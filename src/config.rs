@@ -95,7 +95,7 @@ impl Config {
                 sources.push(SourceCfg { adapter: "git".into(), path: name.clone().into() });
                 continue;
             }
-            let notes = crate::ingest::notes_in(p)?;
+            let notes = crate::construct::ingest::notes_in(p)?;
             if notes.is_empty() {
                 continue;
             }

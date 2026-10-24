@@ -1,4 +1,4 @@
-//! Adapters. Each reads a source, emits typed facts, and points back to where the
+//! CONSTRUCT, mechanically: adapters. Each reads a source, emits typed facts, and points back to where the
 //! content lives; no document text is stored, only short labels. Ingestion is mechanical:
 //! an id a source names becomes a plain `mentions` link, and `ava dream` decides later what
 //! the mention means.
@@ -127,11 +127,17 @@ pub fn json_lines(path: &Path) -> Result<Vec<FactIn>> {
         .collect()
 }
 
-/// The text a node's pointer leads to: a commit's message or a note's body.
-pub fn content(dir: &Path, pointer: &str) -> Result<String> {
+/// How much of a change a dream reads: enough for a model to see what changed, bounded
+/// so one huge commit cannot dominate the bill.
+pub const EVIDENCE_CHARS: usize = 6000;
+
+/// The evidence a node's pointer leads to: a commit's message, the files it changed and
+/// its diff, bounded; or a note's body.
+pub fn evidence(dir: &Path, pointer: &str) -> Result<String> {
     if let Some(rest) = pointer.strip_prefix("git:") {
         let (repo, sha) = rest.rsplit_once('@').ok_or("bad git pointer")?;
-        return git(&dir.join(repo), &["log", "-1", "--format=%B", sha]);
+        let text = git(&dir.join(repo), &["show", "--stat", "--patch", "--format=%B", sha])?;
+        return Ok(text.chars().take(EVIDENCE_CHARS).collect());
     }
     if let Some(rest) = pointer.strip_prefix("md:") {
         return Ok(read_note(&dir.join(rest))?.body);

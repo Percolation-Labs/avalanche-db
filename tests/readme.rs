@@ -47,8 +47,24 @@ fn blocks(readme: &str) -> Vec<Cmd> {
     out
 }
 
-/// Durations vary by machine: `101µs`, `3.2ms` and `1.5s` all become `#µs`.
+/// Durations vary by machine: `101µs`, `3.2ms` and `1.5s` all become `#µs`. Wall-clock
+/// times (`2026-10-24 11:39Z`) become `#time`; dates alone are data and stay.
 fn mask(s: &str) -> String {
+    let words: Vec<String> = s.split(' ').map(String::from).collect();
+    let mut joined = vec![];
+    let mut i = 0;
+    while i < words.len() {
+        let is_date = |w: &str| w.len() == 10 && w.as_bytes()[4] == b'-' && w.as_bytes()[7] == b'-';
+        let is_time = |w: &str| w.len() == 6 && w.ends_with('Z') && w.as_bytes()[2] == b':';
+        if i + 1 < words.len() && is_date(&words[i]) && is_time(&words[i + 1]) {
+            joined.push("#time".to_string());
+            i += 2;
+        } else {
+            joined.push(words[i].clone());
+            i += 1;
+        }
+    }
+    let s = joined.join(" ");
     let mut out = String::new();
     let b: Vec<char> = s.trim_end().chars().collect();
     let mut i = 0;
@@ -135,4 +151,6 @@ fn masking_hides_only_durations() {
     assert_eq!(mask("12 keys in 101µs at T2"), "12 keys in #µs at T2");
     assert_eq!(mask("read 5.5s, written 3.2ms"), "read #µs, written #µs");
     assert_eq!(mask("7 commits, 2 steps"), "7 commits, 2 steps");
+    assert_eq!(mask("T1  2026-10-24 11:39Z  54 facts"), "T1  #time  54 facts");
+    assert_eq!(mask("issue:BUG-12  2026-04-09 \"A cent\""), "issue:BUG-12  2026-04-09 \"A cent\"");
 }

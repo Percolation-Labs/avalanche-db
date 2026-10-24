@@ -6,9 +6,11 @@ use clap::{Parser, Subcommand};
 
 use avalanche::config::{Config, DIR, FILE};
 use avalanche::model::{date, Pred};
-use avalanche::session::{self, DEFAULT_FOLLOW, USAGE};
+use avalanche::walk::session::{self, Steer};
 use avalanche::store::{Dir, ScanCost, Store};
-use avalanche::{dream, ingest, search, Result};
+use avalanche::construct::{dream, ingest};
+use avalanche::walk::search;
+use avalanche::{infer, Result};
 
 #[derive(Parser)]
 #[command(name = "ava", version, about = "Avalanche DB: a memory you walk, not one you search")]
@@ -50,13 +52,17 @@ enum Cmd {
         /// Walk only what was true on this date
         #[arg(long)]
         valid_at: Option<String>,
+        /// Change the priority policy: kind=weight, comma separated (0 stops following a kind)
+        #[arg(long, value_delimiter = ',')]
+        prefer: Vec<String>,
     },
-    /// Take one step of a walk
+    /// Take one step of a walk: the best open question, or the one named by --take
     Step {
         token: String,
-        /// Link types to follow, most wanted first
+        #[arg(long)]
+        take: Option<String>,
         #[arg(long, value_delimiter = ',')]
-        follow: Vec<String>,
+        prefer: Vec<String>,
     },
     /// Run a walk to its end and print what it reached
     Why {
@@ -66,7 +72,7 @@ enum Cmd {
         #[arg(long)]
         valid_at: Option<String>,
         #[arg(long, value_delimiter = ',')]
-        follow: Vec<String>,
+        prefer: Vec<String>,
     },
     /// A node's links, as of a transaction and optionally valid on a date
     Edges {
@@ -97,13 +103,6 @@ fn main() {
         eprintln!("ava: {e}");
         std::process::exit(1);
     }
-}
-
-fn follow(names: &[String]) -> Result<Vec<Pred>> {
-    if names.is_empty() {
-        return Ok(DEFAULT_FOLLOW.to_vec());
-    }
-    names.iter().map(|p| Pred::from_name(p).ok_or_else(|| format!("{p}: not a link type").into())).collect()
 }
 
 fn day(d: Option<String>) -> Result<Option<i64>> {
@@ -160,11 +159,11 @@ fn run(cli: Cli) -> Result<()> {
         Cmd::Key { action: KeyCmd::Set } => {
             let mut k = String::new();
             std::io::stdin().read_to_string(&mut k)?;
-            println!("kept in {}", dream::set_key(&k)?.display());
+            println!("kept in {}", infer::set_key(&k)?.display());
         }
         Cmd::Key { action: KeyCmd::Check } => {
             let cfg = Config::load(dir)?;
-            println!("{}: key accepted", dream::check_key(&cfg)?);
+            println!("{}: key accepted", infer::check_key(&cfg)?);
         }
         Cmd::Dream => {
             let (cfg, store, t) = open(dir)?;
@@ -203,18 +202,18 @@ fn run(cli: Cli) -> Result<()> {
             }
             println!("{} records share a word with the question{}", hits.len(), if hits.len() > 5 { "; the best 5 shown" } else { "" });
         }
-        Cmd::Ask { words, budget, as_of, valid_at } => {
+        Cmd::Ask { words, budget, as_of, valid_at, prefer } => {
             let (_, store, t) = open(dir)?;
-            let s = session::ask(&store, t, &words.join(" "), budget, as_of, day(valid_at)?)?;
+            let s = session::ask(&store, t, &words.join(" "), budget, as_of, day(valid_at)?, &session::parse_prefer(&prefer)?)?;
             println!("session {} at {}, pinned to T{}, budget {}\n  token {}", s.id, s.start, s.snapshot, s.budget, s.token());
         }
-        Cmd::Step { token, follow: f } => {
-            let (_, store, _) = open(dir)?;
-            print!("{}", session::step(&store, &token, &follow(&f)?)?);
-        }
-        Cmd::Why { words, budget, valid_at, follow: f } => {
+        Cmd::Step { token, take, prefer } => {
             let (_, store, t) = open(dir)?;
-            let s = session::walk(&store, t, &words.join(" "), budget, day(valid_at)?, &follow(&f)?)?;
+            print!("{}", session::step(&store, t, &token, &Steer { prefer: session::parse_prefer(&prefer)?, take })?);
+        }
+        Cmd::Why { words, budget, valid_at, prefer } => {
+            let (_, store, t) = open(dir)?;
+            let s = session::walk(&store, t, &words.join(" "), budget, day(valid_at)?, &session::parse_prefer(&prefer)?)?;
             print!("{}", session::why(&store, &s)?);
         }
         Cmd::Edges { node, as_of, valid_at, r#in } => {
@@ -242,10 +241,11 @@ fn run(cli: Cli) -> Result<()> {
             }
         }
         Cmd::Usage => {
-            let (_, store, t) = open(dir)?;
+            let (_, store, data) = open(dir)?;
+            let t = store.usage_of(data)?;
             let head = store.head(t)?;
             let mut cost = ScanCost::default();
-            let usage = store.graph_id(t, USAGE)?;
+            let usage = store.graph_id(t, "usage")?;
             let sessions = store.by_pred(t, Pred::Asked, head, &mut cost)?.len();
             let steps = store.by_pred(t, Pred::InSession, head, &mut cost)?.len();
             let mut per_node: BTreeMap<String, usize> = BTreeMap::new();

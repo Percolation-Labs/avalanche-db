@@ -1,4 +1,4 @@
-//! The circle: lexical likeness (BM25) between a question and node labels. `ava search`
+//! WALK: the circle. lexical likeness (BM25) between a question and node labels. `ava search`
 //! shows it so a reader can see what search alone returns, and `ava ask` uses it once to
 //! pick where a walk starts.
 

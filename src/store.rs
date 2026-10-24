@@ -98,6 +98,24 @@ impl Store {
         Ok(id)
     }
 
+    /// The tenant's usage log: a tenant of its own, `<name>#usage`, so walks have their own
+    /// transactions and never move the data's T.
+    pub fn usage_of(&self, tenant: u32) -> Result<u32> {
+        let name = {
+            let r = self.db.begin_read()?;
+            let t = r.open_table(TENANTS)?;
+            let mut found = None;
+            for row in t.iter()? {
+                let (k, v) = row?;
+                if v.value() == tenant {
+                    found = Some(k.value().to_string());
+                }
+            }
+            found.ok_or_else(|| format!("no tenant {tenant}"))?
+        };
+        self.tenant(&format!("{name}#usage"))
+    }
+
     /// The tenant's latest transaction, 0 before its first write.
     pub fn head(&self, tenant: u32) -> Result<u64> {
         let r = self.db.begin_read()?;

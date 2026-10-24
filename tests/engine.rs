@@ -1,7 +1,9 @@
 use avalanche::model::{FactIn, Pred};
-use avalanche::session::{self, DEFAULT_FOLLOW};
+use avalanche::walk::session::{self, Steer};
 
-const WALK: &[Pred] = &[Pred::Answers, Pred::Informs, Pred::Mentions];
+fn mentions() -> Vec<(String, f64)> {
+    vec![("mentions".into(), 0.4)]
+}
 use avalanche::store::{Dir, ScanCost, Store};
 
 fn store(name: &str) -> Store {
@@ -65,12 +67,12 @@ fn a_session_walks_from_question_to_decision_and_logs_every_step() {
     let s = store("session");
     let t = s.tenant("a").unwrap();
     seed(&s, t);
-    let sess = session::ask(&s, t, "placed by the user", 10, None, None).unwrap();
+    let sess = session::ask(&s, t, "placed by the user", 10, None, None, &mentions()).unwrap();
     assert_eq!(sess.start, "question:q1");
     let mut token = sess.token();
     let mut seen = vec![];
     for _ in 0..4 {
-        let step = session::step(&s, &token, WALK).unwrap();
+        let step = session::step(&s, t, &token, &Steer::default()).unwrap();
         seen.push(step.at.as_ref().unwrap().node.clone());
         assert!(step.stats.keys_read > 0);
         match step.token {
@@ -80,8 +82,9 @@ fn a_session_walks_from_question_to_decision_and_logs_every_step() {
     }
     assert_eq!(seen, ["question:q1", "claim:c1", "card:REM-1", "commit:aaaaaaaaaa"]);
     // The old token is stale once the session has moved on.
-    assert!(session::step(&s, &sess.token(), DEFAULT_FOLLOW).err().unwrap().to_string().contains("stale token"));
-    let visits = s.by_pred(t, Pred::Visited, s.head(t).unwrap(), &mut ScanCost::default()).unwrap();
+    assert!(session::step(&s, t, &sess.token(), &Steer::default()).err().unwrap().to_string().contains("stale token"));
+    let u = s.usage_of(t).unwrap();
+    let visits = s.by_pred(u, Pred::Visited, s.head(u).unwrap(), &mut ScanCost::default()).unwrap();
     assert_eq!(visits.len(), 4);
 }
 
@@ -90,8 +93,45 @@ fn a_session_pinned_before_a_write_does_not_see_it() {
     let s = store("pinned");
     let t = s.tenant("a").unwrap();
     let t1 = seed(&s, t);
-    let sess = session::ask(&s, t, "question:q1", 10, Some(t1), None).unwrap();
+    let sess = session::ask(&s, t, "question:q1", 10, Some(t1), None, &[]).unwrap();
     s.write(t, &[FactIn::new("claim:c2", Pred::Answers, "question:q1", "claims")]).unwrap();
-    let step = session::step(&s, &sess.token(), DEFAULT_FOLLOW).unwrap();
+    let step = session::step(&s, t, &sess.token(), &Steer::default()).unwrap();
     assert!(step.neighbours.iter().all(|n| n.node != "claim:c2"));
+}
+
+#[test]
+fn walking_never_moves_the_data_transaction() {
+    let s = store("usagelog");
+    let t = s.tenant("a").unwrap();
+    let t1 = seed(&s, t);
+    for _ in 0..3 {
+        session::walk(&s, t, "question:q1", 10, None, &mentions()).unwrap();
+    }
+    assert_eq!(s.head(t).unwrap(), t1);
+    assert!(s.head(s.usage_of(t).unwrap()).unwrap() >= 3);
+}
+
+#[test]
+fn the_agent_steers_by_policy_and_by_name() {
+    let s = store("steer");
+    let t = s.tenant("a").unwrap();
+    seed(&s, t);
+    s.write(t, &[FactIn::new("claim:c2", Pred::Answers, "question:q1", "claims"), FactIn::new("claim:c2", Pred::Informs, "card:REM-2", "claims")]).unwrap();
+    let sess = session::ask(&s, t, "question:q1", 10, None, None, &[]).unwrap();
+    let first = session::step(&s, t, &sess.token(), &Steer::default()).unwrap();
+    assert_eq!(first.session.frontier.len(), 2, "both claims are open");
+    // Take the second-ranked claim by name, then stop following informs mid-walk.
+    let other = first.session.ranked()[1].node.clone();
+    let took = session::step(&s, t, &first.token.unwrap(), &Steer { take: Some(other.clone()), prefer: vec![("informs".into(), 0.0)] }).unwrap();
+    assert_eq!(took.at.unwrap().node, other);
+    assert!(took.neighbours.iter().all(|n| n.pred != Pred::Informs), "informs was turned off");
+    let u = s.usage_of(t).unwrap();
+    assert_eq!(s.by_pred(u, Pred::Took, s.head(u).unwrap(), &mut ScanCost::default()).unwrap().len(), 1);
+}
+
+#[test]
+fn the_walk_layer_never_calls_the_model() {
+    for src in [include_str!("../src/walk/session.rs"), include_str!("../src/walk/search.rs")] {
+        assert!(!src.contains("infer"), "walk/ must not reach the model");
+    }
 }

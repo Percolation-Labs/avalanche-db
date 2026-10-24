@@ -19,6 +19,7 @@ pub enum Kind {
     Decision,
     Proposal,
     Issue,
+    Pr,
     Lit,
 }
 
@@ -55,6 +56,7 @@ impl Kind {
             "decision" => Kind::Decision,
             "proposal" => Kind::Proposal,
             "issue" => Kind::Issue,
+            "pr" => Kind::Pr,
             "lit" => Kind::Lit,
             _ => return None,
         })
@@ -63,9 +65,9 @@ impl Kind {
 
 use Kind::*;
 
-const THINGS: &[Kind] = &[Commit, Person, File, Card, Question, Claim, Package, Source, Session, Step, Decision, Proposal, Issue];
+const THINGS: &[Kind] = &[Commit, Person, File, Card, Question, Claim, Package, Source, Session, Step, Decision, Proposal, Issue, Pr];
 /// What a commit or a note can name.
-const NAMEABLE: &[Kind] = &[Commit, File, Card, Decision, Proposal, Issue];
+const NAMEABLE: &[Kind] = &[Commit, File, Card, Decision, Proposal, Issue, Pr];
 const NOTES: &[Kind] = &[Decision, Proposal, Issue];
 
 macro_rules! preds {
@@ -89,7 +91,7 @@ preds! {
     Parent = 3, "parent", &[Commit], &[Commit];
     AuthoredBy = 4, "authoredBy", &[Commit], &[Person];
     Touches = 5, "touches", &[Commit], &[File];
-    Mentions = 6, "mentions", &[Commit, Decision, Proposal, Issue], NAMEABLE;
+    Mentions = 6, "mentions", &[Commit, Decision, Proposal, Issue, Pr, Card], NAMEABLE;
     State = 7, "state", &[Card], &[Lit];
     Answers = 8, "answers", &[Claim], &[Question];
     Stance = 9, "stance", &[Claim], &[Lit];
@@ -106,8 +108,11 @@ preds! {
     Adopts = 22, "adopts", &[Decision], &[Proposal];
     Decides = 23, "decides", &[Decision], &[File];
     Duplicates = 24, "duplicates", NOTES, &[Issue];
-    Fixes = 25, "fixes", &[Commit], &[Issue];
-    Implements = 26, "implements", &[Commit], &[Decision];
+    Fixes = 25, "fixes", &[Commit, Pr], &[Issue];
+    Implements = 26, "implements", &[Commit, Pr], &[Decision, Card];
+    MergedAs = 27, "mergedAs", &[Pr], &[Commit];
+    Took = 30, "took", &[Step], &[Lit];
+    Prefer = 31, "prefer", &[Step, Session], &[Lit];
 }
 
 impl Pred {
@@ -140,6 +145,7 @@ impl Pred {
             Pred::Touches => "touched by",
             Pred::AuthoredBy => "authored",
             Pred::Parent => "child",
+            Pred::MergedAs => "merged from",
             _ => self.name(),
         }
     }
