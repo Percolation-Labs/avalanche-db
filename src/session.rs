@@ -3,7 +3,7 @@
 //! the budget, and returns statistics and a continuation token. The agent reasons between
 //! steps. Every step is appended to the usage graph in the same log.
 
-use std::collections::BTreeMap;
+use std::collections::{BTreeMap, HashSet};
 use std::fmt;
 use std::time::Instant;
 
@@ -14,6 +14,9 @@ use crate::store::{Dir, Edge, ScanCost, Store};
 use crate::Result;
 
 pub const USAGE: &str = "usage";
+
+/// Neighbours described per step; the rest are counted.
+const SHOWN: usize = 12;
 
 /// The default walk order: what a node answers and who decided it before how it was built.
 /// `parent` is left out so a walk does not slide down commit history; ask for it by name.
@@ -53,6 +56,7 @@ pub struct Neighbour {
     pub node: String,
     pub label: Option<String>,
     pub pushed: bool,
+    pub id: u64,
 }
 
 pub struct StepOut {
@@ -169,34 +173,49 @@ pub fn step(store: &Store, token: &str, follow: &[Pred]) -> Result<StepOut> {
         } else {
             stats.fan_in += 1;
         }
-        let other = store.name(t, e.other)?;
         if e.pred.is_attribute() {
-            let text = other.trim_start_matches("lit:").to_string();
+            let text = store.name(t, e.other)?.trim_start_matches("lit:").to_string();
             if e.pred == Pred::Label {
                 label_text = Some(text.clone());
             }
             attributes.push((e.pred, text));
         } else if let Some(rank) = follow.iter().position(|p| *p == e.pred) {
-            candidates.push((rank, e.pred, e.dir, other));
+            candidates.push((rank, e.pred, e.dir, e.other));
         }
     }
+    // Neighbours stay ids until a reader needs them: a name or a label costs a lookup, so a
+    // hub's thousands of held-back edges are counted, not described.
+    let known: HashSet<u64> = s.visited.iter().chain(s.stack.iter().map(|f| &f.node)).filter_map(|n| store.id(t, n).ok().flatten()).collect();
     // Push lowest priority first so the most wanted edge is on top of the stack.
     candidates.sort_by(|a, b| b.0.cmp(&a.0).then(b.3.cmp(&a.3)));
-    let mut neighbours = vec![];
+    let mut picked = vec![];
     for (_, pred, dir, other) in candidates {
-        let seen = s.visited.contains(&other) || s.stack.iter().any(|f| f.node == other);
-        let room = s.pushed < s.budget;
-        let pushed = !seen && room;
+        let seen = known.contains(&other) || picked.iter().any(|(_, _, o, p)| *o == other && *p);
+        let pushed = !seen && s.pushed < s.budget;
         if pushed {
-            s.stack.push(Frame { node: other.clone(), depth: frame.depth + 1, via: format!("{} {} {}", pred.name(), if dir == Dir::Out { "from" } else { "into" }, frame.node) });
             s.pushed += 1;
         } else if !seen {
             stats.held_back += 1;
         }
-        let other_id = store.id(t, &other)?.unwrap();
-        neighbours.push(Neighbour { pred, dir, label: label(store, t, other_id, s.snapshot, &mut cost)?, node: other, pushed });
+        picked.push((pred, dir, other, pushed));
+    }
+    let mut neighbours = vec![];
+    for (pred, dir, other, pushed) in picked {
+        if pushed {
+            let name = store.name(t, other)?;
+            s.stack.push(Frame { node: name.clone(), depth: frame.depth + 1, via: format!("{} {} {}", pred.name(), if dir == Dir::Out { "from" } else { "into" }, frame.node) });
+            neighbours.push(Neighbour { pred, dir, label: None, node: name, pushed, id: other });
+        } else {
+            neighbours.push(Neighbour { pred, dir, label: None, node: String::new(), pushed, id: other });
+        }
     }
     neighbours.reverse();
+    for n in neighbours.iter_mut().take(SHOWN) {
+        if n.node.is_empty() {
+            n.node = store.name(t, n.id)?;
+        }
+        n.label = label(store, t, n.id, s.snapshot, &mut cost)?;
+    }
 
     // Path use is read live, not at the snapshot: it is about the store's readers, not its facts.
     let head = store.head(t)?;
@@ -236,7 +255,10 @@ impl fmt::Display for StepOut {
                 writeln!(f, "  {}: {v}", p.name())?;
             }
         }
-        for n in &self.neighbours {
+        if self.neighbours.len() > SHOWN {
+            writeln!(f, "  ({} neighbours; the first {SHOWN} shown)", self.neighbours.len())?;
+        }
+        for n in self.neighbours.iter().take(SHOWN) {
             let arrow = if n.dir == Dir::Out { format!("-{}->", n.pred.name()) } else { format!("<-{}-", n.pred.name()) };
             let mark = if n.pushed { "+" } else { " " };
             let label = n.label.as_deref().map(|l| format!("  \"{}\"", l.chars().take(70).collect::<String>())).unwrap_or_default();

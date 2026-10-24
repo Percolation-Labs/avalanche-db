@@ -1,0 +1,114 @@
+{"s": "question:01a112c1", "p": "label", "o": "lit:Should AI memory allow user-placed over system-inferred content?", "g": "claims", "valid_from": "2026-09-28"}
+{"s": "question:01a112c1", "p": "pointer", "o": "lit:percolate:question/01a112c1-8e54-7679-97f9-50a2dd9479bd", "g": "claims"}
+{"s": "package:rp-e2154adb", "p": "label", "o": "lit:AI memory in 2026 competes on recall while the write path and unfinished intentions stay unsolved", "g": "claims"}
+{"s": "package:rp-e2154adb", "p": "pointer", "o": "lit:percolate:rp-e2154adb", "g": "claims"}
+{"s": "source:rp-e2154adb/S1", "p": "label", "o": "lit:Mnemoverse: Mem0 vs Zep vs Letta vs Cognee vs Supermemory (Q3 2026)", "g": "claims"}
+{"s": "source:rp-e2154adb/S2", "p": "label", "o": "lit:eCorpIT: AI agent memory 2026", "g": "claims"}
+{"s": "source:rp-e2154adb/S3", "p": "label", "o": "lit:Sellen and Whittaker, Beyond Total Capture (CACM 2010)", "g": "claims"}
+{"s": "source:rp-e2154adb/S4", "p": "label", "o": "lit:Microsoft Defender: AI Recommendation Poisoning (Feb 2026)", "g": "claims"}
+{"s": "source:rp-e2154adb/S5", "p": "label", "o": "lit:SpAIware: ChatGPT macOS memory flaw (2024)", "g": "claims"}
+{"s": "source:rp-e2154adb/S6", "p": "label", "o": "lit:Bergman, Whittaker et al., folder structure and file navigation (JASIST 2010)", "g": "claims"}
+{"s": "source:rp-e2154adb/S7", "p": "label", "o": "lit:Cursor forum: memories gone in 2.1", "g": "claims"}
+{"s": "source:rp-e2154adb/S8", "p": "label", "o": "lit:Blockchain Council: does Cursor track memory", "g": "claims"}
+{"s": "source:rp-e2154adb/S9", "p": "label", "o": "lit:Y Combinator: avoiding the tarpit", "g": "claims"}
+{"s": "source:rp-e2154adb/S10", "p": "label", "o": "lit:Feather DB: AI agent memory landscape 2026", "g": "claims"}
+{"s": "package:rp-e2154adb", "p": "makes", "o": "claim:rp-e2154adb/C1", "g": "claims"}
+{"s": "claim:rp-e2154adb/C1", "p": "label", "o": "lit:Agent-memory vendors compare on chat-recall benchmarks whose scores change when a rival runs the test", "g": "claims"}
+{"s": "claim:rp-e2154adb/C1", "p": "pointer", "o": "lit:percolate:rp-e2154adb/C1", "g": "claims"}
+{"s": "claim:rp-e2154adb/C1", "p": "cites", "o": "source:rp-e2154adb/S1", "g": "claims"}
+{"s": "claim:rp-e2154adb/C1", "p": "cites", "o": "source:rp-e2154adb/S2", "g": "claims"}
+{"s": "package:rp-e2154adb", "p": "makes", "o": "claim:rp-e2154adb/C2", "g": "claims"}
+{"s": "claim:rp-e2154adb/C2", "p": "label", "o": "lit:Lifelogging showed total capture goes largely unused; capture-first AI memory repeats that bet", "g": "claims"}
+{"s": "claim:rp-e2154adb/C2", "p": "pointer", "o": "lit:percolate:rp-e2154adb/C2", "g": "claims"}
+{"s": "claim:rp-e2154adb/C2", "p": "cites", "o": "source:rp-e2154adb/S3", "g": "claims"}
+{"s": "package:rp-e2154adb", "p": "makes", "o": "claim:rp-e2154adb/C3", "g": "claims"}
+{"s": "claim:rp-e2154adb/C3", "p": "label", "o": "lit:Content an assistant reads can write to its memory; write permission is an open security problem for AI memory", "g": "claims"}
+{"s": "claim:rp-e2154adb/C3", "p": "pointer", "o": "lit:percolate:rp-e2154adb/C3", "g": "claims"}
+{"s": "claim:rp-e2154adb/C3", "p": "cites", "o": "source:rp-e2154adb/S4", "g": "claims"}
+{"s": "claim:rp-e2154adb/C3", "p": "cites", "o": "source:rp-e2154adb/S5", "g": "claims"}
+{"s": "package:rp-e2154adb", "p": "makes", "o": "claim:rp-e2154adb/C4", "g": "claims"}
+{"s": "claim:rp-e2154adb/C4", "p": "label", "o": "lit:People reach their own information by where they put it and search as a last resort, favouring user-placed memory", "g": "claims"}
+{"s": "claim:rp-e2154adb/C4", "p": "pointer", "o": "lit:percolate:rp-e2154adb/C4", "g": "claims"}
+{"s": "claim:rp-e2154adb/C4", "p": "cites", "o": "source:rp-e2154adb/S6", "g": "claims"}
+{"s": "claim:rp-e2154adb/C4", "p": "cites", "o": "source:rp-e2154adb/S7", "g": "claims"}
+{"s": "claim:rp-e2154adb/C4", "p": "cites", "o": "source:rp-e2154adb/S8", "g": "claims"}
+{"s": "package:rp-e2154adb", "p": "makes", "o": "claim:rp-e2154adb/C5", "g": "claims"}
+{"s": "claim:rp-e2154adb/C5", "p": "label", "o": "lit:The missing piece is memory of intentions and of the reasons behind decisions", "g": "claims"}
+{"s": "claim:rp-e2154adb/C5", "p": "pointer", "o": "lit:percolate:rp-e2154adb/C5", "g": "claims"}
+{"s": "claim:rp-e2154adb/C5", "p": "cites", "o": "source:rp-e2154adb/S3", "g": "claims"}
+{"s": "package:rp-e2154adb", "p": "makes", "o": "claim:rp-e2154adb/C6", "g": "claims"}
+{"s": "claim:rp-e2154adb/C6", "p": "label", "o": "lit:Consumer remember-everything apps fit Y Combinator's tarpit pattern; developer memory infrastructure is not shown to", "g": "claims"}
+{"s": "claim:rp-e2154adb/C6", "p": "pointer", "o": "lit:percolate:rp-e2154adb/C6", "g": "claims"}
+{"s": "claim:rp-e2154adb/C6", "p": "cites", "o": "source:rp-e2154adb/S9", "g": "claims"}
+{"s": "claim:rp-e2154adb/C6", "p": "cites", "o": "source:rp-e2154adb/S10", "g": "claims"}
+{"s": "package:rp-449ce6b9", "p": "label", "o": "lit:Recording why a decision was made failed on cost, and only some of those costs have changed", "g": "claims"}
+{"s": "package:rp-449ce6b9", "p": "pointer", "o": "lit:percolate:rp-449ce6b9", "g": "claims"}
+{"s": "source:rp-449ce6b9/S1", "p": "label", "o": "lit:Horner and Atwood, Design Rationale: the rationale and the barriers (NordiCHI 2006)", "g": "claims"}
+{"s": "source:rp-449ce6b9/S2", "p": "label", "o": "lit:Branham, Harrison and McCrickard, Making Design Rationale Matter (HCIC 2010)", "g": "claims"}
+{"s": "source:rp-449ce6b9/S3", "p": "label", "o": "lit:Shipman and McCall, incremental formalization (HOS project page)", "g": "claims"}
+{"s": "package:rp-449ce6b9", "p": "makes", "o": "claim:rp-449ce6b9/C1", "g": "claims"}
+{"s": "claim:rp-449ce6b9/C1", "p": "label", "o": "lit:One trade-off dominates capture: recording away from the work loses context, recording inside it interrupts the thinking", "g": "claims"}
+{"s": "claim:rp-449ce6b9/C1", "p": "pointer", "o": "lit:percolate:rp-449ce6b9/C1", "g": "claims"}
+{"s": "claim:rp-449ce6b9/C1", "p": "cites", "o": "source:rp-449ce6b9/S1", "g": "claims"}
+{"s": "package:rp-449ce6b9", "p": "makes", "o": "claim:rp-449ce6b9/C2", "g": "claims"}
+{"s": "claim:rp-449ce6b9/C2", "p": "label", "o": "lit:The field never doubted rationale was worth having; its failure was cost, not value", "g": "claims"}
+{"s": "claim:rp-449ce6b9/C2", "p": "pointer", "o": "lit:percolate:rp-449ce6b9/C2", "g": "claims"}
+{"s": "claim:rp-449ce6b9/C2", "p": "cites", "o": "source:rp-449ce6b9/S1", "g": "claims"}
+{"s": "claim:rp-449ce6b9/C2", "p": "cites", "o": "source:rp-449ce6b9/S2", "g": "claims"}
+{"s": "package:rp-449ce6b9", "p": "makes", "o": "claim:rp-449ce6b9/C3", "g": "claims"}
+{"s": "claim:rp-449ce6b9/C3", "p": "label", "o": "lit:An agent already party to the work changes who pays the capture cost and when", "g": "claims"}
+{"s": "claim:rp-449ce6b9/C3", "p": "pointer", "o": "lit:percolate:rp-449ce6b9/C3", "g": "claims"}
+{"s": "claim:rp-449ce6b9/C3", "p": "cites", "o": "source:rp-449ce6b9/S1", "g": "claims"}
+{"s": "claim:rp-449ce6b9/C3", "p": "cites", "o": "source:rp-449ce6b9/S3", "g": "claims"}
+{"s": "package:rp-449ce6b9", "p": "makes", "o": "claim:rp-449ce6b9/C4", "g": "claims"}
+{"s": "claim:rp-449ce6b9/C4", "p": "label", "o": "lit:Tacit knowledge and the incentive to withhold are untouched by who records", "g": "claims"}
+{"s": "claim:rp-449ce6b9/C4", "p": "pointer", "o": "lit:percolate:rp-449ce6b9/C4", "g": "claims"}
+{"s": "claim:rp-449ce6b9/C4", "p": "cites", "o": "source:rp-449ce6b9/S1", "g": "claims"}
+{"s": "package:rp-449ce6b9", "p": "makes", "o": "claim:rp-449ce6b9/C5", "g": "claims"}
+{"s": "claim:rp-449ce6b9/C5", "p": "label", "o": "lit:Whether cheap capture yields rationale anyone uses is unmeasured", "g": "claims"}
+{"s": "claim:rp-449ce6b9/C5", "p": "pointer", "o": "lit:percolate:rp-449ce6b9/C5", "g": "claims"}
+{"s": "claim:rp-449ce6b9/C5", "p": "cites", "o": "source:rp-449ce6b9/S1", "g": "claims"}
+{"s": "package:rp-53fd5ebc", "p": "label", "o": "lit:A typed decision model is the primitive knowledge graph construction was missing", "g": "claims"}
+{"s": "package:rp-53fd5ebc", "p": "pointer", "o": "lit:percolate:rp-53fd5ebc", "g": "claims"}
+{"s": "source:rp-53fd5ebc/S1", "p": "label", "o": "lit:Abt-Buy entity resolution benchmark", "g": "claims"}
+{"s": "source:rp-53fd5ebc/S2", "p": "label", "o": "lit:DBLP-ACM entity resolution benchmark", "g": "claims"}
+{"s": "source:rp-53fd5ebc/S3", "p": "label", "o": "lit:Planted-bisection experiment (Ants That Can Read)", "g": "claims"}
+{"s": "source:rp-53fd5ebc/S4", "p": "label", "o": "lit:Eight transformer abstracts and their claims", "g": "claims"}
+{"s": "source:rp-53fd5ebc/S5", "p": "label", "o": "lit:Peskun 1973, optimum Monte-Carlo sampling", "g": "claims"}
+{"s": "source:rp-53fd5ebc/S6", "p": "label", "o": "lit:THOR orbit recovery (AJ 2021)", "g": "claims"}
+{"s": "source:rp-53fd5ebc/S7", "p": "label", "o": "lit:Decelle et al., stochastic block model (PRE 2011)", "g": "claims"}
+{"s": "source:rp-53fd5ebc/S8", "p": "label", "o": "lit:Papadakis et al., re-evaluation of matching benchmarks (2023)", "g": "claims"}
+{"s": "source:rp-53fd5ebc/S10", "p": "label", "o": "lit:TypeSafe AI Manifesto", "g": "claims"}
+{"s": "source:rp-53fd5ebc/S11", "p": "label", "o": "lit:TypeSafe AI: System One models and Jev", "g": "claims"}
+{"s": "package:rp-53fd5ebc", "p": "makes", "o": "claim:rp-53fd5ebc/C7", "g": "claims"}
+{"s": "claim:rp-53fd5ebc/C7", "p": "label", "o": "lit:The useful unit of intelligence for software is a typed decision with a calibrated probability", "g": "claims"}
+{"s": "claim:rp-53fd5ebc/C7", "p": "pointer", "o": "lit:percolate:rp-53fd5ebc/C7", "g": "claims"}
+{"s": "claim:rp-53fd5ebc/C7", "p": "cites", "o": "source:rp-53fd5ebc/S10", "g": "claims"}
+{"s": "claim:rp-53fd5ebc/C7", "p": "cites", "o": "source:rp-53fd5ebc/S11", "g": "claims"}
+{"s": "package:rp-53fd5ebc", "p": "makes", "o": "claim:rp-53fd5ebc/C1", "g": "claims"}
+{"s": "claim:rp-53fd5ebc/C1", "p": "label", "o": "lit:Similarity fails in opposite directions at the two ends, so no single threshold separates matches", "g": "claims"}
+{"s": "claim:rp-53fd5ebc/C1", "p": "pointer", "o": "lit:percolate:rp-53fd5ebc/C1", "g": "claims"}
+{"s": "claim:rp-53fd5ebc/C1", "p": "cites", "o": "source:rp-53fd5ebc/S1", "g": "claims"}
+{"s": "claim:rp-53fd5ebc/C1", "p": "cites", "o": "source:rp-53fd5ebc/S4", "g": "claims"}
+{"s": "package:rp-53fd5ebc", "p": "makes", "o": "claim:rp-53fd5ebc/C2", "g": "claims"}
+{"s": "claim:rp-53fd5ebc/C2", "p": "label", "o": "lit:Retrieving candidates and deciding between them are different jobs; embeddings do the first well, the second badly", "g": "claims"}
+{"s": "claim:rp-53fd5ebc/C2", "p": "pointer", "o": "lit:percolate:rp-53fd5ebc/C2", "g": "claims"}
+{"s": "claim:rp-53fd5ebc/C2", "p": "cites", "o": "source:rp-53fd5ebc/S1", "g": "claims"}
+{"s": "package:rp-53fd5ebc", "p": "makes", "o": "claim:rp-53fd5ebc/C4", "g": "claims"}
+{"s": "claim:rp-53fd5ebc/C4", "p": "label", "o": "lit:Proposer quality needed is set by how completely the objective checks the proposal", "g": "claims"}
+{"s": "claim:rp-53fd5ebc/C4", "p": "pointer", "o": "lit:percolate:rp-53fd5ebc/C4", "g": "claims"}
+{"s": "claim:rp-53fd5ebc/C4", "p": "cites", "o": "source:rp-53fd5ebc/S3", "g": "claims"}
+{"s": "claim:rp-53fd5ebc/C4", "p": "cites", "o": "source:rp-53fd5ebc/S5", "g": "claims"}
+{"s": "claim:rp-53fd5ebc/C4", "p": "cites", "o": "source:rp-53fd5ebc/S6", "g": "claims"}
+{"s": "package:rp-53fd5ebc", "p": "makes", "o": "claim:rp-53fd5ebc/C5", "g": "claims"}
+{"s": "claim:rp-53fd5ebc/C5", "p": "label", "o": "lit:Where the objective's best answer is not the truth, no proposer recovers it", "g": "claims"}
+{"s": "claim:rp-53fd5ebc/C5", "p": "pointer", "o": "lit:percolate:rp-53fd5ebc/C5", "g": "claims"}
+{"s": "claim:rp-53fd5ebc/C5", "p": "cites", "o": "source:rp-53fd5ebc/S3", "g": "claims"}
+{"s": "claim:rp-53fd5ebc/C5", "p": "cites", "o": "source:rp-53fd5ebc/S7", "g": "claims"}
+{"s": "package:rp-53fd5ebc", "p": "makes", "o": "claim:rp-53fd5ebc/C6", "g": "claims"}
+{"s": "claim:rp-53fd5ebc/C6", "p": "label", "o": "lit:Most entity-matching benchmarks sit where a similarity threshold already suffices", "g": "claims"}
+{"s": "claim:rp-53fd5ebc/C6", "p": "pointer", "o": "lit:percolate:rp-53fd5ebc/C6", "g": "claims"}
+{"s": "claim:rp-53fd5ebc/C6", "p": "cites", "o": "source:rp-53fd5ebc/S2", "g": "claims"}
+{"s": "claim:rp-53fd5ebc/C6", "p": "cites", "o": "source:rp-53fd5ebc/S8", "g": "claims"}
+{"s": "claim:rp-e2154adb/C4", "p": "answers", "o": "question:01a112c1", "g": "claims", "valid_from": "2026-09-28"}
+{"s": "claim:rp-e2154adb/C4", "p": "stance", "o": "lit:yes", "g": "claims", "valid_from": "2026-09-28"}
