@@ -4,7 +4,7 @@
 
 use serde::Deserialize;
 
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq, PartialOrd, Ord, Hash)]
 pub enum Kind {
     Commit,
     Person,
@@ -16,10 +16,26 @@ pub enum Kind {
     Source,
     Session,
     Step,
+    Decision,
+    Proposal,
+    Issue,
     Lit,
 }
 
 impl Kind {
+    /// The node prefix an `[ids]` table entry names.
+    pub fn prefix(name: &str) -> Option<&'static str> {
+        Some(match name {
+            "decision" => "decision",
+            "proposal" => "proposal",
+            "issue" => "issue",
+            "card" => "card",
+            "question" => "question",
+            "claim" => "claim",
+            _ => return None,
+        })
+    }
+
     pub fn of(name: &str) -> Option<Kind> {
         let (prefix, rest) = name.split_once(':')?;
         if rest.is_empty() {
@@ -36,6 +52,9 @@ impl Kind {
             "source" => Kind::Source,
             "session" => Kind::Session,
             "step" => Kind::Step,
+            "decision" => Kind::Decision,
+            "proposal" => Kind::Proposal,
+            "issue" => Kind::Issue,
             "lit" => Kind::Lit,
             _ => return None,
         })
@@ -44,7 +63,10 @@ impl Kind {
 
 use Kind::*;
 
-const THINGS: &[Kind] = &[Commit, Person, File, Card, Question, Claim, Package, Source, Session, Step];
+const THINGS: &[Kind] = &[Commit, Person, File, Card, Question, Claim, Package, Source, Session, Step, Decision, Proposal, Issue];
+/// What a commit or a note can name.
+const NAMEABLE: &[Kind] = &[Commit, File, Card, Decision, Proposal, Issue];
+const NOTES: &[Kind] = &[Decision, Proposal, Issue];
 
 macro_rules! preds {
     ($($v:ident = $n:literal, $name:literal, $dom:expr, $rng:expr;)*) => {
@@ -67,17 +89,25 @@ preds! {
     Parent = 3, "parent", &[Commit], &[Commit];
     AuthoredBy = 4, "authoredBy", &[Commit], &[Person];
     Touches = 5, "touches", &[Commit], &[File];
-    Mentions = 6, "mentions", &[Commit], &[Card];
+    Mentions = 6, "mentions", &[Commit, Decision, Proposal, Issue], NAMEABLE;
     State = 7, "state", &[Card], &[Lit];
     Answers = 8, "answers", &[Claim], &[Question];
     Stance = 9, "stance", &[Claim], &[Lit];
     Makes = 10, "makes", &[Package], &[Claim];
     Cites = 11, "cites", &[Claim], &[Source];
     Informs = 12, "informs", &[Claim, Question], &[Card];
-    Asked = 13, "asked", &[Session], &[Question];
+    Asked = 13, "asked", &[Session], THINGS;
     InSession = 14, "inSession", &[Step], &[Session];
     Visited = 15, "visited", &[Step], THINGS;
     Returned = 16, "returned", &[Step], &[Lit];
+    Via = 17, "via", &[Step], &[Lit];
+    Because = 20, "because", &[Decision], &[Issue];
+    Rejects = 21, "rejects", &[Decision], &[Proposal];
+    Adopts = 22, "adopts", &[Decision], &[Proposal];
+    Decides = 23, "decides", &[Decision], &[File];
+    Duplicates = 24, "duplicates", NOTES, &[Issue];
+    Fixes = 25, "fixes", &[Commit], &[Issue];
+    Implements = 26, "implements", &[Commit], &[Decision];
 }
 
 impl Pred {
@@ -89,6 +119,29 @@ impl Pred {
     pub fn is_attribute(self) -> bool {
         let (_, range) = self.signature();
         range == [Lit]
+    }
+
+    /// How the link reads from its object's side: `BUG-12 <-because- ADR-007` is
+    /// "BUG-12 led to ADR-007".
+    pub fn inverse(self) -> &'static str {
+        match self {
+            Pred::Because => "led to",
+            Pred::Fixes => "fixed by",
+            Pred::Implements => "implemented by",
+            Pred::Duplicates => "duplicated by",
+            Pred::Rejects => "rejected by",
+            Pred::Adopts => "adopted by",
+            Pred::Decides => "decided by",
+            Pred::Mentions => "mentioned by",
+            Pred::Answers => "answered by",
+            Pred::Makes => "made by",
+            Pred::Informs => "informed by",
+            Pred::Cites => "cited by",
+            Pred::Touches => "touched by",
+            Pred::AuthoredBy => "authored",
+            Pred::Parent => "child",
+            _ => self.name(),
+        }
     }
 
     pub fn check(self, s: &str, o: &str) -> Result<(), String> {

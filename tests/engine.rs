@@ -1,5 +1,7 @@
 use avalanche::model::{FactIn, Pred};
 use avalanche::session::{self, DEFAULT_FOLLOW};
+
+const WALK: &[Pred] = &[Pred::Answers, Pred::Informs, Pred::Mentions];
 use avalanche::store::{Dir, ScanCost, Store};
 
 fn store(name: &str) -> Store {
@@ -63,12 +65,12 @@ fn a_session_walks_from_question_to_decision_and_logs_every_step() {
     let s = store("session");
     let t = s.tenant("a").unwrap();
     seed(&s, t);
-    let sess = session::ask(&s, t, "placed by the user", 10, None).unwrap();
-    assert_eq!(sess.question, "question:q1");
+    let sess = session::ask(&s, t, "placed by the user", 10, None, None).unwrap();
+    assert_eq!(sess.start, "question:q1");
     let mut token = sess.token();
     let mut seen = vec![];
     for _ in 0..4 {
-        let step = session::step(&s, &token, DEFAULT_FOLLOW).unwrap();
+        let step = session::step(&s, &token, WALK).unwrap();
         seen.push(step.at.as_ref().unwrap().node.clone());
         assert!(step.stats.keys_read > 0);
         match step.token {
@@ -88,7 +90,7 @@ fn a_session_pinned_before_a_write_does_not_see_it() {
     let s = store("pinned");
     let t = s.tenant("a").unwrap();
     let t1 = seed(&s, t);
-    let sess = session::ask(&s, t, "question:q1", 10, Some(t1)).unwrap();
+    let sess = session::ask(&s, t, "question:q1", 10, Some(t1), None).unwrap();
     s.write(t, &[FactIn::new("claim:c2", Pred::Answers, "question:q1", "claims")]).unwrap();
     let step = session::step(&s, &sess.token(), DEFAULT_FOLLOW).unwrap();
     assert!(step.neighbours.iter().all(|n| n.node != "claim:c2"));
