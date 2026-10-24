@@ -20,6 +20,7 @@ pub enum Kind {
     Proposal,
     Issue,
     Pr,
+    Review,
     Lit,
 }
 
@@ -57,6 +58,7 @@ impl Kind {
             "proposal" => Kind::Proposal,
             "issue" => Kind::Issue,
             "pr" => Kind::Pr,
+            "review" => Kind::Review,
             "lit" => Kind::Lit,
             _ => return None,
         })
@@ -65,7 +67,7 @@ impl Kind {
 
 use Kind::*;
 
-const THINGS: &[Kind] = &[Commit, Person, File, Card, Question, Claim, Package, Source, Session, Step, Decision, Proposal, Issue, Pr];
+const THINGS: &[Kind] = &[Commit, Person, File, Card, Question, Claim, Package, Source, Session, Step, Decision, Proposal, Issue, Pr, Review];
 /// What a commit or a note can name.
 const NAMEABLE: &[Kind] = &[Commit, File, Card, Decision, Proposal, Issue, Pr];
 const NOTES: &[Kind] = &[Decision, Proposal, Issue];
@@ -91,7 +93,7 @@ preds! {
     Parent = 3, "parent", &[Commit], &[Commit];
     AuthoredBy = 4, "authoredBy", &[Commit], &[Person];
     Touches = 5, "touches", &[Commit], &[File];
-    Mentions = 6, "mentions", &[Commit, Decision, Proposal, Issue, Pr, Card], NAMEABLE;
+    Mentions = 6, "mentions", &[Commit, Decision, Proposal, Issue, Pr, Card, Claim], NAMEABLE;
     State = 7, "state", &[Card], &[Lit];
     Answers = 8, "answers", &[Claim], &[Question];
     Stance = 9, "stance", &[Claim], &[Lit];
@@ -111,8 +113,11 @@ preds! {
     Fixes = 25, "fixes", &[Commit, Pr], &[Issue];
     Implements = 26, "implements", &[Commit, Pr], &[Decision, Card];
     MergedAs = 27, "mergedAs", &[Pr], &[Commit];
+    Supports = 28, "supports", &[Claim], &[Decision, Card, Proposal];
+    Challenges = 29, "challenges", &[Claim], &[Decision, Card, Proposal];
     Took = 30, "took", &[Step], &[Lit];
     Prefer = 31, "prefer", &[Step, Session], &[Lit];
+    Retracts = 32, "retracts", &[Review], &[Lit];
 }
 
 impl Pred {
@@ -146,6 +151,8 @@ impl Pred {
             Pred::AuthoredBy => "authored",
             Pred::Parent => "child",
             Pred::MergedAs => "merged from",
+            Pred::Supports => "supported by",
+            Pred::Challenges => "challenged by",
             _ => self.name(),
         }
     }
@@ -206,8 +213,21 @@ pub fn lit(text: &str) -> String {
     format!("lit:{}", if cut.is_empty() { "-" } else { &cut })
 }
 
+/// A label cut to `n` characters for display, marked when cut.
+pub fn short(text: &str, n: usize) -> String {
+    if text.chars().count() <= n {
+        return text.to_string();
+    }
+    format!("{}…", text.chars().take(n - 1).collect::<String>().trim_end())
+}
+
 pub mod date {
     use serde::{Deserialize, Deserializer};
+
+    /// A date as a point to read at: a bare day means the whole day, so its last second.
+    pub fn through(d: &str) -> Option<i64> {
+        parse(d).map(|t| if d.len() == 10 { t + 86399 } else { t })
+    }
 
     /// Days since 1970-01-01 for a proleptic Gregorian date (Howard Hinnant's algorithm).
     fn days(y: i64, m: i64, d: i64) -> i64 {

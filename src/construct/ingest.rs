@@ -180,6 +180,89 @@ pub fn github(slug: &str, cfg: &Config) -> Result<Ingested> {
     Ok(Ingested { facts, read: (prs.len(), "PRs") })
 }
 
+/// Percolate research, as an export of packages and questions: each package makes claims,
+/// each claim cites sources and may answer a question with a stance, and every id a claim
+/// names is a mention for `dream` to decide (supports or challenges). Valid time is the
+/// claim's `as_of`, else the package's `created`.
+pub fn percolate(path: &Path, at: &str, cfg: &Config) -> Result<Ingested> {
+    let v: serde_json::Value = serde_json::from_str(&std::fs::read_to_string(path)?).map_err(|e| format!("{}: {e}", path.display()))?;
+    let str_of = |v: &serde_json::Value, k: &str| v[k].as_str().unwrap_or_default().to_string();
+    let mut facts = vec![];
+    let mut claims = 0;
+    let mut dated = std::collections::HashMap::new();
+    let empty = vec![];
+    let packages = v["packages"].as_array().unwrap_or(&empty);
+    for p in packages {
+        let id = str_of(p, "id");
+        let pkg = format!("package:{id}");
+        let t = date::parse(&str_of(p, "created")).unwrap_or(0);
+        facts.push(FactIn::new(&pkg, Pred::Label, lit(&str_of(p, "title")), "percolate").at(t));
+        facts.push(FactIn::new(&pkg, Pred::Pointer, lit(&format!("percolate:{at}#{id}")), "percolate").at(t));
+        for s in p["sources"].as_array().unwrap_or(&empty) {
+            let src = format!("source:{id}/{}", str_of(s, "id"));
+            facts.push(FactIn::new(&src, Pred::Label, lit(&str_of(s, "title")), "percolate").at(t));
+            if !str_of(s, "url").is_empty() {
+                facts.push(FactIn::new(&src, Pred::Pointer, lit(&str_of(s, "url")), "percolate").at(t));
+            }
+        }
+        for c in p["claims"].as_array().unwrap_or(&empty) {
+            claims += 1;
+            let key = str_of(c, "id");
+            let claim = format!("claim:{id}/{key}");
+            let text = str_of(c, "text");
+            let t = date::parse(&str_of(c, "as_of")).unwrap_or(t);
+            dated.insert(claim.clone(), t);
+            facts.push(FactIn::new(&pkg, Pred::Makes, &claim, "percolate").at(t));
+            facts.push(FactIn::new(&claim, Pred::Label, lit(&text), "percolate").at(t));
+            facts.push(FactIn::new(&claim, Pred::Pointer, lit(&format!("percolate:{at}#{id}/{key}")), "percolate").at(t));
+            for s in c["source_ids"].as_array().unwrap_or(&empty) {
+                facts.push(FactIn::new(&claim, Pred::Cites, format!("source:{id}/{}", s.as_str().unwrap_or_default()), "percolate").at(t));
+            }
+            for node in cfg.ids_in(&text) {
+                facts.push(FactIn::new(&claim, Pred::Mentions, node, "percolate").at(t));
+            }
+        }
+    }
+    for q in v["questions"].as_array().unwrap_or(&empty) {
+        let question = format!("question:{}", str_of(q, "id"));
+        let phrasing = match q["phrasing"].as_str() {
+            Some(p) => p.to_string(),
+            None => format!("{}: {}", str_of(q, "subject"), str_of(q, "outcome")),
+        };
+        // A question is as old as the first claim that answers it.
+        let mut answers = vec![];
+        for a in q["answers"].as_array().unwrap_or(&empty) {
+            for c in a["claims"].as_array().unwrap_or(&empty) {
+                let claim = format!("claim:{}/{}", str_of(c, "package_id"), str_of(c, "claim_key"));
+                let t = dated.get(&claim).copied().unwrap_or(0);
+                answers.push(FactIn::new(&claim, Pred::Answers, &question, "percolate").at(t));
+                answers.push(FactIn::new(&claim, Pred::Stance, lit(&str_of(a, "stance")), "percolate").at(t));
+            }
+        }
+        let first = answers.iter().filter_map(|f| f.valid_from).min().unwrap_or(0);
+        facts.push(FactIn::new(&question, Pred::Label, lit(&phrasing), "percolate").at(first));
+        facts.extend(answers);
+    }
+    Ok(Ingested { facts, read: (claims, "claims") })
+}
+
+/// What a claim's pointer leads to: the claim with its package's title and frame, and the
+/// titles of the sources it cites.
+fn percolate_claim(path: &Path, pkg: &str, key: Option<&str>) -> Result<String> {
+    let v: serde_json::Value = serde_json::from_str(&std::fs::read_to_string(path)?)?;
+    let p = v["packages"].as_array().into_iter().flatten().find(|p| p["id"] == pkg).ok_or_else(|| format!("no package {pkg}"))?;
+    let mut out = format!("Package: {}\nFrame: {}\n", p["title"].as_str().unwrap_or_default(), p["frame"].as_str().unwrap_or_default());
+    for c in p["claims"].as_array().into_iter().flatten().filter(|c| key.is_none_or(|k| c["id"] == k)) {
+        out += &format!("Claim {}: {}\n", c["id"].as_str().unwrap_or_default(), c["text"].as_str().unwrap_or_default());
+        for s in c["source_ids"].as_array().into_iter().flatten() {
+            if let Some(src) = p["sources"].as_array().into_iter().flatten().find(|x| &x["id"] == s) {
+                out += &format!("  cites: {}\n", src["title"].as_str().unwrap_or_default());
+            }
+        }
+    }
+    Ok(out)
+}
+
 /// JSON lines of facts by name, as an agent or another adapter writes them.
 pub fn json_lines(path: &Path) -> Result<Vec<FactIn>> {
     let text = std::fs::read_to_string(path)?;
@@ -213,6 +296,14 @@ pub fn evidence(dir: &Path, pointer: &str) -> Result<String> {
         let (slug, n) = rest.split_once('#').ok_or("bad gh pointer")?;
         let out = Command::new("gh").args(["pr", "view", n, "--repo", slug, "--json", "title,body,files", "--jq", ".title + \"\\n\\n\" + .body + \"\\n\\nfiles: \" + ([.files[].path] | join(\", \"))"]).output()?;
         return Ok(String::from_utf8_lossy(&out.stdout).chars().take(EVIDENCE_CHARS).collect());
+    }
+    if let Some(rest) = pointer.strip_prefix("percolate:") {
+        let (file, id) = rest.split_once('#').ok_or("bad percolate pointer")?;
+        let (pkg, key) = match id.split_once('/') {
+            Some((p, k)) => (p, Some(k)),
+            None => (id, None),
+        };
+        return percolate_claim(&dir.join(file), pkg, key);
     }
     Err(format!("no reader for pointer {pointer}").into())
 }

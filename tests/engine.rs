@@ -34,9 +34,9 @@ fn a_fact_outside_the_type_system_refuses_the_batch() {
     let t = s.tenant("a").unwrap();
     let err = s.write(t, &[
         FactIn::new("claim:c1", Pred::Answers, "question:q1", "claims"),
-        FactIn::new("claim:c1", Pred::Mentions, "card:REM-1", "claims"),
+        FactIn::new("claim:c1", Pred::Fixes, "issue:BUG-1", "claims"),
     ]);
-    assert!(err.unwrap_err().to_string().contains("mentions cannot start at claim:c1"));
+    assert!(err.unwrap_err().to_string().contains("fixes cannot start at claim:c1"));
     assert_eq!(s.head(t).unwrap(), 0, "nothing written");
     let bad = FactIn { p: "relatesTo".into(), ..FactIn::new("claim:c1", Pred::Label, "lit:x", "claims") };
     assert!(s.write(t, &[bad]).is_err());
@@ -105,7 +105,7 @@ fn walking_never_moves_the_data_transaction() {
     let t = s.tenant("a").unwrap();
     let t1 = seed(&s, t);
     for _ in 0..3 {
-        session::walk(&s, t, "question:q1", 10, None, &mentions()).unwrap();
+        session::walk(&s, t, "question:q1", 10, None, None, &mentions()).unwrap();
     }
     assert_eq!(s.head(t).unwrap(), t1);
     assert!(s.head(s.usage_of(t).unwrap()).unwrap() >= 3);
@@ -131,7 +131,7 @@ fn the_agent_steers_by_policy_and_by_name() {
 
 #[test]
 fn the_walk_layer_never_calls_the_model() {
-    for src in [include_str!("../src/walk/session.rs"), include_str!("../src/walk/search.rs")] {
+    for src in [include_str!("../src/walk/session.rs"), include_str!("../src/walk/search.rs"), include_str!("../src/walk/suite.rs"), include_str!("../src/walk/mcp.rs")] {
         assert!(!src.contains("infer"), "walk/ must not reach the model");
     }
 }

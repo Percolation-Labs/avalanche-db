@@ -1,7 +1,7 @@
 //! The README is the acceptance test. Every `console` block runs in order against a fresh
 //! copy of the example, and each command's output must match the block, with only
 //! durations masked. `no-test` blocks are skipped; `needs-key` blocks run only when
-//! AVALANCHE_MODEL_KEY is set. Every other block runs with no key, so the recorded model
+//! AVALANCHE_MODEL_KEY is set; commands in `fails` blocks must exit non-zero. Every other block runs with no key, so the recorded model
 //! answers are what it sees.
 
 use std::path::{Path, PathBuf};
@@ -11,6 +11,7 @@ struct Cmd {
     line: String,
     expected: Vec<String>,
     needs_key: bool,
+    fails: bool,
 }
 
 fn blocks(readme: &str) -> Vec<Cmd> {
@@ -34,7 +35,7 @@ fn blocks(readme: &str) -> Vec<Cmd> {
             continue;
         }
         if let Some(c) = line.strip_prefix("$ ") {
-            out.push(Cmd { line: c.to_string(), expected: vec![], needs_key: flags.iter().any(|f| f == "needs-key") });
+            out.push(Cmd { line: c.to_string(), expected: vec![], needs_key: flags.iter().any(|f| f == "needs-key"), fails: flags.iter().any(|f| f == "fails") });
         } else if let Some(last) = out.last_mut() {
             last.expected.push(line.to_string());
         }
@@ -136,7 +137,7 @@ fn the_readme_story_runs_as_written() {
         }
         let out = cmd.output().unwrap();
         let got = String::from_utf8_lossy(&out.stdout);
-        assert!(out.status.success(), "`{}` failed:\n{}{}", c.line, got, String::from_utf8_lossy(&out.stderr));
+        assert_eq!(out.status.success(), !c.fails, "`{}` exited {}:\n{}{}", c.line, out.status, got, String::from_utf8_lossy(&out.stderr));
         let got: Vec<String> = got.lines().map(mask).collect();
         let want: Vec<String> = c.expected.iter().map(|l| mask(l)).collect();
         assert_eq!(got, want, "\n`{}` printed something other than the README says.\n--- README\n{}\n--- ava\n{}\n", c.line, want.join("\n"), got.join("\n"));

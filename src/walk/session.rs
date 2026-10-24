@@ -31,6 +31,8 @@ pub const DEFAULT_POLICY: &[(Pred, f64)] = &[
     (Pred::Answers, 0.8),
     (Pred::Implements, 0.8),
     (Pred::Fixes, 0.8),
+    (Pred::Challenges, 0.8),
+    (Pred::Supports, 0.7),
     (Pred::Informs, 0.7),
     (Pred::Decides, 0.6),
     (Pred::MergedAs, 0.6),
@@ -83,6 +85,14 @@ impl Frame {
         }
     }
 
+    /// `parent link node`, or the node alone where the walk began.
+    pub fn line(&self) -> String {
+        match &self.parent {
+            Some(p) => format!("{p} {} {}", self.link(), self.node),
+            None => self.node.clone(),
+        }
+    }
+
     fn rescore(&mut self, policy: &Policy) {
         let w = self.pred.as_ref().map(|p| policy.get(p).copied().unwrap_or(0.0)).unwrap_or(1.0);
         self.priority = w * DEPTH_DECAY.powi(self.depth as i32);
@@ -107,9 +117,27 @@ pub struct Session {
     pub visited: Vec<Frame>,
     /// Link kinds walked so far, in the order first used.
     pub kinds: Vec<String>,
+    /// What the steps so far cost: index keys read, and time.
+    #[serde(default)]
+    pub keys_read: u64,
+    #[serde(default)]
+    pub micros: u128,
 }
 
 impl Session {
+    /// What `ava ask` prints: where the walk starts, what it is pinned to, and its token.
+    pub fn started(&self) -> String {
+        format!("session {} at {}, pinned to T{}, budget {}\n  token {}\n", self.id, self.start, self.snapshot, self.budget, self.token())
+    }
+
+    /// Which state a walk saw: `T2`, or `2026-04-10` when pinned to a valid time.
+    pub fn as_of_label(&self) -> String {
+        match self.valid_at {
+            Some(v) => date::show(v)[..10].to_string(),
+            None => format!("T{}", self.snapshot),
+        }
+    }
+
     pub fn token(&self) -> String {
         format!("{}.{}.{}", self.id, self.step, self.snapshot)
     }
@@ -214,6 +242,8 @@ pub fn ask(store: &Store, t: u32, words: &str, budget: usize, as_of: Option<u64>
         frontier: vec![Frame { node: start.clone(), depth: 0, parent: None, pred: None, inbound: false, priority: 1.0, order: 0 }],
         visited: vec![],
         kinds: vec![],
+        keys_read: 0,
+        micros: 0,
     };
     s.prefer(prefer);
     let session = format!("session:{}", s.id);
@@ -310,6 +340,8 @@ pub fn step(store: &Store, t: u32, token: &str, steer: &Steer) -> Result<StepOut
     stats.budget_left = s.budget.saturating_sub(s.opened);
     stats.keys_read = cost.keys_read;
     stats.micros = started.elapsed().as_micros();
+    s.keys_read += stats.keys_read;
+    s.micros += stats.micros;
 
     s.step += 1;
     let step_node = format!("step:{}-{}", s.id, s.step);
@@ -344,7 +376,7 @@ impl fmt::Display for StepOut {
         for n in self.neighbours.iter().take(SHOWN) {
             let arrow = if n.dir == Dir::Out { format!("-{}->", n.pred.name()) } else { format!("<-{}-", n.pred.name()) };
             let (mark, tail) = match (n.opened, n.known, &n.label) {
-                (Some(p), _, Some(l)) => ("+", format!("  \"{}\"  {p:.2}", l.chars().take(60).collect::<String>())),
+                (Some(p), _, Some(l)) => ("+", format!("  \"{}\"  {p:.2}", crate::model::short(l, 60))),
                 (Some(p), _, None) => ("+", format!("  {p:.2}")),
                 (None, true, _) if n.visited => (" ", "  (visited)".to_string()),
                 (None, true, _) => (" ", "  (already open)".to_string()),
@@ -365,8 +397,8 @@ impl fmt::Display for StepOut {
 }
 
 /// Run a whole walk, always taking the best open question, and return the session.
-pub fn walk(store: &Store, t: u32, words: &str, budget: usize, valid_at: Option<i64>, prefer: &[(String, f64)]) -> Result<Session> {
-    let s = ask(store, t, words, budget, None, valid_at, prefer)?;
+pub fn walk(store: &Store, t: u32, words: &str, budget: usize, as_of: Option<u64>, valid_at: Option<i64>, prefer: &[(String, f64)]) -> Result<Session> {
+    let s = ask(store, t, words, budget, as_of, valid_at, prefer)?;
     let mut token = Some(s.token());
     let mut last = s;
     while let Some(tk) = token {
@@ -377,9 +409,17 @@ pub fn walk(store: &Store, t: u32, words: &str, budget: usize, valid_at: Option<
     Ok(last)
 }
 
+/// What a walk reached, one line per record: `parent link node`, with the start alone.
+/// Two walks reached the same answer when these sets match.
+pub fn reached(s: &Session) -> Vec<String> {
+    s.visited.iter().map(Frame::line).collect()
+}
+
 /// The walk as a tree for a person: each node under the one it was reached from, with the
-/// link as it reads from there and the date the node became true.
-pub fn why(store: &Store, s: &Session) -> Result<String> {
+/// link as it reads from there and the date the node became true. Given an earlier walk of
+/// the same question, records it did not reach are marked `+`, and records it reached
+/// that this walk does not are listed after the tree, marked `-`.
+pub fn why(store: &Store, s: &Session, then: Option<&Session>) -> Result<String> {
     let t = s.tenant;
     let mut rows = vec![];
     fn place<'a>(visited: &'a [Frame], node: &str, depth: usize, rows: &mut Vec<(&'a Frame, usize)>) {
@@ -394,16 +434,31 @@ pub fn why(store: &Store, s: &Session) -> Result<String> {
     }
     let heads: Vec<String> = rows.iter().map(|(f, d)| if *d == 0 { f.node.clone() } else { format!("{}{}  {}", "  ".repeat(*d), f.link(), f.node) }).collect();
     let width = heads.iter().map(|h| h.chars().count()).max().unwrap_or(0);
+    let before: Option<HashSet<String>> = then.map(|p| reached(p).into_iter().collect());
     let mut out = String::new();
     for ((f, _), head) in rows.iter().zip(&heads) {
         let id = store.id(t, &f.node)?.unwrap();
         let (label, when) = match label(store, t, id, s.snapshot, s.valid_at, &mut ScanCost::default())? {
-            Some((l, at)) => (format!(" \"{l}\""), date::show(at)[..10].to_string()),
+            Some((l, at)) => (format!(" \"{}\"", crate::model::short(&l, 60)), date::show(at)[..10].to_string()),
             None => (String::new(), String::new()),
         };
-        out += &format!("{head}{}  {when:<10}{label}\n", " ".repeat(width - head.chars().count()));
+        let mark = match &before {
+            None => "",
+            Some(b) if b.contains(&f.line()) => "  ",
+            Some(_) => "+ ",
+        };
+        out += &format!("{mark}{head}{}  {when:<10}{label}\n", " ".repeat(width - head.chars().count()));
     }
     let kinds = s.kinds.len();
-    out += &format!("{} steps, {kinds} link kind{}\n", s.step, if kinds == 1 { "" } else { "s" });
+    out += &format!("{} steps, {kinds} link kind{}; {} keys read in {:.1?}\n", s.step, if kinds == 1 { "" } else { "s" }, s.keys_read, std::time::Duration::from_micros(s.micros as u64));
+    if let Some(then) = then {
+        let now: HashSet<String> = reached(s).into_iter().collect();
+        let gone: Vec<String> = reached(then).into_iter().filter(|r| !now.contains(r)).collect();
+        for g in &gone {
+            out += &format!("- {g}\n");
+        }
+        let added = now.len() - now.iter().filter(|r| before.as_ref().unwrap().contains(*r)).count();
+        out += &format!("against {}: {added} reached since, {} no longer reached\n", then.as_of_label(), gone.len());
+    }
     Ok(out)
 }

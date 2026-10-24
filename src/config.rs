@@ -123,6 +123,13 @@ impl Config {
             }
             sources.push(SourceCfg { adapter: "markdown".into(), path: name.into(), rev: None, dir: None, repo: None });
         }
+        for p in &entries {
+            let is_export = p.extension().is_some_and(|x| x == "json")
+                && std::fs::read_to_string(p).ok().and_then(|t| serde_json::from_str::<serde_json::Value>(&t).ok()).is_some_and(|v| v["packages"].is_array());
+            if is_export {
+                sources.push(SourceCfg { adapter: "percolate".into(), path: p.file_name().unwrap().into(), rev: None, dir: None, repo: None });
+            }
+        }
         Ok(Config { tenant: "me".into(), sources, ids, model: ModelCfg::default() })
     }
 

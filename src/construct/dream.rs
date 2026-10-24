@@ -29,6 +29,10 @@ fn options(s: Kind, o: Kind, target: &str) -> Vec<(String, String)> {
         (Kind::Issue, Kind::Issue) => vec![("duplicates", format!("`record` reports the same problem as {target}"))],
         (Kind::Commit | Kind::Pr, Kind::Issue) => vec![("fixes", format!("`record` is a change that fixes {target}"))],
         (Kind::Commit | Kind::Pr, Kind::Decision | Kind::Card) => vec![("implements", format!("`record` is a change that carries out {target}"))],
+        (Kind::Claim, Kind::Decision | Kind::Card | Kind::Proposal) => vec![
+            ("supports", format!("`record` is a reading that argues for {target}")),
+            ("challenges", format!("`record` is a reading that argues against {target}, or names a cost of it")),
+        ],
         _ => vec![],
     };
     if v.is_empty() {
@@ -39,14 +43,16 @@ fn options(s: Kind, o: Kind, target: &str) -> Vec<(String, String)> {
     v
 }
 
-/// The link types dreaming writes; a mention already turned into one is not asked again.
-const WRITES: &[Pred] = &[Pred::Because, Pred::Rejects, Pred::Adopts, Pred::Decides, Pred::Duplicates, Pred::Fixes, Pred::Implements];
+/// The link types dreaming writes.
+const WRITES: &[Pred] = &[Pred::Because, Pred::Rejects, Pred::Adopts, Pred::Decides, Pred::Duplicates, Pred::Fixes, Pred::Implements, Pred::Supports, Pred::Challenges];
 
 pub struct Decision {
     pub s: String,
     pub o: String,
     pub choice: String,
     pub p: f64,
+    /// The link is already in the store, from an earlier dream.
+    pub written: bool,
 }
 
 #[derive(Default)]
@@ -70,6 +76,8 @@ pub struct Report {
     pub decisions: Vec<Decision>,
     pub tx: Option<u64>,
     pub written: usize,
+    /// Links the model chose that a review has taken back: never written again.
+    pub rejected: Vec<String>,
 }
 
 fn label(store: &Store, t: u32, id: u64, as_of: u64) -> Result<Option<(String, i64)>> {
@@ -81,7 +89,9 @@ fn label(store: &Store, t: u32, id: u64, as_of: u64) -> Result<Option<(String, i
     Ok(None)
 }
 
-/// Every undecided mention, grouped by the source that makes it, in name order.
+/// Every source with a mention not yet turned into a link, with all its mentions: a source
+/// is always asked about everything it names, so its request, and its recording, stays the
+/// same however many of its links are already written.
 pub fn candidates(store: &Store, t: u32) -> Result<BTreeMap<String, (u64, Vec<(String, u64)>)>> {
     let head = store.head(t)?;
     let mut cost = ScanCost::default();
@@ -92,24 +102,34 @@ pub fn candidates(store: &Store, t: u32) -> Result<BTreeMap<String, (u64, Vec<(S
         }
     }
     let mut by_source: BTreeMap<String, (u64, Vec<(String, u64)>)> = BTreeMap::new();
+    let mut open = std::collections::HashSet::new();
     for (s, o, _) in store.by_pred(t, Pred::Mentions, head, &mut cost)? {
-        if typed.contains(&(s, o)) {
-            continue;
-        }
         let (sn, on) = (store.name(t, s)?, store.name(t, o)?);
         if options(Kind::of(&sn).unwrap(), Kind::of(&on).unwrap(), "x").is_empty() {
             continue;
         }
+        if !typed.contains(&(s, o)) {
+            open.insert(s);
+        }
         by_source.entry(sn).or_insert((s, vec![])).1.push((on, o));
     }
+    by_source.retain(|_, (s, _)| open.contains(s));
+    // By name, so a request, and its recording, does not depend on the order things were ingested.
+    by_source.values_mut().for_each(|(_, targets)| targets.sort());
     Ok(by_source)
 }
 
 pub fn dream(store: &Store, t: u32, dir: &Path, cfg: &Config, opts: &Opts) -> Result<Report> {
     let head = store.head(t)?;
     let mut model = Model::open(dir, cfg)?;
-    let mut report = Report { dry_run: opts.dry_run, to_call: 0, estimate: 0.0, mentions: 0, sources: BTreeMap::new(), calls: 0, replayed: 0, cost: 0.0, decisions: vec![], tx: None, written: 0 };
+    let mut report = Report { dry_run: opts.dry_run, to_call: 0, estimate: 0.0, mentions: 0, sources: BTreeMap::new(), calls: 0, replayed: 0, cost: 0.0, decisions: vec![], tx: None, written: 0, rejected: vec![] };
     let mut pending = vec![];
+    let mut links = std::collections::HashSet::new();
+    for p in WRITES {
+        for (s, o, _) in store.by_pred(t, *p, head, &mut ScanCost::default())? {
+            links.insert((store.name(t, s)?, *p, store.name(t, o)?));
+        }
+    }
     for (source, (sid, targets)) in candidates(store, t)? {
         if let Some(since) = opts.since {
             if label(store, t, sid, head)?.is_none_or(|(_, at)| at < since) {
@@ -153,7 +173,8 @@ pub fn dream(store: &Store, t: u32, dir: &Path, cfg: &Config, opts: &Opts) -> Re
                     report.cost += cost;
                 }
                 for ((target, _), a) in targets.iter().zip(answers) {
-                    report.decisions.push(Decision { s: source.clone(), o: target.clone(), choice: a.choice, p: a.p });
+                    let written = Pred::from_name(&a.choice).is_some_and(|p| links.contains(&(source.clone(), p, target.clone())));
+                    report.decisions.push(Decision { s: source.clone(), o: target.clone(), choice: a.choice, p: a.p, written });
                 }
             }
         }
@@ -164,9 +185,15 @@ pub fn dream(store: &Store, t: u32, dir: &Path, cfg: &Config, opts: &Opts) -> Re
     if !pending.is_empty() {
         return Err(format!("{} sources need the model and no key is set ({}); nothing written. Set {} or run `ava key set`.", pending.len(), pending.join(", "), cfg.model.key_env).into());
     }
+    let rejected = crate::construct::review::rejected(store, t)?;
     let mut facts = vec![];
     for d in &report.decisions {
-        if d.choice == ONLY || d.p < ACCEPT {
+        if d.choice == ONLY || d.p < ACCEPT || d.written {
+            continue;
+        }
+        let link = format!("{} {} {}", d.s, d.choice, d.o);
+        if rejected.contains(&link) {
+            report.rejected.push(link);
             continue;
         }
         let sid = store.id(t, &d.s)?.unwrap();

@@ -31,7 +31,7 @@ pub fn search(store: &Store, t: u32, words: &str, as_of: u64, valid_at: Option<i
     let mut docs = vec![];
     for (s, o, _) in store.by_pred(t, Pred::Label, as_of, &mut ScanCost::default())? {
         let node = store.name(t, s)?;
-        if matches!(Kind::of(&node), Some(Kind::Session | Kind::Step) | None) {
+        if matches!(Kind::of(&node), Some(Kind::Session | Kind::Step | Kind::Review) | None) {
             continue;
         }
         if let Some(at) = valid_at {
@@ -73,4 +73,16 @@ pub fn search(store: &Store, t: u32, words: &str, as_of: u64, valid_at: Option<i
     }
     hits.sort_by(|a, b| b.score.total_cmp(&a.score).then(a.node.cmp(&b.node)));
     Ok(hits)
+}
+
+/// The circle as `ava search` prints it: the best five, and how many share a word.
+pub fn show(hits: &[Hit]) -> String {
+    let w = hits.iter().take(5).map(|h| h.node.len()).max().unwrap_or(0);
+    let shown: Vec<String> = hits.iter().take(5).map(|h| format!("\"{}\"", crate::model::short(&h.label, 60))).collect();
+    let lw = shown.iter().map(|l| l.chars().count()).max().unwrap_or(0);
+    let mut out = String::new();
+    for (h, l) in hits.iter().zip(&shown) {
+        out += &format!("  {:<w$}  {:<lw$}  {:.2}\n", h.node, l, h.score);
+    }
+    out + &format!("{} records share a word with the question{}\n", hits.len(), if hits.len() > 5 { "; the best 5 shown" } else { "" })
 }

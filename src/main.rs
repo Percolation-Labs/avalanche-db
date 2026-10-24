@@ -8,8 +8,8 @@ use avalanche::config::{Config, DIR, FILE};
 use avalanche::model::{date, Pred};
 use avalanche::walk::session::{self, Steer};
 use avalanche::store::{Dir, ScanCost, Store};
-use avalanche::construct::{dream, ingest};
-use avalanche::walk::search;
+use avalanche::construct::{dream, ingest, review};
+use avalanche::walk::{mcp, search, suite};
 use avalanche::{infer, Result};
 
 #[derive(Parser)]
@@ -26,8 +26,10 @@ struct Cli {
 enum Cmd {
     /// Write avalanche.toml from what is in this folder, and create the store
     Init,
-    /// Read every configured source into the store, as one transaction
+    /// Read the configured sources into the store, as one transaction
     Ingest {
+        /// Only these sources, by path or repo (all of them when none are named)
+        sources: Vec<String>,
         /// Append a JSON-lines file of typed facts instead
         #[arg(long)]
         facts: Option<PathBuf>,
@@ -77,10 +79,30 @@ enum Cmd {
         #[arg(long, default_value_t = 20)]
         budget: usize,
         #[arg(long)]
+        as_of: Option<u64>,
+        #[arg(long)]
         valid_at: Option<String>,
         #[arg(long, value_delimiter = ',')]
         prefer: Vec<String>,
+        /// Mark what changed against an earlier state: a transaction (T2) or a date
+        #[arg(long)]
+        changed_since: Option<String>,
     },
+    /// Take a link back, with the reason; the rejection is kept as a fact
+    Retract {
+        s: String,
+        pred: String,
+        o: String,
+        #[arg(long)]
+        because: String,
+    },
+    /// Keep questions with what they reach, and walk them again to see what changed
+    Suite {
+        #[command(subcommand)]
+        action: SuiteCmd,
+    },
+    /// Serve the session API to an agent over MCP, on stdin and stdout
+    Mcp,
     /// A node's links, as of a transaction and optionally valid on a date
     Edges {
         node: String,
@@ -95,6 +117,22 @@ enum Cmd {
     Log { tx: Option<u64> },
     /// How the memory has been walked, read from the usage graph
     Usage,
+}
+
+#[derive(Subcommand)]
+enum SuiteCmd {
+    /// Keep a question with what its walk reaches now
+    Add {
+        words: Vec<String>,
+        #[arg(long, default_value_t = 20)]
+        budget: usize,
+        #[arg(long)]
+        valid_at: Option<String>,
+        #[arg(long, value_delimiter = ',')]
+        prefer: Vec<String>,
+    },
+    /// Walk every kept question again; fails if any answer changed
+    Run,
 }
 
 #[derive(Subcommand)]
@@ -113,8 +151,7 @@ fn main() {
 }
 
 fn day(d: Option<String>) -> Result<Option<i64>> {
-    // A date means the whole day: valid at its last second.
-    d.map(|d| date::parse(&d).map(|t| if d.len() == 10 { t + 86399 } else { t }).ok_or_else(|| format!("{d}: not a date").into())).transpose()
+    d.map(|d| date::through(&d).ok_or_else(|| format!("{d}: not a date").into())).transpose()
 }
 
 fn open(dir: &Path) -> Result<(Config, Store, u32)> {
@@ -142,30 +179,41 @@ fn run(cli: Cli) -> Result<()> {
             let ids: Vec<String> = cfg.ids.iter().map(|(k, v)| format!("{k} {v}")).collect();
             println!("  ids: {}", if ids.is_empty() { "none found".into() } else { ids.join(", ") });
         }
-        Cmd::Ingest { facts } => {
+        Cmd::Ingest { sources, facts } => {
+            let started = std::time::Instant::now();
             let (cfg, store, t) = open(dir)?;
             let mut all = vec![];
             if let Some(f) = facts {
                 all = ingest::json_lines(&f)?;
                 println!("facts     {}  →  {} facts", f.display(), all.len());
             } else {
-                for src in &cfg.sources {
-                    let at = if src.adapter == "github" { src.repo.clone().unwrap_or_default() } else { src.path.display().to_string() };
+                let at_of = |src: &avalanche::config::SourceCfg| if src.adapter == "github" { src.repo.clone().unwrap_or_default() } else { src.path.display().to_string() };
+                if let Some(missing) = sources.iter().find(|n| !cfg.sources.iter().any(|s| at_of(s) == **n)) {
+                    return Err(format!("{missing}: not a source in {FILE}").into());
+                }
+                for src in cfg.sources.iter().filter(|s| sources.is_empty() || sources.contains(&at_of(s))) {
+                    let at = at_of(src);
                     let got = match src.adapter.as_str() {
                         "git" => ingest::git_history(&dir.join(&src.path), src.rev.as_deref().unwrap_or("HEAD"), &at, &cfg)?,
                         "markdown" => match &src.rev {
                             Some(rev) => ingest::markdown_at(&dir.join(&src.path), rev, src.dir.as_deref().unwrap_or("."), &at, &cfg)?,
                             None => ingest::markdown(&dir.join(&src.path), &at, &cfg)?,
                         },
+                        "percolate" => ingest::percolate(&dir.join(&src.path), &at, &cfg)?,
                         "github" => ingest::github(src.repo.as_deref().ok_or("a github source needs repo = \"owner/name\"")?, &cfg)?,
                         other => return Err(format!("{other}: no such adapter").into()),
                     };
-                    println!("{:<9} {:<8} {} {:<8} →  {} facts", src.adapter, at, got.read.0, got.read.1, got.facts.len());
+                    println!("{:<9} {:<14} {} {:<8} →  {} facts", src.adapter, at, got.read.0, got.read.1, got.facts.len());
                     all.extend(got.facts);
+                }
+                let (n, facts) = review::facts(dir)?;
+                if n > 0 {
+                    println!("{:<9} {:<14} {} {:<8} →  {} facts", "reviews", format!("{DIR}/{}", review::FILE).trim_start_matches(".avalanche/"), n, if n == 1 { "review" } else { "reviews" }, facts.len());
+                    all.extend(facts);
                 }
             }
             let tx = store.write(t, &all)?;
-            println!("T{tx}: {} facts", all.len());
+            println!("T{tx}: {} facts in {:.1?}", all.len(), started.elapsed());
         }
         Cmd::Key { action: KeyCmd::Set } => {
             let mut k = String::new();
@@ -193,9 +241,12 @@ fn run(cli: Cli) -> Result<()> {
             let ow = r.decisions.iter().map(|d| d.o.len()).max().unwrap_or(0);
             let mut only = vec![];
             let mut undecided = vec![];
-            for d in &r.decisions {
+            let already = r.decisions.iter().filter(|d| d.written).count();
+            for d in r.decisions.iter().filter(|d| !d.written) {
                 if d.choice == "only_mentions" {
                     only.push(format!("{} → {}", d.s, d.o));
+                } else if r.rejected.contains(&format!("{} {} {}", d.s, d.choice, d.o)) {
+                    continue;
                 } else if d.p < dream::ACCEPT {
                     undecided.push(format!("{} {} {} ({:.2})", d.s, d.choice, d.o, d.p));
                 } else {
@@ -204,6 +255,12 @@ fn run(cli: Cli) -> Result<()> {
             }
             println!("  only mentions: {}", if only.is_empty() { "none".into() } else { only.join(", ") });
             println!("  undecided (p < {}): {}", dream::ACCEPT, if undecided.is_empty() { "none".into() } else { undecided.join(", ") });
+            if already > 0 {
+                println!("  already linked: {already}");
+            }
+            if !r.rejected.is_empty() {
+                println!("  rejected in review, not written: {}", r.rejected.join(", "));
+            }
             match r.tx {
                 Some(tx) => println!("T{tx}: {} facts", r.written),
                 None => println!("nothing new to write"),
@@ -212,28 +269,61 @@ fn run(cli: Cli) -> Result<()> {
         Cmd::Search { words } => {
             let (_, store, t) = open(dir)?;
             let head = store.head(t)?;
-            let hits = search::search(&store, t, &words.join(" "), head, None)?;
-            let w = hits.iter().map(|h| h.node.len()).max().unwrap_or(0);
-            let lw = hits.iter().map(|h| h.label.len()).max().unwrap_or(0) + 2;
-            for h in hits.iter().take(5) {
-                println!("  {:<w$}  {:<lw$}  {:.2}", h.node, format!("\"{}\"", h.label), h.score);
-            }
-            println!("{} records share a word with the question{}", hits.len(), if hits.len() > 5 { "; the best 5 shown" } else { "" });
+            print!("{}", search::show(&search::search(&store, t, &words.join(" "), head, None)?));
         }
         Cmd::Ask { words, budget, as_of, valid_at, prefer } => {
             let (_, store, t) = open(dir)?;
             let s = session::ask(&store, t, &words.join(" "), budget, as_of, day(valid_at)?, &session::parse_prefer(&prefer)?)?;
-            println!("session {} at {}, pinned to T{}, budget {}\n  token {}", s.id, s.start, s.snapshot, s.budget, s.token());
+            print!("{}", s.started());
         }
         Cmd::Step { token, take, prefer } => {
             let (_, store, t) = open(dir)?;
             print!("{}", session::step(&store, t, &token, &Steer { prefer: session::parse_prefer(&prefer)?, take })?);
         }
-        Cmd::Why { words, budget, valid_at, prefer } => {
+        Cmd::Why { words, budget, as_of, valid_at, prefer, changed_since } => {
             let (_, store, t) = open(dir)?;
-            let s = session::walk(&store, t, &words.join(" "), budget, day(valid_at)?, &session::parse_prefer(&prefer)?)?;
-            print!("{}", session::why(&store, &s)?);
+            let (q, prefer) = (words.join(" "), session::parse_prefer(&prefer)?);
+            let then = match changed_since {
+                Some(c) => Some(match c.strip_prefix('T').and_then(|n| n.parse::<u64>().ok()) {
+                    Some(tx) => session::walk(&store, t, &q, budget, Some(tx), None, &prefer)?,
+                    None => session::walk(&store, t, &q, budget, as_of, day(Some(c))?, &prefer)?,
+                }),
+                None => None,
+            };
+            let s = session::walk(&store, t, &q, budget, as_of, day(valid_at)?, &prefer)?;
+            print!("{}", session::why(&store, &s, then.as_ref())?);
         }
+        Cmd::Retract { s, pred, o, because } => {
+            let (_, store, t) = open(dir)?;
+            let p = Pred::from_name(&pred).ok_or(format!("{pred}: not a link type"))?;
+            let (tx, r) = review::retract(&store, t, dir, &s, p, &o, &because)?;
+            println!("T{tx}: retracted {}, kept as {}", r.link(), r.review);
+        }
+        Cmd::Suite { action: SuiteCmd::Add { words, budget, valid_at, prefer } } => {
+            let (_, store, t) = open(dir)?;
+            let e = suite::add(&store, t, dir, &words.join(" "), budget, valid_at, prefer)?;
+            let n = suite::read(dir)?.len();
+            println!("kept: {} records reached; {n} question{} in {DIR}/{}", e.reached.len(), if n == 1 { "" } else { "s" }, suite::FILE);
+        }
+        Cmd::Suite { action: SuiteCmd::Run } => {
+            let (_, store, t) = open(dir)?;
+            let outcomes = suite::run(&store, t, dir)?;
+            let changed = outcomes.iter().filter(|o| !o.gone.is_empty() || !o.new.is_empty()).count();
+            for o in &outcomes {
+                println!("{}  {}", if o.gone.is_empty() && o.new.is_empty() { "same   " } else { "changed" }, o.question);
+                for g in &o.gone {
+                    println!("  - {g}");
+                }
+                for n in &o.new {
+                    println!("  + {n}");
+                }
+            }
+            println!("{} of {} questions reach what they reached when kept", outcomes.len() - changed, outcomes.len());
+            if changed > 0 {
+                return Err(format!("{changed} of {} answers changed: review them, and keep a new answer with `ava suite add`", outcomes.len()).into());
+            }
+        }
+        Cmd::Mcp => mcp::serve(dir)?,
         Cmd::Edges { node, as_of, valid_at, r#in } => {
             let (_, store, t) = open(dir)?;
             let head = store.head(t)?;
