@@ -27,8 +27,8 @@ pub struct Ingested {
 /// A repository's history: commits, parents, author, files touched, and every id a commit
 /// message names. Valid time is the author time. `at` is the source path as configured,
 /// which pointers carry so `dream` can read the message back.
-pub fn git_history(repo: &Path, at: &str, cfg: &Config) -> Result<Ingested> {
-    let out = git(repo, &["log", "HEAD", "--name-only", "--format=%x1e%H%x1f%P%x1f%an%x1f%at%x1f%s"])?;
+pub fn git_history(repo: &Path, rev: &str, at: &str, cfg: &Config) -> Result<Ingested> {
+    let out = git(repo, &["log", rev, "--name-only", "--format=%x1e%H%x1f%P%x1f%an%x1f%at%x1f%s"])?;
     let mut facts = vec![];
     let mut commits = 0;
     for rec in out.split('\x1e').filter(|r| !r.trim().is_empty()) {
@@ -67,13 +67,17 @@ pub struct Note {
 }
 
 pub fn read_note(path: &Path) -> Result<Note> {
-    let text = std::fs::read_to_string(path)?;
+    Ok(parse_note(path, &std::fs::read_to_string(path)?))
+}
+
+fn parse_note(path: &Path, text: &str) -> Note {
+    let text = text.to_string();
     let (front, body) = match text.strip_prefix("---\n").and_then(|r| r.split_once("\n---\n")) {
         Some((f, b)) => (f, b.to_string()),
         None => ("", text.clone()),
     };
     let field = |k: &str| front.lines().find_map(|l| l.strip_prefix(&format!("{k}:")).map(|v| v.trim().to_string()));
-    Ok(Note { path: path.to_path_buf(), id: field("id"), kind: field("kind"), title: field("title"), date: field("date").and_then(|d| date::parse(&d)), body })
+    Note { path: path.to_path_buf(), id: field("id"), kind: field("kind"), title: field("title"), date: field("date").or_else(|| field("created")).and_then(|d| date::parse(&d)), body }
 }
 
 /// The notes directly in a folder, by file name.
@@ -98,15 +102,44 @@ fn paths_in(text: &str) -> Vec<String> {
 /// a mention of every other id and every path it names.
 pub fn markdown(dir: &Path, at: &str, cfg: &Config) -> Result<Ingested> {
     let notes = notes_in(dir)?;
+    let pointers = notes.iter().map(|n| format!("md:{at}/{}", n.path.file_name().unwrap().to_string_lossy())).collect();
+    note_facts(&notes, pointers, cfg)
+}
+
+/// Notes from a folder inside a git repository at a revision, so a stale working tree
+/// does not matter: `git cat-file --batch` reads them all in one process.
+pub fn markdown_at(repo: &Path, rev: &str, sub: &str, at: &str, cfg: &Config) -> Result<Ingested> {
+    use std::io::{BufRead, Read, Write as _};
+    let paths: Vec<String> = git(repo, &["ls-tree", "-r", "--name-only", rev, &format!("{}/", sub.trim_end_matches('/'))])?.lines().filter(|l| l.ends_with(".md")).map(String::from).collect();
+    let mut child = Command::new("git").arg("-C").arg(repo).args(["cat-file", "--batch"]).stdin(std::process::Stdio::piped()).stdout(std::process::Stdio::piped()).spawn()?;
+    let wanted: String = paths.iter().map(|p| format!("{rev}:{p}\n")).collect();
+    let mut stdin = child.stdin.take().unwrap();
+    let writer = std::thread::spawn(move || stdin.write_all(wanted.as_bytes()));
+    let mut reader = std::io::BufReader::new(child.stdout.take().unwrap());
+    let mut notes = vec![];
+    for p in &paths {
+        let mut header = String::new();
+        reader.read_line(&mut header)?;
+        let size: usize = header.split_whitespace().nth(2).and_then(|s| s.parse().ok()).unwrap_or(0);
+        let mut buf = vec![0u8; size + 1];
+        reader.read_exact(&mut buf)?;
+        notes.push(parse_note(Path::new(p), &String::from_utf8_lossy(&buf[..size])));
+    }
+    writer.join().map_err(|_| "git cat-file writer")??;
+    child.wait()?;
+    let pointers = paths.iter().map(|p| format!("mdgit:{at}@{rev}:{p}")).collect();
+    note_facts(&notes, pointers, cfg)
+}
+
+fn note_facts(notes: &[Note], pointers: Vec<String>, cfg: &Config) -> Result<Ingested> {
     let mut facts = vec![];
     let mut read = 0;
-    for n in &notes {
+    for (n, pointer) in notes.iter().zip(pointers) {
         let Some(node) = n.id.as_deref().and_then(|id| cfg.node_for_id(id)) else { continue };
         read += 1;
         let t = n.date.unwrap_or(0);
-        let file = n.path.file_name().unwrap().to_string_lossy();
         facts.push(FactIn::new(&node, Pred::Label, lit(n.title.as_deref().unwrap_or(&node)), "notes").at(t));
-        facts.push(FactIn::new(&node, Pred::Pointer, lit(&format!("md:{at}/{file}")), "notes").at(t));
+        facts.push(FactIn::new(&node, Pred::Pointer, lit(&pointer), "notes").at(t));
         for other in cfg.ids_in(&n.body).into_iter().filter(|o| *o != node) {
             facts.push(FactIn::new(&node, Pred::Mentions, other, "notes").at(t));
         }
@@ -115,6 +148,36 @@ pub fn markdown(dir: &Path, at: &str, cfg: &Config) -> Result<Ingested> {
         }
     }
     Ok(Ingested { facts, read: (read, "notes") })
+}
+
+/// Merged pull requests: title, where they live, the commit they merged as, and every id
+/// the title, body or branch names. Valid time is the merge time. Needs `gh`.
+pub fn github(slug: &str, cfg: &Config) -> Result<Ingested> {
+    let out = Command::new("gh")
+        .args(["pr", "list", "--repo", slug, "--state", "merged", "--limit", "5000", "--json", "number,title,body,headRefName,mergeCommit,mergedAt"])
+        .output()?;
+    if !out.status.success() {
+        return Err(format!("gh pr list {slug}: {}", String::from_utf8_lossy(&out.stderr)).into());
+    }
+    let prs: Vec<serde_json::Value> = serde_json::from_slice(&out.stdout)?;
+    let name = slug.rsplit('/').next().unwrap_or(slug);
+    let mut facts = vec![];
+    for pr in &prs {
+        let n = pr["number"].as_u64().unwrap_or(0);
+        let node = format!("pr:{name}#{n}");
+        let t = pr["mergedAt"].as_str().and_then(date::parse).unwrap_or(0);
+        let title = pr["title"].as_str().unwrap_or_default();
+        facts.push(FactIn::new(&node, Pred::Label, lit(title), "github").at(t));
+        facts.push(FactIn::new(&node, Pred::Pointer, lit(&format!("gh:{slug}#{n}")), "github").at(t));
+        if let Some(oid) = pr["mergeCommit"]["oid"].as_str() {
+            facts.push(FactIn::new(&node, Pred::MergedAs, format!("commit:{}", &oid[..10]), "github").at(t));
+        }
+        let text = format!("{title}\n{}\n{}", pr["headRefName"].as_str().unwrap_or_default(), pr["body"].as_str().unwrap_or_default());
+        for id in cfg.ids_in(&text) {
+            facts.push(FactIn::new(&node, Pred::Mentions, id, "github").at(t));
+        }
+    }
+    Ok(Ingested { facts, read: (prs.len(), "PRs") })
 }
 
 /// JSON lines of facts by name, as an agent or another adapter writes them.
@@ -142,6 +205,15 @@ pub fn evidence(dir: &Path, pointer: &str) -> Result<String> {
     if let Some(rest) = pointer.strip_prefix("md:") {
         return Ok(read_note(&dir.join(rest))?.body);
     }
+    if let Some(rest) = pointer.strip_prefix("mdgit:") {
+        let (repo, spec) = rest.split_once('@').ok_or("bad mdgit pointer")?;
+        return Ok(parse_note(Path::new(spec), &git(&dir.join(repo), &["show", spec])?).body.chars().take(EVIDENCE_CHARS).collect());
+    }
+    if let Some(rest) = pointer.strip_prefix("gh:") {
+        let (slug, n) = rest.split_once('#').ok_or("bad gh pointer")?;
+        let out = Command::new("gh").args(["pr", "view", n, "--repo", slug, "--json", "title,body,files", "--jq", ".title + \"\\n\\n\" + .body + \"\\n\\nfiles: \" + ([.files[].path] | join(\", \"))"]).output()?;
+        return Ok(String::from_utf8_lossy(&out.stdout).chars().take(EVIDENCE_CHARS).collect());
+    }
     Err(format!("no reader for pointer {pointer}").into())
 }
 
@@ -153,6 +225,7 @@ mod tests {
     fn ids_follow_the_table() {
         let cfg: Config = toml::from_str("tenant = \"t\"\n[ids]\nADR = \"decision\"\nBUG = \"issue\"\n").unwrap();
         assert_eq!(cfg.ids_in("Fix BUG-12 per ADR-007 (BUG-12 again), XYZ-3, BUG-, ADR-7a"), vec!["issue:BUG-12", "decision:ADR-007"]);
+        assert_eq!(cfg.ids_in("branch amartey/bug-3-export-fix"), vec!["issue:BUG-3"]);
     }
 
     #[test]

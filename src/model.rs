@@ -103,7 +103,7 @@ preds! {
     Visited = 15, "visited", &[Step], THINGS;
     Returned = 16, "returned", &[Step], &[Lit];
     Via = 17, "via", &[Step], &[Lit];
-    Because = 20, "because", &[Decision], &[Issue];
+    Because = 20, "because", &[Decision, Card], &[Issue, Card];
     Rejects = 21, "rejects", &[Decision], &[Proposal];
     Adopts = 22, "adopts", &[Decision], &[Proposal];
     Decides = 23, "decides", &[Decision], &[File];

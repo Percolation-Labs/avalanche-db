@@ -38,7 +38,14 @@ enum Cmd {
         action: KeyCmd,
     },
     /// Turn mentions into typed links with the decision model
-    Dream,
+    Dream {
+        /// Say what it would ask and cost, and ask nothing
+        #[arg(long)]
+        dry_run: bool,
+        /// Only sources dated on or after this day
+        #[arg(long)]
+        since: Option<String>,
+    },
     /// The circle: records whose labels share words with the question
     Search { words: Vec<String> },
     /// Start a walk at the record these words best match
@@ -143,10 +150,14 @@ fn run(cli: Cli) -> Result<()> {
                 println!("facts     {}  →  {} facts", f.display(), all.len());
             } else {
                 for src in &cfg.sources {
-                    let at = src.path.display().to_string();
+                    let at = if src.adapter == "github" { src.repo.clone().unwrap_or_default() } else { src.path.display().to_string() };
                     let got = match src.adapter.as_str() {
-                        "git" => ingest::git_history(&dir.join(&src.path), &at, &cfg)?,
-                        "markdown" => ingest::markdown(&dir.join(&src.path), &at, &cfg)?,
+                        "git" => ingest::git_history(&dir.join(&src.path), src.rev.as_deref().unwrap_or("HEAD"), &at, &cfg)?,
+                        "markdown" => match &src.rev {
+                            Some(rev) => ingest::markdown_at(&dir.join(&src.path), rev, src.dir.as_deref().unwrap_or("."), &at, &cfg)?,
+                            None => ingest::markdown(&dir.join(&src.path), &at, &cfg)?,
+                        },
+                        "github" => ingest::github(src.repo.as_deref().ok_or("a github source needs repo = \"owner/name\"")?, &cfg)?,
                         other => return Err(format!("{other}: no such adapter").into()),
                     };
                     println!("{:<9} {:<8} {} {:<8} →  {} facts", src.adapter, at, got.read.0, got.read.1, got.facts.len());
@@ -165,12 +176,19 @@ fn run(cli: Cli) -> Result<()> {
             let cfg = Config::load(dir)?;
             println!("{}: key accepted", infer::check_key(&cfg)?);
         }
-        Cmd::Dream => {
+        Cmd::Dream { dry_run, since } => {
             let (cfg, store, t) = open(dir)?;
-            let r = dream::dream(&store, t, dir, &cfg)?;
+            let since = since.map(|d| date::parse(&d).ok_or(format!("{d}: not a date"))).transpose()?;
+            let r = dream::dream(&store, t, dir, &cfg, &dream::Opts { dry_run, since })?;
+            if r.dry_run {
+                let srcs: Vec<String> = r.sources.iter().map(|(k, n)| format!("{n} {}{}", format!("{k:?}").to_lowercase(), if *n == 1 { "" } else { "s" })).collect();
+                println!("{} mentions to decide, from {}", r.mentions, srcs.join(", "));
+                println!("{} calls not yet recorded, about ${:.4} at {}; nothing asked", r.to_call, r.estimate, cfg.model.model);
+                return Ok(());
+            }
             let srcs: Vec<String> = r.sources.iter().map(|(k, n)| format!("{n} {}{}", format!("{k:?}").to_lowercase(), if *n == 1 { "" } else { "s" })).collect();
             println!("{} mentions to decide, from {}", r.mentions, srcs.join(", "));
-            println!("asked {} questions in {} calls ({} replayed, {} called), ${:.4}", r.mentions, r.calls, r.replayed, r.calls - r.replayed, r.cost);
+            println!("asked {} questions in {} calls ({} replayed, {} called), ${:.4} billed", r.mentions, r.calls, r.replayed, r.calls - r.replayed, r.cost);
             let w = r.decisions.iter().map(|d| d.s.len()).max().unwrap_or(0);
             let ow = r.decisions.iter().map(|d| d.o.len()).max().unwrap_or(0);
             let mut only = vec![];

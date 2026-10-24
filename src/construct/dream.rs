@@ -24,6 +24,7 @@ fn options(s: Kind, o: Kind, target: &str) -> Vec<(String, String)> {
             ("rejects", format!("`record` decides against {target}")),
             ("adopts", format!("`record` decides to adopt {target}")),
         ],
+        (Kind::Card, Kind::Card) => vec![("because", format!("`record` gives {target} as a reason for what it decides or asks"))],
         (Kind::Decision, Kind::File) => vec![("decides", format!("`record` decides how {target} must work"))],
         (Kind::Issue, Kind::Issue) => vec![("duplicates", format!("`record` reports the same problem as {target}"))],
         (Kind::Commit | Kind::Pr, Kind::Issue) => vec![("fixes", format!("`record` is a change that fixes {target}"))],
@@ -48,7 +49,19 @@ pub struct Decision {
     pub p: f64,
 }
 
+#[derive(Default)]
+pub struct Opts {
+    /// Say what it would ask and what it would cost, and ask nothing.
+    pub dry_run: bool,
+    /// Only sources that became true on or after this time.
+    pub since: Option<i64>,
+}
+
 pub struct Report {
+    pub dry_run: bool,
+    /// Calls not yet recorded, and what they would cost.
+    pub to_call: usize,
+    pub estimate: f64,
     pub mentions: usize,
     pub sources: BTreeMap<Kind, usize>,
     pub calls: usize,
@@ -92,12 +105,17 @@ pub fn candidates(store: &Store, t: u32) -> Result<BTreeMap<String, (u64, Vec<(S
     Ok(by_source)
 }
 
-pub fn dream(store: &Store, t: u32, dir: &Path, cfg: &Config) -> Result<Report> {
+pub fn dream(store: &Store, t: u32, dir: &Path, cfg: &Config, opts: &Opts) -> Result<Report> {
     let head = store.head(t)?;
     let mut model = Model::open(dir, cfg)?;
-    let mut report = Report { mentions: 0, sources: BTreeMap::new(), calls: 0, replayed: 0, cost: 0.0, decisions: vec![], tx: None, written: 0 };
+    let mut report = Report { dry_run: opts.dry_run, to_call: 0, estimate: 0.0, mentions: 0, sources: BTreeMap::new(), calls: 0, replayed: 0, cost: 0.0, decisions: vec![], tx: None, written: 0 };
     let mut pending = vec![];
     for (source, (sid, targets)) in candidates(store, t)? {
+        if let Some(since) = opts.since {
+            if label(store, t, sid, head)?.is_none_or(|(_, at)| at < since) {
+                continue;
+            }
+        }
         let pointer = store
             .edges(t, sid, Dir::Out, head, None, &mut ScanCost::default())?
             .into_iter()
@@ -118,17 +136,30 @@ pub fn dream(store: &Store, t: u32, dir: &Path, cfg: &Config) -> Result<Report> 
             questions.push(Choice { instructions: format!("`record` names {shown}. What is `record`'s link to it?"), options: options(sk, Kind::of(target).unwrap(), &shown) });
         }
         report.mentions += questions.len();
+        if opts.dry_run {
+            let (recorded, dollars) = model.estimate(&evidence, &questions);
+            if !recorded {
+                report.to_call += 1;
+                report.estimate += dollars;
+            }
+            continue;
+        }
         match model.ask(&evidence, &questions)? {
             Outcome::NeedsKey => pending.push(source.clone()),
             Outcome::Answered { answers, replayed, cost } => {
                 report.calls += 1;
                 report.replayed += replayed as usize;
-                report.cost += cost;
+                if !replayed {
+                    report.cost += cost;
+                }
                 for ((target, _), a) in targets.iter().zip(answers) {
                     report.decisions.push(Decision { s: source.clone(), o: target.clone(), choice: a.choice, p: a.p });
                 }
             }
         }
+    }
+    if opts.dry_run {
+        return Ok(report);
     }
     if !pending.is_empty() {
         return Err(format!("{} sources need the model and no key is set ({}); nothing written. Set {} or run `ava key set`.", pending.len(), pending.join(", "), cfg.model.key_env).into());

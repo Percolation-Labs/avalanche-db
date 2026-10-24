@@ -93,8 +93,7 @@ impl Model {
         Ok(Model { model: cfg.model.model.clone(), key: key(cfg), path, recorded })
     }
 
-    /// Ask every question about one state in one request: the state is paid for once.
-    pub fn ask(&mut self, state: &str, questions: &[Choice]) -> Result<Outcome> {
+    fn request(&self, state: &str, questions: &[Choice]) -> (Value, String) {
         let qs: serde_json::Map<String, Value> = questions
             .iter()
             .enumerate()
@@ -105,6 +104,20 @@ impl Model {
             .collect();
         let request = json!({"model": self.model, "state": {"record": state}, "questions": qs});
         let h: String = Sha256::digest(request.to_string().as_bytes()).iter().map(|b| format!("{b:02x}")).collect();
+        (request, h)
+    }
+
+    /// What one request would cost before it is sent: (recorded already, estimated dollars).
+    /// Input tokens are estimated at three characters each: on the percolate history four
+    /// under-counted by a third ($0.086 estimated, $0.125 billed).
+    pub fn estimate(&self, state: &str, questions: &[Choice]) -> (bool, f64) {
+        let (request, h) = self.request(state, questions);
+        (self.recorded.contains_key(&h), request.to_string().len() as f64 / 3.0 * PRICE)
+    }
+
+    /// Ask every question about one state in one request: the state is paid for once.
+    pub fn ask(&mut self, state: &str, questions: &[Choice]) -> Result<Outcome> {
+        let (request, h) = self.request(state, questions);
         let (response, replayed) = match self.recorded.get(&h) {
             Some(v) => (v["response"].clone(), true),
             None => {

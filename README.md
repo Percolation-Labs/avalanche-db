@@ -113,7 +113,7 @@ machine.
 ```console
 $ ava dream
 9 mentions to decide, from 3 commits, 1 decision, 1 issue
-asked 9 questions in 5 calls (5 replayed, 0 called), $0.0001
+asked 9 questions in 5 calls (5 replayed, 0 called), $0.0000 billed
   commit:cc746808d1  implements  decision:ADR-007           0.99
   commit:cc746808d1  fixes       issue:BUG-12               0.95
   commit:f1817a41ef  fixes       issue:BUG-3                0.98
@@ -265,6 +265,37 @@ T2  2026-10-24 11:39Z  7 facts
 Every step of every walk, and every `--take` and `--prefer`, is logged, so usage is
 something you query. The usage log is kept apart from the data's own log: after four walks
 the data is still at T2, so a transaction number always names a state of the data.
+
+## Your own history
+
+The same commands run on real work. This is the configuration used on Percolate's own
+history (REM-1185): board cards read from a git revision, two repositories, and their merged
+pull requests, whose titles, bodies and branch names say which card they carry out.
+
+```toml
+tenant = "percolate"
+
+[[source]]
+adapter = "markdown"
+path = "/Users/sirsh/code/p8-subsystems"
+rev = "origin/main"            # read at a revision, so a stale checkout does not matter
+dir = "board/cards"
+
+[[source]]
+adapter = "git"
+path = "/Users/sirsh/code/percolate"
+rev = "origin/main"
+
+[[source]]
+adapter = "github"             # merged PRs, through `gh`
+repo = "Percolation-Labs/percolate"
+
+[ids]
+REM = "card"
+```
+
+`ava dream --dry-run` says what a dream would ask and roughly what it would cost before
+anything is sent, and `--since` limits it to recent sources.
 
 ## Phase two
 

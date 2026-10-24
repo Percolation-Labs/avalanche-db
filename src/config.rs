@@ -26,7 +26,18 @@ pub struct Config {
 #[derive(Clone, Debug, Serialize, Deserialize)]
 pub struct SourceCfg {
     pub adapter: String,
+    /// A folder, or a git repository for `git` and for `markdown` read at a revision.
+    #[serde(default)]
     pub path: PathBuf,
+    /// Read a git source at this revision instead of the working tree (`origin/main`).
+    #[serde(default)]
+    pub rev: Option<String>,
+    /// For `markdown` at a revision: the folder inside the repository.
+    #[serde(default)]
+    pub dir: Option<String>,
+    /// For `github`: owner/name.
+    #[serde(default)]
+    pub repo: Option<String>,
 }
 
 #[derive(Clone, Debug, Serialize, Deserialize)]
@@ -64,12 +75,16 @@ impl Config {
     }
 
     /// Every `PREFIX-123` in a text whose prefix the table knows, in order, once each.
+    /// Branch names write ids in lower case (`amartey/rem-1160-…`), so case is ignored.
     pub fn ids_in(&self, text: &str) -> Vec<String> {
         let mut out = vec![];
-        for word in text.split(|c: char| !(c.is_ascii_alphanumeric() || c == '-')) {
-            if let Some(node) = self.node_for_id(word.trim_matches('-')) {
-                if !out.contains(&node) {
-                    out.push(node);
+        let upper = text.to_uppercase();
+        for word in upper.split(|c: char| !(c.is_ascii_alphanumeric() || c == '-')) {
+            for part in id_parts(word) {
+                if let Some(node) = self.node_for_id(part) {
+                    if !out.contains(&node) {
+                        out.push(node);
+                    }
                 }
             }
         }
@@ -84,7 +99,7 @@ impl Config {
         let mut entries: Vec<PathBuf> = std::fs::read_dir(dir)?.filter_map(|e| e.ok().map(|e| e.path())).collect();
         entries.sort();
         if dir.join(".git").exists() {
-            sources.push(SourceCfg { adapter: "git".into(), path: ".".into() });
+            sources.push(SourceCfg { adapter: "git".into(), path: ".".into(), rev: None, dir: None, repo: None });
         }
         for p in &entries {
             let name = p.file_name().unwrap().to_string_lossy().into_owned();
@@ -92,7 +107,7 @@ impl Config {
                 continue;
             }
             if p.join(".git").exists() {
-                sources.push(SourceCfg { adapter: "git".into(), path: name.clone().into() });
+                sources.push(SourceCfg { adapter: "git".into(), path: name.clone().into(), rev: None, dir: None, repo: None });
                 continue;
             }
             let notes = crate::construct::ingest::notes_in(p)?;
@@ -106,7 +121,7 @@ impl Config {
                     }
                 }
             }
-            sources.push(SourceCfg { adapter: "markdown".into(), path: name.into() });
+            sources.push(SourceCfg { adapter: "markdown".into(), path: name.into(), rev: None, dir: None, repo: None });
         }
         Ok(Config { tenant: "me".into(), sources, ids, model: ModelCfg::default() })
     }
@@ -123,4 +138,24 @@ impl Config {
         s += &format!("\n[model]\nprovider = \"{}\"\nmodel = \"{}\"\nkey_env = \"{}\"\n", self.model.provider, self.model.model, self.model.key_env);
         s
     }
+}
+
+/// The `PREFIX-123` ids inside one hyphenated word: `REM-1160-DRY-RUN` holds `REM-1160`.
+fn id_parts(word: &str) -> Vec<&str> {
+    let mut out = vec![];
+    let bytes = word.as_bytes();
+    let mut start = 0;
+    for (i, b) in bytes.iter().enumerate() {
+        if *b == b'-' && i > start && bytes[start..i].iter().all(|c| c.is_ascii_uppercase()) {
+            let digits = bytes[i + 1..].iter().take_while(|c| c.is_ascii_digit()).count();
+            let end = i + 1 + digits;
+            if digits > 0 && (end == bytes.len() || bytes[end] == b'-') {
+                out.push(&word[start..end]);
+            }
+        }
+        if *b == b'-' {
+            start = i + 1;
+        }
+    }
+    out
 }
