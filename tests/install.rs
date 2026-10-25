@@ -40,3 +40,18 @@ fn install_sh_installs_one_binary_and_checks_it() {
     assert!(!bin.join("ava").exists(), "nothing installed");
     let _ = std::fs::remove_dir_all(&work);
 }
+
+#[test]
+fn install_sh_local_installs_from_a_clone_with_no_release() {
+    let root = PathBuf::from(env!("CARGO_MANIFEST_DIR"));
+    let bin = std::env::temp_dir().join(format!("ava-install-local-{}", std::process::id()));
+    let _ = std::fs::remove_dir_all(&bin);
+    // the build is this test's own binary: cargo is already holding the build directory
+    let out = Command::new("sh").arg(root.join("install.sh")).arg("--local").env("CARGO", "true")
+        .env("AVA_LOCAL_BIN", env!("CARGO_BIN_EXE_ava")).env("AVA_BIN_DIR", &bin).output().unwrap();
+    let said = String::from_utf8_lossy(&out.stdout);
+    assert!(out.status.success(), "{said}{}", String::from_utf8_lossy(&out.stderr));
+    assert!(said.starts_with(&format!("installed ava {}", env!("CARGO_PKG_VERSION"))), "{said}");
+    assert!(bin.join("ava").exists());
+    let _ = std::fs::remove_dir_all(&bin);
+}

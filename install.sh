@@ -2,6 +2,8 @@
 # Install ava, one binary with no server, into ~/.local/bin:
 #   curl -fsSL https://raw.githubusercontent.com/Percolation-Labs/avalanche-db/main/install.sh | sh
 # AVA_BIN_DIR changes where it goes; AVA_URL where the release is read from.
+# From a clone, with no release and no network: ./install.sh --local builds it here, packs it as a release
+# would, and installs that, through the same checksum check.
 set -eu
 repo="Percolation-Labs/avalanche-db"
 bin_dir="${AVA_BIN_DIR:-$HOME/.local/bin}"
@@ -16,9 +18,19 @@ case "$(uname -s)-$(uname -m)" in
     exit 1
     ;;
 esac
-url="${AVA_URL:-https://github.com/$repo/releases/latest/download}/ava-$target.tar.gz"
 tmp=$(mktemp -d)
 trap 'rm -rf "$tmp"' EXIT
+if [ "${1:-}" = "--local" ]; then
+  here=$(cd "$(dirname "$0")" && pwd)
+  (cd "$here" && ${CARGO:-cargo} build --release --locked --quiet)
+  mkdir -p "$tmp/release"
+  cp "${AVA_LOCAL_BIN:-$here/target/release/ava}" "$tmp/release/ava"
+  (cd "$tmp/release" && tar -czf "ava-$target.tar.gz" ava && rm ava)
+  if command -v shasum >/dev/null; then sum=$(shasum -a 256 <"$tmp/release/ava-$target.tar.gz"); else sum=$(sha256sum <"$tmp/release/ava-$target.tar.gz"); fi
+  echo "${sum%% *}  ava-$target.tar.gz" >"$tmp/release/ava-$target.tar.gz.sha256"
+  AVA_URL="file://$tmp/release"
+fi
+url="${AVA_URL:-https://github.com/$repo/releases/latest/download}/ava-$target.tar.gz"
 curl -fsSL "$url" -o "$tmp/ava.tar.gz"
 curl -fsSL "$url.sha256" -o "$tmp/ava.sha256"
 want=$(cut -d' ' -f1 <"$tmp/ava.sha256")

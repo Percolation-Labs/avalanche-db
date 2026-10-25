@@ -43,19 +43,21 @@ repeatable, so it can be measured.
 
 ## 1. Install one binary
 
+From a clone of this repository, one command builds `ava`, packs it as a release would,
+checks it against its checksum and puts it in `~/.local/bin`:
+
 ```console no-test
-$ curl -fsSL https://raw.githubusercontent.com/Percolation-Labs/avalanche-db/main/install.sh | sh
+$ ./install.sh --local
 installed ava 0.1.0 at /Users/you/.local/bin/ava
 ```
 
-`install.sh` downloads the release built for your machine (macOS or Linux, on Apple
-silicon, Intel or ARM), checks it against its published checksum, and puts `ava` in
-`~/.local/bin`. There is no server, daemon or account: `ava` is one 6 MB binary, and a
-store is one file in the folder you run it in. With a Rust toolchain you can build it
-instead:
+There is no server, daemon or account: `ava` is one 6 MB binary, and a store is one file
+in the folder you run it in. `--local` needs a Rust toolchain and no network. Once
+releases are published, the same script downloads the build for your machine (macOS or
+Linux, on Apple silicon, Intel or ARM) instead:
 
 ```console no-test
-$ cargo install --locked --git https://github.com/Percolation-Labs/avalanche-db
+$ curl -fsSL https://raw.githubusercontent.com/Percolation-Labs/avalanche-db/main/install.sh | sh
 ```
 
 ```console
@@ -559,6 +561,6 @@ only durations and wall-clock times masked. Blocks marked `no-test` are skipped;
 `needs-key` blocks run only when `AVALANCHE_MODEL_KEY` is set, and every other block runs
 with no key, so `dream` must replay; commands in `fails` blocks must exit non-zero.
 `make.sh` builds the example repository with fixed authors and dates, so commit ids match
-on every machine. `cargo test --test install` publishes the built binary as a release
-would, in a folder, and runs `install.sh` against it, including a tarball whose checksum
-is wrong. If the story and the binary disagree, the build fails.
+on every machine. `cargo test --test install` runs `install.sh --local`, and publishes the built binary as a
+release would, in a folder, and runs `install.sh` against it, including a tarball whose
+checksum is wrong. If the story and the binary disagree, the build fails.
