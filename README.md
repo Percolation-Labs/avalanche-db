@@ -26,6 +26,47 @@ section.
 | 9 | Replay old questions after re-indexing: a regression test for the graph | [9](#9-replay-questions-after-a-rebuild) |
 | 10 | Give an agent the same session API over MCP | [10](#10-the-same-walk-for-an-agent) |
 
+## Proposed: the target, the plan, and ten hard stories (for Sirsh's approval, 26 Oct)
+
+Sirsh, M-20261026-060505 and M-20261026-062436. Nothing below is built yet; the stories further down are the
+current ones and stay until this is approved.
+
+**The target.** A proof of concept that Avalanche is a query layer with a decision model in it, not a reasoner. The
+caller, an agent or a person, breaks a large question into narrow ones, and each narrow question gets three things:
+
+- the evidence, which search alone does not reach;
+- a coverage estimate, so the caller can tell "nothing there" from "stopped looking";
+- leads: the specific terms and links near what was found, for the next question.
+
+**The plan, four stages, each proven before the next.**
+
+| Stage | What is shown | Data | Passes when |
+|---|---|---|---|
+| 1 | The walk converges in the limit, and a gold-blind temperature says how close it is | p8-subsystems `meta/spikes/2026-10-25-reachability`: synthetic worlds where every piece of evidence and every path to it is known by construction | all evidence read in the limit whenever the three conditions hold, and stalls where one is broken; the temperature ranks the true share left |
+| 2 | Avalanche walks those worlds the same way | the same worlds, imported (facts.jsonl, vectors.npy, ids.json, questions.jsonl) | the same reads in the same order as the reference walk, with the decider replayed. Any gap is an implementation fault and is fixed before stage 3 |
+| 3 | Real questions with known answers | p8-subsystems history: 7,736 commits on main, the board's cards, and postmortems whose `fixes:` name the cards. Percolate claims through the second adapter | for at least 20 "why did we…" questions, the walk reads the known evidence by 50 reads where search does not, and the coverage estimate agrees with the truth |
+| 4 | Learning: repeat walks get warmer faster, and the line between Avalanche and the LLM moves | stage 3's questions, asked again after the graph has kept its own walks | the same evidence in fewer reads, a shorter context handed to the LLM, or a smaller model reaching the same answer |
+
+Every failure along the way is given one of three verdicts before anything is tuned: the data is wrong, the theory
+is wrong, or the implementation is wrong.
+
+**Ten stories, each a hard retrieval problem solved on real data.** The examples below are real questions from this
+team's own history, and the answers are known. Stage 3 checks that each one is as hard as it looks: search must
+miss what the walk finds.
+
+| # | The hard problem | The real example | What proves it |
+|---|---|---|---|
+| 1 | Install, point it at a repository, and in a minute get an answer search can't give | "Why does every push from here pass `-c core.hooksPath=dev/githooks`?" Answer: REM-1015 (c78b719e). Claude Code's worktree creation rewrites the shared hooksPath as an absolute path | the walk reads the gate's commit and the card; search's top 10 hold neither |
+| 2 | An answer three hops away: question to bug to decision to commit | "Why does a release apply its own catalog?" Answer: postmortem 2026-10-18 "A release was five steps" to REM-873 and REM-947 to their commits | each hop is printed with the link it travelled and its P |
+| 3 | An answer that shares no words with the question | "Why did the board stop sorting by severity?" Answer: postmortem 2026-10-20, "severity never meant priority", and REM-1092 | the decision shares no word with the question, and it is still read |
+| 4 | Nothing there, or stopped looking? | A question whose answer is not in the history, asked beside one where the walk stopped early | coverage near 1 with nothing found for the first; low coverage, flagged, for the second |
+| 5 | A vague question becomes a good one | "What went wrong with the board on 23 Oct?" returns leads (REM-1147, waiter, relay); the question asked again with a lead is answered | the second walk reads the evidence the first could only point at |
+| 6 | What was known then | "Does the relay forward a message sent to all?" asked as of 26 Oct 06:00Z, and again now | as of 06:00Z the answer is yes, by 40264585, which made the relay spin on old broadcasts. Now it is no, by 72913ee8. Both commits are on the path |
+| 7 | A wrong link, taken back | a dreamed link that sends story 2's walk the wrong way; retract it | the walk's path and its coverage both change, and the retraction is on record |
+| 8 | Find every mention, with a count you can trust | "every change to the release train in October" | all mentions in time order from the graph, with a coverage estimate checked against a hand count |
+| 9 | The second time is cheaper | the 20 stage-3 questions asked again after the graph has kept its walks | fewer reads for the same evidence, measured per question; a rebuild replays them as a regression test |
+| 10 | An agent asks the big question by asking small ones | "How did releases change in October?" over MCP: the agent breaks it into narrow questions, and each walk returns its evidence, coverage and leads | the agent's answer cites every walk, and the LLM's context is the yes set, not the history |
+
 ## Three layers
 
 Everything Avalanche does sits in one of three layers, over one store.
