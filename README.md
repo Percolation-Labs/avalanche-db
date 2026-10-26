@@ -28,8 +28,8 @@ section.
 
 ## Proposed: the target, the plan, and ten hard stories (for Sirsh's approval, 26 Oct)
 
-Sirsh, M-20261026-060505 and M-20261026-062436. Nothing below is built yet; the stories further down are the
-current ones and stay until this is approved.
+Sirsh, M-20261026-060505 and M-20261026-062436. Approved 26 Oct 13:33Z (M-20261026-133343-0d35); stage 2 is built
+and passes (below).
 
 **The target.** A proof of concept that Avalanche is a query layer with a decision model in it, not a reasoner. The
 caller, an agent or a person, breaks a large question into narrow ones, and each narrow question gets three things:
@@ -49,6 +49,22 @@ caller, an agent or a person, breaks a large question into narrow ones, and each
 
 Every failure along the way is given one of three verdicts before anything is tuned: the data is wrong, the theory
 is wrong, or the implementation is wrong.
+
+**Stage 2, built and passed (26 Oct).** `ava world import <dir>` reads a reach.py world into a store beside it:
+items in creation order, terms and sittings as values (`tagged`, `inSitting`), vectors in a table of their own, and
+each item's three nearest in meaning computed once at import (`near`). `src/walk/world.rs` answers the seven
+questions reach.py's walk asks of a store from the indexes, and `ava world walk` runs stage 1's exploring walk
+(`src/walk/explore.rs`) with each clue's P replayed from the reference's recording and its draws from a coin both
+engines share (SplitMix64 seeded by SHA-256). On four 5,000-document worlds (13,000 items, 113,000 facts each),
+600 walks in five modes, accepted only to a third of travel exploring with near misses first, read the same items
+in the same order as the reference, with the same frontier and specific frontier after every read: 600 of 600.
+Avalanche walks a world's 30 questions in about 5 seconds; the reference takes 30 to 50. Getting there needed two
+fixes in the reference, both to orders Python happened to produce rather than orders the walk chose: a clue's
+targets were read in the order the facts were written (and, for nearest meaning, in numpy's partition order), and
+an exploring draw listed open clues in the order they were opened. Both are now creation order and name order in
+both engines, and stage 1's numbers hold under them (instruction questions 38% read accepted only, 65% to 71% with
+near misses first, by draw). A negative control shows the comparison can fail: one recorded P moved under the bar
+moves the walk from read 188 on.
 
 **Ten stories, each a hard retrieval problem solved on real data.** The examples below are real questions from this
 team's own history, and the answers are known. Stage 3 checks that each one is as hard as it looks: search must

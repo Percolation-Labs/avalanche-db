@@ -21,6 +21,8 @@ pub enum Kind {
     Issue,
     Pr,
     Review,
+    /// A document or claim in a synthetic reachability world (`item:d12`).
+    Item,
     Lit,
 }
 
@@ -59,6 +61,7 @@ impl Kind {
             "issue" => Kind::Issue,
             "pr" => Kind::Pr,
             "review" => Kind::Review,
+            "item" => Kind::Item,
             "lit" => Kind::Lit,
             _ => return None,
         })
@@ -67,7 +70,7 @@ impl Kind {
 
 use Kind::*;
 
-const THINGS: &[Kind] = &[Commit, Person, File, Card, Question, Claim, Package, Source, Session, Step, Decision, Proposal, Issue, Pr, Review];
+const THINGS: &[Kind] = &[Commit, Person, File, Card, Question, Claim, Package, Source, Session, Step, Decision, Proposal, Issue, Pr, Review, Item];
 /// What a commit or a note can name.
 const NAMEABLE: &[Kind] = &[Commit, File, Card, Decision, Proposal, Issue, Pr];
 const NOTES: &[Kind] = &[Decision, Proposal, Issue];
@@ -95,9 +98,9 @@ preds! {
     Touches = 5, "touches", &[Commit], &[File];
     Mentions = 6, "mentions", &[Commit, Decision, Proposal, Issue, Pr, Card, Claim], NAMEABLE;
     State = 7, "state", &[Card], &[Lit];
-    Answers = 8, "answers", &[Claim], &[Question];
+    Answers = 8, "answers", &[Claim, Item], &[Question];
     Stance = 9, "stance", &[Claim], &[Lit];
-    Makes = 10, "makes", &[Package], &[Claim];
+    Makes = 10, "makes", &[Package, Item], &[Claim, Item];
     Cites = 11, "cites", &[Claim], &[Source];
     Informs = 12, "informs", &[Claim, Question], &[Card];
     Asked = 13, "asked", &[Session], THINGS;
@@ -118,6 +121,11 @@ preds! {
     Took = 30, "took", &[Step], &[Lit];
     Prefer = 31, "prefer", &[Step, Session], &[Lit];
     Retracts = 32, "retracts", &[Review], &[Lit];
+    // A reachability world (REM-1195): a tag is an edge between the items that share it, so it is a value, not a node.
+    Tagged = 33, "tagged", &[Item], &[Lit];
+    InSitting = 34, "inSitting", &[Item], &[Lit];
+    // near: the three items nearest in meaning, computed from the vectors at import.
+    Near = 35, "near", &[Item], &[Item];
 }
 
 impl Pred {

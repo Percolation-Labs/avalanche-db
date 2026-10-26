@@ -103,6 +103,11 @@ enum Cmd {
     },
     /// Serve the session API to an agent over MCP, on stdin and stdout
     Mcp,
+    /// A synthetic reachability world (REM-1195): import it, and walk its questions
+    World {
+        #[command(subcommand)]
+        action: WorldCmd,
+    },
     /// A node's links, as of a transaction and optionally valid on a date
     Edges {
         node: String,
@@ -117,6 +122,32 @@ enum Cmd {
     Log { tx: Option<u64> },
     /// How the memory has been walked, read from the usage graph
     Usage,
+}
+
+#[derive(Subcommand)]
+enum WorldCmd {
+    /// Read a reach.py world directory into a fresh store beside it (avalanche.redb)
+    Import { world: PathBuf },
+    /// Walk every question with the exploring walk and print one JSON line per question
+    Walk {
+        world: PathBuf,
+        /// The reference's recorded P per clue (JSON lines: qid, kind, x, p)
+        #[arg(long)]
+        decisions: PathBuf,
+        #[arg(long, default_value_t = 0.0)]
+        eps: f64,
+        #[arg(long, default_value_t = 1600)]
+        max_reads: usize,
+        /// Draw the near misses first: rejected clues with P at or above this
+        #[arg(long)]
+        band: Option<f64>,
+        /// Clue kinds given P = 0
+        #[arg(long, value_delimiter = ',')]
+        blind: Vec<String>,
+        /// Only this question
+        #[arg(long)]
+        qid: Option<String>,
+    },
 }
 
 #[derive(Subcommand)]
@@ -324,6 +355,37 @@ fn run(cli: Cli) -> Result<()> {
             }
         }
         Cmd::Mcp => mcp::serve(dir)?,
+        Cmd::World { action: WorldCmd::Import { world } } => {
+            let path = world.join("avalanche.redb");
+            let _ = std::fs::remove_file(&path);
+            let store = Store::open(&path)?;
+            let t = store.tenant("world")?;
+            let started = std::time::Instant::now();
+            let r = avalanche::construct::world::import(&store, t, &world)?;
+            println!("T{}: {} items, {} facts in {:.1?}", r.tx, r.items, r.facts, started.elapsed());
+        }
+        Cmd::World { action: WorldCmd::Walk { world, decisions, eps, max_reads, band, blind, qid } } => {
+            use avalanche::walk::{explore, world::World};
+            let store = Store::open(world.join("avalanche.redb"))?;
+            let t = store.tenant("world")?;
+            let w = World::open(&store, t)?;
+            let d = explore::Decisions::read(&std::fs::read_to_string(decisions)?)?;
+            let o = explore::Opts { eps, max_reads, blind: &blind, band };
+            for line in std::fs::read_to_string(world.join("questions.jsonl"))?.lines().filter(|l| !l.is_empty()) {
+                let q: serde_json::Value = serde_json::from_str(line)?;
+                let id = q["qid"].as_str().unwrap_or_default();
+                if qid.as_deref().is_some_and(|x| x != id) {
+                    continue;
+                }
+                let qv: Vec<f32> = q["vector"].as_array().ok_or("no vector")?.iter().map(|x| x.as_f64().unwrap_or(0.0) as f32).collect();
+                let started = std::time::Instant::now();
+                w.cost.set(0);
+                let r = explore::explore(&w, id, &qv, &d, &o)?;
+                let order: Vec<String> = r.order.iter().map(|x| w.name(*x)).collect::<Result<_>>()?;
+                println!("{}", serde_json::json!({"qid": id, "order": order, "why": r.why, "front": r.front, "front_small": r.front_small,
+                    "keys_read": w.cost.get(), "micros": started.elapsed().as_micros() as u64}));
+            }
+        }
         Cmd::Edges { node, as_of, valid_at, r#in } => {
             let (_, store, t) = open(dir)?;
             let head = store.head(t)?;

@@ -29,6 +29,8 @@ const NAMES: TableDefinition<(u32, u64), &str> = TableDefinition::new("names");
 const TENANTS: TableDefinition<&str, u32> = TableDefinition::new("tenants");
 /// session id -> durable session state (JSON)
 pub(crate) const SESSIONS: TableDefinition<&str, &str> = TableDefinition::new("sessions");
+/// (tenant, node) -> its vector, little-endian f32. Written once per node by an import; not bitemporal.
+const VECS: TableDefinition<(u32, u64), &[u8]> = TableDefinition::new("vecs");
 
 const ASSERT: u8 = 1;
 const RETRACT: u8 = 0;
@@ -79,6 +81,7 @@ impl Store {
         w.open_table(NAMES)?;
         w.open_table(TENANTS)?;
         w.open_table(SESSIONS)?;
+        w.open_table(VECS)?;
         w.commit()?;
         Ok(Store { db })
     }
@@ -281,6 +284,32 @@ impl Store {
         rows.into_iter()
             .map(|(s, p, o, g, op, _, _)| Ok((self.name(tenant, s)?, Pred::from_id(p).unwrap(), self.name(tenant, o)?, self.name(tenant, g)?, op == RETRACT)))
             .collect()
+    }
+
+    /// Store each named node's vector. Every name must already be interned.
+    pub fn put_vectors(&self, tenant: u32, rows: &[(u64, Vec<f32>)]) -> Result<()> {
+        let w = self.db.begin_write()?;
+        {
+            let mut t = w.open_table(VECS)?;
+            for (id, v) in rows {
+                let bytes: Vec<u8> = v.iter().flat_map(|x| x.to_le_bytes()).collect();
+                t.insert((tenant, *id), bytes.as_slice())?;
+            }
+        }
+        w.commit()?;
+        Ok(())
+    }
+
+    /// Every vector the tenant holds, in node id order.
+    pub fn vectors(&self, tenant: u32) -> Result<Vec<(u64, Vec<f32>)>> {
+        let r = self.db.begin_read()?;
+        let t = r.open_table(VECS)?;
+        let mut out = vec![];
+        for row in t.range((tenant, 0)..=(tenant, u64::MAX))? {
+            let (k, v) = row?;
+            out.push((k.value().1, v.value().chunks_exact(4).map(|b| f32::from_le_bytes([b[0], b[1], b[2], b[3]])).collect()));
+        }
+        Ok(out)
     }
 
     pub(crate) fn get_session(&self, id: &str) -> Result<Option<String>> {
