@@ -26,10 +26,11 @@ section.
 | 9 | Replay old questions after re-indexing: a regression test for the graph | [9](#9-replay-questions-after-a-rebuild) |
 | 10 | Give an agent the same session API over MCP | [10](#10-the-same-walk-for-an-agent) |
 
-## Proposed, 30 Oct: what we learned, what no longer holds, the plan and the ten stories (for Sirsh's approval)
+## Approved 30 Oct: what we learned, what no longer holds, the plan and the ten stories
 
-Sirsh, M-20261030-094748-d36e and M-20261030-094844-403a. Nothing below is built yet. The 26 Oct proposal follows as
-the record; where this one changes it, it says so.
+Sirsh, M-20261030-094748-d36e and M-20261030-094844-403a. Approved 30 Oct 10:09Z (M-20261030-100911-3ad3), with
+stage C reframed from a better judge to redundancy that carries an imperfect one. The 26 Oct proposal follows as the
+record; where this one changes it, it says so.
 
 **What changed since 26 Oct.** Four results, and none of them is about the engine.
 
@@ -66,8 +67,11 @@ dense retrieval with an 8B reranker by 13.8 R@1 on MultiDoc2Dial and 17.4 Hit@1 
 **The hard problem, restated.** A narrow question in a long history usually has its answer in search's first fifty,
 and then nothing beats search. The hard case is evidence search buries. There, the graph already holds a path a
 perfect judge finds in 100 reads 98% of the time, and the decision model loses it by saying yes to anything on
-topic. So Avalanche's hard problem is the judgement at a 1-to-80 base rate, not reach. Two questions follow: a
-judgement that asks "does this answer it", and a stop signal that says how much is left without knowing the answer.
+topic. The judge is imperfect by design, as a person is (Sirsh, M-20261030-100911-3ad3), and the design's answer
+is not a better judge but redundancy in the graph: several routes to the same evidence, echoes and restatements, so
+a judge that turns down one route still meets another. So the hard problem is how much redundancy it takes for an
+imperfect judge at a 1-to-80 base rate to reach the answer anyway, and where the graph lacks it. Two questions
+follow: what redundancy buys, measured, and a stop signal that says how much is left without knowing the answer.
 
 **The plan.** Each stage is proven before the next. Every stage runs in bill's lab as the harness: its fixture
 (288 BEAM questions, DEV and HELD-OUT), its oracle (items, not pieces), its scorecard and its Jev cache. Avalanche
@@ -77,7 +81,7 @@ is the second engine, and lessons go both ways (M-20261030-095133-3077 proposes 
 |---|---|---|---|
 | A. Avalanche is a lab engine | the lab's fixture walked by Avalanche | the same reads, in the same order, with the same clues as bill's engine on the 83 recorded product runs, given their recorded verdicts. A negative control must diverge | $0 |
 | B. A stop signal that works | Kappa §8: the branching ratio (accepted leads per read) and the open frontier as a gold-blind estimate of the items left | it ranks true remaining items better than reads-so-far on DEV, reported once on HELD-OUT, from recorded verdicts | $0 |
-| C. The judgement that answers | three framings against Jev's topical P, on DEV questions with new leads after wave 1: (1) "does this lead answer the question", (2) one choice across a request's options, judged together (DecisionRAG), (3) the decision-walks spec's route probability | NEW-versus-OFF separation at the top of the queue, and coverage at 100 reads, beat the product's .811 by more than the noise floor (0.04 AUC), on HELD-OUT once. Any class built from BEAM's unlabelled material is audited blind first: bill's E1 found 31% of on-topic unlabelled neighbours answer the question and 24% of labelled evidence does not | about $1–3 of Jev, cached |
+| C. Redundancy carries an imperfect judge | for each required item, the routes the graph offers to it (distinct leads whose targets cover it, and restatements by bill's calibrated RESTATES), against whether the walk reached it under Jev's recorded verdicts. Then the lever: add restatement routes to the graph and walk again under the *same* judge | the chance an item is reached rises with its route count as the judge's per-route acceptance predicts (an item with r routes missed about (1 − a)^r of the time), and added routes raise coverage at 100 reads with no change to the judge, on HELD-OUT once. Items with one route are named as the graph's gaps. A cheap judgement change (joint choice across a request's options, as DecisionRAG does) runs only as a side arm, never the main line. Any class built from BEAM's unlabelled material is audited blind first: bill's E1 found 31% of on-topic unlabelled neighbours answer the question and 24% of labelled evidence does not | $0 on recorded verdicts; under $1 of Jev for the walks after routes are added |
 | D. Real history, buried questions | p8-subsystems' history (commits, cards, postmortems) and Percolate claims, with REM-1196's known-answer why-questions and more | questions *selected by burial* (best search rank of the answer beyond 50, measured and reported). The walk reads the answer where search does not, scored by items: a decision restated in a commit, a card and a postmortem is one item. Stage B's signal agrees with the truth | Jev only for C's winner |
 | E. Learning, scoped | stage D's questions asked again after walks write back event-scoped summaries (Kappa §9) | fewer reads for the same items, a shorter context for the decision model, and no new evidence demoted. A topic-scoped summary is the control that should fail | small |
 
@@ -92,7 +96,7 @@ re-scoped.
 | 2 | Know when not to walk | for a question whose answer is in search's first ten, Avalanche says so and stops. A walk would cost reads and find nothing more | D |
 | 3 | An answer three hops away | question to bug to decision to commit, each hop printed with the link and the judgement that took it | D |
 | 4 | Nothing there, or stopped looking? | stage B's signal: a question with no answer in the history dies out (branching below 1, empty frontier); one stopped by budget is flagged as still growing | B, D |
-| 5 | A yes that means "this answers it" | the same buried question walked twice, with a topical judgement and with stage C's. The second reads the answer with fewer irrelevant travels, and both counts are printed | C |
+| 5 | The judge says no, and the answer arrives anyway | a buried question where the judge turns down the first route to the answer, and the walk reaches it by a second: an echo or a restatement. The routes, and which one carried it, are printed | C |
 | 6 | What was known then | as 26 Oct: the relay question as of 26 Oct 06:00Z and now, different answers, both commits on the path | built (story 6) |
 | 7 | A wrong link, taken back | as 26 Oct: the retraction changes the path and the stop signal, and stays on record | built (story 7) |
 | 8 | Find every mention: breadth, not a walk | "every change to the release train in October" in broad mode: on-topic is the right judgement here, with a count checked by hand | own mode |
