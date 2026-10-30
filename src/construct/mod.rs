@@ -4,4 +4,5 @@
 pub mod dream;
 pub mod ingest;
 pub mod review;
+pub mod lab;
 pub mod world;

@@ -126,6 +126,8 @@ preds! {
     InSitting = 34, "inSitting", &[Item], &[Lit];
     // near: the three items nearest in meaning, computed from the vectors at import.
     Near = 35, "near", &[Item], &[Item];
+    // beside: the items in the same sitting within the walk's span, as the lab's graph lists them (REM-1172 stage A).
+    Beside = 36, "beside", &[Item], &[Item];
 }
 
 impl Pred {

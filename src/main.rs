@@ -108,6 +108,11 @@ enum Cmd {
         #[command(subcommand)]
         action: WorldCmd,
     },
+    /// The walk lab's graphs (REM-1172 stage A): import them, and walk as the lab's engine over JSON lines
+    Lab {
+        #[command(subcommand)]
+        action: LabCmd,
+    },
     /// A node's links, as of a transaction and optionally valid on a date
     Edges {
         node: String,
@@ -122,6 +127,25 @@ enum Cmd {
     Log { tx: Option<u64> },
     /// How the memory has been walked, read from the usage graph
     Usage,
+}
+
+#[derive(Subcommand)]
+enum LabCmd {
+    /// Read the lab's graphs.jsonl into a fresh store, one tenant per conversation
+    Import {
+        graphs: PathBuf,
+        #[arg(long)]
+        store: PathBuf,
+        /// Only this conversation
+        #[arg(long)]
+        conv: Option<String>,
+    },
+    /// Walk on request over stdin and stdout, one JSON object a line: in {"walk": {conv, order, settings}}, out
+    /// {"judge": {wave, clues, reads}} answered by {"p": {key: P}}, then {"done": walk}
+    Serve {
+        #[arg(long)]
+        store: PathBuf,
+    },
 }
 
 #[derive(Subcommand)]
@@ -386,6 +410,17 @@ fn run(cli: Cli) -> Result<()> {
                     "keys_read": w.cost.get(), "micros": started.elapsed().as_micros() as u64}));
             }
         }
+        Cmd::Lab { action: LabCmd::Import { graphs, store, conv } } => {
+            if store.exists() && conv.is_none() {
+                return Err(format!("{} exists; the lab imports into a fresh store", store.display()).into());
+            }
+            let s = Store::open(&store)?;
+            let started = std::time::Instant::now();
+            let r = avalanche::construct::lab::import(&s, &graphs, conv.as_deref())?;
+            let (docs, facts): (usize, usize) = r.iter().fold((0, 0), |a, x| (a.0 + x.docs, a.1 + x.facts));
+            println!("{} conversations, {docs} documents, {facts} facts in {:.1?}", r.len(), started.elapsed());
+        }
+        Cmd::Lab { action: LabCmd::Serve { store } } => lab_serve(&store)?,
         Cmd::Edges { node, as_of, valid_at, r#in } => {
             let (_, store, t) = open(dir)?;
             let head = store.head(t)?;
@@ -439,6 +474,52 @@ fn run(cli: Cli) -> Result<()> {
             println!("most walked: {}", top.iter().take(3).map(|(n, c)| format!("{n} ({c})")).collect::<Vec<_>>().join(", "));
             println!("link kinds walked: {}", kinds.iter().map(|(k, c)| format!("{k} {c}")).collect::<Vec<_>>().join(", "));
         }
+    }
+    Ok(())
+}
+
+/// `ava lab serve`: the lab's engine over JSON lines, so walklab's deciders, scorecard and fidelity check drive it.
+fn lab_serve(path: &Path) -> Result<()> {
+    use std::io::{BufRead, Write};
+    use avalanche::walk::lab;
+    let store = Store::open(path)?;
+    let stdin = std::io::stdin();
+    let mut lines = stdin.lock().lines();
+    let mut out = std::io::stdout().lock();
+    while let Some(line) = lines.next() {
+        let line = line?;
+        if line.trim().is_empty() {
+            continue;
+        }
+        let req: serde_json::Value = serde_json::from_str(&line)?;
+        let w = &req["walk"];
+        let res = (|| -> Result<lab::Walk> {
+            let conv = w["conv"].as_str().ok_or("a walk request names its conv")?;
+            let order: Vec<String> = serde_json::from_value(w["order"].clone())?;
+            let settings: lab::Settings = serde_json::from_value(w.get("settings").cloned().unwrap_or(serde_json::json!({})))?;
+            let mut g = lab::Graph::open(&store, conv)?;
+            let mut decide = |wave: u32, clues: &BTreeMap<String, lab::Clue>, walk: &lab::Walk| -> Result<std::collections::HashMap<String, f64>> {
+                let msg = serde_json::json!({"judge": {"wave": wave, "clues": clues.values().collect::<Vec<_>>(), "reads": walk.reads}});
+                writeln!(out, "{msg}")?;
+                out.flush()?;
+                let ans = lines.next().ok_or("stdin closed while a judgement was asked")??;
+                let v: serde_json::Value = serde_json::from_str(&ans)?;
+                let mut got = std::collections::HashMap::new();
+                for (k, p) in v["p"].as_object().ok_or("an answer is {\"p\": {key: P}}")? {
+                    if let Some(p) = p.as_f64() {
+                        got.insert(k.clone(), p);
+                    }
+                }
+                Ok(got)
+            };
+            lab::run(&mut g, order, settings, &mut decide)
+        })();
+        let msg = match res {
+            Ok(walk) => serde_json::json!({"done": walk}),
+            Err(e) => serde_json::json!({"error": e.to_string()}),
+        };
+        writeln!(out, "{msg}")?;
+        out.flush()?;
     }
     Ok(())
 }

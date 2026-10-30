@@ -6,4 +6,5 @@ pub mod mcp;
 pub mod search;
 pub mod session;
 pub mod suite;
+pub mod lab;
 pub mod world;

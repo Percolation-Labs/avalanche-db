@@ -88,6 +88,19 @@ is the second engine, and lessons go both ways (M-20261030-095133-3077 proposes 
 Stage A replaces 26 Oct's stage 2 as the gate. Stages B and C are new. D and E are 26 Oct's stages 3 and 4,
 re-scoped.
 
+**Stage A, built and passed (30 Oct).** `ava lab import` reads the lab's 33 conversation graphs into a store, one
+tenant per conversation: each document labelled in the graph's order, its terms as `tagged` values (so the documents
+holding a term are that value's incoming edges, and the lab's `post` is never stored; import checks it is the
+inverse), and the lab's `beside` and `near` lists as one-way links. That is 35,212 documents and 841,720 facts in 7
+seconds. `src/walk/lab.rs` is the lab's engine rule for rule, asking the store for every term, posting and list.
+`ava lab serve` runs it over JSON lines and hands each round's judgement back to the caller, and
+`lab/avalanche_engine.py` gives it the lab engine's `run`, so walklab's deciders, scorecard and Jev cache drive it
+unchanged. `lab/fidelity.py` replays the 79 recorded live 1M P runs with their recorded verdicts. Avalanche matches the
+recording and the lab's engine on all 79: the same reads in the same order, the same `via`, clues, P, travels and stop.
+It needed no fix: the lab's collation and float4 tie-breaks were ported up front. The control, one travelled verdict
+pushed under the gate, diverges at read 14. Avalanche takes 8.1 s for the 79 walks against the lab engine's 3.9 s, the
+difference being one process round trip per judgement.
+
 **Ten stories, rewritten.** Each states a hard problem honestly, including when search is enough.
 
 | # | The hard problem | What proves it | Stage |
