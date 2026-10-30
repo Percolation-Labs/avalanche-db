@@ -101,6 +101,14 @@ It needed no fix: the lab's collation and float4 tie-breaks were ported up front
 pushed under the gate, diverges at read 14. Avalanche takes 8.1 s for the 79 walks against the lab engine's 3.9 s, the
 difference being one process round trip per judgement.
 
+**Stage B, passed directionally (30 Oct; `lab/STAGE-B.md`, registered before any result).** The signal is m, the
+accepted leads per read. It says whether required items are still unread at AUC 0.837 on HELD-OUT, where the wave
+alone says it at 0.541. Stopping at the first wave with m < 1, the theory's threshold untuned, leaves 8 of 63 items
+unread, where a fixed stop at the same reads leaves 13 (DEV: 11 of 70 against 27). It is 40 questions, because only
+those have recorded verdicts. Its failure is a theory gap. When the judge accepts nothing, m is 0 at once, while
+search reads go on finding items: the walk is a branching process with immigration, and such a process does not die
+out. The stop has to price search's own yield as well, and that is the next registered test.
+
 **Ten stories, rewritten.** Each states a hard problem honestly, including when search is enough.
 
 | # | The hard problem | What proves it | Stage |
