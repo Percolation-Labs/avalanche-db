@@ -197,8 +197,8 @@ fn raise(g: &mut Graph, st: &State, wave_reads: &[String]) -> Result<BTreeMap<St
 pub type Decide<'d> = dyn FnMut(u32, &BTreeMap<String, Clue>, &Walk) -> Result<HashMap<String, f64>> + 'd;
 
 pub fn run(g: &mut Graph, order: Vec<String>, s: Settings, decide: &mut Decide) -> Result<Walk> {
-    if s.order != "p" && s.order != "per_target" {
-        return Err(format!("order is p or per_target, not {}", s.order).into());
+    if !["p", "per_target", "convergence"].contains(&s.order.as_str()) {
+        return Err(format!("order is p, per_target or convergence, not {}", s.order).into());
     }
     let mut st = State { s, order, w: Walk::default(), nxt: BTreeMap::new(), reached: HashSet::new(), pending: VecDeque::new(), si: 0 };
     let seeds: Vec<String> = st.order.iter().take(st.s.seeds).filter(|d| g.holds(d)).cloned().collect();
@@ -262,23 +262,36 @@ fn step(g: &mut Graph, st: &mut State, decide: &mut Decide) -> Result<bool> {
             read(st, doc, best.clone(), &mut n, &mut ord, &mut wave_reads);
             continue;
         }
-        let mut pick: Option<(f64, (String, String, String), String)> = None;
+        // convergence (REM-1172 stage C, not the product): a clue goes first when its unread targets are where the
+        // most open accepted clues converge, one vote per clue; then by P per unread target, as per_target
+        let converge = st.s.order == "convergence";
+        let mut votes: HashMap<&str, u32> = HashMap::new();
+        if converge {
+            for c in open.values() {
+                for d in c.targets.iter().filter(|d| !st.reached.contains(*d)) {
+                    *votes.entry(d.as_str()).or_default() += 1;
+                }
+            }
+        }
+        let mut pick: Option<(u32, f64, (String, String, String), String)> = None;
         for (k, c) in &open {
             let u = c.targets.iter().filter(|d| !st.reached.contains(*d)).count();
             if u == 0 {
                 continue;
             }
             let p = f4(c.p.unwrap_or(0.0));
-            let score = if st.s.order == "per_target" { p / u as f64 } else { p };
+            let score = if st.s.order == "p" { p } else { p / u as f64 };
+            let v = if converge { c.targets.iter().filter(|d| !st.reached.contains(*d)).map(|d| votes[d.as_str()]).max().unwrap_or(0) } else { 0 };
             let col = collate(k);
             let better = match &pick {
                 None => true,
-                Some((bs, bc, _)) => score > *bs || (score == *bs && col < *bc),
+                Some((bv, bs, bc, _)) => v > *bv || (v == *bv && (score > *bs || (score == *bs && col < *bc))),
             };
             if better {
-                pick = Some((score, col, k.clone()));
+                pick = Some((v, score, col, k.clone()));
             }
         }
+        let pick = pick.map(|(_, s, c, k)| (s, c, k));
         if let Some((_, _, k)) = pick {
             let c = open.remove(&k).unwrap();
             for d in c.targets.iter().filter(|d| !st.reached.contains(*d)).cloned().collect::<Vec<_>>() {

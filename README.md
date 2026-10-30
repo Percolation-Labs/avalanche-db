@@ -109,6 +109,16 @@ those have recorded verdicts. Its failure is a theory gap. When the judge accept
 search reads go on finding items: the walk is a branching process with immigration, and such a process does not die
 out. The stop has to price search's own yield as well, and that is the next registered test.
 
+**Stage C, measured (30 Oct; `lab/STAGE-C.md`, both parts registered first).** Redundancy carries the imperfect judge
+to the evidence. It accepts 63% of routes to a required item, and 131 of 133 items had at least one accepted route, as
+independent errors predict up to 8 routes. Two items had 22 and 42 routes and none accepted: the judge turned down
+their whole theme (Kappa Proposition 5). The other 8 unread items had 2 to 16 accepted routes each, and the walk never
+travelled one, because it ranks routes one by one in a queue of 400 to 1,500. Letting routes vote (convergence order)
+did not help: cov@100 −0.005 [−0.026, +0.015]. In the product's own queue, votes rank unread evidence above other
+unread documents at only AUC 0.596. The routes that converge are on topic too, so votes count the same topical
+judgement again. Redundancy that helps has to be of a kind the judge does not read as topic. The next candidates are
+sitting and time, and Kappa's factored predictor.
+
 **Ten stories, rewritten.** Each states a hard problem honestly, including when search is enough.
 
 | # | The hard problem | What proves it | Stage |
