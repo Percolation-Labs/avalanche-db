@@ -26,7 +26,83 @@ section.
 | 9 | Replay old questions after re-indexing: a regression test for the graph | [9](#9-replay-questions-after-a-rebuild) |
 | 10 | Give an agent the same session API over MCP | [10](#10-the-same-walk-for-an-agent) |
 
-## Proposed: the target, the plan, and ten hard stories (for Sirsh's approval, 26 Oct)
+## Proposed, 30 Oct: what we learned, what no longer holds, the plan and the ten stories (for Sirsh's approval)
+
+Sirsh, M-20261030-094748-d36e and M-20261030-094844-403a. Nothing below is built yet. The 26 Oct proposal follows as
+the record; where this one changes it, it says so.
+
+**What changed since 26 Oct.** Four results, and none of them is about the engine.
+
+- *The walk pays only where search buries the evidence* (REM-1244, percolate's walk spec §14). Walk minus search at
+  100 reads is +15.6 [+5.2, +27.5] at 1M, +1.1 [−2.5, +4.9] at 500K and +1.2 [−3.1, +6.3] at 100K. Pooled by
+  burial, it is +50.0 on evidence at search ranks 51–200 (n = 9) and about zero above rank 50. The share of buried
+  questions grows with the history: 1 of 50 at 100K, 7 of 39 at 1M.
+- *Judging, not the graph, is the bottleneck* (bill's lab, `bill/walklab` `meta/lab/README.md`). On the same graph
+  and budget, a perfect lead judge covers .983 of required items by read 100, the product's recorded Jev verdicts
+  .811 and search alone .787. Most of the loss is irrelevant leads accepted: new evidence meets other leads at 1 to
+  80, Jev ranks them at AUC 0.84, and so 5% of travels find anything new. Copies are 4% of travels.
+- *Jev judges topic, not answer.* Its P on a lead is .515 when the evidence line is in front of it and .508 when it
+  is hidden. It responds to how on-topic the shown lines are.
+- *Memory shown as "found" works as a topic signal* (the Kappa paper, ld-8473a1528273, §10, and bill's case
+  1M:28). An exact memory lowers branching, as Proposition 6 says, but Jev then demotes new items on the same theme
+  (P .62 → .29), which is Propositions 3 and 5 observed. The logarithmic memory (Conjecture 1; `kappa_k` = 3 ln reads)
+  lowered NEW-versus-copy AUC by 0.12–0.15, three times the noise floor, on 4 walks.
+
+DecisionRAG (arXiv 2610.35868) reports the other half from outside: a language model judging a node's children
+*together*, in one pass, so their scores are comparable, navigating broad to narrow with no retriever. It beats
+dense retrieval with an 8B reranker by 13.8 R@1 on MultiDoc2Dial and 17.4 Hit@1 on Natural Questions.
+
+**Postmortems: what no longer holds, and why.**
+
+| 26 Oct claim | Verdict | Why |
+|---|---|---|
+| Each narrow question gets "the evidence, which search alone does not reach" | theory too broad | true only where search buries it below rank 50. On a small history search's top 100 holds most of it (95.8% at 100K). The stories were chosen for being *why* questions, not for being buried, and none was checked |
+| A gold-blind temperature says how close the walk is (stage 1) | theory wrong, already reported 26 Oct | Good-Turing needs random draws. A steered walk's sightings scored AUC 0.52–0.60. Stage 1 proved convergence and not the estimator, so story 4 had no mechanism |
+| "Jev decides relevance; the graph decides order" (25 Oct) | half wrong | the order half holds (fewest-targets-first, near competing on count). The relevance half is the failure: relevance is *topic*, and at 1 to 80 a topical yes travels mostly waste. This is Kappa's Proposition 3 (relevance is the wrong admission criterion) applied to leads, not memory |
+| Learning means the graph keeps its walks and the next walk is warmer (stage 4) | untested, and now at risk | a kept walk shown to the decider is a memory, and memory shown as found demotes new evidence on the same theme. Write-back has to be scoped by event and question class (Kappa Proposition 7 and §9) or it repeats 1M:28 |
+| Stage 2's reference is reach.py | superseded | reach.py stays the engine-free baseline. But the reference that is the product is now bill's engine, identical to the product's P walk on 83 of 83 recorded runs |
+| Story 8's "every mention" is a walk story | wrong problem | it is breadth, and 25 Oct already set breadth aside as its own mode. The topical judgement that fails narrow questions is the right one for breadth |
+
+**The hard problem, restated.** A narrow question in a long history usually has its answer in search's first fifty,
+and then nothing beats search. The hard case is evidence search buries. There, the graph already holds a path a
+perfect judge finds in 100 reads 98% of the time, and the decision model loses it by saying yes to anything on
+topic. So Avalanche's hard problem is the judgement at a 1-to-80 base rate, not reach. Two questions follow: a
+judgement that asks "does this answer it", and a stop signal that says how much is left without knowing the answer.
+
+**The plan.** Each stage is proven before the next. Every stage runs in bill's lab as the harness: its fixture
+(288 BEAM questions, DEV and HELD-OUT), its oracle (items, not pieces), its scorecard and its Jev cache. Avalanche
+is the second engine, and lessons go both ways (M-20261030-095133-3077 proposes the split to bill).
+
+| Stage | What is shown | Passes when | Cost |
+|---|---|---|---|
+| A. Avalanche is a lab engine | the lab's fixture walked by Avalanche | the same reads, in the same order, with the same clues as bill's engine on the 83 recorded product runs, given their recorded verdicts. A negative control must diverge | $0 |
+| B. A stop signal that works | Kappa §8: the branching ratio (accepted leads per read) and the open frontier as a gold-blind estimate of the items left | it ranks true remaining items better than reads-so-far on DEV, reported once on HELD-OUT, from recorded verdicts | $0 |
+| C. The judgement that answers | three framings against Jev's topical P, on DEV questions with new leads after wave 1: (1) "does this lead answer the question", (2) one choice across a request's options, judged together (DecisionRAG), (3) the decision-walks spec's route probability | NEW-versus-OFF separation at the top of the queue, and coverage at 100 reads, beat the product's .811 by more than the noise floor (0.04 AUC), on HELD-OUT once | about $1–3 of Jev, cached |
+| D. Real history, buried questions | p8-subsystems' history (commits, cards, postmortems) and Percolate claims, with REM-1196's known-answer why-questions and more | questions *selected by burial* (best search rank of the answer beyond 50, measured and reported). The walk reads the answer where search does not, scored by items: a decision restated in a commit, a card and a postmortem is one item. Stage B's signal agrees with the truth | Jev only for C's winner |
+| E. Learning, scoped | stage D's questions asked again after walks write back event-scoped summaries (Kappa §9) | fewer reads for the same items, a shorter context for the decision model, and no new evidence demoted. A topic-scoped summary is the control that should fail | small |
+
+Stage A replaces 26 Oct's stage 2 as the gate. Stages B and C are new. D and E are 26 Oct's stages 3 and 4,
+re-scoped.
+
+**Ten stories, rewritten.** Each states a hard problem honestly, including when search is enough.
+
+| # | The hard problem | What proves it | Stage |
+|---|---|---|---|
+| 1 | Install it, ask a buried question, and get an answer search can't give | one real question whose answer is past search's rank 50, measured and printed. The walk reads it within 100 reads | D |
+| 2 | Know when not to walk | for a question whose answer is in search's first ten, Avalanche says so and stops. A walk would cost reads and find nothing more | D |
+| 3 | An answer three hops away | question to bug to decision to commit, each hop printed with the link and the judgement that took it | D |
+| 4 | Nothing there, or stopped looking? | stage B's signal: a question with no answer in the history dies out (branching below 1, empty frontier); one stopped by budget is flagged as still growing | B, D |
+| 5 | A yes that means "this answers it" | the same buried question walked twice, with a topical judgement and with stage C's. The second reads the answer with fewer irrelevant travels, and both counts are printed | C |
+| 6 | What was known then | as 26 Oct: the relay question as of 26 Oct 06:00Z and now, different answers, both commits on the path | built (story 6) |
+| 7 | A wrong link, taken back | as 26 Oct: the retraction changes the path and the stop signal, and stays on record | built (story 7) |
+| 8 | Find every mention: breadth, not a walk | "every change to the release train in October" in broad mode: on-topic is the right judgement here, with a count checked by hand | own mode |
+| 9 | The second time is cheaper, without forgetting what's new | stage E: fewer reads on repeat questions, and a new event on an old theme still found | E |
+| 10 | An agent asks the big question by asking small ones | as 26 Oct, over MCP: each narrow walk returns evidence, the stop signal and leads, and the agent's context is the yes set | D |
+
+The 26 Oct examples (hooksPath, the release catalog, severity) stay as candidates for stories 1 and 3. Each is
+kept only if stage D measures its answer as buried.
+
+## Approved 26 Oct: the target, the plan, and ten hard stories (the record)
 
 Sirsh, M-20261026-060505 and M-20261026-062436. Approved 26 Oct 13:33Z (M-20261026-133343-0d35); stage 2 is built
 and passes (below).
