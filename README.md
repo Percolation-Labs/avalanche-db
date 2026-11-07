@@ -89,4 +89,6 @@ from zero, which is what a spreadsheet does). The cent is by design.
 - [specs/engine.md](specs/engine.md): the design principles (Rust and redb, one file,
   append-only, bitemporal quads, typed predicates, durable sessions, tenant isolation) and
   which of them are built.
+- [specs/p8ql.md](specs/p8ql.md): P8QL, the proposed query language: SQL-like statements
+  whose every clause is one walk step, with likeness and connection as the two kinds of step.
 - [specs/plan.md](specs/plan.md): the approved plans, what we measured, and what comes next.
