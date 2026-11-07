@@ -1,4 +1,4 @@
-//! The README is the acceptance test. Every `console` block runs in order against a fresh
+//! The README and docs/stories.md are the acceptance tests. Every `console` block runs in order against a fresh
 //! copy of the example, and each command's output must match the block, with only
 //! durations masked. `no-test` blocks are skipped; `needs-key` blocks run only when
 //! AVALANCHE_MODEL_KEY is set; commands in `fails` blocks must exit non-zero. Every other block runs with no key, so the recorded model
@@ -110,11 +110,11 @@ fn copy(from: &Path, to: &Path) {
     }
 }
 
-#[test]
-fn the_readme_story_runs_as_written() {
+/// Runs one story file in a fresh copy of the example; `min` guards against a story that lost its commands.
+fn run_story(file: &str, min: usize) {
     let root = PathBuf::from(env!("CARGO_MANIFEST_DIR"));
-    let readme = std::fs::read_to_string(root.join("README.md")).unwrap();
-    let work = std::env::temp_dir().join(format!("ava-readme-{}", std::process::id()));
+    let readme = std::fs::read_to_string(root.join(file)).unwrap();
+    let work = std::env::temp_dir().join(format!("ava-story-{}-{}", std::process::id(), file.replace('/', "-")));
     let _ = std::fs::remove_dir_all(&work);
     copy(&root.join("examples"), &work.join("examples"));
     let bin = PathBuf::from(env!("CARGO_BIN_EXE_ava"));
@@ -140,11 +140,21 @@ fn the_readme_story_runs_as_written() {
         assert_eq!(out.status.success(), !c.fails, "`{}` exited {}:\n{}{}", c.line, out.status, got, String::from_utf8_lossy(&out.stderr));
         let got: Vec<String> = got.lines().map(mask).collect();
         let want: Vec<String> = c.expected.iter().map(|l| mask(l)).collect();
-        assert_eq!(got, want, "\n`{}` printed something other than the README says.\n--- README\n{}\n--- ava\n{}\n", c.line, want.join("\n"), got.join("\n"));
+        assert_eq!(got, want, "\n`{}` printed something other than {} says.\n--- {}\n{}\n--- ava\n{}\n", c.line, file, file, want.join("\n"), got.join("\n"));
         ran += 1;
     }
-    assert!(ran >= 10, "only {ran} commands ran; the README lost its story");
+    assert!(ran >= min, "only {ran} commands ran; {file} lost its story");
     let _ = std::fs::remove_dir_all(&work);
+}
+
+#[test]
+fn the_readme_story_runs_as_written() {
+    run_story("README.md", 5);
+}
+
+#[test]
+fn the_ten_stories_run_as_written() {
+    run_story("docs/stories.md", 10);
 }
 
 #[test]
