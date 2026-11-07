@@ -22,7 +22,7 @@ checks it against its checksum and puts it in `~/.local/bin`:
 
 ```console no-test
 $ ./install.sh --local
-installed ava 0.1.0 at /Users/you/.local/bin/ava
+installed ava 0.1.1 at /Users/you/.local/bin/ava
 ```
 
 There is no server, daemon or account: `ava` is one 6 MB binary, and a store is one file
@@ -36,7 +36,7 @@ $ curl -fsSL https://raw.githubusercontent.com/Percolation-Labs/avalanche-db/mai
 
 ```console
 $ ava --version
-ava 0.1.0
+ava 0.1.1
 ```
 
 ## 2. Ingest a Git history
