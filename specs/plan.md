@@ -1,6 +1,6 @@
 # Avalanche DB: the plan
 
-The approved plans for REM-1172, newest first, and what comes next. The README is the short story; [docs/stories.md](../docs/stories.md) is the full set of stories.
+The approved plans for REM-1172, newest first, and what comes next. The lab write-ups and scripts cited here (`lab/…`) are kept in the private `avalanche-lab` repository. The README is the short story; [docs/stories.md](../docs/stories.md) is the full set of stories.
 
 ## Approved 30 Oct: what we learned, what no longer holds, the plan and the ten stories
 

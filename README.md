@@ -86,4 +86,7 @@ from zero, which is what a spreadsheet does). The cent is by design.
 - [docs/architecture.md](docs/architecture.md): the three layers (construct, infer, walk)
   and how to point Avalanche at your own history.
 - [docs/testing.md](docs/testing.md): how this README and the stories run as tests.
+- [specs/engine.md](specs/engine.md): the design principles (Rust and redb, one file,
+  append-only, bitemporal quads, typed predicates, durable sessions, tenant isolation) and
+  which of them are built.
 - [specs/plan.md](specs/plan.md): the approved plans, what we measured, and what comes next.
