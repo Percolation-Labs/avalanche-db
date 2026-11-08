@@ -11,8 +11,11 @@
 - Grouping counts paths with `count(*)` or distinct records of one kind on the walk with
   `count(DISTINCT file)`. Paths are what a pattern returns; the distinct form is the one
   "how many shared files" means.
-- A `LIKE` whose top two candidates are within 0.1 pauses and lists them, and the agent
-  re-runs with `= '<name>'`. That is a new statement, not a token. One word is matched
+- A `LIKE` returns a wave. On its own (no hops), it is the answer, and it returns the
+  nearest records with their scores: five, or as many as `LIMIT` says. Before hops it
+  carries its top candidate. If the top two are within 0.1, it pauses and lists them, and the
+  agent re-runs with `= '<name>'`, or carries several into the hops with
+  `LIKE '…' WAVE n` (REM-1335). A re-run is a new statement, not a token. One word is matched
   fuzzily (edit distance) against names and labels; several words use label search.
 - `WALK FROM` runs the native walk to its end and prints the path. Steering it step by
   step stays with `ask` and `step`.
@@ -230,9 +233,11 @@ Each stage ends with its own tests and stories added to [docs/stories.md](../doc
 
 ## Open questions
 
-- **How many candidates `LIKE` carries forward.** The options are the top 1, every candidate
-  above a score, or pausing and letting the agent choose. The proposal is to pause when the
-  top two are within 0.1, and otherwise carry the top 1.
+- **How many candidates `LIKE` carries forward.** Decided by REM-1335: a bare `LIKE` returns
+  a wave of five. Before hops it carries the top one and pauses on a near tie, unless
+  `WAVE n` asks for more. The history eval's fuzzy question measured the cost of a wave of
+  one (evals/p8ql/RESULTS.md, round 3). Whether a wave before hops should default wider
+  is still open.
 - **Where named paths live:** `avalanche.toml`, or as facts in the store. As facts they
   would be bitemporal and replayable. In `avalanche.toml` they are simpler.
 - **Whether `GROUP BY` and `count` belong in the core,** or whether rows are returned and

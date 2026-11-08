@@ -1,5 +1,23 @@
 # P8QL agent eval: results
 
+## Round 3b, 8 Nov 2026: the fuzzy lookup with a likeness wave (REM-1335)
+
+**Versions:** avalanche-db with REM-1334 (every file, ids from bodies) and REM-1335 (a bare
+`LIKE` returns a wave of five; `WAVE n` carries n into hops). History store rebuilt from
+p8-subsystems 0828fe162 and percolate f3c9191a. Only Q2, both arms, three runs each, $0.46.
+Runs are in `runs/2026-11-08-history-wave/`.
+
+| arm | recall | calls (range) | turns | cost |
+|---|---|---|---|---|
+| baseline | 1.00 | 5.0 (4-6) | 6.7 | $0.073 |
+| P8QL, wave of five | 1.00 | 4.0 (2-7) | 6.0 | $0.079 |
+| P8QL in round 3, wave of one | 1.00 | 9.7 (7-13) | 8.7 | $0.085 |
+
+**With a wave, the fuzzy lookup no longer costs P8QL extra turns.** It took 6.0 turns against
+the baseline's 6.7, down from 8.7. The agent could see REM-1332 among the candidates instead
+of rewording until it came first. Cost is still slightly higher ($0.079 against $0.073),
+probably because each wave prints five labelled lines. Three runs per arm is directional.
+
 ## Round 3, 8 Nov 2026: Percolate's own history, three runs per question per arm
 
 **Versions:** avalanche-db 4ed728b (midb 0.2.0). Store built by `history/build.sh` from

@@ -153,6 +153,8 @@ pub struct Select {
     pub order_by: Option<(String, bool)>,
     pub limit: Option<usize>,
     pub as_of: Option<u64>,
+    /// `LIKE '…' WAVE n`: how many candidates the likeness wave carries into the hops.
+    pub wave: Option<usize>,
 }
 
 #[derive(Clone, Debug)]
@@ -313,6 +315,10 @@ impl P<'_> {
         if self.is_kw("LIKE") {
             self.i += 1;
             q.start = Some(Start::Like(self.string()?));
+            if self.is_kw("WAVE") {
+                self.i += 1;
+                q.wave = Some((self.num()? as usize).max(1));
+            }
         } else if self.is_sym("=") {
             self.i += 1;
             q.start = Some(Start::Exact(self.string()?));
@@ -522,9 +528,19 @@ impl std::fmt::Display for Plan {
 fn start_step(q: &Select) -> String {
     match &q.start {
         Some(Start::Exact(id)) => format!("{:<8} {:<34} dict, one key", "lookup", exact_name(&q.kind, id)),
-        Some(Start::Like(w)) if is_name_like(w) => format!("{:<8} {:<34} names and labels of kind {}, fuzzy", "like", format!("{} '{w}'", q.kind), q.kind),
-        Some(Start::Like(w)) => format!("{:<8} {:<34} label search (BM25){}", "like", format!("{} '{}'", q.kind, crate::model::short(w, 24)), if q.kind == "record" { String::new() } else { format!(", kind {}", q.kind) }),
+        Some(Start::Like(w)) if is_name_like(w) => format!("{:<8} {:<34} names and labels of kind {}, fuzzy{}", "like", format!("{} '{w}'", q.kind), q.kind, wave_note(q)),
+        Some(Start::Like(w)) => format!("{:<8} {:<34} label search (BM25){}{}", "like", format!("{} '{}'", q.kind, crate::model::short(w, 24)), if q.kind == "record" { String::new() } else { format!(", kind {}", q.kind) }, wave_note(q)),
         None => format!("{:<8} {:<34} psog, every {} with a label", "scan", q.kind, q.kind),
+    }
+}
+
+/// What the likeness wave carries: n candidates, or the top one (pausing on a near tie).
+fn wave_note(q: &Select) -> String {
+    match (q.wave, q.hops.is_empty()) {
+        (Some(0), _) => String::new(), // a WALK FROM, whose plan line says it takes the top record
+        (Some(n), _) => format!(", a wave of {n}"),
+        (None, true) => format!(", a wave of {}", q.limit.unwrap_or(WAVE)),
+        (None, false) => ", carries the top one".into(),
     }
 }
 
@@ -580,7 +596,7 @@ pub fn explain(store: &Store, t: u32, stmt: &Stmt) -> Result<Plan> {
             check(&w.from)?;
             let policy = if w.follow.is_empty() { "the default policy".to_string() } else { w.follow.iter().map(|(p, x)| format!("{p} {x}")).collect::<Vec<_>>().join(", ") };
             let steps = vec![
-                format!("{} → the top record", start_step(&w.from)),
+                format!("{} → the top record", start_step(&Select { wave: Some(0), ..w.from.clone() })),
                 format!("{:<8} {:<34} follow {policy}; others 0", "frontier", format!("budget {}", w.budget)),
                 format!("{:<8} {:<34} until the frontier is empty or the budget runs out", "step…", "best open question each step"),
             ];
@@ -595,6 +611,10 @@ pub fn explain(store: &Store, t: u32, stmt: &Stmt) -> Result<Plan> {
 /// How far apart the top two candidates of a LIKE must be for it to carry the first one
 /// forward. Closer than this, the query pauses and returns the candidates instead.
 pub const CLOSE: f64 = 0.1;
+
+/// How many candidates a likeness wave returns when nothing follows it (no hops) and the
+/// statement names no WAVE or LIMIT (REM-1335).
+pub const WAVE: usize = 5;
 
 pub struct Candidate {
     pub node: String,
@@ -691,15 +711,32 @@ pub fn run(store: &Store, t: u32, stmt: &Stmt) -> Result<Outcome> {
             let Some(top) = c.first() else {
                 return Ok(Outcome::Done(format!("{plan}  1  like     nothing of kind {} is like '{w}'\nno rows\n", q.kind)));
             };
-            if c.len() > 1 && top.score - c[1].score < CLOSE {
-                let mut s = format!("{plan}paused at step 1: '{w}' is like {} records about equally; choose one with {} = '<name>' and run again\n", c.iter().take_while(|x| top.score - x.score < CLOSE).count(), q.kind);
-                for x in c.iter().take(5) {
-                    s += &format!("  {:<28} {:.2}  \"{}\"\n", x.node, x.score, crate::model::short(&x.label, 50));
+            // A bare likeness is the answer, so it returns a wave; before hops it carries one
+            // start unless WAVE says how many (REM-1335).
+            let bare = q.hops.is_empty() && matches!(stmt, Stmt::Select(_));
+            let width = q.wave.or(if bare { Some(q.limit.unwrap_or(WAVE)) } else { None });
+            if let Some(n) = width {
+                let wave: Vec<&Candidate> = c.iter().take(n).collect();
+                let mut line = format!("like     '{w}' → a wave of {} (of {} like it)", wave.len(), c.len());
+                for x in &wave {
+                    line += &format!("\n             {:<28} {:.2}", x.node, x.score);
+                    if !x.label.is_empty() {
+                        line += &format!("  \"{}\"", crate::model::short(&x.label, 50));
+                    }
                 }
-                return Ok(Outcome::Paused(s));
+                trace.push(line);
+                wave.iter().map(|x| store.id(t, &x.node)?.ok_or_else(|| "a candidate vanished".into())).collect::<Result<Vec<u64>>>()?
+            } else {
+                if c.len() > 1 && top.score - c[1].score < CLOSE {
+                    let mut s = format!("{plan}paused at step 1: '{w}' is like {} records about equally; choose one with {} = '<name>', or carry several with LIKE '{w}' WAVE n, and run again\n", c.iter().take_while(|x| top.score - x.score < CLOSE).count(), q.kind);
+                    for x in c.iter().take(5) {
+                        s += &format!("  {:<28} {:.2}  \"{}\"\n", x.node, x.score, crate::model::short(&x.label, 50));
+                    }
+                    return Ok(Outcome::Paused(s));
+                }
+                trace.push(format!("like     '{w}' → {} {:.2}{}", top.node, top.score, if c.len() > 1 { format!(" (next {} {:.2})", c[1].node, c[1].score) } else { String::new() }));
+                vec![store.id(t, &top.node)?.ok_or("a candidate vanished")?]
             }
-            trace.push(format!("like     '{w}' → {} {:.2}{}", top.node, top.score, if c.len() > 1 { format!(" (next {} {:.2})", c[1].node, c[1].score) } else { String::new() }));
-            vec![store.id(t, &top.node)?.ok_or("a candidate vanished")?]
         }
         None => {
             let pairs = store.by_pred(t, Pred::Label, plan.as_of, &mut cost)?;

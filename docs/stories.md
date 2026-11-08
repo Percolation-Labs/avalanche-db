@@ -528,7 +528,7 @@ paths
   works_with   <-authoredBy- commit -touches-> file <-touches- commit -authoredBy->
 $ midb query --explain "SELECT colleague, count(DISTINCT file) AS shared_files FROM person LIKE 'bob' AS b WALK b -[works_with]- person AS colleague WHERE colleague <> b GROUP BY colleague ORDER BY shared_files DESC"
 plan  T2
-  1  like     person 'bob'                       names and labels of kind person, fuzzy
+  1  like     person 'bob'                       names and labels of kind person, fuzzy, carries the top one
   2  hop      <-authoredBy- commit               ospg prefix scan per row  (path works_with)
   3  hop      -touches-> file                    spog prefix scan per row  (path works_with)
   4  hop      <-touches- commit                  ospg prefix scan per row  (path works_with)
@@ -546,7 +546,7 @@ keys it read:
 ```console
 $ midb query "SELECT colleague, count(DISTINCT file) AS shared_files FROM person LIKE 'bob' AS b WALK b -[works_with]- person AS colleague WHERE colleague <> b GROUP BY colleague ORDER BY shared_files DESC"
 plan  T2
-  1  like     person 'bob'                       names and labels of kind person, fuzzy
+  1  like     person 'bob'                       names and labels of kind person, fuzzy, carries the top one
   2  hop      <-authoredBy- commit               ospg prefix scan per row  (path works_with)
   3  hop      -touches-> file                    spog prefix scan per row  (path works_with)
   4  hop      <-touches- commit                  ospg prefix scan per row  (path works_with)
@@ -568,28 +568,52 @@ person:Chen  1
 2 rows; 68 keys read in 99.1µs
 ```
 
-Likeness never picks a winner silently. One word is matched fuzzily against names and
-labels, so `bobby` still finds Bob. A word that many records are equally like pauses the
-query and lists the candidates, and you choose one by name:
+Likeness never picks a winner silently. On its own, a `LIKE` is the answer, so it returns a
+wave: the nearest records with their scores, five unless `LIMIT` says otherwise. One word is
+matched fuzzily against names and labels, so `bobby` still finds Bob:
 
 ```console
 $ midb query "SELECT p FROM person LIKE 'bobby' AS p"
 plan  T2
-  1  like     person 'bobby'                     names and labels of kind person, fuzzy
+  1  like     person 'bobby'                     names and labels of kind person, fuzzy, a wave of 5
 ran
-  1  like     'bobby' → person:Bob 0.60
+  1  like     'bobby' → a wave of 1 (of 1 like it)
+             person:Bob                   0.60
 p
 person:Bob
-1 row; 5 keys read in 160.2µs
-$ midb query "SELECT r FROM record LIKE 'invoice' AS r"
+1 row; 5 keys read in 1.2ms
+```
+
+Before hops, a `LIKE` carries its top candidate forward. When many records are about equally
+like the word, the query pauses and lists them. Choose one by name, or carry several into the
+hops with `WAVE n`:
+
+```console
+$ midb query "SELECT f FROM commit LIKE 'invoice' AS c WALK c -touches-> file AS f"
 plan  T2
-  1  like     record 'invoice'                   names and labels of kind record, fuzzy
-paused at step 1: 'invoice' is like 11 records about equally; choose one with record = '<name>' and run again
+  1  like     commit 'invoice'                   names and labels of kind commit, fuzzy, carries the top one
+  2  hop      -touches-> file                    spog prefix scan per row
+paused at step 1: 'invoice' is like 5 records about equally; choose one with commit = '<name>', or carry several with LIKE 'invoice' WAVE n, and run again
   commit:56bf3a3b56            1.00  "invoice: round each line half-up"
   commit:5b17c0bfa2            1.00  "invoice: compute totals"
   commit:984a051ce9            1.00  "tests: forty-line invoice totals"
   commit:cc746808d1            1.00  "invoice: round totals half-even (ADR-007, BUG-12)"
   commit:cee444c6a5            1.00  "invoice: say why totals round half-even"
+$ midb query "SELECT c, f FROM commit LIKE 'invoice' WAVE 3 AS c WALK c -touches-> file AS f"
+plan  T2
+  1  like     commit 'invoice'                   names and labels of kind commit, fuzzy, a wave of 3
+  2  hop      -touches-> file                    spog prefix scan per row
+ran
+  1  like     'invoice' → a wave of 3 (of 6 like it)
+             commit:56bf3a3b56            1.00  "invoice: round each line half-up"
+             commit:5b17c0bfa2            1.00  "invoice: compute totals"
+             commit:984a051ce9            1.00  "tests: forty-line invoice totals"
+  2  hop      -touches-> file                    3 rows, 14 keys
+c                  f
+commit:984a051ce9  file:tests/long_invoice.rs
+commit:56bf3a3b56  file:src/invoice/round.rs
+commit:5b17c0bfa2  file:src/invoice/total.rs
+3 rows; 113 keys read in 168.5µs
 ```
 
 A record select is a lookup and its links, each with the transaction it was learned in. `AS

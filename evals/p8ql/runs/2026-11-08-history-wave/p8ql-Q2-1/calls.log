@@ -1,0 +1,7 @@
+query SELECT x FROM card LIKE 'link to read an unpublished brew draft' AS x LIMIT 8
+query SELECT x FROM card LIKE 'unpublished brew read link' AS x LIMIT 10
+query SELECT x FROM card LIKE 'preview draft brew link' AS x LIMIT 10
+query SELECT x FROM card LIKE 'share link to read a private brew before it is published' AS x LIMIT 10
+query SELECT * FROM card = 'REM-1269'
+query SELECT x FROM card LIKE 'link read an unpublished brew' AS x WAVE 1 LIMIT 3
+query SELECT x FROM card LIKE 'share a private brew by link' AS x LIMIT 6

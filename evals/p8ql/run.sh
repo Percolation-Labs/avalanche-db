@@ -5,7 +5,7 @@
 # OUT/<arm>-<Q>-<rep>/{answer.json,calls.log,agent.json}; a run with an answer is skipped, so a
 # rerun resumes. Score with: python3 evals/p8ql/score.py OUT
 # SET=history runs history/questions.jsonl with history/prompts/ against the store in STORE
-# (history/build.sh); the default set is the billing example.
+# (history/build.sh); the default set is the billing example. ONLY=Q2,Q4 runs just those.
 set -e
 here="$(cd "$(dirname "$0")" && pwd)"; set_dir="$here${SET:+/$SET}"; export SET STORE
 if [ "$1" = --one ]; then
@@ -30,10 +30,13 @@ PY
 fi
 out="$1"; reps="${2:-3}"; jobs="${3:-5}"
 mkdir -p "$out"; out="$(cd "$out" && pwd)"
-python3 - "$set_dir/questions.jsonl" "$reps" <<'PY' | xargs -P "$jobs" -n 3 "$0" --one "$out"
-import json, sys
+ONLY="$ONLY" python3 - "$set_dir/questions.jsonl" "$reps" <<'PY' | xargs -P "$jobs" -n 3 "$0" --one "$out"
+import json, os, sys
+only = set(filter(None, os.environ.get("ONLY", "").split(",")))
 for rep in range(1, int(sys.argv[2]) + 1):
     for line in open(sys.argv[1]):
-        for arm in ("p8ql", "baseline"):
-            print(arm, json.loads(line)["id"], rep)
+        q = json.loads(line)["id"]
+        if not only or q in only:
+            for arm in ("p8ql", "baseline"):
+                print(arm, q, rep)
 PY

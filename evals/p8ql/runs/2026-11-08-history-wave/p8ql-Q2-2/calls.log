@@ -1,0 +1,2 @@
+query SELECT * FROM card LIKE 'link to read an unpublished brew draft'
+query SELECT * FROM card LIKE 'brew link draft unpublished preview share link' LIMIT 10
