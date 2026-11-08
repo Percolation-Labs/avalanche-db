@@ -1,0 +1,5 @@
+{"id":"Q1","tier":"record select","question":"Which file does decision ADR-007 govern, and which proposal did it reject?","gold":["file:src/invoice/round.rs","proposal:P-3"]}
+{"id":"Q2","tier":"fuzzy lookup","question":"Which files has Bobby changed?","gold":["file:src/invoice/round.rs","file:src/export/csv.rs"]}
+{"id":"Q3","tier":"graph pattern","question":"Who has worked on the same files as Bob?","gold":["person:Ana","person:Chen"]}
+{"id":"Q4","tier":"graph pattern","question":"Which issues were fixed by commits to files that Chen has also changed?","gold":["issue:BUG-3"]}
+{"id":"Q5","tier":"iterated","question":"Why is the invoice a cent off from the customer's spreadsheet? Name the decision behind it and the alternative it turned down.","gold":["decision:ADR-007","proposal:P-3"]}

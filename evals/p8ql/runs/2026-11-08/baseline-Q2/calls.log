@@ -1,0 +1,7 @@
+edges person:Bobby --in
+edges person:Bobby
+search Bobby
+search files changed
+edges person:Bob --in
+edges commit:0ab1d325ff
+edges commit:cee444c6a5

@@ -1,0 +1,5 @@
+query WALK FROM (SELECT r FROM record LIKE 'invoice cent rounding spreadsheet' AS r) FOLLOW because 1.0, rejects 0.9, implements 0.8 BUDGET 20 RETURN PATH
+query SELECT * FROM package = 'rp-rounding'
+query SELECT * FROM issue = 'BUG-12'
+query SELECT * FROM decision = 'ADR-007'
+query SELECT * FROM proposal = 'P-3'

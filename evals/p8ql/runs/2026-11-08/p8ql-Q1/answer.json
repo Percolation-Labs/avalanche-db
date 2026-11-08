@@ -1,0 +1,1 @@
+{"ids": ["decision:ADR-007", "proposal:P-3"], "answer": "ADR-007 decided on banker's rounding for money amounts (in src/invoice/round.rs, because of BUG-12) and rejected proposal P-3."}

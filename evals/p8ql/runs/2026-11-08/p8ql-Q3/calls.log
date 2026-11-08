@@ -1,0 +1,2 @@
+schema
+query SELECT y, count(*) AS n FROM person = 'Bob' AS x WALK x -[works_with]- person AS y WHERE y <> x GROUP BY y
