@@ -1,0 +1,9 @@
+query SELECT x FROM record LIKE 'brew unpublished preview link' AS x
+query SELECT x FROM record LIKE 'link to read a draft brew' AS x
+query SELECT x FROM record LIKE 'share link draft brew' AS x
+query SELECT * FROM card = 'REM-1269'
+query SELECT x FROM record LIKE 'brew link unpublished read' AS x
+query SELECT x FROM record LIKE 'brew draft reader link' AS x
+query SELECT x FROM record LIKE 'unpublished brew' AS x
+query SELECT * FROM card = 'REM-1332'
+query SELECT x FROM record LIKE 'share link private brew' AS x

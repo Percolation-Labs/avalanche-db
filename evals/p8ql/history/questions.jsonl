@@ -1,0 +1,5 @@
+{"id":"Q1","tier":"record select","question":"Which pull request carried out card REM-1332, and which other card does REM-1332 mention?","gold":["pr:percolate#407","card:REM-1333"]}
+{"id":"Q2","tier":"fuzzy lookup","question":"Which card added a link that lets someone read a brew that hasn't been published?","gold":["card:REM-1332"]}
+{"id":"Q3","tier":"graph pattern","question":"Which cards have commits that changed the file specs/workflow-engine/YAML.md?","gold":["card:REM-1106","card:REM-1316","card:REM-1319"]}
+{"id":"Q4","tier":"graph pattern","question":"Which other cards have commits that changed a file that a commit for card REM-254 also changed?","gold":["card:REM-1080","card:REM-192","card:REM-542"]}
+{"id":"Q5","tier":"graph pattern","question":"Counting files changed by commits that name each card, which two cards share the most changed files with card REM-1309?","gold":["card:REM-1266","card:REM-1018"]}

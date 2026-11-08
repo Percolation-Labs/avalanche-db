@@ -1,5 +1,58 @@
 # P8QL agent eval: results
 
+## Round 3, 8 Nov 2026: Percolate's own history, three runs per question per arm
+
+**Versions:** avalanche-db 4ed728b (midb 0.2.0). Store built by `history/build.sh` from
+p8-subsystems 2ae637988 (1,331 board cards) and percolate f3c9191a (1,922 commits, 392 merged
+pull requests): 35,144 facts, no dream. Same runner as round 2. 30 runs cost $1.98. Gold ids
+were computed from git and the card files, not from midb, under the git adapter's two rules
+(card ids from commit subjects only; at most 40 files per commit), and then checked against
+the store. Questions are in `history/questions.jsonl`; raw runs are in
+`runs/2026-11-08-history/`.
+
+| q | tier | recall (both) | baseline calls | P8QL calls | baseline turns | P8QL turns | baseline cost | P8QL cost |
+|---|---|---|---|---|---|---|---|---|
+| Q1 | record select (REM-1332's PR) | 1.00 | 2.0 | 1.0 | 4.0 | 4.0 | $0.052 | $0.052 |
+| Q2 | fuzzy lookup (a card by description) | 1.00 | 5.3 | 9.7 | 6.7 | 8.7 | $0.067 | $0.085 |
+| Q3 | graph pattern (cards behind a file) | 1.00 | 4.0 | 3.0 | 5.0 | 6.0 | $0.061 | $0.062 |
+| Q4 | graph pattern (cards sharing REM-254's files) | 1.00 | 14.0 | 2.0 | 7.0 | 5.0 | $0.075 | $0.058 |
+| Q5 | graph pattern (top two by shared files) | 1.00 | 419.7 | 2.0 | 6.7 | 5.0 | $0.089 | $0.058 |
+| mean | | 1.00 | 89.0 | 3.5 | 5.9 | 5.7 | $0.069 | $0.063 |
+
+**Every run in both arms was right again. Counted in agent turns and cost, which is what the
+work costs, the two arms are close: P8QL is cheaper on multi-hop patterns and dearer on
+fuzzy lookup.**
+
+- **Calls measured the wrong thing.** On Q5 the baseline made 420 `midb` calls in under seven
+  turns. The agent wrote its own join as a shell loop over `midb edges`, one invocation per
+  commit. Calls count invocations, not the agent's work, so rounds 1 and 2's "a fifth of the
+  calls" overstated the difference. From this round, `score.py` prints turns and cost from
+  each run's transcript, and those are the measure. Every run spends about four turns on
+  fixed overhead (reading the prompt, writing the answer, replying), so Q1's 4.0 is the
+  floor and the difference lies above it.
+- **Above that floor, P8QL still wins on patterns.** Q4: 1 turn of work against 3. Q5: 1
+  against 2.7, at two thirds of the cost and less than half the time (14 s against 35 s).
+  The same reading of round 2's billing runs gives 1.0-1.3 work turns against 3.3-4.0 on the
+  two pattern questions, at a fifth less cost.
+- **P8QL loses the fuzzy lookup, and the reason is in the design.** `LIKE` carries only its top
+  candidate forward. When the top candidate is wrong, the agent has to rephrase and try
+  again: one run made 13 queries over eight wordings. `search` prints a ranked list, so the
+  baseline agent could see REM-1332 lower down and go to it. The README now says a likeness
+  step returns a wave of nodes. The current `LIKE` returns a wave of one.
+- **The store is missing links, and neither arm can see that.** While computing gold answers
+  from git, we found that the git adapter keeps at most 40 files per commit and drops the
+  rest without saying so (src/construct/ingest.rs). It also reads card ids only from a
+  commit's subject, not its body. For specs/workflow-engine/YAML.md, git names five cards;
+  the store links three. Both arms agreed with the store, so recall here is recall against
+  what was ingested.
+- **Who-works-with questions have no answer on this history.** 1,860 of the 1,922 commits are
+  authored by one git identity, and card owners are not ingested. So the history set has no
+  person tier.
+
+**What this does not show.** Nothing in this history has a typed reason (no dream ran, which
+needs model credit), so the iterated "why" tier is absent. Both arms reached recall 1.00
+again, so accuracy did not separate them on these questions either.
+
 ## Round 2, 8 Nov 2026: three runs per question per arm
 
 **Versions:** avalanche-db 17dd4d3 (midb 0.2.0), billing example with Bob and Chen, reworded Q1.
@@ -19,7 +72,9 @@ with round 1. 30 runs cost $1.85. Raw answers, call logs and agent transcripts a
 
 **Round 1's pattern held across replicates. Every run was right in both arms. P8QL used about
 a fifth of the calls on graph patterns and half on the fuzzy lookup. On the open "why" it used
-more.**
+more.** *Correction from round 3:* calls count `midb` invocations, not the agent's work. In
+turns the arms are 5.9 (baseline) and 5.0 (P8QL), and in cost $0.063 and $0.060 a question.
+On the two pattern questions, P8QL took 1.0-1.3 turns of work against 3.3-4.0.
 
 - **The pattern gap is wider than the run-to-run noise.** On Q3 and Q4 the baseline's
   fewest calls (11 and 9) are more than three times P8QL's most (3 and 3). Six runs per

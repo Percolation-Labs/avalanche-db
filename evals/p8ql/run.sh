@@ -4,13 +4,15 @@
 # runs `claude -p` with Sonnet at low effort, Bash only, no MCP servers. Writes
 # OUT/<arm>-<Q>-<rep>/{answer.json,calls.log,agent.json}; a run with an answer is skipped, so a
 # rerun resumes. Score with: python3 evals/p8ql/score.py OUT
+# SET=history runs history/questions.jsonl with history/prompts/ against the store in STORE
+# (history/build.sh); the default set is the billing example.
 set -e
-here="$(cd "$(dirname "$0")" && pwd)"
+here="$(cd "$(dirname "$0")" && pwd)"; set_dir="$here${SET:+/$SET}"; export SET STORE
 if [ "$1" = --one ]; then
   out="$2"; arm="$3"; q="$4"; rep="$5"; run="$out/$arm-$q-$rep"
   [ -s "$run/answer.json" ] && exit 0
   "$here/setup.sh" "$run" "$arm" >/dev/null
-  prompt=$(RUN="$run" python3 - "$here" "$arm" "$q" <<'PY'
+  prompt=$(RUN="$run" python3 - "$set_dir" "$arm" "$q" <<'PY'
 import json, os, sys
 here, arm, qid = sys.argv[1:]
 q = next(d for d in map(json.loads, open(f"{here}/questions.jsonl")) if d["id"] == qid)
@@ -22,13 +24,13 @@ PY
     --allowedTools Bash --disallowedTools Read Write Edit Glob Grep WebFetch WebSearch Agent \
     --strict-mcp-config --no-session-persistence > agent.json 2> agent.err \
     || echo "$arm-$q-$rep: claude exited $?" >&2
-  rm -rf billing bin; [ -s agent.err ] || rm -f agent.err   # keep only the results
+  rm -rf store bin; [ -s agent.err ] || rm -f agent.err   # keep only the results
   echo "done $arm-$q-$rep: $(grep -c . calls.log) calls"
   exit 0
 fi
 out="$1"; reps="${2:-3}"; jobs="${3:-5}"
 mkdir -p "$out"; out="$(cd "$out" && pwd)"
-python3 - "$here/questions.jsonl" "$reps" <<'PY' | xargs -P "$jobs" -n 3 "$0" --one "$out"
+python3 - "$set_dir/questions.jsonl" "$reps" <<'PY' | xargs -P "$jobs" -n 3 "$0" --one "$out"
 import json, sys
 for rep in range(1, int(sys.argv[2]) + 1):
     for line in open(sys.argv[1]):

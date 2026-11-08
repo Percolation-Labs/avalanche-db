@@ -1,0 +1,4 @@
+schema
+query SELECT c FROM file = 'specs/workflow-engine/YAML.md' AS f WALK f <-touches- commit AS m WALK m -mentions-> card AS c
+query SELECT c FROM file = 'specs/workflow-engine/YAML.md' AS f WALK f <-touches- commit <-mentions- card AS c
+query SELECT c FROM file = 'specs/workflow-engine/YAML.md' AS f WALK f <-touches- commit -mentions-> card AS c

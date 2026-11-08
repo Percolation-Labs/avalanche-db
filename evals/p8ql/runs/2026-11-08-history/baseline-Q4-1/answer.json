@@ -1,0 +1,1 @@
+{"ids":["card:REM-1080","card:REM-542","card:REM-192"],"answer":"Cards REM-1080, REM-542 and REM-192 have commits that touched .github/scripts/bump_extension_version.py or its test, which REM-254 commits also changed."}

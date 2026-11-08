@@ -1,0 +1,509 @@
+edges card:REM-1309 --in
+edges commit:9365ee2e51
+why files shared with card REM-1309
+edges commit:9365ee2e51
+edges commit:e8fe2f53ac
+edges commit:32e4abf035
+edges commit:33779d4a87
+edges commit:d81379f676
+edges commit:a829021c74
+edges commit:53f2d99982
+edges commit:48e7f7b453
+edges commit:050a3dc67c
+edges commit:d5cc3e0980
+edges commit:5ff1b62df1
+edges commit:fe66710d2b
+edges commit:d4efbc5f79
+edges commit:2fd810e29f
+edges commit:e1852f61a2
+edges commit:cf078cebf4
+edges commit:a0f5b9cd68
+edges commit:c0a92bd8eb
+edges commit:1a69041a87
+edges commit:27c0783b8f
+edges commit:cc9e025250
+edges commit:c3714db18e
+edges commit:9365ee2e51
+edges commit:e8fe2f53ac
+edges commit:32e4abf035
+edges commit:33779d4a87
+edges commit:d81379f676
+edges commit:a829021c74
+edges commit:53f2d99982
+edges commit:48e7f7b453
+edges commit:050a3dc67c
+edges commit:d5cc3e0980
+edges commit:5ff1b62df1
+edges commit:fe66710d2b
+edges commit:d4efbc5f79
+edges commit:2fd810e29f
+edges commit:e1852f61a2
+edges commit:cf078cebf4
+edges commit:a0f5b9cd68
+edges commit:c0a92bd8eb
+edges commit:1a69041a87
+edges commit:27c0783b8f
+edges commit:cc9e025250
+edges commit:c3714db18e
+edges file:README.md --in
+edges file:dev/evals/memory/README.md --in
+edges file:dev/evals/memory/compare.py --in
+edges file:dev/evals/memory/extract-directional-compare.txt --in
+edges file:dev/evals/memory/extract-full-compare.txt --in
+edges file:dev/evals/memory/fair-directional-compare.txt --in
+edges file:dev/evals/memory/fair-directional-postmortem.txt --in
+edges file:dev/evals/memory/fixture-directional.json --in
+edges file:dev/evals/memory/graphiti_run.py --in
+edges file:dev/evals/memory/mem0_time.py --in
+edges file:dev/evals/memory/percolate_run.py --in
+edges file:dev/evals/memory/run-extract.sh --in
+edges file:dev/evals/memory/scores-0.2.37.txt --in
+edges file:dev/evals/memory/scores-0.2.38.txt --in
+edges file:dev/evals/memory/scores-extract-directional.txt --in
+edges file:dev/evals/memory/scores-extract-full.txt --in
+edges file:dev/evals/memory/scores-fair-directional.txt --in
+edges file:dev/evals/memory/scores-graphiti-0.31.2.txt --in
+edges file:dev/examples/advanced-memory/blocks/00-setup.sh --in
+edges file:dev/examples/advanced-memory/blocks/01-jev.sh --in
+edges file:dev/examples/advanced-memory/blocks/01-sessions.sql --in
+edges file:dev/examples/advanced-memory/blocks/01b-connect.sh --in
+edges file:dev/examples/advanced-memory/blocks/02-claude.sh --in
+edges file:dev/examples/advanced-memory/blocks/03-claim.sh --in
+edges file:dev/examples/advanced-memory/blocks/03-verdicts.sql --in
+edges file:dev/examples/advanced-memory/blocks/03b-decide.sh --in
+edges file:dev/examples/advanced-memory/blocks/04-signin.sql --in
+edges file:dev/examples/advanced-memory/blocks/04-verdicts.sql --in
+edges file:dev/examples/advanced-memory/blocks/05-model.sql --in
+edges file:dev/examples/advanced-memory/blocks/06-note-function.sql --in
+edges file:dev/examples/advanced-memory/blocks/07-questions.sql --in
+edges file:dev/examples/advanced-memory/blocks/08-embed.sh --in
+edges file:dev/examples/advanced-memory/blocks/09-links.sh --in
+edges file:dev/examples/advanced-memory/blocks/10-links.sql --in
+edges file:dev/examples/advanced-memory/blocks/10b-signin.sql --in
+edges file:dev/examples/advanced-memory/blocks/11-notes.sql --in
+edges file:dev/examples/advanced-memory/blocks/12-ask.sh --in
+edges file:dev/examples/advanced-memory/blocks/13-answers.sql --in
+edges file:dev/examples/advanced-memory/blocks/13-link.sh --in
+edges file:dev/examples/advanced-memory/blocks/14-text-warnings.sql --in
+edges file:dev/examples/advanced-memory/blocks/15-before.sql --in
+edges file:dev/examples/advanced-memory/blocks/16-ask.sh --in
+edges file:dev/examples/advanced-memory/blocks/16-withdraw.sql --in
+edges file:dev/examples/advanced-memory/blocks/17-iterated.sql --in
+edges file:dev/examples/advanced-memory/psqlpaste.py --in
+edges file:dev/examples/advanced-memory/run.sh --in
+edges file:dev/examples/mem0-memory/blocks/00-setup.sh --in
+edges file:dev/examples/mem0-memory/blocks/02b-connect.sh --in
+edges file:dev/examples/mem0-memory/blocks/08d-facts.sql --in
+edges file:dev/examples/mem0-memory/blocks/09-upload.sh --in
+edges file:dev/examples/mem0-memory/blocks/09b-search.sh --in
+edges file:dev/examples/mem0-memory/blocks/11-dream.sql --in
+edges file:dev/examples/mem0-memory/blocks/11c-claim.sh --in
+edges file:dev/examples/mem0-memory/blocks/11c-claude.sh --in
+edges file:dev/examples/mem0-memory/blocks/11d-bind.sh --in
+edges file:dev/examples/mem0-memory/blocks/11d-decided.sql --in
+edges file:dev/examples/mem0-memory/run.sh --in
+edges file:dev/examples/zep-memory/blocks/00-setup.sh --in
+edges file:dev/examples/zep-memory/blocks/01c-connect.sh --in
+edges file:dev/examples/zep-memory/blocks/04a-ask-again.sh --in
+edges file:dev/examples/zep-memory/blocks/04b-read.sh --in
+edges file:dev/examples/zep-memory/blocks/06-business-data.sql --in
+edges file:dev/examples/zep-memory/blocks/08-claude.sh --in
+edges file:dev/examples/zep-memory/blocks/08-judge-1-claim.sh --in
+edges file:dev/examples/zep-memory/blocks/08-judge-2-bind.sh --in
+edges file:dev/examples/zep-memory/blocks/08-judge-3-claim.sh --in
+edges file:dev/examples/zep-memory/blocks/08-judge-4-bind.sh --in
+edges file:dev/examples/zep-memory/blocks/08-judge-5-queue.sh --in
+edges file:dev/examples/zep-memory/blocks/08a-decided.sql --in
+edges file:dev/examples/zep-memory/blocks/08b-ana-decides.sh --in
+edges file:dev/examples/zep-memory/blocks/08c-graph-now.sh --in
+edges file:dev/examples/zep-memory/blocks/08d-retract.sql --in
+edges file:dev/examples/zep-memory/blocks/08e-graph-after-retract.sh --in
+edges file:dev/examples/zep-memory/blocks/12c-context-as-leo.sh --in
+edges file:dev/examples/zep-memory/blocks/15-delete.sh --in
+edges file:dev/examples/zep-memory/run.sh --in
+edges file:dev/tests/query/16-the-tour-fleet-is-its-owners.sql --in
+edges file:dev/tests/query/20-advanced-memory-article.sql --in
+edges file:dev/tests/query/21-zep-quickstart.sql --in
+edges file:dev/tests/workflow/25-the-langgraph-article-runs.sql --in
+edges commit:050a3dc67c
+edges commit:06486503cf
+edges commit:0c38fbf813
+edges commit:0e9ebf0bd5
+edges commit:1033b88e6d
+edges commit:111a8992d5
+edges commit:157b44488f
+edges commit:16478ecb26
+edges commit:174dac6978
+edges commit:18188ad3f0
+edges commit:1a69041a87
+edges commit:1b33444b20
+edges commit:20922fe22c
+edges commit:22a09365f4
+edges commit:257a40491c
+edges commit:272404587e
+edges commit:27c0783b8f
+edges commit:29aa18a080
+edges commit:2f0622d61f
+edges commit:30601d6343
+edges commit:33779d4a87
+edges commit:33c2f9baf2
+edges commit:3411a23280
+edges commit:3479afebe8
+edges commit:3a85f87e1b
+edges commit:47a074ccaa
+edges commit:48e7f7b453
+edges commit:49365ad755
+edges commit:4ca9786e35
+edges commit:4cd70f3b13
+edges commit:51fc9db264
+edges commit:53f2d99982
+edges commit:58045bdf35
+edges commit:5daf97931a
+edges commit:5ff1b62df1
+edges commit:653d8f1e28
+edges commit:695b9a50cc
+edges commit:6c0f6af31b
+edges commit:6e768b5e06
+edges commit:71d2ddf8ed
+edges commit:7ba41b6a0c
+edges commit:80bfffc471
+edges commit:817703f319
+edges commit:81e8ac02a3
+edges commit:8348862da1
+edges commit:8762aa6074
+edges commit:8daea3a38a
+edges commit:929883eda4
+edges commit:9365ee2e51
+edges commit:94bcd0cc24
+edges commit:983eae8515
+edges commit:9ceab91c1c
+edges commit:9ebe9f17fb
+edges commit:9f97ed2d46
+edges commit:a0f5b9cd68
+edges commit:a4f25983ab
+edges commit:a829021c74
+edges commit:b044c1e4f0
+edges commit:b997207600
+edges commit:bdee2ef78c
+edges commit:bf8ba8b8e8
+edges commit:c3526998db
+edges commit:c3714db18e
+edges commit:c443c26c68
+edges commit:c8449d0006
+edges commit:c8a288147a
+edges commit:cc9e025250
+edges commit:ce2fafe176
+edges commit:d4849b29af
+edges commit:d5b36f5a69
+edges commit:d5d3e56649
+edges commit:d81379f676
+edges commit:e0278115b4
+edges commit:e1371fa974
+edges commit:e1852f61a2
+edges commit:e7c2135618
+edges commit:e8fe2f53ac
+edges commit:f50cae336b
+edges commit:f517ef371c
+edges commit:fc863e44a2
+edges commit:fca7c50a9a
+edges commit:fe66710d2b
+edges file:README.md --in
+edges commit:48e7f7b453
+edges commit:d5d3e56649
+edges commit:94bcd0cc24
+edges commit:5daf97931a
+edges commit:4ca9786e35
+edges commit:47a074ccaa
+edges commit:7ba41b6a0c
+edges commit:e7c2135618
+edges commit:157b44488f
+edges commit:e1371fa974
+edges file:dev/evals/memory/README.md --in
+edges commit:9365ee2e51
+edges commit:e8fe2f53ac
+edges commit:33779d4a87
+edges commit:a829021c74
+edges commit:5ff1b62df1
+edges commit:fe66710d2b
+edges commit:e1852f61a2
+edges commit:3479afebe8
+edges commit:9ebe9f17fb
+edges file:dev/evals/memory/compare.py --in
+edges commit:e8fe2f53ac
+edges commit:33779d4a87
+edges file:dev/evals/memory/extract-directional-compare.txt --in
+edges commit:e8fe2f53ac
+edges file:dev/evals/memory/extract-full-compare.txt --in
+edges commit:e8fe2f53ac
+edges file:dev/evals/memory/fair-directional-compare.txt --in
+edges commit:33779d4a87
+edges file:dev/evals/memory/fair-directional-postmortem.txt --in
+edges commit:a829021c74
+edges file:dev/evals/memory/fixture-directional.json --in
+edges commit:a829021c74
+edges file:dev/evals/memory/graphiti_run.py --in
+edges commit:e8fe2f53ac
+edges commit:a829021c74
+edges commit:5ff1b62df1
+edges commit:3479afebe8
+edges file:dev/evals/memory/mem0_time.py --in
+edges commit:e1852f61a2
+edges file:dev/evals/memory/percolate_run.py --in
+edges commit:e8fe2f53ac
+edges commit:9ceab91c1c
+edges commit:e1852f61a2
+edges commit:9ebe9f17fb
+edges file:dev/evals/memory/run-extract.sh --in
+edges commit:e8fe2f53ac
+edges file:dev/evals/memory/scores-0.2.37.txt --in
+edges commit:e1852f61a2
+edges file:dev/evals/memory/scores-0.2.38.txt --in
+edges commit:5ff1b62df1
+edges file:dev/evals/memory/scores-extract-directional.txt --in
+edges commit:e8fe2f53ac
+edges file:dev/evals/memory/scores-extract-full.txt --in
+edges commit:e8fe2f53ac
+edges file:dev/evals/memory/scores-fair-directional.txt --in
+edges commit:a829021c74
+edges file:dev/evals/memory/scores-graphiti-0.31.2.txt --in
+edges commit:5ff1b62df1
+edges file:dev/examples/advanced-memory/blocks/00-setup.sh --in
+edges commit:53f2d99982
+edges commit:48e7f7b453
+edges file:dev/examples/advanced-memory/blocks/01-jev.sh --in
+edges commit:48e7f7b453
+edges commit:c8a288147a
+edges commit:06486503cf
+edges commit:20922fe22c
+edges file:dev/examples/advanced-memory/blocks/01-sessions.sql --in
+edges commit:48e7f7b453
+edges file:dev/examples/advanced-memory/blocks/01b-connect.sh --in
+edges commit:48e7f7b453
+edges commit:c8a288147a
+edges commit:06486503cf
+edges commit:20922fe22c
+edges commit:51fc9db264
+edges file:dev/examples/advanced-memory/blocks/02-claude.sh --in
+edges commit:48e7f7b453
+edges file:dev/examples/advanced-memory/blocks/03-claim.sh --in
+edges commit:48e7f7b453
+edges commit:0e9ebf0bd5
+edges commit:c8a288147a
+edges commit:06486503cf
+edges file:dev/examples/advanced-memory/blocks/03-verdicts.sql --in
+edges commit:48e7f7b453
+edges file:dev/examples/advanced-memory/blocks/03b-decide.sh --in
+edges commit:48e7f7b453
+edges commit:0e9ebf0bd5
+edges commit:06486503cf
+edges file:dev/examples/advanced-memory/blocks/04-signin.sql --in
+edges commit:48e7f7b453
+edges file:dev/examples/advanced-memory/blocks/04-verdicts.sql --in
+edges commit:48e7f7b453
+edges commit:51fc9db264
+edges file:dev/examples/advanced-memory/blocks/05-model.sql --in
+edges commit:48e7f7b453
+edges file:dev/examples/advanced-memory/blocks/06-note-function.sql --in
+edges commit:48e7f7b453
+edges file:dev/examples/advanced-memory/blocks/07-questions.sql --in
+edges commit:48e7f7b453
+edges file:dev/examples/advanced-memory/blocks/08-embed.sh --in
+edges commit:48e7f7b453
+edges file:dev/examples/advanced-memory/blocks/09-links.sh --in
+edges commit:48e7f7b453
+edges file:dev/examples/advanced-memory/blocks/10-links.sql --in
+edges commit:48e7f7b453
+edges file:dev/examples/advanced-memory/blocks/10b-signin.sql --in
+edges commit:48e7f7b453
+edges commit:f517ef371c
+edges file:dev/examples/advanced-memory/blocks/11-notes.sql --in
+edges commit:48e7f7b453
+edges file:dev/examples/advanced-memory/blocks/12-ask.sh --in
+edges commit:48e7f7b453
+edges file:dev/examples/advanced-memory/blocks/13-answers.sql --in
+edges commit:48e7f7b453
+edges file:dev/examples/advanced-memory/blocks/13-link.sh --in
+edges commit:48e7f7b453
+edges commit:f517ef371c
+edges file:dev/examples/advanced-memory/blocks/14-text-warnings.sql --in
+edges commit:48e7f7b453
+edges file:dev/examples/advanced-memory/blocks/15-before.sql --in
+edges commit:48e7f7b453
+edges file:dev/examples/advanced-memory/blocks/16-ask.sh --in
+edges commit:48e7f7b453
+edges commit:c443c26c68
+edges commit:f517ef371c
+edges file:dev/examples/advanced-memory/blocks/16-withdraw.sql --in
+edges commit:48e7f7b453
+edges file:dev/examples/advanced-memory/blocks/17-iterated.sql --in
+edges commit:48e7f7b453
+edges file:dev/examples/advanced-memory/psqlpaste.py --in
+edges commit:d81379f676
+edges commit:c3526998db
+edges file:dev/examples/advanced-memory/run.sh --in
+edges commit:48e7f7b453
+edges commit:6e768b5e06
+edges commit:0e9ebf0bd5
+edges commit:06486503cf
+edges commit:18188ad3f0
+edges commit:20922fe22c
+edges commit:51fc9db264
+edges commit:c443c26c68
+edges commit:c3526998db
+edges commit:f517ef371c
+edges file:dev/examples/mem0-memory/blocks/00-setup.sh --in
+edges commit:fe66710d2b
+edges commit:e1852f61a2
+edges file:dev/examples/mem0-memory/blocks/02b-connect.sh --in
+edges commit:e1852f61a2
+edges commit:272404587e
+edges file:dev/examples/mem0-memory/blocks/08d-facts.sql --in
+edges commit:fe66710d2b
+edges commit:272404587e
+edges file:dev/examples/mem0-memory/blocks/09-upload.sh --in
+edges commit:e1852f61a2
+edges commit:272404587e
+edges file:dev/examples/mem0-memory/blocks/09b-search.sh --in
+edges commit:fe66710d2b
+edges commit:3411a23280
+edges commit:272404587e
+edges file:dev/examples/mem0-memory/blocks/11-dream.sql --in
+edges commit:e1852f61a2
+edges commit:272404587e
+edges file:dev/examples/mem0-memory/blocks/11c-claim.sh --in
+edges commit:e1852f61a2
+edges commit:272404587e
+edges file:dev/examples/mem0-memory/blocks/11c-claude.sh --in
+edges commit:e1852f61a2
+edges file:dev/examples/mem0-memory/blocks/11d-bind.sh --in
+edges commit:e1852f61a2
+edges commit:272404587e
+edges file:dev/examples/mem0-memory/blocks/11d-decided.sql --in
+edges commit:e1852f61a2
+edges file:dev/examples/mem0-memory/run.sh --in
+edges commit:fe66710d2b
+edges commit:e1852f61a2
+edges commit:58045bdf35
+edges commit:272404587e
+edges file:dev/examples/zep-memory/blocks/00-setup.sh --in
+edges commit:050a3dc67c
+edges commit:5ff1b62df1
+edges file:dev/examples/zep-memory/blocks/01c-connect.sh --in
+edges commit:5ff1b62df1
+edges commit:c8449d0006
+edges commit:d5b36f5a69
+edges file:dev/examples/zep-memory/blocks/04a-ask-again.sh --in
+edges commit:5ff1b62df1
+edges file:dev/examples/zep-memory/blocks/04b-read.sh --in
+edges commit:5ff1b62df1
+edges commit:d5b36f5a69
+edges file:dev/examples/zep-memory/blocks/06-business-data.sql --in
+edges commit:5ff1b62df1
+edges commit:22a09365f4
+edges commit:8daea3a38a
+edges commit:bdee2ef78c
+edges commit:ce2fafe176
+edges commit:6c0f6af31b
+edges file:dev/examples/zep-memory/blocks/08-claude.sh --in
+edges commit:5ff1b62df1
+edges file:dev/examples/zep-memory/blocks/08-judge-1-claim.sh --in
+edges commit:5ff1b62df1
+edges commit:bf8ba8b8e8
+edges commit:817703f319
+edges file:dev/examples/zep-memory/blocks/08-judge-2-bind.sh --in
+edges commit:5ff1b62df1
+edges commit:bf8ba8b8e8
+edges commit:817703f319
+edges file:dev/examples/zep-memory/blocks/08-judge-3-claim.sh --in
+edges commit:5ff1b62df1
+edges commit:bf8ba8b8e8
+edges file:dev/examples/zep-memory/blocks/08-judge-4-bind.sh --in
+edges commit:5ff1b62df1
+edges commit:bf8ba8b8e8
+edges file:dev/examples/zep-memory/blocks/08-judge-5-queue.sh --in
+edges commit:5ff1b62df1
+edges commit:bf8ba8b8e8
+edges file:dev/examples/zep-memory/blocks/08a-decided.sql --in
+edges commit:5ff1b62df1
+edges file:dev/examples/zep-memory/blocks/08b-ana-decides.sh --in
+edges commit:111a8992d5
+edges commit:5ff1b62df1
+edges file:dev/examples/zep-memory/blocks/08c-graph-now.sh --in
+edges commit:5ff1b62df1
+edges file:dev/examples/zep-memory/blocks/08d-retract.sql --in
+edges commit:5ff1b62df1
+edges file:dev/examples/zep-memory/blocks/08e-graph-after-retract.sh --in
+edges commit:5ff1b62df1
+edges file:dev/examples/zep-memory/blocks/12c-context-as-leo.sh --in
+edges commit:5ff1b62df1
+edges commit:bf8ba8b8e8
+edges file:dev/examples/zep-memory/blocks/15-delete.sh --in
+edges commit:5ff1b62df1
+edges file:dev/examples/zep-memory/run.sh --in
+edges commit:5ff1b62df1
+edges commit:58045bdf35
+edges commit:bf8ba8b8e8
+edges commit:d5b36f5a69
+edges commit:174dac6978
+edges commit:ce2fafe176
+edges commit:6c0f6af31b
+edges file:dev/tests/query/16-the-tour-fleet-is-its-owners.sql --in
+edges commit:27c0783b8f
+edges commit:cc9e025250
+edges commit:16478ecb26
+edges file:dev/tests/query/20-advanced-memory-article.sql --in
+edges commit:48e7f7b453
+edges commit:6e768b5e06
+edges commit:0e9ebf0bd5
+edges commit:06486503cf
+edges commit:18188ad3f0
+edges commit:51fc9db264
+edges commit:c443c26c68
+edges commit:c3526998db
+edges commit:33c2f9baf2
+edges commit:f517ef371c
+edges file:dev/tests/query/21-zep-quickstart.sql --in
+edges commit:111a8992d5
+edges commit:81e8ac02a3
+edges commit:5ff1b62df1
+edges commit:257a40491c
+edges commit:8762aa6074
+edges commit:bf8ba8b8e8
+edges commit:fc863e44a2
+edges commit:b044c1e4f0
+edges commit:817703f319
+edges commit:c8449d0006
+edges commit:d5b36f5a69
+edges commit:a4f25983ab
+edges commit:fca7c50a9a
+edges commit:d4849b29af
+edges commit:ce2fafe176
+edges commit:653d8f1e28
+edges commit:6c0f6af31b
+edges file:dev/tests/workflow/25-the-langgraph-article-runs.sql --in
+edges commit:49365ad755
+edges commit:a0f5b9cd68
+edges commit:1a69041a87
+edges commit:27c0783b8f
+edges commit:cc9e025250
+edges commit:c3714db18e
+edges commit:58045bdf35
+edges commit:4ca9786e35
+edges commit:1033b88e6d
+edges commit:1b33444b20
+edges commit:983eae8515
+edges commit:9f97ed2d46
+edges commit:0c38fbf813
+edges commit:f50cae336b
+edges commit:929883eda4
+edges commit:b997207600
+edges commit:695b9a50cc
+edges commit:3a85f87e1b
+edges commit:4cd70f3b13
+edges commit:80bfffc471
+edges commit:30601d6343
+edges commit:2f0622d61f
+edges commit:71d2ddf8ed
+edges commit:8348862da1
+edges commit:e0278115b4
+edges commit:29aa18a080

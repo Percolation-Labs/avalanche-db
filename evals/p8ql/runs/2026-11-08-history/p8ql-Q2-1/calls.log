@@ -1,0 +1,13 @@
+query SELECT x FROM card LIKE 'unpublished brew read link' AS x
+query SELECT * FROM card = 'REM-1269'
+query SELECT x FROM record LIKE 'draft brew link' AS x
+query SELECT x FROM card LIKE 'unpublished brew' AS x
+query SELECT x FROM card LIKE 'draft brew' AS x
+query SELECT x FROM card LIKE 'brew unpublished link read' AS x
+query SELECT x FROM card LIKE 'share link brew' AS x
+query SELECT x FROM card LIKE 'private brew' AS x
+query SELECT * FROM card = 'REM-1332'
+query SELECT * FROM card = 'REM-766'
+query SELECT * FROM card = 'REM-1333'
+query SELECT x FROM card LIKE 'brew by link' AS x
+query SELECT x FROM card LIKE 'share private brew' AS x

@@ -1,0 +1,7 @@
+query SELECT x FROM record LIKE 'unpublished brew preview link' AS x LIMIT 15
+query SELECT x FROM record LIKE 'link read draft brew' AS x LIMIT 15
+query SELECT * FROM card = 'REM-769'
+query SELECT x FROM record LIKE 'share link unpublished brew' AS x LIMIT 15
+query SELECT x FROM record LIKE 'private link brew not published' AS x LIMIT 15
+query SELECT x FROM record LIKE 'share link brew draft unpublished' AS x WHERE x <> x LIMIT 5
+query SELECT x FROM record LIKE 'brew link' AS x LIMIT 15

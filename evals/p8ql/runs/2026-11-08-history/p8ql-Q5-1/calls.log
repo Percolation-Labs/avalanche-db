@@ -1,0 +1,2 @@
+schema
+query SELECT y, count(DISTINCT file) AS n FROM card = 'REM-1309' AS x WALK x <-mentions- commit -touches-> file <-touches- commit -mentions-> card AS y WHERE y <> x GROUP BY y ORDER BY n DESC LIMIT 5

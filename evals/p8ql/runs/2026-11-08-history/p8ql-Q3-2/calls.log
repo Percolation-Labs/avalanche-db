@@ -1,0 +1,3 @@
+schema
+query SELECT y FROM file = 'specs/workflow-engine/YAML.md' AS x WALK x <-touches- commit <-mentions- card AS y
+query SELECT y FROM file = 'specs/workflow-engine/YAML.md' AS x WALK x <-touches- commit -mentions-> card AS y
