@@ -1,11 +1,11 @@
 #!/bin/sh
-# evals/p8ql/setup.sh RUN_DIR ARM -- a fresh billing store for one agent run, and an `ava`
+# evals/p8ql/setup.sh RUN_DIR ARM -- a fresh billing store for one agent run, and an `midb`
 # on PATH that allows only the arm's commands and logs every call to RUN_DIR/calls.log.
-#   ARM=p8ql      ava query, ava query --explain, ava schema
-#   ARM=baseline  ava search, ask, step, why, edges
+#   ARM=p8ql      midb query, midb query --explain, midb schema
+#   ARM=baseline  midb search, ask, step, why, edges
 set -e
 run="$1"; arm="$2"; root="$(cd "$(dirname "$0")/../.." && pwd)"
-real="$root/target/release/ava"
+real="$root/target/release/midb"
 rm -rf "$run" && mkdir -p "$run/bin"
 cp -R "$root/examples/billing" "$run/billing"
 rm -rf "$run/billing/repo" "$run/billing/avalanche.toml" "$run/billing/.avalanche/store.redb"
@@ -15,12 +15,12 @@ case "$arm" in
   baseline) allow="search ask step why edges" ;;
   *) echo "arm is p8ql or baseline" >&2; exit 2 ;;
 esac
-cat > "$run/bin/ava" <<SHIM
+cat > "$run/bin/midb" <<SHIM
 #!/bin/sh
 printf '%s\n' "\$*" >> "$run/calls.log"
-case " $allow " in *" \$1 "*) ;; *) echo "ava \$1: not available in this arm; use one of: $allow" >&2; exit 2 ;; esac
+case " $allow " in *" \$1 "*) ;; *) echo "midb \$1: not available in this arm; use one of: $allow" >&2; exit 2 ;; esac
 cd "$run/billing" && exec "$real" "\$@"
 SHIM
-chmod +x "$run/bin/ava"
+chmod +x "$run/bin/midb"
 : > "$run/calls.log"
 echo "$run ready: PATH=$run/bin:\$PATH, arm $arm ($allow)"

@@ -114,10 +114,10 @@ fn copy(from: &Path, to: &Path) {
 fn run_story(file: &str, min: usize) {
     let root = PathBuf::from(env!("CARGO_MANIFEST_DIR"));
     let readme = std::fs::read_to_string(root.join(file)).unwrap();
-    let work = std::env::temp_dir().join(format!("ava-story-{}-{}", std::process::id(), file.replace('/', "-")));
+    let work = std::env::temp_dir().join(format!("midb-story-{}-{}", std::process::id(), file.replace('/', "-")));
     let _ = std::fs::remove_dir_all(&work);
     copy(&root.join("examples"), &work.join("examples"));
-    let bin = PathBuf::from(env!("CARGO_BIN_EXE_ava"));
+    let bin = PathBuf::from(env!("CARGO_BIN_EXE_midb"));
     let path = format!("{}:{}", bin.parent().unwrap().display(), std::env::var("PATH").unwrap_or_default());
     let has_key = std::env::var("AVALANCHE_MODEL_KEY").is_ok_and(|k| !k.is_empty());
     let mut cwd = work.clone();
@@ -140,7 +140,7 @@ fn run_story(file: &str, min: usize) {
         assert_eq!(out.status.success(), !c.fails, "`{}` exited {}:\n{}{}", c.line, out.status, got, String::from_utf8_lossy(&out.stderr));
         let got: Vec<String> = got.lines().map(mask).collect();
         let want: Vec<String> = c.expected.iter().map(|l| mask(l)).collect();
-        assert_eq!(got, want, "\n`{}` printed something other than {} says.\n--- {}\n{}\n--- ava\n{}\n", c.line, file, file, want.join("\n"), got.join("\n"));
+        assert_eq!(got, want, "\n`{}` printed something other than {} says.\n--- {}\n{}\n--- midb\n{}\n", c.line, file, file, want.join("\n"), got.join("\n"));
         ran += 1;
     }
     assert!(ran >= min, "only {ran} commands ran; {file} lost its story");

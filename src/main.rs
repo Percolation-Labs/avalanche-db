@@ -13,7 +13,7 @@ use avalanche::walk::{mcp, p8ql, search, suite};
 use avalanche::{infer, Result};
 
 #[derive(Parser)]
-#[command(name = "ava", version, about = "Avalanche DB: a memory you walk, not one you search")]
+#[command(name = "midb", version, about = "Avalanche DB: a memory you walk, not one you search")]
 struct Cli {
     /// The folder holding avalanche.toml
     #[arg(long, short = 'C', default_value = ".", global = true)]
@@ -209,7 +209,7 @@ enum KeyCmd {
 
 fn main() {
     if let Err(e) = run(Cli::parse()) {
-        eprintln!("ava: {e}");
+        eprintln!("midb: {e}");
         std::process::exit(1);
     }
 }
@@ -399,7 +399,7 @@ fn run(cli: Cli) -> Result<()> {
             }
             println!("{} of {} questions reach what they reached when kept", outcomes.len() - changed, outcomes.len());
             if changed > 0 {
-                return Err(format!("{changed} of {} answers changed: review them, and keep a new answer with `ava suite add`", outcomes.len()).into());
+                return Err(format!("{changed} of {} answers changed: review them, and keep a new answer with `midb suite add`", outcomes.len()).into());
             }
         }
         Cmd::Mcp => mcp::serve(dir)?,
@@ -502,7 +502,7 @@ fn run(cli: Cli) -> Result<()> {
     Ok(())
 }
 
-/// `ava lab serve`: the lab's engine over JSON lines, so walklab's deciders, scorecard and fidelity check drive it.
+/// `midb lab serve`: the lab's engine over JSON lines, so walklab's deciders, scorecard and fidelity check drive it.
 fn lab_serve(path: &Path) -> Result<()> {
     use std::io::{BufRead, Write};
     use avalanche::walk::lab;

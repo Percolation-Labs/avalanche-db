@@ -1,5 +1,5 @@
 """evals/p8ql/score.py RUNS_DIR -- score every run: RUNS_DIR/<arm>-<qid>/answer.json is the
-agent's {"ids": [...]} and calls.log its ava calls. Prints recall, precision and calls."""
+agent's {"ids": [...]} and calls.log its midb calls. Prints recall, precision and calls."""
 import json, os, sys
 runs = sys.argv[1]
 gold = {q["id"]: q for q in map(json.loads, open(os.path.join(os.path.dirname(__file__), "questions.jsonl")))}

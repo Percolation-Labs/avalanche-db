@@ -1,5 +1,5 @@
-//! WALK: the circle. lexical likeness (BM25) between a question and node labels. `ava search`
-//! shows it so a reader can see what search alone returns, and `ava ask` uses it once to
+//! WALK: the circle. lexical likeness (BM25) between a question and node labels. `midb search`
+//! shows it so a reader can see what search alone returns, and `midb ask` uses it once to
 //! pick where a walk starts.
 
 use std::collections::{BTreeMap, HashMap};
@@ -75,7 +75,7 @@ pub fn search(store: &Store, t: u32, words: &str, as_of: u64, valid_at: Option<i
     Ok(hits)
 }
 
-/// The circle as `ava search` prints it: the best five, and how many share a word.
+/// The circle as `midb search` prints it: the best five, and how many share a word.
 pub fn show(hits: &[Hit]) -> String {
     let w = hits.iter().take(5).map(|h| h.node.len()).max().unwrap_or(0);
     let shown: Vec<String> = hits.iter().take(5).map(|h| format!("\"{}\"", crate::model::short(&h.label, 60))).collect();

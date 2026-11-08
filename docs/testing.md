@@ -1,6 +1,6 @@
 # How the README and the stories are tested
 
-`cargo test --test readme` builds `ava` and runs two stories: the README and
+`cargo test --test readme` builds `midb` and runs two stories: the README and
 [stories.md](stories.md). Each runs in its own fresh copy of `examples/`. Every `console`
 block runs in order, and each command's output is compared with the block, with only
 durations and wall-clock times masked. Blocks marked `no-test` are skipped. `needs-key`

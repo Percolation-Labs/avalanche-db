@@ -7,7 +7,7 @@ fn mentions() -> Vec<(String, f64)> {
 use avalanche::store::{Dir, ScanCost, Store};
 
 fn store(name: &str) -> Store {
-    let path = std::env::temp_dir().join(format!("ava-test-{name}-{}.redb", std::process::id()));
+    let path = std::env::temp_dir().join(format!("midb-test-{name}-{}.redb", std::process::id()));
     let _ = std::fs::remove_file(&path);
     Store::open(path).unwrap()
 }

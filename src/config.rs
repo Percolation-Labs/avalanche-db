@@ -1,5 +1,5 @@
 //! `avalanche.toml`: what to read, which kind of thing an id names, and which model may
-//! read it. `ava init` writes it from what it finds in the folder.
+//! read it. `midb init` writes it from what it finds in the folder.
 
 use std::collections::BTreeMap;
 use std::path::{Path, PathBuf};
@@ -64,7 +64,7 @@ impl Default for ModelCfg {
 impl Config {
     pub fn load(dir: &Path) -> Result<Config> {
         let path = dir.join(FILE);
-        let text = std::fs::read_to_string(&path).map_err(|e| format!("{}: {e} (run `ava init` first)", path.display()))?;
+        let text = std::fs::read_to_string(&path).map_err(|e| format!("{}: {e} (run `midb init` first)", path.display()))?;
         Ok(toml::from_str(&text).map_err(|e| format!("{}: {e}", path.display()))?)
     }
 

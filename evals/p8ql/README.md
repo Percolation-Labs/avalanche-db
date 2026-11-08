@@ -10,19 +10,19 @@ example, because walks write to the store's usage log:
 
 ```sh
 cargo build --release
-./evals/p8ql/setup.sh RUNS/p8ql-Q3 p8ql          # ava query, ava query --explain, ava schema
-./evals/p8ql/setup.sh RUNS/baseline-Q3 baseline  # ava search, ask, step, why, edges
+./evals/p8ql/setup.sh RUNS/p8ql-Q3 p8ql          # midb query, midb query --explain, midb schema
+./evals/p8ql/setup.sh RUNS/baseline-Q3 baseline  # midb search, ask, step, why, edges
 ```
 
-`setup.sh` puts an `ava` on the run's PATH that refuses the other arm's commands and logs
+`setup.sh` puts an `midb` on the run's PATH that refuses the other arm's commands and logs
 every call to `calls.log`. The agent is told only the commands of its arm and the question, may
-use nothing but `ava`, and writes `answer.json` as `{"ids": [...], "answer": "..."}`. Both arms
+use nothing but `midb`, and writes `answer.json` as `{"ids": [...], "answer": "..."}`. Both arms
 use the same model and the same prompt apart from the command list.
 
 ```sh
 python3 evals/p8ql/score.py RUNS
 ```
 
-prints recall and precision of the gold ids and the number of `ava` calls, per question and per
+prints recall and precision of the gold ids and the number of `midb` calls, per question and per
 arm. One run per question is directional, not a measurement: the first round is 5 questions x 2
 arms, and a claim of a difference waits for replicates. Results go in `RESULTS.md`, newest first.

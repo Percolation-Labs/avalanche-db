@@ -81,9 +81,9 @@ design but has no code.
   log. That gives three things: metrics come from querying the log, a re-index can be tested
   by replaying old questions against the new graph (story 9), and any answer can be
   explained by what the graph knew when it ran. **Built:** each tenant has a usage log,
-  `<tenant>#usage`, and `ava suite` replays kept questions.
+  `<tenant>#usage`, and `midb suite` replays kept questions.
 - **The only semantic step on the read path is finding where to start.** The words of the
-  question are resolved to a starting node once, never across the store. **Built:** `ava
+  question are resolved to a starting node once, never across the store. **Built:** `midb
   search` draws the circle and the walk starts from it. A test checks that `src/walk/` never
   reaches the model (`tests/engine.rs`).
 - **Query languages are translators onto one small core** of pattern matching, path walks
@@ -118,7 +118,7 @@ design but has no code.
 - **One binary, three roles.** Embedded: a library inside an app or agent, with a local
   file. Sidecar: a small process beside Postgres, a repository or a folder. Cluster: the same
   binary running as writer, builder and reader on Kubernetes. It sits beside whatever else
-  you run and replaces nothing. **Built:** the library and the `ava` CLI, plus `ava mcp`
+  you run and replaces nothing. **Built:** the library and the `midb` CLI, plus `midb mcp`
   for agents. **Not yet:** the sidecar and cluster roles.
 - **Distribution is copying.** Writers append to per-tenant logs. Builders turn log tails
   into immutable snapshots in object storage. Readers pull snapshots and replay the recent

@@ -125,7 +125,7 @@ pub struct Session {
 }
 
 impl Session {
-    /// What `ava ask` prints: where the walk starts, what it is pinned to, and its token.
+    /// What `midb ask` prints: where the walk starts, what it is pinned to, and its token.
     pub fn started(&self) -> String {
         format!("session {} at {}, pinned to T{}, budget {}\n  token {}\n", self.id, self.start, self.snapshot, self.budget, self.token())
     }

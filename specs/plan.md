@@ -64,12 +64,12 @@ is the second engine, and lessons go both ways (M-20261030-095133-3077 proposes 
 Stage A replaces 26 Oct's stage 2 as the gate. Stages B and C are new. D and E are 26 Oct's stages 3 and 4,
 re-scoped.
 
-**Stage A, built and passed (30 Oct).** `ava lab import` reads the lab's 33 conversation graphs into a store, one
+**Stage A, built and passed (30 Oct).** `midb lab import` reads the lab's 33 conversation graphs into a store, one
 tenant per conversation: each document labelled in the graph's order, its terms as `tagged` values (so the documents
 holding a term are that value's incoming edges, and the lab's `post` is never stored; import checks it is the
 inverse), and the lab's `beside` and `near` lists as one-way links. That is 35,212 documents and 841,720 facts in 7
 seconds. `src/walk/lab.rs` is the lab's engine rule for rule, asking the store for every term, posting and list.
-`ava lab serve` runs it over JSON lines and hands each round's judgement back to the caller, and
+`midb lab serve` runs it over JSON lines and hands each round's judgement back to the caller, and
 `lab/avalanche_engine.py` gives it the lab engine's `run`, so walklab's deciders, scorecard and Jev cache drive it
 unchanged. `lab/fidelity.py` replays the 79 recorded live 1M P runs with their recorded verdicts. Avalanche matches the
 recording and the lab's engine on all 79: the same reads in the same order, the same `via`, clues, P, travels and stop.
@@ -137,10 +137,10 @@ caller, an agent or a person, breaks a large question into narrow ones, and each
 Every failure along the way is given one of three verdicts before anything is tuned: the data is wrong, the theory
 is wrong, or the implementation is wrong.
 
-**Stage 2, built and passed (26 Oct).** `ava world import <dir>` reads a reach.py world into a store beside it:
+**Stage 2, built and passed (26 Oct).** `midb world import <dir>` reads a reach.py world into a store beside it:
 items in creation order, terms and sittings as values (`tagged`, `inSitting`), vectors in a table of their own, and
 each item's three nearest in meaning computed once at import (`near`). `src/walk/world.rs` answers the seven
-questions reach.py's walk asks of a store from the indexes, and `ava world walk` runs stage 1's exploring walk
+questions reach.py's walk asks of a store from the indexes, and `midb world walk` runs stage 1's exploring walk
 (`src/walk/explore.rs`) with each clue's P replayed from the reference's recording and its draws from a coin both
 engines share (SplitMix64 seeded by SHA-256). On four 5,000-document worlds (13,000 items, 113,000 facts each),
 600 walks in five modes, accepted only to a third of travel exploring with near misses first, read the same items
@@ -174,7 +174,7 @@ miss what the walk finds.
 ## Phase two
 
 From the theory, next: measuring a walk against diffusion and running the fire test on the
-edges it used (`ava measure`); letting walks bend the graph, reinforcing used paths and
+edges it used (`midb measure`); letting walks bend the graph, reinforcing used paths and
 decaying unused ones; splitting crowded nodes into shorter links (REM-1168). From the spec,
 later: immutable snapshot files, per-tenant encryption and crypto-shredding, a Postgres
 adapter, query languages over the step core, and distribution.

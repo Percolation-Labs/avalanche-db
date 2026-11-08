@@ -47,7 +47,7 @@ fn call(key: &str, body: &Value) -> Result<Value> {
 }
 
 pub fn check_key(cfg: &Config) -> Result<String> {
-    let k = key(cfg).ok_or_else(|| format!("no key: set {} or run `ava key set`", cfg.model.key_env))?;
+    let k = key(cfg).ok_or_else(|| format!("no key: set {} or run `midb key set`", cfg.model.key_env))?;
     let body = json!({"model": cfg.model.model, "state": {"record": "The sky is blue."},
         "questions": {"q": {"type": "noul", "instructions": "Does `record` describe a colour?"}}});
     let r = call(&k, &body)?;

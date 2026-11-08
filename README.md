@@ -24,23 +24,23 @@ and a Percolate research package. Build it and read it all in:
 $ cd examples/billing
 $ ./make.sh
 built repo/: 10 commits
-$ ava init
+$ midb init
 created avalanche.toml and .avalanche/store.redb (tenant "me")
   sources: markdown notes, git repo, percolate percolate.json
   ids: ADR decision, BUG issue, P proposal, SUP issue
-$ ava ingest
+$ midb ingest
 markdown  notes          5 notes    →  16 facts
 git       repo           10 commits  →  53 facts
 percolate percolate.json 3 claims   →  28 facts
-T1: 97 facts in 35.5ms
+T1: 97 facts in 33.3ms
 ```
 
-Ingesting records only what the sources say outright. `ava dream` asks a model what each
+Ingesting records only what the sources say outright. `midb dream` asks a model what each
 mention means: does this commit fix that bug, does this claim support that decision. The
 example's model answers are recorded, so it needs no key and bills nothing:
 
 ```console
-$ ava dream
+$ midb dream
 12 mentions to decide, from 3 commits, 3 claims, 1 decision, 1 issue
 asked 12 questions in 8 calls (8 replayed, 0 called), $0.0000 billed
   claim:rp-rounding/C1  supports    decision:ADR-007           0.96
@@ -59,7 +59,7 @@ T2: 8 facts
 A customer writes in: their invoice is a cent off from their spreadsheet. Ask why:
 
 ```console
-$ ava why "why is the invoice a cent off from the customer's spreadsheet?" --prefer duplicates=0,cites=0
+$ midb why "why is the invoice a cent off from the customer's spreadsheet?" --prefer duplicates=0,cites=0
 issue:BUG-12                               2026-04-09 "A cent off on long invoices"
   led to  decision:ADR-007                 2026-04-11 "Banker's rounding for money amounts"
     rejects  proposal:P-3                  2026-03-02 "Round halves away from zero"
@@ -70,7 +70,7 @@ issue:BUG-12                               2026-04-09 "A cent off on long invoic
         makes  claim:rp-rounding/C2        2026-04-14 "Sheet formulas round each line with halves away from zero,…"
     decides  file:src/invoice/round.rs               
   fixed by  commit:cc746808d1              2026-04-12 "invoice: round totals half-even (ADR-007, BUG-12)"
-10 steps, 7 link kinds; 203 keys read in 565.0µs
+10 steps, 7 link kinds; 203 keys read in 583.0µs
 ```
 
 Search finds the bug report and stops there, because the reason shares no words with the

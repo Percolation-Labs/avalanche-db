@@ -1,4 +1,4 @@
-# A tag v* builds ava for each platform install.sh knows, and attaches each binary with
+# A tag v* builds midb for each platform install.sh knows, and attaches each binary with
 # its checksum to the GitHub release that install.sh reads.
 name: release
 on:
@@ -24,8 +24,8 @@ jobs:
       - run: cargo test --locked
       - run: cargo build --release --locked --target ${{ matrix.target }}
       - run: |
-          tar -czf ava-${{ matrix.target }}.tar.gz -C target/${{ matrix.target }}/release ava
-          shasum -a 256 ava-${{ matrix.target }}.tar.gz > ava-${{ matrix.target }}.tar.gz.sha256
+          tar -czf midb-${{ matrix.target }}.tar.gz -C target/${{ matrix.target }}/release midb
+          shasum -a 256 midb-${{ matrix.target }}.tar.gz > midb-${{ matrix.target }}.tar.gz.sha256
       - uses: softprops/action-gh-release@v2
         with:
-          files: ava-${{ matrix.target }}.tar.gz*
+          files: midb-${{ matrix.target }}.tar.gz*

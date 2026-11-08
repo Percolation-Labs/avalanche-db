@@ -42,5 +42,5 @@ repo = "Percolation-Labs/percolate"
 REM = "card"
 ```
 
-`ava dream --since 2026-10-01` limits a dream to recent sources.
+`midb dream --since 2026-10-01` limits a dream to recent sources.
 

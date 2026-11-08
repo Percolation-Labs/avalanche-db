@@ -31,7 +31,7 @@ fn tiny(dir: &std::path::Path) {
 
 #[test]
 fn a_world_answers_the_seven_questions_in_creation_order() {
-    let dir = std::env::temp_dir().join(format!("ava-world-{}", std::process::id()));
+    let dir = std::env::temp_dir().join(format!("midb-world-{}", std::process::id()));
     tiny(&dir);
     let store = Store::open(dir.join("avalanche.redb")).unwrap();
     let t = store.tenant("world").unwrap();
@@ -54,7 +54,7 @@ fn a_world_answers_the_seven_questions_in_creation_order() {
 
 #[test]
 fn nearest_meaning_is_each_items_three_nearest_both_ways() {
-    let dir = std::env::temp_dir().join(format!("ava-world-near-{}", std::process::id()));
+    let dir = std::env::temp_dir().join(format!("midb-world-near-{}", std::process::id()));
     tiny(&dir);
     let store = Store::open(dir.join("avalanche.redb")).unwrap();
     let t = store.tenant("world").unwrap();

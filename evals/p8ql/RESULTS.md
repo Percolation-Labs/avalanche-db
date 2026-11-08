@@ -41,3 +41,5 @@ more on the open "why" question.**
 the arms on accuracy, and the call counts could swing from run to run. Keys scanned were not
 compared. Next: replicates (three per question per arm), the reworded Q1, and the same tiers
 on Percolate's own history, where a pattern touches hundreds of records rather than ten.
+
+*Since 0.2.0 the CLI is `midb`; round 1 ran when it was still called `ava`, so the call logs say `ava`.*

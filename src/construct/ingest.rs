@@ -1,6 +1,6 @@
 //! CONSTRUCT, mechanically: adapters. Each reads a source, emits typed facts, and points back to where the
 //! content lives; no document text is stored, only short labels. Ingestion is mechanical:
-//! an id a source names becomes a plain `mentions` link, and `ava dream` decides later what
+//! an id a source names becomes a plain `mentions` link, and `midb dream` decides later what
 //! the mention means.
 
 use std::path::{Path, PathBuf};

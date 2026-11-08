@@ -5,8 +5,8 @@
 
 **As built, and where it differs from the proposal below.**
 
-- `ava query "<statement>"` runs a statement and `ava query --explain` returns its plan.
-  `ava schema` lists the kinds, links and named paths. Over MCP these are `p8ql_run`,
+- `midb query "<statement>"` runs a statement and `midb query --explain` returns its plan.
+  `midb schema` lists the kinds, links and named paths. Over MCP these are `p8ql_run`,
   `p8ql_explain` and `p8ql_schema`.
 - Grouping counts paths with `count(*)` or distinct records of one kind on the walk with
   `count(DISTINCT file)`. Paths are what a pattern returns; the distinct form is the one
@@ -80,7 +80,7 @@ GROUP BY ... ORDER BY ... LIMIT ...
 
 `EXPLAIN` returns the plan without running it. `PREPARE` returns the plan and a token for
 its first step. `STEP <token>` runs one step and returns its rows, its statistics and the
-next token, exactly as `ava step` does today.
+next token, exactly as `midb step` does today.
 
 ## Four queries, compiled
 
@@ -165,8 +165,8 @@ plan  T3
   3+ step     best open question, one per STEP      (stops when the frontier empties or the budget runs out)
 ```
 
-This compiles to `ava ask` followed by `ava step` calls. The `FOLLOW` weights are the walk's
-`--prefer` policy. `RETURN PATH` prints what `ava why` prints. Because the walk is native,
+This compiles to `midb ask` followed by `midb step` calls. The `FOLLOW` weights are the walk's
+`--prefer` policy. `RETURN PATH` prints what `midb why` prints. Because the walk is native,
 its plan is short and its work happens at run time: the agent watches the frontier and can
 `TAKE` any open question or change a weight between steps, as it can today.
 
@@ -182,7 +182,7 @@ Over MCP, three tools are added beside today's four (`search`, `ask`, `step` and
 
 An agent that is unsure explains first, reads the plan, and edits the query. It does not run
 a query and guess from an empty result. Every statement, plan and step is written to the
-usage log, so a query an agent wrote can be replayed after a rebuild, as `ava suite` replays
+usage log, so a query an agent wrote can be replayed after a rebuild, as `midb suite` replays
 questions now.
 
 ## Evals: querying through agents

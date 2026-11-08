@@ -183,7 +183,7 @@ pub fn dream(store: &Store, t: u32, dir: &Path, cfg: &Config, opts: &Opts) -> Re
         return Ok(report);
     }
     if !pending.is_empty() {
-        return Err(format!("{} sources need the model and no key is set ({}); nothing written. Set {} or run `ava key set`.", pending.len(), pending.join(", "), cfg.model.key_env).into());
+        return Err(format!("{} sources need the model and no key is set ({}); nothing written. Set {} or run `midb key set`.", pending.len(), pending.join(", "), cfg.model.key_env).into());
     }
     let rejected = crate::construct::review::rejected(store, t)?;
     let mut facts = vec![];
