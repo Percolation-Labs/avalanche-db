@@ -24,21 +24,23 @@ pub struct Ingested {
     pub read: (usize, &'static str),
 }
 
-/// A repository's history: commits, parents, author, files touched, and every id a commit
-/// message names. Valid time is the author time. `at` is the source path as configured,
-/// which pointers carry so `dream` can read the message back.
+/// A repository's history: commits, parents, author, every file touched, and every id the
+/// commit message names, in its subject or its body. Valid time is the author time. `at` is
+/// the source path as configured, which pointers carry so `dream` can read the message back.
 pub fn git_history(repo: &Path, rev: &str, at: &str, cfg: &Config) -> Result<Ingested> {
-    let out = git(repo, &["log", rev, "--name-only", "--format=%x1e%H%x1f%P%x1f%an%x1f%at%x1f%s"])?;
+    // Fields split by 0x1f, the message ends at 0x1d, then the touched files one per line.
+    let out = git(repo, &["log", rev, "--name-only", "--format=%x1e%H%x1f%P%x1f%an%x1f%at%x1f%s%x1f%b%x1d"])?;
     let mut facts = vec![];
     let mut commits = 0;
     for rec in out.split('\x1e').filter(|r| !r.trim().is_empty()) {
-        let mut lines = rec.lines();
-        let head: Vec<&str> = lines.next().unwrap_or("").split('\x1f').collect();
-        if head.len() < 5 {
+        let (meta, files) = rec.split_once('\x1d').unwrap_or((rec, ""));
+        let head: Vec<&str> = meta.splitn(6, '\x1f').collect();
+        if head.len() < 6 {
             continue;
         }
         commits += 1;
-        let (sha, parents, author, t, subject) = (head[0], head[1], head[2], head[3].parse::<i64>().unwrap_or(0), head[4]);
+        let (sha, parents, author, t, subject, body) =
+            (head[0].trim(), head[1], head[2], head[3].parse::<i64>().unwrap_or(0), head[4], head[5]);
         let c = format!("commit:{}", &sha[..10]);
         facts.push(FactIn::new(&c, Pred::Label, lit(subject), "repo").at(t));
         facts.push(FactIn::new(&c, Pred::Pointer, lit(&format!("git:{at}@{sha}")), "repo").at(t));
@@ -46,10 +48,16 @@ pub fn git_history(repo: &Path, rev: &str, at: &str, cfg: &Config) -> Result<Ing
         for p in parents.split_whitespace() {
             facts.push(FactIn::new(&c, Pred::Parent, format!("commit:{}", &p[..10]), "repo").at(t));
         }
-        for node in cfg.ids_in(subject) {
+        let mut named = cfg.ids_in(subject);
+        for node in cfg.ids_in(body) {
+            if !named.contains(&node) {
+                named.push(node);
+            }
+        }
+        for node in named {
             facts.push(FactIn::new(&c, Pred::Mentions, node, "repo").at(t));
         }
-        for file in lines.filter(|l| !l.trim().is_empty()).take(40) {
+        for file in files.lines().filter(|l| !l.trim().is_empty()) {
             facts.push(FactIn::new(&c, Pred::Touches, format!("file:{file}"), "repo").at(t));
         }
     }
@@ -311,6 +319,29 @@ pub fn evidence(dir: &Path, pointer: &str) -> Result<String> {
 #[cfg(test)]
 mod tests {
     use super::*;
+
+    #[test]
+    fn a_commit_keeps_every_file_and_the_ids_in_its_body() {
+        // REM-1334: the adapter kept 40 files a commit and read ids from the subject only.
+        let repo = std::env::temp_dir().join(format!("midb-git-{}", std::process::id()));
+        let _ = std::fs::remove_dir_all(&repo);
+        std::fs::create_dir_all(&repo).unwrap();
+        let run = |args: &[&str]| assert!(Command::new("git").current_dir(&repo).args(args).output().unwrap().status.success());
+        run(&["init", "-q", "-b", "main"]);
+        for i in 0..45 {
+            std::fs::write(repo.join(format!("f{i}.txt")), "x").unwrap();
+        }
+        run(&["add", "."]);
+        run(&["-c", "user.name=Ana", "-c", "user.email=a@x", "-c", "commit.gpgsign=false", "commit", "-q",
+              "-m", "many files (BUG-1)", "-m", "Also closes BUG-2.\nAnd BUG-1 again."]);
+        let cfg: Config = toml::from_str("tenant = \"t\"\n[ids]\nBUG = \"issue\"\n").unwrap();
+        let got = git_history(&repo, "main", "repo", &cfg).unwrap();
+        let _ = std::fs::remove_dir_all(&repo);
+        let count = |p: &str| got.facts.iter().filter(|f| f.p == p).count();
+        assert_eq!(count("touches"), 45);
+        let named: Vec<&str> = got.facts.iter().filter(|f| f.p == "mentions").map(|f| f.o.as_str()).collect();
+        assert_eq!(named, vec!["issue:BUG-1", "issue:BUG-2"]);
+    }
 
     #[test]
     fn ids_follow_the_table() {

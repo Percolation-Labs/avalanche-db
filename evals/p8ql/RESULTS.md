@@ -44,7 +44,9 @@ fuzzy lookup.**
   rest without saying so (src/construct/ingest.rs). It also reads card ids only from a
   commit's subject, not its body. For specs/workflow-engine/YAML.md, git names five cards;
   the store links three. Both arms agreed with the store, so recall here is recall against
-  what was ingested.
+  what was ingested. *Fixed in REM-1334:* the adapter now keeps every file and reads ids from
+  commit bodies, so the store and git agree (20,751 touches each), and `history/questions.jsonl`
+  carries the full gold (Q3: five cards, Q4: four).
 - **Who-works-with questions have no answer on this history.** 1,860 of the 1,922 commits are
   authored by one git identity, and card owners are not ingested. So the history set has no
   person tier.

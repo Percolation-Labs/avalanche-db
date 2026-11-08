@@ -2,8 +2,9 @@
 # evals/p8ql/history/build.sh OUT [P8_SUBSYSTEMS] [PERCOLATE] -- a store of Percolate's own history
 # for the eval (SET=history STORE=OUT run.sh ...): board cards at origin/main, the percolate
 # repository at origin/main, and its merged pull requests through gh. Gold answers in
-# questions.jsonl were computed from git under the git adapter's rules: card ids from commit
-# subjects only, and at most 40 files per commit.
+# questions.jsonl were computed from git (every file a commit changes, card ids in a commit's
+# subject or body) and checked against the store. Round 3 ran before REM-1334, when the
+# adapter kept 40 files a commit and read subjects only; its gold for Q3 and Q4 was smaller.
 set -e
 out="$1"; sub="${2:-$HOME/code/p8-subsystems}"; perc="${3:-$HOME/code/percolate}"
 root="$(cd "$(dirname "$0")/../../.." && pwd)"
