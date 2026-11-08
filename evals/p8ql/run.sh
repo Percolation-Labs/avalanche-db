@@ -22,6 +22,7 @@ PY
     --allowedTools Bash --disallowedTools Read Write Edit Glob Grep WebFetch WebSearch Agent \
     --strict-mcp-config --no-session-persistence > agent.json 2> agent.err \
     || echo "$arm-$q-$rep: claude exited $?" >&2
+  rm -rf billing bin; [ -s agent.err ] || rm -f agent.err   # keep only the results
   echo "done $arm-$q-$rep: $(grep -c . calls.log) calls"
   exit 0
 fi
