@@ -49,14 +49,14 @@ see.
 ```console
 $ cd examples/billing
 $ ./make.sh
-built repo/: 7 commits
+built repo/: 10 commits
 $ ava init
 created avalanche.toml and .avalanche/store.redb (tenant "me")
   sources: markdown notes, git repo, percolate percolate.json
   ids: ADR decision, BUG issue, P proposal, SUP issue
 $ ava ingest repo
-git       repo           7 commits  →  38 facts
-T1: 38 facts in 34.6ms
+git       repo           10 commits  →  53 facts
+T1: 53 facts in 28.3ms
 ```
 
 `ava init` looks at the folder and writes `avalanche.toml`: the sources it found, and which
@@ -111,7 +111,7 @@ their stance.
 $ ava ingest notes percolate.json
 markdown  notes          5 notes    →  16 facts
 percolate percolate.json 3 claims   →  28 facts
-T2: 44 facts in 25.0ms
+T2: 44 facts in 18.2ms
 ```
 
 A claim that names an id (`ADR-007`) mentions it, exactly as a commit does. What that
@@ -166,12 +166,12 @@ usual way, by drawing a circle of likeness around the question:
 
 ```console
 $ ava search "why is the invoice a cent off from the customer's spreadsheet?"
-  issue:BUG-12          "A cent off on long invoices"                                   6.69
-  issue:SUP-88          "Invoice total differs from customer spreadsheet"               5.87
-  commit:b9adc7af54     "export: invoices to a spreadsheet"                             3.27
-  issue:BUG-3           "Spreadsheet export drops the currency symbol"                  2.05
-  claim:rp-rounding/C3  "People judge a total by whether it matches their own sheet,…"  1.32
-12 records share a word with the question; the best 5 shown
+  issue:BUG-12          "A cent off on long invoices"                                   6.96
+  issue:SUP-88          "Invoice total differs from customer spreadsheet"               6.11
+  commit:b9adc7af54     "export: invoices to a spreadsheet"                             3.46
+  issue:BUG-3           "Spreadsheet export drops the currency symbol"                  2.17
+  claim:rp-rounding/C3  "People judge a total by whether it matches their own sheet,…"  1.36
+13 records share a word with the question; the best 5 shown
 ```
 
 The circle finds the problem, not the reason. The decision shares no words with the
@@ -188,7 +188,7 @@ step 1  issue:BUG-12 "A cent off on long invoices"
   + <-fixes- commit:cc746808d1  "invoice: round totals half-even (ADR-007, BUG-12)"  0.72
   + <-duplicates- issue:SUP-88  "Invoice total differs from customer spreadsheet"  0.45
   open 3 (opened 3, closed 1); next: decision:ADR-007 0.90, commit:cc746808d1 0.72, issue:SUP-88 0.45
-  stats: out 2 in 7; held back 0; budget left 16; path use 0; 32 keys in 471µs
+  stats: out 2 in 7; held back 0; budget left 16; path use 0; 32 keys in 88µs
   token s1.1.3
 $ ava step s1.1.3
 step 2  decision:ADR-007 "Banker's rounding for money amounts"
@@ -198,13 +198,13 @@ step 2  decision:ADR-007 "Banker's rounding for money amounts"
     -because-> issue:BUG-12  (visited)
     <-implements- commit:cc746808d1  (already open)
   open 5 (opened 3, closed 1); next: proposal:P-3 0.73, commit:cc746808d1 0.72, claim:rp-rounding/C1 0.57
-  stats: out 9 in 6; held back 0; budget left 13; path use 0; 37 keys in 555µs
+  stats: out 9 in 6; held back 0; budget left 13; path use 0; 37 keys in 92µs
   token s1.2.3
 $ ava step s1.2.3
 step 3  proposal:P-3 "Round halves away from zero"
     <-rejects- decision:ADR-007  (visited)
   open 4 (opened 0, closed 1); next: commit:cc746808d1 0.72, claim:rp-rounding/C1 0.57, file:src/invoice/round.rs 0.49
-  stats: out 3 in 3; held back 0; budget left 13; path use 0; 15 keys in 400µs
+  stats: out 3 in 3; held back 0; budget left 13; path use 0; 15 keys in 83µs
   token s1.3.3
 ```
 
@@ -230,7 +230,7 @@ $ ava step s1.3.3 --take file:src/invoice/round.rs
 step 4  file:src/invoice/round.rs
     <-decides- decision:ADR-007  (visited)
   open 3 (opened 0, closed 1); next: commit:cc746808d1 0.72, claim:rp-rounding/C1 0.57, issue:SUP-88 0.45
-  stats: out 0 in 5; held back 0; budget left 13; path use 0; 14 keys in 414µs
+  stats: out 0 in 6; held back 0; budget left 13; path use 0; 15 keys in 85µs
   token s1.4.3
 ```
 
@@ -258,7 +258,7 @@ issue:BUG-12                               2026-04-09 "A cent off on long invoic
     decides  file:src/invoice/round.rs               
   fixed by  commit:cc746808d1              2026-04-12 "invoice: round totals half-even (ADR-007, BUG-12)"
   duplicated by  issue:SUP-88              2026-04-08 "Invoice total differs from customer spreadsheet"
-14 steps, 9 link kinds; 248 keys read in 7.9ms
+14 steps, 9 link kinds; 249 keys read in 745.0µs
 $ ava why "why is the invoice a cent off from the customer's spreadsheet?" --prefer duplicates=0,cites=0
 issue:BUG-12                               2026-04-09 "A cent off on long invoices"
   led to  decision:ADR-007                 2026-04-11 "Banker's rounding for money amounts"
@@ -270,7 +270,7 @@ issue:BUG-12                               2026-04-09 "A cent off on long invoic
         makes  claim:rp-rounding/C2        2026-04-14 "Sheet formulas round each line with halves away from zero,…"
     decides  file:src/invoice/round.rs               
   fixed by  commit:cc746808d1              2026-04-12 "invoice: round totals half-even (ADR-007, BUG-12)"
-10 steps, 7 link kinds; 218 keys read in 5.4ms
+10 steps, 7 link kinds; 219 keys read in 489.0µs
 ```
 
 The research joins the walk where it bears on the decision: C1 supports ADR-007 and answers
@@ -292,7 +292,7 @@ Everything has a date. Ask the same question as it stood the day after the bug w
 $ ava why "why is the invoice a cent off from the customer's spreadsheet?" --valid-at 2026-04-10
 issue:BUG-12                   2026-04-09 "A cent off on long invoices"
   duplicated by  issue:SUP-88  2026-04-08 "Invoice total differs from customer spreadsheet"
-2 steps, 1 link kind; 30 keys read in 730.0µs
+2 steps, 1 link kind; 30 keys read in 82.0µs
 ```
 
 On 10 April the bug was known and nothing had been decided. `--changed-since` walks the
@@ -314,7 +314,7 @@ $ ava why "why is the invoice a cent off from the customer's spreadsheet?" --cha
 +     decides  file:src/invoice/round.rs               
 +   fixed by  commit:cc746808d1              2026-04-12 "invoice: round totals half-even (ADR-007, BUG-12)"
     duplicated by  issue:SUP-88              2026-04-08 "Invoice total differs from customer spreadsheet"
-14 steps, 9 link kinds; 295 keys read in 7.5ms
+14 steps, 9 link kinds; 296 keys read in 797.0µs
 against 2026-04-10: 12 reached since, 0 no longer reached
 ```
 
@@ -347,7 +347,7 @@ $ ava why "why is the invoice a cent off from the customer's spreadsheet?" --cha
         cites  source:rp-rounding/S1         2026-04-14 "IEEE 754-2019, section 4.3.1: roundTiesToEven"
       decides  file:src/invoice/round.rs               
     fixed by  commit:cc746808d1              2026-04-12 "invoice: round totals half-even (ADR-007, BUG-12)"
-13 steps, 8 link kinds; 310 keys read in 5.2ms
+13 steps, 8 link kinds; 311 keys read in 662.0µs
 - issue:BUG-12 duplicated by issue:SUP-88
 against T3: 0 reached since, 1 no longer reached
 $ ava log 4
@@ -403,10 +403,10 @@ $ ava usage
 most walked: issue:BUG-12 (9), decision:ADR-007 (7), file:src/invoice/round.rs (7)
 link kinds walked: cites 15, answers 12, makes 12, because 7, decides 7, rejects 7, duplicates 6, fixes 6, supports 6
 $ ava log
-T1  2026-10-24 18:22Z  38 facts
-T2  2026-10-24 18:22Z  44 facts
-T3  2026-10-24 18:22Z  8 facts
-T4  2026-10-24 18:22Z  3 facts
+T1  2026-11-08 13:19Z  53 facts
+T2  2026-11-08 13:19Z  44 facts
+T3  2026-11-08 13:19Z  8 facts
+T4  2026-11-08 13:19Z  3 facts
 ```
 
 The usage log is kept apart from the data's own log: after all those walks the data is
@@ -421,10 +421,10 @@ decisions and the reviews.
 $ rm .avalanche/store.redb
 $ ava ingest
 markdown  notes          5 notes    →  16 facts
-git       repo           7 commits  →  38 facts
+git       repo           10 commits  →  53 facts
 percolate percolate.json 3 claims   →  28 facts
 reviews   reviews.jsonl  1 review   →  2 facts
-T1: 84 facts in 53.2ms
+T1: 99 facts in 40.9ms
 $ ava dream
 12 mentions to decide, from 3 commits, 3 claims, 1 decision, 1 issue
 asked 12 questions in 8 calls (8 replayed, 0 called), $0.0000 billed
@@ -486,6 +486,6 @@ agent sees it:
 $ printf '%s\n' '{"jsonrpc":"2.0","id":1,"method":"tools/call","params":{"name":"ask","arguments":{"question":"why is the invoice a cent off?"}}}' | ava mcp
 {"id":1,"jsonrpc":"2.0","result":{"content":[{"text":"session s4 at issue:BUG-12, pinned to T2, budget 20\n  token s4.0.2\n","type":"text"}]}}
 $ printf '%s\n' '{"jsonrpc":"2.0","id":2,"method":"tools/call","params":{"name":"step","arguments":{"token":"s4.0.2","prefer":"duplicates=0"}}}' | ava mcp
-{"id":2,"jsonrpc":"2.0","result":{"content":[{"text":"step 1  issue:BUG-12 \"A cent off on long invoices\"\n  + <-because- decision:ADR-007  \"Banker's rounding for money amounts\"  0.90\n  + <-fixes- commit:cc746808d1  \"invoice: round totals half-even (ADR-007, BUG-12)\"  0.72\n  open 2 (opened 2, closed 1); next: decision:ADR-007 0.90, commit:cc746808d1 0.72\n  stats: out 2 in 6; held back 0; budget left 17; path use 3; 33 keys in 480µs\n  token s4.1.2\n","type":"text"}]}}
+{"id":2,"jsonrpc":"2.0","result":{"content":[{"text":"step 1  issue:BUG-12 \"A cent off on long invoices\"\n  + <-because- decision:ADR-007  \"Banker's rounding for money amounts\"  0.90\n  + <-fixes- commit:cc746808d1  \"invoice: round totals half-even (ADR-007, BUG-12)\"  0.72\n  open 2 (opened 2, closed 1); next: decision:ADR-007 0.90, commit:cc746808d1 0.72\n  stats: out 2 in 6; held back 0; budget left 17; path use 3; 33 keys in 86µs\n  token s4.1.2\n","type":"text"}]}}
 ```
 

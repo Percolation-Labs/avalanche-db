@@ -23,16 +23,16 @@ and a Percolate research package. Build it and read it all in:
 ```console
 $ cd examples/billing
 $ ./make.sh
-built repo/: 7 commits
+built repo/: 10 commits
 $ ava init
 created avalanche.toml and .avalanche/store.redb (tenant "me")
   sources: markdown notes, git repo, percolate percolate.json
   ids: ADR decision, BUG issue, P proposal, SUP issue
 $ ava ingest
 markdown  notes          5 notes    →  16 facts
-git       repo           7 commits  →  38 facts
+git       repo           10 commits  →  53 facts
 percolate percolate.json 3 claims   →  28 facts
-T1: 82 facts in 48.4ms
+T1: 97 facts in 35.5ms
 ```
 
 Ingesting records only what the sources say outright. `ava dream` asks a model what each
@@ -70,7 +70,7 @@ issue:BUG-12                               2026-04-09 "A cent off on long invoic
         makes  claim:rp-rounding/C2        2026-04-14 "Sheet formulas round each line with halves away from zero,…"
     decides  file:src/invoice/round.rs               
   fixed by  commit:cc746808d1              2026-04-12 "invoice: round totals half-even (ADR-007, BUG-12)"
-10 steps, 7 link kinds; 202 keys read in 2.4ms
+10 steps, 7 link kinds; 203 keys read in 565.0µs
 ```
 
 Search finds the bug report and stops there, because the reason shares no words with the

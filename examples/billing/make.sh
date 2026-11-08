@@ -9,8 +9,9 @@ F=../files
 commit() { # date, message, then files as src:dest pairs
   d="$1T10:00:00Z"; m="$2"; shift 2
   for pair in "$@"; do mkdir -p "$(dirname "${pair#*:}")"; cp "$F/${pair%%:*}" "${pair#*:}"; git add "${pair#*:}"; done
-  GIT_AUTHOR_NAME=Ana GIT_AUTHOR_EMAIL=ana@example.com GIT_AUTHOR_DATE="$d" \
-  GIT_COMMITTER_NAME=Ana GIT_COMMITTER_EMAIL=ana@example.com GIT_COMMITTER_DATE="$d" \
+  a="${AUTHOR:-Ana}"; e="$(echo "$a" | tr 'A-Z' 'a-z')@example.com"
+  GIT_AUTHOR_NAME="$a" GIT_AUTHOR_EMAIL="$e" GIT_AUTHOR_DATE="$d" \
+  GIT_COMMITTER_NAME="$a" GIT_COMMITTER_EMAIL="$e" GIT_COMMITTER_DATE="$d" \
   git -c commit.gpgsign=false commit -q -m "$m"
 }
 commit 2026-02-10 "invoice: compute totals" total.rs:src/invoice/total.rs
@@ -23,4 +24,8 @@ GIT_AUTHOR_NAME=Ana GIT_AUTHOR_EMAIL=ana@example.com GIT_AUTHOR_DATE=2026-04-13T
 GIT_COMMITTER_NAME=Ana GIT_COMMITTER_EMAIL=ana@example.com GIT_COMMITTER_DATE=2026-04-13T10:00:00Z \
 git -c commit.gpgsign=false commit -q -m "docs: link ADR-007 from the README"
 commit 2026-04-14 "tests: forty-line invoice totals" total.rs:tests/long_invoice.rs
+# Two more people, so that "who works with Bob?" has an answer (P8QL, specs/p8ql.md).
+AUTHOR=Bob commit 2026-04-20 "invoice: say why totals round half-even" round-v3.rs:src/invoice/round.rs
+AUTHOR=Bob commit 2026-04-21 "export: amounts with two decimals" csv-v3.rs:src/export/csv.rs
+AUTHOR=Chen commit 2026-04-22 "export: name the columns" csv-v4.rs:src/export/csv.rs
 echo "built repo/: $(git rev-list --count HEAD) commits"

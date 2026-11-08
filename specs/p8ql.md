@@ -62,8 +62,8 @@ next token, exactly as `ava step` does today.
 
 ## Four queries, compiled
 
-These examples use the billing example. **The example needs a second author first:** today
-every commit is Ana's, so step 1 of the build adds Bob and Chen to `make.sh`.
+These examples use the billing example. Until 8 Nov
+every commit was Ana's; stage 1 added Bob and Chen to `make.sh`, three commits after the rest.
 
 ### 1. Record select
 
