@@ -1,0 +1,3 @@
+schema
+query SELECT * FROM person LIKE 'Bobby' AS x
+query SELECT f FROM person = 'Bob' AS x WALK x <-authoredBy- commit -touches-> file AS f

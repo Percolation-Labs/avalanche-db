@@ -1,0 +1,5 @@
+search Bobby
+search Bob
+edges person:Bob --in
+edges commit:0ab1d325ff
+edges commit:cee444c6a5

@@ -1,0 +1,1 @@
+{"ids":["decision:ADR-007","proposal:P-3"],"answer":"ADR-007 chose banker's (half-even) rounding for money, while spreadsheets round halves away from zero, so totals differ by a cent; it rejected proposal P-3, rounding halves away from zero."}

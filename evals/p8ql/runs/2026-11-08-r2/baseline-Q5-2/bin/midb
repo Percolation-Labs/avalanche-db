@@ -1,0 +1,4 @@
+#!/bin/sh
+printf '%s\n' "$*" >> "/Users/sirsh/code/avalanche-db/evals/p8ql/runs/2026-11-08-r2/baseline-Q5-2/calls.log"
+case " search ask step why edges " in *" $1 "*) ;; *) echo "midb $1: not available in this arm; use one of: search ask step why edges" >&2; exit 2 ;; esac
+cd "/Users/sirsh/code/avalanche-db/evals/p8ql/runs/2026-11-08-r2/baseline-Q5-2/billing" && exec "/Users/sirsh/code/avalanche-db/target/release/midb" "$@"

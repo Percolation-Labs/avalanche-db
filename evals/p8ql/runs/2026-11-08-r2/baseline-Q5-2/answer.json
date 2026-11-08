@@ -1,0 +1,1 @@
+{"ids":["decision:ADR-007","proposal:P-3"],"answer":"The invoice rounds half-even (banker's rounding) per decision:ADR-007, which rejected proposal:P-3 (round halves away from zero) that spreadsheets use, so totals can differ by a cent."}

@@ -1,0 +1,3 @@
+schema
+query SELECT i FROM person = 'Chen' AS c WALK c <-authoredBy- commit -touches-> file <-touches- commit -fixes-> issue AS i
+query SELECT * FROM issue = 'BUG-3'

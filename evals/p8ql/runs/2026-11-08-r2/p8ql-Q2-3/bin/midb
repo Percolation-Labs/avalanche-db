@@ -1,0 +1,4 @@
+#!/bin/sh
+printf '%s\n' "$*" >> "/Users/sirsh/code/avalanche-db/evals/p8ql/runs/2026-11-08-r2/p8ql-Q2-3/calls.log"
+case " query schema " in *" $1 "*) ;; *) echo "midb $1: not available in this arm; use one of: query schema" >&2; exit 2 ;; esac
+cd "/Users/sirsh/code/avalanche-db/evals/p8ql/runs/2026-11-08-r2/p8ql-Q2-3/billing" && exec "/Users/sirsh/code/avalanche-db/target/release/midb" "$@"

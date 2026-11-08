@@ -26,3 +26,12 @@ python3 evals/p8ql/score.py RUNS
 prints recall and precision of the gold ids and the number of `midb` calls, per question and per
 arm. One run per question is directional, not a measurement: the first round is 5 questions x 2
 arms, and a claim of a difference waits for replicates. Results go in `RESULTS.md`, newest first.
+
+To run every question in both arms with replicates, headless (`claude -p`, Sonnet, Bash only):
+
+```sh
+./evals/p8ql/run.sh evals/p8ql/runs/<date> 3 5   # 3 runs per question per arm, 5 at a time
+```
+
+The prompts are `prompts/p8ql.txt` and `prompts/baseline.txt`. A rerun skips runs that already
+have an answer.

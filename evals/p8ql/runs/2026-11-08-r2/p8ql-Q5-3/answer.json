@@ -1,0 +1,1 @@
+{"ids":["decision:ADR-007","proposal:P-3"],"answer":"ADR-007 chose banker's rounding for money amounts (to fix BUG-12, a cent off on long invoices, reported in SUP-88), rejecting proposal P-3."}

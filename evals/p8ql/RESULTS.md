@@ -1,5 +1,42 @@
 # P8QL agent eval: results
 
+## Round 2, 8 Nov 2026: three runs per question per arm
+
+**Versions:** avalanche-db 17dd4d3 (midb 0.2.0), billing example with Bob and Chen, reworded Q1.
+Runner: `evals/p8ql/run.sh`, headless `claude -p` with Sonnet at low effort, Bash only, no MCP
+servers, a fresh store per run. Round 1 used subagents, so compare arms within this round, not
+with round 1. 30 runs cost $1.85. Raw answers, call logs and agent transcripts are in
+`runs/2026-11-08-r2/`.
+
+| q | tier | baseline recall | P8QL recall | baseline calls (range) | P8QL calls (range) |
+|---|---|---|---|---|---|
+| Q1 | record select | 1.00 | 1.00 | 1.0 (1-1) | 1.0 (1-1) |
+| Q2 | fuzzy lookup ("Bobby") | 1.00 | 1.00 | 5.7 (5-6) | 3.0 (3-3) |
+| Q3 | graph pattern (who works with Bob) | 1.00 | 1.00 | 11.7 (11-12) | 2.3 (2-3) |
+| Q4 | graph pattern (issues fixed in Chen's files) | 1.00 | 1.00 | 11.3 (9-13) | 2.3 (2-3) |
+| Q5 | iterated (why a cent off) | 1.00 | 1.00 | 1.0 (1-1) | 3.0 (1-4) |
+| mean | | 1.00 | 1.00 | 6.1 | 2.3 |
+
+**Round 1's pattern held across replicates. Every run was right in both arms. P8QL used about
+a fifth of the calls on graph patterns and half on the fuzzy lookup. On the open "why" it used
+more.**
+
+- **The pattern gap is wider than the run-to-run noise.** On Q3 and Q4 the baseline's
+  fewest calls (11 and 9) are more than three times P8QL's most (3 and 3). Six runs per
+  question are still a small number, but the ranges do not come close to overlapping.
+- **Q5 confirms round 1's other finding.** The baseline answered with one `why` call in all
+  three runs. One P8QL run (Q5-2) answered from its single `WALK FROM`. The other two
+  followed the walk with record selects on BUG-12, SUP-88 and ADR-007, one of them after a
+  second walk from SUP-88. The walk returned the answer each time. The agent re-read the
+  records before trusting it, as in round 1. Whether the plan and trace printed above the
+  tree cause this is still untested. A run with the trace moved below the tree, or hidden,
+  would test it.
+- **The reworded Q1 fixed the question defect.** All six runs named round.rs and P-3.
+
+**What this does not show.** The example has ten commits, so every question is answerable
+in both arms and recall cannot separate them. That needs a bigger history: next is the same
+four tiers on Percolate's own history.
+
 ## Round 1, 8 Nov 2026: directional, one run per question
 
 **Versions:** avalanche-db 32f555d (P8QL stages 1-3), billing example with Bob and Chen
