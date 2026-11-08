@@ -9,7 +9,7 @@ use std::path::Path;
 
 use serde_json::{json, Value};
 
-use super::search;
+use super::{p8ql, search};
 use super::session::{self, Steer};
 use crate::config::Config;
 use crate::model::date;
@@ -20,7 +20,9 @@ const INSTRUCTIONS: &str = "Avalanche DB is a memory of this project's history t
 Call ask with a question to start a walk; it returns a token. Call step with the token to take one step: \
 it shows the record reached, the links it opened, the ranked open questions and the next token. \
 Steer with take (an open question by name) or prefer (kind=weight, such as because=1,duplicates=0). \
-why runs a whole walk and returns the tree; search shows what plain search finds.";
+why runs a whole walk and returns the tree; search shows what plain search finds. \
+For a question with a known shape, such as who works with someone, write P8QL: p8ql_schema lists the kinds, \
+links and named paths, p8ql_explain shows the plan before it runs, and p8ql_run runs it step by step.";
 
 fn tools() -> Value {
     let s = |d: &str| json!({"type": "string", "description": d});
@@ -35,6 +37,12 @@ fn tools() -> Value {
         {"name": "step", "description": "Take one step of a walk: the best open question, or the one named by take. Returns what was reached, the ranked open questions, the step's statistics and the next token.",
          "inputSchema": {"type": "object", "properties": {"token": s("The token the last ask or step returned"),
             "take": s("An open question to take instead of the best one, by name"), "prefer": prefer}, "required": ["token"]}},
+        {"name": "p8ql_schema", "description": "What a P8QL statement can name: the kinds of record with their counts, the link types with the kinds each joins, and the named paths.",
+         "inputSchema": {"type": "object", "properties": {}}},
+        {"name": "p8ql_explain", "description": "The plan for a P8QL statement, without running it: one line per step, the scan each uses and the transaction it is pinned to. A hop that cannot exist is refused here.",
+         "inputSchema": {"type": "object", "properties": {"statement": s("A P8QL statement, such as SELECT colleague FROM person LIKE 'bob' AS b WALK b -[works_with]- person AS colleague")}, "required": ["statement"]}},
+        {"name": "p8ql_run", "description": "Run a P8QL statement: the plan, each step's rows and keys read, then the answer. A LIKE whose top candidates are close pauses and lists them; choose one with = '<name>' and run again.",
+         "inputSchema": {"type": "object", "properties": {"statement": s("A P8QL statement")}, "required": ["statement"]}},
         {"name": "why", "description": "Run a walk to its end and return each record under the one that led to it, with dates and statistics.",
          "inputSchema": {"type": "object", "properties": {"question": s("The question, in words"),
             "valid_at": s("Walk only what was true on this date (YYYY-MM-DD)"), "prefer": prefer}, "required": ["question"]}}
@@ -56,6 +64,11 @@ fn call(dir: &Path, name: &str, a: &Value) -> Result<String> {
         "ask" => session::ask(&store, t, &need("question")?, budget, None, valid_at, &prefer)?.started(),
         "step" => session::step(&store, t, &need("token")?, &Steer { prefer, take: arg("take") })?.to_string(),
         "why" => session::why(&store, &session::walk(&store, t, &need("question")?, budget, None, valid_at, &prefer)?, None)?,
+        "p8ql_schema" => p8ql::schema(&store, t, &cfg.paths)?,
+        "p8ql_explain" => p8ql::explain(&store, t, &p8ql::parse(&need("statement")?, &cfg.paths)?)?.to_string(),
+        "p8ql_run" => match p8ql::run(&store, t, &p8ql::parse(&need("statement")?, &cfg.paths)?)? {
+            p8ql::Outcome::Done(s) | p8ql::Outcome::Paused(s) => s,
+        },
         other => return Err(format!("no tool {other}").into()),
     })
 }

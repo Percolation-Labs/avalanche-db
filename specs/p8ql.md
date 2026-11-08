@@ -1,6 +1,28 @@
 # P8QL: iterated queries over a memory you walk
 
-*Proposal, 7 Nov 2026. Nothing below is built until Sirsh approves it.*
+*Proposed 7 Nov 2026; stages 1-3 built 8 Nov (REM-1331). Story 11 in
+[docs/stories.md](../docs/stories.md) runs every statement below as a test.*
+
+**As built, and where it differs from the proposal below.**
+
+- `ava query "<statement>"` runs a statement and `ava query --explain` returns its plan.
+  `ava schema` lists the kinds, links and named paths. Over MCP these are `p8ql_run`,
+  `p8ql_explain` and `p8ql_schema`.
+- Grouping counts paths with `count(*)` or distinct records of one kind on the walk with
+  `count(DISTINCT file)`. Paths are what a pattern returns; the distinct form is the one
+  "how many shared files" means.
+- A `LIKE` whose top two candidates are within 0.1 pauses and lists them, and the agent
+  re-runs with `= '<name>'`. That is a new statement, not a token. One word is matched
+  fuzzily (edit distance) against names and labels; several words use label search.
+- `WALK FROM` runs the native walk to its end and prints the path. Steering it step by
+  step stays with `ask` and `step`.
+- **Not built yet:** `PREPARE` and `STEP` for a pattern statement, so a pattern runs to the
+  end, not one hop per call; the plan and the per-step trace show each hop instead.
+  Statements are not yet written to the usage log, and the agent evals (stage 4) have not
+  run.
+
+---
+
 
 ## Why not SQL or Cypher
 

@@ -183,6 +183,22 @@ impl Store {
         Ok(self.db.begin_read()?.open_table(DICT)?.get((tenant, name))?.map(|v| v.value()))
     }
 
+    /// Every interned name starting with `prefix` (`person:`), with its id: one range scan.
+    pub fn names_with_prefix(&self, tenant: u32, prefix: &str) -> Result<Vec<(String, u64)>> {
+        let r = self.db.begin_read()?;
+        let t = r.open_table(DICT)?;
+        let mut out = vec![];
+        for row in t.range((tenant, prefix)..)? {
+            let (k, v) = row?;
+            let (tn, name) = k.value();
+            if tn != tenant || !name.starts_with(prefix) {
+                break;
+            }
+            out.push((name.to_string(), v.value()));
+        }
+        Ok(out)
+    }
+
     pub fn graph_id(&self, tenant: u32, graph: &str) -> Result<Option<u64>> {
         self.id(tenant, &format!("graph:{graph}"))
     }

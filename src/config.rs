@@ -21,6 +21,14 @@ pub struct Config {
     pub ids: BTreeMap<String, String>,
     #[serde(default)]
     pub model: ModelCfg,
+    /// Named paths for P8QL: hops with the kinds between them, ending with an arrow.
+    #[serde(default = "default_paths")]
+    pub paths: BTreeMap<String, String>,
+}
+
+/// The paths every store starts with; `[paths]` in avalanche.toml replaces them.
+pub fn default_paths() -> BTreeMap<String, String> {
+    BTreeMap::from([("works_with".to_string(), "<-authoredBy- commit -touches-> file <-touches- commit -authoredBy->".to_string())])
 }
 
 #[derive(Clone, Debug, Serialize, Deserialize)]
@@ -130,7 +138,7 @@ impl Config {
                 sources.push(SourceCfg { adapter: "percolate".into(), path: p.file_name().unwrap().into(), rev: None, dir: None, repo: None });
             }
         }
-        Ok(Config { tenant: "me".into(), sources, ids, model: ModelCfg::default() })
+        Ok(Config { tenant: "me".into(), sources, ids, model: ModelCfg::default(), paths: default_paths() })
     }
 
     pub fn to_toml(&self) -> String {
@@ -140,6 +148,10 @@ impl Config {
         }
         s += "\n[ids]\n";
         for (k, v) in &self.ids {
+            s += &format!("{k} = \"{v}\"\n");
+        }
+        s += "\n[paths]                  # named paths for P8QL queries: hops, and the kinds between them\n";
+        for (k, v) in &self.paths {
             s += &format!("{k} = \"{v}\"\n");
         }
         s += &format!("\n[model]\nprovider = \"{}\"\nmodel = \"{}\"\nkey_env = \"{}\"\n", self.model.provider, self.model.model, self.model.key_env);

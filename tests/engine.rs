@@ -131,7 +131,7 @@ fn the_agent_steers_by_policy_and_by_name() {
 
 #[test]
 fn the_walk_layer_never_calls_the_model() {
-    for src in [include_str!("../src/walk/session.rs"), include_str!("../src/walk/search.rs"), include_str!("../src/walk/suite.rs"), include_str!("../src/walk/mcp.rs")] {
+    for src in [include_str!("../src/walk/session.rs"), include_str!("../src/walk/search.rs"), include_str!("../src/walk/suite.rs"), include_str!("../src/walk/mcp.rs"), include_str!("../src/walk/p8ql.rs")] {
         assert!(!src.contains("infer"), "walk/ must not reach the model");
     }
 }

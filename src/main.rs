@@ -9,7 +9,7 @@ use avalanche::model::{date, Pred};
 use avalanche::walk::session::{self, Steer};
 use avalanche::store::{Dir, ScanCost, Store};
 use avalanche::construct::{dream, ingest, review};
-use avalanche::walk::{mcp, search, suite};
+use avalanche::walk::{mcp, p8ql, search, suite};
 use avalanche::{infer, Result};
 
 #[derive(Parser)]
@@ -50,6 +50,15 @@ enum Cmd {
     },
     /// The circle: records whose labels share words with the question
     Search { words: Vec<String> },
+    /// Run a P8QL statement (specs/p8ql.md): each clause is one walk step
+    Query {
+        statement: Vec<String>,
+        /// Print the plan without running it
+        #[arg(long)]
+        explain: bool,
+    },
+    /// What a P8QL statement can name: kinds, link types and named paths
+    Schema,
     /// Start a walk at the record these words best match
     Ask {
         words: Vec<String>,
@@ -325,6 +334,21 @@ fn run(cli: Cli) -> Result<()> {
             let (_, store, t) = open(dir)?;
             let head = store.head(t)?;
             print!("{}", search::show(&search::search(&store, t, &words.join(" "), head, None)?));
+        }
+        Cmd::Query { statement, explain } => {
+            let (cfg, store, t) = open(dir)?;
+            let stmt = p8ql::parse(&statement.join(" "), &cfg.paths)?;
+            if explain {
+                print!("{}", p8ql::explain(&store, t, &stmt)?);
+            } else {
+                match p8ql::run(&store, t, &stmt)? {
+                    p8ql::Outcome::Done(s) | p8ql::Outcome::Paused(s) => print!("{s}"),
+                }
+            }
+        }
+        Cmd::Schema => {
+            let (cfg, store, t) = open(dir)?;
+            print!("{}", p8ql::schema(&store, t, &cfg.paths)?);
         }
         Cmd::Ask { words, budget, as_of, valid_at, prefer } => {
             let (_, store, t) = open(dir)?;

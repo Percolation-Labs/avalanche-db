@@ -3,6 +3,7 @@
 
 pub mod explore;
 pub mod mcp;
+pub mod p8ql;
 pub mod search;
 pub mod session;
 pub mod suite;
