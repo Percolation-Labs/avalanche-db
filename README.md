@@ -1,11 +1,29 @@
 # Avalanche DB
 
-A memory you **walk**, not one you search. Avalanche DB reads the places your work already
-lives (git history, notes, research), turns them into a typed graph that never forgets its
-own history, and answers a question by walking from it, one step at a time, until the open
-questions run out.
+A lightweight database of a different kind. It has no SQL or Cypher interface, and needs none,
+because it is built on **durable walks**.
 
-It is one binary and one file on disk. It sits beside your repository and replaces nothing.
+## Likeness, then connection
+
+There are only two ways to know a thing: by what it is like, and by what it is connected to
+([There Are Only Two Ways to Know a Thing](https://drafts4life.substack.com/p/there-are-only-two-ways-to-know-a)).
+A durable walk alternates between the two:
+
+1. **Likeness.** A `LIKE` step is a key lookup, a fuzzy key lookup or a semantic lookup. It
+   returns a wave of nodes.
+2. **Connection.** Each of those nodes has typed links. The agent chooses which to follow,
+   and following them returns more keys.
+3. Those keys start the next likeness wave, and so on, until the open questions run out.
+
+The alternation of likeness waves and connection waves is the heartbeat of the whole system,
+like a heart's systole and diastole. Every question is answered by that rhythm, which is why
+there is no graph-pattern language or SQL to learn: a query is a walk, likeness followed by
+connection. The walk is durable because every step is kept. It can be paused and resumed
+from a token, read back as the plan it followed, and replayed later to see what changed.
+
+Avalanche DB builds the graph from the places your work already lives (git history, notes,
+research), and the graph never forgets its own history. Today it is one binary and one file
+on disk, and it sits beside your repository and replaces nothing.
 
 ## Install
 
@@ -89,6 +107,6 @@ from zero, which is what a spreadsheet does). The cent is by design.
 - [specs/engine.md](specs/engine.md): the design principles (Rust and redb, one file,
   append-only, bitemporal quads, typed predicates, durable sessions, tenant isolation) and
   which of them are built.
-- [specs/p8ql.md](specs/p8ql.md): P8QL, the proposed query language: SQL-like statements
-  whose every clause is one walk step, with likeness and connection as the two kinds of step.
+- [specs/p8ql.md](specs/p8ql.md): P8QL, a durable walk written down: each clause is one
+  likeness or connection step, and the plan runs in the order it is written.
 - [specs/plan.md](specs/plan.md): the approved plans, what we measured, and what comes next.
