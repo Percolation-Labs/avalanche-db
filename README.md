@@ -101,6 +101,8 @@ from zero, which is what a spreadsheet does). The cent is by design.
 - [docs/stories.md](docs/stories.md): the ten stories in full, including walking one step
   at a time, asking what the graph knew then, retracting a link, replaying questions, and
   serving the walk to an agent over MCP.
+- [docs/waves.md](docs/waves.md): five SQL and Cypher queries rewritten as likeness and
+  connection waves, and what the exercise reveals.
 - [docs/architecture.md](docs/architecture.md): the three layers (construct, infer, walk)
   and how to point Avalanche at your own history.
 - [docs/testing.md](docs/testing.md): how this README and the stories run as tests.
