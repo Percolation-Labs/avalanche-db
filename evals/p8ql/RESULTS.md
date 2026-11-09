@@ -5,7 +5,7 @@
 **Versions:** avalanche-db 96fd024 plus this round's change. The same November dream as
 round 5, repeated on a fresh copy of the history store with the Claude stand-in. Round 5's
 recordings were copied in, so only the 33 changed card requests were asked again. Cost: $0
-billed, about 5 minutes.
+billed.
 
 **The change.** For a card naming another card, the dream's alternative to `because` used to
 read "names {target} but none of the above holds". Now it lists what a card does with another
