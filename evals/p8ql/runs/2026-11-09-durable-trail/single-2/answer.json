@@ -1,0 +1,1 @@
+{"ids":["card:REM-1327","card:REM-1312","pr:percolate#378"],"answer":"Every train measures memory retrieval because Mem0-benchmark accuracy fell from 76% to 63% at the 0.2.31 image (REM-1312), caused by the search hybrid's words half not matching all of the query's words (and ties coming back in nondeterministic order), fixed in PR #378."}

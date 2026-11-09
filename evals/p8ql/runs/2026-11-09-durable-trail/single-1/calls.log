@@ -1,0 +1,4 @@
+ask release train measures memory retrieval
+step s1.0.2
+step s1.1.2 --take card:REM-1312
+step s1.2.2 --take card:REM-1145

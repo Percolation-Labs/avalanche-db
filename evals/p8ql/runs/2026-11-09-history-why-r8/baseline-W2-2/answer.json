@@ -1,0 +1,1 @@
+{"ids":["card:REM-1319","card:REM-1316"],"answer":"Minimising time per step through the worker path (REM-1319) mattered because of REM-1316, where a sql step runs in worker or inline mode and a statement timeout never bounded the step itself."}

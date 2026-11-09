@@ -1,0 +1,1 @@
+{"ids":["card:REM-1327","card:REM-1312","card:REM-1145"],"answer":"Because Percolate's Mem0-benchmark accuracy silently fell from 76% to 63% at the 0.2.31 image (REM-1312), caused by the lexical search change (REM-1145) that made the search words half match chunks for natural-language queries differently, so every release train now measures memory retrieval."}

@@ -1,0 +1,1 @@
+{"ids":["card:REM-1327","card:REM-1312","card:REM-1315"],"answer":"Mem0-benchmark accuracy fell from 76% to 63% at the 0.2.31 image (REM-1312), apparently because count_matches counted TEXT matching all words while TEXT matched any word, so the count came out low (REM-1315), so REM-1327 made every train measure memory retrieval and refuse on a drop beyond noise."}

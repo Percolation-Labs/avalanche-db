@@ -11,7 +11,7 @@ mkdir -p "$out"; out="$(cd "$out" && pwd)"
 agent() { # run-dir prompt-file... ; fills {RUN} {QUESTION} {TOKEN}
   run="$1"; shift
   p=$(cat "$here/common.txt" "$@" | RUN="$run" Q="$q" TOKEN="$(cat "$run/handoff.txt" 2>/dev/null || true)" python3 -c "import os,sys;print(sys.stdin.read().replace('{RUN}',os.environ['RUN']).replace('{QUESTION}',os.environ['Q']).replace('{TOKEN}',os.environ['TOKEN']))")
-  (cd "$run" && claude -p "$p" --model sonnet --effort low --output-format json --allowedTools Bash \
+  (cd "$run" && claude -p "$p" </dev/null --model sonnet --effort low --output-format json --allowedTools Bash \
      --disallowedTools Read Write Edit Glob Grep WebFetch WebSearch Agent --strict-mcp-config --no-session-persistence)
 }
 for rep in $(seq 1 "$reps"); do

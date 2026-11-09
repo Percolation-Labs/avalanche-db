@@ -1,0 +1,1 @@
+{"ids":["card:REM-1327","card:REM-1312","card:REM-1145"],"answer":"Every release train measures memory retrieval (card:REM-1327) because Mem0-benchmark accuracy fell from 76% to 63% at the 0.2.31 image (card:REM-1312), a regression traced (by a dreamed link only) to the lexical natural-language search work in card:REM-1145."}

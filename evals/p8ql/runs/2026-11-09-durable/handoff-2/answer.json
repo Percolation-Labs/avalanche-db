@@ -1,0 +1,1 @@
+{"ids":["card:REM-1327","card:REM-1312","card:REM-1145"],"answer":"Mem0-benchmark accuracy silently fell from 76% to 63% at the 0.2.31 image (REM-1312), which went unnoticed because no train measured memory retrieval, so REM-1327 makes every train measure it and refuse on a drop; the cause, per a dreamed link, traces to the lexical-search retrieval path (REM-1145)."}

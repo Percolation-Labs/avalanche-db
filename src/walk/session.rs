@@ -187,6 +187,8 @@ pub struct Neighbour {
 }
 
 pub struct StepOut {
+    /// The way the walk reached `at`, one record per line with its label.
+    pub trail: Vec<String>,
     pub session: Session,
     pub at: Option<Frame>,
     pub label: Option<String>,
@@ -281,7 +283,7 @@ pub fn step(store: &Store, t: u32, token: &str, steer: &Steer) -> Result<StepOut
     s.prefer(&steer.prefer);
     let best = s.ranked().first().map(|f| f.node.clone());
     let Some(name) = steer.take.clone().or(best) else {
-        return Ok(StepOut { session: s, at: None, label: None, neighbours: vec![], stats, token: None });
+        return Ok(StepOut { trail: vec![], session: s, at: None, label: None, neighbours: vec![], stats, token: None });
     };
     let pick = s.frontier.iter().position(|f| f.node == name).ok_or_else(|| format!("{name} is not an open question here"))?;
     let frame = s.frontier.remove(pick);
@@ -366,24 +368,40 @@ pub fn step(store: &Store, t: u32, token: &str, steer: &Steer) -> Result<StepOut
     store.write(s.usage, &facts)?;
     store.put_session(&s.key(), &serde_json::to_string(&s)?)?;
     let token = if s.frontier.is_empty() { None } else { Some(s.token()) };
-    Ok(StepOut { session: s, at: Some(frame), label: label_text, neighbours, stats, token })
+    let trail = if frame.parent.is_some() { trail(store, t, &s, &frame, &mut cost)? } else { vec![] };
+    Ok(StepOut { trail, session: s, at: Some(frame), label: label_text, neighbours, stats, token })
 }
 
-/// The path from the start to `at`, through each frame's parent: `a because b fixed by c`.
-pub fn trail(s: &Session, at: &Frame) -> String {
-    let mut parts = vec![at.node.clone()];
+/// The path from the start to `at`, through each frame's parent: one line per record, the
+/// first the start and each later one the link that reached it, with the record's label.
+pub fn trail(store: &Store, t: u32, s: &Session, at: &Frame, cost: &mut ScanCost) -> Result<Vec<String>> {
+    let mut hops: Vec<(String, String)> = vec![];
     let mut cur = at.clone();
-    while let Some(p) = cur.parent.clone() {
-        let link = format!("{}{}", cur.link(), if cur.dreamed { " (dreamed, not stated)" } else { "" });
-        parts.push(link);
-        parts.push(p.clone());
+    loop {
+        let link = match &cur.parent {
+            Some(_) => format!("{}{}  ", cur.link(), if cur.dreamed { " (dreamed, not stated)" } else { "" }),
+            None => String::new(),
+        };
+        hops.push((link, cur.node.clone()));
+        let Some(p) = cur.parent.clone() else { break };
         match s.visited.iter().find(|f| f.node == p) {
-            Some(f) if parts.len() < 40 => cur = f.clone(),
-            _ => break,
+            Some(f) if hops.len() < 20 => cur = f.clone(),
+            _ => {
+                hops.push((String::new(), p));
+                break;
+            }
         }
     }
-    parts.reverse();
-    parts.join(" ")
+    hops.reverse();
+    let mut out = vec![];
+    for (link, node) in hops {
+        let label = match store.id(t, &node)? {
+            Some(id) => label(store, t, id, s.snapshot, s.valid_at, cost)?.map(|(l, _)| format!("  \"{}\"", crate::model::short(&l, 60))).unwrap_or_default(),
+            None => String::new(),
+        };
+        out.push(format!("{link}{node}{label}"));
+    }
+    Ok(out)
 }
 
 impl fmt::Display for StepOut {
@@ -395,7 +413,10 @@ impl fmt::Display for StepOut {
         writeln!(f, "step {}  {}{label}", self.session.step, at.node)?;
         // The way here, so whoever resumes a token sees how the walk reached this record.
         if at.parent.is_some() {
-            writeln!(f, "  reached by: {}", trail(&self.session, at))?;
+            writeln!(f, "  reached by:")?;
+            for line in &self.trail {
+                writeln!(f, "    {line}")?;
+            }
         }
         if self.neighbours.len() > SHOWN {
             writeln!(f, "  ({} neighbours; the first {SHOWN} shown)", self.neighbours.len())?;

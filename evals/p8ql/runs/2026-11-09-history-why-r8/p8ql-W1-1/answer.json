@@ -1,0 +1,1 @@
+{"ids":["card:REM-1312","card:REM-1145"],"answer":"Mem0-benchmark accuracy fell from 76% to 63% at the 0.2.31 image (REM-1312), caused by the change to lexical search for natural-language queries (REM-1145), so every train now measures memory retrieval."}

@@ -1,5 +1,35 @@
 # P8QL agent eval: results
 
+## Round 9, 9 Nov 2026: a durable walk handed between two agents
+
+**Versions:** avalanche-db 18a2c74, then e6b0d20, then this round's change. The round 8 history
+store. Question: W1 (why every train measures memory retrieval; gold REM-1312, REM-1145).
+Harness: `durable/run.sh`. In a handoff, agent A runs `ask` and exactly two `step`s, writes
+the token, and stops without answering. Agent B gets only the question and the token. In a
+single run, one agent walks with `ask` and `step` from the start. Both use the baseline
+commands. 18 agent runs, $1.87.
+
+| what `step` showed B | B resumed the token | B's calls after A | B right | single agent's calls |
+|---|---|---|---|---|
+| the record it reached (before) | 3 of 3 | 10, 8, 10 | 2 of 3 | 4, 4, 4 |
+| plus `reached by:` as a line of ids | 3 of 3 | 6, 7, 8 | 3 of 3 | 4, 4, 4 |
+| plus `reached by:` one record per line, with labels | 3 of 3 | 2, 3, 5 | 3 of 3 | 5, 4, 4 |
+
+**The token is durable: every second agent resumed the walk where the first left it, and
+none started over. What wasn't durable was the context.** B landed on REM-1145 with no way
+to see that the walk had come from REM-1327 by way of REM-1312. So B rebuilt the path with
+`edges` and `search`, and one B settled on the wrong cause (REM-1315).
+
+- **The mechanism is that a step showed where the walk was, not how it got there.** The
+  session holds the path (each visited frame keeps its parent and link). It just wasn't printed.
+- **Now every step prints `reached by:`**: one line per record from the start, each with
+  the link that reached it, its `dreamed, not stated` mark, and the record's label. With ids
+  alone, B still looked each record up. With labels, B confirmed one or two links and answered.
+- **A handoff now costs about what the work costs.** A spent 3 calls and B about 3, against
+  4 for one agent alone. The second agent pays for confirmation, not reconstruction.
+- **This is one question with a three-step path.** A longer walk prints a longer `reached by`,
+  which is capped at 20 records. Whether a reader skims a long path or re-checks it is untested.
+
 ## Round 8b, 9 Nov 2026: the prompt decides the first call
 
 The P8QL arm's prompt described `WALK FROM` as being "for open-ended 'why' questions", so on
