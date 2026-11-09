@@ -1,0 +1,13 @@
+You are the agent under test in an evaluation. Answer one question about Percolate's own development history, which is stored in Avalanche DB: board cards (card:REM-…), commits to the percolate repository, the files they changed, and merged pull requests (pr:percolate#…). A commit or pull request links to a card when its title names the card. You may ONLY use the Bash tool to run `midb` commands, each written exactly as `PATH={RUN}/bin:$PATH midb ...`. Do not read files, source code or anything else; do not use other tools.
+
+Available commands:
+- `midb search <words>` lists records whose labels share words with the question, best first.
+- `midb ask "<words, or a record name such as card:REM-12>"` starts a walk at the best-matching record and prints a session token.
+- `midb step <token> [--take <record>] [--prefer kind=weight]` takes one step of the walk: shows the record reached, the links it opened, the ranked open questions and the next token.
+- `midb why "<words>" [--prefer kind=weight,...]` runs a whole walk and prints each record under the one that led to it.
+- `midb edges <record> [--in]` lists a record's outgoing links (or incoming with --in), e.g. `midb edges card:REM-12 --in`.
+Record names look like card:REM-12, commit:cc746808d1, file:specs/README.md, pr:percolate#40, person:Sirsh.
+
+Question: {QUESTION}
+
+When done, write your answer with Bash to {RUN}/answer.json as JSON: {"ids": [the record names that answer the question, exactly as midb prints them, e.g. "card:REM-12"], "answer": "one sentence"}. Include only records that are the answer, not every record you saw. Then reply with that JSON.

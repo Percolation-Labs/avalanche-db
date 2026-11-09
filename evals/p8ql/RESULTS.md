@@ -1,5 +1,49 @@
 # P8QL agent eval: results
 
+## Round 5, 9 Nov 2026: "why" questions on Percolate's history, after a dream
+
+**Versions:** avalanche-db a6d0459. The history store (REM-1334 ingest) was dreamed for
+November with the Claude stand-in (`provider = "claude"`), because Jev returned 402 (no
+credit). The dream took 147 calls and wrote 83 links (72 implements, 11 because), and billed
+nothing. The question set is `history-why/` with 3 questions x 2 arms x 3 runs, $1.06; runs are in
+`runs/2026-11-09-history-why/`.
+
+**The stand-in's links, read one by one.** Of the 11 `because` links, 5 are right: REM-1280
+because REM-1275, REM-1311 because REM-1240, REM-1312 because REM-1145 (the Mem0 drop and its
+cause), REM-1319 because REM-1316, and REM-1327 because REM-1312. Four are wrong: REM-1283
+and REM-1302 name other cards only to put them out of scope, and REM-1323 merely relates
+to REM-1328. The last two (REM-1303 and REM-1304 on REM-1167) are dependencies, not causes.
+**Every wrong link sits exactly at 0.80, the dream's cut.** The stand-in reports
+probabilities in a few coarse values (0.55, 0.60, 0.72, 0.80, 0.88-0.96), and 0.80 is its
+"plausible". Above 0.85, 3 of 5 links are right and the other 2 are the dependencies. A stage-0
+check of 8 November's slice found all 8 links right; that slice had mostly `implements`.
+
+| q | gold | baseline recall | P8QL recall | baseline turns | P8QL turns |
+|---|---|---|---|---|---|
+| W1 why trains measure memory retrieval | REM-1312, REM-1145 | 0.67 | 1.00 | 5.0 | 4.7 |
+| W2 why worker-path step time matters | REM-1316 | 1.00 | 1.00 | 4.0 | 4.0 |
+| W3 why agents post observations | REM-1275 | 1.00 | 1.00 | 4.0 | 5.3 |
+| mean | | 0.89 | 1.00 | 4.3 | 4.7 |
+
+**Durable walks work on real history. In both arms, the first walk put the whole chain on
+screen: REM-1327 because REM-1312, because REM-1145.**
+
+- **The recall gap is in what the agent named, not what it found.** Two of the three baseline
+  W1 runs saw REM-1145 in the `why` tree. They described the cause from the fix commits
+  listed under REM-1312 ("words half matches all words", "id tiebreak") and never named the
+  card. The P8QL agents ran record selects on REM-1312 and REM-1145 after the walk, and named
+  it every time. In the `why` tree, the nine `implemented by` lines under REM-1312 bury the
+  one `because` line above them.
+- **P8QL's extra turns are those record selects,** the same habit seen in round 4's free-choice
+  runs. Here they paid off on W1 and cost a turn on W3.
+- **Precision is low in both arms because of how the questions are worded.** The questions
+  name their subject ("every release train", "agents post observations"), and agents include
+  that subject card in their ids. The gold leaves it out. A question set that counts the
+  subject as given, or asks only for the cause, would fix this.
+- **None of the three gold chains passes through a wrong link,** by construction: each one
+  was checked against the cards. A question whose walk crosses one of the four wrong
+  `because` links is the next test, and it is the one that measures what a 0.80 stand-in costs.
+
 ## Round 4, 9 Nov 2026: why the P8QL agent re-checked a walk
 
 **Versions:** avalanche-db 7f187f1 plus the changes this round makes. Billing example, Q5 only,

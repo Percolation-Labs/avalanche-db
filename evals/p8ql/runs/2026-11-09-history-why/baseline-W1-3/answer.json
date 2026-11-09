@@ -1,0 +1,1 @@
+{"ids":["card:REM-1327","card:REM-1312","pr:percolate#378","pr:percolate#376"],"answer":"Mem0-benchmark accuracy silently fell from 76% to 63% at the 0.2.31 image (REM-1312), caused by search changes: the hybrid search words half did not match all query words and ties came back in unstable order (no id tiebreak), so REM-1327 made every release train run the Mem0 fixture."}

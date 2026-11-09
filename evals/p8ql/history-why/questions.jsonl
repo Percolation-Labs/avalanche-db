@@ -1,0 +1,3 @@
+{"id":"W1","tier":"iterated","question":"Why does every release train now measure memory retrieval? Name the problem that prompted it, and what caused that problem.","gold":["card:REM-1312","card:REM-1145"]}
+{"id":"W2","tier":"iterated","question":"Why was the time per workflow step through the worker path worth minimising? Name the card that made it matter.","gold":["card:REM-1316"]}
+{"id":"W3","tier":"iterated","question":"Why were agents asked to post observations while Sirsh records claim judgements? Name the earlier card whose work led to it.","gold":["card:REM-1275"]}

@@ -1,0 +1,4 @@
+query SELECT r FROM record LIKE 'agents post observations, Sirsh records claim judgements' LIMIT 8
+query SELECT r FROM record LIKE 'agents post observations, Sirsh records claim judgements' AS r LIMIT 8
+query SELECT * FROM card = 'REM-1280'
+query SELECT * FROM card = 'REM-1275'

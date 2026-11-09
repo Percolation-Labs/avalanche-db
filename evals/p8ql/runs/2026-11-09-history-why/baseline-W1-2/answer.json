@@ -1,0 +1,1 @@
+{"ids":["card:REM-1327","card:REM-1312","card:REM-1145"],"answer":"Mem0-benchmark accuracy fell from 76% to 63% at the 0.2.31 image (REM-1312), caused by the lexical search change (REM-1145) that made the query match any word of the query, ranking by ties, instead of all words."}

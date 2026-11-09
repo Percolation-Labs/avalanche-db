@@ -1,0 +1,3 @@
+query WALK FROM (SELECT r FROM record LIKE 'release train measures memory retrieval' AS r) FOLLOW because 1.0, rejects 0.9, implements 0.8 BUDGET 20 RETURN PATH
+query SELECT * FROM card = 'REM-1312'
+query SELECT * FROM card = 'REM-1145'

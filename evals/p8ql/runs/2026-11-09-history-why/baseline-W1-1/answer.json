@@ -1,0 +1,1 @@
+{"ids":["card:REM-1327","card:REM-1312"],"answer":"Every train now measures memory retrieval because Percolate's Mem0-benchmark accuracy fell from 76% (REM-1312), caused by search changes: the hybrid search's words half did not require all the query's words, and ties came back in a join-dependent order rather than id order."}

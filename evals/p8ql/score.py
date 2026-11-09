@@ -8,7 +8,7 @@ qs = os.path.join(os.path.dirname(os.path.abspath(__file__)), os.environ.get("SE
 gold = {q["id"]: q for q in map(json.loads, open(qs))}
 cells = defaultdict(list)
 for d in sorted(os.listdir(runs)):
-    m = re.fullmatch(r"(p8ql|baseline)-(Q\d+)(?:-(\d+))?", d)
+    m = re.fullmatch(r"(p8ql|baseline)-([A-Z]\d+)(?:-(\d+))?", d)
     if not m:
         continue
     arm, qid = m.group(1), m.group(2)
