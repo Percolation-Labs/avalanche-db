@@ -21,6 +21,11 @@ what a real agent reads. That description also had the old pause text, which pre
 3b and 4; it now describes the wave, `WAVE n`, and the `dreamed, not stated` mark. Rounds
 before 8b used the older wording, which git history keeps.
 
+**Regression check:** round 5's three "why" questions, rerun on the round 8 store with the new
+prompts (18 runs, `runs/2026-11-09-history-why-r8/`): recall 1.00 in both arms (it was 0.89
+for the baseline and 1.00 for P8QL); turns 4.8 and 4.9 (was 4.3 and 4.7). Precision is
+still low for the reason round 5 gave: agents include the question's own subject card.
+
 ## Round 8, 9 Nov 2026: chained questions, and the dream's commit-to-card question
 
 **Versions:** avalanche-db 700b222 plus this round's change. History store with November
