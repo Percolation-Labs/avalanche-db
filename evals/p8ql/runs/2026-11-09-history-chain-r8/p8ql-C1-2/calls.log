@@ -1,0 +1,8 @@
+query SELECT r FROM record LIKE 'release train measuring memory retrieval' AS r
+query SELECT * FROM card = 'REM-1327'
+query SELECT * FROM card = 'REM-1312'
+query SELECT * FROM card = 'REM-1310'
+query FROM card = 'REM-1312' AS x WALK x <-mentions- pr AS y SELECT y
+query SELECT * FROM pr = 'percolate#376'
+query SELECT y FROM card = 'REM-1312' AS x WALK x <-mentions- pr AS y
+query SELECT * FROM pr = 'percolate#378'

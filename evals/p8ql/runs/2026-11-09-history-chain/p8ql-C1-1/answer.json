@@ -1,0 +1,1 @@
+{"ids":["pr:percolate#378","pr:percolate#376"],"answer":"The Mem0 accuracy drop (REM-1312) that led REM-1327 to make every train measure retrieval was fixed by PRs #378 (hybrid words half matches all query words) and #376 (ties return in id order)."}

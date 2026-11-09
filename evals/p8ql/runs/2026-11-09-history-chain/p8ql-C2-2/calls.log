@@ -1,0 +1,4 @@
+query SELECT x FROM card LIKE 'time per workflow step worker path' AS x
+query SELECT * FROM card = 'REM-1319'
+query SELECT * FROM card = 'REM-1316'
+query SELECT p FROM pr LIKE 'REM-1316' AS p LIMIT 8

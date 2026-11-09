@@ -1,5 +1,47 @@
 # P8QL agent eval: results
 
+## Round 8, 9 Nov 2026: chained questions, and the dream's commit-to-card question
+
+**Versions:** avalanche-db 700b222 plus this round's change. History store with November
+dreamed on the stand-in, with round 7's card wording. Two questions (`history-chain/`)
+chain a reason to its changes: which PRs fixed the problem behind REM-1327 (REM-1312: #376,
+#378), and which PRs carried out the card behind REM-1319 (REM-1316: #381, #386, #392). Gold
+is from gh branch names and titles. 24 runs, $1.80; the dream itself billed $0.
+
+**First run: 0.89 recall in both arms, and the misses came from the store.** The dream had
+linked only #378 to REM-1312 and only #392 to REM-1316. Agents that fell back from `implements`
+to `mentions` recovered the rest. One baseline run trusted `implements` alone and returned only
+#392. One P8QL run stopped at REM-1319 and listed its PRs, not REM-1316's. The question's
+wording ("the card that made it matter") is partly to blame for that one.
+
+**Scoring the dream's commit and PR links against git** (`history-chain/truth.py`: a commit
+whose subject names a card, or a PR or PR merge whose branch or title does): 79 `implements`
+written, precision 0.87, recall 0.68. The misses were plain work for a card: b12db8cf fixes
+REM-1316's bug, 81e8ac02 is REM-1314's fix, and #376 is half of REM-1312's fix. The commit-to-card
+option read "a change that carries out {target}". A card is often a bug, and fixing one does
+not read as carrying it out, so the stand-in chose "only mentions".
+
+**The change:** for a commit or PR naming a card, `implements` now reads "a change made for
+{target}, in whole or in part: it builds what the card asks for, fixes the problem it reports,
+or does a step of its work". Decisions keep the old wording.
+
+| dream | implements written | precision | recall |
+|---|---|---|---|
+| round 7 wording | 79 | 0.87 | 0.68 |
+| round 8 wording | 93 | 0.89 | 0.81 |
+
+The ten links the rule still counts as wrong are the same in both, and all ten are judgement
+calls: REM-542's "opened after" version bumps, a budget fold that names REM-1143 in its body,
+and a merge between two branches of the same card. The 19 left missed are mostly REM-1309's
+research steps and regenerated-SQL commits. #376 is still missed.
+
+**Second run on the new store: 12 of 12 right in both arms.** REM-1316's three PRs are now all
+linked. **But P8QL took more turns on C1** (8.3 against 4.7). Its agents read records one by one
+(REM-1327, REM-1312, REM-1310, then PRs) and never used `WALK FROM`, while the baseline's `why`
+printed the chain and the PRs in one call. The P8QL prompt offers `WALK FROM` for open "why"
+questions, and C1 is phrased "which PRs", so this is round 4's finding again: the first call
+decides the cost, and the prompt decides the first call.
+
 ## Round 7, 9 Nov 2026: the dream question that let scope read as a reason
 
 **Versions:** avalanche-db 96fd024 plus this round's change. The same November dream as

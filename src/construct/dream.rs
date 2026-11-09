@@ -28,7 +28,10 @@ fn options(s: Kind, o: Kind, target: &str) -> Vec<(String, String)> {
         (Kind::Decision, Kind::File) => vec![("decides", format!("`record` decides how {target} must work"))],
         (Kind::Issue, Kind::Issue) => vec![("duplicates", format!("`record` reports the same problem as {target}"))],
         (Kind::Commit | Kind::Pr, Kind::Issue) => vec![("fixes", format!("`record` is a change that fixes {target}"))],
-        (Kind::Commit | Kind::Pr, Kind::Decision | Kind::Card) => vec![("implements", format!("`record` is a change that carries out {target}"))],
+        (Kind::Commit | Kind::Pr, Kind::Decision) => vec![("implements", format!("`record` is a change that carries out {target}"))],
+        // A card is a feature, a bug or a study: its change builds it, fixes it, or does part
+        // of either. "Carries out" alone read as all of a feature (REM-1331 round 8: recall 0.68).
+        (Kind::Commit | Kind::Pr, Kind::Card) => vec![("implements", format!("`record` is a change made for {target}, in whole or in part: it builds what the card asks for, fixes the problem it reports, or does a step of its work"))],
         (Kind::Claim, Kind::Decision | Kind::Card | Kind::Proposal) => vec![
             ("supports", format!("`record` is a reading that argues for {target}")),
             ("challenges", format!("`record` is a reading that argues against {target}, or names a cost of it")),

@@ -1,0 +1,6 @@
+query SELECT x FROM record LIKE 'release train measuring memory retrieval' AS x LIMIT 10
+query SELECT * FROM card = 'REM-1327'
+query SELECT * FROM card = 'REM-1312'
+query SELECT * FROM card = 'REM-1310'
+query SELECT * FROM pr = 'percolate#378'
+query SELECT * FROM pr = 'percolate#376'
