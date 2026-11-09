@@ -1,5 +1,26 @@
 # P8QL agent eval: results
 
+## Round 8b, 9 Nov 2026: the prompt decides the first call
+
+The P8QL arm's prompt described `WALK FROM` as being "for open-ended 'why' questions", so on
+C1 ("which PRs fixed the problem behind…") no agent walked. The variant says "for any question
+that follows reasons or a chain of work (why X, what led to X, what was done about the cause
+of X): one walk prints the chain with its links, so it often answers alone". P8QL arm only,
+3 runs per question, $0.42; runs are in `runs/2026-11-09-history-chain-b/`.
+
+| q | turns before | turns with the new wording | opened with WALK FROM |
+|---|---|---|---|
+| C1 | 8.3 | 5.0 | 3 of 3 (was 0 of 3) |
+| C2 | 6.3 | 6.0 | 0 of 3 |
+
+All 6 runs were right. On C1 the walk printed REM-1327, REM-1312 and its PRs, and each agent
+made one record select to confirm #376 before answering. C2's agents still went straight to the
+two cards, which takes three calls, so a walk would save little there. **The wording is now
+the default:** it is in every P8QL eval prompt and in the `p8ql_run` MCP description, which is
+what a real agent reads. That description also had the old pause text, which predated rounds
+3b and 4; it now describes the wave, `WAVE n`, and the `dreamed, not stated` mark. Rounds
+before 8b used the older wording, which git history keeps.
+
 ## Round 8, 9 Nov 2026: chained questions, and the dream's commit-to-card question
 
 **Versions:** avalanche-db 700b222 plus this round's change. History store with November

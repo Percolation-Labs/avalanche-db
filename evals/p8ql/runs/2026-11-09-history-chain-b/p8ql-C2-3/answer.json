@@ -1,0 +1,1 @@
+{"ids":["pr:percolate#392","pr:percolate#386","pr:percolate#381"],"answer":"Card REM-1316 (statement timeout never bounds its own statement) is why REM-1319 minimised time per step on the worker path; PRs #381, #386 and #392 implement REM-1316."}

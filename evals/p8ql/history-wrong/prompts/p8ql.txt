@@ -9,7 +9,7 @@ Available commands (P8QL):
   WALK x -pred-> <kind> <-pred- <kind> -[named_path]- <kind> AS y   (each arrow is one hop along a typed link)
   WHERE y <> x   GROUP BY y   ORDER BY n DESC   LIMIT n   AS OF T1
   SELECT * FROM card = 'REM-12' shows a record and all its links.
-  Native walk for open-ended "why" questions: WALK FROM (SELECT r FROM record LIKE 'some words' AS r) FOLLOW because 1.0, rejects 0.9, implements 0.8 BUDGET 20 RETURN PATH
+  Native walk, for any question that follows reasons or a chain of work (why X, what led to X, what was done about the cause of X): one walk prints the chain with its links, so it often answers alone. WALK FROM (SELECT r FROM record LIKE 'some words' AS r) FOLLOW because 1.0, rejects 0.9, implements 0.8 BUDGET 20 RETURN PATH
   A LIKE on its own returns its five nearest records with scores (LIMIT n for more). Before WALK it carries the top one; add WAVE n after the LIKE string to carry n (e.g. FROM card LIKE 'words' WAVE 3 AS x WALK ...). If a LIKE pauses with candidates, pick one and re-run with = '<name>', or use WAVE n.
 
 Question: {QUESTION}
