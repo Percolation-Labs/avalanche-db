@@ -369,6 +369,23 @@ pub fn step(store: &Store, t: u32, token: &str, steer: &Steer) -> Result<StepOut
     Ok(StepOut { session: s, at: Some(frame), label: label_text, neighbours, stats, token })
 }
 
+/// The path from the start to `at`, through each frame's parent: `a because b fixed by c`.
+pub fn trail(s: &Session, at: &Frame) -> String {
+    let mut parts = vec![at.node.clone()];
+    let mut cur = at.clone();
+    while let Some(p) = cur.parent.clone() {
+        let link = format!("{}{}", cur.link(), if cur.dreamed { " (dreamed, not stated)" } else { "" });
+        parts.push(link);
+        parts.push(p.clone());
+        match s.visited.iter().find(|f| f.node == p) {
+            Some(f) if parts.len() < 40 => cur = f.clone(),
+            _ => break,
+        }
+    }
+    parts.reverse();
+    parts.join(" ")
+}
+
 impl fmt::Display for StepOut {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
         let Some(at) = &self.at else {
@@ -376,6 +393,10 @@ impl fmt::Display for StepOut {
         };
         let label = self.label.as_deref().map(|l| format!(" \"{l}\"")).unwrap_or_default();
         writeln!(f, "step {}  {}{label}", self.session.step, at.node)?;
+        // The way here, so whoever resumes a token sees how the walk reached this record.
+        if at.parent.is_some() {
+            writeln!(f, "  reached by: {}", trail(&self.session, at))?;
+        }
         if self.neighbours.len() > SHOWN {
             writeln!(f, "  ({} neighbours; the first {SHOWN} shown)", self.neighbours.len())?;
         }

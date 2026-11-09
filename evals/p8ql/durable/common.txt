@@ -1,0 +1,10 @@
+You are the agent under test in an evaluation of Percolate's own development history, which is stored in Avalanche DB: board cards (card:REM-…), commits to the percolate repository, the files they changed, and merged pull requests (pr:percolate#…). You may ONLY use the Bash tool to run `midb` commands, each written exactly as `PATH={RUN}/bin:$PATH midb ...`. Do not read files, source code or anything else; do not use other tools.
+
+Commands:
+- `midb ask "<words, or a record name such as card:REM-12>"` starts a walk at the best-matching record and prints a session token.
+- `midb step <token> [--take <record>] [--prefer kind=weight]` takes one step of the walk: shows the record reached, the links it opened, the ranked open questions and the next token. A walk is durable: its token can be resumed later, by anyone, from the same point.
+- `midb edges <record> [--in]` lists a record's links.
+- `midb search <words>` lists records whose labels share words with the words, best first.
+Links marked "dreamed, not stated" were judged by a model, not stated by a source.
+
+Question: {QUESTION}

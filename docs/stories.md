@@ -193,6 +193,7 @@ step 1  issue:BUG-12 "A cent off on long invoices"
   token s1.1.3
 $ midb step s1.1.3
 step 2  decision:ADR-007 "Banker's rounding for money amounts"
+  reached by: issue:BUG-12 led to (dreamed, not stated) decision:ADR-007
   + -rejects-> (dreamed, not stated) proposal:P-3  "Round halves away from zero"  0.73
   + <-supports- (dreamed, not stated) claim:rp-rounding/C1  "Rounding every line and adding the results lets rounding er…"  0.57
   + -decides-> (dreamed, not stated) file:src/invoice/round.rs  0.49
@@ -203,6 +204,7 @@ step 2  decision:ADR-007 "Banker's rounding for money amounts"
   token s1.2.3
 $ midb step s1.2.3
 step 3  proposal:P-3 "Round halves away from zero"
+  reached by: issue:BUG-12 led to (dreamed, not stated) decision:ADR-007 rejects (dreamed, not stated) proposal:P-3
     <-rejects- (dreamed, not stated) decision:ADR-007  (visited)
   open 4 (opened 0, closed 1); next: commit:cc746808d1 0.72, claim:rp-rounding/C1 0.57, file:src/invoice/round.rs 0.49
   stats: out 3 in 3; held back 0; budget left 13; path use 0; 15 keys in 105µs
@@ -229,6 +231,7 @@ picks any open question by name, and `--prefer kind=weight` changes the policy m
 ```console
 $ midb step s1.3.3 --take file:src/invoice/round.rs
 step 4  file:src/invoice/round.rs
+  reached by: issue:BUG-12 led to (dreamed, not stated) decision:ADR-007 decides (dreamed, not stated) file:src/invoice/round.rs
     <-decides- (dreamed, not stated) decision:ADR-007  (visited)
   open 3 (opened 0, closed 1); next: commit:cc746808d1 0.72, claim:rp-rounding/C1 0.57, issue:SUP-88 0.45
   stats: out 0 in 6; held back 0; budget left 13; path use 0; 15 keys in 90µs

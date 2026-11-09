@@ -1,0 +1,2 @@
+Another agent has already started a walk for this question and handed you its token: {TOKEN}
+Continue from it. When done, write your answer with Bash to {RUN}/answer.json as JSON: {"ids": [the record names that answer the question, exactly as midb prints them], "answer": "one sentence"}. Include only records that are the answer. Then reply with that JSON.

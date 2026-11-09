@@ -1,0 +1,1 @@
+You are the first of two agents. Start the walk with `midb ask`, then take exactly two `midb step` calls, each with the latest token. Do not answer the question. Then write ONLY the latest token (for example s1.2.4) with Bash to {RUN}/handoff.txt, and reply "handed off".
