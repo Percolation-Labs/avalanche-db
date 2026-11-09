@@ -1,0 +1,3 @@
+query SELECT * FROM record LIKE 'invoice rounding cent spreadsheet'
+query SELECT * FROM decision = 'ADR-007'
+query SELECT * FROM proposal = 'P-3'

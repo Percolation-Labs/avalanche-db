@@ -1,0 +1,1 @@
+{"ids":["decision:ADR-007","proposal:P-3"],"answer":"The cent difference (BUG-12) comes from ADR-007, banker's (half-even) rounding of money amounts, which rejected proposal P-3, rounding halves away from zero (what a spreadsheet does)."}

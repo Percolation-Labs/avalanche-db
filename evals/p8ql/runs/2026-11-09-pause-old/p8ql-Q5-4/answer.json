@@ -1,0 +1,1 @@
+{"ids":["decision:ADR-007","proposal:P-3"],"answer":"ADR-007 (banker's rounding once per invoice, to fix BUG-12/SUP-88) caused the cent difference, and it rejected proposal P-3."}

@@ -1,0 +1,1 @@
+{"ids":["decision:ADR-007","proposal:P-3","issue:BUG-12"],"answer":"The invoice differs because ADR-007 chose banker's (half-even) rounding for money, while spreadsheets round halves away from zero, which ADR-007 turned down as proposal P-3."}

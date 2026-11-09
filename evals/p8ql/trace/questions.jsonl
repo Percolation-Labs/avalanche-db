@@ -1,0 +1,1 @@
+{"id":"Q5","tier":"iterated","question":"Why is the invoice a cent off from the customer's spreadsheet? Name the decision behind it and the alternative it turned down. Start with a native walk (WALK FROM).","gold":["decision:ADR-007","proposal:P-3"]}

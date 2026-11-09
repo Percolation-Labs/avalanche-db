@@ -1,0 +1,1 @@
+{"ids":["decision:ADR-007","proposal:P-3"],"answer":"Per ADR-007 (banker's rounding for money, rounding once per invoice) the total differs by a cent from the customer's per-line spreadsheet sum; it rejected proposal P-3."}

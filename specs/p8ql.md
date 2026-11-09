@@ -17,7 +17,9 @@
   agent re-runs with `= '<name>'`, or carries several into the hops with
   `LIKE '…' WAVE n` (REM-1335). A re-run is a new statement, not a token. One word is matched
   fuzzily (edit distance) against names and labels; several words use label search.
-- `WALK FROM` runs the native walk to its end and prints the path. Steering it step by
+- `WALK FROM` runs the native walk to its end and prints the path. It starts at the top
+  candidate without pausing and names the next three, because a pause before a walk cost
+  agents three extra calls when the top was right (evals/p8ql/RESULTS.md, round 4). Steering it step by
   step stays with `ask` and `step`.
 - **Not built yet:** `PREPARE` and `STEP` for a pattern statement, so a pattern runs to the
   end, not one hop per call; the plan and the per-step trace show each hop instead.

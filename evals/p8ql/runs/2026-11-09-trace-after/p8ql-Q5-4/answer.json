@@ -1,0 +1,1 @@
+{"ids":["decision:ADR-007","proposal:P-3"],"answer":"ADR-007 chose banker's (half-even) rounding for money amounts, rejecting proposal P-3 (round halves away from zero), which is what the customer's spreadsheet does."}

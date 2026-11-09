@@ -727,14 +727,19 @@ pub fn run(store: &Store, t: u32, stmt: &Stmt) -> Result<Outcome> {
                 trace.push(line);
                 wave.iter().map(|x| store.id(t, &x.node)?.ok_or_else(|| "a candidate vanished".into())).collect::<Result<Vec<u64>>>()?
             } else {
-                if c.len() > 1 && top.score - c[1].score < CLOSE {
+                // A walk starts at the top and shows the runners-up instead of pausing: the
+                // pause cost agents three extra calls when the top was right (REM-1331 round 4).
+                let walk = matches!(stmt, Stmt::Walk(_));
+                if !walk && c.len() > 1 && top.score - c[1].score < CLOSE {
                     let mut s = format!("{plan}paused at step 1: '{w}' is like {} records about equally; choose one with {} = '<name>', or carry several with LIKE '{w}' WAVE n, and run again\n", c.iter().take_while(|x| top.score - x.score < CLOSE).count(), q.kind);
                     for x in c.iter().take(5) {
                         s += &format!("  {:<28} {:.2}  \"{}\"\n", x.node, x.score, crate::model::short(&x.label, 50));
                     }
                     return Ok(Outcome::Paused(s));
                 }
-                trace.push(format!("like     '{w}' → {} {:.2}{}", top.node, top.score, if c.len() > 1 { format!(" (next {} {:.2})", c[1].node, c[1].score) } else { String::new() }));
+                let shown = if walk { 3 } else { 1 };
+                let next: Vec<String> = c.iter().skip(1).take(shown).map(|x| format!("{} {:.2}", x.node, x.score)).collect();
+                trace.push(format!("like     '{w}' → {} {:.2}{}", top.node, top.score, if next.is_empty() { String::new() } else { format!(" (next {})", next.join(", ")) }));
                 vec![store.id(t, &top.node)?.ok_or("a candidate vanished")?]
             }
         }
@@ -763,7 +768,13 @@ pub fn run(store: &Store, t: u32, stmt: &Stmt) -> Result<Outcome> {
             prefer.extend(w.follow.iter().cloned());
         }
         let s = session::walk(store, t, &start, w.budget, Some(plan.as_of), None, &prefer)?;
-        return Ok(Outcome::Done(format!("{plan}ran\n  1  {}\n  2  walk     session {}, {} steps\n{}", trace[0], s.id, s.step, session::why(store, &s, None)?)));
+        let how = format!("{plan}ran\n  1  {}\n  2  walk     session {}, {} steps\n", trace[0], s.id, s.step);
+        let tree = session::why(store, &s, None)?;
+        // An eval variant (evals/p8ql, REM-1331): the answer first, and how it was found after.
+        if std::env::var("AVALANCHE_TRACE").as_deref() == Ok("after") {
+            return Ok(Outcome::Done(format!("{tree}\nhow it was found:\n{how}")));
+        }
+        return Ok(Outcome::Done(format!("{how}{tree}")));
     }
     // Hops: each row is the node sequence so far.
     let mut rows: Vec<Vec<u64>> = starts.into_iter().map(|n| vec![n]).collect();

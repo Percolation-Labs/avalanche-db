@@ -1,0 +1,1 @@
+{"ids":["decision:ADR-007","proposal:P-3"],"answer":"ADR-007 chose banker's rounding for money amounts (the BUG-12/SUP-88 cent drift) and rejected proposal P-3, rounding halves away from zero."}

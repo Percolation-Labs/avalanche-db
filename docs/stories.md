@@ -649,7 +649,8 @@ $ midb query "SELECT f FROM person = 'Bob' AS b WALK b -touches-> file AS f"
 ```
 
 A question without a known shape is the native walk. `WALK FROM` starts where likeness is
-strongest and runs the walk of story 5, with `FOLLOW` as its policy:
+strongest and runs the walk of story 5, with `FOLLOW` as its policy. It does not pause on a
+near tie: it starts at the top and names the runners-up, so a wrong start is one re-run away:
 
 ```console
 $ midb query "WALK FROM (SELECT r FROM record LIKE 'invoice a cent off from the spreadsheet' AS r) FOLLOW because 1.0, rejects 0.9, implements 0.8, fixes 0.8, supports 0.7 BUDGET 20 RETURN PATH"
@@ -658,7 +659,7 @@ plan  T2
   2  frontier budget 20                          follow because 1, rejects 0.9, implements 0.8, fixes 0.8, supports 0.7; others 0
   3  step…    best open question each step       until the frontier is empty or the budget runs out
 ran
-  1  like     'invoice a cent off from the spreadsheet' → issue:BUG-12 1.00 (next commit:b9adc7af54 0.50)
+  1  like     'invoice a cent off from the spreadsheet' → issue:BUG-12 1.00 (next commit:b9adc7af54 0.50, issue:SUP-88 0.43, issue:BUG-3 0.31)
   2  walk     session s5, 5 steps
 issue:BUG-12                            2026-04-09 "A cent off on long invoices"
   led to  decision:ADR-007              2026-04-11 "Banker's rounding for money amounts"

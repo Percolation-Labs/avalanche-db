@@ -5,7 +5,9 @@
 # OUT/<arm>-<Q>-<rep>/{answer.json,calls.log,agent.json}; a run with an answer is skipped, so a
 # rerun resumes. Score with: python3 evals/p8ql/score.py OUT
 # SET=history runs history/questions.jsonl with history/prompts/ against the store in STORE
-# (history/build.sh); the default set is the billing example. ONLY=Q2,Q4 runs just those.
+# (history/build.sh); the default set is the billing example. ONLY=Q2,Q4 runs just those;
+# ARMS=p8ql runs one arm. Runs load the user's Claude Code settings, so a Stop hook there
+# can cost each run a turn; that is the same in every arm and variant.
 set -e
 here="$(cd "$(dirname "$0")" && pwd)"; set_dir="$here${SET:+/$SET}"; export SET STORE
 if [ "$1" = --one ]; then
@@ -30,13 +32,14 @@ PY
 fi
 out="$1"; reps="${2:-3}"; jobs="${3:-5}"
 mkdir -p "$out"; out="$(cd "$out" && pwd)"
-ONLY="$ONLY" python3 - "$set_dir/questions.jsonl" "$reps" <<'PY' | xargs -P "$jobs" -n 3 "$0" --one "$out"
+ONLY="$ONLY" ARMS="$ARMS" python3 - "$set_dir/questions.jsonl" "$reps" <<'PY' | xargs -P "$jobs" -n 3 "$0" --one "$out"
 import json, os, sys
 only = set(filter(None, os.environ.get("ONLY", "").split(",")))
+arms = [a for a in ("p8ql", "baseline") if a in (os.environ.get("ARMS") or "p8ql,baseline").split(",")]
 for rep in range(1, int(sys.argv[2]) + 1):
     for line in open(sys.argv[1]):
         q = json.loads(line)["id"]
         if not only or q in only:
-            for arm in ("p8ql", "baseline"):
+            for arm in arms:
                 print(arm, q, rep)
 PY

@@ -1,0 +1,1 @@
+{"ids":["decision:ADR-007","proposal:P-3"],"answer":"Per ADR-007 invoice totals use banker's (half-even) rounding, which differs by a cent from the customer's spreadsheet, having turned down proposal P-3, rounding halves away from zero."}

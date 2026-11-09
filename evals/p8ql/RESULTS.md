@@ -1,5 +1,50 @@
 # P8QL agent eval: results
 
+## Round 4, 9 Nov 2026: why the P8QL agent re-checked a walk
+
+**Versions:** avalanche-db 7f187f1 plus the changes this round makes. Billing example, Q5 only,
+P8QL arm only. 50 runs, $2.97. Runs are in `runs/2026-11-09-*`.
+
+Rounds 1 and 2 guessed that the plan and trace printed above a walk's tree made the walk
+read as less final, so the agent re-checked its records. That guess was wrong, and so was
+round 2's statement that "the walk returned the answer each time".
+
+| experiment | runs | first call | calls | turns |
+|---|---|---|---|---|
+| trace above vs below, free choice | 4 + 4 | 0 of 4 vs 3 of 4 WALK FROM | 3.2 vs 1.0 | 5.8 vs 4.0 |
+| trace above vs below, "use one native walk" | 5 + 5 | all WALK FROM | 1.0 vs 1.0 | 4.0 vs 4.0 |
+| trace above vs below, "start with a native walk" | 6 + 6 | all WALK FROM | 1.0 vs 1.0 | 4.0 vs 4.0 |
+| walk pauses on a near tie vs starts at the top | 6 + 6 | 1 vs 5 of 6 WALK FROM | 3.3 vs 1.5 | 5.7 vs 4.3 |
+
+**Where the trace is printed makes no difference. When the walk runs, the agent trusts it:
+in the 31 runs this round whose first call was a walk, all 31 answered from it in one call.**
+
+- **The mechanism is a pause, not the trace.** Replaying round 2's statements shows that in
+  the two runs that went on to look records up, the walk never ran. Its likeness step found
+  BUG-12 at 1.00 and a spreadsheet-export commit at 0.96, inside the 0.1 tie margin, so the
+  query paused and listed candidates. The agent then did the sensible thing and read the
+  records one by one. In both cases the top candidate was the right start.
+- **So a walk no longer pauses.** `WALK FROM` now starts at the top candidate and names the
+  next three in its trace, so a wrong start is one re-run away. A bare `LIKE` before hops still
+  pauses, where carrying the wrong start would silently change every row.
+- **The first trace experiment was confounded.** The two variants differed in which tool the
+  agent reached for first, which it decides before seeing any output. The trace order
+  only changes `WALK FROM` output, so that batch measured strategy choice. The two
+  controlled experiments fix the first call and find no difference at all.
+- **The pause A/B didn't measure the pause either, for the same reason.** Five of the six
+  old-binary runs opened with a bare `LIKE` and record selects (2 to 5 calls). Five of the six
+  new-binary runs opened with `WALK FROM` (1 call). An agent picks its opening before it sees
+  any output, so the split is chance between batches. The case for removing the pause rests on
+  the replay above, not on this A/B.
+- **The first call decides the cost.** Opening with a bare `LIKE` and reading records costs 2 to
+  5 calls. Opening with `WALK FROM` costs 1. Nothing in midb's output can change that choice,
+  because the choice comes before any output. Only the prompt or the tool descriptions can.
+- **Every run carries one turn of hook noise.** Each run loads the user's Claude Code
+  settings, whose Stop hook asks the session to register on the board, and the agent
+  spends its last turn declining. It is the same in every arm and variant, so it inflates the
+  four-turn floor without biasing comparisons. A run without user settings was refused by
+  the permission system, so the floor stays as it is.
+
 ## Round 3b, 8 Nov 2026: the fuzzy lookup with a likeness wave (REM-1335)
 
 **Versions:** avalanche-db with REM-1334 (every file, ids from bodies) and REM-1335 (a bare
@@ -103,7 +148,9 @@ On the two pattern questions, P8QL took 1.0-1.3 turns of work against 3.3-4.0.
   three runs. One P8QL run (Q5-2) answered from its single `WALK FROM`. The other two
   followed the walk with record selects on BUG-12, SUP-88 and ADR-007, one of them after a
   second walk from SUP-88. The walk returned the answer each time. The agent re-read the
-  records before trusting it, as in round 1. Whether the plan and trace printed above the
+  records before trusting it, as in round 1. *Correction from round 4:* in the other two runs the walk
+  paused on a near tie at its likeness step and never ran; the record selects were the agent
+  working around the pause, not distrust of a walk. Whether the plan and trace printed above the
   tree cause this is still untested. A run with the trace moved below the tree, or hidden,
   would test it.
 - **The reworded Q1 fixed the question defect.** All six runs named round.rs and P-3.

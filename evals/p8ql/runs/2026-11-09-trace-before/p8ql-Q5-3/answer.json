@@ -1,0 +1,1 @@
+{"ids":["decision:ADR-007","proposal:P-3"],"answer":"ADR-007 (banker's rounding for money amounts, rounding once per invoice) was decided because of BUG-12 and rejected proposal P-3 (rounding each line and summing), so the total can differ by a cent from the customer's spreadsheet."}

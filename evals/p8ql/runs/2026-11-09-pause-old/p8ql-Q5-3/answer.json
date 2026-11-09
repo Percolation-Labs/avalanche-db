@@ -1,0 +1,1 @@
+{"ids": ["decision:ADR-007","proposal:P-3"], "answer": "ADR-007 (banker's rounding for money amounts) was decided because of BUG-12/SUP-88, and it rejected proposal P-3, rounding halves away from zero."}
