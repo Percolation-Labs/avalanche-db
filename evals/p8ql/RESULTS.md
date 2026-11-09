@@ -1,5 +1,35 @@
 # P8QL agent eval: results
 
+## Round 6, 9 Nov 2026: a wrong dreamed link, and whether agents can tell
+
+**Versions:** avalanche-db 3c7db37 plus this round's change. The store from round 5. One
+question (`history-wrong/`): why was REM-1302 filed? The store's only reason is a wrong
+stand-in link, REM-1302 because REM-1296. The card names REM-1296 only to put it out of
+scope. The real reason, a user's feedback, is not in the store. 15 runs, $0.90.
+
+| what the output showed | baseline: stated as plain fact | P8QL: stated as plain fact |
+|---|---|---|
+| no mark | 3 of 3 | 3 of 3 |
+| tree `(dreamed)`; record select `dreamed, not stated` | 2 of 3 | 0 of 3 |
+| tree `(dreamed, not stated)` | 0 of 3 | not rerun |
+
+**Without a mark, every agent repeated the wrong link as fact. With an explicit mark, every
+agent said the link was the dream's judgement, not the source's.**
+
+- **The mechanism is that nothing told a guess from a fact.** The store keeps dreamed links in
+  graph `dream`, but neither `why`'s tree nor a record select printed that, and agents cannot
+  read card bodies through midb. So a 0.80 guess read exactly like a stated link.
+- **Now the walk tree and P8QL's record select mark every dreamed link.** The tree prints
+  `because (dreamed, not stated)`, and record select prints `dreamed, not stated`. The README's
+  flagship tree shows it.
+- **The wording mattered.** `(dreamed)` alone moved one baseline agent out of three; the
+  baseline agents had also seen `[dream; T3]` in `edges` without reacting. `dreamed, not
+  stated` says what it means, and every agent shown it reported it.
+- **Every agent still named REM-1296.** A mark makes a guess visible; it can't supply the
+  right answer, which isn't in the store. The fixes are upstream: a dream that does not read a
+  scope sentence as a reason (round 5: all four wrong links), and ingesting the evidence a card
+  cites. The question also forces a name, so a hedge is the best a reader can do here.
+
 ## Round 5, 9 Nov 2026: "why" questions on Percolate's history, after a dream
 
 **Versions:** avalanche-db a6d0459. The history store (REM-1334 ingest) was dreamed for

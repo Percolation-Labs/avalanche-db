@@ -78,16 +78,16 @@ A customer writes in: their invoice is a cent off from their spreadsheet. Ask wh
 
 ```console
 $ midb why "why is the invoice a cent off from the customer's spreadsheet?" --prefer duplicates=0,cites=0
-issue:BUG-12                               2026-04-09 "A cent off on long invoices"
-  led to  decision:ADR-007                 2026-04-11 "Banker's rounding for money amounts"
-    rejects  proposal:P-3                  2026-03-02 "Round halves away from zero"
-    supported by  claim:rp-rounding/C1     2026-04-14 "Rounding every line and adding the results lets rounding er…"
-      answers  question:q-round-once       2026-04-14 "Should an invoice total be rounded once, or line by line?"
-        answered by  claim:rp-rounding/C3  2026-04-14 "People judge a total by whether it matches their own sheet,…"
-      made by  package:rp-rounding         2026-04-14 "Rounding money on long invoices: once per invoice, or once…"
-        makes  claim:rp-rounding/C2        2026-04-14 "Sheet formulas round each line with halves away from zero,…"
-    decides  file:src/invoice/round.rs               
-  fixed by  commit:cc746808d1              2026-04-12 "invoice: round totals half-even (ADR-007, BUG-12)"
+issue:BUG-12                                                  2026-04-09 "A cent off on long invoices"
+  led to (dreamed, not stated)  decision:ADR-007              2026-04-11 "Banker's rounding for money amounts"
+    rejects (dreamed, not stated)  proposal:P-3               2026-03-02 "Round halves away from zero"
+    supported by (dreamed, not stated)  claim:rp-rounding/C1  2026-04-14 "Rounding every line and adding the results lets rounding er…"
+      answers  question:q-round-once                          2026-04-14 "Should an invoice total be rounded once, or line by line?"
+        answered by  claim:rp-rounding/C3                     2026-04-14 "People judge a total by whether it matches their own sheet,…"
+      made by  package:rp-rounding                            2026-04-14 "Rounding money on long invoices: once per invoice, or once…"
+        makes  claim:rp-rounding/C2                           2026-04-14 "Sheet formulas round each line with halves away from zero,…"
+    decides (dreamed, not stated)  file:src/invoice/round.rs
+  fixed by (dreamed, not stated)  commit:cc746808d1           2026-04-12 "invoice: round totals half-even (ADR-007, BUG-12)"
 10 steps, 7 link kinds; 203 keys read in 583.0µs
 ```
 
@@ -95,6 +95,10 @@ Search finds the bug report and stops there, because the reason shares no words 
 question. The walk goes on from the bug to the decision made because of it, ADR-007 (round
 the total once, halves to even), and to the proposal ADR-007 turned down, P-3 (halves away
 from zero, which is what a spreadsheet does). The cent is by design.
+
+Every link the dream decided is marked `(dreamed, not stated)`, so a reader can tell what a
+model judged from what a source says. Read without that mark, a wrong judgement passes for
+fact.
 
 ## Read more
 

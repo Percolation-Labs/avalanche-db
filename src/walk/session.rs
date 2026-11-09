@@ -73,6 +73,9 @@ pub struct Frame {
     pub priority: f64,
     /// When it was opened, to break ties in favour of the older question.
     pub order: usize,
+    /// Reached over a link the dream decided, not one a source states.
+    #[serde(default)]
+    pub dreamed: bool,
 }
 
 impl Frame {
@@ -239,7 +242,7 @@ pub fn ask(store: &Store, t: u32, words: &str, budget: usize, as_of: Option<u64>
         opened: 1,
         step: 0,
         policy: default_policy(),
-        frontier: vec![Frame { node: start.clone(), depth: 0, parent: None, pred: None, inbound: false, priority: 1.0, order: 0 }],
+        frontier: vec![Frame { node: start.clone(), depth: 0, parent: None, pred: None, inbound: false, priority: 1.0, order: 0, dreamed: false }],
         visited: vec![],
         kinds: vec![],
         keys_read: 0,
@@ -292,6 +295,7 @@ pub fn step(store: &Store, t: u32, token: &str, steer: &Steer) -> Result<StepOut
 
     let mut label_text = None;
     let mut candidates = vec![];
+    let dream = store.graph_id(t, "dream")?;
     for e in &edges {
         if e.dir == Dir::Out {
             stats.fan_out += 1;
@@ -301,7 +305,7 @@ pub fn step(store: &Store, t: u32, token: &str, steer: &Steer) -> Result<StepOut
         if e.pred == Pred::Label {
             label_text = Some(store.name(t, e.other)?.trim_start_matches("lit:").to_string());
         } else if s.policy.get(e.pred.name()).is_some_and(|w| *w > 0.0) {
-            candidates.push((e.pred, e.dir, e.other));
+            candidates.push((e.pred, e.dir, e.other, Some(e.graph) == dream));
         }
     }
     // Neighbours stay ids until a reader needs them: a name or a label costs a lookup, so a
@@ -310,11 +314,11 @@ pub fn step(store: &Store, t: u32, token: &str, steer: &Steer) -> Result<StepOut
     let known: HashSet<u64> = s.frontier.iter().filter_map(|f| store.id(t, &f.node).ok().flatten()).chain(visited.iter().copied()).collect();
     let mut opened_now: HashSet<u64> = HashSet::new();
     let mut neighbours = vec![];
-    for (pred, dir, other) in candidates {
+    for (pred, dir, other, dreamed) in candidates {
         let seen = known.contains(&other) || opened_now.contains(&other);
         let mut opened = None;
         if !seen && s.opened < s.budget {
-            let mut f = Frame { node: store.name(t, other)?, depth: frame.depth + 1, parent: Some(frame.node.clone()), pred: Some(pred.name().into()), inbound: dir == Dir::In, priority: 0.0, order: s.opened };
+            let mut f = Frame { node: store.name(t, other)?, depth: frame.depth + 1, parent: Some(frame.node.clone()), pred: Some(pred.name().into()), inbound: dir == Dir::In, priority: 0.0, order: s.opened, dreamed };
             f.rescore(&s.policy);
             opened = Some(f.priority);
             s.opened += 1;
@@ -432,7 +436,9 @@ pub fn why(store: &Store, s: &Session, then: Option<&Session>) -> Result<String>
         rows.push((root, 0));
         place(&s.visited, &root.node, 1, &mut rows);
     }
-    let heads: Vec<String> = rows.iter().map(|(f, d)| if *d == 0 { f.node.clone() } else { format!("{}{}  {}", "  ".repeat(*d), f.link(), f.node) }).collect();
+    // A link the dream decided says so, because a reader cannot tell it from a stated one
+    // (REM-1331 round 6: six of six agents repeated a wrong dreamed link as fact).
+    let heads: Vec<String> = rows.iter().map(|(f, d)| if *d == 0 { f.node.clone() } else { format!("{}{}{}  {}", "  ".repeat(*d), f.link(), if f.dreamed { " (dreamed, not stated)" } else { "" }, f.node) }).collect();
     let width = heads.iter().map(|h| h.chars().count()).max().unwrap_or(0);
     let before: Option<HashSet<String>> = then.map(|p| reached(p).into_iter().collect());
     let mut out = String::new();

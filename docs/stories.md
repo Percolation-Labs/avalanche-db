@@ -245,32 +245,32 @@ and prints each record under the one that led to it, with the date it became tru
 
 ```console
 $ midb why "why is the invoice a cent off from the customer's spreadsheet?"
-issue:BUG-12                               2026-04-09 "A cent off on long invoices"
-  led to  decision:ADR-007                 2026-04-11 "Banker's rounding for money amounts"
-    rejects  proposal:P-3                  2026-03-02 "Round halves away from zero"
-    supported by  claim:rp-rounding/C1     2026-04-14 "Rounding every line and adding the results lets rounding er…"
-      answers  question:q-round-once       2026-04-14 "Should an invoice total be rounded once, or line by line?"
-        answered by  claim:rp-rounding/C3  2026-04-14 "People judge a total by whether it matches their own sheet,…"
-          cites  source:rp-rounding/S3     2026-04-14 "Support ticket SUP-88"
-      made by  package:rp-rounding         2026-04-14 "Rounding money on long invoices: once per invoice, or once…"
-        makes  claim:rp-rounding/C2        2026-04-14 "Sheet formulas round each line with halves away from zero,…"
-          cites  source:rp-rounding/S2     2026-04-14 "ROUND function, Microsoft Support"
-      cites  source:rp-rounding/S1         2026-04-14 "IEEE 754-2019, section 4.3.1: roundTiesToEven"
-    decides  file:src/invoice/round.rs               
-  fixed by  commit:cc746808d1              2026-04-12 "invoice: round totals half-even (ADR-007, BUG-12)"
-  duplicated by  issue:SUP-88              2026-04-08 "Invoice total differs from customer spreadsheet"
+issue:BUG-12                                                  2026-04-09 "A cent off on long invoices"
+  led to (dreamed, not stated)  decision:ADR-007              2026-04-11 "Banker's rounding for money amounts"
+    rejects (dreamed, not stated)  proposal:P-3               2026-03-02 "Round halves away from zero"
+    supported by (dreamed, not stated)  claim:rp-rounding/C1  2026-04-14 "Rounding every line and adding the results lets rounding er…"
+      answers  question:q-round-once                          2026-04-14 "Should an invoice total be rounded once, or line by line?"
+        answered by  claim:rp-rounding/C3                     2026-04-14 "People judge a total by whether it matches their own sheet,…"
+          cites  source:rp-rounding/S3                        2026-04-14 "Support ticket SUP-88"
+      made by  package:rp-rounding                            2026-04-14 "Rounding money on long invoices: once per invoice, or once…"
+        makes  claim:rp-rounding/C2                           2026-04-14 "Sheet formulas round each line with halves away from zero,…"
+          cites  source:rp-rounding/S2                        2026-04-14 "ROUND function, Microsoft Support"
+      cites  source:rp-rounding/S1                            2026-04-14 "IEEE 754-2019, section 4.3.1: roundTiesToEven"
+    decides (dreamed, not stated)  file:src/invoice/round.rs
+  fixed by (dreamed, not stated)  commit:cc746808d1           2026-04-12 "invoice: round totals half-even (ADR-007, BUG-12)"
+  duplicated by (dreamed, not stated)  issue:SUP-88           2026-04-08 "Invoice total differs from customer spreadsheet"
 14 steps, 9 link kinds; 249 keys read in 845.0µs
 $ midb why "why is the invoice a cent off from the customer's spreadsheet?" --prefer duplicates=0,cites=0
-issue:BUG-12                               2026-04-09 "A cent off on long invoices"
-  led to  decision:ADR-007                 2026-04-11 "Banker's rounding for money amounts"
-    rejects  proposal:P-3                  2026-03-02 "Round halves away from zero"
-    supported by  claim:rp-rounding/C1     2026-04-14 "Rounding every line and adding the results lets rounding er…"
-      answers  question:q-round-once       2026-04-14 "Should an invoice total be rounded once, or line by line?"
-        answered by  claim:rp-rounding/C3  2026-04-14 "People judge a total by whether it matches their own sheet,…"
-      made by  package:rp-rounding         2026-04-14 "Rounding money on long invoices: once per invoice, or once…"
-        makes  claim:rp-rounding/C2        2026-04-14 "Sheet formulas round each line with halves away from zero,…"
-    decides  file:src/invoice/round.rs               
-  fixed by  commit:cc746808d1              2026-04-12 "invoice: round totals half-even (ADR-007, BUG-12)"
+issue:BUG-12                                                  2026-04-09 "A cent off on long invoices"
+  led to (dreamed, not stated)  decision:ADR-007              2026-04-11 "Banker's rounding for money amounts"
+    rejects (dreamed, not stated)  proposal:P-3               2026-03-02 "Round halves away from zero"
+    supported by (dreamed, not stated)  claim:rp-rounding/C1  2026-04-14 "Rounding every line and adding the results lets rounding er…"
+      answers  question:q-round-once                          2026-04-14 "Should an invoice total be rounded once, or line by line?"
+        answered by  claim:rp-rounding/C3                     2026-04-14 "People judge a total by whether it matches their own sheet,…"
+      made by  package:rp-rounding                            2026-04-14 "Rounding money on long invoices: once per invoice, or once…"
+        makes  claim:rp-rounding/C2                           2026-04-14 "Sheet formulas round each line with halves away from zero,…"
+    decides (dreamed, not stated)  file:src/invoice/round.rs
+  fixed by (dreamed, not stated)  commit:cc746808d1           2026-04-12 "invoice: round totals half-even (ADR-007, BUG-12)"
 10 steps, 7 link kinds; 219 keys read in 478.0µs
 ```
 
@@ -291,8 +291,8 @@ Everything has a date. Ask the same question as it stood the day after the bug w
 
 ```console
 $ midb why "why is the invoice a cent off from the customer's spreadsheet?" --valid-at 2026-04-10
-issue:BUG-12                   2026-04-09 "A cent off on long invoices"
-  duplicated by  issue:SUP-88  2026-04-08 "Invoice total differs from customer spreadsheet"
+issue:BUG-12                                         2026-04-09 "A cent off on long invoices"
+  duplicated by (dreamed, not stated)  issue:SUP-88  2026-04-08 "Invoice total differs from customer spreadsheet"
 2 steps, 1 link kind; 30 keys read in 138.0µs
 ```
 
@@ -301,20 +301,20 @@ question both ways and marks what is new (`+`) and what is no longer reached (`-
 
 ```console
 $ midb why "why is the invoice a cent off from the customer's spreadsheet?" --changed-since 2026-04-10
-  issue:BUG-12                               2026-04-09 "A cent off on long invoices"
-+   led to  decision:ADR-007                 2026-04-11 "Banker's rounding for money amounts"
-+     rejects  proposal:P-3                  2026-03-02 "Round halves away from zero"
-+     supported by  claim:rp-rounding/C1     2026-04-14 "Rounding every line and adding the results lets rounding er…"
-+       answers  question:q-round-once       2026-04-14 "Should an invoice total be rounded once, or line by line?"
-+         answered by  claim:rp-rounding/C3  2026-04-14 "People judge a total by whether it matches their own sheet,…"
-+           cites  source:rp-rounding/S3     2026-04-14 "Support ticket SUP-88"
-+       made by  package:rp-rounding         2026-04-14 "Rounding money on long invoices: once per invoice, or once…"
-+         makes  claim:rp-rounding/C2        2026-04-14 "Sheet formulas round each line with halves away from zero,…"
-+           cites  source:rp-rounding/S2     2026-04-14 "ROUND function, Microsoft Support"
-+       cites  source:rp-rounding/S1         2026-04-14 "IEEE 754-2019, section 4.3.1: roundTiesToEven"
-+     decides  file:src/invoice/round.rs               
-+   fixed by  commit:cc746808d1              2026-04-12 "invoice: round totals half-even (ADR-007, BUG-12)"
-    duplicated by  issue:SUP-88              2026-04-08 "Invoice total differs from customer spreadsheet"
+  issue:BUG-12                                                  2026-04-09 "A cent off on long invoices"
++   led to (dreamed, not stated)  decision:ADR-007              2026-04-11 "Banker's rounding for money amounts"
++     rejects (dreamed, not stated)  proposal:P-3               2026-03-02 "Round halves away from zero"
++     supported by (dreamed, not stated)  claim:rp-rounding/C1  2026-04-14 "Rounding every line and adding the results lets rounding er…"
++       answers  question:q-round-once                          2026-04-14 "Should an invoice total be rounded once, or line by line?"
++         answered by  claim:rp-rounding/C3                     2026-04-14 "People judge a total by whether it matches their own sheet,…"
++           cites  source:rp-rounding/S3                        2026-04-14 "Support ticket SUP-88"
++       made by  package:rp-rounding                            2026-04-14 "Rounding money on long invoices: once per invoice, or once…"
++         makes  claim:rp-rounding/C2                           2026-04-14 "Sheet formulas round each line with halves away from zero,…"
++           cites  source:rp-rounding/S2                        2026-04-14 "ROUND function, Microsoft Support"
++       cites  source:rp-rounding/S1                            2026-04-14 "IEEE 754-2019, section 4.3.1: roundTiesToEven"
++     decides (dreamed, not stated)  file:src/invoice/round.rs
++   fixed by (dreamed, not stated)  commit:cc746808d1           2026-04-12 "invoice: round totals half-even (ADR-007, BUG-12)"
+    duplicated by (dreamed, not stated)  issue:SUP-88           2026-04-08 "Invoice total differs from customer spreadsheet"
 14 steps, 9 link kinds; 296 keys read in 713.0µs
 against 2026-04-10: 12 reached since, 0 no longer reached
 ```
@@ -335,19 +335,19 @@ accepts, not the drift it fixed. Take the link back, with the reason:
 $ midb retract issue:SUP-88 duplicates issue:BUG-12 --because "Northwind's sheet rounds each line, so it still differs after ADR-007; SUP-88 is not the drift BUG-12 fixed"
 T4: retracted issue:SUP-88 duplicates issue:BUG-12, kept as review:1
 $ midb why "why is the invoice a cent off from the customer's spreadsheet?" --changed-since T3
-  issue:BUG-12                               2026-04-09 "A cent off on long invoices"
-    led to  decision:ADR-007                 2026-04-11 "Banker's rounding for money amounts"
-      rejects  proposal:P-3                  2026-03-02 "Round halves away from zero"
-      supported by  claim:rp-rounding/C1     2026-04-14 "Rounding every line and adding the results lets rounding er…"
-        answers  question:q-round-once       2026-04-14 "Should an invoice total be rounded once, or line by line?"
-          answered by  claim:rp-rounding/C3  2026-04-14 "People judge a total by whether it matches their own sheet,…"
-            cites  source:rp-rounding/S3     2026-04-14 "Support ticket SUP-88"
-        made by  package:rp-rounding         2026-04-14 "Rounding money on long invoices: once per invoice, or once…"
-          makes  claim:rp-rounding/C2        2026-04-14 "Sheet formulas round each line with halves away from zero,…"
-            cites  source:rp-rounding/S2     2026-04-14 "ROUND function, Microsoft Support"
-        cites  source:rp-rounding/S1         2026-04-14 "IEEE 754-2019, section 4.3.1: roundTiesToEven"
-      decides  file:src/invoice/round.rs               
-    fixed by  commit:cc746808d1              2026-04-12 "invoice: round totals half-even (ADR-007, BUG-12)"
+  issue:BUG-12                                                  2026-04-09 "A cent off on long invoices"
+    led to (dreamed, not stated)  decision:ADR-007              2026-04-11 "Banker's rounding for money amounts"
+      rejects (dreamed, not stated)  proposal:P-3               2026-03-02 "Round halves away from zero"
+      supported by (dreamed, not stated)  claim:rp-rounding/C1  2026-04-14 "Rounding every line and adding the results lets rounding er…"
+        answers  question:q-round-once                          2026-04-14 "Should an invoice total be rounded once, or line by line?"
+          answered by  claim:rp-rounding/C3                     2026-04-14 "People judge a total by whether it matches their own sheet,…"
+            cites  source:rp-rounding/S3                        2026-04-14 "Support ticket SUP-88"
+        made by  package:rp-rounding                            2026-04-14 "Rounding money on long invoices: once per invoice, or once…"
+          makes  claim:rp-rounding/C2                           2026-04-14 "Sheet formulas round each line with halves away from zero,…"
+            cites  source:rp-rounding/S2                        2026-04-14 "ROUND function, Microsoft Support"
+        cites  source:rp-rounding/S1                            2026-04-14 "IEEE 754-2019, section 4.3.1: roundTiesToEven"
+      decides (dreamed, not stated)  file:src/invoice/round.rs
+    fixed by (dreamed, not stated)  commit:cc746808d1           2026-04-12 "invoice: round totals half-even (ADR-007, BUG-12)"
 13 steps, 8 link kinds; 311 keys read in 687.0µs
 - issue:BUG-12 duplicated by issue:SUP-88
 against T3: 0 reached since, 1 no longer reached
@@ -661,11 +661,11 @@ plan  T2
 ran
   1  like     'invoice a cent off from the spreadsheet' → issue:BUG-12 1.00 (next commit:b9adc7af54 0.50, issue:SUP-88 0.43, issue:BUG-3 0.31)
   2  walk     session s5, 5 steps
-issue:BUG-12                            2026-04-09 "A cent off on long invoices"
-  led to  decision:ADR-007              2026-04-11 "Banker's rounding for money amounts"
-    rejects  proposal:P-3               2026-03-02 "Round halves away from zero"
-    supported by  claim:rp-rounding/C1  2026-04-14 "Rounding every line and adding the results lets rounding er…"
-  fixed by  commit:cc746808d1           2026-04-12 "invoice: round totals half-even (ADR-007, BUG-12)"
+issue:BUG-12                                                  2026-04-09 "A cent off on long invoices"
+  led to (dreamed, not stated)  decision:ADR-007              2026-04-11 "Banker's rounding for money amounts"
+    rejects (dreamed, not stated)  proposal:P-3               2026-03-02 "Round halves away from zero"
+    supported by (dreamed, not stated)  claim:rp-rounding/C1  2026-04-14 "Rounding every line and adding the results lets rounding er…"
+  fixed by (dreamed, not stated)  commit:cc746808d1           2026-04-12 "invoice: round totals half-even (ADR-007, BUG-12)"
 5 steps, 4 link kinds; 138 keys read in 277.0µs
 ```
 

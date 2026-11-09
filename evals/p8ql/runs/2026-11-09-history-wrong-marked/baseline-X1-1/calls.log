@@ -1,0 +1,5 @@
+why card:REM-1302 books and theses link independently versioned chapters
+why card:REM-1302
+edges card:REM-1302 --in
+edges card:REM-1302
+edges card:REM-1296

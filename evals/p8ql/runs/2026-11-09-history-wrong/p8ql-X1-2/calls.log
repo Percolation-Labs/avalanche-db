@@ -1,0 +1,2 @@
+query SELECT * FROM card = 'REM-1302'
+query SELECT * FROM card = 'REM-1296'

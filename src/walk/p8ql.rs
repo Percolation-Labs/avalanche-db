@@ -833,6 +833,7 @@ pub fn run(store: &Store, t: u32, stmt: &Stmt) -> Result<Outcome> {
     let mut table: Vec<Vec<String>> = vec![];
     let mut header: Vec<String> = vec![];
     if q.items.iter().any(|i| matches!(i, Item::All)) && q.hops.is_empty() {
+        let dream = store.graph_id(t, "dream")?;
         for r in rows.iter().take(q.limit.unwrap_or(usize::MAX)) {
             let n = r[0];
             let me = name(store, n)?;
@@ -844,7 +845,8 @@ pub fn run(store: &Store, t: u32, stmt: &Stmt) -> Result<Outcome> {
                         continue;
                     }
                     let a = if dir == Dir::Out { format!("-{}->", e.pred.name()) } else { format!("<-{}-", e.pred.name()) };
-                    out += &format!("  {a:<16} {:<28} T{}  valid from {}\n", name(store, e.other)?, e.tx, crate::model::date::show(e.valid_from).split(' ').next().unwrap_or(""));
+                    let how = if Some(e.graph) == dream { "  dreamed, not stated" } else { "" };
+                    out += &format!("  {a:<16} {:<28} T{}  valid from {}{how}\n", name(store, e.other)?, e.tx, crate::model::date::show(e.valid_from).split(' ').next().unwrap_or(""));
                 }
             }
         }
