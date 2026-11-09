@@ -1,5 +1,43 @@
 # P8QL agent eval: results
 
+## Round 7, 9 Nov 2026: the dream question that let scope read as a reason
+
+**Versions:** avalanche-db 96fd024 plus this round's change. The same November dream as
+round 5, repeated on a fresh copy of the history store with the Claude stand-in. Round 5's
+recordings were copied in, so only the 33 changed card requests were asked again. Cost: $0
+billed, about 5 minutes.
+
+**The change.** For a card naming another card, the dream's alternative to `because` used to
+read "names {target} but none of the above holds". Now it lists what a card does with another
+card when that card is not a reason: "to put it out of scope, as related or later work, or as
+something it depends on or waits for".
+
+| because links | round 5 (old wording) | round 7 (new wording) |
+|---|---|---|
+| written | 11 | 9 |
+| right (checked against both cards) | 5 | 9 |
+| wrong: scope or relation read as a reason | 4 | 0 |
+| a dependency read as a reason | 2 | 0 |
+
+**Every link is now right. The five right links survive, and every wrong link and
+dependency drops below the cut.** Four new links appear, and all four are right: REM-1334 and
+REM-1335 because REM-1331 (both filed from this eval), REM-1308 because REM-1307 (its audit
+found the gap), and REM-1328 because REM-1323 (found during REM-1323's work). Round 5 had
+that last pair the wrong way round, as REM-1323 because REM-1328.
+
+- **The mechanism was a missing option.** The model had to choose between "a reason" and "none
+  of the above", and a card that names another card in a Scope line reads as a vague kind of
+  reason. Named alternatives give a scope note somewhere to go, and the wrong links fall to
+  0.50-0.60.
+- **The stand-in still answers at 0.80 when it is unsure.** Five of the nine links sit at
+  exactly 0.80, the cut, and all five are right this time. The 0.80 bucket is not a signal of
+  error by itself; the wrong links in round 5 were wrong because of the question.
+- **This is one dream of one month, checked by one reader** (me, against the card text). The
+  wording also goes to Jev when credit returns. Whether Jev's card links change, and in which
+  direction, is unmeasured.
+- Round 6's question has no wrong link to repeat in this store. REM-1302 now has no `because`
+  at all, which is the truth as far as the store can tell.
+
 ## Round 6, 9 Nov 2026: a wrong dreamed link, and whether agents can tell
 
 **Versions:** avalanche-db 3c7db37 plus this round's change. The store from round 5. One

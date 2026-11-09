@@ -39,7 +39,14 @@ fn options(s: Kind, o: Kind, target: &str) -> Vec<(String, String)> {
         return vec![];
     }
     let mut v: Vec<(String, String)> = v.into_iter().map(|(k, d)| (k.to_string(), d)).collect();
-    v.push((ONLY.into(), format!("`record` names {target} but none of the above holds")));
+    // Cards name other cards to rule them out of scope, as related or later work, or as what
+    // they wait on; the stand-in read those as reasons (REM-1331 round 5: 4 of 11, all at 0.80).
+    let only = if (s, o) == (Kind::Card, Kind::Card) {
+        format!("`record` names {target} but not as a reason: to put it out of scope, as related or later work, or as something it depends on or waits for")
+    } else {
+        format!("`record` names {target} but none of the above holds")
+    };
+    v.push((ONLY.into(), only));
     v
 }
 
