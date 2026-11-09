@@ -46,6 +46,66 @@ fn call(key: &str, body: &Value) -> Result<Value> {
     }
 }
 
+/// The stand-in decider (provider = "claude"): the same typed questions, answered by
+/// `claude -p` on the subscription, for when the decision model has no credit. Its
+/// probabilities are the model's own report, not a calibrated score, and its answers are
+/// recorded under its own model name, so they never replay as the decision model's.
+fn call_claude(model: &str, body: &Value) -> Result<Value> {
+    let mut prompt = String::from("You decide typed questions about one record. Answer each question by choosing exactly one of its options, and give the probability you put on that choice (0 to 1). Reply with JSON only, no prose: {\"<question id>\": {\"choice\": \"<option>\", \"p\": <number>}, ...}\n\nRecord:\n");
+    prompt += body["state"]["record"].as_str().unwrap_or_default();
+    prompt += "\n\nQuestions:\n";
+    if let Some(qs) = body["questions"].as_object() {
+        for (id, q) in qs {
+            prompt += &format!("\n{id}: {}\n", q["instructions"].as_str().unwrap_or_default());
+            if let Some(opts) = q["criteria"].as_object() {
+                for (k, d) in opts {
+                    prompt += &format!("  - {k}: {}\n", d.as_str().unwrap_or_default());
+                }
+            }
+        }
+    }
+    // stream-json, because a user's Stop hook can add a turn after the answer: the answer is
+    // the first assistant text that parses as a JSON object naming the questions.
+    let out = std::process::Command::new("claude")
+        .args(["-p", &prompt, "--model", model.strip_prefix("claude:").unwrap_or(model), "--output-format", "stream-json", "--verbose", "--tools", "", "--strict-mcp-config", "--no-session-persistence"])
+        .output()?;
+    if !out.status.success() {
+        return Err(format!("claude -p failed: {}", String::from_utf8_lossy(&out.stderr)).into());
+    }
+    let ids: Vec<String> = body["questions"].as_object().map(|m| m.keys().cloned().collect()).unwrap_or_default();
+    let mut got: Option<Value> = None;
+    let mut cost = Value::Null;
+    for line in String::from_utf8_lossy(&out.stdout).lines() {
+        let Ok(ev) = serde_json::from_str::<Value>(line) else { continue };
+        if ev["type"] == "result" {
+            cost = ev["total_cost_usd"].clone();
+        }
+        if got.is_some() || ev["type"] != "assistant" {
+            continue;
+        }
+        for part in ev["message"]["content"].as_array().into_iter().flatten() {
+            let text = part["text"].as_str().unwrap_or_default();
+            let Some(t) = text.find('{').and_then(|a| text.rfind('}').map(|b| &text[a..=b])) else { continue };
+            if let Ok(v) = serde_json::from_str::<Value>(t) {
+                if ids.iter().any(|id| v.get(id).is_some()) {
+                    got = Some(v);
+                    break;
+                }
+            }
+        }
+    }
+    let got = got.ok_or("the stand-in gave no answer that names the questions")?;
+    let mut answers = serde_json::Map::new();
+    if let Some(m) = got.as_object() {
+        for (id, a) in m {
+            let choice = a["choice"].as_str().unwrap_or_default().to_string();
+            let p = a["p"].as_f64().unwrap_or(0.0);
+            answers.insert(id.clone(), json!({"choice": choice, "probabilities": {choice.clone(): p}}));
+        }
+    }
+    Ok(json!({"answers": answers, "usage": {"cost": 0.0}, "stand_in": cost}))
+}
+
 pub fn check_key(cfg: &Config) -> Result<String> {
     let k = key(cfg).ok_or_else(|| format!("no key: set {} or run `midb key set`", cfg.model.key_env))?;
     let body = json!({"model": cfg.model.model, "state": {"record": "The sky is blue."},
@@ -75,6 +135,7 @@ pub enum Outcome {
 /// The decision model behind a recording.
 pub struct Model {
     model: String,
+    provider: String,
     key: Option<String>,
     path: PathBuf,
     recorded: BTreeMap<String, Value>,
@@ -90,7 +151,8 @@ impl Model {
                 recorded.insert(v["key"].as_str().unwrap_or_default().to_string(), v);
             }
         }
-        Ok(Model { model: cfg.model.model.clone(), key: key(cfg), path, recorded })
+        let key = if cfg.model.provider == "claude" { Some("subscription".into()) } else { key(cfg) };
+        Ok(Model { model: cfg.model.model.clone(), provider: cfg.model.provider.clone(), key, path, recorded })
     }
 
     fn request(&self, state: &str, questions: &[Choice]) -> (Value, String) {
@@ -122,7 +184,7 @@ impl Model {
             Some(v) => (v["response"].clone(), true),
             None => {
                 let Some(k) = &self.key else { return Ok(Outcome::NeedsKey) };
-                let r = call(k, &request)?;
+                let r = if self.provider == "claude" { call_claude(&self.model, &request)? } else { call(k, &request)? };
                 let line = json!({"key": h, "request": request, "response": r});
                 let mut f = std::fs::OpenOptions::new().create(true).append(true).open(&self.path)?;
                 writeln!(f, "{line}")?;
