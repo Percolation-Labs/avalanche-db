@@ -185,25 +185,25 @@ session s1 at issue:BUG-12, pinned to T3, budget 20
   token s1.0.3
 $ midb step s1.0.3
 step 1  issue:BUG-12 "A cent off on long invoices"
-  + <-because- decision:ADR-007  "Banker's rounding for money amounts"  0.90
-  + <-fixes- commit:cc746808d1  "invoice: round totals half-even (ADR-007, BUG-12)"  0.72
-  + <-duplicates- issue:SUP-88  "Invoice total differs from customer spreadsheet"  0.45
+  + <-because- (dreamed, not stated) decision:ADR-007  "Banker's rounding for money amounts"  0.90
+  + <-fixes- (dreamed, not stated) commit:cc746808d1  "invoice: round totals half-even (ADR-007, BUG-12)"  0.72
+  + <-duplicates- (dreamed, not stated) issue:SUP-88  "Invoice total differs from customer spreadsheet"  0.45
   open 3 (opened 3, closed 1); next: decision:ADR-007 0.90, commit:cc746808d1 0.72, issue:SUP-88 0.45
   stats: out 2 in 7; held back 0; budget left 16; path use 0; 32 keys in 116µs
   token s1.1.3
 $ midb step s1.1.3
 step 2  decision:ADR-007 "Banker's rounding for money amounts"
-  + -rejects-> proposal:P-3  "Round halves away from zero"  0.73
-  + <-supports- claim:rp-rounding/C1  "Rounding every line and adding the results lets rounding er…"  0.57
-  + -decides-> file:src/invoice/round.rs  0.49
-    -because-> issue:BUG-12  (visited)
-    <-implements- commit:cc746808d1  (already open)
+  + -rejects-> (dreamed, not stated) proposal:P-3  "Round halves away from zero"  0.73
+  + <-supports- (dreamed, not stated) claim:rp-rounding/C1  "Rounding every line and adding the results lets rounding er…"  0.57
+  + -decides-> (dreamed, not stated) file:src/invoice/round.rs  0.49
+    -because-> (dreamed, not stated) issue:BUG-12  (visited)
+    <-implements- (dreamed, not stated) commit:cc746808d1  (already open)
   open 5 (opened 3, closed 1); next: proposal:P-3 0.73, commit:cc746808d1 0.72, claim:rp-rounding/C1 0.57
   stats: out 9 in 6; held back 0; budget left 13; path use 0; 37 keys in 119µs
   token s1.2.3
 $ midb step s1.2.3
 step 3  proposal:P-3 "Round halves away from zero"
-    <-rejects- decision:ADR-007  (visited)
+    <-rejects- (dreamed, not stated) decision:ADR-007  (visited)
   open 4 (opened 0, closed 1); next: commit:cc746808d1 0.72, claim:rp-rounding/C1 0.57, file:src/invoice/round.rs 0.49
   stats: out 3 in 3; held back 0; budget left 13; path use 0; 15 keys in 105µs
   token s1.3.3
@@ -229,7 +229,7 @@ picks any open question by name, and `--prefer kind=weight` changes the policy m
 ```console
 $ midb step s1.3.3 --take file:src/invoice/round.rs
 step 4  file:src/invoice/round.rs
-    <-decides- decision:ADR-007  (visited)
+    <-decides- (dreamed, not stated) decision:ADR-007  (visited)
   open 3 (opened 0, closed 1); next: commit:cc746808d1 0.72, claim:rp-rounding/C1 0.57, issue:SUP-88 0.45
   stats: out 0 in 6; held back 0; budget left 13; path use 0; 15 keys in 90µs
   token s1.4.3
@@ -487,7 +487,7 @@ agent sees it:
 $ printf '%s\n' '{"jsonrpc":"2.0","id":1,"method":"tools/call","params":{"name":"ask","arguments":{"question":"why is the invoice a cent off?"}}}' | midb mcp
 {"id":1,"jsonrpc":"2.0","result":{"content":[{"text":"session s4 at issue:BUG-12, pinned to T2, budget 20\n  token s4.0.2\n","type":"text"}]}}
 $ printf '%s\n' '{"jsonrpc":"2.0","id":2,"method":"tools/call","params":{"name":"step","arguments":{"token":"s4.0.2","prefer":"duplicates=0"}}}' | midb mcp
-{"id":2,"jsonrpc":"2.0","result":{"content":[{"text":"step 1  issue:BUG-12 \"A cent off on long invoices\"\n  + <-because- decision:ADR-007  \"Banker's rounding for money amounts\"  0.90\n  + <-fixes- commit:cc746808d1  \"invoice: round totals half-even (ADR-007, BUG-12)\"  0.72\n  open 2 (opened 2, closed 1); next: decision:ADR-007 0.90, commit:cc746808d1 0.72\n  stats: out 2 in 6; held back 0; budget left 17; path use 3; 33 keys in 74µs\n  token s4.1.2\n","type":"text"}]}}
+{"id":2,"jsonrpc":"2.0","result":{"content":[{"text":"step 1  issue:BUG-12 \"A cent off on long invoices\"\n  + <-because- (dreamed, not stated) decision:ADR-007  \"Banker's rounding for money amounts\"  0.90\n  + <-fixes- (dreamed, not stated) commit:cc746808d1  \"invoice: round totals half-even (ADR-007, BUG-12)\"  0.72\n  open 2 (opened 2, closed 1); next: decision:ADR-007 0.90, commit:cc746808d1 0.72\n  stats: out 2 in 6; held back 0; budget left 17; path use 3; 33 keys in 74µs\n  token s4.1.2\n","type":"text"}]}}
 ```
 
 ## 11. Query with P8QL

@@ -182,6 +182,8 @@ pub struct Neighbour {
     pub visited: bool,
     pub known: bool,
     pub id: u64,
+    /// The link was decided by the dream, not stated by a source.
+    pub dreamed: bool,
 }
 
 pub struct StepOut {
@@ -328,7 +330,7 @@ pub fn step(store: &Store, t: u32, token: &str, steer: &Steer) -> Result<StepOut
         } else if !seen {
             stats.held_back += 1;
         }
-        neighbours.push(Neighbour { pred, dir, label: None, node: String::new(), opened, visited: visited.contains(&other), known: seen, id: other });
+        neighbours.push(Neighbour { pred, dir, label: None, node: String::new(), opened, visited: visited.contains(&other), known: seen, id: other, dreamed });
     }
     neighbours.sort_by(|a, b| b.opened.unwrap_or(-1.0).total_cmp(&a.opened.unwrap_or(-1.0)));
     for n in neighbours.iter_mut().take(SHOWN) {
@@ -379,6 +381,7 @@ impl fmt::Display for StepOut {
         }
         for n in self.neighbours.iter().take(SHOWN) {
             let arrow = if n.dir == Dir::Out { format!("-{}->", n.pred.name()) } else { format!("<-{}-", n.pred.name()) };
+            let arrow = if n.dreamed { format!("{arrow} (dreamed, not stated)") } else { arrow };
             let (mark, tail) = match (n.opened, n.known, &n.label) {
                 (Some(p), _, Some(l)) => ("+", format!("  \"{}\"  {p:.2}", crate::model::short(l, 60))),
                 (Some(p), _, None) => ("+", format!("  {p:.2}")),
