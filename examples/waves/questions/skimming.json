@@ -1,0 +1,9 @@
+{"question": "Northgate Fuel reported card skimming at its pumps from 12 November 2026. Which customers may have had their card details taken?",
+ "data": "bank.db",
+ "start": {"sql": "select * from merchants where name like '%northgate%'", "note": "merchants: select * from merchants where name like '%northgate%'", "decide": false},
+ "hops": [
+   {"to": "transactions", "fk": "merchant_id", "note": "transactions: join transactions on transactions.merchant_id = merchants.id"},
+   {"to": "accounts", "via": "account_id", "note": "accounts: join accounts on accounts.id = transactions.account_id", "decide": false},
+   {"to": "customers", "via": "customer_id", "note": "customers: join customers on customers.id = accounts.customer_id", "decide": false}],
+ "gold": ["C08", "C21", "C33"],
+ "planted": "Card payments at Northgate Fuel on or after 12 Nov: C08 (12th), C21 (13th), C33 (15th). Before: C02 (6th), C14 (9th)."}

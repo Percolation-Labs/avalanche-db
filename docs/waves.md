@@ -184,3 +184,13 @@ the keys it read, but not the ones that were never stored.
   link. The open question, where the shape is unknown, is where stepping pays.
 - **Aggregation is outside the rhythm.** It summarizes a wave, and it is the one place where
   SQL's notation has no walk to translate.
+
+## Run them
+
+[examples/waves](../examples/waves) runs this idea on two databases whose graph is given: a
+relational bank (customers, accounts, transactions, merchants) and a Neo4j-style property graph.
+Each walk is the familiar query, one join or one relationship at a time, with a decision model
+between the hops that keeps only the rows that bear on the question. Switch the decider off and
+the walk is the declarative query again. Its README has what happened: one call at the right
+hop answered three of the four questions exactly, and the fourth showed where row-by-row
+judgement fails.

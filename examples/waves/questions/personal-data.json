@@ -1,0 +1,10 @@
+{"question": "Which of the people Ana works with lead a project that handles personal data?",
+ "data": "graph.json",
+ "start": {"ids": ["Ana"], "note": "MATCH (a:Person {name: 'Ana'})", "decide": false},
+ "hops": [
+   {"rel": "WORKS_WITH", "dir": "both", "to": "Person", "note": "MATCH (a)-[:WORKS_WITH]-(p:Person)", "decide": false},
+   {"rel": "LEADS", "dir": "out", "to": "Project", "note": "MATCH (p)-[:LEADS]->(pj:Project)", "decide": false},
+   {"rel": "HANDLES", "dir": "out", "to": "DataClass", "note": "MATCH (pj)-[:HANDLES]->(d:DataClass) WHERE d.personal"}],
+ "answer_via": 1,
+ "gold": ["Ben", "Chloe", "Dev"],
+ "planted": "A pattern the graph already states: a property (personal) decides it, so the decider has nothing to add beyond the declarative WHERE."}

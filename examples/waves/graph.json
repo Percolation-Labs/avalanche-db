@@ -1,0 +1,492 @@
+{
+ "nodes": [
+  {
+   "id": "Ana",
+   "label": "Person",
+   "props": {
+    "name": "Ana"
+   }
+  },
+  {
+   "id": "Ben",
+   "label": "Person",
+   "props": {
+    "name": "Ben"
+   }
+  },
+  {
+   "id": "Chloe",
+   "label": "Person",
+   "props": {
+    "name": "Chloe"
+   }
+  },
+  {
+   "id": "Dev",
+   "label": "Person",
+   "props": {
+    "name": "Dev"
+   }
+  },
+  {
+   "id": "Ema",
+   "label": "Person",
+   "props": {
+    "name": "Ema"
+   }
+  },
+  {
+   "id": "Femi",
+   "label": "Person",
+   "props": {
+    "name": "Femi"
+   }
+  },
+  {
+   "id": "Gita",
+   "label": "Person",
+   "props": {
+    "name": "Gita"
+   }
+  },
+  {
+   "id": "Hugo",
+   "label": "Person",
+   "props": {
+    "name": "Hugo"
+   }
+  },
+  {
+   "id": "Ines",
+   "label": "Person",
+   "props": {
+    "name": "Ines"
+   }
+  },
+  {
+   "id": "Jon",
+   "label": "Person",
+   "props": {
+    "name": "Jon"
+   }
+  },
+  {
+   "id": "Kai",
+   "label": "Person",
+   "props": {
+    "name": "Kai"
+   }
+  },
+  {
+   "id": "Lena",
+   "label": "Person",
+   "props": {
+    "name": "Lena"
+   }
+  },
+  {
+   "id": "payments-api",
+   "label": "Project",
+   "props": {
+    "name": "payments-api"
+   }
+  },
+  {
+   "id": "search",
+   "label": "Project",
+   "props": {
+    "name": "search"
+   }
+  },
+  {
+   "id": "billing-batch",
+   "label": "Project",
+   "props": {
+    "name": "billing-batch"
+   }
+  },
+  {
+   "id": "mobile-app",
+   "label": "Project",
+   "props": {
+    "name": "mobile-app"
+   }
+  },
+  {
+   "id": "fraud-rules",
+   "label": "Project",
+   "props": {
+    "name": "fraud-rules"
+   }
+  },
+  {
+   "id": "docs-site",
+   "label": "Project",
+   "props": {
+    "name": "docs-site"
+   }
+  },
+  {
+   "id": "warehouse",
+   "label": "Project",
+   "props": {
+    "name": "warehouse"
+   }
+  },
+  {
+   "id": "internal-wiki",
+   "label": "Project",
+   "props": {
+    "name": "internal-wiki"
+   }
+  },
+  {
+   "id": "drools 7.74.1",
+   "label": "Component",
+   "props": {
+    "name": "drools",
+    "version": "7.74.1"
+   }
+  },
+  {
+   "id": "hugo 0.120.0",
+   "label": "Component",
+   "props": {
+    "name": "hugo",
+    "version": "0.120.0"
+   }
+  },
+  {
+   "id": "jackson-databind 2.15.2",
+   "label": "Component",
+   "props": {
+    "name": "jackson-databind",
+    "version": "2.15.2"
+   }
+  },
+  {
+   "id": "log4j-core 2.14.0",
+   "label": "Component",
+   "props": {
+    "name": "log4j-core",
+    "version": "2.14.0"
+   }
+  },
+  {
+   "id": "log4j-core 2.14.1",
+   "label": "Component",
+   "props": {
+    "name": "log4j-core",
+    "version": "2.14.1"
+   }
+  },
+  {
+   "id": "log4j-core 2.15.0",
+   "label": "Component",
+   "props": {
+    "name": "log4j-core",
+    "version": "2.15.0"
+   }
+  },
+  {
+   "id": "log4j-core 2.17.2",
+   "label": "Component",
+   "props": {
+    "name": "log4j-core",
+    "version": "2.17.2"
+   }
+  },
+  {
+   "id": "lucene 9.8.0",
+   "label": "Component",
+   "props": {
+    "name": "lucene",
+    "version": "9.8.0"
+   }
+  },
+  {
+   "id": "okhttp 4.12.0",
+   "label": "Component",
+   "props": {
+    "name": "okhttp",
+    "version": "4.12.0"
+   }
+  },
+  {
+   "id": "postgres-jdbc 42.6.0",
+   "label": "Component",
+   "props": {
+    "name": "postgres-jdbc",
+    "version": "42.6.0"
+   }
+  },
+  {
+   "id": "xwiki 15.5",
+   "label": "Component",
+   "props": {
+    "name": "xwiki",
+    "version": "15.5"
+   }
+  },
+  {
+   "id": "CVE-2021-44228",
+   "label": "Vulnerability",
+   "props": {
+    "name": "Log4Shell",
+    "kind": "remote code execution",
+    "affects": "log4j-core 2.0-beta9 to 2.14.1; 2.15.0 incomplete fix (CVE-2021-45046); fixed in 2.17.1"
+   }
+  },
+  {
+   "id": "CVE-2023-35116",
+   "label": "Vulnerability",
+   "props": {
+    "name": "jackson-databind cyclic DoS",
+    "kind": "denial of service, disputed",
+    "affects": "jackson-databind up to 2.15.2"
+   }
+  },
+  {
+   "id": "card data",
+   "label": "DataClass",
+   "props": {
+    "name": "card data",
+    "personal": true
+   }
+  },
+  {
+   "id": "customer contact",
+   "label": "DataClass",
+   "props": {
+    "name": "customer contact",
+    "personal": true
+   }
+  },
+  {
+   "id": "sales data",
+   "label": "DataClass",
+   "props": {
+    "name": "sales data",
+    "personal": false
+   }
+  }
+ ],
+ "edges": [
+  {
+   "from": "Ana",
+   "type": "WORKS_WITH",
+   "to": "Ben",
+   "props": {}
+  },
+  {
+   "from": "Ana",
+   "type": "WORKS_WITH",
+   "to": "Chloe",
+   "props": {}
+  },
+  {
+   "from": "Ana",
+   "type": "WORKS_WITH",
+   "to": "Dev",
+   "props": {}
+  },
+  {
+   "from": "Ben",
+   "type": "WORKS_WITH",
+   "to": "Ema",
+   "props": {}
+  },
+  {
+   "from": "Dev",
+   "type": "WORKS_WITH",
+   "to": "Femi",
+   "props": {}
+  },
+  {
+   "from": "Gita",
+   "type": "WORKS_WITH",
+   "to": "Hugo",
+   "props": {}
+  },
+  {
+   "from": "Ana",
+   "type": "WORKS_WITH",
+   "to": "Ines",
+   "props": {}
+  },
+  {
+   "from": "Ben",
+   "type": "LEADS",
+   "to": "payments-api",
+   "props": {}
+  },
+  {
+   "from": "payments-api",
+   "type": "DEPENDS_ON",
+   "to": "log4j-core 2.14.1",
+   "props": {}
+  },
+  {
+   "from": "payments-api",
+   "type": "DEPENDS_ON",
+   "to": "jackson-databind 2.15.2",
+   "props": {}
+  },
+  {
+   "from": "payments-api",
+   "type": "HANDLES",
+   "to": "card data",
+   "props": {}
+  },
+  {
+   "from": "Ben",
+   "type": "LEADS",
+   "to": "search",
+   "props": {}
+  },
+  {
+   "from": "search",
+   "type": "DEPENDS_ON",
+   "to": "lucene 9.8.0",
+   "props": {}
+  },
+  {
+   "from": "Chloe",
+   "type": "LEADS",
+   "to": "billing-batch",
+   "props": {}
+  },
+  {
+   "from": "billing-batch",
+   "type": "DEPENDS_ON",
+   "to": "log4j-core 2.17.2",
+   "props": {}
+  },
+  {
+   "from": "billing-batch",
+   "type": "DEPENDS_ON",
+   "to": "postgres-jdbc 42.6.0",
+   "props": {}
+  },
+  {
+   "from": "billing-batch",
+   "type": "HANDLES",
+   "to": "customer contact",
+   "props": {}
+  },
+  {
+   "from": "Dev",
+   "type": "LEADS",
+   "to": "mobile-app",
+   "props": {}
+  },
+  {
+   "from": "mobile-app",
+   "type": "DEPENDS_ON",
+   "to": "okhttp 4.12.0",
+   "props": {}
+  },
+  {
+   "from": "mobile-app",
+   "type": "HANDLES",
+   "to": "customer contact",
+   "props": {}
+  },
+  {
+   "from": "Dev",
+   "type": "LEADS",
+   "to": "fraud-rules",
+   "props": {}
+  },
+  {
+   "from": "fraud-rules",
+   "type": "DEPENDS_ON",
+   "to": "log4j-core 2.15.0",
+   "props": {}
+  },
+  {
+   "from": "fraud-rules",
+   "type": "DEPENDS_ON",
+   "to": "drools 7.74.1",
+   "props": {}
+  },
+  {
+   "from": "fraud-rules",
+   "type": "HANDLES",
+   "to": "card data",
+   "props": {}
+  },
+  {
+   "from": "Ema",
+   "type": "LEADS",
+   "to": "docs-site",
+   "props": {}
+  },
+  {
+   "from": "docs-site",
+   "type": "DEPENDS_ON",
+   "to": "hugo 0.120.0",
+   "props": {}
+  },
+  {
+   "from": "Femi",
+   "type": "LEADS",
+   "to": "warehouse",
+   "props": {}
+  },
+  {
+   "from": "warehouse",
+   "type": "DEPENDS_ON",
+   "to": "log4j-core 2.14.0",
+   "props": {}
+  },
+  {
+   "from": "warehouse",
+   "type": "HANDLES",
+   "to": "sales data",
+   "props": {}
+  },
+  {
+   "from": "Gita",
+   "type": "LEADS",
+   "to": "internal-wiki",
+   "props": {}
+  },
+  {
+   "from": "internal-wiki",
+   "type": "DEPENDS_ON",
+   "to": "xwiki 15.5",
+   "props": {}
+  },
+  {
+   "from": "log4j-core 2.14.1",
+   "type": "AFFECTED_BY",
+   "to": "CVE-2021-44228",
+   "props": {}
+  },
+  {
+   "from": "log4j-core 2.17.2",
+   "type": "AFFECTED_BY",
+   "to": "CVE-2021-44228",
+   "props": {}
+  },
+  {
+   "from": "log4j-core 2.14.0",
+   "type": "AFFECTED_BY",
+   "to": "CVE-2021-44228",
+   "props": {}
+  },
+  {
+   "from": "log4j-core 2.15.0",
+   "type": "AFFECTED_BY",
+   "to": "CVE-2021-44228",
+   "props": {}
+  },
+  {
+   "from": "jackson-databind 2.15.2",
+   "type": "AFFECTED_BY",
+   "to": "CVE-2023-35116",
+   "props": {}
+  }
+ ]
+}

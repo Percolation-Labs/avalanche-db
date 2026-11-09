@@ -1,0 +1,11 @@
+{"question": "Which projects led by people Ana works with depend on a component with a known remote-code-execution vulnerability that affects the version they use?",
+ "data": "graph.json",
+ "start": {"ids": ["Ana"], "note": "MATCH (a:Person {name: 'Ana'})", "decide": false},
+ "hops": [
+   {"rel": "WORKS_WITH", "dir": "both", "to": "Person", "note": "MATCH (a)-[:WORKS_WITH]-(p:Person)", "decide": false},
+   {"rel": "LEADS", "dir": "out", "to": "Project", "note": "MATCH (p)-[:LEADS]->(pj:Project)", "decide": false},
+   {"rel": "DEPENDS_ON", "dir": "out", "to": "Component", "note": "MATCH (pj)-[:DEPENDS_ON]->(c:Component)", "decide": false},
+   {"rel": "AFFECTED_BY", "dir": "out", "to": "Vulnerability", "note": "MATCH (c)-[:AFFECTED_BY]->(v:Vulnerability); the path (via) names Ana, the person, the project and the component"}],
+ "answer_via": 2,
+ "gold": ["payments-api", "fraud-rules"],
+ "planted": "AFFECTED_BY links every log4j-core version to Log4Shell. payments-api uses 2.14.1 (affected); fraud-rules uses 2.15.0 (incomplete fix, affected); billing-batch uses 2.17.2 (fixed). payments-api's jackson-databind DoS is not remote code execution. warehouse (2.14.0) is led by Femi, who works with Dev, not Ana."}
