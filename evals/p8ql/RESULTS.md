@@ -205,7 +205,9 @@ screen: REM-1327 because REM-1312, because REM-1145.**
 - **Precision is low in both arms because of how the questions are worded.** The questions
   name their subject ("every release train", "agents post observations"), and agents include
   that subject card in their ids. The gold leaves it out. A question set that counts the
-  subject as given, or asks only for the cause, would fix this.
+  subject as given, or asks only for the cause, would fix this. *Done later on 9 Nov:* a question can now list `given`
+  ids, which count neither for nor against it. Rescored, round 5's precision is 0.93 (baseline)
+  and 1.00 (P8QL), and round 8b's rerun is 1.00 in both arms.
 - **None of the three gold chains passes through a wrong link,** by construction: each one
   was checked against the cards. A question whose walk crosses one of the four wrong
   `because` links is the next test, and it is the one that measures what a 0.80 stand-in costs.

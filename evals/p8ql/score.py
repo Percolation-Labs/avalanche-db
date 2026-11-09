@@ -19,6 +19,8 @@ for d in sorted(os.listdir(runs)):
         ids = set()
     calls = [l for l in open(os.path.join(p, "calls.log")).read().splitlines() if l.strip()]
     g = set(gold[qid]["gold"])
+    # Records the question itself names ("given") are neither credit nor a false positive.
+    ids -= set(gold[qid].get("given", []))
     hit = len(ids & g)
     try:
         a = json.load(open(os.path.join(p, "agent.json")))
