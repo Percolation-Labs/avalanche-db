@@ -504,7 +504,7 @@ lost. The wording moved calibration, not discrimination, so it was reverted.
 **Loosening.** An outlier view whose keys were kept can now be read again one step looser
 (`KS` gained k = 1 and 2; views still start at k = 3), for its new keys only. On busy afternoons
 the busiest-day view loosened from 7 keys to 23, adding 16. Jev ranked the three missing gold
-customers (6 or 7 payments) fourth to seventh of those 16, at 0.48, 0.44 and 0.43. They sat just
+customers (6 or 7 payments) second, fourth and sixth of those 16, at 0.48, 0.44 and 0.43. They sat just
 below 0.5, among non-gold customers at 0.47 and 0.43. Under `jev` it was offered the loosened view
 and chose to stop (0.44). At 6 or 7 payments, "unusually large" is a matter of degree, and the SQL's
 "6 or more" is a line I drew. So recall stays 0.60 to 0.70. The fixed 0.5 cut is fragile here, even
