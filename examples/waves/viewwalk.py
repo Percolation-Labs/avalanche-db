@@ -39,7 +39,10 @@ os.makedirs(STATE, exist_ok=True)
 RARE = 0.01
 RARE_IDS = set()
 GRAMMAR = {}
-SAMPLE = 0  # with --sample n, each menu option shows its top n keys  # the walk's views, so a decider can say how rare a key's figures are among all keys  # rows rare on some column or hour, filled by views(); what evidence() shows first
+SAMPLE = 0  # with --sample n, each menu option shows its top n keys
+REJUDGE = False  # with --rejudge, every key read so far is judged again together after each read
+REJUDGE_CAP = 80
+JUDGE_WORDING = "compared"  # --wording scale: judge each key against the question, the others shown only for scale  # the walk's views, so a decider can say how rare a key's figures are among all keys  # rows rare on some column or hour, filled by views(); what evidence() shows first
 KS = [1, 2, 3, 5, 8, 13, 21, 34]
 K0 = 2  # outlier views start at k = 3; loosening walks back toward 1
 
@@ -316,8 +319,11 @@ def jev_keep(question, view_name, keys, rows):
     for k in keys:
         e = evidence(rows, k)
         state["customers"][k] = {"rarity": rarity(k), "month": e[0], "rows": e[1:]}
-    qs = {k: {"type": "noul", "instructions": f"Does `customers.{k}` show activity that answers `question`, compared "
-              "with the other customers, rather than activity its own rows explain?",
+    ask = lambda k: (f"Does `customers.{k}` show the activity `question` asks about? Judge it on its own rows and rarity figures; "
+           "the other customers are shown for scale." if JUDGE_WORDING == "scale" else
+           f"Does `customers.{k}` show activity that answers `question`, compared "
+           "with the other customers, rather than activity its own rows explain?")
+    qs = {k: {"type": "noul", "instructions": ask(k),
               "criteria": {"true": "it belongs in the answer", "false": "it is ordinary or explained"}} for k in keys}
     ans, _ = jev(state, qs)
     jev_keep.last = {k: float(ans[k]["noul"]) for k in keys}
@@ -337,6 +343,7 @@ def walk(qfile, decider="symbolic", capacity=20, steps=12, patience=2):
     loosened = {}  # view -> keys already read from it before it was loosened
     taken, result, rows_read, idle = [], {}, 0, 0
     paged = {}  # view -> keys already read from it, page by page
+    read_so_far = {}  # every key read so far, with the view it came from
     choose, keep = {"symbolic": (symbolic_choose, symbolic_keep), "jev": (jev_choose, jev_keep),
                     "standin": (standin_choose, standin_keep),
                     "symbolic+standin": (symbolic_choose, standin_keep),
@@ -394,9 +401,20 @@ def walk(qfile, decider="symbolic", capacity=20, steps=12, patience=2):
             paged.setdefault(pick, set()).update(mem)
         rows_read += len(mem)
         kept = keep(plan["question"], pick, mem, rows)
+        for k, x in mem.items():
+            read_so_far.setdefault(k, f"{pick} ({x:g})")
+        if REJUDGE and keep is jev_keep and len(read_so_far) > len(mem):
+            # the population in view: judge everyone read so far side by side, and let that decide the result set
+            pool = dict(list(read_so_far.items())[-REJUDGE_CAP:])
+            kept = keep(plan["question"], "every key read so far", {k: 0 for k in pool}, rows)
+            gone = [k for k in result if k in kept and not kept[k]]
+            for k in gone:
+                del result[k]
+            if gone:
+                print(f"    removed on rejudging: {', '.join(gone)}")
         new = [k for k, yes in kept.items() if yes and k not in result]
         for k in new:
-            result[k] = f"{pick} ({mem[k]:g})"
+            result[k] = read_so_far[k]
         idle = 0 if new else idle + 1
         if not page or len(mem) >= m["count"]:  # a paged view is done when its last page is read
             taken.append(pick)
@@ -423,6 +441,8 @@ def walk(qfile, decider="symbolic", capacity=20, steps=12, patience=2):
 if __name__ == "__main__":
     a = sys.argv
     SAMPLE = int(a[a.index("--sample") + 1]) if "--sample" in a else 0
+    REJUDGE = "--rejudge" in a
+    JUDGE_WORDING = a[a.index("--wording") + 1] if "--wording" in a else "compared"
     walk(a[1], a[a.index("--decider") + 1] if "--decider" in a else "symbolic",
          int(a[a.index("--capacity") + 1]) if "--capacity" in a else 20,
          int(a[a.index("--steps") + 1]) if "--steps" in a else 12,

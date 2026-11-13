@@ -520,3 +520,38 @@ choose a rule from.
 | single very large payment | recall 0 | recall 0.38, precision 1.00 |
 | busy afternoon | recall 0.70, precision 1.00 | recall 0.60, precision 1.00 |
 | night payments (41) | recall 0.10 | exact |
+
+### Judging everyone read so far, together
+
+Jev judged best with the population in view, so `--rejudge` tried more of it. After each view is
+read, Jev judges every key read so far side by side, in one request of up to 80 keys. The result
+set becomes what it keeps, and a key it now rejects is removed. Results with `--sample 3`, at
+capacity 20:
+
+| question | symbolic+jev, per view | symbolic+jev, rejudged | jev, rejudged |
+|---|---|---|---|
+| unusual activity, noisy and clean | exact | exact | exact |
+| card testing | recall 1.00, precision 0.33 | exact | exact |
+| money transfer at night | exact | exact | exact |
+| single very large payment | recall 0 | recall 0 | recall 0.31, precision 1.00 |
+| busy afternoon | recall 0.70, precision 1.00 | recall 0 | recall 0.60, precision 1.00 |
+| night payments (41) | recall 0.10 | recall 0.10 | exact |
+
+**Card testing was fixed.** Judged beside C0029's refund burst, C0017's night payments fell from
+0.60 to 0.37 to 0.48 across the steps, and the busy roof-repair customer fell to 0.13. Jev kept
+C0029 alone.
+
+**Busy afternoons broke.** Judged among themselves in the busiest-day view, the busy shoppers
+scored 0.50 to 0.61 and were kept. Judged beside C0017 and C0029, they scored 0.23 to 0.33 and
+none were kept. A second wording, "judge it on its own rows and rarity figures; the other
+customers are shown for scale", did not help. It scored C0017 at 0.66 for a busy afternoon,
+which its night payments are not, and the shoppers at 0.30 to 0.38.
+
+**So the population matters, but so does which one.** Comparison helps when an off-question
+oddity has to be weighed against the real answer, as in card testing. It hurts when the answer is
+milder than other oddities that share the pool. Jev reads "unusual" relative to whatever it is
+shown, even when the question asks for a specific, milder pattern. A better pool might hold only
+keys from views the question bears on, which brings this back to Jev's choice of view, the weak
+part. `--rejudge` stays off by default.
+
+Jev to date: 380 requests, 1.03 million input tokens.
