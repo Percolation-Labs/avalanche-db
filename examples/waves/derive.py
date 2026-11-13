@@ -14,7 +14,7 @@ Each derivation runs with no tokens, so the whole decision space is printed: eve
 grammar allows and the set it returns. A decider then makes the choices the grammar cannot: one
 Choice per production with more than one reading (`--decider jev`, untested while Jev is 402).
 
-    python3 derive.py questions/<q>.json [--decider jev]
+    python3 derive.py questions/<q>.json [--decider jev|standin]
 """
 import json, os, re, sqlite3, sys
 from itertools import product
@@ -92,6 +92,17 @@ def jev_choose(question, named, date):
     return back(ans["time"]), back(ans["hop"])
 
 
+def standin_choose(question, named, date):
+    """The Jev stand-in (standin.py): each production's Choice as one Noul per option, best wins."""
+    from standin import choice
+    inst = "Judge whether the document states how the query means its words."
+    t, ts = choice(question, inst, {k: f"In this question, {v} ({date})." for k, v in TIME.items()})
+    h, hs = choice(question, inst, {k: f"In this question, {v}." for k, v in HOP.items()})
+    fmt = lambda d: ", ".join(f"{k} {p:.2f}" for k, p in sorted(d.items(), key=lambda x: -x[1]))
+    print(f"stand-in, time: {fmt(ts)}\nstand-in, hop: {fmt(hs)}")
+    return t, h
+
+
 def main(qfile, decider=None):
     plan = json.load(open(qfile))
     db = sqlite3.connect(os.path.join(HERE, plan["set_data"]))
@@ -110,10 +121,13 @@ def main(qfile, decider=None):
         mark = "  <- the planted answer" if set(got) == gold else ""
         shown = ", ".join(got[:6]) + (f" and {len(got) - 6} more" if len(got) > 6 else "")
         print(f"  time {t:12} hop {h:24} -> {len(got):3} ({shown or 'empty'}); recall {hit / len(gold):.2f}{mark}")
-    if decider == "jev":
-        t, h = jev_choose(plan["question"], named, date) if date else ("ignore", None)
+    if decider in ("jev", "standin"):
+        pick = jev_choose if decider == "jev" else standin_choose
+        t, h = pick(plan["question"], named, date) if date else ("ignore", "stay")
         got = run(rows, named, date, t, h, col)
-        print(f"Jev chose time {t!r}, hop {h!r} -> {', '.join(got) or 'empty'}")
+        hit = len(gold & set(got))
+        print(f"{decider} chose time {t!r}, hop {h!r} -> {', '.join(got) or 'empty'}; "
+              f"recall {hit / len(gold):.2f}, precision {hit / max(1, len(got)):.2f}")
 
 
 if __name__ == "__main__":

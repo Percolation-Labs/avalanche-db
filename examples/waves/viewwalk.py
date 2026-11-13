@@ -23,7 +23,7 @@ Two deciders, neither of which writes anything:
   jev       a decision model: one Choice picks the next view or stop, and one request of Nouls
             judges every key a view returns before it enters the result set
 
-    python3 viewwalk.py questions/<q>.json [--decider symbolic|jev] [--capacity 20] [--steps 12] [--patience 2]
+    python3 viewwalk.py questions/<q>.json [--decider symbolic|jev|standin] [--capacity 20] [--steps 12] [--patience 2]
 
 --patience p stops the walk after p views in a row that add no new key (0 turns it off).
 
@@ -37,6 +37,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 STATE = os.path.join(HERE, ".waves")
 os.makedirs(STATE, exist_ok=True)
 RARE = 0.01
+RARE_IDS = set()  # rows rare on some column or hour, filled by views(); what evidence() shows first
 KS = [3, 5, 8, 13, 21, 34]
 
 
@@ -93,7 +94,8 @@ def views(rows, question=""):
                     per = Counter(r["_key"] for r in rows if r[c] == v)
                     out[f"anchor {c} = {v!r}"] = (f"rows whose {c} is {v!r}, named in the question", per, "anchor")
     rare_rows = defaultdict(int)  # per key: rows that are rare on any column or hour
-    rare_ids = set()
+    rare_ids = RARE_IDS
+    rare_ids.clear()
     for c in cols:
         vals = Counter(r[c] for r in rows)
         if isinstance(rows[0][c], (int, float)) or len(vals) > 60:
@@ -154,13 +156,18 @@ def members(view, k):
 
 
 def evidence(rows, key, limit=6):
-    """What a person would read about one key: its unusual rows first, then how its month looks."""
+    """What a person would read about one key: its rare rows first, then its largest, and how its month looks."""
     mine = [r for r in rows if r["_key"] == key]
     amounts = [abs(r["amount"]) for r in mine if r.get("amount") is not None]
-    lines = [f"{len(mine)} rows this month, median |amount| {statistics.median(amounts):.2f}" if amounts else f"{len(mine)} rows"]
+    head = f"{len(mine)} rows this month" + (f", median amount {statistics.median(amounts):.2f}" if amounts else "")
     kinds = Counter(r.get("kind") for r in mine)
-    lines.append("kinds: " + ", ".join(f"{k} {m}" for k, m in kinds.most_common()))
-    return lines
+    head += "; kinds: " + ", ".join(f"{k} {m}" for k, m in kinds.most_common())
+    show = [r for r in mine if r["id"] in RARE_IDS][:limit]
+    show += [r for r in sorted(mine, key=lambda r: -abs(r.get("amount") or 0)) if r not in show][:max(0, limit - len(show))]
+    line = lambda r: (f"{r['at']} {r['kind']} {r['amount']:.2f} at {r.get('merchants.name') or 'no merchant'}"
+                      f"{' (' + r['merchants.category'] + ')' if r.get('merchants.category') else ''}"
+                      f"{', memo ' + repr(r['memo']) if r.get('memo') else ''}")
+    return [head] + [line(r) for r in show]
 
 
 # ------------------------------------------------------------------ deciders
@@ -182,6 +189,38 @@ def symbolic_choose(menu, result, taken):
 
 def symbolic_keep(question, view_name, keys, rows):
     return {k: True for k in keys}
+
+
+STOP_AT = 0.5  # the stand-in stops the walk when no view left scores this
+
+
+def standin_choose(question, menu, result, taken):
+    """The Jev stand-in: one Noul per readable view, would reading it reach what the question needs."""
+    from standin import nouls
+    ok = [n for n, m in menu.items() if 0 < m["count"] <= m["capacity"]]
+    if not ok:
+        over = [(m["count"], n) for n, m in menu.items() if m["count"] > m["capacity"] and m["can_tighten"]]
+        return (min(over)[1], "nothing readable; tighten the smallest") if over else ("stop", "nothing left to read")
+    ps = nouls(question, "Judge whether reading this set of customers would likely reach information needed to "
+               "answer the query.", [f"{menu[n]['count']} customers: {menu[n]['desc']}" for n in ok])
+    best = max(range(len(ok)), key=lambda i: ps[i])
+    shown = ", ".join(f"{n} {p:.2f}" for n, p in sorted(zip(ok, ps), key=lambda x: -x[1])[:4])
+    if ps[best] < STOP_AT:
+        return "stop", f"no view scores {STOP_AT}: {shown}"
+    return ok[best], f"stand-in: {shown}"
+
+
+def standin_keep(question, view_name, keys, rows):
+    from standin import nouls
+    ks = list(keys)
+    ps = nouls(question, "Judge whether this customer's activity is unusual enough to answer the query, rather than "
+               "ordinary or explained by its own rows.", ["\n".join(evidence(rows, k)) for k in ks])
+    keep_standin.last = dict(zip(ks, ps))
+    return {k: p >= 0.5 for k, p in zip(ks, ps)}
+
+
+def keep_standin():
+    pass
 
 
 JEV_ENDPOINT = "https://api.typesafe.ai/v1/systemone"
@@ -253,7 +292,9 @@ def walk(qfile, decider="symbolic", capacity=20, steps=12, patience=2):
     grammar = views(rows, plan["question"])
     tight = {name: 0 for name in grammar}
     taken, result, rows_read, idle = [], {}, 0, 0
-    choose, keep = (symbolic_choose, symbolic_keep) if decider == "symbolic" else (jev_choose, jev_keep)
+    choose, keep = {"symbolic": (symbolic_choose, symbolic_keep), "jev": (jev_choose, jev_keep),
+                    "standin": (standin_choose, standin_keep),
+                    "symbolic+standin": (symbolic_choose, standin_keep)}[decider]
     print(f"question: {plan['question']}\n{len(grammar)} views from the schema of {fact}; capacity {capacity}; decider {decider}")
     for n in range(1, steps + 1):
         menu = {}
@@ -263,8 +304,8 @@ def walk(qfile, decider="symbolic", capacity=20, steps=12, patience=2):
             mem = members(v, KS[tight[name]])
             menu[name] = {"desc": v[0] + (f", k={KS[tight[name]]}" if v[2] == "outlier" else ""), "count": len(mem),
                           "capacity": capacity, "can_tighten": v[2] == "outlier" and tight[name] < len(KS) - 1}
-        pick, why = choose(plan["question"], menu, {k: w for k, w in result.items()}, taken) if decider != "symbolic" \
-            else choose(menu, result, taken)
+        pick, why = choose(menu, result, taken) if choose is symbolic_choose else \
+            choose(plan["question"], menu, {k: w for k, w in result.items()}, taken)
         if pick == "stop":
             print(f"step {n}: stop  ({why})")
             break
@@ -284,6 +325,8 @@ def walk(qfile, decider="symbolic", capacity=20, steps=12, patience=2):
             result[k] = f"{pick} ({mem[k]:g})"
         idle = 0 if new else idle + 1
         taken.append(pick)
+        if keep is standin_keep:
+            print("    p(keep): " + ", ".join(f"{k} {p:.2f}" for k, p in sorted(keep_standin.last.items(), key=lambda x: -x[1])))
         print(f"step {n}: {pick}: {len(mem)} keys read, kept {', '.join(sorted(k for k, y in kept.items() if y)) or 'none'}"
               f"{'' if new else ', nothing new'}  ({why})")
         if patience and idle >= patience:

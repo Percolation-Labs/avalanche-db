@@ -1,3 +1,4 @@
 .waves/*
 !.waves/decisions.jsonl
 __pycache__/
+!.waves/standin.jsonl

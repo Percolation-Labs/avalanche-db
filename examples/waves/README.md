@@ -306,3 +306,41 @@ knows when to stop, or which of 33 customers to keep. Those are the two remainin
 whether the next view bears on the question, and whether a key is explained. For a decision model
 they are one Choice per step and one Noul per key, over a shortlist the grammar has already cut
 to the walker's capacity.
+
+### The Jev stand-in as the decider
+
+`standin.py` is the team's measured stand-in for Jev: Qwen3-Reranker-0.6B, run locally with no
+tokens. Against Jev on MuSiQue leads it scored Spearman .683 and AUC .924 (p8-subsystems
+`meta/lab/results/jev-standin`). It reads a query, an instruction and a document and gives P(yes),
+so it answers a Noul. A Choice is one Noul per option, and the best one wins. Scores are cached in
+`.waves/standin.jsonl`. On 13 November it was tried at three places in these walks.
+
+**Choosing a derivation: the hop yes, the date's direction often not.** Each Northgate question
+needs two choices: which side of the date, and which rows to hop to. The stand-in was run with three
+instructions and two phrasings of the options, 24 choices in all, and got 18 right. It chose the
+hop right 10 times in 12. Phrased as rows ("the same customers' other payments on the same day as
+their card payment at Northgate Fuel"), it got all 6 right, with P(yes) of 0.78 to 0.99. It chose
+the date's side right 8 times in 12, but only 2 in 6 for the same-day question. There it often read
+"from 12 November" as "on 12 November", which shares the topic but not the comparison. The first
+wording tried happened to get all four choices right, and that would have looked like a clean
+result.
+
+**Choosing the next view: no signal.** Asked whether reading a view would reach what the question
+needs, it scored every view 0.00 to 0.09. With a stop at 0.5 the walk read nothing. A view's
+description is not an answer, and a reranker scores answers.
+
+**Judging each customer: no signal, or worse.** Here the symbolic rule chose the views and the
+stand-in judged each key with a Noul over the customer's rows. It scored almost every customer 0.94
+to 0.99. On the noisy bank's first view, it ranked the two planted customers last of five, so the
+result set was the same 33 customers as before. Every customer's rows look relevant to "unusual
+activity". This is the earlier lesson again: "unusual" is relative to everyone else, and one key's
+rows don't show that. Describing each customer by how rare its figures are among all customers
+("11 rows on one day; 0.05% of customers have as much") helped one plant and not the other.
+C0029 rose to first of 33, and C0017 stayed 19th.
+
+**So a relevance model can make the structural choices, and not the judgements.** It reliably picks
+which rows a question is about when the options are phrased as rows. It cannot yet be trusted
+with the direction of a comparison. It cannot judge whether something is unusual, because that
+needs the population, not the document. That judgement is the one Jev's own Nouls are needed for,
+and none of this is a measurement against Jev, which is still 402. The stand-in was measured on lead
+relevance, not on choices like these.
