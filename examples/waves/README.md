@@ -554,3 +554,39 @@ keys from views the question bears on, which brings this back to Jev's choice of
 part. `--rejudge` stays off by default.
 
 Jev to date: 341 requests, 1.06 million input tokens.
+
+### One last judgement of the result set
+
+A third pool lies between a view's own keys and everything read so far: the result set itself,
+judged once more, together, before it is returned (`--final`). Each candidate then competes only
+with the others that passed. That costs one more request per walk. Results with `--sample 3`, at
+capacity 20:
+
+| question | jev | jev --final | symbolic+jev | symbolic+jev --final |
+|---|---|---|---|---|
+| unusual activity, noisy and clean | exact | exact | exact | exact |
+| card testing | exact | exact | precision 0.33 | exact (C0017 and C0129 removed) |
+| money transfer at night | exact | exact | exact | exact |
+| single very large payment | recall 0.38 | recall 0.25 | recall 0 | recall 0 |
+| busy afternoon | recall 0.60 | recall 0.20 | recall 0.70 | recall 0.10 |
+| night payments (41) | exact | recall 0.98 | recall 0.10 | recall 0.10 |
+
+**The final judgement removes what sits well below the real answer.** For card testing, C0017's night
+payments and the busy roof-repair customer fell out beside C0029's refund burst. Neither the
+grammar nor the per-view judgement had removed them.
+
+**It cannot settle a set that is all near the line.** The busy shoppers were the same six keys, with
+the same question. In their view they scored 0.50 to 0.61 and were kept. Asked again as "the
+result set", without C0029 below them, they scored 0.36 to 0.57, and four were removed. The single
+very large payment lost the piano and the kitchen (0.30, 0.23), and night payments lost one of
+41. A key near 0.5 crosses the line whenever it is asked again in a new setting. So the label of
+the pool, and what else sits in it, move the scale as much as the keys do.
+
+**So membership has a resolution.** Jev separates a clear answer from what is plainly not one, in any
+pool. Between a mild case and the line, it gives different answers in different settings. A
+relative cut (remove only keys far below the best) would fit these seven questions, but it would be
+fitted to them, so it was not adopted. The honest reading is that "unusually busy" and "very
+large" are questions of degree. A walk should return such keys with their scores and say they are
+borderline, rather than force them across a fixed line. `--final` stays off by default.
+
+Jev to date: 351 requests, 1.09 million input tokens.

@@ -42,6 +42,7 @@ GRAMMAR = {}
 SAMPLE = 0  # with --sample n, each menu option shows its top n keys
 REJUDGE = False  # with --rejudge, every key read so far is judged again together after each read
 REJUDGE_CAP = 80
+FINAL = False  # with --final, the result set is judged once more, together, before it is returned
 JUDGE_WORDING = "compared"  # --wording scale: judge each key against the question, the others shown only for scale  # the walk's views, so a decider can say how rare a key's figures are among all keys  # rows rare on some column or hour, filled by views(); what evidence() shows first
 KS = [1, 2, 3, 5, 8, 13, 21, 34]
 K0 = 2  # outlier views start at k = 3; loosening walks back toward 1
@@ -428,6 +429,14 @@ def walk(qfile, decider="symbolic", capacity=20, steps=12, patience=2):
             break
     else:
         print(f"budget of {steps} steps spent")
+    if FINAL and keep is jev_keep and len(result) > 1:
+        # the last fold: the candidates that passed, judged side by side, so each competes only with the others that passed
+        final = keep(plan["question"], "the result set, before it is returned", {k: 0 for k in result}, rows)
+        print("    final p(keep): " + ", ".join(f"{k} {p:.2f}" for k, p in sorted(jev_keep.last.items(), key=lambda x: -x[1])))
+        gone = [k for k, yes in final.items() if not yes]
+        for k in gone:
+            del result[k]
+        print(f"final judgement: removed {', '.join(gone) or 'none'}")
     left = [name for name in grammar if name not in taken]
     ids, gold = sorted(result), set(plan["gold"])
     hit = len(gold & set(ids))
@@ -442,6 +451,7 @@ if __name__ == "__main__":
     a = sys.argv
     SAMPLE = int(a[a.index("--sample") + 1]) if "--sample" in a else 0
     REJUDGE = "--rejudge" in a
+    FINAL = "--final" in a
     JUDGE_WORDING = a[a.index("--wording") + 1] if "--wording" in a else "compared"
     walk(a[1], a[a.index("--decider") + 1] if "--decider" in a else "symbolic",
          int(a[a.index("--capacity") + 1]) if "--capacity" in a else 20,
