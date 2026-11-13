@@ -318,9 +318,9 @@ so it answers a Noul. A Choice is one Noul per option, and the best one wins. Sc
 **Choosing a derivation: the hop yes, the date's direction often not.** Each Northgate question
 needs two choices: which side of the date, and which rows to hop to. The stand-in was run with three
 instructions and two phrasings of the options, 24 choices in all, and got 18 right. It chose the
-hop right 10 times in 12. Phrased as rows ("the same customers' other payments on the same day as
+hop right 11 times in 12. Phrased as rows ("the same customers' other payments on the same day as
 their card payment at Northgate Fuel"), it got all 6 right, with P(yes) of 0.78 to 0.99. It chose
-the date's side right 8 times in 12, but only 2 in 6 for the same-day question. There it often read
+the date's side right 7 times in 12, but only 2 in 6 for the same-day question. There it often read
 "from 12 November" as "on 12 November", which shares the topic but not the comparison. The first
 wording tried happened to get all four choices right, and that would have looked like a clean
 result.
