@@ -37,7 +37,8 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 STATE = os.path.join(HERE, ".waves")
 os.makedirs(STATE, exist_ok=True)
 RARE = 0.01
-RARE_IDS = set()  # rows rare on some column or hour, filled by views(); what evidence() shows first
+RARE_IDS = set()
+GRAMMAR = {}  # the walk's views, so a decider can say how rare a key's figures are among all keys  # rows rare on some column or hour, filled by views(); what evidence() shows first
 KS = [3, 5, 8, 13, 21, 34]
 
 
@@ -225,6 +226,7 @@ def keep_standin():
 
 JEV_ENDPOINT = "https://api.typesafe.ai/v1/systemone"
 JEV_MODEL = "jev-1.13.0"
+JEV_SPENT = {"requests": 0, "input_tokens": 0, "output_tokens": 0}  # fresh calls this process (cache hits are free)
 
 
 def jev(state, questions):
@@ -240,6 +242,10 @@ def jev(state, questions):
         "Authorization": f"Bearer {os.environ['JEV_API_KEY']}", "Content-Type": "application/json"})
     with urllib.request.urlopen(req, timeout=120) as resp:
         data = json.load(resp)
+    u = data.get("usage") or {}
+    JEV_SPENT["requests"] += 1
+    JEV_SPENT["input_tokens"] += u.get("input_tokens", 0)
+    JEV_SPENT["output_tokens"] += u.get("output_tokens", 0)
     with open(log, "a") as f:
         f.write(json.dumps({"key": key, "answers": data["answers"], "usage": data.get("usage")}) + "\n")
     return data["answers"], False
@@ -258,8 +264,9 @@ def jev_choose(question, menu, result, taken):
         what = (f"read the {m['count']} keys in: {m['desc']}" if m["count"] <= m["capacity"] else
                 f"{m['desc']}: {m['count']} keys, over capacity; tighten it before it can be read")
         opts[s], back[s] = what, name
-    opts["stop_the_result_set_answers_the_question"] = "every remaining view is unrelated to the question, or repeats what is already found"
-    back["stop_the_result_set_answers_the_question"] = "stop"
+    if taken:  # stopping before anything is read is not a decision (13 Nov: capacity 5, Jev stopped at step 1)
+        opts["stop_the_result_set_answers_the_question"] = "every remaining view is unrelated to the question, or repeats what is already found"
+        back["stop_the_result_set_answers_the_question"] = "stop"
     state = {"question": question, "result_set": result, "views_read": taken}
     ans, _ = jev(state, {"next": {"type": "choice", "instructions":
                  "Which view should the walk read next to answer `question`, given `result_set` and `views_read`?",
@@ -268,19 +275,31 @@ def jev_choose(question, menu, result, taken):
     return back[a["choice"]], f"Jev chose {a['choice']} (p={a.get('probabilities', {}).get(a['choice'], 0):.2f})"
 
 
+def rarity(key):
+    """How rare a key's figures are among all keys, one line per view where it is in the top 5%."""
+    out = []
+    for desc, per, kind in GRAMMAR.values():
+        v = per.get(key, 0)
+        if v:
+            share = sum(1 for x in per.values() if x >= v) / len(per)
+            if share <= 0.05:
+                out.append(f"{desc}: {v:g} ({share:.2%} of customers have as much)")
+    return out
+
+
 def jev_keep(question, view_name, keys, rows):
-    qs = {}
-    state = {"question": question, "view": view_name, "keys": {}}
-    for k, v in keys.items():
-        mine = [r for r in rows if r["_key"] == k]
-        state["keys"][k] = {"value_in_view": v, "month": evidence(rows, k),
-                            "rows": [{c: r[c] for c in r if c not in ("id", "_key") and not c.endswith("_id")}
-                                     for r in sorted(mine, key=lambda r: -abs(r.get("amount") or 0))[:6]]}
-        qs[k] = {"type": "noul", "instructions": f"Does `keys.{k}` show activity that answers `question`, "
-                 f"rather than activity its own rows explain?",
-                 "criteria": {"true": "it belongs in the answer", "false": "it is ordinary or explained"}}
+    """One request: every key the view returned, side by side in the state, with a Noul each. Seeing
+    the others is what calibrates it (13 Nov: alone, 7 of 33 kept, precision 0.29; together, 2, exact)."""
+    state = {"question": question, "view": view_name, "customers": {}}
+    for k in keys:
+        e = evidence(rows, k)
+        state["customers"][k] = {"rarity": rarity(k), "month": e[0], "rows": e[1:]}
+    qs = {k: {"type": "noul", "instructions": f"Does `customers.{k}` show activity that answers `question`, compared "
+              "with the other customers, rather than activity its own rows explain?",
+              "criteria": {"true": "it belongs in the answer", "false": "it is ordinary or explained"}} for k in keys}
     ans, _ = jev(state, qs)
-    return {k: float(ans[k]["noul"]) >= 0.5 for k in keys}
+    jev_keep.last = {k: float(ans[k]["noul"]) for k in keys}
+    return {k: p >= 0.5 for k, p in jev_keep.last.items()}
 
 
 # ------------------------------------------------------------------ the walk
@@ -290,11 +309,14 @@ def walk(qfile, decider="symbolic", capacity=20, steps=12, patience=2):
     db = sqlite3.connect(os.path.join(HERE, plan["set_data"]))
     fact, rows = load(db, plan.get("key_table", "customers"))
     grammar = views(rows, plan["question"])
+    GRAMMAR.clear()
+    GRAMMAR.update(grammar)
     tight = {name: 0 for name in grammar}
     taken, result, rows_read, idle = [], {}, 0, 0
     choose, keep = {"symbolic": (symbolic_choose, symbolic_keep), "jev": (jev_choose, jev_keep),
                     "standin": (standin_choose, standin_keep),
-                    "symbolic+standin": (symbolic_choose, standin_keep)}[decider]
+                    "symbolic+standin": (symbolic_choose, standin_keep),
+                    "symbolic+jev": (symbolic_choose, jev_keep)}[decider]
     print(f"question: {plan['question']}\n{len(grammar)} views from the schema of {fact}; capacity {capacity}; decider {decider}")
     for n in range(1, steps + 1):
         menu = {}
@@ -325,8 +347,9 @@ def walk(qfile, decider="symbolic", capacity=20, steps=12, patience=2):
             result[k] = f"{pick} ({mem[k]:g})"
         idle = 0 if new else idle + 1
         taken.append(pick)
-        if keep is standin_keep:
-            print("    p(keep): " + ", ".join(f"{k} {p:.2f}" for k, p in sorted(keep_standin.last.items(), key=lambda x: -x[1])))
+        last = keep_standin.last if keep is standin_keep else jev_keep.last if keep is jev_keep else None
+        if last:
+            print("    p(keep): " + ", ".join(f"{k} {p:.2f}" for k, p in sorted(last.items(), key=lambda x: -x[1])[:8]))
         print(f"step {n}: {pick}: {len(mem)} keys read, kept {', '.join(sorted(k for k, y in kept.items() if y)) or 'none'}"
               f"{'' if new else ', nothing new'}  ({why})")
         if patience and idle >= patience:
@@ -340,6 +363,8 @@ def walk(qfile, decider="symbolic", capacity=20, steps=12, patience=2):
     print(f"result set: {', '.join(ids) or '(empty)'}")
     print(f"against the planted answer {sorted(gold)}: recall {hit / len(gold):.2f}, precision {hit / max(1, len(ids)):.2f}; "
           f"{rows_read} keys read; views not read: {len(left)}")
+    if JEV_SPENT["requests"]:
+        print(f"Jev this run: {JEV_SPENT}")
 
 
 if __name__ == "__main__":

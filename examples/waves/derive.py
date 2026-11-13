@@ -81,15 +81,17 @@ HOP = {"stay": "the answer is read from the anchor rows themselves",
 
 def jev_choose(question, named, date):
     """One request: a Choice for each production with more than one reading. Option keys are
-    named for what they mean, since Jev reads the key (decide.py, 30 Sept)."""
+    named for what they mean, since Jev reads the key (decide.py, 30 Sept). Returns every
+    (time, hop) reading with its joint probability, most likely first."""
     key = lambda s: s.replace(" ", "_")
     qs = {"time": {"type": "choice", "instructions": f"How does `question` use the date {date}?",
                    "criteria": {key(k): v for k, v in TIME.items()}},
           "hop": {"type": "choice", "instructions": "Which rows does `question` ask about, given the anchor rows "
                   f"(those with {named})?", "criteria": {key(k): v for k, v in HOP.items()}}}
     ans, _ = jev({"question": question}, qs)
-    back = lambda a: a["choice"].replace("_", " ")
-    return back(ans["time"]), back(ans["hop"])
+    pt = {k.replace("_", " "): p for k, p in ans["time"]["probabilities"].items()}
+    ph = {k.replace("_", " "): p for k, p in ans["hop"]["probabilities"].items()}
+    return sorted(((pt[t] * ph[h], t, h) for t in pt for h in ph), reverse=True)
 
 
 def standin_choose(question, named, date):
@@ -121,14 +123,21 @@ def main(qfile, decider=None):
         mark = "  <- the planted answer" if set(got) == gold else ""
         shown = ", ".join(got[:6]) + (f" and {len(got) - 6} more" if len(got) > 6 else "")
         print(f"  time {t:12} hop {h:24} -> {len(got):3} ({shown or 'empty'}); recall {hit / len(gold):.2f}{mark}")
-    if decider in ("jev", "standin"):
-        pick = jev_choose if decider == "jev" else standin_choose
-        t, h = pick(plan["question"], named, date) if date else ("ignore", "stay")
+    if decider == "jev":
+        # an empty set is a semantic exception: the walk takes Jev's next most likely reading
+        for p, t, h in jev_choose(plan["question"], named, date):
+            got = run(rows, named, date, t, h, col)
+            print(f"jev reading: time {t!r}, hop {h!r} (p {p:.2f}) -> {', '.join(got) or 'empty: semantic exception'}")
+            if got:
+                break
+        hit = len(gold & set(got))
+        print(f"recall {hit / len(gold):.2f}, precision {hit / max(1, len(got)):.2f}")
+    elif decider == "standin":
+        t, h = standin_choose(plan["question"], named, date)
         got = run(rows, named, date, t, h, col)
         hit = len(gold & set(got))
-        print(f"{decider} chose time {t!r}, hop {h!r} -> {', '.join(got) or 'empty'}; "
+        print(f"standin chose time {t!r}, hop {h!r} -> {', '.join(got) or 'empty'}; "
               f"recall {hit / len(gold):.2f}, precision {hit / max(1, len(got)):.2f}")
-
 
 if __name__ == "__main__":
     main(sys.argv[1], sys.argv[sys.argv.index("--decider") + 1] if "--decider" in sys.argv else None)

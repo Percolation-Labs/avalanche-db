@@ -344,3 +344,76 @@ with the direction of a comparison. It cannot judge whether something is unusual
 needs the population, not the document. That judgement is the one Jev's own Nouls are needed for,
 and none of this is a measurement against Jev, which is still 402. The stand-in was measured on lead
 relevance, not on choices like these.
+
+### Jev as the decider
+
+On 13 November Jev (jev-1.13.0) had credit again, so it was put in the stand-in's three places, and
+in the walk's two decisions. This took 76 requests, including one probe, and about 95,000 input
+tokens. At walklab's price ($0.042 per million input tokens) that is under half a cent. Every answer
+is cached in `.waves/jev.jsonl` and replays offline.
+
+**Derivations: steady, with one fixed misreading that the grammar recovered from.** It was run on the
+stand-in's grid of three instructions and two phrasings of the options:
+
+- **The hop:** right 12 times in 12.
+- **Skimming's date:** right 6 times in 6, at 0.95 to 0.99.
+- **The same-day question's date:** "on 12 November" all 6 times, at 0.86 to 0.99, and again under
+  two instructions that named the date.
+
+Where the stand-in's choices changed with the wording, Jev's did not change: it reads that question
+one way. That question has a second time phrase ("on the same day as their fuel payment"), which is
+the likely pull. "On the 12th" returns an empty set, so `derive.py` now treats an empty set as a
+semantic exception and takes Jev's next most likely reading (p 0.08). With that, all four Northgate
+runs, on the clean and the noisy bank, return exactly the planted answer. The recovery depended on
+the wrong reading being empty, which it will not always be.
+
+**Judging customers: what the stand-in could not do.** One request held all 33 customers of the
+noisy shortlist, each a Noul. With each customer's rarity figures and rows, and the instruction
+"compared with the other customers", it kept C0017 (0.85) and C0029 (0.67) and nothing else: recall
+1.00, precision 1.00. The decoy C0005 scored 0.34. The two planted customers ranked first and
+second in every variant tried, so the ranking held throughout. Where the 0.5 cut falls depended on
+seeing the others:
+
+| how Jev saw the customers | kept | precision |
+|---|---|---|
+| together, rarity and rows, "compared with the other customers" | 2 | 1.00 |
+| together, rarity and rows, plain wording | 3 | 0.67 |
+| together, rows only | 1 (C0029 at 0.35) | 1.00, recall 0.50 |
+| each alone, 33 requests | 7 | 0.29 |
+
+So a judgement about a population is made best with the population in view. In the walk, the
+shortlist is that population, cut to the walker's capacity before Jev reads it.
+
+**The whole walk.** `--decider jev` lets Jev choose the next view (a Choice over the menu, with stop)
+and judge its keys. `--decider symbolic+jev` takes views by the token-free rule and lets Jev judge
+the keys; that rule stops after two views in which Jev keeps no new key.
+
+| decider | bank | capacity 5 | capacity 20 | capacity 50 |
+|---|---|---|---|---|
+| jev | noisy | exact, 2 steps | exact, 2 steps | exact, 2 steps |
+| jev | clean | C0029 only | exact, 2 steps | exact, 2 steps |
+| symbolic+jev | noisy | exact | exact, 3 views | exact, 3 views |
+| symbolic+jev | clean | exact, 5 views | exact, 5 views | exact, 5 views |
+
+Here "exact" means C0017 and C0029, with recall and precision both 1.00. At its best, Jev read one
+view (rare rows per key), kept the two planted customers, and chose to stop (0.80 to 0.94). Its view
+choices were less sure (0.28 to 0.57). At capacity 5 on the clean bank, that view was over capacity.
+On the first try Jev chose to stop before reading anything (0.28); "stop" is now offered only after
+a view has been read. On the second try it read the busiest-day view, kept C0029 and stopped, so it
+stopped too early again.
+
+The combined decider was exact in all six runs. Its rule finds what to read, and Jev decides what
+belongs; the stop follows from those decisions. One waste remains: at capacity 5 on the noisy bank,
+nine of its twelve steps tightened views that stayed over capacity after the answer was complete.
+
+**What this says about the walk.** Each part of a walk went to whoever could do it:
+
+- **The grammar** lists what can be read.
+- **The count** says what fits.
+- **A token-free rule** searches the menu.
+- **The decision model** is spent on the judgement only it can make: whether a key belongs, seen
+  beside the others.
+
+The model never writes a query, and the stopping problem that model-written walks had is gone.
+Still to try: other questions and banks, and a decider that stops tightening a view that will not
+shrink. This is one question on two synthetic banks, so it gives a direction, not a measurement.
