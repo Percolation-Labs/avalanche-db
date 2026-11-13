@@ -38,8 +38,10 @@ STATE = os.path.join(HERE, ".waves")
 os.makedirs(STATE, exist_ok=True)
 RARE = 0.01
 RARE_IDS = set()
-GRAMMAR = {}  # the walk's views, so a decider can say how rare a key's figures are among all keys  # rows rare on some column or hour, filled by views(); what evidence() shows first
-KS = [3, 5, 8, 13, 21, 34]
+GRAMMAR = {}
+SAMPLE = 0  # with --sample n, each menu option shows its top n keys  # the walk's views, so a decider can say how rare a key's figures are among all keys  # rows rare on some column or hour, filled by views(); what evidence() shows first
+KS = [1, 2, 3, 5, 8, 13, 21, 34]
+K0 = 2  # outlier views start at k = 3; loosening walks back toward 1
 
 
 def fk_path(db, src, dst):
@@ -272,12 +274,13 @@ def jev_choose(question, menu, result, taken, may_stop=True):
     for name, m in menu.items():
         if m["count"] == 0:
             continue
+        eg = ("; for example " + " | ".join(m["sample"])) if m.get("sample") else ""
         if m["count"] <= m["capacity"]:
-            s, what = slug(name), f"read the {m['count']} keys in: {m['desc']}"
+            s, what = slug(name), f"read the {m['count']} keys in: {m['desc']}{eg}"
         elif m["can_tighten"]:
-            s, what = "tighten_" + slug(name), f"{m['desc']}: {m['count']} keys, over capacity; tighten it before it can be read"
+            s, what = "tighten_" + slug(name), f"{m['desc']}: {m['count']} keys, over capacity; tighten it before it can be read{eg}"
         elif m.get("can_page"):
-            s, what = "page_" + slug(name), f"{m['desc']}: {m['count']} keys, over capacity; read the next page of {m['capacity']}"
+            s, what = "page_" + slug(name), f"{m['desc']}: {m['count']} keys, over capacity; read the next page of {m['capacity']}{eg}"
         else:
             continue
         opts[s], back[s] = what, name
@@ -330,7 +333,8 @@ def walk(qfile, decider="symbolic", capacity=20, steps=12, patience=2):
     grammar = views(rows, plan["question"])
     GRAMMAR.clear()
     GRAMMAR.update(grammar)
-    tight = {name: 0 for name in grammar}
+    tight = {name: K0 for name in grammar}
+    loosened = {}  # view -> keys already read from it before it was loosened
     taken, result, rows_read, idle = [], {}, 0, 0
     paged = {}  # view -> keys already read from it, page by page
     choose, keep = {"symbolic": (symbolic_choose, symbolic_keep), "jev": (jev_choose, jev_keep),
@@ -344,6 +348,17 @@ def walk(qfile, decider="symbolic", capacity=20, steps=12, patience=2):
         menu = {}
         for name, v in grammar.items():
             if name in taken:
+                # a read outlier view whose keys were kept can be loosened: read again at a lower k, new keys only
+                kept_here = [k for k, w in result.items() if w.startswith(name + " ")]
+                if v[2] == "outlier" and kept_here and tight[name] > 0 and name + " (loosened)" not in taken:
+                    lo = members(v, KS[tight[name] - 1])
+                    seen = set(members(v, KS[tight[name]]))
+                    extra = {k: x for k, x in lo.items() if k not in seen}
+                    if 0 < len(extra) <= capacity:
+                        menu[name + " (loosened)"] = {"desc": f"{v[0]}, loosened to k={KS[tight[name] - 1]}: only the keys "
+                                                      f"it adds", "count": len(extra), "capacity": capacity,
+                                                      "can_tighten": False, "shrink_to": None, "can_page": False,
+                                                      "_extra": extra}
                 continue
             mem = members(v, KS[tight[name]])
             if name in paged:
@@ -354,6 +369,9 @@ def walk(qfile, decider="symbolic", capacity=20, steps=12, patience=2):
             menu[name] = {"desc": v[0] + (f", k={KS[tight[name]]}" if v[2] == "outlier" else ""), "count": len(mem),
                           "capacity": capacity, "can_tighten": shrink is not None, "shrink_to": shrink,
                           "can_page": shrink is None and len(mem) > capacity}
+            if SAMPLE:  # what a person would glance at: the top keys, each by its most telling row
+                top = sorted(mem, key=lambda k: (-mem[k], k))[:SAMPLE]
+                menu[name]["sample"] = [f"{k}: " + (evidence(rows, k, 1)[1] if len(evidence(rows, k, 1)) > 1 else "") for k in top]
             if menu[name]["can_page"]:
                 menu[name]["desc"] += f"; read a page of the {capacity} highest, then the next"
         pick, why = choose(menu, result, taken) if choose is symbolic_choose else \
@@ -369,7 +387,7 @@ def walk(qfile, decider="symbolic", capacity=20, steps=12, patience=2):
                 print(f"step {n}: {pick}: {m['count']} keys, semantic exception; tightened  ({why})")
                 continue
             page = True
-        mem = members(grammar[pick], KS[tight[pick]])
+        mem = m["_extra"] if "_extra" in m else members(grammar[pick], KS[tight[pick]])
         if page:  # the next page: the highest values not yet read, ties by key
             rest = sorted((-x, k) for k, x in mem.items() if k not in paged.get(pick, set()))[:capacity]
             mem = {k: -x for x, k in rest}
@@ -404,6 +422,7 @@ def walk(qfile, decider="symbolic", capacity=20, steps=12, patience=2):
 
 if __name__ == "__main__":
     a = sys.argv
+    SAMPLE = int(a[a.index("--sample") + 1]) if "--sample" in a else 0
     walk(a[1], a[a.index("--decider") + 1] if "--decider" in a else "symbolic",
          int(a[a.index("--capacity") + 1]) if "--capacity" in a else 20,
          int(a[a.index("--steps") + 1]) if "--steps" in a else 12,

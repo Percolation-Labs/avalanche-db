@@ -482,3 +482,41 @@ activity, patience read 116 keys and kept 2 more customers.
 
 Spend: 224 Jev requests in all on 13 November, 596,000 input tokens, about 2.5 cents at walklab's
 price. All are cached in `.waves/jev.jsonl`.
+
+### Samples in the menu, and loosening
+
+**Samples.** `--sample 3` shows Jev each view's top three keys, each with its most telling row,
+beside the view's description. Jev judges keys better than descriptions, and so does a person
+skimming a report. Two `jev+patience` results improved: noisy unusual activity went from precision
+0.50 to exact, and card testing from recall 0 to recall 1.00 with precision 0.50. With `jev`, card
+testing went from recall 0 to exact. Nothing got worse.
+
+That last result is a path, not a better judgement. With the loosened view on the menu, Jev read the
+busiest-day view, the loosened busiest-day view and rare rows per key, and stopped. It never reached
+"repeats of one amount", where it had kept C0017 at 0.60. When it does read that view, it still keeps
+C0017 for card testing.
+
+**A wording that only moved the scale.** I added "or unusual in a way the question does not ask
+about" to the Noul's false side, so it would drop C0017 from card testing. Every score fell by about
+0.03. C0017 went from 0.60 to 0.50, still kept, and one busy shopper went from 0.50 to 0.47 and was
+lost. The wording moved calibration, not discrimination, so it was reverted.
+
+**Loosening.** An outlier view whose keys were kept can now be read again one step looser
+(`KS` gained k = 1 and 2; views still start at k = 3), for its new keys only. On busy afternoons
+the busiest-day view loosened from 7 keys to 23, adding 16. Jev ranked the three missing gold
+customers (6 or 7 payments) fourth to seventh of those 16, at 0.48, 0.44 and 0.43. They sat just
+below 0.5, among non-gold customers at 0.47 and 0.43. Under `jev` it was offered the loosened view
+and chose to stop (0.44). At 6 or 7 payments, "unusually large" is a matter of degree, and the SQL's
+"6 or more" is a line I drew. So recall stays 0.60 to 0.70. The fixed 0.5 cut is fragile here, even
+though Jev's ranking is right: all six kept customers scored 0.50 to 0.61, and the next was 0.26. A
+cut at the largest gap would keep them as well. It was not tried, because one view is too little to
+choose a rule from.
+
+| question | symbolic+jev | jev (samples) |
+|---|---|---|
+| unusual activity, noisy and clean | exact | exact |
+| card testing | recall 1.00, precision 0.33 | exact, by path |
+| money transfer at night | exact | exact |
+| single very large payment | recall 0 | recall 0.38, precision 1.00 |
+| busy afternoon | recall 0.70, precision 1.00 | recall 0.60, precision 1.00 |
+| night payments (41) | recall 0.10 | exact |
