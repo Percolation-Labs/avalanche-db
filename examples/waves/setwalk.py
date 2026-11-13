@@ -8,6 +8,13 @@ and never the rows, and refines. A set within capacity comes back whole, and the
 start from it. The walk ends when the decider answers. The aim is not a set that contains the
 answer, which the whole table does, but the smallest set that still holds what the question needs.
 
+Two things are kept apart (Sirsh, 13 Nov). The *result set* is the keys rated for return to the
+caller: every step adds keys to it or removes them, explicitly, and the answer is that set, even
+for keys the walker never looks at again. *Kappa* is the walker's short-term memory, the limited
+information the decider uses to choose its next step: here, the schema and the steps so far.
+Some of the result set may sit in kappa, but they are different stacks. With --no-result-set the
+walk answers from kappa alone, as it did before.
+
     python3 setwalk.py questions/<q>.json [--capacity 100] [--steps 8]
 
 The decider is claude -p (a stand-in for Jev). Every decision is recorded in
@@ -55,21 +62,35 @@ def ask(prompt):
                     reply = json.loads(m.group(0))
                 except ValueError:
                     continue
-                if "sql" in reply or "answer" in reply:
+                if "sql" in reply or "answer" in reply or "stop" in reply:
                     with open(log, "a") as f:
                         f.write(json.dumps({"key": key, "reply": reply}) + "\n")
                     return reply, False
     sys.exit(f"the decider gave no answer: {out.stderr[-400:]}")
 
 
-def walk(qfile, capacity=100, steps=8):
+def walk(qfile, capacity=100, steps=8, result_set=True):
     plan = json.load(open(qfile))
     db = sqlite3.connect(os.path.join(HERE, plan["set_data"]))
     db.row_factory = sqlite3.Row
     sch = schema(db)
     history, calls, rows_read = [], 0, 0
-    print(f"question: {plan['question']}\ncapacity: {capacity} rows")
+    result = {}  # key -> why it is in the result set
+    print(f"question: {plan['question']}\ncapacity: {capacity} rows; result set {'on' if result_set else 'off'}")
     for n in range(1, steps + 1):
+        if result_set:
+            ask_tail = (
+                f"\n\nResult set (the {plan['answer_hint']} that will be returned to the caller, with why each is in it):\n" +
+                ("\n".join(f"- {k}: {w}" for k, w in result.items()) if result else "(empty)") +
+                "\n\nEvery reply may change the result set: add the keys your latest step established as part of "
+                "the answer, and remove any it ruled out. Keys stay in it until you remove them, and the caller gets "
+                "exactly this set. Reply with JSON only: {\"sql\": \"<one select>\", \"add\": {\"<key>\": \"why\"}, "
+                "\"remove\": [\"<key>\"], \"why\": \"one sentence\"} to take a step, or {\"stop\": true, \"add\": {...}, "
+                "\"remove\": [...], \"why\": \"one sentence\"} when the result set is complete."
+            )
+        else:
+            ask_tail = ('\n\nReply with JSON only: {"sql": "<one select>", "why": "one sentence"} to take a step, or '
+                        f'{{"answer": [{plan["answer_hint"]}], "why": "one sentence"}} to answer.')
         prompt = (
             "You answer a question about a SQLite database by walking through sets. Each step, write ONE SQL "
             "select describing a set that moves you toward the answer: a filter, a join, or an aggregate or "
@@ -79,20 +100,28 @@ def walk(qfile, capacity=100, steps=8):
             "smallest set that still holds what the question needs; a set that merely contains the answer is "
             "too big. When you know the answer, give it.\n\n"
             f"Question: {plan['question']}\n\nSchema:\n{sch}\n\nSteps so far:\n" +
-            ("\n".join(history) if history else "(none)") +
-            '\n\nReply with JSON only: {"sql": "<one select>", "why": "one sentence"} to take a step, or '
-            f'{{"answer": [{plan["answer_hint"]}], "why": "one sentence"}} to answer.'
+            ("\n".join(history) if history else "(none)") + ask_tail
         )
         reply, replayed = ask(prompt)
         calls += 0 if replayed else 1
-        if "answer" in reply:
-            ids = sorted(map(str, reply["answer"]))
+        if result_set:
+            for k, w in (reply.get("add") or {}).items():
+                result[str(k)] = w
+            for k in reply.get("remove") or []:
+                result.pop(str(k), None)
+            if reply.get("add") or reply.get("remove"):
+                print(f"  result set now: {', '.join(sorted(result)) or '(empty)'}")
+        if "answer" in reply or reply.get("stop"):
+            ids = sorted(result) if result_set else sorted(map(str, reply["answer"]))
             gold = set(plan["gold"])
             hit = len(gold & set(ids))
             print(f"answer after {n - 1} steps: {', '.join(ids)}  ({reply.get('why', '')})")
             print(f"against the planted answer {sorted(gold)}: recall {hit / len(gold):.2f}, precision {hit / max(1, len(ids)):.2f}; "
                   f"{rows_read} rows read; {calls} decider calls this run")
             return
+        if not reply.get("sql"):
+            history.append(f"{n}. (no query; the result set was updated)")
+            continue
         sql = reply["sql"].strip().rstrip(";")
         try:
             count = db.execute(f"select count(*) from ({sql})").fetchone()[0]
@@ -115,4 +144,4 @@ if __name__ == "__main__":
     a = sys.argv
     cap = int(a[a.index("--capacity") + 1]) if "--capacity" in a else 100
     st = int(a[a.index("--steps") + 1]) if "--steps" in a else 8
-    walk(a[1], cap, st)
+    walk(a[1], cap, st, "--no-result-set" not in a)

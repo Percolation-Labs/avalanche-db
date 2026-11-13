@@ -134,3 +134,33 @@ refunds belong to C0029, and step 7 established C0017. The answer named only C00
 transfer but not six payments of about 490, and it never looked further. A walk that carries
 its conclusions only in prose loses them. The draft's weighted key set is the fix to try next:
 each step adds to or removes from an explicit set of candidate keys, and the answer is that set.
+
+### The result set, kept apart from kappa
+
+Two things a walk holds are kept apart (Sirsh, 13 Nov). The *result set* is the keys rated for
+return to the caller. Every step adds keys to it or removes them, explicitly, and the answer is
+exactly that set. *Kappa* is the walker's short-term memory, the limited information the decider
+uses to choose its next step (here, the schema and the steps so far). Some of the result set may
+sit in kappa, but they are different stacks. `setwalk.py` now shows the decider the result set
+with each key's reason, and every reply may add or remove keys; `--no-result-set` gives the old
+walk, which answered from kappa alone.
+
+| question | capacity | steps | rows read | result set returned |
+|---|---|---|---|---|
+| skimming | 100 | 3 | 18 | C0008, C0021, C0033, all right |
+| same-day merchants | 100 | 3 | 3 | Sundry Online, right |
+| unusual activity | 100 | 6 | 22 | C0017, C0029 and the decoy C0005 |
+| unusual activity | 20 | 4 | 37 | C0029 (C0005 left out, its memo explaining it) |
+| unusual activity | 5 | 4 | 14 | C0005, C0029 |
+
+**Nothing found was forgotten.** In every run the answer was the set the walk had built, so a key
+added at step 3 was still there at the end. The capacity-5 failure from before, where C0029 was
+established at step 5 and missing from the answer, can no longer happen.
+
+**What remains is a search miss.** At capacity 100 the walk kept going after the refunds and the
+transfer, checked repeated identical charges, and found C0017's overnight run of maximum-size card
+charges. At capacities 20 and 5 it stopped after the refunds. At capacity 5 it even looked at
+C0017's account in step 3 and read its activity as "a smooth tail of ordinary card activity". So
+a result set fixes forgetting, but not when to stop or how far to look. The decoy is a
+judgement either way: two runs kept the 48,500 transfer as unusual and one left it out because its
+memo explains it.
