@@ -92,15 +92,20 @@ def views(rows, question=""):
                 if len(v) > 3 and v.lower() in q:
                     per = Counter(r["_key"] for r in rows if r[c] == v)
                     out[f"anchor {c} = {v!r}"] = (f"rows whose {c} is {v!r}, named in the question", per, "anchor")
+    rare_rows = defaultdict(int)  # per key: rows that are rare on any column or hour
+    rare_ids = set()
     for c in cols:
         vals = Counter(r[c] for r in rows)
         if isinstance(rows[0][c], (int, float)) or len(vals) > 60:
             continue
-        for v, m in vals.items():
-            if v in (None, "") or m / n >= RARE:
-                continue
-            per = Counter(r["_key"] for r in rows if r[c] == v)
-            out[f"rare {c} = {v!r}"] = (f"rows whose {c} is {v!r} ({m} of {n} rows)", per, "rare")
+        rare = {v for v, m in vals.items() if v not in (None, "") and m / n < RARE}
+        if not rare:
+            continue
+        hit = [r for r in rows if r[c] in rare]
+        rare_ids |= {r["id"] for r in hit}
+        per = Counter(r["_key"] for r in hit)
+        shown = ", ".join(repr(v) for v in sorted(rare, key=str)[:4]) + (" ..." if len(rare) > 4 else "")
+        out[f"rare {c}"] = (f"rows whose {c} is one of {len(rare)} values each under 1% of rows ({shown}; {len(hit)} rows)", per, "rare")
     times = [c for c in cols if isinstance(rows[0][c], str) and len(rows[0][c]) >= 13 and rows[0][c][10] in " T"]
     for c in times:
         hours = Counter(r[c][11:13] for r in rows)
@@ -108,6 +113,7 @@ def views(rows, question=""):
         if rare:
             per = Counter(r["_key"] for r in rows if r[c][11:13] in rare)
             out[f"rare hours of {c}"] = (f"rows at hours {', '.join(sorted(rare))}, each under 1% of rows", per, "rare")
+            rare_ids |= {r["id"] for r in rows if r[c][11:13] in rare}
         day = Counter((r["_key"], r[c][:10]) for r in rows)
         burst = defaultdict(int)
         for (k, _), m in day.items():
@@ -124,6 +130,12 @@ def views(rows, question=""):
         for (k, _, _), m in rep.items():
             most[k] = max(most[k], m)
         out[f"repeats of one {c}"] = (f"the most rows a key has with one merchant and one exact {c}", most, "outlier")
+    for r in rows:
+        if r["id"] in rare_ids:
+            rare_rows[r["_key"]] += 1
+    for r in rows:
+        rare_rows.setdefault(r["_key"], 0)
+    out["rare rows per key"] = ("how many of a key's rows are rare on some column or hour", rare_rows, "outlier")
     out["row count"] = ("a key's number of rows", Counter(r["_key"] for r in rows), "outlier")
     return out
 
@@ -135,8 +147,10 @@ def members(view, k):
         return {key: v for key, v in per.items() if v}
     vals = list(per.values())
     med = statistics.median(vals)
-    mad = statistics.median(abs(v - med) for v in vals) or 1e-9
-    return {key: v for key, v in per.items() if (v - med) / (1.4826 * mad) > k}
+    scale = 1.4826 * statistics.median(abs(v - med) for v in vals)
+    if not scale:  # most keys share one value (a count of 0): the spread is the standard deviation
+        scale = statistics.pstdev(vals) or 1e-9
+    return {key: v for key, v in per.items() if (v - med) / scale > k}
 
 
 def evidence(rows, key, limit=6):

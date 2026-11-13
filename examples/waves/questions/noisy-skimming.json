@@ -1,0 +1,11 @@
+{
+ "question": "Northgate Fuel reported card skimming at its pumps from 12 November 2026. Which customers may have had their card details taken?",
+ "set_data": "bank-noisy.db",
+ "answer_hint": "customer ids",
+ "gold": [
+  "C0008",
+  "C0021",
+  "C0033"
+ ],
+ "planted": "Card payments at Northgate Fuel on or after 12 Nov: C0008, C0021, C0033. Before: C0002, C0014."
+}

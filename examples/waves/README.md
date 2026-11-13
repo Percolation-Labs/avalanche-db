@@ -245,6 +245,64 @@ before the 12th, which leaves it exactly where the declarative query is. "Explai
 and "on or after the 12th" are conditions the grammar does not state. Earlier in this README, one
 decider call at that hop was what removed them, and that call is a Noul per key.
 
-**The grammar has no hop yet.** "Merchants the skimmed customers used the same day" needs a step
-from the result set to the merchants, so it fails. A hop production from a result set over a
-foreign key is the next piece of grammar.
+**The grammar had no hop.** "Merchants the skimmed customers used the same day" needs a step from
+the result set to the merchants, so it failed. `derive.py`, below, adds one.
+
+### A question as a derivation
+
+`derive.py` builds a plan for a question that names things. It applies four productions in the
+order the draft's grammar gives them:
+
+1. **Anchor:** the rows holding every value the question names.
+2. **Time:** if the question names a date, keep rows on or after it, on it, before it, or ignore it.
+3. **Hop:** stay on the anchor rows, go to the same customers' other rows, or go to their other
+   rows on the same day.
+4. **Project:** return the column whose name is most like the answer hint, so "merchant names"
+   gives `merchants.name`.
+
+Every derivation runs with no tokens, so the whole decision space is printed. For both Northgate
+questions, the grammar allows 12 plans. The planted answer is the only result they produce, from
+one reading for the same-day question and from two equivalent readings for skimming:
+
+| question | time | hop | result |
+|---|---|---|---|
+| skimming | on or after 12 Nov | stay | C0008, C0021, C0033 |
+| same-day merchants | on or after 12 Nov | other rows the same day | Sundry Online |
+
+Each of the other plans is a misreading the grammar cannot rule out. "Ignore the date" gives the
+declarative five customers. "Other rows at any time" gives nine merchants. So a question becomes
+two choices among named options, one per production, and a decision model can answer them as two
+Choices in one request: about $0.01 a question. `--decider jev` does that, but Jev still returned
+402 on 13 November.
+
+### When rare values mean nothing
+
+On `bank-large.db` every planted case is a rare value. `noise.py` writes `bank-noisy.db`, which adds
+the rarities real data has and which mean nothing. With a fixed seed, ordinary customers get:
+
+- 30 small merchants, each used 1 to 4 times;
+- 40 card payments between 1am and 5am;
+- 15 large one-off transfers with ordinary memos (car purchase, school fees);
+- 12 single refunds;
+- 10 afternoons with 6 to 9 card payments.
+
+The planted cases are untouched, and the derivations above give the same answers on it.
+
+**The first grammar failed.** It had one view per rare value, so the noisy bank had 62 views, and
+"most selective first" read one-off memos for all 12 steps. Recall was 0.
+
+**Two token-free changes restored recall.** First, a column's rare values became one view ("rare
+memo", "rare merchant") instead of one view per value. Second, a weighted key set counts each
+customer's rows that are rare on any column or hour, and keeps the outliers. Its spread falls back
+to the standard deviation, because most customers have no rare rows and the median deviation is
+0. On the noisy bank that weighted set is the most selective view. Read first, it holds 5
+customers, including C0017 and C0029: recall 1.00, precision 0.40, from one view.
+
+**Then the walk did not stop.** Each later view brought its own noise. The busiest-day view brought
+6 ordinary busy shoppers, the repeated-charge view 6 more, and the large-payment view 16. So "stop
+after two views add nothing new" never fired, and the walk ended with 33 customers (precision
+0.06). On clean data that rule stopped at the right time. On noisy data no symbolic rule tried here
+knows when to stop, or which of 33 customers to keep. Those are the two remaining decisions:
+whether the next view bears on the question, and whether a key is explained. For a decision model
+they are one Choice per step and one Noul per key, over a shortlist the grammar has already cut
+to the walker's capacity.
