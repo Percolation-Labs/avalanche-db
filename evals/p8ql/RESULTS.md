@@ -1,5 +1,43 @@
 # P8QL agent eval: results
 
+## Round 10, 13 Nov 2026: Jev dreams November, against the Claude stand-in
+
+Jev had credit again, so the plan on REM-1331 ran: jev-1.13.0 dreams the November slice of
+Percolate's history with the same question wording as round 8, on the same ingested store, and
+is scored with `history-chain/truth.py` against the round 8 dream by the Claude stand-in
+(`provider = "claude"`). Stage 0, 8 November alone, took 12 calls and cost $0.0011. November took
+151 calls (143 new) and cost $0.0111. The stand-in's November dream took about 155 `claude -p`
+calls, which no meter recorded.
+
+**Stage 0.** Jev wrote 4 links, and all 4 are right: two share-link commits and PR #407 implement
+REM-1332, and a release commit implements REM-1143. The stand-in had written those 4 and 4 more.
+Jev left the 4 others between 0.51 and 0.54, under the 0.8 cut: three release commits implementing
+REM-542, which they name only in the body, and REM-1335 because REM-1331.
+
+**November, `implements` links:**
+
+| cut | Jev written | Jev precision | Jev recall | stand-in precision | stand-in recall |
+|---|---|---|---|---|---|
+| 0.8 (midb's) | 69 | 0.94 | 0.66 | 0.89 | 0.81 |
+| 0.7 | 75 | 0.91 | 0.69 | 0.88 | 0.85 |
+| 0.6 | 83 | 0.87 | 0.73 | 0.87 | 0.95 |
+| 0.5 | 98 | 0.79 | 0.78 | 0.87 | 0.95 |
+
+**At midb's cut Jev is more precise and finds less.** At an equal precision of 0.87, Jev's recall
+is 0.73 against the stand-in's 0.95. Lowering the cut does not catch up, because 22 of the true
+links never reach a cut: Jev answered "only a mention". Most of those 22 are housekeeping commits
+that name their card ("Extension SQL regenerated over main after #380/#381 (REM-1314)", a renamed
+test, a README count). Some are merge commits of PR branches that carry the card number. The
+round 8 wording widened `implements` to cover partial work and fixes, and the truth rule counts
+every commit that names its card. The stand-in followed that. Jev reads housekeeping as a mention,
+which is defensible for some of them, and is a miss for the PR merges.
+
+**Caveats.** The question wording was tuned on the stand-in over rounds 5 to 8, so it may favour
+Claude. Jev's notes say option keys move its answers (decide.py, 30 Sept), and the wording was not
+re-tuned for it. The truth rule undercounts: release commits that name REM-542 only in the body
+are counted wrong. This is one month and one run each. The same pattern held on the synthetic
+bank (examples/waves): Jev is sharp on what is plainly true and leaves subtler cases near 0.5.
+
 ## Round 9, 9 Nov 2026: a durable walk handed between two agents
 
 **Versions:** avalanche-db 18a2c74, then e6b0d20, then this round's change. The round 8 history
