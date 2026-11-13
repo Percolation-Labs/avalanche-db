@@ -1,0 +1,10 @@
+{
+ "question": "Which customers' accounts show unusual activity this month (November 2026)?",
+ "set_data": "bank-large.db",
+ "answer_hint": "customer ids",
+ "gold": [
+  "C0017",
+  "C0029"
+ ],
+ "planted": "As in bank.db, among 2,000 customers: C0017 six night-time payments of ~490 to QuickWire Ltd; C0029 eleven 1-3 refunds in one afternoon. Decoy C0005: a 48,500 house purchase completion."
+}

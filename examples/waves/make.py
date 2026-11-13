@@ -12,14 +12,19 @@ edges. Planted, so the answers are known:
 graph.json (property graph, Neo4j style): Person, Project, Component, Vulnerability and DataClass
 nodes; WORKS_WITH, LEADS, DEPENDS_ON, AFFECTED_BY and HANDLES relationships.
 """
-import json, random, sqlite3, os
+import json, random, sqlite3, os, sys
 here = os.path.dirname(os.path.abspath(__file__))
 rnd = random.Random(7)
 FIRST = "Ana Ben Chloe Dev Ema Femi Gita Hugo Ines Jon Kai Lena Mo Nia Omar Pia Priya Raj Sara Tom Uma Vic Wen Yara Zed Alba Bo Cora Dan Eli Faye Gus Hana Ivo Juno Kit Leo Mira Ned Ola".split()
 LAST = "Silva Okoro Brandt Mehta Rossi Adeyemi Kaur Lefevre Duarte Park Tanaka Fischer Haddad Novak Farouk Lind Nair Shah Cohen Okafor Iyer Moreau Zhou Petrov Ali Costa Berg Reyes Kim Weber Lopez Dahl Sato Kovac Ruiz Holm Bianchi Varga Quinn Eze".split()
 
-def bank():
-    path = os.path.join(here, "bank.db")
+def bank(scale=1, name="bank.db"):
+    """scale 1: 40 customers (bank.db). scale 50: 2,000 customers and the same planted cases
+    (bank-large.db), for walks whose first waves are far over a walker's capacity."""
+    path = os.path.join(here, name)
+    n_cust = 40 * scale
+    w = 2 if scale == 1 else 4
+    cid_of = lambda i: f"C{i:0{w}d}"
     if os.path.exists(path):
         os.remove(path)
     db = sqlite3.connect(path)
@@ -41,12 +46,12 @@ def bank():
         nonlocal n
         n += 1
         tx.append((f"T{n:04d}", acct, merch, f"2026-11-{day:02d} {hour:02d}:{rnd.randint(0,59):02d}", amount, kind, memo))
-    for i in range(1, 41):
-        cid = f"C{i:02d}"
-        db.execute("insert into customers values (?,?,?,?)", (cid, f"{FIRST[i-1]} {LAST[i-1]}", rnd.choice(["Leeds", "Bristol", "York", "Hull"]), f"20{rnd.randint(12,24)}-0{rnd.randint(1,9)}-01"))
+    for i in range(1, n_cust + 1):
+        cid = cid_of(i)
+        db.execute("insert into customers values (?,?,?,?)", (cid, f"{FIRST[(i-1) % 40]} {LAST[i-1] if scale == 1 else LAST[((i-1) * 7 + (i-1) // 40) % 40]}", rnd.choice(["Leeds", "Bristol", "York", "Hull"]), f"20{rnd.randint(12,24)}-0{rnd.randint(1,9)}-01"))
         kinds = ["checking"] + rnd.sample(["savings", "card"], rnd.randint(1, 2))
         for j, k in enumerate(kinds):
-            aid = f"A{i:02d}{j}"
+            aid = f"A{i:0{w}d}{j}"
             db.execute("insert into accounts values (?,?,?,?)", (aid, cid, k, f"20{rnd.randint(12,24)}-0{rnd.randint(1,9)}-15"))
             if k == "checking":
                 t(aid, "M12", 1, 9, round(rnd.uniform(1800, 3200), 2), "credit", "salary")
@@ -60,21 +65,21 @@ def bank():
         return a[0]
     # C17: night-time transfers to a new payee.
     for d, h, amt in [(18, 2, -480.0), (18, 2, -495.0), (18, 3, -499.0), (19, 2, -470.0), (19, 3, -499.0), (19, 4, -490.0)]:
-        t(card_of("C17"), "M06", d, h, amt, "card", "")
+        t(card_of(cid_of(17)), "M06", d, h, amt, "card", "")
     # C29: card testing, many tiny refunds from unfamiliar merchants.
     for k in range(11):
-        t(card_of("C29"), rnd.choice(["M07", "M10", "M11"]), 22, 15, round(rnd.uniform(1, 3), 2), "refund", "")
+        t(card_of(cid_of(29)), rnd.choice(["M07", "M10", "M11"]), 22, 15, round(rnd.uniform(1, 3), 2), "refund", "")
     # C05: a large but explained transfer.
-    t(acct("C05", "checking")[0], "M09", 14, 11, -48500.0, "transfer", "house purchase completion")
+    t(acct(cid_of(5), "checking")[0], "M09", 14, 11, -48500.0, "transfer", "house purchase completion")
     # Northgate Fuel: skimming reported 12 Nov.
-    for c, d in [("C08", 12), ("C21", 13), ("C33", 15), ("C02", 6), ("C14", 9)]:
+    for c, d in [(cid_of(8), 12), (cid_of(21), 13), (cid_of(33), 15), (cid_of(2), 6), (cid_of(14), 9)]:
         t(card_of(c), "M02", d, rnd.randint(7, 20), -round(rnd.uniform(40, 80), 2), "card", "")
     # Number transactions in time order, so a planted row's id says nothing about it.
     tx.sort(key=lambda r: (r[3], r[1]))
     tx = [(f"T{k + 1:04d}",) + r[1:] for k, r in enumerate(tx)]
     db.executemany("insert into transactions values (?,?,?,?,?,?,?)", tx)
     db.commit()
-    print(f"bank.db: 40 customers, {db.execute('select count(*) from accounts').fetchone()[0]} accounts, {len(tx)} transactions")
+    print(f"{name}: {n_cust} customers, {db.execute('select count(*) from accounts').fetchone()[0]} accounts, {len(tx)} transactions")
 
 def graph():
     people = ["Ana", "Ben", "Chloe", "Dev", "Ema", "Femi", "Gita", "Hugo", "Ines", "Jon", "Kai", "Lena"]
@@ -104,7 +109,7 @@ def graph():
         nodes.append({"id": c, "label": "Component", "props": {"name": name, "version": ver}})
     nodes.append({"id": "CVE-2021-44228", "label": "Vulnerability", "props": {"name": "Log4Shell", "kind": "remote code execution", "affects": "log4j-core 2.0-beta9 to 2.14.1; 2.15.0 incomplete fix (CVE-2021-45046); fixed in 2.17.1"}})
     nodes.append({"id": "CVE-2023-35116", "label": "Vulnerability", "props": {"name": "jackson-databind cyclic DoS", "kind": "denial of service, disputed", "affects": "jackson-databind up to 2.15.2"}})
-    for c in comps:
+    for c in sorted(comps):
         if c.startswith("log4j-core"):
             edges.append({"from": c, "type": "AFFECTED_BY", "to": "CVE-2021-44228", "props": {}})
         if c.startswith("jackson-databind"):
@@ -114,5 +119,8 @@ def graph():
     json.dump({"nodes": nodes, "edges": edges}, open(os.path.join(here, "graph.json"), "w"), indent=1)
     print(f"graph.json: {len(nodes)} nodes, {len(edges)} relationships")
 
-bank()
-graph()
+if "--large" in sys.argv:
+    bank(50, "bank-large.db")
+else:
+    bank()
+    graph()

@@ -90,3 +90,47 @@ the last hop or two, where little can be lost. A decider pruning early, on a wav
 thousands, could drop the answer before it is reached, and that has not been tried here. The
 decider's cost is calls, not keys: one call per hop that needs judgement, plus one per chunk of
 60 rows when a wave is wider.
+
+## Sets and semantic exceptions
+
+`setwalk.py` walks through sets instead of rows. At each step the decider reads the question, the
+schema (tables, columns, foreign keys and row counts) and every step so far, and writes one SQL
+select: a description of a set. The database counts it first. A set over the walker's capacity
+raises a *semantic exception*: the decider gets the count and never the rows, and must refine.
+A set within capacity comes back whole. The walk ends when the decider answers.
+
+```sh
+python3 make.py --large                                   # bank-large.db: 2,000 customers, 39,261 transactions
+python3 setwalk.py questions/large-skimming.json          # capacity 100 by default
+python3 setwalk.py questions/large-unusual-activity.json --capacity 5
+```
+
+On the large bank, 13 November 2026, the Claude stand-in as decider, one run each:
+
+| question | capacity | steps | rows read | answer |
+|---|---|---|---|---|
+| skimming at Northgate Fuel | 100 | 2 | 4 | C0008, C0021, C0033, all right |
+| merchants the skimmed customers used the same day | 100 | 2 | 4 | Sundry Online, right |
+| unusual activity | 100 | 2 | 53 | C0017, C0029 and the decoy C0005 |
+| unusual activity | 20 | 3 | 27 | C0029 and the decoy C0005; C0017 missed |
+| unusual activity | 5 | 7 | 14 | C0017 only; C0029 found at step 5 but dropped from the answer |
+
+**Sets made the large walk cheap.** A row walk over 39,261 transactions shows a decider 60 rows
+at a time, which is about 650 calls. The set walks took two or three, and read a few dozen rows.
+The decider wrote the joins and the aggregates itself, after reading only the schema.
+
+**At capacity 100 no exception fired, because the decider avoided it.** Its first step ranked
+accounts and added `LIMIT 50` "to keep the result under 100 rows". A ranking cut to its top is a
+legitimate weighted set, but it means the exception was never tested there.
+
+**At capacity 5 the exception did what it is for.** The refunds this month came to 11 rows, over
+capacity. The decider didn't read them: it regrouped them by account and customer, got one row
+(C0029), and moved on. With the tight budget it also checked the large transfer's memo and
+dropped the decoy, and it found C0017's night-time payments by looking for card outliers.
+
+**But the answer forgot what the walk had found.** At capacity 5, step 5 established that the
+refunds belong to C0029, and step 7 established C0017. The answer named only C0017. At capacity
+20, the walk studied the distribution by transaction kind, which surfaces the refunds and the
+transfer but not six payments of about 490, and it never looked further. A walk that carries
+its conclusions only in prose loses them. The draft's weighted key set is the fix to try next:
+each step adds to or removes from an explicit set of candidate keys, and the answer is that set.

@@ -1,0 +1,9 @@
+{
+ "question": "Which other merchants did the customers who may have been skimmed at Northgate Fuel (card payments there from 12 November 2026, when skimming was reported) use on the same day as their fuel payment?",
+ "set_data": "bank-large.db",
+ "answer_hint": "merchant names",
+ "gold": [
+  "Sundry Online"
+ ],
+ "planted": "Computed by hand-written SQL: the same-day transactions of C0008, C0021 and C0033."
+}

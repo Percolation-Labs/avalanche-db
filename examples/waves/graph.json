@@ -459,19 +459,19 @@
    "props": {}
   },
   {
-   "from": "log4j-core 2.14.1",
+   "from": "jackson-databind 2.15.2",
    "type": "AFFECTED_BY",
-   "to": "CVE-2021-44228",
-   "props": {}
-  },
-  {
-   "from": "log4j-core 2.17.2",
-   "type": "AFFECTED_BY",
-   "to": "CVE-2021-44228",
+   "to": "CVE-2023-35116",
    "props": {}
   },
   {
    "from": "log4j-core 2.14.0",
+   "type": "AFFECTED_BY",
+   "to": "CVE-2021-44228",
+   "props": {}
+  },
+  {
+   "from": "log4j-core 2.14.1",
    "type": "AFFECTED_BY",
    "to": "CVE-2021-44228",
    "props": {}
@@ -483,9 +483,9 @@
    "props": {}
   },
   {
-   "from": "jackson-databind 2.15.2",
+   "from": "log4j-core 2.17.2",
    "type": "AFFECTED_BY",
-   "to": "CVE-2023-35116",
+   "to": "CVE-2021-44228",
    "props": {}
   }
  ]
