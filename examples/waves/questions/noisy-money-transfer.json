@@ -1,0 +1,9 @@
+{
+ "question": "Which customers sent several large card payments to a money-transfer service in the middle of the night?",
+ "set_data": "bank-noisy.db",
+ "answer_hint": "customer ids",
+ "gold": [
+  "C0017"
+ ],
+ "planted": "gold by hand-written SQL on bank-noisy.db (13 Nov); see README"
+}

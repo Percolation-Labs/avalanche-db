@@ -87,13 +87,22 @@ def views(rows, question=""):
     n = len(rows)
     out = {}
     cols = [c for c in rows[0] if c not in ("_key", "id") and not c.endswith("_id")]
-    q = question.lower()
-    for c in cols:  # likeness first: a value the question names is an anchor
+    q = question.lower().replace("-", " ")
+    found = []  # likeness first: a value the question names is an anchor
+    for c in cols:
         if isinstance(rows[0][c], str):
             for v in {r[c] for r in rows if r[c]}:
-                if len(v) > 3 and v.lower() in q:
-                    per = Counter(r["_key"] for r in rows if r[c] == v)
-                    out[f"anchor {c} = {v!r}"] = (f"rows whose {c} is {v!r}, named in the question", per, "anchor")
+                at = q.find(v.lower().replace("-", " "))
+                if len(v) > 3 and at >= 0:
+                    found.append((at, at + len(v), c, v))
+    for at, end, c, v in found:  # a match inside a longer match ('transfer' in 'money transfer') is not an anchor
+        if any(a <= at and end <= e and (e - a) > (end - at) for a, e, _, _ in found):
+            continue
+        hits = [r for r in rows if r[c] == v]
+        if len(hits) / n >= 0.5:  # a value in most rows ('card' in 'card payments') names the whole data, not a likeness
+            continue
+        per = Counter(r["_key"] for r in hits)
+        out[f"anchor {c} = {v!r}"] = (f"rows whose {c} is {v!r}, named in the question", per, "anchor")
     rare_rows = defaultdict(int)  # per key: rows that are rare on any column or hour
     rare_ids = RARE_IDS
     rare_ids.clear()
@@ -177,15 +186,18 @@ def symbolic_choose(menu, result, taken):
     anchors = [(m["count"], name) for name, m in menu.items() if name.startswith("anchor") and 0 < m["count"] <= m["capacity"]]
     if anchors:
         return min(anchors)[1], "a value the question names"
-    if any(t.startswith("anchor") for t in taken):
-        return "stop", "the anchors are read; nothing else in the grammar is tied to the question"
+    if any(t.startswith("anchor") for t in taken) and result:
+        return "stop", "the anchors are read and gave keys; nothing else in the grammar is tied to the question"
     readable = [(m["count"], name) for name, m in menu.items() if 0 < m["count"] <= m["capacity"]]
     if readable:
         return min(readable)[1], "the most selective view not yet read"
     over = [(m["count"], name) for name, m in menu.items() if m["count"] > m["capacity"] and m["can_tighten"]]
     if over:
         return min(over)[1], "nothing readable is left; tighten the smallest view over capacity"
-    return "stop", "every view is read, empty, or over capacity at its tightest"
+    pages = [(m["count"], name) for name, m in menu.items() if m.get("can_page")]
+    if pages:
+        return min(pages)[1], "nothing readable is left; read a page of the smallest view that cannot tighten"
+    return "stop", "every view is read or empty"
 
 
 def symbolic_keep(question, view_name, keys, rows):
@@ -255,18 +267,25 @@ def slug(name):
     return "".join(ch if ch.isalnum() else "_" for ch in name.lower()).strip("_")[:60]
 
 
-def jev_choose(question, menu, result, taken):
+def jev_choose(question, menu, result, taken, may_stop=True):
     opts, back = {}, {}
     for name, m in menu.items():
         if m["count"] == 0:
             continue
-        s = slug(name) if m["count"] <= m["capacity"] else "tighten_" + slug(name)
-        what = (f"read the {m['count']} keys in: {m['desc']}" if m["count"] <= m["capacity"] else
-                f"{m['desc']}: {m['count']} keys, over capacity; tighten it before it can be read")
+        if m["count"] <= m["capacity"]:
+            s, what = slug(name), f"read the {m['count']} keys in: {m['desc']}"
+        elif m["can_tighten"]:
+            s, what = "tighten_" + slug(name), f"{m['desc']}: {m['count']} keys, over capacity; tighten it before it can be read"
+        elif m.get("can_page"):
+            s, what = "page_" + slug(name), f"{m['desc']}: {m['count']} keys, over capacity; read the next page of {m['capacity']}"
+        else:
+            continue
         opts[s], back[s] = what, name
-    if taken:  # stopping before anything is read is not a decision (13 Nov: capacity 5, Jev stopped at step 1)
+    if taken and may_stop:  # stopping before anything is read is not a decision (13 Nov: capacity 5, Jev stopped at step 1)
         opts["stop_the_result_set_answers_the_question"] = "every remaining view is unrelated to the question, or repeats what is already found"
         back["stop_the_result_set_answers_the_question"] = "stop"
+    if not opts:
+        return "stop", "nothing left to read, tighten or page"
     state = {"question": question, "result_set": result, "views_read": taken}
     ans, _ = jev(state, {"next": {"type": "choice", "instructions":
                  "Which view should the walk read next to answer `question`, given `result_set` and `views_read`?",
@@ -313,10 +332,13 @@ def walk(qfile, decider="symbolic", capacity=20, steps=12, patience=2):
     GRAMMAR.update(grammar)
     tight = {name: 0 for name in grammar}
     taken, result, rows_read, idle = [], {}, 0, 0
+    paged = {}  # view -> keys already read from it, page by page
     choose, keep = {"symbolic": (symbolic_choose, symbolic_keep), "jev": (jev_choose, jev_keep),
                     "standin": (standin_choose, standin_keep),
                     "symbolic+standin": (symbolic_choose, standin_keep),
-                    "symbolic+jev": (symbolic_choose, jev_keep)}[decider]
+                    "symbolic+jev": (symbolic_choose, jev_keep),
+                    # Jev picks what to read; the walk stops by patience, not by Jev's own stop
+                    "jev+patience": (lambda *a: jev_choose(*a, may_stop=False), jev_keep)}[decider]
     print(f"question: {plan['question']}\n{len(grammar)} views from the schema of {fact}; capacity {capacity}; decider {decider}")
     for n in range(1, steps + 1):
         menu = {}
@@ -324,33 +346,46 @@ def walk(qfile, decider="symbolic", capacity=20, steps=12, patience=2):
             if name in taken:
                 continue
             mem = members(v, KS[tight[name]])
+            if name in paged:
+                mem = {k: x for k, x in mem.items() if k not in paged[name]}
+            # a view can be tightened only to a k that actually shrinks it; the walk jumps straight there
+            shrink = next((i for i in range(tight[name] + 1, len(KS)) if len(members(v, KS[i])) < len(mem)), None) \
+                if v[2] == "outlier" else None
             menu[name] = {"desc": v[0] + (f", k={KS[tight[name]]}" if v[2] == "outlier" else ""), "count": len(mem),
-                          "capacity": capacity, "can_tighten": v[2] == "outlier" and tight[name] < len(KS) - 1}
+                          "capacity": capacity, "can_tighten": shrink is not None, "shrink_to": shrink,
+                          "can_page": shrink is None and len(mem) > capacity}
+            if menu[name]["can_page"]:
+                menu[name]["desc"] += f"; read a page of the {capacity} highest, then the next"
         pick, why = choose(menu, result, taken) if choose is symbolic_choose else \
             choose(plan["question"], menu, {k: w for k, w in result.items()}, taken)
         if pick == "stop":
             print(f"step {n}: stop  ({why})")
             break
         m = menu[pick]
+        page = False
         if m["count"] > capacity:
             if m["can_tighten"]:
-                tight[pick] += 1
-            else:
-                taken.append(pick)
-            print(f"step {n}: {pick}: {m['count']} keys, semantic exception; tightened  ({why})")
-            continue
+                tight[pick] = m["shrink_to"]
+                print(f"step {n}: {pick}: {m['count']} keys, semantic exception; tightened  ({why})")
+                continue
+            page = True
         mem = members(grammar[pick], KS[tight[pick]])
+        if page:  # the next page: the highest values not yet read, ties by key
+            rest = sorted((-x, k) for k, x in mem.items() if k not in paged.get(pick, set()))[:capacity]
+            mem = {k: -x for x, k in rest}
+            paged.setdefault(pick, set()).update(mem)
         rows_read += len(mem)
         kept = keep(plan["question"], pick, mem, rows)
         new = [k for k, yes in kept.items() if yes and k not in result]
         for k in new:
             result[k] = f"{pick} ({mem[k]:g})"
         idle = 0 if new else idle + 1
-        taken.append(pick)
+        if not page or len(mem) >= m["count"]:  # a paged view is done when its last page is read
+            taken.append(pick)
         last = keep_standin.last if keep is standin_keep else jev_keep.last if keep is jev_keep else None
         if last:
             print("    p(keep): " + ", ".join(f"{k} {p:.2f}" for k, p in sorted(last.items(), key=lambda x: -x[1])[:8]))
-        print(f"step {n}: {pick}: {len(mem)} keys read, kept {', '.join(sorted(k for k, y in kept.items() if y)) or 'none'}"
+        print(f"step {n}: {pick}{' (a page)' if page else ''}: {len(mem)} keys read, kept {', '.join(sorted(k for k, y in kept.items() if y)) or 'none'}"
               f"{'' if new else ', nothing new'}  ({why})")
         if patience and idle >= patience:
             print(f"stop: {patience} views in a row added no new key")

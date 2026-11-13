@@ -1,0 +1,9 @@
+{
+ "question": "Which customers' cards look as if someone was testing them with a burst of tiny transactions?",
+ "set_data": "bank-noisy.db",
+ "answer_hint": "customer ids",
+ "gold": [
+  "C0029"
+ ],
+ "planted": "gold by hand-written SQL on bank-noisy.db (13 Nov); see README"
+}

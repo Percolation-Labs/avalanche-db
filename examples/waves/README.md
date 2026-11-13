@@ -417,3 +417,68 @@ nine of its twelve steps tightened views that stayed over capacity after the ans
 The model never writes a query, and the stopping problem that model-written walks had is gone.
 Still to try: other questions and banks, and a decider that stops tightening a view that will not
 shrink. This is one question on two synthetic banks, so it gives a direction, not a measurement.
+
+### More questions, and what each part got wrong
+
+There are five new questions on `bank-noisy.db`. Each gold answer is computed by hand-written SQL,
+so each gold is my reading of its question:
+
+| question | gold |
+|---|---|
+| card testing ("a burst of tiny transactions") | C0029 |
+| several large night payments to a money-transfer service | C0017 |
+| a single very large payment, such as for a house or a car | the 16 transfers of 4,000 or more |
+| an unusually large number of card payments in one afternoon | the 10 customers with 6 or more |
+| card payments between midnight and 5am | 41 customers, more than capacity 20 |
+
+There are now three deciders. `jev` chooses the views and stops itself. `jev+patience` lets Jev
+choose but stops after two views add nothing new. `symbolic+jev` searches by the token-free rule.
+All three use Jev for membership. Results at capacity 20:
+
+| question | symbolic+jev | jev | jev+patience |
+|---|---|---|---|
+| unusual activity, noisy | exact | exact | recall 1.00, precision 0.50 |
+| unusual activity, clean | exact | exact | exact |
+| card testing | recall 1.00, precision 0.33 | recall 0 | recall 1.00, precision 0.33 |
+| money transfer at night | exact | exact | exact |
+| single very large payment | recall 0 | recall 0.31, precision 1.00 | recall 0.31, precision 1.00 |
+| busy afternoon | recall 0.70, precision 1.00 | recall 0.60, precision 1.00 | recall 0.60, precision 0.75 |
+| night payments (41) | recall 0.10 | exact | exact |
+
+**The grammar needed three changes before these were fair.**
+
+- **Anchors.** "money-transfer service" had anchored on kind = 'transfer', because the hyphen hid the
+  category 'money transfer'. Now hyphens read as spaces, and the longest match wins.
+- **Values in most rows.** "card payments" anchored on kind = 'card', which is in 90% of rows, and
+  the walk paged through 2,000 customers. A value in half the rows or more is now not an anchor,
+  because it names the whole bank, not a likeness.
+- **Answers larger than capacity.** The 41 night payers are in a view that can't be tightened (it is
+  a set of rare hours). Tightening is the wrong move when the whole set is the answer, so such a
+  view is now read in pages of the capacity, and the result set gathers them. That made "night
+  payments" exact: Jev read three pages and kept all 41 and nothing else. A tightened view also
+  now jumps to a k that actually shrinks it, which ended the wasted steps at capacity 5.
+
+**Jev's membership is the strongest part, and it reads the question.** The same rows are kept or
+dropped depending on what is asked. The money-transfer question keeps C0017 alone; the
+night-payments question keeps C0017 with 40 ordinary night payers; unusual activity keeps C0017 and
+C0029. It is weakest on a narrow pattern. Asked about card testing, it scored C0029 0.81, but it also
+kept C0017 (0.60, night transfers) and C0129 (0.72, a busy day and a large roof repair). It reads
+"suspicious" where the question says "card testing".
+
+**Jev's view choice is the weakest part.** For card testing, it chose "repeats of one amount", kept
+C0017 and stopped, so the answer was wrong. For "single very large payment", the token-free rule
+never reached the largest-amount view before its stop fired, and Jev went straight there. Neither
+search wins everywhere. Jev's own stop was right more often than the patience rule: on noisy unusual
+activity, patience read 116 keys and kept 2 more customers.
+
+**Two misses are my gold answers as much as the walk.**
+
+- **"Single very large payment."** Jev kept 5 of the 16 transfers: the house, two car purchases, a
+  conservatory and a kitchen. It left out a holiday of 20,000. It read "such as for a house or a car"
+  as the kind of purchase. My gold reads it as any transfer of 4,000 or more.
+- **"Unusually large number in one afternoon."** Recall stops at the view's outlier cut, k = 3. That
+  leaves out three customers with 6 or 7 payments, whom the SQL's flat "6 or more" counts. A
+  production that loosens a view, the opposite of tightening, would reach them.
+
+Spend: 224 Jev requests in all on 13 November, 596,000 input tokens, about 2.5 cents at walklab's
+price. All are cached in `.waves/jev.jsonl`.

@@ -1,0 +1,18 @@
+{
+ "question": "Which customers made an unusually large number of card payments in a single afternoon?",
+ "set_data": "bank-noisy.db",
+ "answer_hint": "customer ids",
+ "gold": [
+  "C0004",
+  "C0096",
+  "C0129",
+  "C0139",
+  "C0514",
+  "C0545",
+  "C0627",
+  "C1109",
+  "C1858",
+  "C1993"
+ ],
+ "planted": "gold by hand-written SQL on bank-noisy.db (13 Nov); see README"
+}

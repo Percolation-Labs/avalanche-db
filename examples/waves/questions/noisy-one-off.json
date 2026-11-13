@@ -1,0 +1,24 @@
+{
+ "question": "Which customers made a single very large payment this month, such as for a house or a car?",
+ "set_data": "bank-noisy.db",
+ "answer_hint": "customer ids",
+ "gold": [
+  "C0005",
+  "C0129",
+  "C0174",
+  "C0345",
+  "C0413",
+  "C0474",
+  "C0551",
+  "C0614",
+  "C0710",
+  "C0729",
+  "C1229",
+  "C1253",
+  "C1419",
+  "C1618",
+  "C1717",
+  "C1911"
+ ],
+ "planted": "gold by hand-written SQL on bank-noisy.db (13 Nov); see README"
+}
