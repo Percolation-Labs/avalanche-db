@@ -537,9 +537,8 @@ capacity 20:
 | busy afternoon | recall 0.70, precision 1.00 | recall 0 | recall 0.60, precision 1.00 |
 | night payments (41) | recall 0.10 | recall 0.10 | exact |
 
-**Card testing was fixed.** Judged beside C0029's refund burst, C0017's night payments fell from
-0.60 to 0.37 to 0.48 across the steps, and the busy roof-repair customer fell to 0.13. Jev kept
-C0029 alone.
+**Card testing was fixed.** C0017's night payments, kept at 0.60 when judged in their own view,
+scored 0.37 to 0.48 beside C0029's refund burst. Jev kept C0029 alone.
 
 **Busy afternoons broke.** Judged among themselves in the busiest-day view, the busy shoppers
 scored 0.50 to 0.61 and were kept. Judged beside C0017 and C0029, they scored 0.23 to 0.33 and
@@ -554,4 +553,4 @@ shown, even when the question asks for a specific, milder pattern. A better pool
 keys from views the question bears on, which brings this back to Jev's choice of view, the weak
 part. `--rejudge` stays off by default.
 
-Jev to date: 380 requests, 1.03 million input tokens.
+Jev to date: 341 requests, 1.06 million input tokens.
