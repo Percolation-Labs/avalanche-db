@@ -203,3 +203,48 @@ payments stand out by hour and size, not number.
 **Not a measurement.** Three runs per arm on one question. These 61 decider calls ran as a batch of
 `claude -p` walks, which breaks the 13 November rule that no batch uses Claude. They are recorded
 and replay offline. Further runs wait for a local decider that can write SQL; none is installed here.
+
+## Choices instead of queries
+
+`viewwalk.py` asks whether a walk needs a generative model at all. No step is written. The
+schema's grammar produces the candidate sets ("views"), and a decider only chooses among them:
+
+- **Anchors:** rows whose column holds a value the question names.
+- **Rare values:** rows with a column value under 1% of all rows, such as kind 'refund' or
+  merchant QuickWire Ltd.
+- **Rare hours:** rows at hours of the day that each hold under 1% of rows.
+- **Outliers:** customers whose largest amount, row count, busiest day or most-repeated charge
+  sits k robust deviations above the median.
+
+Each view is counted before it is read. A view over capacity can only be tightened, which raises k.
+The menu at every step lists each view not yet read, so the walk always knows what it has not
+looked at.
+
+Two deciders are written. The `symbolic` one spends no tokens: it reads the anchors, or else the
+most selective view, and stops after two views in a row add no new key. The `jev` one uses a
+Choice for the next view or stop, and a Noul for each key before it enters the result set. Jev
+still returned 402 on 13 November, so only the symbolic decider has run:
+
+| question | steps | keys read | result set | recall | precision |
+|---|---|---|---|---|---|
+| unusual activity | 5 | 5 | C0005, C0017, C0029 | 1.00 | 0.67 |
+| skimming at Northgate Fuel | 2 | 10 | the five Northgate customers | 1.00 | 0.60 |
+| merchants used the same day | 2 | 10 | customers, not merchants | 0.00 | 0.00 |
+
+The capacity made no difference (5 and 20 give the same walk), and each walk takes 0.14 seconds.
+
+**When the choices are listed, stopping is no longer a judgement.** The model-written walks missed
+C0017 by stopping after the refunds. Here the walk reached C0005, C0029 and C0017 in its first
+three views, and it stopped when two more found nothing new. That is the best answer any of the
+Claude walks gave, with no tokens. It is easy here, though: on this synthetic bank every plant is a
+rare value, and real data has many rare values that mean nothing.
+
+**What is left is the semantic cut, which is the decision model's job.** The symbolic decider keeps
+everything a view returns, so the decoy stays in. For skimming it keeps the two payments made
+before the 12th, which leaves it exactly where the declarative query is. "Explained by its memo"
+and "on or after the 12th" are conditions the grammar does not state. Earlier in this README, one
+decider call at that hop was what removed them, and that call is a Noul per key.
+
+**The grammar has no hop yet.** "Merchants the skimmed customers used the same day" needs a step
+from the result set to the merchants, so it fails. A hop production from a result set over a
+foreign key is the next piece of grammar.
