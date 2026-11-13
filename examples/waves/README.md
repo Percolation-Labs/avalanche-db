@@ -180,17 +180,25 @@ three times (`--rep`) at each capacity:
 | 5 | plain | 0 of 3 | C0005, C0029 (all three) |
 | 5 | stop-check | 1 of 3 | C0005, C0029; C0017, C0029; C0005, C0029 |
 
-**One question before stopping found the missed customer every time at capacity 20.** Asked
-what it had not checked, the decider named card activity per customer, queried it, and found
-C0017's overnight charges. Without the question, it stopped after large amounts, transaction kinds
-and refunds every time, because those three views make everything else look uniform.
+The table credits the question with more than it did, so the walks are read one by one:
 
-**At capacity 5 the answer depends on what the decider names.** The run that found C0017 named card
-spend. Another, questioned at step 5, named memos and the mix of transaction kinds, checked both, and
-ran out of its eight steps. The third was never questioned: its decider replied with an answer rather
-than a stop, and the check only caught a stop (fixed since, but that run was not repeated). So the
-question widens the search, but it does not choose the direction. Card counts, which two runs did
-look at, do not show C0017, whose six payments stand out by hour and size, not number.
+- **The question fired three times, and twice the walk then found C0017.** Both were at capacity
+  20. One named card activity per customer as unchecked, and the other named large single card
+  charges. Both queried that view and found the overnight payments.
+- **The third questioned walk named the wrong angles.** At capacity 5 it named memos and the mix of
+  transaction kinds, checked both, and spent its eight steps.
+- **Two stop-check walks found C0017 before ever proposing a stop.** One ranked single transactions
+  rather than customers' largest. The other looked at merchants with few card payments and reached
+  QuickWire. The question played no part in either.
+- **One stop-check walk was never questioned.** Its decider replied with an answer rather than a
+  stop, and the check only caught a stop. This is fixed now, but that walk was not repeated.
+- **Every plain walk stopped by its sixth step.** Each had looked at large amounts, transaction kinds
+  and refunds. Those three views make the rest look uniform, and C0017 was never found.
+
+So the miss is stopping, not seeing. Every walk that kept searching past the refunds found C0017
+or ran out of budget. Asking once what is unchecked keeps a walk going, but the decider still
+chooses which way to look. Card counts, which three walks did check, do not show C0017, whose six
+payments stand out by hour and size, not number.
 
 **Not a measurement.** Three runs per arm on one question. These 61 decider calls ran as a batch of
 `claude -p` walks, which breaks the 13 November rule that no batch uses Claude. They are recorded
