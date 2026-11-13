@@ -185,11 +185,12 @@ what it had not checked, the decider named card activity per customer, queried i
 C0017's overnight charges. Without the question, it stopped after large amounts, transaction kinds
 and refunds every time, because those three views make everything else look uniform.
 
-**At capacity 5 the question was not enough.** Two of the three questioned walks named card activity
-or counts, but the per-customer views they wrote came back over capacity or too coarse, and they
-stopped again. A tight budget leaves the decider seeing only one or two rows per step, so a search
-that is wide enough needs more steps than the eight it was given. Depth and capacity trade against
-each other.
+**At capacity 5 the answer depends on what the decider names.** The run that found C0017 named card
+spend. Another, questioned at step 5, named memos and the mix of transaction kinds, checked both, and
+ran out of its eight steps. The third was never questioned: its decider replied with an answer rather
+than a stop, and the check only caught a stop (fixed since, but that run was not repeated). So the
+question widens the search, but it does not choose the direction. Card counts, which two runs did
+look at, do not show C0017, whose six payments stand out by hour and size, not number.
 
 **Not a measurement.** Three runs per arm on one question. These 61 decider calls ran as a batch of
 `claude -p` walks, which breaks the 13 November rule that no batch uses Claude. They are recorded

@@ -116,7 +116,7 @@ def walk(qfile, capacity=100, steps=8, result_set=True, stop_check=False, rep=0)
                 result.pop(str(k), None)
             if reply.get("add") or reply.get("remove"):
                 print(f"  result set now: {', '.join(sorted(result)) or '(empty)'}")
-        if stop_check and reply.get("stop") and not challenged and n < steps:
+        if stop_check and (reply.get("stop") or "answer" in reply) and not challenged and n < steps:
             challenged = True
             history.append(
                 f"{n}. (you proposed stopping: {reply.get('why', '')})\n"
