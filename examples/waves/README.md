@@ -164,3 +164,33 @@ C0017's account in step 3 and read its activity as "a smooth tail of ordinary ca
 a result set fixes forgetting, but not when to stop or how far to look. The decoy is a
 judgement either way: two runs kept the 48,500 transfer as unusual and one left it out because its
 memo explains it.
+
+### Stopping too early
+
+The capacity-20 and capacity-5 walks above missed C0017 because they stopped after the refunds.
+`--stop-check` questions the first proposed stop once. The decider must name the ways the
+question could be met in this data, and query any of them that no step has queried yet. If the
+step budget runs out, the walk returns the result set it has. On 13 November each arm was run
+three times (`--rep`) at each capacity:
+
+| capacity | arm | C0017 found | answers |
+|---|---|---|---|
+| 20 | plain | 0 of 3 | C0029; C0005, C0029; C0029 |
+| 20 | stop-check | 3 of 3 | C0017, C0029 (twice); C0005, C0017, C0029 |
+| 5 | plain | 0 of 3 | C0005, C0029 (all three) |
+| 5 | stop-check | 1 of 3 | C0005, C0029; C0017, C0029; C0005, C0029 |
+
+**One question before stopping found the missed customer every time at capacity 20.** Asked
+what it had not checked, the decider named card activity per customer, queried it, and found
+C0017's overnight charges. Without the question, it stopped after large amounts, transaction kinds
+and refunds every time, because those three views make everything else look uniform.
+
+**At capacity 5 the question was not enough.** Two of the three questioned walks named card activity
+or counts, but the per-customer views they wrote came back over capacity or too coarse, and they
+stopped again. A tight budget leaves the decider seeing only one or two rows per step, so a search
+that is wide enough needs more steps than the eight it was given. Depth and capacity trade against
+each other.
+
+**Not a measurement.** Three runs per arm on one question. These 61 decider calls ran as a batch of
+`claude -p` walks, which breaks the 13 November rule that no batch uses Claude. They are recorded
+and replay offline. Further runs wait for a local decider that can write SQL; none is installed here.

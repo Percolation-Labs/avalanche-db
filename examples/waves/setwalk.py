@@ -15,7 +15,10 @@ information the decider uses to choose its next step: here, the schema and the s
 Some of the result set may sit in kappa, but they are different stacks. With --no-result-set the
 walk answers from kappa alone, as it did before.
 
-    python3 setwalk.py questions/<q>.json [--capacity 100] [--steps 8]
+    python3 setwalk.py questions/<q>.json [--capacity 100] [--steps 8] [--stop-check] [--rep N]
+
+--stop-check questions the first proposed stop once: the decider must name the ways the question
+could be met and query any it has not. --rep N asks the decider afresh (recorded apart) to replicate.
 
 The decider is claude -p (a stand-in for Jev). Every decision is recorded in
 .waves/decisions.jsonl against its exact prompt, so a rerun replays and calls nothing.
@@ -37,8 +40,9 @@ def schema(db):
     return "\n".join(out)
 
 
-def ask(prompt):
-    key = hashlib.sha256(prompt.encode()).hexdigest()
+def ask(prompt, rep=0):
+    # rep > 0 asks again for the same prompt, recorded apart, so a run can be replicated
+    key = hashlib.sha256((prompt + (f"\x00rep{rep}" if rep else "")).encode()).hexdigest()
     log = os.path.join(STATE, "decisions.jsonl")
     if os.path.exists(log):
         for line in open(log):
@@ -69,13 +73,14 @@ def ask(prompt):
     sys.exit(f"the decider gave no answer: {out.stderr[-400:]}")
 
 
-def walk(qfile, capacity=100, steps=8, result_set=True):
+def walk(qfile, capacity=100, steps=8, result_set=True, stop_check=False, rep=0):
     plan = json.load(open(qfile))
     db = sqlite3.connect(os.path.join(HERE, plan["set_data"]))
     db.row_factory = sqlite3.Row
     sch = schema(db)
     history, calls, rows_read = [], 0, 0
     result = {}  # key -> why it is in the result set
+    challenged = False  # with stop_check, the first proposed stop is questioned once
     print(f"question: {plan['question']}\ncapacity: {capacity} rows; result set {'on' if result_set else 'off'}")
     for n in range(1, steps + 1):
         if result_set:
@@ -102,7 +107,7 @@ def walk(qfile, capacity=100, steps=8, result_set=True):
             f"Question: {plan['question']}\n\nSchema:\n{sch}\n\nSteps so far:\n" +
             ("\n".join(history) if history else "(none)") + ask_tail
         )
-        reply, replayed = ask(prompt)
+        reply, replayed = ask(prompt, rep)
         calls += 0 if replayed else 1
         if result_set:
             for k, w in (reply.get("add") or {}).items():
@@ -111,6 +116,15 @@ def walk(qfile, capacity=100, steps=8, result_set=True):
                 result.pop(str(k), None)
             if reply.get("add") or reply.get("remove"):
                 print(f"  result set now: {', '.join(sorted(result)) or '(empty)'}")
+        if stop_check and reply.get("stop") and not challenged and n < steps:
+            challenged = True
+            history.append(
+                f"{n}. (you proposed stopping: {reply.get('why', '')})\n"
+                "   Before the result set goes back: name the distinct ways the question could be met in this data, and "
+                "which of them no step so far has queried. If any is unqueried, take a step on it; stop only when "
+                "each has been checked.")
+            print(f"step {n}: proposed stop, questioned once  ({reply.get('why', '')})")
+            continue
         if "answer" in reply or reply.get("stop"):
             ids = sorted(result) if result_set else sorted(map(str, reply["answer"]))
             gold = set(plan["gold"])
@@ -137,6 +151,14 @@ def walk(qfile, capacity=100, steps=8, result_set=True):
         rows_read += len(got)
         history.append(f"{n}. {sql}\n   {count} rows:\n" + "\n".join("   " + json.dumps(r, default=str) for r in got))
         print(f"step {n}: {count} rows, read  ({reply.get('why', '')})\n    {sql[:200]}")
+    if result_set:
+        # the caller gets the result set whether or not the walk stopped itself
+        ids, gold = sorted(result), set(plan["gold"])
+        hit = len(gold & set(ids))
+        print(f"budget of {steps} steps spent, returning the result set: {', '.join(ids) or '(empty)'}")
+        print(f"against the planted answer {sorted(gold)}: recall {hit / len(gold):.2f}, precision {hit / max(1, len(ids)):.2f}; "
+              f"{rows_read} rows read; {calls} decider calls this run")
+        return
     print(f"no answer within {steps} steps; {rows_read} rows read; {calls} decider calls")
 
 
@@ -144,4 +166,5 @@ if __name__ == "__main__":
     a = sys.argv
     cap = int(a[a.index("--capacity") + 1]) if "--capacity" in a else 100
     st = int(a[a.index("--steps") + 1]) if "--steps" in a else 8
-    walk(a[1], cap, st, "--no-result-set" not in a)
+    rp = int(a[a.index("--rep") + 1]) if "--rep" in a else 0
+    walk(a[1], cap, st, "--no-result-set" not in a, "--stop-check" in a, rp)
