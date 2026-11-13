@@ -40,6 +40,19 @@ def schema(db):
     return "\n".join(out)
 
 
+CLAUDE_BUDGET = int(os.environ.get("CLAUDE_BUDGET", "0") or 0)  # no batch run uses Claude (Sirsh, 13 Nov 2026)
+_claude_calls = 0
+
+
+def _claude_allowed():
+    """Fresh claude -p calls refuse unless the run names a budget; recorded decisions still replay."""
+    global _claude_calls
+    if _claude_calls >= CLAUDE_BUDGET:
+        sys.exit(f"refused: Claude as decider is capped at {CLAUDE_BUDGET} fresh calls (CLAUDE_BUDGET). No batch run "
+                 "uses Claude; use viewwalk.py with Jev or the stand-in, or name a small budget for a hand-picked check.")
+    _claude_calls += 1
+
+
 def ask(prompt, rep=0):
     # rep > 0 asks again for the same prompt, recorded apart, so a run can be replicated
     key = hashlib.sha256((prompt + (f"\x00rep{rep}" if rep else "")).encode()).hexdigest()
@@ -49,6 +62,7 @@ def ask(prompt, rep=0):
             d = json.loads(line)
             if d["key"] == key:
                 return d["reply"], True
+    _claude_allowed()
     out = subprocess.run(["claude", "-p", prompt, "--model", "sonnet", "--output-format", "stream-json", "--verbose",
                           "--tools", "", "--strict-mcp-config", "--no-session-persistence"],
                          capture_output=True, text=True, stdin=subprocess.DEVNULL)

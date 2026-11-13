@@ -46,11 +46,30 @@ fn call(key: &str, body: &Value) -> Result<Value> {
     }
 }
 
+/// Fresh `claude -p` calls this process has made.
+static CLAUDE_CALLS: std::sync::atomic::AtomicUsize = std::sync::atomic::AtomicUsize::new(0);
+
+/// No batch run uses Claude (Sirsh, 13 Nov 2026): a fresh call is refused unless the run names a
+/// budget in CLAUDE_BUDGET, and the budget defaults to 0. Recorded answers still replay for free.
+fn claude_budget(spent: usize, budget: Option<&str>) -> Result<()> {
+    let n = budget.and_then(|b| b.trim().parse::<usize>().ok()).unwrap_or(0);
+    if spent >= n {
+        return Err(format!(
+            "refused: Claude as decider is capped at {n} fresh calls (CLAUDE_BUDGET). No batch run uses Claude; \
+             use the decision model, or name a small budget for a hand-picked check. Recorded answers still replay."
+        )
+        .into());
+    }
+    Ok(())
+}
+
 /// The stand-in decider (provider = "claude"): the same typed questions, answered by
 /// `claude -p` on the subscription, for when the decision model has no credit. Its
 /// probabilities are the model's own report, not a calibrated score, and its answers are
 /// recorded under its own model name, so they never replay as the decision model's.
 fn call_claude(model: &str, body: &Value) -> Result<Value> {
+    claude_budget(CLAUDE_CALLS.load(std::sync::atomic::Ordering::SeqCst), std::env::var("CLAUDE_BUDGET").ok().as_deref())?;
+    CLAUDE_CALLS.fetch_add(1, std::sync::atomic::Ordering::SeqCst);
     let mut prompt = String::from("You decide typed questions about one record. Answer each question by choosing exactly one of its options, and give the probability you put on that choice (0 to 1). Reply with JSON only, no prose: {\"<question id>\": {\"choice\": \"<option>\", \"p\": <number>}, ...}\n\nRecord:\n");
     prompt += body["state"]["record"].as_str().unwrap_or_default();
     prompt += "\n\nQuestions:\n";
@@ -203,5 +222,19 @@ impl Model {
             })
             .collect();
         Ok(Outcome::Answered { answers, replayed, cost })
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::claude_budget;
+
+    #[test]
+    fn claude_is_refused_unless_a_budget_is_named() {
+        assert!(claude_budget(0, None).is_err());
+        assert!(claude_budget(0, Some("0")).is_err());
+        assert!(claude_budget(0, Some("not a number")).is_err());
+        assert!(claude_budget(2, Some("3")).is_ok());
+        assert!(claude_budget(3, Some("3")).is_err());
     }
 }

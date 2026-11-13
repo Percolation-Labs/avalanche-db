@@ -6,10 +6,12 @@
 # answer.json, a.log and b.log (or calls.log), and agent JSON.
 set -e
 here="$(cd "$(dirname "$0")" && pwd)"; out="$1"; reps="${2:-3}"
+. "$here/../claude_budget.sh"   # every agent run counts against CLAUDE_BUDGET (default 0)
 q="Why does every release train now measure memory retrieval? Name the problem that prompted it, and what caused that problem."
 mkdir -p "$out"; out="$(cd "$out" && pwd)"
 agent() { # run-dir prompt-file... ; fills {RUN} {QUESTION} {TOKEN}
   run="$1"; shift
+  claude_allowed "$out" || return 1
   p=$(cat "$here/common.txt" "$@" | RUN="$run" Q="$q" TOKEN="$(cat "$run/handoff.txt" 2>/dev/null || true)" python3 -c "import os,sys;print(sys.stdin.read().replace('{RUN}',os.environ['RUN']).replace('{QUESTION}',os.environ['Q']).replace('{TOKEN}',os.environ['TOKEN']))")
   (cd "$run" && claude -p "$p" </dev/null --model sonnet --effort low --output-format json --allowedTools Bash \
      --disallowedTools Read Write Edit Glob Grep WebFetch WebSearch Agent --strict-mcp-config --no-session-persistence)

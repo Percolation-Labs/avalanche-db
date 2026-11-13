@@ -8,11 +8,13 @@
 # (history/build.sh); the default set is the billing example. ONLY=Q2,Q4 runs just those;
 # ARMS=p8ql runs one arm. Runs load the user's Claude Code settings, so a Stop hook there
 # can cost each run a turn; that is the same in every arm and variant.
+# Every run counts against CLAUDE_BUDGET (default 0): see claude_budget.sh.
 set -e
 here="$(cd "$(dirname "$0")" && pwd)"; set_dir="$here${SET:+/$SET}"; export SET STORE
 if [ "$1" = --one ]; then
   out="$2"; arm="$3"; q="$4"; rep="$5"; run="$out/$arm-$q-$rep"
   [ -s "$run/answer.json" ] && exit 0
+  . "$here/claude_budget.sh"; claude_allowed "$out" || exit 0
   "$here/setup.sh" "$run" "$arm" >/dev/null
   prompt=$(RUN="$run" python3 - "$set_dir" "$arm" "$q" <<'PY'
 import json, os, sys
