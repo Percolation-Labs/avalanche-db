@@ -272,7 +272,7 @@ one reading for the same-day question and from two equivalent readings for skimm
 Each of the other plans is a misreading the grammar cannot rule out. "Ignore the date" gives the
 declarative five customers. "Other rows at any time" gives nine merchants. So a question becomes
 two choices among named options, one per production, and a decision model can answer them as two
-Choices in one request: about $0.01 a question. `--decider jev` does that, but Jev still returned
+Choices in one request. `--decider jev` does that, but Jev still returned
 402 on 13 November.
 
 ### When rare values mean nothing
