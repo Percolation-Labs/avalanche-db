@@ -778,3 +778,12 @@ the decider is set against the same joins without it, at the same hops, and its 
 2 or later (dropping fuel payments made before the skimming date, and the fixed log4j version). No
 search-only baseline was run there either, so they show what a decider adds to a declarative
 path, not what a walk adds to search.
+
+**Bill's audit agrees (p8-subsystems `meta/lab/results/walk-vs-search/AUDIT.md`, 14 Nov).** In the
+world lab, search-only at 100 reads covers .169 of questions (share .66 to .67). The plain walk
+covers .150 to .169 (share .63 to .64), equal to deeper search or slightly behind it. The findings
+arms (f2, f4) beat it, but they change round one itself: their round-one top 3 matches f0's on only
+59 and 23 of 160 questions. So that gain is the entity-name boost acting from the first read, not
+anything the walk adds after it. On 12 held-out MuSiQue reranker walks, the walk read exactly as
+many required items as search at 100 (net 0). That makes three nulls for the walk beyond search:
+the bank, the world lab and MuSiQue.
