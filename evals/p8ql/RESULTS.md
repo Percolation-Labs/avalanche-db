@@ -1,5 +1,15 @@
 # P8QL agent eval: results
 
+**Audit, 14 Nov (round one is search, M-20261114-214308-9cc4).** "Round" here numbers eval
+rounds, not waves of a walk. Rounds 1 to 4 and 8 to 9 compare two interfaces to the same store,
+a baseline agent with `search`, `edges` and `why` against an agent with P8QL, and both arms
+reached the same recall in every round. None of them credits the walk with what search found.
+What they claim for P8QL is turns and cost on multi-hop pattern questions, where both arms must
+follow links past the first lookup. On the one search-shaped question (round 3's fuzzy lookup),
+P8QL lost. Rounds 5 to 7, 10 and 11 measure the dream (construction) or the agent's trust in
+dreamed links, not walk coverage. Nothing here is retracted. The bank results in
+`examples/waves/README.md` were audited separately, and there the walk's own gain is a null.
+
 ## Round 11, 14 Nov 2026: re-wording the card question for Jev, checked on held-out October
 
 Round 10 left 22 true November links at "only a mention", and its wording had been tuned on the
