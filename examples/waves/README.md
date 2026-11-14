@@ -733,3 +733,48 @@ keys at confident low scores, which is the frame effect again. A fixed band also
 whose whole scale has shifted: on held-out refunds every gold key scored 0.62 to 0.70 and every
 other key 0.05 or less, so the band holds 12 of the 13 answers while the cut was exact. In that
 pool the gap in the ranking carries the answer, and the absolute band does not see it.
+
+### Audit: round one is search, and what the walk added beyond it
+
+Sirsh, 14 Nov (M-20261114-214308-9cc4): there is no round-one walk. Round one is search, and the
+walk gets credit only for what it adds beyond search. Here round one is the first view a walk
+reads, judged by Jev. Every run below replays from cache (`round1.py`, $0), with `--sample 3` at
+capacity 20, and compares the answer after that first view with the final one.
+
+| question | jev: round one | jev: final (views read) | symbolic+jev: round one | symbolic+jev: final (views read) |
+|---|---|---|---|---|
+| unusual activity, noisy | exact | exact (1) | exact | exact (3) |
+| card testing | exact | exact (3) | exact | precision 0.33 (6) |
+| money transfer at night | exact | exact (3) | exact | exact (1) |
+| single very large payment | recall 0.31 | recall 0.38 (5) | recall 0 | recall 0 (2) |
+| busy afternoon | recall 0.60 | recall 0.60 (1) | recall 0 | recall 0.70 (6) |
+| night payments (41) | recall 0.49 | exact (3 pages) | recall 0.10 | recall 0.10 (3) |
+
+**Read strictly, the view walk adds almost nothing beyond round one.**
+
+- **Under `jev`, the one gain is a single key.** On single very large payment, one more of the 16
+  transfers was found after the first view. Night payments went from 0.49 to exact by reading
+  further pages of the same view, which is search reading deeper, not a walk.
+- **Under `symbolic+jev`, the one gain comes from a weak round one.** On busy afternoon, recall
+  went from 0 to 0.70. But its round one was the token-free rule's "most selective view", and
+  Jev's own first choice reached 0.60 alone. Its one loss also came after round one: card testing
+  was exact after the first view and ended at precision 0.33.
+- **The later views are not reached through round one's results.** They are other productions
+  from the same menu, so this walk is a sequence of searches over facets, not a walk along links.
+  The earlier sections' "exact, 2 steps" and "at its best, Jev read one view and stopped" are
+  results of search plus a set judgement. They are not evidence for the walk.
+
+**The comparison that counts was never run at equal budget.** `poolwalk.py` is search only: it
+rates every view once, pools the relevant ones and judges the pool once, in 2 requests. It is not
+a walk, despite its name. The view walks took 2 to 12 requests. At its lower budget, the pooled
+search matched the walk on four of the seven seen questions and on all three held-out ones. Where
+it fell short (busy afternoon, single very large payment), judging each view under its own name
+(`--per-view`, still search) closed most of the gap. So in this bank the gains belong to
+search and to judging a set together. The walk's own contribution is a null: one key on one
+question.
+
+**The relational `walk.py` results at the top of this README are a different comparison.** There
+the decider is set against the same joins without it, at the same hops, and its gains come at hop
+2 or later (dropping fuel payments made before the skimming date, and the fixed log4j version). No
+search-only baseline was run there either, so they show what a decider adds to a declarative
+path, not what a walk adds to search.
