@@ -1,5 +1,45 @@
 # P8QL agent eval: results
 
+## Round 11, 14 Nov 2026: re-wording the card question for Jev, checked on held-out October
+
+Round 10 left 22 true November links at "only a mention", and its wording had been tuned on the
+Claude stand-in. This round re-words the commit/PR -> card option for Jev, tunes on November only,
+and checks on October, which Jev had not dreamed. All on jev-1.13.0, scored with
+`history-chain/split.py` (truth.py's rule, split by source date). Runs: `runs/2026-11-14-jev-wording/`.
+Spend: $0.021 tuning November, $0.185 for both October arms.
+
+**The misses were mostly not subtle.** 11 of the 22 were PR merges and plain work commits whose
+subject carries the card ("dev/evals/memory: compare.py ... (REM-1309)"). Jev read the diff
+against the card's title, which is about tutorials, and called it a mention. The repo's
+convention, that the card in a title or branch is the card the change was made for, was never in
+the question.
+
+**Wording B2** adds that convention to `implements` (housekeeping and the merge of the card's PR
+count; a merge of main into the card's branch does not), and narrows `only_mentions` to a card
+named in passing in the body. A first version (B) also said "a merge of its branch" and wrote 6
+main-into-branch merges as implements; B2 names the direction.
+
+| | cut | baseline P | baseline R | B2 P | B2 R | true left at only-mention |
+|---|---|---|---|---|---|---|
+| November (tuned on) | 0.8 | 0.93 | 0.66 | 0.95 | 0.74 | 22 -> 12 |
+| November | 0.6 | 0.86 | 0.73 | 0.89 | 0.84 | |
+| **October (held out), 771 true** | 0.8 | 0.90 | 0.73 | 0.90 | 0.75 | 76 -> 47 |
+| October | 0.6 | 0.84 | 0.87 | 0.86 | 0.91 | |
+
+**Held out, the gain is a third of what tuning showed.** On October B2 is no worse anywhere and
+better at both cuts, but by 2 to 4 points of recall. Under the net, the wording churned: 77 October
+links rose over 0.8 (54 true) and 62 fell under it (38 true), so most of the change was links
+trading places, among them plain ones such as "query/52 ... (REM-1245)". On identical questions
+the wording did not touch (804 card -> card), Jev's two runs moved by 0.014 on average and changed
+13 choices, so the churn is the wording, not run noise. B2 is now the default.
+
+**What this says about Jev.** A convention it is told helps where the evidence and the card's title
+disagree; it does not make the mid-range stable. The same was seen on the bank: clear cases hold,
+the middle moves with the setting.
+
+**Caveats.** One run per arm. The truth rule is the convention B2 states, so this measures following
+it, not understanding the work. The Claude stand-in was not re-run on B2 (no Claude in batch).
+
 ## Round 10, 13 Nov 2026: Jev dreams November, against the Claude stand-in
 
 Jev had credit again, so the plan on REM-1331 ran: jev-1.13.0 dreams the November slice of

@@ -31,7 +31,9 @@ fn options(s: Kind, o: Kind, target: &str) -> Vec<(String, String)> {
         (Kind::Commit | Kind::Pr, Kind::Decision) => vec![("implements", format!("`record` is a change that carries out {target}"))],
         // A card is a feature, a bug or a study: its change builds it, fixes it, or does part
         // of either. "Carries out" alone read as all of a feature (REM-1331 round 8: recall 0.68).
-        (Kind::Commit | Kind::Pr, Kind::Card) => vec![("implements", format!("`record` is a change made for {target}, in whole or in part: it builds what the card asks for, fixes the problem it reports, or does a step of its work"))],
+        // Jev read housekeeping and PR merges tagged with the card as mentions; naming the
+        // title-or-branch convention lifted held-out October recall .73 to .75 at equal precision (round 11).
+        (Kind::Commit | Kind::Pr, Kind::Card) => vec![("implements", format!("`record` is a change made for {target}, in whole or in part: it builds what the card asks for, fixes the problem it reports, or does a step of its work. A change whose title or branch names a card was made for that card, including housekeeping for it (regenerated files, a renamed test, the merge of its pull request), even when the work looks far from the card's title. A merge of main into the card's branch is not: it brings in other work"))],
         (Kind::Claim, Kind::Decision | Kind::Card | Kind::Proposal) => vec![
             ("supports", format!("`record` is a reading that argues for {target}")),
             ("challenges", format!("`record` is a reading that argues against {target}, or names a cost of it")),
@@ -46,6 +48,8 @@ fn options(s: Kind, o: Kind, target: &str) -> Vec<(String, String)> {
     // they wait on; the stand-in read those as reasons (REM-1331 round 5: 4 of 11, all at 0.80).
     let only = if (s, o) == (Kind::Card, Kind::Card) {
         format!("`record` names {target} but not as a reason: to put it out of scope, as related or later work, or as something it depends on or waits for")
+    } else if matches!(s, Kind::Commit | Kind::Pr) && o == Kind::Card {
+        format!("`record` names {target} only in passing, in its body or its text, as background or related work: not in its title or branch, and not as the card it was made for")
     } else {
         format!("`record` names {target} but none of the above holds")
     };
