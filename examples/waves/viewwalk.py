@@ -256,6 +256,8 @@ def jev(state, questions):
             d = json.loads(line)
             if d["key"] == key:
                 return d["answers"], True
+    if os.environ.get("JEV_OFFLINE"):  # replay only: a judgement not in the cache is refused, never bought
+        raise SystemExit("JEV_OFFLINE: a request is not in .waves/jev.jsonl")
     req = urllib.request.Request(JEV_ENDPOINT, data=json.dumps(body).encode(), method="POST", headers={
         "Authorization": f"Bearer {os.environ['JEV_API_KEY']}", "Content-Type": "application/json"})
     with urllib.request.urlopen(req, timeout=120) as resp:
@@ -328,6 +330,9 @@ def jev_keep(question, view_name, keys, rows):
               "criteria": {"true": "it belongs in the answer", "false": "it is ordinary or explained"}} for k in keys}
     ans, _ = jev(state, qs)
     jev_keep.last = {k: float(ans[k]["noul"]) for k in keys}
+    if os.environ.get("KEEP_LOG"):  # every pool's scores, for rank-stability across pools
+        with open(os.environ["KEEP_LOG"], "a") as f:
+            f.write(json.dumps({"question": question, "pool": view_name, "scores": jev_keep.last}) + "\n")
     return {k: p >= 0.5 for k, p in jev_keep.last.items()}
 
 

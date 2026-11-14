@@ -628,3 +628,39 @@ scored 0.50 to 0.61. One-off payments kept 4 of 16, below the walk's 6.
 into the pool, at two requests a question, and is exact on 4 of 7. It does not fix membership on
 questions of degree, which is where both approaches lose. The membership judgement, not the search,
 is now the limit. Jev to date: 365 requests, 1.21 million input tokens.
+
+### Rankings hold while the cut moves; the pool's label can invert them
+
+Registered before running (board M-20261114-111532-ed39): if the median Spearman across pools is
+0.7 or more and AUC varies by 0.05 or less while some pair flips 15% of labels at 0.5, the cut is
+the fragile part and a walk should return a ranking. Data: every cached judgement, replayed with
+`JEV_OFFLINE=1 KEEP_LOG=...` (no new requests), 314 pool judgements in `runs-pool/keeplog.jsonl`;
+`rankstab.py` scores them. Held out: the history dream, the same sources under two wordings.
+
+| question | pools | median rho | AUC per pool | gold above all non-gold in both pools |
+|---|---|---|---|---|
+| unusual activity, clean | 19 | 0.97 | 1.00 everywhere | 24 of 24 pairs |
+| card testing | 13 | 0.68 | 1.00 everywhere | 22 of 22 |
+| money transfer | 5 | 0.33 | 1.00 everywhere | 3 of 3 |
+| night payments | 13 | 0.68 | 1.00 everywhere | 8 of 8 |
+| single very large payment | 11 | 0.84 | 1.00 everywhere | 4 of 4 |
+| busy afternoon | 11 | 0.64 | 0.08 to 1.00 | 1 of 7 |
+| history dream, October (held out) | 2 wordings | 0.87 | 0.82, 0.84 | flips 13% at 0.5 |
+
+**The rule held on five questions and on held-out history, and failed on one.** Where it held,
+the answer ranks above every other key in every pool, while labels flip. Single very large
+payment is the plainest case: AUC 1.00 in every pool, and the 0.5 cut kept 4 to 6 of 16. Low rho on
+money transfer is reshuffling among non-answers. On real history the separation is weaker (AUC
+0.82), but it moved by 0.02 between wordings while 13% of links crossed the cut.
+
+**Busy afternoon inverted, and the cause is the pool's label, not its members.** Under the view's
+own name, "most rows on one day by at", the 7 keys ranked perfectly (AUC 1.00). The same 7 keys
+under "customers from the views that bear on the question" ranked at AUC 0.08, with C0029, the card
+tester, on top. Pools labelled "every key read so far" sat between (0.65 to 0.83). A generic label
+lets Jev read the question as "anything odd". The view's name tells it which oddity is meant.
+
+**Registered next, before running:** `poolwalk.py` judges each relevant view's keys under that
+view's own name, instead of one generic pool, and a key's score is its best over the views it is in.
+The held-out questions are `noisy-same-day` and `noisy-skimming`, which `poolwalk.py` has not run.
+The measure is AUC and recall at the largest score gap, against the generic pool. On the seven
+questions above it is reported but not used to choose.
