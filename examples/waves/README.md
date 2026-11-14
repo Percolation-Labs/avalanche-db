@@ -677,3 +677,11 @@ from recall 0.25 to 0.44, and changed nothing else. A cut at the largest score g
 where 0.5 halved precision (noisy unusual activity), and worse on single very large payment (0.19).
 It is not adopted. `--per-view` stays a flag until it is tested on held-out questions with several
 relevant views; those have to be written, with SQL gold, before any run.
+
+**Cross-check in bill's world lab (p8-subsystems PR #736, `meta/lab/results/world-lab/heldout/RANKSTAB.md`).**
+The same metric did not meet the rule there, and the lab is a weak instrument for it: its symbolic
+judge is mapped onto Claude's scores by quantile, so the scale cannot shift, and its noise is seeded
+per door and shared across conditions. Its one condition that did move the cut a lot (f4, round 2:
+flips 0.51) also moved the ranking (rho 0.47). That agrees with busy afternoon here: a change of
+what the judge is told it is looking for reorders the keys, not only rescales them. A change of
+pool that keeps the question's frame (another view's keys, another wording) rescales.
