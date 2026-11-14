@@ -1,0 +1,17 @@
+question: Which customers made a single very large payment this month, such as for a house or a car?
+10 views from the schema of transactions
+  * 0.88  rare memo: 16 keys, gold 16
+  * 0.82  largest |amount|: 16 keys, gold 16
+  * 0.53  rare kind: 29 keys, gold 16
+    0.39  rare merchants.category: 55 keys, gold 1
+    0.37  rare merchants.name: 82 keys, gold 1
+    0.22  rare rows per key: 5 keys, gold 0
+    0.13  most rows on one day by at: 7 keys, gold 0
+    0.13  repeats of one amount: 7 keys, gold 0
+    0.11  rare hours of at: 41 keys, gold 0
+pool: 29 keys from 3 views; gold in pool 16 of 16
+    p(keep): C0005 0.88, C1911 0.83, C0551 0.82, C1229 0.55, C0345 0.53, C0474 0.52, C0174 0.50, C1618 0.39, C0729 0.38, C0413 0.37, C0614 0.35, C0710 0.25
+AUC in pool 1.00; at the largest gap 3 keys, recall 0.19, precision 1.00
+result set: C0005, C0174, C0345, C0474, C0551, C1229, C1911
+against the planted answer ['C0005', 'C0129', 'C0174', 'C0345', 'C0413', 'C0474', 'C0551', 'C0614', 'C0710', 'C0729', 'C1229', 'C1253'] ...: recall 0.44, precision 1.00; pool 29
+Jev this run: {'requests': 1, 'input_tokens': 11068, 'output_tokens': 584}

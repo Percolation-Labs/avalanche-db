@@ -11,5 +11,6 @@ question: Which customers' cards look as if someone was testing them with a burs
     0.16  largest |amount|: 16 keys, gold 0
 pool: 38 keys from 3 views; gold in pool 1 of 1
     p(keep): C0029 0.81, C0017 0.40, C1253 0.17, C0139 0.14, C0545 0.14, C0514 0.14, C0129 0.13, C1858 0.11, C0627 0.10, C0474 0.10, C1717 0.10, C0062 0.09
+AUC in pool 1.00; at the largest gap 1 keys, recall 1.00, precision 1.00
 result set: C0029
 against the planted answer ['C0029']: recall 1.00, precision 1.00; pool 38

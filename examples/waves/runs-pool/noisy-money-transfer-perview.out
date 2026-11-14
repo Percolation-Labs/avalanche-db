@@ -1,0 +1,18 @@
+question: Which customers sent several large card payments to a money-transfer service in the middle of the night?
+11 views from the schema of transactions
+  * 0.92  anchor merchants.category = 'money transfer': 1 keys, gold 1
+  * 0.86  rare hours of at: 41 keys, gold 1
+  * 0.85  rare merchants.category: 55 keys, gold 1
+  * 0.67  rare merchants.name: 82 keys, gold 1
+  * 0.62  rare rows per key: 5 keys, gold 1
+  * 0.58  repeats of one amount: 7 keys, gold 1
+    0.36  largest |amount|: 16 keys, gold 0
+    0.21  rare kind: 29 keys, gold 0
+    0.18  rare memo: 16 keys, gold 0
+    0.17  most rows on one day by at: 7 keys, gold 0
+pool: 80 keys from 6 views; gold in pool 1 of 1
+    p(keep): C0017 0.92, C0621 0.05, C0186 0.04, C1312 0.04, C0686 0.04, C0808 0.04, C0832 0.04, C0854 0.04, C0927 0.04, C0965 0.04, C0975 0.04, C1239 0.04
+AUC in pool 1.00; at the largest gap 1 keys, recall 1.00, precision 1.00
+result set: C0017
+against the planted answer ['C0017']: recall 1.00, precision 1.00; pool 80
+Jev this run: {'requests': 4, 'input_tokens': 42611, 'output_tokens': 2336}

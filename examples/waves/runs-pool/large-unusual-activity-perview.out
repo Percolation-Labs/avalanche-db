@@ -1,0 +1,17 @@
+question: Which customers' accounts show unusual activity this month (November 2026)?
+10 views from the schema of transactions
+  * 0.90  rare kind: 2 keys, gold 1
+  * 0.86  rare merchants.category: 7 keys, gold 1
+  * 0.85  rare merchants.name: 7 keys, gold 1
+  * 0.84  rare hours of at: 1 keys, gold 1
+  * 0.84  rare rows per key: 8 keys, gold 2
+  * 0.79  rare memo: 1 keys, gold 0
+  * 0.74  largest |amount|: 1 keys, gold 0
+  * 0.59  most rows on one day by at: 1 keys, gold 1
+  * 0.56  repeats of one amount: 7 keys, gold 1
+pool: 13 keys from 9 views; gold in pool 2 of 2
+    p(keep): C0017 0.88, C0029 0.80, C0005 0.45, C0033 0.30, C0021 0.27, C1433 0.25, C0367 0.22, C0014 0.17, C0526 0.16, C1516 0.14, C1809 0.13, C0008 0.11
+AUC in pool 1.00; at the largest gap 2 keys, recall 1.00, precision 1.00
+result set: C0017, C0029
+against the planted answer ['C0017', 'C0029']: recall 1.00, precision 1.00; pool 13
+Jev this run: {'requests': 3, 'input_tokens': 9265, 'output_tokens': 432}

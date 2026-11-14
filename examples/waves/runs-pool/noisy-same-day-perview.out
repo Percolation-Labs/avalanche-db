@@ -1,0 +1,17 @@
+question: Which other merchants did the customers who may have been skimmed at Northgate Fuel (card payments there from 12 November 2026, when skimming was reported) use on the same day as their fuel payment?
+11 views from the schema of transactions
+  * 0.86  anchor merchants.name = 'Northgate Fuel': 5 keys, gold 0
+    0.44  rare merchants.category: 55 keys, gold 0
+    0.37  repeats of one amount: 7 keys, gold 0
+    0.33  rare merchants.name: 82 keys, gold 0
+    0.23  rare rows per key: 5 keys, gold 0
+    0.17  rare kind: 29 keys, gold 0
+    0.17  most rows on one day by at: 7 keys, gold 0
+    0.16  rare memo: 16 keys, gold 0
+    0.16  rare hours of at: 41 keys, gold 0
+    0.12  largest |amount|: 16 keys, gold 0
+pool: 5 keys from 1 views; gold in pool 0 of 1
+    p(keep): C0002 0.36, C0008 0.31, C0021 0.19, C0014 0.16, C0033 0.14
+result set: (empty)
+against the planted answer ['Sundry Online']: recall 0.00, precision 0.00; pool 5
+Jev this run: {'requests': 1, 'input_tokens': 2182, 'output_tokens': 104}

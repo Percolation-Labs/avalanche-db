@@ -664,3 +664,16 @@ view's own name, instead of one generic pool, and a key's score is its best over
 The held-out questions are `noisy-same-day` and `noisy-skimming`, which `poolwalk.py` has not run.
 The measure is AUC and recall at the largest score gap, against the generic pool. On the seven
 questions above it is reported but not used to choose.
+
+**Result of the registered test: inconclusive on held-out data.** Both held-out questions had a
+single relevant view, so per-view and generic pools judged the same keys. `noisy-skimming` was exact
+either way. `noisy-same-day` asks for a merchant, which a pool of customers cannot hold, so it is out
+of scope for this grammar, not a failure of it. Neither tests what the change is for: several
+relevant views and a mild answer.
+
+On the seven seen questions (reported, not used to choose), `--per-view` restored busy afternoon
+(AUC 0.08 to 1.00; recall 0.60, precision 1.00, as in the walk), raised single very large payment
+from recall 0.25 to 0.44, and changed nothing else. A cut at the largest score gap was mixed: exact
+where 0.5 halved precision (noisy unusual activity), and worse on single very large payment (0.19).
+It is not adopted. `--per-view` stays a flag until it is tested on held-out questions with several
+relevant views; those have to be written, with SQL gold, before any run.

@@ -1,0 +1,18 @@
+question: Northgate Fuel reported card skimming at its pumps from 12 November 2026. Which customers may have had their card details taken?
+11 views from the schema of transactions
+  * 0.87  anchor merchants.name = 'Northgate Fuel': 5 keys, gold 3
+    0.48  rare merchants.category: 55 keys, gold 3
+    0.42  repeats of one amount: 7 keys, gold 1
+    0.38  rare merchants.name: 82 keys, gold 3
+    0.21  rare rows per key: 5 keys, gold 0
+    0.11  rare hours of at: 41 keys, gold 0
+    0.11  largest |amount|: 16 keys, gold 0
+    0.09  rare kind: 29 keys, gold 0
+    0.09  rare memo: 16 keys, gold 0
+    0.09  most rows on one day by at: 7 keys, gold 0
+pool: 5 keys from 1 views; gold in pool 3 of 3
+    p(keep): C0021 0.73, C0008 0.70, C0033 0.70, C0014 0.27, C0002 0.16
+AUC in pool 1.00; at the largest gap 3 keys, recall 1.00, precision 1.00
+result set: C0008, C0021, C0033
+against the planted answer ['C0008', 'C0021', 'C0033']: recall 1.00, precision 1.00; pool 5
+Jev this run: {'requests': 1, 'input_tokens': 2166, 'output_tokens': 104}

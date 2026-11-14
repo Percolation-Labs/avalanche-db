@@ -11,12 +11,17 @@ the question: a Noul per view. The pool is the union of the members of the views
 views' starting tightness. A second request judges the whole pool side by side, with the same
 Nouls viewwalk.py uses (jev_keep). Two requests per question; nothing is chosen in order.
 
-    python3 poolwalk.py questions/<q>.json [--sample 3] [--cap 80]
+    python3 poolwalk.py questions/<q>.json [--sample 3] [--cap 80] [--per-view]
+
+--per-view judges each relevant view's keys under that view's name (a key keeps its best score),
+instead of one pool under a generic label.
 
 --cap bounds the pool; over it, each relevant view gives its highest keys in turn until the cap.
 """
 import json, os, sqlite3, sys
 import viewwalk as vw
+
+PER_VIEW = False
 
 
 def relevant(question, grammar, rows, sample):
@@ -63,9 +68,27 @@ def run(qfile, sample=3, cap=80):
     if not pool:
         print("result set: (empty)\nagainst the planted answer: recall 0.00")
         return
-    kept = vw.jev_keep(plan["question"], "customers from the views that bear on the question", {k: 0 for k in pool}, rows)
-    print("    p(keep): " + ", ".join(f"{k} {p:.2f}" for k, p in sorted(vw.jev_keep.last.items(), key=lambda x: -x[1])[:12]))
-    ids = sorted(k for k, y in kept.items() if y)
+    if PER_VIEW:  # each relevant view's keys judged under the view's own name; a key keeps its best score
+        score = {}
+        for n in chosen:
+            mine = {k: 0 for k, v in pool.items() if v == n or k in vw.members(grammar[n], vw.KS[vw.K0])}
+            if mine:
+                vw.jev_keep(plan["question"], n, mine, rows)
+                for k, p in vw.jev_keep.last.items():
+                    score[k] = max(score.get(k, 0), p)
+    else:
+        vw.jev_keep(plan["question"], "customers from the views that bear on the question", {k: 0 for k in pool}, rows)
+        score = dict(vw.jev_keep.last)
+    print("    p(keep): " + ", ".join(f"{k} {p:.2f}" for k, p in sorted(score.items(), key=lambda x: -x[1])[:12]))
+    ranked = sorted(score.values(), reverse=True)
+    gaps = [(ranked[i] - ranked[i + 1], i + 1) for i in range(len(ranked) - 1)]
+    at_gap = set(sorted(score, key=lambda k: -score[k])[:max(gaps)[1]]) if gaps else set(score)
+    pos = [score[k] for k in score if k in gold]; neg = [score[k] for k in score if k not in gold]
+    if pos and neg:
+        a = sum((x > y) + 0.5 * (x == y) for x in pos for y in neg) / (len(pos) * len(neg))
+        print(f"AUC in pool {a:.2f}; at the largest gap {len(at_gap)} keys, recall {len(gold & at_gap) / len(gold):.2f}, "
+              f"precision {len(gold & at_gap) / len(at_gap):.2f}")
+    ids = sorted(k for k, p in score.items() if p >= 0.5)
     hit = len(gold & set(ids))
     print(f"result set: {', '.join(ids) or '(empty)'}")
     print(f"against the planted answer {sorted(gold)[:12]}{' ...' if len(gold) > 12 else ''}: recall {hit / len(gold):.2f}, "
@@ -76,4 +99,5 @@ def run(qfile, sample=3, cap=80):
 
 if __name__ == "__main__":
     a = sys.argv
+    PER_VIEW = "--per-view" in a
     run(a[1], int(a[a.index("--sample") + 1]) if "--sample" in a else 3, int(a[a.index("--cap") + 1]) if "--cap" in a else 80)
