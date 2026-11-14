@@ -37,6 +37,8 @@ the wording did not touch (804 card -> card), Jev's two runs moved by 0.014 on a
 disagree; it does not make the mid-range stable. The same was seen on the bank: clear cases hold,
 the middle moves with the setting.
 
+**Flagged as corpus-specific (Sirsh, 14 Nov: drop or flag what only works where it was tuned).** B2 states one repository's convention, that a card in a title or branch is the card the change was made for. It should not be expected to transfer to a corpus without that convention, and it was not tested on one.
+
 **Caveats.** One run per arm. The truth rule is the convention B2 states, so this measures following
 it, not understanding the work. The Claude stand-in was not re-run on B2 (no Claude in batch).
 
