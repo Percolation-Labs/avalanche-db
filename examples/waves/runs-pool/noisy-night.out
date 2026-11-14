@@ -1,0 +1,16 @@
+question: Which customers made card payments in the middle of the night, between midnight and 5am?
+10 views from the schema of transactions
+  * 0.90  rare hours of at: 41 keys, gold 41
+  * 0.53  rare rows per key: 5 keys, gold 4
+    0.44  rare merchants.category: 55 keys, gold 3
+    0.42  rare merchants.name: 82 keys, gold 3
+    0.30  repeats of one amount: 7 keys, gold 1
+    0.16  largest |amount|: 16 keys, gold 0
+    0.13  rare memo: 16 keys, gold 0
+    0.13  most rows on one day by at: 7 keys, gold 0
+    0.10  rare kind: 29 keys, gold 1
+pool: 42 keys from 2 views; gold in pool 41 of 41
+    p(keep): C0017 0.78, C0186 0.66, C0369 0.66, C0767 0.65, C0808 0.64, C0621 0.63, C0142 0.63, C0832 0.63, C1829 0.63, C1899 0.63, C1312 0.62, C0578 0.62
+result set: C0017, C0113, C0119, C0120, C0128, C0142, C0186, C0369, C0407, C0430, C0472, C0496, C0513, C0578, C0598, C0621, C0644, C0686, C0767, C0808, C0832, C0852, C0854, C0927, C0965, C0975, C1135, C1206, C1239, C1312, C1318, C1339, C1534, C1551, C1571, C1599, C1615, C1814, C1829, C1831, C1899
+against the planted answer ['C0017', 'C0113', 'C0119', 'C0120', 'C0128', 'C0142', 'C0186', 'C0369', 'C0407', 'C0430', 'C0472', 'C0496'] ...: recall 1.00, precision 1.00; pool 42
+Jev this run: {'requests': 2, 'input_tokens': 17723, 'output_tokens': 1023}

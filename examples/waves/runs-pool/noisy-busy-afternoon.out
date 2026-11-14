@@ -1,0 +1,16 @@
+question: Which customers made an unusually large number of card payments in a single afternoon?
+10 views from the schema of transactions
+  * 0.52  most rows on one day by at: 7 keys, gold 6
+    0.30  rare rows per key: 5 keys, gold 0
+    0.26  rare merchants.category: 55 keys, gold 0
+    0.25  rare merchants.name: 82 keys, gold 0
+    0.21  repeats of one amount: 7 keys, gold 0
+    0.17  rare hours of at: 41 keys, gold 0
+    0.14  rare memo: 16 keys, gold 1
+    0.13  largest |amount|: 16 keys, gold 1
+    0.11  rare kind: 29 keys, gold 1
+pool: 7 keys from 1 views; gold in pool 6 of 10
+    p(keep): C0029 0.38, C0139 0.38, C1858 0.37, C0545 0.35, C0514 0.31, C0627 0.30, C0096 0.26
+result set: (empty)
+against the planted answer ['C0004', 'C0096', 'C0129', 'C0139', 'C0514', 'C0545', 'C0627', 'C1109', 'C1858', 'C1993']: recall 0.00, precision 0.00; pool 7
+Jev this run: {'requests': 2, 'input_tokens': 5620, 'output_tokens': 323}

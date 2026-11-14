@@ -590,3 +590,41 @@ large" are questions of degree. A walk should return such keys with their scores
 borderline, rather than force them across a fixed line. `--final` stays off by default.
 
 Jev to date: 351 requests, 1.09 million input tokens.
+
+### No walk: the views the question bears on, pooled and judged once
+
+`--rejudge` showed that the pool decides what Jev keeps, and suggested a pool of only the views the
+question bears on. Choosing that by walking needs Jev's next-view choice, the weak part. `poolwalk.py`
+asks differently: one request rates every view at once (its description, count and top three keys,
+a Noul each: does what it selects bear on the question?). The pool is the union of the views rated
+0.5 or more, at their starting k, capped at 80. One more request judges the pool together with
+`jev_keep`. Two requests per question, nothing chosen in order. Outputs are in `runs-pool/`.
+
+| question | relevant views | gold in pool | pooled | jev walk (samples) |
+|---|---|---|---|---|
+| unusual activity, noisy | 9 of 9 | 2 of 2 | recall 1.00, precision 0.50 | exact |
+| unusual activity, clean | 9 of 9 | 2 of 2 | exact | exact |
+| card testing | 3 | 1 of 1 | exact | exact, by path |
+| money transfer at night | 6 | 1 of 1 | exact | exact |
+| single very large payment | 3 | 16 of 16 | recall 0.25, precision 1.00 | recall 0.38 |
+| busy afternoon | 1 | 6 of 10 | recall 0 | recall 0.60 |
+| night payments (41) | 2 | 41 of 41 | exact | exact |
+
+**Rated all at once, Jev's view relevance is good.** The view holding the answer was rated top or
+near it for every question: rare hours at 0.90 for night payments, the money-transfer anchor at
+0.92, rare memo and largest amount at 0.88 and 0.82 for one-off payments. For card testing it left
+out "repeats of one amount" (0.42), the view where the walk had kept C0017 by mistake. Every pool
+but one held every gold key; busy afternoon's pool held 6 of 10 because the view's k = 3 cut drops
+the rest. So the weakness found earlier was the sequential choice and its stop, not relevance.
+
+**The pool still decides the scale, and broad questions get broad pools.** "Unusual activity" rates
+every view relevant, so its pool is the capped 80 and the walk's precision falls to 0.50: C0129 at
+0.55 and C0514 at 0.50 sit on the line. Busy afternoon was the clearest loss. Its pool was the one
+right view, but labelled "customers from the views that bear on the question" and with C0029 in it,
+and the six busy shoppers scored 0.30 to 0.38. In the walk, the same keys under the view's own name
+scored 0.50 to 0.61. One-off payments kept 4 of 16, below the walk's 6.
+
+**What this settles.** Pooling by one-shot relevance replaces view choice without loss of recall
+into the pool, at two requests a question, and is exact on 4 of 7. It does not fix membership on
+questions of degree, which is where both approaches lose. The membership judgement, not the search,
+is now the limit. Jev to date: 365 requests, 1.21 million input tokens.
