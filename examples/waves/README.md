@@ -709,3 +709,27 @@ by a judgement. Ordering was perfect or near it in every pool. None of the three
 off-question oddity sharing the pool, which is the case that broke busy afternoon, so these
 questions say the method works when relevance alone separates the answer. They do not test the
 frame effect.
+
+### A kept set or a ranked list with a borderline band
+
+**Registered 14 Nov, before computing (M-20261114-191028-1f60):** every pool judgement already in
+Jev's cache, 72 seen-question pools (`runs-pool/keeplog.jsonl`) and the 9 held-out pools replayed
+offline (`runs-pool/heldout-keeplog.jsonl`), $0. Fixed bands: keep at 0.7 or above, borderline from
+0.3 to 0.7, drop below 0.3; the cut is 0.5. A walk returns ranked+band only if, on the held-out
+pools, at least 2/3 of the cut's errors fall in the band and the band holds at most 25% of the
+pool, and if, on the seen pools, a key's confident label (keep or drop) flips to the opposite
+confident label between pools less than half as often as its 0.5 label flips. `bandtest.py`.
+
+| pools | cut errors | of them in the band | band share of pool | 0.5 flips between pools | confident flips |
+|---|---|---|---|---|---|
+| held-out (3 questions, 280 judgements) | 9 | 9 | 0.25 | 10 of 185 | 0 |
+| seen (6 questions, 1149 judgements) | 96 | 57 (0.59) | 0.31 | 105 of 1723 | 5 |
+
+**All three conditions held, so `poolwalk.py` now prints the ranked list with the band** beside the
+0.5 set. Two limits are clear in the data. The band share sits exactly on the 25% bound. And the
+band catches the judge's honest doubt, not its confident mistakes: on seen questions it held only
+59% of the errors, because one-off payments (26 of 56) and busy afternoon (23 of 31) lose gold
+keys at confident low scores, which is the frame effect again. A fixed band also misreads a pool
+whose whole scale has shifted: on held-out refunds every gold key scored 0.62 to 0.70 and every
+other key 0.05 or less, so the band holds 12 of the 13 answers while the cut was exact. In that
+pool the gap in the ranking carries the answer, and the absolute band does not see it.

@@ -88,6 +88,9 @@ def run(qfile, sample=3, cap=80):
         a = sum((x > y) + 0.5 * (x == y) for x in pos for y in neg) / (len(pos) * len(neg))
         print(f"AUC in pool {a:.2f}; at the largest gap {len(at_gap)} keys, recall {len(gold & at_gap) / len(gold):.2f}, "
               f"precision {len(gold & at_gap) / len(at_gap):.2f}")
+    band = sorted((k for k, p in score.items() if 0.3 <= p < 0.7), key=lambda k: -score[k])
+    print("ranked: keep (>=0.7) " + (", ".join(k for k in sorted(score, key=lambda k: -score[k]) if score[k] >= 0.7) or "(none)")
+          + "; borderline (0.3-0.7) " + (", ".join(f"{k} {score[k]:.2f}" for k in band) or "(none)"))
     ids = sorted(k for k, p in score.items() if p >= 0.5)
     hit = len(gold & set(ids))
     print(f"result set: {', '.join(ids) or '(empty)'}")
