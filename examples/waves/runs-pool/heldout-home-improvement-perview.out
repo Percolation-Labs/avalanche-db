@@ -1,0 +1,17 @@
+question: Which customers paid for work on their home this month, such as a new kitchen, a boiler or a roof?
+10 views from the schema of transactions
+  * 0.90  rare memo: 16 keys, gold 6
+  * 0.70  largest |amount|: 16 keys, gold 6
+    0.26  rare merchants.category: 55 keys, gold 0
+    0.24  rare merchants.name: 82 keys, gold 0
+    0.16  rare rows per key: 5 keys, gold 0
+    0.14  repeats of one amount: 7 keys, gold 0
+    0.13  rare kind: 29 keys, gold 6
+    0.09  most rows on one day by at: 7 keys, gold 0
+    0.08  rare hours of at: 41 keys, gold 0
+pool: 16 keys from 2 views; gold in pool 6 of 6
+    p(keep): C1618 0.92, C0129 0.91, C0174 0.91, C0474 0.89, C0413 0.89, C0729 0.86, C0005 0.06, C0614 0.05, C1229 0.05, C0345 0.04, C0551 0.04, C0710 0.04
+AUC in pool 1.00; at the largest gap 6 keys, recall 1.00, precision 1.00
+result set: C0129, C0174, C0413, C0474, C0729, C1618
+against the planted answer ['C0129', 'C0174', 'C0413', 'C0474', 'C0729', 'C1618']: recall 1.00, precision 1.00; pool 16
+Jev this run: {'requests': 2, 'input_tokens': 12837, 'output_tokens': 648}

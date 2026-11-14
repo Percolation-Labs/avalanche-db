@@ -1,0 +1,17 @@
+question: Which customers paid a small local tradesperson or service this month, such as a locksmith, a vet or a tailor?
+10 views from the schema of transactions
+  * 0.60  rare merchants.name: 82 keys, gold 33
+  * 0.58  rare memo: 16 keys, gold 0
+    0.45  rare merchants.category: 55 keys, gold 33
+    0.22  rare rows per key: 5 keys, gold 1
+    0.21  repeats of one amount: 7 keys, gold 0
+    0.18  largest |amount|: 16 keys, gold 0
+    0.15  rare kind: 29 keys, gold 0
+    0.13  rare hours of at: 41 keys, gold 1
+    0.12  most rows on one day by at: 7 keys, gold 0
+pool: 80 keys from 2 views; gold in pool 31 of 33
+    p(keep): C0209 0.82, C0630 0.78, C0101 0.77, C0385 0.76, C1056 0.75, C1246 0.75, C0169 0.73, C0249 0.73, C0961 0.73, C0621 0.72, C0563 0.71, C0735 0.71
+AUC in pool 0.99; at the largest gap 33 keys, recall 0.94, precision 0.94
+result set: C0101, C0169, C0209, C0249, C0385, C0386, C0446, C0563, C0621, C0630, C0657, C0712, C0735, C0796, C0961, C1056, C1065, C1070, C1082, C1211, C1246, C1304, C1316, C1317, C1333, C1375, C1434, C1452, C1563, C1717
+against the planted answer ['C0101', 'C0169', 'C0209', 'C0249', 'C0385', 'C0386', 'C0446', 'C0563', 'C0621', 'C0630', 'C0657', 'C0712'] ...: recall 0.88, precision 0.97; pool 80
+Jev this run: {'requests': 2, 'input_tokens': 29433, 'output_tokens': 1628}

@@ -691,3 +691,21 @@ gold by SQL in the question file (`questions/heldout-*.json`): refunds (13 custo
 services (33), home improvement (6). `poolwalk.py` is run on each with and without `--per-view`.
 `--per-view` becomes the default only if, on all three, its AUC in the pool is no lower, its recall
 at 0.5 is no lower, and its precision falls by no more than 0.10.
+
+| held-out question | relevant views (Jev) | gold in pool | generic pool | `--per-view` |
+|---|---|---|---|---|
+| refunds (13) | refund anchor 0.97, rare kind 0.77 | 13 of 13 | exact, AUC 1.00 | exact, AUC 1.00 |
+| small local services (33) | rare merchant name 0.60, rare memo 0.58 | 31 of 33 (cap 80) | recall 0.85, precision 1.00, AUC 1.00 | recall 0.88, precision 0.97, AUC 0.99 |
+| home improvement (6) | rare memo 0.90, largest amount 0.70 | 6 of 6 | exact, AUC 1.00 | exact, AUC 1.00 |
+
+**Per the registered rule, `--per-view` is not adopted:** on local services its AUC was 0.99
+against 1.00. The difference is one pair, but the rule was "no lower", so the flag stays off, and
+the busy-afternoon gain stays a result on a seen question.
+
+**The pooled walk itself held on held-out questions.** Two exact and one at recall 0.85, precision
+1.00, in 12 requests for all three. The views Jev rated relevant held the answers each time; the
+two local-services customers it missed were cut by the pool's cap of 80 (82 keys in the view), not
+by a judgement. Ordering was perfect or near it in every pool. None of the three had a louder
+off-question oddity sharing the pool, which is the case that broke busy afternoon, so these
+questions say the method works when relevance alone separates the answer. They do not test the
+frame effect.

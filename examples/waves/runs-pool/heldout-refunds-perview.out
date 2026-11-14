@@ -1,0 +1,18 @@
+question: Which customers got money back from a shop this month as a refund?
+11 views from the schema of transactions
+  * 0.97  anchor kind = 'refund': 13 keys, gold 13
+  * 0.77  rare kind: 29 keys, gold 13
+    0.34  rare rows per key: 5 keys, gold 2
+    0.21  most rows on one day by at: 7 keys, gold 1
+    0.15  rare merchants.name: 82 keys, gold 0
+    0.15  rare merchants.category: 55 keys, gold 0
+    0.15  largest |amount|: 16 keys, gold 0
+    0.14  repeats of one amount: 7 keys, gold 0
+    0.11  rare memo: 16 keys, gold 0
+    0.11  rare hours of at: 41 keys, gold 1
+pool: 29 keys from 2 views; gold in pool 13 of 13
+    p(keep): C0029 0.73, C1467 0.63, C1312 0.62, C1537 0.62, C0062 0.60, C0732 0.60, C0544 0.59, C1465 0.56, C1007 0.54, C0179 0.53, C0396 0.53, C0846 0.53
+AUC in pool 1.00; at the largest gap 13 keys, recall 1.00, precision 1.00
+result set: C0029, C0062, C0088, C0179, C0396, C0544, C0732, C0846, C1007, C1312, C1465, C1467, C1537
+against the planted answer ['C0029', 'C0062', 'C0088', 'C0179', 'C0396', 'C0544', 'C0732', 'C0846', 'C1007', 'C1312', 'C1465', 'C1467'] ...: recall 1.00, precision 1.00; pool 29
+Jev this run: {'requests': 2, 'input_tokens': 16014, 'output_tokens': 848}
