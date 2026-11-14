@@ -1,0 +1,14 @@
+{
+ "question": "Which customers paid for work on their home this month, such as a new kitchen, a boiler or a roof?",
+ "set_data": "bank-noisy.db",
+ "answer_hint": "customer ids",
+ "gold": [
+  "C0129",
+  "C0174",
+  "C0413",
+  "C0474",
+  "C0729",
+  "C1618"
+ ],
+ "planted": "held out (14 Nov): written with its gold before any walk ran on it; gold SQL: select a.customer_id from transactions t join accounts a on a.id = t.account_id left join merchants m on m.id = t.merchant_id where t.memo in ('kitchen fitting', 'solar panels', 'boiler replacement', 'roof repair', 'conservatory', 'loft conversion') or t.memo like '%roof%' or t.memo like '%kitchen%' or t.memo like '%boiler%'"
+}

@@ -1,0 +1,21 @@
+{
+ "question": "Which customers got money back from a shop this month as a refund?",
+ "set_data": "bank-noisy.db",
+ "answer_hint": "customer ids",
+ "gold": [
+  "C0029",
+  "C0062",
+  "C0088",
+  "C0179",
+  "C0396",
+  "C0544",
+  "C0732",
+  "C0846",
+  "C1007",
+  "C1312",
+  "C1465",
+  "C1467",
+  "C1537"
+ ],
+ "planted": "held out (14 Nov): written with its gold before any walk ran on it; gold SQL: select a.customer_id from transactions t join accounts a on a.id = t.account_id left join merchants m on m.id = t.merchant_id where t.kind = 'refund'"
+}

@@ -685,3 +685,9 @@ per door and shared across conditions. Its one condition that did move the cut a
 flips 0.51) also moved the ranking (rho 0.47). That agrees with busy afternoon here: a change of
 what the judge is told it is looking for reorders the keys, not only rescales them. A change of
 pool that keeps the question's frame (another view's keys, another wording) rescales.
+
+**Registered 14 Nov, before any run:** three held-out questions on `bank-noisy.db`, each with its
+gold by SQL in the question file (`questions/heldout-*.json`): refunds (13 customers), small local
+services (33), home improvement (6). `poolwalk.py` is run on each with and without `--per-view`.
+`--per-view` becomes the default only if, on all three, its AUC in the pool is no lower, its recall
+at 0.5 is no lower, and its precision falls by no more than 0.10.
