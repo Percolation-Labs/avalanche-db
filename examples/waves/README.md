@@ -327,7 +327,7 @@ result.
 
 **Choosing the next view: no signal.** Asked whether reading a view would reach what the question
 needs, it scored every view 0.00 to 0.09. With a stop at 0.5 the walk read nothing. A view's
-description is not an answer, and a reranker scores answers.
+description is not an answer, and that model was trained to score answers, not to choose paths.
 
 **Judging each customer: no signal, or worse.** Here the symbolic rule chose the views and the
 stand-in judged each key with a Noul over the customer's rows. It scored almost every customer 0.94
@@ -784,6 +784,6 @@ world lab, search-only at 100 reads covers .169 of questions (share .66 to .67).
 covers .150 to .169 (share .63 to .64), equal to deeper search or slightly behind it. The findings
 arms (f2, f4) beat it, but they change round one itself: their round-one top 3 matches f0's on only
 59 and 23 of 160 questions. So that gain is the entity-name boost acting from the first read, not
-anything the walk adds after it. On 12 held-out MuSiQue reranker walks, the walk read exactly as
+anything the walk adds after it. On 12 held-out MuSiQue walks with the local model as edge selector, the walk read exactly as
 many required items as search at 100 (net 0). That makes three nulls for the walk beyond search:
 the bank, the world lab and MuSiQue.
