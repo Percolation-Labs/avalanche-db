@@ -175,6 +175,12 @@ This compiles to `midb ask` followed by `midb step` calls. The `FOLLOW` weights 
 its plan is short and its work happens at run time: the agent watches the frontier and can
 `TAKE` any open question or change a weight between steps, as it can today.
 
+## Doors, deciders and the budget
+
+Which doors a connection wave opens is split three ways: a door labeller describes them from the
+graph alone, a decider filters and ranks them, and the caller sets the budget. Every wave records
+the whole batch, so any decider can be scored as a ranker from the log. See [doors.md](doors.md).
+
 ## How an agent uses it
 
 Over MCP, three tools are added beside today's four (`search`, `ask`, `step` and `why`):
