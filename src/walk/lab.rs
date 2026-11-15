@@ -30,13 +30,17 @@ pub struct Settings {
     pub seeds: usize,
     pub per_wave: usize,
     pub cap: usize,
-    pub gate: f64,
+    /// The legacy .5 gate, now a filter (`Gated`): set only to reproduce recorded V0 walks.
+    pub gate: Option<f64>,
+    /// How opened doors are ordered: `rank` (the decider's order) or the V0 orders `p`, `per_target`, `convergence`.
     pub order: String,
+    /// The caller's cap on doors opened per wave; none means until the wave's reads run out.
+    pub open: Option<usize>,
 }
 
 impl Default for Settings {
     fn default() -> Settings {
-        Settings { waves: 10, wave: 50, seeds: 10, per_wave: 10, cap: 100, gate: 0.5, order: "per_target".into() }
+        Settings { waves: 10, wave: 50, seeds: 10, per_wave: 10, cap: 100, gate: None, order: "rank".into(), open: None }
     }
 }
 
@@ -67,6 +71,8 @@ pub struct Walk {
     pub log: Vec<serde_json::Value>,
     pub stop: Option<serde_json::Value>,
     pub keys_read: u64,
+    /// Every wave's whole batch: doors shown, their attributes, the filter's result, the full ranking, what opened.
+    pub batches: Vec<BatchLog>,
 }
 
 /// ORDER BY key under glibc's en_US.utf8: punctuation and spaces ignored at the first level, case after it.
@@ -156,6 +162,10 @@ struct State {
     reached: HashSet<String>,
     pending: VecDeque<String>,
     si: usize,
+    /// Doors the filter kept (all judged doors when there is no filter).
+    kept: HashSet<String>,
+    /// A door's place in its wave's ranking, for `order: rank` when the decider gave no score.
+    rankpos: HashMap<String, (u32, usize)>,
 }
 
 /// aiq.walk_state's next-round clues, out of one wave's reads.
@@ -193,14 +203,22 @@ fn raise(g: &mut Graph, st: &State, wave_reads: &[String]) -> Result<BTreeMap<St
     Ok(out)
 }
 
-/// The decision model: one round's clues, with the walk so far, to P by key. A key it leaves out is unjudged.
-pub type Decide<'d> = dyn FnMut(u32, &BTreeMap<String, Clue>, &Walk) -> Result<HashMap<String, f64>> + 'd;
+pub use super::doors::{Attrs, Batch, BatchLog, Decider, DoorLabeller, Ranked};
 
-pub fn run(g: &mut Graph, order: Vec<String>, s: Settings, decide: &mut Decide) -> Result<Walk> {
-    if !["p", "per_target", "convergence"].contains(&s.order.as_str()) {
-        return Err(format!("order is p, per_target or convergence, not {}", s.order).into());
+/// Walk with a decider and a labeller; the caller's budget is in `s`.
+pub fn run(g: &mut Graph, order: Vec<String>, s: Settings, question: &str, decider: &mut dyn Decider, labeller: &mut dyn DoorLabeller) -> Result<Walk> {
+    if !["rank", "p", "per_target", "convergence"].contains(&s.order.as_str()) {
+        return Err(format!("order is rank, p, per_target or convergence, not {}", s.order).into());
     }
-    let mut st = State { s, order, w: Walk::default(), nxt: BTreeMap::new(), reached: HashSet::new(), pending: VecDeque::new(), si: 0 };
+    let mut gated;
+    let decider: &mut dyn Decider = match s.gate {
+        Some(at) => {
+            gated = super::doors::Gated { inner: decider, at };
+            &mut gated
+        }
+        None => decider,
+    };
+    let mut st = State { s, order, w: Walk::default(), nxt: BTreeMap::new(), reached: HashSet::new(), pending: VecDeque::new(), si: 0, kept: HashSet::new(), rankpos: HashMap::new() };
     let seeds: Vec<String> = st.order.iter().take(st.s.seeds).filter(|d| g.holds(d)).cloned().collect();
     if seeds.is_empty() {
         return Err("no seed: none of search's first documents is in the graph".into());
@@ -211,12 +229,12 @@ pub fn run(g: &mut Graph, order: Vec<String>, s: Settings, decide: &mut Decide) 
         st.reached.insert(d.clone());
     }
     st.nxt = raise(g, &st, &seeds)?;
-    while step(g, &mut st, decide)? {}
+    while step(g, &mut st, question, decider, labeller)? {}
     st.w.keys_read = g.cost.keys_read;
     Ok(st.w)
 }
 
-fn step(g: &mut Graph, st: &mut State, decide: &mut Decide) -> Result<bool> {
+fn step(g: &mut Graph, st: &mut State, question: &str, decider: &mut dyn Decider, labeller: &mut dyn DoorLabeller) -> Result<bool> {
     let wn = 1 + st.w.reads.iter().map(|r| r.wave).max().unwrap_or(0);
     if wn > st.s.waves {
         st.w.stop = Some(serde_json::json!({"reason": "waves", "wave": wn - 1}));
@@ -225,18 +243,51 @@ fn step(g: &mut Graph, st: &mut State, decide: &mut Decide) -> Result<bool> {
     for c in st.nxt.values_mut() {
         c.wave = wn;
     }
-    let got = if st.nxt.is_empty() { HashMap::new() } else { decide(wn, &st.nxt, &st.w)? };
     let nxt = std::mem::take(&mut st.nxt);
+    let mut attrs: BTreeMap<String, Attrs> = BTreeMap::new();
+    for (k, c) in &nxt {
+        attrs.insert(k.clone(), labeller.label(c, g)?);
+    }
+    let (kept, ranking) = if nxt.is_empty() {
+        (None, vec![])
+    } else {
+        let b = Batch { question, wave: wn, doors: &nxt, attrs: &attrs, reads: &st.w.reads, label_version: labeller.version() };
+        let kept = decider.filter(&b)?;
+        let ranking = decider.rank(&b)?;
+        (kept, ranking)
+    };
+    let score: HashMap<&str, Option<f64>> = ranking.iter().map(|r| (r.key.as_str(), r.score)).collect();
     let (raised, mut judged, mut accepted) = (nxt.len(), 0, 0);
+    for (i, r) in ranking.iter().enumerate() {
+        if nxt.contains_key(&r.key) {
+            st.rankpos.insert(r.key.clone(), (wn, i));
+        }
+    }
+    let mut doors_log = vec![];
     for (k, mut c) in nxt {
-        c.p = got.get(&k).copied();
-        judged += c.p.is_some() as usize;
-        accepted += c.p.is_some_and(|p| p >= st.s.gate) as usize;
+        let ranked = score.contains_key(k.as_str());
+        c.p = score.get(k.as_str()).copied().flatten();
+        judged += ranked as usize;
+        let keep = ranked && kept.as_ref().is_none_or(|ks| ks.contains(&k));
+        if keep {
+            accepted += 1;
+            st.kept.insert(k.clone());
+        }
+        doors_log.push(serde_json::json!({"key": k, "kind": c.kind, "targets": c.targets, "attrs": attrs.get(&k)}));
         st.w.clues.insert(k, c);
     }
     st.w.log.push(serde_json::json!({"wave": wn, "raised": raised, "judged": judged, "accepted": accepted}));
+    st.w.batches.push(BatchLog {
+        wave: wn,
+        label_version: labeller.version(),
+        decider: decider.name(),
+        doors: doors_log,
+        kept: kept.map(|k| k.into_iter().collect()),
+        ranking,
+        opened: vec![],
+    });
     let mut open: BTreeMap<String, Clue> = st.w.clues.iter()
-        .filter(|(k, c)| !st.w.travelled.contains_key(*k) && c.p.is_some_and(|p| p >= st.s.gate))
+        .filter(|(k, _)| !st.w.travelled.contains_key(*k) && st.kept.contains(*k))
         .map(|(k, c)| (k.clone(), c.clone())).collect();
     let target = (wn as usize * st.s.wave).saturating_sub(st.w.reads.len());
     let (mut n, mut ord) = (0usize, 0usize);
@@ -257,6 +308,7 @@ fn step(g: &mut Graph, st: &mut State, decide: &mut Decide) -> Result<bool> {
         }
     }
     let mut best: Option<String> = None;
+    let mut opened = 0usize;
     while n < target {
         if let Some(doc) = st.pending.pop_front() {
             read(st, doc, best.clone(), &mut n, &mut ord, &mut wave_reads);
@@ -280,7 +332,15 @@ fn step(g: &mut Graph, st: &mut State, decide: &mut Decide) -> Result<bool> {
                 continue;
             }
             let p = f4(c.p.unwrap_or(0.0));
-            let score = if st.s.order == "p" { p } else { p / u as f64 };
+            let score = match st.s.order.as_str() {
+                // the decider's order: its score where it gave one, else its place (earlier waves' doors first)
+                "rank" => c.p.unwrap_or_else(|| {
+                    let (w, i) = st.rankpos.get(k).copied().unwrap_or((u32::MAX, usize::MAX));
+                    -(w as f64) * 1e6 - i as f64
+                }),
+                "p" => p,
+                _ => p / u as f64,
+            };
             let v = if converge { c.targets.iter().filter(|d| !st.reached.contains(*d)).map(|d| votes[d.as_str()]).max().unwrap_or(0) } else { 0 };
             let col = collate(k);
             let better = match &pick {
@@ -292,7 +352,12 @@ fn step(g: &mut Graph, st: &mut State, decide: &mut Decide) -> Result<bool> {
             }
         }
         let pick = pick.map(|(_, s, c, k)| (s, c, k));
-        if let Some((_, _, k)) = pick {
+        let capped = st.s.open.is_some_and(|cap| opened >= cap);
+        if let (Some((_, _, k)), false) = (pick, capped) {
+            opened += 1;
+            if let Some(b) = st.w.batches.last_mut() {
+                b.opened.push(k.clone());
+            }
             let c = open.remove(&k).unwrap();
             for d in c.targets.iter().filter(|d| !st.reached.contains(*d)).cloned().collect::<Vec<_>>() {
                 st.reached.insert(d.clone());

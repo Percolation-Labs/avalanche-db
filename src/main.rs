@@ -149,8 +149,9 @@ enum LabCmd {
         #[arg(long)]
         conv: Option<String>,
     },
-    /// Walk on request over stdin and stdout, one JSON object a line: in {"walk": {conv, order, settings}}, out
-    /// {"judge": {wave, clues, reads}} answered by {"p": {key: P}}, then {"done": walk}
+    /// Walk on request over stdin and stdout, one JSON object a line: in {"walk": {conv, order, settings, question}},
+    /// out {"judge": {wave, clues, attrs, label_version, reads}} answered by {"p": {key: P}} or {"keep", "rank"},
+    /// then {"done": walk}. Specs: specs/doors.md
     Serve {
         #[arg(long)]
         store: PathBuf,
@@ -502,14 +503,68 @@ fn run(cli: Cli) -> Result<()> {
     Ok(())
 }
 
-/// `midb lab serve`: the lab's engine over JSON lines, so walklab's deciders, scorecard and fidelity check drive it.
+/// `midb lab serve`: the lab's engine over JSON lines, so an outside decider drives it (specs/doors.md).
+///
+/// In: {"walk": {conv, order, settings, question?}}. Each wave the engine writes {"judge": {wave, clues, attrs,
+/// label_version, reads}} and reads one answer: {"p": {key: P}} (scores; with `gate` in the settings, the V0 gate) or
+/// {"keep": [keys], "rank": [keys]} (filter, then rank). Then {"done": walk}.
 fn lab_serve(path: &Path) -> Result<()> {
     use std::io::{BufRead, Write};
-    use avalanche::walk::lab;
+    use avalanche::walk::{doors, lab};
     let store = Store::open(path)?;
     let stdin = std::io::stdin();
     let mut lines = stdin.lock().lines();
     let mut out = std::io::stdout().lock();
+
+    /// The outside decider: one round trip per wave, cached so the filter and rank passes ask once.
+    struct Remote<'a, I: Iterator<Item = std::io::Result<String>>, W: Write> {
+        lines: &'a mut I,
+        out: &'a mut W,
+        wave: Option<u32>,
+        keep: Option<std::collections::BTreeSet<String>>,
+        rank: Vec<doors::Ranked>,
+    }
+    impl<I: Iterator<Item = std::io::Result<String>>, W: Write> Remote<'_, I, W> {
+        fn ask(&mut self, b: &doors::Batch) -> Result<()> {
+            if self.wave == Some(b.wave) {
+                return Ok(());
+            }
+            let msg = serde_json::json!({"judge": {"wave": b.wave, "clues": b.doors.values().collect::<Vec<_>>(), "attrs": b.attrs, "label_version": b.label_version, "reads": b.reads}});
+            writeln!(self.out, "{msg}")?;
+            self.out.flush()?;
+            let ans = self.lines.next().ok_or("stdin closed while a judgement was asked")??;
+            let v: serde_json::Value = serde_json::from_str(&ans)?;
+            self.keep = match v.get("keep") {
+                Some(k) => Some(serde_json::from_value(k.clone())?),
+                None => None,
+            };
+            self.rank = if let Some(r) = v.get("rank") {
+                let keys: Vec<String> = serde_json::from_value(r.clone())?;
+                keys.into_iter().map(|key| doors::Ranked { key, score: None }).collect()
+            } else {
+                let p = v["p"].as_object().ok_or("an answer is {\"p\": {key: P}} or {\"keep\": [...], \"rank\": [...]}")?;
+                let mut r: Vec<(String, f64)> = p.iter().filter_map(|(k, p)| p.as_f64().map(|p| (k.clone(), p))).collect();
+                r.sort_by(|a, b| b.1.total_cmp(&a.1).then_with(|| lab::collate(&a.0).cmp(&lab::collate(&b.0))));
+                r.into_iter().map(|(key, s)| doors::Ranked { key, score: Some(s) }).collect()
+            };
+            self.wave = Some(b.wave);
+            Ok(())
+        }
+    }
+    impl<I: Iterator<Item = std::io::Result<String>>, W: Write> doors::Decider for Remote<'_, I, W> {
+        fn name(&self) -> String {
+            "remote".into()
+        }
+        fn filter(&mut self, b: &doors::Batch) -> Result<Option<std::collections::BTreeSet<String>>> {
+            self.ask(b)?;
+            Ok(self.keep.clone())
+        }
+        fn rank(&mut self, b: &doors::Batch) -> Result<Vec<doors::Ranked>> {
+            self.ask(b)?;
+            Ok(self.rank.clone())
+        }
+    }
+
     while let Some(line) = lines.next() {
         let line = line?;
         if line.trim().is_empty() {
@@ -521,22 +576,10 @@ fn lab_serve(path: &Path) -> Result<()> {
             let conv = w["conv"].as_str().ok_or("a walk request names its conv")?;
             let order: Vec<String> = serde_json::from_value(w["order"].clone())?;
             let settings: lab::Settings = serde_json::from_value(w.get("settings").cloned().unwrap_or(serde_json::json!({})))?;
+            let question = w["question"].as_str().unwrap_or_default().to_string();
             let mut g = lab::Graph::open(&store, conv)?;
-            let mut decide = |wave: u32, clues: &BTreeMap<String, lab::Clue>, walk: &lab::Walk| -> Result<std::collections::HashMap<String, f64>> {
-                let msg = serde_json::json!({"judge": {"wave": wave, "clues": clues.values().collect::<Vec<_>>(), "reads": walk.reads}});
-                writeln!(out, "{msg}")?;
-                out.flush()?;
-                let ans = lines.next().ok_or("stdin closed while a judgement was asked")??;
-                let v: serde_json::Value = serde_json::from_str(&ans)?;
-                let mut got = std::collections::HashMap::new();
-                for (k, p) in v["p"].as_object().ok_or("an answer is {\"p\": {key: P}}")? {
-                    if let Some(p) = p.as_f64() {
-                        got.insert(k.clone(), p);
-                    }
-                }
-                Ok(got)
-            };
-            lab::run(&mut g, order, settings, &mut decide)
+            let mut remote = Remote { lines: &mut lines, out: &mut out, wave: None, keep: None, rank: vec![] };
+            lab::run(&mut g, order, settings, &question, &mut remote, &mut doors::GraphStats)
         })();
         let msg = match res {
             Ok(walk) => serde_json::json!({"done": walk}),
