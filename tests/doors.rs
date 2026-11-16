@@ -206,3 +206,32 @@ fn within_postings_reads_the_same_door_in_another_order() {
     let bad = std::panic::catch_unwind(|| walk(&mut fixed(), &mut GraphStats, serde_json::json!({"within": "question"})));
     assert!(bad.is_err(), "an unknown within (such as one built from the question) is refused");
 }
+
+/// specs/doors.md, the third pass: under `within: decider` the decider orders an opened door's unread targets and
+/// may use the question; `per_door` then reads the top of that order. Default off, so today's walk is unchanged.
+#[test]
+fn within_decider_reads_the_targets_the_decider_puts_first() {
+    let gold = gold();
+    let place: std::collections::HashMap<String, usize> = gold.iter().map(|d| (d.clone(), 0)).collect();
+    let mut td = doors::TargetOrder { inner: fixed(), place };
+    let w = walk(&mut td, &mut GraphStats, serde_json::json!({"per_door": 1, "within": "decider"}));
+    let logged: Vec<&doors::TargetLog> = w.batches.iter().flat_map(|b| b.targets.iter()).collect();
+    assert!(!logged.is_empty(), "every opened door's target order is logged");
+    for t in &logged {
+        let first_gold = t.order.iter().position(|d| gold.contains(d));
+        if let Some(i) = first_gold {
+            assert_eq!(i, 0, "a door holding gold puts it first under the target oracle");
+        }
+    }
+    let base = walk(&mut fixed(), &mut GraphStats, serde_json::json!({"per_door": 1}));
+    let hit = |w: &lab::Walk| w.reads.iter().filter(|r| r.via.as_deref() != Some("search") && gold.contains(&r.doc)).count();
+    assert!(hit(&w) >= hit(&base), "reading the gold target first never reads less gold through doors");
+}
+
+#[test]
+fn within_decider_without_a_third_pass_is_the_graph_order() {
+    let a = walk(&mut fixed(), &mut GraphStats, serde_json::json!({"per_door": 1}));
+    let b = walk(&mut fixed(), &mut GraphStats, serde_json::json!({"per_door": 1, "within": "decider"}));
+    assert_eq!(a.reads.iter().map(|r| &r.doc).collect::<Vec<_>>(), b.reads.iter().map(|r| &r.doc).collect::<Vec<_>>());
+    assert!(b.batches.iter().all(|b| b.targets.is_empty()), "nothing is logged when the decider has no third pass");
+}

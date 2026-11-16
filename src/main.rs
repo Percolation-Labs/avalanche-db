@@ -507,7 +507,8 @@ fn run(cli: Cli) -> Result<()> {
 ///
 /// In: {"walk": {conv, order, settings, question?}}. Each wave the engine writes {"judge": {wave, clues, attrs,
 /// label_version, reads}} and reads one answer: {"p": {key: P}} (scores; with `gate` in the settings, the V0 gate) or
-/// {"keep": [keys], "rank": [keys]} (filter, then rank). Then {"done": walk}.
+/// {"keep": [keys], "rank": [keys]} (filter, then rank). Under `within: decider` the engine also writes
+/// {"targets": {wave, door, targets}} for each door it opens, answered by {"order": [docs]}. Then {"done": walk}.
 fn lab_serve(path: &Path) -> Result<()> {
     use std::io::{BufRead, Write};
     use avalanche::walk::{doors, lab};
@@ -562,6 +563,15 @@ fn lab_serve(path: &Path) -> Result<()> {
         fn rank(&mut self, b: &doors::Batch) -> Result<Vec<doors::Ranked>> {
             self.ask(b)?;
             Ok(self.rank.clone())
+        }
+        /// Under `within: decider`: {"targets": {wave, door, targets}} answered by {"order": [docs]} or {"order": null}.
+        fn rank_targets(&mut self, _q: &str, door: &lab::Clue, targets: &[String]) -> Result<Option<Vec<String>>> {
+            let msg = serde_json::json!({"targets": {"wave": self.wave, "door": door.key, "targets": targets}});
+            writeln!(self.out, "{msg}")?;
+            self.out.flush()?;
+            let ans = self.lines.next().ok_or("stdin closed while a target order was asked")??;
+            let v: serde_json::Value = serde_json::from_str(&ans)?;
+            Ok(serde_json::from_value(v.get("order").cloned().unwrap_or(serde_json::Value::Null))?)
         }
     }
 
