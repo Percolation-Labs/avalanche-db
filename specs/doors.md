@@ -17,17 +17,27 @@ The walk layer owns none of the three judgements. It raises the doors, asks the 
 describe them, asks the decider to filter and rank them, opens the top of the ranking until
 the budget runs out, and records all of it.
 
-## A door is a typed edge with attributes
+## A door is a typed edge with a description and attributes
 
 A door is the clue a read raises: `term:<t>`, `next:<doc>` or `near:<doc>` today, and any
-typed link in the store generally. Like an edge in Cypher, it has a type and attributes, and
-the attributes are what a decider may filter on:
+typed link in the store generally. It carries two things, both built at ingestion and both
+blind to the question (Sirsh's framework, M-20261116-214238-37f1, points 3c and 4).
+[edge-types.md](edge-types.md) says which distinctions are types and which are attributes.
+
+**Attributes** are data-derived categories, and the filter pass selects on them:
 
 - **Type**: the predicate it follows (`tagged`, `beside`, `near`, `authoredBy`, …).
+- **Categories**: categorical values from the data, such as a shared term's entity `kind`, the
+  term's `role` in each document (title, lead, body), the `relation` phrase that links them, and a
+  near door's `same_subject`.
+
+**Description** is graph-derived, and the decider reads it when it ranks:
+
 - **Immediate**: what is right behind it, such as the targets' labels or openings.
 - **Reachable**: a compressed summary of everything reachable through it, beyond the first hop.
 - **Statistics**: graph numbers, such as how many unread targets it has, the term's postings
-  (df), the targets' centrality and how specific the term is across the corpus.
+  (df), the targets' centrality and how specific the term is across the corpus. Statistics are
+  never filter attributes.
 
 **Integrity rule (Sirsh, 15 Nov, M-20261115-201816-ab76).** A door's attributes are derived
 from the graph alone, never from the question or its gold. The labeller's signature has no
@@ -46,6 +56,11 @@ pub struct Attrs {
     pub stats: BTreeMap<String, f64>,        // targets, postings, centrality, specificity, ...
 }
 ```
+
+The code above is the 15 Nov shape, with `stats` inside `Attrs`. The split lands when the
+filter-then-rank test (3c) is built ([edge-types.md](edge-types.md), "What the filter-then-rank
+test needs first"): `Attrs` keeps `kind` and gains `categories: BTreeMap<String, String>`, and
+`immediate`, `reachable` and `stats` move to a `Description`.
 
 **Labels belong to construction.** Today a labeller runs at walk time over the graph. The
 target is that labels are built once, at construction or by dreaming, and stored as facts
@@ -143,7 +158,7 @@ That is the measurement Sirsh asked for on 15 Nov (M-20261115-204054-124e).
 Run under the same budget, it is the baseline every walk result is compared with (memory
 `round-one-is-search`). The other fakes are `Oracle` (doors with gold targets first, the
 upper bound on any decider for those doors), `Random` (seeded), `Scores` (fixed scores by
-key, from a recording) and `AttrFilter` (a filter pass over one statistic). The real deciders,
+key, from a recording) and `AttrFilter` (today a filter pass over one statistic; under the split, over one category). The real deciders,
 Jev and the System One models, plug in through the same trait; that research is bill's.
 
 ## What changes where
