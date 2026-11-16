@@ -174,3 +174,35 @@ fn the_door_module_never_calls_the_model() {
     assert!(!include_str!("../src/walk/doors.rs").contains("infer"));
     assert!(!include_str!("../src/walk/lab.rs").contains("infer"));
 }
+
+/// specs/doors.md, read order: `per_door` caps the reads one opened door spends, and `within` orders them from the
+/// graph alone. The default (`graph`, no cap) is today's walk, which the golden test above holds.
+#[test]
+fn per_door_caps_the_reads_one_door_spends() {
+    for m in [1usize, 2] {
+        let w = walk(&mut fixed(), &mut GraphStats, serde_json::json!({"per_door": m}));
+        assert!(!w.travelled.is_empty());
+        let mut by_door: std::collections::HashMap<&str, usize> = std::collections::HashMap::new();
+        for r in &w.reads {
+            if let Some(v) = r.via.as_deref().filter(|v| *v != "search") {
+                *by_door.entry(v).or_default() += 1;
+            }
+        }
+        assert!(by_door.values().all(|&n| n <= m), "per_door {m}: a door read more than {m} targets");
+        let all = walk(&mut fixed(), &mut GraphStats, serde_json::json!({}));
+        assert!(w.travelled.len() > all.travelled.len(), "per_door {m}: the reads a door gives up go to further doors");
+    }
+}
+
+#[test]
+fn within_postings_reads_the_same_door_in_another_order() {
+    let a = walk(&mut fixed(), &mut GraphStats, serde_json::json!({"per_door": 1}));
+    let b = walk(&mut fixed(), &mut GraphStats, serde_json::json!({"per_door": 1, "within": "postings"}));
+    assert_ne!(
+        a.reads.iter().map(|r| &r.doc).collect::<Vec<_>>(),
+        b.reads.iter().map(|r| &r.doc).collect::<Vec<_>>(),
+        "with one read per door, choosing it by postings must change which target is read"
+    );
+    let bad = std::panic::catch_unwind(|| walk(&mut fixed(), &mut GraphStats, serde_json::json!({"within": "question"})));
+    assert!(bad.is_err(), "an unknown within (such as one built from the question) is refused");
+}

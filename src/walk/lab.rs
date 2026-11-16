@@ -36,11 +36,17 @@ pub struct Settings {
     pub order: String,
     /// The caller's cap on doors opened per wave; none means until the wave's reads run out.
     pub open: Option<usize>,
+    /// The order of reads inside an opened door: `graph` (the door's targets as the graph lists them, sorted; today)
+    /// or `postings` (fewest term postings first, the target's own graph degree; the key the tie). Never the question.
+    pub within: String,
+    /// The most targets one opened door reads; the rest stay unread and the wave's reads go to the next door.
+    /// None reads every unread target (today).
+    pub per_door: Option<usize>,
 }
 
 impl Default for Settings {
     fn default() -> Settings {
-        Settings { waves: 10, wave: 50, seeds: 10, per_wave: 10, cap: 100, gate: None, order: "rank".into(), open: None }
+        Settings { waves: 10, wave: 50, seeds: 10, per_wave: 10, cap: 100, gate: None, order: "rank".into(), open: None, within: "graph".into(), per_door: None }
     }
 }
 
@@ -210,6 +216,12 @@ pub fn run(g: &mut Graph, order: Vec<String>, s: Settings, question: &str, decid
     if !["rank", "p", "per_target", "convergence"].contains(&s.order.as_str()) {
         return Err(format!("order is rank, p, per_target or convergence, not {}", s.order).into());
     }
+    if !["graph", "postings"].contains(&s.within.as_str()) {
+        return Err(format!("within is graph or postings, not {}", s.within).into());
+    }
+    if s.per_door == Some(0) {
+        return Err("per_door is at least 1".into());
+    }
     let mut gated;
     let decider: &mut dyn Decider = match s.gate {
         Some(at) => {
@@ -359,7 +371,19 @@ fn step(g: &mut Graph, st: &mut State, question: &str, decider: &mut dyn Decider
                 b.opened.push(k.clone());
             }
             let c = open.remove(&k).unwrap();
-            for d in c.targets.iter().filter(|d| !st.reached.contains(*d)).cloned().collect::<Vec<_>>() {
+            let mut unread: Vec<String> = c.targets.iter().filter(|d| !st.reached.contains(*d)).cloned().collect();
+            if st.s.within == "postings" {
+                let mut keyed = Vec::with_capacity(unread.len());
+                for d in unread {
+                    keyed.push((g.terms(&d)?.len(), d));
+                }
+                keyed.sort();
+                unread = keyed.into_iter().map(|(_, d)| d).collect();
+            }
+            if let Some(m) = st.s.per_door {
+                unread.truncate(m);
+            }
+            for d in unread {
                 st.reached.insert(d.clone());
                 st.pending.push_back(d);
             }
