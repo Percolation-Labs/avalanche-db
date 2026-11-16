@@ -93,6 +93,18 @@ out. The opening order is `order`:
 - `p`, `per_target` and `convergence` are the product's V0 orders over the decider's scores.
   They are kept only to reproduce recorded walks.
 
+Reads inside an opened door are part of the budget too. An opened door used to read every
+unread target, in the order the graph lists them, before anything else. A door chosen for one
+well-placed target then spent most of the wave's reads on the others (p8-subsystems #773,
+prediction 7). Two settings make that a choice:
+
+- `per_door`: the most targets one opened door reads (default: all). The reads it gives up go
+  to the next door in the ranking, or to search once `open` is reached.
+- `within`: the order of those reads. `graph` (the default) is the graph's order. `postings`
+  reads the target with the fewest term postings first, its own graph degree. Like a door's
+  label, it never uses the question. Ranking targets by the question would be the decider's
+  job, as a later idea, not the engine's.
+
 ## Every wave records the whole batch
 
 `Walk.batches` gets one entry per wave:
