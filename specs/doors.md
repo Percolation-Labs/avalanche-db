@@ -102,8 +102,20 @@ prediction 7). Two settings make that a choice:
   to the next door in the ranking, or to search once `open` is reached.
 - `within`: the order of those reads. `graph` (the default) is the graph's order. `postings`
   reads the target with the fewest term postings first, its own graph degree. Like a door's
-  label, it never uses the question. Ranking targets by the question would be the decider's
-  job, as a later idea, not the engine's.
+  label, neither uses the question. `decider` hands the order to the decider's third pass,
+  below.
+
+**The third pass: the decider orders a door's targets.** p8-subsystems #774 found that a cap
+without the question opens the right door and reads the wrong document: the Oracle's gain
+over search fell from +.24 to −.03. Choosing which target to read needs the question, and the
+integrity rule allows the question on the decider's side only. So `Decider` has an optional
+`rank_targets(question, door, targets)`, called for each opened door under `within: decider`.
+It returns the unread targets best first, and `per_door` reads the top of that order. A
+decider without the pass keeps the graph's order, and a target it leaves out is read after
+the rest. The default `within: graph` never calls it, so the golden walks are unchanged. Over
+`lab serve` the engine writes `{"targets": {wave, door, targets}}` and reads `{"order": [...]}`.
+Each order is logged in the wave's batch as `targets: [{door, order}]`, so a target ranker
+can be scored from the log too. Like filter-then-rank, it is an idea to test, not a recipe.
 
 ## Every wave records the whole batch
 

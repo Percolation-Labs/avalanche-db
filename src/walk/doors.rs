@@ -95,6 +95,16 @@ pub struct BatchLog {
     pub ranking: Vec<Ranked>,
     /// The doors opened while this wave read, in order (they may have been raised by earlier waves).
     pub opened: Vec<String>,
+    /// With `within: decider`, the decider's order of each opened door's unread targets, before `per_door` cut it.
+    #[serde(default, skip_serializing_if = "Vec::is_empty")]
+    pub targets: Vec<TargetLog>,
+}
+
+/// One opened door's unread targets as the decider ordered them (the third pass), best first.
+#[derive(Clone, Debug, Serialize, Deserialize, PartialEq)]
+pub struct TargetLog {
+    pub door: String,
+    pub order: Vec<String>,
 }
 
 pub trait Decider {
@@ -105,6 +115,12 @@ pub trait Decider {
     }
     /// The ranking pass: best first. A door left out is unjudged and never opened.
     fn rank(&mut self, b: &Batch) -> Result<Vec<Ranked>>;
+    /// The optional third pass, used only under `within: decider`: order one opened door's unread targets, best
+    /// first. Unlike a door's label it may use the question. None (the default) keeps the graph's order; a target
+    /// left out of the order is read after the ones in it, in the graph's order.
+    fn rank_targets(&mut self, _question: &str, _door: &Clue, _targets: &[String]) -> Result<Option<Vec<String>>> {
+        Ok(None)
+    }
 }
 
 /// Sort by score, highest first, ties by key under the walk's collation.
@@ -132,6 +148,9 @@ pub struct Gated<'d> {
 }
 
 impl Decider for Gated<'_> {
+    fn rank_targets(&mut self, q: &str, door: &Clue, targets: &[String]) -> Result<Option<Vec<String>>> {
+        self.inner.rank_targets(q, door, targets)
+    }
     fn name(&self) -> String {
         format!("{} gated at {}", self.inner.name(), self.at)
     }
@@ -196,6 +215,32 @@ impl Decider for SearchOrder {
     }
 }
 
+/// Ranks doors as `inner` does and orders a door's targets by a fixed place per document, lowest first (a
+/// document with no place goes last, in the graph's order). With gold at place 0 it is the target oracle; with
+/// search's order it reads the door's best-placed target first. A fake for the third pass.
+pub struct TargetOrder<D: Decider> {
+    pub inner: D,
+    pub place: HashMap<String, usize>,
+}
+
+impl<D: Decider> Decider for TargetOrder<D> {
+    fn name(&self) -> String {
+        format!("{} + target-order", self.inner.name())
+    }
+    fn filter(&mut self, b: &Batch) -> Result<Option<BTreeSet<String>>> {
+        self.inner.filter(b)
+    }
+    fn rank(&mut self, b: &Batch) -> Result<Vec<Ranked>> {
+        self.inner.rank(b)
+    }
+    fn rank_targets(&mut self, _q: &str, _door: &Clue, targets: &[String]) -> Result<Option<Vec<String>>> {
+        let mut v: Vec<(usize, usize, String)> = targets.iter().enumerate()
+            .map(|(i, d)| (self.place.get(d).copied().unwrap_or(usize::MAX), i, d.clone())).collect();
+        v.sort();
+        Ok(Some(v.into_iter().map(|(_, _, d)| d).collect()))
+    }
+}
+
 /// Filter-then-rank: keep the doors whose statistic `stat` is at most `max` (a door without it is dropped), then
 /// rank with `inner`. A fake for testing the two passes, not a proposal for which attribute matters.
 pub struct AttrFilter<D: Decider> {
@@ -205,6 +250,9 @@ pub struct AttrFilter<D: Decider> {
 }
 
 impl<D: Decider> Decider for AttrFilter<D> {
+    fn rank_targets(&mut self, q: &str, door: &Clue, targets: &[String]) -> Result<Option<Vec<String>>> {
+        self.inner.rank_targets(q, door, targets)
+    }
     fn name(&self) -> String {
         format!("{} <= {} then {}", self.stat, self.max, self.inner.name())
     }

@@ -216,8 +216,8 @@ pub fn run(g: &mut Graph, order: Vec<String>, s: Settings, question: &str, decid
     if !["rank", "p", "per_target", "convergence"].contains(&s.order.as_str()) {
         return Err(format!("order is rank, p, per_target or convergence, not {}", s.order).into());
     }
-    if !["graph", "postings"].contains(&s.within.as_str()) {
-        return Err(format!("within is graph or postings, not {}", s.within).into());
+    if !["graph", "postings", "decider"].contains(&s.within.as_str()) {
+        return Err(format!("within is graph, postings or decider, not {}", s.within).into());
     }
     if s.per_door == Some(0) {
         return Err("per_door is at least 1".into());
@@ -297,6 +297,7 @@ fn step(g: &mut Graph, st: &mut State, question: &str, decider: &mut dyn Decider
         kept: kept.map(|k| k.into_iter().collect()),
         ranking,
         opened: vec![],
+        targets: vec![],
     });
     let mut open: BTreeMap<String, Clue> = st.w.clues.iter()
         .filter(|(k, _)| !st.w.travelled.contains_key(*k) && st.kept.contains(*k))
@@ -379,6 +380,16 @@ fn step(g: &mut Graph, st: &mut State, question: &str, decider: &mut dyn Decider
                 }
                 keyed.sort();
                 unread = keyed.into_iter().map(|(_, d)| d).collect();
+            } else if st.s.within == "decider" {
+                if let Some(order) = decider.rank_targets(question, &c, &unread)? {
+                    let mut seen: HashSet<String> = HashSet::new();
+                    let mut v: Vec<String> = order.into_iter().filter(|d| unread.contains(d) && seen.insert(d.clone())).collect();
+                    v.extend(unread.iter().filter(|d| !seen.contains(*d)).cloned());
+                    unread = v;
+                    if let Some(b) = st.w.batches.last_mut() {
+                        b.targets.push(super::doors::TargetLog { door: k.clone(), order: unread.clone() });
+                    }
+                }
             }
             if let Some(m) = st.s.per_door {
                 unread.truncate(m);
