@@ -42,11 +42,14 @@ pub struct Settings {
     /// The most targets one opened door reads; the rest stay unread and the wave's reads go to the next door.
     /// None reads every unread target (today).
     pub per_door: Option<usize>,
+    /// The most reads one wave spends through doors; once reached, the wave's other reads are search's and no
+    /// further door opens. Targets an opened door has not read yet stay pending for the next wave. None: no cap.
+    pub door_reads: Option<usize>,
 }
 
 impl Default for Settings {
     fn default() -> Settings {
-        Settings { waves: 10, wave: 50, seeds: 10, per_wave: 10, cap: 100, gate: None, order: "rank".into(), open: None, within: "graph".into(), per_door: None }
+        Settings { waves: 10, wave: 50, seeds: 10, per_wave: 10, cap: 100, gate: None, order: "rank".into(), open: None, within: "graph".into(), per_door: None, door_reads: None }
     }
 }
 
@@ -322,10 +325,15 @@ fn step(g: &mut Graph, st: &mut State, question: &str, decider: &mut dyn Decider
     }
     let mut best: Option<String> = None;
     let mut opened = 0usize;
+    let mut through = 0usize; // this wave's reads through doors, for `door_reads`
     while n < target {
-        if let Some(doc) = st.pending.pop_front() {
-            read(st, doc, best.clone(), &mut n, &mut ord, &mut wave_reads);
-            continue;
+        let full = st.s.door_reads.is_some_and(|cap| through >= cap);
+        if !full {
+            if let Some(doc) = st.pending.pop_front() {
+                through += 1;
+                read(st, doc, best.clone(), &mut n, &mut ord, &mut wave_reads);
+                continue;
+            }
         }
         // convergence (REM-1172 stage C, not the product): a clue goes first when its unread targets are where the
         // most open accepted clues converge, one vote per clue; then by P per unread target, as per_target
@@ -365,7 +373,7 @@ fn step(g: &mut Graph, st: &mut State, question: &str, decider: &mut dyn Decider
             }
         }
         let pick = pick.map(|(_, s, c, k)| (s, c, k));
-        let capped = st.s.open.is_some_and(|cap| opened >= cap);
+        let capped = full || st.s.open.is_some_and(|cap| opened >= cap);
         if let (Some((_, _, k)), false) = (pick, capped) {
             opened += 1;
             if let Some(b) = st.w.batches.last_mut() {
