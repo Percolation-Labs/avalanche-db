@@ -376,7 +376,7 @@ fn run(cli: Cli) -> Result<()> {
         Cmd::Search { words, text: true } => {
             let (_, store, t) = open(dir)?;
             let mut g = avalanche::walk::lab::Graph::open_items(&store, t)?;
-            let ft = avalanche::walk::text::FullText::build(&mut g, &mut avalanche::construct::documents::Reader::new(dir))?;
+            let ft = avalanche::walk::text::FullText::open(dir, t, store.head(t)?, &mut g)?;
             let hits = ft.search(&words.join(" "));
             for (d, s) in hits.iter().take(10) {
                 let title = g.values(d, Pred::Label)?.into_iter().next().unwrap_or_default();

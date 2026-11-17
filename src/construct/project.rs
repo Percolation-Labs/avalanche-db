@@ -80,5 +80,9 @@ fn ingest_from(dir: &Path, cfg: &Config, sources: &[String], facts: Option<PathB
     }
     let tx = store.write(t, &all)?;
     out += &format!("T{tx}: {} facts in {:.1?}\n", all.len(), started.elapsed());
+    // a documents store's full-text index, built now so a walk in a fresh process reads it instead of rebuilding
+    if let Ok(mut g) = crate::walk::lab::Graph::open_items(&store, t) {
+        crate::walk::text::FullText::open(dir, t, store.head(t)?, &mut g)?;
+    }
     Ok(out)
 }

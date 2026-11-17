@@ -105,3 +105,19 @@ fn kappa_is_the_opening_sentences_door_reads_first() {
     drop(store);
     std::fs::remove_dir_all(&dir).unwrap();
 }
+
+#[test]
+fn the_store_is_not_a_document_and_its_index_is_kept() {
+    let dir = folder("self");
+    // ingest the folder itself: avalanche.toml and .avalanche/ are the store's, not the project's
+    let said = midb(&dir, &["ingest", "--documents", "."]);
+    assert!(said.contains("4 passages"), "{said}");
+    let out = Command::new(env!("CARGO_BIN_EXE_midb")).arg("--dir").arg(&dir).args(["doors", "avalanche.toml#1"]).output().unwrap();
+    assert!(!out.status.success(), "avalanche.toml was ingested as a passage");
+    // the full-text index is built at ingestion and read, not rebuilt, by a later search
+    let index = dir.join(".avalanche/fulltext.json");
+    let built = std::fs::metadata(&index).expect("an index after ingest").modified().unwrap();
+    midb(&dir, &["search", "--text", "invoice total"]);
+    assert_eq!(std::fs::metadata(&index).unwrap().modified().unwrap(), built);
+    std::fs::remove_dir_all(&dir).unwrap();
+}

@@ -3,6 +3,9 @@
 //! reads each passage's text back through its pointer instead.
 
 use std::collections::HashMap;
+use std::path::{Path, PathBuf};
+
+use serde::{Deserialize, Serialize};
 
 use super::lab::Graph;
 use crate::construct::documents::{words, Reader};
@@ -10,13 +13,46 @@ use crate::model::Pred;
 use crate::Result;
 
 /// Every passage's words, read once; then any number of questions.
+#[derive(Serialize, Deserialize)]
 pub struct FullText {
     docs: Vec<(String, HashMap<String, f64>, f64)>,
     df: HashMap<String, f64>,
     avg: f64,
 }
 
+/// Where a store's full-text index is kept, beside the store.
+pub fn index_path(dir: &Path) -> PathBuf {
+    dir.join(crate::config::DIR).join("fulltext.json")
+}
+
+#[derive(Serialize, Deserialize)]
+struct Saved {
+    tenant: u32,
+    head: u64,
+    index: FullText,
+}
+
 impl FullText {
+    /// The index for the tenant at `head`: read from `.avalanche/fulltext.json` when it was built at that head, else
+    /// built (reading every passage back) and saved. Ingestion builds it, so a walk in a fresh process reads it
+    /// instead of rebuilding: on p8-subsystems the build takes about 10 s.
+    pub fn open(dir: &Path, t: u32, head: u64, g: &mut Graph) -> Result<FullText> {
+        let path = index_path(dir);
+        if let Ok(bytes) = std::fs::read(&path) {
+            if let Ok(s) = serde_json::from_slice::<Saved>(&bytes) {
+                if s.tenant == t && s.head == head {
+                    return Ok(s.index);
+                }
+            }
+        }
+        let index = FullText::build(g, &mut Reader::new(dir))?;
+        let saved = Saved { tenant: t, head, index };
+        let tmp = path.with_extension("json.tmp");
+        std::fs::write(&tmp, serde_json::to_vec(&saved)?)?;
+        std::fs::rename(&tmp, &path)?;
+        Ok(saved.index)
+    }
+
     pub fn build(g: &mut Graph, reader: &mut Reader) -> Result<FullText> {
         let mut docs = vec![];
         let mut df: HashMap<String, f64> = HashMap::new();

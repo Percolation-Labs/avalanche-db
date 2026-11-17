@@ -702,7 +702,7 @@ path. Claude's first call:
 
 ```console
 $ printf '%s\n' '{"jsonrpc":"2.0","id":1,"method":"tools/call","params":{"name":"ingest_repo","arguments":{}}}' | midb mcp
-{"id":1,"jsonrpc":"2.0","result":{"content":[{"text":"added a documents source for . to avalanche.toml\ndocuments .              20 passages →  516 facts\nreviews   reviews.jsonl  1 review   →  2 facts\nT3: 518 facts in #µs\n","type":"text"}]}}
+{"id":1,"jsonrpc":"2.0","result":{"content":[{"text":"added a documents source for . to avalanche.toml\ndocuments .              19 passages →  488 facts\nreviews   reviews.jsonl  1 review   →  2 facts\nT3: 490 facts in #µs\n","type":"text"}]}}
 ```
 
 Then the question. The `walk` tool returns the same text as `midb walk`. The caller's `--budget` is
@@ -723,24 +723,25 @@ note: no key, so the doors were ranked by search's order, not by Jev; set AVALAN
       notes/BUG-12.md (bytes 0-300)
    3  notes/ADR-007.md#1           search         "notes/ADR-007.md"
       notes/ADR-007.md (bytes 0-641)
-   4  avalanche.toml#1             term:decision  "avalanche.toml"
-      avalanche.toml (bytes 0-588)
-   5  files/round-v3.rs#1          term:decision  "files/round-v3.rs"
+   4  files/round-v3.rs#1          term:decision  "files/round-v3.rs"
       files/round-v3.rs (bytes 0-224)
-   6  repo/src/invoice/round.rs#1  term:decision  "repo/src/invoice/round.rs"
+   5  repo/src/invoice/round.rs#1  term:decision  "repo/src/invoice/round.rs"
       repo/src/invoice/round.rs (bytes 0-224)
-   7  make.sh#1                    term:even      "make.sh"
+   6  make.sh#1                    term:even      "make.sh"
       make.sh (bytes 0-2008)
-   8  notes/P-3.md#1               term:halves    "notes/P-3.md"
+   7  notes/P-3.md#1               term:halves    "notes/P-3.md"
       notes/P-3.md (bytes 0-283)
-   9  notes/BUG-3.md#1             term:invoice   "notes/BUG-3.md"
+   8  notes/BUG-3.md#1             term:invoice   "notes/BUG-3.md"
       notes/BUG-3.md (bytes 0-187)
-  10  repo/src/invoice/total.rs#1  term:invoice   "repo/src/invoice/total.rs"
+   9  repo/src/invoice/total.rs#1  term:invoice   "repo/src/invoice/total.rs"
       repo/src/invoice/total.rs (bytes 0-58)
-wave 1: 46 doors; opened term:decision
-wave 2: 19 doors; opened term:even
+  10  files/round-v1.rs#1          term:round     "files/round-v1.rs"
+      files/round-v1.rs (bytes 0-62)
+wave 1: 45 doors; opened term:decision
+wave 2: 14 doors; opened term:even
 wave 3: 15 doors; opened term:halves
-wave 4: 2 doors; opened term:invoice
+wave 4: 1 door; opened term:invoice
+wave 5: 6 doors; opened term:round
 ```
 
 Each document's second line says where its content lives. `read_document` reads it from there,

@@ -269,12 +269,18 @@ fn wanted(path: &Path) -> bool {
     let name = path.file_name().and_then(|n| n.to_str()).unwrap_or("");
     (TEXT_EXT.contains(&ext.as_str()) || CODE_EXT.contains(&ext.as_str()) || ["README", "LICENSE", "Makefile", "Dockerfile"].contains(&name))
         && !name.ends_with(".lock")
+        && name != crate::config::FILE
         && std::fs::metadata(path).map(|m| m.len() <= MAX_FILE).unwrap_or(false)
 }
 
 fn files(root: &Path, is_git: bool) -> Result<Vec<String>> {
     if is_git {
-        let mut v: Vec<String> = git(root, &["ls-files"])?.lines().map(String::from).filter(|f| wanted(&root.join(f))).collect();
+        // the store's own folder and config are not the project's documents, even when committed
+        let mut v: Vec<String> = git(root, &["ls-files"])?
+            .lines()
+            .map(String::from)
+            .filter(|f| !f.starts_with(".avalanche/") && !f.contains("/.avalanche/") && wanted(&root.join(f)))
+            .collect();
         v.sort();
         return Ok(v);
     }
