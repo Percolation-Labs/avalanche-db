@@ -124,7 +124,7 @@ pub trait Decider {
 }
 
 /// Sort by score, highest first, ties by key under the walk's collation.
-fn by_score(mut v: Vec<(String, f64)>) -> Vec<Ranked> {
+pub fn by_score(mut v: Vec<(String, f64)>) -> Vec<Ranked> {
     v.sort_by(|a, b| b.1.total_cmp(&a.1).then_with(|| collate(&a.0).cmp(&collate(&b.0))));
     v.into_iter().map(|(key, s)| Ranked { key, score: Some(s) }).collect()
 }

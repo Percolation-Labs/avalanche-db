@@ -15,6 +15,7 @@ Each story is shown as commands with their real output, run against the billing 
 | 9 | Replay old questions after re-indexing: a regression test for the graph | [9](#9-replay-questions-after-a-rebuild) |
 | 10 | Give an agent the same session API over MCP | [10](#10-the-same-walk-for-an-agent) |
 | 11 | Query with P8QL: find by likeness, follow by connection, and read the plan first | [11](#11-query-with-p8ql) |
+| 12 | The walk an agent calls: from Claude, ingest a folder, ask, and read the documents it needs | [12](#12-the-walk-an-agent-calls) |
 
 ## 1. Install one binary
 
@@ -488,7 +489,7 @@ your repository by walking it instead of searching it. Add it to Claude Code:
 $ claude mcp add avalanche -- midb -C /path/to/your/folder mcp
 ```
 
-The agent gets seven tools: `search`, `ask`, `step` and `why`, and the three P8QL tools of story 11, `p8ql_schema`, `p8ql_explain` and `p8ql_run`. The first four take with the same arguments and
+The agent gets ten tools: `search`, `ask`, `step` and `why`, the three P8QL tools of story 11, `p8ql_schema`, `p8ql_explain` and `p8ql_run`, and the three tools of the walk an agent calls in story 12, `ingest_repo`, `walk` and `read_document`. `midb mcp install` registers the server for you (story 12). The first four take with the same arguments and
 the same text back as the commands above: it starts a walk, reads the ranked open
 questions at each step, and steers with `take` and `prefer`. The store is opened for each
 call and closed after it, so you can use `midb` at the same time. One exchange, as the
@@ -679,4 +680,112 @@ issue:BUG-12                                                  2026-04-09 "A cent
   fixed by (dreamed, not stated)  commit:cc746808d1           2026-04-12 "invoice: round totals half-even (ADR-007, BUG-12)"
 5 steps, 4 link kinds; 138 keys read in 277.0µs
 ```
+
+## 12. The walk an agent calls
+
+The target user installs `midb` (story 1) and works from Claude: Claude ingests their folder,
+they ask questions, and they get the right documents back. One command registers the store
+with Claude Code. It runs `claude mcp add`, or prints that command and the JSON config for any
+other MCP client when `claude` is not on the PATH:
+
+```console no-test
+$ midb mcp install
+claude mcp add --scope user avalanche -- /Users/you/.local/bin/midb -C /Users/you/billing mcp
+Added stdio MCP server avalanche with command: /Users/you/.local/bin/midb -C /Users/you/billing mcp to user config
+```
+
+Three tools serve the walk. `ingest_repo` reads the folder's text, markdown and code files and
+its git history as passages. It builds the doors a walk follows, and adds a `documents` source
+to `avalanche.toml` the first time. `walk` takes a question and returns documents in reading
+order. `read_document` returns one of them. Claude's first call:
+
+```console
+$ printf '%s\n' '{"jsonrpc":"2.0","id":1,"method":"tools/call","params":{"name":"ingest_repo","arguments":{}}}' | midb mcp
+{"id":1,"jsonrpc":"2.0","result":{"content":[{"text":"added a documents source, path \".\", to avalanche.toml\ndocuments .              20 passages →  516 facts\nreviews   reviews.jsonl  1 review   →  2 facts\nT3: 518 facts in #µs\n","type":"text"}]}}
+```
+
+Then the question. The `walk` tool returns the same text as `midb walk`. Search over the
+passages' full text picks the first ten documents. After that, each wave describes the doors
+the last wave raised, from the graph alone and never from the question. Jev ranks them in one
+batch, and the walk opens the best `--budget` doors (one by default). It stops at `--reads`
+documents (100 by default). With no key, as here, search's order ranks the doors instead, and
+the walk says so:
+
+```console
+$ midb walk "why is the invoice a cent off?" --reads 12
+walk: 11 documents; decider search-order; opens 1 door a wave
+note: no key, so the doors were ranked by search's order, not by Jev; set AVALANCHE_MODEL_KEY or run `midb key set`
+   1  notes/SUP-88.md#1            search                    "notes/SUP-88.md"
+      notes/SUP-88.md (bytes 0-269)
+   2  notes/BUG-12.md#1            search                    "notes/BUG-12.md"
+      notes/BUG-12.md (bytes 0-300)
+   3  notes/ADR-007.md#1           search                    "notes/ADR-007.md"
+      notes/ADR-007.md (bytes 0-641)
+   4  repo/src/invoice/round.rs#1  search                    "repo/src/invoice/round.rs"
+      repo/src/invoice/round.rs (bytes 0-224)
+   5  repo/src/invoice/total.rs#1  search                    "repo/src/invoice/total.rs"
+      repo/src/invoice/total.rs (bytes 0-58)
+   6  make.sh#1                    search                    "make.sh"
+      make.sh (bytes 0-2008)
+   7  files/round-v3.rs#1          search                    "files/round-v3.rs"
+      files/round-v3.rs (bytes 0-224)
+   8  notes/BUG-3.md#1             search                    "notes/BUG-3.md"
+      notes/BUG-3.md (bytes 0-187)
+   9  notes/P-3.md#1               search                    "notes/P-3.md"
+      notes/P-3.md (bytes 0-283)
+  10  files/round-v1.rs#1          near:files/round-v3.rs#1  "files/round-v1.rs"
+      files/round-v1.rs (bytes 0-62)
+  11  files/round-v2.rs#1          near:files/round-v3.rs#1  "files/round-v2.rs"
+      files/round-v2.rs (bytes 0-153)
+wave 1: 54 doors; opened near:files/round-v3.rs#1
+```
+
+Each document's second line says where its content lives. `read_document` reads it from there,
+and nothing is copied into the store:
+
+```console
+$ printf '%s\n' '{"jsonrpc":"2.0","id":2,"method":"tools/call","params":{"name":"read_document","arguments":{"id":"notes/ADR-007.md#1"}}}' | midb mcp
+{"id":2,"jsonrpc":"2.0","result":{"content":[{"text":"notes/ADR-007.md#1  notes/ADR-007.md\nnotes/ADR-007.md (bytes 0-641)\n\n---\nid: ADR-007\nkind: decision\ntitle: Banker's rounding for money amounts\ndate: 2026-04-11\n---\nDecision: keep line amounts exact, add them, and round the total once, with halves to\neven. This is what `src/invoice/round.rs` must do from now on.\n\nWhy: BUG-12 showed that rounding every line lets the errors pile up on long invoices.\n\nRejected: P-3, rounding halves away from zero. It matches what spreadsheets do, but it\nstill rounds every line, so it keeps the drift. Our totals will sometimes differ from a\ncustomer's spreadsheet by a cent, and that is the correct answer.\n\nNot related: BUG-3, which is about the export format, not amounts.\n","type":"text"}]}}
+```
+
+With a key (story 4), Jev ranks each wave's doors. The question goes into Jev's request and
+nowhere else. Every answer is recorded in `.avalanche/decisions.jsonl` and replayed after that,
+so a repeated walk costs nothing. Next to the question, each request also carries what the walk has
+read so far, as one opening sentence for each document read (kappa, K6). `--no-kappa` leaves it out,
+which is the control. The walk's last line gives the cost. On a folder this small,
+Jev's top door was `term:files`, which leads to the export code and not to the rounding:
+
+```console no-test
+$ midb walk "why is the invoice a cent off?" --reads 12
+walk: 12 documents; decider jev (jev-1.13.0), kappa K6; opens 1 door a wave
+   1  notes/SUP-88.md#1            search      "notes/SUP-88.md"
+      notes/SUP-88.md (bytes 0-269)
+   2  notes/BUG-12.md#1            search      "notes/BUG-12.md"
+      notes/BUG-12.md (bytes 0-300)
+   3  notes/ADR-007.md#1           search      "notes/ADR-007.md"
+      notes/ADR-007.md (bytes 0-641)
+   4  repo/src/invoice/round.rs#1  search      "repo/src/invoice/round.rs"
+      repo/src/invoice/round.rs (bytes 0-224)
+   5  repo/src/invoice/total.rs#1  search      "repo/src/invoice/total.rs"
+      repo/src/invoice/total.rs (bytes 0-58)
+   6  make.sh#1                    search      "make.sh"
+      make.sh (bytes 0-2008)
+   7  files/round-v3.rs#1          search      "files/round-v3.rs"
+      files/round-v3.rs (bytes 0-224)
+   8  notes/BUG-3.md#1             search      "notes/BUG-3.md"
+      notes/BUG-3.md (bytes 0-187)
+   9  notes/P-3.md#1               search      "notes/P-3.md"
+      notes/P-3.md (bytes 0-283)
+  10  files/csv-v1.rs#1            term:files  "files/csv-v1.rs"
+      files/csv-v1.rs (bytes 0-109)
+  11  files/csv-v2.rs#1            term:files  "files/csv-v2.rs"
+      files/csv-v2.rs (bytes 0-125)
+  12  files/csv-v3.rs#1            term:files  "files/csv-v3.rs"
+      files/csv-v3.rs (bytes 0-148)
+wave 1: 54 doors in 1 request (0 replayed, 1 sent); opened term:files
+jev: 1 request (0 replayed, 1 sent), 5986 input tokens, $0.0003
+```
+
+`--json` prints the same walk as JSON: each document's id, title, location, how it was
+reached and its wave, then each wave's doors, requests and cost.
 

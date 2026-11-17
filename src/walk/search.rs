@@ -86,3 +86,40 @@ pub fn show(hits: &[Hit]) -> String {
     }
     out + &format!("{} records share a word with the question{}\n", hits.len(), if hits.len() > 5 { "; the best 5 shown" } else { "" })
 }
+
+/// The same BM25 over texts the caller holds (a document's title and body, say): (id, score), best first, ties by
+/// id; only texts sharing a word with the question.
+pub fn rank_texts(texts: &[(String, String)], words: &str) -> Vec<(String, f64)> {
+    let q = terms(words);
+    let docs: Vec<(&String, Vec<String>)> = texts.iter().map(|(id, t)| (id, terms(t))).collect();
+    let n = docs.len() as f64;
+    let avg = docs.iter().map(|d| d.1.len()).sum::<usize>() as f64 / n.max(1.0);
+    let mut df: HashMap<&str, f64> = HashMap::new();
+    for d in &docs {
+        let mut seen: Vec<&str> = d.1.iter().map(String::as_str).collect();
+        seen.sort();
+        seen.dedup();
+        for w in seen {
+            *df.entry(w).or_default() += 1.0;
+        }
+    }
+    let (k1, b) = (1.2, 0.75);
+    let mut hits = vec![];
+    for (id, toks) in &docs {
+        let mut tf: BTreeMap<&str, f64> = BTreeMap::new();
+        for w in toks {
+            *tf.entry(w).or_default() += 1.0;
+        }
+        let mut score = 0.0;
+        for w in &q {
+            let Some(f) = tf.get(w.as_str()) else { continue };
+            let idf = ((n - df[w.as_str()] + 0.5) / (df[w.as_str()] + 0.5) + 1.0).ln();
+            score += idf * f * (k1 + 1.0) / (f + k1 * (1.0 - b + b * toks.len() as f64 / avg));
+        }
+        if score > 0.0 {
+            hits.push(((*id).clone(), score));
+        }
+    }
+    hits.sort_by(|a, b| b.1.total_cmp(&a.1).then(a.0.cmp(&b.0)));
+    hits
+}

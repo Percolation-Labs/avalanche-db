@@ -225,6 +225,91 @@ impl Model {
     }
 }
 
+/// One recorded or fresh answer to a request sent as exact bytes.
+pub struct RawAnswer {
+    pub response: Value,
+    pub replayed: bool,
+}
+
+/// At most this many requests in flight at once, as the lab's `jevcache.ask_all` (CONCURRENCY = 16).
+pub const CONCURRENCY: usize = 16;
+
+fn call_body(key: &str, body: &str) -> Result<Value> {
+    let r = ureq::post(ENDPOINT).set("Authorization", &format!("Bearer {key}")).set("Content-Type", "application/json").send_string(body);
+    match r {
+        Ok(r) => Ok(r.into_json()?),
+        Err(ureq::Error::Status(code, r)) => Err(format!("{ENDPOINT}: {code} {}", r.into_string().unwrap_or_default()).into()),
+        Err(e) => Err(e.into()),
+    }
+}
+
+/// The sha256 of a request's exact bytes: its key in decisions.jsonl.
+pub fn body_key(body: &str) -> String {
+    Sha256::digest(body.as_bytes()).iter().map(|b| format!("{b:02x}")).collect()
+}
+
+impl Model {
+    /// The model's name, as requests carry it.
+    pub fn name(&self) -> &str {
+        &self.model
+    }
+
+    /// Whether a key is held, so a request not yet recorded can be sent.
+    pub fn has_key(&self) -> bool {
+        self.key.is_some() && self.provider != "claude"
+    }
+
+    /// Whether every body is already recorded.
+    pub fn recorded_all(&self, bodies: &[String]) -> bool {
+        bodies.iter().all(|b| self.recorded.contains_key(&body_key(b)))
+    }
+
+    /// Send requests built by the caller as exact bytes: replayed when recorded, else sent together, at most
+    /// CONCURRENCY at once, and each fresh answer recorded under the sha256 of its body. None when one is not
+    /// recorded and there is no key (nothing is sent then). The decision model only: the stand-in is refused.
+    pub fn ask_bodies(&mut self, bodies: &[String]) -> Result<Option<Vec<RawAnswer>>> {
+        let keys: Vec<String> = bodies.iter().map(|b| body_key(b)).collect();
+        let miss: Vec<usize> = (0..bodies.len()).filter(|&i| !self.recorded.contains_key(&keys[i])).collect();
+        if !miss.is_empty() {
+            if self.provider == "claude" {
+                return Err("refused: a batch of door rankings is never sent to Claude; set the decision model's key".into());
+            }
+            let Some(k) = self.key.clone() else { return Ok(None) };
+            let mut got: Vec<(usize, Result<Value>)> = vec![];
+            for chunk in miss.chunks(CONCURRENCY) {
+                let answers: Vec<(usize, Result<Value>)> = std::thread::scope(|s| {
+                    let hs: Vec<_> = chunk.iter().map(|&i| {
+                        let (k, b) = (&k, &bodies[i]);
+                        (i, s.spawn(move || call_body(k, b).map_err(|e| e.to_string())))
+                    }).collect();
+                    hs.into_iter().map(|(i, h)| (i, h.join().unwrap_or_else(|_| Err("a request thread panicked".into())).map_err(|e| e.into()))).collect()
+                });
+                got.extend(answers);
+            }
+            if let Some(d) = self.path.parent() {
+                std::fs::create_dir_all(d)?;
+            }
+            let mut f = std::fs::OpenOptions::new().create(true).append(true).open(&self.path)?;
+            let mut first_err = None;
+            for (i, r) in got {
+                match r {
+                    Ok(r) => {
+                        let request: Value = serde_json::from_str(&bodies[i])?;
+                        let line = json!({"key": keys[i], "request": request, "response": r});
+                        writeln!(f, "{line}")?;
+                        self.recorded.insert(keys[i].clone(), line);
+                    }
+                    Err(e) => first_err = first_err.or(Some(e)),
+                }
+            }
+            if let Some(e) = first_err {
+                return Err(e);
+            }
+        }
+        Ok(Some(keys.iter().enumerate().map(|(i, h)| RawAnswer { response: self.recorded[h]["response"].clone(), replayed: !miss.contains(&i) }).collect()))
+    }
+}
+
 #[cfg(test)]
 mod tests {
     use super::claude_budget;
