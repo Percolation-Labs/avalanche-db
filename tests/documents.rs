@@ -11,8 +11,8 @@ fn midb(dir: &Path, args: &[&str]) -> String {
     String::from_utf8_lossy(&out.stdout).into_owned()
 }
 
-fn folder() -> PathBuf {
-    let dir = std::env::temp_dir().join(format!("midb-documents-{}", std::process::id()));
+fn folder(name: &str) -> PathBuf {
+    let dir = std::env::temp_dir().join(format!("midb-documents-{name}-{}", std::process::id()));
     let _ = std::fs::remove_dir_all(&dir);
     std::fs::create_dir_all(dir.join("notes")).unwrap();
     let w = |p: &str, t: &str| std::fs::write(dir.join(p), t).unwrap();
@@ -26,7 +26,7 @@ fn folder() -> PathBuf {
 
 #[test]
 fn a_folder_becomes_passages_doors_and_a_full_text_search() {
-    let dir = folder();
+    let dir = folder("passages");
     let said = midb(&dir, &["ingest"]);
     assert!(said.starts_with("documents notes"), "{said}");
     assert!(said.contains("4 passages"), "{said}");
@@ -64,5 +64,22 @@ fn a_deep_path_is_stored_and_read_back() {
     assert!(midb(&dir, &["ingest"]).contains("2 passages"));
     let doors = midb(&dir, &["doors", "near.md#1"]);
     assert!(doors.contains("A passage far down the tree"), "{doors}");
+    std::fs::remove_dir_all(&dir).unwrap();
+}
+
+#[test]
+fn a_reingest_writes_only_what_changed() {
+    let dir = folder("reingest");
+    midb(&dir, &["ingest"]);
+    // unchanged files: nothing to write
+    let again = midb(&dir, &["ingest"]);
+    assert!(again.contains("4 passages →  0 facts"), "{again}");
+    // the export note loses SheetWriter and gains RoundingPolicy: the old name is retracted, the new one asserted
+    std::fs::write(dir.join("notes/export.md"), "# Export\n\nThe spreadsheet export writes each invoice total with its currency symbol, through RoundingPolicy.\n").unwrap();
+    let changed = midb(&dir, &["ingest"]);
+    assert!(!changed.contains(" 0 facts"), "{changed}");
+    let doors = midb(&dir, &["doors", "support.md#1"]);
+    assert!(doors.contains("term 'roundingpolicy' · 2 unread"), "{doors}");
+    assert!(!doors.contains("SheetWriter"), "{doors}");
     std::fs::remove_dir_all(&dir).unwrap();
 }

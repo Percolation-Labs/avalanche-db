@@ -33,6 +33,10 @@ enum Cmd {
         /// Append a JSON-lines file of typed facts instead
         #[arg(long)]
         facts: Option<PathBuf>,
+        /// Bring your own files: add this folder, repository or .jsonl as a `documents` source (creating the
+        /// config and store when there are none) and ingest it
+        #[arg(long)]
+        documents: Option<String>,
     },
     /// Set or check the decision model's key
     Key {
@@ -257,7 +261,13 @@ fn run(cli: Cli) -> Result<()> {
             let ids: Vec<String> = cfg.ids.iter().map(|(k, v)| format!("{k} {v}")).collect();
             println!("  ids: {}", if ids.is_empty() { "none found".into() } else { ids.join(", ") });
         }
-        Cmd::Ingest { sources, facts } => {
+        Cmd::Ingest { mut sources, facts, documents } => {
+            if let Some(p) = documents {
+                if Config::add_documents(dir, &p)? {
+                    println!("added a documents source for {p} to {FILE}");
+                }
+                sources = vec![p];
+            }
             let started = std::time::Instant::now();
             let (cfg, store, t) = open(dir)?;
             let mut all = vec![];
@@ -278,7 +288,7 @@ fn run(cli: Cli) -> Result<()> {
                             None => ingest::markdown(&dir.join(&src.path), &at, &cfg)?,
                         },
                         "percolate" => ingest::percolate(&dir.join(&src.path), &at, &cfg)?,
-                        "documents" => avalanche::construct::documents::documents(&dir.join(&src.path), &at)?,
+                        "documents" => avalanche::construct::documents::documents(&dir.join(&src.path), &at, &store, t)?,
                         "github" => ingest::github(src.repo.as_deref().ok_or("a github source needs repo = \"owner/name\"")?, &cfg)?,
                         other => return Err(format!("{other}: no such adapter").into()),
                     };
