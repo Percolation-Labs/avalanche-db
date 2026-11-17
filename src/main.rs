@@ -49,7 +49,20 @@ enum Cmd {
         since: Option<String>,
     },
     /// The circle: records whose labels share words with the question
-    Search { words: Vec<String> },
+    Search {
+        words: Vec<String>,
+        /// Search the ingested documents' full text (BM25) instead of labels
+        #[arg(long)]
+        text: bool,
+    },
+    /// The doors one ingested passage opens, as the D6 door shows them to a decider
+    Doors {
+        /// A passage id, as `midb search --text` prints it (`README.md#2`, `commit/1a2b3c4d5e`)
+        doc: String,
+        /// Terms held by more passages than this raise no door (the walk's cap)
+        #[arg(long, default_value_t = 100)]
+        cap: usize,
+    },
     /// Run a P8QL statement (specs/p8ql.md): each clause is one walk step
     Query {
         statement: Vec<String>,
@@ -265,6 +278,7 @@ fn run(cli: Cli) -> Result<()> {
                             None => ingest::markdown(&dir.join(&src.path), &at, &cfg)?,
                         },
                         "percolate" => ingest::percolate(&dir.join(&src.path), &at, &cfg)?,
+                        "documents" => avalanche::construct::documents::documents(&dir.join(&src.path), &at)?,
                         "github" => ingest::github(src.repo.as_deref().ok_or("a github source needs repo = \"owner/name\"")?, &cfg)?,
                         other => return Err(format!("{other}: no such adapter").into()),
                     };
@@ -331,7 +345,26 @@ fn run(cli: Cli) -> Result<()> {
                 None => println!("nothing new to write"),
             }
         }
-        Cmd::Search { words } => {
+        Cmd::Doors { doc, cap } => {
+            let (_, store, t) = open(dir)?;
+            let mut g = avalanche::walk::lab::Graph::open_items(&store, t)?;
+            let mut d6 = avalanche::walk::d6::D6::new(dir);
+            for door in avalanche::walk::d6::doors_of(&mut g, &doc, cap)? {
+                println!("{}\n  {}\n", door.key, d6.lines(&door, &mut g)?.join("\n  "));
+            }
+        }
+        Cmd::Search { words, text: true } => {
+            let (_, store, t) = open(dir)?;
+            let mut g = avalanche::walk::lab::Graph::open_items(&store, t)?;
+            let ft = avalanche::walk::text::FullText::build(&mut g, &mut avalanche::construct::documents::Reader::new(dir))?;
+            let hits = ft.search(&words.join(" "));
+            for (d, s) in hits.iter().take(10) {
+                let title = g.values(d, Pred::Label)?.into_iter().next().unwrap_or_default();
+                println!("  {d:<40}  {:<60}  {s:.2}", avalanche::model::short(&title, 60));
+            }
+            println!("{} passages share a word with the question; the best {} shown", hits.len(), hits.len().min(10));
+        }
+        Cmd::Search { words, .. } => {
             let (_, store, t) = open(dir)?;
             let head = store.head(t)?;
             print!("{}", search::show(&search::search(&store, t, &words.join(" "), head, None)?));

@@ -122,6 +122,38 @@ impl<'a> Graph<'a> {
         Ok(Graph { store, t, as_of, keys, cost, terms: HashMap::new(), post: HashMap::new(), lists: HashMap::new() })
     }
 
+    /// The passages a `documents` source wrote into a tenant (its `item:` nodes), at the tenant's head. Other nodes
+    /// in the tenant (commits, notes) are not documents the walk reads.
+    pub fn open_items(store: &'a Store, t: u32) -> Result<Graph<'a>> {
+        let as_of = store.head(t)?;
+        let mut cost = ScanCost::default();
+        let mut keys = HashSet::new();
+        for (s, _, _) in store.by_pred(t, Pred::Label, as_of, &mut cost)? {
+            let name = store.name(t, s)?;
+            if let Some(d) = name.strip_prefix("item:") {
+                keys.insert(d.to_string());
+            }
+        }
+        if keys.is_empty() {
+            return Err("no documents in this store: add a `documents` source and run `midb ingest`".into());
+        }
+        Ok(Graph { store, t, as_of, keys, cost, terms: HashMap::new(), post: HashMap::new(), lists: HashMap::new() })
+    }
+
+    /// Every document the graph holds, sorted.
+    pub fn docs(&self) -> Vec<String> {
+        let mut v: Vec<String> = self.keys.iter().cloned().collect();
+        v.sort();
+        v
+    }
+
+    /// A document's literal values under `pred` (`label`, `pointer`, `named`), without the `lit:` prefix.
+    pub fn values(&mut self, doc: &str, pred: Pred) -> Result<Vec<String>> {
+        let Some(id) = self.store.id(self.t, &item(doc))? else { return Ok(vec![]) };
+        let edges = self.store.edges(self.t, id, Dir::Out, self.as_of, None, &mut self.cost)?;
+        edges.into_iter().filter(|e| e.pred == pred).map(|e| self.store.name(self.t, e.other).map(|n| n.trim_start_matches("lit:").to_string())).collect()
+    }
+
     fn names(&mut self, node: &str, dir: Dir, pred: Pred) -> Result<Vec<String>> {
         let Some(id) = self.store.id(self.t, node)? else { return Ok(vec![]) };
         let edges = self.store.edges(self.t, id, dir, self.as_of, None, &mut self.cost)?;
