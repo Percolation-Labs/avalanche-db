@@ -16,15 +16,15 @@
 //!   names   capitalised runs of one to four words that do not open a sentence, and code identifiers (snake_case,
 //!           CamelCase, a::b), less those held by more than one passage in twenty
 
-use std::collections::{BTreeMap, BTreeSet, HashMap};
+use std::collections::{BTreeMap, BTreeSet, HashMap, HashSet};
 use std::path::{Path, PathBuf};
 use std::process::Command;
 
 use super::ingest::Ingested;
 use crate::model::{lit, FactIn, Pred};
+use crate::store::Store;
 use crate::Result;
 
-const GRAPH: &str = "documents";
 /// A passage is cut at about this many characters, on a paragraph or line boundary.
 const CHUNK: usize = 1200;
 const NEAR: usize = 5;
@@ -349,7 +349,7 @@ pub fn passages(root: &Path, at: &str) -> Result<Vec<Passage>> {
 }
 
 /// The facts for a set of passages: the graph the walk reads, and the D6 door's data.
-pub fn facts(ps: &[Passage]) -> Result<Vec<FactIn>> {
+pub fn facts(ps: &[Passage], graph: &str) -> Result<Vec<FactIn>> {
     let held: Vec<BTreeSet<String>> = ps.iter().map(|p| terms(&format!("{}\n{}", p.title, p.text))).collect();
     let mut df: HashMap<&str, usize> = HashMap::new();
     for ts in &held {
@@ -375,13 +375,13 @@ pub fn facts(ps: &[Passage]) -> Result<Vec<FactIn>> {
         if lit(&p.pointer) != format!("lit:{}", p.pointer) {
             return Err(format!("{}: the pointer {:?} is too long to store; use a shorter source path", p.id, p.pointer).into());
         }
-        facts.push(with(FactIn::new(&me, Pred::Label, lit(if p.title.is_empty() { &p.id } else { &p.title }), GRAPH), p.at));
-        facts.push(with(FactIn::new(&me, Pred::Pointer, lit(&p.pointer), GRAPH), p.at));
+        facts.push(with(FactIn::new(&me, Pred::Label, lit(if p.title.is_empty() { &p.id } else { &p.title }), graph), p.at));
+        facts.push(with(FactIn::new(&me, Pred::Pointer, lit(&p.pointer), graph), p.at));
         for t in ts.iter().filter(|t| df[t.as_str()] >= 2 && lit(t) == format!("lit:{t}")) {
-            facts.push(with(FactIn::new(&me, Pred::Tagged, format!("lit:{t}"), GRAPH), p.at));
+            facts.push(with(FactIn::new(&me, Pred::Tagged, format!("lit:{t}"), graph), p.at));
         }
         for n in named[i].iter().filter(|n| name_df[n.as_str()] <= common).take(40) {
-            facts.push(with(FactIn::new(&me, Pred::Named, lit(n), GRAPH), p.at));
+            facts.push(with(FactIn::new(&me, Pred::Named, lit(n), graph), p.at));
         }
     }
     // beside: both ways along each file or history
@@ -394,7 +394,7 @@ pub fn facts(ps: &[Passage]) -> Result<Vec<FactIn>> {
     }
     for (d, xs) in &beside {
         for x in xs {
-            facts.push(FactIn::new(item(d), Pred::Beside, item(x), GRAPH));
+            facts.push(FactIn::new(item(d), Pred::Beside, item(x), graph));
         }
     }
     // near: tf-idf cosine over unigram content words, candidates through terms held by at most NEAR_DF passages
@@ -441,20 +441,41 @@ pub fn facts(ps: &[Passage]) -> Result<Vec<FactIn>> {
         let mut best: Vec<(usize, f64)> = score.into_iter().filter(|&(_, s)| s >= NEAR_MIN).collect();
         best.sort_by(|a, b| b.1.total_cmp(&a.1).then(ps[a.0].id.cmp(&ps[b.0].id)));
         for (j, _) in best.into_iter().take(NEAR) {
-            facts.push(FactIn::new(item(&ps[i].id), Pred::Near, item(&ps[j].id), GRAPH));
+            facts.push(FactIn::new(item(&ps[i].id), Pred::Near, item(&ps[j].id), graph));
         }
     }
     Ok(facts)
 }
 
-/// The adapter: passages, then their facts.
-pub fn documents(root: &Path, at: &str) -> Result<Ingested> {
+/// The graph one documents source writes: its facts are kept apart, so a re-ingest compares with its own only.
+pub fn graph_of(at: &str) -> String {
+    format!("documents:{at}")
+}
+
+/// The adapter: passages, then their facts, less what the store already holds for this source. A re-ingest of
+/// unchanged files writes nothing; a changed file's old facts are retracted and its new ones asserted, so a walk at
+/// the new head never sees a term or link the files no longer have (and one pinned to an older transaction still
+/// does).
+pub fn documents(root: &Path, at: &str, store: &Store, t: u32) -> Result<Ingested> {
     let ps = passages(root, at)?;
     if ps.is_empty() {
         return Err(format!("{}: no passages found (text, markdown or code files, or a .jsonl of {{id, title, text}})", root.display()).into());
     }
-    let facts = facts(&ps)?;
-    Ok(Ingested { facts, read: (ps.len(), "passages") })
+    let graph = graph_of(at);
+    let new = facts(&ps, &graph)?;
+    let held: HashSet<(String, String, String)> =
+        store.graph_facts(t, &graph, store.head(t)?)?.into_iter().map(|(s, p, o)| (s, p.name().to_string(), o)).collect();
+    let wanted: HashSet<(String, String, String)> = new.iter().map(|f| (f.s.clone(), f.p.clone(), f.o.clone())).collect();
+    let mut out: Vec<FactIn> = new.into_iter().filter(|f| !held.contains(&(f.s.clone(), f.p.clone(), f.o.clone()))).collect();
+    let mut gone: Vec<&(String, String, String)> = held.iter().filter(|k| !wanted.contains(*k)).collect();
+    gone.sort();
+    for (s, p, o) in gone {
+        let pred = Pred::from_name(p).ok_or_else(|| format!("{p}: not a predicate"))?;
+        let mut f = FactIn::new(s, pred, o, &graph);
+        f.retract = true;
+        out.push(f);
+    }
+    Ok(Ingested { facts: out, read: (ps.len(), "passages") })
 }
 
 /// A passage's text, read back through its pointer. `dir` is the folder holding avalanche.toml, against which a

@@ -259,6 +259,30 @@ impl Store {
     }
 
     /// Facts per graph as of `as_of`, from GSPO.
+    /// The facts asserted in a graph (its name without `graph:`) at `as_of`, by name: what a re-ingest of one source
+    /// compares itself with.
+    pub fn graph_facts(&self, tenant: u32, graph: &str, as_of: u64) -> Result<Vec<(String, Pred, String)>> {
+        let Some(g) = self.graph_id(tenant, graph)? else { return Ok(vec![]) };
+        let r = self.db.begin_read()?;
+        let t = r.open_table(GSPO)?;
+        let mut latest: BTreeMap<(u64, u64, u64), u8> = BTreeMap::new();
+        for row in t.range((tenant, g, 0, 0, 0, 0)..=(tenant, g, u64::MAX, u64::MAX, u64::MAX, u64::MAX))? {
+            let (k, v) = row?;
+            let (_, _, s, p, o, tx) = k.value();
+            if tx <= as_of {
+                latest.insert((s, p, o), v.value().0);
+            }
+        }
+        let mut out = vec![];
+        for ((s, p, o), op) in latest {
+            if op == ASSERT {
+                let pred = Pred::from_id(p).ok_or_else(|| format!("predicate id {p} is not known"))?;
+                out.push((self.name(tenant, s)?, pred, self.name(tenant, o)?));
+            }
+        }
+        Ok(out)
+    }
+
     pub fn graph_size(&self, tenant: u32, graph: u64, as_of: u64) -> Result<u64> {
         let r = self.db.begin_read()?;
         let t = r.open_table(GSPO)?;

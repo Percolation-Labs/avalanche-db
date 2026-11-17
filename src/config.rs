@@ -141,6 +141,35 @@ impl Config {
         Ok(Config { tenant: "me".into(), sources, ids, model: ModelCfg::default(), paths: default_paths() })
     }
 
+    /// Make sure `dir` has a config and a store, and that `path` is one of its `documents` sources: the one step a
+    /// person (`midb ingest --documents PATH`) or an agent (the MCP ingest tool) takes to bring their own files.
+    /// The source is appended to avalanche.toml as text, so the file's comments and order are kept. Returns whether it
+    /// was added (false when it was already there).
+    pub fn add_documents(dir: &Path, path: &str) -> Result<bool> {
+        // the source path is carried by every passage's pointer, and a stored value is cut at 120 characters
+        if path.chars().count() > 80 {
+            return Err(format!("{path}: a source path of more than 80 characters; run midb in the folder, or one above it").into());
+        }
+        if !dir.join(path).exists() {
+            return Err(format!("{path}: no such folder or file under {}", dir.display()).into());
+        }
+        let file = dir.join(FILE);
+        if !file.exists() {
+            let cfg = Config { tenant: "me".into(), sources: vec![], ids: BTreeMap::new(), model: ModelCfg::default(), paths: default_paths() };
+            std::fs::write(&file, cfg.to_toml())?;
+        }
+        std::fs::create_dir_all(dir.join(DIR))?;
+        let cfg = Config::load(dir)?;
+        if cfg.sources.iter().any(|s| s.adapter == "documents" && s.path == Path::new(path)) {
+            return Ok(false);
+        }
+        let mut text = std::fs::read_to_string(&file)?;
+        text += &format!("\n[[source]]\nadapter = \"documents\"   # passages, their terms, near and beside links, and names\npath = \"{path}\"\n");
+        std::fs::write(&file, text)?;
+        Config::load(dir)?;
+        Ok(true)
+    }
+
     pub fn to_toml(&self) -> String {
         let mut s = format!("tenant = \"{}\"\n", self.tenant);
         for src in &self.sources {
