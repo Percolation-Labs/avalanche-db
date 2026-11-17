@@ -62,3 +62,26 @@ The 100 dev cards (`dev/cards-dev.jsonl`), none in the test's 150.
 - **If it passes**, the pick becomes D6's default and the result is posted beside the first run, which still
   stands.
 - **If it fails**, the result is posted with a postmortem.
+
+## Amendment 2, 17 Nov ~21:40Z, before any run with it: the read order inside an opened door
+
+**Why.** The L1k dev slice failed (RESULT.md, last section). Jev opened the id door on 72 of 100 dev cards, but the
+walk read its targets in sorted-id order, and 281 of the 343 reads were `board/cards/...`.
+
+**Candidates.** None sees the question, and each is a fixed default if it wins.
+
+| | within an opened door |
+|---|---|
+| **graph** (today) | the targets in sorted-id order |
+| **postings** | fewest terms first, the id the tie (the walk's existing option) |
+| **shown** | what D6 showed, in its order: today's snippet, then the leads, then every other target in lead order |
+
+**$0 step, dev cards.**
+- The k=10 walk's settings, seeds 5, the I1 store, L1k doors.
+- The oracle's recall@10 for each candidate. The oracle opens gold doors, so this measures what the within-door
+  order reads.
+- The search-order walk is reported beside it.
+- The pick is the highest oracle recall@10. Within .01 of it, `graph` stays, being today's order.
+
+**Jev step.** The MCP walk at k=10 on the 100 dev cards with I1, L1k and the pick, against L0 as merged (.380, already
+run). It goes forward only if it is higher. Then the test, as registered above, cap $1.
