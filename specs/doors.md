@@ -99,6 +99,10 @@ The caller sets the budget:
 
 - `waves` and `wave`: the walk reads at most `wave` documents per wave, `waves` times.
 - `open`: at most this many doors opened per wave (default: no limit beyond the reads).
+- `door_reads`: at most this many of a wave's reads go through doors (default: no limit beyond
+  the reads). Once reached, the rest of the wave is search's and no further door opens; an
+  opened door's unread targets wait for the next wave. It bounds the share of reads doors take
+  from search, whatever the number of doors (p8-subsystems `door-budget-guard`).
 
 Each wave opens the top of the ranking, in order, until the wave's reads or its `open` cap run
 out. The opening order is `order`:

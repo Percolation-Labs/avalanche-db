@@ -194,6 +194,20 @@ fn per_door_caps_the_reads_one_door_spends() {
     }
 }
 
+/// specs/doors.md, budget: `door_reads` caps the reads one wave spends through doors; the rest of the wave is search.
+#[test]
+fn door_reads_caps_a_waves_reads_through_doors() {
+    let all = walk(&mut fixed(), &mut GraphStats, serde_json::json!({}));
+    let through = |w: &lab::Walk, wave: u32| w.reads.iter().filter(|r| r.wave == wave && r.via.as_deref() != Some("search")).count();
+    let most = (1..=6).map(|v| through(&all, v)).max().unwrap();
+    assert!(most > 2, "the fixture walk must read more than 2 documents through doors in some wave");
+    let w = walk(&mut fixed(), &mut GraphStats, serde_json::json!({"door_reads": 2}));
+    assert!((1..=6).all(|v| through(&w, v) <= 2), "door_reads 2: a wave read more than 2 documents through doors");
+    assert_eq!(w.reads.len(), all.reads.len(), "door_reads gives the wave's reads to search, it does not shorten the walk");
+    let none = walk(&mut fixed(), &mut GraphStats, serde_json::json!({"door_reads": null}));
+    assert_eq!(none.reads.iter().map(|r| &r.doc).collect::<Vec<_>>(), all.reads.iter().map(|r| &r.doc).collect::<Vec<_>>());
+}
+
 #[test]
 fn within_postings_reads_the_same_door_in_another_order() {
     let a = walk(&mut fixed(), &mut GraphStats, serde_json::json!({"per_door": 1}));
