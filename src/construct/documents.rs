@@ -9,7 +9,8 @@
 //!
 //! Construction choices, each a difference from the walk lab's MuSiQue graph that a test must carry:
 //!   terms   content words (stop words out, three letters or more, or a four-digit year) and the two-word phrases of adjacent
-//!           content words; only those held by two passages or more, since a term held once leads nowhere
+//!           content words; only those held by two to TERM_MAX_DF passages: a term held once leads nowhere, and one
+//!           held by more is never a door
 //!   near    the five passages with the highest tf-idf cosine (at least 0.1), not embedding neighbours: the binary
 //!           carries no embedding model
 //!   beside  the passage before and after in the same file; a commit's parents and children
@@ -28,6 +29,10 @@ use crate::Result;
 /// A passage is cut at about this many characters, on a paragraph or line boundary.
 const CHUNK: usize = 1200;
 const NEAR: usize = 5;
+/// A term held by more passages than this is not stored. The walk opens a term door only when the term is held by at
+/// most its `cap` passages (100 by default), so above twice that a term is never a door; on MuSiQue such terms were
+/// 62% of the term facts.
+pub const TERM_MAX_DF: usize = 200;
 const NEAR_MIN: f64 = 0.1;
 /// Terms held by more passages than this are not used to find near candidates (they are too common to say much).
 const NEAR_DF: usize = 50;
@@ -377,7 +382,7 @@ pub fn facts(ps: &[Passage], graph: &str) -> Result<Vec<FactIn>> {
         }
         facts.push(with(FactIn::new(&me, Pred::Label, lit(if p.title.is_empty() { &p.id } else { &p.title }), graph), p.at));
         facts.push(with(FactIn::new(&me, Pred::Pointer, lit(&p.pointer), graph), p.at));
-        for t in ts.iter().filter(|t| df[t.as_str()] >= 2 && lit(t) == format!("lit:{t}")) {
+        for t in ts.iter().filter(|t| (2..=TERM_MAX_DF).contains(&df[t.as_str()]) && lit(t) == format!("lit:{t}")) {
             facts.push(with(FactIn::new(&me, Pred::Tagged, format!("lit:{t}"), graph), p.at));
         }
         for n in named[i].iter().filter(|n| name_df[n.as_str()] <= common).take(40) {
