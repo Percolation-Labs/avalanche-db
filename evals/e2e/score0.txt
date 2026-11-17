@@ -1,0 +1,26 @@
+
+== A MuSiQue: 150 questions
+G0  questions with a gold door and another: 136/150; doors per question 73
+    AUC width 0.575   AUC question-door overlap 0.738   (A requires overlap >= .55)
+recall@5  search 0.409  oracle 0.527  width 0.349  coin 0.356  search-order 0.387
+recall@10 search 0.464  oracle 0.603  width 0.354  coin 0.372  search-order 0.409
+recall@20 search 0.556  oracle 0.707  width 0.363  coin 0.378  search-order 0.446
+full support @10  search 0.140  oracle 0.387  width 0.047  coin 0.073  search-order 0.127
+    oracle        - search  recall@10  +0.139 [+0.092, +0.186]
+    width         - search  recall@10  -0.110 [-0.143, -0.078]
+    coin          - search  recall@10  -0.092 [-0.127, -0.057]
+    search-order  - search  recall@10  -0.054 [-0.088, -0.022]
+G1  oracle - search recall@10 +0.139: PASS (>= .10)
+
+== B p8-subsystems: 150 questions
+G0  questions with a gold door and another: 120/150; doors per question 40
+    AUC width 0.612   AUC question-door overlap 0.707   (A requires overlap >= .55)
+recall@5  search 0.184  oracle 0.281  width 0.094  coin 0.124  search-order 0.148
+recall@10 search 0.291  oracle 0.438  width 0.094  coin 0.148  search-order 0.185
+recall@20 search 0.373  oracle 0.622  width 0.098  coin 0.185  search-order 0.224
+full support @10  search 0.187  oracle 0.327  width 0.040  coin 0.087  search-order 0.113
+    oracle        - search  recall@10  +0.147 [+0.078, +0.218]
+    width         - search  recall@10  -0.197 [-0.251, -0.147]
+    coin          - search  recall@10  -0.143 [-0.196, -0.095]
+    search-order  - search  recall@10  -0.106 [-0.155, -0.059]
+G1  oracle - search recall@10 +0.147: PASS (>= .10)
