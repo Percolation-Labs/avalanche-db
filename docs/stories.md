@@ -755,34 +755,37 @@ nowhere else. Each door is one option, named by its head line (`0_term_round`), 
 measured; `--keys c` names them `c0`, `c1` and so on, the lab's older naming. Every answer is recorded in `.avalanche/decisions.jsonl` and replayed after that,
 so a repeated walk costs nothing. Next to the question, each request also carries what the walk has
 read so far, as one opening sentence for each document read (kappa, K6). `--no-kappa` leaves it out,
-which is the control. The walk's last line gives the cost. Here Jev opened `term:round`
-first, which leads to every version of the rounding code and to the rejected proposal:
+which is the control. The walk's last line gives the cost. Here Jev opened `term:bug 12` first,
+the door for the bug's id (an id such as `BUG-12` is a term). Then it opened `term:f64 i64`, which leads
+to every version of the rounding code, and last `term:see`, which leads to the rejected proposal:
 
 ```console no-test
 $ midb walk "why is the invoice a cent off?"
 walk: 10 documents, 5 from search then one door a wave; decider jev (jev-1.13.0), kappa K6
-   1  notes/SUP-88.md#1            search      "notes/SUP-88.md"
+   1  notes/SUP-88.md#1            search        "notes/SUP-88.md"
       notes/SUP-88.md (bytes 0-269)
-   2  notes/BUG-12.md#1            search      "notes/BUG-12.md"
+   2  notes/BUG-12.md#1            search        "notes/BUG-12.md"
       notes/BUG-12.md (bytes 0-300)
-   3  notes/ADR-007.md#1           search      "notes/ADR-007.md"
+   3  notes/ADR-007.md#1           search        "notes/ADR-007.md"
       notes/ADR-007.md (bytes 0-641)
-   4  repo/src/invoice/round.rs#1  search      "repo/src/invoice/round.rs"
+   4  repo/src/invoice/round.rs#1  search        "repo/src/invoice/round.rs"
       repo/src/invoice/round.rs (bytes 0-224)
-   5  repo/src/invoice/total.rs#1  search      "repo/src/invoice/total.rs"
+   5  repo/src/invoice/total.rs#1  search        "repo/src/invoice/total.rs"
       repo/src/invoice/total.rs (bytes 0-58)
-   6  files/round-v1.rs#1          term:round  "files/round-v1.rs"
-      files/round-v1.rs (bytes 0-62)
-   7  files/round-v2.rs#1          term:round  "files/round-v2.rs"
-      files/round-v2.rs (bytes 0-153)
-   8  files/round-v3.rs#1          term:round  "files/round-v3.rs"
-      files/round-v3.rs (bytes 0-224)
-   9  make.sh#1                    term:round  "make.sh"
+   6  make.sh#1                    term:bug 12   "make.sh"
       make.sh (bytes 0-2008)
-  10  notes/P-3.md#1               term:round  "notes/P-3.md"
+   7  files/round-v1.rs#1          term:f64 i64  "files/round-v1.rs"
+      files/round-v1.rs (bytes 0-62)
+   8  files/round-v2.rs#1          term:f64 i64  "files/round-v2.rs"
+      files/round-v2.rs (bytes 0-153)
+   9  files/round-v3.rs#1          term:f64 i64  "files/round-v3.rs"
+      files/round-v3.rs (bytes 0-224)
+  10  notes/P-3.md#1               term:see      "notes/P-3.md"
       notes/P-3.md (bytes 0-283)
-wave 1: 64 doors in 3 requests (0 replayed, 3 sent); opened term:round
-jev: 3 requests (0 replayed, 3 sent), 11688 input tokens, $0.0005
+wave 1: 67 doors in 3 requests (0 replayed, 3 sent); opened term:bug 12
+wave 2: 16 doors in 1 request (0 replayed, 1 sent); opened term:f64 i64
+wave 3: 2 doors in 1 request (0 replayed, 1 sent); opened term:see
+jev: 5 requests (0 replayed, 5 sent), 15991 input tokens, $0.0007
 ```
 
 `--json` prints the same walk as JSON: each document's id, title, location, how it was
