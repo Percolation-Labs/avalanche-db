@@ -451,6 +451,8 @@ pub struct Reader {
     dir: PathBuf,
     files: HashMap<PathBuf, String>,
     lines: HashMap<PathBuf, Vec<String>>,
+    /// repository → commit → message, read in one `git log` the first time a commit is asked for
+    commits: HashMap<PathBuf, HashMap<String, String>>,
 }
 
 impl Reader {
@@ -489,7 +491,17 @@ impl Reader {
         }
         if let Some(rest) = pointer.strip_prefix("git:") {
             let (path, sha) = rest.rsplit_once('@').ok_or_else(|| format!("{pointer}: no commit"))?;
-            return git(&self.dir.join(path), &["show", "-s", "--format=%B", sha]);
+            let repo = self.dir.join(path);
+            if !self.commits.contains_key(&repo) {
+                // one process for the whole history: a git show per commit took four minutes on 18,509 commits
+                let log = git(&repo, &["log", "--all", "--format=%x1e%H%x1f%B"])?;
+                let m = log.split('\x1e').filter_map(|r| r.split_once('\x1f')).map(|(h, b)| (h.trim().to_string(), b.to_string())).collect();
+                self.commits.insert(repo.clone(), m);
+            }
+            if let Some(b) = self.commits[&repo].get(sha) {
+                return Ok(b.clone());
+            }
+            return git(&repo, &["show", "-s", "--format=%B", sha]);
         }
         Err(format!("{pointer}: not a pointer this reader knows").into())
     }
