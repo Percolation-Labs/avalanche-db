@@ -34,8 +34,16 @@ impl Decider for Width {
 }
 
 fn settings() -> Settings {
-    // three seeds, then doors; reads after the first 20 are not scored
-    serde_json::from_value(serde_json::json!({"seeds": 3, "wave": 10, "waves": 4, "per_wave": 0, "cap": 100})).unwrap()
+    // REGISTERED's probe: three seeds, waves of 10, no search filler; reads after the first 20 are not scored.
+    // E2E_SETTINGS (JSON) overrides any field, for the dev-slice sweep.
+    let mut v = serde_json::json!({"seeds": 3, "wave": 10, "waves": 4, "per_wave": 0, "cap": 100});
+    if let Ok(o) = std::env::var("E2E_SETTINGS") {
+        let o: serde_json::Value = serde_json::from_str(&o).expect("E2E_SETTINGS is JSON");
+        for (k, x) in o.as_object().unwrap() {
+            v[k] = x.clone();
+        }
+    }
+    serde_json::from_value(v).unwrap()
 }
 
 fn main() -> avalanche::Result<()> {
@@ -73,6 +81,38 @@ fn main() -> avalanche::Result<()> {
                 let behind = c.targets.iter().filter(|d| gold.contains(*d)).count();
                 doors.insert(c.key.clone(), serde_json::json!({"kind": c.kind, "width": c.targets.len(), "gold": behind, "text": text}));
             }
+        }
+        if let Ok(cfgs) = std::env::var("E2E_CONFIGS") {
+            let cfgs: Vec<serde_json::Value> = serde_json::from_str(&cfgs).expect("E2E_CONFIGS is a JSON list");
+            for c in cfgs {
+                let name = c["name"].as_str().unwrap().to_string();
+                let mut v = serde_json::json!({"seeds": 3, "wave": 10, "waves": 4, "per_wave": 0, "cap": 100});
+                for (k, x) in c["settings"].as_object().unwrap() {
+                    v[k] = x.clone();
+                }
+                let st: Settings = serde_json::from_value(v)?;
+                let mut walks = serde_json::Map::new();
+                let arms: Vec<(&str, Box<dyn Decider>)> = vec![
+                    ("oracle", Box::new(Oracle(gold.clone()))),
+                    ("width", Box::new(Width)),
+                    ("coin", Box::new(Random(Coin::new(&format!("e2e:{}", q["qid"]))))),
+                    ("search-order", Box::new(SearchOrder::new(&order))),
+                ];
+                let keep = std::env::var("E2E_ARMS").unwrap_or_else(|_| "oracle,width,coin,search-order".into());
+                for (arm, mut dec) in arms.into_iter().filter(|(a, _)| keep.split(',').any(|k| k == *a)) {
+                    let w = if seeds.is_empty() { None } else { Some(run(&mut g, order.clone(), st.clone(), &question, dec.as_mut(), &mut d6)?) };
+                    let mut reads: Vec<(u32, usize, String)> = w.map(|w| w.reads.into_iter().map(|r| (r.wave, r.ord, r.doc)).collect()).unwrap_or_default();
+                    reads.sort();
+                    walks.insert(arm.into(), serde_json::json!(reads.into_iter().map(|r| r.2).take(20).collect::<Vec<_>>()));
+                }
+                let mut gs: Vec<&String> = gold.iter().collect();
+                gs.sort();
+                let row = serde_json::json!({"qid": q["qid"], "search": order.iter().take(20).collect::<Vec<_>>(), "walks": walks, "gold": gs});
+                use std::io::Write as _;
+                let mut f = std::fs::OpenOptions::new().create(true).append(true).open(format!("{out}.{name}.jsonl"))?;
+                writeln!(f, "{row}")?;
+            }
+            continue;
         }
         let mut walks = serde_json::Map::new();
         let arms: Vec<(&str, Box<dyn Decider>)> = vec![

@@ -59,3 +59,126 @@ these 300, because REGISTERED.md fixes the questions.
 - A re-ingest rewrote every fact and never retracted any (#11).
 
 Ingesting p8-subsystems whole takes 101 s and a 2.2 GB store. Size is the next thing to cut.
+
+## The walk's seeds rule, chosen on dev slices (17 Nov, bill, $0)
+
+**Question.** A caller asks for k documents. How many should come from search before the walk opens doors? With
+james's first default of 10 seeds, a walk at k=10 returned exactly search's top 10, so W1 would have been 0 by
+construction (M-20261117-191822-d81b).
+
+**Dev slices.** None of these questions is among the registered 300:
+- 101 MuSiQue questions: `rw_musique.questions`, seed 1119, excluding every used and registered qid
+  (`dev/musique-dev.jsonl`);
+- 100 of the 365 eligible cards not sampled for the test, seed 1119 (`dev/cards-dev.jsonl`).
+
+**Setup.** The probe ran with the walk's own k-mode settings (`dev/kmode-configs.json`):
+- one door a wave, k waves, search only as seeds, a stop at k reads;
+- seeds varied.
+
+Oracle and search-order walks, minus search, at the same k:
+
+| k | seeds | oracle, MuSiQue | oracle, p8 | search-order, MuSiQue | search-order, p8 |
+|---|---|---|---|---|---|
+| 5 | 2 | +.059 | +.100 | −.055 | −.111 |
+| 5 | **3** | **+.090** | +.081 | −.018 | −.117 |
+| 10 | 2 | +.134 | +.158 | −.055 | −.162 |
+| 10 | 3 | +.157 | +.177 | −.014 | −.133 |
+| 10 | **5** | **+.192** | **+.221** | −.020 | −.043 |
+| 10 | 7 | +.158 | +.218 | −.007 | −.035 |
+| 20 | 5 | +.205 | +.267 | −.058 | −.071 |
+| 20 | **10** | **+.229** | **+.310** | −.035 | −.045 |
+| 20 | 15 | +.208 | +.249 | −.011 | −.043 |
+
+**Rule: seeds = ceil(k/2).**
+- It has the highest ceiling at k=10 and k=20 on both corpora, with a floor near the best.
+- At k=5, p8 prefers 2 seeds by .019, and the single rule is kept.
+- An earlier sweep tried capping reads per door at 3, reading inside the door in the graph's order. The cap lowered
+  the oracle at the chosen seeds on both corpora, so there is no cap. It also showed one door a wave matching or
+  beating ranking all doors at once.
+- james set the rule as the walk's default.
+
+**What this changes for the registered run.** G0 and G1 above used the probe's first settings (3 seeds, waves of 10).
+REGISTERED.md says every arm shares the walk's settings at the time of the run, so the control arms (oracle,
+width-only, coin, search-order) are rerun on the registered 300 with the k-mode settings and this rule when the Jev
+walk runs. G1 is checked again then.
+
+**Parity.** `mcp_drive.py` drives `midb mcp` as Claude does (initialize, tools/call walk). With no key it read the
+same documents in the same order as the probe's search-order walk on 4 of 5 dev questions. The fifth differed at
+read 10, because that probe config filled with search after one door. The k-mode configs don't fill.
+
+## The registered run: W1 and W2 (17 Nov, bill)
+
+**Setup.**
+- The walk arm is `mcp_drive.py` on main at 6f34275. It runs `midb mcp`, then `initialize`, then one `tools/call
+  walk` per question and k.
+- The walk's defaults: Jev 1.13.0, D6 doors with F2 keys, K6 as `found`, seeds = ceil(k/2), one door a wave.
+- The control arms are the probe with the same settings (`run-configs.json`), on the same stores and the same 300
+  questions.
+- `score.py` scores both; the output is in `score.txt`.
+- **Spend:** $0.997 on MuSiQue and $1.002 on p8. The p8 run stopped at the registered $1 cap after 103 of the 150
+  questions at k=20, so that row is the 103 completed questions. k=5 and k=10 are complete on both.
+- **Pilot:** 5 questions per corpus at k=10, $0.016, looked at only for price.
+
+| recall@10, paired 95% CI | A: MuSiQue, 150 | B: p8-subsystems, 150 |
+|---|---|---|
+| search | .464 | .291 |
+| **walk** (Jev, through MCP) | **.596** | **.323** |
+| **W1**, walk − search | **+.132 [+.089, +.174], PASS** | **+.032 [−.025, +.088], FAIL** |
+| **W2**, walk − width-only | **+.186 [+.148, +.227], PASS** | **+.139 [+.092, +.189], PASS** |
+| walk − search-order | +.151 [+.112, +.192] | +.087 [+.033, +.141] |
+| walk − coin | +.174 [+.136, +.213] | +.123 [+.074, +.175] |
+| G1 again, oracle − search | +.187 [+.142, +.231] | +.246 [+.176, +.318] |
+| full support @10, walk / search | .353 / .140 | .220 / .187 |
+| last-hop gold @10, walk / search | .507 / .280 | – |
+| k=5, walk − search | +.043 [+.007, +.079] | −.034 [−.082, +.015] |
+| k=20, walk − search | +.120 [+.073, +.167] | +.129 [+.051, +.209] (n=103) |
+
+**On MuSiQue the package does what the brief asks.** A question in, ten documents back: the walk returns the full
+support for a question 2.5 times as often as search (.353 against .140), and it finds the last hop's paragraph, the
+one search can't rank, 1.8 times as often. It gets about 70% of the way from search to the oracle (+.132 of +.187).
+W2 passes, so the gain is Jev reading the doors, not the graph's shape.
+
+**On p8-subsystems W1 fails at the primary budget.** The walk is above search, but the CI includes 0 at k=10. It
+passes W2: Jev reads the doors better than any unread control. At k=20 it clears search, +.129 [+.051, +.209] on the
+103 questions run. The package's claim on a real repository is therefore scoped: at 10 documents, no better than
+search; at 20, better.
+
+## Postmortem: why the repository walk gets 13% of its headroom
+
+**Gains and losses.** At k=10 on p8 the walk finds 29 gold commits that search's top 10 misses, and gives up 25
+that search's ranks 6–10 held. On MuSiQue the same counts are 59 and 13. The oracle's headroom on p8 is the largest
+(+.246), so the doors lead to the answers. The walk doesn't take them.
+
+**The id door is there and is rarely opened.**
+- Search puts the card among the seeds on all 150 questions, because the question is its title.
+- The term door `rem NNNN`, from the card to everything naming its id, exists for most cards.
+- Jev opened it on 6 of 150.
+
+**Mechanism: the door's description doesn't show the commits.** Take REM-1044:
+- Its id door has 14 targets.
+- D6 shows the first snippet, then five leads ordered by how many names each target mentions.
+- On a repository the passages naming the most are board logs, team logs and other cards' logs, so those are the
+  leads.
+- The commit that did the work (`train: a read leg ... (REM-1049)`, beside the gold) appears, but among them.
+- Jev sees a door to board bookkeeping.
+- On MuSiQue, naming many entities marks an informative paragraph. In a repository it marks a list.
+
+**What this is and isn't.** It is a construction finding about D6's lead order on a repository, measured on one
+repository and one question type (card title to the commits that name it). It doesn't show that walking a
+repository can't beat search: the oracle shows it can, by +.246.
+
+**Next, registered before any run:**
+- A lead order that doesn't reward lists, such as fewest names first, or one lead per kind of passage (commit, file,
+  note), chosen on the dev cards only.
+- Then this test's B arm again, on the same 150 cards.
+
+## Differences from the lab's measured setup
+
+Each is carried with the claim:
+- near is tf-idf, not embeddings, and a near door's head says "closest in wording" (james's question,
+  M-20261117-195138-9ac1);
+- names are rule-based, not spaCy;
+- ties are sha-256, not md5.
+
+D6's +.061 and K6's +.046 were measured in the lab. This run measures the package as shipped, not those parts
+separately.

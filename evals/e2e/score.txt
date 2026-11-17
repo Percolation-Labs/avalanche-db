@@ -1,0 +1,49 @@
+
+== A MuSiQue
+k=10  n=150  recall: walk 0.596  search 0.464  oracle 0.651  search-order 0.444  coin 0.422  width 0.409
+        full support: walk 0.353  search 0.140  oracle 0.453  search-order 0.133  coin 0.127  width 0.113
+        walk - search       +0.132 [+0.089, +0.174]  W1 PASS
+        walk - width        +0.186 [+0.148, +0.227]  W2 PASS
+        walk - search-order +0.151 [+0.112, +0.192]
+        walk - coin         +0.174 [+0.136, +0.213]
+        oracle - search       +0.187 [+0.142, +0.231]  G1 PASS
+        last-hop gold recall: walk 0.507  search 0.280  oracle 0.587
+k=5  n=150  recall: walk 0.453  search 0.409  oracle 0.527  search-order 0.387  coin 0.356  width 0.349
+        full support: walk 0.193  search 0.113  oracle 0.267  search-order 0.100  coin 0.053  width 0.047
+        walk - search       +0.043 [+0.007, +0.079]
+        walk - width        +0.104 [+0.074, +0.136]
+        walk - search-order +0.066 [+0.034, +0.099]
+        walk - coin         +0.097 [+0.065, +0.130]
+        oracle - search       +0.117 [+0.078, +0.156]
+        last-hop gold recall: walk 0.340  search 0.240  oracle 0.440
+k=20  n=150  recall: walk 0.676  search 0.556  oracle 0.746  search-order 0.493  coin 0.477  width 0.464
+        full support: walk 0.433  search 0.200  oracle 0.573  search-order 0.180  coin 0.160  width 0.140
+        walk - search       +0.120 [+0.073, +0.167]
+        walk - width        +0.212 [+0.174, +0.251]
+        walk - search-order +0.183 [+0.144, +0.222]
+        walk - coin         +0.199 [+0.163, +0.234]
+        oracle - search       +0.189 [+0.139, +0.239]
+        last-hop gold recall: walk 0.580  search 0.367  oracle 0.680
+
+== B p8-subsystems
+k=10  n=150  recall: walk 0.323  search 0.291  oracle 0.537  search-order 0.236  coin 0.200  width 0.184
+        full support: walk 0.220  search 0.187  oracle 0.420  search-order 0.147  coin 0.113  width 0.100
+        walk - search       +0.032 [-0.025, +0.088]  W1 FAIL
+        walk - width        +0.139 [+0.092, +0.189]  W2 PASS
+        walk - search-order +0.087 [+0.033, +0.141]
+        walk - coin         +0.123 [+0.074, +0.175]
+        oracle - search       +0.246 [+0.176, +0.318]  G1 PASS
+k=5  n=150  recall: walk 0.150  search 0.184  oracle 0.298  search-order 0.148  coin 0.126  width 0.094
+        full support: walk 0.093  search 0.100  oracle 0.220  search-order 0.087  coin 0.067  width 0.040
+        walk - search       -0.034 [-0.082, +0.015]
+        walk - width        +0.056 [+0.027, +0.091]
+        walk - search-order +0.003 [-0.034, +0.040]
+        walk - coin         +0.024 [-0.010, +0.061]
+        oracle - search       +0.114 [+0.051, +0.178]
+k=20  n=103  recall: walk 0.477  search 0.348  oracle 0.713  search-order 0.267  coin 0.267  width 0.258
+        full support: walk 0.350  search 0.223  oracle 0.631  search-order 0.175  coin 0.175  width 0.165
+        walk - search       +0.129 [+0.051, +0.209]
+        walk - width        +0.219 [+0.150, +0.295]
+        walk - search-order +0.209 [+0.140, +0.285]
+        walk - coin         +0.209 [+0.142, +0.282]
+        oracle - search       +0.366 [+0.281, +0.450]
