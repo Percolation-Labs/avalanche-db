@@ -78,7 +78,9 @@ impl D6 {
         ordered
     }
 
-    /// The door's targets in the order its text shows them: today's snippet, then the lead order.
+    /// The order an opened door is read in: today's snippet, then every other target in lead order. Past the snippet
+    /// this is the lead order, not exactly the lines shown: `lines` stops at five leads and skips a lead whose text
+    /// repeats one shown, and such a lead is still read here at its place in lead order (the measured code).
     pub fn shown_order(&mut self, door: &Clue, g: &mut Graph) -> Result<Vec<String>> {
         for d in &door.targets {
             self.doc(d, g)?;
