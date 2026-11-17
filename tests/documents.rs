@@ -11,8 +11,8 @@ fn midb(dir: &Path, args: &[&str]) -> String {
     String::from_utf8_lossy(&out.stdout).into_owned()
 }
 
-fn folder() -> PathBuf {
-    let dir = std::env::temp_dir().join(format!("midb-documents-{}", std::process::id()));
+fn folder(name: &str) -> PathBuf {
+    let dir = std::env::temp_dir().join(format!("midb-documents-{name}-{}", std::process::id()));
     let _ = std::fs::remove_dir_all(&dir);
     std::fs::create_dir_all(dir.join("notes")).unwrap();
     let w = |p: &str, t: &str| std::fs::write(dir.join(p), t).unwrap();
@@ -26,7 +26,7 @@ fn folder() -> PathBuf {
 
 #[test]
 fn a_folder_becomes_passages_doors_and_a_full_text_search() {
-    let dir = folder();
+    let dir = folder("passages");
     let said = midb(&dir, &["ingest"]);
     assert!(said.starts_with("documents notes"), "{said}");
     assert!(said.contains("4 passages"), "{said}");
@@ -64,5 +64,27 @@ fn a_deep_path_is_stored_and_read_back() {
     assert!(midb(&dir, &["ingest"]).contains("2 passages"));
     let doors = midb(&dir, &["doors", "near.md#1"]);
     assert!(doors.contains("A passage far down the tree"), "{doors}");
+    std::fs::remove_dir_all(&dir).unwrap();
+}
+
+#[test]
+fn kappa_is_the_opening_sentences_door_reads_first() {
+    use avalanche::construct::documents::Reader;
+    use avalanche::walk::kappa::k6;
+    use avalanche::walk::lab::{Graph, Read};
+    let dir = folder("kappa");
+    midb(&dir, &["ingest"]);
+    let store = avalanche::store::Store::open(dir.join(".avalanche/store.redb")).unwrap();
+    let t = store.tenant("me").unwrap();
+    let mut g = Graph::open_items(&store, t).unwrap();
+    let read = |doc: &str, ord, via: &str| Read { doc: doc.into(), wave: 1, ord, via: Some(via.into()) };
+    let reads = vec![read("export.md#1", 1, "search"), read("support.md#1", 2, "search"), read("rounding.md#2", 3, "term:roundingpolicy")];
+    let k = k6(&reads, &mut g, &mut Reader::new(&dir)).unwrap();
+    assert_eq!(k.len(), 3);
+    // the door-taken read first, then search's, most recent first
+    assert_eq!(k[0], "rounding.md › Why half-even: Rounding halves away from zero drifts a cent on long invoices, which RoundingPolicy avoids.");
+    assert!(k[1].starts_with("support.md › Support: ") && k[2].starts_with("export.md › Export: "), "{k:?}");
+    drop(g);
+    drop(store);
     std::fs::remove_dir_all(&dir).unwrap();
 }
