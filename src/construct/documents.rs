@@ -179,6 +179,19 @@ pub fn names(text: &str) -> Vec<String> {
     out
 }
 
+/// A passage's text without what its title already says: leading markdown headings, and a first line the title
+/// carries (a commit's subject).
+pub fn body(title: &str, text: &str) -> String {
+    let mut lines = text.lines().skip_while(|l| l.trim().is_empty() || l.trim_start().starts_with('#')).peekable();
+    // the stored title is cut at 120 characters, so a long subject is matched on its opening
+    let opens = |l: &str| title.contains(&l.trim().chars().take(40).collect::<String>());
+    if lines.peek().is_some_and(|l| !l.trim().is_empty() && opens(l)) {
+        lines.next();
+    }
+    let rest = lines.collect::<Vec<_>>().join("\n");
+    if rest.trim().is_empty() { text.to_string() } else { rest.trim().to_string() }
+}
+
 /// The passage's first sentence, at most `n` characters: what a door shows of it.
 pub fn lead(text: &str, n: usize) -> String {
     let flat: String = text.split_whitespace().collect::<Vec<_>>().join(" ");

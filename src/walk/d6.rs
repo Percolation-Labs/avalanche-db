@@ -17,7 +17,7 @@ use sha2::{Digest, Sha256};
 
 use super::doors::{Attrs, DoorLabeller};
 use super::lab::{Clue, Graph};
-use crate::construct::documents::{lead, Reader};
+use crate::construct::documents::{body, lead, Reader};
 use crate::model::Pred;
 use crate::Result;
 
@@ -35,19 +35,6 @@ fn hash(key: &str, doc: &str) -> Vec<u8> {
 
 fn snippet(text: &str, n: usize) -> String {
     text.split_whitespace().collect::<Vec<_>>().join(" ").chars().take(n).collect()
-}
-
-/// A passage's text without what its title already says: leading markdown headings, and a first line the title
-/// carries (a commit's subject).
-fn body(title: &str, text: &str) -> String {
-    let mut lines = text.lines().skip_while(|l| l.trim().is_empty() || l.trim_start().starts_with('#')).peekable();
-    // the stored title is cut at 120 characters, so a long subject is matched on its opening
-    let opens = |l: &str| title.contains(&l.trim().chars().take(40).collect::<String>());
-    if lines.peek().is_some_and(|l| !l.trim().is_empty() && opens(l)) {
-        lines.next();
-    }
-    let rest = lines.collect::<Vec<_>>().join("\n");
-    if rest.trim().is_empty() { text.to_string() } else { rest.trim().to_string() }
 }
 
 impl D6 {
@@ -172,8 +159,8 @@ pub fn doors_of(g: &mut Graph, doc: &str, cap: usize) -> Result<Vec<Clue>> {
 mod tests {
     #[test]
     fn body_drops_what_the_title_says() {
-        assert_eq!(super::body("a.md › Part", "## Part\n\nThe part says this."), "The part says this.");
-        assert_eq!(super::body("commit 1a2b3c4: fix rounding", "fix rounding\n\nBanker's rounding, per ADR-007."), "Banker's rounding, per ADR-007.");
-        assert_eq!(super::body("x", "## Only a heading"), "## Only a heading");
+        assert_eq!(crate::construct::documents::body("a.md › Part", "## Part\n\nThe part says this."), "The part says this.");
+        assert_eq!(crate::construct::documents::body("commit 1a2b3c4: fix rounding", "fix rounding\n\nBanker's rounding, per ADR-007."), "Banker's rounding, per ADR-007.");
+        assert_eq!(crate::construct::documents::body("x", "## Only a heading"), "## Only a heading");
     }
 }

@@ -10,5 +10,6 @@ pub mod suite;
 pub mod text;
 pub mod d6;
 pub mod doors;
+pub mod kappa;
 pub mod lab;
 pub mod world;
