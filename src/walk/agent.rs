@@ -1,10 +1,12 @@
 //! THE WALK AN AGENT CALLS: a question in, documents out, each with where its content lives and how the walk
 //! reached it. `midb walk` and the MCP `walk` tool are this function.
 //!
-//! Search's order seeds the walk; each wave the doors the last wave raised are described from the graph alone
-//! (`describe`), ranked by Jev in one batch (`jev`), and the top `budget` doors are opened; the walk stops at
-//! `reads` documents. The settings are the lab's measured best, operator a (#777, #837): one door a wave, 10 seeds,
-//! waves of 50. With no key the doors are ranked by search's order instead, and the result says so.
+//! The caller's `budget` is k, the documents returned. Full-text search picks the first `seeds` (s); the walk then
+//! fills the other k - s through doors: each wave the doors raised so far are described from the graph alone
+//! (`describe`, D6), ranked by Jev in one batch (`jev`), and the best one is opened and read, until k documents are
+//! read. Search reads again only when no door is open. With no key the doors are ranked by search's order instead,
+//! and the result says so. `reads` is the lab's operator a instead (10 seeds, waves of 50 filled by search, one
+//! door a wave, stop at `reads`), the shape the lab's a-k1 walks were recorded in.
 //!
 //! `Corpus` says where the documents and their doors are: the folder's own store, whose `documents` source wrote
 //! passages with their doors at ingestion (labelled by D6, ordered by full-text search), or a lab-imported
@@ -40,10 +42,12 @@ pub enum Corpus {
 
 #[derive(Clone, Debug)]
 pub struct Opts {
-    /// How many of a wave's top-ranked doors are opened.
+    /// k: how many documents the walk returns.
     pub budget: usize,
-    /// The walk stops after this many documents.
-    pub reads: usize,
+    /// s: how many of them full-text search picks before the walk follows doors (3; under `reads`, 10).
+    pub seeds: Option<usize>,
+    /// Operator a, for holding a walk to the lab's recorded ones: waves of 50 filled by search, stop at this many.
+    pub reads: Option<usize>,
     /// Search's order supplied by the caller (to hold a walk to a recorded one); none: the store's own search.
     pub order: Option<Vec<String>>,
     /// The walk's past (K6) in Jev's state as `found` (kappa round 3); off is the control.
@@ -52,7 +56,7 @@ pub struct Opts {
 
 impl Default for Opts {
     fn default() -> Opts {
-        Opts { budget: 1, reads: 100, order: None, kappa: true }
+        Opts { budget: 10, seeds: None, reads: None, order: None, kappa: true }
     }
 }
 
@@ -84,6 +88,7 @@ pub struct AgentWalk {
     pub decider: String,
     pub note: Option<String>,
     pub budget: usize,
+    pub seeds: usize,
     pub documents: Vec<Found>,
     pub waves: Vec<WaveLog>,
     pub requests: usize,
@@ -110,8 +115,8 @@ fn lab_pointer(docs: &Path, id: &str) -> String {
 }
 
 pub fn walk(dir: &Path, corpus: &Corpus, question: &str, o: &Opts) -> Result<AgentWalk> {
-    if o.reads == 0 {
-        return Err("reads is at least 1".into());
+    if o.budget == 0 || o.reads == Some(0) {
+        return Err("a walk returns at least 1 document".into());
     }
     match corpus {
         Corpus::Project => project_walk(dir, question, o),
@@ -132,6 +137,23 @@ fn open_project(dir: &Path) -> Result<(Store, u32)> {
     Ok((store, t))
 }
 
+/// The full-text index of a store at its head, built once per process: an MCP server walks many questions, and on
+/// a large store the build (reading every passage back) is most of a walk's time.
+fn full_text(dir: &Path, store: &Store, t: u32, g: &mut Graph) -> Result<std::sync::Arc<FullText>> {
+    use std::sync::{Arc, Mutex, OnceLock};
+    static CACHE: OnceLock<Mutex<Option<(PathBuf, u64, Arc<FullText>)>>> = OnceLock::new();
+    let key = (std::fs::canonicalize(dir).unwrap_or_else(|_| dir.to_path_buf()), store.head(t)?);
+    let cache = CACHE.get_or_init(|| Mutex::new(None));
+    if let Some((d, h, ft)) = cache.lock().unwrap().as_ref() {
+        if (d, *h) == (&key.0, key.1) {
+            return Ok(ft.clone());
+        }
+    }
+    let ft = Arc::new(FullText::build(g, &mut Reader::new(dir))?);
+    *cache.lock().unwrap() = Some((key.0, key.1, ft.clone()));
+    Ok(ft)
+}
+
 /// The folder's passages, their D6 doors, and full-text search for the seeds and search's order.
 fn project_walk(dir: &Path, question: &str, o: &Opts) -> Result<AgentWalk> {
     let clock = std::time::Instant::now();
@@ -140,7 +162,7 @@ fn project_walk(dir: &Path, question: &str, o: &Opts) -> Result<AgentWalk> {
     let opened = clock.elapsed().as_secs_f64();
     let order = match &o.order {
         Some(v) => v.clone(),
-        None => FullText::build(&mut g, &mut Reader::new(dir))?.search(question).into_iter().map(|(d, _)| d).collect(),
+        None => full_text(dir, &store, t, &mut g)?.search(question).into_iter().map(|(d, _)| d).collect(),
     };
     if order.is_empty() {
         return Err("no passage shares a word with the question".into());
@@ -214,10 +236,21 @@ fn run(dir: &Path, g: &mut Graph, order: Vec<String>, labeller: &mut dyn DoorLab
     let cfg = config(dir)?;
     let mut model = Model::open(dir, &cfg)?;
     let d = Settings::default();
-    // no wave past the one that reaches `reads`, and none at all when the seeds alone are enough
-    let waves = if o.reads <= d.seeds { 0 } else { o.reads.div_ceil(d.wave) as u32 };
-    let s8 = Settings { waves, open: Some(o.budget), ..d };
-    let (w, decider, note, costs) = if o.budget > 0 && model.has_key() {
+    let (k, s8) = match o.reads {
+        // operator a: no wave past the one that reaches `reads`, none when the seeds alone are enough
+        Some(n) => {
+            let seeds = o.seeds.unwrap_or(d.seeds);
+            let waves = if n <= seeds { 0 } else { n.div_ceil(d.wave) as u32 };
+            (n, Settings { waves, seeds, open: Some(1), max_reads: Some(n), ..d })
+        }
+        // k documents: s from search, then one door a wave until k are read; search only when no door is open
+        None => {
+            let k = o.budget;
+            (k, Settings { waves: k as u32, seeds: o.seeds.unwrap_or(3).min(k), wave: 1_000_000, per_wave: 0, open: Some(1), max_reads: Some(k), fill: false, ..d })
+        }
+    };
+    let seeds = s8.seeds;
+    let (w, decider, note, costs) = if model.has_key() {
         let mut jev = JevDecider::new(&mut model);
         let with_kappa = kappa.is_some();
         jev.kappa = kappa;
@@ -225,11 +258,7 @@ fn run(dir: &Path, g: &mut Graph, order: Vec<String>, labeller: &mut dyn DoorLab
         let name = if with_kappa { format!("{}, kappa K6", jev.name()) } else { jev.name() };
         (w, name, None, jev.waves)
     } else {
-        let note = if o.budget == 0 {
-            "budget 0: no door is opened, so the walk is search's order".to_string()
-        } else {
-            format!("no key, so the doors were ranked by search's order, not by Jev; set {} or run `midb key set`", cfg.model.key_env)
-        };
+        let note = format!("no key, so the doors were ranked by search's order, not by Jev; set {} or run `midb key set`", cfg.model.key_env);
         let mut so = SearchOrder::new(&order);
         let w = lab::run(g, order, s8, question, &mut so, labeller)?;
         (w, "search-order".to_string(), Some(note), vec![])
@@ -241,7 +270,7 @@ fn run(dir: &Path, g: &mut Graph, order: Vec<String>, labeller: &mut dyn DoorLab
             opened.iter().rev().find(|k| w.clues.get(**k).is_some_and(|c| c.targets.contains(&r.doc))).map(|k| k.to_string()).unwrap_or_else(|| "search".into())
         })
     };
-    let documents = w.reads.iter().take(o.reads).enumerate().map(|(i, r)| Found {
+    let documents = w.reads.iter().take(k).enumerate().map(|(i, r)| Found {
         rank: i + 1,
         id: r.doc.clone(),
         label: r.doc.clone(),
@@ -259,7 +288,8 @@ fn run(dir: &Path, g: &mut Graph, order: Vec<String>, labeller: &mut dyn DoorLab
         question: question.into(),
         decider,
         note,
-        budget: o.budget,
+        budget: k,
+        seeds,
         documents,
         requests: costs.iter().map(|c| c.requests).sum(),
         replayed: costs.iter().map(|c| c.replayed).sum(),
@@ -276,7 +306,7 @@ impl std::fmt::Display for AgentWalk {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         let doors = |n: usize| format!("{n} door{}", if n == 1 { "" } else { "s" });
         let reqs = |n: usize| format!("{n} request{}", if n == 1 { "" } else { "s" });
-        writeln!(f, "walk: {} documents; decider {}; opens {} a wave", self.documents.len(), self.decider, doors(self.budget))?;
+        writeln!(f, "walk: {} documents, {} from search then one door a wave; decider {}", self.documents.len(), self.seeds, self.decider)?;
         if let Some(n) = &self.note {
             writeln!(f, "note: {n}")?;
         }

@@ -45,11 +45,16 @@ pub struct Settings {
     /// The most reads one wave spends through doors; once reached, the wave's other reads are search's and no
     /// further door opens. Targets an opened door has not read yet stay pending for the next wave. None: no cap.
     pub door_reads: Option<usize>,
+    /// The walk stops once it has read this many documents (the caller's k). None: no cap (today).
+    pub max_reads: Option<usize>,
+    /// Whether search fills a wave once the wave's doors are spent (today). False: a wave that has opened its `open`
+    /// doors ends there, and search reads only when no door is open at all.
+    pub fill: bool,
 }
 
 impl Default for Settings {
     fn default() -> Settings {
-        Settings { waves: 10, wave: 50, seeds: 10, per_wave: 10, cap: 100, gate: None, order: "rank".into(), open: None, within: "graph".into(), per_door: None, door_reads: None }
+        Settings { waves: 10, wave: 50, seeds: 10, per_wave: 10, cap: 100, gate: None, order: "rank".into(), open: None, within: "graph".into(), per_door: None, door_reads: None, max_reads: None, fill: true }
     }
 }
 
@@ -266,7 +271,8 @@ pub fn run(g: &mut Graph, order: Vec<String>, s: Settings, question: &str, decid
         None => decider,
     };
     let mut st = State { s, order, w: Walk::default(), nxt: BTreeMap::new(), reached: HashSet::new(), pending: VecDeque::new(), si: 0, kept: HashSet::new(), rankpos: HashMap::new() };
-    let seeds: Vec<String> = st.order.iter().take(st.s.seeds).filter(|d| g.holds(d)).cloned().collect();
+    let mut seeds: Vec<String> = st.order.iter().take(st.s.seeds).filter(|d| g.holds(d)).cloned().collect();
+    seeds.truncate(st.s.max_reads.unwrap_or(usize::MAX));
     if seeds.is_empty() {
         return Err("no seed: none of search's first documents is in the graph".into());
     }
@@ -283,6 +289,10 @@ pub fn run(g: &mut Graph, order: Vec<String>, s: Settings, question: &str, decid
 
 fn step(g: &mut Graph, st: &mut State, question: &str, decider: &mut dyn Decider, labeller: &mut dyn DoorLabeller) -> Result<bool> {
     let wn = 1 + st.w.reads.iter().map(|r| r.wave).max().unwrap_or(0);
+    if st.s.max_reads.is_some_and(|m| st.w.reads.len() >= m) {
+        st.w.stop = Some(serde_json::json!({"reason": "reads", "wave": wn - 1}));
+        return Ok(false);
+    }
     if wn > st.s.waves {
         st.w.stop = Some(serde_json::json!({"reason": "waves", "wave": wn - 1}));
         return Ok(false);
@@ -347,7 +357,7 @@ fn step(g: &mut Graph, st: &mut State, question: &str, decider: &mut dyn Decider
         *n += 1;
     };
     if wn > 1 {
-        while n < st.s.per_wave.min(target) && st.si < st.order.len() {
+        while n < st.s.per_wave.min(target) && st.si < st.order.len() && !st.s.max_reads.is_some_and(|m| st.w.reads.len() >= m) {
             let doc = st.order[st.si].clone();
             st.si += 1;
             if st.reached.insert(doc.clone()) {
@@ -358,7 +368,7 @@ fn step(g: &mut Graph, st: &mut State, question: &str, decider: &mut dyn Decider
     let mut best: Option<String> = None;
     let mut opened = 0usize;
     let mut through = 0usize; // this wave's reads through doors, for `door_reads`
-    while n < target {
+    while n < target && !st.s.max_reads.is_some_and(|m| st.w.reads.len() >= m) {
         let full = st.s.door_reads.is_some_and(|cap| through >= cap);
         if !full {
             if let Some(doc) = st.pending.pop_front() {
@@ -441,6 +451,9 @@ fn step(g: &mut Graph, st: &mut State, question: &str, decider: &mut dyn Decider
             st.w.travelled.insert(k.clone(), wn);
             best = Some(k);
             continue;
+        }
+        if capped && !st.s.fill {
+            break;
         }
         if st.si >= st.order.len() {
             break;

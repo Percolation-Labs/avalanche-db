@@ -137,12 +137,16 @@ enum Cmd {
     /// The walk an agent calls: the documents a question needs, with where each lives and how the walk reached it
     Walk {
         question: Vec<String>,
-        /// How many of a wave's top-ranked doors are opened
-        #[arg(long, default_value_t = 1)]
+        /// How many documents to return (k)
+        #[arg(long, default_value_t = 10)]
         budget: usize,
-        /// Stop after this many documents
-        #[arg(long, default_value_t = 100)]
-        reads: usize,
+        /// How many of them full-text search picks before the walk follows doors (s; default 3, or 10 with --reads)
+        #[arg(long)]
+        seeds: Option<usize>,
+        /// Expert: the lab's operator a instead (waves of 50 filled by search, one door a wave), stopping at this many
+        /// documents; --budget is then ignored
+        #[arg(long)]
+        reads: Option<usize>,
         /// Print JSON
         #[arg(long)]
         json: bool,
@@ -454,9 +458,9 @@ fn run(cli: Cli) -> Result<()> {
         }
         Cmd::Mcp { action: Some(McpCmd::Install { scope }), corpus } => print!("{}", mcp::install(dir, &corpus.corpus()?, &scope)?),
         Cmd::Mcp { action: None, corpus } => mcp::serve(dir, &corpus.corpus()?)?,
-        Cmd::Walk { question, budget, reads, json, no_kappa, order, corpus } => {
+        Cmd::Walk { question, budget, seeds, reads, json, no_kappa, order, corpus } => {
             let order = order.map(|p| -> Result<Vec<String>> { Ok(serde_json::from_str(&std::fs::read_to_string(&p).map_err(|e| format!("{}: {e}", p.display()))?)?) }).transpose()?;
-            let w = agent::walk(dir, &corpus.corpus()?, &question.join(" "), &agent::Opts { budget, reads, order, kappa: !no_kappa })?;
+            let w = agent::walk(dir, &corpus.corpus()?, &question.join(" "), &agent::Opts { budget, seeds, reads, order, kappa: !no_kappa })?;
             if json {
                 println!("{}", serde_json::to_string_pretty(&w)?);
             } else {

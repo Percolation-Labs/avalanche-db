@@ -224,7 +224,7 @@ fn midb_walk_with_no_key_ranks_doors_by_search_order_and_says_so() {
     assert_eq!(w["called"], 0);
     // the text form says the same, and read_document's reader reads the location back
     let text = String::from_utf8_lossy(&midb(&dir, &dir, &args).stdout).into_owned();
-    assert!(text.starts_with("walk: 80 documents; decider search-order; opens 1 door a wave\nnote: no key"), "{text}");
+    assert!(text.starts_with("walk: 80 documents, 10 from search then one door a wave; decider search-order\nnote: no key"), "{text}");
     assert!(avalanche::walk::agent::content(&dir, docs_out[0]["id"].as_str().unwrap(), docs_out[0]["location"].as_str().unwrap()).unwrap().contains("the cent"));
     // search's order from a file holds the walk to it
     let order: Vec<String> = (0..common::DOCS).rev().map(common::doc).collect();
@@ -232,6 +232,27 @@ fn midb_walk_with_no_key_ranks_doors_by_search_order_and_says_so() {
     let out = midb(&dir, &dir, &[&args[..], &["--json", "--order", dir.join("order.json").to_str().unwrap()]].concat());
     let w: Value = serde_json::from_slice(&out.stdout).unwrap();
     assert_eq!(w["documents"][0]["id"], order[0]);
+    let _ = std::fs::remove_dir_all(&dir);
+}
+
+/// The caller's budget is k documents: s from search, then the rest through doors, one door a wave, exactly k.
+#[test]
+fn a_walk_returns_k_documents_s_from_search_the_rest_through_doors() {
+    let (dir, store, docs) = lab_fixture("k");
+    let base = ["walk", "which notes are about rounding?", "--store", store.to_str().unwrap(), "--conv", common::CONV, "--docs", docs.to_str().unwrap(), "--json"];
+    for (extra, k, s) in [(vec![], 10usize, 3usize), (vec!["--budget", "25", "--seeds", "5"], 25, 5), (vec!["--budget", "2"], 2, 2)] {
+        let out = midb(&dir, &dir, &[&base[..], &extra[..]].concat());
+        assert!(out.status.success(), "{}", String::from_utf8_lossy(&out.stderr));
+        let w: Value = serde_json::from_slice(&out.stdout).unwrap();
+        let d = w["documents"].as_array().unwrap();
+        assert_eq!((d.len(), w["budget"].as_u64().unwrap() as usize, w["seeds"].as_u64().unwrap() as usize), (k, k, s), "{extra:?}");
+        assert!(d[..s].iter().all(|x| x["via"] == "search"), "{extra:?}: the first s are search's");
+        assert!(d[s..].iter().all(|x| x["via"] != "search"), "{extra:?}: the rest came through doors");
+        let waves = w["waves"].as_array().unwrap();
+        assert!(waves.iter().all(|x| x["opened"].as_array().unwrap().len() == 1), "{extra:?}: one door a wave");
+        let ids: std::collections::HashSet<&str> = d.iter().map(|x| x["id"].as_str().unwrap()).collect();
+        assert_eq!(ids.len(), k, "no document twice");
+    }
     let _ = std::fs::remove_dir_all(&dir);
 }
 
@@ -271,8 +292,8 @@ fn the_mcp_tools_ingest_walk_and_read_a_folder() {
         json!({"method": "tools/list"}),
         call("walk", json!({"question": "why is the invoice a cent off?"})),
         call("ingest_repo", json!({})),
-        call("walk", json!({"question": "why is the invoice a cent off?", "reads": 3})),
-        call("walk", json!({"question": "why is the invoice a cent off?", "reads": 3, "json": true})),
+        call("walk", json!({"question": "why is the invoice a cent off?", "budget": 3})),
+        call("walk", json!({"question": "why is the invoice a cent off?", "budget": 3, "json": true})),
     ]);
     let names: Vec<&str> = r[0]["result"]["tools"].as_array().unwrap().iter().map(|t| t["name"].as_str().unwrap()).collect();
     for n in ["ingest_repo", "walk", "read_document", "search", "ask", "step", "why", "p8ql_schema", "p8ql_explain", "p8ql_run"] {
@@ -283,7 +304,7 @@ fn the_mcp_tools_ingest_walk_and_read_a_folder() {
     assert!(text(&r[2]).contains("added a documents source"), "{}", text(&r[2]));
     assert!(text(&r[2]).contains("passages"), "{}", text(&r[2]));
     let walk = text(&r[3]);
-    assert!(walk.starts_with("walk: 3 documents; decider search-order"), "{walk}");
+    assert!(walk.starts_with("walk: 3 documents, 3 from search then one door a wave; decider search-order"), "{walk}");
     let first = walk.lines().nth(2).unwrap().split_whitespace().nth(1).unwrap().to_string();
     let j: Value = serde_json::from_str(text(&r[4])).unwrap();
     assert_eq!(j["documents"][0]["id"], first.as_str());
@@ -297,8 +318,8 @@ fn the_mcp_tools_ingest_walk_and_read_a_folder() {
 fn the_mcp_walk_serves_a_lab_conversation() {
     let (dir, store, docs) = lab_fixture("mcplab");
     let extra = ["--store", store.to_str().unwrap(), "--conv", common::CONV, "--docs", docs.to_str().unwrap()];
-    let r = mcp(&dir, &extra, &[call("walk", json!({"question": "rounding", "reads": 12, "budget": 2})), call("read_document", json!({"id": common::doc(3)}))]);
-    assert!(text(&r[0]).starts_with("walk: 12 documents; decider search-order; opens 2 doors a wave"), "{}", text(&r[0]));
+    let r = mcp(&dir, &extra, &[call("walk", json!({"question": "rounding", "budget": 12})), call("read_document", json!({"id": common::doc(3)}))]);
+    assert!(text(&r[0]).starts_with("walk: 12 documents, 3 from search then one door a wave; decider search-order"), "{}", text(&r[0]));
     assert!(text(&r[1]).contains("Note 3 is about"), "{}", text(&r[1]));
     let _ = std::fs::remove_dir_all(&dir);
 }
