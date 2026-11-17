@@ -70,6 +70,36 @@ impl D6 {
         Ok(&self.docs[d])
     }
 
+    /// The door's targets in lead order (`spread` keeps one per file when `all` is false). Every target has been
+    /// read into `self.docs` first.
+    fn lead_order<'a>(&self, door: &'a Clue, all: bool) -> Vec<&'a String> {
+        let mut ordered: Vec<&String> = door.targets.iter().collect();
+        match self.leads.as_str() {
+            "fewest" => ordered.sort_by_key(|d| (self.docs[*d].2.len(), hash("", d))),
+            "spread" => {
+                // one per file: the file's first passage in hash order, files in hash order
+                ordered.sort_by_key(|d| (hash(&door.key, file_of(d)), hash("", d)));
+                if !all {
+                    let mut seen = std::collections::HashSet::new();
+                    ordered.retain(|d| seen.insert(file_of(d)));
+                }
+            }
+            _ => ordered.sort_by_key(|d| (std::cmp::Reverse(self.docs[*d].2.len()), hash("", d))),
+        }
+        ordered
+    }
+
+    /// The door's targets in the order its text shows them: today's snippet, then the lead order.
+    pub fn shown_order(&mut self, door: &Clue, g: &mut Graph) -> Result<Vec<String>> {
+        for d in &door.targets {
+            self.doc(d, g)?;
+        }
+        let first = door.targets.iter().min_by_key(|d| hash(&door.key, d)).cloned();
+        let mut out: Vec<String> = first.iter().cloned().collect();
+        out.extend(self.lead_order(door, true).into_iter().filter(|d| Some(*d) != first.as_ref()).cloned());
+        Ok(out)
+    }
+
     /// The door's text, one line per entry; `immediate.join("\n")` is what a decider is shown.
     pub fn lines(&mut self, door: &Clue, g: &mut Graph) -> Result<Vec<String>> {
         let tg = &door.targets;
@@ -108,17 +138,7 @@ impl D6 {
             shown = snippet(&format!("{title}\n\n{text}"), 160);
             lines.push(format!("- {shown}"));
         }
-        let mut ordered: Vec<&String> = tg.iter().collect();
-        match self.leads.as_str() {
-            "fewest" => ordered.sort_by_key(|d| (self.docs[*d].2.len(), hash("", d))),
-            "spread" => {
-                // one per file: the file's first passage in hash order, files in hash order
-                ordered.sort_by_key(|d| (hash(&door.key, file_of(d)), hash("", d)));
-                let mut seen = std::collections::HashSet::new();
-                ordered.retain(|d| seen.insert(file_of(d)));
-            }
-            _ => ordered.sort_by_key(|d| (std::cmp::Reverse(self.docs[*d].2.len()), hash("", d))),
-        }
+        let ordered = self.lead_order(door, false);
         let dedup = self.leads != "names";
         let mut said: Vec<String> = vec![];
         let mut leads = 0;
@@ -169,6 +189,9 @@ impl DoorLabeller for D6 {
             stats.insert("postings".into(), g.post(&door.x)?.len() as f64);
         }
         Ok(Attrs { kind: door.kind.clone(), immediate: self.lines(door, g)?, reachable: None, stats })
+    }
+    fn read_order(&mut self, door: &Clue, g: &mut Graph) -> Result<Option<Vec<String>>> {
+        Ok(Some(self.shown_order(door, g)?))
     }
 }
 

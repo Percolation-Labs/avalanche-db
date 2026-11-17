@@ -1,0 +1,3 @@
+graph     n=100 search 0.340 oracle 0.557 search-order 0.297
+postings  n=100 search 0.340 oracle 0.666 search-order 0.307
+shown     n=100 search 0.340 oracle 0.727 search-order 0.335

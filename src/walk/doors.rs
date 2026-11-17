@@ -33,6 +33,11 @@ pub struct Attrs {
 pub trait DoorLabeller {
     fn version(&self) -> String;
     fn label(&mut self, door: &Clue, g: &mut Graph) -> Result<Attrs>;
+    /// The order an opened door's targets are read in under `Settings.within = "shown"`: the order the label showed
+    /// them. None: the labeller shows no order, and the graph's order stands.
+    fn read_order(&mut self, _door: &Clue, _g: &mut Graph) -> Result<Option<Vec<String>>> {
+        Ok(None)
+    }
 }
 
 /// The default labeller: the door's kind, its first three targets, its unread target count and, for a term, the

@@ -236,3 +236,24 @@ question:
 
 The order is chosen at $0 on the dev cards, then a Jev dev slice runs against L0, then the test, as above. The
 within-door order is james's walk, so it is agreed with him first.
+
+## The read order inside a door, dev cards (17 Nov, bill, $0.005)
+
+This section follows REGISTERED-leads.md, amendment 2.
+
+**$0 step.** The k=10 settings on the I1 store with L1k doors, recall@10 (`leads/within-dollar0.txt`):
+
+| within | oracle | search-order | search |
+|---|---|---|---|
+| graph (today) | .557 | .297 | .340 |
+| postings | .666 | .307 | |
+| **shown** | **.727** | .335 | |
+
+The pick is **shown**.
+
+**Jev step.** Recall@10 at k=10 through MCP, on the 100 dev cards:
+- I1, L1k and shown together, called **L1kS**, score **.565**.
+- That is +.225 [+.147, +.308] over search (.340), and +.185 [+.103, +.270] over the merged walk (L0, .380).
+- The 100 walks made 597 requests. 579 were replayed from the cache, because wave 1 is identical to L1k's: the same
+  seeds, door text and kappa. Only the read order inside the door changed.
+- L1kS goes forward to the registered test.
