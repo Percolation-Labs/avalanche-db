@@ -49,3 +49,20 @@ fn a_folder_becomes_passages_doors_and_a_full_text_search() {
     assert!(!doors.contains("why is"), "{doors}");
     std::fs::remove_dir_all(&dir).unwrap();
 }
+
+#[test]
+fn a_deep_path_is_stored_and_read_back() {
+    // a stored value is cut at 120 characters; a passage's path lives in its id, so any depth ingests
+    let dir = std::env::temp_dir().join(format!("midb-deep-{}", std::process::id()));
+    let _ = std::fs::remove_dir_all(&dir);
+    let deep = "notes/".to_string() + &"a-rather-long-folder-name/".repeat(6);
+    std::fs::create_dir_all(dir.join(&deep)).unwrap();
+    std::fs::write(dir.join(&deep).join("deep.md"), "# Deep\n\nA passage far down the tree, about RoundingPolicy.\n").unwrap();
+    std::fs::write(dir.join("notes/near.md"), "# Near\n\nAnother passage about RoundingPolicy, near the top.\n").unwrap();
+    std::fs::write(dir.join("avalanche.toml"), "tenant = \"me\"\n\n[[source]]\nadapter = \"documents\"\npath = \"notes\"\n").unwrap();
+    std::fs::create_dir_all(dir.join(".avalanche")).unwrap();
+    assert!(midb(&dir, &["ingest"]).contains("2 passages"));
+    let doors = midb(&dir, &["doors", "near.md#1"]);
+    assert!(doors.contains("A passage far down the tree"), "{doors}");
+    std::fs::remove_dir_all(&dir).unwrap();
+}

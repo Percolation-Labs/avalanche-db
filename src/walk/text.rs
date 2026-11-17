@@ -23,7 +23,7 @@ impl FullText {
         for d in g.docs() {
             let title = g.values(&d, Pred::Label)?.into_iter().next().unwrap_or_default();
             let text = match g.values(&d, Pred::Pointer)?.into_iter().next() {
-                Some(p) => reader.text(&p)?,
+                Some(p) => reader.text(&d, &p)?,
                 None => String::new(),
             };
             let ws = words(&format!("{title}\n{text}"));

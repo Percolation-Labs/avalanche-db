@@ -60,7 +60,7 @@ impl D6 {
         if !self.docs.contains_key(d) {
             let title = g.values(d, Pred::Label)?.into_iter().next().unwrap_or_else(|| d.to_string());
             let text = match g.values(d, Pred::Pointer)?.into_iter().next() {
-                Some(p) => self.reader.text(&p)?,
+                Some(p) => self.reader.text(d, &p)?,
                 None => String::new(),
             };
             let names = g.values(d, Pred::Named)?;
