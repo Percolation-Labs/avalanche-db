@@ -1,0 +1,33 @@
+
+== B: p8-subsystems, I1 + L1kS
+k=10  n=150  recall: walk 0.477  search 0.291  oracle 0.712  search-order 0.266  coin 0.209  width 0.188
+        full support: walk 0.307  search 0.187  oracle 0.573  search-order 0.167  coin 0.113  width 0.107
+        walk - search       +0.186 [+0.118, +0.253]  W1 PASS
+        walk - width        +0.289 [+0.228, +0.349]  W2 PASS
+        walk - search-order +0.211 [+0.148, +0.275]
+        walk - coin         +0.268 [+0.207, +0.331]
+        oracle - search       +0.421 [+0.350, +0.493]  G1 PASS
+k=5  n=150  recall: walk 0.217  search 0.184  oracle 0.425  search-order 0.171  coin 0.122  width 0.101
+        full support: walk 0.100  search 0.100  oracle 0.293  search-order 0.100  coin 0.060  width 0.047
+        walk - search       +0.034 [-0.027, +0.095]
+        walk - width        +0.117 [+0.075, +0.162]
+        walk - search-order +0.047 [-0.007, +0.101]
+        walk - coin         +0.095 [+0.052, +0.141]
+        oracle - search       +0.241 [+0.171, +0.312]
+k=20  n=125  recall: walk 0.712  search 0.337  oracle 0.864  search-order 0.260  coin 0.268  width 0.260
+        full support: walk 0.576  search 0.216  oracle 0.768  search-order 0.160  coin 0.160  width 0.160
+        walk - search       +0.374 [+0.291, +0.458]
+        walk - width        +0.452 [+0.372, +0.531]
+        walk - search-order +0.451 [+0.374, +0.528]
+        walk - coin         +0.443 [+0.368, +0.520]
+        oracle - search       +0.526 [+0.450, +0.603]
+
+== A: MuSiQue, I1 + L1kS (k=10 only walked)
+k=10  n=150  recall: walk 0.598  search 0.464  oracle 0.664  search-order 0.448  coin 0.418  width 0.409
+        full support: walk 0.353  search 0.140  oracle 0.447  search-order 0.133  coin 0.127  width 0.113
+        walk - search       +0.134 [+0.094, +0.176]  W1 PASS
+        walk - width        +0.189 [+0.150, +0.229]  W2 PASS
+        walk - search-order +0.151 [+0.111, +0.191]
+        walk - coin         +0.180 [+0.141, +0.220]
+        oracle - search       +0.201 [+0.158, +0.243]  G1 PASS
+        last-hop gold recall: walk 0.520  search 0.280  oracle 0.647

@@ -2,13 +2,19 @@
 //! result, `results/reference-world/RESULT.md`). Every line is built from ingestion-time data and the door's unread
 //! targets, never from the question:
 //!
-//!   head     what the door is and how many unread passages are behind it
+//!   head     what the door is, how many unread passages are behind it and of what kind (commits, passages in files)
 //!   first    today's first snippet: the first target in a fixed hash order, 160 characters
-//!   leads    up to five other targets, those naming the most first (hash order the tie): `- title: first sentence`
+//!   leads    up to five other targets, those naming the fewest first (hash order the tie), no text twice:
+//!            `- title: first sentence`
 //!   names    the names its unread targets mention, the most shared first, then the rarest, at most fifteen
 //!
-//! Two differences from the lab's D6, both forced by the binary: the tie order is sha-256 of `key:doc`, not md5,
-//! and names come from `documents::names` (capitalised runs and code identifiers), not spaCy's entities.
+//! Differences from the lab's D6:
+//! - Two are forced by the binary: the tie order is sha-256 of `key:doc`, not md5, and names come from
+//!   `documents::names` (capitalised runs and code identifiers), not spaCy's entities.
+//! - Two were chosen on dev cards and tested on held-out ones (`evals/e2e/REGISTERED-leads.md`, RESULT.md): leads
+//!   fewest names first, not most, and the head's kinds.
+//!
+//! The walk reads an opened door in the order shown here (`read_order`, `within = "shown"`).
 
 use std::collections::{BTreeMap, HashMap};
 use std::path::Path;
@@ -27,6 +33,11 @@ pub struct D6 {
     docs: HashMap<String, (String, String, Vec<String>)>,
     /// name → how many documents name it, filled as documents are read
     df: BTreeMap<String, usize>,
+}
+
+/// A passage's file: its id up to `#`; a commit is its own file.
+fn file_of(d: &str) -> &str {
+    d.split('#').next().unwrap_or(d)
 }
 
 fn hash(key: &str, doc: &str) -> Vec<u8> {
@@ -59,6 +70,27 @@ impl D6 {
         Ok(&self.docs[d])
     }
 
+    /// The door's targets in lead order: those naming the fewest first, the hash the tie. On a repository, naming
+    /// many marks a list (a log, a board), not the passage a door is for (evals/e2e/REGISTERED-leads.md).
+    fn lead_order<'a>(&self, door: &'a Clue) -> Vec<&'a String> {
+        let mut ordered: Vec<&String> = door.targets.iter().collect();
+        ordered.sort_by_key(|d| (self.docs[*d].2.len(), hash("", d)));
+        ordered
+    }
+
+    /// The order an opened door is read in: today's snippet, then every other target in lead order. Past the snippet
+    /// this is the lead order, not exactly the lines shown: `lines` stops at five leads and skips a lead whose text
+    /// repeats one shown, and such a lead is still read here at its place in lead order (the measured code).
+    pub fn shown_order(&mut self, door: &Clue, g: &mut Graph) -> Result<Vec<String>> {
+        for d in &door.targets {
+            self.doc(d, g)?;
+        }
+        let first = door.targets.iter().min_by_key(|d| hash(&door.key, d)).cloned();
+        let mut out: Vec<String> = first.iter().cloned().collect();
+        out.extend(self.lead_order(door).into_iter().filter(|d| Some(*d) != first.as_ref()).cloned());
+        Ok(out)
+    }
+
     /// The door's text, one line per entry; `immediate.join("\n")` is what a decider is shown.
     pub fn lines(&mut self, door: &Clue, g: &mut Graph) -> Result<Vec<String>> {
         let tg = &door.targets;
@@ -67,6 +99,21 @@ impl D6 {
             "near" => format!("{} unread closest in wording to a read one", tg.len()),
             "next" => format!("{} unread beside a read one, in the same file or history", tg.len()),
             k => format!("{k} · {} unread", tg.len()),
+        };
+        let head = {
+            let commits = tg.iter().filter(|d| d.starts_with("commit/")).count();
+            let mut files: Vec<&str> = tg.iter().filter(|d| !d.starts_with("commit/")).map(|d| file_of(d)).collect();
+            let passages = files.len();
+            files.sort();
+            files.dedup();
+            let mut parts = vec![];
+            if commits > 0 {
+                parts.push(format!("{commits} commit{}", if commits == 1 { "" } else { "s" }));
+            }
+            if passages > 0 {
+                parts.push(format!("{passages} passage{} in {} file{}", if passages == 1 { "" } else { "s" }, files.len(), if files.len() == 1 { "" } else { "s" }));
+            }
+            format!("{head} · {}", parts.join(", "))
         };
         for d in tg {
             self.doc(d, g)?;
@@ -80,8 +127,8 @@ impl D6 {
             shown = snippet(&format!("{title}\n\n{text}"), 160);
             lines.push(format!("- {shown}"));
         }
-        let mut ordered: Vec<&String> = tg.iter().collect();
-        ordered.sort_by_key(|d| (std::cmp::Reverse(self.docs[*d].2.len()), hash("", d)));
+        let ordered = self.lead_order(door);
+        let mut said: Vec<String> = vec![];
         let mut leads = 0;
         for d in ordered {
             if leads == 5 {
@@ -92,7 +139,12 @@ impl D6 {
             if !opening.is_empty() && shown.contains(&opening) {
                 continue;
             }
-            lines.push(format!("- {}: {}", snippet(title, 120), lead(&body(title, text), 200)));
+            let said_here = lead(&body(title, text), 200);
+            if said.contains(&said_here) {
+                continue;
+            }
+            lines.push(format!("- {}: {}", snippet(title, 120), said_here));
+            said.push(said_here);
             leads += 1;
         }
         let mut count: BTreeMap<&str, usize> = BTreeMap::new();
@@ -116,7 +168,7 @@ impl D6 {
 
 impl DoorLabeller for D6 {
     fn version(&self) -> String {
-        "d6/1".into()
+        "d6/2".into()
     }
     fn label(&mut self, door: &Clue, g: &mut Graph) -> Result<Attrs> {
         let mut stats = BTreeMap::new();
@@ -125,6 +177,9 @@ impl DoorLabeller for D6 {
             stats.insert("postings".into(), g.post(&door.x)?.len() as f64);
         }
         Ok(Attrs { kind: door.kind.clone(), immediate: self.lines(door, g)?, reachable: None, stats })
+    }
+    fn read_order(&mut self, door: &Clue, g: &mut Graph) -> Result<Option<Vec<String>>> {
+        Ok(Some(self.shown_order(door, g)?))
     }
 }
 

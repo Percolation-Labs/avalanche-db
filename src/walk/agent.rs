@@ -250,7 +250,7 @@ fn run(dir: &Path, g: &mut Graph, order: Vec<String>, labeller: &mut dyn DoorLab
         // k documents: s from search, then one door a wave until k are read; search only when no door is open
         None => {
             let k = o.budget;
-            (k, Settings { waves: k as u32, seeds: o.seeds.unwrap_or(k.div_ceil(2)).min(k), wave: 1_000_000, per_wave: 0, open: Some(1), max_reads: Some(k), fill: false, ..d })
+            (k, Settings { waves: k as u32, seeds: o.seeds.unwrap_or(k.div_ceil(2)).min(k), wave: 1_000_000, per_wave: 0, open: Some(1), max_reads: Some(k), fill: false, within: "shown".into(), ..d })
         }
     };
     let seeds = s8.seeds;

@@ -33,6 +33,61 @@ $ curl -fsSL https://raw.githubusercontent.com/Percolation-Labs/avalanche-db/mai
 
 From a clone, `./install.sh --local` builds it instead (it needs a Rust toolchain).
 
+## Your own repository, from Claude
+
+In the repository you want to ask about, register the store with Claude Code:
+
+```console no-test
+$ cd ~/code/your-repo
+$ midb mcp install
+claude mcp add --scope user avalanche -- /Users/you/.local/bin/midb -C /Users/you/code/your-repo mcp
+Added stdio MCP server avalanche with command: /Users/you/.local/bin/midb -C /Users/you/code/your-repo mcp to user config
+```
+
+`--scope project` writes the registration to the repository's `.mcp.json` instead. Without `claude` on the PATH,
+the command prints the JSON config for any other MCP client.
+
+Then open Claude in the repository and ask it to ingest and to answer. Claude calls three tools:
+1. `ingest_repo`, once, to read every text, markdown and code file and every commit message into the store.
+2. `walk`, with your question, which returns the documents that answer it.
+3. `read_document`, on the documents it wants to read.
+
+Here is what Claude gets back when that is run on this repository itself, at `2e71f77`. Ingesting takes half a
+second:
+
+```console no-test
+ingest_repo
+added a documents source for . to avalanche.toml
+documents .              700 passages →  62504 facts
+
+walk  "why does a re-ingest retract facts instead of rewriting the store?"
+walk: 10 documents, 5 from search then one door a wave; decider jev (jev-1.13.0), kappa K6
+   1  src/construct/review.rs#2      search                 "src/construct/review.rs"
+   2  src/construct/documents.rs#12  search                 "src/construct/documents.rs"
+   …
+   6  commit/7636e8d34e              term:ingest compares   "commit 7636e8d: ingest --documents PATH, and a documents re…"
+   …
+jev: 26 requests (0 replayed, 26 sent), 149910 input tokens, $0.0063
+```
+
+**How the walk finds documents.**
+- Search finds the first five.
+- The walk then follows doors: words, names and ids the documents share, a file's neighbouring parts, and passages
+  with close wording.
+- Jev picks one door a wave. Here it went from the ingest code to the commit that made re-ingesting a diff, which
+  search didn't rank.
+- It needs a key, set with `midb key set` or `AVALANCHE_MODEL_KEY`. Without one, the walk ranks doors by search's
+  order and says so.
+- Every answer is kept in `.avalanche/decisions.jsonl`, so asking the same question again costs nothing.
+- The same walk runs from the shell: `midb ingest --documents .`, then `midb walk "…" --budget 10`.
+
+**What it was measured to do** ([evals/e2e/RESULT.md](evals/e2e/RESULT.md)):
+- The test ran on 150 questions over this team's own repository, each asking what was done about a board card and why.
+- At 10 documents, the walk returned 48% of the commits that did the work. Search returned 29% (+.19, 95% CI
+  [+.12, +.25]).
+- On a public multi-hop benchmark, MuSiQue, the walk returned 60% of the supporting paragraphs and search 46%.
+- It is one repository and one kind of question. At 5 documents the walk is no better than search.
+
 ## A cent off
 
 The repository ships an example: a small billing service with its git history, a few notes

@@ -120,6 +120,17 @@ pub fn terms(text: &str) -> BTreeSet<String> {
                 out.insert(format!("{} {}", pair[0], pair[1]));
             }
         }
+        // an id, letters then a hyphen then digits (REM-103, ADR-007, BUG-12), is a term whatever its digits count
+        for tok in sentence.to_lowercase().split(|c: char| !(c.is_alphanumeric() || c == '-')) {
+            if let Some((a, d)) = tok.trim_matches('-').split_once('-')
+                && a.len() >= 2
+                && a.chars().all(|c| c.is_ascii_lowercase())
+                && !d.is_empty()
+                && d.chars().all(|c| c.is_ascii_digit())
+            {
+                out.insert(format!("{a} {d}"));
+            }
+        }
     }
     out
 }
@@ -555,6 +566,15 @@ impl Reader {
 #[cfg(test)]
 mod tests {
     use super::*;
+
+    #[test]
+    fn an_id_is_a_term_whatever_its_digits() {
+        let t = terms("Closes REM-103 and ADR-007, after BUG-12 (see REM-1044).");
+        for id in ["rem 103", "adr 007", "bug 12", "rem 1044"] {
+            assert!(t.contains(id), "{id}: {t:?}");
+        }
+        assert!(!terms("x-1 and 12-34").iter().any(|w| w == "x 1" || w == "12 34"));
+    }
 
     #[test]
     fn terms_keep_content_words_and_adjacent_pairs() {
