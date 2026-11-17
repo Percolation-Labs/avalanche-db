@@ -68,6 +68,23 @@ fn a_deep_path_is_stored_and_read_back() {
 }
 
 #[test]
+fn a_reingest_writes_only_what_changed() {
+    let dir = folder("reingest");
+    midb(&dir, &["ingest"]);
+    // unchanged files: nothing to write
+    let again = midb(&dir, &["ingest"]);
+    assert!(again.contains("4 passages →  0 facts"), "{again}");
+    // the export note loses SheetWriter and gains RoundingPolicy: the old name is retracted, the new one asserted
+    std::fs::write(dir.join("notes/export.md"), "# Export\n\nThe spreadsheet export writes each invoice total with its currency symbol, through RoundingPolicy.\n").unwrap();
+    let changed = midb(&dir, &["ingest"]);
+    assert!(!changed.contains(" 0 facts"), "{changed}");
+    let doors = midb(&dir, &["doors", "support.md#1"]);
+    assert!(doors.contains("term 'roundingpolicy' · 2 unread"), "{doors}");
+    assert!(!doors.contains("SheetWriter"), "{doors}");
+    std::fs::remove_dir_all(&dir).unwrap();
+}
+
+#[test]
 fn kappa_is_the_opening_sentences_door_reads_first() {
     use avalanche::construct::documents::Reader;
     use avalanche::walk::kappa::k6;

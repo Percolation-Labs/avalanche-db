@@ -697,11 +697,12 @@ Added stdio MCP server avalanche with command: /Users/you/.local/bin/midb -C /Us
 Three tools serve the walk. `ingest_repo` reads the folder's text, markdown and code files and
 its git history as passages. It builds the doors a walk follows, and adds a `documents` source
 to `avalanche.toml` the first time. `walk` takes a question and returns documents in reading
-order. `read_document` returns one of them. Claude's first call:
+order. `read_document` returns one of them. `ingest_repo` is `midb ingest --documents .`, the same code
+path. Claude's first call:
 
 ```console
 $ printf '%s\n' '{"jsonrpc":"2.0","id":1,"method":"tools/call","params":{"name":"ingest_repo","arguments":{}}}' | midb mcp
-{"id":1,"jsonrpc":"2.0","result":{"content":[{"text":"added a documents source, path \".\", to avalanche.toml\ndocuments .              20 passages →  516 facts\nreviews   reviews.jsonl  1 review   →  2 facts\nT3: 518 facts in #µs\n","type":"text"}]}}
+{"id":1,"jsonrpc":"2.0","result":{"content":[{"text":"added a documents source for . to avalanche.toml\ndocuments .              20 passages →  516 facts\nreviews   reviews.jsonl  1 review   →  2 facts\nT3: 518 facts in #µs\n","type":"text"}]}}
 ```
 
 Then the question. The `walk` tool returns the same text as `midb walk`. Search over the

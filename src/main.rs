@@ -33,6 +33,10 @@ enum Cmd {
         /// Append a JSON-lines file of typed facts instead
         #[arg(long)]
         facts: Option<PathBuf>,
+        /// Bring your own files: add this folder, repository or .jsonl as a `documents` source (creating the
+        /// config and store when there are none) and ingest it
+        #[arg(long)]
+        documents: Option<String>,
     },
     /// Set or check the decision model's key
     Key {
@@ -302,7 +306,10 @@ fn run(cli: Cli) -> Result<()> {
     let dir = cli.dir.as_path();
     match cli.cmd {
         Cmd::Init => print!("{}", project::init(dir)?),
-        Cmd::Ingest { sources, facts } => print!("{}", project::ingest(dir, &sources, facts)?),
+        Cmd::Ingest { sources, facts, documents } => match documents {
+            Some(p) => print!("{}", project::ingest_documents(dir, &p)?),
+            None => print!("{}", project::ingest(dir, &sources, facts)?),
+        },
         Cmd::Key { action: KeyCmd::Set } => {
             let mut k = String::new();
             std::io::stdin().read_to_string(&mut k)?;

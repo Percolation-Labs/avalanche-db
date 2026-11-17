@@ -12,7 +12,7 @@ use serde_json::{json, Value};
 use super::agent::{self, Corpus};
 use super::{p8ql, search};
 use super::session::{self, Steer};
-use crate::config::{Config, FILE};
+use crate::config::Config;
 use crate::construct::project;
 use crate::model::date;
 use crate::store::Store;
@@ -144,26 +144,9 @@ pub fn serve(dir: &Path, corpus: &Corpus) -> Result<()> {
     Ok(())
 }
 
-/// `ingest_repo`: the folder as a `documents` source (added to avalanche.toml when absent, after `midb init` when
-/// there is no avalanche.toml), then `midb ingest` of that source.
+/// `ingest_repo`: `midb ingest --documents PATH`, the same code path.
 pub fn ingest_repo(dir: &Path, path: &str) -> Result<String> {
-    let mut out = String::new();
-    if !dir.join(FILE).exists() {
-        out += &project::init(dir)?;
-    }
-    let cfg = Config::load(dir)?;
-    if !cfg.sources.iter().any(|s| s.adapter == "documents" && s.path == Path::new(path)) {
-        let mut toml = std::fs::read_to_string(dir.join(FILE))?;
-        toml += &format!("\n[[source]]\nadapter = \"documents\"\npath = {}\n", serde_json::to_string(path)?);
-        std::fs::write(dir.join(FILE), toml)?;
-        out += &format!("added a documents source, path {path:?}, to {FILE}\n");
-    }
-    // only that source: the folder's other sources keep their own `midb ingest`
-    let cfg = Config::load(dir)?;
-    let mut only = cfg.clone();
-    only.sources.retain(|s| s.adapter == "documents" && s.path == Path::new(path));
-    out += &project::ingest_with(dir, &only, &[], None)?;
-    Ok(out)
+    project::ingest_documents(dir, path)
 }
 
 fn on_path(bin: &str) -> Option<std::path::PathBuf> {

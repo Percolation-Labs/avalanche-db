@@ -33,9 +33,14 @@ pub fn ingest(dir: &Path, sources: &[String], facts: Option<PathBuf>) -> Result<
     ingest_from(dir, &cfg, sources, facts, started)
 }
 
-/// `ingest` with the configuration given, so a caller can name exactly the sources to read.
-pub fn ingest_with(dir: &Path, cfg: &Config, sources: &[String], facts: Option<PathBuf>) -> Result<String> {
-    ingest_from(dir, cfg, sources, facts, std::time::Instant::now())
+/// `midb ingest --documents PATH` and the MCP `ingest_repo`: make `path` a `documents` source (creating the config
+/// and store when there are none), then ingest that source alone.
+pub fn ingest_documents(dir: &Path, path: &str) -> Result<String> {
+    let mut out = String::new();
+    if Config::add_documents(dir, path)? {
+        out += &format!("added a documents source for {path} to {FILE}\n");
+    }
+    Ok(out + &ingest(dir, &[path.to_string()], None)?)
 }
 
 fn ingest_from(dir: &Path, cfg: &Config, sources: &[String], facts: Option<PathBuf>, started: std::time::Instant) -> Result<String> {
@@ -60,7 +65,7 @@ fn ingest_from(dir: &Path, cfg: &Config, sources: &[String], facts: Option<PathB
                     None => ingest::markdown(&dir.join(&src.path), &at, cfg)?,
                 },
                 "percolate" => ingest::percolate(&dir.join(&src.path), &at, cfg)?,
-                "documents" => super::documents::documents(&dir.join(&src.path), &at)?,
+                "documents" => super::documents::documents(&dir.join(&src.path), &at, &store, t)?,
                 "github" => ingest::github(src.repo.as_deref().ok_or("a github source needs repo = \"owner/name\"")?, cfg)?,
                 other => return Err(format!("{other}: no such adapter").into()),
             };
