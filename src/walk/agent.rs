@@ -149,7 +149,7 @@ fn full_text(dir: &Path, store: &Store, t: u32, g: &mut Graph) -> Result<std::sy
             return Ok(ft.clone());
         }
     }
-    let ft = Arc::new(FullText::build(g, &mut Reader::new(dir))?);
+    let ft = Arc::new(FullText::open(dir, t, key.1, g)?);
     *cache.lock().unwrap() = Some((key.0, key.1, ft.clone()));
     Ok(ft)
 }
