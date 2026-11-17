@@ -52,11 +52,13 @@ pub struct Opts {
     pub order: Option<Vec<String>>,
     /// The walk's past (K6) in Jev's state as `found` (kappa round 3); off is the control.
     pub kappa: bool,
+    /// How Jev's options are named: F2, as measured, or c{j}, the lab's jevcache (for holding a walk to an a-k1 one).
+    pub keys: super::jev::Keys,
 }
 
 impl Default for Opts {
     fn default() -> Opts {
-        Opts { budget: 10, seeds: None, reads: None, order: None, kappa: true }
+        Opts { budget: 10, seeds: None, reads: None, order: None, kappa: true, keys: super::jev::Keys::F2 }
     }
 }
 
@@ -254,6 +256,7 @@ fn run(dir: &Path, g: &mut Graph, order: Vec<String>, labeller: &mut dyn DoorLab
         let mut jev = JevDecider::new(&mut model);
         let with_kappa = kappa.is_some();
         jev.kappa = kappa;
+        jev.keys = o.keys;
         let w = lab::run(g, order, s8, question, &mut jev, labeller)?;
         let name = if with_kappa { format!("{}, kappa K6", jev.name()) } else { jev.name() };
         (w, name, None, jev.waves)

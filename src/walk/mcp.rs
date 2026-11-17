@@ -71,7 +71,7 @@ fn call(dir: &Path, corpus: &Corpus, name: &str, a: &Value) -> Result<String> {
         "ingest_repo" => return ingest_repo(dir, a["path"].as_str().unwrap_or(".")),
         "walk" => {
             let q = a["question"].as_str().ok_or("walk needs question")?;
-            let o = agent::Opts { budget: num("budget", 10), seeds: a["seeds"].as_u64().map(|n| n as usize), reads: None, order: None, kappa: a["kappa"].as_bool().unwrap_or(true) };
+            let o = agent::Opts { budget: num("budget", 10), seeds: a["seeds"].as_u64().map(|n| n as usize), reads: None, order: None, kappa: a["kappa"].as_bool().unwrap_or(true), keys: crate::walk::jev::Keys::F2 };
             let w = agent::walk(dir, corpus, q, &o)?;
             return Ok(if a["json"].as_bool().unwrap_or(false) { serde_json::to_string_pretty(&w)? } else { w.to_string() });
         }
