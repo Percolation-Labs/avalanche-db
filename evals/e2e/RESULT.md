@@ -331,5 +331,5 @@ card's title (score0.py's tokens, less the question frame)?
 
 - Search can't reach a commit whose wording differs from the question, and it found none of the 81.
 - The walk reaches a third of them through the card's id.
-- It also does better on the 238 commits search can match by wording, because a door read replaces a search read
-  only where Jev expects more from it.
+- It also does better on the 238 commits search can match by wording. Why was not measured: either those commits
+  are behind the same id door, or they ranked below search's top 10.
