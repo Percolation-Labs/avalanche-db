@@ -729,10 +729,10 @@ note: no key, so the doors were ranked by search's order, not by Jev; set AVALAN
       repo/src/invoice/total.rs (bytes 0-58)
    6  make.sh#1                    near:notes/ADR-007.md#1  "make.sh"
       make.sh (bytes 0-2008)
-   7  notes/BUG-3.md#1             near:notes/ADR-007.md#1  "notes/BUG-3.md"
-      notes/BUG-3.md (bytes 0-187)
-   8  notes/P-3.md#1               near:notes/ADR-007.md#1  "notes/P-3.md"
+   7  notes/P-3.md#1               near:notes/ADR-007.md#1  "notes/P-3.md"
       notes/P-3.md (bytes 0-283)
+   8  notes/BUG-3.md#1             near:notes/ADR-007.md#1  "notes/BUG-3.md"
+      notes/BUG-3.md (bytes 0-187)
    9  files/total.rs#1             near:notes/BUG-12.md#1   "files/total.rs"
       files/total.rs (bytes 0-58)
   10  repo/README.md#1             term:adr                 "repo/README.md › Billing"

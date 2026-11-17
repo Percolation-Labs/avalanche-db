@@ -30,6 +30,8 @@ def main(name, qpath, wpath, ctl):
     for k in (10, 5, 20):
         rows = {json.loads(l)["qid"]: json.loads(l) for l in open(f"{ctl}.k{k}.jsonl")}
         ids = [q for q in rows if (q, k) in walks]
+        if not ids:
+            continue
         gold = {q: rows[q]["gold"] for q in ids}
         arms = {"walk": {q: walks[(q, k)] for q in ids}, "search": {q: rows[q]["search"] for q in ids}}
         for a in ("oracle", "search-order", "coin", "width"):

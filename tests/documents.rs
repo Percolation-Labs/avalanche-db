@@ -42,7 +42,8 @@ fn a_folder_becomes_passages_doors_and_a_full_text_search() {
     // the near door has two targets: the first as today's snippet, the other as a lead, its title then its opening
     // sentence, without its heading again
     let near = doors.split("near:support.md#1\n").nth(1).expect("a near door");
-    assert!(near.starts_with("  2 unread closest in wording to a read one\n"), "{near}");
+    // the head says what kind of passages are behind the door
+    assert!(near.starts_with("  2 unread closest in wording to a read one · 2 passages in 2 files\n"), "{near}");
     assert!(near.contains(": Rounding halves away from zero") || near.contains(": The spreadsheet export writes"), "{near}");
     assert!(!near.contains(": # ") && !near.contains(": ## "), "{near}");
     // no door carries words that are only in a question

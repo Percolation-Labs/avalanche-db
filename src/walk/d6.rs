@@ -2,13 +2,19 @@
 //! result, `results/reference-world/RESULT.md`). Every line is built from ingestion-time data and the door's unread
 //! targets, never from the question:
 //!
-//!   head     what the door is and how many unread passages are behind it
+//!   head     what the door is, how many unread passages are behind it and of what kind (commits, passages in files)
 //!   first    today's first snippet: the first target in a fixed hash order, 160 characters
-//!   leads    up to five other targets, those naming the most first (hash order the tie): `- title: first sentence`
+//!   leads    up to five other targets, those naming the fewest first (hash order the tie), no text twice:
+//!            `- title: first sentence`
 //!   names    the names its unread targets mention, the most shared first, then the rarest, at most fifteen
 //!
-//! Two differences from the lab's D6, both forced by the binary: the tie order is sha-256 of `key:doc`, not md5,
-//! and names come from `documents::names` (capitalised runs and code identifiers), not spaCy's entities.
+//! Differences from the lab's D6:
+//! - Two are forced by the binary: the tie order is sha-256 of `key:doc`, not md5, and names come from
+//!   `documents::names` (capitalised runs and code identifiers), not spaCy's entities.
+//! - Two were chosen on dev cards and tested on held-out ones (`evals/e2e/REGISTERED-leads.md`, RESULT.md): leads
+//!   fewest names first, not most, and the head's kinds.
+//!
+//! The walk reads an opened door in the order shown here (`read_order`, `within = "shown"`).
 
 use std::collections::{BTreeMap, HashMap};
 use std::path::Path;
@@ -27,10 +33,6 @@ pub struct D6 {
     docs: HashMap<String, (String, String, Vec<String>)>,
     /// name → how many documents name it, filled as documents are read
     df: BTreeMap<String, usize>,
-    /// the lead order and head (evals/e2e/REGISTERED-leads.md): AVALANCHE_D6_LEADS = names | fewest | spread,
-    /// AVALANCHE_D6_HEAD = plain | kinds
-    leads: String,
-    kinds: bool,
 }
 
 /// A passage's file: its id up to `#`; a commit is its own file.
@@ -49,9 +51,7 @@ fn snippet(text: &str, n: usize) -> String {
 impl D6 {
     /// `dir` is the folder holding avalanche.toml, against which pointers resolve.
     pub fn new(dir: &Path) -> D6 {
-        let leads = std::env::var("AVALANCHE_D6_LEADS").unwrap_or_else(|_| "names".into());
-        let kinds = std::env::var("AVALANCHE_D6_HEAD").map(|h| h == "kinds").unwrap_or(false);
-        D6 { reader: Reader::new(dir), docs: HashMap::new(), df: BTreeMap::new(), leads, kinds }
+        D6 { reader: Reader::new(dir), docs: HashMap::new(), df: BTreeMap::new() }
     }
 
     fn doc(&mut self, d: &str, g: &mut Graph) -> Result<&(String, String, Vec<String>)> {
@@ -70,22 +70,11 @@ impl D6 {
         Ok(&self.docs[d])
     }
 
-    /// The door's targets in lead order (`spread` keeps one per file when `all` is false). Every target has been
-    /// read into `self.docs` first.
-    fn lead_order<'a>(&self, door: &'a Clue, all: bool) -> Vec<&'a String> {
+    /// The door's targets in lead order: those naming the fewest first, the hash the tie. On a repository, naming
+    /// many marks a list (a log, a board), not the passage a door is for (evals/e2e/REGISTERED-leads.md).
+    fn lead_order<'a>(&self, door: &'a Clue) -> Vec<&'a String> {
         let mut ordered: Vec<&String> = door.targets.iter().collect();
-        match self.leads.as_str() {
-            "fewest" => ordered.sort_by_key(|d| (self.docs[*d].2.len(), hash("", d))),
-            "spread" => {
-                // one per file: the file's first passage in hash order, files in hash order
-                ordered.sort_by_key(|d| (hash(&door.key, file_of(d)), hash("", d)));
-                if !all {
-                    let mut seen = std::collections::HashSet::new();
-                    ordered.retain(|d| seen.insert(file_of(d)));
-                }
-            }
-            _ => ordered.sort_by_key(|d| (std::cmp::Reverse(self.docs[*d].2.len()), hash("", d))),
-        }
+        ordered.sort_by_key(|d| (self.docs[*d].2.len(), hash("", d)));
         ordered
     }
 
@@ -96,7 +85,7 @@ impl D6 {
         }
         let first = door.targets.iter().min_by_key(|d| hash(&door.key, d)).cloned();
         let mut out: Vec<String> = first.iter().cloned().collect();
-        out.extend(self.lead_order(door, true).into_iter().filter(|d| Some(*d) != first.as_ref()).cloned());
+        out.extend(self.lead_order(door).into_iter().filter(|d| Some(*d) != first.as_ref()).cloned());
         Ok(out)
     }
 
@@ -109,7 +98,7 @@ impl D6 {
             "next" => format!("{} unread beside a read one, in the same file or history", tg.len()),
             k => format!("{k} · {} unread", tg.len()),
         };
-        let head = if self.kinds {
+        let head = {
             let commits = tg.iter().filter(|d| d.starts_with("commit/")).count();
             let mut files: Vec<&str> = tg.iter().filter(|d| !d.starts_with("commit/")).map(|d| file_of(d)).collect();
             let passages = files.len();
@@ -123,8 +112,6 @@ impl D6 {
                 parts.push(format!("{passages} passage{} in {} file{}", if passages == 1 { "" } else { "s" }, files.len(), if files.len() == 1 { "" } else { "s" }));
             }
             format!("{head} · {}", parts.join(", "))
-        } else {
-            head
         };
         for d in tg {
             self.doc(d, g)?;
@@ -138,8 +125,7 @@ impl D6 {
             shown = snippet(&format!("{title}\n\n{text}"), 160);
             lines.push(format!("- {shown}"));
         }
-        let ordered = self.lead_order(door, false);
-        let dedup = self.leads != "names";
+        let ordered = self.lead_order(door);
         let mut said: Vec<String> = vec![];
         let mut leads = 0;
         for d in ordered {
@@ -152,7 +138,7 @@ impl D6 {
                 continue;
             }
             let said_here = lead(&body(title, text), 200);
-            if dedup && said.contains(&said_here) {
+            if said.contains(&said_here) {
                 continue;
             }
             lines.push(format!("- {}: {}", snippet(title, 120), said_here));
@@ -180,7 +166,7 @@ impl D6 {
 
 impl DoorLabeller for D6 {
     fn version(&self) -> String {
-        if self.leads == "names" && !self.kinds { "d6/1".into() } else { format!("d6/1+{}{}", self.leads, if self.kinds { "+kinds" } else { "" }) }
+        "d6/2".into()
     }
     fn label(&mut self, door: &Clue, g: &mut Graph) -> Result<Attrs> {
         let mut stats = BTreeMap::new();

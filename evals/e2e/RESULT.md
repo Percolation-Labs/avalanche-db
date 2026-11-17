@@ -257,3 +257,65 @@ The pick is **shown**.
 - The 100 walks made 597 requests. 579 were replayed from the cache, because wave 1 is identical to L1k's: the same
   seeds, door text and kappa. Only the read order inside the door changed.
 - L1kS goes forward to the registered test.
+
+## The registered test: the walk beats search on p8-subsystems at 10 documents (17 Nov, bill, $1.27)
+
+**Setup.** As in the registered run above, with I1, L1kS and nothing else changed:
+- the same 150 test cards and 150 MuSiQue questions;
+- MCP, Jev 1.13.0, K6, F2 keys, seeds = ceil(k/2);
+- fresh `midb ingest` of both stores with I1;
+- the control arms rerun at $0 with the same settings, so W2 compares like with like.
+
+Output: `leads/test/score.txt`.
+
+**Spend.**
+- p8: $1.00. k=10 and k=5 completed on all 150 cards; k=20 stopped at the $1 cap after 125 cards.
+- MuSiQue: $0.27, k=10.
+
+| recall@10, paired 95% CI | B: p8-subsystems, 150 | A: MuSiQue, 150 |
+|---|---|---|
+| search | .291 | .464 |
+| walk, merged (first run) | .323 | .596 |
+| **walk, I1 + L1kS** | **.477** | **.598** |
+| **W1**, walk − search | **+.186 [+.118, +.253], PASS** | **+.134 [+.094, +.176], PASS** |
+| W2, walk − width-only | +.289 [+.228, +.349], PASS | +.189 [+.150, +.229], PASS |
+| walk − search-order | +.211 | +.151 |
+| oracle − search | +.421 | +.201 |
+| full support @10, walk / search | .307 / .187 | .353 / .140 |
+| k=5, walk − search | +.034 [−.027, +.095] | not run |
+| k=20, walk − search | +.374 [+.291, +.458] (n=125) | not run |
+
+**The bar is met.**
+- On our own repository, at the default 10 documents, the walk returns 64% more of the commits that did a card's work
+  than search does.
+- It returns all of them for 31% of cards, against 19% for search.
+- MuSiQue is unchanged (+.134 against +.132), so the changes didn't buy the repository at the reference world's
+  expense.
+
+### Postmortem
+
+**Where the gain comes from.**
+- At k=10 Jev opened the card's id door on 98 of 150 cards. The merged walk opened it on 6.
+- 68 gold commits came through that door, 18 through other term doors, and 55 from search's five seeds.
+- Against search's top 10, the walk found 73 gold commits that search missed and gave up 18 that search's ranks 6–10
+  held.
+
+All three changes were needed, and each fixed the previous one's block:
+1. **I1** made the door exist. Before it, the door was missing on five cards in six.
+2. **L1k** made the door look like what it holds, so Jev took it: 6 → 72 of 100 on dev.
+3. **Shown** made the door read what it showed, so taking it paid: dev recall .345 → .565.
+
+**Why k=5 is a null.** At k=5 the walk has 3 seeds and 2 door reads. It gains 35 gold and gives up 26 from search's
+ranks 4–5. Two reads are too few for the door to repay the search reads it costs. The claim is made at 10 and 20
+documents, not at 5.
+
+**Scope.** These go with every use of the number:
+- This is one repository and one question type: a card's title, answered by the commits that name its id. The id
+  door is the same relation that defines the gold. A repository whose issues are never named in commits gets no
+  such door.
+- The test shows that a walk reaches what a link in the text implies, which search can't rank. It doesn't show that
+  every repository question gains.
+- I1 and the kinds head are generic: any `ABC-123` id; commits and files exist in every git source. The lead order
+  and `shown` were chosen on dev cards and checked on MuSiQue, where they were neutral.
+- The walk now gets 65% of the oracle's gain (+.186 of +.421), against 13% before. The rest is the next headroom,
+  measured with the oracle's door choice and the same read order.
