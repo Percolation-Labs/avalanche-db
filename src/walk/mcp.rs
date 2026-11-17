@@ -39,7 +39,7 @@ fn tools() -> Value {
         {"name": "walk", "description": "Find the documents a question needs. Full-text search picks the first few; then, one wave at a time, the decision model ranks the doors (leads from what has been read to unread documents) and the walk opens the best one and reads what is behind it, until it has budget documents. Returns exactly those documents in reading order: rank, id, how it was reached (search, or the door it came through) and title, then where its content lives; then each wave's doors and what the ranking cost. Read a document with read_document.",
          "inputSchema": {"type": "object", "properties": {"question": s("The question, in words"),
             "budget": {"type": "integer", "description": "How many documents to return (default 10)"},
-            "seeds": {"type": "integer", "description": "How many of them full-text search picks before the walk follows doors (default 3)"},
+            "seeds": {"type": "integer", "description": "How many of them full-text search picks before the walk follows doors (default half the budget, rounded up)"},
             "kappa": {"type": "boolean", "description": "Give the ranking what the walk has read so far, one sentence a document (default true; false is the control)"},
             "json": {"type": "boolean", "description": "Return the walk as JSON instead of text (default false)"}}, "required": ["question"]}},
         {"name": "read_document", "description": "The content of one document walk returned, by its id: its title, where it lives, then its text.",

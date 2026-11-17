@@ -271,7 +271,7 @@ fn midb_walk_with_no_key_ranks_doors_by_search_order_and_says_so() {
 fn a_walk_returns_k_documents_s_from_search_the_rest_through_doors() {
     let (dir, store, docs) = lab_fixture("k");
     let base = ["walk", "which notes are about rounding?", "--store", store.to_str().unwrap(), "--conv", common::CONV, "--docs", docs.to_str().unwrap(), "--json"];
-    for (extra, k, s) in [(vec![], 10usize, 3usize), (vec!["--budget", "25", "--seeds", "5"], 25, 5), (vec!["--budget", "2"], 2, 2), (vec!["--budget", "1"], 1, 1)] {
+    for (extra, k, s) in [(vec![], 10usize, 5usize), (vec!["--budget", "25", "--seeds", "5"], 25, 5), (vec!["--budget", "7"], 7, 4), (vec!["--budget", "1"], 1, 1)] {
         let out = midb(&dir, &dir, &[&base[..], &extra[..]].concat());
         assert!(out.status.success(), "{}", String::from_utf8_lossy(&out.stderr));
         let w: Value = serde_json::from_slice(&out.stdout).unwrap();
@@ -335,7 +335,7 @@ fn the_mcp_tools_ingest_walk_and_read_a_folder() {
     assert!(text(&r[2]).contains("added a documents source"), "{}", text(&r[2]));
     assert!(text(&r[2]).contains("passages"), "{}", text(&r[2]));
     let walk = text(&r[3]);
-    assert!(walk.starts_with("walk: 3 documents, 3 from search then one door a wave; decider search-order"), "{walk}");
+    assert!(walk.starts_with("walk: 3 documents, 2 from search then one door a wave; decider search-order"), "{walk}");
     let first = walk.lines().nth(2).unwrap().split_whitespace().nth(1).unwrap().to_string();
     let j: Value = serde_json::from_str(text(&r[4])).unwrap();
     assert_eq!(j["documents"][0]["id"], first.as_str());
@@ -350,7 +350,7 @@ fn the_mcp_walk_serves_a_lab_conversation() {
     let (dir, store, docs) = lab_fixture("mcplab");
     let extra = ["--store", store.to_str().unwrap(), "--conv", common::CONV, "--docs", docs.to_str().unwrap()];
     let r = mcp(&dir, &extra, &[call("walk", json!({"question": "rounding", "budget": 12})), call("read_document", json!({"id": common::doc(3)}))]);
-    assert!(text(&r[0]).starts_with("walk: 12 documents, 3 from search then one door a wave; decider search-order"), "{}", text(&r[0]));
+    assert!(text(&r[0]).starts_with("walk: 12 documents, 6 from search then one door a wave; decider search-order"), "{}", text(&r[0]));
     assert!(text(&r[1]).contains("Note 3 is about"), "{}", text(&r[1]));
     let _ = std::fs::remove_dir_all(&dir);
 }

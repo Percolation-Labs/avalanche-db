@@ -140,7 +140,7 @@ enum Cmd {
         /// How many documents to return (k)
         #[arg(long, default_value_t = 10)]
         budget: usize,
-        /// How many of them full-text search picks before the walk follows doors (s; default 3, or 10 with --reads)
+        /// How many of them full-text search picks before the walk follows doors (s; default ceil(k/2), or 10 with --reads)
         #[arg(long)]
         seeds: Option<usize>,
         /// Expert: the lab's operator a instead (waves of 50 filled by search, one door a wave), stopping at this many

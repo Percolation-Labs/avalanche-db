@@ -707,7 +707,7 @@ $ printf '%s\n' '{"jsonrpc":"2.0","id":1,"method":"tools/call","params":{"name":
 
 Then the question. The `walk` tool returns the same text as `midb walk`. The caller's `--budget` is
 how many documents come back (10 by default). Full-text search over the passages picks the first
-`--seeds` of them (3 by default). The walk fills the rest through doors, one door a wave. Each
+`--seeds` of them (half the budget, rounded up, by default). The walk fills the rest through doors, one door a wave. Each
 wave, the doors raised so far are described from the graph alone, never from the question. Jev
 ranks them in one batch, and the walk opens the best one and reads what is behind it, until it
 has read `--budget` documents. With no key, as here, search's order ranks the doors instead, and
@@ -715,33 +715,31 @@ the walk says so:
 
 ```console
 $ midb walk "why is the invoice a cent off?"
-walk: 10 documents, 3 from search then one door a wave; decider search-order
+walk: 10 documents, 5 from search then one door a wave; decider search-order
 note: no key, so the doors were ranked by search's order, not by Jev; set AVALANCHE_MODEL_KEY or run `midb key set`
-   1  notes/SUP-88.md#1            search         "notes/SUP-88.md"
+   1  notes/SUP-88.md#1            search                   "notes/SUP-88.md"
       notes/SUP-88.md (bytes 0-269)
-   2  notes/BUG-12.md#1            search         "notes/BUG-12.md"
+   2  notes/BUG-12.md#1            search                   "notes/BUG-12.md"
       notes/BUG-12.md (bytes 0-300)
-   3  notes/ADR-007.md#1           search         "notes/ADR-007.md"
+   3  notes/ADR-007.md#1           search                   "notes/ADR-007.md"
       notes/ADR-007.md (bytes 0-641)
-   4  files/round-v3.rs#1          term:decision  "files/round-v3.rs"
-      files/round-v3.rs (bytes 0-224)
-   5  repo/src/invoice/round.rs#1  term:decision  "repo/src/invoice/round.rs"
+   4  repo/src/invoice/round.rs#1  search                   "repo/src/invoice/round.rs"
       repo/src/invoice/round.rs (bytes 0-224)
-   6  make.sh#1                    term:even      "make.sh"
-      make.sh (bytes 0-2008)
-   7  notes/P-3.md#1               term:halves    "notes/P-3.md"
-      notes/P-3.md (bytes 0-283)
-   8  notes/BUG-3.md#1             term:invoice   "notes/BUG-3.md"
-      notes/BUG-3.md (bytes 0-187)
-   9  repo/src/invoice/total.rs#1  term:invoice   "repo/src/invoice/total.rs"
+   5  repo/src/invoice/total.rs#1  search                   "repo/src/invoice/total.rs"
       repo/src/invoice/total.rs (bytes 0-58)
-  10  files/round-v1.rs#1          term:round     "files/round-v1.rs"
-      files/round-v1.rs (bytes 0-62)
-wave 1: 45 doors; opened term:decision
-wave 2: 14 doors; opened term:even
-wave 3: 15 doors; opened term:halves
-wave 4: 1 door; opened term:invoice
-wave 5: 6 doors; opened term:round
+   6  make.sh#1                    near:notes/ADR-007.md#1  "make.sh"
+      make.sh (bytes 0-2008)
+   7  notes/BUG-3.md#1             near:notes/ADR-007.md#1  "notes/BUG-3.md"
+      notes/BUG-3.md (bytes 0-187)
+   8  notes/P-3.md#1               near:notes/ADR-007.md#1  "notes/P-3.md"
+      notes/P-3.md (bytes 0-283)
+   9  files/total.rs#1             near:notes/BUG-12.md#1   "files/total.rs"
+      files/total.rs (bytes 0-58)
+  10  repo/README.md#1             term:adr                 "repo/README.md › Billing"
+      repo/README.md (bytes 0-34)
+wave 1: 64 doors; opened near:notes/ADR-007.md#1
+wave 2: 15 doors; opened near:notes/BUG-12.md#1
+wave 3: 1 door; opened term:adr
 ```
 
 Each document's second line says where its content lives. `read_document` reads it from there,
@@ -762,30 +760,29 @@ first, which leads to every version of the rounding code and to the rejected pro
 
 ```console no-test
 $ midb walk "why is the invoice a cent off?"
-walk: 10 documents, 3 from search then one door a wave; decider jev (jev-1.13.0), kappa K6
-   1  notes/SUP-88.md#1            search        "notes/SUP-88.md"
+walk: 10 documents, 5 from search then one door a wave; decider jev (jev-1.13.0), kappa K6
+   1  notes/SUP-88.md#1            search      "notes/SUP-88.md"
       notes/SUP-88.md (bytes 0-269)
-   2  notes/BUG-12.md#1            search        "notes/BUG-12.md"
+   2  notes/BUG-12.md#1            search      "notes/BUG-12.md"
       notes/BUG-12.md (bytes 0-300)
-   3  notes/ADR-007.md#1           search        "notes/ADR-007.md"
+   3  notes/ADR-007.md#1           search      "notes/ADR-007.md"
       notes/ADR-007.md (bytes 0-641)
-   4  files/round-v1.rs#1          term:round    "files/round-v1.rs"
-      files/round-v1.rs (bytes 0-62)
-   5  files/round-v2.rs#1          term:round    "files/round-v2.rs"
-      files/round-v2.rs (bytes 0-153)
-   6  files/round-v3.rs#1          term:round    "files/round-v3.rs"
-      files/round-v3.rs (bytes 0-224)
-   7  make.sh#1                    term:round    "make.sh"
-      make.sh (bytes 0-2008)
-   8  notes/P-3.md#1               term:round    "notes/P-3.md"
-      notes/P-3.md (bytes 0-283)
-   9  repo/src/invoice/round.rs#1  term:round    "repo/src/invoice/round.rs"
+   4  repo/src/invoice/round.rs#1  search      "repo/src/invoice/round.rs"
       repo/src/invoice/round.rs (bytes 0-224)
-  10  notes/BUG-3.md#1             term:invoice  "notes/BUG-3.md"
-      notes/BUG-3.md (bytes 0-187)
-wave 1: 45 doors in 2 requests (0 replayed, 2 sent); opened term:round
-wave 2: 23 doors in 1 request (0 replayed, 1 sent); opened term:invoice
-jev: 3 requests (0 replayed, 3 sent), 12004 input tokens, $0.0005
+   5  repo/src/invoice/total.rs#1  search      "repo/src/invoice/total.rs"
+      repo/src/invoice/total.rs (bytes 0-58)
+   6  files/round-v1.rs#1          term:round  "files/round-v1.rs"
+      files/round-v1.rs (bytes 0-62)
+   7  files/round-v2.rs#1          term:round  "files/round-v2.rs"
+      files/round-v2.rs (bytes 0-153)
+   8  files/round-v3.rs#1          term:round  "files/round-v3.rs"
+      files/round-v3.rs (bytes 0-224)
+   9  make.sh#1                    term:round  "make.sh"
+      make.sh (bytes 0-2008)
+  10  notes/P-3.md#1               term:round  "notes/P-3.md"
+      notes/P-3.md (bytes 0-283)
+wave 1: 64 doors in 3 requests (0 replayed, 3 sent); opened term:round
+jev: 3 requests (0 replayed, 3 sent), 11688 input tokens, $0.0005
 ```
 
 `--json` prints the same walk as JSON: each document's id, title, location, how it was
