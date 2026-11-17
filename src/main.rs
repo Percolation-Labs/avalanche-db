@@ -4,12 +4,12 @@ use std::path::{Path, PathBuf};
 
 use clap::{Parser, Subcommand};
 
-use avalanche::config::{Config, DIR, FILE};
+use avalanche::config::{Config, DIR};
 use avalanche::model::{date, Pred};
 use avalanche::walk::session::{self, Steer};
 use avalanche::store::{Dir, ScanCost, Store};
-use avalanche::construct::{dream, ingest, review};
-use avalanche::walk::{mcp, p8ql, search, suite};
+use avalanche::construct::{dream, project, review};
+use avalanche::walk::{agent, mcp, p8ql, search, suite};
 use avalanche::{infer, Result};
 
 #[derive(Parser)]
@@ -127,8 +127,38 @@ enum Cmd {
         #[command(subcommand)]
         action: SuiteCmd,
     },
-    /// Serve the session API to an agent over MCP, on stdin and stdout
-    Mcp,
+    /// Serve the session API and the agent walk over MCP, on stdin and stdout; `mcp install` registers it with Claude
+    Mcp {
+        #[command(subcommand)]
+        action: Option<McpCmd>,
+        #[command(flatten)]
+        corpus: CorpusArgs,
+    },
+    /// The walk an agent calls: the documents a question needs, with where each lives and how the walk reached it
+    Walk {
+        question: Vec<String>,
+        /// How many documents to return (k)
+        #[arg(long, default_value_t = 10)]
+        budget: usize,
+        /// How many of them full-text search picks before the walk follows doors (s; default 3, or 10 with --reads)
+        #[arg(long)]
+        seeds: Option<usize>,
+        /// Expert: the lab's operator a instead (waves of 50 filled by search, one door a wave), stopping at this many
+        /// documents; --budget is then ignored
+        #[arg(long)]
+        reads: Option<usize>,
+        /// Print JSON
+        #[arg(long)]
+        json: bool,
+        /// Leave the walk's past (kappa, K6) out of Jev's requests: the control
+        #[arg(long)]
+        no_kappa: bool,
+        /// Search's order from a file (a JSON list of document ids) instead of the store's own search
+        #[arg(long)]
+        order: Option<PathBuf>,
+        #[command(flatten)]
+        corpus: CorpusArgs,
+    },
     /// A synthetic reachability world (REM-1195): import it, and walk its questions
     World {
         #[command(subcommand)]
@@ -153,6 +183,39 @@ enum Cmd {
     Log { tx: Option<u64> },
     /// How the memory has been walked, read from the usage graph
     Usage,
+}
+
+/// Where a walk's documents are: this folder's store, or a lab-imported conversation.
+#[derive(clap::Args)]
+struct CorpusArgs {
+    /// A lab-imported store (`midb lab import`) instead of this folder's
+    #[arg(long)]
+    store: Option<PathBuf>,
+    /// The conversation in that store
+    #[arg(long, requires = "store")]
+    conv: Option<String>,
+    /// The documents' text, a docs.jsonl (uri, title, said, ...), for door text, search and read_document
+    #[arg(long, requires = "store")]
+    docs: Option<PathBuf>,
+}
+
+impl CorpusArgs {
+    fn corpus(self) -> Result<agent::Corpus> {
+        Ok(match self.store {
+            None => agent::Corpus::Project,
+            Some(store) => agent::Corpus::Lab { store, conv: self.conv.ok_or("--store needs --conv")?, docs: self.docs },
+        })
+    }
+}
+
+#[derive(Subcommand)]
+enum McpCmd {
+    /// Register this store with Claude Code (`claude mcp add`), or print the command and config when claude is not here
+    Install {
+        /// Claude Code's scope: local, user or project
+        #[arg(long, default_value = "user")]
+        scope: String,
+    },
 }
 
 #[derive(Subcommand)]
@@ -246,64 +309,11 @@ fn open(dir: &Path) -> Result<(Config, Store, u32)> {
 fn run(cli: Cli) -> Result<()> {
     let dir = cli.dir.as_path();
     match cli.cmd {
-        Cmd::Init => {
-            if dir.join(FILE).exists() {
-                return Err(format!("{FILE} already exists; edit it, or remove it to start again").into());
-            }
-            let cfg = Config::discover(dir)?;
-            std::fs::write(dir.join(FILE), cfg.to_toml())?;
-            std::fs::create_dir_all(dir.join(DIR))?;
-            let store = Store::open(Config::store_path(dir))?;
-            store.tenant(&cfg.tenant)?;
-            println!("created {FILE} and {DIR}/store.redb (tenant \"{}\")", cfg.tenant);
-            let srcs: Vec<String> = cfg.sources.iter().map(|s| format!("{} {}", s.adapter, s.path.display())).collect();
-            println!("  sources: {}", if srcs.is_empty() { "none found".into() } else { srcs.join(", ") });
-            let ids: Vec<String> = cfg.ids.iter().map(|(k, v)| format!("{k} {v}")).collect();
-            println!("  ids: {}", if ids.is_empty() { "none found".into() } else { ids.join(", ") });
-        }
-        Cmd::Ingest { mut sources, facts, documents } => {
-            if let Some(p) = documents {
-                if Config::add_documents(dir, &p)? {
-                    println!("added a documents source for {p} to {FILE}");
-                }
-                sources = vec![p];
-            }
-            let started = std::time::Instant::now();
-            let (cfg, store, t) = open(dir)?;
-            let mut all = vec![];
-            if let Some(f) = facts {
-                all = ingest::json_lines(&f)?;
-                println!("facts     {}  →  {} facts", f.display(), all.len());
-            } else {
-                let at_of = |src: &avalanche::config::SourceCfg| if src.adapter == "github" { src.repo.clone().unwrap_or_default() } else { src.path.display().to_string() };
-                if let Some(missing) = sources.iter().find(|n| !cfg.sources.iter().any(|s| at_of(s) == **n)) {
-                    return Err(format!("{missing}: not a source in {FILE}").into());
-                }
-                for src in cfg.sources.iter().filter(|s| sources.is_empty() || sources.contains(&at_of(s))) {
-                    let at = at_of(src);
-                    let got = match src.adapter.as_str() {
-                        "git" => ingest::git_history(&dir.join(&src.path), src.rev.as_deref().unwrap_or("HEAD"), &at, &cfg)?,
-                        "markdown" => match &src.rev {
-                            Some(rev) => ingest::markdown_at(&dir.join(&src.path), rev, src.dir.as_deref().unwrap_or("."), &at, &cfg)?,
-                            None => ingest::markdown(&dir.join(&src.path), &at, &cfg)?,
-                        },
-                        "percolate" => ingest::percolate(&dir.join(&src.path), &at, &cfg)?,
-                        "documents" => avalanche::construct::documents::documents(&dir.join(&src.path), &at, &store, t)?,
-                        "github" => ingest::github(src.repo.as_deref().ok_or("a github source needs repo = \"owner/name\"")?, &cfg)?,
-                        other => return Err(format!("{other}: no such adapter").into()),
-                    };
-                    println!("{:<9} {:<14} {} {:<8} →  {} facts", src.adapter, at, got.read.0, got.read.1, got.facts.len());
-                    all.extend(got.facts);
-                }
-                let (n, facts) = review::facts(dir)?;
-                if n > 0 {
-                    println!("{:<9} {:<14} {} {:<8} →  {} facts", "reviews", format!("{DIR}/{}", review::FILE).trim_start_matches(".avalanche/"), n, if n == 1 { "review" } else { "reviews" }, facts.len());
-                    all.extend(facts);
-                }
-            }
-            let tx = store.write(t, &all)?;
-            println!("T{tx}: {} facts in {:.1?}", all.len(), started.elapsed());
-        }
+        Cmd::Init => print!("{}", project::init(dir)?),
+        Cmd::Ingest { sources, facts, documents } => match documents {
+            Some(p) => print!("{}", project::ingest_documents(dir, &p)?),
+            None => print!("{}", project::ingest(dir, &sources, facts)?),
+        },
         Cmd::Key { action: KeyCmd::Set } => {
             let mut k = String::new();
             std::io::stdin().read_to_string(&mut k)?;
@@ -446,7 +456,17 @@ fn run(cli: Cli) -> Result<()> {
                 return Err(format!("{changed} of {} answers changed: review them, and keep a new answer with `midb suite add`", outcomes.len()).into());
             }
         }
-        Cmd::Mcp => mcp::serve(dir)?,
+        Cmd::Mcp { action: Some(McpCmd::Install { scope }), corpus } => print!("{}", mcp::install(dir, &corpus.corpus()?, &scope)?),
+        Cmd::Mcp { action: None, corpus } => mcp::serve(dir, &corpus.corpus()?)?,
+        Cmd::Walk { question, budget, seeds, reads, json, no_kappa, order, corpus } => {
+            let order = order.map(|p| -> Result<Vec<String>> { Ok(serde_json::from_str(&std::fs::read_to_string(&p).map_err(|e| format!("{}: {e}", p.display()))?)?) }).transpose()?;
+            let w = agent::walk(dir, &corpus.corpus()?, &question.join(" "), &agent::Opts { budget, seeds, reads, order, kappa: !no_kappa })?;
+            if json {
+                println!("{}", serde_json::to_string_pretty(&w)?);
+            } else {
+                print!("{w}");
+            }
+        }
         Cmd::World { action: WorldCmd::Import { world } } => {
             let path = world.join("avalanche.redb");
             let _ = std::fs::remove_file(&path);

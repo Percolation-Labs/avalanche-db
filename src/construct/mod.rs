@@ -6,4 +6,5 @@ pub mod dream;
 pub mod ingest;
 pub mod review;
 pub mod lab;
+pub mod project;
 pub mod world;
