@@ -27,6 +27,15 @@ pub struct D6 {
     docs: HashMap<String, (String, String, Vec<String>)>,
     /// name → how many documents name it, filled as documents are read
     df: BTreeMap<String, usize>,
+    /// the lead order and head (evals/e2e/REGISTERED-leads.md): AVALANCHE_D6_LEADS = names | fewest | spread,
+    /// AVALANCHE_D6_HEAD = plain | kinds
+    leads: String,
+    kinds: bool,
+}
+
+/// A passage's file: its id up to `#`; a commit is its own file.
+fn file_of(d: &str) -> &str {
+    d.split('#').next().unwrap_or(d)
 }
 
 fn hash(key: &str, doc: &str) -> Vec<u8> {
@@ -40,7 +49,9 @@ fn snippet(text: &str, n: usize) -> String {
 impl D6 {
     /// `dir` is the folder holding avalanche.toml, against which pointers resolve.
     pub fn new(dir: &Path) -> D6 {
-        D6 { reader: Reader::new(dir), docs: HashMap::new(), df: BTreeMap::new() }
+        let leads = std::env::var("AVALANCHE_D6_LEADS").unwrap_or_else(|_| "names".into());
+        let kinds = std::env::var("AVALANCHE_D6_HEAD").map(|h| h == "kinds").unwrap_or(false);
+        D6 { reader: Reader::new(dir), docs: HashMap::new(), df: BTreeMap::new(), leads, kinds }
     }
 
     fn doc(&mut self, d: &str, g: &mut Graph) -> Result<&(String, String, Vec<String>)> {
@@ -68,6 +79,23 @@ impl D6 {
             "next" => format!("{} unread beside a read one, in the same file or history", tg.len()),
             k => format!("{k} · {} unread", tg.len()),
         };
+        let head = if self.kinds {
+            let commits = tg.iter().filter(|d| d.starts_with("commit/")).count();
+            let mut files: Vec<&str> = tg.iter().filter(|d| !d.starts_with("commit/")).map(|d| file_of(d)).collect();
+            let passages = files.len();
+            files.sort();
+            files.dedup();
+            let mut parts = vec![];
+            if commits > 0 {
+                parts.push(format!("{commits} commit{}", if commits == 1 { "" } else { "s" }));
+            }
+            if passages > 0 {
+                parts.push(format!("{passages} passage{} in {} file{}", if passages == 1 { "" } else { "s" }, files.len(), if files.len() == 1 { "" } else { "s" }));
+            }
+            format!("{head} · {}", parts.join(", "))
+        } else {
+            head
+        };
         for d in tg {
             self.doc(d, g)?;
         }
@@ -81,7 +109,18 @@ impl D6 {
             lines.push(format!("- {shown}"));
         }
         let mut ordered: Vec<&String> = tg.iter().collect();
-        ordered.sort_by_key(|d| (std::cmp::Reverse(self.docs[*d].2.len()), hash("", d)));
+        match self.leads.as_str() {
+            "fewest" => ordered.sort_by_key(|d| (self.docs[*d].2.len(), hash("", d))),
+            "spread" => {
+                // one per file: the file's first passage in hash order, files in hash order
+                ordered.sort_by_key(|d| (hash(&door.key, file_of(d)), hash("", d)));
+                let mut seen = std::collections::HashSet::new();
+                ordered.retain(|d| seen.insert(file_of(d)));
+            }
+            _ => ordered.sort_by_key(|d| (std::cmp::Reverse(self.docs[*d].2.len()), hash("", d))),
+        }
+        let dedup = self.leads != "names";
+        let mut said: Vec<String> = vec![];
         let mut leads = 0;
         for d in ordered {
             if leads == 5 {
@@ -92,7 +131,12 @@ impl D6 {
             if !opening.is_empty() && shown.contains(&opening) {
                 continue;
             }
-            lines.push(format!("- {}: {}", snippet(title, 120), lead(&body(title, text), 200)));
+            let said_here = lead(&body(title, text), 200);
+            if dedup && said.contains(&said_here) {
+                continue;
+            }
+            lines.push(format!("- {}: {}", snippet(title, 120), said_here));
+            said.push(said_here);
             leads += 1;
         }
         let mut count: BTreeMap<&str, usize> = BTreeMap::new();
@@ -116,7 +160,7 @@ impl D6 {
 
 impl DoorLabeller for D6 {
     fn version(&self) -> String {
-        "d6/1".into()
+        if self.leads == "names" && !self.kinds { "d6/1".into() } else { format!("d6/1+{}{}", self.leads, if self.kinds { "+kinds" } else { "" }) }
     }
     fn label(&mut self, door: &Clue, g: &mut Graph) -> Result<Attrs> {
         let mut stats = BTreeMap::new();

@@ -1,0 +1,6 @@
+L0    Shown 0.520 (281/540)  id door Shown 0.459 (45/98)  overlap AUC 0.690  (100 cards)
+L1    Shown 0.678 (366/540)  id door Shown 0.755 (74/98)  overlap AUC 0.703  (100 cards)
+L2    Shown 0.648 (350/540)  id door Shown 0.816 (80/98)  overlap AUC 0.708  (100 cards)
+L0k   Shown 0.520 (281/540)  id door Shown 0.459 (45/98)  overlap AUC 0.690  (100 cards)
+L1k   Shown 0.678 (366/540)  id door Shown 0.755 (74/98)  overlap AUC 0.703  (100 cards)
+L2k   Shown 0.648 (350/540)  id door Shown 0.816 (80/98)  overlap AUC 0.708  (100 cards)

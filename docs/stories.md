@@ -702,7 +702,7 @@ path. Claude's first call:
 
 ```console
 $ printf '%s\n' '{"jsonrpc":"2.0","id":1,"method":"tools/call","params":{"name":"ingest_repo","arguments":{}}}' | midb mcp
-{"id":1,"jsonrpc":"2.0","result":{"content":[{"text":"added a documents source for . to avalanche.toml\ndocuments .              19 passages →  488 facts\nreviews   reviews.jsonl  1 review   →  2 facts\nT3: 490 facts in #µs\n","type":"text"}]}}
+{"id":1,"jsonrpc":"2.0","result":{"content":[{"text":"added a documents source for . to avalanche.toml\ndocuments .              19 passages →  498 facts\nreviews   reviews.jsonl  1 review   →  2 facts\nT3: 500 facts in #µs\n","type":"text"}]}}
 ```
 
 Then the question. The `walk` tool returns the same text as `midb walk`. The caller's `--budget` is
@@ -737,7 +737,7 @@ note: no key, so the doors were ranked by search's order, not by Jev; set AVALAN
       files/total.rs (bytes 0-58)
   10  repo/README.md#1             term:adr                 "repo/README.md › Billing"
       repo/README.md (bytes 0-34)
-wave 1: 64 doors; opened near:notes/ADR-007.md#1
+wave 1: 67 doors; opened near:notes/ADR-007.md#1
 wave 2: 15 doors; opened near:notes/BUG-12.md#1
 wave 3: 1 door; opened term:adr
 ```

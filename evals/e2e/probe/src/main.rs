@@ -68,7 +68,8 @@ fn main() -> avalanche::Result<()> {
         };
         let hits = ft.search(&question);
         let order: Vec<String> = hits.iter().map(|h| h.0.clone()).collect();
-        let seeds: Vec<String> = order.iter().take(3).cloned().collect();
+        let n_seeds: usize = std::env::var("E2E_SEEDS").ok().and_then(|v| v.parse().ok()).unwrap_or(3);
+        let seeds: Vec<String> = order.iter().take(n_seeds).cloned().collect();
         let seen: HashSet<&String> = seeds.iter().collect();
         let mut doors: BTreeMap<String, serde_json::Value> = BTreeMap::new();
         for s in &seeds {
@@ -121,7 +122,8 @@ fn main() -> avalanche::Result<()> {
             ("coin", Box::new(Random(Coin::new(&format!("e2e:{}", q["qid"]))))),
             ("search-order", Box::new(SearchOrder::new(&order))),
         ];
-        for (name, mut dec) in arms {
+        let keep = std::env::var("E2E_ARMS").unwrap_or_else(|_| "oracle,width,coin,search-order".into());
+        for (name, mut dec) in arms.into_iter().filter(|(a, _)| keep.split(',').any(|k| k == *a)) {
             let w = if seeds.is_empty() { None } else { Some(run(&mut g, order.clone(), settings(), &question, dec.as_mut(), &mut d6)?) };
             let mut reads: Vec<(u32, usize, String)> = w.map(|w| w.reads.into_iter().map(|r| (r.wave, r.ord, r.doc)).collect()).unwrap_or_default();
             reads.sort();

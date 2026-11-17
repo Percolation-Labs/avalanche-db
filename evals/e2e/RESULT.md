@@ -151,7 +151,9 @@ that search's ranks 6–10 held. On MuSiQue the same counts are 59 and 13. The o
 
 **The id door is there and is rarely opened.**
 - Search puts the card among the seeds on all 150 questions, because the question is its title.
-- The term door `rem NNNN`, from the card to everything naming its id, exists for most cards.
+- The term door `rem NNNN`, from the card to everything naming its id, was said here to exist for most cards. That
+  was wrong (corrected 17 Nov, [REGISTERED-leads.md](REGISTERED-leads.md)): ingestion kept only four-digit numbers,
+  so the door existed only for REM-1000 to REM-9999, about one card in six on the dev cards.
 - Jev opened it on 6 of 150.
 
 **Mechanism: the door's description doesn't show the commits.** Take REM-1044:
@@ -182,3 +184,55 @@ Each is carried with the claim:
 
 D6's +.061 and K6's +.046 were measured in the lab. This run measures the package as shipped, not those parts
 separately.
+
+## Lead orders on a repository, dev cards (17 Nov, bill, $0.35)
+
+This section follows [REGISTERED-leads.md](REGISTERED-leads.md) and its I1 amendment. All of it is on the 100 dev
+cards, none of the test's 150.
+
+**$0 step** (`leads/dollar0-*.txt`). On the I1 store, the id door with gold behind it is raised on 98 cards. On the
+merged store it is raised on 15.
+
+| on the I1 store | L0 (today) | L1, fewest names | L2, one per file |
+|---|---|---|---|
+| Shown, gold doors whose text shows a gold commit | .520 | **.678** | .648 |
+| Shown, the id door | .459 | .755 | .816 |
+| overlap AUC | .690 | .703 | .708 |
+
+The kinds head changes neither measure, so it is kept. By the registered rule the pick is **L1k**: I1, fewest
+names, kinds head.
+
+**Jev step**, recall@10 at k=10 through MCP:
+
+| | search | L0, merged store | L1k, I1 store |
+|---|---|---|---|
+| recall@10 | .340 | .380 | .345 |
+| − search | | +.041 [−.016, +.097] | +.005 [−.067, +.079] |
+
+- L1k − L0 is −.035 [−.099, +.029].
+- The pick is not above L0, so under the registered rule it does not go forward and the test is not run.
+- Spend: $0.19 and $0.15.
+
+### Postmortem: the door is now taken, and it reads the wrong targets
+
+**The description fix worked on the decision.**
+- Jev opened the id door on 72 of 100 cards with L1k, against 6 of 100 with L0.
+
+**What it read.**
+- 343 reads went through it, and 12 were gold.
+- 281 of the 343 were `board/cards/...`: the card's own other sections, and other cards naming the id.
+- The walk reads an opened door's targets in sorted-id order (`Settings.within = "graph"`).
+- `board/` sorts before `commit/`, so the commits come last, after the budget is spent.
+- On this corpus, sorted-id order buries what the door is for.
+
+**The loss also has a second side.** Opening the id door spends the wave's reads on it. Under L0 the walk opened other
+term doors instead, and those found 29 gold, against 9 under L1k.
+
+**Next, registered before any run.** The read order inside an opened door, from candidates that never see the
+question:
+- `postings`, fewest terms first, which the walk already has;
+- `shown`, the door's own order: today's snippet, then its leads, then the rest in lead order. A door then reads what
+  it showed.
+
+The order is chosen at $0 on the dev cards, then a Jev dev slice runs against L0, then the test, as above. The
+within-door order is james's walk, so it is agreed with him first.
