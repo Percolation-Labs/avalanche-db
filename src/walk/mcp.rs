@@ -39,7 +39,7 @@ fn tools() -> Value {
         {"name": "walk", "description": "Find the documents a question needs. Full-text search picks the first few; then, one wave at a time, the decision model ranks the doors (leads from what has been read to unread documents) and the walk opens the best one and reads what is behind it, until it has budget documents. Returns exactly those documents in reading order: rank, id, how it was reached (search, or the door it came through) and title, then where its content lives; then each wave's doors and what the ranking cost. Read a document with read_document.",
          "inputSchema": {"type": "object", "properties": {"question": s("The question, in words"),
             "budget": {"type": "integer", "description": "How many documents to return (default 10)"},
-            "seeds": {"type": "integer", "description": "How many of them full-text search picks before the walk follows doors (default 3)"},
+            "seeds": {"type": "integer", "description": "How many of them full-text search picks before the walk follows doors (default half the budget, rounded up)"},
             "kappa": {"type": "boolean", "description": "Give the ranking what the walk has read so far, one sentence a document (default true; false is the control)"},
             "json": {"type": "boolean", "description": "Return the walk as JSON instead of text (default false)"}}, "required": ["question"]}},
         {"name": "read_document", "description": "The content of one document walk returned, by its id: its title, where it lives, then its text.",
@@ -71,7 +71,7 @@ fn call(dir: &Path, corpus: &Corpus, name: &str, a: &Value) -> Result<String> {
         "ingest_repo" => return ingest_repo(dir, a["path"].as_str().unwrap_or(".")),
         "walk" => {
             let q = a["question"].as_str().ok_or("walk needs question")?;
-            let o = agent::Opts { budget: num("budget", 10), seeds: a["seeds"].as_u64().map(|n| n as usize), reads: None, order: None, kappa: a["kappa"].as_bool().unwrap_or(true) };
+            let o = agent::Opts { budget: num("budget", 10), seeds: a["seeds"].as_u64().map(|n| n as usize), reads: None, order: None, kappa: a["kappa"].as_bool().unwrap_or(true), keys: crate::walk::jev::Keys::F2 };
             let w = agent::walk(dir, corpus, q, &o)?;
             return Ok(if a["json"].as_bool().unwrap_or(false) { serde_json::to_string_pretty(&w)? } else { w.to_string() });
         }

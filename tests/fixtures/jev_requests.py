@@ -6,6 +6,7 @@ Nothing is sent. tests/jev.rs must reproduce the bytes.
 
     git -C ~/code/p8-subsystems show origin/main:meta/lab/walklab/{__init__,describe,jevcache,engine}.py > WALKLAB/walklab/
     git -C ~/code/p8-subsystems show origin/main:meta/lab/worlds/kappa_state.py > WALKLAB/kappa_state.py
+    git -C ~/code/p8-subsystems show origin/main:meta/lab/worlds/ceiling.py > WALKLAB/ceiling_src.py
     uv run -q --with 'percolate-core==0.2.15' python tests/fixtures/jev_requests.py WALKLAB \
         [SAVED_WALKS.jsonl PAGE FIXTURE_DIR [JEV_CACHE.jsonl]]
 
@@ -64,7 +65,8 @@ def synthetic():
              "said_at": (f"2026-0{1 + i % 9}-{10 + i % 18:02d}T{i % 24:02d}:00:00" if i % 4 else None)}
         docs[d] = x
     clues, post = [], {}
-    names = ["Rounding", "rounding-rule", "round up", "état", "ADR 007", "a.b", "Cent", "cents", "ledger", "z"]
+    names = ["Rounding", "rounding-rule", "round up", "état", "ADR 007", "a.b", "Cent", "cents", "ledger", "z",
+             "an extraordinarily long term name that runs well past the sixty characters of a key"]
     for j in range(150):
         kind = ["term", "next", "near"][j % 3]
         src = f"d{r.randrange(300):03d}"
@@ -103,6 +105,53 @@ def real(saved, page_id, fixture):
     sent = {d["key"]: d["text"] for d in pg["doors"]}
     assert p["texts"] == sent, "the door texts differ from the texts the saved run sent"
     return p
+
+
+def lab_present():
+    """ceiling.present, the F0/F1/F2 presenter the lab's D6 and kappa runs used, taken from ceiling.py as written
+    (its module imports the worlds' scorer, so only the presenter's own lines are run)."""
+    src = open(f"{sys.argv[1]}/ceiling_src.py").read()
+    ns = {"re": __import__("re")}
+    exec(src[src.index("TERM = re.compile"):src.index("def pages_of")], ns)
+    return ns["present"]
+
+
+def f2_bodies(question, texts, d6=False, found=None):
+    """F2 requests over jevcache's cut. A describe.lines door is laid out by present("F2"), as the lab's F2 arm sent
+    it. A D6 door keeps its text, and its key is present("F2") of its head line, as the lab keyed D6 bodies."""
+    present = lab_present()
+    state = {"question": question, "task": jevcache.TASK_LINES}
+    if found:
+        state["found"] = found
+    out = []
+    for ks in jevcache.requests({k: None for k in texts}, texts):
+        if d6:
+            keys = [k for k, _ in present("F2", [{"text_none": texts[k].split("\n")[0]} for k in ks])]
+            opts = list(zip(keys, [texts[k] for k in ks]))
+        else:
+            opts = present("F2", [{"text_none": texts[k]} for k in ks])
+        body = {"model": MODEL, "state": state, "questions": {key: Noul(t).wire() for key, t in opts}}
+        _, stream = encode_json(body)
+        out.append(b"".join(stream).decode())
+    return out
+
+
+def d6_page():
+    """Doors in D6's shape (walk::d6): a head line, today's snippet, leads, names; heads with punctuation and unicode."""
+    r = random.Random(61)
+    heads = ["term '{}' · {} unread", "{1} unread closest in wording to a read one",
+             "{1} unread beside a read one, in the same file or history"]
+    names = ["RoundingPolicy", "ADR-007", "São Paulo", "round_total", "Mr. O'Neil", "東京", "a::b", "café"]
+    texts = {}
+    for j in range(130):
+        n = r.randint(1, 30)
+        head = heads[j % 3].format(r.choice(["rounding", "half-even", "ADR 007", "état", "x.y", "Ünïcode", "a'b"]), n)
+        lines = [head, "- " + " ".join(r.choice(names) for _ in range(r.randint(3, 40)))]
+        lines += [f"- {r.choice(names)}: {r.choice(names)} said \"so\"." for _ in range(r.randint(0, 5))]
+        lines.append(f"Names in its {n} unread passage(s): {', '.join(r.sample(names, 3))}.")
+        texts[f"{['term', 'near', 'next'][j % 3]}:{j}:{r.choice(names)}"] = "\n".join(lines)
+    question = "Why is the invoice a cent off?"
+    return {"name": "d6", "question": question, "texts": texts, "f2_bodies": f2_bodies(question, texts, d6=True)}
 
 
 def kappas():
@@ -158,7 +207,9 @@ if __name__ == "__main__":
     # round 3's request shape: the same doors, with K6 of a walk's reads as `found` beside the question and task
     pages.append(page("round3", pages[0]["question"], pages[0]["docs"], pages[0]["clues"][:70], pages[0]["post"],
                       found=k[-3]["found"]))
-    out = {"model": MODEL, "task": jevcache.TASK_LINES, "pages": pages, "cuts": cuts(), "kappa": k}
+    for p in pages:
+        p["f2_bodies"] = f2_bodies(p["question"], p["texts"], found=p["found"])
+    out = {"model": MODEL, "task": jevcache.TASK_LINES, "pages": pages, "cuts": cuts(), "kappa": k, "d6": d6_page()}
     with open("tests/fixtures/jev-requests.json", "w") as f:
         json.dump(out, f, ensure_ascii=False, indent=0)
     for p in pages:

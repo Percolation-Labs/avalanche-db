@@ -1,7 +1,8 @@
 //! THE WALK AN AGENT CALLS: a question in, documents out, each with where its content lives and how the walk
 //! reached it. `midb walk` and the MCP `walk` tool are this function.
 //!
-//! The caller's `budget` is k, the documents returned. Full-text search picks the first `seeds` (s); the walk then
+//! The caller's `budget` is k, the documents returned. Full-text search picks the first `seeds` (s, ceil(k/2) by
+//! default); the walk then
 //! fills the other k - s through doors: each wave the doors raised so far are described from the graph alone
 //! (`describe`, D6), ranked by Jev in one batch (`jev`), and the best one is opened and read, until k documents are
 //! read. Search reads again only when no door is open. With no key the doors are ranked by search's order instead,
@@ -44,7 +45,8 @@ pub enum Corpus {
 pub struct Opts {
     /// k: how many documents the walk returns.
     pub budget: usize,
-    /// s: how many of them full-text search picks before the walk follows doors (3; under `reads`, 10).
+    /// s: how many of them full-text search picks before the walk follows doors: ceil(k/2) by default, bill's k-mode
+    /// sweep (best at k = 5, 10 and 20 on MuSiQue and p8); under `reads`, 10.
     pub seeds: Option<usize>,
     /// Operator a, for holding a walk to the lab's recorded ones: waves of 50 filled by search, stop at this many.
     pub reads: Option<usize>,
@@ -52,11 +54,13 @@ pub struct Opts {
     pub order: Option<Vec<String>>,
     /// The walk's past (K6) in Jev's state as `found` (kappa round 3); off is the control.
     pub kappa: bool,
+    /// How Jev's options are named: F2, as measured, or c{j}, the lab's jevcache (for holding a walk to an a-k1 one).
+    pub keys: super::jev::Keys,
 }
 
 impl Default for Opts {
     fn default() -> Opts {
-        Opts { budget: 10, seeds: None, reads: None, order: None, kappa: true }
+        Opts { budget: 10, seeds: None, reads: None, order: None, kappa: true, keys: super::jev::Keys::F2 }
     }
 }
 
@@ -246,7 +250,7 @@ fn run(dir: &Path, g: &mut Graph, order: Vec<String>, labeller: &mut dyn DoorLab
         // k documents: s from search, then one door a wave until k are read; search only when no door is open
         None => {
             let k = o.budget;
-            (k, Settings { waves: k as u32, seeds: o.seeds.unwrap_or(3).min(k), wave: 1_000_000, per_wave: 0, open: Some(1), max_reads: Some(k), fill: false, ..d })
+            (k, Settings { waves: k as u32, seeds: o.seeds.unwrap_or(k.div_ceil(2)).min(k), wave: 1_000_000, per_wave: 0, open: Some(1), max_reads: Some(k), fill: false, ..d })
         }
     };
     let seeds = s8.seeds;
@@ -254,6 +258,7 @@ fn run(dir: &Path, g: &mut Graph, order: Vec<String>, labeller: &mut dyn DoorLab
         let mut jev = JevDecider::new(&mut model);
         let with_kappa = kappa.is_some();
         jev.kappa = kappa;
+        jev.keys = o.keys;
         let w = lab::run(g, order, s8, question, &mut jev, labeller)?;
         let name = if with_kappa { format!("{}, kappa K6", jev.name()) } else { jev.name() };
         (w, name, None, jev.waves)

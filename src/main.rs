@@ -140,7 +140,7 @@ enum Cmd {
         /// How many documents to return (k)
         #[arg(long, default_value_t = 10)]
         budget: usize,
-        /// How many of them full-text search picks before the walk follows doors (s; default 3, or 10 with --reads)
+        /// How many of them full-text search picks before the walk follows doors (s; default ceil(k/2), or 10 with --reads)
         #[arg(long)]
         seeds: Option<usize>,
         /// Expert: the lab's operator a instead (waves of 50 filled by search, one door a wave), stopping at this many
@@ -153,6 +153,9 @@ enum Cmd {
         /// Leave the walk's past (kappa, K6) out of Jev's requests: the control
         #[arg(long)]
         no_kappa: bool,
+        /// How Jev's options are named: f2 (as measured) or c (c0, c1, ..., the lab's jevcache, for parity)
+        #[arg(long, default_value = "f2")]
+        keys: avalanche::walk::jev::Keys,
         /// Search's order from a file (a JSON list of document ids) instead of the store's own search
         #[arg(long)]
         order: Option<PathBuf>,
@@ -458,9 +461,9 @@ fn run(cli: Cli) -> Result<()> {
         }
         Cmd::Mcp { action: Some(McpCmd::Install { scope }), corpus } => print!("{}", mcp::install(dir, &corpus.corpus()?, &scope)?),
         Cmd::Mcp { action: None, corpus } => mcp::serve(dir, &corpus.corpus()?)?,
-        Cmd::Walk { question, budget, seeds, reads, json, no_kappa, order, corpus } => {
+        Cmd::Walk { question, budget, seeds, reads, json, no_kappa, keys, order, corpus } => {
             let order = order.map(|p| -> Result<Vec<String>> { Ok(serde_json::from_str(&std::fs::read_to_string(&p).map_err(|e| format!("{}: {e}", p.display()))?)?) }).transpose()?;
-            let w = agent::walk(dir, &corpus.corpus()?, &question.join(" "), &agent::Opts { budget, seeds, reads, order, kappa: !no_kappa })?;
+            let w = agent::walk(dir, &corpus.corpus()?, &question.join(" "), &agent::Opts { budget, seeds, reads, order, kappa: !no_kappa, keys })?;
             if json {
                 println!("{}", serde_json::to_string_pretty(&w)?);
             } else {

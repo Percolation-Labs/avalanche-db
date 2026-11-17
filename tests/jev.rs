@@ -87,17 +87,47 @@ fn requests_are_byte_identical_to_the_labs() {
         for (k, t) in &want {
             assert_eq!(&pg.texts[k], t, "{}: door {k}'s text differs from describe.lines", p["name"]);
         }
-        let d = JevDecider::new(&mut m);
+        let mut d = JevDecider::new(&mut m);
+        assert_eq!(d.keys, jev::Keys::F2, "F2 is the default");
         let b = Batch { question: &pg.question, wave: 1, doors: &pg.doors, attrs: &pg.attrs, reads: &[], label_version: "describe-lines/1".into() };
-        let got: Vec<String> = d.bodies(&b, pg.found.as_deref()).into_iter().map(|(_, b)| b).collect();
-        assert_eq!(got.len(), pg.bodies.len(), "{}: a different cut", p["name"]);
-        for (i, (g, w)) in got.iter().zip(&pg.bodies).enumerate() {
-            assert_eq!(g, w, "{}: request {i} differs from the lab's bytes", p["name"]);
-            checked += 1;
+        let f2: Vec<String> = serde_json::from_value(p["f2_bodies"].clone()).unwrap();
+        for (keys, want) in [(jev::Keys::C, &pg.bodies), (jev::Keys::F2, &f2)] {
+            d.keys = keys;
+            let got: Vec<String> = d.bodies(&b, pg.found.as_deref()).into_iter().map(|(_, b)| b).collect();
+            assert_eq!(got.len(), want.len(), "{}: a different cut", p["name"]);
+            for (i, (g, w)) in got.iter().zip(want).enumerate() {
+                assert_eq!(g, w, "{} {keys:?}: request {i} differs from the lab's bytes", p["name"]);
+                checked += 1;
+            }
         }
     }
-    assert!(checked >= 17, "only {checked} requests compared");
+    assert!(checked >= 34, "only {checked} requests compared");
     assert!(fx["pages"].as_array().unwrap().iter().any(|p| p["name"] == "round3" && p["found"].as_array().is_some_and(|f| f.len() > 100)), "no request carries kappa's found");
+    let _ = std::fs::remove_dir_all(&dir);
+}
+
+/// F2 over D6 doors: each option's key is the lab's `present("F2")` of the door's head line, its text the D6 text,
+/// byte for byte as the lab's presenter and client write them.
+#[test]
+fn d6_doors_carry_the_labs_f2_keys() {
+    let fx = fixture();
+    let p = &fx["d6"];
+    let texts: BTreeMap<String, String> = serde_json::from_value(p["texts"].clone()).unwrap();
+    let mut doors = BTreeMap::new();
+    let mut attrs = BTreeMap::new();
+    for (k, t) in &texts {
+        doors.insert(k.clone(), Clue { key: k.clone(), kind: k.split(':').next().unwrap().into(), x: String::new(), source: String::new(), targets: vec![], wave: 1, p: None });
+        attrs.insert(k.clone(), Attrs { immediate: t.split('\n').map(String::from).collect(), ..Attrs::default() });
+    }
+    let dir = tmp("d6f2");
+    let mut m = model(&dir);
+    let d = JevDecider::new(&mut m);
+    let q = p["question"].as_str().unwrap();
+    let b = Batch { question: q, wave: 1, doors: &doors, attrs: &attrs, reads: &[], label_version: "d6/1".into() };
+    let want: Vec<String> = serde_json::from_value(p["f2_bodies"].clone()).unwrap();
+    let got: Vec<String> = d.bodies(&b, None).into_iter().map(|(_, b)| b).collect();
+    assert!(want.len() >= 3, "the page is cut into several requests");
+    assert_eq!(got, want);
     let _ = std::fs::remove_dir_all(&dir);
 }
 
@@ -171,6 +201,7 @@ fn a_recorded_page_replays_without_the_network() {
     let mut m = model(&dir);
     assert!(m.recorded_all(&pg.bodies));
     let mut d = JevDecider::new(&mut m);
+    d.keys = jev::Keys::C;
     let b = Batch { question: &pg.question, wave: 1, doors: &pg.doors, attrs: &pg.attrs, reads: &[], label_version: "describe-lines/1".into() };
     let ranking = d.rank(&b).unwrap();
     let mut want = vec![];
@@ -240,7 +271,7 @@ fn midb_walk_with_no_key_ranks_doors_by_search_order_and_says_so() {
 fn a_walk_returns_k_documents_s_from_search_the_rest_through_doors() {
     let (dir, store, docs) = lab_fixture("k");
     let base = ["walk", "which notes are about rounding?", "--store", store.to_str().unwrap(), "--conv", common::CONV, "--docs", docs.to_str().unwrap(), "--json"];
-    for (extra, k, s) in [(vec![], 10usize, 3usize), (vec!["--budget", "25", "--seeds", "5"], 25, 5), (vec!["--budget", "2"], 2, 2)] {
+    for (extra, k, s) in [(vec![], 10usize, 5usize), (vec!["--budget", "25", "--seeds", "5"], 25, 5), (vec!["--budget", "7"], 7, 4), (vec!["--budget", "1"], 1, 1)] {
         let out = midb(&dir, &dir, &[&base[..], &extra[..]].concat());
         assert!(out.status.success(), "{}", String::from_utf8_lossy(&out.stderr));
         let w: Value = serde_json::from_slice(&out.stdout).unwrap();
@@ -304,7 +335,7 @@ fn the_mcp_tools_ingest_walk_and_read_a_folder() {
     assert!(text(&r[2]).contains("added a documents source"), "{}", text(&r[2]));
     assert!(text(&r[2]).contains("passages"), "{}", text(&r[2]));
     let walk = text(&r[3]);
-    assert!(walk.starts_with("walk: 3 documents, 3 from search then one door a wave; decider search-order"), "{walk}");
+    assert!(walk.starts_with("walk: 3 documents, 2 from search then one door a wave; decider search-order"), "{walk}");
     let first = walk.lines().nth(2).unwrap().split_whitespace().nth(1).unwrap().to_string();
     let j: Value = serde_json::from_str(text(&r[4])).unwrap();
     assert_eq!(j["documents"][0]["id"], first.as_str());
@@ -319,7 +350,7 @@ fn the_mcp_walk_serves_a_lab_conversation() {
     let (dir, store, docs) = lab_fixture("mcplab");
     let extra = ["--store", store.to_str().unwrap(), "--conv", common::CONV, "--docs", docs.to_str().unwrap()];
     let r = mcp(&dir, &extra, &[call("walk", json!({"question": "rounding", "budget": 12})), call("read_document", json!({"id": common::doc(3)}))]);
-    assert!(text(&r[0]).starts_with("walk: 12 documents, 3 from search then one door a wave; decider search-order"), "{}", text(&r[0]));
+    assert!(text(&r[0]).starts_with("walk: 12 documents, 6 from search then one door a wave; decider search-order"), "{}", text(&r[0]));
     assert!(text(&r[1]).contains("Note 3 is about"), "{}", text(&r[1]));
     let _ = std::fs::remove_dir_all(&dir);
 }
