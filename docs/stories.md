@@ -753,7 +753,8 @@ $ printf '%s\n' '{"jsonrpc":"2.0","id":2,"method":"tools/call","params":{"name":
 ```
 
 With a key (story 4), Jev ranks each wave's doors. The question goes into Jev's request and
-nowhere else. Every answer is recorded in `.avalanche/decisions.jsonl` and replayed after that,
+nowhere else. Each door is one option, named by its head line (`0_term_round`), as D6 doors were
+measured; `--keys c` names them `c0`, `c1` and so on, the lab's older naming. Every answer is recorded in `.avalanche/decisions.jsonl` and replayed after that,
 so a repeated walk costs nothing. Next to the question, each request also carries what the walk has
 read so far, as one opening sentence for each document read (kappa, K6). `--no-kappa` leaves it out,
 which is the control. The walk's last line gives the cost. Here Jev opened `term:round`
@@ -783,8 +784,8 @@ walk: 10 documents, 3 from search then one door a wave; decider jev (jev-1.13.0)
   10  notes/BUG-3.md#1             term:invoice  "notes/BUG-3.md"
       notes/BUG-3.md (bytes 0-187)
 wave 1: 45 doors in 2 requests (0 replayed, 2 sent); opened term:round
-wave 2: 26 doors in 1 request (0 replayed, 1 sent); opened term:invoice
-jev: 3 requests (0 replayed, 3 sent), 12278 input tokens, $0.0005
+wave 2: 23 doors in 1 request (0 replayed, 1 sent); opened term:invoice
+jev: 3 requests (0 replayed, 3 sent), 12004 input tokens, $0.0005
 ```
 
 `--json` prints the same walk as JSON: each document's id, title, location, how it was
