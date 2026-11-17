@@ -5,7 +5,7 @@
 //!
 //! Everything here is built from the documents alone, at ingestion, and never from a question: these are the
 //! ingestion-time data the D6 door reads (`walk::d6`). As everywhere in the store, no text is copied: a pointer says
-//! where a passage's text is, and `text` reads it back.
+//! where a passage's text is, and `Reader::text` reads it back.
 //!
 //! Construction choices, each a difference from the walk lab's MuSiQue graph that a test must carry:
 //!   terms   content words (stop words out, three letters or more, or a four-digit year) and the two-word phrases of adjacent
@@ -310,7 +310,7 @@ pub fn passages(root: &Path, at: &str) -> Result<Vec<Passage>> {
         for (i, (heading, a, b)) in cut(&rel, &text).into_iter().enumerate() {
             let id = format!("{rel}#{}", i + 1);
             let title = if heading.is_empty() { rel.clone() } else { format!("{rel} › {heading}") };
-            out.push(Passage { id: id.clone(), title, text: text[a..b].to_string(), pointer: format!("doc:{at}/{rel}#{a}-{b}"), after: prev.clone(), at: None });
+            out.push(Passage { id: id.clone(), title, text: text[a..b].to_string(), pointer: format!("doc:{at}#{a}-{b}"), after: prev.clone(), at: None });
             prev = Some(id);
         }
     }
@@ -458,12 +458,16 @@ impl Reader {
         Reader { dir: dir.to_path_buf(), ..Reader::default() }
     }
 
-    pub fn text(&mut self, pointer: &str) -> Result<String> {
+    /// The text of passage `doc` (its id, as `item:` names it without the prefix), through its pointer. A file
+    /// passage's pointer holds its source and byte range, and its id the file's path within the source
+    /// (`notes/a.md#2`), because a stored value is cut at 120 characters and a path can be longer.
+    pub fn text(&mut self, doc: &str, pointer: &str) -> Result<String> {
         if let Some(rest) = pointer.strip_prefix("doc:") {
-            let (path, range) = rest.rsplit_once('#').ok_or_else(|| format!("{pointer}: no byte range"))?;
+            let (root, range) = rest.rsplit_once('#').ok_or_else(|| format!("{pointer}: no byte range"))?;
             let (a, b) = range.split_once('-').ok_or_else(|| format!("{pointer}: bad byte range"))?;
             let (a, b): (usize, usize) = (a.parse()?, b.parse()?);
-            let p = self.dir.join(path);
+            let (rel, _) = doc.rsplit_once('#').ok_or_else(|| format!("{doc}: a file passage's id is path#n"))?;
+            let p = self.dir.join(root).join(rel);
             if !self.files.contains_key(&p) {
                 let t = std::fs::read_to_string(&p).map_err(|e| format!("{}: {e}", p.display()))?;
                 self.files.insert(p.clone(), t);
