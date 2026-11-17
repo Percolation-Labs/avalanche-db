@@ -319,3 +319,17 @@ documents, not at 5.
   and `shown` were chosen on dev cards and checked on MuSiQue, where they were neutral.
 - The walk now gets 65% of the oracle's gain (+.186 of +.421), against 13% before. The rest is the next headroom,
   measured with the oracle's door choice and the same read order.
+
+**Where the walk's gain lies, by gold commit** ($0, from the test rows; james's suggestion). No card's title names an
+id, by `cards.py`'s rule, so the test split is by wording instead: does a gold commit's message share words with the
+card's title (score0.py's tokens, less the question frame)?
+
+| gold commits, found in the top 10 | n | search | walk, merged | walk, this change |
+|---|---|---|---|---|
+| sharing two or more title words | 238 | .37 | .37 | **.48** |
+| sharing at most one | 81 | .00 | .04 | **.33** |
+
+- Search can't reach a commit whose wording differs from the question, and it found none of the 81.
+- The walk reaches a third of them through the card's id.
+- It also does better on the 238 commits search can match by wording, because a door read replaces a search read
+  only where Jev expects more from it.
