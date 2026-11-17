@@ -7,6 +7,8 @@ pub mod p8ql;
 pub mod search;
 pub mod session;
 pub mod suite;
+pub mod text;
+pub mod d6;
 pub mod doors;
 pub mod lab;
 pub mod world;

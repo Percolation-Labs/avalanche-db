@@ -128,6 +128,8 @@ preds! {
     Near = 35, "near", &[Item], &[Item];
     // beside: the items in the same sitting within the walk's span, as the lab's graph lists them (REM-1172 stage A).
     Beside = 36, "beside", &[Item], &[Item];
+    // named: a name or code identifier a passage mentions, from the `documents` adapter; the D6 door lists them.
+    Named = 37, "named", &[Item], &[Lit];
 }
 
 impl Pred {
