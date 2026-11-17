@@ -333,3 +333,26 @@ card's title (score0.py's tokens, less the question frame)?
 - The walk reaches a third of them through the card's id.
 - It also does better on the 238 commits search can match by wording. Why was not measured: either those commits
   are behind the same id door, or they ranked below search's top 10.
+
+## Seeds at k=5 ($0, dev only; [REGISTERED-k5.md](REGISTERED-k5.md))
+
+Oracle recall@k on the I1 stores, with L1k doors and `shown`:
+
+| seeds at k=5 | 1 | 2 | **3 (ceil)** | 4 | | k=10: 4 / **5** | k=20: 9 / **10** |
+|---|---|---|---|---|---|---|---|
+| p8, 100 dev cards (search .245) | .445 | .437 | .382 | .372 | | .745 / .727 | .902 / .876 |
+| MuSiQue, 101 dev questions (search .466) | .463 | .529 | .539 | .540 | | .671 / .677 | .799 / .783 |
+
+**ceil(k/2) stays.** The one rule over k with fewer seeds at k=5 is ceil(k/2) − 1, which is floor(k/2) there. It
+raises p8's k=5 ceiling (.382 → .437) and lowers MuSiQue's (.539 → .529), so it fails the registered rule, and no Jev
+run was made.
+
+**Postmortem: the corpora pull opposite ways at 5 documents.**
+- On MuSiQue, search's ranks 1–3 are where the supporting paragraphs are. A seed given up costs more than a door
+  read gains.
+- On the repository, the gold commits are behind the card's id door. Search's ranks 3–5 rarely hold them, so each
+  door read is worth more.
+- A single rule can't serve both at k=5, and a rule chosen per corpus is what the registration rules out.
+- So at 5 documents the walk equals search, and that is the claim.
+- Not pursued: ceil(k/2) − 1 is within .01 or better at k=10 and k=20 on both corpora (p8 +.018 and +.026, MuSiQue
+  −.006 and +.016). That is a different question from this registration's, and it would need its own registration.
