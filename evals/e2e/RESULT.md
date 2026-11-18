@@ -441,8 +441,15 @@ the 65 questions) against .876 on B's.
 - Yet merge doors were opened in 1 walk (4 reads). The walk opens the best-scored door among all doors still open,
   including those scored on earlier waves (`lab.rs`, `order: rank`). So a door that tops its own page can still lose
   to an older door scored higher.
-- How often that happened was not measured. It needs a per-wave log of the open doors' scores, at $0, from the
-  stored requests.
+- **Measured at $0** by replaying the 65 M dev walks from the stored requests, with all 65 replayed and none
+  called, plus a temporary pick log that isn't committed. Older doors are not the cause:
+  - 79 of the 80 picks with a merge door in the batch were in wave 1. The merge commit is a seed, so there was no
+    older door to lose to.
+  - The merge door was the top of its whole wave once, and that time it was opened.
+  - Overall, 24 of the 113 picks went to a door from an older wave.
+- So the door loses within its own wave. A wave's doors (about 200) are ranked over about 14 requests. A merge door
+  that tops its own page of about 20 is usually beaten by the top of another page, and P from different pages isn't
+  on one scale either.
 
 **Why Jev passes the door over on the other pages was not measured.** The candidates registered change the door, not the decider. The
 next question is a decider one: does Jev rank a door it is told holds the work of one merge over doors that share the
