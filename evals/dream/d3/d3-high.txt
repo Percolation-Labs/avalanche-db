@@ -1,0 +1,15 @@
+p8: dev G0 cards 0.819 (gold door 0.77, pairs 14181), prs 0.731 (gold door 0.80, pairs 12518)
+  q=2: round 1: removed 307484 key memberships and 40023 owned doors (32.083%); round 2: removed 175637 key memberships and 4716 owned doors (24.517%); round 3: removed 114570 key memberships and 1224 owned doors (20.853%); round 4: removed 76648 key memberships and 544 owned doors (17.564%) | dev cards 0.775 (gold door 0.43), prs 0.809 (gold door 0.39)
+  q=4: round 1: removed 178563 key memberships and 29924 owned doors (19.248%); round 2: removed 93557 key memberships and 4981 owned doors (11.266%); round 3: removed 56073 key memberships and 1828 owned doors (7.460%); round 4: removed 38609 key memberships and 902 owned doors (5.501%) | dev cards 0.791 (gold door 0.64), prs 0.691 (gold door 0.60)
+  q=8: round 1: removed 93071 key memberships and 19846 owned doors (10.425%); round 2: removed 39883 key memberships and 3787 owned doors (4.501%); round 3: removed 20102 key memberships and 1649 owned doors (2.348%); round 4: removed 11359 key memberships and 780 owned doors (1.342%) | dev cards 0.787 (gold door 0.74), prs 0.722 (gold door 0.69)
+  q=16: round 1: removed 42572 key memberships and 11489 owned doors (4.991%); round 2: removed 14328 key memberships and 2100 owned doors (1.596%); round 3: removed 5453 key memberships and 676 owned doors (0.605%) | dev cards 0.807 (gold door 0.77), prs 0.718 (gold door 0.75)
+  chosen q=2 on dev
+  TEST cards: G0 0.783 (gold door 1.00, pairs 27773) | G_edit 0.748 (gold door 0.55) | random removal 0.722 (gold door 0.72)
+  TEST prs: G0 0.726 (gold door 1.00, pairs 16856) | G_edit 0.670 (gold door 0.55) | random removal 0.639 (gold door 0.64)
+mq: dev G0 mq 0.808 (gold door 0.67, pairs 12441)
+  q=2: round 1: removed 167946 key memberships and 18200 owned doors (35.127%); round 2: removed 96045 key memberships and 496 owned doors (28.083%); round 3: removed 62979 key memberships and 178 owned doors (25.546%); round 4: removed 41177 key memberships and 61 owned doors (22.403%) | dev mq 0.578 (gold door 0.17)
+  q=4: round 1: removed 114242 key memberships and 16556 owned doors (24.683%); round 2: removed 53378 key memberships and 668 owned doors (13.541%); round 3: removed 34286 key memberships and 241 owned doors (10.006%); round 4: removed 26515 key memberships and 113 owned doors (8.575%) | dev mq 0.675 (gold door 0.39)
+  q=8: round 1: removed 74667 key memberships and 14395 owned doors (16.807%); round 2: removed 24993 key memberships and 798 owned doors (5.850%); round 3: removed 11874 key memberships and 307 owned doors (2.935%); round 4: removed 6582 key memberships and 126 owned doors (1.665%) | dev mq 0.746 (gold door 0.54)
+  q=16: round 1: removed 47232 key memberships and 11609 owned doors (11.104%); round 2: removed 11418 key memberships and 714 owned doors (2.575%); round 3: removed 4154 key memberships and 291 owned doors (0.969%) | dev mq 0.766 (gold door 0.56)
+  chosen q=16 on dev
+  TEST mq: G0 0.807 (gold door 1.00, pairs 27287) | G_edit 0.759 (gold door 0.89) | random removal 0.791 (gold door 0.97)
