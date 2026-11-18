@@ -1,0 +1,81 @@
+##### DEV
+
+== cards: 87 batches with gold and gold-free doors
+  property          AUC real  shuffled   Jev's errors ordered right: real  shuffled   | width-matched pairs (not registered): real  shuffled
+  jev P             0.872       —        0.000 (n 8518)     —   | 0.843 (n 14181)    —
+  search order      0.784       —        0.580 (n 8518)     —   | 0.748 (n 14181)    —
+  narrow (−width)   0.370       —        0.239 (n 8518)     —   | 0.466 (n 14181)    —
+  cohesion          0.614     0.536      0.466 (n 8518)   0.619   | 0.563 (n 14181)  0.501
+  convergence       0.767     0.541      0.673 (n 8518)   0.680   | 0.744 (n 14181)  0.501
+  ppr (sum)         0.861     0.560      0.730 (n 8518)   0.654   | 0.841 (n 14181)  0.488
+  ppr (mean)        0.651     0.558      0.351 (n 8518)   0.607   | 0.817 (n 14181)  0.482
+  ppr from real          best gold beyond the seeds: rank ≤10 42, ≤100 81, reached 85 (of 85 questions with gold beyond the seeds by real PPR)
+  ppr from random_seeds  best gold beyond the seeds: rank ≤10 0, ≤100 0, reached 8 (of 85 questions with gold beyond the seeds by real PPR)
+  ppr from shuffled      best gold beyond the seeds: rank ≤10 0, ≤100 0, reached 5 (of 85 questions with gold beyond the seeds by real PPR)
+
+== prs: 71 batches with gold and gold-free doors
+  property          AUC real  shuffled   Jev's errors ordered right: real  shuffled   | width-matched pairs (not registered): real  shuffled
+  jev P             0.708       —        0.000 (n 11767)     —   | 0.736 (n 12518)    —
+  search order      0.699       —        0.580 (n 11767)     —   | 0.741 (n 12518)    —
+  narrow (−width)   0.509       —        0.377 (n 11767)     —   | 0.474 (n 12518)    —
+  cohesion          0.479     0.469      0.430 (n 11767)   0.539   | 0.591 (n 12518)  0.492
+  convergence       0.570     0.496      0.561 (n 11767)   0.603   | 0.643 (n 12518)  0.465
+  ppr (sum)         0.712     0.511      0.579 (n 11767)   0.604   | 0.752 (n 12518)  0.492
+  ppr (mean)        0.676     0.506      0.404 (n 11767)   0.557   | 0.732 (n 12518)  0.493
+  ppr from real          best gold beyond the seeds: rank ≤10 36, ≤100 57, reached 60 (of 60 questions with gold beyond the seeds by real PPR)
+  ppr from random_seeds  best gold beyond the seeds: rank ≤10 0, ≤100 0, reached 4 (of 60 questions with gold beyond the seeds by real PPR)
+  ppr from shuffled      best gold beyond the seeds: rank ≤10 0, ≤100 2, reached 7 (of 60 questions with gold beyond the seeds by real PPR)
+
+== musique: 97 batches with gold and gold-free doors
+  property          AUC real  shuffled   Jev's errors ordered right: real  shuffled   | width-matched pairs (not registered): real  shuffled
+  jev P             0.901       —        0.000 (n 3750)     —   | 0.918 (n 12441)    —
+  search order      0.755       —        0.688 (n 3750)     —   | 0.779 (n 12441)    —
+  narrow (−width)   0.399       —        0.207 (n 3750)     —   | 0.480 (n 12441)    —
+  cohesion          0.620     0.534      0.437 (n 3750)   0.648   | 0.684 (n 12441)  0.490
+  convergence       0.645     0.581      0.673 (n 3750)   0.752   | 0.637 (n 12441)  0.477
+  ppr (sum)         0.787     0.566      0.686 (n 3750)   0.752   | 0.824 (n 12441)  0.479
+  ppr (mean)        0.571     0.518      0.289 (n 3750)   0.599   | 0.812 (n 12441)  0.473
+  ppr from real          best gold beyond the seeds: rank ≤10 21, ≤100 58, reached 86 (of 86 questions with gold beyond the seeds by real PPR)
+  ppr from random_seeds  best gold beyond the seeds: rank ≤10 0, ≤100 1, reached 38 (of 86 questions with gold beyond the seeds by real PPR)
+  ppr from shuffled      best gold beyond the seeds: rank ≤10 1, ≤100 1, reached 22 (of 86 questions with gold beyond the seeds by real PPR)
+
+##### TEST
+
+== cards: 147 batches with gold and gold-free doors
+  property          AUC real  shuffled   Jev's errors ordered right: real  shuffled   | width-matched pairs (not registered): real  shuffled
+  jev P             0.862       —        0.000 (n 26921)     —   | 0.745 (n 27773)    —
+  search order      0.800       —        0.515 (n 26921)     —   | 0.678 (n 27773)    —
+  narrow (−width)   0.371       —        0.276 (n 26921)     —   | 0.468 (n 27773)    —
+  cohesion          0.605     0.582      0.575 (n 26921)   0.658   | 0.596 (n 27773)  0.513
+  convergence       0.758     0.557      0.680 (n 26921)   0.691   | 0.740 (n 27773)  0.542
+  ppr (sum)         0.868     0.567      0.706 (n 26921)   0.693   | 0.802 (n 27773)  0.538
+  ppr (mean)        0.665     0.565      0.373 (n 26921)   0.680   | 0.783 (n 27773)  0.539
+  ppr from real          best gold beyond the seeds: rank ≤10 59, ≤100 130, reached 135 (of 135 questions with gold beyond the seeds by real PPR)
+  ppr from random_seeds  best gold beyond the seeds: rank ≤10 0, ≤100 2, reached 21 (of 135 questions with gold beyond the seeds by real PPR)
+  ppr from shuffled      best gold beyond the seeds: rank ≤10 1, ≤100 1, reached 16 (of 135 questions with gold beyond the seeds by real PPR)
+
+== prs: 95 batches with gold and gold-free doors
+  property          AUC real  shuffled   Jev's errors ordered right: real  shuffled   | width-matched pairs (not registered): real  shuffled
+  jev P             0.688       —        0.000 (n 18215)     —   | 0.703 (n 16856)    —
+  search order      0.672       —        0.494 (n 18215)     —   | 0.706 (n 16856)    —
+  narrow (−width)   0.508       —        0.378 (n 18215)     —   | 0.476 (n 16856)    —
+  cohesion          0.481     0.467      0.459 (n 18215)   0.553   | 0.584 (n 16856)  0.502
+  convergence       0.566     0.498      0.534 (n 18215)   0.596   | 0.640 (n 16856)  0.484
+  ppr (sum)         0.724     0.507      0.571 (n 18215)   0.580   | 0.733 (n 16856)  0.498
+  ppr (mean)        0.689     0.497      0.410 (n 18215)   0.539   | 0.725 (n 16856)  0.494
+  ppr from real          best gold beyond the seeds: rank ≤10 55, ≤100 81, reached 87 (of 87 questions with gold beyond the seeds by real PPR)
+  ppr from random_seeds  best gold beyond the seeds: rank ≤10 0, ≤100 0, reached 13 (of 87 questions with gold beyond the seeds by real PPR)
+  ppr from shuffled      best gold beyond the seeds: rank ≤10 0, ≤100 1, reached 10 (of 87 questions with gold beyond the seeds by real PPR)
+
+== musique: 149 batches with gold and gold-free doors
+  property          AUC real  shuffled   Jev's errors ordered right: real  shuffled   | width-matched pairs (not registered): real  shuffled
+  jev P             0.902       —        0.000 (n 9619)     —   | 0.901 (n 27287)    —
+  search order      0.770       —        0.724 (n 9619)     —   | 0.816 (n 27287)    —
+  narrow (−width)   0.378       —        0.207 (n 9619)     —   | 0.483 (n 27287)    —
+  cohesion          0.652     0.552      0.471 (n 9619)   0.634   | 0.700 (n 27287)  0.481
+  convergence       0.665     0.599      0.694 (n 9619)   0.749   | 0.657 (n 27287)  0.501
+  ppr (sum)         0.808     0.608      0.722 (n 9619)   0.739   | 0.826 (n 27287)  0.520
+  ppr (mean)        0.563     0.557      0.305 (n 9619)   0.594   | 0.808 (n 27287)  0.518
+  ppr from real          best gold beyond the seeds: rank ≤10 37, ≤100 95, reached 131 (of 131 questions with gold beyond the seeds by real PPR)
+  ppr from random_seeds  best gold beyond the seeds: rank ≤10 0, ≤100 7, reached 63 (of 131 questions with gold beyond the seeds by real PPR)
+  ppr from shuffled      best gold beyond the seeds: rank ≤10 0, ≤100 3, reached 24 (of 131 questions with gold beyond the seeds by real PPR)
