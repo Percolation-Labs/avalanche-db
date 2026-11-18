@@ -48,3 +48,14 @@ as an addendum before running.
 ## Postmortem
 
 Every result gets one.
+
+## Addendum, D3b (registered before running, after D3's removal arm harmed dev and test)
+
+Removing the memberships the neighbourhood doesn't vouch for lowers the width-matched AUC at every q. So the
+specific, unvouched links are what tell the gold door apart. D3b tests the mirror edit, same pipeline and controls:
+remove the memberships whose vote ratio is **highest**. Those are redundant links to passages the neighbourhood
+already reaches, and they spread the vote wide.
+- **The threshold:** a ratio above h, with h chosen on dev from {2, 4, 8, 16}. Test is held out.
+- **Convergence:** at most 4 rounds, stopping when under 1% of memberships change.
+- **Pass:** as D3: at least +.03 over G0 and random removal on two of three sets, and gold-door waves down by no
+  more than .02.
