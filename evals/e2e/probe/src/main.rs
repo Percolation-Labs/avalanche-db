@@ -14,6 +14,7 @@ mod features;
 mod replay;
 mod steiner;
 mod structure;
+mod votes;
 
 use avalanche::config::Config;
 use avalanche::construct::documents::Reader;
@@ -61,6 +62,9 @@ fn main() -> avalanche::Result<()> {
     let t0 = std::time::Instant::now();
     let ft = FullText::build(&mut g, &mut Reader::new(dir))?;
     eprintln!("full text built in {:.1?}", t0.elapsed());
+    if let Ok(tr) = std::env::var("E2E_VOTES") {
+        return votes::run(&mut g, &ft, &tr, out);
+    }
     if let Ok(tr) = std::env::var("E2E_FEATURES") {
         return features::run(&mut g, &ft, &tr, out);
     }
