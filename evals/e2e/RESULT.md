@@ -409,3 +409,36 @@ questions it does not.
   the PR's own relation, as the id door was the card's, so a gain from it would need the same scope note.
 - Showing the session door as what it is (commits from one working session) rather than as an opaque term.
 - Any of these is a new registration, chosen on the 65 dev questions, with the 93 test questions run once.
+
+## PR-title questions, round 2: N and M on dev (18 Nov, bill, $0.47; [REGISTERED-prs2.md](REGISTERED-prs2.md))
+
+**Neither candidate clears the registered bar, so the test wasn't run.**
+
+| 65 dev PR questions, k=10 | recall@10 | − B | walks that opened the door | Jev $ |
+|---|---|---|---|---|
+| B (as merged) | .507 | – | next 0 | .157 |
+| N (next-door head names its commit) | .507 | .000 | next 1 | .078 |
+| M (merge door) | .532 | +.025 | merge 1 | .150 |
+| NM | .536 | +.029 | merge 1, next 1 | .080 |
+
+The bar was +.03 over B. At $0 the oracle reached .962 on M's store (102 gold commits through merge doors, on 55 of
+the 65 questions) against .876 on B's.
+
+### Postmortem
+
+**What was measured.**
+- The merge door was raised and shown to Jev: a merge-door head appears in 124 of the stored M requests, and the
+  N head in 70 of N's.
+- Jev opened a merge door on 1 of 65 walks, and N's `next` door on 1. The oracle used a merge door to reach gold on
+  55 of the 65.
+- So a door that leads to the gold, named for what it is, is not enough for this decider on this page. The pages
+  hold about 20 doors, mostly term doors whose snippets share words with the question.
+- M's +.025 and NM's +.029 are within the dev slice's noise. They are reported, not claimed.
+
+**Why Jev passes the door over was not measured.** The candidates registered change the door, not the decider. The
+next question is a decider one: does Jev rank a door it is told holds the work of one merge over doors that share the
+question's wording? That calls for a hand-picked look, a few pages read in-session (no batch Claude), before any
+registration.
+
+**What happens to the code.** Not merged. The candidates are kept as `prs/candidates-N-M.patch` against main at
+`23dd6e3`. The defaults are unchanged.
