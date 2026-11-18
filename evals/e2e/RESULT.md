@@ -435,7 +435,16 @@ the 65 questions) against .876 on B's.
   hold about 20 doors, mostly term doors whose snippets share words with the question.
 - M's +.025 and NM's +.029 are within the dev slice's noise. They are reported, not claimed.
 
-**Why Jev passes the door over was not measured.** The candidates registered change the door, not the decider. The
+**Where the door is lost, partly measured.**
+- Jev scored the merge door highest on 12 of the 124 pages that showed one, and in the top three on 48.
+- Its mean score was .52 against a page's top score of .70.
+- Yet merge doors were opened in 1 walk (4 reads). The walk opens the best-scored door among all doors still open,
+  including those scored on earlier waves (`lab.rs`, `order: rank`). So a door that tops its own page can still lose
+  to an older door scored higher.
+- How often that happened was not measured. It needs a per-wave log of the open doors' scores, at $0, from the
+  stored requests.
+
+**Why Jev passes the door over on the other pages was not measured.** The candidates registered change the door, not the decider. The
 next question is a decider one: does Jev rank a door it is told holds the work of one merge over doors that share the
 question's wording? That calls for a hand-picked look, a few pages read in-session (no batch Claude), before any
 registration.
