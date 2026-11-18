@@ -1,0 +1,10 @@
+cards: n=18  gold door to top by best fixed variant 0.39 (q-best 0.50)  control displaced 0.56  median gold rank change +0.0  leads with an alternative 0.51
+   mean P change, gold: second +0.001  last -0.007  longest +0.008  q-best +0.020   control: second -0.034  last -0.034  longest -0.017  q-best +0.002
+   cost $0.038
+prs: n=45  gold door to top by best fixed variant 0.11 (q-best 0.11)  control displaced 0.69  median gold rank change +0  leads with an alternative 0.63
+   mean P change, gold: second -0.012  last -0.015  longest +0.000  q-best +0.000   control: second -0.054  last -0.064  longest -0.029  q-best -0.013
+   cost $0.096
+mq: n=26  gold door to top by best fixed variant 0.12 (q-best 0.08)  control displaced 0.38  median gold rank change +0.0  leads with an alternative 0.89
+   mean P change, gold: second -0.010  last -0.013  longest -0.003  q-best -0.001   control: second -0.019  last -0.018  longest -0.020  q-best -0.015
+   cost $0.043
+text headroom (>= 2 of 3 sets): False [False, False, False]
