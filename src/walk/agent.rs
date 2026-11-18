@@ -56,11 +56,13 @@ pub struct Opts {
     pub kappa: bool,
     /// How Jev's options are named: F2, as measured, or c{j}, the lab's jevcache (for holding a walk to an a-k1 one).
     pub keys: super::jev::Keys,
+    /// Add the walk's full log to the result (`trace`): every wave's batch, every door raised and every read.
+    pub trace: bool,
 }
 
 impl Default for Opts {
     fn default() -> Opts {
-        Opts { budget: 10, seeds: None, reads: None, order: None, kappa: true, keys: super::jev::Keys::F2 }
+        Opts { budget: 10, seeds: None, reads: None, order: None, kappa: true, keys: super::jev::Keys::F2, trace: false }
     }
 }
 
@@ -103,6 +105,18 @@ pub struct AgentWalk {
     pub keys_read: u64,
     /// Seconds per phase: `open` (the store and its graph), `search` (search's order), `walk` (the waves).
     pub seconds: std::collections::BTreeMap<String, f64>,
+    /// With `Opts.trace`: the walk's own log, for studying it (never shown to a decider).
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub trace: Option<Trace>,
+}
+
+/// The walk's log: each wave's batch as the decider saw and ranked it, every door raised (with the document that
+/// raised it, its wave and its score), and every read in order.
+#[derive(Clone, Debug, Serialize)]
+pub struct Trace {
+    pub batches: Vec<super::doors::BatchLog>,
+    pub doors: Vec<lab::Clue>,
+    pub reads: Vec<lab::Read>,
 }
 
 fn config(dir: &Path) -> Result<Config> {
@@ -304,6 +318,7 @@ fn run(dir: &Path, g: &mut Graph, order: Vec<String>, labeller: &mut dyn DoorLab
         keys_read: w.keys_read,
         seconds: Default::default(),
         waves,
+        trace: o.trace.then(|| Trace { batches: w.batches.clone(), doors: w.clues.values().cloned().collect(), reads: w.reads.clone() }),
     })
 }
 
