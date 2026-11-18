@@ -1,0 +1,4 @@
+B   n=65 recall@10 0.507  opened next 0  merge 0  $0.157
+N   n=65 recall@10 0.507  opened next 1  merge 0  $0.078
+M   n=65 recall@10 0.532  opened next 1  merge 1  $0.150
+NM  n=65 recall@10 0.536  opened next 1  merge 1  $0.080

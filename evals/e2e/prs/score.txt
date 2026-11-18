@@ -1,0 +1,27 @@
+
+== p8 PR titles, test
+k=10  n=93  recall: walk 0.472  search 0.514  oracle 0.859  search-order 0.485  coin 0.438  width 0.428
+        full support: walk 0.129  search 0.151  oracle 0.753  search-order 0.140  coin 0.097  width 0.065
+        walk - search       -0.042 [-0.082, -0.001]  W1 FAIL
+        walk - width        +0.044 [+0.013, +0.078]  W2 PASS
+        walk - search-order -0.013 [-0.051, +0.024]
+        walk - coin         +0.034 [-0.001, +0.071]
+        oracle - search       +0.345 [+0.287, +0.403]  G1 PASS
+k=5  n=93  recall: walk 0.413  search 0.419  oracle 0.740  search-order 0.405  coin 0.405  width 0.372
+        full support: walk 0.086  search 0.065  oracle 0.602  search-order 0.054  coin 0.086  width 0.032
+        walk - search       -0.006 [-0.047, +0.034]
+        walk - width        +0.041 [+0.013, +0.072]
+        walk - search-order +0.008 [-0.026, +0.041]
+        walk - coin         +0.008 [-0.028, +0.043]
+        oracle - search       +0.321 [+0.260, +0.378]
+k=20  n=93  recall: walk 0.586  search 0.616  oracle 0.945  search-order 0.542  coin 0.530  width 0.523
+        full support: walk 0.258  search 0.269  oracle 0.882  search-order 0.183  coin 0.172  width 0.172
+        walk - search       -0.029 [-0.073, +0.015]
+        walk - width        +0.064 [+0.032, +0.100]
+        walk - search-order +0.044 [+0.016, +0.077]
+        walk - coin         +0.057 [+0.021, +0.096]
+        oracle - search       +0.329 [+0.277, +0.380]
+gold commits by title words shared, k=10: n, search, walk
+  <=1 shared: 45  search 0.02  walk 0.02
+  >=2 shared: 221  search 0.56  walk 0.51
+gold returned by the walk, by door kind: {'search': 100, 'term': 13, 'term:session': 1}

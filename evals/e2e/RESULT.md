@@ -356,3 +356,107 @@ run was made.
 - So at 5 documents the walk equals search, and that is the claim.
 - Not pursued: ceil(k/2) − 1 is within .01 or better at k=10 and k=20 on both corpora (p8 +.018 and +.026, MuSiQue
   −.006 and +.016). That is a different question from this registration's, and it would need its own registration.
+
+## A second question type: pull-request titles, no id (18 Nov, bill, $0.74; [REGISTERED-prs.md](REGISTERED-prs.md))
+
+**Setup.** The 93 test questions. A question is a merged PR's title, and the gold is the PR's own commits (2.86 per
+question). The walk ran as merged, with nothing tuned on these questions: MCP, Jev 1.13.0, K6, D6/2, `within` `shown`,
+seeds = ceil(k/2). The control arms ran at $0 with the same settings. Output: `prs/score.txt`.
+
+| recall, paired 95% CI | k=5 | **k=10** | k=20 |
+|---|---|---|---|
+| search | .419 | **.514** | .616 |
+| walk | .413 | **.472** | .586 |
+| walk − search | −.006 [−.047, +.034] | **−.042 [−.082, −.001], W1 FAIL** | −.029 [−.073, +.015] |
+| walk − width-only (W2) | +.041 | +.044 [+.013, +.078], PASS | +.064 |
+| oracle − search | +.321 | +.345 (G1 PASS) | +.329 |
+
+G1 also passed on the 65 dev questions (oracle .876, search .508 at k=10).
+
+**The walk does not beat search on this type. At 10 documents it is slightly worse.** The claim in the README stays
+scoped to the card questions: on questions whose answer is joined by an id, the walk beats search, and on PR-title
+questions it does not.
+
+### Postmortem
+
+**What was measured.**
+- Wording carries this type. 221 of the 266 gold commits share two or more title words with the question, and search
+  returns 56% of those at k=10, against the walk's 51%. Of the 45 that share at most one word, both return 2%.
+- Against search's top 10, the walk found 9 gold commits that search missed and gave up 19 that sat at search's ranks
+  6–10. Every gold commit the walk found by a door came through a term door (13 commits) or a session-id door (1).
+- PR merge commits carry the title verbatim. One was in search's top 5 on all 93 questions, so it used one of the
+  walk's five seeds every time, and one of search's ten slots.
+- Claude Code session ids in commit messages (`session_…`) are terms. On 18 of the 93 PRs, two or more gold commits
+  share one, which makes that term door a branch-like link to the rest of the PR. Jev opened it on 1 of those 18.
+- Walk − search-order is −.013 [−.051, +.024], so on PR titles Jev's door ranking is no better than ranking doors by
+  search. With the oracle at +.345 over search, the gap is in the ranking.
+- The headroom is real: the oracle gets .859. But search-order (.485) and coin (.438) are below search too, so on
+  this type a door read is usually worth less than search's next rank. Jev beats width-only and coin, so it is
+  choosing better than chance among doors that are mostly worse than search.
+
+**Which doors hold the headroom ($0, the 65 dev questions, the probe now records `via`).**
+- At k=10 the oracle's gold came from search (79), `next` doors (66), session-id term doors (15), other term doors (9)
+  and `near` (1).
+- A `next` door is the commits beside a read one in history. Its D6 head reads "N unread beside a read one, in the
+  same file or history". A PR's commits sit next to each other and next to its merge commit, which is always a seed.
+- The oracle used a `next` door to reach gold on 42 of the 65 dev questions. Jev opened a `next` door on 0 of the 93
+  test walks at k=10.
+- So this is a presentation and choice problem, not a graph problem: the door to the gold exists and is raised, and
+  Jev never picks it.
+
+**What would change it, none of it run.**
+- A `next` door head that says what is behind it, e.g. "the commits just before and after commit X", so it doesn't
+  read as bookkeeping. This is the first candidate, because the door already exists and the oracle uses it.
+- A door for the merge commit's parents. The merge is always among the seeds, and its parents are the gold. It is
+  the PR's own relation, as the id door was the card's, so a gain from it would need the same scope note.
+- Showing the session door as what it is (commits from one working session) rather than as an opaque term.
+- Any of these is a new registration, chosen on the 65 dev questions, with the 93 test questions run once.
+
+## PR-title questions, round 2: N and M on dev (18 Nov, bill, $0.47; [REGISTERED-prs2.md](REGISTERED-prs2.md))
+
+**Neither candidate clears the registered bar, so the test wasn't run.**
+
+| 65 dev PR questions, k=10 | recall@10 | − B | walks that opened the door | Jev $ |
+|---|---|---|---|---|
+| B (as merged) | .507 | – | next 0 | .157 |
+| N (next-door head names its commit) | .507 | .000 | next 1 | .078 |
+| M (merge door) | .532 | +.025 | merge 1 | .150 |
+| NM | .536 | +.029 | merge 1, next 1 | .080 |
+
+The bar was +.03 over B. At $0 the oracle reached .962 on M's store (102 gold commits through merge doors, on 55 of
+the 65 questions) against .876 on B's.
+
+### Postmortem
+
+**What was measured.**
+- The merge door was raised and shown to Jev: a merge-door head appears in 124 of the stored M requests, and the
+  N head in 70 of N's.
+- Jev opened a merge door on 1 of 65 walks, and N's `next` door on 1. The oracle used a merge door to reach gold on
+  55 of the 65.
+- So a door that leads to the gold, named for what it is, is not enough for this decider on this page. The pages
+  hold about 20 doors, mostly term doors whose snippets share words with the question.
+- M's +.025 and NM's +.029 are within the dev slice's noise. They are reported, not claimed.
+
+**Where the door is lost, partly measured.**
+- Jev scored the merge door highest on 12 of the 124 pages that showed one, and in the top three on 48.
+- Its mean score was .52 against a page's top score of .70.
+- Yet merge doors were opened in 1 walk (4 reads). The walk opens the best-scored door among all doors still open,
+  including those scored on earlier waves (`lab.rs`, `order: rank`). So a door that tops its own page can still lose
+  to an older door scored higher.
+- **Measured at $0** by replaying the 65 M dev walks from the stored requests, with all 65 replayed and none
+  called, plus a temporary pick log that isn't committed. Older doors are not the cause:
+  - 79 of the 80 picks with a merge door in the batch were in wave 1. The merge commit is a seed, so there was no
+    older door to lose to.
+  - The merge door was the top of its whole wave once, and that time it was opened.
+  - Overall, 24 of the 113 picks went to a door from an older wave.
+- So the door loses within its own wave. A wave's doors (about 200) are ranked over about 14 requests. A merge door
+  that tops its own page of about 20 is usually beaten by the top of another page, and P from different pages isn't
+  on one scale either.
+
+**Why Jev passes the door over on the other pages was not measured.** The candidates registered change the door, not the decider. The
+next question is a decider one: does Jev rank a door it is told holds the work of one merge over doors that share the
+question's wording? That calls for a hand-picked look, a few pages read in-session (no batch Claude), before any
+registration.
+
+**What happens to the code.** Not merged. The candidates are kept as `prs/candidates-N-M.patch` against main at
+`23dd6e3`. The defaults are unchanged.

@@ -93,6 +93,7 @@ fn main() -> avalanche::Result<()> {
                 }
                 let st: Settings = serde_json::from_value(v)?;
                 let mut walks = serde_json::Map::new();
+                let mut vias = serde_json::Map::new();
                 let arms: Vec<(&str, Box<dyn Decider>)> = vec![
                     ("oracle", Box::new(Oracle(gold.clone()))),
                     ("width", Box::new(Width)),
@@ -102,13 +103,16 @@ fn main() -> avalanche::Result<()> {
                 let keep = std::env::var("E2E_ARMS").unwrap_or_else(|_| "oracle,width,coin,search-order".into());
                 for (arm, mut dec) in arms.into_iter().filter(|(a, _)| keep.split(',').any(|k| k == *a)) {
                     let w = if seeds.is_empty() { None } else { Some(run(&mut g, order.clone(), st.clone(), &question, dec.as_mut(), &mut d6)?) };
-                    let mut reads: Vec<(u32, usize, String)> = w.map(|w| w.reads.into_iter().map(|r| (r.wave, r.ord, r.doc)).collect()).unwrap_or_default();
+                    let mut reads: Vec<(u32, usize, String, String)> =
+                        w.map(|w| w.reads.into_iter().map(|r| (r.wave, r.ord, r.doc, r.via.unwrap_or_default())).collect()).unwrap_or_default();
                     reads.sort();
-                    walks.insert(arm.into(), serde_json::json!(reads.into_iter().map(|r| r.2).take(20).collect::<Vec<_>>()));
+                    reads.truncate(20);
+                    vias.insert(arm.into(), serde_json::json!(reads.iter().map(|r| r.3.clone()).collect::<Vec<_>>()));
+                    walks.insert(arm.into(), serde_json::json!(reads.into_iter().map(|r| r.2).collect::<Vec<_>>()));
                 }
                 let mut gs: Vec<&String> = gold.iter().collect();
                 gs.sort();
-                let row = serde_json::json!({"qid": q["qid"], "search": order.iter().take(20).collect::<Vec<_>>(), "walks": walks, "gold": gs});
+                let row = serde_json::json!({"qid": q["qid"], "search": order.iter().take(20).collect::<Vec<_>>(), "walks": walks, "via": vias, "gold": gs});
                 use std::io::Write as _;
                 let mut f = std::fs::OpenOptions::new().create(true).append(true).open(format!("{out}.{name}.jsonl"))?;
                 writeln!(f, "{row}")?;

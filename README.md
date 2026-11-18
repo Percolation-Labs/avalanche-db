@@ -86,7 +86,10 @@ jev: 26 requests (0 replayed, 26 sent), 149910 input tokens, $0.0063
 - At 10 documents, the walk returned 48% of the commits that did the work. Search returned 29% (+.19, 95% CI
   [+.12, +.25]).
 - On a public multi-hop benchmark, MuSiQue, the walk returned 60% of the supporting paragraphs and search 46%.
-- It is one repository and one kind of question. At 5 documents the walk is no better than search.
+- It is one repository. At 5 documents the walk is no better than search.
+- The gain comes where an id joins the question to its answer. On a second kind of question, a pull request's title
+  with its commits as the answer and no id between them, the walk did slightly worse than search at 10 documents
+  (47% against 51%).
 
 ## A cent off
 
