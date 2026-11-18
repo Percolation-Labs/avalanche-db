@@ -1,0 +1,48 @@
+
+== cards: 100 questions with gold in the store
+  (a) real          Steiner share@5 0.913   all gold covered within 60 reads 100/100, median reads 2
+  (a) random_seeds  Steiner share@5 0.288   all gold covered within 60 reads 94/100, median reads 10
+  (a) shuffled      Steiner share@5 0.410   all gold covered within 60 reads 100/100, median reads 12
+  (a) Spearman(Steiner share@5, walk recall@10) +0.374
+  (a) Spearman(Steiner share@5, search recall@10) +0.270
+  (a) Spearman(Steiner share@5, oracle recall@10) +0.577
+      tercile 1: share@5 0.74  walk 0.382  search 0.170  walk-search +0.212
+      tercile 2: share@5 1.00  walk 0.684  search 0.374  walk-search +0.311
+      tercile 3: share@5 1.00  walk 0.628  search 0.472  walk-search +0.156
+  (b) jev           waves with a gold door 87: gold door first 0.782  MRR 0.866  expected gold from the top door 0.552 of the best
+  (b) search-order  waves with a gold door 87: gold door first 0.230  MRR 0.397  expected gold from the top door 0.132 of the best
+  (b) width         waves with a gold door 87: gold door first 0.149  MRR 0.264  expected gold from the top door 0.010 of the best
+  (b) random        waves with a gold door 87: gold door first 0.057  MRR 0.192  expected gold from the top door 0.024 of the best
+  (b) wave-1 gap (best gold door's expected gold − Jev's first door's): all 38.0 over 85 waves; on Steiner share@5 ≥ .5: 37.1 (98%)
+
+== prs: 65 questions with gold in the store
+  (a) real          Steiner share@5 0.997   all gold covered within 60 reads 65/65, median reads 2
+  (a) random_seeds  Steiner share@5 0.316   all gold covered within 60 reads 62/65, median reads 9
+  (a) shuffled      Steiner share@5 0.562   all gold covered within 60 reads 65/65, median reads 14
+  (a) Spearman(Steiner share@5, walk recall@10) +0.183
+  (a) Spearman(Steiner share@5, search recall@10) +0.208
+  (a) Spearman(Steiner share@5, oracle recall@10) +0.277
+      tercile 1: share@5 0.99  walk 0.397  search 0.373  walk-search +0.024
+      tercile 2: share@5 1.00  walk 0.636  search 0.633  walk-search +0.003
+      tercile 3: share@5 1.00  walk 0.484  search 0.511  walk-search -0.027
+  (b) jev           waves with a gold door 71: gold door first 0.211  MRR 0.369  expected gold from the top door 0.114 of the best
+  (b) search-order  waves with a gold door 71: gold door first 0.169  MRR 0.321  expected gold from the top door 0.075 of the best
+  (b) width         waves with a gold door 71: gold door first 0.070  MRR 0.163  expected gold from the top door 0.003 of the best
+  (b) random        waves with a gold door 71: gold door first 0.042  MRR 0.171  expected gold from the top door 0.015 of the best
+  (b) wave-1 gap (best gold door's expected gold − Jev's first door's): all 61.9 over 59 waves; on Steiner share@5 ≥ .5: 61.9 (100%)
+
+== musique: 101 questions with gold in the store
+  (a) real          Steiner share@5 0.863   all gold covered within 60 reads 101/101, median reads 3
+  (a) random_seeds  Steiner share@5 0.450   all gold covered within 60 reads 101/101, median reads 9
+  (a) shuffled      Steiner share@5 0.711   all gold covered within 60 reads 101/101, median reads 6
+  (a) Spearman(Steiner share@5, walk recall@10) +0.623
+  (a) Spearman(Steiner share@5, search recall@10) +0.671
+  (a) Spearman(Steiner share@5, oracle recall@10) +0.664
+      tercile 1: share@5 0.58  walk 0.356  search 0.288  walk-search +0.068
+      tercile 2: share@5 1.00  walk 0.828  search 0.637  walk-search +0.191
+      tercile 3: share@5 1.00  walk 0.657  search 0.556  walk-search +0.100
+  (b) jev           waves with a gold door 97: gold door first 0.639  MRR 0.741  expected gold from the top door 0.560 of the best
+  (b) search-order  waves with a gold door 97: gold door first 0.175  MRR 0.310  expected gold from the top door 0.069 of the best
+  (b) width         waves with a gold door 97: gold door first 0.134  MRR 0.253  expected gold from the top door 0.014 of the best
+  (b) random        waves with a gold door 97: gold door first 0.041  MRR 0.165  expected gold from the top door 0.021 of the best
+  (b) wave-1 gap (best gold door's expected gold − Jev's first door's): all 24.8 over 80 waves; on Steiner share@5 ≥ .5: 24.5 (99%)
