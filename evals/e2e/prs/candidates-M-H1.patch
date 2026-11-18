@@ -1,0 +1,236 @@
+diff --git a/src/construct/documents.rs b/src/construct/documents.rs
+index be9bd2b..1c5b739 100644
+--- a/src/construct/documents.rs
++++ b/src/construct/documents.rs
+@@ -78,6 +78,9 @@ pub struct Passage {
+     /// The passage it follows, in its file or history.
+     pub after: Option<String>,
+     pub at: Option<i64>,
++    /// For a merge commit: the commits its second parent brought in (the second parent and its first-parent
++    /// ancestors, up to the first commit on HEAD's first-parent line).
++    pub merges: Vec<String>,
+ }
+ 
+ /// The document's id as a node.
+@@ -333,6 +336,7 @@ pub fn passages(root: &Path, at: &str) -> Result<Vec<Passage>> {
+                 pointer: format!("jsonl:{at}#{}", n + 1),
+                 after: None,
+                 at: None,
++                merges: vec![],
+                 id,
+             });
+         }
+@@ -345,12 +349,13 @@ pub fn passages(root: &Path, at: &str) -> Result<Vec<Passage>> {
+         for (i, (heading, a, b)) in cut(&rel, &text).into_iter().enumerate() {
+             let id = format!("{rel}#{}", i + 1);
+             let title = if heading.is_empty() { rel.clone() } else { format!("{rel} › {heading}") };
+-            out.push(Passage { id: id.clone(), title, text: text[a..b].to_string(), pointer: format!("doc:{at}#{a}-{b}"), after: prev.clone(), at: None });
++            out.push(Passage { id: id.clone(), title, text: text[a..b].to_string(), pointer: format!("doc:{at}#{a}-{b}"), after: prev.clone(), at: None, merges: vec![] });
+             prev = Some(id);
+         }
+     }
+     if is_git {
+         let log = git(root, &["log", "HEAD", "--format=%x1e%H%x1f%P%x1f%at%x1f%s%x1f%b"])?;
++        let merged = merged_by(&git(root, &["log", "HEAD", "--format=%H %P"])?);
+         for rec in log.split('\x1e').filter(|r| !r.trim().is_empty()) {
+             let f: Vec<&str> = rec.splitn(5, '\x1f').collect();
+             if f.len() < 5 {
+@@ -364,12 +369,47 @@ pub fn passages(root: &Path, at: &str) -> Result<Vec<Passage>> {
+                 pointer: format!("git:{at}@{sha}"),
+                 after: parents.split_whitespace().next().map(|p| format!("commit/{}", &p[..10])),
+                 at: t,
++                merges: merged.get(sha).map(|v| v.iter().map(|c| format!("commit/{}", &c[..10])).collect()).unwrap_or_default(),
+             });
+         }
+     }
+     Ok(out)
+ }
+ 
++/// A merge commit's branch: from `git log --format='%H %P'` (newest first, HEAD first), each merge's second parent
++/// and its first-parent ancestors until the first commit on HEAD's first-parent line, at most `MERGE_MAX`.
++fn merged_by(log: &str) -> HashMap<String, Vec<String>> {
++    const MERGE_MAX: usize = 50;
++    let parents: HashMap<&str, Vec<&str>> = log.lines().filter_map(|l| {
++        let mut it = l.split_whitespace();
++        it.next().map(|h| (h, it.collect()))
++    }).collect();
++    let mut main: HashSet<&str> = HashSet::new();
++    let mut at = log.lines().next().and_then(|l| l.split_whitespace().next());
++    while let Some(h) = at {
++        if !main.insert(h) {
++            break;
++        }
++        at = parents.get(h).and_then(|p| p.first().copied());
++    }
++    let mut out = HashMap::new();
++    for (m, ps) in &parents {
++        let Some(mut c) = ps.get(1).copied() else { continue };
++        let mut v = vec![];
++        while !main.contains(c) && v.len() < MERGE_MAX {
++            v.push(c.to_string());
++            match parents.get(c).and_then(|p| p.first()) {
++                Some(p) => c = p,
++                None => break,
++            }
++        }
++        if !v.is_empty() && std::env::var("AVALANCHE_DEV_MERGES").as_deref() == Ok("1") {
++            out.insert(m.to_string(), v);
++        }
++    }
++    out
++}
++
+ /// The facts for a set of passages: the graph the walk reads, and the D6 door's data.
+ pub fn facts(ps: &[Passage], graph: &str) -> Result<Vec<FactIn>> {
+     let held: Vec<BTreeSet<String>> = ps.iter().map(|p| terms(&format!("{}\n{}", p.title, p.text))).collect();
+@@ -406,6 +446,12 @@ pub fn facts(ps: &[Passage], graph: &str) -> Result<Vec<FactIn>> {
+             facts.push(with(FactIn::new(&me, Pred::Named, lit(n), graph), p.at));
+         }
+     }
++    // merges: a merge commit to the commits it brought in
++    for p in ps {
++        for c in p.merges.iter().filter(|c| ids.contains(c.as_str())) {
++            facts.push(FactIn::new(item(&p.id), Pred::Merges, item(c), graph));
++        }
++    }
+     // beside: both ways along each file or history
+     let mut beside: BTreeMap<&str, BTreeSet<&str>> = BTreeMap::new();
+     for p in ps {
+diff --git a/src/model.rs b/src/model.rs
+index 93a4f0a..97b87ae 100644
+--- a/src/model.rs
++++ b/src/model.rs
+@@ -130,6 +130,8 @@ preds! {
+     Beside = 36, "beside", &[Item], &[Item];
+     // named: a name or code identifier a passage mentions, from the `documents` adapter; the D6 door lists them.
+     Named = 37, "named", &[Item], &[Lit];
++    // merges: from a merge commit to the commits its second parent brought in, from the `documents` adapter.
++    Merges = 38, "merges", &[Item], &[Item];
+ }
+ 
+ impl Pred {
+diff --git a/src/walk/d6.rs b/src/walk/d6.rs
+index 62ae263..b2c50d5 100644
+--- a/src/walk/d6.rs
++++ b/src/walk/d6.rs
+@@ -36,6 +36,20 @@ pub struct D6 {
+ }
+ 
+ /// A passage's file: its id up to `#`; a commit is its own file.
++/// `Merge pull request #12 from owner/some-branch` → (12, some-branch).
++fn pr_branch(subject: &str) -> Option<(String, String)> {
++    let rest = subject.strip_prefix("Merge pull request #")?;
++    let (pr, rest) = rest.split_once(" from ")?;
++    let branch = rest.split_once('/').map(|(_, b)| b).unwrap_or(rest).trim();
++    (pr.chars().all(|c| c.is_ascii_digit()) && !branch.is_empty()).then(|| (pr.to_string(), branch.to_string()))
++}
++
++/// `commit/1a2b3c4d5e` → `1a2b3c4`.
++fn sha7(d: &str) -> &str {
++    let h = d.strip_prefix("commit/").unwrap_or(d);
++    &h[..h.len().min(7)]
++}
++
+ fn file_of(d: &str) -> &str {
+     d.split('#').next().unwrap_or(d)
+ }
+@@ -70,6 +84,13 @@ impl D6 {
+         Ok(&self.docs[d])
+     }
+ 
++    /// A commit's subject, from its title (`commit 1a2b3c4: subject`), cut to 80 characters.
++    fn subject(&mut self, d: &str, g: &mut Graph) -> Result<String> {
++        let title = &self.doc(d, g)?.0;
++        let s = title.split_once(": ").map(|(_, s)| s).unwrap_or(title);
++        Ok(if s.chars().count() > 80 { format!("{}…", s.chars().take(80).collect::<String>()) } else { s.to_string() })
++    }
++
+     /// The door's targets in lead order: those naming the fewest first, the hash the tie. On a repository, naming
+     /// many marks a list (a log, a board), not the passage a door is for (evals/e2e/REGISTERED-leads.md).
+     fn lead_order<'a>(&self, door: &'a Clue) -> Vec<&'a String> {
+@@ -97,7 +118,21 @@ impl D6 {
+         let head = match door.kind.as_str() {
+             "term" => format!("term '{}' · {} unread", door.x, tg.len()),
+             "near" => format!("{} unread closest in wording to a read one", tg.len()),
++            "next" if door.source.starts_with("commit/") && std::env::var("AVALANCHE_DEV_NEXT").as_deref() == Ok("1") => {
++                let n = tg.len();
++                format!("{n} commit{} just before and after commit {} \"{}\"", if n == 1 { "" } else { "s" }, sha7(&door.source), self.subject(&door.source, g)?)
++            }
+             "next" => format!("{} unread beside a read one, in the same file or history", tg.len()),
++            "merge" if std::env::var("AVALANCHE_DEV_H1").as_deref() == Ok("1") && pr_branch(&self.subject(&door.x, g)?).is_some() => {
++                let (pr, branch) = pr_branch(&self.subject(&door.x, g)?).unwrap();
++                if door.source == door.x {
++                    format!("one pull request's work: the {} commits merged in #{pr} (branch {branch})", tg.len())
++                } else {
++                    format!("one pull request's work: the {} other commits merged with this one in #{pr} (branch {branch})", tg.len())
++                }
++            }
++            "merge" if door.source == door.x => format!("{} commits merged by commit {} \"{}\"", tg.len(), sha7(&door.x), self.subject(&door.x, g)?),
++            "merge" => format!("{} commits merged with this one by commit {} \"{}\"", tg.len(), sha7(&door.x), self.subject(&door.x, g)?),
+             k => format!("{k} · {} unread", tg.len()),
+         };
+         let head = {
+@@ -113,7 +148,7 @@ impl D6 {
+             if passages > 0 {
+                 parts.push(format!("{passages} passage{} in {} file{}", if passages == 1 { "" } else { "s" }, files.len(), if files.len() == 1 { "" } else { "s" }));
+             }
+-            format!("{head} · {}", parts.join(", "))
++            if door.kind == "merge" && head.starts_with("one pull request's work") { head } else { format!("{head} · {}", parts.join(", ")) }
+         };
+         for d in tg {
+             self.doc(d, g)?;
+@@ -207,6 +242,9 @@ pub fn doors_of(g: &mut Graph, doc: &str, cap: usize) -> Result<Vec<Clue>> {
+             out.push(Clue { key: format!("{kind}:{doc}"), kind: kind.into(), x: doc.into(), source: doc.into(), targets: tg, wave: 0, p: None });
+         }
+     }
++    if let Some(c) = super::lab::merge_clue(g, doc, |_| true)? {
++        out.push(c);
++    }
+     Ok(out)
+ }
+ 
+diff --git a/src/walk/lab.rs b/src/walk/lab.rs
+index bd2fdad..94ed4bd 100644
+--- a/src/walk/lab.rs
++++ b/src/walk/lab.rs
+@@ -195,6 +195,28 @@ impl<'a> Graph<'a> {
+         }
+         Ok(self.lists[&k].clone())
+     }
++
++    /// The merge a commit belongs to, and that merge's commits: for a merge commit, itself and what it brought in;
++    /// for a commit a merge brought in, that merge and the merge's commits. None for anything else.
++    pub fn merge_door(&mut self, doc: &str) -> Result<Option<(String, Vec<String>)>> {
++        let out = self.list(Pred::Merges, doc)?;
++        if !out.is_empty() {
++            return Ok(Some((doc.to_string(), out)));
++        }
++        let Some(m) = self.names(&item(doc), Dir::In, Pred::Merges)?.into_iter().next() else { return Ok(None) };
++        let mut tg = vec![m.clone()];
++        tg.extend(self.list(Pred::Merges, &m)?);
++        Ok(Some((m, tg)))
++    }
++}
++
++/// The `merge` door reading `src` raises, its targets those not yet reached (`keep`).
++pub fn merge_clue(g: &mut Graph, src: &str, keep: impl Fn(&str) -> bool) -> Result<Option<Clue>> {
++    let Some((m, tg)) = g.merge_door(src)? else { return Ok(None) };
++    let mut tg: Vec<String> = tg.into_iter().filter(|d| d != src && keep(d)).collect();
++    tg.sort();
++    tg.dedup();
++    Ok((!tg.is_empty()).then(|| Clue { key: format!("merge:{m}"), kind: "merge".into(), x: m, source: src.to_string(), targets: tg, wave: 0, p: None }))
+ }
+ 
+ fn strip(name: &str) -> String {
+@@ -246,6 +268,11 @@ fn raise(g: &mut Graph, st: &State, wave_reads: &[String]) -> Result<BTreeMap<St
+                 out.insert(k.clone(), Clue { key: k, kind: kind.into(), x: src.clone(), source: src.clone(), targets: tg.into_iter().collect(), wave: 0, p: None });
+             }
+         }
++        if let Some(c) = merge_clue(g, src, |d| !st.reached.contains(d))? {
++            if !st.w.clues.contains_key(&c.key) && !out.contains_key(&c.key) {
++                out.insert(c.key.clone(), c);
++            }
++        }
+     }
+     Ok(out)
+ }

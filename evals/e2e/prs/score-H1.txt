@@ -1,0 +1,26 @@
+
+== PR test, M+H1
+k=10  n=93  recall: walk 0.502  search 0.514  oracle 0.955  search-order 0.486  coin 0.444  width 0.428
+        full support: walk 0.151  search 0.151  oracle 0.892  search-order 0.140  coin 0.097  width 0.065
+        walk - search       -0.011 [-0.053, +0.030]  W1 FAIL
+        walk - width        +0.074 [+0.037, +0.116]  W2 PASS
+        walk - search-order +0.016 [-0.029, +0.061]
+        walk - coin         +0.058 [+0.019, +0.102]
+        oracle - search       +0.442 [+0.382, +0.498]  G1 PASS
+k=5  n=93  recall: walk 0.438  search 0.419  oracle 0.852  search-order 0.434  coin 0.393  width 0.372
+        full support: walk 0.108  search 0.065  oracle 0.731  search-order 0.097  coin 0.054  width 0.032
+        walk - search       +0.018 [-0.023, +0.060]
+        walk - width        +0.066 [+0.031, +0.105]
+        walk - search-order +0.004 [-0.040, +0.046]
+        walk - coin         +0.045 [+0.004, +0.086]
+        oracle - search       +0.433 [+0.377, +0.488]
+k=20  n=93  recall: walk 0.635  search 0.616  oracle 0.988  search-order 0.555  coin 0.522  width 0.523
+        full support: walk 0.333  search 0.269  oracle 0.968  search-order 0.194  coin 0.161  width 0.172
+        walk - search       +0.019 [-0.040, +0.081]
+        walk - width        +0.112 [+0.065, +0.163]
+        walk - search-order +0.080 [+0.028, +0.135]
+        walk - coin         +0.113 [+0.067, +0.163]
+        oracle - search       +0.372 [+0.314, +0.429]
+branch shares 2+ words: n 38  walk - search +0.010 [-0.060, +0.080]
+branch shares <=1: n 55  walk - search -0.026 [-0.079, +0.026]
+merge opened at k=10: 3 / 93

@@ -460,3 +460,47 @@ registration.
 
 **What happens to the code.** Not merged. The candidates are kept as `prs/candidates-N-M.patch` against main at
 `23dd6e3`. The defaults are unchanged.
+
+## The merge door's text (H1), test (18 Nov, bill, $0.99; [REGISTERED-merge-text.md](REGISTERED-merge-text.md))
+
+**Dev:**
+- PR dev: .541 against B's .507 (+.034), with a merge door opened on 2 of 65 walks against M's 1. It passed both
+  conditions, narrowly.
+- Cards dev: .573 against .565, no harm.
+
+Spend: dev $0.06; test $0.93 (k=10 $0.15, k=5 $0.22, k=20 $0.57).
+
+| 93 PR test questions, M + H1 | k=5 | **k=10** | k=20 |
+|---|---|---|---|
+| search | .419 | **.514** | .616 |
+| walk, as merged (first run) | .413 | .472 | .586 |
+| **walk, M + H1** | .438 | **.502** | .635 |
+| walk − search | +.018 [−.023, +.060] | **−.011 [−.053, +.030], W1 FAIL** | +.019 [−.040, +.081] |
+| walk − width-only (W2) | +.066 | +.074, PASS | +.112 |
+| oracle − search | +.433 | +.442 | +.372 |
+
+**W1 fails. The walk is now level with search on PR titles rather than behind it** (−.042 → −.011 at k=10). Nothing
+becomes a default.
+
+**Scope, as james asked (M-20261118-095119-f878).** H1's head carries the branch name, which often paraphrases the PR
+title.
+- On the 38 test questions whose branch name shares two or more words with the question, walk − search is
+  +.010 [−.060, +.080].
+- On the other 55 it is −.026 [−.079, +.026].
+- Neither half is a win.
+
+### Postmortem
+
+- **The gain is M's construction, not H1's text.** Merge doors were opened on 3 of the 93 test walks at k=10 (2 of 65
+  on dev), so the head barely moved Jev's pick. The move from −.042 to −.011 comes with the merge store, which raises
+  the oracle from .859 to .955 and the walk's controls with it (search-order .485 → .486, width .428 → .428).
+  Credit for the change is M's, small as it is.
+- **Calibration across kinds is unchanged.** A door that names its relation in plain words, "one pull request's
+  work", is still scored below term doors that share the question's words, though it holds gold far more often. Text
+  alone, question-blind, didn't move that.
+- **What's left is not free.**
+  - A per-kind weight is a dial fitted to data. On james's rule it must be judged on corpora and question types it
+    wasn't fitted on: p8 cards, MuSiQue and PR test.
+  - The other route is a decider that learns a kind's base rate, which Jev, scoring one door at a time, can't.
+  - Neither is registered. The PR-title type is parked at parity with search, and the README's scope stands.
+- The code isn't merged. It is kept as `prs/candidates-M-H1.patch`.

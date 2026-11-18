@@ -1,7 +1,7 @@
 """REGISTERED-prs2.md's Jev dev step: recall@10 and the pick rate per candidate on the 65 dev PR questions."""
 import json, sys
 qs = {q["qid"]: q for q in map(json.loads, open(sys.argv[1]))}
-for n in ("B", "N", "M", "NM"):
+for n in ("B", "N", "M", "NM", "H1"):
     try:
         rows = [json.loads(l) for l in open(f"{sys.argv[2]}/jev-dev-{n}.jsonl")]
     except FileNotFoundError:
