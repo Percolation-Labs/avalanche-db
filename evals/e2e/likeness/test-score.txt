@@ -1,0 +1,16 @@
+cards: n=150/150 (orthogonal share 0.51)  search 0.291  walk 0.477  like 0.508  oracle 0.524
+  L1 like-search +0.217 [+0.147, +0.287] PASS
+  L2 like-walk   +0.031 [-0.006, +0.070] PASS
+  L3 like-coin   +0.124 [+0.079, +0.169] PASS
+  losses to search: walk 13  like 12;  w1 open 7/150  P med 0.59 vs top 0.77  $0.258
+prs: n=93/93 (orthogonal share 0.3)  search 0.514  walk 0.472  like 0.498  oracle 0.539
+  L1 like-search -0.015 [-0.051, +0.020] FAIL
+  L2 like-walk   +0.026 [+0.004, +0.052] (reported)
+  L3 like-coin   +0.005 [-0.017, +0.029] PASS
+  losses to search: walk 16  like 11;  w1 open 17/93  P med 0.67 vs top 0.77  $0.178
+mq: n=150/150 (orthogonal share 0.36)  search 0.464  walk 0.598  like 0.602  oracle 0.621
+  L1 like-search +0.138 [+0.099, +0.178] PASS
+  L2 like-walk   +0.004 [-0.007, +0.017] PASS
+  L3 like-coin   +0.071 [+0.051, +0.092] PASS
+  losses to search: walk 10  like 7;  w1 open 7/150  P med 0.26 vs top 0.63  $0.267
+FAIL (on the sets run)
