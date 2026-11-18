@@ -1,0 +1,33 @@
+
+== cards: 100 questions; rank reproduces the recorded walk on 100
+  search     recall@10 0.340  below search   0  unscored doors met    0  doors opened {}
+  rank       recall@10 0.565  below search   3  unscored doors met    0  doors opened {1: 89, 2: 9, 3: 1, 4: 1}
+  per_read   recall@10 0.425  below search   8  unscored doors met 9611  doors opened {3: 6, 4: 27, 5: 67}
+  per_target recall@10 0.397  below search   8  unscored doors met 10471  doors opened {3: 1, 4: 14, 5: 85}
+  per_read - rank: -0.141 [-0.219, -0.065]
+  per_read - search: +0.085 [+0.020, +0.152]
+  rank - search: +0.225 [+0.147, +0.308]
+  per_target - rank: -0.168 [-0.257, -0.082]
+  per_read changed 99 walks: better 5, worse 27; its doors there by width {'<=2': 348, '>5': 91, '3-5': 17}
+
+== prs: 65 questions; rank reproduces the recorded walk on 65
+  search     recall@10 0.508  below search   0  unscored doors met    0  doors opened {}
+  rank       recall@10 0.507  below search  11  unscored doors met    0  doors opened {1: 44, 2: 18, 3: 3}
+  per_read   recall@10 0.528  below search  11  unscored doors met 7410  doors opened {3: 2, 4: 5, 5: 58}
+  per_target recall@10 0.509  below search  11  unscored doors met 7675  doors opened {4: 5, 5: 60}
+  per_read - rank: +0.021 [-0.031, +0.071]
+  per_read - search: +0.020 [-0.036, +0.077]
+  rank - search: -0.000 [-0.057, +0.056]
+  per_target - rank: +0.001 [-0.055, +0.056]
+  per_read changed 64 walks: better 11, worse 7; its doors there by width {'<=2': 239, '>5': 42, '3-5': 30}
+
+== musique: 101 questions; rank reproduces the recorded walk on 101
+  search     recall@10 0.496  below search   0  unscored doors met    0  doors opened {}
+  rank       recall@10 0.616  below search   6  unscored doors met    0  doors opened {1: 70, 2: 20, 3: 10, 4: 1}
+  per_read   recall@10 0.602  below search   5  unscored doors met 6301  doors opened {1: 4, 2: 13, 3: 22, 4: 35, 5: 27}
+  per_target recall@10 0.585  below search   5  unscored doors met 7968  doors opened {2: 5, 3: 16, 4: 25, 5: 55}
+  per_read - rank: -0.014 [-0.040, +0.011]
+  per_read - search: +0.106 [+0.063, +0.152]
+  rank - search: +0.120 [+0.073, +0.169]
+  per_target - rank: -0.031 [-0.064, +0.000]
+  per_read changed 94 walks: better 4, worse 7; its doors there by width {'<=2': 246, '3-5': 37, '>5': 76}

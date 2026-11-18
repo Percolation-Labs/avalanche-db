@@ -1,0 +1,25 @@
+diff --git a/src/walk/lab.rs b/src/walk/lab.rs
+index bd2fdad..c937261 100644
+--- a/src/walk/lab.rs
++++ b/src/walk/lab.rs
+@@ -254,7 +254,7 @@ pub use super::doors::{Attrs, Batch, BatchLog, Decider, DoorLabeller, Ranked};
+ 
+ /// Walk with a decider and a labeller; the caller's budget is in `s`.
+ pub fn run(g: &mut Graph, order: Vec<String>, s: Settings, question: &str, decider: &mut dyn Decider, labeller: &mut dyn DoorLabeller) -> Result<Walk> {
+-    if !["rank", "p", "per_target", "convergence"].contains(&s.order.as_str()) {
++    if !["rank", "p", "per_target", "per_read", "convergence"].contains(&s.order.as_str()) {
+         return Err(format!("order is rank, p, per_target or convergence, not {}", s.order).into());
+     }
+     if !["graph", "postings", "shown", "decider"].contains(&s.within.as_str()) {
+@@ -403,6 +403,11 @@ fn step(g: &mut Graph, st: &mut State, question: &str, decider: &mut dyn Decider
+                     -(w as f64) * 1e6 - i as f64
+                 }),
+                 "p" => p,
++                // a door's cost is the reads it would take from what is left of the budget (width as budget spent)
++                "per_read" => {
++                    let left = st.s.max_reads.map(|m| m.saturating_sub(st.w.reads.len())).unwrap_or(u).max(1);
++                    p / u.min(left) as f64
++                }
+                 _ => p / u as f64,
+             };
+             let v = if converge { c.targets.iter().filter(|d| !st.reached.contains(*d)).map(|d| votes[d.as_str()]).max().unwrap_or(0) } else { 0 };
