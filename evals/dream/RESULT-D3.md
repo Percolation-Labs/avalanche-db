@@ -35,6 +35,18 @@ in round 4, and leaves a gold door on only .39 of dev waves. Every milder h is b
 **Verdict: both fail.** Neither beats G0 on any test set. D3b beats random removal on p8 only because both cut so
 much, and it loses 45% of the gold doors.
 
+## The add arm: hubs over passages that vote for each other but share no door
+
+The criterion is mutual top 5 of the two-step vote with no shared door, merged into sets of at most 20.
+
+| set | hubs written | test G0 | test, hubs (offered as doors when a member is read) | test, random hubs of the same sizes |
+|---|---|---|---|---|
+| cards | 3,705 hubs (p8; 18,068 pairs; 20,375 passages) | .783 | .782 | .784 |
+| PR titles | (the same p8 hubs) | .726 | .729 | .727 |
+| MuSiQue | 1,998 hubs (5,419 pairs; 7,172 passages) | .807 | .808 | .809 |
+
+**Null.** Within ±.003 of G0 and of random hubs, on dev and test alike. Output: `d3/d3-add.txt`.
+
 ## Postmortem
 
 - **The graph as built is a local optimum for removal under the walk's vote.** Removing memberships by any
@@ -47,6 +59,8 @@ much, and it loses 45% of the gold doors.
 - **There is a hidden kind effect in D3b.** Owned doors (next/near) have higher vote ratios (median 3.1, against
   about 1 for keys), so "remove the most redundant" removed tens of thousands of them. No kind was a feature, but the
   edit fell on one kind anyway. Next time, report edits by kind.
-- **What is left:** removal is closed under the uniform vote. Two things remain. The add arm, hubs over passages that
-  vote for each other but share no door, is registered here but not yet run. And bill's learned vote (evals/votes) may
-  move the optimum: re-run D3 with his θ once it is posted.
+- **The add arm doesn't move the vote either.** Hubs over mutually voting passages add mass where the vote already
+  flows: their members are two steps apart already. Random hubs do as little. Under the uniform vote, G0 is a local
+  optimum for every edit tried.
+- **What is left:** bill's learned vote (evals/votes). If learned weights move the gold door's vote, materialising
+  them is the edit: drop or add the memberships the weights push to zero or up. D3's pipeline re-runs with his θ.

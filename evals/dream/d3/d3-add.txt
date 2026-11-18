@@ -1,0 +1,5 @@
+p8: 18068 mutual pairs sharing no door -> 3705 hubs, sizes median 3, max 20, passages covered 20375
+  cards: dev G0 0.819 -> hubs 0.821 | TEST G0 0.783 (gold door 1.00) | hubs 0.782 (1.00) | random hubs 0.784 (1.00)
+  prs: dev G0 0.731 -> hubs 0.739 | TEST G0 0.726 (gold door 1.00) | hubs 0.729 (1.00) | random hubs 0.727 (1.00)
+mq: 5419 mutual pairs sharing no door -> 1998 hubs, sizes median 3, max 20, passages covered 7172
+  mq: dev G0 0.808 -> hubs 0.809 | TEST G0 0.807 (gold door 1.00) | hubs 0.808 (1.00) | random hubs 0.809 (1.00)
