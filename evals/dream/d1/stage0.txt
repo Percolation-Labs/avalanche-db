@@ -1,0 +1,38 @@
+cards: waves 90 | raised hubs per wave ~31 | some hub holds unread gold 0.86 | best gold density: hub 0.205 vs existing door 0.411 | hub>door 0.23
+prs: waves 83 | raised hubs per wave ~36 | some hub holds unread gold 0.94 | best gold density: hub 0.520 vs existing door 0.649 | hub>door 0.23
+mq: waves 114 | raised hubs per wave ~37 | some hub holds unread gold 0.64 | best gold density: hub 0.121 vs existing door 0.278 | hub>door 0.19
+
+cards: waves 87 | term-door cohesion AUC gold vs not 0.58 (gold 0.46, not 0.33) | gold first: none pruned 0.78 | prune 25%: 0.78 (gold door survives 0.99; random 0.70) | prune 50%: 0.60 (gold door survives 0.85; random 0.59) | prune 75%: 0.39 (gold door survives 0.68; random 0.43)
+prs: waves 71 | term-door cohesion AUC gold vs not 0.58 (gold 0.52, not 0.33) | gold first: none pruned 0.21 | prune 25%: 0.21 (gold door survives 0.96; random 0.23) | prune 50%: 0.21 (gold door survives 0.93; random 0.20) | prune 75%: 0.11 (gold door survives 0.89; random 0.19)
+mq: waves 97 | term-door cohesion AUC gold vs not 0.65 (gold 0.43, not 0.20) | gold first: none pruned 0.64 | prune 25%: 0.64 (gold door survives 0.97; random 0.60) | prune 50%: 0.59 (gold door survives 0.88; random 0.55) | prune 75%: 0.48 (gold door survives 0.63; random 0.47)
+
+p8: dev instances 5771 (pos 0.158) | held-back dev AUC 0.64 | coef size +0.42, conductance -0.21, cohesion +0.35, density -0.20, mean_deg -0.45, top_share +0.27, top_df -0.26, novelty -0.01
+   test cards: waves 160 | top-scored raised hub holds unread gold 0.26 vs a random raised hub 0.14 | instance AUC 0.69
+   test prs: waves 110 | top-scored raised hub holds unread gold 0.25 vs a random raised hub 0.17 | instance AUC 0.63
+mq: dev instances 4101 (pos 0.060) | held-back dev AUC 0.77 | coef size +0.03, conductance +0.00, cohesion +0.77, density -0.19, mean_deg +0.41, top_share -0.71, top_df +0.44, novelty -0.61
+   test mq: waves 163 | top-scored raised hub holds unread gold 0.16 vs a random raised hub 0.06 | instance AUC 0.69
+
+cards (test waves 160):
+  learned@1% N=485: hubs offered/wave 0.2, waves with a gold hub 0.03, gold density 0.075
+  random@1% N=485: hubs offered/wave 0.3, waves with a gold hub 0.02, gold density 0.011
+  learned@5% N=2429: hubs offered/wave 1.5, waves with a gold hub 0.19, gold density 0.055
+  random@5% N=2429: hubs offered/wave 1.8, waves with a gold hub 0.12, gold density 0.011
+  learned@20% N=9716: hubs offered/wave 3.1, waves with a gold hub 0.29, gold density 0.048
+  random@20% N=9716: hubs offered/wave 7.2, waves with a gold hub 0.47, gold density 0.015
+prs (test waves 110):
+  learned@1% N=485: hubs offered/wave 0.0, waves with a gold hub 0.01, gold density 0.104
+  random@1% N=485: hubs offered/wave 0.4, waves with a gold hub 0.06, gold density 0.020
+  learned@5% N=2429: hubs offered/wave 0.7, waves with a gold hub 0.11, gold density 0.030
+  random@5% N=2429: hubs offered/wave 1.9, waves with a gold hub 0.23, gold density 0.026
+  learned@20% N=9716: hubs offered/wave 1.3, waves with a gold hub 0.23, gold density 0.035
+  random@20% N=9716: hubs offered/wave 7.3, waves with a gold hub 0.63, gold density 0.030
+mq (test waves 163):
+  learned@1% N=210: hubs offered/wave 0.7, waves with a gold hub 0.12, gold density 0.026
+  random@1% N=210: hubs offered/wave 0.4, waves with a gold hub 0.01, gold density 0.002
+  learned@5% N=1053: hubs offered/wave 3.1, waves with a gold hub 0.25, gold density 0.021
+  random@5% N=1053: hubs offered/wave 2.1, waves with a gold hub 0.10, gold density 0.008
+  learned@20% N=4215: hubs offered/wave 10.9, waves with a gold hub 0.42, gold density 0.014
+  random@20% N=4215: hubs offered/wave 8.3, waves with a gold hub 0.33, gold density 0.011
+cards: waves with a gold door 87, Jev's first gold-free on 19 (0.22) | learned@5%: a gold hub on 0.32 of them, as dense as the best gold door on 0.21 -> (b) ceiling +0.07 | random@5%: a gold hub on 0.16 of them, as dense as the best gold door on 0.05 -> (b) ceiling +0.03 | learned@20%: a gold hub on 0.37 of them, as dense as the best gold door on 0.21 -> (b) ceiling +0.08 | random@20%: a gold hub on 0.37 of them, as dense as the best gold door on 0.21 -> (b) ceiling +0.08
+prs: waves with a gold door 71, Jev's first gold-free on 56 (0.79) | learned@5%: a gold hub on 0.07 of them, as dense as the best gold door on 0.00 -> (b) ceiling +0.06 | random@5%: a gold hub on 0.20 of them, as dense as the best gold door on 0.05 -> (b) ceiling +0.15 | learned@20%: a gold hub on 0.12 of them, as dense as the best gold door on 0.04 -> (b) ceiling +0.10 | random@20%: a gold hub on 0.59 of them, as dense as the best gold door on 0.18 -> (b) ceiling +0.46
+mq: waves with a gold door 97, Jev's first gold-free on 35 (0.36) | learned@5%: a gold hub on 0.29 of them, as dense as the best gold door on 0.11 -> (b) ceiling +0.10 | random@5%: a gold hub on 0.09 of them, as dense as the best gold door on 0.00 -> (b) ceiling +0.03 | learned@20%: a gold hub on 0.40 of them, as dense as the best gold door on 0.14 -> (b) ceiling +0.14 | random@20%: a gold hub on 0.14 of them, as dense as the best gold door on 0.03 -> (b) ceiling +0.05

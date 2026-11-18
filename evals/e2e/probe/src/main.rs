@@ -10,6 +10,7 @@ use std::collections::{BTreeMap, HashSet};
 use std::io::Write;
 use std::path::Path;
 
+mod features;
 mod replay;
 mod steiner;
 mod structure;
@@ -60,6 +61,9 @@ fn main() -> avalanche::Result<()> {
     let t0 = std::time::Instant::now();
     let ft = FullText::build(&mut g, &mut Reader::new(dir))?;
     eprintln!("full text built in {:.1?}", t0.elapsed());
+    if let Ok(tr) = std::env::var("E2E_FEATURES") {
+        return features::run(&mut g, &ft, &tr, out);
+    }
     if let Ok(tr) = std::env::var("E2E_STEINER") {
         return steiner::run(dir, &mut g, &ft, &tr, out);
     }
