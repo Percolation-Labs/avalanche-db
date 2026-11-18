@@ -57,5 +57,14 @@ It passes on L1, L2 and L3 together. Only then is `like` made the default, in it
 
 ## Spend
 
-Dev cap $0.90 (probe: $0.0005 a walk, 1.3 s). Test cap $0.50. Each is a registered run of $1 or less. The spend is
+Dev cap $0.90 (probe: $0.0005 a walk, 1.3 s). Test cap $0.50, raised to $0.80 before the test ran: dev's walks cost
+$0.0015–0.002 each with the door, so the test's 393 would cost about $0.64. Each is a registered run of $1 or less. The spend is
 reported in RESULT.md.
+
+## Dev result (18 Nov, $0.836; likeness/dev-score.txt)
+
+The chosen head is `match`. The smallest gain over search across the three sets is +.022 for `match`, +.018 for
+`plain` and +.009 for `search`; PR titles are the smallest set for all three heads. On dev, `match` against today's
+walk is −.020 on cards, +.022 on PR titles and +.006 on MuSiQue. Losses to search go from 3/11/6 to 3/6/3. In round 1
+Jev opens the door on 7/100, 9/65 and 5/101 questions. Its median P is .62 against the top door's .78 on cards, .67
+against .76 on PR titles, and .30 against .62 on MuSiQue. The held-out test now runs once, with `match`.

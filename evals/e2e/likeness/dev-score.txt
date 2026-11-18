@@ -1,0 +1,17 @@
+
+cards: n=100  search 0.340  none 0.565  coin 0.453  oracle 0.583  losses(none) 3
+  match  0.545  -search +0.205 [+0.131, +0.284]  -none -0.020 [-0.056, +0.010]  -coin +0.092  losses 3  w1 open 7/100  P med 0.62 vs top 0.78  rank med 7.0/79.5  $0.150
+  search 0.552  -search +0.212 [+0.134, +0.292]  -none -0.014 [-0.054, +0.026]  -coin +0.099  losses 3  w1 open 10/100  P med 0.64 vs top 0.78  rank med 6.0/79.5  $0.041
+  plain  0.545  -search +0.205 [+0.131, +0.284]  -none -0.020 [-0.056, +0.010]  -coin +0.092  losses 3  w1 open 6/100  P med 0.65 vs top 0.78  rank med 5.0/79.5  $0.041
+
+prs: n=65  search 0.508  none 0.507  coin 0.507  oracle 0.568  losses(none) 11
+  match  0.529  -search +0.022 [-0.024, +0.071]  -none +0.022 [-0.008, +0.054]  -coin +0.022  losses 6  w1 open 9/65  P med 0.67 vs top 0.76  rank med 5/91  $0.135
+  search 0.516  -search +0.009 [-0.036, +0.056]  -none +0.009 [-0.023, +0.042]  -coin +0.009  losses 7  w1 open 12/65  P med 0.71 vs top 0.77  rank med 3/91  $0.032
+  plain  0.525  -search +0.018 [-0.033, +0.069]  -none +0.018 [-0.003, +0.044]  -coin +0.018  losses 8  w1 open 9/65  P med 0.69 vs top 0.76  rank med 4/91  $0.032
+
+mq: n=101  search 0.496  none 0.620  coin 0.558  oracle 0.642  losses(none) 6
+  match  0.625  -search +0.130 [+0.086, +0.175]  -none +0.006 [-0.020, +0.031]  -coin +0.068  losses 3  w1 open 5/101  P med 0.30 vs top 0.62  rank med 17/109  $0.156
+  search 0.633  -search +0.137 [+0.092, +0.182]  -none +0.013 [-0.008, +0.036]  -coin +0.075  losses 4  w1 open 3/101  P med 0.25 vs top 0.62  rank med 21/109  $0.040
+  plain  0.625  -search +0.129 [+0.083, +0.176]  -none +0.005 [-0.018, +0.028]  -coin +0.067  losses 5  w1 open 5/101  P med 0.31 vs top 0.62  rank med 13/109  $0.042
+
+worst-set (arm - search): {'match': 0.022, 'search': 0.009, 'plain': 0.018}
