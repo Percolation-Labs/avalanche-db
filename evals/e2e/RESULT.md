@@ -388,6 +388,8 @@ questions it does not.
   walk's five seeds every time, and one of search's ten slots.
 - Claude Code session ids in commit messages (`session_…`) are terms. On 18 of the 93 PRs, two or more gold commits
   share one, which makes that term door a branch-like link to the rest of the PR. Jev opened it on 1 of those 18.
+- Walk − search-order is −.013 [−.051, +.024], so on PR titles Jev's door ranking is no better than ranking doors by
+  search. With the oracle at +.345 over search, the gap is in the ranking.
 - The headroom is real: the oracle gets .859. But search-order (.485) and coin (.438) are below search too, so on
   this type a door read is usually worth less than search's next rank. Jev beats width-only and coin, so it is
   choosing better than chance among doors that are mostly worse than search.
