@@ -1,0 +1,27 @@
+p8: 48636 passages, 1303411 candidate pairs, 0.71 already one door apart
+  train pairs 47291 (pos 601), held-back AUC learned 0.87 vs common-neighbour score 0.75
+  coef w1 -0.65, w2 +0.48, shared +1.18, logmindf -0.41, link +0.68, degsum -0.51, degdiff -0.26
+  test cards: gold pairs 330, unlinked 28 (in candidates 0.32)
+learned@1% (N=486): (a) unlinked gold pairs connected 0.000 | test waves where a written edge leads from a read passage to unread gold 0.000
+common-nb@1% (N=486): (a) unlinked gold pairs connected 0.000 | test waves where a written edge leads from a read passage to unread gold 0.000
+random@1% (N=486): (a) unlinked gold pairs connected 0.000 | test waves where a written edge leads from a read passage to unread gold 0.000
+learned@5% (N=2431): (a) unlinked gold pairs connected 0.000 | test waves where a written edge leads from a read passage to unread gold 0.000
+common-nb@5% (N=2431): (a) unlinked gold pairs connected 0.000 | test waves where a written edge leads from a read passage to unread gold 0.000
+random@5% (N=2431): (a) unlinked gold pairs connected 0.000 | test waves where a written edge leads from a read passage to unread gold 0.006
+  test prs: gold pairs 331, unlinked 57 (in candidates 0.56)
+learned@1% (N=486): (a) unlinked gold pairs connected 0.000 | test waves where a written edge leads from a read passage to unread gold 0.000
+common-nb@1% (N=486): (a) unlinked gold pairs connected 0.000 | test waves where a written edge leads from a read passage to unread gold 0.000
+random@1% (N=486): (a) unlinked gold pairs connected 0.000 | test waves where a written edge leads from a read passage to unread gold 0.000
+learned@5% (N=2431): (a) unlinked gold pairs connected 0.000 | test waves where a written edge leads from a read passage to unread gold 0.000
+common-nb@5% (N=2431): (a) unlinked gold pairs connected 0.000 | test waves where a written edge leads from a read passage to unread gold 0.000
+random@5% (N=2431): (a) unlinked gold pairs connected 0.000 | test waves where a written edge leads from a read passage to unread gold 0.000
+mq: 21100 passages, 697859 candidate pairs, 0.69 already one door apart
+  train pairs 13376 (pos 71), held-back AUC learned 0.83 vs common-neighbour score 0.65
+  coef w1 -0.02, w2 +0.55, shared +0.43, logmindf -0.83, link +0.06, degsum -0.06, degdiff -0.03
+  test mq: gold pairs 378, unlinked 127 (in candidates 0.02)
+learned@1% (N=211): (a) unlinked gold pairs connected 0.000 | test waves where a written edge leads from a read passage to unread gold 0.000
+common-nb@1% (N=211): (a) unlinked gold pairs connected 0.000 | test waves where a written edge leads from a read passage to unread gold 0.000
+random@1% (N=211): (a) unlinked gold pairs connected 0.000 | test waves where a written edge leads from a read passage to unread gold 0.000
+learned@5% (N=1055): (a) unlinked gold pairs connected 0.000 | test waves where a written edge leads from a read passage to unread gold 0.000
+common-nb@5% (N=1055): (a) unlinked gold pairs connected 0.000 | test waves where a written edge leads from a read passage to unread gold 0.006
+random@5% (N=1055): (a) unlinked gold pairs connected 0.000 | test waves where a written edge leads from a read passage to unread gold 0.000
