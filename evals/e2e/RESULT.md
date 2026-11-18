@@ -392,14 +392,20 @@ questions it does not.
   this type a door read is usually worth less than search's next rank. Jev beats width-only and coin, so it is
   choosing better than chance among doors that are mostly worse than search.
 
-**Not measured.** Which doors the oracle used to reach the 34 points of headroom. The probe doesn't record the oracle's
-`via`. That is the next $0 step, and it decides whether this is a presentation problem (a door to the gold exists,
-and D6 doesn't make it look like one, as with the session door) or a graph problem (the PR's commits are joined only
-by doors that also join many others).
+**Which doors hold the headroom ($0, the 65 dev questions, the probe now records `via`).**
+- At k=10 the oracle's gold came from search (79), `next` doors (66), session-id term doors (15), other term doors (9)
+  and `near` (1).
+- A `next` door is the commits beside a read one in history. Its D6 head reads "N unread beside a read one, in the
+  same file or history". A PR's commits sit next to each other and next to its merge commit, which is always a seed.
+- The oracle used a `next` door to reach gold on 42 of the 65 dev questions. Jev opened a `next` door on 0 of the 93
+  test walks at k=10.
+- So this is a presentation and choice problem, not a graph problem: the door to the gold exists and is raised, and
+  Jev never picks it.
 
 **What would change it, none of it run.**
-- A door for the merge commit's parents. The merge is always among the seeds, and its parents are the gold. No
-  adapter builds that link today. It is the PR's own relation, as the id door was the card's, so a gain from it
-  would need the same scope note.
+- A `next` door head that says what is behind it, e.g. "the commits just before and after commit X", so it doesn't
+  read as bookkeeping. This is the first candidate, because the door already exists and the oracle uses it.
+- A door for the merge commit's parents. The merge is always among the seeds, and its parents are the gold. It is
+  the PR's own relation, as the id door was the card's, so a gain from it would need the same scope note.
 - Showing the session door as what it is (commits from one working session) rather than as an opaque term.
 - Any of these is a new registration, chosen on the 65 dev questions, with the 93 test questions run once.
