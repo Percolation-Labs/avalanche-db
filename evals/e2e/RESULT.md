@@ -356,3 +356,50 @@ run was made.
 - So at 5 documents the walk equals search, and that is the claim.
 - Not pursued: ceil(k/2) − 1 is within .01 or better at k=10 and k=20 on both corpora (p8 +.018 and +.026, MuSiQue
   −.006 and +.016). That is a different question from this registration's, and it would need its own registration.
+
+## A second question type: pull-request titles, no id (18 Nov, bill, $0.74; [REGISTERED-prs.md](REGISTERED-prs.md))
+
+**Setup.** The 93 test questions. A question is a merged PR's title, and the gold is the PR's own commits (2.86 per
+question). The walk ran as merged, with nothing tuned on these questions: MCP, Jev 1.13.0, K6, D6/2, `within` `shown`,
+seeds = ceil(k/2). The control arms ran at $0 with the same settings. Output: `prs/score.txt`.
+
+| recall, paired 95% CI | k=5 | **k=10** | k=20 |
+|---|---|---|---|
+| search | .419 | **.514** | .616 |
+| walk | .413 | **.472** | .586 |
+| walk − search | −.006 [−.047, +.034] | **−.042 [−.082, −.001], W1 FAIL** | −.029 [−.073, +.015] |
+| walk − width-only (W2) | +.041 | +.044 [+.013, +.078], PASS | +.064 |
+| oracle − search | +.321 | +.345 (G1 PASS) | +.329 |
+
+G1 also passed on the 65 dev questions (oracle .876, search .508 at k=10).
+
+**The walk does not beat search on this type. At 10 documents it is slightly worse.** The claim in the README stays
+scoped to the card questions: on questions whose answer is joined by an id, the walk beats search, and on PR-title
+questions it does not.
+
+### Postmortem
+
+**What was measured.**
+- Wording carries this type. 221 of the 266 gold commits share two or more title words with the question, and search
+  returns 56% of those at k=10, against the walk's 51%. Of the 45 that share at most one word, both return 2%.
+- Against search's top 10, the walk found 9 gold commits that search missed and gave up 19 that sat at search's ranks
+  6–10. Every gold commit the walk found by a door came through a term door (13 commits) or a session-id door (1).
+- PR merge commits carry the title verbatim. One was in search's top 5 on all 93 questions, so it used one of the
+  walk's five seeds every time, and one of search's ten slots.
+- Claude Code session ids in commit messages (`session_…`) are terms. On 18 of the 93 PRs, two or more gold commits
+  share one, which makes that term door a branch-like link to the rest of the PR. Jev opened it on 1 of those 18.
+- The headroom is real: the oracle gets .859. But search-order (.485) and coin (.438) are below search too, so on
+  this type a door read is usually worth less than search's next rank. Jev beats width-only and coin, so it is
+  choosing better than chance among doors that are mostly worse than search.
+
+**Not measured.** Which doors the oracle used to reach the 34 points of headroom. The probe doesn't record the oracle's
+`via`. That is the next $0 step, and it decides whether this is a presentation problem (a door to the gold exists,
+and D6 doesn't make it look like one, as with the session door) or a graph problem (the PR's commits are joined only
+by doors that also join many others).
+
+**What would change it, none of it run.**
+- A door for the merge commit's parents. The merge is always among the seeds, and its parents are the gold. No
+  adapter builds that link today. It is the PR's own relation, as the id door was the card's, so a gain from it
+  would need the same scope note.
+- Showing the session door as what it is (commits from one working session) rather than as an opaque term.
+- Any of these is a new registration, chosen on the 65 dev questions, with the 93 test questions run once.
