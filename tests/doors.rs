@@ -249,3 +249,29 @@ fn within_decider_without_a_third_pass_is_the_graph_order() {
     assert_eq!(a.reads.iter().map(|r| &r.doc).collect::<Vec<_>>(), b.reads.iter().map(|r| &r.doc).collect::<Vec<_>>());
     assert!(b.batches.iter().all(|b| b.targets.is_empty()), "nothing is logged when the decider has no third pass");
 }
+
+/// REGISTERED-likeness.md: the likeness door holds search's next unread passages, as many as the budget has left, so a
+/// decider that opens it reads exactly search's first k; one that never ranks it walks as if it were not there.
+#[test]
+fn the_likeness_door_is_searchs_continuation() {
+    let k = 10;
+    let kmode = serde_json::json!({"waves": k, "wave": 1_000_000, "seeds": 5, "per_wave": 0, "open": 1, "max_reads": k, "fill": false, "like": true});
+    let mut first = Scores("like first".into(), |key: &str| Some(if key.starts_with("search:") { 2.0 } else { common::p_of(key) }));
+    let w = walk(&mut first, &mut GraphStats, kmode.clone());
+    let (s, _dir) = common::store("like-order");
+    let g = lab::Graph::open(&s, common::CONV).unwrap();
+    let want: Vec<String> = common::order(0).into_iter().filter(|d| g.holds(d)).take(k).collect();
+    assert_eq!(w.reads.iter().map(|r| r.doc.clone()).collect::<Vec<_>>(), want);
+    assert_eq!(w.travelled.keys().collect::<Vec<_>>(), vec!["search:1"]);
+    let like = &w.clues["search:1"];
+    assert_eq!((like.kind.as_str(), like.targets.len()), ("like", k - 5));
+
+    let mut never = Scores("like never".into(), |key: &str| if key.starts_with("search:") { None } else { Some(common::p_of(key)) });
+    let with = walk(&mut never, &mut GraphStats, kmode.clone());
+    let mut off = kmode;
+    off["like"] = false.into();
+    let without = walk(&mut fixed(), &mut GraphStats, off);
+    let docs = |w: &lab::Walk| w.reads.iter().map(|r| (r.doc.clone(), r.via.clone())).collect::<Vec<_>>();
+    assert_eq!(docs(&with), docs(&without));
+    assert!(with.batches.iter().all(|b| b.doors.iter().filter(|d| d["kind"] == "like").count() <= 1), "one likeness door a wave");
+}
