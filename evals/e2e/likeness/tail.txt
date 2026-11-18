@@ -1,0 +1,24 @@
+
+cards: n=150, gold 319; beyond top 50: 0.56
+  gold per read: 1-5 0.073  6-10 0.043  11-20 0.017  21-50 0.006
+  share of gold: 1-5 0.17  6-10 0.10  11-20 0.08  21-50 0.08
+  seeds 0 gold   n=105  6-10 0.038  11-20 0.019  21-50 0.007  | first door 0.137 per read (481 reads)
+  seeds 1 gold   n= 37  6-10 0.059  11-20 0.014  21-50 0.005  | first door 0.071 per read (170 reads)
+  seeds 2+ gold  n=  8  6-10 0.025  11-20 0.000  21-50 0.004  | first door 0.059 per read (34 reads)
+  first door (Jev's): 0.117 gold per read; 53/80 of its gold is outside search's top 50
+
+prs: n=93, gold 266; beyond top 50: 0.36
+  gold per read: 1-5 0.215  6-10 0.052  11-20 0.028  21-50 0.007
+  share of gold: 1-5 0.38  6-10 0.09  11-20 0.10  21-50 0.07
+  seeds 0 gold   n= 10  6-10 0.080  11-20 0.050  21-50 0.013  | first door 0.020 per read (49 reads)
+  seeds 1 gold   n= 69  6-10 0.052  11-20 0.028  21-50 0.006  | first door 0.031 per read (294 reads)
+  seeds 2+ gold  n= 14  6-10 0.029  11-20 0.014  21-50 0.007  | first door 0.032 per read (63 reads)
+  first door (Jev's): 0.030 gold per read; 0/12 of its gold is outside search's top 50
+
+mq: n=150, gold 399; beyond top 50: 0.38
+  gold per read: 1-5 0.205  6-10 0.028  11-20 0.025  21-50 0.007
+  share of gold: 1-5 0.39  6-10 0.05  11-20 0.10  21-50 0.08
+  seeds 0 gold   n= 34  6-10 0.059  11-20 0.062  21-50 0.011  | first door 0.116 per read (138 reads)
+  seeds 1 gold   n= 80  6-10 0.025  11-20 0.019  21-50 0.007  | first door 0.129 per read (325 reads)
+  seeds 2+ gold  n= 36  6-10 0.006  11-20 0.006  21-50 0.005  | first door 0.025 per read (157 reads)
+  first door (Jev's): 0.100 gold per read; 36/62 of its gold is outside search's top 50
