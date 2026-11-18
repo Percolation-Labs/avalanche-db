@@ -153,6 +153,10 @@ enum Cmd {
         /// Print JSON with the walk's full log: every wave's batch and scores, every door raised, every read
         #[arg(long)]
         trace: bool,
+        /// Research: add the likeness door (search's continuation as one more door), with its head's wording:
+        /// match, search or plain
+        #[arg(long)]
+        like: Option<String>,
         /// Leave the walk's past (kappa, K6) out of Jev's requests: the control
         #[arg(long)]
         no_kappa: bool,
@@ -464,9 +468,9 @@ fn run(cli: Cli) -> Result<()> {
         }
         Cmd::Mcp { action: Some(McpCmd::Install { scope }), corpus } => print!("{}", mcp::install(dir, &corpus.corpus()?, &scope)?),
         Cmd::Mcp { action: None, corpus } => mcp::serve(dir, &corpus.corpus()?)?,
-        Cmd::Walk { question, budget, seeds, reads, json, trace, no_kappa, keys, order, corpus } => {
+        Cmd::Walk { question, budget, seeds, reads, json, trace, like, no_kappa, keys, order, corpus } => {
             let order = order.map(|p| -> Result<Vec<String>> { Ok(serde_json::from_str(&std::fs::read_to_string(&p).map_err(|e| format!("{}: {e}", p.display()))?)?) }).transpose()?;
-            let w = agent::walk(dir, &corpus.corpus()?, &question.join(" "), &agent::Opts { budget, seeds, reads, order, kappa: !no_kappa, keys, trace })?;
+            let w = agent::walk(dir, &corpus.corpus()?, &question.join(" "), &agent::Opts { budget, seeds, reads, order, kappa: !no_kappa, keys, trace, like })?;
             if json || trace {
                 println!("{}", serde_json::to_string_pretty(&w)?);
             } else {

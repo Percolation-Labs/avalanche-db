@@ -58,11 +58,13 @@ pub struct Opts {
     pub keys: super::jev::Keys,
     /// Add the walk's full log to the result (`trace`): every wave's batch, every door raised and every read.
     pub trace: bool,
+    /// The likeness door, with its head's variant (`d6::like_head`); none: no likeness door (today).
+    pub like: Option<String>,
 }
 
 impl Default for Opts {
     fn default() -> Opts {
-        Opts { budget: 10, seeds: None, reads: None, order: None, kappa: true, keys: super::jev::Keys::F2, trace: false }
+        Opts { budget: 10, seeds: None, reads: None, order: None, kappa: true, keys: super::jev::Keys::F2, trace: false, like: None }
     }
 }
 
@@ -187,6 +189,9 @@ fn project_walk(dir: &Path, question: &str, o: &Opts) -> Result<AgentWalk> {
     }
     let searched = clock.elapsed().as_secs_f64();
     let mut d6 = D6::new(dir);
+    if let Some(v) = &o.like {
+        d6.like = v.clone();
+    }
     let kappa: Option<Kappa> = if o.kappa {
         let mut kg = Graph::open_items(&store, t)?;
         let mut reader = Reader::new(dir);
@@ -264,7 +269,7 @@ fn run(dir: &Path, g: &mut Graph, order: Vec<String>, labeller: &mut dyn DoorLab
         // k documents: s from search, then one door a wave until k are read; search only when no door is open
         None => {
             let k = o.budget;
-            (k, Settings { waves: k as u32, seeds: o.seeds.unwrap_or(k.div_ceil(2)).min(k), wave: 1_000_000, per_wave: 0, open: Some(1), max_reads: Some(k), fill: false, within: "shown".into(), ..d })
+            (k, Settings { waves: k as u32, seeds: o.seeds.unwrap_or(k.div_ceil(2)).min(k), wave: 1_000_000, per_wave: 0, open: Some(1), max_reads: Some(k), fill: false, within: "shown".into(), like: o.like.is_some(), ..d })
         }
     };
     let seeds = s8.seeds;

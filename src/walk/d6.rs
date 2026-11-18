@@ -33,6 +33,8 @@ pub struct D6 {
     docs: HashMap<String, (String, String, Vec<String>)>,
     /// name → how many documents name it, filled as documents are read
     df: BTreeMap<String, usize>,
+    /// The likeness door's head (`like_head`): `match`, `search` or `plain`, chosen on dev.
+    pub like: String,
 }
 
 /// A passage's file: its id up to `#`; a commit is its own file.
@@ -51,7 +53,7 @@ fn snippet(text: &str, n: usize) -> String {
 impl D6 {
     /// `dir` is the folder holding avalanche.toml, against which pointers resolve.
     pub fn new(dir: &Path) -> D6 {
-        D6 { reader: Reader::new(dir), docs: HashMap::new(), df: BTreeMap::new() }
+        D6 { reader: Reader::new(dir), docs: HashMap::new(), df: BTreeMap::new(), like: "match".into() }
     }
 
     fn doc(&mut self, d: &str, g: &mut Graph) -> Result<&(String, String, Vec<String>)> {
@@ -98,6 +100,7 @@ impl D6 {
             "term" => format!("term '{}' · {} unread", door.x, tg.len()),
             "near" => format!("{} unread closest in wording to a read one", tg.len()),
             "next" => format!("{} unread beside a read one, in the same file or history", tg.len()),
+            "like" => like_head(&self.like, tg.len()),
             k => format!("{k} · {} unread", tg.len()),
         };
         let head = {
@@ -163,6 +166,15 @@ impl D6 {
             lines.push(format!("Names in its {} unread passage(s): {}.", tg.len(), list.join(", ")));
         }
         Ok(lines)
+    }
+}
+
+/// The likeness door's head, by variant. Fixed words, never the question's: which passages it holds is search's.
+pub fn like_head(variant: &str, n: usize) -> String {
+    match variant {
+        "search" => format!("{n} unread next in a full-text search for the question"),
+        "plain" => format!("{n} unread"),
+        _ => format!("{n} unread that best match the question's words"),
     }
 }
 

@@ -51,11 +51,16 @@ pub struct Settings {
     /// Whether search fills a wave once the wave's doors are spent (today). False: a wave that has opened its `open`
     /// doors ends there, and search reads only when no door is open at all.
     pub fill: bool,
+    /// The likeness door (Sirsh, M-20261118-150956-f539): each wave one more door, `search:<wave>` of kind `like`,
+    /// whose targets are the next unread passages in search's order, as many as the budget has left, so opening it
+    /// reads exactly what search would. Described by the labeller like any door; only its membership comes from
+    /// search, as the seeds' does. The previous wave's untaken one is withdrawn. Needs `max_reads`.
+    pub like: bool,
 }
 
 impl Default for Settings {
     fn default() -> Settings {
-        Settings { waves: 10, wave: 50, seeds: 10, per_wave: 10, cap: 100, gate: None, order: "rank".into(), open: None, within: "graph".into(), per_door: None, door_reads: None, max_reads: None, fill: true }
+        Settings { waves: 10, wave: 50, seeds: 10, per_wave: 10, cap: 100, gate: None, order: "rank".into(), open: None, within: "graph".into(), per_door: None, door_reads: None, max_reads: None, fill: true, like: false }
     }
 }
 
@@ -301,7 +306,16 @@ fn step(g: &mut Graph, st: &mut State, question: &str, decider: &mut dyn Decider
     for c in st.nxt.values_mut() {
         c.wave = wn;
     }
-    let nxt = std::mem::take(&mut st.nxt);
+    let mut nxt = std::mem::take(&mut st.nxt);
+    if st.s.like {
+        st.kept.retain(|k| !k.starts_with("search:"));
+        let left = st.s.max_reads.map(|m| m.saturating_sub(st.w.reads.len())).unwrap_or(0);
+        let tg: Vec<String> = st.order[st.si.min(st.order.len())..].iter().filter(|d| !st.reached.contains(*d) && g.holds(d)).take(left).cloned().collect();
+        if !tg.is_empty() {
+            let k = format!("search:{wn}");
+            nxt.insert(k.clone(), Clue { key: k, kind: "like".into(), x: "search".into(), source: "search".into(), targets: tg, wave: wn, p: None });
+        }
+    }
     let mut attrs: BTreeMap<String, Attrs> = BTreeMap::new();
     for (k, c) in &nxt {
         attrs.insert(k.clone(), labeller.label(c, g)?);
