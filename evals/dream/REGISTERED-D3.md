@@ -1,44 +1,42 @@
-# Registered: D3, dreaming as learned PageRank voting that drives edge removal (james, 18 Nov 2026, before running)
+# Registered: D3, graph edits driven by PageRank votes (james, 18 Nov 2026, before running)
 
 Sirsh (M-20261118-215523-957d): the only graph operations are adding or removing edges and nodes. Dreaming should be
 those operations, driven by PageRank-like voting statistics learned by reinforcement from the loop's own walks,
 never set by hand. The aim is a structure in which the right door carries the vote. Width-neutral first, at $0.
 
-## The vote
+## Split (M-20261118-215648-b1dc, M-20261118-220608-c825)
 
-Bill's walk-PageRank (evals/structural), from the read set R with α = .15: a passage spreads its vote over its doors,
-and each door spreads it over its other members. Bill spreads it uniformly over the doors. D3 lets the share each
-door gets be learned: share ∝ exp(θ·φ(door)). φ is question-free and kind-free, and the same for every door:
-- log postings (members);
-- cohesion (the share of member pairs linked by another door);
-- log of the passage's own door count.
+Bill learns the voting statistic: per-edge transition weights as a function of structure, learned from dev walks,
+in the style of supervised random walks (evals/votes). D3 is the edit operator driven by a vote. It runs on bill's
+uniform read-set PPR first, and on his learned weights once they are posted. D3 learns no vote of its own. The draft
+that did (7f17edb) is withdrawn.
 
-θ = 0 is bill's uniform vote. The vote is computed by 30 power iterations over the passage–door graph.
+## The vote, question-free
 
-## Learning θ, by reinforcement from walks
+The passages rate each other. u's vote for v is the two-step walk mass from u to v: one step to a door uniformly,
+then to a member uniformly, with α = .15. Paths through the door being judged are excluded.
 
-- **Episodes:** the recorded dev waves (bill's fd rows plus reads from b rows): read set, doors, gold behind each.
-- **Reward:** the width-matched within-wave AUC of mean vote per target, gold doors against gold-free ones, for
-  pairs within 2× width of each other (bill's unconfounded measure).
-- **Search:** θ is searched by the cross-entropy method, 5 rounds of 16 samples. The 20% of dev questions held back
-  pick the round. No test data is used.
-- **Convergence:** report the reward per round and the movement of θ. Converged means θ moves less than 10% in the
-  last round and the held-back reward stops rising.
+## The edits
 
-## The structural edit
-
-Materialise the vote as edges. Remove each passage–door membership whose learned share, at that passage, is below
-a quarter of the uniform share (1/(4·doors)). Then plain uniform PageRank on the edited graph is re-scored. The
-edited graph has to carry the vote by itself, with no learned weights at walk time.
+- **Remove.** Drop the membership (u, d) when u's vote for d's other members, through every other door, falls below
+  a threshold q of u's mean vote over its own neighbours. Such a door connects u to passages its neighbourhood
+  doesn't vouch for.
+- **Add (second arm).** A hub over passage pairs or small sets that vote for each other strongly (mutual top 5) but
+  share no door. Members are capped at 20, and the label is D1's rule.
+- **The one parameter.** q, taken from {.05, .1, .2, .4}, is chosen by the dev reward: the width-matched AUC of mean
+  read-set PPR per target, on the edited graph, over the dev waves. It is learned from walks in that sense. Test is
+  never used.
+- **Convergence.** The edits are re-applied on the edited graph, with votes recomputed, until fewer than 1% of
+  memberships change, for at most 4 rounds. Changes per round are reported.
 
 ## Held-out read-outs (test traces, cards 150, PR titles 93, MuSiQue 150; $0)
 
-The width-matched AUC of mean vote per target, for these arms:
-- G0, uniform vote;
-- the learned vote;
-- G_edit, uniform vote on the pruned graph;
-- **controls:** a random θ of the same norm; random removal of the same number of memberships; shuffled links
-  (width kept).
+The width-matched AUC of mean read-set PPR per target (uniform, then bill's learned weights), for these arms:
+- G0;
+- G_edit, removal;
+- G_edit, removal plus hubs;
+- **controls:** random removal of the same number of memberships; random hubs of the same count and sizes;
+  shuffled links (width kept).
 
 Also on G_edit: the share of test waves that still have a gold door. The edit must not cut the answer.
 
