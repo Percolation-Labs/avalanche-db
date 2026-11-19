@@ -8,8 +8,9 @@ passages. Its edges are door co-membership (u lists t through some door), symmet
 **Properties, all question-free except the last, which uses gold and is a diagnostic, not a predictor:**
 1. **Spectral gap:** λ2 of H's normalized Laplacian, by deflated power iteration on the lazy walk (1,000 steps). Low
    means H splits into loosely joined parts.
-2. **Seed coherence:** the share of the lazy walk's stationary mass after 3 steps from the seeds that stays in the seeds'
-   own doors. High means the seeds point the same way.
+2. **Seed coherence:** the mean, over pairs of seeds, of the Jaccard overlap of their one-door neighbourhoods. High means
+   the seeds point the same way. *(Amended before running: the first definition, mass staying in the seeds' doors, is
+   always 1, because H is exactly those doors.)*
 3. **Density:** edges per node in H.
 4. **Gold conductance:** the edges leaving the gold set (within H) divided by its volume (diagnostic only).
 
