@@ -13,6 +13,7 @@ use std::path::Path;
 mod features;
 mod replay;
 mod spectral;
+mod steinergraph;
 mod steiner;
 mod structure;
 mod votes;
@@ -63,6 +64,9 @@ fn main() -> avalanche::Result<()> {
     let t0 = std::time::Instant::now();
     let ft = FullText::build(&mut g, &mut Reader::new(dir))?;
     eprintln!("full text built in {:.1?}", t0.elapsed());
+    if let Ok(tr) = std::env::var("E2E_STEINERGRAPH") {
+        return steinergraph::run(&mut g, &ft, &tr, out);
+    }
     if let Ok(tr) = std::env::var("E2E_SPECTRAL") {
         return spectral::run(&mut g, &ft, &tr, out);
     }
