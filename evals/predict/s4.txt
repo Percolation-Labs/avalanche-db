@@ -1,0 +1,31 @@
+
+== test: AUC for 'Jev's first door holds gold' (directions fixed by the registration)
+  property                               cards             PR titles               MuSiQue    pooled
+  choice size (−log)                     0.519                 0.481                 0.524     0.504
+  gold share                             0.603                 0.707                 0.640     0.602
+  vote margin                0.610 (sh 0.54)     0.729 (sh 0.56)     0.532 (sh 0.53)     0.621
+  vote concentration         0.557 (sh 0.57)     0.483 (sh 0.45)     0.496 (sh 0.53)     0.504
+  width spread (−cv)                     0.501                 0.516                 0.419     0.521
+  waves (first door gold): cards 147 (101), PR titles 95 (12), MuSiQue 149 (88)
+  graphs by Jev gold-first: cards 0.687, mq 0.591, prs 0.126
+    graph means of choice size (−log)    : cards -4.396, prs -4.433, mq -4.618
+    graph means of gold share            : cards 0.081, prs 0.065, mq 0.058
+    graph means of vote margin           : cards 0.027, mq -0.042, prs -0.054   (same order)
+    graph means of vote concentration    : cards 0.274, prs 0.264, mq 0.208
+    graph means of width spread (−cv)    : mq -1.122, cards -1.289, prs -1.298
+  PREDICTS (bar): none
+
+== dev: AUC for 'Jev's first door holds gold' (directions fixed by the registration)
+  property                               cards             PR titles               MuSiQue    pooled
+  choice size (−log)                     0.657                 0.418                 0.541     0.565
+  gold share                             0.710                 0.666                 0.708     0.681
+  vote margin                0.709 (sh 0.53)     0.780 (sh 0.58)     0.567 (sh 0.57)     0.671
+  vote concentration         0.608 (sh 0.63)     0.445 (sh 0.46)     0.505 (sh 0.52)     0.547
+  width spread (−cv)                     0.352                 0.637                 0.586     0.563
+  waves (first door gold): cards 87 (68), PR titles 71 (15), MuSiQue 97 (62)
+  graphs by Jev gold-first: cards 0.782, mq 0.639, prs 0.211
+    graph means of choice size (−log)    : cards -4.348, mq -4.430, prs -4.573   (same order)
+    graph means of gold share            : cards 0.076, mq 0.057, prs 0.049   (same order)
+    graph means of vote margin           : cards 0.033, prs -0.055, mq -0.058
+    graph means of vote concentration    : cards 0.284, mq 0.246, prs 0.232   (same order)
+    graph means of width spread (−cv)    : mq -1.115, cards -1.282, prs -1.301
