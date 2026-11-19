@@ -1,42 +1,44 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 396" font-family="system-ui, sans-serif" font-size="12">
 <style>.t{fill:#1d1d1f}.m{fill:#6e6e73}.e{stroke:#0a7d5a;stroke-width:2;fill:none}.k{fill:#0a7d5a;font-size:10px}</style>
 <rect width="1180" height="396" fill="#fff"/>
-<text x="20" y="28" font-size="15" font-weight="600" class="t">MuSiQue · compact: RW:3hop1__102461_24918_24991</text>
-<text x="20" y="50" class="m">What went down after the Soviet President visiting the the birth country of Andrey Dashkov while the protests were taking place departed from the Kremlin?</text>
+<text x="20" y="28" font-size="15" font-weight="600" class="t">MuSiQue · compact: RW:3hop1__106094_443779_52195</text>
+<text x="20" y="50" class="m">Who is the president of the newly declared independent country part of the Commission of Truth and Friendship with the country that made Arisan!??</text>
 <text x="40" y="78" font-weight="600" class="m">search’s seeds</text><text x="430" y="78" font-weight="600" class="m">connectors and walk reads</text><text x="820" y="78" font-weight="600" class="m">gold</text>
 <path class="e" d="M190,142 C505.0,142 505.0,96 820,96"/>
-<rect x="462.0" y="104.0" width="92.8" height="15" rx="3" fill="#fff" opacity=".9"/>
-<text class="k" x="465.0" y="115.0">“ukraine” (59)</text>
-<path class="e" d="M190,188 C505.0,188 505.0,96 820,96"/>
-<rect x="462.0" y="127.0" width="105.2" height="15" rx="3" fill="#fff" opacity=".9"/>
-<text class="k" x="465.0" y="138.0">“gorbachev” (17)</text>
+<rect x="462.0" y="104.0" width="111.4" height="15" rx="3" fill="#fff" opacity=".9"/>
+<text class="k" x="465.0" y="115.0">“indonesian” (45)</text>
+<path class="e" d="M190,142 C505.0,142 505.0,142 820,142"/>
+<rect x="462.0" y="127.0" width="30.8" height="15" rx="3" fill="#fff" opacity=".9"/>
+<text class="k" x="465.0" y="138.0">Near</text>
 <rect x="40" y="127" width="340" height="28" rx="6" fill="#f5c400" stroke="#0a7d5a" stroke-width="2"/>
-<text x="48" y="146" class="t">Andrey Dashkov</text>
-<rect x="40" y="173" width="340" height="28" rx="6" fill="#f5c400" stroke="#0a7d5a" stroke-width="2"/>
-<text x="48" y="192" class="t">Dissolution of the Soviet Union</text>
+<text x="48" y="146" class="t">Indonesia–Timor Leste Commission of Truth a…</text>
 <rect x="820" y="81" width="340" height="28" rx="6" fill="#f5c400" stroke="#0a7d5a" stroke-width="2"/>
-<text x="828" y="100" class="t">Dissolution of the Soviet Union</text>
-<rect x="40" y="219" width="340" height="28" rx="6" fill="#dbe9ff" stroke="#c7c7cc" stroke-width="1"/>
-<text x="48" y="238" class="t">Moscow Kremlin</text>
-<rect x="40" y="265" width="340" height="28" rx="6" fill="#dbe9ff" stroke="#c7c7cc" stroke-width="1"/>
-<text x="48" y="284" class="t">This Is Us</text>
+<text x="828" y="100" class="t">Arisan!</text>
+<rect x="820" y="127" width="340" height="28" rx="6" fill="#f5c400" stroke="#0a7d5a" stroke-width="2"/>
+<text x="828" y="146" class="t">East Timor</text>
+<rect x="40" y="173" width="340" height="28" rx="6" fill="#dbe9ff" stroke="#c7c7cc" stroke-width="1"/>
+<text x="48" y="192" class="t">Made in USA</text>
 <rect x="40" y="81" width="340" height="28" rx="6" fill="#dbe9ff" stroke="#c7c7cc" stroke-width="1"/>
-<text x="48" y="100" class="t">1886 United States House of Representatives…</text>
-<rect x="430" y="81" width="340" height="28" rx="6" fill="#f2f2f4" stroke="#c7c7cc" stroke-width="1"/>
-<text x="438" y="100" class="t">Cold War</text>
-<text x="768" y="100" text-anchor="end" class="m" font-size="10">walk w1</text>
-<rect x="430" y="265" width="340" height="28" rx="6" fill="#f2f2f4" stroke="#c7c7cc" stroke-width="1"/>
-<text x="438" y="284" class="t">Sevastopol International Airport</text>
-<text x="768" y="284" text-anchor="end" class="m" font-size="10">walk w1</text>
-<rect x="430" y="127" width="340" height="28" rx="6" fill="#f2f2f4" stroke="#c7c7cc" stroke-width="1"/>
-<text x="438" y="146" class="t">Dissolution of the Soviet Union</text>
-<text x="768" y="146" text-anchor="end" class="m" font-size="10">walk w1</text>
-<rect x="430" y="219" width="340" height="28" rx="6" fill="#f2f2f4" stroke="#c7c7cc" stroke-width="1"/>
-<text x="438" y="238" class="t">Russian Soviet Federative Socialist Republic</text>
-<text x="768" y="238" text-anchor="end" class="m" font-size="10">walk w1</text>
+<text x="48" y="100" class="t">Declaration of war by the United States</text>
+<rect x="40" y="219" width="340" height="28" rx="6" fill="#dbe9ff" stroke="#c7c7cc" stroke-width="1"/>
+<text x="48" y="238" class="t">The Trouble with the Truth (song)</text>
+<rect x="40" y="265" width="340" height="28" rx="6" fill="#dbe9ff" stroke="#c7c7cc" stroke-width="1"/>
+<text x="48" y="284" class="t">The Truth About Men</text>
 <rect x="430" y="173" width="340" height="28" rx="6" fill="#f2f2f4" stroke="#c7c7cc" stroke-width="1"/>
-<text x="438" y="192" class="t">Dissolution of the Soviet Union</text>
+<text x="438" y="192" class="t">Religion in Asia</text>
 <text x="768" y="192" text-anchor="end" class="m" font-size="10">walk w1</text>
-<text x="20" y="362" class="m">Steiner cost 2 links; nearest seed 0 doors from gold; graph within 1 door of the seeds: 2,658 passages, within 2: 18,428</text>
+<rect x="430" y="219" width="340" height="28" rx="6" fill="#f2f2f4" stroke="#c7c7cc" stroke-width="1"/>
+<text x="438" y="238" class="t">United Nations Security Council Resolution …</text>
+<text x="768" y="238" text-anchor="end" class="m" font-size="10">walk w1</text>
+<rect x="430" y="265" width="340" height="28" rx="6" fill="#f2f2f4" stroke="#c7c7cc" stroke-width="1"/>
+<text x="438" y="284" class="t">Zeferino Martins</text>
+<text x="768" y="284" text-anchor="end" class="m" font-size="10">walk w1</text>
+<rect x="430" y="81" width="340" height="28" rx="6" fill="#f2f2f4" stroke="#c7c7cc" stroke-width="1"/>
+<text x="438" y="100" class="t">Estanislau da Silva</text>
+<text x="768" y="100" text-anchor="end" class="m" font-size="10">walk w1</text>
+<rect x="430" y="127" width="340" height="28" rx="6" fill="#f2f2f4" stroke="#c7c7cc" stroke-width="1"/>
+<text x="438" y="146" class="t">List of Ramon Magsaysay Award winners</text>
+<text x="768" y="146" text-anchor="end" class="m" font-size="10">walk w1</text>
+<text x="20" y="362" class="m">Steiner cost 2 links; nearest seed 0 doors from gold; graph within 1 door of the seeds: 2,387 passages, within 2: 18,693</text>
 <text x="20" y="382" class="m">recall@5 beyond the seeds: search 0.00, U 0.00, Q 0.00, LQ 0.00. Yellow gold, blue seeds, green-edged nodes and links form the Steiner graph.</text>
 </svg>

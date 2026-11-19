@@ -11,8 +11,8 @@ RULES = {
 }
 
 
-def pick(rows, rule):
-    R = [r for r in rows if r["n_gold"] >= (3 if rule in ("compact", "spread") else 2)]
+def pick(rows, rule, used=()):
+    R = [r for r in rows if r["qid"] not in used and r["n_gold"] >= (3 if rule in ("compact", "spread") else 2)]
     if rule == "lands": R = sorted([r for r in R if r["n_gold"] > r["seeds_on_gold"]], key=lambda r: (-r["seeds_on_gold"], r["steiner_cost"], r["qid"]))
     elif rule == "misses":
         R = sorted([r for r in R if r["nearest_seed_doors"] is None or r["nearest_seed_doors"] >= 2], key=lambda r: (r["steiner_cost"], r["qid"]))
@@ -97,12 +97,14 @@ def main():
     os.makedirs("fixtures/svg", exist_ok=True)
     for c in ("cards", "prs", "mq"):
         rows = [json.loads(l) for l in open(f"fixtures/{c}/index.jsonl")]
+        used = set()  # one question per example: a rule skips questions an earlier rule took
         for rule in RULES:
             if rule == "learned-wins" and c != "prs": continue
-            r = pick(rows, rule)
+            r = pick(rows, rule, used)
             if not r:
                 out.append({"name": f"{c}-{rule}", "set": c, "rule": RULES[rule], "qid": None, "note": "no test question meets the rule"})
                 print(f"{c}-{rule}: none meets the rule"); continue
+            used.add(r["qid"])
             fx = json.load(open(f"fixtures/{c}/{r['file']}"))
             name = f"{c}-{rule}"
             open(f"fixtures/svg/{name}.svg", "w").write(svg(fx, f"{ {'cards': 'Cards', 'prs': 'PR titles', 'mq': 'MuSiQue'}[c]} · {rule}: {fx['qid']}"))
