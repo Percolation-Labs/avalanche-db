@@ -1,0 +1,7 @@
+cards: chosen (0, -1.5, 0.5) dev 0.353 test 0.306; Q(uniform θ) dev 0.205 test 0.219; test over 60 θ: median 0.210, max 0.306, chosen ranks 1/60; dev–test corr 0.92
+   best on test: (0, -1.5, 0.5) dev 0.353 test 0.306; (0, -0.5, 0.3) dev 0.229 test 0.293; (0, -1, 0.5) dev 0.315 test 0.293
+prs: chosen (-2, -1.5, 0.3) dev 0.558 test 0.611; Q(uniform θ) dev 0.237 test 0.227; test over 60 θ: median 0.432, max 0.627, chosen ranks 4/60; dev–test corr 0.98
+   best on test: (-1, -1.5, 0.5) dev 0.511 test 0.627; (-1, -1.5, 0.15) dev 0.539 test 0.621; (-1, -1.5, 0.3) dev 0.525 test 0.620
+   PR LQ gold hits by link to a seed: {'next': 64, 'near': 1, 'key only': 11, '2+ hops': 1}
+mq: chosen (-1, 0.5, 0.15) dev 0.155 test 0.094; Q(uniform θ) dev 0.125 test 0.145; test over 60 θ: median 0.105, max 0.148, chosen ranks 45/60; dev–test corr 0.46
+   best on test: (-1, -0.5, 0.15) dev 0.138 test 0.148; (-1, 0, 0.15) dev 0.125 test 0.145; (-1, -1, 0.15) dev 0.127 test 0.140
