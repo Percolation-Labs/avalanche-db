@@ -1,0 +1,24 @@
+RO: gold among the doors in 213/247 later sub-questions
+  connection
+    narrow     AUC 0.811 [0.779, 0.840]
+    strength   AUC 0.842 [0.809, 0.871]
+    fan-in     AUC 0.554 [0.533, 0.577]
+    beside     AUC 0.500 [0.500, 0.500]  (does not separate)
+  likeness
+    near       AUC 0.605 [0.578, 0.633]
+    passage    AUC 0.798 [0.760, 0.836]
+    door text  AUC 0.510 [0.502, 0.520]
+    question   AUC 0.842 [0.809, 0.876]
+  diagnostic: a shared key equals the previous answer for gold 0.657, for other doors 0.029
+RD: gold among the doors in 201/247 later sub-questions
+  connection
+    narrow     AUC 0.799 [0.763, 0.832]
+    strength   AUC 0.841 [0.808, 0.873]
+    fan-in     AUC 0.733 [0.697, 0.766]
+    beside     AUC 0.500 [0.500, 0.500]  (does not separate)
+  likeness
+    near       AUC 0.596 [0.568, 0.624]
+    passage    AUC 0.810 [0.770, 0.849]
+    door text  AUC 0.536 [0.519, 0.556]
+    question   AUC 0.859 [0.824, 0.894]
+  diagnostic: a shared key equals the previous answer for gold 0.502, for other doors 0.006
