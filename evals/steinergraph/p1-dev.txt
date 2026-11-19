@@ -1,0 +1,23 @@
+== dev: recall of gold beyond the seeds (questions with gold beyond the seeds)
+  set        arm           recall@5  recall@20  best gold rank, median   (Jev walk, 5 reads: recall)
+  cards      S                0.136      0.257                     124   (0.437, n 85)
+  cards      U                0.223      0.553                      11   
+  cards      Q                0.217      0.473                      15   
+  cards      Q_shuffled       0.000      0.000                 1000000   
+             avalanche U: step 1: gold mass 0.0202, best gold in top 10 32/85; step 2: gold mass 0.0090, best gold in top 10 49/85; step 3: gold mass 0.0054, best gold in top 10 45/85
+             avalanche Q: step 1: gold mass 0.0244, best gold in top 10 42/85; step 2: gold mass 0.0139, best gold in top 10 39/85; step 3: gold mass 0.0132, best gold in top 10 37/85
+
+  PR titles  S                0.128      0.341                    19.0   (0.137, n 60)
+  PR titles  U                0.265      0.578                     8.0   
+  PR titles  Q                0.237      0.490                    11.0   
+  PR titles  Q_shuffled       0.009      0.014                  1512.5   
+             avalanche U: step 1: gold mass 0.0252, best gold in top 10 35/60; step 2: gold mass 0.0054, best gold in top 10 20/60; step 3: gold mass 0.0032, best gold in top 10 28/60
+             avalanche Q: step 1: gold mass 0.0312, best gold in top 10 36/60; step 2: gold mass 0.0118, best gold in top 10 26/60; step 3: gold mass 0.0109, best gold in top 10 26/60
+
+  MuSiQue    S                0.051      0.212                    97.0   (0.320, n 88)
+  MuSiQue    U                0.136      0.269                    48.5   
+  MuSiQue    Q                0.131      0.284                    35.0   
+  MuSiQue    Q_shuffled       0.003      0.003                   455.0   
+             avalanche U: step 1: gold mass 0.0078, best gold in top 10 22/88; step 2: gold mass 0.0014, best gold in top 10 17/88; step 3: gold mass 0.0009, best gold in top 10 17/88
+             avalanche Q: step 1: gold mass 0.0139, best gold in top 10 24/88; step 2: gold mass 0.0062, best gold in top 10 22/88; step 3: gold mass 0.0070, best gold in top 10 22/88
+
