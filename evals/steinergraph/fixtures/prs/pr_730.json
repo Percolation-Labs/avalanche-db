@@ -1,0 +1,405 @@
+{
+ "qid": "pr:730",
+ "set": "prs",
+ "question": "What work went into this, and why: meta/lab/CLAUDE-USE.md: Claude in data and fixture generation?",
+ "gold": [
+  {
+   "id": "commit/8fff9c2f33",
+   "label": "commit 8fff9c2: No batch Claude: the Jev stand-in at scale is local; Claude reads hand-picked examples in session",
+   "seed": false
+  },
+  {
+   "id": "commit/a54df1647c",
+   "label": "commit a54df16: meta/lab/CLAUDE-USE.md: where Claude is used in data and fixture generation, from code and records",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/a54df1647c",
+   "label": "commit a54df16: meta/lab/CLAUDE-USE.md: where Claude is used in data and fixture generation, from code and records",
+   "rank": 1,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "commit/25e8c5119c",
+   "label": "commit 25e8c51: Merge pull request #730 from Percolation-Labs/bill/claude-use-inventory",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "meta/lab/CLAUDE-USE.md#1",
+   "label": "meta/lab/CLAUDE-USE.md \u203a How Claude is used in the lab's data and fixture generation (bill, 13 Nov 2026)",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/messages/M-20261113-122242-d85b.md#1",
+   "label": "board/messages/M-20261113-122242-d85b.md",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "board/messages/M-20261113-122205-5504.md#1",
+   "label": "board/messages/M-20261113-122205-5504.md",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 2
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/8fff9c2f33",
+    "label": "commit 8fff9c2: No batch Claude: the Jev stand-in at scale is local; Claude reads hand-picked examples in session",
+    "role": "gold"
+   },
+   {
+    "id": "commit/a54df1647c",
+    "label": "commit a54df16: meta/lab/CLAUDE-USE.md: where Claude is used in data and fixture generation, from code and records",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/8fff9c2f33",
+    "b": "commit/a54df1647c",
+    "via": [
+     {
+      "kind": "beside"
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "commit/a54df1647c",
+   "gold": "commit/a54df1647c",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 1035,
+  "within_2_doors": 32806,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "commit/479ea6a40d",
+    "label": "commit 479ea6a: board: bill acknowledges 2 message(s)",
+    "p": 0.008576750227850597,
+    "gold": false
+   },
+   {
+    "id": "commit/4cfc1ba5ed",
+    "label": "commit 4cfc1ba: board: james messages sirsh",
+    "p": 0.007787127434859112,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/CLAUDE-USE.md#4",
+    "label": "meta/lab/CLAUDE-USE.md \u203a Against the rule",
+    "p": 0.007424833266420757,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261113-123659-efbb.md#1",
+    "label": "board/messages/M-20261113-123659-efbb.md",
+    "p": 0.007395287703254753,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/world-lab/TOKEN-FREE.md#1",
+    "label": "meta/lab/results/world-lab/TOKEN-FREE.md \u203a World lab, token-free (bill, 13 Nov 2026; the symbolic judge built and checke",
+    "p": 0.007085343764568099,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/CLAUDE-USE.md#2",
+    "label": "meta/lab/CLAUDE-USE.md \u203a What makes data without tokens today",
+    "p": 0.006465643066009236,
+    "gold": false
+   },
+   {
+    "id": "commit/8fff9c2f33",
+    "label": "commit 8fff9c2: No batch Claude: the Jev stand-in at scale is local; Claude reads hand-picked examples in session",
+    "p": 0.006233680932302656,
+    "gold": true
+   },
+   {
+    "id": "commit/1df218ee0f",
+    "label": "commit 1df218e: Merge pull request #731 from Percolation-Labs/bill/world-lab-token-free",
+    "p": 0.006067702219106077,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/CLAUDE-USE.md#3",
+    "label": "meta/lab/CLAUDE-USE.md \u203a Where Claude is, and what it does",
+    "p": 0.005006020249382274,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/CLAUDE-USE.md#5",
+    "label": "meta/lab/CLAUDE-USE.md \u203a Can Claude still generate data today?",
+    "p": 0.004974879435217142,
+    "gold": false
+   },
+   {
+    "id": "commit/b957a97a0e",
+    "label": "commit b957a97: board: bill acknowledges 1 message(s)",
+    "p": 0.0043291493621498076,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261113-122709-de75.md#1",
+    "label": "board/messages/M-20261113-122709-de75.md",
+    "p": 0.0037151332862381857,
+    "gold": false
+   },
+   {
+    "id": "commit/3859df40a7",
+    "label": "commit 3859df4: board: bill messages sirsh",
+    "p": 0.0031774778799352494,
+    "gold": false
+   },
+   {
+    "id": "commit/97c2c50618",
+    "label": "commit 97c2c50: board: bill messages sirsh",
+    "p": 0.003148765119646827,
+    "gold": false
+   },
+   {
+    "id": "commit/3689279f0d",
+    "label": "commit 3689279: board: james messages sirsh",
+    "p": 0.0024047496187219034,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261113-122859-738e.md#1",
+    "label": "board/messages/M-20261113-122859-738e.md",
+    "p": 0.0022952488305752724,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/evidence/2026-11-13-token-spend/judge_calls.py#1",
+    "label": "meta/postmortems/evidence/2026-11-13-token-spend/judge_calls.py",
+    "p": 0.0019307820965313567,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/world-lab/TOKEN-FREE.md#2",
+    "label": "meta/lab/results/world-lab/TOKEN-FREE.md \u203a Where Claude was, and where it goes",
+    "p": 0.0017886628496695304,
+    "gold": false
+   },
+   {
+    "id": "commit/4aa2cc6061",
+    "label": "commit 4aa2cc6: board: bill messages james",
+    "p": 0.0017641676523973853,
+    "gold": false
+   },
+   {
+    "id": "commit/f0dabfab11",
+    "label": "commit f0dabfa: board: board-watch messages sirsh",
+    "p": 0.0016950215895579388,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/a54df1647c",
+   "label": "commit a54df16: meta/lab/CLAUDE-USE.md: where Claude is used in data and fixture generation, from code and records",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "commit/25e8c5119c",
+   "label": "commit 25e8c51: Merge pull request #730 from Percolation-Labs/bill/claude-use-inventory",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/CLAUDE-USE.md#1",
+   "label": "meta/lab/CLAUDE-USE.md \u203a How Claude is used in the lab's data and fixture generation (bill, 13 Nov 2026)",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/messages/M-20261113-122242-d85b.md#1",
+   "label": "board/messages/M-20261113-122242-d85b.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/messages/M-20261113-122205-5504.md#1",
+   "label": "board/messages/M-20261113-122205-5504.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/CLAUDE-USE.md#3",
+   "label": "meta/lab/CLAUDE-USE.md \u203a Where Claude is, and what it does",
+   "wave": 1,
+   "via": "term:lab claude",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/CLAUDE-USE.md#5",
+   "label": "meta/lab/CLAUDE-USE.md \u203a Can Claude still generate data today?",
+   "wave": 1,
+   "via": "term:lab claude",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/CLAUDE-USE.md#2",
+   "label": "meta/lab/CLAUDE-USE.md \u203a What makes data without tokens today",
+   "wave": 1,
+   "via": "term:lab claude",
+   "gold": false
+  },
+  {
+   "id": "board/messages/M-20261113-123659-efbb.md#1",
+   "label": "board/messages/M-20261113-123659-efbb.md",
+   "wave": 1,
+   "via": "term:lab claude",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/CLAUDE-USE.md#4",
+   "label": "meta/lab/CLAUDE-USE.md \u203a Against the rule",
+   "wave": 1,
+   "via": "term:lab claude",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "commit/479ea6a40d",
+    "label": "commit 479ea6a: board: bill acknowledges 2 message(s)",
+    "gold": false
+   },
+   {
+    "id": "commit/4cfc1ba5ed",
+    "label": "commit 4cfc1ba: board: james messages sirsh",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/CLAUDE-USE.md#4",
+    "label": "meta/lab/CLAUDE-USE.md \u203a Against the rule",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261113-123659-efbb.md#1",
+    "label": "board/messages/M-20261113-123659-efbb.md",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/world-lab/TOKEN-FREE.md#1",
+    "label": "meta/lab/results/world-lab/TOKEN-FREE.md \u203a World lab, token-free (bill, 13 Nov 2026; the symbolic judge built and checke",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "meta/lab/results/world-lab/TOKEN-FREE.md#1",
+    "label": "meta/lab/results/world-lab/TOKEN-FREE.md \u203a World lab, token-free (bill, 13 Nov 2026; the symbolic judge built and checke",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/CLAUDE-USE.md#4",
+    "label": "meta/lab/CLAUDE-USE.md \u203a Against the rule",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261113-123659-efbb.md#1",
+    "label": "board/messages/M-20261113-123659-efbb.md",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/CLAUDE-USE.md#2",
+    "label": "meta/lab/CLAUDE-USE.md \u203a What makes data without tokens today",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/CLAUDE-USE.md#5",
+    "label": "meta/lab/CLAUDE-USE.md \u203a Can Claude still generate data today?",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "meta/lab/results/world-lab/TOKEN-FREE.md#1",
+    "label": "meta/lab/results/world-lab/TOKEN-FREE.md \u203a World lab, token-free (bill, 13 Nov 2026; the symbolic judge built and checke",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/CLAUDE-USE.md#2",
+    "label": "meta/lab/CLAUDE-USE.md \u203a What makes data without tokens today",
+    "gold": false
+   },
+   {
+    "id": "commit/8fff9c2f33",
+    "label": "commit 8fff9c2: No batch Claude: the Jev stand-in at scale is local; Claude reads hand-picked examples in session",
+    "gold": true
+   },
+   {
+    "id": "board/messages/M-20261113-122137-a2d7.md#1",
+    "label": "board/messages/M-20261113-122137-a2d7.md",
+    "gold": false
+   },
+   {
+    "id": "commit/1df218ee0f",
+    "label": "commit 1df218e: Merge pull request #731 from Percolation-Labs/bill/world-lab-token-free",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "meta/lab/CLAUDE-USE.md#2",
+    "label": "meta/lab/CLAUDE-USE.md \u203a What makes data without tokens today",
+    "gold": false
+   },
+   {
+    "id": "commit/59dcfb5cac",
+    "label": "commit 59dcfb5: research-package: a package records how deep the work went, turns and search depth (REM-548)",
+    "gold": false
+   },
+   {
+    "id": "commit/71d488b296",
+    "label": "commit 71d488b: The shared tier stopped being a null org_id and six journeys went quiet",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/CLAUDE-USE.md#5",
+    "label": "meta/lab/CLAUDE-USE.md \u203a Can Claude still generate data today?",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261113-122859-738e.md#1",
+    "label": "board/messages/M-20261113-122859-738e.md",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 1.0,
+  "S": 0.0
+ }
+}

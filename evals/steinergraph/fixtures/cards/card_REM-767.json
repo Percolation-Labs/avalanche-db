@@ -1,0 +1,383 @@
+{
+ "qid": "card:REM-767",
+ "set": "cards",
+ "question": "What was done about this, and why: distillation: show a brew beats the report it replaces, by measurement?",
+ "gold": [
+  {
+   "id": "commit/1e875903d2",
+   "label": "commit 1e87590: Marketing strategy: brewification, and why distillation is not summarisation",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/d08cf6ea62",
+   "label": "commit d08cf6e: board: file REM-767 distillation: show a brew beats the report it replaces, by measurement",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-767.md#1",
+   "label": "board/cards/REM-767.md",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-767.md#2",
+   "label": "board/cards/REM-767.md \u203a Goal",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "specs/design/marketing-strategy.md#5",
+   "label": "specs/design/marketing-strategy.md \u203a 3.2 The distillation is the product (REM-767, REM-768, REM-769)",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/1e875903d2",
+   "label": "commit 1e87590: Marketing strategy: brewification, and why distillation is not summarisation",
+   "rank": 5,
+   "gold": true,
+   "doors_to_gold": 0
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/1e875903d2",
+    "label": "commit 1e87590: Marketing strategy: brewification, and why distillation is not summarisation",
+    "role": "gold"
+   }
+  ],
+  "links": [],
+  "cost": 0,
+  "detached_gold": [],
+  "gold_pair_doors": [],
+  "entry": {
+   "seed": "commit/1e875903d2",
+   "gold": "commit/1e875903d2",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 705,
+  "within_2_doors": 31809,
+  "gold_within_1": 0,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "board/cards/REM-768.md#1",
+    "label": "board/cards/REM-768.md",
+    "p": 0.014225075596231542,
+    "gold": false
+   },
+   {
+    "id": "commit/d26180aeec",
+    "label": "commit d26180a: board: file REM-768 distillation: profiles a writer chooses, each with its measured scores",
+    "p": 0.011211720919153503,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-768.md#2",
+    "label": "board/cards/REM-768.md \u203a Goal",
+    "p": 0.008319681235533371,
+    "gold": false
+   },
+   {
+    "id": "specs/design/marketing-strategy.md#1",
+    "label": "specs/design/marketing-strategy.md \u203a Percolate \u2014 marketing strategy",
+    "p": 0.006943241505132138,
+    "gold": false
+   },
+   {
+    "id": "commit/5a37bbd88c",
+    "label": "commit 5a37bbd: Marketing strategy: distillation is filing into the claims graph, after Trust Engineering",
+    "p": 0.005078776463210663,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-769.md#3",
+    "label": "board/cards/REM-769.md \u203a Notes",
+    "p": 0.004491287548270121,
+    "gold": false
+   },
+   {
+    "id": "specs/design/marketing-strategy.md#8",
+    "label": "specs/design/marketing-strategy.md \u203a 5. Order of work",
+    "p": 0.004250704412220912,
+    "gold": false
+   },
+   {
+    "id": "specs/design/marketing-strategy.md#6",
+    "label": "specs/design/marketing-strategy.md \u203a 4. Distillation is not summarisation",
+    "p": 0.003698870346524163,
+    "gold": false
+   },
+   {
+    "id": "commit/da5d914b6e",
+    "label": "commit da5d914: board: file REM-766 import: brew any page from a toolbar, through the person's own AI",
+    "p": 0.003520349756968231,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-767.md#4",
+    "label": "board/cards/REM-767.md \u203a Done when",
+    "p": 0.003442260345812687,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-767.md#3",
+    "label": "board/cards/REM-767.md \u203a Method (to refine)",
+    "p": 0.003393042722922395,
+    "gold": false
+   },
+   {
+    "id": "specs/design/README.md#2",
+    "label": "specs/design/README.md \u203a Start here",
+    "p": 0.0032987454047647027,
+    "gold": false
+   },
+   {
+    "id": "specs/design/marketing-strategy.md#7",
+    "label": "specs/design/marketing-strategy.md \u203a 4. Distillation is not summarisation",
+    "p": 0.003212217060804529,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-769.md#1",
+    "label": "board/cards/REM-769.md",
+    "p": 0.002797761484070062,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-490.md#4",
+    "label": "board/cards/REM-490.md \u203a Done when",
+    "p": 0.0027442754336833414,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-769.md#2",
+    "label": "board/cards/REM-769.md \u203a Goal",
+    "p": 0.002426515694243748,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-769.md#4",
+    "label": "board/cards/REM-769.md \u203a Done when",
+    "p": 0.002280683209086206,
+    "gold": false
+   },
+   {
+    "id": "commit/053d79936c",
+    "label": "commit 053d799: Merge pull request #408 from Percolation-Labs/amartey/marketing-strategy-brewification",
+    "p": 0.00227126777404652,
+    "gold": false
+   },
+   {
+    "id": "commit/a123380db5",
+    "label": "commit a123380: board: file REM-769 format: publish the brew format and score any brew by the same checks",
+    "p": 0.002192884288640278,
+    "gold": false
+   },
+   {
+    "id": "specs/design/marketing-strategy.md#4",
+    "label": "specs/design/marketing-strategy.md \u203a 3.1 Ingest: brew what already exists (REM-766)",
+    "p": 0.002122363431879539,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/d08cf6ea62",
+   "label": "commit d08cf6e: board: file REM-767 distillation: show a brew beats the report it replaces, by measurement",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-767.md#1",
+   "label": "board/cards/REM-767.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-767.md#2",
+   "label": "board/cards/REM-767.md \u203a Goal",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/design/marketing-strategy.md#5",
+   "label": "specs/design/marketing-strategy.md \u203a 3.2 The distillation is the product (REM-767, REM-768, REM-769)",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/1e875903d2",
+   "label": "commit 1e87590: Marketing strategy: brewification, and why distillation is not summarisation",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "specs/design/marketing-strategy.md#8",
+   "label": "specs/design/marketing-strategy.md \u203a 5. Order of work",
+   "wave": 1,
+   "via": "term:rem 767",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-767.md#5",
+   "label": "board/cards/REM-767.md \u203a Log",
+   "wave": 1,
+   "via": "term:rem 767",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-768.md#1",
+   "label": "board/cards/REM-768.md",
+   "wave": 1,
+   "via": "term:rem 767",
+   "gold": false
+  },
+  {
+   "id": "specs/design/marketing-strategy.md#9",
+   "label": "specs/design/marketing-strategy.md \u203a 6. How we tell it is working, and what would kill it",
+   "wave": 1,
+   "via": "term:rem 767",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-769.md#1",
+   "label": "board/cards/REM-769.md",
+   "wave": 1,
+   "via": "term:rem 767",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "board/cards/REM-768.md#1",
+    "label": "board/cards/REM-768.md",
+    "gold": false
+   },
+   {
+    "id": "commit/d26180aeec",
+    "label": "commit d26180a: board: file REM-768 distillation: profiles a writer chooses, each with its measured scores",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-768.md#2",
+    "label": "board/cards/REM-768.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "specs/design/marketing-strategy.md#1",
+    "label": "specs/design/marketing-strategy.md \u203a Percolate \u2014 marketing strategy",
+    "gold": false
+   },
+   {
+    "id": "commit/5a37bbd88c",
+    "label": "commit 5a37bbd: Marketing strategy: distillation is filing into the claims graph, after Trust Engineering",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "board/cards/REM-768.md#2",
+    "label": "board/cards/REM-768.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "commit/5a37bbd88c",
+    "label": "commit 5a37bbd: Marketing strategy: distillation is filing into the claims graph, after Trust Engineering",
+    "gold": false
+   },
+   {
+    "id": "commit/d26180aeec",
+    "label": "commit d26180a: board: file REM-768 distillation: profiles a writer chooses, each with its measured scores",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-768.md#1",
+    "label": "board/cards/REM-768.md",
+    "gold": false
+   },
+   {
+    "id": "specs/design/marketing-strategy.md#6",
+    "label": "specs/design/marketing-strategy.md \u203a 4. Distillation is not summarisation",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "board/cards/REM-767.md#4",
+    "label": "board/cards/REM-767.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "commit/d26180aeec",
+    "label": "commit d26180a: board: file REM-768 distillation: profiles a writer chooses, each with its measured scores",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-768.md#2",
+    "label": "board/cards/REM-768.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-768.md#1",
+    "label": "board/cards/REM-768.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-769.md#3",
+    "label": "board/cards/REM-769.md \u203a Notes",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "specs/design/marketing-strategy.md#6",
+    "label": "specs/design/marketing-strategy.md \u203a 4. Distillation is not summarisation",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-768.md#2",
+    "label": "board/cards/REM-768.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-769.md#3",
+    "label": "board/cards/REM-769.md \u203a Notes",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-767.md#4",
+    "label": "board/cards/REM-767.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "specs/design/marketing-strategy.md#7",
+    "label": "specs/design/marketing-strategy.md \u203a 4. Distillation is not summarisation",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": null,
+  "Q": null,
+  "LQ": null,
+  "S": null
+ }
+}

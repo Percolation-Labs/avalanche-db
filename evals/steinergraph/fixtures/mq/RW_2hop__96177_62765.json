@@ -1,0 +1,407 @@
+{
+ "qid": "RW:2hop__96177_62765",
+ "set": "mq",
+ "question": "Who did the star of Dark Hazard play in The Ten Commandments?",
+ "gold": [
+  {
+   "id": "mq:bf182291197ff0d5",
+   "label": "The Ten Commandments (1956 film)",
+   "seed": true
+  },
+  {
+   "id": "mq:bf88f5e6e32a3fd1",
+   "label": "Dark Hazard",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:bf88f5e6e32a3fd1",
+   "label": "Dark Hazard",
+   "rank": 1,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:2855211037ff8fa3",
+   "label": "The Ten Commandments (1923 film)",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:144466cf93ec4819",
+   "label": "Ten Modern Commandments",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:bf182291197ff0d5",
+   "label": "The Ten Commandments (1956 film)",
+   "rank": 4,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:1e35ba66387fa5b8",
+   "label": "Star Wars: Dark Forces",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 2
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:bf182291197ff0d5",
+    "label": "The Ten Commandments (1956 film)",
+    "role": "gold"
+   },
+   {
+    "id": "mq:bf88f5e6e32a3fd1",
+    "label": "Dark Hazard",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:bf182291197ff0d5",
+    "b": "mq:bf88f5e6e32a3fd1",
+    "via": [
+     {
+      "kind": "term",
+      "key": "robinson",
+      "width": 66
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "mq:bf182291197ff0d5",
+   "gold": "mq:bf182291197ff0d5",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 2411,
+  "within_2_doors": 18636,
+  "gold_within_1": 0,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "mq:828097d07482ebe5",
+    "label": "The Devil-Stone",
+    "p": 0.0039187269472722745,
+    "gold": false
+   },
+   {
+    "id": "mq:74f2bcff01e0a204",
+    "label": "The Bourne Ultimatum (film)",
+    "p": 0.0020326554096335705,
+    "gold": false
+   },
+   {
+    "id": "mq:37ae96f6b92bce37",
+    "label": "Honour thy father and thy mother",
+    "p": 0.0018193033578968358,
+    "gold": false
+   },
+   {
+    "id": "mq:264cb99b84a9981d",
+    "label": "The King of Kings (1927 film)",
+    "p": 0.0015716236415751258,
+    "gold": false
+   },
+   {
+    "id": "mq:42a03423b7f389d5",
+    "label": "The Bad Man (1930 film)",
+    "p": 0.0015051156793468188,
+    "gold": false
+   },
+   {
+    "id": "mq:7cbe438b8afed6af",
+    "label": "Millard Webb",
+    "p": 0.0013282990016096593,
+    "gold": false
+   },
+   {
+    "id": "mq:1a952e9d3b4985fa",
+    "label": "Iraqi Light Armored Vehicle",
+    "p": 0.0012556325499397016,
+    "gold": false
+   },
+   {
+    "id": "mq:6a843d5b9fff2fc7",
+    "label": "A Crown of Swords",
+    "p": 0.0012203466848937662,
+    "gold": false
+   },
+   {
+    "id": "mq:f20513e5f37f6f06",
+    "label": "Les 11 commandements",
+    "p": 0.0011751226397691274,
+    "gold": false
+   },
+   {
+    "id": "mq:25c46c889f98146e",
+    "label": "Smokey and the Bandit",
+    "p": 0.0011679233855472965,
+    "gold": false
+   },
+   {
+    "id": "mq:bad3b04030151ebc",
+    "label": "Os Dez Mandamentos",
+    "p": 0.0011564953207372573,
+    "gold": false
+   },
+   {
+    "id": "mq:63c8f20a1733da80",
+    "label": "Adam Lambert",
+    "p": 0.001096847753614843,
+    "gold": false
+   },
+   {
+    "id": "mq:7b861332fe07d8f1",
+    "label": "The Woman in the Window",
+    "p": 0.0010636724959371927,
+    "gold": false
+   },
+   {
+    "id": "mq:45dcb144569b7cf8",
+    "label": "Father Brown, Detective",
+    "p": 0.0010603108698660321,
+    "gold": false
+   },
+   {
+    "id": "mq:176f1276e1f477eb",
+    "label": "Night Alarm",
+    "p": 0.0010515016316373631,
+    "gold": false
+   },
+   {
+    "id": "mq:1142b1a9db637468",
+    "label": "Sammy Going South",
+    "p": 0.0010120904065827345,
+    "gold": false
+   },
+   {
+    "id": "mq:cf9dbaeb5eb6c097",
+    "label": "Separation of church and state in the United States",
+    "p": 0.0010060830944359658,
+    "gold": false
+   },
+   {
+    "id": "mq:bab2f53c9cd5af18",
+    "label": "Prodigal Daughters",
+    "p": 0.00100490290949589,
+    "gold": false
+   },
+   {
+    "id": "mq:6b974c428b618ac0",
+    "label": "City Lights",
+    "p": 0.0009406177856649564,
+    "gold": false
+   },
+   {
+    "id": "mq:ad51cb1514320833",
+    "label": "The Master Mind",
+    "p": 0.0007931068227961871,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:bf88f5e6e32a3fd1",
+   "label": "Dark Hazard",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:2855211037ff8fa3",
+   "label": "The Ten Commandments (1923 film)",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:144466cf93ec4819",
+   "label": "Ten Modern Commandments",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:bf182291197ff0d5",
+   "label": "The Ten Commandments (1956 film)",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:1e35ba66387fa5b8",
+   "label": "Star Wars: Dark Forces",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:4f7a2bc792fd36d6",
+   "label": "Prisoner of the Volga",
+   "wave": 1,
+   "via": "term:john derek",
+   "gold": false
+  },
+  {
+   "id": "mq:4982d1e0e2e454a5",
+   "label": "Knock on Any Door",
+   "wave": 1,
+   "via": "term:john derek",
+   "gold": false
+  },
+  {
+   "id": "mq:7b861332fe07d8f1",
+   "label": "The Woman in the Window",
+   "wave": 2,
+   "via": "term:starring edward",
+   "gold": false
+  },
+  {
+   "id": "mq:1142b1a9db637468",
+   "label": "Sammy Going South",
+   "wave": 2,
+   "via": "term:starring edward",
+   "gold": false
+  },
+  {
+   "id": "mq:4a39309fdef60051",
+   "label": "Dad's Army",
+   "wave": 3,
+   "via": "term:derek",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:828097d07482ebe5",
+    "label": "The Devil-Stone",
+    "gold": false
+   },
+   {
+    "id": "mq:74f2bcff01e0a204",
+    "label": "The Bourne Ultimatum (film)",
+    "gold": false
+   },
+   {
+    "id": "mq:37ae96f6b92bce37",
+    "label": "Honour thy father and thy mother",
+    "gold": false
+   },
+   {
+    "id": "mq:264cb99b84a9981d",
+    "label": "The King of Kings (1927 film)",
+    "gold": false
+   },
+   {
+    "id": "mq:42a03423b7f389d5",
+    "label": "The Bad Man (1930 film)",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:37ae96f6b92bce37",
+    "label": "Honour thy father and thy mother",
+    "gold": false
+   },
+   {
+    "id": "mq:63c8f20a1733da80",
+    "label": "Adam Lambert",
+    "gold": false
+   },
+   {
+    "id": "mq:cf9dbaeb5eb6c097",
+    "label": "Separation of church and state in the United States",
+    "gold": false
+   },
+   {
+    "id": "mq:f20513e5f37f6f06",
+    "label": "Les 11 commandements",
+    "gold": false
+   },
+   {
+    "id": "mq:a5a6e08cc68cd518",
+    "label": "A Hazard of Hearts",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:63c8f20a1733da80",
+    "label": "Adam Lambert",
+    "gold": false
+   },
+   {
+    "id": "mq:37ae96f6b92bce37",
+    "label": "Honour thy father and thy mother",
+    "gold": false
+   },
+   {
+    "id": "mq:cf9dbaeb5eb6c097",
+    "label": "Separation of church and state in the United States",
+    "gold": false
+   },
+   {
+    "id": "mq:d219a394dedc9b6c",
+    "label": "Andy Serkis",
+    "gold": false
+   },
+   {
+    "id": "mq:95e17a1a4a5aa24f",
+    "label": "Andy Serkis",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:37ae96f6b92bce37",
+    "label": "Honour thy father and thy mother",
+    "gold": false
+   },
+   {
+    "id": "mq:c48b5bbb6c6a0bf7",
+    "label": "Theta Apodis",
+    "gold": false
+   },
+   {
+    "id": "mq:fb855b900ed06a51",
+    "label": "Shadow Star",
+    "gold": false
+   },
+   {
+    "id": "mq:090b08458968a8aa",
+    "label": "A Sawmill Hazard",
+    "gold": false
+   },
+   {
+    "id": "mq:9183b1c5b445ab49",
+    "label": "In a Forest, Dark and Deep",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": null,
+  "Q": null,
+  "LQ": null,
+  "S": null
+ }
+}

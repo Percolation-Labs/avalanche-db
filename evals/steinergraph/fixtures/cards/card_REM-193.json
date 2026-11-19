@@ -1,0 +1,503 @@
+{
+ "qid": "card:REM-193",
+ "set": "cards",
+ "question": "What was done about this, and why: extension: an upgrade to 0.2.2 leaves application roles its new grant rule refuses?",
+ "gold": [
+  {
+   "id": "commit/9374b39cde",
+   "label": "commit 9374b39: An upgrade keeps research:publish on an application's publication role (REM-311)",
+   "seed": false
+  },
+  {
+   "id": "commit/95a76cfb1f",
+   "label": "commit 95a76cf: A writer stores an article image, and readers of the revision read it (REM-309, core 0.2.11)",
+   "seed": false
+  },
+  {
+   "id": "commit/ad2101212c",
+   "label": "commit ad21012: An upgrade keeps application roles grantable (REM-193)",
+   "seed": true
+  },
+  {
+   "id": "commit/cbc9ee3535",
+   "label": "commit cbc9ee3: Merge pull request #176 from Percolation-Labs/amartey/rem-193-upgrade-prunes-app-roles",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "board/cards/REM-193.md#1",
+   "label": "board/cards/REM-193.md",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-193.md#2",
+   "label": "board/cards/REM-193.md \u203a Goal",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "meta/postmortems/2026-09-13-hetzner-cutover-and-its-secrets.md#8",
+   "label": "meta/postmortems/2026-09-13-hetzner-cutover-and-its-secrets.md \u203a An upgrade that tightens a rule leaves the rows that br",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/ad2101212c",
+   "label": "commit ad21012: An upgrade keeps application roles grantable (REM-193)",
+   "rank": 4,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "commit/ef8d4fecb6",
+   "label": "commit ef8d4fe: Merge pull request #211 from Percolation-Labs/amartey/upgrade-keeps-application-roles",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/9374b39cde",
+    "label": "commit 9374b39: An upgrade keeps research:publish on an application's publication role (REM-311)",
+    "role": "gold"
+   },
+   {
+    "id": "commit/95a76cfb1f",
+    "label": "commit 95a76cf: A writer stores an article image, and readers of the revision read it (REM-309, core 0.2.11)",
+    "role": "gold"
+   },
+   {
+    "id": "commit/ad2101212c",
+    "label": "commit ad21012: An upgrade keeps application roles grantable (REM-193)",
+    "role": "gold"
+   },
+   {
+    "id": "commit/cbc9ee3535",
+    "label": "commit cbc9ee3: Merge pull request #176 from Percolation-Labs/amartey/rem-193-upgrade-prunes-app-roles",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/9374b39cde",
+    "b": "commit/ad2101212c",
+    "via": [
+     {
+      "kind": "term",
+      "key": "keeps research",
+      "width": 4
+     },
+     {
+      "kind": "term",
+      "key": "upgrade keeps",
+      "width": 8
+     },
+     {
+      "kind": "term",
+      "key": "rem 193",
+      "width": 28
+     },
+     {
+      "kind": "term",
+      "key": "grant_application_role",
+      "width": 29
+     },
+     {
+      "kind": "term",
+      "key": "dev upgrade",
+      "width": 83
+     }
+    ]
+   },
+   {
+    "a": "commit/95a76cfb1f",
+    "b": "commit/ad2101212c",
+    "via": [
+     {
+      "kind": "term",
+      "key": "rem 193",
+      "width": 28
+     },
+     {
+      "kind": "term",
+      "key": "resources create",
+      "width": 45
+     }
+    ]
+   },
+   {
+    "a": "commit/ad2101212c",
+    "b": "commit/cbc9ee3535",
+    "via": [
+     {
+      "kind": "near",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "roles grantable",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "grantable rem",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "keeps application",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "grantable",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "upgrade keeps",
+      "width": 8
+     }
+    ]
+   }
+  ],
+  "cost": 3,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  "entry": {
+   "seed": "commit/ad2101212c",
+   "gold": "commit/ad2101212c",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 1189,
+  "within_2_doors": 32798,
+  "gold_within_1": 3,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "board/cards/REM-311.md#7",
+    "label": "board/cards/REM-311.md \u203a Log",
+    "p": 0.011428756300183454,
+    "gold": false
+   },
+   {
+    "id": "commit/cbc9ee3535",
+    "label": "commit cbc9ee3: Merge pull request #176 from Percolation-Labs/amartey/rem-193-upgrade-prunes-app-roles",
+    "p": 0.00568741220747016,
+    "gold": true
+   },
+   {
+    "id": "commit/9374b39cde",
+    "label": "commit 9374b39: An upgrade keeps research:publish on an application's publication role (REM-311)",
+    "p": 0.004896978139420048,
+    "gold": true
+   },
+   {
+    "id": "board/cards/REM-311.md#1",
+    "label": "board/cards/REM-311.md",
+    "p": 0.004374752592348889,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-14-a-merged-fix-is-four-steps-from-a-reader.md#4",
+    "label": "meta/postmortems/2026-09-14-a-merged-fix-is-four-steps-from-a-reader.md \u203a 2. A release was dispatched with a known upgra",
+    "p": 0.0034001420530861345,
+    "gold": false
+   },
+   {
+    "id": "specs/user-rbac/schema.sql#14",
+    "label": "specs/user-rbac/schema.sql",
+    "p": 0.0027123382886559693,
+    "gold": false
+   },
+   {
+    "id": "specs/user-rbac/schema.sql#13",
+    "label": "specs/user-rbac/schema.sql",
+    "p": 0.0023805665530615763,
+    "gold": false
+   },
+   {
+    "id": "specs/research-platform/architecture.md#3",
+    "label": "specs/research-platform/architecture.md \u203a 1. Decision and outcomes",
+    "p": 0.0022005208785431988,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-239.md#9",
+    "label": "board/cards/REM-239.md \u203a 2026-09-14T12:57:07.518Z \u00b7 Amartey",
+    "p": 0.0021480270830025027,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-311.md#8",
+    "label": "board/cards/REM-311.md \u203a Log",
+    "p": 0.0020209971101800544,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-193.md#3",
+    "label": "board/cards/REM-193.md \u203a Evidence",
+    "p": 0.0019928726688865786,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-267.md#1",
+    "label": "board/cards/REM-267.md",
+    "p": 0.0014478802569218878,
+    "gold": false
+   },
+   {
+    "id": "commit/964fb3edf6",
+    "label": "commit 964fb3e: board: file REM-267 hub: the publication catalog's publish_entry asks core's rbac.may_in_org instead of ",
+    "p": 0.001372576470879722,
+    "gold": false
+   },
+   {
+    "id": "commit/71146743c0",
+    "label": "commit 7114674: board: file REM-314 hub: every package-page section tells writers and readers its job and the feeling it",
+    "p": 0.0013110548557553271,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-305.md#8",
+    "label": "board/cards/REM-305.md \u203a Log",
+    "p": 0.001261669504885867,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-267.md#2",
+    "label": "board/cards/REM-267.md \u203a Goal",
+    "p": 0.0011993963237619445,
+    "gold": false
+   },
+   {
+    "id": "commit/bd821d103e",
+    "label": "commit bd821d1: board: percolate-application-37 takes REM-313",
+    "p": 0.00119787519557177,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-552.md#2",
+    "label": "board/cards/REM-552.md \u203a Goal",
+    "p": 0.0011272251078998305,
+    "gold": false
+   },
+   {
+    "id": "specs/research-platform/schema.sql#74",
+    "label": "specs/research-platform/schema.sql",
+    "p": 0.001119458274473958,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-242.md#3",
+    "label": "board/cards/REM-242.md \u203a Evidence",
+    "p": 0.001116273641348867,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "board/cards/REM-193.md#1",
+   "label": "board/cards/REM-193.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-193.md#2",
+   "label": "board/cards/REM-193.md \u203a Goal",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/postmortems/2026-09-13-hetzner-cutover-and-its-secrets.md#8",
+   "label": "meta/postmortems/2026-09-13-hetzner-cutover-and-its-secrets.md \u203a An upgrade that tightens a rule leaves the rows that br",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/ad2101212c",
+   "label": "commit ad21012: An upgrade keeps application roles grantable (REM-193)",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "commit/ef8d4fecb6",
+   "label": "commit ef8d4fe: Merge pull request #211 from Percolation-Labs/amartey/upgrade-keeps-application-roles",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-193.md#3",
+   "label": "board/cards/REM-193.md \u203a Evidence",
+   "wave": 1,
+   "via": "term:rem 193",
+   "gold": false
+  },
+  {
+   "id": "commit/cbc9ee3535",
+   "label": "commit cbc9ee3: Merge pull request #176 from Percolation-Labs/amartey/rem-193-upgrade-prunes-app-roles",
+   "wave": 1,
+   "via": "term:rem 193",
+   "gold": true
+  },
+  {
+   "id": "board/cards/REM-193.md#4",
+   "label": "board/cards/REM-193.md \u203a Log",
+   "wave": 1,
+   "via": "term:rem 193",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-311.md#8",
+   "label": "board/cards/REM-311.md \u203a Log",
+   "wave": 1,
+   "via": "term:rem 193",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-552.md#2",
+   "label": "board/cards/REM-552.md \u203a Goal",
+   "wave": 1,
+   "via": "term:rem 193",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "board/cards/REM-311.md#7",
+    "label": "board/cards/REM-311.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "commit/cbc9ee3535",
+    "label": "commit cbc9ee3: Merge pull request #176 from Percolation-Labs/amartey/rem-193-upgrade-prunes-app-roles",
+    "gold": true
+   },
+   {
+    "id": "commit/9374b39cde",
+    "label": "commit 9374b39: An upgrade keeps research:publish on an application's publication role (REM-311)",
+    "gold": true
+   },
+   {
+    "id": "board/cards/REM-311.md#1",
+    "label": "board/cards/REM-311.md",
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-14-a-merged-fix-is-four-steps-from-a-reader.md#4",
+    "label": "meta/postmortems/2026-09-14-a-merged-fix-is-four-steps-from-a-reader.md \u203a 2. A release was dispatched with a known upgra",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "board/cards/REM-311.md#7",
+    "label": "board/cards/REM-311.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "commit/cbc9ee3535",
+    "label": "commit cbc9ee3: Merge pull request #176 from Percolation-Labs/amartey/rem-193-upgrade-prunes-app-roles",
+    "gold": true
+   },
+   {
+    "id": "board/cards/REM-311.md#1",
+    "label": "board/cards/REM-311.md",
+    "gold": false
+   },
+   {
+    "id": "commit/9374b39cde",
+    "label": "commit 9374b39: An upgrade keeps research:publish on an application's publication role (REM-311)",
+    "gold": true
+   },
+   {
+    "id": "meta/postmortems/2026-09-14-a-merged-fix-is-four-steps-from-a-reader.md#4",
+    "label": "meta/postmortems/2026-09-14-a-merged-fix-is-four-steps-from-a-reader.md \u203a 2. A release was dispatched with a known upgra",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/cbc9ee3535",
+    "label": "commit cbc9ee3: Merge pull request #176 from Percolation-Labs/amartey/rem-193-upgrade-prunes-app-roles",
+    "gold": true
+   },
+   {
+    "id": "board/cards/REM-311.md#1",
+    "label": "board/cards/REM-311.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-193.md#4",
+    "label": "board/cards/REM-193.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-552.md#2",
+    "label": "board/cards/REM-552.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-311.md#8",
+    "label": "board/cards/REM-311.md \u203a Log",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "board/cards/REM-305.md#8",
+    "label": "board/cards/REM-305.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "commit/eeb7289d80",
+    "label": "commit eeb7289: An upgrade leaves an operator's denied rights denied (REM-552)",
+    "gold": false
+   },
+   {
+    "id": "commit/cbc9ee3535",
+    "label": "commit cbc9ee3: Merge pull request #176 from Percolation-Labs/amartey/rem-193-upgrade-prunes-app-roles",
+    "gold": true
+   },
+   {
+    "id": "board/cards/REM-311.md#7",
+    "label": "board/cards/REM-311.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "PACKAGING.md#9",
+    "label": "PACKAGING.md \u203a Deployment: one image, three entrypoints",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.6666666666666666,
+  "Q": 0.6666666666666666,
+  "LQ": 0.3333333333333333,
+  "S": 0.3333333333333333
+ }
+}

@@ -1,0 +1,447 @@
+{
+ "qid": "RW:2hop__20256_71302",
+ "set": "mq",
+ "question": "In The Godfather, who does the actor producing the Freddie Mercury film play?",
+ "gold": [
+  {
+   "id": "mq:62a61bd58554ab05",
+   "label": "The Godfather Part II",
+   "seed": false
+  },
+  {
+   "id": "mq:787591efd3f4c5c2",
+   "label": "Queen (band)",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:8ed6d9d3b0633025",
+   "label": "Play the Game (song)",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:b675ced2d879f937",
+   "label": "I Was Born to Love You (song)",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:8a64ae2971f7b244",
+   "label": "John Cazale",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:ad1afd1bb52ebe1d",
+   "label": "Bohemian Rhapsody (film)",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:8ee5954ff5080359",
+   "label": "Freddie Stroma",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 2
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:62a61bd58554ab05",
+    "label": "The Godfather Part II",
+    "role": "gold"
+   },
+   {
+    "id": "mq:787591efd3f4c5c2",
+    "label": "Queen (band)",
+    "role": "gold"
+   },
+   {
+    "id": "mq:8a64ae2971f7b244",
+    "label": "John Cazale",
+    "role": "seed"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:62a61bd58554ab05",
+    "b": "mq:787591efd3f4c5c2",
+    "via": [
+     {
+      "kind": "term",
+      "key": "niro",
+      "width": 8
+     }
+    ]
+   },
+   {
+    "a": "mq:62a61bd58554ab05",
+    "b": "mq:8a64ae2971f7b244",
+    "via": [
+     {
+      "kind": "near",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "pacino",
+      "width": 3
+     },
+     {
+      "kind": "term",
+      "key": "francis ford",
+      "width": 7
+     },
+     {
+      "kind": "term",
+      "key": "corleone",
+      "width": 7
+     },
+     {
+      "kind": "term",
+      "key": "ford coppola",
+      "width": 7
+     },
+     {
+      "kind": "term",
+      "key": "godfather part",
+      "width": 8
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "mq:8a64ae2971f7b244",
+   "gold": "mq:62a61bd58554ab05",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 3044,
+  "within_2_doors": 18034,
+  "gold_within_1": 2,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "mq:edfca163c6d9a7a9",
+    "label": "Queen (band)",
+    "p": 0.0041507615913090705,
+    "gold": false
+   },
+   {
+    "id": "mq:fcb3d9294347d3df",
+    "label": "Don't Stop Me Now",
+    "p": 0.003947964383817509,
+    "gold": false
+   },
+   {
+    "id": "mq:0ec66d44b6393133",
+    "label": "13 Hours: The Secret Soldiers of Benghazi",
+    "p": 0.0032759373065094034,
+    "gold": false
+   },
+   {
+    "id": "mq:ea3f6cdb37604aed",
+    "label": "I Can't Drive 55",
+    "p": 0.0019890065373784054,
+    "gold": false
+   },
+   {
+    "id": "mq:41db42ad7aa6e9d8",
+    "label": "I Want It All (Queen song)",
+    "p": 0.001482497615939349,
+    "gold": false
+   },
+   {
+    "id": "mq:692d750cd33fa012",
+    "label": "Don't Go Breaking My Heart",
+    "p": 0.001303338328004686,
+    "gold": false
+   },
+   {
+    "id": "mq:196963867ef86361",
+    "label": "I'm Leaving It Up to You",
+    "p": 0.0012234771102836164,
+    "gold": false
+   },
+   {
+    "id": "mq:c4d0f78f89869351",
+    "label": "Chris Sarandon",
+    "p": 0.0011422680005179502,
+    "gold": false
+   },
+   {
+    "id": "mq:5e026412fbdaef38",
+    "label": "Let's Go All the Way (song)",
+    "p": 0.0011275685120101017,
+    "gold": false
+   },
+   {
+    "id": "mq:7d50ccd023fa4328",
+    "label": "The Lord of the Rings (film series)",
+    "p": 0.0011263376315616641,
+    "gold": false
+   },
+   {
+    "id": "mq:62a61bd58554ab05",
+    "label": "The Godfather Part II",
+    "p": 0.0011099534753636687,
+    "gold": true
+   },
+   {
+    "id": "mq:ac3f9bfdaa094359",
+    "label": "The Pride You Hide",
+    "p": 0.0010949341496866907,
+    "gold": false
+   },
+   {
+    "id": "mq:f89b32947907069c",
+    "label": "Cinderella",
+    "p": 0.0010301959354643963,
+    "gold": false
+   },
+   {
+    "id": "mq:4b39708ec8c2d31f",
+    "label": "Professional wrestling",
+    "p": 0.0010264716176954724,
+    "gold": false
+   },
+   {
+    "id": "mq:1c1d1d6b5ee8510f",
+    "label": "Scratchie Records",
+    "p": 0.0009139534507813147,
+    "gold": false
+   },
+   {
+    "id": "mq:f81a0879da8a5bb8",
+    "label": "Vito Corleone",
+    "p": 0.0008379733151109315,
+    "gold": false
+   },
+   {
+    "id": "mq:430a93bb14a0820b",
+    "label": "Idealism",
+    "p": 0.0008309862021392358,
+    "gold": false
+   },
+   {
+    "id": "mq:c411dc0fcea7422e",
+    "label": "Saint Helena",
+    "p": 0.0008126728249225442,
+    "gold": false
+   },
+   {
+    "id": "mq:a77a3ec5dc357d63",
+    "label": "Amanda Tanen",
+    "p": 0.000803147278461228,
+    "gold": false
+   },
+   {
+    "id": "mq:cee7af61e205cfd4",
+    "label": "Time Team Digs",
+    "p": 0.0007915151753630325,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:8ed6d9d3b0633025",
+   "label": "Play the Game (song)",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:b675ced2d879f937",
+   "label": "I Was Born to Love You (song)",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:8a64ae2971f7b244",
+   "label": "John Cazale",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:ad1afd1bb52ebe1d",
+   "label": "Bohemian Rhapsody (film)",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:8ee5954ff5080359",
+   "label": "Freddie Stroma",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:2a76f745cf0ba149",
+   "label": "Do They Know It's Christmas?",
+   "wave": 1,
+   "via": "term:live aid",
+   "gold": false
+  },
+  {
+   "id": "mq:f5d734492b1ad749",
+   "label": "Autograph (Russian band)",
+   "wave": 1,
+   "via": "term:live aid",
+   "gold": false
+  },
+  {
+   "id": "mq:787591efd3f4c5c2",
+   "label": "Queen (band)",
+   "wave": 1,
+   "via": "term:live aid",
+   "gold": true
+  },
+  {
+   "id": "mq:edfca163c6d9a7a9",
+   "label": "Queen (band)",
+   "wave": 1,
+   "via": "term:live aid",
+   "gold": false
+  },
+  {
+   "id": "mq:aec80d8cf6a319d4",
+   "label": "The Bronx",
+   "wave": 2,
+   "via": "term:niro",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:edfca163c6d9a7a9",
+    "label": "Queen (band)",
+    "gold": false
+   },
+   {
+    "id": "mq:fcb3d9294347d3df",
+    "label": "Don't Stop Me Now",
+    "gold": false
+   },
+   {
+    "id": "mq:0ec66d44b6393133",
+    "label": "13 Hours: The Secret Soldiers of Benghazi",
+    "gold": false
+   },
+   {
+    "id": "mq:ea3f6cdb37604aed",
+    "label": "I Can't Drive 55",
+    "gold": false
+   },
+   {
+    "id": "mq:41db42ad7aa6e9d8",
+    "label": "I Want It All (Queen song)",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:edfca163c6d9a7a9",
+    "label": "Queen (band)",
+    "gold": false
+   },
+   {
+    "id": "mq:fcb3d9294347d3df",
+    "label": "Don't Stop Me Now",
+    "gold": false
+   },
+   {
+    "id": "mq:0ec66d44b6393133",
+    "label": "13 Hours: The Secret Soldiers of Benghazi",
+    "gold": false
+   },
+   {
+    "id": "mq:62a61bd58554ab05",
+    "label": "The Godfather Part II",
+    "gold": true
+   },
+   {
+    "id": "mq:f81a0879da8a5bb8",
+    "label": "Vito Corleone",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:edfca163c6d9a7a9",
+    "label": "Queen (band)",
+    "gold": false
+   },
+   {
+    "id": "mq:0ec66d44b6393133",
+    "label": "13 Hours: The Secret Soldiers of Benghazi",
+    "gold": false
+   },
+   {
+    "id": "mq:fcb3d9294347d3df",
+    "label": "Don't Stop Me Now",
+    "gold": false
+   },
+   {
+    "id": "mq:62a61bd58554ab05",
+    "label": "The Godfather Part II",
+    "gold": true
+   },
+   {
+    "id": "mq:f81a0879da8a5bb8",
+    "label": "Vito Corleone",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:787591efd3f4c5c2",
+    "label": "Queen (band)",
+    "gold": true
+   },
+   {
+    "id": "mq:fcb3d9294347d3df",
+    "label": "Don't Stop Me Now",
+    "gold": false
+   },
+   {
+    "id": "mq:4c45325e4f776e8b",
+    "label": "She's All That",
+    "gold": false
+   },
+   {
+    "id": "mq:c8f09d2ca60465ed",
+    "label": "The Godfather (film series)",
+    "gold": false
+   },
+   {
+    "id": "mq:02ac103b3933f00a",
+    "label": "Mumbai Godfather",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.5,
+  "LQ": 0.5,
+  "S": 0.5
+ }
+}

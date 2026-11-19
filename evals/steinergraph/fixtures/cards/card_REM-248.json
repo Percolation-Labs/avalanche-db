@@ -1,0 +1,453 @@
+{
+ "qid": "card:REM-248",
+ "set": "cards",
+ "question": "What was done about this, and why: hub: an editor admits and withdraws a writer from inside the hub, through a revocation core lets the application make?",
+ "gold": [
+  {
+   "id": "commit/0bd9b4546d",
+   "label": "commit 0bd9b45: An application withdraws a grant it issued, with a reason, keeping the history (REM-248)",
+   "seed": false
+  },
+  {
+   "id": "commit/85d42f4819",
+   "label": "commit 85d42f4: Merge pull request #204 from Percolation-Labs/amartey/rem-248-application-revokes",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "board/cards/REM-248.md#1",
+   "label": "board/cards/REM-248.md",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-248.md#6",
+   "label": "board/cards/REM-248.md \u203a Log",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "specs/percolate-application/access-and-limits.md#10",
+   "label": "specs/percolate-application/access-and-limits.md \u203a Becoming a writer",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-248.md#8",
+   "label": "board/cards/REM-248.md \u203a Log",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-248.md#4",
+   "label": "board/cards/REM-248.md \u203a Done when",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "board/cards/REM-248.md#6",
+    "label": "board/cards/REM-248.md \u203a Log",
+    "role": "seed"
+   },
+   {
+    "id": "commit/0bd9b4546d",
+    "label": "commit 0bd9b45: An application withdraws a grant it issued, with a reason, keeping the history (REM-248)",
+    "role": "gold"
+   },
+   {
+    "id": "commit/85d42f4819",
+    "label": "commit 85d42f4: Merge pull request #204 from Percolation-Labs/amartey/rem-248-application-revokes",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "board/cards/REM-248.md#6",
+    "b": "commit/0bd9b4546d",
+    "via": [
+     {
+      "kind": "term",
+      "key": "reason keeping",
+      "width": 3
+     },
+     {
+      "kind": "term",
+      "key": "provisioner",
+      "width": 24
+     },
+     {
+      "kind": "term",
+      "key": "rem 248",
+      "width": 37
+     }
+    ]
+   },
+   {
+    "a": "commit/0bd9b4546d",
+    "b": "commit/85d42f4819",
+    "via": [
+     {
+      "kind": "term",
+      "key": "reason keeping",
+      "width": 3
+     },
+     {
+      "kind": "term",
+      "key": "application withdraws",
+      "width": 3
+     },
+     {
+      "kind": "term",
+      "key": "history rem",
+      "width": 10
+     },
+     {
+      "kind": "term",
+      "key": "rem 248",
+      "width": 37
+     },
+     {
+      "kind": "term",
+      "key": "issued",
+      "width": 56
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "board/cards/REM-248.md#6",
+   "gold": "commit/0bd9b4546d",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 1920,
+  "within_2_doors": 34190,
+  "gold_within_1": 2,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "board/cards/REM-248.md#7",
+    "label": "board/cards/REM-248.md \u203a Log",
+    "p": 0.006841151065679933,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-248.md#2",
+    "label": "board/cards/REM-248.md \u203a Goal",
+    "p": 0.004555072511873784,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-258.md#8",
+    "label": "board/cards/REM-258.md \u203a Log",
+    "p": 0.0042141494057607466,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/access-and-limits.md#11",
+    "label": "specs/percolate-application/access-and-limits.md \u203a Becoming a writer",
+    "p": 0.0036613038470703716,
+    "gold": false
+   },
+   {
+    "id": "specs/research-platform/architecture.md#17",
+    "label": "specs/research-platform/architecture.md \u203a 7. The application is the writing hub",
+    "p": 0.003496940878848317,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-155.md#13",
+    "label": "board/cards/REM-155.md \u203a 2026-09-14T14:21:47.349Z \u00b7 Amartey",
+    "p": 0.003244928931566848,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-248.md#3",
+    "label": "board/cards/REM-248.md \u203a Evidence",
+    "p": 0.0028211205927008804,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-155.md#14",
+    "label": "board/cards/REM-155.md \u203a Log",
+    "p": 0.0024538328082058455,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-252.md#6",
+    "label": "board/cards/REM-252.md \u203a Log",
+    "p": 0.002167533261280463,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-249.md#6",
+    "label": "board/cards/REM-249.md \u203a Log",
+    "p": 0.0021348438417475497,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/access-and-limits.md#9",
+    "label": "specs/percolate-application/access-and-limits.md \u203a Who owns each policy",
+    "p": 0.0021094888802339956,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-258.md#7",
+    "label": "board/cards/REM-258.md \u203a Log",
+    "p": 0.0019689615057073197,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/writer-onboarding.md#3",
+    "label": "specs/percolate-application/writer-onboarding.md \u203a 2. What must stay true",
+    "p": 0.00185326867161892,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-628.md#9",
+    "label": "board/cards/REM-628.md \u203a Log",
+    "p": 0.0017717092971895618,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/search.md#6",
+    "label": "specs/percolate-application/search.md \u203a 3a. Searching the packages you can read (built)",
+    "p": 0.0017040340732657727,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-248.md#5",
+    "label": "board/cards/REM-248.md \u203a Scope",
+    "p": 0.0015643580666560531,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-181.md#9",
+    "label": "board/cards/REM-181.md \u203a Log",
+    "p": 0.0014417265844817453,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/navigation-and-account-flows.md#10",
+    "label": "specs/percolate-application/navigation-and-account-flows.md \u203a 4. Marketplace and Library",
+    "p": 0.001420663592771341,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-390.md#7",
+    "label": "board/cards/REM-390.md \u203a Log",
+    "p": 0.0013907257917084353,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-155.md#12",
+    "label": "board/cards/REM-155.md \u203a 2026-09-14T14:21:47.349Z \u00b7 Amartey",
+    "p": 0.0013801894909198987,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "board/cards/REM-248.md#1",
+   "label": "board/cards/REM-248.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-248.md#6",
+   "label": "board/cards/REM-248.md \u203a Log",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/percolate-application/access-and-limits.md#10",
+   "label": "specs/percolate-application/access-and-limits.md \u203a Becoming a writer",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-248.md#8",
+   "label": "board/cards/REM-248.md \u203a Log",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-248.md#4",
+   "label": "board/cards/REM-248.md \u203a Done when",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-448.md#5",
+   "label": "board/cards/REM-448.md \u203a Scope",
+   "wave": 1,
+   "via": "term:provisioner",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-448.md#2",
+   "label": "board/cards/REM-448.md \u203a Goal",
+   "wave": 1,
+   "via": "term:provisioner",
+   "gold": false
+  },
+  {
+   "id": "commit/0bd9b4546d",
+   "label": "commit 0bd9b45: An application withdraws a grant it issued, with a reason, keeping the history (REM-248)",
+   "wave": 1,
+   "via": "term:provisioner",
+   "gold": true
+  },
+  {
+   "id": "board/cards/REM-248.md#3",
+   "label": "board/cards/REM-248.md \u203a Evidence",
+   "wave": 1,
+   "via": "term:provisioner",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-248.md#2",
+   "label": "board/cards/REM-248.md \u203a Goal",
+   "wave": 1,
+   "via": "term:provisioner",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "board/cards/REM-248.md#7",
+    "label": "board/cards/REM-248.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-248.md#2",
+    "label": "board/cards/REM-248.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-258.md#8",
+    "label": "board/cards/REM-258.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/access-and-limits.md#11",
+    "label": "specs/percolate-application/access-and-limits.md \u203a Becoming a writer",
+    "gold": false
+   },
+   {
+    "id": "specs/research-platform/architecture.md#17",
+    "label": "specs/research-platform/architecture.md \u203a 7. The application is the writing hub",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "board/cards/REM-248.md#7",
+    "label": "board/cards/REM-248.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/access-and-limits.md#11",
+    "label": "specs/percolate-application/access-and-limits.md \u203a Becoming a writer",
+    "gold": false
+   },
+   {
+    "id": "specs/research-platform/architecture.md#17",
+    "label": "specs/research-platform/architecture.md \u203a 7. The application is the writing hub",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-248.md#2",
+    "label": "board/cards/REM-248.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-155.md#13",
+    "label": "board/cards/REM-155.md \u203a 2026-09-14T14:21:47.349Z \u00b7 Amartey",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "board/cards/REM-248.md#2",
+    "label": "board/cards/REM-248.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "commit/c44cc5dc7e",
+    "label": "commit c44cc5d: board: percolate-application-ad takes REM-248",
+    "gold": false
+   },
+   {
+    "id": "commit/cbf3bdd5a8",
+    "label": "commit cbf3bdd: board: REM-248 in-progress \u2192 done",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-155.md#13",
+    "label": "board/cards/REM-155.md \u203a 2026-09-14T14:21:47.349Z \u00b7 Amartey",
+    "gold": false
+   },
+   {
+    "id": "commit/1d5d6ec419",
+    "label": "commit 1d5d6ec: board: file REM-354 writers: an editor invites a writer by email, and signing in through the link admits",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "specs/percolate-application/access-and-limits.md#11",
+    "label": "specs/percolate-application/access-and-limits.md \u203a Becoming a writer",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-155.md#14",
+    "label": "board/cards/REM-155.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-155.md#13",
+    "label": "board/cards/REM-155.md \u203a 2026-09-14T14:21:47.349Z \u00b7 Amartey",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-248.md#2",
+    "label": "board/cards/REM-248.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "specs/research-platform/architecture.md#17",
+    "label": "specs/research-platform/architecture.md \u203a 7. The application is the writing hub",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

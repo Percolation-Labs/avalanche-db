@@ -1,0 +1,435 @@
+{
+ "qid": "pr:651",
+ "set": "prs",
+ "question": "What work went into this, and why: walklab Q4: edges from use end to end, stage 1 -- flat; the judge saw the use door at P .03 and was right (ledger 5.28)?",
+ "gold": [
+  {
+   "id": "commit/37aeafcdcf",
+   "label": "commit 37aeafc: use_loop: --dev-arm, so a staged run can take only the DEV cases that grew edges",
+   "seed": false
+  },
+  {
+   "id": "commit/7db3ad9758",
+   "label": "commit 7db3ad9: use_loop: top-3 travel (cory's Settings.topk), the stated-evidence rule with no fallback, DEV failures d",
+   "seed": false
+  },
+  {
+   "id": "commit/e9bd6554f9",
+   "label": "commit e9bd655: q4-use-loop stage 1: flat -- 3 stated use edges from one DEV failure change nothing (1/2 DEV, 6/7 HELD-O",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/1994dbefc0",
+   "label": "commit 1994dbe: Merge pull request #651 from Percolation-Labs/mike/q4-use-loop",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/e9bd6554f9",
+   "label": "commit e9bd655: q4-use-loop stage 1: flat -- 3 stated use edges from one DEV failure change nothing (1/2 DEV, 6/7 HELD-O",
+   "rank": 2,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "meta/lab/results/q4-use-loop/README.md#1",
+   "label": "meta/lab/results/q4-use-loop/README.md \u203a Edges from use, end to end, stage 1: flat (2 Nov, mike)",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "meta/lab/results/q4-use-loop/README.md#2",
+   "label": "meta/lab/results/q4-use-loop/README.md \u203a Edges from use, end to end, stage 1: flat (2 Nov, mike)",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "meta/lab/results/q4-use-loop/README.md#3",
+   "label": "meta/lab/results/q4-use-loop/README.md \u203a Edges from use, end to end, stage 1: flat (2 Nov, mike)",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/37aeafcdcf",
+    "label": "commit 37aeafc: use_loop: --dev-arm, so a staged run can take only the DEV cases that grew edges",
+    "role": "gold"
+   },
+   {
+    "id": "commit/7db3ad9758",
+    "label": "commit 7db3ad9: use_loop: top-3 travel (cory's Settings.topk), the stated-evidence rule with no fallback, DEV failures d",
+    "role": "gold"
+   },
+   {
+    "id": "commit/e9bd6554f9",
+    "label": "commit e9bd655: q4-use-loop stage 1: flat -- 3 stated use edges from one DEV failure change nothing (1/2 DEV, 6/7 HELD-O",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/37aeafcdcf",
+    "b": "commit/7db3ad9758",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "near",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "use_loop",
+      "width": 42
+     }
+    ]
+   },
+   {
+    "a": "commit/37aeafcdcf",
+    "b": "commit/e9bd6554f9",
+    "via": [
+     {
+      "kind": "beside"
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   1,
+   2
+  ],
+  "entry": {
+   "seed": "commit/e9bd6554f9",
+   "gold": "commit/e9bd6554f9",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 1276,
+  "within_2_doors": 32505,
+  "gold_within_1": 2,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "board/messages/M-20261102-141935-a597.md#1",
+    "label": "board/messages/M-20261102-141935-a597.md",
+    "p": 0.01587416280583246,
+    "gold": false
+   },
+   {
+    "id": "commit/e4d78fb4b9",
+    "label": "commit e4d78fb: board: sirsh messages bill",
+    "p": 0.0045680773585229624,
+    "gold": false
+   },
+   {
+    "id": "commit/a969875439",
+    "label": "commit a969875: board: bill messages sirsh",
+    "p": 0.004494620254976964,
+    "gold": false
+   },
+   {
+    "id": "commit/37aeafcdcf",
+    "label": "commit 37aeafc: use_loop: --dev-arm, so a staged run can take only the DEV cases that grew edges",
+    "p": 0.0020911756229695846,
+    "gold": true
+   },
+   {
+    "id": "commit/ffa08bd816",
+    "label": "commit ffa08bd: board: bill acknowledges 1 message(s)",
+    "p": 0.001997830653195729,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/q4/use_loop.py#1",
+    "label": "meta/lab/q4/use_loop.py",
+    "p": 0.0019150829561283042,
+    "gold": false
+   },
+   {
+    "id": "commit/aa7e530054",
+    "label": "commit aa7e530: board: bill messages sirsh",
+    "p": 0.0016624712193776855,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/q4/use_loop.py#3",
+    "label": "meta/lab/q4/use_loop.py",
+    "p": 0.001547082995925246,
+    "gold": false
+   },
+   {
+    "id": "commit/8d558d2365",
+    "label": "commit 8d558d2: walklab: every lead the real judge scored on recorded walks -- 670,361 rows with kind, width, rank in ro",
+    "p": 0.0015442631264527273,
+    "gold": false
+   },
+   {
+    "id": "commit/a928f605e5",
+    "label": "commit a928f60: Merge pull request #652 from Percolation-Labs/mike/jev-lead-table",
+    "p": 0.0014600934772943522,
+    "gold": false
+   },
+   {
+    "id": "commit/016e60beec",
+    "label": "commit 016e60b: walklab q4: edges from use -- a failed walk's two unjoined ends plus one posting intersection create the",
+    "p": 0.0014076863444874525,
+    "gold": false
+   },
+   {
+    "id": "research-notes/essay-graph/corpus/strunk-1918-elements-of-style/text.txt#44",
+    "label": "research-notes/essay-graph/corpus/strunk-1918-elements-of-style/text.txt",
+    "p": 0.001350439247693704,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/walklab/experiments/e8_frozen_node.py#1",
+    "label": "meta/lab/walklab/experiments/e8_frozen_node.py",
+    "p": 0.0013271328312537153,
+    "gold": false
+   },
+   {
+    "id": "commit/7db3ad9758",
+    "label": "commit 7db3ad9: use_loop: top-3 travel (cory's Settings.topk), the stated-evidence rule with no fallback, DEV failures d",
+    "p": 0.0013232236638548098,
+    "gold": true
+   },
+   {
+    "id": "meta/lab/results/qasper-rejudge/README.md#3",
+    "label": "meta/lab/results/qasper-rejudge/README.md \u203a QASPER: rejudging the leads that pointed at a missed answer (james, 4 Nov 20",
+    "p": 0.001296446582531088,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/q4/use_loop.py#8",
+    "label": "meta/lab/q4/use_loop.py",
+    "p": 0.001290885844200617,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-miss-census-floor/result.txt#3",
+    "label": "meta/lab/results/q4-miss-census-floor/result.txt",
+    "p": 0.0012715907365687448,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/q4/use_loop.py#7",
+    "label": "meta/lab/q4/use_loop.py",
+    "p": 0.0012694832426881656,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-640.md#7",
+    "label": "board/cards/REM-640.md \u203a Log",
+    "p": 0.00122782244486771,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/README.md#35",
+    "label": "meta/lab/README.md \u203a E8: the frozen-node unit test, phase 1 (MIDB claim 2.9; $0, recorded verdicts)",
+    "p": 0.0012123987965855392,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/1994dbefc0",
+   "label": "commit 1994dbe: Merge pull request #651 from Percolation-Labs/mike/q4-use-loop",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/e9bd6554f9",
+   "label": "commit e9bd655: q4-use-loop stage 1: flat -- 3 stated use edges from one DEV failure change nothing (1/2 DEV, 6/7 HELD-O",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "meta/lab/results/q4-use-loop/README.md#1",
+   "label": "meta/lab/results/q4-use-loop/README.md \u203a Edges from use, end to end, stage 1: flat (2 Nov, mike)",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/q4-use-loop/README.md#2",
+   "label": "meta/lab/results/q4-use-loop/README.md \u203a Edges from use, end to end, stage 1: flat (2 Nov, mike)",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/q4-use-loop/README.md#3",
+   "label": "meta/lab/results/q4-use-loop/README.md \u203a Edges from use, end to end, stage 1: flat (2 Nov, mike)",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/44f62e6fb4",
+   "label": "commit 44f62e6: walklab Q4: the edges-from-use loop -- a 'use' lead kind, its evidence on the lead, and the driver (not ",
+   "wave": 1,
+   "via": "term:grows edges",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/q4-use-edge/result.txt#1",
+   "label": "meta/lab/results/q4-use-edge/result.txt",
+   "wave": 1,
+   "via": "term:grows edges",
+   "gold": false
+  },
+  {
+   "id": "board/messages/M-20261102-113643-4ce3.md#1",
+   "label": "board/messages/M-20261102-113643-4ce3.md",
+   "wave": 2,
+   "via": "term:sentence holding",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/states/README.md#3",
+   "label": "meta/lab/results/states/README.md \u203a Does the evidence state the relation? A dependency-parse filter (2 Nov, sally; bill'",
+   "wave": 2,
+   "via": "term:sentence holding",
+   "gold": false
+  },
+  {
+   "id": "commit/b0d5b66b31",
+   "label": "commit b0d5b66: walklab Q4: cory's edges-from-use rule v3 in SQL -- identical on 196 of 196 questions, 20.6 ms of SQL pe",
+   "wave": 2,
+   "via": "term:sentence holding",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "board/messages/M-20261102-141935-a597.md#1",
+    "label": "board/messages/M-20261102-141935-a597.md",
+    "gold": false
+   },
+   {
+    "id": "commit/e4d78fb4b9",
+    "label": "commit e4d78fb: board: sirsh messages bill",
+    "gold": false
+   },
+   {
+    "id": "commit/a969875439",
+    "label": "commit a969875: board: bill messages sirsh",
+    "gold": false
+   },
+   {
+    "id": "commit/37aeafcdcf",
+    "label": "commit 37aeafc: use_loop: --dev-arm, so a staged run can take only the DEV cases that grew edges",
+    "gold": true
+   },
+   {
+    "id": "commit/ffa08bd816",
+    "label": "commit ffa08bd: board: bill acknowledges 1 message(s)",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "board/messages/M-20261102-141935-a597.md#1",
+    "label": "board/messages/M-20261102-141935-a597.md",
+    "gold": false
+   },
+   {
+    "id": "commit/016e60beec",
+    "label": "commit 016e60b: walklab q4: edges from use -- a failed walk's two unjoined ends plus one posting intersection create the",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/q4/use_loop.py#1",
+    "label": "meta/lab/q4/use_loop.py",
+    "gold": false
+   },
+   {
+    "id": "commit/44f62e6fb4",
+    "label": "commit 44f62e6: walklab Q4: the edges-from-use loop -- a 'use' lead kind, its evidence on the lead, and the driver (not ",
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-self-model/dreaming/equivalence/pairs.py#1",
+    "label": "applications/percolate-self-model/dreaming/equivalence/pairs.py",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/a969875439",
+    "label": "commit a969875: board: bill messages sirsh",
+    "gold": false
+   },
+   {
+    "id": "commit/e4d78fb4b9",
+    "label": "commit e4d78fb: board: sirsh messages bill",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261102-141935-a597.md#1",
+    "label": "board/messages/M-20261102-141935-a597.md",
+    "gold": false
+   },
+   {
+    "id": "commit/37aeafcdcf",
+    "label": "commit 37aeafc: use_loop: --dev-arm, so a staged run can take only the DEV cases that grew edges",
+    "gold": true
+   },
+   {
+    "id": "commit/016e60beec",
+    "label": "commit 016e60b: walklab q4: edges from use -- a failed walk's two unjoined ends plus one posting intersection create the",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "applications/percolate-self-model/dreaming/fixtures/narrative_v2/day06-2-dan.md#1",
+    "label": "applications/percolate-self-model/dreaming/fixtures/narrative_v2/day06-2-dan.md \u203a Day 6 \u2014 the ledger",
+    "gold": false
+   },
+   {
+    "id": "commit/016e60beec",
+    "label": "commit 016e60b: walklab q4: edges from use -- a failed walk's two unjoined ends plus one posting intersection create the",
+    "gold": false
+   },
+   {
+    "id": "commit/44f62e6fb4",
+    "label": "commit 44f62e6: walklab Q4: the edges-from-use loop -- a 'use' lead kind, its evidence on the lead, and the driver (not ",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/group-doors-controls/RESULT.md#7",
+    "label": "meta/lab/results/group-doors-controls/RESULT.md \u203a Postmortem",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/blind-door/RESULT.md#5",
+    "label": "meta/lab/results/blind-door/RESULT.md \u203a Prediction",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.5,
+  "Q": 0.0,
+  "LQ": 0.5,
+  "S": 0.0
+ }
+}

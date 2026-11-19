@@ -1,0 +1,447 @@
+{
+ "qid": "RW:2hop__81268_85407",
+ "set": "mq",
+ "question": "What was the 2018 population of the Italian city that's underwater?",
+ "gold": [
+  {
+   "id": "mq:7a9b914bd2ec687d",
+   "label": "Venice",
+   "seed": false
+  },
+  {
+   "id": "mq:9ef826a6610b5dd0",
+   "label": "Venice",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:69d162dbd53bf32a",
+   "label": "Palermo",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "mq:c8c4c8d1feece7db",
+   "label": "Reykjav\u00edk",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "mq:608955236dc0b2ea",
+   "label": "World population",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "mq:45df91149c88a5df",
+   "label": "New Haven, Connecticut",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:c2543380cddde365",
+   "label": "Mexico Beach, Florida",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 2
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:45df91149c88a5df",
+    "label": "New Haven, Connecticut",
+    "role": "seed"
+   },
+   {
+    "id": "mq:7a9b914bd2ec687d",
+    "label": "Venice",
+    "role": "gold"
+   },
+   {
+    "id": "mq:9ef826a6610b5dd0",
+    "label": "Venice",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:45df91149c88a5df",
+    "b": "mq:7a9b914bd2ec687d",
+    "via": [
+     {
+      "kind": "term",
+      "key": "density",
+      "width": 74
+     }
+    ]
+   },
+   {
+    "a": "mq:7a9b914bd2ec687d",
+    "b": "mq:9ef826a6610b5dd0",
+    "via": [
+     {
+      "kind": "near",
+      "width": 3
+     },
+     {
+      "kind": "term",
+      "key": "italian venezia",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "veneto",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "venezia",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "venetian",
+      "width": 18
+     },
+     {
+      "kind": "term",
+      "key": "venice",
+      "width": 54
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "mq:45df91149c88a5df",
+   "gold": "mq:7a9b914bd2ec687d",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 2627,
+  "within_2_doors": 18460,
+  "gold_within_1": 1,
+  "gold_within_2": 1,
+  "top_U": [
+   {
+    "id": "mq:76a39350768a759a",
+    "label": "Pope Paul VI",
+    "p": 0.00416559592114794,
+    "gold": false
+   },
+   {
+    "id": "mq:70a5e48edbfbd8a0",
+    "label": "Bangladesh",
+    "p": 0.0027864401115759285,
+    "gold": false
+   },
+   {
+    "id": "mq:3fae77c52cf2862f",
+    "label": "List of extreme points of the United States",
+    "p": 0.002655647502042319,
+    "gold": false
+   },
+   {
+    "id": "mq:113b8a4c7ac1b341",
+    "label": "Executive Order 12148",
+    "p": 0.002646914552991665,
+    "gold": false
+   },
+   {
+    "id": "mq:58fff05bf611a886",
+    "label": "Emergency Management Institute",
+    "p": 0.00176581434674885,
+    "gold": false
+   },
+   {
+    "id": "mq:7b3082f19832dfca",
+    "label": "Lynn Haven, Florida",
+    "p": 0.0015986791632474748,
+    "gold": false
+   },
+   {
+    "id": "mq:b9bb6cdec89e5685",
+    "label": "WEBZ",
+    "p": 0.001549002785064052,
+    "gold": false
+   },
+   {
+    "id": "mq:81ccf1167a09b3b2",
+    "label": "SAT",
+    "p": 0.001220117450611291,
+    "gold": false
+   },
+   {
+    "id": "mq:b46d7587ecd212ce",
+    "label": "North Carolina",
+    "p": 0.0011418727165415832,
+    "gold": false
+   },
+   {
+    "id": "mq:556c9b8fa70facac",
+    "label": "Tyler Island",
+    "p": 0.0011122880166111611,
+    "gold": false
+   },
+   {
+    "id": "mq:8cafed7ba6b60115",
+    "label": "United States Department of Homeland Security",
+    "p": 0.001082092982896409,
+    "gold": false
+   },
+   {
+    "id": "mq:615d1e49ee93bfe1",
+    "label": "Houston",
+    "p": 0.0010666961503759754,
+    "gold": false
+   },
+   {
+    "id": "mq:d0b260d91e79e137",
+    "label": "List of South American countries by population",
+    "p": 0.0008240790520820606,
+    "gold": false
+   },
+   {
+    "id": "mq:a5e328ac25737cd5",
+    "label": "List of countries by bauxite production",
+    "p": 0.0007960023206601961,
+    "gold": false
+   },
+   {
+    "id": "mq:edfb1cbe31a302e3",
+    "label": "Gold reserve",
+    "p": 0.0007601362214002589,
+    "gold": false
+   },
+   {
+    "id": "mq:40ea6ebdd65028bf",
+    "label": "List of countries by diamond production",
+    "p": 0.0007477808987147272,
+    "gold": false
+   },
+   {
+    "id": "mq:b3a3fd86e7b5464a",
+    "label": "Altoona, Iowa",
+    "p": 0.0007459848641390168,
+    "gold": false
+   },
+   {
+    "id": "mq:ed27b2558221c286",
+    "label": "List of U.S. states by Hispanic and Latino population",
+    "p": 0.0007451702629596981,
+    "gold": false
+   },
+   {
+    "id": "mq:922c2004137d56a3",
+    "label": "Richmond, Virginia",
+    "p": 0.0007438054766063036,
+    "gold": false
+   },
+   {
+    "id": "mq:5036ac5e68e72159",
+    "label": "Browns Valley, Minnesota",
+    "p": 0.00073491090399783,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:69d162dbd53bf32a",
+   "label": "Palermo",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:c8c4c8d1feece7db",
+   "label": "Reykjav\u00edk",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:608955236dc0b2ea",
+   "label": "World population",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:45df91149c88a5df",
+   "label": "New Haven, Connecticut",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:c2543380cddde365",
+   "label": "Mexico Beach, Florida",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:dafaa88d4ecf61f6",
+   "label": "Stazione FS (Brescia Metro)",
+   "wave": 1,
+   "via": "term:northern italy",
+   "gold": false
+  },
+  {
+   "id": "mq:914fb809b5c4ef8b",
+   "label": "Sanpolino (Brescia Metro)",
+   "wave": 1,
+   "via": "term:northern italy",
+   "gold": false
+  },
+  {
+   "id": "mq:70474f3fe97ceedb",
+   "label": "Palazzo Corner Spinelli",
+   "wave": 1,
+   "via": "term:northern italy",
+   "gold": false
+  },
+  {
+   "id": "mq:cb8c780363dece80",
+   "label": "Malchiostro Annunciation",
+   "wave": 1,
+   "via": "term:northern italy",
+   "gold": false
+  },
+  {
+   "id": "mq:d4b8156eb122b422",
+   "label": "Portrait of Lucina Brembati",
+   "wave": 1,
+   "via": "term:northern italy",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:76a39350768a759a",
+    "label": "Pope Paul VI",
+    "gold": false
+   },
+   {
+    "id": "mq:70a5e48edbfbd8a0",
+    "label": "Bangladesh",
+    "gold": false
+   },
+   {
+    "id": "mq:3fae77c52cf2862f",
+    "label": "List of extreme points of the United States",
+    "gold": false
+   },
+   {
+    "id": "mq:113b8a4c7ac1b341",
+    "label": "Executive Order 12148",
+    "gold": false
+   },
+   {
+    "id": "mq:58fff05bf611a886",
+    "label": "Emergency Management Institute",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:7b3082f19832dfca",
+    "label": "Lynn Haven, Florida",
+    "gold": false
+   },
+   {
+    "id": "mq:70a5e48edbfbd8a0",
+    "label": "Bangladesh",
+    "gold": false
+   },
+   {
+    "id": "mq:615d1e49ee93bfe1",
+    "label": "Houston",
+    "gold": false
+   },
+   {
+    "id": "mq:3fae77c52cf2862f",
+    "label": "List of extreme points of the United States",
+    "gold": false
+   },
+   {
+    "id": "mq:ff4d88502b9d9c47",
+    "label": "San Diego",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:7b3082f19832dfca",
+    "label": "Lynn Haven, Florida",
+    "gold": false
+   },
+   {
+    "id": "mq:70a5e48edbfbd8a0",
+    "label": "Bangladesh",
+    "gold": false
+   },
+   {
+    "id": "mq:615d1e49ee93bfe1",
+    "label": "Houston",
+    "gold": false
+   },
+   {
+    "id": "mq:ff4d88502b9d9c47",
+    "label": "San Diego",
+    "gold": false
+   },
+   {
+    "id": "mq:d0b260d91e79e137",
+    "label": "List of South American countries by population",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:fea1386828ecf73d",
+    "label": "St. Peter's Basilica",
+    "gold": false
+   },
+   {
+    "id": "mq:c27927245d41a6c5",
+    "label": "SpongeBob SquarePants (season 7)",
+    "gold": false
+   },
+   {
+    "id": "mq:b0891be41bfbefc5",
+    "label": "United States Navy SEALs",
+    "gold": false
+   },
+   {
+    "id": "mq:7a9b914bd2ec687d",
+    "label": "Venice",
+    "gold": true
+   },
+   {
+    "id": "mq:d68ef3f0d3e3f488",
+    "label": "Fresno, California",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.5
+ }
+}

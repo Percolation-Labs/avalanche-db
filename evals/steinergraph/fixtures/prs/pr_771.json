@@ -1,0 +1,481 @@
+{
+ "qid": "pr:771",
+ "set": "prs",
+ "question": "What work went into this, and why: Worlds slice 1: oracle doors lift Jev .538->.718; the worlds over-reward wide doors, so their filter result does not transfer?",
+ "gold": [
+  {
+   "id": "commit/2b9e546692",
+   "label": "commit 2b9e546: Worlds slice 1 WIP: generator walk with oracle door labels, graph attributes and the labeller ladder; pa",
+   "seed": false
+  },
+  {
+   "id": "commit/4730f8c26f",
+   "label": "commit 4730f8c: Worlds slice 1: oracle door shows gold first (label-consistent); deciders behind rank(question, doors); ",
+   "seed": false
+  },
+  {
+   "id": "commit/50d304a5b9",
+   "label": "commit 50d304a: Worlds design: oracle-labelled doors, a ladder of door labellers (none/graph/oracle/noisy), $0 decider h",
+   "seed": false
+  },
+  {
+   "id": "commit/7bcf72d405",
+   "label": "commit 7bcf72d: Worlds slice 1 result: oracle doors lift Jev .538->.718 and amber .484->.590; filter-then-rank helps on ",
+   "seed": true
+  },
+  {
+   "id": "commit/e6ee7a18d4",
+   "label": "commit e6ee7a1: Worlds: register filter-then-rank before scoring; live Jev decider (cached, capped); scorer split into i",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/0801e603c3",
+   "label": "commit 0801e60: Merge pull request #771 from Percolation-Labs/bill/worlds",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/7bcf72d405",
+   "label": "commit 7bcf72d: Worlds slice 1 result: oracle doors lift Jev .538->.718 and amber .484->.590; filter-then-rank helps on ",
+   "rank": 2,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "meta/lab/results/worlds/RESULT.md#1",
+   "label": "meta/lab/results/worlds/RESULT.md \u203a Worlds, slice 1: oracle doors lift every decider, and the worlds over-reward wide do",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/messages/M-20261116-082847-f8cf.md#1",
+   "label": "board/messages/M-20261116-082847-f8cf.md",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "meta/lab/results/worlds/FILTER-REGISTERED.md#1",
+   "label": "meta/lab/results/worlds/FILTER-REGISTERED.md \u203a Filter-then-rank against plain ranking on worlds (registered 16 Nov ~08:3",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/2b9e546692",
+    "label": "commit 2b9e546: Worlds slice 1 WIP: generator walk with oracle door labels, graph attributes and the labeller ladder; pa",
+    "role": "gold"
+   },
+   {
+    "id": "commit/4730f8c26f",
+    "label": "commit 4730f8c: Worlds slice 1: oracle door shows gold first (label-consistent); deciders behind rank(question, doors); ",
+    "role": "gold"
+   },
+   {
+    "id": "commit/50d304a5b9",
+    "label": "commit 50d304a: Worlds design: oracle-labelled doors, a ladder of door labellers (none/graph/oracle/noisy), $0 decider h",
+    "role": "gold"
+   },
+   {
+    "id": "commit/7bcf72d405",
+    "label": "commit 7bcf72d: Worlds slice 1 result: oracle doors lift Jev .538->.718 and amber .484->.590; filter-then-rank helps on ",
+    "role": "gold"
+   },
+   {
+    "id": "commit/e6ee7a18d4",
+    "label": "commit e6ee7a1: Worlds: register filter-then-rank before scoring; live Jev decider (cached, capped); scorer split into i",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/2b9e546692",
+    "b": "commit/4730f8c26f",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "worlds slice",
+      "width": 17
+     },
+     {
+      "kind": "term",
+      "key": "oracle door",
+      "width": 23
+     }
+    ]
+   },
+   {
+    "a": "commit/2b9e546692",
+    "b": "commit/50d304a5b9",
+    "via": [
+     {
+      "kind": "beside"
+     }
+    ]
+   },
+   {
+    "a": "commit/4730f8c26f",
+    "b": "commit/e6ee7a18d4",
+    "via": [
+     {
+      "kind": "beside"
+     }
+    ]
+   },
+   {
+    "a": "commit/7bcf72d405",
+    "b": "commit/e6ee7a18d4",
+    "via": [
+     {
+      "kind": "beside"
+     }
+    ]
+   }
+  ],
+  "cost": 4,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   1,
+   1,
+   2,
+   2,
+   1,
+   1,
+   2,
+   2,
+   1
+  ],
+  "entry": {
+   "seed": "commit/7bcf72d405",
+   "gold": "commit/7bcf72d405",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 1454,
+  "within_2_doors": 30939,
+  "gold_within_1": 4,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "commit/e6ee7a18d4",
+    "label": "commit e6ee7a1: Worlds: register filter-then-rank before scoring; live Jev decider (cached, capped); scorer split into i",
+    "p": 0.003496468932247136,
+    "gold": true
+   },
+   {
+    "id": "meta/lab/results/jev-ceiling/REGISTERED.md#1",
+    "label": "meta/lab/results/jev-ceiling/REGISTERED.md \u203a Jev's ranking ceiling on one fixed graph (registered 16 Nov ~18:20Z, before",
+    "p": 0.0033021663733300037,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/dream-metric/OBSERVABLES.md#4",
+    "label": "meta/lab/results/dream-metric/OBSERVABLES.md \u203a The conditions",
+    "p": 0.003059660398202576,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/worlds/RESULT.md#2",
+    "label": "meta/lab/results/worlds/RESULT.md \u203a Results",
+    "p": 0.002893021436441164,
+    "gold": false
+   },
+   {
+    "id": "commit/0e2dcfa35b",
+    "label": "commit 0e2dcfa: Merge pull request #783 from Percolation-Labs/bill/jev-doors-musique",
+    "p": 0.0027389632444925556,
+    "gold": false
+   },
+   {
+    "id": "commit/7184942dc6",
+    "label": "commit 7184942: Merge pull request #781 from Percolation-Labs/bill/jev-doors",
+    "p": 0.002717992681275539,
+    "gold": false
+   },
+   {
+    "id": "commit/c3fc229ce0",
+    "label": "commit c3fc229: Step 4 round 1: graph-only doors lift Jev from NDCG .636 to .696 on held-out (+.060); prompt re-tuning d",
+    "p": 0.0026215920723323153,
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-10-20-lme-seeded-taxonomy/in_percolate/runs/beam/casebook/dossiers.md#32",
+    "label": "meta/spikes/2026-10-20-lme-seeded-taxonomy/in_percolate/runs/beam/casebook/dossiers.md \u203a 10M:3:information_extraction:1 ",
+    "p": 0.002478399610077447,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/worlds/RESULT.md#3",
+    "label": "meta/lab/results/worlds/RESULT.md \u203a Results",
+    "p": 0.0022829736838303545,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/worlds/ftr.py#1",
+    "label": "meta/lab/worlds/ftr.py",
+    "p": 0.002267083606746703,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/worlds/RESULT.md#5",
+    "label": "meta/lab/results/worlds/RESULT.md \u203a Postmortem",
+    "p": 0.002164570659071102,
+    "gold": false
+   },
+   {
+    "id": "commit/a01f9174e6",
+    "label": "commit a01f917: board: bill messages sirsh",
+    "p": 0.0019198034354139066,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/worlds/FILTER-REGISTERED.md#2",
+    "label": "meta/lab/results/worlds/FILTER-REGISTERED.md \u203a Filter-then-rank against plain ranking on worlds (registered 16 Nov ~08:3",
+    "p": 0.0018839715114746635,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/worlds/FILTER-REGISTERED.md#3",
+    "label": "meta/lab/results/worlds/FILTER-REGISTERED.md \u203a Amendment, 08:40Z, after the tune results and one held-out line",
+    "p": 0.0017150332545775393,
+    "gold": false
+   },
+   {
+    "id": "commit/6eade5bf04",
+    "label": "commit 6eade5b: Merge pull request #770 from Percolation-Labs/bill/ranking-eval",
+    "p": 0.0017070672867190374,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261116-081239-cd9f.md#1",
+    "label": "board/messages/M-20261116-081239-cd9f.md",
+    "p": 0.0016354253930030334,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261116-182008-f59c.md#1",
+    "label": "board/messages/M-20261116-182008-f59c.md",
+    "p": 0.0016140159247759888,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/worlds/DESIGN.md#1",
+    "label": "meta/lab/results/worlds/DESIGN.md \u203a Worlds: synthetic graphs with oracle-labelled doors, and a loop that improves them (",
+    "p": 0.0016043938200441274,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/worlds/wr_filter.py#2",
+    "label": "meta/lab/worlds/wr_filter.py",
+    "p": 0.0015864766772877086,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/worlds/RESULT.md#4",
+    "label": "meta/lab/results/worlds/RESULT.md \u203a Postmortem",
+    "p": 0.0015189141155785946,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/0801e603c3",
+   "label": "commit 0801e60: Merge pull request #771 from Percolation-Labs/bill/worlds",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/7bcf72d405",
+   "label": "commit 7bcf72d: Worlds slice 1 result: oracle doors lift Jev .538->.718 and amber .484->.590; filter-then-rank helps on ",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "meta/lab/results/worlds/RESULT.md#1",
+   "label": "meta/lab/results/worlds/RESULT.md \u203a Worlds, slice 1: oracle doors lift every decider, and the worlds over-reward wide do",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/messages/M-20261116-082847-f8cf.md#1",
+   "label": "board/messages/M-20261116-082847-f8cf.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/worlds/FILTER-REGISTERED.md#1",
+   "label": "meta/lab/results/worlds/FILTER-REGISTERED.md \u203a Filter-then-rank against plain ranking on worlds (registered 16 Nov ~08:3",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/worlds/RESULT-FOUND.md#4",
+   "label": "meta/lab/results/worlds/RESULT-FOUND.md \u203a 2. The width gate: where the worlds' width effect comes from",
+   "wave": 1,
+   "via": "term:lead rate",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/worlds/RESULT.md#4",
+   "label": "meta/lab/results/worlds/RESULT.md \u203a Postmortem",
+   "wave": 1,
+   "via": "term:lead rate",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/README.md#31",
+   "label": "meta/lab/README.md \u203a E6: stated relations on BEAM, built-in and built-in plus user (Sirsh 16:59Z; $0 Jev, extraction by ",
+   "wave": 1,
+   "via": "term:lead rate",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/worlds/gate.py#1",
+   "label": "meta/lab/worlds/gate.py",
+   "wave": 1,
+   "via": "term:lead rate",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/worlds/FILTER-REGISTERED.md#3",
+   "label": "meta/lab/results/worlds/FILTER-REGISTERED.md \u203a Amendment, 08:40Z, after the tune results and one held-out line",
+   "wave": 2,
+   "via": "term:worlds filter",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "commit/e6ee7a18d4",
+    "label": "commit e6ee7a1: Worlds: register filter-then-rank before scoring; live Jev decider (cached, capped); scorer split into i",
+    "gold": true
+   },
+   {
+    "id": "meta/lab/results/jev-ceiling/REGISTERED.md#1",
+    "label": "meta/lab/results/jev-ceiling/REGISTERED.md \u203a Jev's ranking ceiling on one fixed graph (registered 16 Nov ~18:20Z, before",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/dream-metric/OBSERVABLES.md#4",
+    "label": "meta/lab/results/dream-metric/OBSERVABLES.md \u203a The conditions",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/worlds/RESULT.md#2",
+    "label": "meta/lab/results/worlds/RESULT.md \u203a Results",
+    "gold": false
+   },
+   {
+    "id": "commit/0e2dcfa35b",
+    "label": "commit 0e2dcfa: Merge pull request #783 from Percolation-Labs/bill/jev-doors-musique",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "meta/lab/results/worlds/RESULT.md#3",
+    "label": "meta/lab/results/worlds/RESULT.md \u203a Results",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/worlds/RESULT.md#5",
+    "label": "meta/lab/results/worlds/RESULT.md \u203a Postmortem",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-ceiling/REGISTERED.md#1",
+    "label": "meta/lab/results/jev-ceiling/REGISTERED.md \u203a Jev's ranking ceiling on one fixed graph (registered 16 Nov ~18:20Z, before",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/worlds/FILTER-REGISTERED.md#2",
+    "label": "meta/lab/results/worlds/FILTER-REGISTERED.md \u203a Filter-then-rank against plain ranking on worlds (registered 16 Nov ~08:3",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/worlds/wr_filter.py#2",
+    "label": "meta/lab/worlds/wr_filter.py",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/e6ee7a18d4",
+    "label": "commit e6ee7a1: Worlds: register filter-then-rank before scoring; live Jev decider (cached, capped); scorer split into i",
+    "gold": true
+   },
+   {
+    "id": "commit/c3fc229ce0",
+    "label": "commit c3fc229: Step 4 round 1: graph-only doors lift Jev from NDCG .636 to .696 on held-out (+.060); prompt re-tuning d",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/worlds/FILTER-REGISTERED.md#2",
+    "label": "meta/lab/results/worlds/FILTER-REGISTERED.md \u203a Filter-then-rank against plain ranking on worlds (registered 16 Nov ~08:3",
+    "gold": false
+   },
+   {
+    "id": "commit/28a8d0b7f4",
+    "label": "commit 28a8d0b: Worlds: register Jev-with-found before scoring; slice writes per-round reads; scorer passes found; fix -",
+    "gold": false
+   },
+   {
+    "id": "commit/12813953d9",
+    "label": "commit 1281395: Step 4: register graph-only doors D1-D3 before scoring; slice records each door's targets (rows unchange",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "meta/lab/results/filter-then-rank/RESULT.md#8",
+    "label": "meta/lab/results/filter-then-rank/RESULT.md \u203a Round 4: the worlds' relation attribute, at its upper bound, adds nothing ",
+    "gold": false
+   },
+   {
+    "id": "commit/4730f8c26f",
+    "label": "commit 4730f8c: Worlds slice 1: oracle door shows gold first (label-consistent); deciders behind rank(question, doors); ",
+    "gold": true
+   },
+   {
+    "id": "meta/lab/results/worlds/FILTER-REGISTERED.md#2",
+    "label": "meta/lab/results/worlds/FILTER-REGISTERED.md \u203a Filter-then-rank against plain ranking on worlds (registered 16 Nov ~08:3",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/worlds/RESULT.md#3",
+    "label": "meta/lab/results/worlds/RESULT.md \u203a Results",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/worlds/ftr_labels.py#3",
+    "label": "meta/lab/worlds/ftr_labels.py",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.25,
+  "Q": 0.0,
+  "LQ": 0.25,
+  "S": 0.25
+ }
+}

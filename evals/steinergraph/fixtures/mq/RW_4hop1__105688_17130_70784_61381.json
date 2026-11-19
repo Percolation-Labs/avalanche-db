@@ -1,0 +1,464 @@
+{
+ "qid": "RW:4hop1__105688_17130_70784_61381",
+ "set": "mq",
+ "question": "The country that Eyal Golan is from lies within a certain region. When was the area that lies immediately to the north of that region established?",
+ "gold": [
+  {
+   "id": "mq:5b56be54717d03f5",
+   "label": "Israel",
+   "seed": false
+  },
+  {
+   "id": "mq:6421666ff3e70d66",
+   "label": "Geography of Saudi Arabia",
+   "seed": false
+  },
+  {
+   "id": "mq:9e58851ca95874f4",
+   "label": "Eyal Golan",
+   "seed": true
+  },
+  {
+   "id": "mq:ec91dd0e33450587",
+   "label": "Saudi Arabia",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:9e58851ca95874f4",
+   "label": "Eyal Golan",
+   "rank": 1,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:b12fc31fac8a3ec3",
+   "label": "City Municipality of Velenje",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "mq:432affbfe3153bdb",
+   "label": "Andra\u017e nad Polzelo",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "mq:e2f7fc3b2273283e",
+   "label": "Wollaston Peninsula",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "mq:98e29432c81a8de2",
+   "label": "Samarqand District",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 2
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:5b56be54717d03f5",
+    "label": "Israel",
+    "role": "gold"
+   },
+   {
+    "id": "mq:6421666ff3e70d66",
+    "label": "Geography of Saudi Arabia",
+    "role": "gold"
+   },
+   {
+    "id": "mq:9e58851ca95874f4",
+    "label": "Eyal Golan",
+    "role": "gold"
+   },
+   {
+    "id": "mq:ec91dd0e33450587",
+    "label": "Saudi Arabia",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:5b56be54717d03f5",
+    "b": "mq:6421666ff3e70d66",
+    "via": [
+     {
+      "kind": "term",
+      "key": "red sea",
+      "width": 21
+     }
+    ]
+   },
+   {
+    "a": "mq:5b56be54717d03f5",
+    "b": "mq:9e58851ca95874f4",
+    "via": [
+     {
+      "kind": "term",
+      "key": "israeli",
+      "width": 49
+     }
+    ]
+   },
+   {
+    "a": "mq:6421666ff3e70d66",
+    "b": "mq:ec91dd0e33450587",
+    "via": [
+     {
+      "kind": "term",
+      "key": "saudi arabia",
+      "width": 33
+     },
+     {
+      "kind": "term",
+      "key": "saudi",
+      "width": 42
+     },
+     {
+      "kind": "term",
+      "key": "arabia",
+      "width": 47
+     }
+    ]
+   }
+  ],
+  "cost": 3,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   1,
+   1,
+   2,
+   1,
+   2
+  ],
+  "entry": {
+   "seed": "mq:9e58851ca95874f4",
+   "gold": "mq:9e58851ca95874f4",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 1145,
+  "within_2_doors": 19907,
+  "gold_within_1": 1,
+  "gold_within_2": 2,
+  "top_U": [
+   {
+    "id": "mq:bb854e3d4b02888e",
+    "label": "Brinov\u0161\u010dica",
+    "p": 0.006923292705235615,
+    "gold": false
+   },
+   {
+    "id": "mq:4a55ce0573e39cf6",
+    "label": "Vev\u010de",
+    "p": 0.0053654361748156545,
+    "gold": false
+   },
+   {
+    "id": "mq:67967a091e6c9b63",
+    "label": "Hero and the Terror",
+    "p": 0.004881144936423032,
+    "gold": false
+   },
+   {
+    "id": "mq:93e57bd99c9bb5de",
+    "label": "Altaussee",
+    "p": 0.0030197594686893225,
+    "gold": false
+   },
+   {
+    "id": "mq:20e3ec3d14d7ac66",
+    "label": "Hargrave River (Nunavut)",
+    "p": 0.0029832802173891853,
+    "gold": false
+   },
+   {
+    "id": "mq:431ebd43e9d9d4dd",
+    "label": "Ukraine",
+    "p": 0.00287270493859784,
+    "gold": false
+   },
+   {
+    "id": "mq:b4c52894df950a42",
+    "label": "Ro\u0161poh, Maribor",
+    "p": 0.002233649020066112,
+    "gold": false
+   },
+   {
+    "id": "mq:46c14f048382b4be",
+    "label": "History of Central Asia",
+    "p": 0.0022135991407365835,
+    "gold": false
+   },
+   {
+    "id": "mq:ede48d491674880e",
+    "label": "Embassy of Canada in Moscow",
+    "p": 0.002168609167839563,
+    "gold": false
+   },
+   {
+    "id": "mq:7b853b0514d77e0f",
+    "label": "Uzbekistan",
+    "p": 0.0021053185499333347,
+    "gold": false
+   },
+   {
+    "id": "mq:f86dc2cc02d3d34a",
+    "label": "Xorazm Region",
+    "p": 0.002043681453834231,
+    "gold": false
+   },
+   {
+    "id": "mq:a1b6c55da0bbd549",
+    "label": "Namangan",
+    "p": 0.002039469362327787,
+    "gold": false
+   },
+   {
+    "id": "mq:7b09d76ac21e8a3e",
+    "label": "Battle of Verdun",
+    "p": 0.0019514397748211351,
+    "gold": false
+   },
+   {
+    "id": "mq:90ed15adadec43e9",
+    "label": "Battle of Verdun",
+    "p": 0.0019285767584912893,
+    "gold": false
+   },
+   {
+    "id": "mq:f7733391270ef3d6",
+    "label": "Tex Beneke",
+    "p": 0.0019101299622229428,
+    "gold": false
+   },
+   {
+    "id": "mq:83395a820aefe6ca",
+    "label": "\u00c5sane (municipality)",
+    "p": 0.0015406626955920912,
+    "gold": false
+   },
+   {
+    "id": "mq:73a4e750e45eae31",
+    "label": "Washington Island (Michigan)",
+    "p": 0.0014247717128275251,
+    "gold": false
+   },
+   {
+    "id": "mq:87708c8d9c55d904",
+    "label": "2018 Winter Olympics",
+    "p": 0.001382769372774275,
+    "gold": false
+   },
+   {
+    "id": "mq:6d7ec8683e6c3bea",
+    "label": "Brand\u00fds nad Labem-Star\u00e1 Boleslav",
+    "p": 0.0013179018195000093,
+    "gold": false
+   },
+   {
+    "id": "mq:34e730f2aff5f18d",
+    "label": "Cape Bathurst",
+    "p": 0.0013144942389669934,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:9e58851ca95874f4",
+   "label": "Eyal Golan",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:b12fc31fac8a3ec3",
+   "label": "City Municipality of Velenje",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:432affbfe3153bdb",
+   "label": "Andra\u017e nad Polzelo",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:e2f7fc3b2273283e",
+   "label": "Wollaston Peninsula",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:98e29432c81a8de2",
+   "label": "Samarqand District",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:28a5c0b4003cf638",
+   "label": "1948 Arab\u2013Israeli War",
+   "wave": 1,
+   "via": "term:israeli",
+   "gold": false
+  },
+  {
+   "id": "mq:529546a823f1e8df",
+   "label": "Joel Chasnoff",
+   "wave": 1,
+   "via": "term:israeli",
+   "gold": false
+  },
+  {
+   "id": "mq:36e4273dbc51c9cb",
+   "label": "Assi Tubi",
+   "wave": 1,
+   "via": "term:israeli",
+   "gold": false
+  },
+  {
+   "id": "mq:c5e3e39f323d9fd3",
+   "label": "Avner Treinin",
+   "wave": 1,
+   "via": "term:israeli",
+   "gold": false
+  },
+  {
+   "id": "mq:a2cc99d0dbdbda00",
+   "label": "Israel Sports Center for the Disabled",
+   "wave": 1,
+   "via": "term:israeli",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:bb854e3d4b02888e",
+    "label": "Brinov\u0161\u010dica",
+    "gold": false
+   },
+   {
+    "id": "mq:4a55ce0573e39cf6",
+    "label": "Vev\u010de",
+    "gold": false
+   },
+   {
+    "id": "mq:67967a091e6c9b63",
+    "label": "Hero and the Terror",
+    "gold": false
+   },
+   {
+    "id": "mq:93e57bd99c9bb5de",
+    "label": "Altaussee",
+    "gold": false
+   },
+   {
+    "id": "mq:20e3ec3d14d7ac66",
+    "label": "Hargrave River (Nunavut)",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:bb854e3d4b02888e",
+    "label": "Brinov\u0161\u010dica",
+    "gold": false
+   },
+   {
+    "id": "mq:67967a091e6c9b63",
+    "label": "Hero and the Terror",
+    "gold": false
+   },
+   {
+    "id": "mq:4a55ce0573e39cf6",
+    "label": "Vev\u010de",
+    "gold": false
+   },
+   {
+    "id": "mq:d3b4caf481ea720d",
+    "label": "An Ph\u00fa District",
+    "gold": false
+   },
+   {
+    "id": "mq:601bcfec0687922d",
+    "label": "H\u1ea1 H\u00f2a District",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:bb854e3d4b02888e",
+    "label": "Brinov\u0161\u010dica",
+    "gold": false
+   },
+   {
+    "id": "mq:67967a091e6c9b63",
+    "label": "Hero and the Terror",
+    "gold": false
+   },
+   {
+    "id": "mq:7b09d76ac21e8a3e",
+    "label": "Battle of Verdun",
+    "gold": false
+   },
+   {
+    "id": "mq:90ed15adadec43e9",
+    "label": "Battle of Verdun",
+    "gold": false
+   },
+   {
+    "id": "mq:4a55ce0573e39cf6",
+    "label": "Vev\u010de",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:0a0838b08c8399c4",
+    "label": "Dobjoi",
+    "gold": false
+   },
+   {
+    "id": "mq:8acc4e73f4ec85b3",
+    "label": "Beaverdell",
+    "gold": false
+   },
+   {
+    "id": "mq:bb854e3d4b02888e",
+    "label": "Brinov\u0161\u010dica",
+    "gold": false
+   },
+   {
+    "id": "mq:61d44b9d5d56bf29",
+    "label": "Dyas Island",
+    "gold": false
+   },
+   {
+    "id": "mq:a8cec075517ea96c",
+    "label": "Sobrado, A Pobra de Trives",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

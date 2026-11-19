@@ -1,0 +1,427 @@
+{
+ "qid": "card:REM-583",
+ "set": "cards",
+ "question": "What was done about this, and why: library: apply the approved reading-room design to Library, Explore and examples?",
+ "gold": [
+  {
+   "id": "commit/b20a92045f",
+   "label": "commit b20a920: docs: record approved Library and Explore reading-room contract (REM-583)",
+   "seed": true
+  },
+  {
+   "id": "commit/c0ff73d60d",
+   "label": "commit c0ff73d: Merge pull request #295 from Percolation-Labs/codex/rem-583-reading-room-spec",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/414b6d0abd",
+   "label": "commit 414b6d0: board: file REM-583 library: apply the approved reading-room design to Library, Explore and examples",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-583.md#1",
+   "label": "board/cards/REM-583.md",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "specs/percolate-application/reading-room.md#1",
+   "label": "specs/percolate-application/reading-room.md \u203a Library and Explore: the reading room",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/b20a92045f",
+   "label": "commit b20a920: docs: record approved Library and Explore reading-room contract (REM-583)",
+   "rank": 4,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "commit/c0ff73d60d",
+   "label": "commit c0ff73d: Merge pull request #295 from Percolation-Labs/codex/rem-583-reading-room-spec",
+   "rank": 5,
+   "gold": true,
+   "doors_to_gold": 0
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/b20a92045f",
+    "label": "commit b20a920: docs: record approved Library and Explore reading-room contract (REM-583)",
+    "role": "gold"
+   },
+   {
+    "id": "commit/c0ff73d60d",
+    "label": "commit c0ff73d: Merge pull request #295 from Percolation-Labs/codex/rem-583-reading-room-spec",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/b20a92045f",
+    "b": "commit/c0ff73d60d",
+    "via": [
+     {
+      "kind": "term",
+      "key": "explore reading",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "approved library",
+      "width": 3
+     },
+     {
+      "kind": "term",
+      "key": "room contract",
+      "width": 3
+     },
+     {
+      "kind": "term",
+      "key": "contract rem",
+      "width": 6
+     },
+     {
+      "kind": "term",
+      "key": "rem 583",
+      "width": 15
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "commit/b20a92045f",
+   "gold": "commit/b20a92045f",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 365,
+  "within_2_doors": 27924,
+  "gold_within_1": 0,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "board/cards/REM-583.md#3",
+    "label": "board/cards/REM-583.md \u203a Log",
+    "p": 0.008869612800540034,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/experience.md#1",
+    "label": "specs/percolate-application/experience.md \u203a Reader, writer and design experience",
+    "p": 0.0071320758986711886,
+    "gold": false
+   },
+   {
+    "id": "commit/0b34bb8523",
+    "label": "commit 0b34bb8: board: note on REM-583",
+    "p": 0.006372866625852181,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-614.md#2",
+    "label": "board/cards/REM-614.md \u203a Log",
+    "p": 0.005492577770274665,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-583.md#2",
+    "label": "board/cards/REM-583.md \u203a Goal",
+    "p": 0.004908615868431504,
+    "gold": false
+   },
+   {
+    "id": "commit/9b48030795",
+    "label": "commit 9b48030: board: codex-reading-room takes REM-583",
+    "p": 0.00469596638282533,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1263.md#8",
+    "label": "board/cards/REM-1263.md \u203a Log",
+    "p": 0.004477595942626818,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-607.md#5",
+    "label": "board/cards/REM-607.md \u203a Log",
+    "p": 0.004118283344245069,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-607.md#2",
+    "label": "board/cards/REM-607.md \u203a Goal",
+    "p": 0.004005986052223127,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/reading-room.md#2",
+    "label": "specs/percolate-application/reading-room.md \u203a One visual form for each job",
+    "p": 0.0026393641825741727,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/README.md#5",
+    "label": "specs/percolate-application/README.md \u203a Read in this order",
+    "p": 0.00246015063247532,
+    "gold": false
+   },
+   {
+    "id": "commit/76156b7831",
+    "label": "commit 76156b7: board: REM-516 in-progress \u2192 done",
+    "p": 0.002426614534955842,
+    "gold": false
+   },
+   {
+    "id": "commit/3a21a39e65",
+    "label": "commit 3a21a39: board: note on REM-581",
+    "p": 0.0021931592303498066,
+    "gold": false
+   },
+   {
+    "id": "research-notes/coalescing/question-interface-paper-2026-10-07/paper.md#17",
+    "label": "research-notes/coalescing/question-interface-paper-2026-10-07/paper.md \u203a Build, Knit, Dream",
+    "p": 0.002148272428524646,
+    "gold": false
+   },
+   {
+    "id": "commit/0e6937b23d",
+    "label": "commit 0e6937b: board: file REM-598 ci: a release never waits behind p8-subsystems CI",
+    "p": 0.0020696559798168085,
+    "gold": false
+   },
+   {
+    "id": "commit/ee8625151b",
+    "label": "commit ee86251: board: note on REM-583",
+    "p": 0.0019828406454417097,
+    "gold": false
+   },
+   {
+    "id": "specs/research-platform/sequence.md#1",
+    "label": "specs/research-platform/sequence.md \u203a Research platform delivery gates",
+    "p": 0.0019282305659326206,
+    "gold": false
+   },
+   {
+    "id": "commit/00af75454e",
+    "label": "commit 00af754: board: REM-583 in-progress \u2192 done",
+    "p": 0.0019153638907464972,
+    "gold": false
+   },
+   {
+    "id": "board/team/codex-reading-room.md#2",
+    "label": "board/team/codex-reading-room.md \u203a Log",
+    "p": 0.0019103648026778384,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/authoring-and-publication.md#20",
+    "label": "specs/percolate-application/authoring-and-publication.md \u203a 8. Delivery gates",
+    "p": 0.0018174562978531521,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/414b6d0abd",
+   "label": "commit 414b6d0: board: file REM-583 library: apply the approved reading-room design to Library, Explore and examples",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-583.md#1",
+   "label": "board/cards/REM-583.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/percolate-application/reading-room.md#1",
+   "label": "specs/percolate-application/reading-room.md \u203a Library and Explore: the reading room",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/b20a92045f",
+   "label": "commit b20a920: docs: record approved Library and Explore reading-room contract (REM-583)",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "commit/c0ff73d60d",
+   "label": "commit c0ff73d: Merge pull request #295 from Percolation-Labs/codex/rem-583-reading-room-spec",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "specs/percolate-application/experience.md#1",
+   "label": "specs/percolate-application/experience.md \u203a Reader, writer and design experience",
+   "wave": 1,
+   "via": "term:approved reading",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-583.md#3",
+   "label": "board/cards/REM-583.md \u203a Log",
+   "wave": 1,
+   "via": "term:approved reading",
+   "gold": false
+  },
+  {
+   "id": "commit/0b34bb8523",
+   "label": "commit 0b34bb8: board: note on REM-583",
+   "wave": 2,
+   "via": "term:rem 583",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-583.md#2",
+   "label": "board/cards/REM-583.md \u203a Goal",
+   "wave": 2,
+   "via": "term:rem 583",
+   "gold": false
+  },
+  {
+   "id": "commit/00af75454e",
+   "label": "commit 00af754: board: REM-583 in-progress \u2192 done",
+   "wave": 2,
+   "via": "term:rem 583",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "board/cards/REM-583.md#3",
+    "label": "board/cards/REM-583.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/experience.md#1",
+    "label": "specs/percolate-application/experience.md \u203a Reader, writer and design experience",
+    "gold": false
+   },
+   {
+    "id": "commit/0b34bb8523",
+    "label": "commit 0b34bb8: board: note on REM-583",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-614.md#2",
+    "label": "board/cards/REM-614.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-583.md#2",
+    "label": "board/cards/REM-583.md \u203a Goal",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "board/cards/REM-583.md#3",
+    "label": "board/cards/REM-583.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-614.md#2",
+    "label": "board/cards/REM-614.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/experience.md#1",
+    "label": "specs/percolate-application/experience.md \u203a Reader, writer and design experience",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-602.md#7",
+    "label": "board/cards/REM-602.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/team/codex-reading-room.md#2",
+    "label": "board/team/codex-reading-room.md \u203a Log",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/9b48030795",
+    "label": "commit 9b48030: board: codex-reading-room takes REM-583",
+    "gold": false
+   },
+   {
+    "id": "commit/6ca9a92417",
+    "label": "commit 6ca9a92: board: codex-reading-room checks in, working",
+    "gold": false
+   },
+   {
+    "id": "commit/96813b2491",
+    "label": "commit 96813b2: board: codex-reading-room checks in, working",
+    "gold": false
+   },
+   {
+    "id": "commit/1e3877af52",
+    "label": "commit 1e3877a: board: codex-reading-room checks in, working",
+    "gold": false
+   },
+   {
+    "id": "commit/5a20e08e67",
+    "label": "commit 5a20e08: board: codex-reading-room checks in, working",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "board/cards/REM-583.md#3",
+    "label": "board/cards/REM-583.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-602.md#7",
+    "label": "board/cards/REM-602.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-602.md#3",
+    "label": "board/cards/REM-602.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-729.md#2",
+    "label": "board/cards/REM-729.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/experience.md#1",
+    "label": "specs/percolate-application/experience.md \u203a Reader, writer and design experience",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": null,
+  "Q": null,
+  "LQ": null,
+  "S": null
+ }
+}

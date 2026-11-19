@@ -1,0 +1,609 @@
+{
+ "qid": "pr:86",
+ "set": "prs",
+ "question": "What work went into this, and why: Four sessions' verifications were all correct, and all of them had expired?",
+ "gold": [
+  {
+   "id": "commit/0a5a02f923",
+   "label": "commit 0a5a02f: Four sessions' verifications were all correct, and all of them had expired",
+   "seed": true
+  },
+  {
+   "id": "commit/158dc96119",
+   "label": "commit 158dc96: The hook row is closed, and the first fix for it failed the rule it satisfied",
+   "seed": false
+  },
+  {
+   "id": "commit/45eedee92d",
+   "label": "commit 45eedee: Three sessions corrected this file, and one of the corrections is its own thesis",
+   "seed": false
+  },
+  {
+   "id": "commit/a3023a0394",
+   "label": "commit a3023a0: Two sessions fixed the same P0, and only the fourth reply said so",
+   "seed": false
+  },
+  {
+   "id": "commit/bb20e4e6bc",
+   "label": "commit bb20e4e: Name the object, and the only review that happened today was over a postmortem",
+   "seed": false
+  },
+  {
+   "id": "commit/cb9c9e7455",
+   "label": "commit cb9c9e7: The space axis was still running, and the release path is where it lands",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/a55197c44d",
+   "label": "commit a55197c: Merge pull request #86 from Percolation-Labs/docs/team-postmortem-2026-09-12",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/0a5a02f923",
+   "label": "commit 0a5a02f: Four sessions' verifications were all correct, and all of them had expired",
+   "rank": 2,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "applications/percolate-self-model/sessions.py#1",
+   "label": "applications/percolate-self-model/sessions.py",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "meta/postmortems/2026-09-12-true-when-it-was-measured.md#4",
+   "label": "meta/postmortems/2026-09-12-true-when-it-was-measured.md \u203a 2. The one shape: true when it was measured",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "applications/percolate-ui/DOGFOOD-2026-09-10.md#11",
+   "label": "applications/percolate-ui/DOGFOOD-2026-09-10.md \u203a Follow-up: visual refinement and expired sessions",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/0a5a02f923",
+    "label": "commit 0a5a02f: Four sessions' verifications were all correct, and all of them had expired",
+    "role": "gold"
+   },
+   {
+    "id": "commit/158dc96119",
+    "label": "commit 158dc96: The hook row is closed, and the first fix for it failed the rule it satisfied",
+    "role": "gold"
+   },
+   {
+    "id": "commit/45eedee92d",
+    "label": "commit 45eedee: Three sessions corrected this file, and one of the corrections is its own thesis",
+    "role": "gold"
+   },
+   {
+    "id": "commit/a3023a0394",
+    "label": "commit a3023a0: Two sessions fixed the same P0, and only the fourth reply said so",
+    "role": "gold"
+   },
+   {
+    "id": "commit/bb20e4e6bc",
+    "label": "commit bb20e4e: Name the object, and the only review that happened today was over a postmortem",
+    "role": "gold"
+   },
+   {
+    "id": "commit/cb9c9e7455",
+    "label": "commit cb9c9e7: The space axis was still running, and the release path is where it lands",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/0a5a02f923",
+    "b": "commit/45eedee92d",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "ten tree",
+      "width": 15
+     },
+     {
+      "kind": "term",
+      "key": "session_019s6crlfsdqqf1wbadpxvj3",
+      "width": 19
+     },
+     {
+      "kind": "term",
+      "key": "code session_019s6crlfsdqqf1wbadpxvj3",
+      "width": 19
+     },
+     {
+      "kind": "term",
+      "key": "gates green",
+      "width": 42
+     }
+    ]
+   },
+   {
+    "a": "commit/0a5a02f923",
+    "b": "commit/cb9c9e7455",
+    "via": [
+     {
+      "kind": "term",
+      "key": "space axis",
+      "width": 3
+     },
+     {
+      "kind": "term",
+      "key": "ten tree",
+      "width": 15
+     },
+     {
+      "kind": "term",
+      "key": "session_019s6crlfsdqqf1wbadpxvj3",
+      "width": 19
+     },
+     {
+      "kind": "term",
+      "key": "code session_019s6crlfsdqqf1wbadpxvj3",
+      "width": 19
+     },
+     {
+      "kind": "term",
+      "key": "sessions share",
+      "width": 23
+     }
+    ]
+   },
+   {
+    "a": "commit/158dc96119",
+    "b": "commit/a3023a0394",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "fourth reply",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "header promised",
+      "width": 3
+     },
+     {
+      "kind": "term",
+      "key": "pushed twice",
+      "width": 3
+     },
+     {
+      "kind": "term",
+      "key": "every armed",
+      "width": 3
+     },
+     {
+      "kind": "term",
+      "key": "expensive event",
+      "width": 3
+     }
+    ]
+   },
+   {
+    "a": "commit/158dc96119",
+    "b": "commit/bb20e4e6bc",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "a1da945a",
+      "width": 4
+     },
+     {
+      "kind": "term",
+      "key": "ten tree",
+      "width": 15
+     },
+     {
+      "kind": "term",
+      "key": "session_019s6crlfsdqqf1wbadpxvj3",
+      "width": 19
+     },
+     {
+      "kind": "term",
+      "key": "code session_019s6crlfsdqqf1wbadpxvj3",
+      "width": 19
+     },
+     {
+      "kind": "term",
+      "key": "gates green",
+      "width": 42
+     }
+    ]
+   },
+   {
+    "a": "commit/45eedee92d",
+    "b": "commit/bb20e4e6bc",
+    "via": [
+     {
+      "kind": "term",
+      "key": "merged prs",
+      "width": 8
+     },
+     {
+      "kind": "term",
+      "key": "sixty seven",
+      "width": 8
+     },
+     {
+      "kind": "term",
+      "key": "ten tree",
+      "width": 15
+     },
+     {
+      "kind": "term",
+      "key": "session_019s6crlfsdqqf1wbadpxvj3",
+      "width": 19
+     },
+     {
+      "kind": "term",
+      "key": "code session_019s6crlfsdqqf1wbadpxvj3",
+      "width": 19
+     }
+    ]
+   }
+  ],
+  "cost": 5,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  "entry": {
+   "seed": "commit/0a5a02f923",
+   "gold": "commit/0a5a02f923",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 3107,
+  "within_2_doors": 33632,
+  "gold_within_1": 5,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "applications/percolate-self-model/code_analysis.py#1",
+    "label": "applications/percolate-self-model/code_analysis.py",
+    "p": 0.0033668746992433743,
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-self-model/ingest.py#1",
+    "label": "applications/percolate-self-model/ingest.py",
+    "p": 0.0032996164741346925,
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-self-model/truth.py#1",
+    "label": "applications/percolate-self-model/truth.py",
+    "p": 0.0032787048538066555,
+    "gold": false
+   },
+   {
+    "id": "commit/706a6d00f0",
+    "label": "commit 706a6d0: Merge remote-tracking branch 'origin/main' into docs/team-postmortem-2026-09-12",
+    "p": 0.003277029505987187,
+    "gold": false
+   },
+   {
+    "id": "commit/db68420154",
+    "label": "commit db68420: Merge remote-tracking branch 'origin/main' into docs/team-postmortem-2026-09-12",
+    "p": 0.0032750878758200093,
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-ui/README.md#8",
+    "label": "applications/percolate-ui/README.md \u203a The working app",
+    "p": 0.002737873396689826,
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-self-model/schema.sql#5",
+    "label": "applications/percolate-self-model/schema.sql",
+    "p": 0.0017100579080175013,
+    "gold": false
+   },
+   {
+    "id": "packages/percolate-dev/storage.sql#6",
+    "label": "packages/percolate-dev/storage.sql",
+    "p": 0.0017011582972615335,
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-ui/artifacts/workflow-composition-manifest.yaml#2",
+    "label": "applications/percolate-ui/artifacts/workflow-composition-manifest.yaml",
+    "p": 0.0015258010212968569,
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-ui/artifacts/workflow-new-agent-manifest.yaml#2",
+    "label": "applications/percolate-ui/artifacts/workflow-new-agent-manifest.yaml",
+    "p": 0.00152525656868945,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-12-true-when-it-was-measured.md#16",
+    "label": "meta/postmortems/2026-09-12-true-when-it-was-measured.md \u203a 5. What each session got wrong, in its own words",
+    "p": 0.001496145424823485,
+    "gold": false
+   },
+   {
+    "id": "commit/12bc3e7a80",
+    "label": "commit 12bc3e7: Merge pull request #90 from Percolation-Labs/fix/one-sitting-backlog",
+    "p": 0.0014653940420045518,
+    "gold": false
+   },
+   {
+    "id": "commit/9a1bf09a3a",
+    "label": "commit 9a1bf09: Merge pull request #93 from Percolation-Labs/fix/rem-113-database-refuses-unbounded",
+    "p": 0.0014033914195232034,
+    "gold": false
+   },
+   {
+    "id": "commit/c2694d717e",
+    "label": "commit c2694d7: Graph G: structure, time and meaning joined at the node",
+    "p": 0.001379289489919329,
+    "gold": false
+   },
+   {
+    "id": "commit/8e5e072f70",
+    "label": "commit 8e5e072: A fresh install refused the view I added, and nothing that ran had a fresh install",
+    "p": 0.0013566020783772963,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-12-true-when-it-was-measured.md#1",
+    "label": "meta/postmortems/2026-09-12-true-when-it-was-measured.md \u203a True when it was measured",
+    "p": 0.0013276342514764949,
+    "gold": false
+   },
+   {
+    "id": "commit/31a94ddd00",
+    "label": "commit 31a94dd: A gate that can write: the hook rebuilt the served database and a test committed to the branch (#88)",
+    "p": 0.001147184368515441,
+    "gold": false
+   },
+   {
+    "id": "commit/d0fb72fb8a",
+    "label": "commit d0fb72f: \"All of them, in order\" meant five surfaces, and two people read it as everything",
+    "p": 0.001131719353626639,
+    "gold": false
+   },
+   {
+    "id": "commit/cb9c9e7455",
+    "label": "commit cb9c9e7: The space axis was still running, and the release path is where it lands",
+    "p": 0.0010825329347286968,
+    "gold": true
+   },
+   {
+    "id": "meta/postmortems/2026-09-12-true-when-it-was-measured.md#5",
+    "label": "meta/postmortems/2026-09-12-true-when-it-was-measured.md \u203a 2. The one shape: true when it was measured",
+    "p": 0.0010714203223991352,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/a55197c44d",
+   "label": "commit a55197c: Merge pull request #86 from Percolation-Labs/docs/team-postmortem-2026-09-12",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/0a5a02f923",
+   "label": "commit 0a5a02f: Four sessions' verifications were all correct, and all of them had expired",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "applications/percolate-self-model/sessions.py#1",
+   "label": "applications/percolate-self-model/sessions.py",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/postmortems/2026-09-12-true-when-it-was-measured.md#4",
+   "label": "meta/postmortems/2026-09-12-true-when-it-was-measured.md \u203a 2. The one shape: true when it was measured",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "applications/percolate-ui/DOGFOOD-2026-09-10.md#11",
+   "label": "applications/percolate-ui/DOGFOOD-2026-09-10.md \u203a Follow-up: visual refinement and expired sessions",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/postmortems/2026-09-12-true-when-it-was-measured.md#1",
+   "label": "meta/postmortems/2026-09-12-true-when-it-was-measured.md \u203a True when it was measured",
+   "wave": 1,
+   "via": "term:postmortem comments",
+   "gold": false
+  },
+  {
+   "id": "meta/postmortems/2026-09-12-the-diagnosis-was-the-expensive-half.md#1",
+   "label": "meta/postmortems/2026-09-12-the-diagnosis-was-the-expensive-half.md \u203a The diagnosis was the expensive half",
+   "wave": 2,
+   "via": "term:hour went",
+   "gold": false
+  },
+  {
+   "id": "meta/postmortems/2026-09-11-four-spellings-of-current.md#3",
+   "label": "meta/postmortems/2026-09-11-four-spellings-of-current.md \u203a 2. What cost the most time",
+   "wave": 2,
+   "via": "term:hour went",
+   "gold": false
+  },
+  {
+   "id": "commit/ad4fb2cb29",
+   "label": "commit ad4fb2c: The diagnosis was the expensive half (#137)",
+   "wave": 2,
+   "via": "term:hour went",
+   "gold": false
+  },
+  {
+   "id": "meta/spikes/2026-10-17-iterative-query/forage/lucy_tools.py#3",
+   "label": "meta/spikes/2026-10-17-iterative-query/forage/lucy_tools.py",
+   "wave": 3,
+   "via": "term:as_of",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "applications/percolate-self-model/code_analysis.py#1",
+    "label": "applications/percolate-self-model/code_analysis.py",
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-self-model/ingest.py#1",
+    "label": "applications/percolate-self-model/ingest.py",
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-self-model/truth.py#1",
+    "label": "applications/percolate-self-model/truth.py",
+    "gold": false
+   },
+   {
+    "id": "commit/706a6d00f0",
+    "label": "commit 706a6d0: Merge remote-tracking branch 'origin/main' into docs/team-postmortem-2026-09-12",
+    "gold": false
+   },
+   {
+    "id": "commit/db68420154",
+    "label": "commit db68420: Merge remote-tracking branch 'origin/main' into docs/team-postmortem-2026-09-12",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "applications/percolate-ui/README.md#8",
+    "label": "applications/percolate-ui/README.md \u203a The working app",
+    "gold": false
+   },
+   {
+    "id": "packages/percolate-dev/storage.sql#6",
+    "label": "packages/percolate-dev/storage.sql",
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-self-model/schema.sql#5",
+    "label": "applications/percolate-self-model/schema.sql",
+    "gold": false
+   },
+   {
+    "id": "commit/ad4fb2cb29",
+    "label": "commit ad4fb2c: The diagnosis was the expensive half (#137)",
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-ui/artifacts/workflow-new-agent-manifest.yaml#2",
+    "label": "applications/percolate-ui/artifacts/workflow-new-agent-manifest.yaml",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "applications/percolate-ui/README.md#8",
+    "label": "applications/percolate-ui/README.md \u203a The working app",
+    "gold": false
+   },
+   {
+    "id": "commit/da3be17065",
+    "label": "commit da3be17: Merge pull request #73 from Percolation-Labs/docs/ui-status-after-four",
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-ui/DOGFOOD-2026-09-10.md#12",
+    "label": "applications/percolate-ui/DOGFOOD-2026-09-10.md \u203a Follow-up: visual refinement and expired sessions",
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-12-described-three-lines-up.md#1",
+    "label": "meta/postmortems/2026-09-12-described-three-lines-up.md \u203a The hazard was described three lines up",
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-ui/PRE-REVIEW-2026-09-10.md#5",
+    "label": "applications/percolate-ui/PRE-REVIEW-2026-09-10.md \u203a Route inventory for the final review",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "commit/c6715277fb",
+    "label": "commit c671527: An expired reservation retry cannot reuse spent capacity (REM-189), extension 0.2.3",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/data-governance.md#7",
+    "label": "specs/percolate-application/data-governance.md \u203a B. Sessions and credentials",
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-12-true-when-it-was-measured.md#1",
+    "label": "meta/postmortems/2026-09-12-true-when-it-was-measured.md \u203a True when it was measured",
+    "gold": false
+   },
+   {
+    "id": "commit/2e344d9353",
+    "label": "commit 2e344d9: The rule addressed the session that filed the issue, and most work does not arrive that way (#89)",
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-04-resource-scoping.md#11",
+    "label": "meta/postmortems/2026-09-04-resource-scoping.md \u203a 8. Three sessions, one working tree",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

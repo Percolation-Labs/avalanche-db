@@ -1,0 +1,412 @@
+{
+ "qid": "RW:2hop__673655_316668",
+ "set": "mq",
+ "question": "What instrument is played by the person from The Blackout All-Stars?",
+ "gold": [
+  {
+   "id": "mq:353b5ff0fcf9b76e",
+   "label": "The Blackout All-Stars",
+   "seed": true
+  },
+  {
+   "id": "mq:99d42e87d787e189",
+   "label": "Midnight Blue (Kenny Burrell album)",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:353b5ff0fcf9b76e",
+   "label": "The Blackout All-Stars",
+   "rank": 1,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:97d34a71dce79831",
+   "label": "Northeast blackout of 2003",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:2f5f84d8e3bcb593",
+   "label": "The Blitz",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:9abdfbc36f45ad52",
+   "label": "Kamryn Belle",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "mq:52de750718fa1e5e",
+   "label": "Allen Harvin",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 2
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:353b5ff0fcf9b76e",
+    "label": "The Blackout All-Stars",
+    "role": "gold"
+   },
+   {
+    "id": "mq:99d42e87d787e189",
+    "label": "Midnight Blue (Kenny Burrell album)",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:353b5ff0fcf9b76e",
+    "b": "mq:99d42e87d787e189",
+    "via": [
+     {
+      "kind": "term",
+      "key": "ray barretto",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "barretto",
+      "width": 2
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "mq:353b5ff0fcf9b76e",
+   "gold": "mq:353b5ff0fcf9b76e",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 1985,
+  "within_2_doors": 19089,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "mq:99d42e87d787e189",
+    "label": "Midnight Blue (Kenny Burrell album)",
+    "p": 0.003975657593844484,
+    "gold": true
+   },
+   {
+    "id": "mq:599c42a16916c326",
+    "label": "Def Squad",
+    "p": 0.002987881923314098,
+    "gold": false
+   },
+   {
+    "id": "mq:4a0fe60084232903",
+    "label": "Pro Football Hall of Fame Game",
+    "p": 0.002815148644552065,
+    "gold": false
+   },
+   {
+    "id": "mq:9ecd159743acca71",
+    "label": "Arena Football League",
+    "p": 0.002386617389899346,
+    "gold": false
+   },
+   {
+    "id": "mq:3b1175ee92cdbb42",
+    "label": "Just the Two of Us (Grover Washington Jr. song)",
+    "p": 0.0022573886342431046,
+    "gold": false
+   },
+   {
+    "id": "mq:d2fff0e63df2aa12",
+    "label": "Chris Thompson (running back)",
+    "p": 0.0013803516287620643,
+    "gold": false
+   },
+   {
+    "id": "mq:d2b4c15559b6f8e2",
+    "label": "Radar (song)",
+    "p": 0.0013652697888208495,
+    "gold": false
+   },
+   {
+    "id": "mq:d76c79e4ebc836e9",
+    "label": "Transformers (film)",
+    "p": 0.0013560827915050525,
+    "gold": false
+   },
+   {
+    "id": "mq:72c9fc517f51cc23",
+    "label": "Dan Fitzsimons",
+    "p": 0.0013361188864447066,
+    "gold": false
+   },
+   {
+    "id": "mq:2aee1e08f1aee6cb",
+    "label": "Belle Mina",
+    "p": 0.0011210146200079107,
+    "gold": false
+   },
+   {
+    "id": "mq:656b8b13ef2c6778",
+    "label": "The Mavericks",
+    "p": 0.0011077613777509816,
+    "gold": false
+   },
+   {
+    "id": "mq:79e6bedd94a125dc",
+    "label": "My Dad Is Better than Your Dad",
+    "p": 0.0011074568768424766,
+    "gold": false
+   },
+   {
+    "id": "mq:bf325848510f72b8",
+    "label": "Jane Darwell",
+    "p": 0.0010718314505739556,
+    "gold": false
+   },
+   {
+    "id": "mq:f0a9739c59d2074b",
+    "label": "Jim Cornelison",
+    "p": 0.0010710932437138698,
+    "gold": false
+   },
+   {
+    "id": "mq:7a8378ae1b9c9f4d",
+    "label": "The Song That Never Ends",
+    "p": 0.0010387415293156726,
+    "gold": false
+   },
+   {
+    "id": "mq:da01cb23b49ff519",
+    "label": "Mitzi Meyerson",
+    "p": 0.0010358612644908584,
+    "gold": false
+   },
+   {
+    "id": "mq:583df30e8faf3498",
+    "label": "2002 NBA draft",
+    "p": 0.000998557442201307,
+    "gold": false
+   },
+   {
+    "id": "mq:9d1cc4833aa8d1c4",
+    "label": "Vero Beach, Florida",
+    "p": 0.0009963552973125702,
+    "gold": false
+   },
+   {
+    "id": "mq:5d0f03602893ef7c",
+    "label": "Twenty-fifth Amendment to the United States Constitution",
+    "p": 0.0009271662407469044,
+    "gold": false
+   },
+   {
+    "id": "mq:9820b05c72f82a43",
+    "label": "Super Bowl XLVII halftime show",
+    "p": 0.0008398122151712673,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:353b5ff0fcf9b76e",
+   "label": "The Blackout All-Stars",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:97d34a71dce79831",
+   "label": "Northeast blackout of 2003",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:2f5f84d8e3bcb593",
+   "label": "The Blitz",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:9abdfbc36f45ad52",
+   "label": "Kamryn Belle",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:52de750718fa1e5e",
+   "label": "Allen Harvin",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:3b1175ee92cdbb42",
+   "label": "Just the Two of Us (Grover Washington Jr. song)",
+   "wave": 1,
+   "via": "term:grover washington",
+   "gold": false
+  },
+  {
+   "id": "mq:99d42e87d787e189",
+   "label": "Midnight Blue (Kenny Burrell album)",
+   "wave": 2,
+   "via": "term:barretto",
+   "gold": true
+  },
+  {
+   "id": "mq:116652d964e1f3e9",
+   "label": "Virgin Islands Creole",
+   "wave": 3,
+   "via": "term:consisting",
+   "gold": false
+  },
+  {
+   "id": "mq:62a17b61e53d4bb1",
+   "label": "USB",
+   "wave": 3,
+   "via": "term:consisting",
+   "gold": false
+  },
+  {
+   "id": "mq:1acd7242d2654e87",
+   "label": "Trench warfare",
+   "wave": 3,
+   "via": "term:consisting",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:99d42e87d787e189",
+    "label": "Midnight Blue (Kenny Burrell album)",
+    "gold": true
+   },
+   {
+    "id": "mq:599c42a16916c326",
+    "label": "Def Squad",
+    "gold": false
+   },
+   {
+    "id": "mq:4a0fe60084232903",
+    "label": "Pro Football Hall of Fame Game",
+    "gold": false
+   },
+   {
+    "id": "mq:9ecd159743acca71",
+    "label": "Arena Football League",
+    "gold": false
+   },
+   {
+    "id": "mq:3b1175ee92cdbb42",
+    "label": "Just the Two of Us (Grover Washington Jr. song)",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:d2b4c15559b6f8e2",
+    "label": "Radar (song)",
+    "gold": false
+   },
+   {
+    "id": "mq:d76c79e4ebc836e9",
+    "label": "Transformers (film)",
+    "gold": false
+   },
+   {
+    "id": "mq:72c9fc517f51cc23",
+    "label": "Dan Fitzsimons",
+    "gold": false
+   },
+   {
+    "id": "mq:c4df408791e6ba73",
+    "label": "Galactic Center",
+    "gold": false
+   },
+   {
+    "id": "mq:4a0fe60084232903",
+    "label": "Pro Football Hall of Fame Game",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:d76c79e4ebc836e9",
+    "label": "Transformers (film)",
+    "gold": false
+   },
+   {
+    "id": "mq:d2b4c15559b6f8e2",
+    "label": "Radar (song)",
+    "gold": false
+   },
+   {
+    "id": "mq:c4df408791e6ba73",
+    "label": "Galactic Center",
+    "gold": false
+   },
+   {
+    "id": "mq:72c9fc517f51cc23",
+    "label": "Dan Fitzsimons",
+    "gold": false
+   },
+   {
+    "id": "mq:9820b05c72f82a43",
+    "label": "Super Bowl XLVII halftime show",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:ffd82c07c97d6028",
+    "label": "Wusum Stars",
+    "gold": false
+   },
+   {
+    "id": "mq:43c5a91dd89f7858",
+    "label": "Chapman Stick",
+    "gold": false
+   },
+   {
+    "id": "mq:c4df408791e6ba73",
+    "label": "Galactic Center",
+    "gold": false
+   },
+   {
+    "id": "mq:3bb4ebbb16f1c3e6",
+    "label": "\u010ceskoslovensk\u00e9 hudebn\u00ed n\u00e1stroje",
+    "gold": false
+   },
+   {
+    "id": "mq:b0331283bd47c7d1",
+    "label": "Fizeau\u2013Foucault apparatus",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 1.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

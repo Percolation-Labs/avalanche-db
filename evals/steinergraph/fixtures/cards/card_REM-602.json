@@ -1,0 +1,518 @@
+{
+ "qid": "card:REM-602",
+ "set": "cards",
+ "question": "What was done about this, and why: discovery: spacious sliders and a complete local reading-room preview?",
+ "gold": [
+  {
+   "id": "commit/82fa9d4d8f",
+   "label": "commit 82fa9d4: docs: specify spacious discovery sliders and local review (REM-602)",
+   "seed": true
+  },
+  {
+   "id": "commit/9aaa02bc60",
+   "label": "commit 9aaa02b: Merge pull request #300 from Percolation-Labs/codex/rem-602-discovery-spec-v2",
+   "seed": false
+  },
+  {
+   "id": "commit/be5964e339",
+   "label": "commit be5964e: Merge pull request #298 from Percolation-Labs/codex/rem-602-discovery-spec",
+   "seed": true
+  },
+  {
+   "id": "commit/c239511f79",
+   "label": "commit c239511: REM-602: clarify Explore spacing and local review contract (#302)",
+   "seed": false
+  },
+  {
+   "id": "commit/f178fe91d0",
+   "label": "commit f178fe9: guard and banned.py read a batched main run correctly, so main can go green again",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/eee91e2c25",
+   "label": "commit eee91e2: board: file REM-602 discovery: spacious sliders and a complete local reading-room preview",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-602.md#1",
+   "label": "board/cards/REM-602.md",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/82fa9d4d8f",
+   "label": "commit 82fa9d4: docs: specify spacious discovery sliders and local review (REM-602)",
+   "rank": 3,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "board/cards/REM-602.md#2",
+   "label": "board/cards/REM-602.md \u203a Goal",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/be5964e339",
+   "label": "commit be5964e: Merge pull request #298 from Percolation-Labs/codex/rem-602-discovery-spec",
+   "rank": 5,
+   "gold": true,
+   "doors_to_gold": 0
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/82fa9d4d8f",
+    "label": "commit 82fa9d4: docs: specify spacious discovery sliders and local review (REM-602)",
+    "role": "gold"
+   },
+   {
+    "id": "commit/9aaa02bc60",
+    "label": "commit 9aaa02b: Merge pull request #300 from Percolation-Labs/codex/rem-602-discovery-spec-v2",
+    "role": "gold"
+   },
+   {
+    "id": "commit/be5964e339",
+    "label": "commit be5964e: Merge pull request #298 from Percolation-Labs/codex/rem-602-discovery-spec",
+    "role": "gold"
+   },
+   {
+    "id": "commit/c239511f79",
+    "label": "commit c239511: REM-602: clarify Explore spacing and local review contract (#302)",
+    "role": "gold"
+   },
+   {
+    "id": "commit/f178fe91d0",
+    "label": "commit f178fe9: guard and banned.py read a batched main run correctly, so main can go green again",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/82fa9d4d8f",
+    "b": "commit/be5964e339",
+    "via": [
+     {
+      "kind": "near",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "spacious discovery",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "discovery sliders",
+      "width": 4
+     },
+     {
+      "kind": "term",
+      "key": "spacious",
+      "width": 6
+     },
+     {
+      "kind": "term",
+      "key": "sliders",
+      "width": 26
+     },
+     {
+      "kind": "term",
+      "key": "local review",
+      "width": 27
+     }
+    ]
+   },
+   {
+    "a": "commit/82fa9d4d8f",
+    "b": "commit/c239511f79",
+    "via": [
+     {
+      "kind": "term",
+      "key": "local review",
+      "width": 27
+     },
+     {
+      "kind": "term",
+      "key": "rem 602",
+      "width": 34
+     }
+    ]
+   },
+   {
+    "a": "commit/82fa9d4d8f",
+    "b": "commit/f178fe91d0",
+    "via": [
+     {
+      "kind": "term",
+      "key": "rem 602",
+      "width": 34
+     }
+    ]
+   },
+   {
+    "a": "commit/9aaa02bc60",
+    "b": "commit/be5964e339",
+    "via": [
+     {
+      "kind": "term",
+      "key": "discovery spec",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "labs codex",
+      "width": 8
+     },
+     {
+      "kind": "term",
+      "key": "codex rem",
+      "width": 55
+     }
+    ]
+   }
+  ],
+  "cost": 4,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   2,
+   1,
+   1,
+   1,
+   1,
+   1,
+   2,
+   1,
+   1,
+   1
+  ],
+  "entry": {
+   "seed": "commit/82fa9d4d8f",
+   "gold": "commit/82fa9d4d8f",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 543,
+  "within_2_doors": 30988,
+  "gold_within_1": 3,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "specs/percolate-application/reading-room.md#6",
+    "label": "specs/percolate-application/reading-room.md \u203a Discovery cards and local review (REM-602)",
+    "p": 0.005595544641385964,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-602.md#3",
+    "label": "board/cards/REM-602.md \u203a Done when",
+    "p": 0.005484628939932204,
+    "gold": false
+   },
+   {
+    "id": "commit/fc2c65c424",
+    "label": "commit fc2c65c: board: file REM-835 reviewers: Convert description to sliders gives comparable reviewers",
+    "p": 0.004312680851667994,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-602.md#5",
+    "label": "board/cards/REM-602.md \u203a Log",
+    "p": 0.003846900460607529,
+    "gold": false
+   },
+   {
+    "id": "commit/9aaa02bc60",
+    "label": "commit 9aaa02b: Merge pull request #300 from Percolation-Labs/codex/rem-602-discovery-spec-v2",
+    "p": 0.0038086333828410684,
+    "gold": true
+   },
+   {
+    "id": "board/cards/REM-602.md#6",
+    "label": "board/cards/REM-602.md \u203a Log",
+    "p": 0.003208799820457073,
+    "gold": false
+   },
+   {
+    "id": "research-notes/essay-graph/corpus/montaigne-1580-essays-cotton/text.txt#25",
+    "label": "research-notes/essay-graph/corpus/montaigne-1580-essays-cotton/text.txt",
+    "p": 0.003114180152086455,
+    "gold": false
+   },
+   {
+    "id": "commit/5b4054bfc7",
+    "label": "commit 5b4054b: board: codex-reading-room takes REM-602",
+    "p": 0.00278265591829972,
+    "gold": false
+   },
+   {
+    "id": "commit/e70afd84bc",
+    "label": "commit e70afd8: docs: simplify discovery browsing language",
+    "p": 0.0026469015404808533,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-835.md#1",
+    "label": "board/cards/REM-835.md",
+    "p": 0.002618415640324891,
+    "gold": false
+   },
+   {
+    "id": "commit/ad435dafe7",
+    "label": "commit ad435da: board: REM-532 in-progress \u2192 done",
+    "p": 0.0019709167821552083,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-602.md#7",
+    "label": "board/cards/REM-602.md \u203a Log",
+    "p": 0.001907407617834844,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/reading-room.md#7",
+    "label": "specs/percolate-application/reading-room.md \u203a Discovery cards and local review (REM-602)",
+    "p": 0.0018977626836741868,
+    "gold": false
+   },
+   {
+    "id": "commit/d6b4235ef5",
+    "label": "commit d6b4235: The gate list was itself a thing to remember",
+    "p": 0.0018469436516439556,
+    "gold": false
+   },
+   {
+    "id": "board/team/codex-shitville.md#3",
+    "label": "board/team/codex-shitville.md \u203a Log",
+    "p": 0.001817111258090453,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/reading-room.md#2",
+    "label": "specs/percolate-application/reading-room.md \u203a One visual form for each job",
+    "p": 0.0017777901679516298,
+    "gold": false
+   },
+   {
+    "id": "commit/4bd0f213f5",
+    "label": "commit 4bd0f21: board: note on REM-603",
+    "p": 0.0017150316427221115,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-04-resource-scoping.md#12",
+    "label": "meta/postmortems/2026-09-04-resource-scoping.md \u203a 9. What I would tell the next person",
+    "p": 0.0016740980888910566,
+    "gold": false
+   },
+   {
+    "id": "commit/d2167827b7",
+    "label": "commit d216782: board: REM-548 in-progress \u2192 review",
+    "p": 0.0016170996853562742,
+    "gold": false
+   },
+   {
+    "id": "commit/a6fe4ff5f5",
+    "label": "commit a6fe4ff: board: REM-435 todo \u2192 backlog",
+    "p": 0.0015774657828671336,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/eee91e2c25",
+   "label": "commit eee91e2: board: file REM-602 discovery: spacious sliders and a complete local reading-room preview",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-602.md#1",
+   "label": "board/cards/REM-602.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/82fa9d4d8f",
+   "label": "commit 82fa9d4: docs: specify spacious discovery sliders and local review (REM-602)",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "board/cards/REM-602.md#2",
+   "label": "board/cards/REM-602.md \u203a Goal",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/be5964e339",
+   "label": "commit be5964e: Merge pull request #298 from Percolation-Labs/codex/rem-602-discovery-spec",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "board/cards/REM-602.md#7",
+   "label": "board/cards/REM-602.md \u203a Log",
+   "wave": 1,
+   "via": "term:discovery cards",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-716.md#3",
+   "label": "board/cards/REM-716.md \u203a Evidence",
+   "wave": 1,
+   "via": "term:discovery cards",
+   "gold": false
+  },
+  {
+   "id": "specs/percolate-application/reading-room.md#8",
+   "label": "specs/percolate-application/reading-room.md \u203a Verification",
+   "wave": 1,
+   "via": "term:discovery cards",
+   "gold": false
+  },
+  {
+   "id": "specs/percolate-application/reading-room.md#6",
+   "label": "specs/percolate-application/reading-room.md \u203a Discovery cards and local review (REM-602)",
+   "wave": 1,
+   "via": "term:discovery cards",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-716.md#7",
+   "label": "board/cards/REM-716.md \u203a Log",
+   "wave": 1,
+   "via": "term:discovery cards",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "specs/percolate-application/reading-room.md#6",
+    "label": "specs/percolate-application/reading-room.md \u203a Discovery cards and local review (REM-602)",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-602.md#3",
+    "label": "board/cards/REM-602.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "commit/fc2c65c424",
+    "label": "commit fc2c65c: board: file REM-835 reviewers: Convert description to sliders gives comparable reviewers",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-602.md#5",
+    "label": "board/cards/REM-602.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "commit/9aaa02bc60",
+    "label": "commit 9aaa02b: Merge pull request #300 from Percolation-Labs/codex/rem-602-discovery-spec-v2",
+    "gold": true
+   }
+  ],
+  "Q": [
+   {
+    "id": "board/cards/REM-602.md#6",
+    "label": "board/cards/REM-602.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-602.md#5",
+    "label": "board/cards/REM-602.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/reading-room.md#6",
+    "label": "specs/percolate-application/reading-room.md \u203a Discovery cards and local review (REM-602)",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-602.md#3",
+    "label": "board/cards/REM-602.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "board/team/codex-reading-room.md#2",
+    "label": "board/team/codex-reading-room.md \u203a Log",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/5b4054bfc7",
+    "label": "commit 5b4054b: board: codex-reading-room takes REM-602",
+    "gold": false
+   },
+   {
+    "id": "commit/58c80a0eb4",
+    "label": "commit 58c80a0: board: codex-reading-room takes REM-602",
+    "gold": false
+   },
+   {
+    "id": "commit/0b751d7cdb",
+    "label": "commit 0b751d7: board: codex-reading-room takes REM-602",
+    "gold": false
+   },
+   {
+    "id": "commit/ac96d622ec",
+    "label": "commit ac96d62: board: codex-reading-room takes REM-602",
+    "gold": false
+   },
+   {
+    "id": "commit/d0c90b55d4",
+    "label": "commit d0c90b5: board: codex-reading-room takes REM-602",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "board/cards/REM-602.md#5",
+    "label": "board/cards/REM-602.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-602.md#6",
+    "label": "board/cards/REM-602.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-602.md#3",
+    "label": "board/cards/REM-602.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/reading-room.md#6",
+    "label": "specs/percolate-application/reading-room.md \u203a Discovery cards and local review (REM-602)",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-615.md#2",
+    "label": "board/cards/REM-615.md \u203a Log",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.3333333333333333,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

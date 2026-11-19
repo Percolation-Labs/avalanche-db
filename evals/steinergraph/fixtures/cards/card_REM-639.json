@@ -1,0 +1,619 @@
+{
+ "qid": "card:REM-639",
+ "set": "cards",
+ "question": "What was done about this, and why: research: the claim reducer's acceptance rule tests survival, not size?",
+ "gold": [
+  {
+   "id": "commit/042269e6bb",
+   "label": "commit 042269e: research: the reducer scored against labels it did not write (REM-640)",
+   "seed": false
+  },
+  {
+   "id": "commit/230bc6580f",
+   "label": "commit 230bc65: research: a proposal costs nothing, measured in core (REM-649 box 2)",
+   "seed": false
+  },
+  {
+   "id": "commit/37e04a7dfb",
+   "label": "commit 37e04a7: research: the reducer's run against the sample, still before the labels (REM-640)",
+   "seed": false
+  },
+  {
+   "id": "commit/a1e10fe55b",
+   "label": "commit a1e10fe: research: an equivalence merge carries both scopes, and that costs the null (REM-641)",
+   "seed": false
+  },
+  {
+   "id": "commit/bac3fff584",
+   "label": "commit bac3fff: research: what a null can test, and what it cannot (REM-639)",
+   "seed": false
+  },
+  {
+   "id": "commit/f9581ea103",
+   "label": "commit f9581ea: equivalence: record that no gate can produce a merge-quality number (REM-633)",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/56e6082741",
+   "label": "commit 56e6082: board: file REM-639 research: the claim reducer's acceptance rule tests survival, not size",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-639.md#1",
+   "label": "board/cards/REM-639.md",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-639.md#2",
+   "label": "board/cards/REM-639.md \u203a Goal",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/01ef64ef82",
+   "label": "commit 01ef64e: research: a merge may not change who is said to hold the claim (REM-642)",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-639.md#5",
+   "label": "board/cards/REM-639.md \u203a Scope",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/01ef64ef82",
+    "label": "commit 01ef64e: research: a merge may not change who is said to hold the claim (REM-642)",
+    "role": "seed"
+   },
+   {
+    "id": "commit/042269e6bb",
+    "label": "commit 042269e: research: the reducer scored against labels it did not write (REM-640)",
+    "role": "gold"
+   },
+   {
+    "id": "commit/230bc6580f",
+    "label": "commit 230bc65: research: a proposal costs nothing, measured in core (REM-649 box 2)",
+    "role": "gold"
+   },
+   {
+    "id": "commit/37e04a7dfb",
+    "label": "commit 37e04a7: research: the reducer's run against the sample, still before the labels (REM-640)",
+    "role": "gold"
+   },
+   {
+    "id": "commit/a1e10fe55b",
+    "label": "commit a1e10fe: research: an equivalence merge carries both scopes, and that costs the null (REM-641)",
+    "role": "gold"
+   },
+   {
+    "id": "commit/bac3fff584",
+    "label": "commit bac3fff: research: what a null can test, and what it cannot (REM-639)",
+    "role": "gold"
+   },
+   {
+    "id": "commit/f9581ea103",
+    "label": "commit f9581ea: equivalence: record that no gate can produce a merge-quality number (REM-633)",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/01ef64ef82",
+    "b": "commit/a1e10fe55b",
+    "via": [
+     {
+      "kind": "term",
+      "key": "acceptance record",
+      "width": 4
+     },
+     {
+      "kind": "term",
+      "key": "scoreable label",
+      "width": 6
+     },
+     {
+      "kind": "term",
+      "key": "scoreable",
+      "width": 15
+     },
+     {
+      "kind": "term",
+      "key": "lexical baseline",
+      "width": 17
+     },
+     {
+      "kind": "term",
+      "key": "identically",
+      "width": 85
+     }
+    ]
+   },
+   {
+    "a": "commit/042269e6bb",
+    "b": "commit/37e04a7dfb",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "tie rate",
+      "width": 3
+     },
+     {
+      "kind": "term",
+      "key": "rem 640",
+      "width": 28
+     },
+     {
+      "kind": "term",
+      "key": "rem 639",
+      "width": 45
+     }
+    ]
+   },
+   {
+    "a": "commit/230bc6580f",
+    "b": "commit/a1e10fe55b",
+    "via": [
+     {
+      "kind": "term",
+      "key": "different claims",
+      "width": 18
+     },
+     {
+      "kind": "term",
+      "key": "rem 635",
+      "width": 41
+     },
+     {
+      "kind": "term",
+      "key": "rem 639",
+      "width": 45
+     },
+     {
+      "kind": "term",
+      "key": "two claims",
+      "width": 99
+     }
+    ]
+   },
+   {
+    "a": "commit/37e04a7dfb",
+    "b": "commit/a1e10fe55b",
+    "via": [
+     {
+      "kind": "term",
+      "key": "lexical baseline",
+      "width": 17
+     },
+     {
+      "kind": "term",
+      "key": "rem 640",
+      "width": 28
+     },
+     {
+      "kind": "term",
+      "key": "rem 639",
+      "width": 45
+     }
+    ]
+   },
+   {
+    "a": "commit/a1e10fe55b",
+    "b": "commit/bac3fff584",
+    "via": [
+     {
+      "kind": "term",
+      "key": "longer refuse",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "equivalence merge",
+      "width": 7
+     },
+     {
+      "kind": "term",
+      "key": "permuting",
+      "width": 21
+     },
+     {
+      "kind": "term",
+      "key": "rem 635",
+      "width": 41
+     },
+     {
+      "kind": "term",
+      "key": "rem 641",
+      "width": 44
+     }
+    ]
+   },
+   {
+    "a": "commit/bac3fff584",
+    "b": "commit/f9581ea103",
+    "via": [
+     {
+      "kind": "term",
+      "key": "number rem",
+      "width": 3
+     },
+     {
+      "kind": "term",
+      "key": "asks anything",
+      "width": 4
+     },
+     {
+      "kind": "term",
+      "key": "eight trials",
+      "width": 7
+     },
+     {
+      "kind": "term",
+      "key": "semantic judge",
+      "width": 7
+     },
+     {
+      "kind": "term",
+      "key": "corpus cannot",
+      "width": 10
+     }
+    ]
+   }
+  ],
+  "cost": 6,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  "entry": {
+   "seed": "commit/01ef64ef82",
+   "gold": "commit/a1e10fe55b",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 1242,
+  "within_2_doors": 32804,
+  "gold_within_1": 6,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "board/cards/REM-642.md#7",
+    "label": "board/cards/REM-642.md \u203a Log",
+    "p": 0.007852622173904401,
+    "gold": false
+   },
+   {
+    "id": "meta/status/2026-09-20-claim-reduction.md#3",
+    "label": "meta/status/2026-09-20-claim-reduction.md \u203a What shipped",
+    "p": 0.005769491403020392,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-638.md#7",
+    "label": "board/cards/REM-638.md \u203a Log",
+    "p": 0.005042405089585256,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-639.md#3",
+    "label": "board/cards/REM-639.md \u203a Evidence",
+    "p": 0.0046481047091581264,
+    "gold": false
+   },
+   {
+    "id": "commit/0eb0ee8581",
+    "label": "commit 0eb0ee8: research: measure the reducer without a model, and find the gate is the wrong statistic (REM-638)",
+    "p": 0.00436752779011016,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-639.md#4",
+    "label": "board/cards/REM-639.md \u203a Done when",
+    "p": 0.0032053616404832887,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-641.md#7",
+    "label": "board/cards/REM-641.md \u203a Log",
+    "p": 0.0029632101441273203,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-637.md#6",
+    "label": "board/cards/REM-637.md \u203a Log",
+    "p": 0.0029385426991670087,
+    "gold": false
+   },
+   {
+    "id": "commit/00f4c21914",
+    "label": "commit 00f4c21: research: a scoped claim reducer whose gate can refuse (REM-637)",
+    "p": 0.0026826836225569304,
+    "gold": false
+   },
+   {
+    "id": "commit/782920453d",
+    "label": "commit 7829204: equivalence: freeze a sample that has something to merge (REM-633 box 1)",
+    "p": 0.0024543506548014163,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-639.md#7",
+    "label": "board/cards/REM-639.md \u203a Log",
+    "p": 0.0023628554748166618,
+    "gold": false
+   },
+   {
+    "id": "commit/442e440285",
+    "label": "commit 442e440: board: p8-subsystems-10 checks in, idle",
+    "p": 0.002321344767023228,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-644.md#5",
+    "label": "board/cards/REM-644.md \u203a Scope",
+    "p": 0.002230684299901239,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1084.md#2",
+    "label": "board/cards/REM-1084.md \u203a Goal",
+    "p": 0.0022301933453507347,
+    "gold": false
+   },
+   {
+    "id": "commit/a1e10fe55b",
+    "label": "commit a1e10fe: research: an equivalence merge carries both scopes, and that costs the null (REM-641)",
+    "p": 0.0020016609118384764,
+    "gold": true
+   },
+   {
+    "id": "board/team/p8-subsystems-10.md#2",
+    "label": "board/team/p8-subsystems-10.md \u203a Log",
+    "p": 0.0019330125516585544,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-639.md#6",
+    "label": "board/cards/REM-639.md \u203a Links",
+    "p": 0.0019175586464698332,
+    "gold": false
+   },
+   {
+    "id": "commit/8dc26fa2c5",
+    "label": "commit 8dc26fa: equivalence: declare the label scope jack's run caught, and rule on p11 (REM-633)",
+    "p": 0.0019052310931670052,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-640.md#7",
+    "label": "board/cards/REM-640.md \u203a Log",
+    "p": 0.0018758139954856048,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-641.md#5",
+    "label": "board/cards/REM-641.md \u203a Scope",
+    "p": 0.001735800238672506,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/56e6082741",
+   "label": "commit 56e6082: board: file REM-639 research: the claim reducer's acceptance rule tests survival, not size",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-639.md#1",
+   "label": "board/cards/REM-639.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-639.md#2",
+   "label": "board/cards/REM-639.md \u203a Goal",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/01ef64ef82",
+   "label": "commit 01ef64e: research: a merge may not change who is said to hold the claim (REM-642)",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-639.md#5",
+   "label": "board/cards/REM-639.md \u203a Scope",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-633.md#11",
+   "label": "board/cards/REM-633.md \u203a Log",
+   "wave": 1,
+   "via": "term:rem 639",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-639.md#3",
+   "label": "board/cards/REM-639.md \u203a Evidence",
+   "wave": 1,
+   "via": "term:rem 639",
+   "gold": false
+  },
+  {
+   "id": "commit/62c5551f11",
+   "label": "commit 62c5551: board: REM-639 in-progress \u2192 done",
+   "wave": 1,
+   "via": "term:rem 639",
+   "gold": false
+  },
+  {
+   "id": "applications/percolate-self-model/dreaming/equivalence/README.md#11",
+   "label": "applications/percolate-self-model/dreaming/equivalence/README.md \u203a No gate can produce a merge-quality number",
+   "wave": 1,
+   "via": "term:rem 639",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-647.md#6",
+   "label": "board/cards/REM-647.md \u203a Links",
+   "wave": 1,
+   "via": "term:rem 639",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "board/cards/REM-642.md#7",
+    "label": "board/cards/REM-642.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "meta/status/2026-09-20-claim-reduction.md#3",
+    "label": "meta/status/2026-09-20-claim-reduction.md \u203a What shipped",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-638.md#7",
+    "label": "board/cards/REM-638.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-639.md#3",
+    "label": "board/cards/REM-639.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "commit/0eb0ee8581",
+    "label": "commit 0eb0ee8: research: measure the reducer without a model, and find the gate is the wrong statistic (REM-638)",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "board/cards/REM-642.md#7",
+    "label": "board/cards/REM-642.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "meta/status/2026-09-20-claim-reduction.md#3",
+    "label": "meta/status/2026-09-20-claim-reduction.md \u203a What shipped",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-641.md#7",
+    "label": "board/cards/REM-641.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-638.md#7",
+    "label": "board/cards/REM-638.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "commit/0eb0ee8581",
+    "label": "commit 0eb0ee8: research: measure the reducer without a model, and find the gate is the wrong statistic (REM-638)",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "board/cards/REM-638.md#1",
+    "label": "board/cards/REM-638.md",
+    "gold": false
+   },
+   {
+    "id": "commit/f8de2c3341",
+    "label": "commit f8de2c3: board: file REM-638 research: the claim reducer runs and is measured without a model",
+    "gold": false
+   },
+   {
+    "id": "commit/62c5551f11",
+    "label": "commit 62c5551: board: REM-639 in-progress \u2192 done",
+    "gold": false
+   },
+   {
+    "id": "commit/eda09fd5b3",
+    "label": "commit eda09fd: board: file REM-648 research: the claim reducer rebuilt what core already owns",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-641.md#5",
+    "label": "board/cards/REM-641.md \u203a Scope",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "commit/a1e10fe55b",
+    "label": "commit a1e10fe: research: an equivalence merge carries both scopes, and that costs the null (REM-641)",
+    "gold": true
+   },
+   {
+    "id": "commit/eda09fd5b3",
+    "label": "commit eda09fd: board: file REM-648 research: the claim reducer rebuilt what core already owns",
+    "gold": false
+   },
+   {
+    "id": "commit/f8de2c3341",
+    "label": "commit f8de2c3: board: file REM-638 research: the claim reducer runs and is measured without a model",
+    "gold": false
+   },
+   {
+    "id": "commit/25ddb84194",
+    "label": "commit 25ddb84: research: freeze the scoped claim reduction protocol and its corpus (REM-637)",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-639.md#4",
+    "label": "board/cards/REM-639.md \u203a Done when",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.16666666666666666
+ }
+}

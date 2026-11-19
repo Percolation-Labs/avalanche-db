@@ -1,0 +1,501 @@
+{
+ "qid": "card:REM-335",
+ "set": "cards",
+ "question": "What was done about this, and why: assessments: the records a regulator asks for first exist and are dated?",
+ "gold": [
+  {
+   "id": "commit/236595ade8",
+   "label": "commit 236595a: compliance drafts cite data-governance.md at its merge, ed1aa9b2 (REM-335)",
+   "seed": false
+  },
+  {
+   "id": "commit/68f696b09e",
+   "label": "commit 68f696b: compliance: draft the records a regulator asks for first (REM-335)",
+   "seed": true
+  },
+  {
+   "id": "commit/73d5623492",
+   "label": "commit 73d5623: Merge pull request #328 from Percolation-Labs/amartey/rem-335-regulator-records",
+   "seed": true
+  },
+  {
+   "id": "commit/76430c032b",
+   "label": "commit 76430c0: specs: compliance names its holding card REM-327 and stage cards REM-328 to REM-335",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/2981bf9b0f",
+   "label": "commit 2981bf9: board: file REM-335 assessments: the records a regulator asks for first exist and are dated",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-335.md#1",
+   "label": "board/cards/REM-335.md",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-335.md#2",
+   "label": "board/cards/REM-335.md \u203a Goal",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/68f696b09e",
+   "label": "commit 68f696b: compliance: draft the records a regulator asks for first (REM-335)",
+   "rank": 4,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "commit/73d5623492",
+   "label": "commit 73d5623: Merge pull request #328 from Percolation-Labs/amartey/rem-335-regulator-records",
+   "rank": 5,
+   "gold": true,
+   "doors_to_gold": 0
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/236595ade8",
+    "label": "commit 236595a: compliance drafts cite data-governance.md at its merge, ed1aa9b2 (REM-335)",
+    "role": "gold"
+   },
+   {
+    "id": "commit/68f696b09e",
+    "label": "commit 68f696b: compliance: draft the records a regulator asks for first (REM-335)",
+    "role": "gold"
+   },
+   {
+    "id": "commit/73d5623492",
+    "label": "commit 73d5623: Merge pull request #328 from Percolation-Labs/amartey/rem-335-regulator-records",
+    "role": "gold"
+   },
+   {
+    "id": "commit/76430c032b",
+    "label": "commit 76430c0: specs: compliance names its holding card REM-327 and stage cards REM-328 to REM-335",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/236595ade8",
+    "b": "commit/68f696b09e",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "rem 335",
+      "width": 30
+     },
+     {
+      "kind": "term",
+      "key": "rem 339",
+      "width": 52
+     },
+     {
+      "kind": "term",
+      "key": "data governance",
+      "width": 64
+     },
+     {
+      "kind": "term",
+      "key": "governance",
+      "width": 89
+     }
+    ]
+   },
+   {
+    "a": "commit/68f696b09e",
+    "b": "commit/73d5623492",
+    "via": [
+     {
+      "kind": "near",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "regulator",
+      "width": 17
+     },
+     {
+      "kind": "term",
+      "key": "breach runbook",
+      "width": 19
+     },
+     {
+      "kind": "term",
+      "key": "literacy",
+      "width": 23
+     },
+     {
+      "kind": "term",
+      "key": "dpia",
+      "width": 25
+     },
+     {
+      "kind": "term",
+      "key": "rem 335",
+      "width": 30
+     }
+    ]
+   },
+   {
+    "a": "commit/68f696b09e",
+    "b": "commit/76430c032b",
+    "via": [
+     {
+      "kind": "term",
+      "key": "rem 335",
+      "width": 30
+     },
+     {
+      "kind": "term",
+      "key": "rem 328",
+      "width": 44
+     }
+    ]
+   }
+  ],
+  "cost": 3,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  "entry": {
+   "seed": "commit/68f696b09e",
+   "gold": "commit/68f696b09e",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 724,
+  "within_2_doors": 31427,
+  "gold_within_1": 2,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "specs/percolate-application/compliance.md#19",
+    "label": "specs/percolate-application/compliance.md \u203a 6. Stages",
+    "p": 0.01532451586172709,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-335.md#6",
+    "label": "board/cards/REM-335.md \u203a Log",
+    "p": 0.013562965597229925,
+    "gold": false
+   },
+   {
+    "id": "meta/compliance/README.md#1",
+    "label": "meta/compliance/README.md \u203a Compliance records",
+    "p": 0.007356852004351806,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-335.md#4",
+    "label": "board/cards/REM-335.md \u203a Done when",
+    "p": 0.0060721877659197085,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-335.md#3",
+    "label": "board/cards/REM-335.md \u203a Evidence",
+    "p": 0.004549932195843864,
+    "gold": false
+   },
+   {
+    "id": "commit/76430c032b",
+    "label": "commit 76430c0: specs: compliance names its holding card REM-327 and stage cards REM-328 to REM-335",
+    "p": 0.0034864910448557033,
+    "gold": true
+   },
+   {
+    "id": "specs/design/percolate-positioning.md#8",
+    "label": "specs/design/percolate-positioning.md \u203a Tier 1 \u2014 chase now",
+    "p": 0.0034014320557873745,
+    "gold": false
+   },
+   {
+    "id": "commit/ea88a29060",
+    "label": "commit ea88a29: board: file REM-334 evidence: captures respect opt-outs, and readers see extracts rather than copies",
+    "p": 0.0029519959730627677,
+    "gold": false
+   },
+   {
+    "id": "meta/compliance/dpia.md#6",
+    "label": "meta/compliance/dpia.md \u203a 4. Measures",
+    "p": 0.002951922591041787,
+    "gold": false
+   },
+   {
+    "id": "meta/compliance/README.md#3",
+    "label": "meta/compliance/README.md \u203a The records",
+    "p": 0.002498981026295906,
+    "gold": false
+   },
+   {
+    "id": "meta/compliance/README.md#4",
+    "label": "meta/compliance/README.md \u203a What waits on REM-328",
+    "p": 0.0021944375434906536,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/data-governance.md#21",
+    "label": "specs/percolate-application/data-governance.md \u203a 5. Who approves what",
+    "p": 0.0020963066981305595,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-327.md#6",
+    "label": "board/cards/REM-327.md \u203a Log",
+    "p": 0.0018230541279146723,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-627.md#2",
+    "label": "board/cards/REM-627.md \u203a Goal",
+    "p": 0.0018216723506402108,
+    "gold": false
+   },
+   {
+    "id": "commit/336c419bba",
+    "label": "commit 336c419: board: tick REM-335 box 1",
+    "p": 0.0018089044705032076,
+    "gold": false
+   },
+   {
+    "id": "meta/compliance/osa-illegal-content.md#1",
+    "label": "meta/compliance/osa-illegal-content.md \u203a Online Safety Act: illegal content risk assessment",
+    "p": 0.0017871282064433574,
+    "gold": false
+   },
+   {
+    "id": "meta/compliance/lia.md#1",
+    "label": "meta/compliance/lia.md \u203a Legitimate-interests assessments",
+    "p": 0.001755243100072545,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-334.md#1",
+    "label": "board/cards/REM-334.md",
+    "p": 0.0016374322151749229,
+    "gold": false
+   },
+   {
+    "id": "board/team/p8-subsystems-d4.md#2",
+    "label": "board/team/p8-subsystems-d4.md \u203a Log",
+    "p": 0.0016159419708643699,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/compliance.md#12",
+    "label": "specs/percolate-application/compliance.md \u203a 3.5 Paperwork that has to exist",
+    "p": 0.0015859612684097162,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/2981bf9b0f",
+   "label": "commit 2981bf9: board: file REM-335 assessments: the records a regulator asks for first exist and are dated",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-335.md#1",
+   "label": "board/cards/REM-335.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-335.md#2",
+   "label": "board/cards/REM-335.md \u203a Goal",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/68f696b09e",
+   "label": "commit 68f696b: compliance: draft the records a regulator asks for first (REM-335)",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "commit/73d5623492",
+   "label": "commit 73d5623: Merge pull request #328 from Percolation-Labs/amartey/rem-335-regulator-records",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "board/cards/REM-335.md#6",
+   "label": "board/cards/REM-335.md \u203a Log",
+   "wave": 1,
+   "via": "term:ropa dpia",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-335.md#4",
+   "label": "board/cards/REM-335.md \u203a Done when",
+   "wave": 1,
+   "via": "term:ropa dpia",
+   "gold": false
+  },
+  {
+   "id": "specs/percolate-application/compliance.md#19",
+   "label": "specs/percolate-application/compliance.md \u203a 6. Stages",
+   "wave": 1,
+   "via": "term:ropa dpia",
+   "gold": false
+  },
+  {
+   "id": "meta/compliance/transfers.md#1",
+   "label": "meta/compliance/transfers.md \u203a Transfer assessment",
+   "wave": 2,
+   "via": "term:transfer assessment",
+   "gold": false
+  },
+  {
+   "id": "meta/compliance/README.md#1",
+   "label": "meta/compliance/README.md \u203a Compliance records",
+   "wave": 3,
+   "via": "term:rem 335",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "specs/percolate-application/compliance.md#19",
+    "label": "specs/percolate-application/compliance.md \u203a 6. Stages",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-335.md#6",
+    "label": "board/cards/REM-335.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "meta/compliance/README.md#1",
+    "label": "meta/compliance/README.md \u203a Compliance records",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-335.md#4",
+    "label": "board/cards/REM-335.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-335.md#3",
+    "label": "board/cards/REM-335.md \u203a Evidence",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "board/cards/REM-335.md#6",
+    "label": "board/cards/REM-335.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/compliance.md#19",
+    "label": "specs/percolate-application/compliance.md \u203a 6. Stages",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-335.md#4",
+    "label": "board/cards/REM-335.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "meta/compliance/README.md#1",
+    "label": "meta/compliance/README.md \u203a Compliance records",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/compliance.md#12",
+    "label": "specs/percolate-application/compliance.md \u203a 3.5 Paperwork that has to exist",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "meta/compliance/README.md#1",
+    "label": "meta/compliance/README.md \u203a Compliance records",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-328.md#2",
+    "label": "board/cards/REM-328.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-335.md#4",
+    "label": "board/cards/REM-335.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "commit/6e78ca427b",
+    "label": "commit 6e78ca4: board: file REM-328 decide: the company facts and appointments the compliance notices and assessments de",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-627.md#5",
+    "label": "board/cards/REM-627.md \u203a Scope",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "board/cards/REM-335.md#6",
+    "label": "board/cards/REM-335.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-335.md#4",
+    "label": "board/cards/REM-335.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/compliance.md#19",
+    "label": "specs/percolate-application/compliance.md \u203a 6. Stages",
+    "gold": false
+   },
+   {
+    "id": "meta/compliance/README.md#1",
+    "label": "meta/compliance/README.md \u203a Compliance records",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/compliance.md#12",
+    "label": "specs/percolate-application/compliance.md \u203a 3.5 Paperwork that has to exist",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

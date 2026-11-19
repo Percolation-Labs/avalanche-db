@@ -1,0 +1,405 @@
+{
+ "qid": "card:REM-1194",
+ "set": "cards",
+ "question": "What was done about this, and why: search: every walk answer carries a calibrated coverage estimate and leads?",
+ "gold": [
+  {
+   "id": "commit/f2d8d24d16",
+   "label": "commit f2d8d24: REM-1194: box 2 states the claim the work established",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/376b0edfc6",
+   "label": "commit 376b0ed: board: file REM-1194 search: every walk answer carries a calibrated coverage estimate and leads",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-1194.md#2",
+   "label": "board/cards/REM-1194.md \u203a Goal",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-1194.md#1",
+   "label": "board/cards/REM-1194.md",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/bdb5d0c7da",
+   "label": "commit bdb5d0c: REM-1219: worked examples drawn from a walk's own rows (answer, coverage, traversal graph)",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "meta/spikes/2026-10-25-reachability/README.md#29",
+   "label": "meta/spikes/2026-10-25-reachability/README.md \u203a What a walk should return, from this",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 2
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/376b0edfc6",
+    "label": "commit 376b0ed: board: file REM-1194 search: every walk answer carries a calibrated coverage estimate and leads",
+    "role": "seed"
+   },
+   {
+    "id": "commit/f2d8d24d16",
+    "label": "commit f2d8d24: REM-1194: box 2 states the claim the work established",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/376b0edfc6",
+    "b": "commit/f2d8d24d16",
+    "via": [
+     {
+      "kind": "term",
+      "key": "rem 1194",
+      "width": 36
+     },
+     {
+      "kind": "term",
+      "key": "1194",
+      "width": 41
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [],
+  "entry": {
+   "seed": "commit/376b0edfc6",
+   "gold": "commit/f2d8d24d16",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 1040,
+  "within_2_doors": 32183,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "commit/329327e92f",
+    "label": "commit 329327e: board: sally takes REM-1194",
+    "p": 0.006356836209237482,
+    "gold": false
+   },
+   {
+    "id": "commit/147858d755",
+    "label": "commit 147858d: board: note on REM-1194",
+    "p": 0.005273619828849347,
+    "gold": false
+   },
+   {
+    "id": "commit/59a138f791",
+    "label": "commit 59a138f: board: REM-1194 in-progress \u2192 done",
+    "p": 0.00503467900531197,
+    "gold": false
+   },
+   {
+    "id": "commit/5c3f8bfcf8",
+    "label": "commit 5c3f8bf: board: note on REM-1194",
+    "p": 0.0050217285395792455,
+    "gold": false
+   },
+   {
+    "id": "commit/9bae277c0d",
+    "label": "commit 9bae277: board: note on REM-1194",
+    "p": 0.00489280357945454,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261026-071548-d0fa.md#2",
+    "label": "board/messages/M-20261026-071548-d0fa.md",
+    "p": 0.0038221529031771165,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1194.md#3",
+    "label": "board/cards/REM-1194.md \u203a Evidence",
+    "p": 0.0031954157160455454,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1194.md#7",
+    "label": "board/cards/REM-1194.md \u203a Log",
+    "p": 0.003083758763849825,
+    "gold": false
+   },
+   {
+    "id": "commit/1e93409b67",
+    "label": "commit 1e93409: board: tick REM-1194 box 2",
+    "p": 0.0029350432015390693,
+    "gold": false
+   },
+   {
+    "id": "commit/cf5d51cd4f",
+    "label": "commit cf5d51c: board: file REM-1193 search: every walk miss has a real-data story and a data/theory/implementation verd",
+    "p": 0.002864832150596731,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261026-062249-5e02.md#1",
+    "label": "board/messages/M-20261026-062249-5e02.md",
+    "p": 0.0026644982045924276,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261028-170629-ffe9.md#1",
+    "label": "board/messages/M-20261028-170629-ffe9.md",
+    "p": 0.0024028300942010865,
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-10-25-reachability/README.md#28",
+    "label": "meta/spikes/2026-10-25-reachability/README.md \u203a Stage 1, round 2: a smaller exploration share, near misses first, and a ",
+    "p": 0.0023377216436083936,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261026-070403-1da4.md#1",
+    "label": "board/messages/M-20261026-070403-1da4.md",
+    "p": 0.002192146336597342,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261026-072608-fa58.md#1",
+    "label": "board/messages/M-20261026-072608-fa58.md",
+    "p": 0.002152622902304703,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1194.md#4",
+    "label": "board/cards/REM-1194.md \u203a Done when",
+    "p": 0.002019005190054338,
+    "gold": false
+   },
+   {
+    "id": "commit/f2d8d24d16",
+    "label": "commit f2d8d24: REM-1194: box 2 states the claim the work established",
+    "p": 0.001985597318932937,
+    "gold": true
+   },
+   {
+    "id": "commit/375a166c29",
+    "label": "commit 375a166: board: tick REM-1194 box 4",
+    "p": 0.0019410297288297881,
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-10-28-two-clocks/examples-said.py#1",
+    "label": "meta/spikes/2026-10-28-two-clocks/examples-said.py",
+    "p": 0.0018009167959731013,
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-10-27-dream-walk-graphs/examples/examples.py#1",
+    "label": "meta/spikes/2026-10-27-dream-walk-graphs/examples/examples.py",
+    "p": 0.0017992654194555376,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/376b0edfc6",
+   "label": "commit 376b0ed: board: file REM-1194 search: every walk answer carries a calibrated coverage estimate and leads",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-1194.md#2",
+   "label": "board/cards/REM-1194.md \u203a Goal",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-1194.md#1",
+   "label": "board/cards/REM-1194.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/bdb5d0c7da",
+   "label": "commit bdb5d0c: REM-1219: worked examples drawn from a walk's own rows (answer, coverage, traversal graph)",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/spikes/2026-10-25-reachability/README.md#29",
+   "label": "meta/spikes/2026-10-25-reachability/README.md \u203a What a walk should return, from this",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/messages/M-20261026-073530-8e6a.md#1",
+   "label": "board/messages/M-20261026-073530-8e6a.md",
+   "wave": 1,
+   "via": "term:rem 1194",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-1194.md#5",
+   "label": "board/cards/REM-1194.md \u203a Scope",
+   "wave": 1,
+   "via": "term:rem 1194",
+   "gold": false
+  },
+  {
+   "id": "commit/59a138f791",
+   "label": "commit 59a138f: board: REM-1194 in-progress \u2192 done",
+   "wave": 1,
+   "via": "term:rem 1194",
+   "gold": false
+  },
+  {
+   "id": "commit/f2d8d24d16",
+   "label": "commit f2d8d24: REM-1194: box 2 states the claim the work established",
+   "wave": 1,
+   "via": "term:rem 1194",
+   "gold": true
+  },
+  {
+   "id": "board/cards/REM-1206.md#3",
+   "label": "board/cards/REM-1206.md \u203a Evidence",
+   "wave": 1,
+   "via": "term:rem 1194",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "commit/329327e92f",
+    "label": "commit 329327e: board: sally takes REM-1194",
+    "gold": false
+   },
+   {
+    "id": "commit/147858d755",
+    "label": "commit 147858d: board: note on REM-1194",
+    "gold": false
+   },
+   {
+    "id": "commit/59a138f791",
+    "label": "commit 59a138f: board: REM-1194 in-progress \u2192 done",
+    "gold": false
+   },
+   {
+    "id": "commit/5c3f8bfcf8",
+    "label": "commit 5c3f8bf: board: note on REM-1194",
+    "gold": false
+   },
+   {
+    "id": "commit/9bae277c0d",
+    "label": "commit 9bae277: board: note on REM-1194",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "board/cards/REM-1194.md#7",
+    "label": "board/cards/REM-1194.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261026-071548-d0fa.md#2",
+    "label": "board/messages/M-20261026-071548-d0fa.md",
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-10-27-dream-walk-graphs/examples/examples.py#1",
+    "label": "meta/spikes/2026-10-27-dream-walk-graphs/examples/examples.py",
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-10-28-two-clocks/examples-said.py#1",
+    "label": "meta/spikes/2026-10-28-two-clocks/examples-said.py",
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-10-28-buried-walk/nose/examples_json.py#1",
+    "label": "meta/spikes/2026-10-28-buried-walk/nose/examples_json.py",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/59a138f791",
+    "label": "commit 59a138f: board: REM-1194 in-progress \u2192 done",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1194.md#5",
+    "label": "board/cards/REM-1194.md \u203a Scope",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1203.md#3",
+    "label": "board/cards/REM-1203.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1206.md#3",
+    "label": "board/cards/REM-1206.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "commit/27c6b31123",
+    "label": "commit 27c6b31: REM-1219: worked examples regenerated on 0.2.33 (james's run from empty, replays pinned span 2 / cap 10)",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "meta/lab/results/door-jev-stage0/RESULT.md#4",
+    "label": "meta/lab/results/door-jev-stage0/RESULT.md \u203a Caveats",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/examples/00_spec.py#1",
+    "label": "meta/lab/examples/00_spec.py",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1194.md#7",
+    "label": "board/cards/REM-1194.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-miss-census-topk/cap-result.txt#2",
+    "label": "meta/lab/results/q4-miss-census-topk/cap-result.txt",
+    "gold": false
+   },
+   {
+    "id": "specs/decision-walks/README.md#24",
+    "label": "specs/decision-walks/README.md \u203a Travel: a relative gate for a low-calibrated judge (proposed for walk.sql)",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

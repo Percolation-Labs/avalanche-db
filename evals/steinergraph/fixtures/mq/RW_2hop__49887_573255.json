@@ -1,0 +1,423 @@
+{
+ "qid": "RW:2hop__49887_573255",
+ "set": "mq",
+ "question": "Who is the spouse of the first king chosen to rule over the Israelites?",
+ "gold": [
+  {
+   "id": "mq:51c8f8e3e7b2ba0a",
+   "label": "Ahinoam",
+   "seed": false
+  },
+  {
+   "id": "mq:be74f2af7104cbc2",
+   "label": "Saul",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:2562ed1916898524",
+   "label": "The Twelve Spies",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "mq:8d8a8974d74e7385",
+   "label": "List of English monarchs",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:95f867a71ddefffb",
+   "label": "Goi of Baekje",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "mq:094ce699f6fbd736",
+   "label": "Crossing the Red Sea",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:b30414401d2a5a92",
+   "label": "George Wickham",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 2
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:51c8f8e3e7b2ba0a",
+    "label": "Ahinoam",
+    "role": "gold"
+   },
+   {
+    "id": "mq:8d8a8974d74e7385",
+    "label": "List of English monarchs",
+    "role": "seed"
+   },
+   {
+    "id": "mq:be74f2af7104cbc2",
+    "label": "Saul",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:51c8f8e3e7b2ba0a",
+    "b": "mq:be74f2af7104cbc2",
+    "via": [
+     {
+      "kind": "term",
+      "key": "saul",
+      "width": 16
+     }
+    ]
+   },
+   {
+    "a": "mq:8d8a8974d74e7385",
+    "b": "mq:be74f2af7104cbc2",
+    "via": [
+     {
+      "kind": "term",
+      "key": "first king",
+      "width": 8
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "mq:8d8a8974d74e7385",
+   "gold": "mq:be74f2af7104cbc2",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 2661,
+  "within_2_doors": 18422,
+  "gold_within_1": 2,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "mq:8ca7533afbb97813",
+    "label": "Dongmyeong of Goguryeo",
+    "p": 0.007365417993074066,
+    "gold": false
+   },
+   {
+    "id": "mq:2a83853515d382ef",
+    "label": "Mr. Darcy",
+    "p": 0.006599171423193777,
+    "gold": false
+   },
+   {
+    "id": "mq:a9ad9f5c5454712b",
+    "label": "Jordan River",
+    "p": 0.0023298715523008265,
+    "gold": false
+   },
+   {
+    "id": "mq:fa2d02a1f1638783",
+    "label": "Viktor Dankl von Krasnik",
+    "p": 0.0021279306560662526,
+    "gold": false
+   },
+   {
+    "id": "mq:f6015ebd41d319d5",
+    "label": "Tengku Muhammad Ismail",
+    "p": 0.002106059186833296,
+    "gold": false
+   },
+   {
+    "id": "mq:298f99fd8fa1f039",
+    "label": "The Twelve Spies",
+    "p": 0.0020484295502149457,
+    "gold": false
+   },
+   {
+    "id": "mq:39fc75a3887f450b",
+    "label": "The Exodus",
+    "p": 0.0016329166653416278,
+    "gold": false
+   },
+   {
+    "id": "mq:116652d964e1f3e9",
+    "label": "Virgin Islands Creole",
+    "p": 0.0015911333426166141,
+    "gold": false
+   },
+   {
+    "id": "mq:d4f236ee3db08312",
+    "label": "James Hannell",
+    "p": 0.0015488942370563807,
+    "gold": false
+   },
+   {
+    "id": "mq:cf7cb9cb9dd21f6d",
+    "label": "Old Age Security",
+    "p": 0.0012994969881899624,
+    "gold": false
+   },
+   {
+    "id": "mq:ac1a7ce60c477df1",
+    "label": "Evelyn de Rothschild",
+    "p": 0.001272313123696999,
+    "gold": false
+   },
+   {
+    "id": "mq:d8aa86d5f0b963ba",
+    "label": "London",
+    "p": 0.0012660803420548978,
+    "gold": false
+   },
+   {
+    "id": "mq:c4605b5d1e6640e0",
+    "label": "Mr William Collins",
+    "p": 0.0010963986175323679,
+    "gold": false
+   },
+   {
+    "id": "mq:9da3bb3a89920045",
+    "label": "Monarchy of the United Kingdom",
+    "p": 0.001086299612993246,
+    "gold": false
+   },
+   {
+    "id": "mq:a73a6446d6937cbf",
+    "label": "Calling from a Country Phone",
+    "p": 0.0009537743562869274,
+    "gold": false
+   },
+   {
+    "id": "mq:671af836be7fb504",
+    "label": "Westminster Abbey",
+    "p": 0.0008364878357799743,
+    "gold": false
+   },
+   {
+    "id": "mq:02909bb0c76fdd8d",
+    "label": "Plagues of Egypt",
+    "p": 0.0008332831659770346,
+    "gold": false
+   },
+   {
+    "id": "mq:9171803531c3be9c",
+    "label": "Westminster Abbey",
+    "p": 0.0008281306422036806,
+    "gold": false
+   },
+   {
+    "id": "mq:52f381ea27d5eec9",
+    "label": "Great Britain",
+    "p": 0.0007541289623655108,
+    "gold": false
+   },
+   {
+    "id": "mq:d9d4b0c9523377ff",
+    "label": "Aragorn",
+    "p": 0.0007538970053745303,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:2562ed1916898524",
+   "label": "The Twelve Spies",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:8d8a8974d74e7385",
+   "label": "List of English monarchs",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:95f867a71ddefffb",
+   "label": "Goi of Baekje",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:094ce699f6fbd736",
+   "label": "Crossing the Red Sea",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:b30414401d2a5a92",
+   "label": "George Wickham",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:a3835151960eecd4",
+   "label": "Books of Samuel",
+   "wave": 1,
+   "via": "term:first king",
+   "gold": false
+  },
+  {
+   "id": "mq:be74f2af7104cbc2",
+   "label": "Saul",
+   "wave": 1,
+   "via": "term:first king",
+   "gold": true
+  },
+  {
+   "id": "mq:9800c38df0aa8a22",
+   "label": "Minos",
+   "wave": 1,
+   "via": "term:first king",
+   "gold": false
+  },
+  {
+   "id": "mq:9cfa3f7899c0ff08",
+   "label": "Saul",
+   "wave": 1,
+   "via": "term:first king",
+   "gold": false
+  },
+  {
+   "id": "mq:6d6d09d54beced4e",
+   "label": "Kingdom of Hungary",
+   "wave": 1,
+   "via": "term:first king",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:8ca7533afbb97813",
+    "label": "Dongmyeong of Goguryeo",
+    "gold": false
+   },
+   {
+    "id": "mq:2a83853515d382ef",
+    "label": "Mr. Darcy",
+    "gold": false
+   },
+   {
+    "id": "mq:a9ad9f5c5454712b",
+    "label": "Jordan River",
+    "gold": false
+   },
+   {
+    "id": "mq:fa2d02a1f1638783",
+    "label": "Viktor Dankl von Krasnik",
+    "gold": false
+   },
+   {
+    "id": "mq:f6015ebd41d319d5",
+    "label": "Tengku Muhammad Ismail",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:8ca7533afbb97813",
+    "label": "Dongmyeong of Goguryeo",
+    "gold": false
+   },
+   {
+    "id": "mq:2a83853515d382ef",
+    "label": "Mr. Darcy",
+    "gold": false
+   },
+   {
+    "id": "mq:39fc75a3887f450b",
+    "label": "The Exodus",
+    "gold": false
+   },
+   {
+    "id": "mq:a9ad9f5c5454712b",
+    "label": "Jordan River",
+    "gold": false
+   },
+   {
+    "id": "mq:02909bb0c76fdd8d",
+    "label": "Plagues of Egypt",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:8ca7533afbb97813",
+    "label": "Dongmyeong of Goguryeo",
+    "gold": false
+   },
+   {
+    "id": "mq:39fc75a3887f450b",
+    "label": "The Exodus",
+    "gold": false
+   },
+   {
+    "id": "mq:2a83853515d382ef",
+    "label": "Mr. Darcy",
+    "gold": false
+   },
+   {
+    "id": "mq:a9ad9f5c5454712b",
+    "label": "Jordan River",
+    "gold": false
+   },
+   {
+    "id": "mq:02909bb0c76fdd8d",
+    "label": "Plagues of Egypt",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:1ba872b748a988c6",
+    "label": "Simba",
+    "gold": false
+   },
+   {
+    "id": "mq:2642606e814bce7f",
+    "label": "United Nations Economic and Social Council",
+    "gold": false
+   },
+   {
+    "id": "mq:ee1bdb3523d32b67",
+    "label": "Vat Yotkeo",
+    "gold": false
+   },
+   {
+    "id": "mq:644f6da242455c5c",
+    "label": "Margareta Eriksdotter Vasa",
+    "gold": false
+   },
+   {
+    "id": "mq:71776edbc150a2d8",
+    "label": "The Burning Fiery Furnace",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

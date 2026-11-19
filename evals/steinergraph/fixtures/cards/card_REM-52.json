@@ -1,0 +1,428 @@
+{
+ "qid": "card:REM-52",
+ "set": "cards",
+ "question": "What was done about this, and why: workflow: what \"finished\" means is read from the vocabulary, everywhere it is asked?",
+ "gold": [
+  {
+   "id": "commit/6dd80104ed",
+   "label": "commit 6dd8010: Ten eval scenarios described a schema that had moved on without them",
+   "seed": false
+  },
+  {
+   "id": "commit/a3af50a570",
+   "label": "commit a3af50a: Merge pull request #34 from Percolation-Labs/fix/rem-52-finished-from-vocabulary",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "board/cards/REM-52.md#1",
+   "label": "board/cards/REM-52.md",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/a3af50a570",
+   "label": "commit a3af50a: Merge pull request #34 from Percolation-Labs/fix/rem-52-finished-from-vocabulary",
+   "rank": 2,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "specs/workflow-engine/spec.md#64",
+   "label": "specs/workflow-engine/spec.md \u203a `workflow.lifecycle_states`",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "commit/9aaf2960b6",
+   "label": "commit 9aaf296: the jobs column lists the jobs that exist, not the workflow (REM-663) (#341)",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "commit/8ea09f77f6",
+   "label": "commit 8ea09f7: \"Has it finished\" was written down nine times instead of being asked",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/6dd80104ed",
+    "label": "commit 6dd8010: Ten eval scenarios described a schema that had moved on without them",
+    "role": "gold"
+   },
+   {
+    "id": "commit/8ea09f77f6",
+    "label": "commit 8ea09f7: \"Has it finished\" was written down nine times instead of being asked",
+    "role": "seed"
+   },
+   {
+    "id": "commit/a3af50a570",
+    "label": "commit a3af50a: Merge pull request #34 from Percolation-Labs/fix/rem-52-finished-from-vocabulary",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/6dd80104ed",
+    "b": "commit/8ea09f77f6",
+    "via": [
+     {
+      "kind": "term",
+      "key": "rem 44",
+      "width": 28
+     }
+    ]
+   },
+   {
+    "a": "commit/8ea09f77f6",
+    "b": "commit/a3af50a570",
+    "via": [
+     {
+      "kind": "term",
+      "key": "times instead",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "nine times",
+      "width": 5
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   2
+  ],
+  "entry": {
+   "seed": "commit/a3af50a570",
+   "gold": "commit/a3af50a570",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 2302,
+  "within_2_doors": 33492,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "dev/runner/queue.sh#2",
+    "label": "dev/runner/queue.sh",
+    "p": 0.010801592891940694,
+    "gold": false
+   },
+   {
+    "id": "commit/efebac2927",
+    "label": "commit efebac2: One word for finishing well, and one home for the word",
+    "p": 0.004844346139601351,
+    "gold": false
+   },
+   {
+    "id": "dev/runner/queue.sh#1",
+    "label": "dev/runner/queue.sh",
+    "p": 0.0031863943478262304,
+    "gold": false
+   },
+   {
+    "id": "commit/59b8c6b377",
+    "label": "commit 59b8c6b: Merge pull request #33 from Percolation-Labs/fix/rem-61-api-source-defaults",
+    "p": 0.0028861726183215565,
+    "gold": false
+   },
+   {
+    "id": "commit/0c46bc9948",
+    "label": "commit 0c46bc9: Merge pull request #26 from Percolation-Labs/docs/rem-18-b6-closed",
+    "p": 0.0027023821944194594,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-990.md#3",
+    "label": "board/cards/REM-990.md \u203a Evidence",
+    "p": 0.0017463971302159249,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-52.md#2",
+    "label": "board/cards/REM-52.md \u203a Log",
+    "p": 0.0017084905991102068,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-11-fixed-at-the-copy-that-failed.md#9",
+    "label": "meta/postmortems/2026-09-11-fixed-at-the-copy-that-failed.md \u203a 5. What each class needs, and the ticket",
+    "p": 0.0016491924162476196,
+    "gold": false
+   },
+   {
+    "id": "dev/train.sh#8",
+    "label": "dev/train.sh",
+    "p": 0.0016152405829745848,
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-10-20-lme-seeded-taxonomy/coverage.py#2",
+    "label": "meta/spikes/2026-10-20-lme-seeded-taxonomy/coverage.py",
+    "p": 0.001590975158190602,
+    "gold": false
+   },
+   {
+    "id": "meta/skills/spec-driven-development/SKILL.md#29",
+    "label": "meta/skills/spec-driven-development/SKILL.md \u203a Anti-patterns",
+    "p": 0.001574137382035461,
+    "gold": false
+   },
+   {
+    "id": "commit/7e3cc3409f",
+    "label": "commit 7e3cc34: The tenancy example showed both tenants the same row, and passed",
+    "p": 0.0015724422205121112,
+    "gold": false
+   },
+   {
+    "id": "site/posts/development-processes.md#22",
+    "label": "site/posts/development-processes.md \u203a Percolate as the backbone",
+    "p": 0.0015666676384045164,
+    "gold": false
+   },
+   {
+    "id": "commit/78280c7616",
+    "label": "commit 78280c7: train: the measure test runs in the tree gates; the floor cites james's ten-container spread (REM-1327)",
+    "p": 0.001563907706859997,
+    "gold": false
+   },
+   {
+    "id": "specs/workflow-engine/spec.md#63",
+    "label": "specs/workflow-engine/spec.md \u203a What this does not decide",
+    "p": 0.001560707786786904,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/musique-judge/diagnosis.md#7",
+    "label": "meta/lab/results/musique-judge/diagnosis.md \u203a MQ:2:4hop1__711307_49925_13759_736921",
+    "p": 0.0015513203451436894,
+    "gold": false
+   },
+   {
+    "id": "commit/47c7fab8de",
+    "label": "commit 47c7fab: the CI queue tells a run that is working from one that is waiting (REM-663) (#340)",
+    "p": 0.0014480760100393775,
+    "gold": false
+   },
+   {
+    "id": "commit/9b764cc618",
+    "label": "commit 9b764cc: An API source saved without a watermark type was pulled as one and guarded as none",
+    "p": 0.001220552411170198,
+    "gold": false
+   },
+   {
+    "id": "specs/world-model-ingestion/integration.sql#14",
+    "label": "specs/world-model-ingestion/integration.sql",
+    "p": 0.001061478481558281,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-663.md#6",
+    "label": "board/cards/REM-663.md \u203a Log",
+    "p": 0.001023415335401055,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "board/cards/REM-52.md#1",
+   "label": "board/cards/REM-52.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/a3af50a570",
+   "label": "commit a3af50a: Merge pull request #34 from Percolation-Labs/fix/rem-52-finished-from-vocabulary",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "specs/workflow-engine/spec.md#64",
+   "label": "specs/workflow-engine/spec.md \u203a `workflow.lifecycle_states`",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/9aaf2960b6",
+   "label": "commit 9aaf296: the jobs column lists the jobs that exist, not the workflow (REM-663) (#341)",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/8ea09f77f6",
+   "label": "commit 8ea09f7: \"Has it finished\" was written down nine times instead of being asked",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/efebac2927",
+   "label": "commit efebac2: One word for finishing well, and one home for the word",
+   "wave": 1,
+   "via": "term:meaning rather",
+   "gold": false
+  },
+  {
+   "id": "commit/e327b301cd",
+   "label": "commit e327b30: The upgrade job, now that it runs, was checking for a word that had moved",
+   "wave": 2,
+   "via": "term:efebac2",
+   "gold": false
+  },
+  {
+   "id": "specs/world-model-ingestion/lake.md#22",
+   "label": "specs/world-model-ingestion/lake.md \u203a same storage tests (REM-981's harness), so a rerun uses it:",
+   "wave": 2,
+   "via": "term:efebac2",
+   "gold": false
+  },
+  {
+   "id": "commit/c7bd54c219",
+   "label": "commit c7bd54c: e2e-ingest waited for a run status the engine had renamed",
+   "wave": 2,
+   "via": "term:efebac2",
+   "gold": false
+  },
+  {
+   "id": "commit/478b827152",
+   "label": "commit 478b827: The readiness check was satisfied by the server shutting down",
+   "wave": 2,
+   "via": "term:efebac2",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "dev/runner/queue.sh#2",
+    "label": "dev/runner/queue.sh",
+    "gold": false
+   },
+   {
+    "id": "commit/efebac2927",
+    "label": "commit efebac2: One word for finishing well, and one home for the word",
+    "gold": false
+   },
+   {
+    "id": "dev/runner/queue.sh#1",
+    "label": "dev/runner/queue.sh",
+    "gold": false
+   },
+   {
+    "id": "commit/59b8c6b377",
+    "label": "commit 59b8c6b: Merge pull request #33 from Percolation-Labs/fix/rem-61-api-source-defaults",
+    "gold": false
+   },
+   {
+    "id": "commit/0c46bc9948",
+    "label": "commit 0c46bc9: Merge pull request #26 from Percolation-Labs/docs/rem-18-b6-closed",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "dev/runner/queue.sh#2",
+    "label": "dev/runner/queue.sh",
+    "gold": false
+   },
+   {
+    "id": "commit/efebac2927",
+    "label": "commit efebac2: One word for finishing well, and one home for the word",
+    "gold": false
+   },
+   {
+    "id": "dev/runner/queue.sh#1",
+    "label": "dev/runner/queue.sh",
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-11-fixed-at-the-copy-that-failed.md#9",
+    "label": "meta/postmortems/2026-09-11-fixed-at-the-copy-that-failed.md \u203a 5. What each class needs, and the ticket",
+    "gold": false
+   },
+   {
+    "id": "specs/world-model-ingestion/integration.sql#14",
+    "label": "specs/world-model-ingestion/integration.sql",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/9df7312483",
+    "label": "commit 9df7312: board: REM-663 in-progress \u2192 done",
+    "gold": false
+   },
+   {
+    "id": "commit/6002b45d4d",
+    "label": "commit 6002b45: Merge pull request #75 from Percolation-Labs/fix/rem-68-vocabulary-reaches-upgrades",
+    "gold": false
+   },
+   {
+    "id": "commit/670dc6aa26",
+    "label": "commit 670dc6a: Merge pull request #82 from Percolation-Labs/fix/rem-92-check-finds-an-interpreter",
+    "gold": false
+   },
+   {
+    "id": "commit/1b0e2a434d",
+    "label": "commit 1b0e2a4: Merge remote-tracking branch 'origin/main' into fix/rem-68-vocabulary-reaches-upgrades",
+    "gold": false
+   },
+   {
+    "id": "commit/3e0dbe007a",
+    "label": "commit 3e0dbe0: Merge remote-tracking branch 'origin/main' into fix/rem-68-vocabulary-reaches-upgrades",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "commit/efebac2927",
+    "label": "commit efebac2: One word for finishing well, and one home for the word",
+    "gold": false
+   },
+   {
+    "id": "specs/user-rbac/schema.sql#10",
+    "label": "specs/user-rbac/schema.sql",
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-11-fixed-at-the-copy-that-failed.md#9",
+    "label": "meta/postmortems/2026-09-11-fixed-at-the-copy-that-failed.md \u203a 5. What each class needs, and the ticket",
+    "gold": false
+   },
+   {
+    "id": "meta/skills/challenge-the-process/SKILL.md#28",
+    "label": "meta/skills/challenge-the-process/SKILL.md \u203a 9. Push the fact down \u2014 the database first",
+    "gold": false
+   },
+   {
+    "id": "specs/workflow-engine/YAML.md#3",
+    "label": "specs/workflow-engine/YAML.md \u203a Finding out what this deployment accepts",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

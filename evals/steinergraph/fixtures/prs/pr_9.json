@@ -1,0 +1,451 @@
+{
+ "qid": "pr:9",
+ "set": "prs",
+ "question": "What work went into this, and why: Probe the plan instead of only reading it?",
+ "gold": [
+  {
+   "id": "commit/0a179da65a",
+   "label": "commit 0a179da: Probe the plan instead of only reading it, and say what each step returns",
+   "seed": true
+  },
+  {
+   "id": "commit/1ea40f108e",
+   "label": "commit 1ea40f1: Correct the span keys in the upload example, and say why nothing noticed",
+   "seed": false
+  },
+  {
+   "id": "commit/5fd61638db",
+   "label": "commit 5fd6163: Walk the journeys rather than the mechanisms, and find four defects doing it",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/9316bcbf1c",
+   "label": "commit 9316bcb: Merge pull request #9 from percolating-sirsh/plan-probe",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/0a179da65a",
+   "label": "commit 0a179da: Probe the plan instead of only reading it, and say what each step returns",
+   "rank": 2,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "board/cards/REM-487.md#2",
+   "label": "board/cards/REM-487.md \u203a Goal",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "specs/build-knit-dream/reachability.md#20",
+   "label": "specs/build-knit-dream/reachability.md \u203a 9.2 Separate query authoring from decision execution",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "specs/workflow-engine/plan-graph.md#13",
+   "label": "specs/workflow-engine/plan-graph.md \u203a 7. Probing, and the last run \u2014 the two questions reading cannot answer",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/0a179da65a",
+    "label": "commit 0a179da: Probe the plan instead of only reading it, and say what each step returns",
+    "role": "gold"
+   },
+   {
+    "id": "commit/1ea40f108e",
+    "label": "commit 1ea40f1: Correct the span keys in the upload example, and say why nothing noticed",
+    "role": "gold"
+   },
+   {
+    "id": "commit/5fd61638db",
+    "label": "commit 5fd6163: Walk the journeys rather than the mechanisms, and find four defects doing it",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/0a179da65a",
+    "b": "commit/1ea40f108e",
+    "via": [
+     {
+      "kind": "beside"
+     }
+    ]
+   },
+   {
+    "a": "commit/1ea40f108e",
+    "b": "commit/5fd61638db",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "spans back",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "code session_01wbeeazkjxoyt27awgefkcp",
+      "width": 6
+     },
+     {
+      "kind": "term",
+      "key": "session_01wbeeazkjxoyt27awgefkcp",
+      "width": 6
+     },
+     {
+      "kind": "term",
+      "key": "chunk count",
+      "width": 8
+     },
+     {
+      "kind": "term",
+      "key": "nothing noticed",
+      "width": 14
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   2,
+   1
+  ],
+  "entry": {
+   "seed": "commit/0a179da65a",
+   "gold": "commit/0a179da65a",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 3240,
+  "within_2_doors": 33695,
+  "gold_within_1": 1,
+  "gold_within_2": 1,
+  "top_U": [
+   {
+    "id": "specs/workflow-engine/plan-graph.md#16",
+    "label": "specs/workflow-engine/plan-graph.md \u203a `plan_probe` runs the cheap half",
+    "p": 0.005348262352728517,
+    "gold": false
+   },
+   {
+    "id": "commit/29f052d0eb",
+    "label": "commit 29f052d: Merge pull request #7 from percolating-sirsh/plan-graph",
+    "p": 0.004686564612103406,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-487.md#1",
+    "label": "board/cards/REM-487.md",
+    "p": 0.0043523215450630695,
+    "gold": false
+   },
+   {
+    "id": "commit/e6b3ef918f",
+    "label": "commit e6b3ef9: Merge pull request #5 from percolating-sirsh/open-sql",
+    "p": 0.0038687746659128914,
+    "gold": false
+   },
+   {
+    "id": "commit/5e6e1c03ab",
+    "label": "commit 5e6e1c0: Merge pull request #10 from percolating-sirsh/scoped-finding",
+    "p": 0.00370009686746797,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-487.md#3",
+    "label": "board/cards/REM-487.md \u203a Evidence",
+    "p": 0.0035359558164467318,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261026-220853-092e.md#1",
+    "label": "board/messages/M-20261026-220853-092e.md",
+    "p": 0.0026374785522738074,
+    "gold": false
+   },
+   {
+    "id": "commit/8398e07062",
+    "label": "commit 8398e07: Try to build scoped SQL, and record the rule that stops it",
+    "p": 0.0025223299320253955,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261023-182456-2213.md#1",
+    "label": "board/messages/M-20261023-182456-2213.md",
+    "p": 0.002414151666773811,
+    "gold": false
+   },
+   {
+    "id": "commit/444a3a3600",
+    "label": "commit 444a3a3: Merge pull request #11 from percolating-sirsh/fix-open-findings",
+    "p": 0.002396289576157525,
+    "gold": false
+   },
+   {
+    "id": "commit/17239d24d1",
+    "label": "commit 17239d2: Merge pull request #14 from percolating-sirsh/agent-skills",
+    "p": 0.0021975372418588978,
+    "gold": false
+   },
+   {
+    "id": "specs/workflow-engine/plan-graph.md#21",
+    "label": "specs/workflow-engine/plan-graph.md \u203a What a step does to the world",
+    "p": 0.00218513780193524,
+    "gold": false
+   },
+   {
+    "id": "specs/workflow-engine/plan-graph.md#22",
+    "label": "specs/workflow-engine/plan-graph.md \u203a `unconsumed_read`",
+    "p": 0.0018742505423169162,
+    "gold": false
+   },
+   {
+    "id": "commit/228a6c1d77",
+    "label": "commit 228a6c1: board: file REM-487 native: a writer publishes a reading from a phone",
+    "p": 0.0018097832368654788,
+    "gold": false
+   },
+   {
+    "id": "commit/326b0aa7a4",
+    "label": "commit 326b0aa: board: file REM-914 shitsville: physical phones sustain a measured rendering budget without flicker",
+    "p": 0.001798117424189656,
+    "gold": false
+   },
+   {
+    "id": "specs/workflow-engine/plan-graph.md#2",
+    "label": "specs/workflow-engine/plan-graph.md \u203a 1. The shape of it",
+    "p": 0.0016571332975934612,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-914.md#3",
+    "label": "board/cards/REM-914.md \u203a Evidence",
+    "p": 0.001642013895832859,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-828.md#5",
+    "label": "board/cards/REM-828.md \u203a Scope",
+    "p": 0.001603644887351001,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-465.md#6",
+    "label": "board/cards/REM-465.md \u203a Scope",
+    "p": 0.001577971091383885,
+    "gold": false
+   },
+   {
+    "id": "commit/829cf48dd7",
+    "label": "commit 829cf48: Let a step write its own SQL, and keep the allow-list as a setting",
+    "p": 0.0015513294347573976,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/9316bcbf1c",
+   "label": "commit 9316bcb: Merge pull request #9 from percolating-sirsh/plan-probe",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/0a179da65a",
+   "label": "commit 0a179da: Probe the plan instead of only reading it, and say what each step returns",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "board/cards/REM-487.md#2",
+   "label": "board/cards/REM-487.md \u203a Goal",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/build-knit-dream/reachability.md#20",
+   "label": "specs/build-knit-dream/reachability.md \u203a 9.2 Separate query authoring from decision execution",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/workflow-engine/plan-graph.md#13",
+   "label": "specs/workflow-engine/plan-graph.md \u203a 7. Probing, and the last run \u2014 the two questions reading cannot answer",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/a8159c13c5",
+   "label": "commit a8159c1: The lint read a scheduled agent step's name from a field that step does not have",
+   "wave": 1,
+   "via": "term:plan_probe",
+   "gold": false
+  },
+  {
+   "id": "specs/workflow-engine/plan-graph.md#17",
+   "label": "specs/workflow-engine/plan-graph.md \u203a `plan_probe` runs the cheap half",
+   "wave": 1,
+   "via": "term:plan_probe",
+   "gold": false
+  },
+  {
+   "id": "meta/postmortems/2026-09-12-true-when-it-was-measured.md#8",
+   "label": "meta/postmortems/2026-09-12-true-when-it-was-measured.md \u203a 3. The checkout is the failure domain, and so is the backlog",
+   "wave": 1,
+   "via": "term:plan_probe",
+   "gold": false
+  },
+  {
+   "id": "commit/ccf0e8423e",
+   "label": "commit ccf0e84: \"Nothing here executes a step\" now says what makes that true",
+   "wave": 1,
+   "via": "term:plan_probe",
+   "gold": false
+  },
+  {
+   "id": "specs/workflow-engine/plan-graph.md#16",
+   "label": "specs/workflow-engine/plan-graph.md \u203a `plan_probe` runs the cheap half",
+   "wave": 1,
+   "via": "term:plan_probe",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "specs/workflow-engine/plan-graph.md#16",
+    "label": "specs/workflow-engine/plan-graph.md \u203a `plan_probe` runs the cheap half",
+    "gold": false
+   },
+   {
+    "id": "commit/29f052d0eb",
+    "label": "commit 29f052d: Merge pull request #7 from percolating-sirsh/plan-graph",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-487.md#1",
+    "label": "board/cards/REM-487.md",
+    "gold": false
+   },
+   {
+    "id": "commit/e6b3ef918f",
+    "label": "commit e6b3ef9: Merge pull request #5 from percolating-sirsh/open-sql",
+    "gold": false
+   },
+   {
+    "id": "commit/5e6e1c03ab",
+    "label": "commit 5e6e1c0: Merge pull request #10 from percolating-sirsh/scoped-finding",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "specs/workflow-engine/plan-graph.md#16",
+    "label": "specs/workflow-engine/plan-graph.md \u203a `plan_probe` runs the cheap half",
+    "gold": false
+   },
+   {
+    "id": "commit/29f052d0eb",
+    "label": "commit 29f052d: Merge pull request #7 from percolating-sirsh/plan-graph",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-487.md#1",
+    "label": "board/cards/REM-487.md",
+    "gold": false
+   },
+   {
+    "id": "specs/workflow-engine/plan-graph.md#22",
+    "label": "specs/workflow-engine/plan-graph.md \u203a `unconsumed_read`",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-487.md#3",
+    "label": "board/cards/REM-487.md \u203a Evidence",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/29f052d0eb",
+    "label": "commit 29f052d: Merge pull request #7 from percolating-sirsh/plan-graph",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-487.md#1",
+    "label": "board/cards/REM-487.md",
+    "gold": false
+   },
+   {
+    "id": "specs/workflow-engine/plan-graph.md#21",
+    "label": "specs/workflow-engine/plan-graph.md \u203a What a step does to the world",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261026-220853-092e.md#1",
+    "label": "board/messages/M-20261026-220853-092e.md",
+    "gold": false
+   },
+   {
+    "id": "commit/228a6c1d77",
+    "label": "commit 228a6c1: board: file REM-487 native: a writer publishes a reading from a phone",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "dev/scale/run.sh#2",
+    "label": "dev/scale/run.sh",
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-10-20-lme-seeded-taxonomy/incremental_search/audit_outcomes.py#1",
+    "label": "meta/spikes/2026-10-20-lme-seeded-taxonomy/incremental_search/audit_outcomes.py",
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-04-issues-filed-for-shipped-work.md#2",
+    "label": "meta/postmortems/2026-09-04-issues-filed-for-shipped-work.md \u203a Why",
+    "gold": false
+   },
+   {
+    "id": "commit/59dcfb5cac",
+    "label": "commit 59dcfb5: research-package: a package records how deep the work went, turns and search depth (REM-548)",
+    "gold": false
+   },
+   {
+    "id": "meta/skills/spec-driven-development/references/tool-surface.md#4",
+    "label": "meta/skills/spec-driven-development/references/tool-surface.md \u203a `query` is the pattern to copy",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

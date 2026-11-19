@@ -1,0 +1,424 @@
+{
+ "qid": "card:REM-308",
+ "set": "cards",
+ "question": "What was done about this, and why: design: claim badges are square, not round-ended?",
+ "gold": [
+  {
+   "id": "commit/4615b03377",
+   "label": "commit 4615b03: specs: badges and chips are square-cornered; only avatars, dots and icon buttons are round (REM-308)",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/b8b76ebe35",
+   "label": "commit b8b76eb: board: file REM-308 design: claim badges are square, not round-ended",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-308.md#1",
+   "label": "board/cards/REM-308.md",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-308.md#4",
+   "label": "board/cards/REM-308.md \u203a Done when",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-308.md#2",
+   "label": "board/cards/REM-308.md \u203a Goal",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-308.md#6",
+   "label": "board/cards/REM-308.md \u203a Log",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "board/cards/REM-308.md#6",
+    "label": "board/cards/REM-308.md \u203a Log",
+    "role": "seed"
+   },
+   {
+    "id": "commit/4615b03377",
+    "label": "commit 4615b03: specs: badges and chips are square-cornered; only avatars, dots and icon buttons are round (REM-308)",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "board/cards/REM-308.md#6",
+    "b": "commit/4615b03377",
+    "via": [
+     {
+      "kind": "near",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "avatars dots",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "square cornered",
+      "width": 4
+     },
+     {
+      "kind": "term",
+      "key": "cornered",
+      "width": 4
+     },
+     {
+      "kind": "term",
+      "key": "icon buttons",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "rem 308",
+      "width": 13
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [],
+  "entry": {
+   "seed": "board/cards/REM-308.md#6",
+   "gold": "commit/4615b03377",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 926,
+  "within_2_doors": 32715,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "specs/agentic/ui-design-language.md#6",
+    "label": "specs/agentic/ui-design-language.md \u203a 3.1 Page structure and visual tokens",
+    "p": 0.011797564985493102,
+    "gold": false
+   },
+   {
+    "id": "commit/4615b03377",
+    "label": "commit 4615b03: specs: badges and chips are square-cornered; only avatars, dots and icon buttons are round (REM-308)",
+    "p": 0.010089686103565346,
+    "gold": true
+   },
+   {
+    "id": "board/cards/REM-308.md#5",
+    "label": "board/cards/REM-308.md \u203a Scope",
+    "p": 0.005911737664471883,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-308.md#3",
+    "label": "board/cards/REM-308.md \u203a Evidence",
+    "p": 0.005356488025262261,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-dream/vocab-2.txt#4",
+    "label": "meta/lab/results/q4-dream/vocab-2.txt",
+    "p": 0.0034266317258890987,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-dream/vocab-all.txt#1",
+    "label": "meta/lab/results/q4-dream/vocab-all.txt",
+    "p": 0.003275194699434361,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-dream/vocab-3.txt#5",
+    "label": "meta/lab/results/q4-dream/vocab-3.txt",
+    "p": 0.003080143305783106,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-16-three-browser-checks-nobody-ran.md#5",
+    "label": "meta/postmortems/2026-09-16-three-browser-checks-nobody-ran.md \u203a What was changed in the same sitting",
+    "p": 0.0026611358712582142,
+    "gold": false
+   },
+   {
+    "id": "README.md#9",
+    "label": "README.md \u203a How this repo is built",
+    "p": 0.002567387270120978,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-12-the-diagnosis-was-the-expensive-half.md#12",
+    "label": "meta/postmortems/2026-09-12-the-diagnosis-was-the-expensive-half.md \u203a 5. What actually resolved things",
+    "p": 0.0025570702653227957,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-713.md#3",
+    "label": "board/cards/REM-713.md \u203a Log",
+    "p": 0.002369833146906033,
+    "gold": false
+   },
+   {
+    "id": "commit/55a75fb42c",
+    "label": "commit 55a75fb: board: file REM-309 articles: a writer adds an image to an article and readers see it",
+    "p": 0.0021919850443496156,
+    "gold": false
+   },
+   {
+    "id": "commit/daeef6b33c",
+    "label": "commit daeef6b: board: percolate-application-ad takes REM-293",
+    "p": 0.0021411879273315537,
+    "gold": false
+   },
+   {
+    "id": "output/trust-claims-tutorial-2026-09-19/build.py#1",
+    "label": "output/trust-claims-tutorial-2026-09-19/build.py",
+    "p": 0.0016688449317929473,
+    "gold": false
+   },
+   {
+    "id": "commit/95d7dbef64",
+    "label": "commit 95d7dbe: board: REM-308 in-progress \u2192 done",
+    "p": 0.0016633623736027486,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-303.md#8",
+    "label": "board/cards/REM-303.md \u203a Log",
+    "p": 0.0016196160910635468,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-15-five-rebases-for-one-card.md#1",
+    "label": "meta/postmortems/2026-09-15-five-rebases-for-one-card.md \u203a Five rebases for a one-point card",
+    "p": 0.0015818582894349272,
+    "gold": false
+   },
+   {
+    "id": "commit/71511b804a",
+    "label": "commit 71511b8: board: percolate-application-16 takes REM-308",
+    "p": 0.0014594622366064834,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/journeys-and-screen-bindings.md#15",
+    "label": "specs/percolate-application/journeys-and-screen-bindings.md \u203a Homepage interaction retained from Edition",
+    "p": 0.0011966093896504273,
+    "gold": false
+   },
+   {
+    "id": "specs/evidence-workspace/research.md#2",
+    "label": "specs/evidence-workspace/research.md \u203a Findings that change the implementation",
+    "p": 0.0011694370939261108,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/b8b76ebe35",
+   "label": "commit b8b76eb: board: file REM-308 design: claim badges are square, not round-ended",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-308.md#1",
+   "label": "board/cards/REM-308.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-308.md#4",
+   "label": "board/cards/REM-308.md \u203a Done when",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-308.md#2",
+   "label": "board/cards/REM-308.md \u203a Goal",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-308.md#6",
+   "label": "board/cards/REM-308.md \u203a Log",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/4615b03377",
+   "label": "commit 4615b03: specs: badges and chips are square-cornered; only avatars, dots and icon buttons are round (REM-308)",
+   "wave": 1,
+   "via": "term:rem 308",
+   "gold": true
+  },
+  {
+   "id": "board/cards/REM-308.md#3",
+   "label": "board/cards/REM-308.md \u203a Evidence",
+   "wave": 1,
+   "via": "term:rem 308",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-308.md#5",
+   "label": "board/cards/REM-308.md \u203a Scope",
+   "wave": 1,
+   "via": "term:rem 308",
+   "gold": false
+  },
+  {
+   "id": "commit/95d7dbef64",
+   "label": "commit 95d7dbe: board: REM-308 in-progress \u2192 done",
+   "wave": 1,
+   "via": "term:rem 308",
+   "gold": false
+  },
+  {
+   "id": "commit/71511b804a",
+   "label": "commit 71511b8: board: percolate-application-16 takes REM-308",
+   "wave": 1,
+   "via": "term:rem 308",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "specs/agentic/ui-design-language.md#6",
+    "label": "specs/agentic/ui-design-language.md \u203a 3.1 Page structure and visual tokens",
+    "gold": false
+   },
+   {
+    "id": "commit/4615b03377",
+    "label": "commit 4615b03: specs: badges and chips are square-cornered; only avatars, dots and icon buttons are round (REM-308)",
+    "gold": true
+   },
+   {
+    "id": "board/cards/REM-308.md#5",
+    "label": "board/cards/REM-308.md \u203a Scope",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-308.md#3",
+    "label": "board/cards/REM-308.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-dream/vocab-2.txt#4",
+    "label": "meta/lab/results/q4-dream/vocab-2.txt",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "commit/4615b03377",
+    "label": "commit 4615b03: specs: badges and chips are square-cornered; only avatars, dots and icon buttons are round (REM-308)",
+    "gold": true
+   },
+   {
+    "id": "specs/agentic/ui-design-language.md#6",
+    "label": "specs/agentic/ui-design-language.md \u203a 3.1 Page structure and visual tokens",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-308.md#5",
+    "label": "board/cards/REM-308.md \u203a Scope",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-dream/vocab-all.txt#1",
+    "label": "meta/lab/results/q4-dream/vocab-all.txt",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-dream/vocab-2.txt#4",
+    "label": "meta/lab/results/q4-dream/vocab-2.txt",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/4615b03377",
+    "label": "commit 4615b03: specs: badges and chips are square-cornered; only avatars, dots and icon buttons are round (REM-308)",
+    "gold": true
+   },
+   {
+    "id": "commit/9c2002ff20",
+    "label": "commit 9c2002f: board: file REM-381 connect: the plugin steps use the app's square numbers, and Claude Code and Codex ar",
+    "gold": false
+   },
+   {
+    "id": "commit/95d7dbef64",
+    "label": "commit 95d7dbe: board: REM-308 in-progress \u2192 done",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-381.md#1",
+    "label": "board/cards/REM-381.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-308.md#5",
+    "label": "board/cards/REM-308.md \u203a Scope",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "commit/4615b03377",
+    "label": "commit 4615b03: specs: badges and chips are square-cornered; only avatars, dots and icon buttons are round (REM-308)",
+    "gold": true
+   },
+   {
+    "id": "specs/agentic/ui-design-language.md#6",
+    "label": "specs/agentic/ui-design-language.md \u203a 3.1 Page structure and visual tokens",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-647.md#4",
+    "label": "board/cards/REM-647.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "commit/3406c1f52a",
+    "label": "commit 3406c1f: board: full-flow-design checks in, ended",
+    "gold": false
+   },
+   {
+    "id": "commit/1367255e6c",
+    "label": "commit 1367255: board: full-flow-design checks in, ended",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 1.0,
+  "Q": 1.0,
+  "LQ": 1.0,
+  "S": 1.0
+ }
+}

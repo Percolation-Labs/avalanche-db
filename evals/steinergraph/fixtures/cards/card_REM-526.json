@@ -1,0 +1,466 @@
+{
+ "qid": "card:REM-526",
+ "set": "cards",
+ "question": "What was done about this, and why: ingress: the apex redirects to www in one hop, without a port in the address?",
+ "gold": [
+  {
+   "id": "commit/e78a1550ca",
+   "label": "commit e78a155: architecture-and-deployment: the apex redirect is one hop, answered by the application (REM-526)",
+   "seed": false
+  },
+  {
+   "id": "commit/f5cec51bc7",
+   "label": "commit f5cec51: Merge pull request #263 from Percolation-Labs/amartey/rem-526-apex-spec",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/22c6f781d8",
+   "label": "commit 22c6f78: board: file REM-526 ingress: the apex redirects to www in one hop, without a port in the address",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-526.md#1",
+   "label": "board/cards/REM-526.md",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-526.md#7",
+   "label": "board/cards/REM-526.md \u203a Log",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "specs/percolate-application/architecture-and-deployment.md#14",
+   "label": "specs/percolate-application/architecture-and-deployment.md \u203a Hetzner deployment",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-526.md#3",
+   "label": "board/cards/REM-526.md \u203a Evidence",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "board/cards/REM-526.md#1",
+    "label": "board/cards/REM-526.md",
+    "role": "seed"
+   },
+   {
+    "id": "commit/e78a1550ca",
+    "label": "commit e78a155: architecture-and-deployment: the apex redirect is one hop, answered by the application (REM-526)",
+    "role": "gold"
+   },
+   {
+    "id": "commit/f5cec51bc7",
+    "label": "commit f5cec51: Merge pull request #263 from Percolation-Labs/amartey/rem-526-apex-spec",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "board/cards/REM-526.md#1",
+    "b": "commit/e78a1550ca",
+    "via": [
+     {
+      "kind": "near",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "apex redirect",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "apex",
+      "width": 8
+     },
+     {
+      "kind": "term",
+      "key": "rem 526",
+      "width": 14
+     },
+     {
+      "kind": "term",
+      "key": "redirect",
+      "width": 69
+     }
+    ]
+   },
+   {
+    "a": "commit/e78a1550ca",
+    "b": "commit/f5cec51bc7",
+    "via": [
+     {
+      "kind": "near",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "hop answered",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "apex redirect",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "apex",
+      "width": 8
+     },
+     {
+      "kind": "term",
+      "key": "rem 526",
+      "width": 14
+     },
+     {
+      "kind": "term",
+      "key": "application rem",
+      "width": 65
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "board/cards/REM-526.md#1",
+   "gold": "commit/e78a1550ca",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 1892,
+  "within_2_doors": 34500,
+  "gold_within_1": 2,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "board/cards/REM-526.md#2",
+    "label": "board/cards/REM-526.md \u203a Goal",
+    "p": 0.007283007476240114,
+    "gold": false
+   },
+   {
+    "id": "commit/f5cec51bc7",
+    "label": "commit f5cec51: Merge pull request #263 from Percolation-Labs/amartey/rem-526-apex-spec",
+    "p": 0.006886675444333786,
+    "gold": true
+   },
+   {
+    "id": "commit/e78a1550ca",
+    "label": "commit e78a155: architecture-and-deployment: the apex redirect is one hop, answered by the application (REM-526)",
+    "p": 0.006858524623926683,
+    "gold": true
+   },
+   {
+    "id": "board/cards/REM-526.md#4",
+    "label": "board/cards/REM-526.md \u203a Done when",
+    "p": 0.0050100895980824695,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-526.md#6",
+    "label": "board/cards/REM-526.md \u203a Links",
+    "p": 0.004496590574167435,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-504.md#1",
+    "label": "board/cards/REM-504.md",
+    "p": 0.0032364534734220063,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-525.md#6",
+    "label": "board/cards/REM-525.md \u203a Links",
+    "p": 0.0028400037247707085,
+    "gold": false
+   },
+   {
+    "id": "site/www/www-deployment.yaml#2",
+    "label": "site/www/www-deployment.yaml",
+    "p": 0.0027110814479936124,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-526.md#5",
+    "label": "board/cards/REM-526.md \u203a Scope",
+    "p": 0.0025880873850197238,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-525.md#3",
+    "label": "board/cards/REM-525.md \u203a Evidence",
+    "p": 0.002562433537045052,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-525.md#7",
+    "label": "board/cards/REM-525.md \u203a Log",
+    "p": 0.002562245624067812,
+    "gold": false
+   },
+   {
+    "id": "commit/f7a9a74d60",
+    "label": "commit f7a9a74: board: file REM-525 web: a request without JavaScript gets the homepage's words, and a shared reading un",
+    "p": 0.0023884680557478425,
+    "gold": false
+   },
+   {
+    "id": "commit/a47a27f08a",
+    "label": "commit a47a27f: board: file REM-527 decide: whether a longer essay sits behind the short reading, and how a reader reach",
+    "p": 0.0021872254186226176,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/connecting-claude-and-chatgpt.md#1",
+    "label": "specs/percolate-application/connecting-claude-and-chatgpt.md \u203a Connecting Claude and ChatGPT to Percolate",
+    "p": 0.0019200000273786183,
+    "gold": false
+   },
+   {
+    "id": "commit/b3f12c43aa",
+    "label": "commit b3f12c4: Specify release and GitOps on Hetzner: Argo CD, two release trains, core under the app",
+    "p": 0.0015877090117160765,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/release-and-gitops.md#19",
+    "label": "specs/percolate-application/release-and-gitops.md \u203a Public surface",
+    "p": 0.0013139058411385169,
+    "gold": false
+   },
+   {
+    "id": "commit/fc3f928c88",
+    "label": "commit fc3f928: board: percolate-application-70 takes REM-526",
+    "p": 0.001296759983064144,
+    "gold": false
+   },
+   {
+    "id": "commit/bcda7a8138",
+    "label": "commit bcda7a8: board: REM-526 in-progress \u2192 done",
+    "p": 0.001291170612724159,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/release-and-gitops.md#2",
+    "label": "specs/percolate-application/release-and-gitops.md \u203a One cluster, four namespaces that matter",
+    "p": 0.001181394239916025,
+    "gold": false
+   },
+   {
+    "id": "commit/1e10a6d83e",
+    "label": "commit 1e10a6d: access-and-limits: the capability table keeps one row per capability in four columns (REM-467)",
+    "p": 0.0011208467935950417,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/22c6f781d8",
+   "label": "commit 22c6f78: board: file REM-526 ingress: the apex redirects to www in one hop, without a port in the address",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-526.md#1",
+   "label": "board/cards/REM-526.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-526.md#7",
+   "label": "board/cards/REM-526.md \u203a Log",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/percolate-application/architecture-and-deployment.md#14",
+   "label": "specs/percolate-application/architecture-and-deployment.md \u203a Hetzner deployment",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-526.md#3",
+   "label": "board/cards/REM-526.md \u203a Evidence",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-526.md#2",
+   "label": "board/cards/REM-526.md \u203a Goal",
+   "wave": 1,
+   "via": "term:rem 526",
+   "gold": false
+  },
+  {
+   "id": "commit/bcda7a8138",
+   "label": "commit bcda7a8: board: REM-526 in-progress \u2192 done",
+   "wave": 1,
+   "via": "term:rem 526",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-526.md#6",
+   "label": "board/cards/REM-526.md \u203a Links",
+   "wave": 1,
+   "via": "term:rem 526",
+   "gold": false
+  },
+  {
+   "id": "commit/f5cec51bc7",
+   "label": "commit f5cec51: Merge pull request #263 from Percolation-Labs/amartey/rem-526-apex-spec",
+   "wave": 1,
+   "via": "term:rem 526",
+   "gold": true
+  },
+  {
+   "id": "commit/e78a1550ca",
+   "label": "commit e78a155: architecture-and-deployment: the apex redirect is one hop, answered by the application (REM-526)",
+   "wave": 1,
+   "via": "term:rem 526",
+   "gold": true
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "board/cards/REM-526.md#2",
+    "label": "board/cards/REM-526.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "commit/f5cec51bc7",
+    "label": "commit f5cec51: Merge pull request #263 from Percolation-Labs/amartey/rem-526-apex-spec",
+    "gold": true
+   },
+   {
+    "id": "commit/e78a1550ca",
+    "label": "commit e78a155: architecture-and-deployment: the apex redirect is one hop, answered by the application (REM-526)",
+    "gold": true
+   },
+   {
+    "id": "board/cards/REM-526.md#4",
+    "label": "board/cards/REM-526.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-526.md#6",
+    "label": "board/cards/REM-526.md \u203a Links",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "commit/e78a1550ca",
+    "label": "commit e78a155: architecture-and-deployment: the apex redirect is one hop, answered by the application (REM-526)",
+    "gold": true
+   },
+   {
+    "id": "commit/f5cec51bc7",
+    "label": "commit f5cec51: Merge pull request #263 from Percolation-Labs/amartey/rem-526-apex-spec",
+    "gold": true
+   },
+   {
+    "id": "site/www/www-deployment.yaml#2",
+    "label": "site/www/www-deployment.yaml",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-526.md#4",
+    "label": "board/cards/REM-526.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-526.md#2",
+    "label": "board/cards/REM-526.md \u203a Goal",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "board/cards/REM-526.md#4",
+    "label": "board/cards/REM-526.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "commit/e78a1550ca",
+    "label": "commit e78a155: architecture-and-deployment: the apex redirect is one hop, answered by the application (REM-526)",
+    "gold": true
+   },
+   {
+    "id": "commit/f5cec51bc7",
+    "label": "commit f5cec51: Merge pull request #263 from Percolation-Labs/amartey/rem-526-apex-spec",
+    "gold": true
+   },
+   {
+    "id": "board/cards/REM-526.md#2",
+    "label": "board/cards/REM-526.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-526.md#5",
+    "label": "board/cards/REM-526.md \u203a Scope",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "specs/percolate-application/connecting-claude-and-chatgpt.md#1",
+    "label": "specs/percolate-application/connecting-claude-and-chatgpt.md \u203a Connecting Claude and ChatGPT to Percolate",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-526.md#4",
+    "label": "board/cards/REM-526.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "site/www/www-deployment.yaml#2",
+    "label": "site/www/www-deployment.yaml",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/release-and-gitops.md#19",
+    "label": "specs/percolate-application/release-and-gitops.md \u203a Public surface",
+    "gold": false
+   },
+   {
+    "id": "commit/e78a1550ca",
+    "label": "commit e78a155: architecture-and-deployment: the apex redirect is one hop, answered by the application (REM-526)",
+    "gold": true
+   }
+  ]
+ },
+ "recall5": {
+  "U": 1.0,
+  "Q": 1.0,
+  "LQ": 1.0,
+  "S": 0.5
+ }
+}

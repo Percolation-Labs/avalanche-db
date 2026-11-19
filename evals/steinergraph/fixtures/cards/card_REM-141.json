@@ -1,0 +1,491 @@
+{
+ "qid": "card:REM-141",
+ "set": "cards",
+ "question": "What was done about this, and why: agentic: a turn in CI has a tool catalogue, or the gate says so instead of failing in the stream?",
+ "gold": [
+  {
+   "id": "commit/3493dda085",
+   "label": "commit 3493dda: Two gates read the wrong thing: a sibling checkout, and a seeded agent CI cannot use (#135)",
+   "seed": false
+  },
+  {
+   "id": "commit/6aabfe714c",
+   "label": "commit 6aabfe7: Seven PRs in five hours, and the code was the cheap part (#138)",
+   "seed": false
+  },
+  {
+   "id": "commit/f9a8448e3b",
+   "label": "commit f9a8448: One key stopped where the other continued, and a comment said it could not (#136)",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "board/cards/REM-141.md#1",
+   "label": "board/cards/REM-141.md",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-141.md#2",
+   "label": "board/cards/REM-141.md \u203a Goal",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/77362ae91b",
+   "label": "commit 77362ae: board: file REM-534 gates: a gate the machine failed says so, instead of failing the diff",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 3
+  },
+  {
+   "id": "board/cards/REM-534.md#1",
+   "label": "board/cards/REM-534.md",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "specs/agentic/brief.md#3",
+   "label": "specs/agentic/brief.md \u203a 2. What we're keeping from p8k8's agentic system, and what we're not",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 2
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "board/cards/REM-141.md#2",
+    "label": "board/cards/REM-141.md \u203a Goal",
+    "role": "seed"
+   },
+   {
+    "id": "commit/3493dda085",
+    "label": "commit 3493dda: Two gates read the wrong thing: a sibling checkout, and a seeded agent CI cannot use (#135)",
+    "role": "gold"
+   },
+   {
+    "id": "commit/6aabfe714c",
+    "label": "commit 6aabfe7: Seven PRs in five hours, and the code was the cheap part (#138)",
+    "role": "gold"
+   },
+   {
+    "id": "commit/f9a8448e3b",
+    "label": "commit f9a8448: One key stopped where the other continued, and a comment said it could not (#136)",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "board/cards/REM-141.md#2",
+    "b": "commit/3493dda085",
+    "via": [
+     {
+      "kind": "term",
+      "key": "discovered tools",
+      "width": 4
+     },
+     {
+      "kind": "term",
+      "key": "rem 141",
+      "width": 9
+     },
+     {
+      "kind": "term",
+      "key": "tool server",
+      "width": 55
+     }
+    ]
+   },
+   {
+    "a": "commit/3493dda085",
+    "b": "commit/6aabfe714c",
+    "via": [
+     {
+      "kind": "term",
+      "key": "rem 141",
+      "width": 9
+     },
+     {
+      "kind": "term",
+      "key": "rem 140",
+      "width": 10
+     },
+     {
+      "kind": "term",
+      "key": "rem 56",
+      "width": 11
+     },
+     {
+      "kind": "term",
+      "key": "session_01s1pabrhajkqr7kqzbmgfac",
+      "width": 15
+     },
+     {
+      "kind": "term",
+      "key": "code session_01s1pabrhajkqr7kqzbmgfac",
+      "width": 15
+     }
+    ]
+   },
+   {
+    "a": "commit/3493dda085",
+    "b": "commit/f9a8448e3b",
+    "via": [
+     {
+      "kind": "term",
+      "key": "rem 141",
+      "width": 9
+     },
+     {
+      "kind": "term",
+      "key": "rem 140",
+      "width": 10
+     },
+     {
+      "kind": "term",
+      "key": "omitting",
+      "width": 25
+     },
+     {
+      "kind": "term",
+      "key": "asserting",
+      "width": 87
+     }
+    ]
+   }
+  ],
+  "cost": 3,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   1,
+   1
+  ],
+  "entry": {
+   "seed": "board/cards/REM-141.md#2",
+   "gold": "commit/3493dda085",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 1273,
+  "within_2_doors": 33247,
+  "gold_within_1": 3,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "board/cards/REM-534.md#2",
+    "label": "board/cards/REM-534.md \u203a Goal",
+    "p": 0.013704275699140976,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-18-a-day-the-gates-measured-the-machine.md#2",
+    "label": "meta/postmortems/2026-09-18-a-day-the-gates-measured-the-machine.md \u203a 1. The machine failed the gates: about four hours",
+    "p": 0.005924672013303704,
+    "gold": false
+   },
+   {
+    "id": "commit/42d6f86200",
+    "label": "commit 42d6f86: board: file REM-535 gates: an app change needing unreleased core also passes on the pinned core",
+    "p": 0.004524762263376421,
+    "gold": false
+   },
+   {
+    "id": "commit/9fe61aa95d",
+    "label": "commit 9fe61aa: Merge pull request #268 from Percolation-Labs/amartey/postmortem-2026-09-18-day",
+    "p": 0.004399951177463969,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-534.md#3",
+    "label": "board/cards/REM-534.md \u203a Evidence",
+    "p": 0.0030362041184582023,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-534.md#7",
+    "label": "board/cards/REM-534.md \u203a Log",
+    "p": 0.0025844576740492514,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-534.md#5",
+    "label": "board/cards/REM-534.md \u203a Scope",
+    "p": 0.002508887564636513,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-141.md#3",
+    "label": "board/cards/REM-141.md \u203a Evidence",
+    "p": 0.0025042368162279532,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-534.md#4",
+    "label": "board/cards/REM-534.md \u203a Done when",
+    "p": 0.0024257408133210954,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-534.md#6",
+    "label": "board/cards/REM-534.md \u203a Links",
+    "p": 0.0023875382529402775,
+    "gold": false
+   },
+   {
+    "id": "commit/3493dda085",
+    "label": "commit 3493dda: Two gates read the wrong thing: a sibling checkout, and a seeded agent CI cannot use (#135)",
+    "p": 0.002290954235123403,
+    "gold": true
+   },
+   {
+    "id": "commit/c53ec73304",
+    "label": "commit c53ec73: board: REM-534 in-progress \u2192 done",
+    "p": 0.002164487677204547,
+    "gold": false
+   },
+   {
+    "id": "commit/6e3a96b516",
+    "label": "commit 6e3a96b: board: p8-subsystems-a6 takes REM-534",
+    "p": 0.002041852430448478,
+    "gold": false
+   },
+   {
+    "id": "specs/agentic/schema.sql#18",
+    "label": "specs/agentic/schema.sql",
+    "p": 0.0016175540418161057,
+    "gold": false
+   },
+   {
+    "id": "commit/f808da6b26",
+    "label": "commit f808da6: Both halves said 0.2.0, and one of them was a day behind (#133)",
+    "p": 0.0014090017370493417,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-139.md#2",
+    "label": "board/cards/REM-139.md \u203a Goal",
+    "p": 0.0013854767556934161,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-19-a-night-the-checks-did-not-run.md#13",
+    "label": "meta/postmortems/2026-09-19-a-night-the-checks-did-not-run.md \u203a What changes",
+    "p": 0.0013618434065873174,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-339.md#5",
+    "label": "board/cards/REM-339.md \u203a Scope",
+    "p": 0.001307469919637948,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-544.md#5",
+    "label": "board/cards/REM-544.md \u203a Log",
+    "p": 0.0012162291967887553,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-535.md#1",
+    "label": "board/cards/REM-535.md",
+    "p": 0.0012025667280994973,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "board/cards/REM-141.md#1",
+   "label": "board/cards/REM-141.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-141.md#2",
+   "label": "board/cards/REM-141.md \u203a Goal",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/77362ae91b",
+   "label": "commit 77362ae: board: file REM-534 gates: a gate the machine failed says so, instead of failing the diff",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-534.md#1",
+   "label": "board/cards/REM-534.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/agentic/brief.md#3",
+   "label": "specs/agentic/brief.md \u203a 2. What we're keeping from p8k8's agentic system, and what we're not",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-141.md#3",
+   "label": "board/cards/REM-141.md \u203a Evidence",
+   "wave": 1,
+   "via": "term:rem 141",
+   "gold": false
+  },
+  {
+   "id": "meta/postmortems/2026-09-12-the-queue-is-the-product.md#13",
+   "label": "meta/postmortems/2026-09-12-the-queue-is-the-product.md \u203a 6. Say the conclusion where the next person looks, first",
+   "wave": 1,
+   "via": "term:rem 141",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-141.md#4",
+   "label": "board/cards/REM-141.md \u203a Log",
+   "wave": 1,
+   "via": "term:rem 141",
+   "gold": false
+  },
+  {
+   "id": "meta/postmortems/2026-09-12-the-queue-is-the-product.md#4",
+   "label": "meta/postmortems/2026-09-12-the-queue-is-the-product.md \u203a The costs, separated, because the fixes differ",
+   "wave": 1,
+   "via": "term:rem 141",
+   "gold": false
+  },
+  {
+   "id": "commit/6aabfe714c",
+   "label": "commit 6aabfe7: Seven PRs in five hours, and the code was the cheap part (#138)",
+   "wave": 1,
+   "via": "term:rem 141",
+   "gold": true
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "board/cards/REM-534.md#2",
+    "label": "board/cards/REM-534.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-18-a-day-the-gates-measured-the-machine.md#2",
+    "label": "meta/postmortems/2026-09-18-a-day-the-gates-measured-the-machine.md \u203a 1. The machine failed the gates: about four hours",
+    "gold": false
+   },
+   {
+    "id": "commit/42d6f86200",
+    "label": "commit 42d6f86: board: file REM-535 gates: an app change needing unreleased core also passes on the pinned core",
+    "gold": false
+   },
+   {
+    "id": "commit/9fe61aa95d",
+    "label": "commit 9fe61aa: Merge pull request #268 from Percolation-Labs/amartey/postmortem-2026-09-18-day",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-534.md#3",
+    "label": "board/cards/REM-534.md \u203a Evidence",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "board/cards/REM-534.md#2",
+    "label": "board/cards/REM-534.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "commit/3493dda085",
+    "label": "commit 3493dda: Two gates read the wrong thing: a sibling checkout, and a seeded agent CI cannot use (#135)",
+    "gold": true
+   },
+   {
+    "id": "meta/postmortems/2026-09-18-a-day-the-gates-measured-the-machine.md#2",
+    "label": "meta/postmortems/2026-09-18-a-day-the-gates-measured-the-machine.md \u203a 1. The machine failed the gates: about four hours",
+    "gold": false
+   },
+   {
+    "id": "specs/agentic/schema.sql#18",
+    "label": "specs/agentic/schema.sql",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-534.md#4",
+    "label": "board/cards/REM-534.md \u203a Done when",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/c53ec73304",
+    "label": "commit c53ec73: board: REM-534 in-progress \u2192 done",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-534.md#2",
+    "label": "board/cards/REM-534.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-146.md#1",
+    "label": "board/cards/REM-146.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-141.md#4",
+    "label": "board/cards/REM-141.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-534.md#4",
+    "label": "board/cards/REM-534.md \u203a Done when",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "specs/agentic/brief.md#76",
+    "label": "specs/agentic/brief.md \u203a 11.4 The stream",
+    "gold": false
+   },
+   {
+    "id": "meta/skills/claude-reactive/SKILL.md#4",
+    "label": "meta/skills/claude-reactive/SKILL.md \u203a Answer the turns",
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-08-the-pin-that-moved-nothing.md#4",
+    "label": "meta/postmortems/2026-09-08-the-pin-that-moved-nothing.md \u203a 3. What was done",
+    "gold": false
+   },
+   {
+    "id": "specs/agentic/reference/runtime.py#7",
+    "label": "specs/agentic/reference/runtime.py",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1150.md#4",
+    "label": "board/cards/REM-1150.md \u203a Done when",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.3333333333333333,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

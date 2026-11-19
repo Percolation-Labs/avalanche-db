@@ -1,0 +1,472 @@
+{
+ "qid": "card:REM-766",
+ "set": "cards",
+ "question": "What was done about this, and why: import: save Chrome pages to a private brew queue for an agent to process?",
+ "gold": [
+  {
+   "id": "commit/1e875903d2",
+   "label": "commit 1e87590: Marketing strategy: brewification, and why distillation is not summarisation",
+   "seed": false
+  },
+  {
+   "id": "commit/b2e55542a6",
+   "label": "commit b2e5554: Record live brew queue release and stale rollout follow-up (REM-766, REM-770)",
+   "seed": false
+  },
+  {
+   "id": "commit/c462a3bd98",
+   "label": "commit c462a3b: Record branded Chrome brew queue popup (REM-766)",
+   "seed": false
+  },
+  {
+   "id": "commit/dcacd8267c",
+   "label": "commit dcacd82: Specify Chrome capture and private attributed brew queue (REM-766)",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "board/cards/REM-766.md#1",
+   "label": "board/cards/REM-766.md",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-766.md#5",
+   "label": "board/cards/REM-766.md \u203a Log",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "specs/percolate-application/story-import.md#7",
+   "label": "specs/percolate-application/story-import.md \u203a 3. Reader/writer flow",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/dcacd8267c",
+   "label": "commit dcacd82: Specify Chrome capture and private attributed brew queue (REM-766)",
+   "rank": 4,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "board/team/chrome-brew.md#2",
+   "label": "board/team/chrome-brew.md \u203a Log",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/1e875903d2",
+    "label": "commit 1e87590: Marketing strategy: brewification, and why distillation is not summarisation",
+    "role": "gold"
+   },
+   {
+    "id": "commit/b2e55542a6",
+    "label": "commit b2e5554: Record live brew queue release and stale rollout follow-up (REM-766, REM-770)",
+    "role": "gold"
+   },
+   {
+    "id": "commit/c462a3bd98",
+    "label": "commit c462a3b: Record branded Chrome brew queue popup (REM-766)",
+    "role": "gold"
+   },
+   {
+    "id": "commit/dcacd8267c",
+    "label": "commit dcacd82: Specify Chrome capture and private attributed brew queue (REM-766)",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/1e875903d2",
+    "b": "commit/b2e55542a6",
+    "via": [
+     {
+      "kind": "term",
+      "key": "rem 766",
+      "width": 23
+     }
+    ]
+   },
+   {
+    "a": "commit/b2e55542a6",
+    "b": "commit/c462a3bd98",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "brew queue",
+      "width": 8
+     },
+     {
+      "kind": "term",
+      "key": "rem 766",
+      "width": 23
+     }
+    ]
+   },
+   {
+    "a": "commit/c462a3bd98",
+    "b": "commit/dcacd8267c",
+    "via": [
+     {
+      "kind": "term",
+      "key": "brew queue",
+      "width": 8
+     },
+     {
+      "kind": "term",
+      "key": "rem 766",
+      "width": 23
+     },
+     {
+      "kind": "term",
+      "key": "chrome",
+      "width": 73
+     }
+    ]
+   }
+  ],
+  "cost": 3,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  "entry": {
+   "seed": "commit/dcacd8267c",
+   "gold": "commit/dcacd8267c",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 1961,
+  "within_2_doors": 34440,
+  "gold_within_1": 3,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "board/team/chrome-brew.md#1",
+    "label": "board/team/chrome-brew.md",
+    "p": 0.012970030038430155,
+    "gold": false
+   },
+   {
+    "id": "commit/c462a3bd98",
+    "label": "commit c462a3b: Record branded Chrome brew queue popup (REM-766)",
+    "p": 0.004569890794027587,
+    "gold": true
+   },
+   {
+    "id": "meta/postmortems/2026-10-07-release-served-previous-image.md#1",
+    "label": "meta/postmortems/2026-10-07-release-served-previous-image.md",
+    "p": 0.004224359348895932,
+    "gold": false
+   },
+   {
+    "id": "commit/4e3d21b7da",
+    "label": "commit 4e3d21b: board: chrome-brew checks in, working",
+    "p": 0.004023937680612091,
+    "gold": false
+   },
+   {
+    "id": "commit/413ac7af2a",
+    "label": "commit 413ac7a: board: chrome-brew checks in, working",
+    "p": 0.003909347870790161,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-766.md#2",
+    "label": "board/cards/REM-766.md \u203a Goal",
+    "p": 0.0035651881313792854,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/story-import.md#6",
+    "label": "specs/percolate-application/story-import.md \u203a 3. Reader/writer flow",
+    "p": 0.002959786143512406,
+    "gold": false
+   },
+   {
+    "id": "commit/b2e55542a6",
+    "label": "commit b2e5554: Record live brew queue release and stale rollout follow-up (REM-766, REM-770)",
+    "p": 0.0024891616025425408,
+    "gold": true
+   },
+   {
+    "id": "commit/3942d8988d",
+    "label": "commit 3942d89: board: chrome-brew takes REM-766",
+    "p": 0.002325609487535388,
+    "gold": false
+   },
+   {
+    "id": "commit/ba15ec6020",
+    "label": "commit ba15ec6: board: chrome-brew checks in, ended",
+    "p": 0.0023232892716010885,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-770.md#3",
+    "label": "board/cards/REM-770.md \u203a Evidence",
+    "p": 0.002265875139130566,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-770.md#6",
+    "label": "board/cards/REM-770.md \u203a Log",
+    "p": 0.0017849046763663682,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-766.md#3",
+    "label": "board/cards/REM-766.md \u203a Notes",
+    "p": 0.0017672905471697636,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-770.md#2",
+    "label": "board/cards/REM-770.md \u203a Goal",
+    "p": 0.0015595912226931059,
+    "gold": false
+   },
+   {
+    "id": "commit/9356c0a474",
+    "label": "commit 9356c0a: The privacy notice names the Chrome extension and what it sends (#410)",
+    "p": 0.0015583196632263892,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-10-07-release-served-previous-image.md#2",
+    "label": "meta/postmortems/2026-10-07-release-served-previous-image.md",
+    "p": 0.0014445456811834393,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-766.md#4",
+    "label": "board/cards/REM-766.md \u203a Done when",
+    "p": 0.001402142938828824,
+    "gold": false
+   },
+   {
+    "id": "specs/design/marketing-strategy.md#4",
+    "label": "specs/design/marketing-strategy.md \u203a 3.1 Ingest: brew what already exists (REM-766)",
+    "p": 0.0013985848186385918,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261020-080053-007d.md#1",
+    "label": "board/messages/M-20261020-080053-007d.md",
+    "p": 0.0012304608516178655,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1095.md#2",
+    "label": "board/cards/REM-1095.md \u203a Goal",
+    "p": 0.001228734908020033,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "board/cards/REM-766.md#1",
+   "label": "board/cards/REM-766.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-766.md#5",
+   "label": "board/cards/REM-766.md \u203a Log",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/percolate-application/story-import.md#7",
+   "label": "specs/percolate-application/story-import.md \u203a 3. Reader/writer flow",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/dcacd8267c",
+   "label": "commit dcacd82: Specify Chrome capture and private attributed brew queue (REM-766)",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "board/team/chrome-brew.md#2",
+   "label": "board/team/chrome-brew.md \u203a Log",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/design/marketing-strategy.md#12",
+   "label": "specs/design/marketing-strategy.md \u203a 8. Personal-notes tools: Obsidian with an MCP server",
+   "wave": 1,
+   "via": "term:rem 766",
+   "gold": false
+  },
+  {
+   "id": "commit/7d7e45e53e",
+   "label": "commit 7d7e45e: board: REM-766 in-progress \u2192 done",
+   "wave": 1,
+   "via": "term:rem 766",
+   "gold": false
+  },
+  {
+   "id": "commit/4b8ce062e6",
+   "label": "commit 4b8ce06: board: edit REM-766 title project",
+   "wave": 1,
+   "via": "term:rem 766",
+   "gold": false
+  },
+  {
+   "id": "board/team/chrome-brew.md#1",
+   "label": "board/team/chrome-brew.md",
+   "wave": 1,
+   "via": "term:rem 766",
+   "gold": false
+  },
+  {
+   "id": "commit/3942d8988d",
+   "label": "commit 3942d89: board: chrome-brew takes REM-766",
+   "wave": 1,
+   "via": "term:rem 766",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "board/team/chrome-brew.md#1",
+    "label": "board/team/chrome-brew.md",
+    "gold": false
+   },
+   {
+    "id": "commit/c462a3bd98",
+    "label": "commit c462a3b: Record branded Chrome brew queue popup (REM-766)",
+    "gold": true
+   },
+   {
+    "id": "meta/postmortems/2026-10-07-release-served-previous-image.md#1",
+    "label": "meta/postmortems/2026-10-07-release-served-previous-image.md",
+    "gold": false
+   },
+   {
+    "id": "commit/4e3d21b7da",
+    "label": "commit 4e3d21b: board: chrome-brew checks in, working",
+    "gold": false
+   },
+   {
+    "id": "commit/413ac7af2a",
+    "label": "commit 413ac7a: board: chrome-brew checks in, working",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "board/team/chrome-brew.md#1",
+    "label": "board/team/chrome-brew.md",
+    "gold": false
+   },
+   {
+    "id": "commit/c462a3bd98",
+    "label": "commit c462a3b: Record branded Chrome brew queue popup (REM-766)",
+    "gold": true
+   },
+   {
+    "id": "meta/postmortems/2026-10-07-release-served-previous-image.md#1",
+    "label": "meta/postmortems/2026-10-07-release-served-previous-image.md",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/story-import.md#6",
+    "label": "specs/percolate-application/story-import.md \u203a 3. Reader/writer flow",
+    "gold": false
+   },
+   {
+    "id": "commit/4e3d21b7da",
+    "label": "commit 4e3d21b: board: chrome-brew checks in, working",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/c462a3bd98",
+    "label": "commit c462a3b: Record branded Chrome brew queue popup (REM-766)",
+    "gold": true
+   },
+   {
+    "id": "commit/3942d8988d",
+    "label": "commit 3942d89: board: chrome-brew takes REM-766",
+    "gold": false
+   },
+   {
+    "id": "commit/4e3d21b7da",
+    "label": "commit 4e3d21b: board: chrome-brew checks in, working",
+    "gold": false
+   },
+   {
+    "id": "commit/413ac7af2a",
+    "label": "commit 413ac7a: board: chrome-brew checks in, working",
+    "gold": false
+   },
+   {
+    "id": "commit/ba15ec6020",
+    "label": "commit ba15ec6: board: chrome-brew checks in, ended",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "commit/c462a3bd98",
+    "label": "commit c462a3b: Record branded Chrome brew queue popup (REM-766)",
+    "gold": true
+   },
+   {
+    "id": "specs/percolate-application/story-import.md#6",
+    "label": "specs/percolate-application/story-import.md \u203a 3. Reader/writer flow",
+    "gold": false
+   },
+   {
+    "id": "board/team/chrome-brew.md#1",
+    "label": "board/team/chrome-brew.md",
+    "gold": false
+   },
+   {
+    "id": "commit/3942d8988d",
+    "label": "commit 3942d89: board: chrome-brew takes REM-766",
+    "gold": false
+   },
+   {
+    "id": "commit/413ac7af2a",
+    "label": "commit 413ac7a: board: chrome-brew checks in, working",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.3333333333333333,
+  "Q": 0.3333333333333333,
+  "LQ": 0.3333333333333333,
+  "S": 0.3333333333333333
+ }
+}

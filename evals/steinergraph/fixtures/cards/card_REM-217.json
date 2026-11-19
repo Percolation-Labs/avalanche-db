@@ -1,0 +1,450 @@
+{
+ "qid": "card:REM-217",
+ "set": "cards",
+ "question": "What was done about this, and why: evaluation: stance labels are checked against the essay pilot and negation, scope and same-source controls?",
+ "gold": [
+  {
+   "id": "commit/25bef8c99d",
+   "label": "commit 25bef8c: Merge pull request #178 from Percolation-Labs/amartey/rem-217-spec-latest-run",
+   "seed": false
+  },
+  {
+   "id": "commit/3c4efe5dec",
+   "label": "commit 3c4efe5: comparison-and-trust specifies finding work that disagrees with a claim (REM-211)",
+   "seed": true
+  },
+  {
+   "id": "commit/b1ab13e253",
+   "label": "commit b1ab13e: The comparison spec records the first stance evaluation run (REM-217)",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "board/cards/REM-217.md#1",
+   "label": "board/cards/REM-217.md",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "specs/percolate-application/comparison-and-trust.md#24",
+   "label": "specs/percolate-application/comparison-and-trust.md \u203a Evaluation, and the gate for widening",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-221.md#2",
+   "label": "board/cards/REM-221.md \u203a Goal",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/3c4efe5dec",
+   "label": "commit 3c4efe5: comparison-and-trust specifies finding work that disagrees with a claim (REM-211)",
+   "rank": 4,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "specs/percolate-application/comparison-and-trust.md#23",
+   "label": "specs/percolate-application/comparison-and-trust.md \u203a Evaluation, and the gate for widening",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/25bef8c99d",
+    "label": "commit 25bef8c: Merge pull request #178 from Percolation-Labs/amartey/rem-217-spec-latest-run",
+    "role": "gold"
+   },
+   {
+    "id": "commit/3c4efe5dec",
+    "label": "commit 3c4efe5: comparison-and-trust specifies finding work that disagrees with a claim (REM-211)",
+    "role": "gold"
+   },
+   {
+    "id": "commit/b1ab13e253",
+    "label": "commit b1ab13e: The comparison spec records the first stance evaluation run (REM-217)",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/25bef8c99d",
+    "b": "commit/3c4efe5dec",
+    "via": [
+     {
+      "kind": "term",
+      "key": "rem 217",
+      "width": 12
+     }
+    ]
+   },
+   {
+    "a": "commit/25bef8c99d",
+    "b": "commit/b1ab13e253",
+    "via": [
+     {
+      "kind": "term",
+      "key": "first stance",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "comparison spec",
+      "width": 4
+     },
+     {
+      "kind": "term",
+      "key": "evaluation run",
+      "width": 4
+     },
+     {
+      "kind": "term",
+      "key": "stance evaluation",
+      "width": 10
+     },
+     {
+      "kind": "term",
+      "key": "rem 217",
+      "width": 12
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   1,
+   1
+  ],
+  "entry": {
+   "seed": "commit/3c4efe5dec",
+   "gold": "commit/3c4efe5dec",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 1638,
+  "within_2_doors": 33976,
+  "gold_within_1": 2,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "board/cards/REM-221.md#3",
+    "label": "board/cards/REM-221.md \u203a Evidence",
+    "p": 0.007637925268048021,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-217.md#2",
+    "label": "board/cards/REM-217.md \u203a Goal",
+    "p": 0.0049251056577735795,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/comparison-and-trust.md#22",
+    "label": "specs/percolate-application/comparison-and-trust.md \u203a First slice",
+    "p": 0.004307161813129242,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/how-it-works.md#11",
+    "label": "specs/percolate-application/how-it-works.md \u203a Comparing 10\u201320 essays",
+    "p": 0.0040885001413920805,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-217.md#3",
+    "label": "board/cards/REM-217.md \u203a Evidence",
+    "p": 0.003930544847159397,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-221.md#1",
+    "label": "board/cards/REM-221.md",
+    "p": 0.0034265735159937256,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/comparison-and-trust.md#12",
+    "label": "specs/percolate-application/comparison-and-trust.md \u203a Finding work that disagrees with a claim",
+    "p": 0.003125452796508217,
+    "gold": false
+   },
+   {
+    "id": "meta/skills/coalescing-runs/tools/build_stance_page.py#1",
+    "label": "meta/skills/coalescing-runs/tools/build_stance_page.py",
+    "p": 0.002575556518585172,
+    "gold": false
+   },
+   {
+    "id": "commit/b0cc3b7d3b",
+    "label": "commit b0cc3b7: comparison-and-trust: the web compare view is built (REM-213)",
+    "p": 0.0022994780777411293,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-285.md#1",
+    "label": "board/cards/REM-285.md",
+    "p": 0.0022352368186587556,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/comparison-and-trust.md#20",
+    "label": "specs/percolate-application/comparison-and-trust.md \u203a The comparison document",
+    "p": 0.0020879289753947027,
+    "gold": false
+   },
+   {
+    "id": "commit/65b1e31340",
+    "label": "commit 65b1e31: comparison-and-trust: the comparison contract is built (REM-212)",
+    "p": 0.0017269099633252516,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-221.md#5",
+    "label": "board/cards/REM-221.md \u203a Estimate \u2014 1 point",
+    "p": 0.0017262031792111736,
+    "gold": false
+   },
+   {
+    "id": "commit/25bef8c99d",
+    "label": "commit 25bef8c: Merge pull request #178 from Percolation-Labs/amartey/rem-217-spec-latest-run",
+    "p": 0.0016906350297999475,
+    "gold": true
+   },
+   {
+    "id": "board/cards/REM-221.md#4",
+    "label": "board/cards/REM-221.md \u203a Done when",
+    "p": 0.0016874381708208252,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-576.md#1",
+    "label": "board/cards/REM-576.md",
+    "p": 0.0015596342385471417,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-285.md#7",
+    "label": "board/cards/REM-285.md \u203a Log",
+    "p": 0.0015009432048996127,
+    "gold": false
+   },
+   {
+    "id": "commit/b1ab13e253",
+    "label": "commit b1ab13e: The comparison spec records the first stance evaluation run (REM-217)",
+    "p": 0.0014483438174152127,
+    "gold": true
+   },
+   {
+    "id": "board/cards/REM-285.md#5",
+    "label": "board/cards/REM-285.md \u203a Scope",
+    "p": 0.001445703268960733,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/comparison-and-trust.md#18",
+    "label": "specs/percolate-application/comparison-and-trust.md \u203a Discovery, cheapest and most structured first",
+    "p": 0.0011930402746050822,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "board/cards/REM-217.md#1",
+   "label": "board/cards/REM-217.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/percolate-application/comparison-and-trust.md#24",
+   "label": "specs/percolate-application/comparison-and-trust.md \u203a Evaluation, and the gate for widening",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-221.md#2",
+   "label": "board/cards/REM-221.md \u203a Goal",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/3c4efe5dec",
+   "label": "commit 3c4efe5: comparison-and-trust specifies finding work that disagrees with a claim (REM-211)",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "specs/percolate-application/comparison-and-trust.md#23",
+   "label": "specs/percolate-application/comparison-and-trust.md \u203a Evaluation, and the gate for widening",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-217.md#4",
+   "label": "board/cards/REM-217.md \u203a Log",
+   "wave": 1,
+   "via": "term:rem 217",
+   "gold": false
+  },
+  {
+   "id": "commit/25bef8c99d",
+   "label": "commit 25bef8c: Merge pull request #178 from Percolation-Labs/amartey/rem-217-spec-latest-run",
+   "wave": 1,
+   "via": "term:rem 217",
+   "gold": true
+  },
+  {
+   "id": "board/cards/REM-217.md#3",
+   "label": "board/cards/REM-217.md \u203a Evidence",
+   "wave": 1,
+   "via": "term:rem 217",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-217.md#2",
+   "label": "board/cards/REM-217.md \u203a Goal",
+   "wave": 1,
+   "via": "term:rem 217",
+   "gold": false
+  },
+  {
+   "id": "commit/b1ab13e253",
+   "label": "commit b1ab13e: The comparison spec records the first stance evaluation run (REM-217)",
+   "wave": 1,
+   "via": "term:rem 217",
+   "gold": true
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "board/cards/REM-221.md#3",
+    "label": "board/cards/REM-221.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-217.md#2",
+    "label": "board/cards/REM-217.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/comparison-and-trust.md#22",
+    "label": "specs/percolate-application/comparison-and-trust.md \u203a First slice",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/how-it-works.md#11",
+    "label": "specs/percolate-application/how-it-works.md \u203a Comparing 10\u201320 essays",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-217.md#3",
+    "label": "board/cards/REM-217.md \u203a Evidence",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "board/cards/REM-221.md#3",
+    "label": "board/cards/REM-221.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-217.md#3",
+    "label": "board/cards/REM-217.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-221.md#1",
+    "label": "board/cards/REM-221.md",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/comparison-and-trust.md#22",
+    "label": "specs/percolate-application/comparison-and-trust.md \u203a First slice",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/comparison-and-trust.md#12",
+    "label": "specs/percolate-application/comparison-and-trust.md \u203a Finding work that disagrees with a claim",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "board/cards/REM-221.md#1",
+    "label": "board/cards/REM-221.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-221.md#6",
+    "label": "board/cards/REM-221.md \u203a Scope",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-217.md#3",
+    "label": "board/cards/REM-217.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-221.md#3",
+    "label": "board/cards/REM-221.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-211.md#2",
+    "label": "board/cards/REM-211.md \u203a Goal",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "board/cards/REM-221.md#1",
+    "label": "board/cards/REM-221.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-221.md#3",
+    "label": "board/cards/REM-221.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "specs/build-knit-dream/sequence.md#7",
+    "label": "specs/build-knit-dream/sequence.md \u203a G2. Evaluate memory after changes, not only final questions",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-217.md#3",
+    "label": "board/cards/REM-217.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-221.md#6",
+    "label": "board/cards/REM-221.md \u203a Scope",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

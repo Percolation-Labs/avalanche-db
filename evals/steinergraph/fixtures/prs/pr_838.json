@@ -1,0 +1,415 @@
+{
+ "qid": "pr:838",
+ "set": "prs",
+ "question": "What work went into this, and why: Reference world test 2: the walk-so-far state's gain is not in the names?",
+ "gold": [
+  {
+   "id": "commit/18414e93d9",
+   "label": "commit 18414e9: Reference world test 2 registered: does the state's gain (K6 - K0) depend on bridges being named? $0 ran",
+   "seed": false
+  },
+  {
+   "id": "commit/5e839be919",
+   "label": "commit 5e839be: Reference world test 2: the state's gain is not in the names (K6-K0 named +.046, described +.040, diff +",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "meta/lab/results/reference-world/REGISTERED.md#8",
+   "label": "meta/lab/results/reference-world/REGISTERED.md \u203a Test 2: does the walk-so-far state's gain depend on bridges being named",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/dd9fb8441e",
+   "label": "commit dd9fb84: Merge pull request #838 from Percolation-Labs/bill/rw-naming",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/messages/M-20261117-151123-22e8.md#1",
+   "label": "board/messages/M-20261117-151123-22e8.md",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "meta/lab/results/reference-world/RESULT.md#7",
+   "label": "meta/lab/results/reference-world/RESULT.md \u203a Test 2: the state's gain is not in the names (17 Nov ~15:35Z)",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/5e839be919",
+   "label": "commit 5e839be: Reference world test 2: the state's gain is not in the names (K6-K0 named +.046, described +.040, diff +",
+   "rank": 5,
+   "gold": true,
+   "doors_to_gold": 0
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/18414e93d9",
+    "label": "commit 18414e9: Reference world test 2 registered: does the state's gain (K6 - K0) depend on bridges being named? $0 ran",
+    "role": "gold"
+   },
+   {
+    "id": "commit/5e839be919",
+    "label": "commit 5e839be: Reference world test 2: the state's gain is not in the names (K6-K0 named +.046, described +.040, diff +",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/18414e93d9",
+    "b": "commit/5e839be919",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "world test",
+      "width": 9
+     },
+     {
+      "kind": "term",
+      "key": "reference world",
+      "width": 87
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "commit/5e839be919",
+   "gold": "commit/5e839be919",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 946,
+  "within_2_doors": 30986,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "commit/18414e93d9",
+    "label": "commit 18414e9: Reference world test 2 registered: does the state's gain (K6 - K0) depend on bridges being named? $0 ran",
+    "p": 0.008003882001942816,
+    "gold": true
+   },
+   {
+    "id": "meta/lab/results/reference-world/REGISTERED.md#9",
+    "label": "meta/lab/results/reference-world/REGISTERED.md \u203a Test 2: does the walk-so-far state's gain depend on bridges being named",
+    "p": 0.0049260695495929666,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/worlds/rw_naming.py#1",
+    "label": "meta/lab/worlds/rw_naming.py",
+    "p": 0.004861401690997374,
+    "gold": false
+   },
+   {
+    "id": "commit/b1fe401f4a",
+    "label": "commit b1fe401: board: bill messages sirsh",
+    "p": 0.004490723191410159,
+    "gold": false
+   },
+   {
+    "id": "commit/7f999c779b",
+    "label": "commit 7f999c7: board: bill acknowledges 1 message(s)",
+    "p": 0.0043736705169411605,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/reference-world/test2.txt#1",
+    "label": "meta/lab/results/reference-world/test2.txt",
+    "p": 0.0037965187267038646,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/reference-world/RESULT.md#8",
+    "label": "meta/lab/results/reference-world/RESULT.md \u203a Test 2: the state's gain is not in the names (17 Nov ~15:35Z)",
+    "p": 0.0034997468946612567,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/worlds/rw_score.py#1",
+    "label": "meta/lab/worlds/rw_score.py",
+    "p": 0.0025529827663208385,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/two-hop-door/REGISTERED.md#1",
+    "label": "meta/lab/results/two-hop-door/REGISTERED.md \u203a The two-hop door: does a door that names what lies one hop beyond its targ",
+    "p": 0.0023555740631001796,
+    "gold": false
+   },
+   {
+    "id": "commit/20fcbd4e5e",
+    "label": "commit 20fcbd4: Reference world test 1 replicates over BEAM: D6 - today documented +.018 n.s., natural +.038, hidden +.0",
+    "p": 0.0021974816111309525,
+    "gold": false
+   },
+   {
+    "id": "commit/0c545ae72a",
+    "label": "commit 0c545ae: Reference world test 1: the hidden-gold dial drives D6's gain (documented -.013, natural +.055, hidden +",
+    "p": 0.002166979722762212,
+    "gold": false
+   },
+   {
+    "id": "commit/1d08eccc8e",
+    "label": "commit 1d08ecc: board: board-watch messages all",
+    "p": 0.0019477191956470724,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/worlds/FOUND-REGISTERED.md#1",
+    "label": "meta/lab/results/worlds/FOUND-REGISTERED.md \u203a Jev with what was read in its state (registered 16 Nov ~08:58Z, before any",
+    "p": 0.0018650179529098587,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/reference-world/RESULT.md#1",
+    "label": "meta/lab/results/reference-world/RESULT.md \u203a Reference world over MuSiQue, test 1: the hidden-gold dial drives D6's gain",
+    "p": 0.0017497990103269375,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261117-001333-aa54.md#1",
+    "label": "board/messages/M-20261117-001333-aa54.md",
+    "p": 0.0016237471981832045,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/kappa/RESULT.md#5",
+    "label": "meta/lab/results/kappa/RESULT.md \u203a Round 2: rarest-first names do not carry the bridge better (17 Nov, ~00:35Z)",
+    "p": 0.0015819708477637319,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/dream-metric/OBSERVABLES.md#2",
+    "label": "meta/lab/results/dream-metric/OBSERVABLES.md \u203a The table (held-out AUC, lead against missed; held-out counts lead:missed",
+    "p": 0.0015603944207233634,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/kappa/RESULT.md#10",
+    "label": "meta/lab/results/kappa/RESULT.md \u203a Round 5: kappa does not carry to BEAM; sentence kappa hurts there (17 Nov ~09:45Z)",
+    "p": 0.0015419371965096052,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/reference-world/RESULT.md#5",
+    "label": "meta/lab/results/reference-world/RESULT.md \u203a Test 1 over BEAM: it replicates (17 Nov ~14:50Z)",
+    "p": 0.0015221570948228812,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/reference-world/REGISTERED.md#6",
+    "label": "meta/lab/results/reference-world/REGISTERED.md \u203a Test 1 over BEAM: the same dial on a second real corpus (registered 17 ",
+    "p": 0.0014891142375713109,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "meta/lab/results/reference-world/REGISTERED.md#8",
+   "label": "meta/lab/results/reference-world/REGISTERED.md \u203a Test 2: does the walk-so-far state's gain depend on bridges being named",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/dd9fb8441e",
+   "label": "commit dd9fb84: Merge pull request #838 from Percolation-Labs/bill/rw-naming",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/messages/M-20261117-151123-22e8.md#1",
+   "label": "board/messages/M-20261117-151123-22e8.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/reference-world/RESULT.md#7",
+   "label": "meta/lab/results/reference-world/RESULT.md \u203a Test 2: the state's gain is not in the names (17 Nov ~15:35Z)",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/5e839be919",
+   "label": "commit 5e839be: Reference world test 2: the state's gain is not in the names (K6-K0 named +.046, described +.040, diff +",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "meta/lab/results/reference-world/REGISTERED.md#9",
+   "label": "meta/lab/results/reference-world/REGISTERED.md \u203a Test 2: does the walk-so-far state's gain depend on bridges being named",
+   "wave": 1,
+   "via": "term:gain depend",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/reference-world/RESULT.md#8",
+   "label": "meta/lab/results/reference-world/RESULT.md \u203a Test 2: the state's gain is not in the names (17 Nov ~15:35Z)",
+   "wave": 2,
+   "via": "term:perfect naming",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/worlds/naming.py#1",
+   "label": "meta/lab/worlds/naming.py",
+   "wave": 3,
+   "via": "term:type description",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/cornerstone/REGISTERED.md#3",
+   "label": "meta/lab/results/cornerstone/REGISTERED.md \u203a The fix: w124, the same worlds with MuSiQue's naming",
+   "wave": 3,
+   "via": "term:type description",
+   "gold": false
+  },
+  {
+   "id": "board/messages/M-20261117-082559-3c48.md#1",
+   "label": "board/messages/M-20261117-082559-3c48.md",
+   "wave": 3,
+   "via": "term:type description",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "commit/18414e93d9",
+    "label": "commit 18414e9: Reference world test 2 registered: does the state's gain (K6 - K0) depend on bridges being named? $0 ran",
+    "gold": true
+   },
+   {
+    "id": "meta/lab/results/reference-world/REGISTERED.md#9",
+    "label": "meta/lab/results/reference-world/REGISTERED.md \u203a Test 2: does the walk-so-far state's gain depend on bridges being named",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/worlds/rw_naming.py#1",
+    "label": "meta/lab/worlds/rw_naming.py",
+    "gold": false
+   },
+   {
+    "id": "commit/b1fe401f4a",
+    "label": "commit b1fe401: board: bill messages sirsh",
+    "gold": false
+   },
+   {
+    "id": "commit/7f999c779b",
+    "label": "commit 7f999c7: board: bill acknowledges 1 message(s)",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "meta/lab/results/reference-world/REGISTERED.md#9",
+    "label": "meta/lab/results/reference-world/REGISTERED.md \u203a Test 2: does the walk-so-far state's gain depend on bridges being named",
+    "gold": false
+   },
+   {
+    "id": "commit/18414e93d9",
+    "label": "commit 18414e9: Reference world test 2 registered: does the state's gain (K6 - K0) depend on bridges being named? $0 ran",
+    "gold": true
+   },
+   {
+    "id": "meta/lab/results/reference-world/RESULT.md#8",
+    "label": "meta/lab/results/reference-world/RESULT.md \u203a Test 2: the state's gain is not in the names (17 Nov ~15:35Z)",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/worlds/rw_naming.py#1",
+    "label": "meta/lab/worlds/rw_naming.py",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/reference-world/RESULT.md#1",
+    "label": "meta/lab/results/reference-world/RESULT.md \u203a Reference world over MuSiQue, test 1: the hidden-gold dial drives D6's gain",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/18414e93d9",
+    "label": "commit 18414e9: Reference world test 2 registered: does the state's gain (K6 - K0) depend on bridges being named? $0 ran",
+    "gold": true
+   },
+   {
+    "id": "meta/lab/results/reference-world/test2.txt#1",
+    "label": "meta/lab/results/reference-world/test2.txt",
+    "gold": false
+   },
+   {
+    "id": "commit/7f999c779b",
+    "label": "commit 7f999c7: board: bill acknowledges 1 message(s)",
+    "gold": false
+   },
+   {
+    "id": "commit/20fcbd4e5e",
+    "label": "commit 20fcbd4: Reference world test 1 replicates over BEAM: D6 - today documented +.018 n.s., natural +.038, hidden +.0",
+    "gold": false
+   },
+   {
+    "id": "commit/b1fe401f4a",
+    "label": "commit b1fe401: board: bill messages sirsh",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "meta/lab/results/reference-world/REGISTERED.md#9",
+    "label": "meta/lab/results/reference-world/REGISTERED.md \u203a Test 2: does the walk-so-far state's gain depend on bridges being named",
+    "gold": false
+   },
+   {
+    "id": "commit/18414e93d9",
+    "label": "commit 18414e9: Reference world test 2 registered: does the state's gain (K6 - K0) depend on bridges being named? $0 ran",
+    "gold": true
+   },
+   {
+    "id": "meta/lab/results/reference-world/RESULT.md#8",
+    "label": "meta/lab/results/reference-world/RESULT.md \u203a Test 2: the state's gain is not in the names (17 Nov ~15:35Z)",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/kappa/RESULT.md#4",
+    "label": "meta/lab/results/kappa/RESULT.md \u203a Postmortem",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/reference-world/REGISTERED.md#1",
+    "label": "meta/lab/results/reference-world/REGISTERED.md \u203a Reference world over MuSiQue, test 1: does the hidden-gold dial move D6",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 1.0,
+  "Q": 1.0,
+  "LQ": 1.0,
+  "S": 1.0
+ }
+}

@@ -1,0 +1,417 @@
+{
+ "qid": "RW:2hop__36269_63853",
+ "set": "mq",
+ "question": "What is the source of the river Orlam clans crossed to migrate to Namibia?",
+ "gold": [
+  {
+   "id": "mq:2103ac973008600a",
+   "label": "Orange River",
+   "seed": true
+  },
+  {
+   "id": "mq:d9a6b322480d4bc8",
+   "label": "Namibia",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:d9a6b322480d4bc8",
+   "label": "Namibia",
+   "rank": 1,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:2103ac973008600a",
+   "label": "Orange River",
+   "rank": 2,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:40ea5f8edc852013",
+   "label": "Namibia",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:175a1405ad928bfb",
+   "label": "Jonker Afrikaner",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:62fab1209810c92b",
+   "label": "Namibia",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:2103ac973008600a",
+    "label": "Orange River",
+    "role": "gold"
+   },
+   {
+    "id": "mq:d9a6b322480d4bc8",
+    "label": "Namibia",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:2103ac973008600a",
+    "b": "mq:d9a6b322480d4bc8",
+    "via": [
+     {
+      "kind": "term",
+      "key": "orange river",
+      "width": 8
+     },
+     {
+      "kind": "term",
+      "key": "namibia",
+      "width": 30
+     },
+     {
+      "kind": "term",
+      "key": "orange",
+      "width": 87
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "mq:2103ac973008600a",
+   "gold": "mq:2103ac973008600a",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 3353,
+  "within_2_doors": 17738,
+  "gold_within_1": 0,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "mq:45c79af0e755655c",
+    "label": "R359 (South Africa)",
+    "p": 0.003131648345183427,
+    "gold": false
+   },
+   {
+    "id": "mq:3b1d75a85d412ad1",
+    "label": "Spice trade",
+    "p": 0.002146106811704869,
+    "gold": false
+   },
+   {
+    "id": "mq:a759eaa4bf52b333",
+    "label": "Upper Orange Water Management Area",
+    "p": 0.001916285957564051,
+    "gold": false
+   },
+   {
+    "id": "mq:2350ac113a93c3a9",
+    "label": "Damaraland",
+    "p": 0.0014518315515662321,
+    "gold": false
+   },
+   {
+    "id": "mq:0fefcf90e2c131b0",
+    "label": "Hatef Esfahani",
+    "p": 0.001436584612756214,
+    "gold": false
+   },
+   {
+    "id": "mq:4c453a02efa853a7",
+    "label": "Namibia",
+    "p": 0.0013493372375879664,
+    "gold": false
+   },
+   {
+    "id": "mq:f43af5fd89d3fae1",
+    "label": "Chitti Gatti",
+    "p": 0.0012468814951818983,
+    "gold": false
+   },
+   {
+    "id": "mq:9c982dbec069ba56",
+    "label": "Water supply and sanitation in South Africa",
+    "p": 0.0012184954667316683,
+    "gold": false
+   },
+   {
+    "id": "mq:26be4cf1d3f51927",
+    "label": "History of South Africa",
+    "p": 0.0012066225943666337,
+    "gold": false
+   },
+   {
+    "id": "mq:c2f2d5fa39b4c729",
+    "label": "History of South Africa",
+    "p": 0.0012066225943666337,
+    "gold": false
+   },
+   {
+    "id": "mq:625a3cf58da617f4",
+    "label": "A. P. J. Abdul Kalam",
+    "p": 0.0011728904322215023,
+    "gold": false
+   },
+   {
+    "id": "mq:2b12345d48f7766b",
+    "label": "Ottoman Empire",
+    "p": 0.0011436693657240291,
+    "gold": false
+   },
+   {
+    "id": "mq:e8198c25685903e4",
+    "label": "Taishanese people",
+    "p": 0.0011323580075433058,
+    "gold": false
+   },
+   {
+    "id": "mq:1a59be0ed86212a7",
+    "label": "Barack Obama",
+    "p": 0.001114597810361562,
+    "gold": false
+   },
+   {
+    "id": "mq:34b174dfb12a3940",
+    "label": "Meat Corporation of Namibia",
+    "p": 0.0010191885445759892,
+    "gold": false
+   },
+   {
+    "id": "mq:0638d9a29f677b22",
+    "label": "Pedro \u00c1lvares Cabral",
+    "p": 0.0009441629671810761,
+    "gold": false
+   },
+   {
+    "id": "mq:01b88997942c8251",
+    "label": "Namibia",
+    "p": 0.0008625248848531569,
+    "gold": false
+   },
+   {
+    "id": "mq:b7fd9cbd1da4d742",
+    "label": "Khan River",
+    "p": 0.0008479100419771922,
+    "gold": false
+   },
+   {
+    "id": "mq:0d29ce248a3c66e4",
+    "label": "Albion-class landing platform dock",
+    "p": 0.0008416681963324485,
+    "gold": false
+   },
+   {
+    "id": "mq:fc9f40fb9dec46f6",
+    "label": "Red Deer River",
+    "p": 0.0008343375283528311,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:d9a6b322480d4bc8",
+   "label": "Namibia",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:2103ac973008600a",
+   "label": "Orange River",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:40ea5f8edc852013",
+   "label": "Namibia",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:175a1405ad928bfb",
+   "label": "Jonker Afrikaner",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:62fab1209810c92b",
+   "label": "Namibia",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:4bbd22816f037148",
+   "label": "Fullerton Union High School",
+   "wave": 1,
+   "via": "term:orange",
+   "gold": false
+  },
+  {
+   "id": "mq:12c531fda9c23ece",
+   "label": "Harpactes",
+   "wave": 1,
+   "via": "term:orange",
+   "gold": false
+  },
+  {
+   "id": "mq:5cd172f0b29f5f06",
+   "label": "Emergency Response Guidebook",
+   "wave": 1,
+   "via": "term:orange",
+   "gold": false
+  },
+  {
+   "id": "mq:ac90e7ddce552707",
+   "label": "Cucurucho",
+   "wave": 1,
+   "via": "term:orange",
+   "gold": false
+  },
+  {
+   "id": "mq:b24447c36e867d84",
+   "label": "List of Orange Is the New Black episodes",
+   "wave": 1,
+   "via": "term:orange",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:45c79af0e755655c",
+    "label": "R359 (South Africa)",
+    "gold": false
+   },
+   {
+    "id": "mq:3b1d75a85d412ad1",
+    "label": "Spice trade",
+    "gold": false
+   },
+   {
+    "id": "mq:a759eaa4bf52b333",
+    "label": "Upper Orange Water Management Area",
+    "gold": false
+   },
+   {
+    "id": "mq:2350ac113a93c3a9",
+    "label": "Damaraland",
+    "gold": false
+   },
+   {
+    "id": "mq:0fefcf90e2c131b0",
+    "label": "Hatef Esfahani",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:01b88997942c8251",
+    "label": "Namibia",
+    "gold": false
+   },
+   {
+    "id": "mq:34b174dfb12a3940",
+    "label": "Meat Corporation of Namibia",
+    "gold": false
+   },
+   {
+    "id": "mq:f6e82ea7156bcd86",
+    "label": "Namibia",
+    "gold": false
+   },
+   {
+    "id": "mq:b7fd9cbd1da4d742",
+    "label": "Khan River",
+    "gold": false
+   },
+   {
+    "id": "mq:9f8e1ed37a5d0540",
+    "label": "Omaruru River",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:01b88997942c8251",
+    "label": "Namibia",
+    "gold": false
+   },
+   {
+    "id": "mq:a384750c66de38d1",
+    "label": "Nile",
+    "gold": false
+   },
+   {
+    "id": "mq:34b174dfb12a3940",
+    "label": "Meat Corporation of Namibia",
+    "gold": false
+   },
+   {
+    "id": "mq:1efcc348998c6c42",
+    "label": "Nile",
+    "gold": false
+   },
+   {
+    "id": "mq:f6e82ea7156bcd86",
+    "label": "Namibia",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:b5286065a7cbc0fa",
+    "label": "Lisala",
+    "gold": false
+   },
+   {
+    "id": "mq:b7fd9cbd1da4d742",
+    "label": "Khan River",
+    "gold": false
+   },
+   {
+    "id": "mq:f7b2a8a5521d78e4",
+    "label": "Molopo River",
+    "gold": false
+   },
+   {
+    "id": "mq:9f8e1ed37a5d0540",
+    "label": "Omaruru River",
+    "gold": false
+   },
+   {
+    "id": "mq:2c6bf72cffb8939c",
+    "label": "Mayuni Conservancy",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": null,
+  "Q": null,
+  "LQ": null,
+  "S": null
+ }
+}

@@ -1,0 +1,445 @@
+{
+ "qid": "RW:3hop1__765388_42197_18397",
+ "set": "mq",
+ "question": "Where did the arguer that Vadim Spiridonov's country of citizenship had become an imperialist power declare he would intervene in the Korean conflict?",
+ "gold": [
+  {
+   "id": "mq:20dfa50f43b0dfc9",
+   "label": "Vadim Spiridonov",
+   "seed": true
+  },
+  {
+   "id": "mq:4aec4bfb579ba905",
+   "label": "Imperialism",
+   "seed": true
+  },
+  {
+   "id": "mq:92d6c665c7279c38",
+   "label": "Korean War",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:20dfa50f43b0dfc9",
+   "label": "Vadim Spiridonov",
+   "rank": 1,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:26e6ea804052c889",
+   "label": "Imperialism",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:4c3541d91b089741",
+   "label": "Cuban War of Independence",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:1a8b36d4294f67b3",
+   "label": "Viktor Spiridonov",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:4aec4bfb579ba905",
+   "label": "Imperialism",
+   "rank": 5,
+   "gold": true,
+   "doors_to_gold": 0
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:20dfa50f43b0dfc9",
+    "label": "Vadim Spiridonov",
+    "role": "gold"
+   },
+   {
+    "id": "mq:4aec4bfb579ba905",
+    "label": "Imperialism",
+    "role": "gold"
+   },
+   {
+    "id": "mq:92d6c665c7279c38",
+    "label": "Korean War",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:20dfa50f43b0dfc9",
+    "b": "mq:4aec4bfb579ba905",
+    "via": [
+     {
+      "kind": "term",
+      "key": "lenin",
+      "width": 16
+     },
+     {
+      "kind": "term",
+      "key": "ussr",
+      "width": 59
+     }
+    ]
+   },
+   {
+    "a": "mq:4aec4bfb579ba905",
+    "b": "mq:92d6c665c7279c38",
+    "via": [
+     {
+      "kind": "term",
+      "key": "mao zedong",
+      "width": 6
+     },
+     {
+      "kind": "term",
+      "key": "zedong",
+      "width": 6
+     },
+     {
+      "kind": "term",
+      "key": "mao",
+      "width": 14
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   2,
+   1
+  ],
+  "entry": {
+   "seed": "mq:20dfa50f43b0dfc9",
+   "gold": "mq:20dfa50f43b0dfc9",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 3379,
+  "within_2_doors": 17702,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "mq:c2f52d0615027ffa",
+    "label": "Yuri Kleschev",
+    "p": 0.003043253457931349,
+    "gold": false
+   },
+   {
+    "id": "mq:f165976c9df3c4d1",
+    "label": "Roger Vadim",
+    "p": 0.0026106308256104906,
+    "gold": false
+   },
+   {
+    "id": "mq:16a0fd1c2295b1ef",
+    "label": "Guilty of Treason",
+    "p": 0.0023343776377224186,
+    "gold": false
+   },
+   {
+    "id": "mq:a9122505318e7c80",
+    "label": "USB",
+    "p": 0.0021186803565107493,
+    "gold": false
+   },
+   {
+    "id": "mq:1211afca2f953c24",
+    "label": "Sport",
+    "p": 0.002079322736740593,
+    "gold": false
+   },
+   {
+    "id": "mq:8f79b6e2709b16a9",
+    "label": "Vladimir Ageyev",
+    "p": 0.0020537459798237057,
+    "gold": false
+   },
+   {
+    "id": "mq:7afd99b59d2ec4b6",
+    "label": "Oleg Lomakin",
+    "p": 0.0018113247384735805,
+    "gold": false
+   },
+   {
+    "id": "mq:a03ff8a9c6185d7c",
+    "label": "Maya Kopitseva",
+    "p": 0.0017370724724243627,
+    "gold": false
+   },
+   {
+    "id": "mq:e6ce51506bde252e",
+    "label": "Viktor Afanasyev (cosmonaut)",
+    "p": 0.0011818079157399806,
+    "gold": false
+   },
+   {
+    "id": "mq:fa2d02a1f1638783",
+    "label": "Viktor Dankl von Krasnik",
+    "p": 0.0011725432466589902,
+    "gold": false
+   },
+   {
+    "id": "mq:bca5bbb47e488a67",
+    "label": "Decolonization of the Americas",
+    "p": 0.0009444751531730581,
+    "gold": false
+   },
+   {
+    "id": "mq:65d7e863a3fd8e97",
+    "label": "Korean War",
+    "p": 0.0008950633100528126,
+    "gold": false
+   },
+   {
+    "id": "mq:1a940b725a76879e",
+    "label": "List of highest paid film actors",
+    "p": 0.0008900466191060053,
+    "gold": false
+   },
+   {
+    "id": "mq:56f71af6f18938f3",
+    "label": "List of highest paid film actors",
+    "p": 0.0008881367428412903,
+    "gold": false
+   },
+   {
+    "id": "mq:d64066543119aad0",
+    "label": "Vladimir Rapoport",
+    "p": 0.000751389941922079,
+    "gold": false
+   },
+   {
+    "id": "mq:19670a168d78a9e6",
+    "label": "List of presidents of the Philippines",
+    "p": 0.0007283677090692299,
+    "gold": false
+   },
+   {
+    "id": "mq:8575d162b2c066ac",
+    "label": "Spanish conquest of the Aztec Empire",
+    "p": 0.0007198738729957768,
+    "gold": false
+   },
+   {
+    "id": "mq:b71c52d75541a083",
+    "label": "Australian Cattle Dog",
+    "p": 0.0007126738451319496,
+    "gold": false
+   },
+   {
+    "id": "mq:3ebf54f4407f07d4",
+    "label": "Mark Fradkin",
+    "p": 0.0007100527844408701,
+    "gold": false
+   },
+   {
+    "id": "mq:1330913d10091c3d",
+    "label": "Jason Mewes",
+    "p": 0.0006783063211669315,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:20dfa50f43b0dfc9",
+   "label": "Vadim Spiridonov",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:26e6ea804052c889",
+   "label": "Imperialism",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:4c3541d91b089741",
+   "label": "Cuban War of Independence",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:1a8b36d4294f67b3",
+   "label": "Viktor Spiridonov",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:4aec4bfb579ba905",
+   "label": "Imperialism",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:69d5ceb00fd1a751",
+   "label": "Kim Jong-un",
+   "wave": 1,
+   "via": "term:north korea",
+   "gold": false
+  },
+  {
+   "id": "mq:a17d5e324dfdd1b7",
+   "label": "Korean War",
+   "wave": 1,
+   "via": "term:north korea",
+   "gold": false
+  },
+  {
+   "id": "mq:4cbfd829e9e593d8",
+   "label": "Geomdeok mine",
+   "wave": 1,
+   "via": "term:north korea",
+   "gold": false
+  },
+  {
+   "id": "mq:1430282473c393d6",
+   "label": "Ri Se-gwang",
+   "wave": 1,
+   "via": "term:north korea",
+   "gold": false
+  },
+  {
+   "id": "mq:b65b242b5bcc8664",
+   "label": "Premier of North Korea",
+   "wave": 1,
+   "via": "term:north korea",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:c2f52d0615027ffa",
+    "label": "Yuri Kleschev",
+    "gold": false
+   },
+   {
+    "id": "mq:f165976c9df3c4d1",
+    "label": "Roger Vadim",
+    "gold": false
+   },
+   {
+    "id": "mq:16a0fd1c2295b1ef",
+    "label": "Guilty of Treason",
+    "gold": false
+   },
+   {
+    "id": "mq:a9122505318e7c80",
+    "label": "USB",
+    "gold": false
+   },
+   {
+    "id": "mq:1211afca2f953c24",
+    "label": "Sport",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:f165976c9df3c4d1",
+    "label": "Roger Vadim",
+    "gold": false
+   },
+   {
+    "id": "mq:65d7e863a3fd8e97",
+    "label": "Korean War",
+    "gold": false
+   },
+   {
+    "id": "mq:16a0fd1c2295b1ef",
+    "label": "Guilty of Treason",
+    "gold": false
+   },
+   {
+    "id": "mq:5b18e2428752406d",
+    "label": "Arnold Schwarzenegger",
+    "gold": false
+   },
+   {
+    "id": "mq:92d6c665c7279c38",
+    "label": "Korean War",
+    "gold": true
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:f165976c9df3c4d1",
+    "label": "Roger Vadim",
+    "gold": false
+   },
+   {
+    "id": "mq:65d7e863a3fd8e97",
+    "label": "Korean War",
+    "gold": false
+   },
+   {
+    "id": "mq:5b18e2428752406d",
+    "label": "Arnold Schwarzenegger",
+    "gold": false
+   },
+   {
+    "id": "mq:16a0fd1c2295b1ef",
+    "label": "Guilty of Treason",
+    "gold": false
+   },
+   {
+    "id": "mq:78e8b7439ffd080d",
+    "label": "Powers of the United States Congress",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:c790b09568607641",
+    "label": "Soviet Union in the Korean War",
+    "gold": false
+   },
+   {
+    "id": "mq:946a4c19ea4cfc8a",
+    "label": "Korean War",
+    "gold": false
+   },
+   {
+    "id": "mq:53378bd44d954411",
+    "label": "Shark sanctuary",
+    "gold": false
+   },
+   {
+    "id": "mq:f165976c9df3c4d1",
+    "label": "Roger Vadim",
+    "gold": false
+   },
+   {
+    "id": "mq:78e8b7439ffd080d",
+    "label": "Powers of the United States Congress",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 1.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

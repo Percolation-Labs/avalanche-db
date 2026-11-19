@@ -1,0 +1,405 @@
+{
+ "qid": "card:REM-723",
+ "set": "cards",
+ "question": "What was done about this, and why: canvas: write in place, show references and restore time?",
+ "gold": [
+  {
+   "id": "commit/7d9ab1fd72",
+   "label": "commit 7d9ab1f: Specify inline canvas writing, visible revisions and intent focus (REM-723)",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/3a518722d0",
+   "label": "commit 3a51872: board: file REM-723 canvas: write in place, show references and restore time",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-723.md#1",
+   "label": "board/cards/REM-723.md",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-723.md#2",
+   "label": "board/cards/REM-723.md \u203a Goal",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-726.md#1",
+   "label": "board/cards/REM-726.md",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "board/cards/REM-719.md#1",
+   "label": "board/cards/REM-719.md",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 2
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "board/cards/REM-723.md#2",
+    "label": "board/cards/REM-723.md \u203a Goal",
+    "role": "seed"
+   },
+   {
+    "id": "commit/7d9ab1fd72",
+    "label": "commit 7d9ab1f: Specify inline canvas writing, visible revisions and intent focus (REM-723)",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "board/cards/REM-723.md#2",
+    "b": "commit/7d9ab1fd72",
+    "via": [
+     {
+      "kind": "term",
+      "key": "intent focus",
+      "width": 4
+     },
+     {
+      "kind": "term",
+      "key": "rem 723",
+      "width": 13
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [],
+  "entry": {
+   "seed": "board/cards/REM-723.md#2",
+   "gold": "commit/7d9ab1fd72",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 857,
+  "within_2_doors": 31985,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "commit/e214c42180",
+    "label": "commit e214c42: board: file REM-719 canvas: restore preview elegance and make the graph readable",
+    "p": 0.01115176141740503,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-29-canvas-writing-and-time.md#3",
+    "label": "meta/postmortems/2026-09-29-canvas-writing-and-time.md \u203a What changes the outcome",
+    "p": 0.005343227107100821,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-723.md#4",
+    "label": "board/cards/REM-723.md \u203a Log",
+    "p": 0.005304246029500631,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-719.md#3",
+    "label": "board/cards/REM-719.md \u203a Log",
+    "p": 0.0049756476068212934,
+    "gold": false
+   },
+   {
+    "id": "specs/user-rbac/spec.md#39",
+    "label": "specs/user-rbac/spec.md \u203a Local MCP connector credentials (REM-1330)",
+    "p": 0.0048620510280497084,
+    "gold": false
+   },
+   {
+    "id": "commit/cea25b1910",
+    "label": "commit cea25b1: board: focus-canvas takes REM-723",
+    "p": 0.004549962626185186,
+    "gold": false
+   },
+   {
+    "id": "board/team/focus-canvas.md#3",
+    "label": "board/team/focus-canvas.md \u203a Log",
+    "p": 0.0037138236619933093,
+    "gold": false
+   },
+   {
+    "id": "commit/2e6a12d903",
+    "label": "commit 2e6a12d: board: focus-canvas checks in, idle",
+    "p": 0.0036540015613299175,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/focus-canvas-contract.md#1",
+    "label": "specs/percolate-application/focus-canvas-contract.md \u203a Lens and Orbit: the writing canvas",
+    "p": 0.003109227538392398,
+    "gold": false
+   },
+   {
+    "id": "commit/ea0da2da08",
+    "label": "commit ea0da2d: canvas: preserve fisheye design and use a real article for review (REM-719)",
+    "p": 0.002773581730774643,
+    "gold": false
+   },
+   {
+    "id": "commit/6c08ad2f1a",
+    "label": "commit 6c08ad2: board: file REM-726 canvas: keep unfinished critiques and return to the visible thought",
+    "p": 0.002751561270114246,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-724.md#1",
+    "label": "board/cards/REM-724.md",
+    "p": 0.0027475268610605845,
+    "gold": false
+   },
+   {
+    "id": "board/team/focus-canvas.md#2",
+    "label": "board/team/focus-canvas.md \u203a Log",
+    "p": 0.002709321506266895,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-719.md#2",
+    "label": "board/cards/REM-719.md \u203a Goal",
+    "p": 0.0026872306592144036,
+    "gold": false
+   },
+   {
+    "id": "commit/7d9ab1fd72",
+    "label": "commit 7d9ab1f: Specify inline canvas writing, visible revisions and intent focus (REM-723)",
+    "p": 0.00259060180574287,
+    "gold": true
+   },
+   {
+    "id": "board/cards/REM-717.md#1",
+    "label": "board/cards/REM-717.md",
+    "p": 0.002576583149007871,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-726.md#2",
+    "label": "board/cards/REM-726.md \u203a Log",
+    "p": 0.0025714640334574958,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-717.md#8",
+    "label": "board/cards/REM-717.md \u203a Log",
+    "p": 0.0024349833300375927,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-724.md#4",
+    "label": "board/cards/REM-724.md \u203a Log",
+    "p": 0.0022782857757849676,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-715.md#1",
+    "label": "board/cards/REM-715.md",
+    "p": 0.002228536636527954,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/3a518722d0",
+   "label": "commit 3a51872: board: file REM-723 canvas: write in place, show references and restore time",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-723.md#1",
+   "label": "board/cards/REM-723.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-723.md#2",
+   "label": "board/cards/REM-723.md \u203a Goal",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-726.md#1",
+   "label": "board/cards/REM-726.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-719.md#1",
+   "label": "board/cards/REM-719.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-450.md#5",
+   "label": "board/cards/REM-450.md \u203a Scope",
+   "wave": 1,
+   "via": "term:backlinks",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-723.md#3",
+   "label": "board/cards/REM-723.md \u203a Done when",
+   "wave": 1,
+   "via": "term:backlinks",
+   "gold": false
+  },
+  {
+   "id": "meta/postmortems/2026-09-29-canvas-writing-and-time.md#2",
+   "label": "meta/postmortems/2026-09-29-canvas-writing-and-time.md \u203a What failed",
+   "wave": 1,
+   "via": "term:backlinks",
+   "gold": false
+  },
+  {
+   "id": "specs/design/marketing-strategy.md#12",
+   "label": "specs/design/marketing-strategy.md \u203a 8. Personal-notes tools: Obsidian with an MCP server",
+   "wave": 1,
+   "via": "term:backlinks",
+   "gold": false
+  },
+  {
+   "id": "meta/postmortems/2026-09-29-canvas-writing-and-time.md#3",
+   "label": "meta/postmortems/2026-09-29-canvas-writing-and-time.md \u203a What changes the outcome",
+   "wave": 1,
+   "via": "term:backlinks",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "commit/e214c42180",
+    "label": "commit e214c42: board: file REM-719 canvas: restore preview elegance and make the graph readable",
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-29-canvas-writing-and-time.md#3",
+    "label": "meta/postmortems/2026-09-29-canvas-writing-and-time.md \u203a What changes the outcome",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-723.md#4",
+    "label": "board/cards/REM-723.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-719.md#3",
+    "label": "board/cards/REM-719.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "specs/user-rbac/spec.md#39",
+    "label": "specs/user-rbac/spec.md \u203a Local MCP connector credentials (REM-1330)",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "commit/e214c42180",
+    "label": "commit e214c42: board: file REM-719 canvas: restore preview elegance and make the graph readable",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-723.md#4",
+    "label": "board/cards/REM-723.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-29-canvas-writing-and-time.md#3",
+    "label": "meta/postmortems/2026-09-29-canvas-writing-and-time.md \u203a What changes the outcome",
+    "gold": false
+   },
+   {
+    "id": "board/team/focus-canvas.md#3",
+    "label": "board/team/focus-canvas.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-719.md#3",
+    "label": "board/cards/REM-719.md \u203a Log",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/cea25b1910",
+    "label": "commit cea25b1: board: focus-canvas takes REM-723",
+    "gold": false
+   },
+   {
+    "id": "commit/fa1c88c8f7",
+    "label": "commit fa1c88c: board: REM-723 in-progress \u2192 done",
+    "gold": false
+   },
+   {
+    "id": "commit/2e6a12d903",
+    "label": "commit 2e6a12d: board: focus-canvas checks in, idle",
+    "gold": false
+   },
+   {
+    "id": "commit/7d9ab1fd72",
+    "label": "commit 7d9ab1f: Specify inline canvas writing, visible revisions and intent focus (REM-723)",
+    "gold": true
+   },
+   {
+    "id": "commit/e214c42180",
+    "label": "commit e214c42: board: file REM-719 canvas: restore preview elegance and make the graph readable",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "commit/e214c42180",
+    "label": "commit e214c42: board: file REM-719 canvas: restore preview elegance and make the graph readable",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-727.md#4",
+    "label": "board/cards/REM-727.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-732.md#1",
+    "label": "board/cards/REM-732.md",
+    "gold": false
+   },
+   {
+    "id": "commit/2a06e22200",
+    "label": "commit 2a06e22: docs(canvas): make bare evidence references navigable (REM-732)",
+    "gold": false
+   },
+   {
+    "id": "commit/6915a43fd8",
+    "label": "commit 6915a43: board: file REM-732 canvas: source references open their evidence",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 1.0,
+  "S": 0.0
+ }
+}

@@ -1,0 +1,446 @@
+{
+ "qid": "RW:3hop2__140194_49541_51068",
+ "set": "mq",
+ "question": "Who is the actress who plays the role of the Queen of England in 1890, on the network that aired The Dinosaurs!?",
+ "gold": [
+  {
+   "id": "mq:3ba419f39bf2fd35",
+   "label": "Queen Victoria",
+   "seed": false
+  },
+  {
+   "id": "mq:5cf8952553e86cc2",
+   "label": "Jenna Coleman",
+   "seed": false
+  },
+  {
+   "id": "mq:aff521035c3b3c1f",
+   "label": "The Dinosaurs!",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:aff521035c3b3c1f",
+   "label": "The Dinosaurs!",
+   "rank": 1,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:e464f5560931181a",
+   "label": "Gladys Bronwyn Stern",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "mq:a5be3c6284cc015f",
+   "label": "When Dinosaurs Roamed America",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:0b649259e63d40de",
+   "label": "DinoSquad",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:dd04cf0cc4edcf18",
+   "label": "The Ilona Massey Show",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 2
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:3ba419f39bf2fd35",
+    "label": "Queen Victoria",
+    "role": "gold"
+   },
+   {
+    "id": "mq:5cf8952553e86cc2",
+    "label": "Jenna Coleman",
+    "role": "gold"
+   },
+   {
+    "id": "mq:a8a4eb2266121c58",
+    "label": "Jennifer Ehle",
+    "role": "connector"
+   },
+   {
+    "id": "mq:aff521035c3b3c1f",
+    "label": "The Dinosaurs!",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:3ba419f39bf2fd35",
+    "b": "mq:5cf8952553e86cc2",
+    "via": [
+     {
+      "kind": "term",
+      "key": "queen victoria",
+      "width": 44
+     }
+    ]
+   },
+   {
+    "a": "mq:5cf8952553e86cc2",
+    "b": "mq:a8a4eb2266121c58",
+    "via": [
+     {
+      "kind": "term",
+      "key": "english actress",
+      "width": 12
+     }
+    ]
+   },
+   {
+    "a": "mq:a8a4eb2266121c58",
+    "b": "mq:aff521035c3b3c1f",
+    "via": [
+     {
+      "kind": "term",
+      "key": "miniseries",
+      "width": 22
+     }
+    ]
+   }
+  ],
+  "cost": 3,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   3,
+   2
+  ],
+  "entry": {
+   "seed": "mq:aff521035c3b3c1f",
+   "gold": "mq:aff521035c3b3c1f",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 1830,
+  "within_2_doors": 19214,
+  "gold_within_1": 0,
+  "gold_within_2": 2,
+  "top_U": [
+   {
+    "id": "mq:82b391bc5e279042",
+    "label": "Nebular hypothesis",
+    "p": 0.0032487013218794295,
+    "gold": false
+   },
+   {
+    "id": "mq:04896fabd1f84d85",
+    "label": "This Is America, Charlie Brown",
+    "p": 0.002299910005346132,
+    "gold": false
+   },
+   {
+    "id": "mq:c25776d8ad205d71",
+    "label": "Petticoat Junction",
+    "p": 0.0022893375892758306,
+    "gold": false
+   },
+   {
+    "id": "mq:72ef10cf74691b17",
+    "label": "Bird",
+    "p": 0.002110929054391022,
+    "gold": false
+   },
+   {
+    "id": "mq:1df4b2db8ce179ea",
+    "label": "Eugene Paul Nassar",
+    "p": 0.0017894935807864665,
+    "gold": false
+   },
+   {
+    "id": "mq:d95751ed19fac7ed",
+    "label": "Indroda Dinosaur and Fossil Park",
+    "p": 0.0017085417936508161,
+    "gold": false
+   },
+   {
+    "id": "mq:70cc10081544a8e4",
+    "label": "List of Happily Divorced episodes",
+    "p": 0.0015869320455747444,
+    "gold": false
+   },
+   {
+    "id": "mq:64b5659dd03c5151",
+    "label": "List of North American dinosaurs",
+    "p": 0.0015819460701653393,
+    "gold": false
+   },
+   {
+    "id": "mq:2a7066d7ef97929c",
+    "label": "Clara Edwards",
+    "p": 0.0009825615628887396,
+    "gold": false
+   },
+   {
+    "id": "mq:9bb6189ab5a02010",
+    "label": "David Bomberg",
+    "p": 0.0009474637020446629,
+    "gold": false
+   },
+   {
+    "id": "mq:c03f5741fc315183",
+    "label": "Body Story",
+    "p": 0.0009312943487944771,
+    "gold": false
+   },
+   {
+    "id": "mq:018b3e4ea84194f7",
+    "label": "Steven Spielberg",
+    "p": 0.0009234693461353016,
+    "gold": false
+   },
+   {
+    "id": "mq:4505b4d35dea7415",
+    "label": "Qui studio a voi stadio",
+    "p": 0.0009187562209597887,
+    "gold": false
+   },
+   {
+    "id": "mq:81501b6de32f95b1",
+    "label": "King (miniseries)",
+    "p": 0.00090203350333496,
+    "gold": false
+   },
+   {
+    "id": "mq:5c70c311b92247a1",
+    "label": "The Hot Rod Dogs and Cool Car Cats",
+    "p": 0.0009018249387316006,
+    "gold": false
+   },
+   {
+    "id": "mq:ea456fa26056add0",
+    "label": "Callum Kane",
+    "p": 0.0008966249305390225,
+    "gold": false
+   },
+   {
+    "id": "mq:afeaaac1380e6cde",
+    "label": "Ilona Andr\u00e1ssy",
+    "p": 0.000872108716524079,
+    "gold": false
+   },
+   {
+    "id": "mq:4186f7a4244d7804",
+    "label": "Rio All-Suite Hotel and Casino",
+    "p": 0.0008704195525489116,
+    "gold": false
+   },
+   {
+    "id": "mq:3b853c52f48ea703",
+    "label": "Dinosaur!",
+    "p": 0.0008414231195744122,
+    "gold": false
+   },
+   {
+    "id": "mq:3dfaa85e3be1acbd",
+    "label": "Megan Follows",
+    "p": 0.0008301467328327432,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:aff521035c3b3c1f",
+   "label": "The Dinosaurs!",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:e464f5560931181a",
+   "label": "Gladys Bronwyn Stern",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:a5be3c6284cc015f",
+   "label": "When Dinosaurs Roamed America",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:0b649259e63d40de",
+   "label": "DinoSquad",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:dd04cf0cc4edcf18",
+   "label": "The Ilona Massey Show",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:cfc1030f5d0a5a75",
+   "label": "In the Footsteps of Marco Polo",
+   "wave": 1,
+   "via": "term:pbs",
+   "gold": false
+  },
+  {
+   "id": "mq:0af0510f3b6d45b8",
+   "label": "High Feather",
+   "wave": 1,
+   "via": "term:pbs",
+   "gold": false
+  },
+  {
+   "id": "mq:63d2c0f1032ba924",
+   "label": "The Lawrence Welk Show",
+   "wave": 1,
+   "via": "term:pbs",
+   "gold": false
+  },
+  {
+   "id": "mq:641f71686abad650",
+   "label": "India\u2013Pakistan border",
+   "wave": 1,
+   "via": "term:pbs",
+   "gold": false
+  },
+  {
+   "id": "mq:5469d822f511246a",
+   "label": "Monsterpiece Theater",
+   "wave": 1,
+   "via": "term:pbs",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:82b391bc5e279042",
+    "label": "Nebular hypothesis",
+    "gold": false
+   },
+   {
+    "id": "mq:04896fabd1f84d85",
+    "label": "This Is America, Charlie Brown",
+    "gold": false
+   },
+   {
+    "id": "mq:c25776d8ad205d71",
+    "label": "Petticoat Junction",
+    "gold": false
+   },
+   {
+    "id": "mq:72ef10cf74691b17",
+    "label": "Bird",
+    "gold": false
+   },
+   {
+    "id": "mq:1df4b2db8ce179ea",
+    "label": "Eugene Paul Nassar",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:64b5659dd03c5151",
+    "label": "List of North American dinosaurs",
+    "gold": false
+   },
+   {
+    "id": "mq:d95751ed19fac7ed",
+    "label": "Indroda Dinosaur and Fossil Park",
+    "gold": false
+   },
+   {
+    "id": "mq:72ef10cf74691b17",
+    "label": "Bird",
+    "gold": false
+   },
+   {
+    "id": "mq:90ba173bf5e2b97e",
+    "label": "Sally Struthers",
+    "gold": false
+   },
+   {
+    "id": "mq:83f34d71d0d05533",
+    "label": "Sally Struthers",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:90ba173bf5e2b97e",
+    "label": "Sally Struthers",
+    "gold": false
+   },
+   {
+    "id": "mq:83f34d71d0d05533",
+    "label": "Sally Struthers",
+    "gold": false
+   },
+   {
+    "id": "mq:72ef10cf74691b17",
+    "label": "Bird",
+    "gold": false
+   },
+   {
+    "id": "mq:d95751ed19fac7ed",
+    "label": "Indroda Dinosaur and Fossil Park",
+    "gold": false
+   },
+   {
+    "id": "mq:64b5659dd03c5151",
+    "label": "List of North American dinosaurs",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:24f2811024521c97",
+    "label": "Blackadder II",
+    "gold": false
+   },
+   {
+    "id": "mq:37141b8f1ad06a06",
+    "label": "Mara Marini",
+    "gold": false
+   },
+   {
+    "id": "mq:cadf4c4f42abacae",
+    "label": "The Faerie Queene",
+    "gold": false
+   },
+   {
+    "id": "mq:d0c7f9310bb55a3b",
+    "label": "Isabella of France",
+    "gold": false
+   },
+   {
+    "id": "mq:edabad480a6beb85",
+    "label": "Rose Leveson-Gower, Countess Granville",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

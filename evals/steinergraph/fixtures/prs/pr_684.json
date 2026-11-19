@@ -1,0 +1,436 @@
+{
+ "qid": "pr:684",
+ "set": "prs",
+ "question": "What work went into this, and why: walklab: casebook of misses across four corpora (records only)?",
+ "gold": [
+  {
+   "id": "commit/2a99041466",
+   "label": "commit 2a99041: walklab: casebook pooled across four corpora -- 124 run-misses: DECIDER 51, EDGE 48, BUDGET/CAP 23, ABSE",
+   "seed": true
+  },
+  {
+   "id": "commit/be20fd4366",
+   "label": "commit be20fd4: walklab: casebook of misses, MuSiQue and repo (83 run-misses, 30 unique items) classified from records; ",
+   "seed": true
+  },
+  {
+   "id": "commit/c4364b9e0d",
+   "label": "commit c4364b9: walklab dreaming: register create (stated relation, mike's finder), prune and hub, learned from DEV EDGE",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/2a99041466",
+   "label": "commit 2a99041: walklab: casebook pooled across four corpora -- 124 run-misses: DECIDER 51, EDGE 48, BUDGET/CAP 23, ABSE",
+   "rank": 1,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "commit/583832362e",
+   "label": "commit 5838323: Merge pull request #684 from Percolation-Labs/cory/q3-topk",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/be20fd4366",
+   "label": "commit be20fd4: walklab: casebook of misses, MuSiQue and repo (83 run-misses, 30 unique items) classified from records; ",
+   "rank": 3,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "board/messages/M-20261103-080755-e214.md#1",
+   "label": "board/messages/M-20261103-080755-e214.md",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/messages/M-20261103-071608-1757.md#1",
+   "label": "board/messages/M-20261103-071608-1757.md",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/2a99041466",
+    "label": "commit 2a99041: walklab: casebook pooled across four corpora -- 124 run-misses: DECIDER 51, EDGE 48, BUDGET/CAP 23, ABSE",
+    "role": "gold"
+   },
+   {
+    "id": "commit/be20fd4366",
+    "label": "commit be20fd4: walklab: casebook of misses, MuSiQue and repo (83 run-misses, 30 unique items) classified from records; ",
+    "role": "gold"
+   },
+   {
+    "id": "commit/c4364b9e0d",
+    "label": "commit c4364b9: walklab dreaming: register create (stated relation, mike's finder), prune and hub, learned from DEV EDGE",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/2a99041466",
+    "b": "commit/be20fd4366",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "run misses",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "walklab casebook",
+      "width": 3
+     }
+    ]
+   },
+   {
+    "a": "commit/2a99041466",
+    "b": "commit/c4364b9e0d",
+    "via": [
+     {
+      "kind": "beside"
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   1,
+   2
+  ],
+  "entry": {
+   "seed": "commit/2a99041466",
+   "gold": "commit/2a99041466",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 901,
+  "within_2_doors": 32145,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "meta/lab/results/casebook/CASEBOOK.md#3",
+    "label": "meta/lab/results/casebook/CASEBOOK.md \u203a Counts",
+    "p": 0.005665602662044216,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261103-071757-f954.md#1",
+    "label": "board/messages/M-20261103-071757-f954.md",
+    "p": 0.00473664760893906,
+    "gold": false
+   },
+   {
+    "id": "commit/1206a6b240",
+    "label": "commit 1206a6b: board: cory acknowledges 1 message(s)",
+    "p": 0.0035319601125254254,
+    "gold": false
+   },
+   {
+    "id": "commit/a4369da71c",
+    "label": "commit a4369da: board: bill messages sirsh",
+    "p": 0.003531942759237353,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/casebook/CASEBOOK.md#1",
+    "label": "meta/lab/results/casebook/CASEBOOK.md \u203a Casebook of misses (Sirsh M-20261103-071608-1757; cory leads, mike sends BEAM an",
+    "p": 0.0030333033705579166,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/casebook/README.md#1",
+    "label": "meta/lab/results/casebook/README.md \u203a Casebook of misses",
+    "p": 0.0027171231614796557,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261103-080215-b71a.md#1",
+    "label": "board/messages/M-20261103-080215-b71a.md",
+    "p": 0.002491624315654907,
+    "gold": false
+   },
+   {
+    "id": "board/board.py#23",
+    "label": "board/board.py",
+    "p": 0.002342154355526809,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1301.md#3",
+    "label": "board/cards/REM-1301.md \u203a Evidence",
+    "p": 0.002288313140986689,
+    "gold": false
+   },
+   {
+    "id": "commit/21919917cd",
+    "label": "commit 2191991: walklab dreaming: the tail operations built from DEV EDGE misses (MuSiQue 7 items: 6 created edges, 20 p",
+    "p": 0.002282273400649313,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/dream-tail/RULE.md#3",
+    "label": "meta/lab/results/dream-tail/RULE.md \u203a Dreaming to lift the floor: create (with a stated relation), prune and hub, learne",
+    "p": 0.002249803684722816,
+    "gold": false
+   },
+   {
+    "id": "commit/c4364b9e0d",
+    "label": "commit c4364b9: walklab dreaming: register create (stated relation, mike's finder), prune and hub, learned from DEV EDGE",
+    "p": 0.0021310313337710935,
+    "gold": true
+   },
+   {
+    "id": "board/messages/M-20261108-235746-9ff4.md#1",
+    "label": "board/messages/M-20261108-235746-9ff4.md",
+    "p": 0.0020347337556017387,
+    "gold": false
+   },
+   {
+    "id": "commit/19af930c63",
+    "label": "commit 19af930: board: sirsh messages bill",
+    "p": 0.001963699471375465,
+    "gold": false
+   },
+   {
+    "id": "commit/a74d46eebf",
+    "label": "commit a74d46e: board: bill acknowledges 1 message(s)",
+    "p": 0.0019636606002930183,
+    "gold": false
+   },
+   {
+    "id": "commit/13e5216e97",
+    "label": "commit 13e5216: walklab q4: fix --describe rare after the main merge (main's _emb is a dict; use its _vec, same model an",
+    "p": 0.0019208196278591798,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261102-220200-5973.md#1",
+    "label": "board/messages/M-20261102-220200-5973.md",
+    "p": 0.0018946819823093355,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261102-222700-dfa9.md#1",
+    "label": "board/messages/M-20261102-222700-dfa9.md",
+    "p": 0.001659166046524026,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261103-080049-98bc.md#1",
+    "label": "board/messages/M-20261103-080049-98bc.md",
+    "p": 0.001614332534589749,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/q4/dream_tail_ops.py#3",
+    "label": "meta/lab/q4/dream_tail_ops.py",
+    "p": 0.0015087141486780557,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/2a99041466",
+   "label": "commit 2a99041: walklab: casebook pooled across four corpora -- 124 run-misses: DECIDER 51, EDGE 48, BUDGET/CAP 23, ABSE",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "commit/583832362e",
+   "label": "commit 5838323: Merge pull request #684 from Percolation-Labs/cory/q3-topk",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/be20fd4366",
+   "label": "commit be20fd4: walklab: casebook of misses, MuSiQue and repo (83 run-misses, 30 unique items) classified from records; ",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "board/messages/M-20261103-080755-e214.md#1",
+   "label": "board/messages/M-20261103-080755-e214.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/messages/M-20261103-071608-1757.md#1",
+   "label": "board/messages/M-20261103-071608-1757.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/q4/casebook.py#1",
+   "label": "meta/lab/q4/casebook.py",
+   "wave": 1,
+   "via": "term:recorded miss",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/casebook/README.md#1",
+   "label": "meta/lab/results/casebook/README.md \u203a Casebook of misses",
+   "wave": 1,
+   "via": "term:recorded miss",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/casebook/CASEBOOK.md#1",
+   "label": "meta/lab/results/casebook/CASEBOOK.md \u203a Casebook of misses (Sirsh M-20261103-071608-1757; cory leads, mike sends BEAM an",
+   "wave": 1,
+   "via": "term:recorded miss",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/casebook/CASEBOOK.md#6",
+   "label": "meta/lab/results/casebook/CASEBOOK.md \u203a Every miss",
+   "wave": 2,
+   "via": "term:pass decider",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/casebook/CASEBOOK.md#18",
+   "label": "meta/lab/results/casebook/CASEBOOK.md \u203a Every miss",
+   "wave": 2,
+   "via": "term:pass decider",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "meta/lab/results/casebook/CASEBOOK.md#3",
+    "label": "meta/lab/results/casebook/CASEBOOK.md \u203a Counts",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261103-071757-f954.md#1",
+    "label": "board/messages/M-20261103-071757-f954.md",
+    "gold": false
+   },
+   {
+    "id": "commit/1206a6b240",
+    "label": "commit 1206a6b: board: cory acknowledges 1 message(s)",
+    "gold": false
+   },
+   {
+    "id": "commit/a4369da71c",
+    "label": "commit a4369da: board: bill messages sirsh",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/casebook/CASEBOOK.md#1",
+    "label": "meta/lab/results/casebook/CASEBOOK.md \u203a Casebook of misses (Sirsh M-20261103-071608-1757; cory leads, mike sends BEAM an",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "meta/lab/results/casebook/CASEBOOK.md#3",
+    "label": "meta/lab/results/casebook/CASEBOOK.md \u203a Counts",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/casebook/CASEBOOK.md#1",
+    "label": "meta/lab/results/casebook/CASEBOOK.md \u203a Casebook of misses (Sirsh M-20261103-071608-1757; cory leads, mike sends BEAM an",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261103-080215-b71a.md#1",
+    "label": "board/messages/M-20261103-080215-b71a.md",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261103-071757-f954.md#1",
+    "label": "board/messages/M-20261103-071757-f954.md",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261103-075950-8a14.md#1",
+    "label": "board/messages/M-20261103-075950-8a14.md",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "board/messages/M-20261103-080049-98bc.md#1",
+    "label": "board/messages/M-20261103-080049-98bc.md",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261103-080215-b71a.md#1",
+    "label": "board/messages/M-20261103-080215-b71a.md",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/casebook/CASEBOOK.md#3",
+    "label": "meta/lab/results/casebook/CASEBOOK.md \u203a Counts",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261103-071757-f954.md#1",
+    "label": "board/messages/M-20261103-071757-f954.md",
+    "gold": false
+   },
+   {
+    "id": "commit/1206a6b240",
+    "label": "commit 1206a6b: board: cory acknowledges 1 message(s)",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "meta/lab/results/casebook/CASEBOOK.md#3",
+    "label": "meta/lab/results/casebook/CASEBOOK.md \u203a Counts",
+    "gold": false
+   },
+   {
+    "id": "commit/1f5704116c",
+    "label": "commit 1f57041: walklab dreaming: use-driven relabel across 3 corpora with the unraised control -- MuSiQue +.009 vs .000",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261103-080010-7639.md#1",
+    "label": "board/messages/M-20261103-080010-7639.md",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/casebook/CASEBOOK.md#1",
+    "label": "meta/lab/results/casebook/CASEBOOK.md \u203a Casebook of misses (Sirsh M-20261103-071608-1757; cory leads, mike sends BEAM an",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/reference-world/REGISTERED.md#7",
+    "label": "meta/lab/results/reference-world/REGISTERED.md \u203a Test 1 over BEAM: the same dial on a second real corpus (registered 17 ",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

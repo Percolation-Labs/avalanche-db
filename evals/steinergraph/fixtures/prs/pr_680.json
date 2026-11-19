@@ -1,0 +1,431 @@
+{
+ "qid": "pr:680",
+ "set": "prs",
+ "question": "What work went into this, and why: walklab: b1 cost run (unfinished at 30 min) and the switch-on proposal?",
+ "gold": [
+  {
+   "id": "commit/335c46d568",
+   "label": "commit 335c46d: walklab: b1 cost run unfinished at 30 min (151 calls; P-first alone is itself ~30 min); switch-on propos",
+   "seed": true
+  },
+  {
+   "id": "commit/71483f32e9",
+   "label": "commit 71483f3: walklab: register the b1 cost run of the full bounded rule; lab engine gains open_whole_max_width (mirro",
+   "seed": false
+  },
+  {
+   "id": "commit/bc91923dd2",
+   "label": "commit bc91923: switch-on proposal: settings are per walk, rollback cites walk_run_settings",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/335c46d568",
+   "label": "commit 335c46d: walklab: b1 cost run unfinished at 30 min (151 calls; P-first alone is itself ~30 min); switch-on propos",
+   "rank": 1,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "commit/56edd1fa20",
+   "label": "commit 56edd1f: Merge pull request #680 from Percolation-Labs/mike/b1-cost",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/b4e7839164",
+   "label": "commit b4e7839: walklab q3: per-target top-3 loss check -- MuSiQue 11 vs 10 on 5 walks, nothing lost, 17 per-target requ",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "meta/lab/results/q4-switch-cost/PROPOSAL.md#1",
+   "label": "meta/lab/results/q4-switch-cost/PROPOSAL.md \u203a Switching on the new walk rule: a proposal for Sirsh (mike, 2 Nov 2026)",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "meta/lab/results/q4-switch-cost/PROPOSAL.md#4",
+   "label": "meta/lab/results/q4-switch-cost/PROPOSAL.md \u203a What it costs",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/335c46d568",
+    "label": "commit 335c46d: walklab: b1 cost run unfinished at 30 min (151 calls; P-first alone is itself ~30 min); switch-on propos",
+    "role": "gold"
+   },
+   {
+    "id": "commit/71483f32e9",
+    "label": "commit 71483f3: walklab: register the b1 cost run of the full bounded rule; lab engine gains open_whole_max_width (mirro",
+    "role": "gold"
+   },
+   {
+    "id": "commit/bc91923dd2",
+    "label": "commit bc91923: switch-on proposal: settings are per walk, rollback cites walk_run_settings",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/335c46d568",
+    "b": "commit/71483f32e9",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "cost run",
+      "width": 9
+     }
+    ]
+   },
+   {
+    "a": "commit/335c46d568",
+    "b": "commit/bc91923dd2",
+    "via": [
+     {
+      "kind": "beside"
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   1,
+   2
+  ],
+  "entry": {
+   "seed": "commit/335c46d568",
+   "gold": "commit/335c46d568",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 686,
+  "within_2_doors": 31411,
+  "gold_within_1": 2,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "commit/71483f32e9",
+    "label": "commit 71483f3: walklab: register the b1 cost run of the full bounded rule; lab engine gains open_whole_max_width (mirro",
+    "p": 0.006017996863012528,
+    "gold": true
+   },
+   {
+    "id": "meta/lab/results/q4-switch-cost/RULE.md#1",
+    "label": "meta/lab/results/q4-switch-cost/RULE.md \u203a The cost of the full bounded rule on the repository's hardest walk, b1 (regist",
+    "p": 0.004909511071419384,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-switch-cost/PROPOSAL.md#2",
+    "label": "meta/lab/results/q4-switch-cost/PROPOSAL.md \u203a The rule (percolate #357, #359)",
+    "p": 0.0046103916169036125,
+    "gold": false
+   },
+   {
+    "id": "commit/be0f357848",
+    "label": "commit be0f357: board: bill messages sirsh",
+    "p": 0.003971554789315164,
+    "gold": false
+   },
+   {
+    "id": "commit/eadbc2c60f",
+    "label": "commit eadbc2c: Merge pull request #682 from Percolation-Labs/mike/jev-stage0",
+    "p": 0.003890226981621634,
+    "gold": false
+   },
+   {
+    "id": "commit/04e32dfbe6",
+    "label": "commit 04e32df: walklab q3: register the per-target top-3 loss check on 5 MuSiQue walks and repo b1 (baseline: cory's P-",
+    "p": 0.0038392223504553694,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-switch-cost/result.txt#1",
+    "label": "meta/lab/results/q4-switch-cost/result.txt",
+    "p": 0.003795182241571837,
+    "gold": false
+   },
+   {
+    "id": "commit/bc91923dd2",
+    "label": "commit bc91923: switch-on proposal: settings are per walk, rollback cites walk_run_settings",
+    "p": 0.003401439901923342,
+    "gold": true
+   },
+   {
+    "id": "meta/lab/results/q4-switch-cost/RULE.md#2",
+    "label": "meta/lab/results/q4-switch-cost/RULE.md \u203a The cost of the full bounded rule on the repository's hardest walk, b1 (regist",
+    "p": 0.0030974023138545244,
+    "gold": false
+   },
+   {
+    "id": "specs/decision-walks/README.md#27",
+    "label": "specs/decision-walks/README.md \u203a Travel: a relative gate for a low-calibrated judge (proposed for walk.sql)",
+    "p": 0.0030915350434647594,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-switch-cost/PROPOSAL.md#6",
+    "label": "meta/lab/results/q4-switch-cost/PROPOSAL.md \u203a What I would switch on first",
+    "p": 0.003035537237275908,
+    "gold": false
+   },
+   {
+    "id": "specs/decision-walks/README.md#26",
+    "label": "specs/decision-walks/README.md \u203a Travel: a relative gate for a low-calibrated judge (proposed for walk.sql)",
+    "p": 0.002850076511629371,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-switch-cost/PROPOSAL.md#3",
+    "label": "meta/lab/results/q4-switch-cost/PROPOSAL.md \u203a What it gains",
+    "p": 0.0024912200741753006,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-onek-loss/result.txt#1",
+    "label": "meta/lab/results/q4-onek-loss/result.txt",
+    "p": 0.002429878179553276,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-onek-loss/RULE.md#1",
+    "label": "meta/lab/results/q4-onek-loss/RULE.md \u203a Loss check for per-target top-3 on MuSiQue and the repository (registered before",
+    "p": 0.002290341562771538,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261102-220200-5973.md#1",
+    "label": "board/messages/M-20261102-220200-5973.md",
+    "p": 0.0022144710176252714,
+    "gold": false
+   },
+   {
+    "id": "commit/d8e532285d",
+    "label": "commit d8e5322: board: bill messages sirsh",
+    "p": 0.0021412575933785327,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-onek-loss/result.txt#2",
+    "label": "meta/lab/results/q4-onek-loss/result.txt",
+    "p": 0.0019930711735632965,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-switch-cost/PROPOSAL.md#5",
+    "label": "meta/lab/results/q4-switch-cost/PROPOSAL.md \u203a Risks",
+    "p": 0.001988971911866481,
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-10-29-lead-information/pilot/pilot_stop.py#2",
+    "label": "meta/spikes/2026-10-29-lead-information/pilot/pilot_stop.py",
+    "p": 0.0018962667921012073,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/335c46d568",
+   "label": "commit 335c46d: walklab: b1 cost run unfinished at 30 min (151 calls; P-first alone is itself ~30 min); switch-on propos",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "commit/56edd1fa20",
+   "label": "commit 56edd1f: Merge pull request #680 from Percolation-Labs/mike/b1-cost",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/b4e7839164",
+   "label": "commit b4e7839: walklab q3: per-target top-3 loss check -- MuSiQue 11 vs 10 on 5 walks, nothing lost, 17 per-target requ",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/q4-switch-cost/PROPOSAL.md#1",
+   "label": "meta/lab/results/q4-switch-cost/PROPOSAL.md \u203a Switching on the new walk rule: a proposal for Sirsh (mike, 2 Nov 2026)",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/q4-switch-cost/PROPOSAL.md#4",
+   "label": "meta/lab/results/q4-switch-cost/PROPOSAL.md \u203a What it costs",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/q4-switch-cost/RULE.md#2",
+   "label": "meta/lab/results/q4-switch-cost/RULE.md \u203a The cost of the full bounded rule on the repository's hardest walk, b1 (regist",
+   "wave": 1,
+   "via": "term:hardest walk",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/q4-switch-cost/result.txt#1",
+   "label": "meta/lab/results/q4-switch-cost/result.txt",
+   "wave": 1,
+   "via": "term:hardest walk",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/q4-switch-cost/RULE.md#1",
+   "label": "meta/lab/results/q4-switch-cost/RULE.md \u203a The cost of the full bounded rule on the repository's hardest walk, b1 (regist",
+   "wave": 1,
+   "via": "term:hardest walk",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/q4-switch-cost/PROPOSAL.md#3",
+   "label": "meta/lab/results/q4-switch-cost/PROPOSAL.md \u203a What it gains",
+   "wave": 2,
+   "via": "term:switch cost",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/q4-switch-cost/PROPOSAL.md#2",
+   "label": "meta/lab/results/q4-switch-cost/PROPOSAL.md \u203a The rule (percolate #357, #359)",
+   "wave": 2,
+   "via": "term:switch cost",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "commit/71483f32e9",
+    "label": "commit 71483f3: walklab: register the b1 cost run of the full bounded rule; lab engine gains open_whole_max_width (mirro",
+    "gold": true
+   },
+   {
+    "id": "meta/lab/results/q4-switch-cost/RULE.md#1",
+    "label": "meta/lab/results/q4-switch-cost/RULE.md \u203a The cost of the full bounded rule on the repository's hardest walk, b1 (regist",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-switch-cost/PROPOSAL.md#2",
+    "label": "meta/lab/results/q4-switch-cost/PROPOSAL.md \u203a The rule (percolate #357, #359)",
+    "gold": false
+   },
+   {
+    "id": "commit/be0f357848",
+    "label": "commit be0f357: board: bill messages sirsh",
+    "gold": false
+   },
+   {
+    "id": "commit/eadbc2c60f",
+    "label": "commit eadbc2c: Merge pull request #682 from Percolation-Labs/mike/jev-stage0",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "meta/lab/results/q4-switch-cost/RULE.md#1",
+    "label": "meta/lab/results/q4-switch-cost/RULE.md \u203a The cost of the full bounded rule on the repository's hardest walk, b1 (regist",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-switch-cost/result.txt#1",
+    "label": "meta/lab/results/q4-switch-cost/result.txt",
+    "gold": false
+   },
+   {
+    "id": "commit/71483f32e9",
+    "label": "commit 71483f3: walklab: register the b1 cost run of the full bounded rule; lab engine gains open_whole_max_width (mirro",
+    "gold": true
+   },
+   {
+    "id": "meta/lab/results/q4-switch-cost/PROPOSAL.md#2",
+    "label": "meta/lab/results/q4-switch-cost/PROPOSAL.md \u203a The rule (percolate #357, #359)",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-switch-cost/PROPOSAL.md#6",
+    "label": "meta/lab/results/q4-switch-cost/PROPOSAL.md \u203a What I would switch on first",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/04e32dfbe6",
+    "label": "commit 04e32df: walklab q3: register the per-target top-3 loss check on 5 MuSiQue walks and repo b1 (baseline: cory's P-",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-switch-cost/PROPOSAL.md#2",
+    "label": "meta/lab/results/q4-switch-cost/PROPOSAL.md \u203a The rule (percolate #357, #359)",
+    "gold": false
+   },
+   {
+    "id": "commit/bc91923dd2",
+    "label": "commit bc91923: switch-on proposal: settings are per walk, rollback cites walk_run_settings",
+    "gold": true
+   },
+   {
+    "id": "meta/lab/results/q4-switch-cost/result.txt#1",
+    "label": "meta/lab/results/q4-switch-cost/result.txt",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-switch-cost/PROPOSAL.md#3",
+    "label": "meta/lab/results/q4-switch-cost/PROPOSAL.md \u203a What it gains",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "board/messages/M-20261102-221100-5587.md#1",
+    "label": "board/messages/M-20261102-221100-5587.md",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-switch-cost/RULE.md#1",
+    "label": "meta/lab/results/q4-switch-cost/RULE.md \u203a The cost of the full bounded rule on the repository's hardest walk, b1 (regist",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-switch-cost/result.txt#1",
+    "label": "meta/lab/results/q4-switch-cost/result.txt",
+    "gold": false
+   },
+   {
+    "id": "commit/bc91923dd2",
+    "label": "commit bc91923: switch-on proposal: settings are per walk, rollback cites walk_run_settings",
+    "gold": true
+   },
+   {
+    "id": "applications/percolate-self-model/reflect/offline/README.md#2",
+    "label": "applications/percolate-self-model/reflect/offline/README.md \u203a Results",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.5,
+  "Q": 0.5,
+  "LQ": 0.5,
+  "S": 0.5
+ }
+}

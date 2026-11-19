@@ -1,0 +1,410 @@
+{
+ "qid": "card:REM-1094",
+ "set": "cards",
+ "question": "What was done about this, and why: production: claims and questions are embedded in production and backfilled?",
+ "gold": [
+  {
+   "id": "commit/fbd9b678a0",
+   "label": "commit fbd9b67: dev/train.sh: one script runs the release train, leg by leg (REM-1097)",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/21af6ff16b",
+   "label": "commit 21af6ff: board: file REM-1094 production: claims and questions are embedded in production and backfilled",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-1094.md#1",
+   "label": "board/cards/REM-1094.md",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-1094.md#2",
+   "label": "board/cards/REM-1094.md \u203a Goal",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/messages/M-20261020-094506-0a8e.md#1",
+   "label": "board/messages/M-20261020-094506-0a8e.md",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "board/cards/REM-1094.md#7",
+   "label": "board/cards/REM-1094.md \u203a Log",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "board/cards/REM-1094.md#7",
+    "label": "board/cards/REM-1094.md \u203a Log",
+    "role": "seed"
+   },
+   {
+    "id": "commit/fbd9b678a0",
+    "label": "commit fbd9b67: dev/train.sh: one script runs the release train, leg by leg (REM-1097)",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "board/cards/REM-1094.md#7",
+    "b": "commit/fbd9b678a0",
+    "via": [
+     {
+      "kind": "term",
+      "key": "production handoff",
+      "width": 11
+     },
+     {
+      "kind": "term",
+      "key": "rem 1094",
+      "width": 42
+     },
+     {
+      "kind": "term",
+      "key": "1094",
+      "width": 45
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [],
+  "entry": {
+   "seed": "board/cards/REM-1094.md#7",
+   "gold": "commit/fbd9b678a0",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 1095,
+  "within_2_doors": 33594,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "board/cards/REM-1094.md#4",
+    "label": "board/cards/REM-1094.md \u203a Done when",
+    "p": 0.009502497369860073,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1094.md#6",
+    "label": "board/cards/REM-1094.md \u203a Log",
+    "p": 0.0055499204881001305,
+    "gold": false
+   },
+   {
+    "id": "commit/11866770b2",
+    "label": "commit 1186677: board: note on REM-1094",
+    "p": 0.003956398618303433,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261020-075521-7b79.md#1",
+    "label": "board/messages/M-20261020-075521-7b79.md",
+    "p": 0.003880941646423449,
+    "gold": false
+   },
+   {
+    "id": "commit/20d21967b7",
+    "label": "commit 20d2196: board: note on REM-1094",
+    "p": 0.0037791997732454456,
+    "gold": false
+   },
+   {
+    "id": "commit/1631b43786",
+    "label": "commit 1631b43: board: note on REM-1094",
+    "p": 0.0036828069421034246,
+    "gold": false
+   },
+   {
+    "id": "commit/4cf179f955",
+    "label": "commit 4cf179f: board: note on REM-1094",
+    "p": 0.003622272570929105,
+    "gold": false
+   },
+   {
+    "id": "meta/status/2026-10-20-roll-call.md#7",
+    "label": "meta/status/2026-10-20-roll-call.md \u203a In flight",
+    "p": 0.0034779009305913404,
+    "gold": false
+   },
+   {
+    "id": "commit/8c8383f46f",
+    "label": "commit 8c8383f: board: REM-1094 in-progress \u2192 done",
+    "p": 0.002965551535469589,
+    "gold": false
+   },
+   {
+    "id": "commit/30d26ea326",
+    "label": "commit 30d26ea: board: p8-subsystems-08 takes REM-1074",
+    "p": 0.002313371990783159,
+    "gold": false
+   },
+   {
+    "id": "commit/5934d91e42",
+    "label": "commit 5934d91: board: bob messages sirsh",
+    "p": 0.0022270526571711744,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261023-113513-c5da.md#1",
+    "label": "board/messages/M-20261023-113513-c5da.md",
+    "p": 0.002129831906206767,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261020-091450-d5d5.md#1",
+    "label": "board/messages/M-20261020-091450-d5d5.md",
+    "p": 0.0018217018601913773,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261028-160530-3b83.md#1",
+    "label": "board/messages/M-20261028-160530-3b83.md",
+    "p": 0.001818994621052323,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261029-122815-55f0.md#1",
+    "label": "board/messages/M-20261029-122815-55f0.md",
+    "p": 0.0017860588878358334,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1094.md#3",
+    "label": "board/cards/REM-1094.md \u203a Evidence",
+    "p": 0.001766790267635373,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261026-120846-abbe.md#1",
+    "label": "board/messages/M-20261026-120846-abbe.md",
+    "p": 0.0017231647062276962,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261024-122909-710b.md#2",
+    "label": "board/messages/M-20261024-122909-710b.md",
+    "p": 0.0017186665960128183,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261029-192553-045c.md#1",
+    "label": "board/messages/M-20261029-192553-045c.md",
+    "p": 0.001718343206711086,
+    "gold": false
+   },
+   {
+    "id": "research-notes/essay-graph/corpus/webber-et-al-2019-pdtb3-sense-hierarchy/notes.md#5",
+    "label": "research-notes/essay-graph/corpus/webber-et-al-2019-pdtb3-sense-hierarchy/notes.md \u203a Hypophora (\u00a72.7.1)",
+    "p": 0.0016636836364730275,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/21af6ff16b",
+   "label": "commit 21af6ff: board: file REM-1094 production: claims and questions are embedded in production and backfilled",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-1094.md#1",
+   "label": "board/cards/REM-1094.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-1094.md#2",
+   "label": "board/cards/REM-1094.md \u203a Goal",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/messages/M-20261020-094506-0a8e.md#1",
+   "label": "board/messages/M-20261020-094506-0a8e.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-1094.md#7",
+   "label": "board/cards/REM-1094.md \u203a Log",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/4cf179f955",
+   "label": "commit 4cf179f: board: note on REM-1094",
+   "wave": 1,
+   "via": "term:rem 1094",
+   "gold": false
+  },
+  {
+   "id": "commit/8c8383f46f",
+   "label": "commit 8c8383f: board: REM-1094 in-progress \u2192 done",
+   "wave": 1,
+   "via": "term:rem 1094",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-1102.md#6",
+   "label": "board/cards/REM-1102.md \u203a Links",
+   "wave": 1,
+   "via": "term:rem 1094",
+   "gold": false
+  },
+  {
+   "id": "commit/20d21967b7",
+   "label": "commit 20d2196: board: note on REM-1094",
+   "wave": 1,
+   "via": "term:rem 1094",
+   "gold": false
+  },
+  {
+   "id": "commit/11866770b2",
+   "label": "commit 1186677: board: note on REM-1094",
+   "wave": 1,
+   "via": "term:rem 1094",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "board/cards/REM-1094.md#4",
+    "label": "board/cards/REM-1094.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1094.md#6",
+    "label": "board/cards/REM-1094.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "commit/11866770b2",
+    "label": "commit 1186677: board: note on REM-1094",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261020-075521-7b79.md#1",
+    "label": "board/messages/M-20261020-075521-7b79.md",
+    "gold": false
+   },
+   {
+    "id": "commit/20d21967b7",
+    "label": "commit 20d2196: board: note on REM-1094",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "board/cards/REM-1094.md#4",
+    "label": "board/cards/REM-1094.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1094.md#6",
+    "label": "board/cards/REM-1094.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261020-075521-7b79.md#1",
+    "label": "board/messages/M-20261020-075521-7b79.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-662.md#5",
+    "label": "board/cards/REM-662.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "meta/status/2026-10-20-roll-call.md#7",
+    "label": "meta/status/2026-10-20-roll-call.md \u203a In flight",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/8c8383f46f",
+    "label": "commit 8c8383f: board: REM-1094 in-progress \u2192 done",
+    "gold": false
+   },
+   {
+    "id": "commit/8c62199ef8",
+    "label": "commit 8c62199: board: file REM-662 claims: a claim is embedded when its revision is projected",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261020-092611-0bdb.md#1",
+    "label": "board/messages/M-20261020-092611-0bdb.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1094.md#4",
+    "label": "board/cards/REM-1094.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261021-062823-ff77.md#1",
+    "label": "board/messages/M-20261021-062823-ff77.md",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "board/cards/REM-1094.md#4",
+    "label": "board/cards/REM-1094.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261020-075521-7b79.md#1",
+    "label": "board/messages/M-20261020-075521-7b79.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1099.md#6",
+    "label": "board/cards/REM-1099.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261020-102352-ec26.md#1",
+    "label": "board/messages/M-20261020-102352-ec26.md",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261020-091444-44f9.md#1",
+    "label": "board/messages/M-20261020-091444-44f9.md",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

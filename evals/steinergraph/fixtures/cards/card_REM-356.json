@@ -1,0 +1,383 @@
+{
+ "qid": "card:REM-356",
+ "set": "cards",
+ "question": "What was done about this, and why: articles: an article card tells its story with a chart or an illustration, and charts cover the forms stories need?",
+ "gold": [
+  {
+   "id": "commit/e11dee3811",
+   "label": "commit e11dee3: specs: artifacts, chart forms and article thumbnails tell one story (REM-356)",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/a60f9731fa",
+   "label": "commit a60f973: board: file REM-356 articles: an article card tells its story with a chart or an illustration, and chart",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-356.md#1",
+   "label": "board/cards/REM-356.md",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-356.md#2",
+   "label": "board/cards/REM-356.md \u203a Goal",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "specs/percolate-application/artifacts-and-thumbnails.md#2",
+   "label": "specs/percolate-application/artifacts-and-thumbnails.md \u203a 1. The story a reader gets",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/e11dee3811",
+   "label": "commit e11dee3: specs: artifacts, chart forms and article thumbnails tell one story (REM-356)",
+   "rank": 5,
+   "gold": true,
+   "doors_to_gold": 0
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/e11dee3811",
+    "label": "commit e11dee3: specs: artifacts, chart forms and article thumbnails tell one story (REM-356)",
+    "role": "gold"
+   }
+  ],
+  "links": [],
+  "cost": 0,
+  "detached_gold": [],
+  "gold_pair_doors": [],
+  "entry": {
+   "seed": "commit/e11dee3811",
+   "gold": "commit/e11dee3811",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 934,
+  "within_2_doors": 32742,
+  "gold_within_1": 0,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "board/cards/REM-357.md#6",
+    "label": "board/cards/REM-357.md \u203a Log",
+    "p": 0.006236068092965364,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-356.md#7",
+    "label": "board/cards/REM-356.md \u203a Log",
+    "p": 0.0049639462113006275,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/README.md#4",
+    "label": "specs/percolate-application/README.md \u203a Read in this order",
+    "p": 0.004501509341458606,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-625.md#5",
+    "label": "board/cards/REM-625.md \u203a Log",
+    "p": 0.004167502551642108,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-359.md#1",
+    "label": "board/cards/REM-359.md",
+    "p": 0.0039405315234657635,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1174.md#2",
+    "label": "board/cards/REM-1174.md \u203a Goal",
+    "p": 0.003487300519086195,
+    "gold": false
+   },
+   {
+    "id": "commit/2a55dbbb97",
+    "label": "commit 2a55dbb: board: file REM-357 charts: stories draw part-to-whole, before and after, relationships and headline fig",
+    "p": 0.003363658960663451,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-358.md#1",
+    "label": "board/cards/REM-358.md",
+    "p": 0.003285198801917045,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-358.md#6",
+    "label": "board/cards/REM-358.md \u203a Log",
+    "p": 0.0031735729238251556,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/artifacts-and-thumbnails.md#11",
+    "label": "specs/percolate-application/artifacts-and-thumbnails.md \u203a 6. Portfolio and end-to-end proof",
+    "p": 0.003155109140890202,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-357.md#1",
+    "label": "board/cards/REM-357.md",
+    "p": 0.0031502946802872893,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-358.md#2",
+    "label": "board/cards/REM-358.md \u203a Goal",
+    "p": 0.0030849340892547253,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/artifacts-and-thumbnails.md#10",
+    "label": "specs/percolate-application/artifacts-and-thumbnails.md \u203a 6. Portfolio and end-to-end proof",
+    "p": 0.0029342619387522193,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/artifacts-and-thumbnails.md#1",
+    "label": "specs/percolate-application/artifacts-and-thumbnails.md \u203a Artifacts, charts and article thumbnails",
+    "p": 0.0029061026392532257,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/research-package.md#7",
+    "label": "specs/percolate-application/research-package.md \u203a 3. Artifacts are evidence objects",
+    "p": 0.0027953147000310107,
+    "gold": false
+   },
+   {
+    "id": "commit/0c5222ce33",
+    "label": "commit 0c5222c: board: file REM-359 examples: a portfolio of real stories shows each chart form and thumbnail",
+    "p": 0.00272718435821017,
+    "gold": false
+   },
+   {
+    "id": "commit/b8e2ea4765",
+    "label": "commit b8e2ea4: board: edit REM-356 spec",
+    "p": 0.0026054395393584587,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-356.md#4",
+    "label": "board/cards/REM-356.md \u203a Done when",
+    "p": 0.002380821890415074,
+    "gold": false
+   },
+   {
+    "id": "commit/4b64291f0d",
+    "label": "commit 4b64291: board: percolate-application-62 takes REM-354",
+    "p": 0.00229327397303406,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-356.md#3",
+    "label": "board/cards/REM-356.md \u203a Evidence",
+    "p": 0.0022612081806300754,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/a60f9731fa",
+   "label": "commit a60f973: board: file REM-356 articles: an article card tells its story with a chart or an illustration, and chart",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-356.md#1",
+   "label": "board/cards/REM-356.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-356.md#2",
+   "label": "board/cards/REM-356.md \u203a Goal",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/percolate-application/artifacts-and-thumbnails.md#2",
+   "label": "specs/percolate-application/artifacts-and-thumbnails.md \u203a 1. The story a reader gets",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/e11dee3811",
+   "label": "commit e11dee3: specs: artifacts, chart forms and article thumbnails tell one story (REM-356)",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "board/cards/REM-357.md#1",
+   "label": "board/cards/REM-357.md",
+   "wave": 1,
+   "via": "term:rem 356",
+   "gold": false
+  },
+  {
+   "id": "commit/979b4dd14e",
+   "label": "commit 979b4dd: board: REM-356 todo \u2192 done",
+   "wave": 1,
+   "via": "term:rem 356",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-358.md#1",
+   "label": "board/cards/REM-358.md",
+   "wave": 1,
+   "via": "term:rem 356",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-359.md#1",
+   "label": "board/cards/REM-359.md",
+   "wave": 1,
+   "via": "term:rem 356",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-356.md#5",
+   "label": "board/cards/REM-356.md \u203a Scope",
+   "wave": 1,
+   "via": "term:rem 356",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "board/cards/REM-357.md#6",
+    "label": "board/cards/REM-357.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-356.md#7",
+    "label": "board/cards/REM-356.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/README.md#4",
+    "label": "specs/percolate-application/README.md \u203a Read in this order",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-625.md#5",
+    "label": "board/cards/REM-625.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-359.md#1",
+    "label": "board/cards/REM-359.md",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "board/cards/REM-357.md#6",
+    "label": "board/cards/REM-357.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-356.md#7",
+    "label": "board/cards/REM-356.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/artifacts-and-thumbnails.md#10",
+    "label": "specs/percolate-application/artifacts-and-thumbnails.md \u203a 6. Portfolio and end-to-end proof",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-358.md#6",
+    "label": "board/cards/REM-358.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/artifacts-and-thumbnails.md#1",
+    "label": "specs/percolate-application/artifacts-and-thumbnails.md \u203a Artifacts, charts and article thumbnails",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/77513cd3b1",
+    "label": "commit 77513cd: board: file REM-358 articles: the writer's agent chooses the card thumbnail: a chart, an image, a genera",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-357.md#1",
+    "label": "board/cards/REM-357.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-358.md#1",
+    "label": "board/cards/REM-358.md",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/artifacts-and-thumbnails.md#11",
+    "label": "specs/percolate-application/artifacts-and-thumbnails.md \u203a 6. Portfolio and end-to-end proof",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-356.md#4",
+    "label": "board/cards/REM-356.md \u203a Done when",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "specs/percolate-application/artifacts-and-thumbnails.md#1",
+    "label": "specs/percolate-application/artifacts-and-thumbnails.md \u203a Artifacts, charts and article thumbnails",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-459.md#7",
+    "label": "board/cards/REM-459.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-356.md#4",
+    "label": "board/cards/REM-356.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "commit/77513cd3b1",
+    "label": "commit 77513cd: board: file REM-358 articles: the writer's agent chooses the card thumbnail: a chart, an image, a genera",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-459.md#1",
+    "label": "board/cards/REM-459.md",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": null,
+  "Q": null,
+  "LQ": null,
+  "S": null
+ }
+}

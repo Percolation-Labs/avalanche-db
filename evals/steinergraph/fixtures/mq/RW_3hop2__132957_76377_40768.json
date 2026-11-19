@@ -1,0 +1,440 @@
+{
+ "qid": "RW:3hop2__132957_76377_40768",
+ "set": "mq",
+ "question": "When did Nissan, the Acura Legend maker and the top selling car brand open US assembly plants?",
+ "gold": [
+  {
+   "id": "mq:2e2b0b093721a57a",
+   "label": "1973 oil crisis",
+   "seed": true
+  },
+  {
+   "id": "mq:4817a1f7a89d7c96",
+   "label": "List of best-selling automobiles",
+   "seed": false
+  },
+  {
+   "id": "mq:9cbea3805ac3dc04",
+   "label": "Acura Legend",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:9cbea3805ac3dc04",
+   "label": "Acura Legend",
+   "rank": 1,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:4779450bf31d0758",
+   "label": "Acura RL",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:b557cdbdead41d89",
+   "label": "Acura ZDX",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:fcdb428b5d779104",
+   "label": "Infiniti J30",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:2e2b0b093721a57a",
+   "label": "1973 oil crisis",
+   "rank": 5,
+   "gold": true,
+   "doors_to_gold": 0
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:2e2b0b093721a57a",
+    "label": "1973 oil crisis",
+    "role": "gold"
+   },
+   {
+    "id": "mq:4817a1f7a89d7c96",
+    "label": "List of best-selling automobiles",
+    "role": "gold"
+   },
+   {
+    "id": "mq:9cbea3805ac3dc04",
+    "label": "Acura Legend",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:2e2b0b093721a57a",
+    "b": "mq:9cbea3805ac3dc04",
+    "via": [
+     {
+      "kind": "term",
+      "key": "acura",
+      "width": 12
+     },
+     {
+      "kind": "term",
+      "key": "honda",
+      "width": 22
+     },
+     {
+      "kind": "term",
+      "key": "luxury",
+      "width": 42
+     }
+    ]
+   },
+   {
+    "a": "mq:4817a1f7a89d7c96",
+    "b": "mq:9cbea3805ac3dc04",
+    "via": [
+     {
+      "kind": "term",
+      "key": "nameplate",
+      "width": 7
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   1,
+   1
+  ],
+  "entry": {
+   "seed": "mq:2e2b0b093721a57a",
+   "gold": "mq:2e2b0b093721a57a",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 2080,
+  "within_2_doors": 18981,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "mq:604e022d44a504f5",
+    "label": "Acura RLX",
+    "p": 0.006647227003406441,
+    "gold": false
+   },
+   {
+    "id": "mq:18ce99a4875a0687",
+    "label": "Infiniti Q45",
+    "p": 0.004719865662234091,
+    "gold": false
+   },
+   {
+    "id": "mq:822789bb2105f5a2",
+    "label": "Acura RL",
+    "p": 0.004351416635419534,
+    "gold": false
+   },
+   {
+    "id": "mq:837d491b094af92c",
+    "label": "1973 oil crisis",
+    "p": 0.003548302811724752,
+    "gold": false
+   },
+   {
+    "id": "mq:930932e1b90406cb",
+    "label": "Infiniti Q50",
+    "p": 0.0032371693267123926,
+    "gold": false
+   },
+   {
+    "id": "mq:ee11e8162e5e0067",
+    "label": "Acura MDX",
+    "p": 0.0029987440793849316,
+    "gold": false
+   },
+   {
+    "id": "mq:0cbbba4108948c8a",
+    "label": "Mercedes-Benz G-Class",
+    "p": 0.0029415168017595823,
+    "gold": false
+   },
+   {
+    "id": "mq:e92983794b098175",
+    "label": "Mercedes-Benz G-Class",
+    "p": 0.002941477593280181,
+    "gold": false
+   },
+   {
+    "id": "mq:93f8f43015cf4c7d",
+    "label": "Chevrolet Malibu",
+    "p": 0.002727251126191304,
+    "gold": false
+   },
+   {
+    "id": "mq:05cd8eaec0f6c281",
+    "label": "Nissan Fuga",
+    "p": 0.0026737413928134253,
+    "gold": false
+   },
+   {
+    "id": "mq:4d41ef62ccf3ed3b",
+    "label": "Lincoln Town Car",
+    "p": 0.0025646353229060665,
+    "gold": false
+   },
+   {
+    "id": "mq:b703e57f3f23fc45",
+    "label": "Hyundai HCD6",
+    "p": 0.002372700072784942,
+    "gold": false
+   },
+   {
+    "id": "mq:d09f8f8014cbdcbc",
+    "label": "Infiniti G-series (Q40/Q60)",
+    "p": 0.0023367349355754956,
+    "gold": false
+   },
+   {
+    "id": "mq:6281d835bca35b9d",
+    "label": "Ford Crown Victoria",
+    "p": 0.0023119299110484657,
+    "gold": false
+   },
+   {
+    "id": "mq:4501133fa724e1fd",
+    "label": "Nissan Actic",
+    "p": 0.002203102755590503,
+    "gold": false
+   },
+   {
+    "id": "mq:641c474e5d4d52e9",
+    "label": "Acura EL",
+    "p": 0.0020115509103363757,
+    "gold": false
+   },
+   {
+    "id": "mq:a66e5ffab9beb6ef",
+    "label": "Nissan Rogue",
+    "p": 0.0019933707490534863,
+    "gold": false
+   },
+   {
+    "id": "mq:720b784793d2226c",
+    "label": "Honda Civic",
+    "p": 0.001971986415627268,
+    "gold": false
+   },
+   {
+    "id": "mq:bd45b397ae386bc6",
+    "label": "Jaguar E-Pace",
+    "p": 0.0017612853918500771,
+    "gold": false
+   },
+   {
+    "id": "mq:f91c981daf6fb33d",
+    "label": "Scion bbX",
+    "p": 0.001754417951799513,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:9cbea3805ac3dc04",
+   "label": "Acura Legend",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:4779450bf31d0758",
+   "label": "Acura RL",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:b557cdbdead41d89",
+   "label": "Acura ZDX",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:fcdb428b5d779104",
+   "label": "Infiniti J30",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:2e2b0b093721a57a",
+   "label": "1973 oil crisis",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:f3c69ad36e4f01a1",
+   "label": "Abdullah Khadr",
+   "wave": 1,
+   "via": "term:cars",
+   "gold": false
+  },
+  {
+   "id": "mq:e21c6654f020d77e",
+   "label": "BMW",
+   "wave": 1,
+   "via": "term:cars",
+   "gold": false
+  },
+  {
+   "id": "mq:99b1ab53dc339a18",
+   "label": "Electric Vehicle (1899 automobile)",
+   "wave": 1,
+   "via": "term:cars",
+   "gold": false
+  },
+  {
+   "id": "mq:11c4496b06ae10a8",
+   "label": "Texas Car Wars",
+   "wave": 1,
+   "via": "term:cars",
+   "gold": false
+  },
+  {
+   "id": "mq:86e89aec9293e6df",
+   "label": "National Car Test",
+   "wave": 1,
+   "via": "term:cars",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:604e022d44a504f5",
+    "label": "Acura RLX",
+    "gold": false
+   },
+   {
+    "id": "mq:18ce99a4875a0687",
+    "label": "Infiniti Q45",
+    "gold": false
+   },
+   {
+    "id": "mq:822789bb2105f5a2",
+    "label": "Acura RL",
+    "gold": false
+   },
+   {
+    "id": "mq:837d491b094af92c",
+    "label": "1973 oil crisis",
+    "gold": false
+   },
+   {
+    "id": "mq:930932e1b90406cb",
+    "label": "Infiniti Q50",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:604e022d44a504f5",
+    "label": "Acura RLX",
+    "gold": false
+   },
+   {
+    "id": "mq:18ce99a4875a0687",
+    "label": "Infiniti Q45",
+    "gold": false
+   },
+   {
+    "id": "mq:822789bb2105f5a2",
+    "label": "Acura RL",
+    "gold": false
+   },
+   {
+    "id": "mq:930932e1b90406cb",
+    "label": "Infiniti Q50",
+    "gold": false
+   },
+   {
+    "id": "mq:d09f8f8014cbdcbc",
+    "label": "Infiniti G-series (Q40/Q60)",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:604e022d44a504f5",
+    "label": "Acura RLX",
+    "gold": false
+   },
+   {
+    "id": "mq:18ce99a4875a0687",
+    "label": "Infiniti Q45",
+    "gold": false
+   },
+   {
+    "id": "mq:822789bb2105f5a2",
+    "label": "Acura RL",
+    "gold": false
+   },
+   {
+    "id": "mq:d09f8f8014cbdcbc",
+    "label": "Infiniti G-series (Q40/Q60)",
+    "gold": false
+   },
+   {
+    "id": "mq:930932e1b90406cb",
+    "label": "Infiniti Q50",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:822789bb2105f5a2",
+    "label": "Acura RL",
+    "gold": false
+   },
+   {
+    "id": "mq:f58ee3120265b21c",
+    "label": "Infiniti Kuraza",
+    "gold": false
+   },
+   {
+    "id": "mq:18ce99a4875a0687",
+    "label": "Infiniti Q45",
+    "gold": false
+   },
+   {
+    "id": "mq:641c474e5d4d52e9",
+    "label": "Acura EL",
+    "gold": false
+   },
+   {
+    "id": "mq:604e022d44a504f5",
+    "label": "Acura RLX",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

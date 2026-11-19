@@ -1,0 +1,427 @@
+{
+ "qid": "RW:2hop__41158_35124",
+ "set": "mq",
+ "question": "How many books were said to have been written by the person who proposed explanations for the origins of earthquakes and the formation of mountains?",
+ "gold": [
+  {
+   "id": "mq:42b5402a41ab74cd",
+   "label": "Muslim world",
+   "seed": false
+  },
+  {
+   "id": "mq:77c6915a4b67f01f",
+   "label": "Geology",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:77c6915a4b67f01f",
+   "label": "Geology",
+   "rank": 1,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:2222f2b29ee5d150",
+   "label": "Response to sneezing",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "mq:a3e707560eba0a91",
+   "label": "Said Ashour",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:10f29b08c3bc43a0",
+   "label": "Han dynasty",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:2274af990dd90cec",
+   "label": "2008 Sichuan earthquake",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:42b5402a41ab74cd",
+    "label": "Muslim world",
+    "role": "gold"
+   },
+   {
+    "id": "mq:77c6915a4b67f01f",
+    "label": "Geology",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:42b5402a41ab74cd",
+    "b": "mq:77c6915a4b67f01f",
+    "via": [
+     {
+      "kind": "term",
+      "key": "persian scholar",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "scholar ibn",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "1037",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "ibn sina",
+      "width": 4
+     },
+     {
+      "kind": "term",
+      "key": "sina avicenna",
+      "width": 4
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "mq:77c6915a4b67f01f",
+   "gold": "mq:77c6915a4b67f01f",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 3004,
+  "within_2_doors": 18074,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "mq:ddd1459ce5660f99",
+    "label": "This Land Is Your Land",
+    "p": 0.0029503072537844788,
+    "gold": false
+   },
+   {
+    "id": "mq:4d57f509899b8d3a",
+    "label": "Han dynasty",
+    "p": 0.002381330877585467,
+    "gold": false
+   },
+   {
+    "id": "mq:7498904b3c513f66",
+    "label": "Thuringia",
+    "p": 0.0022011769521689804,
+    "gold": false
+   },
+   {
+    "id": "mq:42b5402a41ab74cd",
+    "label": "Muslim world",
+    "p": 0.002012563451395928,
+    "gold": true
+   },
+   {
+    "id": "mq:08897c72d7866b22",
+    "label": "2008 Sichuan earthquake",
+    "p": 0.0014948414718715822,
+    "gold": false
+   },
+   {
+    "id": "mq:09326cc22721df09",
+    "label": "Bouchard's nodes",
+    "p": 0.001221256190745952,
+    "gold": false
+   },
+   {
+    "id": "mq:8cb8008ad4c4013c",
+    "label": "Lunar distance (astronomy)",
+    "p": 0.0011554435741806526,
+    "gold": false
+   },
+   {
+    "id": "mq:d321df1667b5f9f3",
+    "label": "Thurgood Marshall College",
+    "p": 0.0009850305107378182,
+    "gold": false
+   },
+   {
+    "id": "mq:8c745ad292d12d80",
+    "label": "Freedom of religion in Nepal",
+    "p": 0.0009780173160849341,
+    "gold": false
+   },
+   {
+    "id": "mq:11c49a1c9b180ee5",
+    "label": "Beyonc\u00e9",
+    "p": 0.0009450332588416275,
+    "gold": false
+   },
+   {
+    "id": "mq:9ddfb7376763f609",
+    "label": "Tiananmen Incident",
+    "p": 0.0009377140339298874,
+    "gold": false
+   },
+   {
+    "id": "mq:aae9f0ad57dccfa4",
+    "label": "Egypt",
+    "p": 0.0009044078537614614,
+    "gold": false
+   },
+   {
+    "id": "mq:c3c05bd5ec05c707",
+    "label": "Detroit Tigers",
+    "p": 0.0008644941540974789,
+    "gold": false
+   },
+   {
+    "id": "mq:c4df408791e6ba73",
+    "label": "Galactic Center",
+    "p": 0.0008463472952873953,
+    "gold": false
+   },
+   {
+    "id": "mq:21951c57c41fbf54",
+    "label": "Capital punishment in the United States",
+    "p": 0.0008169658841163216,
+    "gold": false
+   },
+   {
+    "id": "mq:b7142be31d66ed4b",
+    "label": "Protestantism",
+    "p": 0.0007911927164784939,
+    "gold": false
+   },
+   {
+    "id": "mq:de0d093ebe31a523",
+    "label": "Stranger anxiety",
+    "p": 0.0007637954758395715,
+    "gold": false
+   },
+   {
+    "id": "mq:987a6abd06c32b75",
+    "label": "Avicenna",
+    "p": 0.0007548262113218532,
+    "gold": false
+   },
+   {
+    "id": "mq:33bbd984cd3c51b5",
+    "label": "2008 Sichuan earthquake",
+    "p": 0.0007295484902560164,
+    "gold": false
+   },
+   {
+    "id": "mq:b0c824f5e174f86d",
+    "label": "Zahi Hawass",
+    "p": 0.000720797608780612,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:77c6915a4b67f01f",
+   "label": "Geology",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:2222f2b29ee5d150",
+   "label": "Response to sneezing",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:a3e707560eba0a91",
+   "label": "Said Ashour",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:10f29b08c3bc43a0",
+   "label": "Han dynasty",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:2274af990dd90cec",
+   "label": "2008 Sichuan earthquake",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:14991d5fb96dea92",
+   "label": "Middle Ages",
+   "wave": 1,
+   "via": "term:calamities",
+   "gold": false
+  },
+  {
+   "id": "mq:bfca27d05de2409f",
+   "label": "History of science",
+   "wave": 1,
+   "via": "term:calamities",
+   "gold": false
+  },
+  {
+   "id": "mq:02909bb0c76fdd8d",
+   "label": "Plagues of Egypt",
+   "wave": 1,
+   "via": "term:calamities",
+   "gold": false
+  },
+  {
+   "id": "mq:f1386f4b513b1e92",
+   "label": "Huns",
+   "wave": 2,
+   "via": "term:earthquakes",
+   "gold": false
+  },
+  {
+   "id": "mq:3705b4c8f4bc963b",
+   "label": "Wes Hart",
+   "wave": 2,
+   "via": "term:earthquakes",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:ddd1459ce5660f99",
+    "label": "This Land Is Your Land",
+    "gold": false
+   },
+   {
+    "id": "mq:4d57f509899b8d3a",
+    "label": "Han dynasty",
+    "gold": false
+   },
+   {
+    "id": "mq:7498904b3c513f66",
+    "label": "Thuringia",
+    "gold": false
+   },
+   {
+    "id": "mq:42b5402a41ab74cd",
+    "label": "Muslim world",
+    "gold": true
+   },
+   {
+    "id": "mq:08897c72d7866b22",
+    "label": "2008 Sichuan earthquake",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:42b5402a41ab74cd",
+    "label": "Muslim world",
+    "gold": true
+   },
+   {
+    "id": "mq:08897c72d7866b22",
+    "label": "2008 Sichuan earthquake",
+    "gold": false
+   },
+   {
+    "id": "mq:ddd1459ce5660f99",
+    "label": "This Land Is Your Land",
+    "gold": false
+   },
+   {
+    "id": "mq:45dfad749791f479",
+    "label": "New Testament",
+    "gold": false
+   },
+   {
+    "id": "mq:11a4297dfea89268",
+    "label": "New Testament",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:42b5402a41ab74cd",
+    "label": "Muslim world",
+    "gold": true
+   },
+   {
+    "id": "mq:11a4297dfea89268",
+    "label": "New Testament",
+    "gold": false
+   },
+   {
+    "id": "mq:45dfad749791f479",
+    "label": "New Testament",
+    "gold": false
+   },
+   {
+    "id": "mq:82b391bc5e279042",
+    "label": "Nebular hypothesis",
+    "gold": false
+   },
+   {
+    "id": "mq:86ca976be7b65bfe",
+    "label": "Draw-a-Person test",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:0135e1ee9f48ce6a",
+    "label": "Queen Zixi of Ix",
+    "gold": false
+   },
+   {
+    "id": "mq:3b8584c6e0be034c",
+    "label": "Elliott Nunatak",
+    "gold": false
+   },
+   {
+    "id": "mq:0fb3ecaaac35f645",
+    "label": "You and I (Lady Gaga song)",
+    "gold": false
+   },
+   {
+    "id": "mq:82b391bc5e279042",
+    "label": "Nebular hypothesis",
+    "gold": false
+   },
+   {
+    "id": "mq:983206dcbc318dc4",
+    "label": "Ashkenazi Jews",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 1.0,
+  "Q": 1.0,
+  "LQ": 1.0,
+  "S": 0.0
+ }
+}

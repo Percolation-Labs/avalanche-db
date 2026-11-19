@@ -1,0 +1,530 @@
+{
+ "qid": "RW:4hop1__73810_32392_823060_610794",
+ "set": "mq",
+ "question": "In what county is located the city that shares a border with the capital of the state that won the 2017 NCAA Basketball Tournament?",
+ "gold": [
+  {
+   "id": "mq:371e6491122b99a7",
+   "label": "WWNQ",
+   "seed": false
+  },
+  {
+   "id": "mq:a6cd0672323b735d",
+   "label": "Forest Acres, South Carolina",
+   "seed": false
+  },
+  {
+   "id": "mq:bfa44716252f19ae",
+   "label": "Charleston, South Carolina",
+   "seed": false
+  },
+  {
+   "id": "mq:dd134a2f8e33e985",
+   "label": "2017 NCAA Division I Women's Basketball Tournament",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:dd134a2f8e33e985",
+   "label": "2017 NCAA Division I Women's Basketball Tournament",
+   "rank": 1,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:1795640a64afc979",
+   "label": "2017\u201318 NCAA Division I men's basketball season",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:954349c348f0a631",
+   "label": "2017\u201318 NCAA Division I men's basketball season",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:e705124894ad6eb4",
+   "label": "NCAA Division I Men's Basketball Tournament",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:f7d282020bb5df03",
+   "label": "NCAA Division I Men's Basketball Tournament",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:13e0361a2fb7e2ec",
+    "label": "Columbia, South Carolina",
+    "role": "connector"
+   },
+   {
+    "id": "mq:1a4bb8163d98b737",
+    "label": "Charlotte Douglas International Airport",
+    "role": "connector"
+   },
+   {
+    "id": "mq:371e6491122b99a7",
+    "label": "WWNQ",
+    "role": "gold"
+   },
+   {
+    "id": "mq:a6cd0672323b735d",
+    "label": "Forest Acres, South Carolina",
+    "role": "gold"
+   },
+   {
+    "id": "mq:bfa44716252f19ae",
+    "label": "Charleston, South Carolina",
+    "role": "gold"
+   },
+   {
+    "id": "mq:dd134a2f8e33e985",
+    "label": "2017 NCAA Division I Women's Basketball Tournament",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:13e0361a2fb7e2ec",
+    "b": "mq:371e6491122b99a7",
+    "via": [
+     {
+      "kind": "term",
+      "key": "columbia south",
+      "width": 6
+     }
+    ]
+   },
+   {
+    "a": "mq:13e0361a2fb7e2ec",
+    "b": "mq:bfa44716252f19ae",
+    "via": [
+     {
+      "kind": "term",
+      "key": "upland",
+      "width": 3
+     },
+     {
+      "kind": "term",
+      "key": "piedmont region",
+      "width": 4
+     },
+     {
+      "kind": "term",
+      "key": "piedmont",
+      "width": 13
+     }
+    ]
+   },
+   {
+    "a": "mq:1a4bb8163d98b737",
+    "b": "mq:a6cd0672323b735d",
+    "via": [
+     {
+      "kind": "term",
+      "key": "carolina united",
+      "width": 22
+     },
+     {
+      "kind": "term",
+      "key": "acres",
+      "width": 45
+     }
+    ]
+   },
+   {
+    "a": "mq:1a4bb8163d98b737",
+    "b": "mq:dd134a2f8e33e985",
+    "via": [
+     {
+      "kind": "term",
+      "key": "american airlines",
+      "width": 9
+     },
+     {
+      "kind": "term",
+      "key": "airlines",
+      "width": 34
+     },
+     {
+      "kind": "term",
+      "key": "dallas",
+      "width": 67
+     }
+    ]
+   },
+   {
+    "a": "mq:371e6491122b99a7",
+    "b": "mq:a6cd0672323b735d",
+    "via": [
+     {
+      "kind": "near",
+      "width": 3
+     },
+     {
+      "kind": "term",
+      "key": "forest acres",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "acres south",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "columbia south",
+      "width": 6
+     },
+     {
+      "kind": "term",
+      "key": "acres",
+      "width": 45
+     }
+    ]
+   }
+  ],
+  "cost": 5,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   2,
+   2,
+   2,
+   2,
+   2
+  ],
+  "entry": {
+   "seed": "mq:dd134a2f8e33e985",
+   "gold": "mq:dd134a2f8e33e985",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 1093,
+  "within_2_doors": 19859,
+  "gold_within_1": 1,
+  "gold_within_2": 2,
+  "top_U": [
+   {
+    "id": "mq:19ac4052e7960741",
+    "label": "Hardwood Dreams",
+    "p": 0.002620730979190132,
+    "gold": false
+   },
+   {
+    "id": "mq:82ca953a55e6efa2",
+    "label": "List of Cincinnati Bearcats head football coaches",
+    "p": 0.0026023529897953816,
+    "gold": false
+   },
+   {
+    "id": "mq:9581065890285294",
+    "label": "2018 NCAA Division I Men's Basketball Tournament",
+    "p": 0.0023343631170045526,
+    "gold": false
+   },
+   {
+    "id": "mq:e42608ad51fdf1ac",
+    "label": "Exhibition game",
+    "p": 0.0023236309344386447,
+    "gold": false
+   },
+   {
+    "id": "mq:4de6322d1d2d3944",
+    "label": "Arkansas Razorbacks football",
+    "p": 0.00226780224811859,
+    "gold": false
+   },
+   {
+    "id": "mq:a724a2cdd37d6fa8",
+    "label": "UConn Huskies women's basketball",
+    "p": 0.0019710388649891515,
+    "gold": false
+   },
+   {
+    "id": "mq:809f0ee37a9c8ecb",
+    "label": "University of Kansas",
+    "p": 0.001873982353155229,
+    "gold": false
+   },
+   {
+    "id": "mq:ebd9c038d144581f",
+    "label": "Oklahoma City",
+    "p": 0.0017871050092233807,
+    "gold": false
+   },
+   {
+    "id": "mq:2e7764de84fbd11b",
+    "label": "Table tennis at the 2012 Summer Olympics \u2013 Men's singles",
+    "p": 0.0017106958714431077,
+    "gold": false
+   },
+   {
+    "id": "mq:3946ade5806eca52",
+    "label": "2016 NCAA Division I Women's Basketball Tournament",
+    "p": 0.0013919821508820763,
+    "gold": false
+   },
+   {
+    "id": "mq:10c487323123f666",
+    "label": "2017\u201318 NBA season",
+    "p": 0.0013910266671765057,
+    "gold": false
+   },
+   {
+    "id": "mq:169c4506ca731a38",
+    "label": "2017\u201318 NBA season",
+    "p": 0.001385714736778629,
+    "gold": false
+   },
+   {
+    "id": "mq:bc139beacfcc5bba",
+    "label": "2012 NCAA Division I Men's Basketball Tournament",
+    "p": 0.0013734463478749408,
+    "gold": false
+   },
+   {
+    "id": "mq:a23fc8d569e7fae4",
+    "label": "AFL Grand Final",
+    "p": 0.0013570425946814256,
+    "gold": false
+   },
+   {
+    "id": "mq:e231f1e12a24d1ad",
+    "label": "Daylight saving time by country",
+    "p": 0.0013383433906693364,
+    "gold": false
+   },
+   {
+    "id": "mq:072d70155a077f7a",
+    "label": "2017 Notre Dame Fighting Irish football team",
+    "p": 0.001298629082649597,
+    "gold": false
+   },
+   {
+    "id": "mq:f6db3ee313eb074e",
+    "label": "Ohio State Buckeyes men's basketball",
+    "p": 0.001263053326710494,
+    "gold": false
+   },
+   {
+    "id": "mq:0d838aad42de712f",
+    "label": "List of Indian Premier League seasons and results",
+    "p": 0.001212571946628285,
+    "gold": false
+   },
+   {
+    "id": "mq:6252b44bd4c906f4",
+    "label": "Indian Premier League",
+    "p": 0.0011737340443536972,
+    "gold": false
+   },
+   {
+    "id": "mq:daa829d7fd5ef586",
+    "label": "Michigan Wolverines men's basketball",
+    "p": 0.001154893907126352,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:dd134a2f8e33e985",
+   "label": "2017 NCAA Division I Women's Basketball Tournament",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:1795640a64afc979",
+   "label": "2017\u201318 NCAA Division I men's basketball season",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:954349c348f0a631",
+   "label": "2017\u201318 NCAA Division I men's basketball season",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:e705124894ad6eb4",
+   "label": "NCAA Division I Men's Basketball Tournament",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:f7d282020bb5df03",
+   "label": "NCAA Division I Men's Basketball Tournament",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:f3848e1537cf242b",
+   "label": "Chicana/o studies",
+   "wave": 1,
+   "via": "term:san antonio",
+   "gold": false
+  },
+  {
+   "id": "mq:58cca220e0df6a60",
+   "label": "2017 San Antonio mayoral election",
+   "wave": 1,
+   "via": "term:san antonio",
+   "gold": false
+  },
+  {
+   "id": "mq:94d0f24a9d657029",
+   "label": "Clear Springs, Texas",
+   "wave": 1,
+   "via": "term:san antonio",
+   "gold": false
+  },
+  {
+   "id": "mq:b374c81f10c8ae0a",
+   "label": "Levi Strauss & Co.",
+   "wave": 1,
+   "via": "term:san antonio",
+   "gold": false
+  },
+  {
+   "id": "mq:885c9fe71b9de328",
+   "label": "Barrio San Antonio",
+   "wave": 1,
+   "via": "term:san antonio",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:19ac4052e7960741",
+    "label": "Hardwood Dreams",
+    "gold": false
+   },
+   {
+    "id": "mq:82ca953a55e6efa2",
+    "label": "List of Cincinnati Bearcats head football coaches",
+    "gold": false
+   },
+   {
+    "id": "mq:9581065890285294",
+    "label": "2018 NCAA Division I Men's Basketball Tournament",
+    "gold": false
+   },
+   {
+    "id": "mq:e42608ad51fdf1ac",
+    "label": "Exhibition game",
+    "gold": false
+   },
+   {
+    "id": "mq:4de6322d1d2d3944",
+    "label": "Arkansas Razorbacks football",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:f6db3ee313eb074e",
+    "label": "Ohio State Buckeyes men's basketball",
+    "gold": false
+   },
+   {
+    "id": "mq:8e66f5253559aff9",
+    "label": "Kansas State Wildcats men's basketball",
+    "gold": false
+   },
+   {
+    "id": "mq:daa829d7fd5ef586",
+    "label": "Michigan Wolverines men's basketball",
+    "gold": false
+   },
+   {
+    "id": "mq:a724a2cdd37d6fa8",
+    "label": "UConn Huskies women's basketball",
+    "gold": false
+   },
+   {
+    "id": "mq:809f0ee37a9c8ecb",
+    "label": "University of Kansas",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:daa829d7fd5ef586",
+    "label": "Michigan Wolverines men's basketball",
+    "gold": false
+   },
+   {
+    "id": "mq:8e66f5253559aff9",
+    "label": "Kansas State Wildcats men's basketball",
+    "gold": false
+   },
+   {
+    "id": "mq:f6db3ee313eb074e",
+    "label": "Ohio State Buckeyes men's basketball",
+    "gold": false
+   },
+   {
+    "id": "mq:809f0ee37a9c8ecb",
+    "label": "University of Kansas",
+    "gold": false
+   },
+   {
+    "id": "mq:8d7bf92f34740606",
+    "label": "Stephen Curry",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:1e41e8ed7022044e",
+    "label": "New Richland, Minnesota",
+    "gold": false
+   },
+   {
+    "id": "mq:35c9deab6490092c",
+    "label": "NCAA Division I Women's Basketball Tournament",
+    "gold": false
+   },
+   {
+    "id": "mq:3946ade5806eca52",
+    "label": "2016 NCAA Division I Women's Basketball Tournament",
+    "gold": false
+   },
+   {
+    "id": "mq:88d190e3868de7dd",
+    "label": "2018 Big 12 Men's Basketball Tournament",
+    "gold": false
+   },
+   {
+    "id": "mq:f6db3ee313eb074e",
+    "label": "Ohio State Buckeyes men's basketball",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

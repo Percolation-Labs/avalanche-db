@@ -1,0 +1,492 @@
+{
+ "qid": "card:REM-664",
+ "set": "cards",
+ "question": "What was done about this, and why: release: a version sweep moves pins and cannot touch records?",
+ "gold": [
+  {
+   "id": "commit/39f0c4c58a",
+   "label": "commit 39f0c4c: a version sweep moves pins and leaves records alone (REM-664)",
+   "seed": false
+  },
+  {
+   "id": "commit/4065a543bc",
+   "label": "commit 4065a54: Merge branch 'main' into amartey/rem-664-pins-not-records",
+   "seed": false
+  },
+  {
+   "id": "commit/50c63a2acd",
+   "label": "commit 50c63a2: Merge pull request #342 from Percolation-Labs/amartey/rem-664-pins-not-records",
+   "seed": true
+  },
+  {
+   "id": "commit/682830ab5b",
+   "label": "commit 682830a: Board messages are records, so the pin scan skips them",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/435ed632c6",
+   "label": "commit 435ed63: board: file REM-664 release: a version sweep moves pins and cannot touch records",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-664.md#1",
+   "label": "board/cards/REM-664.md",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "dev/a-sweep-moves-pins-not-records.py#4",
+   "label": "dev/a-sweep-moves-pins-not-records.py",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/50c63a2acd",
+   "label": "commit 50c63a2: Merge pull request #342 from Percolation-Labs/amartey/rem-664-pins-not-records",
+   "rank": 4,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "dev/a-sweep-moves-pins-not-records.py#2",
+   "label": "dev/a-sweep-moves-pins-not-records.py",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/39f0c4c58a",
+    "label": "commit 39f0c4c: a version sweep moves pins and leaves records alone (REM-664)",
+    "role": "gold"
+   },
+   {
+    "id": "commit/4065a543bc",
+    "label": "commit 4065a54: Merge branch 'main' into amartey/rem-664-pins-not-records",
+    "role": "gold"
+   },
+   {
+    "id": "commit/50c63a2acd",
+    "label": "commit 50c63a2: Merge pull request #342 from Percolation-Labs/amartey/rem-664-pins-not-records",
+    "role": "gold"
+   },
+   {
+    "id": "commit/682830ab5b",
+    "label": "commit 682830a: Board messages are records, so the pin scan skips them",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/39f0c4c58a",
+    "b": "commit/4065a543bc",
+    "via": [
+     {
+      "kind": "beside"
+     }
+    ]
+   },
+   {
+    "a": "commit/39f0c4c58a",
+    "b": "commit/50c63a2acd",
+    "via": [
+     {
+      "kind": "term",
+      "key": "alone rem",
+      "width": 4
+     },
+     {
+      "kind": "term",
+      "key": "leaves records",
+      "width": 4
+     },
+     {
+      "kind": "term",
+      "key": "records alone",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "version sweep",
+      "width": 10
+     },
+     {
+      "kind": "term",
+      "key": "moves pins",
+      "width": 15
+     }
+    ]
+   },
+   {
+    "a": "commit/39f0c4c58a",
+    "b": "commit/682830ab5b",
+    "via": [
+     {
+      "kind": "term",
+      "key": "pin scan",
+      "width": 4
+     },
+     {
+      "kind": "term",
+      "key": "exclusion list",
+      "width": 6
+     },
+     {
+      "kind": "term",
+      "key": "rem 664",
+      "width": 16
+     },
+     {
+      "kind": "term",
+      "key": "exclusion",
+      "width": 60
+     },
+     {
+      "kind": "term",
+      "key": "rewriting",
+      "width": 90
+     }
+    ]
+   }
+  ],
+  "cost": 3,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   1,
+   1,
+   2,
+   2,
+   1
+  ],
+  "entry": {
+   "seed": "commit/50c63a2acd",
+   "gold": "commit/50c63a2acd",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 971,
+  "within_2_doors": 32750,
+  "gold_within_1": 2,
+  "gold_within_2": 1,
+  "top_U": [
+   {
+    "id": "commit/39f0c4c58a",
+    "label": "commit 39f0c4c: a version sweep moves pins and leaves records alone (REM-664)",
+    "p": 0.013319448386156507,
+    "gold": true
+   },
+   {
+    "id": "dev/a-sweep-moves-pins-not-records.py#1",
+    "label": "dev/a-sweep-moves-pins-not-records.py",
+    "p": 0.01121268965067494,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-664.md#2",
+    "label": "board/cards/REM-664.md \u203a Goal",
+    "p": 0.006791476931838532,
+    "gold": false
+   },
+   {
+    "id": "dev/check.sh#4",
+    "label": "dev/check.sh",
+    "p": 0.00647532422604449,
+    "gold": false
+   },
+   {
+    "id": "dev/a-sweep-moves-pins-not-records.py#3",
+    "label": "dev/a-sweep-moves-pins-not-records.py",
+    "p": 0.0051096872129759024,
+    "gold": false
+   },
+   {
+    "id": "dev/a-sweep-moves-pins-not-records.py#6",
+    "label": "dev/a-sweep-moves-pins-not-records.py",
+    "p": 0.004835424713529491,
+    "gold": false
+   },
+   {
+    "id": "dev/a-sweep-moves-pins-not-records.py#5",
+    "label": "dev/a-sweep-moves-pins-not-records.py",
+    "p": 0.004805963498830152,
+    "gold": false
+   },
+   {
+    "id": "meta/skills/docs-writing/banned.py#6",
+    "label": "meta/skills/docs-writing/banned.py",
+    "p": 0.0034284343520947953,
+    "gold": false
+   },
+   {
+    "id": "dev/references.sh#2",
+    "label": "dev/references.sh",
+    "p": 0.0033840774437598965,
+    "gold": false
+   },
+   {
+    "id": "dev/references.sh#3",
+    "label": "dev/references.sh",
+    "p": 0.003268088903815102,
+    "gold": false
+   },
+   {
+    "id": "commit/37ed4cd487",
+    "label": "commit 37ed4cd: rows, not schema: the rule, and a gate that reads specs/ (REM-655) (#335)",
+    "p": 0.003156148297170439,
+    "gold": false
+   },
+   {
+    "id": "commit/a6851aeb00",
+    "label": "commit a6851ae: board: REM-664 in-progress \u2192 done",
+    "p": 0.002811745606606888,
+    "gold": false
+   },
+   {
+    "id": "dev/train.sh#13",
+    "label": "dev/train.sh",
+    "p": 0.0027885435482602108,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-664.md#4",
+    "label": "board/cards/REM-664.md \u203a What it cost, 2026-09-20",
+    "p": 0.0027801439107430735,
+    "gold": false
+   },
+   {
+    "id": "commit/d84348ce7e",
+    "label": "commit d84348c: board: freddie takes REM-663",
+    "p": 0.002315667863145281,
+    "gold": false
+   },
+   {
+    "id": "commit/75ed71fa68",
+    "label": "commit 75ed71f: Merge remote-tracking branch 'origin/main' into bill/stack-questions-evidence",
+    "p": 0.001980929811990399,
+    "gold": false
+   },
+   {
+    "id": "commit/3704af9ab6",
+    "label": "commit 3704af9: board: bill checks in, working",
+    "p": 0.0019722741762698377,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-664.md#5",
+    "label": "board/cards/REM-664.md \u203a Done when",
+    "p": 0.0016429174933433746,
+    "gold": false
+   },
+   {
+    "id": "meta/skills/docs-writing/banned.py#5",
+    "label": "meta/skills/docs-writing/banned.py",
+    "p": 0.0016314470920489224,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261027-115703-1b2d.md#1",
+    "label": "board/messages/M-20261027-115703-1b2d.md",
+    "p": 0.001517460280927044,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/435ed632c6",
+   "label": "commit 435ed63: board: file REM-664 release: a version sweep moves pins and cannot touch records",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-664.md#1",
+   "label": "board/cards/REM-664.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "dev/a-sweep-moves-pins-not-records.py#4",
+   "label": "dev/a-sweep-moves-pins-not-records.py",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/50c63a2acd",
+   "label": "commit 50c63a2: Merge pull request #342 from Percolation-Labs/amartey/rem-664-pins-not-records",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "dev/a-sweep-moves-pins-not-records.py#2",
+   "label": "dev/a-sweep-moves-pins-not-records.py",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-664.md#3",
+   "label": "board/cards/REM-664.md \u203a The distinction, which is in the code and written down nowhere",
+   "wave": 1,
+   "via": "term:rem 664",
+   "gold": false
+  },
+  {
+   "id": "commit/a6851aeb00",
+   "label": "commit a6851ae: board: REM-664 in-progress \u2192 done",
+   "wave": 1,
+   "via": "term:rem 664",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-664.md#2",
+   "label": "board/cards/REM-664.md \u203a Goal",
+   "wave": 1,
+   "via": "term:rem 664",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-664.md#4",
+   "label": "board/cards/REM-664.md \u203a What it cost, 2026-09-20",
+   "wave": 1,
+   "via": "term:rem 664",
+   "gold": false
+  },
+  {
+   "id": "commit/682830ab5b",
+   "label": "commit 682830a: Board messages are records, so the pin scan skips them",
+   "wave": 1,
+   "via": "term:rem 664",
+   "gold": true
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "commit/39f0c4c58a",
+    "label": "commit 39f0c4c: a version sweep moves pins and leaves records alone (REM-664)",
+    "gold": true
+   },
+   {
+    "id": "dev/a-sweep-moves-pins-not-records.py#1",
+    "label": "dev/a-sweep-moves-pins-not-records.py",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-664.md#2",
+    "label": "board/cards/REM-664.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "dev/check.sh#4",
+    "label": "dev/check.sh",
+    "gold": false
+   },
+   {
+    "id": "dev/a-sweep-moves-pins-not-records.py#3",
+    "label": "dev/a-sweep-moves-pins-not-records.py",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "commit/39f0c4c58a",
+    "label": "commit 39f0c4c: a version sweep moves pins and leaves records alone (REM-664)",
+    "gold": true
+   },
+   {
+    "id": "dev/a-sweep-moves-pins-not-records.py#1",
+    "label": "dev/a-sweep-moves-pins-not-records.py",
+    "gold": false
+   },
+   {
+    "id": "dev/check.sh#4",
+    "label": "dev/check.sh",
+    "gold": false
+   },
+   {
+    "id": "dev/a-sweep-moves-pins-not-records.py#6",
+    "label": "dev/a-sweep-moves-pins-not-records.py",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-664.md#2",
+    "label": "board/cards/REM-664.md \u203a Goal",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "dev/a-sweep-moves-pins-not-records.py#6",
+    "label": "dev/a-sweep-moves-pins-not-records.py",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-664.md#2",
+    "label": "board/cards/REM-664.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "commit/75ed71fa68",
+    "label": "commit 75ed71f: Merge remote-tracking branch 'origin/main' into bill/stack-questions-evidence",
+    "gold": false
+   },
+   {
+    "id": "commit/a6851aeb00",
+    "label": "commit a6851ae: board: REM-664 in-progress \u2192 done",
+    "gold": false
+   },
+   {
+    "id": "dev/a-sweep-moves-pins-not-records.py#3",
+    "label": "dev/a-sweep-moves-pins-not-records.py",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "dev/a-sweep-moves-pins-not-records.py#6",
+    "label": "dev/a-sweep-moves-pins-not-records.py",
+    "gold": false
+   },
+   {
+    "id": "dev/a-sweep-moves-pins-not-records.py#1",
+    "label": "dev/a-sweep-moves-pins-not-records.py",
+    "gold": false
+   },
+   {
+    "id": "commit/e51903df80",
+    "label": "commit e51903d: percolate-core 0.2.5: the pins and versions.toml follow it",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-664.md#2",
+    "label": "board/cards/REM-664.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "dev/check.sh#4",
+    "label": "dev/check.sh",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.3333333333333333,
+  "Q": 0.3333333333333333,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

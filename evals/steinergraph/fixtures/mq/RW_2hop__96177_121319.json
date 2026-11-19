@@ -1,0 +1,407 @@
+{
+ "qid": "RW:2hop__96177_121319",
+ "set": "mq",
+ "question": "Where did the star of Dark Hazard study?",
+ "gold": [
+  {
+   "id": "mq:851a196818cc0ce0",
+   "label": "Edward G. Robinson",
+   "seed": false
+  },
+  {
+   "id": "mq:bf88f5e6e32a3fd1",
+   "label": "Dark Hazard",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:bf88f5e6e32a3fd1",
+   "label": "Dark Hazard",
+   "rank": 1,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:1e35ba66387fa5b8",
+   "label": "Star Wars: Dark Forces",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "mq:0143cb0d66e8243b",
+   "label": "Mary Ann Doane",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:c48b5bbb6c6a0bf7",
+   "label": "Theta Apodis",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "mq:fb855b900ed06a51",
+   "label": "Shadow Star",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 2
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:851a196818cc0ce0",
+    "label": "Edward G. Robinson",
+    "role": "gold"
+   },
+   {
+    "id": "mq:bf88f5e6e32a3fd1",
+    "label": "Dark Hazard",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:851a196818cc0ce0",
+    "b": "mq:bf88f5e6e32a3fd1",
+    "via": [
+     {
+      "kind": "term",
+      "key": "robinson",
+      "width": 66
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "mq:bf88f5e6e32a3fd1",
+   "gold": "mq:bf88f5e6e32a3fd1",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 1881,
+  "within_2_doors": 19155,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "mq:bb669dd02a9a3a4f",
+    "label": "Boruto: Naruto Next Generations",
+    "p": 0.0027413179388248005,
+    "gold": false
+   },
+   {
+    "id": "mq:7f5dd1f5bbbaa7f3",
+    "label": "Courrier International",
+    "p": 0.0018852612347972344,
+    "gold": false
+   },
+   {
+    "id": "mq:a5a6e08cc68cd518",
+    "label": "A Hazard of Hearts",
+    "p": 0.0015545495523252722,
+    "gold": false
+   },
+   {
+    "id": "mq:090b08458968a8aa",
+    "label": "A Sawmill Hazard",
+    "p": 0.001518051417766364,
+    "gold": false
+   },
+   {
+    "id": "mq:3896eaaee9a74f84",
+    "label": "Sharon Warren",
+    "p": 0.001455223759694429,
+    "gold": false
+   },
+   {
+    "id": "mq:42a03423b7f389d5",
+    "label": "The Bad Man (1930 film)",
+    "p": 0.0013843720435179666,
+    "gold": false
+   },
+   {
+    "id": "mq:1a952e9d3b4985fa",
+    "label": "Iraqi Light Armored Vehicle",
+    "p": 0.0012532687642335325,
+    "gold": false
+   },
+   {
+    "id": "mq:7cbe438b8afed6af",
+    "label": "Millard Webb",
+    "p": 0.0012480572505763087,
+    "gold": false
+   },
+   {
+    "id": "mq:25c46c889f98146e",
+    "label": "Smokey and the Bandit",
+    "p": 0.0011598024138655234,
+    "gold": false
+   },
+   {
+    "id": "mq:cd0acde6bc56e5ab",
+    "label": "Venus",
+    "p": 0.0011367538778530347,
+    "gold": false
+   },
+   {
+    "id": "mq:f70c6836fd65479b",
+    "label": "Venus",
+    "p": 0.0011273973063273275,
+    "gold": false
+   },
+   {
+    "id": "mq:176f1276e1f477eb",
+    "label": "Night Alarm",
+    "p": 0.0010791798426718153,
+    "gold": false
+   },
+   {
+    "id": "mq:7b861332fe07d8f1",
+    "label": "The Woman in the Window",
+    "p": 0.0010641520028576205,
+    "gold": false
+   },
+   {
+    "id": "mq:45dcb144569b7cf8",
+    "label": "Father Brown, Detective",
+    "p": 0.0010260173659788364,
+    "gold": false
+   },
+   {
+    "id": "mq:1142b1a9db637468",
+    "label": "Sammy Going South",
+    "p": 0.0010254564963053411,
+    "gold": false
+   },
+   {
+    "id": "mq:bf0297395f83ab3d",
+    "label": "Speed Racer",
+    "p": 0.0010216873420507392,
+    "gold": false
+   },
+   {
+    "id": "mq:8c2d28e2cef2c8f1",
+    "label": "Bird",
+    "p": 0.000990741725902479,
+    "gold": false
+   },
+   {
+    "id": "mq:dbaddd16fdf4c120",
+    "label": "Preki",
+    "p": 0.0009789461496281624,
+    "gold": false
+   },
+   {
+    "id": "mq:ccddc518bb87a259",
+    "label": "\u00d6sten Bergstrand",
+    "p": 0.00094425060691726,
+    "gold": false
+   },
+   {
+    "id": "mq:dfe8a985f80f6063",
+    "label": "No Rain",
+    "p": 0.0009131073951248107,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:bf88f5e6e32a3fd1",
+   "label": "Dark Hazard",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:1e35ba66387fa5b8",
+   "label": "Star Wars: Dark Forces",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:0143cb0d66e8243b",
+   "label": "Mary Ann Doane",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:c48b5bbb6c6a0bf7",
+   "label": "Theta Apodis",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:fb855b900ed06a51",
+   "label": "Shadow Star",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:090b08458968a8aa",
+   "label": "A Sawmill Hazard",
+   "wave": 1,
+   "via": "term:hazard",
+   "gold": false
+  },
+  {
+   "id": "mq:5cd172f0b29f5f06",
+   "label": "Emergency Response Guidebook",
+   "wave": 1,
+   "via": "term:hazard",
+   "gold": false
+  },
+  {
+   "id": "mq:c5b7a0602225d484",
+   "label": "Mexico City",
+   "wave": 1,
+   "via": "term:hazard",
+   "gold": false
+  },
+  {
+   "id": "mq:a5a6e08cc68cd518",
+   "label": "A Hazard of Hearts",
+   "wave": 1,
+   "via": "term:hazard",
+   "gold": false
+  },
+  {
+   "id": "mq:3ded8e832b38a387",
+   "label": "Harry Payne Whitney",
+   "wave": 1,
+   "via": "term:hazard",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:bb669dd02a9a3a4f",
+    "label": "Boruto: Naruto Next Generations",
+    "gold": false
+   },
+   {
+    "id": "mq:7f5dd1f5bbbaa7f3",
+    "label": "Courrier International",
+    "gold": false
+   },
+   {
+    "id": "mq:a5a6e08cc68cd518",
+    "label": "A Hazard of Hearts",
+    "gold": false
+   },
+   {
+    "id": "mq:090b08458968a8aa",
+    "label": "A Sawmill Hazard",
+    "gold": false
+   },
+   {
+    "id": "mq:3896eaaee9a74f84",
+    "label": "Sharon Warren",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:090b08458968a8aa",
+    "label": "A Sawmill Hazard",
+    "gold": false
+   },
+   {
+    "id": "mq:a5a6e08cc68cd518",
+    "label": "A Hazard of Hearts",
+    "gold": false
+   },
+   {
+    "id": "mq:5cd172f0b29f5f06",
+    "label": "Emergency Response Guidebook",
+    "gold": false
+   },
+   {
+    "id": "mq:cb6d06f844364c03",
+    "label": "Grier Raggio",
+    "gold": false
+   },
+   {
+    "id": "mq:cc226707f969d166",
+    "label": "Tundra Publishing",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:090b08458968a8aa",
+    "label": "A Sawmill Hazard",
+    "gold": false
+   },
+   {
+    "id": "mq:a5a6e08cc68cd518",
+    "label": "A Hazard of Hearts",
+    "gold": false
+   },
+   {
+    "id": "mq:5cd172f0b29f5f06",
+    "label": "Emergency Response Guidebook",
+    "gold": false
+   },
+   {
+    "id": "mq:95e17a1a4a5aa24f",
+    "label": "Andy Serkis",
+    "gold": false
+   },
+   {
+    "id": "mq:cc226707f969d166",
+    "label": "Tundra Publishing",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:f7235656d6f65fdd",
+    "label": "Greeks",
+    "gold": false
+   },
+   {
+    "id": "mq:090b08458968a8aa",
+    "label": "A Sawmill Hazard",
+    "gold": false
+   },
+   {
+    "id": "mq:a5a6e08cc68cd518",
+    "label": "A Hazard of Hearts",
+    "gold": false
+   },
+   {
+    "id": "mq:84678e3cf52d93ab",
+    "label": "Dark Desire",
+    "gold": false
+   },
+   {
+    "id": "mq:5cd172f0b29f5f06",
+    "label": "Emergency Response Guidebook",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

@@ -1,0 +1,433 @@
+{
+ "qid": "RW:2hop__45126_807969",
+ "set": "mq",
+ "question": "Which team is the highest goal scorer in EPL this season a member of?",
+ "gold": [
+  {
+   "id": "mq:0239153eb8eef343",
+   "label": "List of top Premier League goal scorers by season",
+   "seed": false
+  },
+  {
+   "id": "mq:5b7355b6c8fd92c5",
+   "label": "Ahmed Salah Hosny",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:c34307415ccffb9e",
+   "label": "List of Wigan Warriors players",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:5ef3dc4624cfe550",
+   "label": "Field goal percentage",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:9ceaff43e776fbcf",
+   "label": "Cho Chi-hyo",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:149c2be99de464ae",
+   "label": "Sebastian Janikowski",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:b6c37f4bc49f1799",
+   "label": "Ferenc Bene",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 2
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:0239153eb8eef343",
+    "label": "List of top Premier League goal scorers by season",
+    "role": "gold"
+   },
+   {
+    "id": "mq:5b7355b6c8fd92c5",
+    "label": "Ahmed Salah Hosny",
+    "role": "gold"
+   },
+   {
+    "id": "mq:c34307415ccffb9e",
+    "label": "List of Wigan Warriors players",
+    "role": "seed"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:0239153eb8eef343",
+    "b": "mq:5b7355b6c8fd92c5",
+    "via": [
+     {
+      "kind": "term",
+      "key": "salah",
+      "width": 8
+     },
+     {
+      "kind": "term",
+      "key": "mohamed",
+      "width": 27
+     }
+    ]
+   },
+   {
+    "a": "mq:0239153eb8eef343",
+    "b": "mq:c34307415ccffb9e",
+    "via": [
+     {
+      "kind": "term",
+      "key": "manchester",
+      "width": 65
+     },
+     {
+      "kind": "term",
+      "key": "goal",
+      "width": 92
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "mq:c34307415ccffb9e",
+   "gold": "mq:0239153eb8eef343",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 1752,
+  "within_2_doors": 19304,
+  "gold_within_1": 1,
+  "gold_within_2": 1,
+  "top_U": [
+   {
+    "id": "mq:a05dbc1e48550ad8",
+    "label": "List of National Basketball Association annual scoring leaders",
+    "p": 0.004857870426750608,
+    "gold": false
+   },
+   {
+    "id": "mq:1cbc68222f8469c1",
+    "label": "Michael Jordan",
+    "p": 0.0030993475328269455,
+    "gold": false
+   },
+   {
+    "id": "mq:809f0ee37a9c8ecb",
+    "label": "University of Kansas",
+    "p": 0.0026869498680543776,
+    "gold": false
+   },
+   {
+    "id": "mq:bf9e907d89c1f45b",
+    "label": "Shawne Merriman",
+    "p": 0.0021879937465363927,
+    "gold": false
+   },
+   {
+    "id": "mq:eccfb979dba8145b",
+    "label": "Le foto proibite di una signora per bene",
+    "p": 0.0019323393265290917,
+    "gold": false
+   },
+   {
+    "id": "mq:91f04a8cae67064e",
+    "label": "Le foto proibite di una signora per bene",
+    "p": 0.0016586526931072544,
+    "gold": false
+   },
+   {
+    "id": "mq:ca059f42a7a551ba",
+    "label": "Liberty Bridge (Budapest)",
+    "p": 0.0013490126285938878,
+    "gold": false
+   },
+   {
+    "id": "mq:92bf4871ce28ffa3",
+    "label": "Samoa",
+    "p": 0.0013192571030634806,
+    "gold": false
+   },
+   {
+    "id": "mq:932391c6ee3fcdaf",
+    "label": "Samoa",
+    "p": 0.0013192571030634806,
+    "gold": false
+   },
+   {
+    "id": "mq:6774755bfd433f78",
+    "label": "Polideportivo Huerta del Rey",
+    "p": 0.0013137753992698007,
+    "gold": false
+   },
+   {
+    "id": "mq:dc265ad373753d41",
+    "label": "Zhang Peijun",
+    "p": 0.0012402238056786127,
+    "gold": false
+   },
+   {
+    "id": "mq:dc9c152fb26a05ea",
+    "label": "1998 NFL Draft",
+    "p": 0.0011689349972397382,
+    "gold": false
+   },
+   {
+    "id": "mq:3c09e9b0cae4a2dc",
+    "label": "Real Madrid CF",
+    "p": 0.0011145543757565403,
+    "gold": false
+   },
+   {
+    "id": "mq:6d51a683aafd3233",
+    "label": "List of highest-scoring NBA games",
+    "p": 0.0010972456374902502,
+    "gold": false
+   },
+   {
+    "id": "mq:de321920fbc69b1d",
+    "label": "List of National Football League annual sacks leaders",
+    "p": 0.0010399058227949947,
+    "gold": false
+   },
+   {
+    "id": "mq:c974eaccb258446b",
+    "label": "Anthony Waters (field hockey)",
+    "p": 0.0010376209833151645,
+    "gold": false
+   },
+   {
+    "id": "mq:ded9bd3fdb512aa6",
+    "label": "2014 Thai League Cup",
+    "p": 0.001012553611493978,
+    "gold": false
+   },
+   {
+    "id": "mq:6da79db1ec0512cb",
+    "label": "Taylor King",
+    "p": 0.0008856063565914034,
+    "gold": false
+   },
+   {
+    "id": "mq:7f662fe86564caa9",
+    "label": "Elgin Davis",
+    "p": 0.0008298136553895544,
+    "gold": false
+   },
+   {
+    "id": "mq:853553daa07bde13",
+    "label": "Dumbledore's Army",
+    "p": 0.0008080609362261418,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:c34307415ccffb9e",
+   "label": "List of Wigan Warriors players",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:5ef3dc4624cfe550",
+   "label": "Field goal percentage",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:9ceaff43e776fbcf",
+   "label": "Cho Chi-hyo",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:149c2be99de464ae",
+   "label": "Sebastian Janikowski",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:b6c37f4bc49f1799",
+   "label": "Ferenc Bene",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:79934da5595b8bec",
+   "label": "List of busiest airports in the United Kingdom",
+   "wave": 1,
+   "via": "term:manchester",
+   "gold": false
+  },
+  {
+   "id": "mq:d33cf711ca613344",
+   "label": "Manchester, Oklahoma",
+   "wave": 1,
+   "via": "term:manchester",
+   "gold": false
+  },
+  {
+   "id": "mq:b0774311c12f3a2e",
+   "label": "WEVS",
+   "wave": 1,
+   "via": "term:manchester",
+   "gold": false
+  },
+  {
+   "id": "mq:8b7a14457a5887c7",
+   "label": "Live in the UK 2008",
+   "wave": 1,
+   "via": "term:manchester",
+   "gold": false
+  },
+  {
+   "id": "mq:d8303e8fbe9aef75",
+   "label": "Eni Njoku",
+   "wave": 1,
+   "via": "term:manchester",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:a05dbc1e48550ad8",
+    "label": "List of National Basketball Association annual scoring leaders",
+    "gold": false
+   },
+   {
+    "id": "mq:1cbc68222f8469c1",
+    "label": "Michael Jordan",
+    "gold": false
+   },
+   {
+    "id": "mq:809f0ee37a9c8ecb",
+    "label": "University of Kansas",
+    "gold": false
+   },
+   {
+    "id": "mq:bf9e907d89c1f45b",
+    "label": "Shawne Merriman",
+    "gold": false
+   },
+   {
+    "id": "mq:eccfb979dba8145b",
+    "label": "Le foto proibite di una signora per bene",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:a05dbc1e48550ad8",
+    "label": "List of National Basketball Association annual scoring leaders",
+    "gold": false
+   },
+   {
+    "id": "mq:01367c25a976d904",
+    "label": "Argentina v England (1986 FIFA World Cup)",
+    "gold": false
+   },
+   {
+    "id": "mq:1bcc05405923b878",
+    "label": "Argentina v England (1986 FIFA World Cup)",
+    "gold": false
+   },
+   {
+    "id": "mq:4eb33705e9cec4ae",
+    "label": "List of La Liga top scorers",
+    "gold": false
+   },
+   {
+    "id": "mq:eac38f67693daa54",
+    "label": "List of La Liga top scorers",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:1bcc05405923b878",
+    "label": "Argentina v England (1986 FIFA World Cup)",
+    "gold": false
+   },
+   {
+    "id": "mq:01367c25a976d904",
+    "label": "Argentina v England (1986 FIFA World Cup)",
+    "gold": false
+   },
+   {
+    "id": "mq:a05dbc1e48550ad8",
+    "label": "List of National Basketball Association annual scoring leaders",
+    "gold": false
+   },
+   {
+    "id": "mq:608f2041d902d140",
+    "label": "LeBron James",
+    "gold": false
+   },
+   {
+    "id": "mq:acccf8f0b227f7bc",
+    "label": "LeBron James",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:6b41b50e16141772",
+    "label": "FC Barcelona",
+    "gold": false
+   },
+   {
+    "id": "mq:6c11f6a2eae1bab3",
+    "label": "Brandon Corp",
+    "gold": false
+   },
+   {
+    "id": "mq:be2774b85f03664c",
+    "label": "Richard Wallace (rugby union)",
+    "gold": false
+   },
+   {
+    "id": "mq:7da026eb4c9a2e6e",
+    "label": "Premier League",
+    "gold": false
+   },
+   {
+    "id": "mq:915f221ad9c1619c",
+    "label": "List of international goals scored by Lionel Messi",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

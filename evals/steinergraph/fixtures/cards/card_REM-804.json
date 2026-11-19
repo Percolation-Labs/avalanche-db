@@ -1,0 +1,427 @@
+{
+ "qid": "card:REM-804",
+ "set": "cards",
+ "question": "What was done about this, and why: critics: suggestions coexist in the margin; no lens governs and no figure guard refuses?",
+ "gold": [
+  {
+   "id": "commit/3aa0e8fc48",
+   "label": "commit 3aa0e8f: Merge pull request #432 from Percolation-Labs/amartey/rem-804-spec",
+   "seed": false
+  },
+  {
+   "id": "commit/ec0200e108",
+   "label": "commit ec0200e: drafter \u00a74: no lens governs a piece; no figure guard (REM-804, Sirsh)",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/269a1f60b1",
+   "label": "commit 269a1f6: board: file REM-804 critics: suggestions coexist in the margin; no lens governs and no figure guard refu",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-804.md#1",
+   "label": "board/cards/REM-804.md",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/ec0200e108",
+   "label": "commit ec0200e: drafter \u00a74: no lens governs a piece; no figure guard (REM-804, Sirsh)",
+   "rank": 3,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "meta/postmortems/2026-10-10-critics-v0-in-six-releases.md#7",
+   "label": "meta/postmortems/2026-10-10-critics-v0-in-six-releases.md \u203a The costliest finding: the spec held a rule the owner does n",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-804.md#5",
+   "label": "board/cards/REM-804.md \u203a Log",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/3aa0e8fc48",
+    "label": "commit 3aa0e8f: Merge pull request #432 from Percolation-Labs/amartey/rem-804-spec",
+    "role": "gold"
+   },
+   {
+    "id": "commit/ec0200e108",
+    "label": "commit ec0200e: drafter \u00a74: no lens governs a piece; no figure guard (REM-804, Sirsh)",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/3aa0e8fc48",
+    "b": "commit/ec0200e108",
+    "via": [
+     {
+      "kind": "term",
+      "key": "guard rem",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "lens governs",
+      "width": 11
+     },
+     {
+      "kind": "term",
+      "key": "figure guard",
+      "width": 12
+     },
+     {
+      "kind": "term",
+      "key": "rem 804",
+      "width": 18
+     },
+     {
+      "kind": "term",
+      "key": "governs",
+      "width": 68
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "commit/ec0200e108",
+   "gold": "commit/ec0200e108",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 1426,
+  "within_2_doors": 34482,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "commit/3aa0e8fc48",
+    "label": "commit 3aa0e8f: Merge pull request #432 from Percolation-Labs/amartey/rem-804-spec",
+    "p": 0.008933796282219904,
+    "gold": true
+   },
+   {
+    "id": "board/cards/REM-804.md#2",
+    "label": "board/cards/REM-804.md \u203a Goal",
+    "p": 0.006499114776645546,
+    "gold": false
+   },
+   {
+    "id": "commit/382931db24",
+    "label": "commit 382931d: board: freddie checks in, idle",
+    "p": 0.005779435098726755,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-10-10-critics-v0-in-six-releases.md#5",
+    "label": "meta/postmortems/2026-10-10-critics-v0-in-six-releases.md \u203a What is still open",
+    "p": 0.005309494822150588,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/drafter.md#57",
+    "label": "specs/percolate-application/drafter.md \u203a What the server enforces (10 October 2026)",
+    "p": 0.0038829966571082715,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-10-10-critics-v0-in-six-releases.md#4",
+    "label": "meta/postmortems/2026-10-10-critics-v0-in-six-releases.md \u203a Is the method settling?",
+    "p": 0.003697324828652938,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-804.md#3",
+    "label": "board/cards/REM-804.md \u203a Evidence",
+    "p": 0.003270750691083551,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-10-10-critics-v0-in-six-releases.md#1",
+    "label": "meta/postmortems/2026-10-10-critics-v0-in-six-releases.md",
+    "p": 0.003051594334709387,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/drafter.md#51",
+    "label": "specs/percolate-application/drafter.md \u203a A critic holds together, and critics combine (REM-798)",
+    "p": 0.002853833806960504,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-804.md#4",
+    "label": "board/cards/REM-804.md \u203a Done when",
+    "p": 0.002761334905249433,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-10-10-critics-v0-in-six-releases.md#6",
+    "label": "meta/postmortems/2026-10-10-critics-v0-in-six-releases.md \u203a What is still open",
+    "p": 0.002727546414254634,
+    "gold": false
+   },
+   {
+    "id": "commit/1a201f2839",
+    "label": "commit 1a201f2: Postmortem: Sirsh drops the figure guard and lens governance; the spec held a rule the owner does not",
+    "p": 0.002330416971419954,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-10-10-critics-v0-in-six-releases.md#3",
+    "label": "meta/postmortems/2026-10-10-critics-v0-in-six-releases.md \u203a Is the method settling?",
+    "p": 0.0021152481442792844,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-10-10-critics-v0-in-six-releases.md#9",
+    "label": "meta/postmortems/2026-10-10-critics-v0-in-six-releases.md \u203a A rule that lived in prose and nowhere in the server",
+    "p": 0.002101002075113589,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-10-10-critics-v0-in-six-releases.md#10",
+    "label": "meta/postmortems/2026-10-10-critics-v0-in-six-releases.md \u203a A fix shaped to the reported probe instead of the invariant",
+    "p": 0.0018385077721183177,
+    "gold": false
+   },
+   {
+    "id": "commit/bc0b60af91",
+    "label": "commit bc0b60a: board: file REM-805 reviewers: a new user sees faces on the starter cards",
+    "p": 0.0017388422911393082,
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-10-10-lens-library/report.md#58",
+    "label": "meta/spikes/2026-10-10-lens-library/report.md \u203a Gains concentrate in rounds one and two; unconstrained rewriting cycles",
+    "p": 0.0017201592526599504,
+    "gold": false
+   },
+   {
+    "id": "commit/fd79ae4d6b",
+    "label": "commit fd79ae4: board: file REM-803 gates: a push from current main passes the pre-push hook",
+    "p": 0.0016467888982284163,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-10-10-critics-v0-in-six-releases.md#17",
+    "label": "meta/postmortems/2026-10-10-critics-v0-in-six-releases.md \u203a What surprised us",
+    "p": 0.001227511386263135,
+    "gold": false
+   },
+   {
+    "id": "commit/5c281c3093",
+    "label": "commit 5c281c3: The graph forgets on purpose now: retraction instead of DELETE",
+    "p": 0.0012218376928967876,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/269a1f60b1",
+   "label": "commit 269a1f6: board: file REM-804 critics: suggestions coexist in the margin; no lens governs and no figure guard refu",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-804.md#1",
+   "label": "board/cards/REM-804.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/ec0200e108",
+   "label": "commit ec0200e: drafter \u00a74: no lens governs a piece; no figure guard (REM-804, Sirsh)",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "meta/postmortems/2026-10-10-critics-v0-in-six-releases.md#7",
+   "label": "meta/postmortems/2026-10-10-critics-v0-in-six-releases.md \u203a The costliest finding: the spec held a rule the owner does n",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-804.md#5",
+   "label": "board/cards/REM-804.md \u203a Log",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/postmortems/2026-10-10-critics-v0-in-six-releases.md#10",
+   "label": "meta/postmortems/2026-10-10-critics-v0-in-six-releases.md \u203a A fix shaped to the reported probe instead of the invariant",
+   "wave": 1,
+   "via": "term:figure guard",
+   "gold": false
+  },
+  {
+   "id": "commit/1a201f2839",
+   "label": "commit 1a201f2: Postmortem: Sirsh drops the figure guard and lens governance; the spec held a rule the owner does not",
+   "wave": 1,
+   "via": "term:figure guard",
+   "gold": false
+  },
+  {
+   "id": "commit/3aa0e8fc48",
+   "label": "commit 3aa0e8f: Merge pull request #432 from Percolation-Labs/amartey/rem-804-spec",
+   "wave": 1,
+   "via": "term:figure guard",
+   "gold": true
+  },
+  {
+   "id": "meta/postmortems/2026-10-10-critics-v0-in-six-releases.md#4",
+   "label": "meta/postmortems/2026-10-10-critics-v0-in-six-releases.md \u203a Is the method settling?",
+   "wave": 1,
+   "via": "term:figure guard",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-804.md#3",
+   "label": "board/cards/REM-804.md \u203a Evidence",
+   "wave": 1,
+   "via": "term:figure guard",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "commit/3aa0e8fc48",
+    "label": "commit 3aa0e8f: Merge pull request #432 from Percolation-Labs/amartey/rem-804-spec",
+    "gold": true
+   },
+   {
+    "id": "board/cards/REM-804.md#2",
+    "label": "board/cards/REM-804.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "commit/382931db24",
+    "label": "commit 382931d: board: freddie checks in, idle",
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-10-10-critics-v0-in-six-releases.md#5",
+    "label": "meta/postmortems/2026-10-10-critics-v0-in-six-releases.md \u203a What is still open",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/drafter.md#57",
+    "label": "specs/percolate-application/drafter.md \u203a What the server enforces (10 October 2026)",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "meta/postmortems/2026-10-10-critics-v0-in-six-releases.md#5",
+    "label": "meta/postmortems/2026-10-10-critics-v0-in-six-releases.md \u203a What is still open",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-804.md#2",
+    "label": "board/cards/REM-804.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "commit/3aa0e8fc48",
+    "label": "commit 3aa0e8f: Merge pull request #432 from Percolation-Labs/amartey/rem-804-spec",
+    "gold": true
+   },
+   {
+    "id": "meta/postmortems/2026-10-10-critics-v0-in-six-releases.md#1",
+    "label": "meta/postmortems/2026-10-10-critics-v0-in-six-releases.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-804.md#3",
+    "label": "board/cards/REM-804.md \u203a Evidence",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/3aa0e8fc48",
+    "label": "commit 3aa0e8f: Merge pull request #432 from Percolation-Labs/amartey/rem-804-spec",
+    "gold": true
+   },
+   {
+    "id": "commit/1a201f2839",
+    "label": "commit 1a201f2: Postmortem: Sirsh drops the figure guard and lens governance; the spec held a rule the owner does not",
+    "gold": false
+   },
+   {
+    "id": "commit/ab18f42608",
+    "label": "commit ab18f42: board: REM-804 in-progress \u2192 done",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-804.md#3",
+    "label": "board/cards/REM-804.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-804.md#2",
+    "label": "board/cards/REM-804.md \u203a Goal",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "commit/3aa0e8fc48",
+    "label": "commit 3aa0e8f: Merge pull request #432 from Percolation-Labs/amartey/rem-804-spec",
+    "gold": true
+   },
+   {
+    "id": "commit/1a201f2839",
+    "label": "commit 1a201f2: Postmortem: Sirsh drops the figure guard and lens governance; the spec held a rule the owner does not",
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-10-10-critics-v0-in-six-releases.md#9",
+    "label": "meta/postmortems/2026-10-10-critics-v0-in-six-releases.md \u203a A rule that lived in prose and nowhere in the server",
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-10-10-critics-v0-in-six-releases.md#1",
+    "label": "meta/postmortems/2026-10-10-critics-v0-in-six-releases.md",
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-10-10-critics-v0-in-six-releases.md#5",
+    "label": "meta/postmortems/2026-10-10-critics-v0-in-six-releases.md \u203a What is still open",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 1.0,
+  "Q": 1.0,
+  "LQ": 1.0,
+  "S": 1.0
+ }
+}

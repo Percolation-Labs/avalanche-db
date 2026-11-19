@@ -1,0 +1,410 @@
+{
+ "qid": "pr:797",
+ "set": "prs",
+ "question": "What work went into this, and why: Operator (c) round 3: filtering on the entity type carries information but still hurts Jev; attributes belong in the door, not a gate?",
+ "gold": [
+  {
+   "id": "commit/93e2a4ce20",
+   "label": "commit 93e2a4c: Operator (c) round 3: register the type filter (entity doors first) before scoring",
+   "seed": false
+  },
+  {
+   "id": "commit/d4bc64e63b",
+   "label": "commit d4bc64e: Operator (c) round 3: the type filter carries information (+.037 vs coin) but still hurts Jev (\u2212.039 to ",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/f37c838afa",
+   "label": "commit f37c838: Merge pull request #797 from Percolation-Labs/bill/filter-entity-type",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/d4bc64e63b",
+   "label": "commit d4bc64e: Operator (c) round 3: the type filter carries information (+.037 vs coin) but still hurts Jev (\u2212.039 to ",
+   "rank": 2,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "board/messages/M-20261116-230712-731c.md#1",
+   "label": "board/messages/M-20261116-230712-731c.md",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "meta/lab/results/filter-then-rank/RESULT.md#6",
+   "label": "meta/lab/results/filter-then-rank/RESULT.md \u203a Round 3: filtering on the type carries information, and still hurts Jev (1",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/f3f056aed1",
+   "label": "commit f3f056a: Operator (c) round 2: typing the door edge by entity label is selective but hurts Jev (\u2212.012 to \u2212.051); ",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/93e2a4ce20",
+    "label": "commit 93e2a4c: Operator (c) round 3: register the type filter (entity doors first) before scoring",
+    "role": "gold"
+   },
+   {
+    "id": "commit/d4bc64e63b",
+    "label": "commit d4bc64e: Operator (c) round 3: the type filter carries information (+.037 vs coin) but still hurts Jev (\u2212.039 to ",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/93e2a4ce20",
+    "b": "commit/d4bc64e63b",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "type filter",
+      "width": 4
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "commit/d4bc64e63b",
+   "gold": "commit/d4bc64e63b",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 1397,
+  "within_2_doors": 32395,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "commit/93e2a4ce20",
+    "label": "commit 93e2a4c: Operator (c) round 3: register the type filter (entity doors first) before scoring",
+    "p": 0.0062810842331448525,
+    "gold": true
+   },
+   {
+    "id": "meta/lab/results/filter-then-rank/RESULT.md#4",
+    "label": "meta/lab/results/filter-then-rank/RESULT.md \u203a Round 2: typing the door's own edge is selective, and it hurts Jev (16 Nov",
+    "p": 0.00620549369886874,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/filter-then-rank/RESULT.md#5",
+    "label": "meta/lab/results/filter-then-rank/RESULT.md \u203a Round 2: typing the door's own edge is selective, and it hurts Jev (16 Nov",
+    "p": 0.005269981337783179,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261116-235231-bb07.md#1",
+    "label": "board/messages/M-20261116-235231-bb07.md",
+    "p": 0.004240295838776086,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/filter-then-rank/RESULT.md#8",
+    "label": "meta/lab/results/filter-then-rank/RESULT.md \u203a Round 4: the worlds' relation attribute, at its upper bound, adds nothing ",
+    "p": 0.004111743583397765,
+    "gold": false
+   },
+   {
+    "id": "commit/2aea316b25",
+    "label": "commit 2aea316: Merge pull request #793 from Percolation-Labs/bill/filter-then-rank-labels",
+    "p": 0.003991707824606582,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/filter-then-rank/RESULT.md#2",
+    "label": "meta/lab/results/filter-then-rank/RESULT.md \u203a Round 1: \"any target mentions the type\" filters nothing (16 Nov, ~22:40Z)",
+    "p": 0.0034275279165893787,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/filter-then-rank/RESULT.md#7",
+    "label": "meta/lab/results/filter-then-rank/RESULT.md \u203a What operator (c) has shown, across three rounds",
+    "p": 0.003374981498292563,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261116-223009-ddd6.md#1",
+    "label": "board/messages/M-20261116-223009-ddd6.md",
+    "p": 0.0032156526760391186,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261116-233407-e2f8.md#1",
+    "label": "board/messages/M-20261116-233407-e2f8.md",
+    "p": 0.0030848945646731333,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/filter-then-rank/REGISTERED.md#3",
+    "label": "meta/lab/results/filter-then-rank/REGISTERED.md \u203a Round 2 (registered 16 Nov ~22:45Z, before scoring)",
+    "p": 0.0030787388179032483,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/filter-then-rank/REGISTERED.md#4",
+    "label": "meta/lab/results/filter-then-rank/REGISTERED.md \u203a Round 3: filter on the type, not the label (registered 16 Nov ~23:05Z,",
+    "p": 0.0029136933916619253,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/filter-then-rank-waves/RESULT.md#14",
+    "label": "meta/lab/results/filter-then-rank-waves/RESULT.md \u203a A parallel run reached the same answer",
+    "p": 0.002794070315806312,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261117-065044-d4e7.md#1",
+    "label": "board/messages/M-20261117-065044-d4e7.md",
+    "p": 0.0024696944979106326,
+    "gold": false
+   },
+   {
+    "id": "commit/b1c839508d",
+    "label": "commit b1c8395: Operator (c) round 1: the any-target label filter saturates and selects nothing; round 2 registered (typ",
+    "p": 0.0020115309356967042,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/filter-then-rank/REGISTERED.md#2",
+    "label": "meta/lab/results/filter-then-rank/REGISTERED.md \u203a Filter-then-rank on a data-derived attribute (operator c), against pla",
+    "p": 0.0019063909612820624,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261116-225700-c451.md#1",
+    "label": "board/messages/M-20261116-225700-c451.md",
+    "p": 0.0018660626760968774,
+    "gold": false
+   },
+   {
+    "id": "commit/81a2d2137e",
+    "label": "commit 81a2d21: board: bill messages sirsh",
+    "p": 0.0017766303576558194,
+    "gold": false
+   },
+   {
+    "id": "commit/a608c8174e",
+    "label": "commit a608c81: REGISTERED.md: one word changed for the house-voice gate ('ranked plainly' -> 'ranked with no filter'); ",
+    "p": 0.0017282132560136787,
+    "gold": false
+   },
+   {
+    "id": "commit/abbcb60eee",
+    "label": "commit abbcb60: board: board-watch messages all",
+    "p": 0.0016607156240049752,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/f37c838afa",
+   "label": "commit f37c838: Merge pull request #797 from Percolation-Labs/bill/filter-entity-type",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/d4bc64e63b",
+   "label": "commit d4bc64e: Operator (c) round 3: the type filter carries information (+.037 vs coin) but still hurts Jev (\u2212.039 to ",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "board/messages/M-20261116-230712-731c.md#1",
+   "label": "board/messages/M-20261116-230712-731c.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/filter-then-rank/RESULT.md#6",
+   "label": "meta/lab/results/filter-then-rank/RESULT.md \u203a Round 3: filtering on the type carries information, and still hurts Jev (1",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/f3f056aed1",
+   "label": "commit f3f056a: Operator (c) round 2: typing the door edge by entity label is selective but hurts Jev (\u2212.012 to \u2212.051); ",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/filter-then-rank/RESULT.md#5",
+   "label": "meta/lab/results/filter-then-rank/RESULT.md \u203a Round 2: typing the door's own edge is selective, and it hurts Jev (16 Nov",
+   "wave": 1,
+   "via": "term:carries information",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-1240.md#2",
+   "label": "board/cards/REM-1240.md \u203a Goal",
+   "wave": 1,
+   "via": "term:carries information",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/filter-then-rank/REGISTERED.md#4",
+   "label": "meta/lab/results/filter-then-rank/REGISTERED.md \u203a Round 3: filter on the type, not the label (registered 16 Nov ~23:05Z,",
+   "wave": 1,
+   "via": "term:carries information",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/filter-then-rank/RESULT.md#8",
+   "label": "meta/lab/results/filter-then-rank/RESULT.md \u203a Round 4: the worlds' relation attribute, at its upper bound, adds nothing ",
+   "wave": 1,
+   "via": "term:carries information",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/filter-then-rank/REGISTERED.md#2",
+   "label": "meta/lab/results/filter-then-rank/REGISTERED.md \u203a Filter-then-rank on a data-derived attribute (operator c), against pla",
+   "wave": 1,
+   "via": "term:carries information",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "commit/93e2a4ce20",
+    "label": "commit 93e2a4c: Operator (c) round 3: register the type filter (entity doors first) before scoring",
+    "gold": true
+   },
+   {
+    "id": "meta/lab/results/filter-then-rank/RESULT.md#4",
+    "label": "meta/lab/results/filter-then-rank/RESULT.md \u203a Round 2: typing the door's own edge is selective, and it hurts Jev (16 Nov",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/filter-then-rank/RESULT.md#5",
+    "label": "meta/lab/results/filter-then-rank/RESULT.md \u203a Round 2: typing the door's own edge is selective, and it hurts Jev (16 Nov",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261116-235231-bb07.md#1",
+    "label": "board/messages/M-20261116-235231-bb07.md",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/filter-then-rank/RESULT.md#8",
+    "label": "meta/lab/results/filter-then-rank/RESULT.md \u203a Round 4: the worlds' relation attribute, at its upper bound, adds nothing ",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "meta/lab/results/filter-then-rank/RESULT.md#4",
+    "label": "meta/lab/results/filter-then-rank/RESULT.md \u203a Round 2: typing the door's own edge is selective, and it hurts Jev (16 Nov",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/filter-then-rank/RESULT.md#5",
+    "label": "meta/lab/results/filter-then-rank/RESULT.md \u203a Round 2: typing the door's own edge is selective, and it hurts Jev (16 Nov",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/filter-then-rank/RESULT.md#7",
+    "label": "meta/lab/results/filter-then-rank/RESULT.md \u203a What operator (c) has shown, across three rounds",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261116-223009-ddd6.md#1",
+    "label": "board/messages/M-20261116-223009-ddd6.md",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/filter-then-rank/RESULT.md#8",
+    "label": "meta/lab/results/filter-then-rank/RESULT.md \u203a Round 4: the worlds' relation attribute, at its upper bound, adds nothing ",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/93e2a4ce20",
+    "label": "commit 93e2a4c: Operator (c) round 3: register the type filter (entity doors first) before scoring",
+    "gold": true
+   },
+   {
+    "id": "commit/b1c839508d",
+    "label": "commit b1c8395: Operator (c) round 1: the any-target label filter saturates and selects nothing; round 2 registered (typ",
+    "gold": false
+   },
+   {
+    "id": "commit/2aea316b25",
+    "label": "commit 2aea316: Merge pull request #793 from Percolation-Labs/bill/filter-then-rank-labels",
+    "gold": false
+   },
+   {
+    "id": "commit/a608c8174e",
+    "label": "commit a608c81: REGISTERED.md: one word changed for the house-voice gate ('ranked plainly' -> 'ranked with no filter'); ",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/filter-then-rank/RESULT.md#3",
+    "label": "meta/lab/results/filter-then-rank/RESULT.md \u203a Round 1: \"any target mentions the type\" filters nothing (16 Nov, ~22:40Z)",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "meta/lab/results/filter-then-rank/RESULT.md#7",
+    "label": "meta/lab/results/filter-then-rank/RESULT.md \u203a What operator (c) has shown, across three rounds",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/filter-then-rank/RESULT.md#4",
+    "label": "meta/lab/results/filter-then-rank/RESULT.md \u203a Round 2: typing the door's own edge is selective, and it hurts Jev (16 Nov",
+    "gold": false
+   },
+   {
+    "id": "commit/2aea316b25",
+    "label": "commit 2aea316: Merge pull request #793 from Percolation-Labs/bill/filter-then-rank-labels",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/filter-then-rank/RESULT.md#5",
+    "label": "meta/lab/results/filter-then-rank/RESULT.md \u203a Round 2: typing the door's own edge is selective, and it hurts Jev (16 Nov",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/filter-then-rank/REGISTERED.md#4",
+    "label": "meta/lab/results/filter-then-rank/REGISTERED.md \u203a Round 3: filter on the type, not the label (registered 16 Nov ~23:05Z,",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 1.0,
+  "Q": 0.0,
+  "LQ": 1.0,
+  "S": 0.0
+ }
+}

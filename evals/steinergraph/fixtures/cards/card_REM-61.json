@@ -1,0 +1,410 @@
+{
+ "qid": "card:REM-61",
+ "set": "cards",
+ "question": "What was done about this, and why: world-model: an API source means the same thing whether the UI, an agent or SQL wrote it?",
+ "gold": [
+  {
+   "id": "commit/59b8c6b377",
+   "label": "commit 59b8c6b: Merge pull request #33 from Percolation-Labs/fix/rem-61-api-source-defaults",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "board/cards/REM-61.md#1",
+   "label": "board/cards/REM-61.md",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "specs/README.md#12",
+   "label": "specs/README.md \u203a The context a model receives",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "specs/world-model-ingestion/ingestion.md#14",
+   "label": "specs/world-model-ingestion/ingestion.md \u203a Whose run a pull returns",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "specs/world-model-ingestion/ingestion.md#11",
+   "label": "specs/world-model-ingestion/ingestion.md \u203a API sources are the other way round",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-1058.md#5",
+   "label": "board/cards/REM-1058.md \u203a Log",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 2
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/59b8c6b377",
+    "label": "commit 59b8c6b: Merge pull request #33 from Percolation-Labs/fix/rem-61-api-source-defaults",
+    "role": "gold"
+   },
+   {
+    "id": "specs/world-model-ingestion/ingestion.md#11",
+    "label": "specs/world-model-ingestion/ingestion.md \u203a API sources are the other way round",
+    "role": "seed"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/59b8c6b377",
+    "b": "specs/world-model-ingestion/ingestion.md#11",
+    "via": [
+     {
+      "kind": "term",
+      "key": "source saved",
+      "width": 6
+     },
+     {
+      "kind": "term",
+      "key": "guarded",
+      "width": 46
+     },
+     {
+      "kind": "term",
+      "key": "pulled",
+      "width": 83
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [],
+  "entry": {
+   "seed": "specs/world-model-ingestion/ingestion.md#11",
+   "gold": "commit/59b8c6b377",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 2865,
+  "within_2_doors": 33282,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "commit/9b764cc618",
+    "label": "commit 9b764cc: An API source saved without a watermark type was pulled as one and guarded as none",
+    "p": 0.008640464783291642,
+    "gold": false
+   },
+   {
+    "id": "specs/world-model-ingestion/api-sources.sql#2",
+    "label": "specs/world-model-ingestion/api-sources.sql",
+    "p": 0.0047822266395336,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1058.md#4",
+    "label": "board/cards/REM-1058.md \u203a Done when",
+    "p": 0.0029311511531782673,
+    "gold": false
+   },
+   {
+    "id": "specs/world-model-ingestion/api-sources.sql#3",
+    "label": "specs/world-model-ingestion/api-sources.sql",
+    "p": 0.0022971493211557093,
+    "gold": false
+   },
+   {
+    "id": "specs/world-model-ingestion/api-sources.sql#10",
+    "label": "specs/world-model-ingestion/api-sources.sql",
+    "p": 0.0019982137322637375,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-61.md#2",
+    "label": "board/cards/REM-61.md \u203a Log",
+    "p": 0.0018602604794133505,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1105.md#2",
+    "label": "board/cards/REM-1105.md \u203a Goal",
+    "p": 0.001578625490015538,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1329.md#9",
+    "label": "board/cards/REM-1329.md \u203a Log",
+    "p": 0.0015557768078270002,
+    "gold": false
+   },
+   {
+    "id": "specs/packages/schema.sql#8",
+    "label": "specs/packages/schema.sql",
+    "p": 0.0014452791555840598,
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-ui/artifacts/workflow-new-agent-manifest.yaml#2",
+    "label": "applications/percolate-ui/artifacts/workflow-new-agent-manifest.yaml",
+    "p": 0.0013861725479662919,
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-ui/artifacts/workflow-composition-manifest.yaml#2",
+    "label": "applications/percolate-ui/artifacts/workflow-composition-manifest.yaml",
+    "p": 0.0013855590122303083,
+    "gold": false
+   },
+   {
+    "id": "commit/5556b73b06",
+    "label": "commit 5556b73: Pulling your own API source handed you somebody else's run",
+    "p": 0.0013547253185198273,
+    "gold": false
+   },
+   {
+    "id": "specs/world-model-ingestion/api-sources.sql#8",
+    "label": "specs/world-model-ingestion/api-sources.sql",
+    "p": 0.0013374903260726754,
+    "gold": false
+   },
+   {
+    "id": "commit/37ed4cd487",
+    "label": "commit 37ed4cd: rows, not schema: the rule, and a gate that reads specs/ (REM-655) (#335)",
+    "p": 0.0012666664570684888,
+    "gold": false
+   },
+   {
+    "id": "specs/world-model-ingestion/api-sources.sql#5",
+    "label": "specs/world-model-ingestion/api-sources.sql",
+    "p": 0.0011965532543131228,
+    "gold": false
+   },
+   {
+    "id": "dev/init/04-graph-sample.sql#4",
+    "label": "dev/init/04-graph-sample.sql",
+    "p": 0.0011605405605352931,
+    "gold": false
+   },
+   {
+    "id": "specs/world-model-ingestion/api-sources.sql#4",
+    "label": "specs/world-model-ingestion/api-sources.sql",
+    "p": 0.001151884335071485,
+    "gold": false
+   },
+   {
+    "id": "site/posts/to-vibe-or-not-to-vibe.md#28",
+    "label": "site/posts/to-vibe-or-not-to-vibe.md \u203a What already exists",
+    "p": 0.0011483756558535716,
+    "gold": false
+   },
+   {
+    "id": "specs/world-model-ingestion/api-sources.sql#7",
+    "label": "specs/world-model-ingestion/api-sources.sql",
+    "p": 0.0011048886826169355,
+    "gold": false
+   },
+   {
+    "id": "specs/agentic/brief.md#2",
+    "label": "specs/agentic/brief.md \u203a 1. What this is",
+    "p": 0.001091016305920823,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "board/cards/REM-61.md#1",
+   "label": "board/cards/REM-61.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/README.md#12",
+   "label": "specs/README.md \u203a The context a model receives",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/world-model-ingestion/ingestion.md#14",
+   "label": "specs/world-model-ingestion/ingestion.md \u203a Whose run a pull returns",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/world-model-ingestion/ingestion.md#11",
+   "label": "specs/world-model-ingestion/ingestion.md \u203a API sources are the other way round",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-1058.md#5",
+   "label": "board/cards/REM-1058.md \u203a Log",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/world-model-ingestion/api-sources.sql#4",
+   "label": "specs/world-model-ingestion/api-sources.sql",
+   "wave": 1,
+   "via": "term:validate_api_source",
+   "gold": false
+  },
+  {
+   "id": "commit/9b764cc618",
+   "label": "commit 9b764cc: An API source saved without a watermark type was pulled as one and guarded as none",
+   "wave": 1,
+   "via": "term:validate_api_source",
+   "gold": false
+  },
+  {
+   "id": "specs/world-model-ingestion/api-sources.sql#3",
+   "label": "specs/world-model-ingestion/api-sources.sql",
+   "wave": 1,
+   "via": "term:validate_api_source",
+   "gold": false
+  },
+  {
+   "id": "specs/packages/schema.sql#8",
+   "label": "specs/packages/schema.sql",
+   "wave": 1,
+   "via": "term:validate_api_source",
+   "gold": false
+  },
+  {
+   "id": "meta/spikes/2026-10-20-lme-seeded-taxonomy/evidence_atlas/render_process.py#5",
+   "label": "meta/spikes/2026-10-20-lme-seeded-taxonomy/evidence_atlas/render_process.py",
+   "wave": 2,
+   "via": "term:source saved",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "commit/9b764cc618",
+    "label": "commit 9b764cc: An API source saved without a watermark type was pulled as one and guarded as none",
+    "gold": false
+   },
+   {
+    "id": "specs/world-model-ingestion/api-sources.sql#2",
+    "label": "specs/world-model-ingestion/api-sources.sql",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1058.md#4",
+    "label": "board/cards/REM-1058.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "specs/world-model-ingestion/api-sources.sql#3",
+    "label": "specs/world-model-ingestion/api-sources.sql",
+    "gold": false
+   },
+   {
+    "id": "specs/world-model-ingestion/api-sources.sql#10",
+    "label": "specs/world-model-ingestion/api-sources.sql",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "commit/9b764cc618",
+    "label": "commit 9b764cc: An API source saved without a watermark type was pulled as one and guarded as none",
+    "gold": false
+   },
+   {
+    "id": "specs/world-model-ingestion/api-sources.sql#2",
+    "label": "specs/world-model-ingestion/api-sources.sql",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1058.md#4",
+    "label": "board/cards/REM-1058.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-ui/artifacts/workflow-new-agent-manifest.yaml#2",
+    "label": "applications/percolate-ui/artifacts/workflow-new-agent-manifest.yaml",
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-ui/artifacts/workflow-composition-manifest.yaml#2",
+    "label": "applications/percolate-ui/artifacts/workflow-composition-manifest.yaml",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "board/cards/REM-61.md#2",
+    "label": "board/cards/REM-61.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-7.md#1",
+    "label": "board/cards/REM-7.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1021.md#5",
+    "label": "board/cards/REM-1021.md \u203a Scope",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1057.md#5",
+    "label": "board/cards/REM-1057.md \u203a Scope",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1066.md#5",
+    "label": "board/cards/REM-1066.md \u203a Scope",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "applications/percolate-self-model/dreaming/README.md#10",
+    "label": "applications/percolate-self-model/dreaming/README.md \u203a Contracts and access",
+    "gold": false
+   },
+   {
+    "id": "specs/world-model-ingestion/sources.md#43",
+    "label": "specs/world-model-ingestion/sources.md \u203a 13.11 Per-source headers are mandatory, not a nicety",
+    "gold": false
+   },
+   {
+    "id": "specs/agentic/ontology.md#2",
+    "label": "specs/agentic/ontology.md \u203a What each node means",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-325.md#3",
+    "label": "board/cards/REM-325.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1012.md#1",
+    "label": "board/cards/REM-1012.md",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

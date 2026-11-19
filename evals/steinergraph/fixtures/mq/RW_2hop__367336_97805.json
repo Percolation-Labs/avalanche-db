@@ -1,0 +1,431 @@
+{
+ "qid": "RW:2hop__367336_97805",
+ "set": "mq",
+ "question": "Which war did the operator of the Finnish coastal defence ship Ilmarinen serve in?",
+ "gold": [
+  {
+   "id": "mq:026fa67e68ef43f4",
+   "label": "Finnish Navy",
+   "seed": true
+  },
+  {
+   "id": "mq:35f825b32684b3b6",
+   "label": "Finnish coastal defence ship Ilmarinen",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:35f825b32684b3b6",
+   "label": "Finnish coastal defence ship Ilmarinen",
+   "rank": 1,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:2398374bc71e0f7d",
+   "label": "Finnish coastal defence ship V\u00e4in\u00e4m\u00f6inen",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:19d260bdc6375bfb",
+   "label": "Svea-class coastal defence ship",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:026fa67e68ef43f4",
+   "label": "Finnish Navy",
+   "rank": 4,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:5aa69679943fc257",
+   "label": "Juhani Kaskeala",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:026fa67e68ef43f4",
+    "label": "Finnish Navy",
+    "role": "gold"
+   },
+   {
+    "id": "mq:35f825b32684b3b6",
+    "label": "Finnish coastal defence ship Ilmarinen",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:026fa67e68ef43f4",
+    "b": "mq:35f825b32684b3b6",
+    "via": [
+     {
+      "kind": "near",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "finnish coastal",
+      "width": 3
+     },
+     {
+      "kind": "term",
+      "key": "coastal defence",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "turku",
+      "width": 6
+     },
+     {
+      "kind": "term",
+      "key": "finnish navy",
+      "width": 7
+     },
+     {
+      "kind": "term",
+      "key": "finnish",
+      "width": 37
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "mq:026fa67e68ef43f4",
+   "gold": "mq:026fa67e68ef43f4",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 1351,
+  "within_2_doors": 19719,
+  "gold_within_1": 0,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "mq:27cff237efde50cc",
+    "label": "Suomi KP/-31",
+    "p": 0.00470221702978318,
+    "gold": false
+   },
+   {
+    "id": "mq:e237bc92e5ebe5bf",
+    "label": "HSwMS Najaden (1897)",
+    "p": 0.003326458899299634,
+    "gold": false
+   },
+   {
+    "id": "mq:24d5b87af05e1583",
+    "label": "Nils Palme",
+    "p": 0.003195782961769534,
+    "gold": false
+   },
+   {
+    "id": "mq:0f556f9900d571d6",
+    "label": "Lieutenant Boomer",
+    "p": 0.00293931525407718,
+    "gold": false
+   },
+   {
+    "id": "mq:d5eb564ba207c868",
+    "label": "Roger Nordlund",
+    "p": 0.0020117885370517052,
+    "gold": false
+   },
+   {
+    "id": "mq:5c284d764ee53972",
+    "label": "Franco-Prussian War",
+    "p": 0.0019330392261085996,
+    "gold": false
+   },
+   {
+    "id": "mq:04d36f17b8276766",
+    "label": "Malabar Battery",
+    "p": 0.0019026660073559333,
+    "gold": false
+   },
+   {
+    "id": "mq:ea13dfa61cff0d31",
+    "label": "Kearsarge-class battleship",
+    "p": 0.001862678779296177,
+    "gold": false
+   },
+   {
+    "id": "mq:26230ae114f75295",
+    "label": "Hassanal Bolkiah",
+    "p": 0.0017985579783694847,
+    "gold": false
+   },
+   {
+    "id": "mq:4b4bf6897d4ac082",
+    "label": "USS Concord (1828)",
+    "p": 0.0017885679492834119,
+    "gold": false
+   },
+   {
+    "id": "mq:9604c5a60b5ab167",
+    "label": "Charlotte of Schaumburg-Lippe",
+    "p": 0.0017594320200926105,
+    "gold": false
+   },
+   {
+    "id": "mq:a6352b28c0b15da8",
+    "label": "Snoma Finnish Cemetery",
+    "p": 0.0017258711382307365,
+    "gold": false
+   },
+   {
+    "id": "mq:71409f07389d7d07",
+    "label": "Hei tie",
+    "p": 0.0015711116978635099,
+    "gold": false
+   },
+   {
+    "id": "mq:9657b32e68f90875",
+    "label": "Lucilla Andrews",
+    "p": 0.0014733343672272876,
+    "gold": false
+   },
+   {
+    "id": "mq:6b71b86e144ae124",
+    "label": "Battle of the Atlantic",
+    "p": 0.001435550045512147,
+    "gold": false
+   },
+   {
+    "id": "mq:8e0daff4e32d9df0",
+    "label": "Independence of the Seas",
+    "p": 0.0012701070933183842,
+    "gold": false
+   },
+   {
+    "id": "mq:4600f6b483acb880",
+    "label": "USS Kilty (DD-137)",
+    "p": 0.001191652993333412,
+    "gold": false
+   },
+   {
+    "id": "mq:8359e014ac72ccb1",
+    "label": "Fabian Wrede-class training ship",
+    "p": 0.0011282575546437915,
+    "gold": false
+   },
+   {
+    "id": "mq:f42ab098097da17e",
+    "label": "Mikko Erich",
+    "p": 0.001090278686097373,
+    "gold": false
+   },
+   {
+    "id": "mq:2e52b6b1dca4264d",
+    "label": "R-class patrol boat",
+    "p": 0.001086672374076732,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:35f825b32684b3b6",
+   "label": "Finnish coastal defence ship Ilmarinen",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:2398374bc71e0f7d",
+   "label": "Finnish coastal defence ship V\u00e4in\u00e4m\u00f6inen",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:19d260bdc6375bfb",
+   "label": "Svea-class coastal defence ship",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:026fa67e68ef43f4",
+   "label": "Finnish Navy",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:5aa69679943fc257",
+   "label": "Juhani Kaskeala",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:ef5f1517b7c12fb8",
+   "label": "Fedorov Avtomat",
+   "wave": 1,
+   "via": "term:winter war",
+   "gold": false
+  },
+  {
+   "id": "mq:27cff237efde50cc",
+   "label": "Suomi KP/-31",
+   "wave": 1,
+   "via": "term:winter war",
+   "gold": false
+  },
+  {
+   "id": "mq:eaae1f28ecfcb3d1",
+   "label": "Soviet Union in World War II",
+   "wave": 1,
+   "via": "term:winter war",
+   "gold": false
+  },
+  {
+   "id": "mq:e2fe49eebef9285d",
+   "label": "Molotov\u2013Ribbentrop Pact",
+   "wave": 1,
+   "via": "term:winter war",
+   "gold": false
+  },
+  {
+   "id": "mq:f9404a35083feade",
+   "label": "Sinebrychoff",
+   "wave": 2,
+   "via": "term:finnish",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:27cff237efde50cc",
+    "label": "Suomi KP/-31",
+    "gold": false
+   },
+   {
+    "id": "mq:e237bc92e5ebe5bf",
+    "label": "HSwMS Najaden (1897)",
+    "gold": false
+   },
+   {
+    "id": "mq:24d5b87af05e1583",
+    "label": "Nils Palme",
+    "gold": false
+   },
+   {
+    "id": "mq:0f556f9900d571d6",
+    "label": "Lieutenant Boomer",
+    "gold": false
+   },
+   {
+    "id": "mq:d5eb564ba207c868",
+    "label": "Roger Nordlund",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:27cff237efde50cc",
+    "label": "Suomi KP/-31",
+    "gold": false
+   },
+   {
+    "id": "mq:04d36f17b8276766",
+    "label": "Malabar Battery",
+    "gold": false
+   },
+   {
+    "id": "mq:2e52b6b1dca4264d",
+    "label": "R-class patrol boat",
+    "gold": false
+   },
+   {
+    "id": "mq:8359e014ac72ccb1",
+    "label": "Fabian Wrede-class training ship",
+    "gold": false
+   },
+   {
+    "id": "mq:ea13dfa61cff0d31",
+    "label": "Kearsarge-class battleship",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:27cff237efde50cc",
+    "label": "Suomi KP/-31",
+    "gold": false
+   },
+   {
+    "id": "mq:2e52b6b1dca4264d",
+    "label": "R-class patrol boat",
+    "gold": false
+   },
+   {
+    "id": "mq:ea13dfa61cff0d31",
+    "label": "Kearsarge-class battleship",
+    "gold": false
+   },
+   {
+    "id": "mq:4b4bf6897d4ac082",
+    "label": "USS Concord (1828)",
+    "gold": false
+   },
+   {
+    "id": "mq:8359e014ac72ccb1",
+    "label": "Fabian Wrede-class training ship",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:80a8a8133f16a2a1",
+    "label": "HMS Bristol (D23)",
+    "gold": false
+   },
+   {
+    "id": "mq:27cff237efde50cc",
+    "label": "Suomi KP/-31",
+    "gold": false
+   },
+   {
+    "id": "mq:d5946a7613b1599d",
+    "label": "Taisto-class motor torpedo boat",
+    "gold": false
+   },
+   {
+    "id": "mq:04d36f17b8276766",
+    "label": "Malabar Battery",
+    "gold": false
+   },
+   {
+    "id": "mq:8359e014ac72ccb1",
+    "label": "Fabian Wrede-class training ship",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": null,
+  "Q": null,
+  "LQ": null,
+  "S": null
+ }
+}

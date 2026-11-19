@@ -1,0 +1,400 @@
+{
+ "qid": "card:REM-1245",
+ "set": "cards",
+ "question": "What was done about this, and why: walk: the query layer matches the walk spec, sequential case first?",
+ "gold": [
+  {
+   "id": "commit/ac0fece0bf",
+   "label": "commit ac0fece: Merge pull request #578 from Percolation-Labs/james/part-three-figure-sources",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/edd6917fe6",
+   "label": "commit edd6917: board: file REM-1245 walk: the query layer matches the walk spec, sequential case first",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-1245.md#1",
+   "label": "board/cards/REM-1245.md",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-1245.md#2",
+   "label": "board/cards/REM-1245.md \u203a Goal",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/messages/M-20261029-105602-be43.md#1",
+   "label": "board/messages/M-20261029-105602-be43.md",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/messages/M-20261029-110011-1932.md#1",
+   "label": "board/messages/M-20261029-110011-1932.md",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 2
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/ac0fece0bf",
+    "label": "commit ac0fece: Merge pull request #578 from Percolation-Labs/james/part-three-figure-sources",
+    "role": "gold"
+   },
+   {
+    "id": "commit/edd6917fe6",
+    "label": "commit edd6917: board: file REM-1245 walk: the query layer matches the walk spec, sequential case first",
+    "role": "seed"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/ac0fece0bf",
+    "b": "commit/edd6917fe6",
+    "via": [
+     {
+      "kind": "term",
+      "key": "rem 1245",
+      "width": 97
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [],
+  "entry": {
+   "seed": "commit/edd6917fe6",
+   "gold": "commit/ac0fece0bf",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 1204,
+  "within_2_doors": 32846,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "board/messages/M-20261029-105305-fe5a.md#1",
+    "label": "board/messages/M-20261029-105305-fe5a.md",
+    "p": 0.006866852274517834,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261029-110005-6ad3.md#1",
+    "label": "board/messages/M-20261029-110005-6ad3.md",
+    "p": 0.004938738325552949,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261029-085944-62bd.md#1",
+    "label": "board/messages/M-20261029-085944-62bd.md",
+    "p": 0.004077529517744336,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261029-085819-f102.md#1",
+    "label": "board/messages/M-20261029-085819-f102.md",
+    "p": 0.003987277442522018,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261029-090221-e277.md#1",
+    "label": "board/messages/M-20261029-090221-e277.md",
+    "p": 0.0038902350443805545,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261029-105618-a58f.md#1",
+    "label": "board/messages/M-20261029-105618-a58f.md",
+    "p": 0.0036941195860596986,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261029-105557-e9b6.md#1",
+    "label": "board/messages/M-20261029-105557-e9b6.md",
+    "p": 0.003515560958819056,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261029-105959-ff21.md#2",
+    "label": "board/messages/M-20261029-105959-ff21.md",
+    "p": 0.003465803191945258,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261029-105608-52d8.md#1",
+    "label": "board/messages/M-20261029-105608-52d8.md",
+    "p": 0.003351918433375367,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261029-105923-b725.md#1",
+    "label": "board/messages/M-20261029-105923-b725.md",
+    "p": 0.0033131473978969977,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261029-105613-c556.md#1",
+    "label": "board/messages/M-20261029-105613-c556.md",
+    "p": 0.003192699502839914,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261029-105959-ff21.md#1",
+    "label": "board/messages/M-20261029-105959-ff21.md",
+    "p": 0.002520720374376679,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261029-105852-65d0.md#1",
+    "label": "board/messages/M-20261029-105852-65d0.md",
+    "p": 0.0024801128178833917,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261029-105959-ff21.md#3",
+    "label": "board/messages/M-20261029-105959-ff21.md",
+    "p": 0.002361304864681486,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1245.md#3",
+    "label": "board/cards/REM-1245.md \u203a Done when",
+    "p": 0.002301983841004291,
+    "gold": false
+   },
+   {
+    "id": "commit/4c1d7a2f35",
+    "label": "commit 4c1d7a2: board: file REM-1244 walk: one spec of the durable iterative walk, agreed before more is built",
+    "p": 0.0021536731177334086,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1245.md#4",
+    "label": "board/cards/REM-1245.md \u203a Log",
+    "p": 0.001967580002803165,
+    "gold": false
+   },
+   {
+    "id": "commit/5af00be447",
+    "label": "commit 5af00be: board: file REM-1246 walk: an investigation UI shows the question stack, the graph and the evidence that",
+    "p": 0.0019144375797147152,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261106-163248-ce91.md#1",
+    "label": "board/messages/M-20261106-163248-ce91.md",
+    "p": 0.0016510058907131414,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/generalise/cory-use-edges-016e60bee.md#2",
+    "label": "meta/lab/results/generalise/cory-use-edges-016e60bee.md",
+    "p": 0.0014956943387479595,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/edd6917fe6",
+   "label": "commit edd6917: board: file REM-1245 walk: the query layer matches the walk spec, sequential case first",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-1245.md#1",
+   "label": "board/cards/REM-1245.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-1245.md#2",
+   "label": "board/cards/REM-1245.md \u203a Goal",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/messages/M-20261029-105602-be43.md#1",
+   "label": "board/messages/M-20261029-105602-be43.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/messages/M-20261029-110011-1932.md#1",
+   "label": "board/messages/M-20261029-110011-1932.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/messages/M-20261029-124514-0c01.md#1",
+   "label": "board/messages/M-20261029-124514-0c01.md",
+   "wave": 1,
+   "via": "term:rem 1245",
+   "gold": false
+  },
+  {
+   "id": "board/messages/M-20261029-113247-5905.md#1",
+   "label": "board/messages/M-20261029-113247-5905.md",
+   "wave": 1,
+   "via": "term:rem 1245",
+   "gold": false
+  },
+  {
+   "id": "commit/ac0fece0bf",
+   "label": "commit ac0fece: Merge pull request #578 from Percolation-Labs/james/part-three-figure-sources",
+   "wave": 1,
+   "via": "term:rem 1245",
+   "gold": true
+  },
+  {
+   "id": "board/messages/M-20261029-141348-b8e7.md#1",
+   "label": "board/messages/M-20261029-141348-b8e7.md",
+   "wave": 1,
+   "via": "term:rem 1245",
+   "gold": false
+  },
+  {
+   "id": "commit/4ef1f106c6",
+   "label": "commit 4ef1f10: board: REM-1245 in-progress \u2192 todo",
+   "wave": 1,
+   "via": "term:rem 1245",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "board/messages/M-20261029-105305-fe5a.md#1",
+    "label": "board/messages/M-20261029-105305-fe5a.md",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261029-110005-6ad3.md#1",
+    "label": "board/messages/M-20261029-110005-6ad3.md",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261029-085944-62bd.md#1",
+    "label": "board/messages/M-20261029-085944-62bd.md",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261029-085819-f102.md#1",
+    "label": "board/messages/M-20261029-085819-f102.md",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261029-090221-e277.md#1",
+    "label": "board/messages/M-20261029-090221-e277.md",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "board/messages/M-20261029-105305-fe5a.md#1",
+    "label": "board/messages/M-20261029-105305-fe5a.md",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261029-110005-6ad3.md#1",
+    "label": "board/messages/M-20261029-110005-6ad3.md",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261029-105959-ff21.md#2",
+    "label": "board/messages/M-20261029-105959-ff21.md",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261029-105959-ff21.md#1",
+    "label": "board/messages/M-20261029-105959-ff21.md",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261029-105852-65d0.md#1",
+    "label": "board/messages/M-20261029-105852-65d0.md",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "board/messages/M-20261029-193948-4fc9.md#1",
+    "label": "board/messages/M-20261029-193948-4fc9.md",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261029-193952-36a5.md#1",
+    "label": "board/messages/M-20261029-193952-36a5.md",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261029-193956-d40e.md#1",
+    "label": "board/messages/M-20261029-193956-d40e.md",
+    "gold": false
+   },
+   {
+    "id": "commit/3d4abe8f6f",
+    "label": "commit 3d4abe8: V0 short form: walk spec and SQL links on percolate main (REM-1247)",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261029-155759-82cd.md#1",
+    "label": "board/messages/M-20261029-155759-82cd.md",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "board/cards/REM-1232.md#5",
+    "label": "board/cards/REM-1232.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261029-110331-1e4d.md#1",
+    "label": "board/messages/M-20261029-110331-1e4d.md",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261029-110336-1d6e.md#1",
+    "label": "board/messages/M-20261029-110336-1d6e.md",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261029-110346-8c08.md#1",
+    "label": "board/messages/M-20261029-110346-8c08.md",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261029-105305-fe5a.md#1",
+    "label": "board/messages/M-20261029-105305-fe5a.md",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

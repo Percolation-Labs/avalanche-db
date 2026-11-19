@@ -1,0 +1,424 @@
+{
+ "qid": "pr:40",
+ "set": "prs",
+ "question": "What work went into this, and why: One home for the parser-lag note?",
+ "gold": [
+  {
+   "id": "commit/2118751846",
+   "label": "commit 2118751: The note reaches CI, which is where the red is read",
+   "seed": false
+  },
+  {
+   "id": "commit/bb398a9717",
+   "label": "commit bb398a9: One home for the parser-lag note, and the reasoning behind it",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/9fb372358c",
+   "label": "commit 9fb3723: Merge pull request #40 from Percolation-Labs/fix/one-home-for-the-parser-lag-note",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/bb398a9717",
+   "label": "commit bb398a9: One home for the parser-lag note, and the reasoning behind it",
+   "rank": 2,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "commit/159972dd24",
+   "label": "commit 159972d: Merge pull request #39 from Percolation-Labs/docs/parser-lag-message",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "meta/postmortems/2026-09-12-a-gate-that-can-write.md#16",
+   "label": "meta/postmortems/2026-09-12-a-gate-that-can-write.md \u203a 6. Not verified",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/62a8c6ca44",
+   "label": "commit 62a8c6c: The lag claim is now measured in both directions",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/2118751846",
+    "label": "commit 2118751: The note reaches CI, which is where the red is read",
+    "role": "gold"
+   },
+   {
+    "id": "commit/bb398a9717",
+    "label": "commit bb398a9: One home for the parser-lag note, and the reasoning behind it",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/2118751846",
+    "b": "commit/bb398a9717",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "near",
+      "width": 3
+     },
+     {
+      "kind": "term",
+      "key": "session_01vfjyxea5x5qrbv8w3fceig",
+      "width": 12
+     },
+     {
+      "kind": "term",
+      "key": "code session_01vfjyxea5x5qrbv8w3fceig",
+      "width": 12
+     },
+     {
+      "kind": "term",
+      "key": "banner",
+      "width": 18
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "commit/bb398a9717",
+   "gold": "commit/bb398a9717",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 1712,
+  "within_2_doors": 33598,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "commit/07f3216139",
+    "label": "commit 07f3216: Merge pull request #37 from Percolation-Labs/docs/parser-release-note",
+    "p": 0.004937728159507681,
+    "gold": false
+   },
+   {
+    "id": "commit/31a94ddd00",
+    "label": "commit 31a94dd: A gate that can write: the hook rebuilt the served database and a test committed to the branch (#88)",
+    "p": 0.004924815212693792,
+    "gold": false
+   },
+   {
+    "id": "commit/e96659eb73",
+    "label": "commit e96659e: Merge pull request #41 from Percolation-Labs/docs/rem-78-fast-path-precondition",
+    "p": 0.0037036818547445576,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-12-true-when-it-was-measured.md#15",
+    "label": "meta/postmortems/2026-09-12-true-when-it-was-measured.md \u203a 5. What each session got wrong, in its own words",
+    "p": 0.003238933306891696,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-12-true-when-it-was-measured.md#26",
+    "label": "meta/postmortems/2026-09-12-true-when-it-was-measured.md \u203a 8. Not verified",
+    "p": 0.0031519474674501337,
+    "gold": false
+   },
+   {
+    "id": "meta/skills/deployment/SKILL.md#7",
+    "label": "meta/skills/deployment/SKILL.md \u203a Who does the merging, since \"automatically\" named no mechanism",
+    "p": 0.0025454979131441556,
+    "gold": false
+   },
+   {
+    "id": "commit/0b7af9fd42",
+    "label": "commit 0b7af9f: The release flow, and the window where main is red on purpose",
+    "p": 0.002459348160060812,
+    "gold": false
+   },
+   {
+    "id": "commit/b8bafeecd7",
+    "label": "commit b8bafee: Three of us hit this inside a fix for it, so the ledger says so",
+    "p": 0.0024246916457545623,
+    "gold": false
+   },
+   {
+    "id": "commit/e8dfa0c404",
+    "label": "commit e8dfa0c: Merge pull request #42 from Percolation-Labs/docs/output-visible-where-read",
+    "p": 0.0022334240521662357,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-86.md#1",
+    "label": "board/cards/REM-86.md",
+    "p": 0.0020208549033186507,
+    "gold": false
+   },
+   {
+    "id": "commit/158dc96119",
+    "label": "commit 158dc96: The hook row is closed, and the first fix for it failed the rule it satisfied",
+    "p": 0.0019685200346950702,
+    "gold": false
+   },
+   {
+    "id": "commit/b4f49e5928",
+    "label": "commit b4f49e5: Merge pull request #32 from Percolation-Labs/fix/rem-53-provider-failures-spec",
+    "p": 0.0017321449831501983,
+    "gold": false
+   },
+   {
+    "id": "PACKAGING.md#24",
+    "label": "PACKAGING.md \u203a One version, two files, and the window between them",
+    "p": 0.0017311841706841662,
+    "gold": false
+   },
+   {
+    "id": "commit/2118751846",
+    "label": "commit 2118751: The note reaches CI, which is where the red is read",
+    "p": 0.0017078323519839876,
+    "gold": true
+   },
+   {
+    "id": "commit/c07d3fb08c",
+    "label": "commit c07d3fb: Three functions each decided what a re-minted claim set carries (#56)",
+    "p": 0.0016211172742272393,
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-10-17-iterative-query/README.md#8",
+    "label": "meta/spikes/2026-10-17-iterative-query/README.md \u203a What it found",
+    "p": 0.0014990596350491212,
+    "gold": false
+   },
+   {
+    "id": "commit/e8ca4dd09c",
+    "label": "commit e8ca4dd: Main's one red gate now says why it is red",
+    "p": 0.0014219281790802773,
+    "gold": false
+   },
+   {
+    "id": "commit/f808da6b26",
+    "label": "commit f808da6: Both halves said 0.2.0, and one of them was a day behind (#133)",
+    "p": 0.0013055272140095415,
+    "gold": false
+   },
+   {
+    "id": "research-notes/build-knit-dream-theory-review.md#3",
+    "label": "research-notes/build-knit-dream-theory-review.md \u203a 1. What the document gets right, and where it beat me to it",
+    "p": 0.0012972881368611114,
+    "gold": false
+   },
+   {
+    "id": "meta/skills/challenge-the-process/SKILL.md#20",
+    "label": "meta/skills/challenge-the-process/SKILL.md \u203a \"Verified\" means verified where the defect could be",
+    "p": 0.0012497059536106785,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/9fb372358c",
+   "label": "commit 9fb3723: Merge pull request #40 from Percolation-Labs/fix/one-home-for-the-parser-lag-note",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/bb398a9717",
+   "label": "commit bb398a9: One home for the parser-lag note, and the reasoning behind it",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "commit/159972dd24",
+   "label": "commit 159972d: Merge pull request #39 from Percolation-Labs/docs/parser-lag-message",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/postmortems/2026-09-12-a-gate-that-can-write.md#16",
+   "label": "meta/postmortems/2026-09-12-a-gate-that-can-write.md \u203a 6. Not verified",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/62a8c6ca44",
+   "label": "commit 62a8c6c: The lag claim is now measured in both directions",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "research-notes/h-to-g/session-traces/rank.py#1",
+   "label": "research-notes/h-to-g/session-traces/rank.py",
+   "wave": 1,
+   "via": "term:lag",
+   "gold": false
+  },
+  {
+   "id": "research-notes/h-to-g/session-traces/choice.py#2",
+   "label": "research-notes/h-to-g/session-traces/choice.py",
+   "wave": 1,
+   "via": "term:lag",
+   "gold": false
+  },
+  {
+   "id": "meta/spikes/2026-10-17-iterative-query/README.md#9",
+   "label": "meta/spikes/2026-10-17-iterative-query/README.md \u203a What it found",
+   "wave": 1,
+   "via": "term:lag",
+   "gold": false
+  },
+  {
+   "id": "commit/3796bd8a39",
+   "label": "commit 3796bd8: Merge pull request #52 from Percolation-Labs/docs/release-flow-and-the-lag-window",
+   "wave": 1,
+   "via": "term:lag",
+   "gold": false
+  },
+  {
+   "id": "research-notes/h-to-g/session-traces/choice_recent.py#2",
+   "label": "research-notes/h-to-g/session-traces/choice_recent.py",
+   "wave": 1,
+   "via": "term:lag",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "commit/07f3216139",
+    "label": "commit 07f3216: Merge pull request #37 from Percolation-Labs/docs/parser-release-note",
+    "gold": false
+   },
+   {
+    "id": "commit/31a94ddd00",
+    "label": "commit 31a94dd: A gate that can write: the hook rebuilt the served database and a test committed to the branch (#88)",
+    "gold": false
+   },
+   {
+    "id": "commit/e96659eb73",
+    "label": "commit e96659e: Merge pull request #41 from Percolation-Labs/docs/rem-78-fast-path-precondition",
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-12-true-when-it-was-measured.md#15",
+    "label": "meta/postmortems/2026-09-12-true-when-it-was-measured.md \u203a 5. What each session got wrong, in its own words",
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-12-true-when-it-was-measured.md#26",
+    "label": "meta/postmortems/2026-09-12-true-when-it-was-measured.md \u203a 8. Not verified",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "commit/f808da6b26",
+    "label": "commit f808da6: Both halves said 0.2.0, and one of them was a day behind (#133)",
+    "gold": false
+   },
+   {
+    "id": "commit/0b7af9fd42",
+    "label": "commit 0b7af9f: The release flow, and the window where main is red on purpose",
+    "gold": false
+   },
+   {
+    "id": "PACKAGING.md#26",
+    "label": "PACKAGING.md \u203a Telling a lag red from a real red, without asking anybody",
+    "gold": false
+   },
+   {
+    "id": "commit/31a94ddd00",
+    "label": "commit 31a94dd: A gate that can write: the hook rebuilt the served database and a test committed to the branch (#88)",
+    "gold": false
+   },
+   {
+    "id": "commit/07f3216139",
+    "label": "commit 07f3216: Merge pull request #37 from Percolation-Labs/docs/parser-release-note",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/07f3216139",
+    "label": "commit 07f3216: Merge pull request #37 from Percolation-Labs/docs/parser-release-note",
+    "gold": false
+   },
+   {
+    "id": "PACKAGING.md#24",
+    "label": "PACKAGING.md \u203a One version, two files, and the window between them",
+    "gold": false
+   },
+   {
+    "id": "commit/3796bd8a39",
+    "label": "commit 3796bd8: Merge pull request #52 from Percolation-Labs/docs/release-flow-and-the-lag-window",
+    "gold": false
+   },
+   {
+    "id": "commit/0b7af9fd42",
+    "label": "commit 0b7af9f: The release flow, and the window where main is red on purpose",
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-14-a-card-failed-the-release.md#3",
+    "label": "meta/postmortems/2026-09-14-a-card-failed-the-release.md \u203a 1. A plan is not a reference, and a gate read it as one",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "PACKAGING.md#25",
+    "label": "PACKAGING.md \u203a Telling a lag red from a real red, without asking anybody",
+    "gold": false
+   },
+   {
+    "id": "PACKAGING.md#26",
+    "label": "PACKAGING.md \u203a Telling a lag red from a real red, without asking anybody",
+    "gold": false
+   },
+   {
+    "id": "PACKAGING.md#24",
+    "label": "PACKAGING.md \u203a One version, two files, and the window between them",
+    "gold": false
+   },
+   {
+    "id": "PACKAGING.md#27",
+    "label": "PACKAGING.md \u203a Telling a lag red from a real red, without asking anybody",
+    "gold": false
+   },
+   {
+    "id": "commit/0b7af9fd42",
+    "label": "commit 0b7af9f: The release flow, and the window where main is red on purpose",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

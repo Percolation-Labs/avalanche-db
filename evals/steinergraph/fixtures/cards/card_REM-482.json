@@ -1,0 +1,424 @@
+{
+ "qid": "card:REM-482",
+ "set": "cards",
+ "question": "What was done about this, and why: reading: a claim has its own page, with its question, evidence by origin, history and what changed?",
+ "gold": [
+  {
+   "id": "commit/266e4634d3",
+   "label": "commit 266e463: claims: the graph is read through functions that answer as of a date and never count what the caller can",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/032b960b06",
+   "label": "commit 032b960: board: file REM-482 reading: a claim has its own page, with its question, evidence by origin, history an",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-482.md#1",
+   "label": "board/cards/REM-482.md",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "specs/claims/graph.md#40",
+   "label": "specs/claims/graph.md \u203a 10. Reading the graph",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/edc20ddf8c",
+   "label": "commit edc20dd: Resolve each cited origin once when reading claim evidence",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "specs/percolate-application/library-board.md#19",
+   "label": "specs/percolate-application/library-board.md \u203a 13.3 Following a question in core, and what changed (REM-575)",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 2
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/266e4634d3",
+    "label": "commit 266e463: claims: the graph is read through functions that answer as of a date and never count what the caller can",
+    "role": "gold"
+   },
+   {
+    "id": "specs/claims/graph.md#40",
+    "label": "specs/claims/graph.md \u203a 10. Reading the graph",
+    "role": "seed"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/266e4634d3",
+    "b": "specs/claims/graph.md#40",
+    "via": [
+     {
+      "kind": "near",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "dropped carried",
+      "width": 4
+     },
+     {
+      "kind": "term",
+      "key": "added dropped",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "question_evidence",
+      "width": 8
+     },
+     {
+      "kind": "term",
+      "key": "derived reading",
+      "width": 8
+     },
+     {
+      "kind": "term",
+      "key": "revision_diff",
+      "width": 11
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [],
+  "entry": {
+   "seed": "specs/claims/graph.md#40",
+   "gold": "commit/266e4634d3",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 1415,
+  "within_2_doors": 33404,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "specs/claims/schema.sql#65",
+    "label": "specs/claims/schema.sql",
+    "p": 0.005292247595768594,
+    "gold": false
+   },
+   {
+    "id": "commit/96813b2491",
+    "label": "commit 96813b2: board: codex-reading-room checks in, working",
+    "p": 0.0046481878558907634,
+    "gold": false
+   },
+   {
+    "id": "commit/9bf55321dc",
+    "label": "commit 9bf5532: board: note on REM-615",
+    "p": 0.004643392386570864,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-668.md#4",
+    "label": "board/cards/REM-668.md \u203a Done when",
+    "p": 0.0046183801710884395,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-482.md#2",
+    "label": "board/cards/REM-482.md \u203a Goal",
+    "p": 0.004371398359908324,
+    "gold": false
+   },
+   {
+    "id": "commit/561dceb37a",
+    "label": "commit 561dceb: board: file REM-481 claims: erasing a work erases the claims and assertions only it supported",
+    "p": 0.0038934665128820462,
+    "gold": false
+   },
+   {
+    "id": "commit/ff3175f616",
+    "label": "commit ff3175f: board: file REM-483 authoring: a reworded claim asks whether it is the same claim or a new one",
+    "p": 0.0037860488695885723,
+    "gold": false
+   },
+   {
+    "id": "commit/266e4634d3",
+    "label": "commit 266e463: claims: the graph is read through functions that answer as of a date and never count what the caller can",
+    "p": 0.0022363780053749273,
+    "gold": true
+   },
+   {
+    "id": "specs/claims/graph.md#41",
+    "label": "specs/claims/graph.md \u203a 10. Reading the graph",
+    "p": 0.0019237648266817993,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-475.md#6",
+    "label": "board/cards/REM-475.md \u203a Log",
+    "p": 0.0018789879597957719,
+    "gold": false
+   },
+   {
+    "id": "commit/a0853793b9",
+    "label": "commit a085379: board: file REM-616 release: carry the claim evidence fix into the pinned core image",
+    "p": 0.0017903302635645173,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-575.md#7",
+    "label": "board/cards/REM-575.md \u203a Log",
+    "p": 0.0017177143648538212,
+    "gold": false
+   },
+   {
+    "id": "specs/claims/graph.md#58",
+    "label": "specs/claims/graph.md \u203a 17. Cards",
+    "p": 0.0015974484287218267,
+    "gold": false
+   },
+   {
+    "id": "specs/claims/schema.sql#60",
+    "label": "specs/claims/schema.sql",
+    "p": 0.0015582596600257931,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-616.md#1",
+    "label": "board/cards/REM-616.md",
+    "p": 0.0015078426209444013,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-482.md#6",
+    "label": "board/cards/REM-482.md \u203a Log",
+    "p": 0.001420014348140008,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/library-board.md#16",
+    "label": "specs/percolate-application/library-board.md \u203a 13. Questions: one language for Library, the board and the first run",
+    "p": 0.0013398923612614033,
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-10-27-dream-walk-graphs/tagarm.py#1",
+    "label": "meta/spikes/2026-10-27-dream-walk-graphs/tagarm.py",
+    "p": 0.0012063135808362002,
+    "gold": false
+   },
+   {
+    "id": "output/trust-claims-tutorial-2026-09-19/build.py#12",
+    "label": "output/trust-claims-tutorial-2026-09-19/build.py",
+    "p": 0.0012015159347220374,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-482.md#3",
+    "label": "board/cards/REM-482.md \u203a Done when",
+    "p": 0.0011665045466820677,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/032b960b06",
+   "label": "commit 032b960: board: file REM-482 reading: a claim has its own page, with its question, evidence by origin, history an",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-482.md#1",
+   "label": "board/cards/REM-482.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/claims/graph.md#40",
+   "label": "specs/claims/graph.md \u203a 10. Reading the graph",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/edc20ddf8c",
+   "label": "commit edc20dd: Resolve each cited origin once when reading claim evidence",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/percolate-application/library-board.md#19",
+   "label": "specs/percolate-application/library-board.md \u203a 13.3 Following a question in core, and what changed (REM-575)",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-575.md#3",
+   "label": "board/cards/REM-575.md \u203a Evidence",
+   "wave": 1,
+   "via": "term:rem 482",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-574.md#1",
+   "label": "board/cards/REM-574.md",
+   "wave": 1,
+   "via": "term:rem 482",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-482.md#2",
+   "label": "board/cards/REM-482.md \u203a Goal",
+   "wave": 1,
+   "via": "term:rem 482",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-482.md#3",
+   "label": "board/cards/REM-482.md \u203a Done when",
+   "wave": 1,
+   "via": "term:rem 482",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-482.md#4",
+   "label": "board/cards/REM-482.md \u203a Estimate \u2014 5 points",
+   "wave": 1,
+   "via": "term:rem 482",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "specs/claims/schema.sql#65",
+    "label": "specs/claims/schema.sql",
+    "gold": false
+   },
+   {
+    "id": "commit/96813b2491",
+    "label": "commit 96813b2: board: codex-reading-room checks in, working",
+    "gold": false
+   },
+   {
+    "id": "commit/9bf55321dc",
+    "label": "commit 9bf5532: board: note on REM-615",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-668.md#4",
+    "label": "board/cards/REM-668.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-482.md#2",
+    "label": "board/cards/REM-482.md \u203a Goal",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "board/cards/REM-482.md#2",
+    "label": "board/cards/REM-482.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-668.md#4",
+    "label": "board/cards/REM-668.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "specs/claims/schema.sql#65",
+    "label": "specs/claims/schema.sql",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-575.md#7",
+    "label": "board/cards/REM-575.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "specs/claims/graph.md#41",
+    "label": "specs/claims/graph.md \u203a 10. Reading the graph",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "board/cards/REM-482.md#2",
+    "label": "board/cards/REM-482.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "commit/96813b2491",
+    "label": "commit 96813b2: board: codex-reading-room checks in, working",
+    "gold": false
+   },
+   {
+    "id": "commit/a0853793b9",
+    "label": "commit a085379: board: file REM-616 release: carry the claim evidence fix into the pinned core image",
+    "gold": false
+   },
+   {
+    "id": "commit/12560ddd97",
+    "label": "commit 12560dd: board: REM-482 in-progress \u2192 done",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-668.md#4",
+    "label": "board/cards/REM-668.md \u203a Done when",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "board/cards/REM-482.md#2",
+    "label": "board/cards/REM-482.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "output/critics-story/STORYBOARD.md#3",
+    "label": "output/critics-story/STORYBOARD.md \u203a Planned sequence",
+    "gold": false
+   },
+   {
+    "id": "specs/claims/graph.md#3",
+    "label": "specs/claims/graph.md \u203a 1. What a person does with it",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-575.md#7",
+    "label": "board/cards/REM-575.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "meta/probes/2026-09-19-application-core-compatibility.md#2",
+    "label": "meta/probes/2026-09-19-application-core-compatibility.md \u203a Initial result and repair",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

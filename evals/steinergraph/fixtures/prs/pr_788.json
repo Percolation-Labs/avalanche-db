@@ -1,0 +1,410 @@
+{
+ "qid": "pr:788",
+ "set": "prs",
+ "question": "What work went into this, and why: D6 on the fresh MuSiQue HELD-OUT split: NDCG +.061 [+.042, +.084] over today's door; the gain is all on hidden pages?",
+ "gold": [
+  {
+   "id": "commit/7696a63d10",
+   "label": "commit 7696a63: D6 on the fresh MuSiQue HELD-OUT split: NDCG .707 -> .768, +.061 [+.042,+.084]; all of it on hidden page",
+   "seed": true
+  },
+  {
+   "id": "commit/946c244dab",
+   "label": "commit 946c244: D6 on MuSiQue HELD-OUT: register before scoring; reads rebuilt by replay from cache (2798/2798 doors mat",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/423d327ab6",
+   "label": "commit 423d327: Merge pull request #788 from Percolation-Labs/bill/jev-d6-heldout",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "meta/lab/results/jev-doors/WRITEUP.md#7",
+   "label": "meta/lab/results/jev-doors/WRITEUP.md \u203a Act 3: the gain holds everywhere",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/7696a63d10",
+   "label": "commit 7696a63: D6 on the fresh MuSiQue HELD-OUT split: NDCG .707 -> .768, +.061 [+.042,+.084]; all of it on hidden page",
+   "rank": 3,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "commit/205605e61d",
+   "label": "commit 205605e: D3 on MuSiQue: NDCG +.058 [+.017,+.096] over today's door with ingestion-time names; the gain is on hidd",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "meta/lab/results/jev-doors/MUSIQUE.md#10",
+   "label": "meta/lab/results/jev-doors/MUSIQUE.md \u203a Result on the fresh split (~22:00Z)",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 2
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/7696a63d10",
+    "label": "commit 7696a63: D6 on the fresh MuSiQue HELD-OUT split: NDCG .707 -> .768, +.061 [+.042,+.084]; all of it on hidden page",
+    "role": "gold"
+   },
+   {
+    "id": "commit/946c244dab",
+    "label": "commit 946c244: D6 on MuSiQue HELD-OUT: register before scoring; reads rebuilt by replay from cache (2798/2798 doors mat",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/7696a63d10",
+    "b": "commit/946c244dab",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "musique held",
+      "width": 86
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "commit/7696a63d10",
+   "gold": "commit/7696a63d10",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 573,
+  "within_2_doors": 26934,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "commit/83a6b2474f",
+    "label": "commit 83a6b24: Merge pull request #786 from Percolation-Labs/bill/jev-d6",
+    "p": 0.008599318753992013,
+    "gold": false
+   },
+   {
+    "id": "commit/5865b6418b",
+    "label": "commit 5865b64: D3 on MuSiQue: register before scoring; ingestion-time entities (spaCy over all paragraphs); door target",
+    "p": 0.007071930006045067,
+    "gold": false
+   },
+   {
+    "id": "commit/946c244dab",
+    "label": "commit 946c244: D6 on MuSiQue HELD-OUT: register before scoring; reads rebuilt by replay from cache (2798/2798 doors mat",
+    "p": 0.0057664764513603245,
+    "gold": true
+   },
+   {
+    "id": "board/messages/M-20261116-204500-99a8.md#1",
+    "label": "board/messages/M-20261116-204500-99a8.md",
+    "p": 0.005378304207549441,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-doors/REGISTERED.md#1",
+    "label": "meta/lab/results/jev-doors/REGISTERED.md \u203a Step 4: better doors on the same graph, with Jev fixed at its ceiling setting",
+    "p": 0.0043118875619627284,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-ranking-refworld/RESULT.md#7",
+    "label": "meta/lab/results/jev-ranking-refworld/RESULT.md \u203a Result (17 Nov 2026)",
+    "p": 0.003311046442605019,
+    "gold": false
+   },
+   {
+    "id": "commit/f0972c2542",
+    "label": "commit f0972c2: board: board-watch messages all",
+    "p": 0.0030964780329515635,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-doors/MUSIQUE.md#11",
+    "label": "meta/lab/results/jev-doors/MUSIQUE.md \u203a Where the experiment stands",
+    "p": 0.0029469840197543246,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-doors/MUSIQUE.md#9",
+    "label": "meta/lab/results/jev-doors/MUSIQUE.md \u203a D6 on MuSiQue HELD-OUT: a fresh split (registered 16 Nov ~21:45Z, before scoring",
+    "p": 0.002694824686879947,
+    "gold": false
+   },
+   {
+    "id": "commit/658cdcdf56",
+    "label": "commit 658cdcd: board: james messages sirsh",
+    "p": 0.0025609696005905905,
+    "gold": false
+   },
+   {
+    "id": "commit/07a7bdf6f2",
+    "label": "commit 07a7bdf: Round 3: D6 (D3 + today's first snippet) is the best door: MuSiQue +.063, documented loss removed; level",
+    "p": 0.002460437383316546,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261116-203359-d158.md#1",
+    "label": "board/messages/M-20261116-203359-d158.md",
+    "p": 0.0022904238227247423,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-doors/RESULT.md#2",
+    "label": "meta/lab/results/jev-doors/RESULT.md \u203a Result",
+    "p": 0.0021582759223133328,
+    "gold": false
+   },
+   {
+    "id": "commit/248af4a090",
+    "label": "commit 248af4a: Round 4: prompt re-tuning on D6 does not pass; write-up of the ceiling and door evidence (WRITEUP.md)",
+    "p": 0.0017718832075120242,
+    "gold": false
+   },
+   {
+    "id": "demo/build.sh#2",
+    "label": "demo/build.sh",
+    "p": 0.0016879662385456268,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/writer-onboarding.md#9",
+    "label": "specs/percolate-application/writer-onboarding.md \u203a 6. What went wrong while it was built",
+    "p": 0.0016317697158106052,
+    "gold": false
+   },
+   {
+    "id": "demo/README.md#6",
+    "label": "demo/README.md \u203a The isolated stack",
+    "p": 0.0015961781514058344,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-doors/WRITEUP.md#3",
+    "label": "meta/lab/results/jev-doors/WRITEUP.md \u203a Method",
+    "p": 0.0015546399584996328,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-doors/MUSIQUE.md#3",
+    "label": "meta/lab/results/jev-doors/MUSIQUE.md \u203a Result (16 Nov, ~20:40Z)",
+    "p": 0.0014883766507854557,
+    "gold": false
+   },
+   {
+    "id": "commit/aa5f649b09",
+    "label": "commit aa5f649: board: bill acknowledges 1 message(s)",
+    "p": 0.001468308563578248,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/423d327ab6",
+   "label": "commit 423d327: Merge pull request #788 from Percolation-Labs/bill/jev-d6-heldout",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/jev-doors/WRITEUP.md#7",
+   "label": "meta/lab/results/jev-doors/WRITEUP.md \u203a Act 3: the gain holds everywhere",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/7696a63d10",
+   "label": "commit 7696a63: D6 on the fresh MuSiQue HELD-OUT split: NDCG .707 -> .768, +.061 [+.042,+.084]; all of it on hidden page",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "commit/205605e61d",
+   "label": "commit 205605e: D3 on MuSiQue: NDCG +.058 [+.017,+.096] over today's door with ingestion-time names; the gain is on hidd",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/jev-doors/MUSIQUE.md#10",
+   "label": "meta/lab/results/jev-doors/MUSIQUE.md \u203a Result on the fresh split (~22:00Z)",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/jev-doors/WRITEUP.md#8",
+   "label": "meta/lab/results/jev-doors/WRITEUP.md \u203a Act 4: back to Jev, on the better door",
+   "wave": 1,
+   "via": "term:writeup",
+   "gold": false
+  },
+  {
+   "id": "commit/248af4a090",
+   "label": "commit 248af4a: Round 4: prompt re-tuning on D6 does not pass; write-up of the ceiling and door evidence (WRITEUP.md)",
+   "wave": 1,
+   "via": "term:writeup",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/jev-doors/WRITEUP.md#1",
+   "label": "meta/lab/results/jev-doors/WRITEUP.md \u203a The door, not the decider: what limits Jev's choice of where to read next",
+   "wave": 1,
+   "via": "term:writeup",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/jev-doors/WRITEUP.md#4",
+   "label": "meta/lab/results/jev-doors/WRITEUP.md \u203a Method",
+   "wave": 1,
+   "via": "term:writeup",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/jev-doors/WRITEUP.md#5",
+   "label": "meta/lab/results/jev-doors/WRITEUP.md \u203a Act 1: Jev's ceiling with today's doors",
+   "wave": 1,
+   "via": "term:writeup",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "commit/83a6b2474f",
+    "label": "commit 83a6b24: Merge pull request #786 from Percolation-Labs/bill/jev-d6",
+    "gold": false
+   },
+   {
+    "id": "commit/5865b6418b",
+    "label": "commit 5865b64: D3 on MuSiQue: register before scoring; ingestion-time entities (spaCy over all paragraphs); door target",
+    "gold": false
+   },
+   {
+    "id": "commit/946c244dab",
+    "label": "commit 946c244: D6 on MuSiQue HELD-OUT: register before scoring; reads rebuilt by replay from cache (2798/2798 doors mat",
+    "gold": true
+   },
+   {
+    "id": "board/messages/M-20261116-204500-99a8.md#1",
+    "label": "board/messages/M-20261116-204500-99a8.md",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-doors/REGISTERED.md#1",
+    "label": "meta/lab/results/jev-doors/REGISTERED.md \u203a Step 4: better doors on the same graph, with Jev fixed at its ceiling setting",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "commit/83a6b2474f",
+    "label": "commit 83a6b24: Merge pull request #786 from Percolation-Labs/bill/jev-d6",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261116-204500-99a8.md#1",
+    "label": "board/messages/M-20261116-204500-99a8.md",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-doors/REGISTERED.md#1",
+    "label": "meta/lab/results/jev-doors/REGISTERED.md \u203a Step 4: better doors on the same graph, with Jev fixed at its ceiling setting",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261116-203359-d158.md#1",
+    "label": "board/messages/M-20261116-203359-d158.md",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-doors/MUSIQUE.md#11",
+    "label": "meta/lab/results/jev-doors/MUSIQUE.md \u203a Where the experiment stands",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/946c244dab",
+    "label": "commit 946c244: D6 on MuSiQue HELD-OUT: register before scoring; reads rebuilt by replay from cache (2798/2798 doors mat",
+    "gold": true
+   },
+   {
+    "id": "commit/83a6b2474f",
+    "label": "commit 83a6b24: Merge pull request #786 from Percolation-Labs/bill/jev-d6",
+    "gold": false
+   },
+   {
+    "id": "commit/248af4a090",
+    "label": "commit 248af4a: Round 4: prompt re-tuning on D6 does not pass; write-up of the ceiling and door evidence (WRITEUP.md)",
+    "gold": false
+   },
+   {
+    "id": "commit/e9d77a0887",
+    "label": "commit e9d77a0: Round 4: register the alternation back to Jev's prompt on D6, with a two-split rule",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261116-204500-99a8.md#1",
+    "label": "board/messages/M-20261116-204500-99a8.md",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "board/messages/M-20261116-203359-d158.md#1",
+    "label": "board/messages/M-20261116-203359-d158.md",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-doors/BEAM.md#3",
+    "label": "meta/lab/results/jev-doors/BEAM.md \u203a Result (17 Nov, ~01:00Z): D6 holds on BEAM",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-doors/MUSIQUE.md#9",
+    "label": "meta/lab/results/jev-doors/MUSIQUE.md \u203a D6 on MuSiQue HELD-OUT: a fresh split (registered 16 Nov ~21:45Z, before scoring",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261116-204500-99a8.md#1",
+    "label": "board/messages/M-20261116-204500-99a8.md",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-doors/HOTPOT.md#3",
+    "label": "meta/lab/results/jev-doors/HOTPOT.md \u203a Result (17 Nov, ~00:05Z): a null, explained by narrow doors",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 1.0,
+  "Q": 0.0,
+  "LQ": 1.0,
+  "S": 0.0
+ }
+}

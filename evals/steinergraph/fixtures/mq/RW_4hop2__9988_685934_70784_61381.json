@@ -1,0 +1,489 @@
+{
+ "qid": "RW:4hop2__9988_685934_70784_61381",
+ "set": "mq",
+ "question": "When was the country established that lies north of the region that prevailed with the disgrace of the \"Near East\" and the body of water containing The World islands?",
+ "gold": [
+  {
+   "id": "mq:6421666ff3e70d66",
+   "label": "Geography of Saudi Arabia",
+   "seed": false
+  },
+  {
+   "id": "mq:9e0862ee2a5f61f9",
+   "label": "The World (archipelago)",
+   "seed": false
+  },
+  {
+   "id": "mq:ec91dd0e33450587",
+   "label": "Saudi Arabia",
+   "seed": false
+  },
+  {
+   "id": "mq:f7e20fac3cd1b17b",
+   "label": "Near East",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:f7e20fac3cd1b17b",
+   "label": "Near East",
+   "rank": 1,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:90ba1b333321cc21",
+   "label": "Near East",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:8acc4e73f4ec85b3",
+   "label": "Beaverdell",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:7c43baa5ae3a0542",
+   "label": "Indonesia",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:2f57e10309511043",
+   "label": "Burundi",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:6421666ff3e70d66",
+    "label": "Geography of Saudi Arabia",
+    "role": "gold"
+   },
+   {
+    "id": "mq:9e0862ee2a5f61f9",
+    "label": "The World (archipelago)",
+    "role": "gold"
+   },
+   {
+    "id": "mq:ec91dd0e33450587",
+    "label": "Saudi Arabia",
+    "role": "gold"
+   },
+   {
+    "id": "mq:f7e20fac3cd1b17b",
+    "label": "Near East",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:6421666ff3e70d66",
+    "b": "mq:9e0862ee2a5f61f9",
+    "via": [
+     {
+      "kind": "term",
+      "key": "emirates",
+      "width": 17
+     },
+     {
+      "kind": "term",
+      "key": "arab emirates",
+      "width": 17
+     },
+     {
+      "kind": "term",
+      "key": "united arab",
+      "width": 19
+     },
+     {
+      "kind": "term",
+      "key": "persian gulf",
+      "width": 25
+     },
+     {
+      "kind": "term",
+      "key": "persian",
+      "width": 66
+     }
+    ]
+   },
+   {
+    "a": "mq:6421666ff3e70d66",
+    "b": "mq:ec91dd0e33450587",
+    "via": [
+     {
+      "kind": "term",
+      "key": "saudi arabia",
+      "width": 33
+     },
+     {
+      "kind": "term",
+      "key": "saudi",
+      "width": 42
+     },
+     {
+      "kind": "term",
+      "key": "arabia",
+      "width": 47
+     }
+    ]
+   },
+   {
+    "a": "mq:ec91dd0e33450587",
+    "b": "mq:f7e20fac3cd1b17b",
+    "via": [
+     {
+      "kind": "term",
+      "key": "distinct regions",
+      "width": 3
+     },
+     {
+      "kind": "term",
+      "key": "distinct",
+      "width": 79
+     }
+    ]
+   }
+  ],
+  "cost": 3,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   1,
+   2,
+   1,
+   2,
+   1
+  ],
+  "entry": {
+   "seed": "mq:f7e20fac3cd1b17b",
+   "gold": "mq:f7e20fac3cd1b17b",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 1957,
+  "within_2_doors": 19126,
+  "gold_within_1": 2,
+  "gold_within_2": 1,
+  "top_U": [
+   {
+    "id": "mq:74c30d5e6bf13724",
+    "label": "Granby River",
+    "p": 0.003490101034303617,
+    "gold": false
+   },
+   {
+    "id": "mq:7835dc28fa1a02e4",
+    "label": "Grand Forks, British Columbia",
+    "p": 0.0033524649873559,
+    "gold": false
+   },
+   {
+    "id": "mq:a384750c66de38d1",
+    "label": "Nile",
+    "p": 0.0027325606315243417,
+    "gold": false
+   },
+   {
+    "id": "mq:415b55d6f2c7326f",
+    "label": "Lambly Creek",
+    "p": 0.0025344686998587246,
+    "gold": false
+   },
+   {
+    "id": "mq:bbcbb4260e173b32",
+    "label": "Congo River",
+    "p": 0.002521396240701386,
+    "gold": false
+   },
+   {
+    "id": "mq:e563360fa96e30e5",
+    "label": "Game pie",
+    "p": 0.002456103341391422,
+    "gold": false
+   },
+   {
+    "id": "mq:aba160bb8515fa32",
+    "label": "Antarctica",
+    "p": 0.002235733204124029,
+    "gold": false
+   },
+   {
+    "id": "mq:4d506c4cf87a2519",
+    "label": "Rivers Inlet, British Columbia",
+    "p": 0.001704593937150213,
+    "gold": false
+   },
+   {
+    "id": "mq:c33dd44f9d3a73d9",
+    "label": "Botanie Valley",
+    "p": 0.0016922888230796076,
+    "gold": false
+   },
+   {
+    "id": "mq:1efcc348998c6c42",
+    "label": "Nile",
+    "p": 0.0016597320562314589,
+    "gold": false
+   },
+   {
+    "id": "mq:5c506c8b6b54db58",
+    "label": "Newport News, Virginia",
+    "p": 0.0016455834783277283,
+    "gold": false
+   },
+   {
+    "id": "mq:ec91dd0e33450587",
+    "label": "Saudi Arabia",
+    "p": 0.0013061304960761912,
+    "gold": true
+   },
+   {
+    "id": "mq:9691cf1b00968b04",
+    "label": "Arabian Peninsula",
+    "p": 0.0011357204024105122,
+    "gold": false
+   },
+   {
+    "id": "mq:0483ebf3badf9f8a",
+    "label": "Nile",
+    "p": 0.0011133414867886633,
+    "gold": false
+   },
+   {
+    "id": "mq:86275187db8e6826",
+    "label": "Kinyarwanda",
+    "p": 0.001073113072314841,
+    "gold": false
+   },
+   {
+    "id": "mq:ffe6b50c91bdff3b",
+    "label": "May Creek, British Columbia",
+    "p": 0.000962982841048343,
+    "gold": false
+   },
+   {
+    "id": "mq:f55ba6cbe9777b02",
+    "label": "Russian Far East",
+    "p": 0.0009527266730715563,
+    "gold": false
+   },
+   {
+    "id": "mq:6d84b9f54bba35b7",
+    "label": "Cascade City",
+    "p": 0.000922951901396288,
+    "gold": false
+   },
+   {
+    "id": "mq:964b946de6d12f9c",
+    "label": "North Pole",
+    "p": 0.0008966840475734826,
+    "gold": false
+   },
+   {
+    "id": "mq:4b2c285a4c0c7e33",
+    "label": "Southeast Asia",
+    "p": 0.0008712518523648139,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:f7e20fac3cd1b17b",
+   "label": "Near East",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:90ba1b333321cc21",
+   "label": "Near East",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:8acc4e73f4ec85b3",
+   "label": "Beaverdell",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:7c43baa5ae3a0542",
+   "label": "Indonesia",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:2f57e10309511043",
+   "label": "Burundi",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:26230ae114f75295",
+   "label": "Hassanal Bolkiah",
+   "wave": 1,
+   "via": "term:brunei",
+   "gold": false
+  },
+  {
+   "id": "mq:8fa0326a8f6ce8fc",
+   "label": "ISO 3166-2:BN",
+   "wave": 1,
+   "via": "term:brunei",
+   "gold": false
+  },
+  {
+   "id": "mq:0291804cff4a81bb",
+   "label": "Bokok, Temburong",
+   "wave": 1,
+   "via": "term:brunei",
+   "gold": false
+  },
+  {
+   "id": "mq:024168e6f74a5533",
+   "label": "Kelupis",
+   "wave": 1,
+   "via": "term:brunei",
+   "gold": false
+  },
+  {
+   "id": "mq:ce728a0b5448ccd0",
+   "label": "The Biggest Loser Brunei: Lose It All",
+   "wave": 1,
+   "via": "term:brunei",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:74c30d5e6bf13724",
+    "label": "Granby River",
+    "gold": false
+   },
+   {
+    "id": "mq:7835dc28fa1a02e4",
+    "label": "Grand Forks, British Columbia",
+    "gold": false
+   },
+   {
+    "id": "mq:a384750c66de38d1",
+    "label": "Nile",
+    "gold": false
+   },
+   {
+    "id": "mq:415b55d6f2c7326f",
+    "label": "Lambly Creek",
+    "gold": false
+   },
+   {
+    "id": "mq:bbcbb4260e173b32",
+    "label": "Congo River",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:7835dc28fa1a02e4",
+    "label": "Grand Forks, British Columbia",
+    "gold": false
+   },
+   {
+    "id": "mq:a384750c66de38d1",
+    "label": "Nile",
+    "gold": false
+   },
+   {
+    "id": "mq:1efcc348998c6c42",
+    "label": "Nile",
+    "gold": false
+   },
+   {
+    "id": "mq:6d84b9f54bba35b7",
+    "label": "Cascade City",
+    "gold": false
+   },
+   {
+    "id": "mq:74c30d5e6bf13724",
+    "label": "Granby River",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:a384750c66de38d1",
+    "label": "Nile",
+    "gold": false
+   },
+   {
+    "id": "mq:7835dc28fa1a02e4",
+    "label": "Grand Forks, British Columbia",
+    "gold": false
+   },
+   {
+    "id": "mq:1efcc348998c6c42",
+    "label": "Nile",
+    "gold": false
+   },
+   {
+    "id": "mq:28c4d1c846bae692",
+    "label": "Great Lakes",
+    "gold": false
+   },
+   {
+    "id": "mq:8d069269228ea17d",
+    "label": "Great Lakes",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:2036ed75c0b43415",
+    "label": "Spain",
+    "gold": false
+   },
+   {
+    "id": "mq:0a0838b08c8399c4",
+    "label": "Dobjoi",
+    "gold": false
+   },
+   {
+    "id": "mq:8b75573213c6c23f",
+    "label": "Skendleby",
+    "gold": false
+   },
+   {
+    "id": "mq:a62793556fd2b5cf",
+    "label": "Powwow Pond",
+    "gold": false
+   },
+   {
+    "id": "mq:10147716aab5b427",
+    "label": "North Sea",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

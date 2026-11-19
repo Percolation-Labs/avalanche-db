@@ -1,0 +1,474 @@
+{
+ "qid": "RW:4hop1__696484_49925_13759_736921",
+ "set": "mq",
+ "question": "Where is the district that the person who wanted to reform and address Bernhard Lichtenberg's religion preached a sermon on Marian devotion before his death located?",
+ "gold": [
+  {
+   "id": "mq:02630e7ccab81cab",
+   "label": "Reformation",
+   "seed": false
+  },
+  {
+   "id": "mq:4e27a283fef849b7",
+   "label": "Mary, mother of Jesus",
+   "seed": true
+  },
+  {
+   "id": "mq:bc0838dd1a8e8cb1",
+   "label": "Bernhard Lichtenberg",
+   "seed": true
+  },
+  {
+   "id": "mq:d63cfcdbf18fa095",
+   "label": "Wittenberg (district)",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:bc0838dd1a8e8cb1",
+   "label": "Bernhard Lichtenberg",
+   "rank": 1,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:4e27a283fef849b7",
+   "label": "Mary, mother of Jesus",
+   "rank": 2,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:a04b41d85eb0488e",
+   "label": "Bernhard Ultsch",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:797736a9a3d9c5dc",
+   "label": "History of the Rosary",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:75506a5f85231d97",
+   "label": "Radulphe",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:02630e7ccab81cab",
+    "label": "Reformation",
+    "role": "gold"
+   },
+   {
+    "id": "mq:4e27a283fef849b7",
+    "label": "Mary, mother of Jesus",
+    "role": "gold"
+   },
+   {
+    "id": "mq:bc0838dd1a8e8cb1",
+    "label": "Bernhard Lichtenberg",
+    "role": "gold"
+   },
+   {
+    "id": "mq:d63cfcdbf18fa095",
+    "label": "Wittenberg (district)",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:02630e7ccab81cab",
+    "b": "mq:4e27a283fef849b7",
+    "via": [
+     {
+      "kind": "term",
+      "key": "martin luther",
+      "width": 15
+     },
+     {
+      "kind": "term",
+      "key": "luther",
+      "width": 29
+     },
+     {
+      "kind": "term",
+      "key": "belief",
+      "width": 35
+     },
+     {
+      "kind": "term",
+      "key": "saints",
+      "width": 40
+     },
+     {
+      "kind": "term",
+      "key": "pope",
+      "width": 78
+     }
+    ]
+   },
+   {
+    "a": "mq:4e27a283fef849b7",
+    "b": "mq:bc0838dd1a8e8cb1",
+    "via": [
+     {
+      "kind": "term",
+      "key": "priest",
+      "width": 62
+     }
+    ]
+   },
+   {
+    "a": "mq:4e27a283fef849b7",
+    "b": "mq:d63cfcdbf18fa095",
+    "via": [
+     {
+      "kind": "term",
+      "key": "wittenberg",
+      "width": 5
+     }
+    ]
+   }
+  ],
+  "cost": 3,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   1,
+   2,
+   1,
+   1,
+   2
+  ],
+  "entry": {
+   "seed": "mq:4e27a283fef849b7",
+   "gold": "mq:4e27a283fef849b7",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 3072,
+  "within_2_doors": 18011,
+  "gold_within_1": 2,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "mq:a5a8904a433ddeea",
+    "label": "Rosary",
+    "p": 0.0036629823572961653,
+    "gold": false
+   },
+   {
+    "id": "mq:5e2f37fdb23552e1",
+    "label": "Erich Buder",
+    "p": 0.003136481504748916,
+    "gold": false
+   },
+   {
+    "id": "mq:2983cfa746c25c2e",
+    "label": "Pierre Chaillet",
+    "p": 0.002454144397306962,
+    "gold": false
+   },
+   {
+    "id": "mq:9238bb8458feefcc",
+    "label": "Adolf Gutknecht",
+    "p": 0.0020433895934082744,
+    "gold": false
+   },
+   {
+    "id": "mq:facc76280e25168d",
+    "label": "Oldest people",
+    "p": 0.0019722463349617684,
+    "gold": false
+   },
+   {
+    "id": "mq:5f8616017cb9e370",
+    "label": "Jews",
+    "p": 0.0017966423390474967,
+    "gold": false
+   },
+   {
+    "id": "mq:d8adeefbde28117b",
+    "label": "Catch That Kid",
+    "p": 0.0017516935448618504,
+    "gold": false
+   },
+   {
+    "id": "mq:ee57351aac1b67fe",
+    "label": "Ch\u00e2teau de Lichtenberg",
+    "p": 0.0014360253815615587,
+    "gold": false
+   },
+   {
+    "id": "mq:520eb59b1c5e96d0",
+    "label": "Pope John XXIII",
+    "p": 0.0014161902708265724,
+    "gold": false
+   },
+   {
+    "id": "mq:c352966cc4e41a51",
+    "label": "Louise Sophie of Hanau-Lichtenberg",
+    "p": 0.0014083868091385096,
+    "gold": false
+   },
+   {
+    "id": "mq:7158fa31987c89b5",
+    "label": "Marcel Nogues",
+    "p": 0.0013585324871811222,
+    "gold": false
+   },
+   {
+    "id": "mq:cd1d53ede5dc9949",
+    "label": "Lloyd Andrews Hamilton",
+    "p": 0.0013082687373384794,
+    "gold": false
+   },
+   {
+    "id": "mq:f109a549bc3601f0",
+    "label": "The Schorrsiegel Affair",
+    "p": 0.0013019805992810674,
+    "gold": false
+   },
+   {
+    "id": "mq:48af9d4d4301cbf5",
+    "label": "Rodolphe d'Erlanger",
+    "p": 0.0012160642935105342,
+    "gold": false
+   },
+   {
+    "id": "mq:da868c5db7e250f2",
+    "label": "Rodolphe Radau",
+    "p": 0.001196396796428597,
+    "gold": false
+   },
+   {
+    "id": "mq:2e6c74461b72d019",
+    "label": "Flaminio Avet",
+    "p": 0.0010993209450651381,
+    "gold": false
+   },
+   {
+    "id": "mq:4eccda4bdade6615",
+    "label": "Pope John XXIII",
+    "p": 0.0010398437119049815,
+    "gold": false
+   },
+   {
+    "id": "mq:67e2b6a2c6ca3c38",
+    "label": "Bernhard B\u00f6tel",
+    "p": 0.0010384953432605848,
+    "gold": false
+   },
+   {
+    "id": "mq:f5af8bc8a1bc0e42",
+    "label": "Mansell Richard James",
+    "p": 0.0010094959101238172,
+    "gold": false
+   },
+   {
+    "id": "mq:292af123c012dc7d",
+    "label": "Jacques Ortoli",
+    "p": 0.0009739617998441726,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:bc0838dd1a8e8cb1",
+   "label": "Bernhard Lichtenberg",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:4e27a283fef849b7",
+   "label": "Mary, mother of Jesus",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:a04b41d85eb0488e",
+   "label": "Bernhard Ultsch",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:797736a9a3d9c5dc",
+   "label": "History of the Rosary",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:75506a5f85231d97",
+   "label": "Radulphe",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:d63cfcdbf18fa095",
+   "label": "Wittenberg (district)",
+   "wave": 1,
+   "via": "term:wittenberg",
+   "gold": true
+  },
+  {
+   "id": "mq:9585be0073ab40f6",
+   "label": "Rudolph Goclenius the Younger",
+   "wave": 1,
+   "via": "term:wittenberg",
+   "gold": false
+  },
+  {
+   "id": "mq:637629a74721f961",
+   "label": "Protestantism",
+   "wave": 1,
+   "via": "term:wittenberg",
+   "gold": false
+  },
+  {
+   "id": "mq:3e487e8a36895ad4",
+   "label": "Peter Tomsen",
+   "wave": 1,
+   "via": "term:wittenberg",
+   "gold": false
+  },
+  {
+   "id": "mq:dd15e2f7f2e4bffa",
+   "label": "Pope Paul VI",
+   "wave": 2,
+   "via": "term:john paul",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:a5a8904a433ddeea",
+    "label": "Rosary",
+    "gold": false
+   },
+   {
+    "id": "mq:5e2f37fdb23552e1",
+    "label": "Erich Buder",
+    "gold": false
+   },
+   {
+    "id": "mq:2983cfa746c25c2e",
+    "label": "Pierre Chaillet",
+    "gold": false
+   },
+   {
+    "id": "mq:9238bb8458feefcc",
+    "label": "Adolf Gutknecht",
+    "gold": false
+   },
+   {
+    "id": "mq:facc76280e25168d",
+    "label": "Oldest people",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:ee57351aac1b67fe",
+    "label": "Ch\u00e2teau de Lichtenberg",
+    "gold": false
+   },
+   {
+    "id": "mq:c352966cc4e41a51",
+    "label": "Louise Sophie of Hanau-Lichtenberg",
+    "gold": false
+   },
+   {
+    "id": "mq:8dee8c7485a5c104",
+    "label": "Mary, mother of Jesus",
+    "gold": false
+   },
+   {
+    "id": "mq:f109a549bc3601f0",
+    "label": "The Schorrsiegel Affair",
+    "gold": false
+   },
+   {
+    "id": "mq:67e2b6a2c6ca3c38",
+    "label": "Bernhard B\u00f6tel",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:ee57351aac1b67fe",
+    "label": "Ch\u00e2teau de Lichtenberg",
+    "gold": false
+   },
+   {
+    "id": "mq:c352966cc4e41a51",
+    "label": "Louise Sophie of Hanau-Lichtenberg",
+    "gold": false
+   },
+   {
+    "id": "mq:8dee8c7485a5c104",
+    "label": "Mary, mother of Jesus",
+    "gold": false
+   },
+   {
+    "id": "mq:67e2b6a2c6ca3c38",
+    "label": "Bernhard B\u00f6tel",
+    "gold": false
+   },
+   {
+    "id": "mq:eafb3b44f6a88c36",
+    "label": "Pope Paul VI",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:ee57351aac1b67fe",
+    "label": "Ch\u00e2teau de Lichtenberg",
+    "gold": false
+   },
+   {
+    "id": "mq:aa983ebab03e86ed",
+    "label": "Henry Scott Holland",
+    "gold": false
+   },
+   {
+    "id": "mq:c352966cc4e41a51",
+    "label": "Louise Sophie of Hanau-Lichtenberg",
+    "gold": false
+   },
+   {
+    "id": "mq:48bc21b43bee7d9a",
+    "label": "Ambroise-Marie Carr\u00e9",
+    "gold": false
+   },
+   {
+    "id": "mq:eafb3b44f6a88c36",
+    "label": "Pope Paul VI",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

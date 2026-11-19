@@ -1,0 +1,452 @@
+{
+ "qid": "pr:815",
+ "set": "prs",
+ "question": "What work went into this, and why: walklab: Jev at 3 doors per wave on MuSiQue room 0 (16 questions, both arms)?",
+ "gold": [
+  {
+   "id": "commit/89e78176b1",
+   "label": "commit 89e7817: walklab: Jev k=3 on MuSiQue room 0 costs -.062, and the oracle loses too",
+   "seed": false
+  },
+  {
+   "id": "commit/91428479b7",
+   "label": "commit 9142847: walklab: jev-k3-room0 priced, cut to 16 questions before the run",
+   "seed": false
+  },
+  {
+   "id": "commit/e35c5a714f",
+   "label": "commit e35c5a7: walklab: register Jev k=3 against k=1 on 40 MuSiQue room-0 questions",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/b9f3da6aaf",
+   "label": "commit b9f3da6: Merge pull request #815 from Percolation-Labs/james/jev-k3-room0",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "meta/lab/results/jev-k3-room0/score-result.md#1",
+   "label": "meta/lab/results/jev-k3-room0/score-result.md \u203a Jev at 3 doors per wave against 1 on MuSiQue room 0, operator (a), 100 r",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "meta/lab/results/jev-k3-room0/RESULT.md#3",
+   "label": "meta/lab/results/jev-k3-room0/RESULT.md \u203a Registration (17 Nov 2026, committed before any live call)",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "meta/lab/results/jev-bm5/RESULT.md#2",
+   "label": "meta/lab/results/jev-bm5/RESULT.md \u203a Registration (17 Nov 2026, committed before any live call)",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "meta/lab/results/jev-bm10/RESULT.md#2",
+   "label": "meta/lab/results/jev-bm10/RESULT.md \u203a Registration (17 Nov 2026, committed before any live call)",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/89e78176b1",
+    "label": "commit 89e7817: walklab: Jev k=3 on MuSiQue room 0 costs -.062, and the oracle loses too",
+    "role": "gold"
+   },
+   {
+    "id": "commit/91428479b7",
+    "label": "commit 9142847: walklab: jev-k3-room0 priced, cut to 16 questions before the run",
+    "role": "gold"
+   },
+   {
+    "id": "commit/b9f3da6aaf",
+    "label": "commit b9f3da6: Merge pull request #815 from Percolation-Labs/james/jev-k3-room0",
+    "role": "seed"
+   },
+   {
+    "id": "commit/e35c5a714f",
+    "label": "commit e35c5a7: walklab: register Jev k=3 against k=1 on 40 MuSiQue room-0 questions",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/89e78176b1",
+    "b": "commit/91428479b7",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "walklab jev",
+      "width": 10
+     }
+    ]
+   },
+   {
+    "a": "commit/89e78176b1",
+    "b": "commit/b9f3da6aaf",
+    "via": [
+     {
+      "kind": "term",
+      "key": "walklab jev",
+      "width": 10
+     },
+     {
+      "kind": "term",
+      "key": "musique room",
+      "width": 48
+     }
+    ]
+   },
+   {
+    "a": "commit/91428479b7",
+    "b": "commit/e35c5a714f",
+    "via": [
+     {
+      "kind": "beside"
+     }
+    ]
+   }
+  ],
+  "cost": 3,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   1,
+   1
+  ],
+  "entry": {
+   "seed": "commit/b9f3da6aaf",
+   "gold": "commit/89e78176b1",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 1011,
+  "within_2_doors": 27759,
+  "gold_within_1": 3,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "meta/lab/results/jev-k3-room0/RESULT.md#5",
+    "label": "meta/lab/results/jev-k3-room0/RESULT.md \u203a Result (17 Nov 2026)",
+    "p": 0.007535676284963745,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-bm10/RESULT.md#3",
+    "label": "meta/lab/results/jev-bm10/RESULT.md \u203a Registration (17 Nov 2026, committed before any live call)",
+    "p": 0.003536547661526386,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-bm10/pick.py#1",
+    "label": "meta/lab/results/jev-bm10/pick.py",
+    "p": 0.0030430059312162774,
+    "gold": false
+   },
+   {
+    "id": "commit/a742566f50",
+    "label": "commit a742566: board: james messages sirsh",
+    "p": 0.0027184947015273424,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/door-budget-guard/RESULT.md#5",
+    "label": "meta/lab/results/door-budget-guard/RESULT.md \u203a 808's oracle +.077 and +.182 on BEAM room > .5).",
+    "p": 0.0026582261182507955,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-bm5-replication/RESULT.md#3",
+    "label": "meta/lab/results/jev-bm5-replication/RESULT.md \u203a Registration (17 Nov 2026, committed before any live call)",
+    "p": 0.0026325298337526656,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-k3-room0/score-result.md#2",
+    "label": "meta/lab/results/jev-k3-room0/score-result.md \u203a Controls alone, all 40 questions",
+    "p": 0.0024828942081927354,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-k1-room0/RESULT.md#2",
+    "label": "meta/lab/results/jev-k1-room0/RESULT.md \u203a Registration (17 Nov 2026, committed before any live call)",
+    "p": 0.002470294269510582,
+    "gold": false
+   },
+   {
+    "id": "commit/044fc6988c",
+    "label": "commit 044fc69: board: bill messages sirsh",
+    "p": 0.0023335594389139627,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-k3-musique/RESULT.md#2",
+    "label": "meta/lab/results/jev-k3-musique/RESULT.md \u203a Registration (17 Nov 2026, committed before any live call)",
+    "p": 0.002301219734186402,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-bm5/pick.py#1",
+    "label": "meta/lab/results/jev-bm5/pick.py",
+    "p": 0.0021450750324210907,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-k3-room0/score.py#1",
+    "label": "meta/lab/results/jev-k3-room0/score.py",
+    "p": 0.002023820566835104,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-bm5-replication/score.py#2",
+    "label": "meta/lab/results/jev-bm5-replication/score.py",
+    "p": 0.002011538443536891,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-bm5-replication/RESULT.md#2",
+    "label": "meta/lab/results/jev-bm5-replication/RESULT.md \u203a Registration (17 Nov 2026, committed before any live call)",
+    "p": 0.0018786141498080657,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-bm5-multihop/RESULT.md#4",
+    "label": "meta/lab/results/jev-bm5-multihop/RESULT.md \u203a 826 \u2192 #828 series, on #828's branch.",
+    "p": 0.001836049125162406,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-k1-room0/RESULT.md#3",
+    "label": "meta/lab/results/jev-k1-room0/RESULT.md \u203a Registration (17 Nov 2026, committed before any live call)",
+    "p": 0.0017718531929516808,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-bm5/RESULT.md#3",
+    "label": "meta/lab/results/jev-bm5/RESULT.md \u203a Registration (17 Nov 2026, committed before any live call)",
+    "p": 0.001759018212990694,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-k1-room0/score.py#3",
+    "label": "meta/lab/results/jev-k1-room0/score.py",
+    "p": 0.0017481504979857075,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-k3-room0/drive.py#1",
+    "label": "meta/lab/results/jev-k3-room0/drive.py",
+    "p": 0.0017266937161969562,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-k3-room0/RESULT.md#4",
+    "label": "meta/lab/results/jev-k3-room0/RESULT.md \u203a Registration (17 Nov 2026, committed before any live call)",
+    "p": 0.0017182370062260586,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/b9f3da6aaf",
+   "label": "commit b9f3da6: Merge pull request #815 from Percolation-Labs/james/jev-k3-room0",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/jev-k3-room0/score-result.md#1",
+   "label": "meta/lab/results/jev-k3-room0/score-result.md \u203a Jev at 3 doors per wave against 1 on MuSiQue room 0, operator (a), 100 r",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/jev-k3-room0/RESULT.md#3",
+   "label": "meta/lab/results/jev-k3-room0/RESULT.md \u203a Registration (17 Nov 2026, committed before any live call)",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/jev-bm5/RESULT.md#2",
+   "label": "meta/lab/results/jev-bm5/RESULT.md \u203a Registration (17 Nov 2026, committed before any live call)",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/jev-bm10/RESULT.md#2",
+   "label": "meta/lab/results/jev-bm10/RESULT.md \u203a Registration (17 Nov 2026, committed before any live call)",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/jev-k3-room0/RESULT.md#6",
+   "label": "meta/lab/results/jev-k3-room0/RESULT.md \u203a Result (17 Nov 2026)",
+   "wave": 1,
+   "via": "term:misses gold",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/jev-bm5-replication/RESULT.md#8",
+   "label": "meta/lab/results/jev-bm5-replication/RESULT.md \u203a Postmortem",
+   "wave": 1,
+   "via": "term:misses gold",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/jev-bm10/RESULT.md#5",
+   "label": "meta/lab/results/jev-bm10/RESULT.md \u203a Result (17 Nov 2026)",
+   "wave": 1,
+   "via": "term:misses gold",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/jev-k3-room0/RESULT.md#7",
+   "label": "meta/lab/results/jev-k3-room0/RESULT.md \u203a Result (17 Nov 2026)",
+   "wave": 1,
+   "via": "term:misses gold",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/jev-bm10/RESULT.md#6",
+   "label": "meta/lab/results/jev-bm10/RESULT.md \u203a Result (17 Nov 2026)",
+   "wave": 2,
+   "via": "term:last search",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "meta/lab/results/jev-k3-room0/RESULT.md#5",
+    "label": "meta/lab/results/jev-k3-room0/RESULT.md \u203a Result (17 Nov 2026)",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-bm10/RESULT.md#3",
+    "label": "meta/lab/results/jev-bm10/RESULT.md \u203a Registration (17 Nov 2026, committed before any live call)",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-bm10/pick.py#1",
+    "label": "meta/lab/results/jev-bm10/pick.py",
+    "gold": false
+   },
+   {
+    "id": "commit/a742566f50",
+    "label": "commit a742566: board: james messages sirsh",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/door-budget-guard/RESULT.md#5",
+    "label": "meta/lab/results/door-budget-guard/RESULT.md \u203a 808's oracle +.077 and +.182 on BEAM room > .5).",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "meta/lab/results/jev-k3-room0/RESULT.md#5",
+    "label": "meta/lab/results/jev-k3-room0/RESULT.md \u203a Result (17 Nov 2026)",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-bm10/RESULT.md#3",
+    "label": "meta/lab/results/jev-bm10/RESULT.md \u203a Registration (17 Nov 2026, committed before any live call)",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-bm10/pick.py#1",
+    "label": "meta/lab/results/jev-bm10/pick.py",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-k3-musique/RESULT.md#2",
+    "label": "meta/lab/results/jev-k3-musique/RESULT.md \u203a Registration (17 Nov 2026, committed before any live call)",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-bm5-replication/RESULT.md#3",
+    "label": "meta/lab/results/jev-bm5-replication/RESULT.md \u203a Registration (17 Nov 2026, committed before any live call)",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "meta/lab/results/jev-bm10/RESULT.md#1",
+    "label": "meta/lab/results/jev-bm10/RESULT.md \u203a Jev under b-m10 on MuSiQue: k = 3's gain where there is room, without the room-0 c",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-k3-room0/RESULT.md#5",
+    "label": "meta/lab/results/jev-k3-room0/RESULT.md \u203a Result (17 Nov 2026)",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-bm5/RESULT.md#1",
+    "label": "meta/lab/results/jev-bm5/RESULT.md \u203a Jev under b-m5 on MuSiQue: does 3 doors a wave pass the no-harm bar on room 0?",
+    "gold": false
+   },
+   {
+    "id": "commit/91428479b7",
+    "label": "commit 9142847: walklab: jev-k3-room0 priced, cut to 16 questions before the run",
+    "gold": true
+   },
+   {
+    "id": "meta/lab/results/jev-k3-room0/score-result.md#2",
+    "label": "meta/lab/results/jev-k3-room0/score-result.md \u203a Controls alone, all 40 questions",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "meta/lab/results/jev-bm5/RESULT.md#1",
+    "label": "meta/lab/results/jev-bm5/RESULT.md \u203a Jev under b-m5 on MuSiQue: does 3 doors a wave pass the no-harm bar on room 0?",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-k3-room0/RESULT.md#1",
+    "label": "meta/lab/results/jev-k3-room0/RESULT.md \u203a Does 3 doors per wave cost Jev where search finds everything? (MuSiQue, room 0",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-k3-no-harm/RESULT.md#6",
+    "label": "meta/lab/results/jev-k3-no-harm/RESULT.md \u203a Postmortem",
+    "gold": false
+   },
+   {
+    "id": "commit/69db7d6684",
+    "label": "commit 69db7d6: k3-cost: registration, before scoring (why 3 doors per wave costs MuSiQue's no-room questions)",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261117-015715-be3a.md#1",
+    "label": "board/messages/M-20261117-015715-be3a.md",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.3333333333333333,
+  "S": 0.0
+ }
+}

@@ -1,0 +1,417 @@
+{
+ "qid": "RW:2hop__94629_1110",
+ "set": "mq",
+ "question": "In what year was Twilight Princess from the game series on which The Legend of Neil was based originally planned for release?",
+ "gold": [
+  {
+   "id": "mq:0de47f3c6b65d2b7",
+   "label": "The Legend of Zelda: Twilight Princess",
+   "seed": true
+  },
+  {
+   "id": "mq:5ce94a787c679a6f",
+   "label": "The Legend of Neil",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:0de47f3c6b65d2b7",
+   "label": "The Legend of Zelda: Twilight Princess",
+   "rank": 1,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:8657b3e1149be74a",
+   "label": "The Legend of Zelda: Twilight Princess",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:24e1cd103ed5e07f",
+   "label": "The Legend of Zelda: Twilight Princess",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:d04d644e5818066b",
+   "label": "The Legend of Zelda: Twilight Princess",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:5ce94a787c679a6f",
+   "label": "The Legend of Neil",
+   "rank": 5,
+   "gold": true,
+   "doors_to_gold": 0
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:0de47f3c6b65d2b7",
+    "label": "The Legend of Zelda: Twilight Princess",
+    "role": "gold"
+   },
+   {
+    "id": "mq:5ce94a787c679a6f",
+    "label": "The Legend of Neil",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:0de47f3c6b65d2b7",
+    "b": "mq:5ce94a787c679a6f",
+    "via": [
+     {
+      "kind": "term",
+      "key": "zelda",
+      "width": 11
+     },
+     {
+      "kind": "term",
+      "key": "legend",
+      "width": 57
+     },
+     {
+      "kind": "term",
+      "key": "nintendo",
+      "width": 79
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "mq:0de47f3c6b65d2b7",
+   "gold": "mq:0de47f3c6b65d2b7",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 3426,
+  "within_2_doors": 17645,
+  "gold_within_1": 0,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "mq:5eea49c5d7e56b4d",
+    "label": "List of accolades received by The Last of Us",
+    "p": 0.00470561988157771,
+    "gold": false
+   },
+   {
+    "id": "mq:61521c18ca24d77c",
+    "label": "The Legend of Zelda: Twilight Princess",
+    "p": 0.004058031353224271,
+    "gold": false
+   },
+   {
+    "id": "mq:7acce0a4532288df",
+    "label": "The Legend of Zelda: Twilight Princess",
+    "p": 0.002936959753323928,
+    "gold": false
+   },
+   {
+    "id": "mq:4f92ed39214c880c",
+    "label": "The Legend of Zelda: Twilight Princess",
+    "p": 0.0022579142717258998,
+    "gold": false
+   },
+   {
+    "id": "mq:61a4bcac7027643c",
+    "label": "High-definition television",
+    "p": 0.001814461744507242,
+    "gold": false
+   },
+   {
+    "id": "mq:a868a26def4e1cee",
+    "label": "Philips CD-i",
+    "p": 0.0017062127231098185,
+    "gold": false
+   },
+   {
+    "id": "mq:80e32606e8a4b4be",
+    "label": "The Witcher 3: Wild Hunt",
+    "p": 0.0011516448501698669,
+    "gold": false
+   },
+   {
+    "id": "mq:9b9fb0266a31a2e2",
+    "label": "Super Smash Bros.",
+    "p": 0.0009988578223347967,
+    "gold": false
+   },
+   {
+    "id": "mq:965f119ef97b0db0",
+    "label": "Super Smash Bros.",
+    "p": 0.0009716328724115701,
+    "gold": false
+   },
+   {
+    "id": "mq:998c8440936a6665",
+    "label": "Mighty Flip Champs!",
+    "p": 0.0009384378143411522,
+    "gold": false
+   },
+   {
+    "id": "mq:6abee5b5b761dc8e",
+    "label": "Rainbow Six (novel)",
+    "p": 0.0008592067834640511,
+    "gold": false
+   },
+   {
+    "id": "mq:9bef98b26db90c77",
+    "label": "PEN/Edward and Lily Tuck Award for Paraguayan Literature",
+    "p": 0.0008133947833699089,
+    "gold": false
+   },
+   {
+    "id": "mq:c8e3d0f0f1f10f87",
+    "label": "Australia at the 2018 Commonwealth Games",
+    "p": 0.0007938718254827451,
+    "gold": false
+   },
+   {
+    "id": "mq:42fb541317a3eb07",
+    "label": "Nintendo Entertainment System",
+    "p": 0.0007920263565166886,
+    "gold": false
+   },
+   {
+    "id": "mq:616237e8f8589814",
+    "label": "List of awards and nominations received by The West Wing",
+    "p": 0.000769897471300276,
+    "gold": false
+   },
+   {
+    "id": "mq:e2deab82d7e92534",
+    "label": "Warlocked",
+    "p": 0.0007592780345161843,
+    "gold": false
+   },
+   {
+    "id": "mq:2b44ff9f352652f6",
+    "label": "List of South Park cast members",
+    "p": 0.0006592295913604888,
+    "gold": false
+   },
+   {
+    "id": "mq:ffbe71ab89068d82",
+    "label": "Guild Guitar Company",
+    "p": 0.0006536422799194336,
+    "gold": false
+   },
+   {
+    "id": "mq:593f16f4d69433c3",
+    "label": "\u0160koda Fabia",
+    "p": 0.0006291585611597566,
+    "gold": false
+   },
+   {
+    "id": "mq:3c794892462dd823",
+    "label": "Xbox 360",
+    "p": 0.0006144833898683537,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:0de47f3c6b65d2b7",
+   "label": "The Legend of Zelda: Twilight Princess",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:8657b3e1149be74a",
+   "label": "The Legend of Zelda: Twilight Princess",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:24e1cd103ed5e07f",
+   "label": "The Legend of Zelda: Twilight Princess",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:d04d644e5818066b",
+   "label": "The Legend of Zelda: Twilight Princess",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:5ce94a787c679a6f",
+   "label": "The Legend of Neil",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:a868a26def4e1cee",
+   "label": "Philips CD-i",
+   "wave": 1,
+   "via": "term:zelda",
+   "gold": false
+  },
+  {
+   "id": "mq:7acce0a4532288df",
+   "label": "The Legend of Zelda: Twilight Princess",
+   "wave": 1,
+   "via": "term:zelda",
+   "gold": false
+  },
+  {
+   "id": "mq:d65daa9a25d99165",
+   "label": "Scariest Places on Earth",
+   "wave": 1,
+   "via": "term:zelda",
+   "gold": false
+  },
+  {
+   "id": "mq:61521c18ca24d77c",
+   "label": "The Legend of Zelda: Twilight Princess",
+   "wave": 1,
+   "via": "term:zelda",
+   "gold": false
+  },
+  {
+   "id": "mq:4f92ed39214c880c",
+   "label": "The Legend of Zelda: Twilight Princess",
+   "wave": 1,
+   "via": "term:zelda",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:5eea49c5d7e56b4d",
+    "label": "List of accolades received by The Last of Us",
+    "gold": false
+   },
+   {
+    "id": "mq:61521c18ca24d77c",
+    "label": "The Legend of Zelda: Twilight Princess",
+    "gold": false
+   },
+   {
+    "id": "mq:7acce0a4532288df",
+    "label": "The Legend of Zelda: Twilight Princess",
+    "gold": false
+   },
+   {
+    "id": "mq:4f92ed39214c880c",
+    "label": "The Legend of Zelda: Twilight Princess",
+    "gold": false
+   },
+   {
+    "id": "mq:61a4bcac7027643c",
+    "label": "High-definition television",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:61521c18ca24d77c",
+    "label": "The Legend of Zelda: Twilight Princess",
+    "gold": false
+   },
+   {
+    "id": "mq:7acce0a4532288df",
+    "label": "The Legend of Zelda: Twilight Princess",
+    "gold": false
+   },
+   {
+    "id": "mq:5eea49c5d7e56b4d",
+    "label": "List of accolades received by The Last of Us",
+    "gold": false
+   },
+   {
+    "id": "mq:4f92ed39214c880c",
+    "label": "The Legend of Zelda: Twilight Princess",
+    "gold": false
+   },
+   {
+    "id": "mq:9b9fb0266a31a2e2",
+    "label": "Super Smash Bros.",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:61521c18ca24d77c",
+    "label": "The Legend of Zelda: Twilight Princess",
+    "gold": false
+   },
+   {
+    "id": "mq:7acce0a4532288df",
+    "label": "The Legend of Zelda: Twilight Princess",
+    "gold": false
+   },
+   {
+    "id": "mq:5eea49c5d7e56b4d",
+    "label": "List of accolades received by The Last of Us",
+    "gold": false
+   },
+   {
+    "id": "mq:4f92ed39214c880c",
+    "label": "The Legend of Zelda: Twilight Princess",
+    "gold": false
+   },
+   {
+    "id": "mq:9b9fb0266a31a2e2",
+    "label": "Super Smash Bros.",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:7acce0a4532288df",
+    "label": "The Legend of Zelda: Twilight Princess",
+    "gold": false
+   },
+   {
+    "id": "mq:b431f0568d071424",
+    "label": "Wakfu (TV series)",
+    "gold": false
+   },
+   {
+    "id": "mq:61521c18ca24d77c",
+    "label": "The Legend of Zelda: Twilight Princess",
+    "gold": false
+   },
+   {
+    "id": "mq:918a52ed253c334d",
+    "label": "Too Human",
+    "gold": false
+   },
+   {
+    "id": "mq:4f92ed39214c880c",
+    "label": "The Legend of Zelda: Twilight Princess",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": null,
+  "Q": null,
+  "LQ": null,
+  "S": null
+ }
+}

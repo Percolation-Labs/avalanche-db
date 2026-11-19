@@ -1,0 +1,405 @@
+{
+ "qid": "card:REM-703",
+ "set": "cards",
+ "question": "What was done about this, and why: comparisons: confirm a label from chat on the owner's word?",
+ "gold": [
+  {
+   "id": "commit/beeab263ff",
+   "label": "commit beeab26: agent-parity and agent-onboarding record REM-705: tool text, display name, proposals routes",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/51062469d1",
+   "label": "commit 5106246: board: file REM-703 comparisons: confirm a label from chat on the owner's word",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-703.md#1",
+   "label": "board/cards/REM-703.md",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-703.md#4",
+   "label": "board/cards/REM-703.md \u203a Done when",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-703.md#2",
+   "label": "board/cards/REM-703.md \u203a Goal",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-703.md#3",
+   "label": "board/cards/REM-703.md \u203a Evidence",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "board/cards/REM-703.md#1",
+    "label": "board/cards/REM-703.md",
+    "role": "seed"
+   },
+   {
+    "id": "commit/beeab263ff",
+    "label": "commit beeab26: agent-parity and agent-onboarding record REM-705: tool text, display name, proposals routes",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "board/cards/REM-703.md#1",
+    "b": "commit/beeab263ff",
+    "via": [
+     {
+      "kind": "term",
+      "key": "rem 703",
+      "width": 14
+     },
+     {
+      "kind": "term",
+      "key": "agent parity",
+      "width": 42
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [],
+  "entry": {
+   "seed": "board/cards/REM-703.md#1",
+   "gold": "commit/beeab263ff",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 250,
+  "within_2_doors": 25358,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "specs/percolate-application/agent-parity.md#7",
+    "label": "specs/percolate-application/agent-parity.md \u203a Slices",
+    "p": 0.01290505822346132,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-701.md#2",
+    "label": "board/cards/REM-701.md \u203a Goal",
+    "p": 0.006158780442565016,
+    "gold": false
+   },
+   {
+    "id": "commit/db0395e9bf",
+    "label": "commit db0395e: board: file REM-704 publishing: unpublish and stop an app publishing from chat",
+    "p": 0.005786964795464148,
+    "gold": false
+   },
+   {
+    "id": "commit/7209944c12",
+    "label": "commit 7209944: board: file REM-702 board: the person runs their whole board from chat",
+    "p": 0.005261222054364795,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-703.md#5",
+    "label": "board/cards/REM-703.md \u203a Scope",
+    "p": 0.005227366305353511,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-705.md#6",
+    "label": "board/cards/REM-705.md \u203a Log",
+    "p": 0.005199992790199133,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-701.md#8",
+    "label": "board/cards/REM-701.md \u203a Log",
+    "p": 0.005092621736932662,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-702.md#3",
+    "label": "board/cards/REM-702.md \u203a Evidence",
+    "p": 0.0034235203936815394,
+    "gold": false
+   },
+   {
+    "id": "commit/beeab263ff",
+    "label": "commit beeab26: agent-parity and agent-onboarding record REM-705: tool text, display name, proposals routes",
+    "p": 0.003382972179950195,
+    "gold": true
+   },
+   {
+    "id": "board/cards/REM-705.md#3",
+    "label": "board/cards/REM-705.md \u203a Evidence",
+    "p": 0.0032610534238604913,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/comparison-and-trust.md#21",
+    "label": "specs/percolate-application/comparison-and-trust.md \u203a Where it runs",
+    "p": 0.003213401133293501,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-703.md#7",
+    "label": "board/cards/REM-703.md \u203a Log",
+    "p": 0.0032056896052912167,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-703.md#6",
+    "label": "board/cards/REM-703.md \u203a Links",
+    "p": 0.0029812683730497556,
+    "gold": false
+   },
+   {
+    "id": "scenarios/tour/compose.yml#4",
+    "label": "scenarios/tour/compose.yml",
+    "p": 0.0029614213504388543,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-704.md#1",
+    "label": "board/cards/REM-704.md",
+    "p": 0.0029517223804162085,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-166.md#9",
+    "label": "board/cards/REM-166.md \u203a 2026-09-13T21:16:23.313Z \u00b7 Amartey",
+    "p": 0.002911402702152104,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-704.md#3",
+    "label": "board/cards/REM-704.md \u203a Evidence",
+    "p": 0.002900378635888147,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-701.md#3",
+    "label": "board/cards/REM-701.md \u203a Evidence",
+    "p": 0.0027833478842038155,
+    "gold": false
+   },
+   {
+    "id": "meta/compliance/ai-literacy.md#2",
+    "label": "meta/compliance/ai-literacy.md \u203a What the systems do",
+    "p": 0.002668187308238999,
+    "gold": false
+   },
+   {
+    "id": "output/focus-canvas/README.md#5",
+    "label": "output/focus-canvas/README.md \u203a Running it",
+    "p": 0.002590220464432699,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/51062469d1",
+   "label": "commit 5106246: board: file REM-703 comparisons: confirm a label from chat on the owner's word",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-703.md#1",
+   "label": "board/cards/REM-703.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-703.md#4",
+   "label": "board/cards/REM-703.md \u203a Done when",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-703.md#2",
+   "label": "board/cards/REM-703.md \u203a Goal",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-703.md#3",
+   "label": "board/cards/REM-703.md \u203a Evidence",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/ad401c4ac2",
+   "label": "commit ad401c4: board: note on REM-703",
+   "wave": 1,
+   "via": "term:rem 703",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-703.md#7",
+   "label": "board/cards/REM-703.md \u203a Log",
+   "wave": 1,
+   "via": "term:rem 703",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-703.md#6",
+   "label": "board/cards/REM-703.md \u203a Links",
+   "wave": 1,
+   "via": "term:rem 703",
+   "gold": false
+  },
+  {
+   "id": "commit/4b6220a283",
+   "label": "commit 4b6220a: board: edit REM-703 labels severity",
+   "wave": 1,
+   "via": "term:rem 703",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-703.md#5",
+   "label": "board/cards/REM-703.md \u203a Scope",
+   "wave": 1,
+   "via": "term:rem 703",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "specs/percolate-application/agent-parity.md#7",
+    "label": "specs/percolate-application/agent-parity.md \u203a Slices",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-701.md#2",
+    "label": "board/cards/REM-701.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "commit/db0395e9bf",
+    "label": "commit db0395e: board: file REM-704 publishing: unpublish and stop an app publishing from chat",
+    "gold": false
+   },
+   {
+    "id": "commit/7209944c12",
+    "label": "commit 7209944: board: file REM-702 board: the person runs their whole board from chat",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-703.md#5",
+    "label": "board/cards/REM-703.md \u203a Scope",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "specs/percolate-application/agent-parity.md#7",
+    "label": "specs/percolate-application/agent-parity.md \u203a Slices",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-701.md#8",
+    "label": "board/cards/REM-701.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-705.md#6",
+    "label": "board/cards/REM-705.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/agent-parity.md#2",
+    "label": "specs/percolate-application/agent-parity.md \u203a The rule",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-703.md#5",
+    "label": "board/cards/REM-703.md \u203a Scope",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/7209944c12",
+    "label": "commit 7209944: board: file REM-702 board: the person runs their whole board from chat",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-703.md#5",
+    "label": "board/cards/REM-703.md \u203a Scope",
+    "gold": false
+   },
+   {
+    "id": "commit/db0395e9bf",
+    "label": "commit db0395e: board: file REM-704 publishing: unpublish and stop an app publishing from chat",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/agent-parity.md#7",
+    "label": "specs/percolate-application/agent-parity.md \u203a Slices",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-702.md#1",
+    "label": "board/cards/REM-702.md",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "specs/percolate-application/agent-parity.md#7",
+    "label": "specs/percolate-application/agent-parity.md \u203a Slices",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-807.md#4",
+    "label": "board/cards/REM-807.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-704.md#4",
+    "label": "board/cards/REM-704.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-702.md#4",
+    "label": "board/cards/REM-702.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/agent-parity.md#2",
+    "label": "specs/percolate-application/agent-parity.md \u203a The rule",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

@@ -1,0 +1,417 @@
+{
+ "qid": "RW:2hop__78873_461854",
+ "set": "mq",
+ "question": "Who is the female star in Gone with the Wind married to?",
+ "gold": [
+  {
+   "id": "mq:df6a13f7b05be730",
+   "label": "Darlings of the Gods",
+   "seed": false
+  },
+  {
+   "id": "mq:fe4ffa24aaf90d24",
+   "label": "Gone with the Wind (film)",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:fe4ffa24aaf90d24",
+   "label": "Gone with the Wind (film)",
+   "rank": 1,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:e96989ef342826ce",
+   "label": "Gone with the Wind (film)",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:9653e107cb5c04d7",
+   "label": "Lone Star Wind Farm",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:aec111d3dd5095cf",
+   "label": "Gone with the Wind (film)",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:269ee91bf458e0ed",
+   "label": "Frankly, my dear, I don't give a damn",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:df6a13f7b05be730",
+    "label": "Darlings of the Gods",
+    "role": "gold"
+   },
+   {
+    "id": "mq:fe4ffa24aaf90d24",
+    "label": "Gone with the Wind (film)",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:df6a13f7b05be730",
+    "b": "mq:fe4ffa24aaf90d24",
+    "via": [
+     {
+      "kind": "term",
+      "key": "vivien leigh",
+      "width": 11
+     },
+     {
+      "kind": "term",
+      "key": "vivien",
+      "width": 12
+     },
+     {
+      "kind": "term",
+      "key": "leigh",
+      "width": 24
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "mq:fe4ffa24aaf90d24",
+   "gold": "mq:fe4ffa24aaf90d24",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 2644,
+  "within_2_doors": 18426,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "mq:dec49f5c28040cb6",
+    "label": "Scarlett O'Hara",
+    "p": 0.003948093334640119,
+    "gold": false
+   },
+   {
+    "id": "mq:932968cfe5bfdaca",
+    "label": "Melanie Hamilton",
+    "p": 0.00344111716600205,
+    "gold": false
+   },
+   {
+    "id": "mq:3b1241be53ac5747",
+    "label": "Ashley Wilkes",
+    "p": 0.0026988144461670377,
+    "gold": false
+   },
+   {
+    "id": "mq:8aa97298770811fe",
+    "label": "Gone with the Wind (film)",
+    "p": 0.002480251415538712,
+    "gold": false
+   },
+   {
+    "id": "mq:0f56015bedd872da",
+    "label": "Scarlett O'Hara",
+    "p": 0.001982599735488585,
+    "gold": false
+   },
+   {
+    "id": "mq:e850a484369a4b3e",
+    "label": "The Wizard of Oz (1939 film)",
+    "p": 0.001935713122386265,
+    "gold": false
+   },
+   {
+    "id": "mq:b4f31111684d2133",
+    "label": "Gone with the Wind (novel)",
+    "p": 0.0018200228507509674,
+    "gold": false
+   },
+   {
+    "id": "mq:0be421bff40dff55",
+    "label": "Vivien Leigh",
+    "p": 0.0016029502217899893,
+    "gold": false
+   },
+   {
+    "id": "mq:7cb2c2921be764c4",
+    "label": "Vivien Leigh",
+    "p": 0.0016029502217899893,
+    "gold": false
+   },
+   {
+    "id": "mq:3e54bf541f743e57",
+    "label": "Fire Over England",
+    "p": 0.0015721806022003131,
+    "gold": false
+   },
+   {
+    "id": "mq:0fa3cc439ef11a39",
+    "label": "Macho Callahan",
+    "p": 0.001284436140443819,
+    "gold": false
+   },
+   {
+    "id": "mq:18b5c2f75e5df3df",
+    "label": "Vestas",
+    "p": 0.0012257346677608746,
+    "gold": false
+   },
+   {
+    "id": "mq:4cd1f18e6e54355b",
+    "label": "21 Days",
+    "p": 0.001156430163596103,
+    "gold": false
+   },
+   {
+    "id": "mq:114a084217924e3e",
+    "label": "Keepit Power Station",
+    "p": 0.0011544303916315728,
+    "gold": false
+   },
+   {
+    "id": "mq:b4cf9eb81f8fca94",
+    "label": "Bakke Mountain",
+    "p": 0.001105408999956419,
+    "gold": false
+   },
+   {
+    "id": "mq:7f0658b93c4102fe",
+    "label": "EDP Renov\u00e1veis",
+    "p": 0.001087869855928135,
+    "gold": false
+   },
+   {
+    "id": "mq:7dc7b825434c9b39",
+    "label": "The Post (film)",
+    "p": 0.001049821427923966,
+    "gold": false
+   },
+   {
+    "id": "mq:63297861371786b3",
+    "label": "The Post (film)",
+    "p": 0.001042239539993854,
+    "gold": false
+   },
+   {
+    "id": "mq:8af34cc993618fc0",
+    "label": "Legends of the Fall",
+    "p": 0.0010387192160213332,
+    "gold": false
+   },
+   {
+    "id": "mq:69dd55bcc8f0c999",
+    "label": "Legends of the Fall",
+    "p": 0.0010387192160213332,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:fe4ffa24aaf90d24",
+   "label": "Gone with the Wind (film)",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:e96989ef342826ce",
+   "label": "Gone with the Wind (film)",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:9653e107cb5c04d7",
+   "label": "Lone Star Wind Farm",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:aec111d3dd5095cf",
+   "label": "Gone with the Wind (film)",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:269ee91bf458e0ed",
+   "label": "Frankly, my dear, I don't give a damn",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:3e54bf541f743e57",
+   "label": "Fire Over England",
+   "wave": 1,
+   "via": "term:vivien leigh",
+   "gold": false
+  },
+  {
+   "id": "mq:aa4cb34e72de4ce2",
+   "label": "Suzanne Farrington",
+   "wave": 1,
+   "via": "term:vivien leigh",
+   "gold": false
+  },
+  {
+   "id": "mq:df6a13f7b05be730",
+   "label": "Darlings of the Gods",
+   "wave": 1,
+   "via": "term:vivien leigh",
+   "gold": true
+  },
+  {
+   "id": "mq:4cd1f18e6e54355b",
+   "label": "21 Days",
+   "wave": 1,
+   "via": "term:vivien leigh",
+   "gold": false
+  },
+  {
+   "id": "mq:7cb2c2921be764c4",
+   "label": "Vivien Leigh",
+   "wave": 1,
+   "via": "term:vivien leigh",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:dec49f5c28040cb6",
+    "label": "Scarlett O'Hara",
+    "gold": false
+   },
+   {
+    "id": "mq:932968cfe5bfdaca",
+    "label": "Melanie Hamilton",
+    "gold": false
+   },
+   {
+    "id": "mq:3b1241be53ac5747",
+    "label": "Ashley Wilkes",
+    "gold": false
+   },
+   {
+    "id": "mq:8aa97298770811fe",
+    "label": "Gone with the Wind (film)",
+    "gold": false
+   },
+   {
+    "id": "mq:0f56015bedd872da",
+    "label": "Scarlett O'Hara",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:dec49f5c28040cb6",
+    "label": "Scarlett O'Hara",
+    "gold": false
+   },
+   {
+    "id": "mq:932968cfe5bfdaca",
+    "label": "Melanie Hamilton",
+    "gold": false
+   },
+   {
+    "id": "mq:0be421bff40dff55",
+    "label": "Vivien Leigh",
+    "gold": false
+   },
+   {
+    "id": "mq:7cb2c2921be764c4",
+    "label": "Vivien Leigh",
+    "gold": false
+   },
+   {
+    "id": "mq:b4f31111684d2133",
+    "label": "Gone with the Wind (novel)",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:dec49f5c28040cb6",
+    "label": "Scarlett O'Hara",
+    "gold": false
+   },
+   {
+    "id": "mq:0be421bff40dff55",
+    "label": "Vivien Leigh",
+    "gold": false
+   },
+   {
+    "id": "mq:7cb2c2921be764c4",
+    "label": "Vivien Leigh",
+    "gold": false
+   },
+   {
+    "id": "mq:932968cfe5bfdaca",
+    "label": "Melanie Hamilton",
+    "gold": false
+   },
+   {
+    "id": "mq:8aa97298770811fe",
+    "label": "Gone with the Wind (film)",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:b4f31111684d2133",
+    "label": "Gone with the Wind (novel)",
+    "gold": false
+   },
+   {
+    "id": "mq:ad122aea7c884c2e",
+    "label": "Ona Munson",
+    "gold": false
+   },
+   {
+    "id": "mq:745a89879db6c4dc",
+    "label": "Mickey Kuhn",
+    "gold": false
+   },
+   {
+    "id": "mq:932968cfe5bfdaca",
+    "label": "Melanie Hamilton",
+    "gold": false
+   },
+   {
+    "id": "mq:4cd1f18e6e54355b",
+    "label": "21 Days",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

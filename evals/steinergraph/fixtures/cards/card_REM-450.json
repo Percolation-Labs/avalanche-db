@@ -1,0 +1,423 @@
+{
+ "qid": "card:REM-450",
+ "set": "cards",
+ "question": "What was done about this, and why: authoring: an owner edits the brief where it is read, in a surface built for writing?",
+ "gold": [
+  {
+   "id": "commit/2bb9106c7f",
+   "label": "commit 2bb9106: authoring spec \u00a73: where in-place editing happens (REM-450)",
+   "seed": false
+  },
+  {
+   "id": "commit/7088eb0905",
+   "label": "commit 7088eb0: Postmortem: a squash rewound two cards, and board.py guard refuses the next one",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/acde0db43d",
+   "label": "commit acde0db: board: file REM-450 authoring: an owner edits the brief where it is read, in a surface built for writing",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-450.md#1",
+   "label": "board/cards/REM-450.md",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-450.md#2",
+   "label": "board/cards/REM-450.md \u203a Goal",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-724.md#3",
+   "label": "board/cards/REM-724.md \u203a Done when",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "meta/skills/spec-driven-development/SKILL.md#5",
+   "label": "meta/skills/spec-driven-development/SKILL.md \u203a 1. Start from the spec, not the code",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 2
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/2bb9106c7f",
+    "label": "commit 2bb9106: authoring spec \u00a73: where in-place editing happens (REM-450)",
+    "role": "gold"
+   },
+   {
+    "id": "commit/7088eb0905",
+    "label": "commit 7088eb0: Postmortem: a squash rewound two cards, and board.py guard refuses the next one",
+    "role": "gold"
+   },
+   {
+    "id": "commit/acde0db43d",
+    "label": "commit acde0db: board: file REM-450 authoring: an owner edits the brief where it is read, in a surface built for writing",
+    "role": "seed"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/2bb9106c7f",
+    "b": "commit/7088eb0905",
+    "via": [
+     {
+      "kind": "term",
+      "key": "rem 450",
+      "width": 26
+     }
+    ]
+   },
+   {
+    "a": "commit/2bb9106c7f",
+    "b": "commit/acde0db43d",
+    "via": [
+     {
+      "kind": "term",
+      "key": "rem 450",
+      "width": 26
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "commit/acde0db43d",
+   "gold": "commit/2bb9106c7f",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 718,
+  "within_2_doors": 32018,
+  "gold_within_1": 2,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "commit/96e3379dec",
+    "label": "commit 96e3379: board: file REM-451 authoring: a slash key attaches a claim, source or artifact to the text",
+    "p": 0.0046996119783827275,
+    "gold": false
+   },
+   {
+    "id": "commit/c6ccaa4774",
+    "label": "commit c6ccaa4: board: note on REM-443",
+    "p": 0.0045189197359632345,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/authoring-and-publication.md#8",
+    "label": "specs/percolate-application/authoring-and-publication.md \u203a 3. A1 \u2014 Edit an owned research package in the browser",
+    "p": 0.003973663081872456,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-450.md#3",
+    "label": "board/cards/REM-450.md \u203a Evidence",
+    "p": 0.00352619686851251,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-450.md#4",
+    "label": "board/cards/REM-450.md \u203a Done when",
+    "p": 0.002975773822648406,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-724.md#4",
+    "label": "board/cards/REM-724.md \u203a Log",
+    "p": 0.002738817777605768,
+    "gold": false
+   },
+   {
+    "id": "commit/5f4d00431e",
+    "label": "commit 5f4d004: Specify experimental canvas entry and user critique focus (REM-724)",
+    "p": 0.0021820966422182145,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-291.md#7",
+    "label": "board/cards/REM-291.md \u203a Log",
+    "p": 0.0021696390944709707,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-291.md#8",
+    "label": "board/cards/REM-291.md \u203a Log",
+    "p": 0.0020043066242355283,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-304.md#8",
+    "label": "board/cards/REM-304.md \u203a Log",
+    "p": 0.0019469315836356787,
+    "gold": false
+   },
+   {
+    "id": "dev/tests/train-read.sh#1",
+    "label": "dev/tests/train-read.sh",
+    "p": 0.0019342481635068504,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/focus-canvas-contract.md#13",
+    "label": "specs/percolate-application/focus-canvas-contract.md \u203a Saving, privacy and failure",
+    "p": 0.0019206466058645248,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/authoring-and-publication.md#14",
+    "label": "specs/percolate-application/authoring-and-publication.md \u203a 5. A3 \u2014 List publicly or add an exact revision to a publicati",
+    "p": 0.00191089344761819,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-291.md#4",
+    "label": "board/cards/REM-291.md \u203a Done when",
+    "p": 0.0018990987751047737,
+    "gold": false
+   },
+   {
+    "id": "commit/546fa776d7",
+    "label": "commit 546fa77: specs: the owner edits a package's takeaway in the browser (REM-304)",
+    "p": 0.0018804499295614599,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-724.md#2",
+    "label": "board/cards/REM-724.md \u203a Goal",
+    "p": 0.0018202465656856587,
+    "gold": false
+   },
+   {
+    "id": "board/team/focus-canvas.md#3",
+    "label": "board/team/focus-canvas.md \u203a Log",
+    "p": 0.001797409071124039,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-938.md#5",
+    "label": "board/cards/REM-938.md \u203a Done when",
+    "p": 0.0017914575628982863,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-450.md#5",
+    "label": "board/cards/REM-450.md \u203a Scope",
+    "p": 0.0015509104124892487,
+    "gold": false
+   },
+   {
+    "id": "commit/7088eb0905",
+    "label": "commit 7088eb0: Postmortem: a squash rewound two cards, and board.py guard refuses the next one",
+    "p": 0.0014902598423048483,
+    "gold": true
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/acde0db43d",
+   "label": "commit acde0db: board: file REM-450 authoring: an owner edits the brief where it is read, in a surface built for writing",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-450.md#1",
+   "label": "board/cards/REM-450.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-450.md#2",
+   "label": "board/cards/REM-450.md \u203a Goal",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-724.md#3",
+   "label": "board/cards/REM-724.md \u203a Done when",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/skills/spec-driven-development/SKILL.md#5",
+   "label": "meta/skills/spec-driven-development/SKILL.md \u203a 1. Start from the spec, not the code",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-450.md#7",
+   "label": "board/cards/REM-450.md \u203a Log",
+   "wave": 1,
+   "via": "term:rem 450",
+   "gold": false
+  },
+  {
+   "id": "commit/2bb9106c7f",
+   "label": "commit 2bb9106: authoring spec \u00a73: where in-place editing happens (REM-450)",
+   "wave": 1,
+   "via": "term:rem 450",
+   "gold": true
+  },
+  {
+   "id": "board/cards/REM-451.md#6",
+   "label": "board/cards/REM-451.md \u203a Links",
+   "wave": 1,
+   "via": "term:rem 450",
+   "gold": false
+  },
+  {
+   "id": "commit/0ca817399c",
+   "label": "commit 0ca8173: board: REM-450 in-progress \u2192 done",
+   "wave": 1,
+   "via": "term:rem 450",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-450.md#5",
+   "label": "board/cards/REM-450.md \u203a Scope",
+   "wave": 1,
+   "via": "term:rem 450",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "commit/96e3379dec",
+    "label": "commit 96e3379: board: file REM-451 authoring: a slash key attaches a claim, source or artifact to the text",
+    "gold": false
+   },
+   {
+    "id": "commit/c6ccaa4774",
+    "label": "commit c6ccaa4: board: note on REM-443",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/authoring-and-publication.md#8",
+    "label": "specs/percolate-application/authoring-and-publication.md \u203a 3. A1 \u2014 Edit an owned research package in the browser",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-450.md#3",
+    "label": "board/cards/REM-450.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-450.md#4",
+    "label": "board/cards/REM-450.md \u203a Done when",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "specs/percolate-application/authoring-and-publication.md#8",
+    "label": "specs/percolate-application/authoring-and-publication.md \u203a 3. A1 \u2014 Edit an owned research package in the browser",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-450.md#3",
+    "label": "board/cards/REM-450.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-450.md#4",
+    "label": "board/cards/REM-450.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "commit/96e3379dec",
+    "label": "commit 96e3379: board: file REM-451 authoring: a slash key attaches a claim, source or artifact to the text",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-724.md#4",
+    "label": "board/cards/REM-724.md \u203a Log",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/546fa776d7",
+    "label": "commit 546fa77: specs: the owner edits a package's takeaway in the browser (REM-304)",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-451.md#6",
+    "label": "board/cards/REM-451.md \u203a Links",
+    "gold": false
+   },
+   {
+    "id": "commit/be9c944c1b",
+    "label": "commit be9c944: board: REM-724 in-progress \u2192 done",
+    "gold": false
+   },
+   {
+    "id": "commit/0ca817399c",
+    "label": "commit 0ca8173: board: REM-450 in-progress \u2192 done",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-450.md#6",
+    "label": "board/cards/REM-450.md \u203a Links",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "board/cards/REM-878.md#6",
+    "label": "board/cards/REM-878.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-878.md#4",
+    "label": "board/cards/REM-878.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-625.md#1",
+    "label": "board/cards/REM-625.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-878.md#1",
+    "label": "board/cards/REM-878.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-546.md#1",
+    "label": "board/cards/REM-546.md",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

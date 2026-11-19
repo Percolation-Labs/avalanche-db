@@ -1,0 +1,469 @@
+{
+ "qid": "RW:2hop__6827_88924",
+ "set": "mq",
+ "question": "Who is the chairman of the company that bought FleetBoston Financial?",
+ "gold": [
+  {
+   "id": "mq:6a0e37536c30be2c",
+   "label": "Boston",
+   "seed": false
+  },
+  {
+   "id": "mq:d57aed09abac1be2",
+   "label": "Brian Moynihan",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:6b0b89914ae24453",
+   "label": "Bank of America",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:ae15da99e872cbd9",
+   "label": "Sean O. Cota",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:a69f9afda0fff159",
+   "label": "Nicolas Merindol",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:f7414b7809065187",
+   "label": "David A. Galloway",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:2fd7f9d45c81a140",
+   "label": "Stephen Tan",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:37a43e2fe40af2c1",
+    "label": "John W. Henry",
+    "role": "connector"
+   },
+   {
+    "id": "mq:6a0e37536c30be2c",
+    "label": "Boston",
+    "role": "gold"
+   },
+   {
+    "id": "mq:6b0b89914ae24453",
+    "label": "Bank of America",
+    "role": "seed"
+   },
+   {
+    "id": "mq:d57aed09abac1be2",
+    "label": "Brian Moynihan",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:37a43e2fe40af2c1",
+    "b": "mq:6a0e37536c30be2c",
+    "via": [
+     {
+      "kind": "term",
+      "key": "boston globe",
+      "width": 4
+     },
+     {
+      "kind": "term",
+      "key": "experienced",
+      "width": 41
+     },
+     {
+      "kind": "term",
+      "key": "globe",
+      "width": 57
+     }
+    ]
+   },
+   {
+    "a": "mq:37a43e2fe40af2c1",
+    "b": "mq:d57aed09abac1be2",
+    "via": [
+     {
+      "kind": "term",
+      "key": "businessman",
+      "width": 57
+     }
+    ]
+   },
+   {
+    "a": "mq:6a0e37536c30be2c",
+    "b": "mq:6b0b89914ae24453",
+    "via": [
+     {
+      "kind": "term",
+      "key": "fleetboston",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "fleetboston financial",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "based bank",
+      "width": 3
+     },
+     {
+      "kind": "term",
+      "key": "boston based",
+      "width": 3
+     },
+     {
+      "kind": "term",
+      "key": "boston globe",
+      "width": 4
+     }
+    ]
+   }
+  ],
+  "cost": 3,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   2
+  ],
+  "entry": {
+   "seed": "mq:6b0b89914ae24453",
+   "gold": "mq:6a0e37536c30be2c",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 1819,
+  "within_2_doors": 19243,
+  "gold_within_1": 2,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "mq:851d1045d75531e4",
+    "label": "Basil L. Plumley",
+    "p": 0.005594282480875025,
+    "gold": false
+   },
+   {
+    "id": "mq:6a0e37536c30be2c",
+    "label": "Boston",
+    "p": 0.003602249956173992,
+    "gold": true
+   },
+   {
+    "id": "mq:dc4aaf6d2d7924f9",
+    "label": "Doug Manchester",
+    "p": 0.0021998984465288166,
+    "gold": false
+   },
+   {
+    "id": "mq:74759b426bf6df7d",
+    "label": "Standard Insurance Company",
+    "p": 0.0021077063757086057,
+    "gold": false
+   },
+   {
+    "id": "mq:cb47634035296efe",
+    "label": "Orano Cycle",
+    "p": 0.0014990295658984585,
+    "gold": false
+   },
+   {
+    "id": "mq:bb0e8a62d4bd6a88",
+    "label": "Of Montreal",
+    "p": 0.0013202215892820241,
+    "gold": false
+   },
+   {
+    "id": "mq:260a9e7f970fa425",
+    "label": "S\u00e9bastien Huyghe",
+    "p": 0.0013103666990565324,
+    "gold": false
+   },
+   {
+    "id": "mq:76156f5fc3beb628",
+    "label": "Montreal Impact",
+    "p": 0.001301677166644,
+    "gold": false
+   },
+   {
+    "id": "mq:53acf48d69d7dbba",
+    "label": "Complexe Maisonneuve",
+    "p": 0.0012973596605251256,
+    "gold": false
+   },
+   {
+    "id": "mq:0d48fcbade54a7c4",
+    "label": "Boston",
+    "p": 0.001238476244110434,
+    "gold": false
+   },
+   {
+    "id": "mq:bdbe5a215768948d",
+    "label": "Graub\u00fcndner Kantonalbank",
+    "p": 0.0012355807250294256,
+    "gold": false
+   },
+   {
+    "id": "mq:4fb48589eede86e1",
+    "label": "Sangob Rattanusorn",
+    "p": 0.0012318114043694203,
+    "gold": false
+   },
+   {
+    "id": "mq:0c539989c9a8239e",
+    "label": "Battle of Saint-Mathieu",
+    "p": 0.0012316754272055925,
+    "gold": false
+   },
+   {
+    "id": "mq:c768404ee9b279c2",
+    "label": "Bank of America Home Loans",
+    "p": 0.0012000338238959058,
+    "gold": false
+   },
+   {
+    "id": "mq:fd54d5e0b994034f",
+    "label": "List of Parks and Recreation characters",
+    "p": 0.001197597419919501,
+    "gold": false
+   },
+   {
+    "id": "mq:97371c9c74b4d9b8",
+    "label": "Mike Barrett (basketball, born 1943)",
+    "p": 0.0011731667382773824,
+    "gold": false
+   },
+   {
+    "id": "mq:d01af96a783ccc9b",
+    "label": "A&E Design",
+    "p": 0.0011675905521957108,
+    "gold": false
+   },
+   {
+    "id": "mq:a02ed3aad293b512",
+    "label": "Messaoud Ould Boulkheir",
+    "p": 0.0011601887318096417,
+    "gold": false
+   },
+   {
+    "id": "mq:0a924c2c53211d1a",
+    "label": "ICICI Bank",
+    "p": 0.0011324217964761875,
+    "gold": false
+   },
+   {
+    "id": "mq:c3287702508624c0",
+    "label": "Sky UK",
+    "p": 0.0011093496809627132,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:6b0b89914ae24453",
+   "label": "Bank of America",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:ae15da99e872cbd9",
+   "label": "Sean O. Cota",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:a69f9afda0fff159",
+   "label": "Nicolas Merindol",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:f7414b7809065187",
+   "label": "David A. Galloway",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:2fd7f9d45c81a140",
+   "label": "Stephen Tan",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:d57aed09abac1be2",
+   "label": "Brian Moynihan",
+   "wave": 1,
+   "via": "term:directors",
+   "gold": true
+  },
+  {
+   "id": "mq:f45b52fd506ce015",
+   "label": "Nonprofit organization",
+   "wave": 1,
+   "via": "term:directors",
+   "gold": false
+  },
+  {
+   "id": "mq:247bd97f69cb4858",
+   "label": "Premier League",
+   "wave": 1,
+   "via": "term:directors",
+   "gold": false
+  },
+  {
+   "id": "mq:de790ec2a428d3a2",
+   "label": "Brian Moynihan",
+   "wave": 1,
+   "via": "term:directors",
+   "gold": false
+  },
+  {
+   "id": "mq:e2a48d92176cc67b",
+   "label": "Governor-General of India",
+   "wave": 1,
+   "via": "term:directors",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:851d1045d75531e4",
+    "label": "Basil L. Plumley",
+    "gold": false
+   },
+   {
+    "id": "mq:6a0e37536c30be2c",
+    "label": "Boston",
+    "gold": true
+   },
+   {
+    "id": "mq:dc4aaf6d2d7924f9",
+    "label": "Doug Manchester",
+    "gold": false
+   },
+   {
+    "id": "mq:74759b426bf6df7d",
+    "label": "Standard Insurance Company",
+    "gold": false
+   },
+   {
+    "id": "mq:cb47634035296efe",
+    "label": "Orano Cycle",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:6a0e37536c30be2c",
+    "label": "Boston",
+    "gold": true
+   },
+   {
+    "id": "mq:74759b426bf6df7d",
+    "label": "Standard Insurance Company",
+    "gold": false
+   },
+   {
+    "id": "mq:dc4aaf6d2d7924f9",
+    "label": "Doug Manchester",
+    "gold": false
+   },
+   {
+    "id": "mq:29bea8cf7788445a",
+    "label": "Tan Suee Chieh",
+    "gold": false
+   },
+   {
+    "id": "mq:0a924c2c53211d1a",
+    "label": "ICICI Bank",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:6a0e37536c30be2c",
+    "label": "Boston",
+    "gold": true
+   },
+   {
+    "id": "mq:dc4aaf6d2d7924f9",
+    "label": "Doug Manchester",
+    "gold": false
+   },
+   {
+    "id": "mq:74759b426bf6df7d",
+    "label": "Standard Insurance Company",
+    "gold": false
+   },
+   {
+    "id": "mq:0a924c2c53211d1a",
+    "label": "ICICI Bank",
+    "gold": false
+   },
+   {
+    "id": "mq:0d48fcbade54a7c4",
+    "label": "Boston",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:74759b426bf6df7d",
+    "label": "Standard Insurance Company",
+    "gold": false
+   },
+   {
+    "id": "mq:6aefab49fa548cf2",
+    "label": "Dell",
+    "gold": false
+   },
+   {
+    "id": "mq:c5b339e710e52ec6",
+    "label": "PizzaExpress",
+    "gold": false
+   },
+   {
+    "id": "mq:6a0e37536c30be2c",
+    "label": "Boston",
+    "gold": true
+   },
+   {
+    "id": "mq:f2039d6ec4af2b33",
+    "label": "Ken Hachikian",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.5,
+  "Q": 0.5,
+  "LQ": 0.5,
+  "S": 0.5
+ }
+}

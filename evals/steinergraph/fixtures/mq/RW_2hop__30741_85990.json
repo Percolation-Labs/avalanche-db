@@ -1,0 +1,428 @@
+{
+ "qid": "RW:2hop__30741_85990",
+ "set": "mq",
+ "question": "Who were the leaders of the opposition of the party that dominated until the mid-20th century?",
+ "gold": [
+  {
+   "id": "mq:2d9e3cac58a7a83f",
+   "label": "Philadelphia",
+   "seed": false
+  },
+  {
+   "id": "mq:5c0c5445c818ccdf",
+   "label": "Republican Party (United States)",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:3fc569948fd664dd",
+   "label": "Nigeria",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:5df98cbf75fdb1e8",
+   "label": "Politics of Japan",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "mq:38e9b347a8d4c9a0",
+   "label": "Movement for Changes",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "mq:1fa083e5adc5547b",
+   "label": "Party leaders of the United States House of Representatives",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "mq:1b54a99be5a8273c",
+   "label": "Leader of Opposition (Uganda)",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:2d9e3cac58a7a83f",
+    "label": "Philadelphia",
+    "role": "gold"
+   },
+   {
+    "id": "mq:3fc569948fd664dd",
+    "label": "Nigeria",
+    "role": "seed"
+   },
+   {
+    "id": "mq:5c0c5445c818ccdf",
+    "label": "Republican Party (United States)",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:2d9e3cac58a7a83f",
+    "b": "mq:5c0c5445c818ccdf",
+    "via": [
+     {
+      "kind": "term",
+      "key": "republican party",
+      "width": 45
+     },
+     {
+      "kind": "term",
+      "key": "chosen",
+      "width": 84
+     }
+    ]
+   },
+   {
+    "a": "mq:3fc569948fd664dd",
+    "b": "mq:5c0c5445c818ccdf",
+    "via": [
+     {
+      "kind": "term",
+      "key": "dominant",
+      "width": 61
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "mq:3fc569948fd664dd",
+   "gold": "mq:5c0c5445c818ccdf",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 2450,
+  "within_2_doors": 18615,
+  "gold_within_1": 1,
+  "gold_within_2": 1,
+  "top_U": [
+   {
+    "id": "mq:31cc6ab3ffa4f12b",
+    "label": "Party leaders of the United States House of Representatives",
+    "p": 0.0038166755365861855,
+    "gold": false
+   },
+   {
+    "id": "mq:fd8d90b1a064d670",
+    "label": "Linux Documentation Project",
+    "p": 0.002738099856656731,
+    "gold": false
+   },
+   {
+    "id": "mq:70a365d25fb2fbd8",
+    "label": "Arik Air",
+    "p": 0.002581646080917835,
+    "gold": false
+   },
+   {
+    "id": "mq:85c44dd86623342b",
+    "label": "Party leaders of the United States House of Representatives",
+    "p": 0.0019586068853180818,
+    "gold": false
+   },
+   {
+    "id": "mq:55e19db838a8980d",
+    "label": "Birger Furug\u00e5rd",
+    "p": 0.001840171871556276,
+    "gold": false
+   },
+   {
+    "id": "mq:ca18b80eef7e748a",
+    "label": "Unsuccessful nominations to the Supreme Court of the United States",
+    "p": 0.001818881212368719,
+    "gold": false
+   },
+   {
+    "id": "mq:694327f0dcd7c323",
+    "label": "Greenback Party",
+    "p": 0.001788146118769267,
+    "gold": false
+   },
+   {
+    "id": "mq:112e88d9b21d83f6",
+    "label": "Hellenistic period",
+    "p": 0.0016189308590225564,
+    "gold": false
+   },
+   {
+    "id": "mq:3cf2732a0b23ddd3",
+    "label": "Rhodesian Front",
+    "p": 0.0014236634299413411,
+    "gold": false
+   },
+   {
+    "id": "mq:086081b0972e68a2",
+    "label": "Nigeria",
+    "p": 0.0013285153645723185,
+    "gold": false
+   },
+   {
+    "id": "mq:6d44ec6558a2278e",
+    "label": "Nigeria",
+    "p": 0.0013202734409727308,
+    "gold": false
+   },
+   {
+    "id": "mq:a06f97635a718eab",
+    "label": "Special economic zones of China",
+    "p": 0.001177017674116314,
+    "gold": false
+   },
+   {
+    "id": "mq:63f7b4215105bba8",
+    "label": "Mr. Irrelevant",
+    "p": 0.0010982332016326519,
+    "gold": false
+   },
+   {
+    "id": "mq:b908f735dc3b6be3",
+    "label": "Walker (surname)",
+    "p": 0.0010612206727606563,
+    "gold": false
+   },
+   {
+    "id": "mq:8ca656fbdb737737",
+    "label": "Donje Crniljevo",
+    "p": 0.0010587614745384767,
+    "gold": false
+   },
+   {
+    "id": "mq:dff4263fd534294f",
+    "label": "Banjevac",
+    "p": 0.0010448995621457494,
+    "gold": false
+   },
+   {
+    "id": "mq:3ef46fe47cb01681",
+    "label": "Batman: Arkham",
+    "p": 0.0010269194634496834,
+    "gold": false
+   },
+   {
+    "id": "mq:f11a93cd58efe521",
+    "label": "Enrique del Moral",
+    "p": 0.0010219410726697554,
+    "gold": false
+   },
+   {
+    "id": "mq:a1c4d6d467bb928f",
+    "label": "Madagascar",
+    "p": 0.0010127377216605754,
+    "gold": false
+   },
+   {
+    "id": "mq:464685fb2ed7afe8",
+    "label": "Labour Party (UK)",
+    "p": 0.0009818101616464949,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:3fc569948fd664dd",
+   "label": "Nigeria",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:5df98cbf75fdb1e8",
+   "label": "Politics of Japan",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:38e9b347a8d4c9a0",
+   "label": "Movement for Changes",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:1fa083e5adc5547b",
+   "label": "Party leaders of the United States House of Representatives",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:1b54a99be5a8273c",
+   "label": "Leader of Opposition (Uganda)",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:c611b1f73ad17c06",
+   "label": "People's Congress Party",
+   "wave": 1,
+   "via": "term:congress party",
+   "gold": false
+  },
+  {
+   "id": "mq:356f4aa6881cc50b",
+   "label": "2009 Malawian general election",
+   "wave": 1,
+   "via": "term:congress party",
+   "gold": false
+  },
+  {
+   "id": "mq:a7476b55447af869",
+   "label": "Ajit Kumar Panja",
+   "wave": 1,
+   "via": "term:congress party",
+   "gold": false
+  },
+  {
+   "id": "mq:afd12469b5a0306d",
+   "label": "Saifuddin Kitchlew",
+   "wave": 1,
+   "via": "term:congress party",
+   "gold": false
+  },
+  {
+   "id": "mq:fe7fb48127394fd1",
+   "label": "Sau Crore",
+   "wave": 1,
+   "via": "term:congress party",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:31cc6ab3ffa4f12b",
+    "label": "Party leaders of the United States House of Representatives",
+    "gold": false
+   },
+   {
+    "id": "mq:fd8d90b1a064d670",
+    "label": "Linux Documentation Project",
+    "gold": false
+   },
+   {
+    "id": "mq:70a365d25fb2fbd8",
+    "label": "Arik Air",
+    "gold": false
+   },
+   {
+    "id": "mq:85c44dd86623342b",
+    "label": "Party leaders of the United States House of Representatives",
+    "gold": false
+   },
+   {
+    "id": "mq:55e19db838a8980d",
+    "label": "Birger Furug\u00e5rd",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:31cc6ab3ffa4f12b",
+    "label": "Party leaders of the United States House of Representatives",
+    "gold": false
+   },
+   {
+    "id": "mq:70a365d25fb2fbd8",
+    "label": "Arik Air",
+    "gold": false
+   },
+   {
+    "id": "mq:85c44dd86623342b",
+    "label": "Party leaders of the United States House of Representatives",
+    "gold": false
+   },
+   {
+    "id": "mq:464685fb2ed7afe8",
+    "label": "Labour Party (UK)",
+    "gold": false
+   },
+   {
+    "id": "mq:c761e90e4df05d38",
+    "label": "House of Commons of Canada",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:31cc6ab3ffa4f12b",
+    "label": "Party leaders of the United States House of Representatives",
+    "gold": false
+   },
+   {
+    "id": "mq:c761e90e4df05d38",
+    "label": "House of Commons of Canada",
+    "gold": false
+   },
+   {
+    "id": "mq:85c44dd86623342b",
+    "label": "Party leaders of the United States House of Representatives",
+    "gold": false
+   },
+   {
+    "id": "mq:66970d63e6986084",
+    "label": "2017 Conservative Party of Canada leadership election",
+    "gold": false
+   },
+   {
+    "id": "mq:70a365d25fb2fbd8",
+    "label": "Arik Air",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:f25687b035d297fe",
+    "label": "History of Singapore",
+    "gold": false
+   },
+   {
+    "id": "mq:f19b9b1e242102bb",
+    "label": "Jeffersonian democracy",
+    "gold": false
+   },
+   {
+    "id": "mq:7939161d886da97e",
+    "label": "Reformed Political Party",
+    "gold": false
+   },
+   {
+    "id": "mq:31cc6ab3ffa4f12b",
+    "label": "Party leaders of the United States House of Representatives",
+    "gold": false
+   },
+   {
+    "id": "mq:7b9a448346655265",
+    "label": "Party leaders of the United States Senate",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

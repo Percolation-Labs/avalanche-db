@@ -1,0 +1,405 @@
+{
+ "qid": "pr:738",
+ "set": "prs",
+ "question": "What work went into this, and why: MuSiQue entity-name doors: registered, then a 3-question slice shows no direction?",
+ "gold": [
+  {
+   "id": "commit/c022da7860",
+   "label": "commit c022da7: MuSiQue: register the entity-name door test before any walk (local reranker, 49 held-out cases)",
+   "seed": false
+  },
+  {
+   "id": "commit/c51362a00d",
+   "label": "commit c51362a: MuSiQue entity doors: 3-question directional slice, no direction (identical items read in every arm)",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/23d7adf422",
+   "label": "commit 23d7adf: Merge pull request #738 from Percolation-Labs/bill/musique-entity-doors",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/c51362a00d",
+   "label": "commit c51362a: MuSiQue entity doors: 3-question directional slice, no direction (identical items read in every arm)",
+   "rank": 2,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "meta/lab/results/musique-entity-doors/REGISTERED.md#3",
+   "label": "meta/lab/results/musique-entity-doors/REGISTERED.md \u203a Directional slice, 3 questions (run instead of the 49; Sirsh, 14 N",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "meta/lab/results/musique-entity-doors/REGISTERED.md#2",
+   "label": "meta/lab/results/musique-entity-doors/REGISTERED.md \u203a Entity-name doors on MuSiQue: registered before any walk (bill, 14",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "meta/lab/results/musique-entity-doors/REGISTERED.md#1",
+   "label": "meta/lab/results/musique-entity-doors/REGISTERED.md \u203a Entity-name doors on MuSiQue: registered before any walk (bill, 14",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/c022da7860",
+    "label": "commit c022da7: MuSiQue: register the entity-name door test before any walk (local reranker, 49 held-out cases)",
+    "role": "gold"
+   },
+   {
+    "id": "commit/c51362a00d",
+    "label": "commit c51362a: MuSiQue entity doors: 3-question directional slice, no direction (identical items read in every arm)",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/c022da7860",
+    "b": "commit/c51362a00d",
+    "via": [
+     {
+      "kind": "beside"
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "commit/c51362a00d",
+   "gold": "commit/c51362a00d",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 1421,
+  "within_2_doors": 32458,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "board/messages/M-20261114-164147-80e5.md#1",
+    "label": "board/messages/M-20261114-164147-80e5.md",
+    "p": 0.006969463968477253,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261114-151834-246b.md#1",
+    "label": "board/messages/M-20261114-151834-246b.md",
+    "p": 0.0052996501386254925,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/q4/entity_doors.py#1",
+    "label": "meta/lab/q4/entity_doors.py",
+    "p": 0.004714864272202258,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261114-150702-4607.md#1",
+    "label": "board/messages/M-20261114-150702-4607.md",
+    "p": 0.0039838603074694385,
+    "gold": false
+   },
+   {
+    "id": "commit/c022da7860",
+    "label": "commit c022da7: MuSiQue: register the entity-name door test before any walk (local reranker, 49 held-out cases)",
+    "p": 0.002852446200755887,
+    "gold": true
+   },
+   {
+    "id": "meta/lab/q4/entity_doors.py#4",
+    "label": "meta/lab/q4/entity_doors.py",
+    "p": 0.002718770648226167,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/world-lab/heldout/HELDOUT.md#2",
+    "label": "meta/lab/results/world-lab/heldout/HELDOUT.md \u203a Held-out worlds: the findings result, registered before it is run (bill,",
+    "p": 0.0022479803736296607,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/walk-vs-search/AUDIT.md#1",
+    "label": "meta/lab/results/walk-vs-search/AUDIT.md \u203a What the walk adds beyond search: an audit of bill's results (14 Nov 2026)",
+    "p": 0.0022053126762782583,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261114-173511-e8bc.md#1",
+    "label": "board/messages/M-20261114-173511-e8bc.md",
+    "p": 0.0019464556207005167,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/q4/entity_doors.py#3",
+    "label": "meta/lab/q4/entity_doors.py",
+    "p": 0.0018973563331286874,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/q4/entity_doors.py#2",
+    "label": "meta/lab/q4/entity_doors.py",
+    "p": 0.0018595655757235464,
+    "gold": false
+   },
+   {
+    "id": "commit/d57adf4f97",
+    "label": "commit d57adf4: board: sirsh acknowledges 1 message(s)",
+    "p": 0.0017588823911096835,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/world-lab/heldout/HELDOUT.md#5",
+    "label": "meta/lab/results/world-lab/heldout/HELDOUT.md \u203a Correction: it is entity-name doors, not findings (same day, unregistere",
+    "p": 0.0017507214290601563,
+    "gold": false
+   },
+   {
+    "id": "commit/75a15d5e0c",
+    "label": "commit 75a15d5: board: bill messages sirsh",
+    "p": 0.001736752106251467,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261027-202641-c698.md#1",
+    "label": "board/messages/M-20261027-202641-c698.md",
+    "p": 0.001572809682412476,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/filter-then-rank/RESULT.md#6",
+    "label": "meta/lab/results/filter-then-rank/RESULT.md \u203a Round 3: filtering on the type carries information, and still hurts Jev (1",
+    "p": 0.0015287821979791843,
+    "gold": false
+   },
+   {
+    "id": "commit/82aa093e6a",
+    "label": "commit 82aa093: Merge pull request #737 from Percolation-Labs/bill/musique-findings",
+    "p": 0.0013976219824319697,
+    "gold": false
+   },
+   {
+    "id": "commit/4e11040a78",
+    "label": "commit 4e11040: World lab: correction, the findings gain is an entity-name preference (seed-3 diagnostic)",
+    "p": 0.001380656825742445,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261116-223009-ddd6.md#1",
+    "label": "board/messages/M-20261116-223009-ddd6.md",
+    "p": 0.0013641507695080247,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/world-lab/heldout/HELDOUT.md#1",
+    "label": "meta/lab/results/world-lab/heldout/HELDOUT.md \u203a Held-out worlds: the findings result, registered before it is run (bill,",
+    "p": 0.0013359000304275393,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/23d7adf422",
+   "label": "commit 23d7adf: Merge pull request #738 from Percolation-Labs/bill/musique-entity-doors",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/c51362a00d",
+   "label": "commit c51362a: MuSiQue entity doors: 3-question directional slice, no direction (identical items read in every arm)",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "meta/lab/results/musique-entity-doors/REGISTERED.md#3",
+   "label": "meta/lab/results/musique-entity-doors/REGISTERED.md \u203a Directional slice, 3 questions (run instead of the 49; Sirsh, 14 N",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/musique-entity-doors/REGISTERED.md#2",
+   "label": "meta/lab/results/musique-entity-doors/REGISTERED.md \u203a Entity-name doors on MuSiQue: registered before any walk (bill, 14",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/musique-entity-doors/REGISTERED.md#1",
+   "label": "meta/lab/results/musique-entity-doors/REGISTERED.md \u203a Entity-name doors on MuSiQue: registered before any walk (bill, 14",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/messages/M-20261114-150702-4607.md#1",
+   "label": "board/messages/M-20261114-150702-4607.md",
+   "wave": 1,
+   "via": "term:bill musique",
+   "gold": false
+  },
+  {
+   "id": "commit/82aa093e6a",
+   "label": "commit 82aa093: Merge pull request #737 from Percolation-Labs/bill/musique-findings",
+   "wave": 1,
+   "via": "term:bill musique",
+   "gold": false
+  },
+  {
+   "id": "commit/6438a0d371",
+   "label": "commit 6438a0d: Merge pull request #739 from Percolation-Labs/bill/musique-round2-haystack",
+   "wave": 1,
+   "via": "term:bill musique",
+   "gold": false
+  },
+  {
+   "id": "board/messages/M-20261114-164147-80e5.md#1",
+   "label": "board/messages/M-20261114-164147-80e5.md",
+   "wave": 1,
+   "via": "term:bill musique",
+   "gold": false
+  },
+  {
+   "id": "board/messages/M-20261105-091044-862a.md#1",
+   "label": "board/messages/M-20261105-091044-862a.md",
+   "wave": 1,
+   "via": "term:bill musique",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "board/messages/M-20261114-164147-80e5.md#1",
+    "label": "board/messages/M-20261114-164147-80e5.md",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261114-151834-246b.md#1",
+    "label": "board/messages/M-20261114-151834-246b.md",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/q4/entity_doors.py#1",
+    "label": "meta/lab/q4/entity_doors.py",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261114-150702-4607.md#1",
+    "label": "board/messages/M-20261114-150702-4607.md",
+    "gold": false
+   },
+   {
+    "id": "commit/c022da7860",
+    "label": "commit c022da7: MuSiQue: register the entity-name door test before any walk (local reranker, 49 held-out cases)",
+    "gold": true
+   }
+  ],
+  "Q": [
+   {
+    "id": "board/messages/M-20261114-164147-80e5.md#1",
+    "label": "board/messages/M-20261114-164147-80e5.md",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/q4/entity_doors.py#1",
+    "label": "meta/lab/q4/entity_doors.py",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261114-151834-246b.md#1",
+    "label": "board/messages/M-20261114-151834-246b.md",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261114-150702-4607.md#1",
+    "label": "board/messages/M-20261114-150702-4607.md",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261114-173511-e8bc.md#1",
+    "label": "board/messages/M-20261114-173511-e8bc.md",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "board/messages/M-20261114-151834-246b.md#1",
+    "label": "board/messages/M-20261114-151834-246b.md",
+    "gold": false
+   },
+   {
+    "id": "commit/c022da7860",
+    "label": "commit c022da7: MuSiQue: register the entity-name door test before any walk (local reranker, 49 held-out cases)",
+    "gold": true
+   },
+   {
+    "id": "board/messages/M-20261114-150702-4607.md#1",
+    "label": "board/messages/M-20261114-150702-4607.md",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261114-164147-80e5.md#1",
+    "label": "board/messages/M-20261114-164147-80e5.md",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/q4/entity_doors.py#4",
+    "label": "meta/lab/q4/entity_doors.py",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "board/messages/M-20261114-173511-e8bc.md#1",
+    "label": "board/messages/M-20261114-173511-e8bc.md",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261114-151834-246b.md#1",
+    "label": "board/messages/M-20261114-151834-246b.md",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/q4/entity_doors.py#1",
+    "label": "meta/lab/q4/entity_doors.py",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261114-150702-4607.md#1",
+    "label": "board/messages/M-20261114-150702-4607.md",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261114-164147-80e5.md#1",
+    "label": "board/messages/M-20261114-164147-80e5.md",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 1.0,
+  "Q": 0.0,
+  "LQ": 1.0,
+  "S": 0.0
+ }
+}

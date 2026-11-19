@@ -1,0 +1,486 @@
+{
+ "qid": "card:REM-960",
+ "set": "cards",
+ "question": "What was done about this, and why: memory: one fixture walks write, reconcile and query through the graph memory?",
+ "gold": [
+  {
+   "id": "commit/70b1eab38d",
+   "label": "commit 70b1eab: core-product: what of the advanced memory runs today, at 0.2.23 (REM-960)",
+   "seed": false
+  },
+  {
+   "id": "commit/8cfbdf486e",
+   "label": "commit 8cfbdf4: query/16: one walk composes knit, reconcile, query, as-of and a question (REM-960)",
+   "seed": false
+  },
+  {
+   "id": "commit/affb868a6a",
+   "label": "commit affb868: Merge pull request #456 from Percolation-Labs/bob/rem-960-advanced-memory",
+   "seed": false
+  },
+  {
+   "id": "commit/d266ee333c",
+   "label": "commit d266ee3: query/16: each article step is a top-level statement a reader can paste (REM-960)",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/af4d48b7f4",
+   "label": "commit af4d48b: board: file REM-960 memory: one fixture walks write, reconcile and query through the graph memory",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-960.md#1",
+   "label": "board/cards/REM-960.md",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-960.md#2",
+   "label": "board/cards/REM-960.md \u203a Goal",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-961.md#2",
+   "label": "board/cards/REM-961.md \u203a Goal",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-1228.md#6",
+   "label": "board/cards/REM-1228.md \u203a Log",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 2
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "board/cards/REM-960.md#2",
+    "label": "board/cards/REM-960.md \u203a Goal",
+    "role": "seed"
+   },
+   {
+    "id": "commit/70b1eab38d",
+    "label": "commit 70b1eab: core-product: what of the advanced memory runs today, at 0.2.23 (REM-960)",
+    "role": "gold"
+   },
+   {
+    "id": "commit/8cfbdf486e",
+    "label": "commit 8cfbdf4: query/16: one walk composes knit, reconcile, query, as-of and a question (REM-960)",
+    "role": "gold"
+   },
+   {
+    "id": "commit/affb868a6a",
+    "label": "commit affb868: Merge pull request #456 from Percolation-Labs/bob/rem-960-advanced-memory",
+    "role": "gold"
+   },
+   {
+    "id": "commit/d266ee333c",
+    "label": "commit d266ee3: query/16: each article step is a top-level statement a reader can paste (REM-960)",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "board/cards/REM-960.md#2",
+    "b": "commit/d266ee333c",
+    "via": [
+     {
+      "kind": "term",
+      "key": "advanced article",
+      "width": 7
+     },
+     {
+      "kind": "term",
+      "key": "rem 960",
+      "width": 21
+     }
+    ]
+   },
+   {
+    "a": "commit/70b1eab38d",
+    "b": "commit/8cfbdf486e",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "rem 960",
+      "width": 21
+     }
+    ]
+   },
+   {
+    "a": "commit/70b1eab38d",
+    "b": "commit/affb868a6a",
+    "via": [
+     {
+      "kind": "term",
+      "key": "rem 960",
+      "width": 21
+     },
+     {
+      "kind": "term",
+      "key": "advanced memory",
+      "width": 47
+     }
+    ]
+   },
+   {
+    "a": "commit/70b1eab38d",
+    "b": "commit/d266ee333c",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "rem 960",
+      "width": 21
+     }
+    ]
+   }
+  ],
+  "cost": 4,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  "entry": {
+   "seed": "board/cards/REM-960.md#2",
+   "gold": "commit/d266ee333c",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 1470,
+  "within_2_doors": 33816,
+  "gold_within_1": 4,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "specs/design/core-product.md#3",
+    "label": "specs/design/core-product.md \u203a 2. The articles",
+    "p": 0.005059855758133301,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1228.md#5",
+    "label": "board/cards/REM-1228.md \u203a Log",
+    "p": 0.0037385895055095557,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261102-114900-e9b7.md#1",
+    "label": "board/messages/M-20261102-114900-e9b7.md",
+    "p": 0.0033742841380173146,
+    "gold": false
+   },
+   {
+    "id": "commit/374271b281",
+    "label": "commit 374271b: board: bob takes REM-960",
+    "p": 0.0026828929520834057,
+    "gold": false
+   },
+   {
+    "id": "commit/057a005789",
+    "label": "commit 057a005: board: file REM-959 memory: Mem0's quickstart and graph memory run on Percolate, measured",
+    "p": 0.002469073576133847,
+    "gold": false
+   },
+   {
+    "id": "commit/c29cc8be73",
+    "label": "commit c29cc8b: board: file REM-961 memory: the graph reconciles itself on a schedule",
+    "p": 0.001961986947728293,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/configs/structure/twostage.py#1",
+    "label": "meta/lab/configs/structure/twostage.py",
+    "p": 0.0017417091735372238,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/q4/miss_census.py#1",
+    "label": "meta/lab/q4/miss_census.py",
+    "p": 0.0017373230732666935,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q2-conformance/README.md#1",
+    "label": "meta/lab/results/q2-conformance/README.md \u203a Quadrant 2: do walklab's graphs and walks hold what the spec says? (1 Nov, m",
+    "p": 0.0017320333860471604,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261030-160941-0d9b.md#1",
+    "label": "board/messages/M-20261030-160941-0d9b.md",
+    "p": 0.0016931193223202231,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261030-160622-9a5f.md#1",
+    "label": "board/messages/M-20261030-160622-9a5f.md",
+    "p": 0.001589404583820107,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-961.md#1",
+    "label": "board/cards/REM-961.md",
+    "p": 0.0015189937310010476,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-961.md#3",
+    "label": "board/cards/REM-961.md \u203a Evidence",
+    "p": 0.0014807578898638845,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-961.md#6",
+    "label": "board/cards/REM-961.md \u203a Log",
+    "p": 0.0013741762239967965,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-960.md#3",
+    "label": "board/cards/REM-960.md \u203a Evidence",
+    "p": 0.0013543071554489282,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-961.md#4",
+    "label": "board/cards/REM-961.md \u203a Done when",
+    "p": 0.0011686988407872629,
+    "gold": false
+   },
+   {
+    "id": "specs/design/core-product-memory.md#2",
+    "label": "specs/design/core-product-memory.md \u203a Where each piece lives",
+    "p": 0.00114737961197045,
+    "gold": false
+   },
+   {
+    "id": "specs/design/core-product.md#7",
+    "label": "specs/design/core-product.md \u203a 4. Done, as Sirsh defined it on 19 October",
+    "p": 0.0011412447554404166,
+    "gold": false
+   },
+   {
+    "id": "commit/d266ee333c",
+    "label": "commit d266ee3: query/16: each article step is a top-level statement a reader can paste (REM-960)",
+    "p": 0.0011103821666004242,
+    "gold": true
+   },
+   {
+    "id": "commit/affb868a6a",
+    "label": "commit affb868: Merge pull request #456 from Percolation-Labs/bob/rem-960-advanced-memory",
+    "p": 0.0009536625049922433,
+    "gold": true
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/af4d48b7f4",
+   "label": "commit af4d48b: board: file REM-960 memory: one fixture walks write, reconcile and query through the graph memory",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-960.md#1",
+   "label": "board/cards/REM-960.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-960.md#2",
+   "label": "board/cards/REM-960.md \u203a Goal",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-961.md#2",
+   "label": "board/cards/REM-961.md \u203a Goal",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-1228.md#6",
+   "label": "board/cards/REM-1228.md \u203a Log",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/374271b281",
+   "label": "commit 374271b: board: bob takes REM-960",
+   "wave": 1,
+   "via": "term:rem 960",
+   "gold": false
+  },
+  {
+   "id": "commit/8cfbdf486e",
+   "label": "commit 8cfbdf4: query/16: one walk composes knit, reconcile, query, as-of and a question (REM-960)",
+   "wave": 1,
+   "via": "term:rem 960",
+   "gold": true
+  },
+  {
+   "id": "board/cards/REM-960.md#3",
+   "label": "board/cards/REM-960.md \u203a Evidence",
+   "wave": 1,
+   "via": "term:rem 960",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-960.md#5",
+   "label": "board/cards/REM-960.md \u203a Scope",
+   "wave": 1,
+   "via": "term:rem 960",
+   "gold": false
+  },
+  {
+   "id": "commit/70b1eab38d",
+   "label": "commit 70b1eab: core-product: what of the advanced memory runs today, at 0.2.23 (REM-960)",
+   "wave": 1,
+   "via": "term:rem 960",
+   "gold": true
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "specs/design/core-product.md#3",
+    "label": "specs/design/core-product.md \u203a 2. The articles",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1228.md#5",
+    "label": "board/cards/REM-1228.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261102-114900-e9b7.md#1",
+    "label": "board/messages/M-20261102-114900-e9b7.md",
+    "gold": false
+   },
+   {
+    "id": "commit/374271b281",
+    "label": "commit 374271b: board: bob takes REM-960",
+    "gold": false
+   },
+   {
+    "id": "commit/057a005789",
+    "label": "commit 057a005: board: file REM-959 memory: Mem0's quickstart and graph memory run on Percolate, measured",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "specs/design/core-product.md#3",
+    "label": "specs/design/core-product.md \u203a 2. The articles",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1228.md#5",
+    "label": "board/cards/REM-1228.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "commit/c29cc8be73",
+    "label": "commit c29cc8b: board: file REM-961 memory: the graph reconciles itself on a schedule",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-961.md#6",
+    "label": "board/cards/REM-961.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "commit/057a005789",
+    "label": "commit 057a005: board: file REM-959 memory: Mem0's quickstart and graph memory run on Percolate, measured",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/affb868a6a",
+    "label": "commit affb868: Merge pull request #456 from Percolation-Labs/bob/rem-960-advanced-memory",
+    "gold": true
+   },
+   {
+    "id": "commit/8cfbdf486e",
+    "label": "commit 8cfbdf4: query/16: one walk composes knit, reconcile, query, as-of and a question (REM-960)",
+    "gold": true
+   },
+   {
+    "id": "commit/075fc21671",
+    "label": "commit 075fc21: Preserve development database upgrades and reconcile concurrent access work",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1228.md#4",
+    "label": "board/cards/REM-1228.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "commit/6e76c143ed",
+    "label": "commit 6e76c14: Checkpoint evidence-backed Dream experiments and graph-memory tutorial",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "board/cards/REM-998.md#4",
+    "label": "board/cards/REM-998.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "specs/ai-query-layer/graph-identity.md#4",
+    "label": "specs/ai-query-layer/graph-identity.md \u203a Two memories",
+    "gold": false
+   },
+   {
+    "id": "commit/affb868a6a",
+    "label": "commit affb868: Merge pull request #456 from Percolation-Labs/bob/rem-960-advanced-memory",
+    "gold": true
+   },
+   {
+    "id": "specs/design/core-product-memory.md#1",
+    "label": "specs/design/core-product-memory.md \u203a Advanced memory: what runs today (W4, REM-960)",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-960.md#4",
+    "label": "board/cards/REM-960.md \u203a Done when",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.5,
+  "S": 0.25
+ }
+}

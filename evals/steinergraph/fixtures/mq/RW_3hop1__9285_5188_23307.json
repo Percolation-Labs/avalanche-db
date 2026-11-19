@@ -1,0 +1,506 @@
+{
+ "qid": "RW:3hop1__9285_5188_23307",
+ "set": "mq",
+ "question": "What month did the Tripartite discussions begin between Britain, France, and the country where, despite being headquartered in the nation called the nobilities commonwealth, the top-ranking Warsaw Pact operatives originated?",
+ "gold": [
+  {
+   "id": "mq:560842b257fa5fbc",
+   "label": "Molotov\u2013Ribbentrop Pact",
+   "seed": false
+  },
+  {
+   "id": "mq:a29f88a939380568",
+   "label": "Warsaw Pact",
+   "seed": false
+  },
+  {
+   "id": "mq:ae55766903e88330",
+   "label": "Szlachta",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:51b913c34bb12352",
+   "label": "Warsaw Pact",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:ab731218d5c8268b",
+   "label": "Warsaw Pact",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:1cd557bee9351ca4",
+   "label": "Warsaw Pact",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:282fa02acec5c6f2",
+   "label": "Warsaw Pact",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:0fbd15226f2dbe1f",
+   "label": "Warsaw Pact",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:282fa02acec5c6f2",
+    "label": "Warsaw Pact",
+    "role": "seed"
+   },
+   {
+    "id": "mq:560842b257fa5fbc",
+    "label": "Molotov\u2013Ribbentrop Pact",
+    "role": "gold"
+   },
+   {
+    "id": "mq:a29f88a939380568",
+    "label": "Warsaw Pact",
+    "role": "gold"
+   },
+   {
+    "id": "mq:ae55766903e88330",
+    "label": "Szlachta",
+    "role": "gold"
+   },
+   {
+    "id": "mq:d02b785612521479",
+    "label": "Szlachta",
+    "role": "connector"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:282fa02acec5c6f2",
+    "b": "mq:a29f88a939380568",
+    "via": [
+     {
+      "kind": "term",
+      "key": "multi national",
+      "width": 3
+     },
+     {
+      "kind": "term",
+      "key": "member countries",
+      "width": 8
+     },
+     {
+      "kind": "term",
+      "key": "warsaw pact",
+      "width": 31
+     },
+     {
+      "kind": "term",
+      "key": "armed forces",
+      "width": 55
+     },
+     {
+      "kind": "term",
+      "key": "warsaw",
+      "width": 71
+     }
+    ]
+   },
+   {
+    "a": "mq:560842b257fa5fbc",
+    "b": "mq:a29f88a939380568",
+    "via": [
+     {
+      "kind": "term",
+      "key": "ussr",
+      "width": 59
+     },
+     {
+      "kind": "term",
+      "key": "pact",
+      "width": 72
+     }
+    ]
+   },
+   {
+    "a": "mq:560842b257fa5fbc",
+    "b": "mq:d02b785612521479",
+    "via": [
+     {
+      "kind": "term",
+      "key": "european countries",
+      "width": 20
+     }
+    ]
+   },
+   {
+    "a": "mq:ae55766903e88330",
+    "b": "mq:d02b785612521479",
+    "via": [
+     {
+      "kind": "near",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "polish nobility",
+      "width": 4
+     },
+     {
+      "kind": "term",
+      "key": "szlachta",
+      "width": 15
+     },
+     {
+      "kind": "term",
+      "key": "nobility",
+      "width": 36
+     },
+     {
+      "kind": "term",
+      "key": "polish",
+      "width": 80
+     }
+    ]
+   }
+  ],
+  "cost": 4,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   2,
+   2
+  ],
+  "entry": {
+   "seed": "mq:282fa02acec5c6f2",
+   "gold": "mq:a29f88a939380568",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 1670,
+  "within_2_doors": 19385,
+  "gold_within_1": 3,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "mq:763a385555b9e69c",
+    "label": "Dissolution of the Soviet Union",
+    "p": 0.002783231569221821,
+    "gold": false
+   },
+   {
+    "id": "mq:c8b7d8576387a0e7",
+    "label": "Warsaw Pact",
+    "p": 0.002672412937377442,
+    "gold": false
+   },
+   {
+    "id": "mq:ac37aa604855871c",
+    "label": "Southern Europe",
+    "p": 0.0023274397164838273,
+    "gold": false
+   },
+   {
+    "id": "mq:a29f88a939380568",
+    "label": "Warsaw Pact",
+    "p": 0.0022177321079382747,
+    "gold": true
+   },
+   {
+    "id": "mq:56c37a73d065a4da",
+    "label": "Cold War",
+    "p": 0.0018818513954265194,
+    "gold": false
+   },
+   {
+    "id": "mq:9cef22e7995f59e2",
+    "label": "Korean War",
+    "p": 0.0017946714450793532,
+    "gold": false
+   },
+   {
+    "id": "mq:840e433574fd072a",
+    "label": "History of Bras\u00edlia",
+    "p": 0.0016744985752591866,
+    "gold": false
+   },
+   {
+    "id": "mq:2020d2a5a789503f",
+    "label": "Warsaw Pact",
+    "p": 0.0016703044811290381,
+    "gold": false
+   },
+   {
+    "id": "mq:c963294840c58e3c",
+    "label": "NATO",
+    "p": 0.001629699516607154,
+    "gold": false
+   },
+   {
+    "id": "mq:76e3aa4cf32ad877",
+    "label": "World War II",
+    "p": 0.0012276395793863058,
+    "gold": false
+   },
+   {
+    "id": "mq:543240d0e5e28d8d",
+    "label": "Celts",
+    "p": 0.001188366172352272,
+    "gold": false
+   },
+   {
+    "id": "mq:31fb56443a0fdb3d",
+    "label": "1990 Polish presidential election",
+    "p": 0.001159383618898641,
+    "gold": false
+   },
+   {
+    "id": "mq:d56c2a97bb234ced",
+    "label": "Zhejiang",
+    "p": 0.001150095318319688,
+    "gold": false
+   },
+   {
+    "id": "mq:50be2a82a142a163",
+    "label": "Modern history",
+    "p": 0.0011041777739236084,
+    "gold": false
+   },
+   {
+    "id": "mq:0e2b44bb71054401",
+    "label": "Oklahoma City",
+    "p": 0.0010621709018769664,
+    "gold": false
+   },
+   {
+    "id": "mq:c8f3d143feaf88ec",
+    "label": "Member states of NATO",
+    "p": 0.0009742711708323032,
+    "gold": false
+   },
+   {
+    "id": "mq:5ce6d753703598a3",
+    "label": "Slavs",
+    "p": 0.0009514142697836129,
+    "gold": false
+   },
+   {
+    "id": "mq:8d0993568359391f",
+    "label": "Member states of NATO",
+    "p": 0.0009244535037591273,
+    "gold": false
+   },
+   {
+    "id": "mq:65252298c8cb049f",
+    "label": "Greek mythology",
+    "p": 0.0009022086455720097,
+    "gold": false
+   },
+   {
+    "id": "mq:69e0231df5a51095",
+    "label": "Richmond, Virginia",
+    "p": 0.0008990681309324036,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:51b913c34bb12352",
+   "label": "Warsaw Pact",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:ab731218d5c8268b",
+   "label": "Warsaw Pact",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:1cd557bee9351ca4",
+   "label": "Warsaw Pact",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:282fa02acec5c6f2",
+   "label": "Warsaw Pact",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:0fbd15226f2dbe1f",
+   "label": "Warsaw Pact",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:7feb0b871f5b7c5d",
+   "label": "History of Latvia",
+   "wave": 1,
+   "via": "term:soviet troops",
+   "gold": false
+  },
+  {
+   "id": "mq:7423db3ba5af9089",
+   "label": "Molotov\u2013Ribbentrop Pact",
+   "wave": 1,
+   "via": "term:soviet troops",
+   "gold": false
+  },
+  {
+   "id": "mq:c14a6cfde8075b63",
+   "label": "Ukraine",
+   "wave": 1,
+   "via": "term:soviet troops",
+   "gold": false
+  },
+  {
+   "id": "mq:56c37a73d065a4da",
+   "label": "Cold War",
+   "wave": 1,
+   "via": "term:soviet troops",
+   "gold": false
+  },
+  {
+   "id": "mq:aab180b2cdac2cbc",
+   "label": "Bukovina",
+   "wave": 2,
+   "via": "term:molotov ribbentrop",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:763a385555b9e69c",
+    "label": "Dissolution of the Soviet Union",
+    "gold": false
+   },
+   {
+    "id": "mq:c8b7d8576387a0e7",
+    "label": "Warsaw Pact",
+    "gold": false
+   },
+   {
+    "id": "mq:ac37aa604855871c",
+    "label": "Southern Europe",
+    "gold": false
+   },
+   {
+    "id": "mq:a29f88a939380568",
+    "label": "Warsaw Pact",
+    "gold": true
+   },
+   {
+    "id": "mq:56c37a73d065a4da",
+    "label": "Cold War",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:c8b7d8576387a0e7",
+    "label": "Warsaw Pact",
+    "gold": false
+   },
+   {
+    "id": "mq:2020d2a5a789503f",
+    "label": "Warsaw Pact",
+    "gold": false
+   },
+   {
+    "id": "mq:a29f88a939380568",
+    "label": "Warsaw Pact",
+    "gold": true
+   },
+   {
+    "id": "mq:763a385555b9e69c",
+    "label": "Dissolution of the Soviet Union",
+    "gold": false
+   },
+   {
+    "id": "mq:ac37aa604855871c",
+    "label": "Southern Europe",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:c8b7d8576387a0e7",
+    "label": "Warsaw Pact",
+    "gold": false
+   },
+   {
+    "id": "mq:2020d2a5a789503f",
+    "label": "Warsaw Pact",
+    "gold": false
+   },
+   {
+    "id": "mq:763a385555b9e69c",
+    "label": "Dissolution of the Soviet Union",
+    "gold": false
+   },
+   {
+    "id": "mq:a29f88a939380568",
+    "label": "Warsaw Pact",
+    "gold": true
+   },
+   {
+    "id": "mq:ac37aa604855871c",
+    "label": "Southern Europe",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:23791d327bc7d951",
+    "label": "Szlachta",
+    "gold": false
+   },
+   {
+    "id": "mq:c8b7d8576387a0e7",
+    "label": "Warsaw Pact",
+    "gold": false
+   },
+   {
+    "id": "mq:bc9362eecd0e24d8",
+    "label": "Warsaw Pact",
+    "gold": false
+   },
+   {
+    "id": "mq:69ab6e3250b1bc8d",
+    "label": "Warsaw Pact",
+    "gold": false
+   },
+   {
+    "id": "mq:c8e3d0f0f1f10f87",
+    "label": "Australia at the 2018 Commonwealth Games",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.3333333333333333,
+  "Q": 0.3333333333333333,
+  "LQ": 0.3333333333333333,
+  "S": 0.0
+ }
+}

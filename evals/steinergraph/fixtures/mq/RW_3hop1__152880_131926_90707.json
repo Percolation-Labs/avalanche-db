@@ -1,0 +1,430 @@
+{
+ "qid": "RW:3hop1__152880_131926_90707",
+ "set": "mq",
+ "question": "Where does the body of water by the city Astronautalis is from and the Ohio River meet?",
+ "gold": [
+  {
+   "id": "mq:507c1c5a685d7414",
+   "label": "Astronautalis",
+   "seed": true
+  },
+  {
+   "id": "mq:d5990bfa6c296226",
+   "label": "Ohio River",
+   "seed": false
+  },
+  {
+   "id": "mq:fa5ce36f072ada0a",
+   "label": "Minneapolis",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:b3466d06767ede20",
+   "label": "Ekulu River",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "mq:1807cd41e05c5f79",
+   "label": "Davis Island Lock and Dam Site",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:b64668bab9c8e6e4",
+   "label": "Silver Lake (Harrisville, New Hampshire)",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "mq:1a00db3311a520fc",
+   "label": "Humaya River",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "mq:507c1c5a685d7414",
+   "label": "Astronautalis",
+   "rank": 5,
+   "gold": true,
+   "doors_to_gold": 0
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:507c1c5a685d7414",
+    "label": "Astronautalis",
+    "role": "gold"
+   },
+   {
+    "id": "mq:d5990bfa6c296226",
+    "label": "Ohio River",
+    "role": "gold"
+   },
+   {
+    "id": "mq:fa5ce36f072ada0a",
+    "label": "Minneapolis",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:507c1c5a685d7414",
+    "b": "mq:fa5ce36f072ada0a",
+    "via": [
+     {
+      "kind": "term",
+      "key": "minneapolis",
+      "width": 40
+     }
+    ]
+   },
+   {
+    "a": "mq:d5990bfa6c296226",
+    "b": "mq:fa5ce36f072ada0a",
+    "via": [
+     {
+      "kind": "term",
+      "key": "mississippi river",
+      "width": 54
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   2,
+   1,
+   1
+  ],
+  "entry": {
+   "seed": "mq:507c1c5a685d7414",
+   "gold": "mq:507c1c5a685d7414",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 1237,
+  "within_2_doors": 19825,
+  "gold_within_1": 2,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "mq:11f80dce5574d835",
+    "label": "Nigeria",
+    "p": 0.0059168626568550375,
+    "gold": false
+   },
+   {
+    "id": "mq:32b8a1e709fb2cd8",
+    "label": "Walter Huston",
+    "p": 0.005912684622026337,
+    "gold": false
+   },
+   {
+    "id": "mq:3a15714c34409af4",
+    "label": "El Pollo Loco",
+    "p": 0.005535566999583545,
+    "gold": false
+   },
+   {
+    "id": "mq:ad4d561334fdf65e",
+    "label": "Amaimo",
+    "p": 0.004804945712775883,
+    "gold": false
+   },
+   {
+    "id": "mq:1a34d96260bae03e",
+    "label": "Harrisville Pond",
+    "p": 0.003989279475240892,
+    "gold": false
+   },
+   {
+    "id": "mq:4b60a064a19b362e",
+    "label": "Miami",
+    "p": 0.0030741869917333565,
+    "gold": false
+   },
+   {
+    "id": "mq:8eaf17402c7d52b2",
+    "label": "Carleton Bridge",
+    "p": 0.003067832921485605,
+    "gold": false
+   },
+   {
+    "id": "mq:4c090e72ac8f8b1f",
+    "label": "Southern California",
+    "p": 0.002757242823318976,
+    "gold": false
+   },
+   {
+    "id": "mq:4f4fc58cdbcb9775",
+    "label": "Ottawa Waterworks Building",
+    "p": 0.0025960466027967477,
+    "gold": false
+   },
+   {
+    "id": "mq:ec5c570bfcc7167b",
+    "label": "Contoocook Lake",
+    "p": 0.0025310880681383486,
+    "gold": false
+   },
+   {
+    "id": "mq:8f076534b6251ea8",
+    "label": "Adam Ravenstahl",
+    "p": 0.0023970239616689162,
+    "gold": false
+   },
+   {
+    "id": "mq:8d510fd6bbe2a6b1",
+    "label": "Mbieri",
+    "p": 0.002178168490489079,
+    "gold": false
+   },
+   {
+    "id": "mq:9e14ccfb5d8cd88d",
+    "label": "Silver Lake (Madison, New Hampshire)",
+    "p": 0.002030923336219138,
+    "gold": false
+   },
+   {
+    "id": "mq:18dd0d7bb3bba7e0",
+    "label": "Jason Sampson",
+    "p": 0.0018814629849727709,
+    "gold": false
+   },
+   {
+    "id": "mq:86cf3c52f59f2f0b",
+    "label": "Brigham Young University",
+    "p": 0.001284995513719668,
+    "gold": false
+   },
+   {
+    "id": "mq:de07f821a9f4ac04",
+    "label": "Journal of Higher Education Outreach and Engagement",
+    "p": 0.0012275163311498136,
+    "gold": false
+   },
+   {
+    "id": "mq:4dff54980dece0a6",
+    "label": "El Pollo Loco",
+    "p": 0.0011688935308140096,
+    "gold": false
+   },
+   {
+    "id": "mq:e8f46df672cee981",
+    "label": "3 'n the Mornin' (Part Two)",
+    "p": 0.0011121598338831255,
+    "gold": false
+   },
+   {
+    "id": "mq:4384594d3318c774",
+    "label": "Roy Harrisville",
+    "p": 0.0011096352049673275,
+    "gold": false
+   },
+   {
+    "id": "mq:a62793556fd2b5cf",
+    "label": "Powwow Pond",
+    "p": 0.0010073657837944188,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:b3466d06767ede20",
+   "label": "Ekulu River",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:1807cd41e05c5f79",
+   "label": "Davis Island Lock and Dam Site",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:b64668bab9c8e6e4",
+   "label": "Silver Lake (Harrisville, New Hampshire)",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:1a00db3311a520fc",
+   "label": "Humaya River",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:507c1c5a685d7414",
+   "label": "Astronautalis",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:82a9dbe209617a82",
+   "label": "Tony Jaros",
+   "wave": 1,
+   "via": "term:minneapolis",
+   "gold": false
+  },
+  {
+   "id": "mq:1d707b88fdb8f4b2",
+   "label": "Minneapolis, Kansas",
+   "wave": 1,
+   "via": "term:minneapolis",
+   "gold": false
+  },
+  {
+   "id": "mq:091906507fd48eb4",
+   "label": "Jucy Lucy",
+   "wave": 1,
+   "via": "term:minneapolis",
+   "gold": false
+  },
+  {
+   "id": "mq:d4f7767a3459cc57",
+   "label": "The Minikahda Club",
+   "wave": 1,
+   "via": "term:minneapolis",
+   "gold": false
+  },
+  {
+   "id": "mq:83436f17dfa0a2cd",
+   "label": "East Lake Library",
+   "wave": 1,
+   "via": "term:minneapolis",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:11f80dce5574d835",
+    "label": "Nigeria",
+    "gold": false
+   },
+   {
+    "id": "mq:32b8a1e709fb2cd8",
+    "label": "Walter Huston",
+    "gold": false
+   },
+   {
+    "id": "mq:3a15714c34409af4",
+    "label": "El Pollo Loco",
+    "gold": false
+   },
+   {
+    "id": "mq:ad4d561334fdf65e",
+    "label": "Amaimo",
+    "gold": false
+   },
+   {
+    "id": "mq:1a34d96260bae03e",
+    "label": "Harrisville Pond",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:1a34d96260bae03e",
+    "label": "Harrisville Pond",
+    "gold": false
+   },
+   {
+    "id": "mq:ec5c570bfcc7167b",
+    "label": "Contoocook Lake",
+    "gold": false
+   },
+   {
+    "id": "mq:4f4fc58cdbcb9775",
+    "label": "Ottawa Waterworks Building",
+    "gold": false
+   },
+   {
+    "id": "mq:9e14ccfb5d8cd88d",
+    "label": "Silver Lake (Madison, New Hampshire)",
+    "gold": false
+   },
+   {
+    "id": "mq:4b60a064a19b362e",
+    "label": "Miami",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:1a34d96260bae03e",
+    "label": "Harrisville Pond",
+    "gold": false
+   },
+   {
+    "id": "mq:ec5c570bfcc7167b",
+    "label": "Contoocook Lake",
+    "gold": false
+   },
+   {
+    "id": "mq:4f4fc58cdbcb9775",
+    "label": "Ottawa Waterworks Building",
+    "gold": false
+   },
+   {
+    "id": "mq:4b60a064a19b362e",
+    "label": "Miami",
+    "gold": false
+   },
+   {
+    "id": "mq:9e14ccfb5d8cd88d",
+    "label": "Silver Lake (Madison, New Hampshire)",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:8c28362b0252634e",
+    "label": "Beaurivage River",
+    "gold": false
+   },
+   {
+    "id": "mq:d5990bfa6c296226",
+    "label": "Ohio River",
+    "gold": true
+   },
+   {
+    "id": "mq:ec5c570bfcc7167b",
+    "label": "Contoocook Lake",
+    "gold": false
+   },
+   {
+    "id": "mq:a62793556fd2b5cf",
+    "label": "Powwow Pond",
+    "gold": false
+   },
+   {
+    "id": "mq:e3812a192add003b",
+    "label": "Kentucky River",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.5
+ }
+}

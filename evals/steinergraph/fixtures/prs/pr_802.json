@@ -1,0 +1,410 @@
+{
+ "qid": "pr:802",
+ "set": "prs",
+ "question": "What work went into this, and why: Kappa round 2: rarest-first names do not carry the bridge; names-only kappa tops out near +.02 on MuSiQue?",
+ "gold": [
+  {
+   "id": "commit/213252bdc9",
+   "label": "commit 213252b: Kappa round 2: rarest-first and door-taken names do not beat the frequency-ordered names line (MuSiQue +",
+   "seed": true
+  },
+  {
+   "id": "commit/3eb9e3bd3f",
+   "label": "commit 3eb9e3b: Kappa round 2: register bridging-name states K4/K5 before scoring; reads keep their route",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/a7418e3e17",
+   "label": "commit a7418e3: Merge pull request #802 from Percolation-Labs/bill/kappa-bridging",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "meta/lab/results/kappa/RESULT.md#5",
+   "label": "meta/lab/results/kappa/RESULT.md \u203a Round 2: rarest-first names do not carry the bridge better (17 Nov, ~00:35Z)",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/messages/M-20261117-001333-aa54.md#1",
+   "label": "board/messages/M-20261117-001333-aa54.md",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/213252bdc9",
+   "label": "commit 213252b: Kappa round 2: rarest-first and door-taken names do not beat the frequency-ordered names line (MuSiQue +",
+   "rank": 4,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "meta/lab/results/kappa/RESULT.md#6",
+   "label": "meta/lab/results/kappa/RESULT.md \u203a Round 2: rarest-first names do not carry the bridge better (17 Nov, ~00:35Z)",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/213252bdc9",
+    "label": "commit 213252b: Kappa round 2: rarest-first and door-taken names do not beat the frequency-ordered names line (MuSiQue +",
+    "role": "gold"
+   },
+   {
+    "id": "commit/3eb9e3bd3f",
+    "label": "commit 3eb9e3b: Kappa round 2: register bridging-name states K4/K5 before scoring; reads keep their route",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/213252bdc9",
+    "b": "commit/3eb9e3bd3f",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "kappa round",
+      "width": 24
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "commit/213252bdc9",
+   "gold": "commit/213252bdc9",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 831,
+  "within_2_doors": 30986,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "commit/3eb9e3bd3f",
+    "label": "commit 3eb9e3b: Kappa round 2: register bridging-name states K4/K5 before scoring; reads keep their route",
+    "p": 0.0060972957682722895,
+    "gold": true
+   },
+   {
+    "id": "meta/lab/results/kappa/REGISTERED.md#3",
+    "label": "meta/lab/results/kappa/REGISTERED.md \u203a Round 2: keep the bridging names (registered 17 Nov ~00:15Z, before scoring)",
+    "p": 0.00560820319365813,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261117-000359-d3a7.md#1",
+    "label": "board/messages/M-20261117-000359-d3a7.md",
+    "p": 0.005409245606325566,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/kappa/RESULT.md#7",
+    "label": "meta/lab/results/kappa/RESULT.md \u203a Round 3: kappa as relations works on both graphs (17 Nov, ~08:30Z)",
+    "p": 0.004070189295066196,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261117-081021-f27f.md#1",
+    "label": "board/messages/M-20261117-081021-f27f.md",
+    "p": 0.003688443646142015,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261117-003557-8ca5.md#1",
+    "label": "board/messages/M-20261117-003557-8ca5.md",
+    "p": 0.0035380726970552145,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261116-193617-4ae4.md#1",
+    "label": "board/messages/M-20261116-193617-4ae4.md",
+    "p": 0.0034459235306257222,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/kappa/RESULT.md#4",
+    "label": "meta/lab/results/kappa/RESULT.md \u203a Postmortem",
+    "p": 0.0029117143590661827,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261117-080547-bcd6.md#1",
+    "label": "board/messages/M-20261117-080547-bcd6.md",
+    "p": 0.0027674036696806225,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-doors/RESULT.md#7",
+    "label": "meta/lab/results/jev-doors/RESULT.md \u203a Postmortem",
+    "p": 0.00251438626005875,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/worlds/mq_kappa.py#1",
+    "label": "meta/lab/worlds/mq_kappa.py",
+    "p": 0.001957027752656616,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/kappa/RESULT.md#8",
+    "label": "meta/lab/results/kappa/RESULT.md \u203a Postmortem",
+    "p": 0.0019249319795137314,
+    "gold": false
+   },
+   {
+    "id": "commit/5b1eec3a72",
+    "label": "commit 5b1eec3: Merge pull request #801 from Percolation-Labs/bill/kappa",
+    "p": 0.0019069378724282965,
+    "gold": false
+   },
+   {
+    "id": "commit/fbe7787369",
+    "label": "commit fbe7787: Merge pull request #813 from Percolation-Labs/bill/kappa-relations",
+    "p": 0.001733654545298513,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/reference-world/REGISTERED.md#9",
+    "label": "meta/lab/results/reference-world/REGISTERED.md \u203a Test 2: does the walk-so-far state's gain depend on bridges being named",
+    "p": 0.0016979515459431523,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/worlds/kappa_state.py#1",
+    "label": "meta/lab/worlds/kappa_state.py",
+    "p": 0.0016461804987719143,
+    "gold": false
+   },
+   {
+    "id": "commit/607afeca19",
+    "label": "commit 607afec: Kappa round 3: register K6 (opening sentences of reads, door-taken first, capped to fit Jev) before scor",
+    "p": 0.001601917942557422,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/kappa/RESULT.md#9",
+    "label": "meta/lab/results/kappa/RESULT.md \u203a Round 4: the ordering is not the gain; the sentences are (17 Nov, ~08:50Z)",
+    "p": 0.0015925068059399572,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/kappa/REGISTERED.md#4",
+    "label": "meta/lab/results/kappa/REGISTERED.md \u203a Round 3: kappa as relations (registered 17 Nov ~08:10Z, before scoring)",
+    "p": 0.0015808508075569492,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/filter-then-rank/RESULT.md#4",
+    "label": "meta/lab/results/filter-then-rank/RESULT.md \u203a Round 2: typing the door's own edge is selective, and it hurts Jev (16 Nov",
+    "p": 0.0015111971710734804,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/a7418e3e17",
+   "label": "commit a7418e3: Merge pull request #802 from Percolation-Labs/bill/kappa-bridging",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/kappa/RESULT.md#5",
+   "label": "meta/lab/results/kappa/RESULT.md \u203a Round 2: rarest-first names do not carry the bridge better (17 Nov, ~00:35Z)",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/messages/M-20261117-001333-aa54.md#1",
+   "label": "board/messages/M-20261117-001333-aa54.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/213252bdc9",
+   "label": "commit 213252b: Kappa round 2: rarest-first and door-taken names do not beat the frequency-ordered names line (MuSiQue +",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "meta/lab/results/kappa/RESULT.md#6",
+   "label": "meta/lab/results/kappa/RESULT.md \u203a Round 2: rarest-first names do not carry the bridge better (17 Nov, ~00:35Z)",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/messages/M-20261117-000359-d3a7.md#1",
+   "label": "board/messages/M-20261117-000359-d3a7.md",
+   "wave": 1,
+   "via": "term:reads taken",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/kappa/REGISTERED.md#4",
+   "label": "meta/lab/results/kappa/REGISTERED.md \u203a Round 3: kappa as relations (registered 17 Nov ~08:10Z, before scoring)",
+   "wave": 1,
+   "via": "term:reads taken",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/kappa/RESULT.md#11",
+   "label": "meta/lab/results/kappa/RESULT.md \u203a Postmortem",
+   "wave": 2,
+   "via": "term:results kappa",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/kappa/round2.txt#2",
+   "label": "meta/lab/results/kappa/round2.txt",
+   "wave": 2,
+   "via": "term:results kappa",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/kappa/RESULT.md#2",
+   "label": "meta/lab/results/kappa/RESULT.md \u203a Worlds, held-out world 3 (232 pages)",
+   "wave": 2,
+   "via": "term:results kappa",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "commit/3eb9e3bd3f",
+    "label": "commit 3eb9e3b: Kappa round 2: register bridging-name states K4/K5 before scoring; reads keep their route",
+    "gold": true
+   },
+   {
+    "id": "meta/lab/results/kappa/REGISTERED.md#3",
+    "label": "meta/lab/results/kappa/REGISTERED.md \u203a Round 2: keep the bridging names (registered 17 Nov ~00:15Z, before scoring)",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261117-000359-d3a7.md#1",
+    "label": "board/messages/M-20261117-000359-d3a7.md",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/kappa/RESULT.md#7",
+    "label": "meta/lab/results/kappa/RESULT.md \u203a Round 3: kappa as relations works on both graphs (17 Nov, ~08:30Z)",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261117-081021-f27f.md#1",
+    "label": "board/messages/M-20261117-081021-f27f.md",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "meta/lab/results/kappa/REGISTERED.md#3",
+    "label": "meta/lab/results/kappa/REGISTERED.md \u203a Round 2: keep the bridging names (registered 17 Nov ~00:15Z, before scoring)",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261116-193617-4ae4.md#1",
+    "label": "board/messages/M-20261116-193617-4ae4.md",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261117-000359-d3a7.md#1",
+    "label": "board/messages/M-20261117-000359-d3a7.md",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/kappa/RESULT.md#7",
+    "label": "meta/lab/results/kappa/RESULT.md \u203a Round 3: kappa as relations works on both graphs (17 Nov, ~08:30Z)",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/kappa/RESULT.md#4",
+    "label": "meta/lab/results/kappa/RESULT.md \u203a Postmortem",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/3eb9e3bd3f",
+    "label": "commit 3eb9e3b: Kappa round 2: register bridging-name states K4/K5 before scoring; reads keep their route",
+    "gold": true
+   },
+   {
+    "id": "board/messages/M-20261117-003557-8ca5.md#1",
+    "label": "board/messages/M-20261117-003557-8ca5.md",
+    "gold": false
+   },
+   {
+    "id": "commit/fbe7787369",
+    "label": "commit fbe7787: Merge pull request #813 from Percolation-Labs/bill/kappa-relations",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/kappa/RESULT.md#7",
+    "label": "meta/lab/results/kappa/RESULT.md \u203a Round 3: kappa as relations works on both graphs (17 Nov, ~08:30Z)",
+    "gold": false
+   },
+   {
+    "id": "commit/9097b85d36",
+    "label": "commit 9097b85: Kappa worlds result (K1 +.134, K2 +.082, K3 +.038 ns) and the MuSiQue scorer, before the MuSiQue score",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "meta/lab/results/kappa/REGISTERED.md#3",
+    "label": "meta/lab/results/kappa/REGISTERED.md \u203a Round 2: keep the bridging names (registered 17 Nov ~00:15Z, before scoring)",
+    "gold": false
+   },
+   {
+    "id": "commit/cc8941c683",
+    "label": "commit cc8941c: Merge pull request #822 from Percolation-Labs/bill/kappa-names-gold",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261116-193617-4ae4.md#1",
+    "label": "board/messages/M-20261116-193617-4ae4.md",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/kappa/REGISTERED.md#4",
+    "label": "meta/lab/results/kappa/REGISTERED.md \u203a Round 3: kappa as relations (registered 17 Nov ~08:10Z, before scoring)",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/worlds/mq_kappa.py#1",
+    "label": "meta/lab/worlds/mq_kappa.py",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 1.0,
+  "Q": 0.0,
+  "LQ": 1.0,
+  "S": 0.0
+ }
+}

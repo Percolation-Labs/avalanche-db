@@ -1,0 +1,420 @@
+{
+ "qid": "pr:775",
+ "set": "prs",
+ "question": "What work went into this, and why: Jev stage 0 under budget top-k: beats search at 100 reads on 2 of 3, $0.014?",
+ "gold": [
+  {
+   "id": "commit/2fc33d7020",
+   "label": "commit 2fc33d7: jev-topk-stage0: Jev's top door beats search at 100 reads on 2 of 3, ties the hidden one; $0.014",
+   "seed": true
+  },
+  {
+   "id": "commit/ec90f619f7",
+   "label": "commit ec90f61: jev-topk-stage0: registration before any live call, and the driver with a live Jev decider",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/fda776bb99",
+   "label": "commit fda776b: Merge pull request #775 from Percolation-Labs/james/jev-topk-stage0",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/2fc33d7020",
+   "label": "commit 2fc33d7: jev-topk-stage0: Jev's top door beats search at 100 reads on 2 of 3, ties the hidden one; $0.014",
+   "rank": 2,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "meta/lab/results/topk-open/RESULT.md#5",
+   "label": "meta/lab/results/topk-open/RESULT.md \u203a Registration (written and committed before any top-k walk was scored)",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "meta/lab/results/batchlog-rescore/RESULT.md#9",
+   "label": "meta/lab/results/batchlog-rescore/RESULT.md \u203a Experiment 2: the walk under budget top-k against search at an equal numbe",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "meta/lab/results/jev-topk-stage0/RESULT.md#1",
+   "label": "meta/lab/results/jev-topk-stage0/RESULT.md \u203a Jev live under budget top-k, stage 0 (16 Nov, james)",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/2fc33d7020",
+    "label": "commit 2fc33d7: jev-topk-stage0: Jev's top door beats search at 100 reads on 2 of 3, ties the hidden one; $0.014",
+    "role": "gold"
+   },
+   {
+    "id": "commit/ec90f619f7",
+    "label": "commit ec90f61: jev-topk-stage0: registration before any live call, and the driver with a live Jev decider",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/2fc33d7020",
+    "b": "commit/ec90f619f7",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "topk stage0",
+      "width": 18
+     },
+     {
+      "kind": "term",
+      "key": "jev topk",
+      "width": 38
+     },
+     {
+      "kind": "term",
+      "key": "stage0",
+      "width": 57
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "commit/2fc33d7020",
+   "gold": "commit/2fc33d7020",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 937,
+  "within_2_doors": 28503,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "meta/lab/results/topk-open/RESULT.md#4",
+    "label": "meta/lab/results/topk-open/RESULT.md \u203a Registration (written and committed before any top-k walk was scored)",
+    "p": 0.005437851258727599,
+    "gold": false
+   },
+   {
+    "id": "commit/ec90f619f7",
+    "label": "commit ec90f61: jev-topk-stage0: registration before any live call, and the driver with a live Jev decider",
+    "p": 0.004413536752734928,
+    "gold": true
+   },
+   {
+    "id": "board/messages/M-20261115-201648-f65c.md#1",
+    "label": "board/messages/M-20261115-201648-f65c.md",
+    "p": 0.004007854916320792,
+    "gold": false
+   },
+   {
+    "id": "commit/8e934cb5e8",
+    "label": "commit 8e934cb: Merge pull request #817 from Percolation-Labs/bill/width-check",
+    "p": 0.003648945049821079,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/batchlog-rescore/RESULT.md#10",
+    "label": "meta/lab/results/batchlog-rescore/RESULT.md \u203a Experiment 2: the walk under budget top-k against search at an equal numbe",
+    "p": 0.003104696952653358,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-topk-stage0/RESULT.md#2",
+    "label": "meta/lab/results/jev-topk-stage0/RESULT.md \u203a Registration (committed before any live call)",
+    "p": 0.002791023802829257,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/batchlog-rescore/RESULT.md#5",
+    "label": "meta/lab/results/batchlog-rescore/RESULT.md \u203a Experiment 2: the walk under budget top-k against search at an equal numbe",
+    "p": 0.0023492065916508355,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-topk-full/drive.py#1",
+    "label": "meta/lab/results/jev-topk-full/drive.py",
+    "p": 0.0020103397643884704,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-topk-stage0/RESULT.md#3",
+    "label": "meta/lab/results/jev-topk-stage0/RESULT.md \u203a Result",
+    "p": 0.001957492954369462,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/door-read-order/RESULT.md#6",
+    "label": "meta/lab/results/door-read-order/RESULT.md \u203a Next test",
+    "p": 0.0019072913458694153,
+    "gold": false
+   },
+   {
+    "id": "commit/95651a06fb",
+    "label": "commit 95651a0: board: james messages sirsh",
+    "p": 0.0018926651618675831,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-topk-stage0/drive.py#1",
+    "label": "meta/lab/results/jev-topk-stage0/drive.py",
+    "p": 0.0018724663659051527,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-topk-full/RESULT.md#5",
+    "label": "meta/lab/results/jev-topk-full/RESULT.md \u203a Postmortem",
+    "p": 0.00187021108021542,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-topk-full/RESULT.md#1",
+    "label": "meta/lab/results/jev-topk-full/RESULT.md \u203a Jev under budget top-k, all 42 questions (16 Nov, james)",
+    "p": 0.0017155987451622225,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261116-105453-7728.md#1",
+    "label": "board/messages/M-20261116-105453-7728.md",
+    "p": 0.0016331852608088189,
+    "gold": false
+   },
+   {
+    "id": "commit/9c175586d2",
+    "label": "commit 9c17558: board: file REM-1337 writing: invite a reviewer to a private draft",
+    "p": 0.0015433768764819362,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-topk-stage0/drive.py#4",
+    "label": "meta/lab/results/jev-topk-stage0/drive.py",
+    "p": 0.0014864917002370638,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/topk-open/RESULT.md#2",
+    "label": "meta/lab/results/topk-open/RESULT.md \u203a Top-k opening instead of the .5 gate, replayed from Jev's cache (15 Nov, james)",
+    "p": 0.0014788085081472253,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-topk-stage0/drive.py#3",
+    "label": "meta/lab/results/jev-topk-stage0/drive.py",
+    "p": 0.001406345996756398,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-topk-full/RESULT.md#2",
+    "label": "meta/lab/results/jev-topk-full/RESULT.md \u203a Registration (committed before any live call)",
+    "p": 0.0014017737816990462,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/fda776bb99",
+   "label": "commit fda776b: Merge pull request #775 from Percolation-Labs/james/jev-topk-stage0",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/2fc33d7020",
+   "label": "commit 2fc33d7: jev-topk-stage0: Jev's top door beats search at 100 reads on 2 of 3, ties the hidden one; $0.014",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "meta/lab/results/topk-open/RESULT.md#5",
+   "label": "meta/lab/results/topk-open/RESULT.md \u203a Registration (written and committed before any top-k walk was scored)",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/batchlog-rescore/RESULT.md#9",
+   "label": "meta/lab/results/batchlog-rescore/RESULT.md \u203a Experiment 2: the walk under budget top-k against search at an equal numbe",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/jev-topk-stage0/RESULT.md#1",
+   "label": "meta/lab/results/jev-topk-stage0/RESULT.md \u203a Jev live under budget top-k, stage 0 (16 Nov, james)",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/jev-topk-stage0/drive.py#4",
+   "label": "meta/lab/results/jev-topk-stage0/drive.py",
+   "wave": 1,
+   "via": "term:jev topk",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/jev-topk-stage0/drive.py#5",
+   "label": "meta/lab/results/jev-topk-stage0/drive.py",
+   "wave": 1,
+   "via": "term:jev topk",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/jev-topk-full/score-result.txt#1",
+   "label": "meta/lab/results/jev-topk-full/score-result.txt",
+   "wave": 1,
+   "via": "term:jev topk",
+   "gold": false
+  },
+  {
+   "id": "commit/3668f5302f",
+   "label": "commit 3668f53: Merge pull request #777 from Percolation-Labs/james/jev-topk-full",
+   "wave": 1,
+   "via": "term:jev topk",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/jev-topk-full/drive.py#6",
+   "label": "meta/lab/results/jev-topk-full/drive.py",
+   "wave": 1,
+   "via": "term:jev topk",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "meta/lab/results/topk-open/RESULT.md#4",
+    "label": "meta/lab/results/topk-open/RESULT.md \u203a Registration (written and committed before any top-k walk was scored)",
+    "gold": false
+   },
+   {
+    "id": "commit/ec90f619f7",
+    "label": "commit ec90f61: jev-topk-stage0: registration before any live call, and the driver with a live Jev decider",
+    "gold": true
+   },
+   {
+    "id": "board/messages/M-20261115-201648-f65c.md#1",
+    "label": "board/messages/M-20261115-201648-f65c.md",
+    "gold": false
+   },
+   {
+    "id": "commit/8e934cb5e8",
+    "label": "commit 8e934cb: Merge pull request #817 from Percolation-Labs/bill/width-check",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/batchlog-rescore/RESULT.md#10",
+    "label": "meta/lab/results/batchlog-rescore/RESULT.md \u203a Experiment 2: the walk under budget top-k against search at an equal numbe",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "meta/lab/results/topk-open/RESULT.md#4",
+    "label": "meta/lab/results/topk-open/RESULT.md \u203a Registration (written and committed before any top-k walk was scored)",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/batchlog-rescore/RESULT.md#5",
+    "label": "meta/lab/results/batchlog-rescore/RESULT.md \u203a Experiment 2: the walk under budget top-k against search at an equal numbe",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-topk-stage0/RESULT.md#2",
+    "label": "meta/lab/results/jev-topk-stage0/RESULT.md \u203a Registration (committed before any live call)",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261115-201648-f65c.md#1",
+    "label": "board/messages/M-20261115-201648-f65c.md",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/batchlog-rescore/RESULT.md#10",
+    "label": "meta/lab/results/batchlog-rescore/RESULT.md \u203a Experiment 2: the walk under budget top-k against search at an equal numbe",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "meta/lab/results/batchlog-rescore/RESULT.md#10",
+    "label": "meta/lab/results/batchlog-rescore/RESULT.md \u203a Experiment 2: the walk under budget top-k against search at an equal numbe",
+    "gold": false
+   },
+   {
+    "id": "commit/8e934cb5e8",
+    "label": "commit 8e934cb: Merge pull request #817 from Percolation-Labs/bill/width-check",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261115-201648-f65c.md#1",
+    "label": "board/messages/M-20261115-201648-f65c.md",
+    "gold": false
+   },
+   {
+    "id": "commit/ec90f619f7",
+    "label": "commit ec90f61: jev-topk-stage0: registration before any live call, and the driver with a live Jev decider",
+    "gold": true
+   },
+   {
+    "id": "commit/95651a06fb",
+    "label": "commit 95651a0: board: james messages sirsh",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "meta/lab/results/batchlog-rescore/RESULT.md#5",
+    "label": "meta/lab/results/batchlog-rescore/RESULT.md \u203a Experiment 2: the walk under budget top-k against search at an equal numbe",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/page-topk/RESULT.md#3",
+    "label": "meta/lab/results/page-topk/RESULT.md \u203a 759); otherwise *hidden*. HELD-OUT and DEV are reported separately.",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261029-211150-3846.md#1",
+    "label": "board/messages/M-20261029-211150-3846.md",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-topk-full/RESULT.md#1",
+    "label": "meta/lab/results/jev-topk-full/RESULT.md \u203a Jev under budget top-k, all 42 questions (16 Nov, james)",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/batchlog-rescore/RESULT.md#12",
+    "label": "meta/lab/results/batchlog-rescore/RESULT.md \u203a Postmortem",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 1.0,
+  "Q": 0.0,
+  "LQ": 1.0,
+  "S": 0.0
+ }
+}

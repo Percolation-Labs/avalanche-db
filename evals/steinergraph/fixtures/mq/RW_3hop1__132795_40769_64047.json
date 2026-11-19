@@ -1,0 +1,435 @@
+{
+ "qid": "RW:3hop1__132795_40769_64047",
+ "set": "mq",
+ "question": "When did the luxury division of the company that produces TMG EV P001 change the body style of rx 350?",
+ "gold": [
+  {
+   "id": "mq:085633576b501a05",
+   "label": "TMG EV P001",
+   "seed": true
+  },
+  {
+   "id": "mq:2e2b0b093721a57a",
+   "label": "1973 oil crisis",
+   "seed": false
+  },
+  {
+   "id": "mq:7919472ea59ef28a",
+   "label": "Lexus RX",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:085633576b501a05",
+   "label": "TMG EV P001",
+   "rank": 1,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:2a7c9181742545e2",
+   "label": "Hyundai Universe",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:4d41ef62ccf3ed3b",
+   "label": "Lincoln Town Car",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:67e10d400fdd89e6",
+   "label": "Genesis Motor",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:81d98995749a516d",
+   "label": "Studio 60 on the Sunset Strip",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:085633576b501a05",
+    "label": "TMG EV P001",
+    "role": "gold"
+   },
+   {
+    "id": "mq:2e2b0b093721a57a",
+    "label": "1973 oil crisis",
+    "role": "gold"
+   },
+   {
+    "id": "mq:7919472ea59ef28a",
+    "label": "Lexus RX",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:085633576b501a05",
+    "b": "mq:2e2b0b093721a57a",
+    "via": [
+     {
+      "kind": "term",
+      "key": "toyota",
+      "width": 32
+     },
+     {
+      "kind": "term",
+      "key": "vehicle",
+      "width": 66
+     }
+    ]
+   },
+   {
+    "a": "mq:2e2b0b093721a57a",
+    "b": "mq:7919472ea59ef28a",
+    "via": [
+     {
+      "kind": "term",
+      "key": "lexus",
+      "width": 8
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   2,
+   1
+  ],
+  "entry": {
+   "seed": "mq:085633576b501a05",
+   "gold": "mq:085633576b501a05",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 2035,
+  "within_2_doors": 19031,
+  "gold_within_1": 2,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "mq:ea3b93b0c63a9a25",
+    "label": "Hyundai Global 900",
+    "p": 0.005516374264717471,
+    "gold": false
+   },
+   {
+    "id": "mq:ffb3d9ccb546dc35",
+    "label": "Hyundai Trago",
+    "p": 0.00400127877532452,
+    "gold": false
+   },
+   {
+    "id": "mq:33d2cdcde45e339a",
+    "label": "Hyundai e-Mighty",
+    "p": 0.003972175162051045,
+    "gold": false
+   },
+   {
+    "id": "mq:5f7f48338be78cd1",
+    "label": "Hyundai Mighty",
+    "p": 0.003447307986731428,
+    "gold": false
+   },
+   {
+    "id": "mq:ab5240241c486c29",
+    "label": "Hyundai Mighty II",
+    "p": 0.0032616959519475414,
+    "gold": false
+   },
+   {
+    "id": "mq:6281d835bca35b9d",
+    "label": "Ford Crown Victoria",
+    "p": 0.0031053785586685387,
+    "gold": false
+   },
+   {
+    "id": "mq:c5b0bbda06c47771",
+    "label": "Hyundai Aero City",
+    "p": 0.003049191516894467,
+    "gold": false
+   },
+   {
+    "id": "mq:d09f8f8014cbdcbc",
+    "label": "Infiniti G-series (Q40/Q60)",
+    "p": 0.002485700696332514,
+    "gold": false
+   },
+   {
+    "id": "mq:fcdb428b5d779104",
+    "label": "Infiniti J30",
+    "p": 0.00222737191725924,
+    "gold": false
+   },
+   {
+    "id": "mq:bc6ba2f2dbec2d3c",
+    "label": "Pontiac Firebird",
+    "p": 0.002009436674245192,
+    "gold": false
+   },
+   {
+    "id": "mq:b703e57f3f23fc45",
+    "label": "Hyundai HCD6",
+    "p": 0.0016003857315316683,
+    "gold": false
+   },
+   {
+    "id": "mq:604e022d44a504f5",
+    "label": "Acura RLX",
+    "p": 0.001523189689129874,
+    "gold": false
+   },
+   {
+    "id": "mq:e819ad12dcb1f809",
+    "label": "EVO (comics)",
+    "p": 0.0014952305259605444,
+    "gold": false
+   },
+   {
+    "id": "mq:60b0a785af7c33d0",
+    "label": "Nissan Rogue",
+    "p": 0.0014788039931218724,
+    "gold": false
+   },
+   {
+    "id": "mq:99b1ab53dc339a18",
+    "label": "Electric Vehicle (1899 automobile)",
+    "p": 0.0014091020529778217,
+    "gold": false
+   },
+   {
+    "id": "mq:18ce99a4875a0687",
+    "label": "Infiniti Q45",
+    "p": 0.0013920220177854163,
+    "gold": false
+   },
+   {
+    "id": "mq:a065caba96684876",
+    "label": "TransMarket Group",
+    "p": 0.0013424875883923416,
+    "gold": false
+   },
+   {
+    "id": "mq:05cd8eaec0f6c281",
+    "label": "Nissan Fuga",
+    "p": 0.0013027111851609356,
+    "gold": false
+   },
+   {
+    "id": "mq:dd574f5eb017feb9",
+    "label": "History of laptops",
+    "p": 0.0012580645466214514,
+    "gold": false
+   },
+   {
+    "id": "mq:13f0bedc74b932bd",
+    "label": "Toyota Matrix",
+    "p": 0.0012578077246859802,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:085633576b501a05",
+   "label": "TMG EV P001",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:2a7c9181742545e2",
+   "label": "Hyundai Universe",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:4d41ef62ccf3ed3b",
+   "label": "Lincoln Town Car",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:67e10d400fdd89e6",
+   "label": "Genesis Motor",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:81d98995749a516d",
+   "label": "Studio 60 on the Sunset Strip",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:57417b6802ba4803",
+   "label": "Volkswagen Group",
+   "wave": 1,
+   "via": "term:toyota",
+   "gold": false
+  },
+  {
+   "id": "mq:4c807422c915e341",
+   "label": "Scion xB",
+   "wave": 1,
+   "via": "term:toyota",
+   "gold": false
+  },
+  {
+   "id": "mq:b8633eca19c2eb44",
+   "label": "Katsuaki Watanabe",
+   "wave": 1,
+   "via": "term:toyota",
+   "gold": false
+  },
+  {
+   "id": "mq:f91c981daf6fb33d",
+   "label": "Scion bbX",
+   "wave": 1,
+   "via": "term:toyota",
+   "gold": false
+  },
+  {
+   "id": "mq:ce16e40f086d9f42",
+   "label": "Toyota",
+   "wave": 1,
+   "via": "term:toyota",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:ea3b93b0c63a9a25",
+    "label": "Hyundai Global 900",
+    "gold": false
+   },
+   {
+    "id": "mq:ffb3d9ccb546dc35",
+    "label": "Hyundai Trago",
+    "gold": false
+   },
+   {
+    "id": "mq:33d2cdcde45e339a",
+    "label": "Hyundai e-Mighty",
+    "gold": false
+   },
+   {
+    "id": "mq:5f7f48338be78cd1",
+    "label": "Hyundai Mighty",
+    "gold": false
+   },
+   {
+    "id": "mq:ab5240241c486c29",
+    "label": "Hyundai Mighty II",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:ea3b93b0c63a9a25",
+    "label": "Hyundai Global 900",
+    "gold": false
+   },
+   {
+    "id": "mq:ffb3d9ccb546dc35",
+    "label": "Hyundai Trago",
+    "gold": false
+   },
+   {
+    "id": "mq:a065caba96684876",
+    "label": "TransMarket Group",
+    "gold": false
+   },
+   {
+    "id": "mq:d09f8f8014cbdcbc",
+    "label": "Infiniti G-series (Q40/Q60)",
+    "gold": false
+   },
+   {
+    "id": "mq:bc6ba2f2dbec2d3c",
+    "label": "Pontiac Firebird",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:d09f8f8014cbdcbc",
+    "label": "Infiniti G-series (Q40/Q60)",
+    "gold": false
+   },
+   {
+    "id": "mq:0cbbba4108948c8a",
+    "label": "Mercedes-Benz G-Class",
+    "gold": false
+   },
+   {
+    "id": "mq:e92983794b098175",
+    "label": "Mercedes-Benz G-Class",
+    "gold": false
+   },
+   {
+    "id": "mq:ffb3d9ccb546dc35",
+    "label": "Hyundai Trago",
+    "gold": false
+   },
+   {
+    "id": "mq:ea3b93b0c63a9a25",
+    "label": "Hyundai Global 900",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:4779450bf31d0758",
+    "label": "Acura RL",
+    "gold": false
+   },
+   {
+    "id": "mq:3e6571510518ac14",
+    "label": "Kawasaki MULE",
+    "gold": false
+   },
+   {
+    "id": "mq:d93c436d819682cd",
+    "label": "Delage",
+    "gold": false
+   },
+   {
+    "id": "mq:ffb3d9ccb546dc35",
+    "label": "Hyundai Trago",
+    "gold": false
+   },
+   {
+    "id": "mq:c03f5741fc315183",
+    "label": "Body Story",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

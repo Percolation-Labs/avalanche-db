@@ -1,0 +1,500 @@
+{
+ "qid": "RW:4hop1__860115_798482_131926_89261",
+ "set": "mq",
+ "question": "Where does the river by the city sharing a border with Elizabeth Berg's birthplace empty into the Gulf of Mexico?",
+ "gold": [
+  {
+   "id": "mq:27e9c1f2a582bb60",
+   "label": "Newgate Education Center",
+   "seed": false
+  },
+  {
+   "id": "mq:72cb7ead3ba4477f",
+   "label": "Mississippi River",
+   "seed": false
+  },
+  {
+   "id": "mq:968580ab971e29b0",
+   "label": "Elizabeth Berg (author)",
+   "seed": false
+  },
+  {
+   "id": "mq:fa5ce36f072ada0a",
+   "label": "Minneapolis",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:4ca772688948d344",
+   "label": "Gulf of Mexico",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:142d8a3e67d54ee1",
+   "label": "Colorado River (Texas)",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:baff4d1fdd99b94d",
+   "label": "Ocoyoacac",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "mq:1e4cd6b73139514c",
+   "label": "Havana",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "mq:c9c971f6300c0ba4",
+   "label": "Gulf of Mexico",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:27e9c1f2a582bb60",
+    "label": "Newgate Education Center",
+    "role": "gold"
+   },
+   {
+    "id": "mq:4ca772688948d344",
+    "label": "Gulf of Mexico",
+    "role": "seed"
+   },
+   {
+    "id": "mq:72cb7ead3ba4477f",
+    "label": "Mississippi River",
+    "role": "gold"
+   },
+   {
+    "id": "mq:968580ab971e29b0",
+    "label": "Elizabeth Berg (author)",
+    "role": "gold"
+   },
+   {
+    "id": "mq:fa5ce36f072ada0a",
+    "label": "Minneapolis",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:27e9c1f2a582bb60",
+    "b": "mq:968580ab971e29b0",
+    "via": [
+     {
+      "kind": "term",
+      "key": "paul minnesota",
+      "width": 13
+     },
+     {
+      "kind": "term",
+      "key": "saint paul",
+      "width": 20
+     }
+    ]
+   },
+   {
+    "a": "mq:27e9c1f2a582bb60",
+    "b": "mq:fa5ce36f072ada0a",
+    "via": [
+     {
+      "kind": "term",
+      "key": "saint paul",
+      "width": 20
+     },
+     {
+      "kind": "term",
+      "key": "minneapolis",
+      "width": 40
+     }
+    ]
+   },
+   {
+    "a": "mq:4ca772688948d344",
+    "b": "mq:72cb7ead3ba4477f",
+    "via": [
+     {
+      "kind": "term",
+      "key": "american continent",
+      "width": 7
+     },
+     {
+      "kind": "term",
+      "key": "continent",
+      "width": 60
+     },
+     {
+      "kind": "term",
+      "key": "louisiana",
+      "width": 72
+     },
+     {
+      "kind": "term",
+      "key": "north american",
+      "width": 83
+     },
+     {
+      "kind": "term",
+      "key": "basin",
+      "width": 92
+     }
+    ]
+   },
+   {
+    "a": "mq:72cb7ead3ba4477f",
+    "b": "mq:fa5ce36f072ada0a",
+    "via": [
+     {
+      "kind": "term",
+      "key": "mississippi river",
+      "width": 54
+     }
+    ]
+   }
+  ],
+  "cost": 4,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   2,
+   1,
+   1,
+   2,
+   1,
+   1
+  ],
+  "entry": {
+   "seed": "mq:4ca772688948d344",
+   "gold": "mq:72cb7ead3ba4477f",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 2027,
+  "within_2_doors": 19039,
+  "gold_within_1": 2,
+  "gold_within_2": 2,
+  "top_U": [
+   {
+    "id": "mq:3237b5df056c576c",
+    "label": "Gulf of Mexico",
+    "p": 0.012367160327191543,
+    "gold": false
+   },
+   {
+    "id": "mq:9e5e53df93e1382d",
+    "label": "Julio C\u00e9sar F\u00e9lix",
+    "p": 0.004585022128257081,
+    "gold": false
+   },
+   {
+    "id": "mq:d96823a51b7f0c54",
+    "label": "Xico, State of Mexico",
+    "p": 0.0031873141368122626,
+    "gold": false
+   },
+   {
+    "id": "mq:e81ebd65a49666a4",
+    "label": "Mexico City",
+    "p": 0.001860308635568994,
+    "gold": false
+   },
+   {
+    "id": "mq:a94e7c470887ac85",
+    "label": "History of Mexico City",
+    "p": 0.0017579783002787436,
+    "gold": false
+   },
+   {
+    "id": "mq:c996a1ef523ace4b",
+    "label": "Cuacos de Yuste",
+    "p": 0.0017547553552483893,
+    "gold": false
+   },
+   {
+    "id": "mq:ca2eef577e0d896d",
+    "label": "Mexico",
+    "p": 0.0017428426945443436,
+    "gold": false
+   },
+   {
+    "id": "mq:b29f95dd3e34f0ae",
+    "label": "Kempele",
+    "p": 0.001739409346512142,
+    "gold": false
+   },
+   {
+    "id": "mq:aeabed357883b6cc",
+    "label": "Cedar Bayou",
+    "p": 0.0016745615526016042,
+    "gold": false
+   },
+   {
+    "id": "mq:317bdfece9da5498",
+    "label": "Colleen Ballinger",
+    "p": 0.0016663382834586063,
+    "gold": false
+   },
+   {
+    "id": "mq:b3efe51b58293228",
+    "label": "Beaufort Sea",
+    "p": 0.0015685407583270897,
+    "gold": false
+   },
+   {
+    "id": "mq:1569588eedb1f639",
+    "label": "Columbia, South Carolina",
+    "p": 0.0013672175176068673,
+    "gold": false
+   },
+   {
+    "id": "mq:27a02e06265a1260",
+    "label": "Valdes Peninsula",
+    "p": 0.0013501743628214124,
+    "gold": false
+   },
+   {
+    "id": "mq:42e905b3a059e656",
+    "label": "European Union Referendum Act 2015",
+    "p": 0.0013089859302126139,
+    "gold": false
+   },
+   {
+    "id": "mq:ebf2f74cf5a2ec30",
+    "label": "Bogot\u00e1",
+    "p": 0.0012832136412582688,
+    "gold": false
+   },
+   {
+    "id": "mq:5c6924a153cca912",
+    "label": "Joseph Seigenthaler",
+    "p": 0.0012743947541404921,
+    "gold": false
+   },
+   {
+    "id": "mq:2f472c2706874eb5",
+    "label": "Where Will I Be Now",
+    "p": 0.0012674088930889062,
+    "gold": false
+   },
+   {
+    "id": "mq:aa9739b9b34a26e1",
+    "label": "C. E. T. Warren",
+    "p": 0.001258701899077703,
+    "gold": false
+   },
+   {
+    "id": "mq:fb67048549ad3ec2",
+    "label": "Dry Tortugas",
+    "p": 0.0009087365842669818,
+    "gold": false
+   },
+   {
+    "id": "mq:4ab3b53599baa0cc",
+    "label": "Little Conch Key",
+    "p": 0.0007962061483197746,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:4ca772688948d344",
+   "label": "Gulf of Mexico",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:142d8a3e67d54ee1",
+   "label": "Colorado River (Texas)",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:baff4d1fdd99b94d",
+   "label": "Ocoyoacac",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:1e4cd6b73139514c",
+   "label": "Havana",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:c9c971f6300c0ba4",
+   "label": "Gulf of Mexico",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:08b812cae61a4340",
+   "label": "Live at Lincoln Hall",
+   "wave": 1,
+   "via": "term:austin",
+   "gold": false
+  },
+  {
+   "id": "mq:447ba92b2bfbcff6",
+   "label": "What's Eating Gilbert Grape",
+   "wave": 1,
+   "via": "term:austin",
+   "gold": false
+  },
+  {
+   "id": "mq:799c468552226622",
+   "label": "Andy Roddick",
+   "wave": 1,
+   "via": "term:austin",
+   "gold": false
+  },
+  {
+   "id": "mq:b286ab2a84f29aef",
+   "label": "A Theory of Fun for Game Design",
+   "wave": 1,
+   "via": "term:austin",
+   "gold": false
+  },
+  {
+   "id": "mq:d38a33a1909c3846",
+   "label": "Baden-Powell International House",
+   "wave": 1,
+   "via": "term:austin",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:3237b5df056c576c",
+    "label": "Gulf of Mexico",
+    "gold": false
+   },
+   {
+    "id": "mq:9e5e53df93e1382d",
+    "label": "Julio C\u00e9sar F\u00e9lix",
+    "gold": false
+   },
+   {
+    "id": "mq:d96823a51b7f0c54",
+    "label": "Xico, State of Mexico",
+    "gold": false
+   },
+   {
+    "id": "mq:e81ebd65a49666a4",
+    "label": "Mexico City",
+    "gold": false
+   },
+   {
+    "id": "mq:a94e7c470887ac85",
+    "label": "History of Mexico City",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:3237b5df056c576c",
+    "label": "Gulf of Mexico",
+    "gold": false
+   },
+   {
+    "id": "mq:9e5e53df93e1382d",
+    "label": "Julio C\u00e9sar F\u00e9lix",
+    "gold": false
+   },
+   {
+    "id": "mq:ca2eef577e0d896d",
+    "label": "Mexico",
+    "gold": false
+   },
+   {
+    "id": "mq:d96823a51b7f0c54",
+    "label": "Xico, State of Mexico",
+    "gold": false
+   },
+   {
+    "id": "mq:aeabed357883b6cc",
+    "label": "Cedar Bayou",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:3237b5df056c576c",
+    "label": "Gulf of Mexico",
+    "gold": false
+   },
+   {
+    "id": "mq:ca2eef577e0d896d",
+    "label": "Mexico",
+    "gold": false
+   },
+   {
+    "id": "mq:d96823a51b7f0c54",
+    "label": "Xico, State of Mexico",
+    "gold": false
+   },
+   {
+    "id": "mq:9e5e53df93e1382d",
+    "label": "Julio C\u00e9sar F\u00e9lix",
+    "gold": false
+   },
+   {
+    "id": "mq:fdc7c3ebd15fe27e",
+    "label": "San Miguel de Allende",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:c5b88426198165ab",
+    "label": "Imperial Valley",
+    "gold": false
+   },
+   {
+    "id": "mq:d1cc4802d1a4cf88",
+    "label": "Perdido River",
+    "gold": false
+   },
+   {
+    "id": "mq:55dd1002be19f182",
+    "label": "Comalcalco (archaeological site)",
+    "gold": false
+   },
+   {
+    "id": "mq:968580ab971e29b0",
+    "label": "Elizabeth Berg (author)",
+    "gold": true
+   },
+   {
+    "id": "mq:3237b5df056c576c",
+    "label": "Gulf of Mexico",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.25
+ }
+}

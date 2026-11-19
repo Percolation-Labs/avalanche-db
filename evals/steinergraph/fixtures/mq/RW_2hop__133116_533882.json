@@ -1,0 +1,412 @@
+{
+ "qid": "RW:2hop__133116_533882",
+ "set": "mq",
+ "question": "What company resulted from a merger in 1961 involving the builder of the Martin BM?",
+ "gold": [
+  {
+   "id": "mq:0de4a84586a9a2bf",
+   "label": "Martin BM",
+   "seed": true
+  },
+  {
+   "id": "mq:152f4b2bb691d84d",
+   "label": "Martin Marietta",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:152f4b2bb691d84d",
+   "label": "Martin Marietta",
+   "rank": 1,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:8db0c4a0d3401832",
+   "label": "Wipac",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:fb1f7dfc7ef2c7ef",
+   "label": "Couchbase Server",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:0de4a84586a9a2bf",
+   "label": "Martin BM",
+   "rank": 4,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:f2e964256fbbd9f0",
+   "label": "Dexter King",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 3
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:0de4a84586a9a2bf",
+    "label": "Martin BM",
+    "role": "gold"
+   },
+   {
+    "id": "mq:152f4b2bb691d84d",
+    "label": "Martin Marietta",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:0de4a84586a9a2bf",
+    "b": "mq:152f4b2bb691d84d",
+    "via": [
+     {
+      "kind": "term",
+      "key": "martin company",
+      "width": 4
+     },
+     {
+      "kind": "term",
+      "key": "glenn",
+      "width": 36
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "mq:0de4a84586a9a2bf",
+   "gold": "mq:0de4a84586a9a2bf",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 1133,
+  "within_2_doors": 19849,
+  "gold_within_1": 0,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "mq:6b6098cc167ef8d0",
+    "label": "Lockheed Martin A2100",
+    "p": 0.003190679951129592,
+    "gold": false
+   },
+   {
+    "id": "mq:81501b6de32f95b1",
+    "label": "King (miniseries)",
+    "p": 0.0029550083185141654,
+    "gold": false
+   },
+   {
+    "id": "mq:68fa1d2c2ea00216",
+    "label": "AAM-N-4 Oriole",
+    "p": 0.0026293165047437343,
+    "gold": false
+   },
+   {
+    "id": "mq:8331d30f4eff8f99",
+    "label": "ASM-N-5 Gorgon V",
+    "p": 0.002493780212980392,
+    "gold": false
+   },
+   {
+    "id": "mq:e5adb21346f7f2d3",
+    "label": "Comcast",
+    "p": 0.0014142765269364221,
+    "gold": false
+   },
+   {
+    "id": "mq:f430159629f376a6",
+    "label": "Arnold Schwarzenegger",
+    "p": 0.0014113529217624006,
+    "gold": false
+   },
+   {
+    "id": "mq:e1606e64263448b0",
+    "label": "Spectrum HoloByte",
+    "p": 0.0014075563815409275,
+    "gold": false
+   },
+   {
+    "id": "mq:b82f7f37dfe75bd9",
+    "label": "Arnold Schwarzenegger",
+    "p": 0.0014049099549785246,
+    "gold": false
+   },
+   {
+    "id": "mq:d6d79b34892b153a",
+    "label": "Verizon Communications",
+    "p": 0.0013752056697009978,
+    "gold": false
+   },
+   {
+    "id": "mq:ab5e9e1e7ff75ef1",
+    "label": "The Blitz",
+    "p": 0.0013592803177285525,
+    "gold": false
+   },
+   {
+    "id": "mq:9755f5f9e181648f",
+    "label": "Windows Server 2012",
+    "p": 0.0013327210568876496,
+    "gold": false
+   },
+   {
+    "id": "mq:59804e05f26d8419",
+    "label": "Toyota Racing Development",
+    "p": 0.0013304634119016272,
+    "gold": false
+   },
+   {
+    "id": "mq:7a5cbad34fe69ca8",
+    "label": "Walter Storp",
+    "p": 0.001289488558028554,
+    "gold": false
+   },
+   {
+    "id": "mq:d5946a7613b1599d",
+    "label": "Taisto-class motor torpedo boat",
+    "p": 0.0012885092860579694,
+    "gold": false
+   },
+   {
+    "id": "mq:58ac6c73002907da",
+    "label": "Lockheed Air Express",
+    "p": 0.0012325297315891564,
+    "gold": false
+   },
+   {
+    "id": "mq:73c0e56d4cdeba65",
+    "label": "Lockheed C-5 Galaxy",
+    "p": 0.0012098904769956825,
+    "gold": false
+   },
+   {
+    "id": "mq:2379144da34c2375",
+    "label": "Windows Server 2012",
+    "p": 0.0011925915262451117,
+    "gold": false
+   },
+   {
+    "id": "mq:77e50f0ca49e89b8",
+    "label": "Intrall",
+    "p": 0.0011881053484396433,
+    "gold": false
+   },
+   {
+    "id": "mq:c582067ddc485b7f",
+    "label": "Windows Server 2016",
+    "p": 0.0011366641994641205,
+    "gold": false
+   },
+   {
+    "id": "mq:853553daa07bde13",
+    "label": "Dumbledore's Army",
+    "p": 0.0011317542411012705,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:152f4b2bb691d84d",
+   "label": "Martin Marietta",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:8db0c4a0d3401832",
+   "label": "Wipac",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:fb1f7dfc7ef2c7ef",
+   "label": "Couchbase Server",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:0de4a84586a9a2bf",
+   "label": "Martin BM",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:f2e964256fbbd9f0",
+   "label": "Dexter King",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:8331d30f4eff8f99",
+   "label": "ASM-N-5 Gorgon V",
+   "wave": 1,
+   "via": "term:martin company",
+   "gold": false
+  },
+  {
+   "id": "mq:68fa1d2c2ea00216",
+   "label": "AAM-N-4 Oriole",
+   "wave": 1,
+   "via": "term:martin company",
+   "gold": false
+  },
+  {
+   "id": "mq:51ebdbd29c78bd5f",
+   "label": "Northrop Corporation",
+   "wave": 2,
+   "via": "term:merger",
+   "gold": false
+  },
+  {
+   "id": "mq:1a8c2d43592bd7dc",
+   "label": "Haarlems Dagblad",
+   "wave": 2,
+   "via": "term:merger",
+   "gold": false
+  },
+  {
+   "id": "mq:44648faa135f04ab",
+   "label": "Unisys",
+   "wave": 2,
+   "via": "term:merger",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:6b6098cc167ef8d0",
+    "label": "Lockheed Martin A2100",
+    "gold": false
+   },
+   {
+    "id": "mq:81501b6de32f95b1",
+    "label": "King (miniseries)",
+    "gold": false
+   },
+   {
+    "id": "mq:68fa1d2c2ea00216",
+    "label": "AAM-N-4 Oriole",
+    "gold": false
+   },
+   {
+    "id": "mq:8331d30f4eff8f99",
+    "label": "ASM-N-5 Gorgon V",
+    "gold": false
+   },
+   {
+    "id": "mq:e5adb21346f7f2d3",
+    "label": "Comcast",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:6b6098cc167ef8d0",
+    "label": "Lockheed Martin A2100",
+    "gold": false
+   },
+   {
+    "id": "mq:68fa1d2c2ea00216",
+    "label": "AAM-N-4 Oriole",
+    "gold": false
+   },
+   {
+    "id": "mq:8331d30f4eff8f99",
+    "label": "ASM-N-5 Gorgon V",
+    "gold": false
+   },
+   {
+    "id": "mq:81501b6de32f95b1",
+    "label": "King (miniseries)",
+    "gold": false
+   },
+   {
+    "id": "mq:f430159629f376a6",
+    "label": "Arnold Schwarzenegger",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:68fa1d2c2ea00216",
+    "label": "AAM-N-4 Oriole",
+    "gold": false
+   },
+   {
+    "id": "mq:f430159629f376a6",
+    "label": "Arnold Schwarzenegger",
+    "gold": false
+   },
+   {
+    "id": "mq:81501b6de32f95b1",
+    "label": "King (miniseries)",
+    "gold": false
+   },
+   {
+    "id": "mq:b82f7f37dfe75bd9",
+    "label": "Arnold Schwarzenegger",
+    "gold": false
+   },
+   {
+    "id": "mq:8331d30f4eff8f99",
+    "label": "ASM-N-5 Gorgon V",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:9043e65c2ba35323",
+    "label": "Drentse Courant",
+    "gold": false
+   },
+   {
+    "id": "mq:40985e567b63c800",
+    "label": "Chase Bank",
+    "gold": false
+   },
+   {
+    "id": "mq:04bd6c1554259b47",
+    "label": "British Aerospace",
+    "gold": false
+   },
+   {
+    "id": "mq:0336720f73de69ed",
+    "label": "Martin Lee Ka-shing",
+    "gold": false
+   },
+   {
+    "id": "mq:38934642c6e112cc",
+    "label": "Breakfast at Tiffany's (film)",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": null,
+  "Q": null,
+  "LQ": null,
+  "S": null
+ }
+}

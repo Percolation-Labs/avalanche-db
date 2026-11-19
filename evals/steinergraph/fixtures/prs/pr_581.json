@@ -1,0 +1,487 @@
+{
+ "qid": "pr:581",
+ "set": "prs",
+ "question": "What work went into this, and why: meta/spikes: part three's outputs and durability run on 0.2.35?",
+ "gold": [
+  {
+   "id": "commit/643eeb698b",
+   "label": "commit 643eeb6: Part three's outputs as 0.2.35 prints them, for the article's blocks 1, 9, 11, 13, 15 and 21",
+   "seed": false
+  },
+  {
+   "id": "commit/e2562356de",
+   "label": "commit e256235: Part three's durability on the release: a live walk a reader can start and interrupt, with what it print",
+   "seed": false
+  },
+  {
+   "id": "commit/e5494a9b21",
+   "label": "commit e5494a9: part-three captures: name percolate's paths in words, not as in-tree paths",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/ed03f821d6",
+   "label": "commit ed03f82: Merge pull request #581 from Percolation-Labs/cory/part3-captures-0-2-35",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "meta/spikes/2026-10-27-dream-walk-graphs/durability/README.md#1",
+   "label": "meta/spikes/2026-10-27-dream-walk-graphs/durability/README.md \u203a Durability: a walk that is killed resumes where it stopp",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "meta/spikes/2026-10-29-part-three-check/durability/during.sql#1",
+   "label": "meta/spikes/2026-10-29-part-three-check/durability/during.sql",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "meta/spikes/2026-10-29-part-three-figures/README.md#1",
+   "label": "meta/spikes/2026-10-29-part-three-figures/README.md \u203a Part three's worked-example figures: their source outputs",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "board/messages/M-20261029-233009-3a4a.md#1",
+   "label": "board/messages/M-20261029-233009-3a4a.md",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 2
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "board/messages/M-20261029-233009-3a4a.md#1",
+    "label": "board/messages/M-20261029-233009-3a4a.md",
+    "role": "seed"
+   },
+   {
+    "id": "commit/643eeb698b",
+    "label": "commit 643eeb6: Part three's outputs as 0.2.35 prints them, for the article's blocks 1, 9, 11, 13, 15 and 21",
+    "role": "gold"
+   },
+   {
+    "id": "commit/e2562356de",
+    "label": "commit e256235: Part three's durability on the release: a live walk a reader can start and interrupt, with what it print",
+    "role": "gold"
+   },
+   {
+    "id": "commit/e5494a9b21",
+    "label": "commit e5494a9: part-three captures: name percolate's paths in words, not as in-tree paths",
+    "role": "gold"
+   },
+   {
+    "id": "meta/spikes/2026-10-29-part-three-check/durability/README.md#1",
+    "label": "meta/spikes/2026-10-29-part-three-check/durability/README.md \u203a Durability on the release: a live walk a reader can inter",
+    "role": "connector"
+   }
+  ],
+  "links": [
+   {
+    "a": "board/messages/M-20261029-233009-3a4a.md#1",
+    "b": "meta/spikes/2026-10-29-part-three-check/durability/README.md#1",
+    "via": [
+     {
+      "kind": "term",
+      "key": "env beside",
+      "width": 4
+     },
+     {
+      "kind": "term",
+      "key": "without replay",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "0118",
+      "width": 6
+     },
+     {
+      "kind": "term",
+      "key": "start live",
+      "width": 9
+     },
+     {
+      "kind": "term",
+      "key": "check durability",
+      "width": 9
+     }
+    ]
+   },
+   {
+    "a": "commit/643eeb698b",
+    "b": "commit/e5494a9b21",
+    "via": [
+     {
+      "kind": "beside"
+     }
+    ]
+   },
+   {
+    "a": "commit/e2562356de",
+    "b": "commit/e5494a9b21",
+    "via": [
+     {
+      "kind": "beside"
+     }
+    ]
+   },
+   {
+    "a": "commit/e2562356de",
+    "b": "meta/spikes/2026-10-29-part-three-check/durability/README.md#1",
+    "via": [
+     {
+      "kind": "near",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "interrupt",
+      "width": 18
+     },
+     {
+      "kind": "term",
+      "key": "live walk",
+      "width": 40
+     }
+    ]
+   }
+  ],
+  "cost": 4,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   2,
+   1,
+   1
+  ],
+  "entry": {
+   "seed": "board/messages/M-20261029-233009-3a4a.md#1",
+   "gold": "commit/e2562356de",
+   "doors": 2
+  }
+ },
+ "potential": {
+  "within_1_door": 1948,
+  "within_2_doors": 33676,
+  "gold_within_1": 0,
+  "gold_within_2": 2,
+  "top_U": [
+   {
+    "id": "board/messages/M-20261029-232924-5dd1.md#1",
+    "label": "board/messages/M-20261029-232924-5dd1.md",
+    "p": 0.0074325823335653456,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261029-232920-7feb.md#1",
+    "label": "board/messages/M-20261029-232920-7feb.md",
+    "p": 0.0074325823335653456,
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-10-29-part-three-check/durability/during.txt#1",
+    "label": "meta/spikes/2026-10-29-part-three-check/durability/during.txt",
+    "p": 0.003823071511746536,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261030-094625-e917.md#1",
+    "label": "board/messages/M-20261030-094625-e917.md",
+    "p": 0.0033054651744380257,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261029-231837-2dc4.md#1",
+    "label": "board/messages/M-20261029-231837-2dc4.md",
+    "p": 0.0032162016610202274,
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-10-29-part-three-check/durability/README.md#1",
+    "label": "meta/spikes/2026-10-29-part-three-check/durability/README.md \u203a Durability on the release: a live walk a reader can inter",
+    "p": 0.002799809230291618,
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-10-29-part-three-check/durability/after.sql#1",
+    "label": "meta/spikes/2026-10-29-part-three-check/durability/after.sql",
+    "p": 0.0027907273274601877,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261029-231833-2369.md#1",
+    "label": "board/messages/M-20261029-231833-2369.md",
+    "p": 0.0027163879374082988,
+    "gold": false
+   },
+   {
+    "id": "specs/workflow-engine/YAML.md#43",
+    "label": "specs/workflow-engine/YAML.md \u203a Agent steps",
+    "p": 0.0025944536364951643,
+    "gold": false
+   },
+   {
+    "id": "commit/74a9663c46",
+    "label": "commit 74a9663: board: sirsh messages james",
+    "p": 0.0025844448353725493,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261029-223917-41fc.md#1",
+    "label": "board/messages/M-20261029-223917-41fc.md",
+    "p": 0.002578109832581932,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261029-223911-e636.md#1",
+    "label": "board/messages/M-20261029-223911-e636.md",
+    "p": 0.002578109832581932,
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-10-27-dream-walk-graphs/durability/blocks.sql#1",
+    "label": "meta/spikes/2026-10-27-dream-walk-graphs/durability/blocks.sql",
+    "p": 0.0025378975116390075,
+    "gold": false
+   },
+   {
+    "id": "commit/5f2dc5fce6",
+    "label": "commit 5f2dc5f: Merge pull request #580 from Percolation-Labs/cory/rem-1246-investigation-ui",
+    "p": 0.00230454674270746,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261029-230814-b244.md#1",
+    "label": "board/messages/M-20261029-230814-b244.md",
+    "p": 0.00226338483049036,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261029-230818-df07.md#1",
+    "label": "board/messages/M-20261029-230818-df07.md",
+    "p": 0.0022585369552167267,
+    "gold": false
+   },
+   {
+    "id": "commit/7be96fb095",
+    "label": "commit 7be96fb: Part three's worked-example figures: their source outputs, from the run from empty for #320 (5e6380d5)",
+    "p": 0.0022348667785608714,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261029-233609-c166.md#1",
+    "label": "board/messages/M-20261029-233609-c166.md",
+    "p": 0.0018873032108293055,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261027-224028-8937.md#1",
+    "label": "board/messages/M-20261027-224028-8937.md",
+    "p": 0.0015773028544380627,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261029-233637-e30a.md#1",
+    "label": "board/messages/M-20261029-233637-e30a.md",
+    "p": 0.001556003483985284,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/ed03f821d6",
+   "label": "commit ed03f82: Merge pull request #581 from Percolation-Labs/cory/part3-captures-0-2-35",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/spikes/2026-10-27-dream-walk-graphs/durability/README.md#1",
+   "label": "meta/spikes/2026-10-27-dream-walk-graphs/durability/README.md \u203a Durability: a walk that is killed resumes where it stopp",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/spikes/2026-10-29-part-three-check/durability/during.sql#1",
+   "label": "meta/spikes/2026-10-29-part-three-check/durability/during.sql",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/spikes/2026-10-29-part-three-figures/README.md#1",
+   "label": "meta/spikes/2026-10-29-part-three-figures/README.md \u203a Part three's worked-example figures: their source outputs",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/messages/M-20261029-233009-3a4a.md#1",
+   "label": "board/messages/M-20261029-233009-3a4a.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/messages/M-20261029-231833-2369.md#1",
+   "label": "board/messages/M-20261029-231833-2369.md",
+   "wave": 1,
+   "via": "term:cory part3",
+   "gold": false
+  },
+  {
+   "id": "board/messages/M-20261029-231837-2dc4.md#1",
+   "label": "board/messages/M-20261029-231837-2dc4.md",
+   "wave": 1,
+   "via": "term:cory part3",
+   "gold": false
+  },
+  {
+   "id": "board/messages/M-20261029-232920-7feb.md#1",
+   "label": "board/messages/M-20261029-232920-7feb.md",
+   "wave": 1,
+   "via": "term:cory part3",
+   "gold": false
+  },
+  {
+   "id": "board/messages/M-20261029-232924-5dd1.md#1",
+   "label": "board/messages/M-20261029-232924-5dd1.md",
+   "wave": 1,
+   "via": "term:cory part3",
+   "gold": false
+  },
+  {
+   "id": "board/messages/M-20261029-230814-b244.md#1",
+   "label": "board/messages/M-20261029-230814-b244.md",
+   "wave": 1,
+   "via": "term:cory part3",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "board/messages/M-20261029-232924-5dd1.md#1",
+    "label": "board/messages/M-20261029-232924-5dd1.md",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261029-232920-7feb.md#1",
+    "label": "board/messages/M-20261029-232920-7feb.md",
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-10-29-part-three-check/durability/during.txt#1",
+    "label": "meta/spikes/2026-10-29-part-three-check/durability/during.txt",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261030-094625-e917.md#1",
+    "label": "board/messages/M-20261030-094625-e917.md",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261029-231837-2dc4.md#1",
+    "label": "board/messages/M-20261029-231837-2dc4.md",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "board/messages/M-20261029-232920-7feb.md#1",
+    "label": "board/messages/M-20261029-232920-7feb.md",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261029-232924-5dd1.md#1",
+    "label": "board/messages/M-20261029-232924-5dd1.md",
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-10-27-dream-walk-graphs/durability/blocks.sql#1",
+    "label": "meta/spikes/2026-10-27-dream-walk-graphs/durability/blocks.sql",
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-10-29-part-three-check/durability/during.txt#1",
+    "label": "meta/spikes/2026-10-29-part-three-check/durability/during.txt",
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-10-29-part-three-check/durability/README.md#1",
+    "label": "meta/spikes/2026-10-29-part-three-check/durability/README.md \u203a Durability on the release: a live walk a reader can inter",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "meta/spikes/2026-10-29-part-three-check/durability/during.txt#1",
+    "label": "meta/spikes/2026-10-29-part-three-check/durability/during.txt",
+    "gold": false
+   },
+   {
+    "id": "commit/7be96fb095",
+    "label": "commit 7be96fb: Part three's worked-example figures: their source outputs, from the run from empty for #320 (5e6380d5)",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261030-094934-7b65.md#1",
+    "label": "board/messages/M-20261030-094934-7b65.md",
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-10-27-dream-walk-graphs/durability/README.md#2",
+    "label": "meta/spikes/2026-10-27-dream-walk-graphs/durability/README.md \u203a 1. Every worker killed (SIGKILL), 90 seconds down (`kill",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261027-224028-8937.md#1",
+    "label": "board/messages/M-20261027-224028-8937.md",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "meta/spikes/2026-10-29-part-three-check/durability/during.txt#1",
+    "label": "meta/spikes/2026-10-29-part-three-check/durability/during.txt",
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-10-29-part-three-check/durability/after.txt#1",
+    "label": "meta/spikes/2026-10-29-part-three-check/durability/after.txt",
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-10-27-dream-walk-graphs/durability/blocks.sql#1",
+    "label": "meta/spikes/2026-10-27-dream-walk-graphs/durability/blocks.sql",
+    "gold": false
+   },
+   {
+    "id": "commit/7be96fb095",
+    "label": "commit 7be96fb: Part three's worked-example figures: their source outputs, from the run from empty for #320 (5e6380d5)",
+    "gold": false
+   },
+   {
+    "id": "commit/e2562356de",
+    "label": "commit e256235: Part three's durability on the release: a live walk a reader can start and interrupt, with what it print",
+    "gold": true
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.3333333333333333
+ }
+}

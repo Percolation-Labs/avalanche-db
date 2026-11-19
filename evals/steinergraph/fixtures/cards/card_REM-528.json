@@ -1,0 +1,519 @@
+{
+ "qid": "card:REM-528",
+ "set": "cards",
+ "question": "What was done about this, and why: research: row security decides per query, not per row, so a read does not grow with every draft?",
+ "gold": [
+  {
+   "id": "commit/16347d5bca",
+   "label": "commit 16347d5: core 0.2.13: REM-528's policy change, since 0.2.12 was tagged without it",
+   "seed": false
+  },
+  {
+   "id": "commit/36f9d43494",
+   "label": "commit 36f9d43: Merge pull request #273 from Percolation-Labs/amartey/rem-528-policy-once",
+   "seed": false
+  },
+  {
+   "id": "commit/bb2ab1ba3e",
+   "label": "commit bb2ab1b: research: works_access asks about the caller once per query, not once per row (REM-528)",
+   "seed": false
+  },
+  {
+   "id": "commit/c8b33056c7",
+   "label": "commit c8b3305: Merge pull request #274 from Percolation-Labs/amartey/rem-528-to-0.2.13",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/9ed0c2f409",
+   "label": "commit 9ed0c2f: board: file REM-528 research: row security decides per query, not per row, so a read does not grow with ",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-528.md#1",
+   "label": "board/cards/REM-528.md",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-528.md#2",
+   "label": "board/cards/REM-528.md \u203a Goal",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "specs/percolate-application/concept-navigation.md#3",
+   "label": "specs/percolate-application/concept-navigation.md \u203a 2. Positions",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "board/cards/REM-533.md#4",
+   "label": "board/cards/REM-533.md \u203a Done when",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 2
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "board/cards/REM-528.md#2",
+    "label": "board/cards/REM-528.md \u203a Goal",
+    "role": "seed"
+   },
+   {
+    "id": "commit/16347d5bca",
+    "label": "commit 16347d5: core 0.2.13: REM-528's policy change, since 0.2.12 was tagged without it",
+    "role": "gold"
+   },
+   {
+    "id": "commit/36f9d43494",
+    "label": "commit 36f9d43: Merge pull request #273 from Percolation-Labs/amartey/rem-528-policy-once",
+    "role": "gold"
+   },
+   {
+    "id": "commit/bb2ab1ba3e",
+    "label": "commit bb2ab1b: research: works_access asks about the caller once per query, not once per row (REM-528)",
+    "role": "gold"
+   },
+   {
+    "id": "commit/c8b33056c7",
+    "label": "commit c8b3305: Merge pull request #274 from Percolation-Labs/amartey/rem-528-to-0.2.13",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "board/cards/REM-528.md#2",
+    "b": "commit/bb2ab1ba3e",
+    "via": [
+     {
+      "kind": "term",
+      "key": "drafts included",
+      "width": 4
+     },
+     {
+      "kind": "term",
+      "key": "private drafts",
+      "width": 21
+     },
+     {
+      "kind": "term",
+      "key": "rem 528",
+      "width": 26
+     }
+    ]
+   },
+   {
+    "a": "commit/16347d5bca",
+    "b": "commit/36f9d43494",
+    "via": [
+     {
+      "kind": "term",
+      "key": "rem 528",
+      "width": 26
+     }
+    ]
+   },
+   {
+    "a": "commit/16347d5bca",
+    "b": "commit/c8b33056c7",
+    "via": [
+     {
+      "kind": "term",
+      "key": "tagged without",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "policy change",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "change since",
+      "width": 7
+     },
+     {
+      "kind": "term",
+      "key": "rem 528",
+      "width": 26
+     }
+    ]
+   },
+   {
+    "a": "commit/36f9d43494",
+    "b": "commit/bb2ab1ba3e",
+    "via": [
+     {
+      "kind": "near",
+      "width": 3
+     },
+     {
+      "kind": "term",
+      "key": "works_access asks",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "research works_access",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "row rem",
+      "width": 8
+     },
+     {
+      "kind": "term",
+      "key": "works_access",
+      "width": 9
+     },
+     {
+      "kind": "term",
+      "key": "rem 528",
+      "width": 26
+     }
+    ]
+   }
+  ],
+  "cost": 4,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  "entry": {
+   "seed": "board/cards/REM-528.md#2",
+   "gold": "commit/bb2ab1ba3e",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 1087,
+  "within_2_doors": 33166,
+  "gold_within_1": 4,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "board/cards/REM-533.md#7",
+    "label": "board/cards/REM-533.md \u203a Log",
+    "p": 0.004069377009798966,
+    "gold": false
+   },
+   {
+    "id": "commit/857c16d378",
+    "label": "commit 857c16d: board: file REM-529 reading: the anonymous Edition asks core for public works only",
+    "p": 0.0036603800854848874,
+    "gold": false
+   },
+   {
+    "id": "commit/f5cec51bc7",
+    "label": "commit f5cec51: Merge pull request #263 from Percolation-Labs/amartey/rem-526-apex-spec",
+    "p": 0.003352407820071331,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-503.md#8",
+    "label": "board/cards/REM-503.md \u203a Log",
+    "p": 0.003176636759742958,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-533.md#3",
+    "label": "board/cards/REM-533.md \u203a Evidence",
+    "p": 0.0028931750569342078,
+    "gold": false
+   },
+   {
+    "id": "site/publish.sh#2",
+    "label": "site/publish.sh",
+    "p": 0.0028848897261889764,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1323.md#1",
+    "label": "board/cards/REM-1323.md",
+    "p": 0.0026226066530369344,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-286.md#8",
+    "label": "board/cards/REM-286.md \u203a Log",
+    "p": 0.0024763910729803276,
+    "gold": false
+   },
+   {
+    "id": "research-notes/h-to-g/harness/README.md#5",
+    "label": "research-notes/h-to-g/harness/README.md \u203a What is actually implemented",
+    "p": 0.002428417185775793,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-533.md#5",
+    "label": "board/cards/REM-533.md \u203a Scope",
+    "p": 0.002265286359775049,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-529.md#7",
+    "label": "board/cards/REM-529.md \u203a Log",
+    "p": 0.002149737875602789,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-528.md#3",
+    "label": "board/cards/REM-528.md \u203a Evidence",
+    "p": 0.0021272869988533984,
+    "gold": false
+   },
+   {
+    "id": "commit/42c38d9d35",
+    "label": "commit 42c38d9: The website had no history, and the blog it needed had nowhere to live",
+    "p": 0.0021262856974460613,
+    "gold": false
+   },
+   {
+    "id": "commit/bb2ab1ba3e",
+    "label": "commit bb2ab1b: research: works_access asks about the caller once per query, not once per row (REM-528)",
+    "p": 0.0021196646312646584,
+    "gold": true
+   },
+   {
+    "id": "specs/percolate-application/drafter.md#70",
+    "label": "specs/percolate-application/drafter.md \u203a 7. Storage: reuse the appropriate existing tables",
+    "p": 0.0019510887869486383,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261029-204812-efb5.md#1",
+    "label": "board/messages/M-20261029-204812-efb5.md",
+    "p": 0.001942872859454252,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/concept-navigation.md#22",
+    "label": "specs/percolate-application/concept-navigation.md \u203a 9. Rules",
+    "p": 0.0017521041505146272,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-528.md#7",
+    "label": "board/cards/REM-528.md \u203a Log",
+    "p": 0.0017392407924563572,
+    "gold": false
+   },
+   {
+    "id": "specs/research-platform/schema.sql#59",
+    "label": "specs/research-platform/schema.sql",
+    "p": 0.00157198066007603,
+    "gold": false
+   },
+   {
+    "id": "specs/claims/graph.md#40",
+    "label": "specs/claims/graph.md \u203a 10. Reading the graph",
+    "p": 0.001444707258698194,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/9ed0c2f409",
+   "label": "commit 9ed0c2f: board: file REM-528 research: row security decides per query, not per row, so a read does not grow with ",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-528.md#1",
+   "label": "board/cards/REM-528.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-528.md#2",
+   "label": "board/cards/REM-528.md \u203a Goal",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/percolate-application/concept-navigation.md#3",
+   "label": "specs/percolate-application/concept-navigation.md \u203a 2. Positions",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-533.md#4",
+   "label": "board/cards/REM-533.md \u203a Done when",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/36f9d43494",
+   "label": "commit 36f9d43: Merge pull request #273 from Percolation-Labs/amartey/rem-528-policy-once",
+   "wave": 1,
+   "via": "term:rem 528",
+   "gold": true
+  },
+  {
+   "id": "board/cards/REM-528.md#5",
+   "label": "board/cards/REM-528.md \u203a Scope",
+   "wave": 1,
+   "via": "term:rem 528",
+   "gold": false
+  },
+  {
+   "id": "commit/269b58df31",
+   "label": "commit 269b58d: board: REM-528 todo \u2192 done",
+   "wave": 1,
+   "via": "term:rem 528",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-533.md#5",
+   "label": "board/cards/REM-533.md \u203a Scope",
+   "wave": 1,
+   "via": "term:rem 528",
+   "gold": false
+  },
+  {
+   "id": "commit/86f1378352",
+   "label": "commit 86f1378: board: edit REM-528 parent",
+   "wave": 1,
+   "via": "term:rem 528",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "board/cards/REM-533.md#7",
+    "label": "board/cards/REM-533.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "commit/857c16d378",
+    "label": "commit 857c16d: board: file REM-529 reading: the anonymous Edition asks core for public works only",
+    "gold": false
+   },
+   {
+    "id": "commit/f5cec51bc7",
+    "label": "commit f5cec51: Merge pull request #263 from Percolation-Labs/amartey/rem-526-apex-spec",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-503.md#8",
+    "label": "board/cards/REM-503.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-533.md#3",
+    "label": "board/cards/REM-533.md \u203a Evidence",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "commit/bb2ab1ba3e",
+    "label": "commit bb2ab1b: research: works_access asks about the caller once per query, not once per row (REM-528)",
+    "gold": true
+   },
+   {
+    "id": "board/cards/REM-533.md#7",
+    "label": "board/cards/REM-533.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "specs/research-platform/schema.sql#59",
+    "label": "specs/research-platform/schema.sql",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-286.md#8",
+    "label": "board/cards/REM-286.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-528.md#3",
+    "label": "board/cards/REM-528.md \u203a Evidence",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/c14bada45b",
+    "label": "commit c14bada: board: file REM-533 reading: a read fetches the revisions it returns, not every revision under row secur",
+    "gold": false
+   },
+   {
+    "id": "commit/36f9d43494",
+    "label": "commit 36f9d43: Merge pull request #273 from Percolation-Labs/amartey/rem-528-policy-once",
+    "gold": true
+   },
+   {
+    "id": "board/cards/REM-533.md#1",
+    "label": "board/cards/REM-533.md",
+    "gold": false
+   },
+   {
+    "id": "commit/269b58df31",
+    "label": "commit 269b58d: board: REM-528 todo \u2192 done",
+    "gold": false
+   },
+   {
+    "id": "commit/bb2ab1ba3e",
+    "label": "commit bb2ab1b: research: works_access asks about the caller once per query, not once per row (REM-528)",
+    "gold": true
+   }
+  ],
+  "S": [
+   {
+    "id": "specs/research-platform/scale.md#6",
+    "label": "specs/research-platform/scale.md \u203a The causes",
+    "gold": false
+   },
+   {
+    "id": "specs/research-platform/schema.sql#59",
+    "label": "specs/research-platform/schema.sql",
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-self-model/dreaming/reduce/graph/edge_readability.py#3",
+    "label": "applications/percolate-self-model/dreaming/reduce/graph/edge_readability.py",
+    "gold": false
+   },
+   {
+    "id": "specs/agentic/reference/skills.yaml#13",
+    "label": "specs/agentic/reference/skills.yaml",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/concept-navigation.md#22",
+    "label": "specs/percolate-application/concept-navigation.md \u203a 9. Rules",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.25,
+  "LQ": 0.5,
+  "S": 0.0
+ }
+}

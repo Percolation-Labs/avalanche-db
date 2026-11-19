@@ -1,0 +1,400 @@
+{
+ "qid": "card:REM-682",
+ "set": "cards",
+ "question": "What was done about this, and why: research: define useful query classes and freeze the iterative-query protocol?",
+ "gold": [
+  {
+   "id": "commit/42ce64e9b4",
+   "label": "commit 42ce64e: research: measure iterated search in 202 real agent sessions (REM-682)",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/3648027706",
+   "label": "commit 3648027: board: file REM-682 research: define useful query classes and freeze the iterative-query protocol",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-682.md#1",
+   "label": "board/cards/REM-682.md",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/ca333f350d",
+   "label": "commit ca333f3: spec(bkd): define research gates and freeze failure-atlas protocol",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 3
+  },
+  {
+   "id": "board/cards/REM-682.md#9",
+   "label": "board/cards/REM-682.md \u203a Log",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-682.md#10",
+   "label": "board/cards/REM-682.md \u203a Log",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/3648027706",
+    "label": "commit 3648027: board: file REM-682 research: define useful query classes and freeze the iterative-query protocol",
+    "role": "seed"
+   },
+   {
+    "id": "commit/42ce64e9b4",
+    "label": "commit 42ce64e: research: measure iterated search in 202 real agent sessions (REM-682)",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/3648027706",
+    "b": "commit/42ce64e9b4",
+    "via": [
+     {
+      "kind": "term",
+      "key": "rem 682",
+      "width": 32
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [],
+  "entry": {
+   "seed": "commit/3648027706",
+   "gold": "commit/42ce64e9b4",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 1960,
+  "within_2_doors": 34294,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "research-notes/build-knit-dream-failure-atlas-2026-09-10.md#2",
+    "label": "research-notes/build-knit-dream-failure-atlas-2026-09-10.md \u203a Question and protocol",
+    "p": 0.005788996787052614,
+    "gold": false
+   },
+   {
+    "id": "commit/1aca2ac4b3",
+    "label": "commit 1aca2ac: spec(bkd): freeze changing-state memory contract and stream fixtures",
+    "p": 0.005570503085340641,
+    "gold": false
+   },
+   {
+    "id": "board/team/iterative-research-tickets.md#2",
+    "label": "board/team/iterative-research-tickets.md \u203a Log",
+    "p": 0.00540119862387197,
+    "gold": false
+   },
+   {
+    "id": "scenarios/round-4.md#6",
+    "label": "scenarios/round-4.md \u203a PG19 SQL/PGQ constraints found by the parser rejecting the obvious form",
+    "p": 0.004326251170363886,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-682.md#2",
+    "label": "board/cards/REM-682.md \u203a Goal",
+    "p": 0.004085741082488574,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-681.md#8",
+    "label": "board/cards/REM-681.md \u203a Log",
+    "p": 0.004072914168073997,
+    "gold": false
+   },
+   {
+    "id": "commit/2ac46e07f7",
+    "label": "commit 2ac46e0: research(bkd): audit retrieval failures and track the next research gates",
+    "p": 0.0035716337753247,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-681.md#10",
+    "label": "board/cards/REM-681.md \u203a Log",
+    "p": 0.0033196578845009674,
+    "gold": false
+   },
+   {
+    "id": "commit/35b007da32",
+    "label": "commit 35b007d: board: file REM-681 research: establish when iterative queries earn their indexing cost",
+    "p": 0.003113188418246666,
+    "gold": false
+   },
+   {
+    "id": "commit/da2d6a8ca1",
+    "label": "commit da2d6a8: board: file REM-683 research: freeze independent project histories with verifiable answer witnesses",
+    "p": 0.0030225471998846067,
+    "gold": false
+   },
+   {
+    "id": "commit/94288dbd84",
+    "label": "commit 94288db: Record audited external baselines and retain budget-dependent alternatives",
+    "p": 0.002761040149313162,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-682.md#4",
+    "label": "board/cards/REM-682.md \u203a Done when",
+    "p": 0.002355714612385745,
+    "gold": false
+   },
+   {
+    "id": "board/team/iterative-research-tickets.md#1",
+    "label": "board/team/iterative-research-tickets.md",
+    "p": 0.001948006839649547,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1261.md#1",
+    "label": "board/cards/REM-1261.md",
+    "p": 0.0016861643863348517,
+    "gold": false
+   },
+   {
+    "id": "specs/build-knit-dream/reachability.md#22",
+    "label": "specs/build-knit-dream/reachability.md \u203a 9.3 Evaluation consequences",
+    "p": 0.0016731967083399625,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-683.md#1",
+    "label": "board/cards/REM-683.md",
+    "p": 0.0016709735895619002,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-681.md#1",
+    "label": "board/cards/REM-681.md",
+    "p": 0.001669404248168564,
+    "gold": false
+   },
+   {
+    "id": "commit/9bf6dcbe45",
+    "label": "commit 9bf6dcb: board: file REM-1261 research: define Kappa through recursive decision value",
+    "p": 0.001669287729586693,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-674.md#1",
+    "label": "board/cards/REM-674.md",
+    "p": 0.0015525428591550915,
+    "gold": false
+   },
+   {
+    "id": "commit/b41d769b25",
+    "label": "commit b41d769: research: define H-to-G algebra and assess JEV as its decision model (REM-674)",
+    "p": 0.0014229237947136248,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/3648027706",
+   "label": "commit 3648027: board: file REM-682 research: define useful query classes and freeze the iterative-query protocol",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-682.md#1",
+   "label": "board/cards/REM-682.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/ca333f350d",
+   "label": "commit ca333f3: spec(bkd): define research gates and freeze failure-atlas protocol",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-682.md#9",
+   "label": "board/cards/REM-682.md \u203a Log",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-682.md#10",
+   "label": "board/cards/REM-682.md \u203a Log",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/team/iterative-research-tickets.md#2",
+   "label": "board/team/iterative-research-tickets.md \u203a Log",
+   "wave": 1,
+   "via": "term:rem 682",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-683.md#1",
+   "label": "board/cards/REM-683.md",
+   "wave": 1,
+   "via": "term:rem 682",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-682.md#3",
+   "label": "board/cards/REM-682.md \u203a Evidence",
+   "wave": 1,
+   "via": "term:rem 682",
+   "gold": false
+  },
+  {
+   "id": "commit/04c73ca367",
+   "label": "commit 04c73ca: board: REM-682 in-progress \u2192 backlog",
+   "wave": 1,
+   "via": "term:rem 682",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-689.md#1",
+   "label": "board/cards/REM-689.md",
+   "wave": 1,
+   "via": "term:rem 682",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "research-notes/build-knit-dream-failure-atlas-2026-09-10.md#2",
+    "label": "research-notes/build-knit-dream-failure-atlas-2026-09-10.md \u203a Question and protocol",
+    "gold": false
+   },
+   {
+    "id": "commit/1aca2ac4b3",
+    "label": "commit 1aca2ac: spec(bkd): freeze changing-state memory contract and stream fixtures",
+    "gold": false
+   },
+   {
+    "id": "board/team/iterative-research-tickets.md#2",
+    "label": "board/team/iterative-research-tickets.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "scenarios/round-4.md#6",
+    "label": "scenarios/round-4.md \u203a PG19 SQL/PGQ constraints found by the parser rejecting the obvious form",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-682.md#2",
+    "label": "board/cards/REM-682.md \u203a Goal",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "board/team/iterative-research-tickets.md#2",
+    "label": "board/team/iterative-research-tickets.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "research-notes/build-knit-dream-failure-atlas-2026-09-10.md#2",
+    "label": "research-notes/build-knit-dream-failure-atlas-2026-09-10.md \u203a Question and protocol",
+    "gold": false
+   },
+   {
+    "id": "commit/1aca2ac4b3",
+    "label": "commit 1aca2ac: spec(bkd): freeze changing-state memory contract and stream fixtures",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-681.md#10",
+    "label": "board/cards/REM-681.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-681.md#8",
+    "label": "board/cards/REM-681.md \u203a Log",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/8aa175c355",
+    "label": "commit 8aa175c: research: define P8QL execution for iterative decision policies",
+    "gold": false
+   },
+   {
+    "id": "commit/2ac46e07f7",
+    "label": "commit 2ac46e0: research(bkd): audit retrieval failures and track the next research gates",
+    "gold": false
+   },
+   {
+    "id": "commit/1aca2ac4b3",
+    "label": "commit 1aca2ac: spec(bkd): freeze changing-state memory contract and stream fixtures",
+    "gold": false
+   },
+   {
+    "id": "commit/973bba02eb",
+    "label": "commit 973bba0: board: iterative-research-tickets takes REM-682",
+    "gold": false
+   },
+   {
+    "id": "commit/66d83276c9",
+    "label": "commit 66d8327: board: file REM-674 research: define H-to-G operations and the JEV decision boundary",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "meta/spikes/2026-10-17-iterative-query/shoebox/research/benchmark-not-a-just-so-story.md#8",
+    "label": "meta/spikes/2026-10-17-iterative-query/shoebox/research/benchmark-not-a-just-so-story.md \u203a 6. Pre-registration and blind",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-681.md#8",
+    "label": "board/cards/REM-681.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-10-17-iterative-query/shoebox/research/database-search.md#1",
+    "label": "meta/spikes/2026-10-17-iterative-query/shoebox/research/database-search.md \u203a Search and navigation over relational datab",
+    "gold": false
+   },
+   {
+    "id": "commit/64762b690a",
+    "label": "commit 64762b6: research: freeze real-corpus brief trial protocol (REM-678)",
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-10-17-iterative-query/shoebox/research/benchmark-not-a-just-so-story.md#1",
+    "label": "meta/spikes/2026-10-17-iterative-query/shoebox/research/benchmark-not-a-just-so-story.md \u203a A synthetic shoebox that is n",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

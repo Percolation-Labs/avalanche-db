@@ -1,0 +1,466 @@
+{
+ "qid": "pr:24",
+ "set": "prs",
+ "question": "What work went into this, and why: A workflow step reads as the person who started the run?",
+ "gold": [
+  {
+   "id": "commit/c2f56627aa",
+   "label": "commit c2f5662: A workflow step reads as the person who started the run",
+   "seed": false
+  },
+  {
+   "id": "commit/ccdb3ef73b",
+   "label": "commit ccdb3ef: Starting a workflow was the way round the gate on defining one",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/e59b0bff36",
+   "label": "commit e59b0bf: Merge pull request #24 from Percolation-Labs/rem-38-workflow-reads-need-a-definer",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "specs/workflow-engine/YAML.md#7",
+   "label": "specs/workflow-engine/YAML.md \u203a Whose rows a step sees: the person who started the run",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "specs/workflow-engine/YAML.md#8",
+   "label": "specs/workflow-engine/YAML.md \u203a Whose rows a step sees: the person who started the run",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/1f3b30ae82",
+   "label": "commit 1f3b30a: An agent step can learn who started its run, so it authenticates as that agent (REM-247)",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "board/cards/REM-247.md#4",
+   "label": "board/cards/REM-247.md \u203a Done when",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 2
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/c2f56627aa",
+    "label": "commit c2f5662: A workflow step reads as the person who started the run",
+    "role": "gold"
+   },
+   {
+    "id": "commit/ccdb3ef73b",
+    "label": "commit ccdb3ef: Starting a workflow was the way round the gate on defining one",
+    "role": "gold"
+   },
+   {
+    "id": "specs/workflow-engine/YAML.md#7",
+    "label": "specs/workflow-engine/YAML.md \u203a Whose rows a step sees: the person who started the run",
+    "role": "seed"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/c2f56627aa",
+    "b": "commit/ccdb3ef73b",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "direct p8ql",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "statement p8ql",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "claims column",
+      "width": 4
+     },
+     {
+      "kind": "term",
+      "key": "session_01uufmbn6wramme2axubsx7g",
+      "width": 4
+     },
+     {
+      "kind": "term",
+      "key": "p8ql p8ql_vec",
+      "width": 4
+     }
+    ]
+   },
+   {
+    "a": "commit/c2f56627aa",
+    "b": "specs/workflow-engine/YAML.md#7",
+    "via": [
+     {
+      "kind": "term",
+      "key": "system pass",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "statement every",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "switches identity",
+      "width": 4
+     },
+     {
+      "kind": "term",
+      "key": "nobody started",
+      "width": 4
+     },
+     {
+      "kind": "term",
+      "key": "every p8ql",
+      "width": 4
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "specs/workflow-engine/YAML.md#7",
+   "gold": "commit/c2f56627aa",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 1553,
+  "within_2_doors": 33119,
+  "gold_within_1": 2,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "specs/workflow-engine/integration-rbac.sql#46",
+    "label": "specs/workflow-engine/integration-rbac.sql",
+    "p": 0.006213019582951826,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-247.md#6",
+    "label": "board/cards/REM-247.md \u203a Log",
+    "p": 0.0053052290986204806,
+    "gold": false
+   },
+   {
+    "id": "commit/c2f56627aa",
+    "label": "commit c2f5662: A workflow step reads as the person who started the run",
+    "p": 0.003954503596186738,
+    "gold": true
+   },
+   {
+    "id": "board/cards/REM-247.md#3",
+    "label": "board/cards/REM-247.md \u203a Evidence",
+    "p": 0.0037379728305328157,
+    "gold": false
+   },
+   {
+    "id": "commit/1c18397e55",
+    "label": "commit 1c18397: A workflow step runs as the agent that started its run, and every role says how it was granted (REM-171)",
+    "p": 0.0032918972486467137,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-171.md#15",
+    "label": "board/cards/REM-171.md \u203a 2026-09-14T13:43:34.699Z \u00b7 Amartey",
+    "p": 0.0031806974596535515,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-171.md#17",
+    "label": "board/cards/REM-171.md \u203a 2026-09-14T14:14:20.901Z \u00b7 Amartey",
+    "p": 0.003063629747170197,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1010.md#3",
+    "label": "board/cards/REM-1010.md \u203a Evidence",
+    "p": 0.0027407414771657874,
+    "gold": false
+   },
+   {
+    "id": "specs/build-knit-dream/reachability.md#21",
+    "label": "specs/build-knit-dream/reachability.md \u203a 9.2 Separate query authoring from decision execution",
+    "p": 0.002716333094124104,
+    "gold": false
+   },
+   {
+    "id": "commit/c3f9887665",
+    "label": "commit c3f9887: Merge pull request #21 from Percolation-Labs/lake-contract",
+    "p": 0.002706841836239571,
+    "gold": false
+   },
+   {
+    "id": "commit/acc06486ac",
+    "label": "commit acc0648: Merge pull request #25 from Percolation-Labs/tour-fixes",
+    "p": 0.002637398162209417,
+    "gold": false
+   },
+   {
+    "id": "specs/workflow-engine/integration-rbac.sql#32",
+    "label": "specs/workflow-engine/integration-rbac.sql",
+    "p": 0.0025433510861985888,
+    "gold": false
+   },
+   {
+    "id": "specs/workflow-engine/integration-rbac.sql#3",
+    "label": "specs/workflow-engine/integration-rbac.sql",
+    "p": 0.0017877009587916387,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-247.md#2",
+    "label": "board/cards/REM-247.md \u203a Goal",
+    "p": 0.0015430871606480236,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1055.md#6",
+    "label": "board/cards/REM-1055.md \u203a Log",
+    "p": 0.0015151824187150111,
+    "gold": false
+   },
+   {
+    "id": "specs/workflow-engine/integration-rbac.sql#28",
+    "label": "specs/workflow-engine/integration-rbac.sql",
+    "p": 0.0014592496096555478,
+    "gold": false
+   },
+   {
+    "id": "specs/workflow-engine/roadmap.md#17",
+    "label": "specs/workflow-engine/roadmap.md \u203a 6. An identity for a run nobody started",
+    "p": 0.0014165734552072842,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-364.md#7",
+    "label": "board/cards/REM-364.md \u203a Log",
+    "p": 0.0014001289673347677,
+    "gold": false
+   },
+   {
+    "id": "scenarios/tour/tour.py#30",
+    "label": "scenarios/tour/tour.py",
+    "p": 0.0012798663632124262,
+    "gold": false
+   },
+   {
+    "id": "specs/user-rbac/spec.md#9",
+    "label": "specs/user-rbac/spec.md \u203a A narrowing survives only as far as something carries it",
+    "p": 0.0011756007001206632,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/e59b0bff36",
+   "label": "commit e59b0bf: Merge pull request #24 from Percolation-Labs/rem-38-workflow-reads-need-a-definer",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/workflow-engine/YAML.md#7",
+   "label": "specs/workflow-engine/YAML.md \u203a Whose rows a step sees: the person who started the run",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/workflow-engine/YAML.md#8",
+   "label": "specs/workflow-engine/YAML.md \u203a Whose rows a step sees: the person who started the run",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/1f3b30ae82",
+   "label": "commit 1f3b30a: An agent step can learn who started its run, so it authenticates as that agent (REM-247)",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-247.md#4",
+   "label": "board/cards/REM-247.md \u203a Done when",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/research-platform/architecture.md#1",
+   "label": "specs/research-platform/architecture.md \u203a Percolate research platform and the writing hub",
+   "wave": 1,
+   "via": "term:rem 171",
+   "gold": false
+  },
+  {
+   "id": "meta/skills/board/SKILL.md#16",
+   "label": "meta/skills/board/SKILL.md \u203a A card",
+   "wave": 1,
+   "via": "term:rem 171",
+   "gold": false
+  },
+  {
+   "id": "commit/4f6afdd35f",
+   "label": "commit 4f6afdd: Merge pull request #194 from Percolation-Labs/amartey/rem-171-run-actor-and-grant-provenance",
+   "wave": 1,
+   "via": "term:rem 171",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-171.md#6",
+   "label": "board/cards/REM-171.md \u203a Links",
+   "wave": 1,
+   "via": "term:rem 171",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-171.md#1",
+   "label": "board/cards/REM-171.md",
+   "wave": 1,
+   "via": "term:rem 171",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "specs/workflow-engine/integration-rbac.sql#46",
+    "label": "specs/workflow-engine/integration-rbac.sql",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-247.md#6",
+    "label": "board/cards/REM-247.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "commit/c2f56627aa",
+    "label": "commit c2f5662: A workflow step reads as the person who started the run",
+    "gold": true
+   },
+   {
+    "id": "board/cards/REM-247.md#3",
+    "label": "board/cards/REM-247.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "commit/1c18397e55",
+    "label": "commit 1c18397: A workflow step runs as the agent that started its run, and every role says how it was granted (REM-171)",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "specs/workflow-engine/integration-rbac.sql#46",
+    "label": "specs/workflow-engine/integration-rbac.sql",
+    "gold": false
+   },
+   {
+    "id": "commit/c2f56627aa",
+    "label": "commit c2f5662: A workflow step reads as the person who started the run",
+    "gold": true
+   },
+   {
+    "id": "commit/1c18397e55",
+    "label": "commit 1c18397: A workflow step runs as the agent that started its run, and every role says how it was granted (REM-171)",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-171.md#15",
+    "label": "board/cards/REM-171.md \u203a 2026-09-14T13:43:34.699Z \u00b7 Amartey",
+    "gold": false
+   },
+   {
+    "id": "specs/workflow-engine/integration-rbac.sql#3",
+    "label": "specs/workflow-engine/integration-rbac.sql",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "specs/workflow-engine/integration-rbac.sql#46",
+    "label": "specs/workflow-engine/integration-rbac.sql",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-247.md#2",
+    "label": "board/cards/REM-247.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "commit/acc06486ac",
+    "label": "commit acc0648: Merge pull request #25 from Percolation-Labs/tour-fixes",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-247.md#1",
+    "label": "board/cards/REM-247.md",
+    "gold": false
+   },
+   {
+    "id": "commit/97aae03e6b",
+    "label": "commit 97aae03: Merge pull request #200 from Percolation-Labs/amartey/rem-247-agent-step-as-agent",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "specs/workflow-engine/roadmap.md#17",
+    "label": "specs/workflow-engine/roadmap.md \u203a 6. An identity for a run nobody started",
+    "gold": false
+   },
+   {
+    "id": "specs/agentic/reference/skills.yaml#6",
+    "label": "specs/agentic/reference/skills.yaml",
+    "gold": false
+   },
+   {
+    "id": "specs/workflow-engine/integration-rbac.sql#46",
+    "label": "specs/workflow-engine/integration-rbac.sql",
+    "gold": false
+   },
+   {
+    "id": "specs/workflow-engine/integration-rbac.sql#3",
+    "label": "specs/workflow-engine/integration-rbac.sql",
+    "gold": false
+   },
+   {
+    "id": "specs/agentic/reference/percolate.yaml#5",
+    "label": "specs/agentic/reference/percolate.yaml",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.5,
+  "Q": 0.5,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

@@ -1,0 +1,446 @@
+{
+ "qid": "pr:820",
+ "set": "prs",
+ "question": "What work went into this, and why: door-budget-guard: a question-blind budget for 3 doors per wave ($0, oracle gate)?",
+ "gold": [
+  {
+   "id": "commit/5bd29d9db2",
+   "label": "commit 5bd29d9: door-budget-guard: result, b-m10 keeps .90 of k=3's BEAM gain at -.005 on MuSiQue room 0 (oracle)",
+   "seed": false
+  },
+  {
+   "id": "commit/98aae3c42b",
+   "label": "commit 98aae3c: door-budget-guard: register a question-blind budget for 3 doors per wave ($0, controls only)",
+   "seed": true
+  },
+  {
+   "id": "commit/ecd062ca91",
+   "label": "commit ecd062c: door-budget-guard: mark the cap's mechanism as a reading, not a measurement",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/6dc158dd54",
+   "label": "commit 6dc158d: Merge pull request #820 from Percolation-Labs/james/door-budget-guard",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/98aae3c42b",
+   "label": "commit 98aae3c: door-budget-guard: register a question-blind budget for 3 doors per wave ($0, controls only)",
+   "rank": 2,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "meta/lab/results/door-budget-guard/RESULT.md#1",
+   "label": "meta/lab/results/door-budget-guard/RESULT.md \u203a A question-blind budget for 3 doors per wave",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "meta/lab/results/door-budget-guard/RESULT.md#2",
+   "label": "meta/lab/results/door-budget-guard/RESULT.md \u203a Registration (17 Nov 2026, committed before any scoring)",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "meta/lab/results/door-budget-guard/drive.py#1",
+   "label": "meta/lab/results/door-budget-guard/drive.py",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/5bd29d9db2",
+    "label": "commit 5bd29d9: door-budget-guard: result, b-m10 keeps .90 of k=3's BEAM gain at -.005 on MuSiQue room 0 (oracle)",
+    "role": "gold"
+   },
+   {
+    "id": "commit/98aae3c42b",
+    "label": "commit 98aae3c: door-budget-guard: register a question-blind budget for 3 doors per wave ($0, controls only)",
+    "role": "gold"
+   },
+   {
+    "id": "commit/ecd062ca91",
+    "label": "commit ecd062c: door-budget-guard: mark the cap's mechanism as a reading, not a measurement",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/5bd29d9db2",
+    "b": "commit/98aae3c42b",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "budget guard",
+      "width": 34
+     },
+     {
+      "kind": "term",
+      "key": "door budget",
+      "width": 34
+     }
+    ]
+   },
+   {
+    "a": "commit/5bd29d9db2",
+    "b": "commit/ecd062ca91",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "budget guard",
+      "width": 34
+     },
+     {
+      "kind": "term",
+      "key": "door budget",
+      "width": 34
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   1,
+   1
+  ],
+  "entry": {
+   "seed": "commit/98aae3c42b",
+   "gold": "commit/98aae3c42b",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 991,
+  "within_2_doors": 30610,
+  "gold_within_1": 2,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "commit/5bd29d9db2",
+    "label": "commit 5bd29d9: door-budget-guard: result, b-m10 keeps .90 of k=3's BEAM gain at -.005 on MuSiQue room 0 (oracle)",
+    "p": 0.006581210671036059,
+    "gold": true
+   },
+   {
+    "id": "meta/lab/results/door-budget-guard/score-result.md#2",
+    "label": "meta/lab/results/door-budget-guard/score-result.md \u203a BEAM room > .5 (21 questions)",
+    "p": 0.006450972730101017,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/door-budget-guard/score-result.md#4",
+    "label": "meta/lab/results/door-budget-guard/score-result.md \u203a BEAM room \u2264 .5 (18 questions)",
+    "p": 0.0062569185654238494,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/door-budget-guard/score-result.md#6",
+    "label": "meta/lab/results/door-budget-guard/score-result.md \u203a BEAM room 0 (61 questions)",
+    "p": 0.006256687360077518,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/door-budget-guard/score-result.md#10",
+    "label": "meta/lab/results/door-budget-guard/score-result.md \u203a MuSiQue room > 0 (29 questions)",
+    "p": 0.0062132903801291545,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/door-budget-guard/score-result.md#8",
+    "label": "meta/lab/results/door-budget-guard/score-result.md \u203a MuSiQue room 0 (53 questions)",
+    "p": 0.006020622154801733,
+    "gold": false
+   },
+   {
+    "id": "commit/a742566f50",
+    "label": "commit a742566: board: james messages sirsh",
+    "p": 0.004669372386023798,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/door-budget-guard/drive.py#2",
+    "label": "meta/lab/results/door-budget-guard/drive.py",
+    "p": 0.0039701234282582855,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/door-budget-guard/RESULT.md#4",
+    "label": "meta/lab/results/door-budget-guard/RESULT.md \u203a 808's oracle +.077 and +.182 on BEAM room > .5).",
+    "p": 0.003966706719433864,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/door-budget-guard/score-result.md#11",
+    "label": "meta/lab/results/door-budget-guard/score-result.md \u203a MuSiQue room > 0 (29 questions)",
+    "p": 0.003960397336770677,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/door-budget-guard/RESULT.md#6",
+    "label": "meta/lab/results/door-budget-guard/RESULT.md \u203a Result (17 Nov 2026)",
+    "p": 0.003922285114688767,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/door-budget-guard/score-result.md#3",
+    "label": "meta/lab/results/door-budget-guard/score-result.md \u203a BEAM room > .5 (21 questions)",
+    "p": 0.003912786653362774,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/door-budget-guard/score-result.md#5",
+    "label": "meta/lab/results/door-budget-guard/score-result.md \u203a BEAM room \u2264 .5 (18 questions)",
+    "p": 0.003910047235872269,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/door-budget-guard/score-result.md#7",
+    "label": "meta/lab/results/door-budget-guard/score-result.md \u203a BEAM room 0 (61 questions)",
+    "p": 0.003906715463679549,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/door-budget-guard/RESULT.md#5",
+    "label": "meta/lab/results/door-budget-guard/RESULT.md \u203a 808's oracle +.077 and +.182 on BEAM room > .5).",
+    "p": 0.003878149350260056,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/door-budget-guard/score-result.md#9",
+    "label": "meta/lab/results/door-budget-guard/score-result.md \u203a MuSiQue room 0 (53 questions)",
+    "p": 0.003864826273551678,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/door-budget-guard/RESULT.md#3",
+    "label": "meta/lab/results/door-budget-guard/RESULT.md \u203a Registration (17 Nov 2026, committed before any scoring)",
+    "p": 0.003824064214960384,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/door-budget-guard/score-result.md#12",
+    "label": "meta/lab/results/door-budget-guard/score-result.md \u203a The registered gate (oracle)",
+    "p": 0.0037891022031136777,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/door-budget-guard/score.py#3",
+    "label": "meta/lab/results/door-budget-guard/score.py",
+    "p": 0.003664219876384141,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-bm5/RESULT.md#2",
+    "label": "meta/lab/results/jev-bm5/RESULT.md \u203a Registration (17 Nov 2026, committed before any live call)",
+    "p": 0.0035700074300708444,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/6dc158dd54",
+   "label": "commit 6dc158d: Merge pull request #820 from Percolation-Labs/james/door-budget-guard",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/98aae3c42b",
+   "label": "commit 98aae3c: door-budget-guard: register a question-blind budget for 3 doors per wave ($0, controls only)",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "meta/lab/results/door-budget-guard/RESULT.md#1",
+   "label": "meta/lab/results/door-budget-guard/RESULT.md \u203a A question-blind budget for 3 doors per wave",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/door-budget-guard/RESULT.md#2",
+   "label": "meta/lab/results/door-budget-guard/RESULT.md \u203a Registration (17 Nov 2026, committed before any scoring)",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/door-budget-guard/drive.py#1",
+   "label": "meta/lab/results/door-budget-guard/drive.py",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/door-budget-guard/score.py#1",
+   "label": "meta/lab/results/door-budget-guard/score.py",
+   "wave": 1,
+   "via": "term:cap s40",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/door-budget-guard/score-result.md#6",
+   "label": "meta/lab/results/door-budget-guard/score-result.md \u203a BEAM room 0 (61 questions)",
+   "wave": 1,
+   "via": "term:cap s40",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/door-budget-guard/score-result.md#2",
+   "label": "meta/lab/results/door-budget-guard/score-result.md \u203a BEAM room > .5 (21 questions)",
+   "wave": 1,
+   "via": "term:cap s40",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/door-budget-guard/score-result.md#4",
+   "label": "meta/lab/results/door-budget-guard/score-result.md \u203a BEAM room \u2264 .5 (18 questions)",
+   "wave": 1,
+   "via": "term:cap s40",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/door-budget-guard/score-result.md#8",
+   "label": "meta/lab/results/door-budget-guard/score-result.md \u203a MuSiQue room 0 (53 questions)",
+   "wave": 1,
+   "via": "term:cap s40",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "commit/5bd29d9db2",
+    "label": "commit 5bd29d9: door-budget-guard: result, b-m10 keeps .90 of k=3's BEAM gain at -.005 on MuSiQue room 0 (oracle)",
+    "gold": true
+   },
+   {
+    "id": "meta/lab/results/door-budget-guard/score-result.md#2",
+    "label": "meta/lab/results/door-budget-guard/score-result.md \u203a BEAM room > .5 (21 questions)",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/door-budget-guard/score-result.md#4",
+    "label": "meta/lab/results/door-budget-guard/score-result.md \u203a BEAM room \u2264 .5 (18 questions)",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/door-budget-guard/score-result.md#6",
+    "label": "meta/lab/results/door-budget-guard/score-result.md \u203a BEAM room 0 (61 questions)",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/door-budget-guard/score-result.md#10",
+    "label": "meta/lab/results/door-budget-guard/score-result.md \u203a MuSiQue room > 0 (29 questions)",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "meta/lab/results/door-budget-guard/score-result.md#2",
+    "label": "meta/lab/results/door-budget-guard/score-result.md \u203a BEAM room > .5 (21 questions)",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/door-budget-guard/score-result.md#4",
+    "label": "meta/lab/results/door-budget-guard/score-result.md \u203a BEAM room \u2264 .5 (18 questions)",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/door-budget-guard/score-result.md#6",
+    "label": "meta/lab/results/door-budget-guard/score-result.md \u203a BEAM room 0 (61 questions)",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/door-budget-guard/score-result.md#10",
+    "label": "meta/lab/results/door-budget-guard/score-result.md \u203a MuSiQue room > 0 (29 questions)",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/door-budget-guard/score-result.md#8",
+    "label": "meta/lab/results/door-budget-guard/score-result.md \u203a MuSiQue room 0 (53 questions)",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/5bd29d9db2",
+    "label": "commit 5bd29d9: door-budget-guard: result, b-m10 keeps .90 of k=3's BEAM gain at -.005 on MuSiQue room 0 (oracle)",
+    "gold": true
+   },
+   {
+    "id": "commit/ecd062ca91",
+    "label": "commit ecd062c: door-budget-guard: mark the cap's mechanism as a reading, not a measurement",
+    "gold": true
+   },
+   {
+    "id": "commit/3443373108",
+    "label": "commit 3443373: jev-bm5-multihop: result, oracle gate +.050 (P2) but Jev b-m5 - k=1 -.003 [-.072, +.061] on 30 fresh 3/4",
+    "gold": false
+   },
+   {
+    "id": "commit/a24711a22a",
+    "label": "commit a24711a: jev-bm5-multihop: oracle gate passes (+.050), priced ($0.45 projected, no cut)",
+    "gold": false
+   },
+   {
+    "id": "commit/a742566f50",
+    "label": "commit a742566: board: james messages sirsh",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "meta/lab/results/door-budget-guard/RESULT.md#9",
+    "label": "meta/lab/results/door-budget-guard/RESULT.md \u203a Postmortem",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261117-141250-41e8.md#1",
+    "label": "board/messages/M-20261117-141250-41e8.md",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261117-085359-d273.md#1",
+    "label": "board/messages/M-20261117-085359-d273.md",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/doors-per-wave/RESULT.md#8",
+    "label": "meta/lab/results/doors-per-wave/RESULT.md \u203a Postmortem",
+    "gold": false
+   },
+   {
+    "id": "commit/5bd29d9db2",
+    "label": "commit 5bd29d9: door-budget-guard: result, b-m10 keeps .90 of k=3's BEAM gain at -.005 on MuSiQue room 0 (oracle)",
+    "gold": true
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.5,
+  "Q": 0.0,
+  "LQ": 1.0,
+  "S": 0.5
+ }
+}

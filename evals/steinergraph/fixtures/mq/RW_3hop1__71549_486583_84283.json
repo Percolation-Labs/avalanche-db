@@ -1,0 +1,454 @@
+{
+ "qid": "RW:3hop1__71549_486583_84283",
+ "set": "mq",
+ "question": "Who owns the record label where Neil Young's co-singer on Four Strong Winds records?",
+ "gold": [
+  {
+   "id": "mq:19f9a932367a95d0",
+   "label": "Nicolette (album)",
+   "seed": false
+  },
+  {
+   "id": "mq:686592b68ef0a5f3",
+   "label": "Four Strong Winds",
+   "seed": true
+  },
+  {
+   "id": "mq:d9f976bd5b1a8053",
+   "label": "Warner Records",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:686592b68ef0a5f3",
+   "label": "Four Strong Winds",
+   "rank": 1,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:7a9262c41e5e550d",
+   "label": "Old Ways",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:30a811342092cc15",
+   "label": "The Beauty of Hindsight",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:e83e49d88d5b737c",
+   "label": "Mona Bone Jakon",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "mq:19151bed72d9f367",
+   "label": "Barbara Pittman",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 2
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:19f9a932367a95d0",
+    "label": "Nicolette (album)",
+    "role": "gold"
+   },
+   {
+    "id": "mq:686592b68ef0a5f3",
+    "label": "Four Strong Winds",
+    "role": "gold"
+   },
+   {
+    "id": "mq:d9f976bd5b1a8053",
+    "label": "Warner Records",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:19f9a932367a95d0",
+    "b": "mq:686592b68ef0a5f3",
+    "via": [
+     {
+      "kind": "near",
+      "width": 1
+     },
+     {
+      "kind": "term",
+      "key": "nicolette",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "nicolette larson",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "larson",
+      "width": 5
+     }
+    ]
+   },
+   {
+    "a": "mq:19f9a932367a95d0",
+    "b": "mq:d9f976bd5b1a8053",
+    "via": [
+     {
+      "kind": "term",
+      "key": "warner bros",
+      "width": 56
+     },
+     {
+      "kind": "term",
+      "key": "bros",
+      "width": 68
+     },
+     {
+      "kind": "term",
+      "key": "warner",
+      "width": 93
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   1,
+   2
+  ],
+  "entry": {
+   "seed": "mq:686592b68ef0a5f3",
+   "gold": "mq:686592b68ef0a5f3",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 1646,
+  "within_2_doors": 19372,
+  "gold_within_1": 1,
+  "gold_within_2": 1,
+  "top_U": [
+   {
+    "id": "mq:07a694f3b1c618ef",
+    "label": "If Not for You (album)",
+    "p": 0.004327603109180956,
+    "gold": false
+   },
+   {
+    "id": "mq:19f9a932367a95d0",
+    "label": "Nicolette (album)",
+    "p": 0.0029562388723032317,
+    "gold": true
+   },
+   {
+    "id": "mq:8b3fe8141a1e2f54",
+    "label": "One Nil",
+    "p": 0.0028729817557401373,
+    "gold": false
+   },
+   {
+    "id": "mq:bd4246f92f769121",
+    "label": "Blues",
+    "p": 0.0025014108301236807,
+    "gold": false
+   },
+   {
+    "id": "mq:76fb05ba6f4f8586",
+    "label": "Still Life (Talking)",
+    "p": 0.002425344242984237,
+    "gold": false
+   },
+   {
+    "id": "mq:a9fc28448cf0c44e",
+    "label": "Rosetta Pebble",
+    "p": 0.002130259131338213,
+    "gold": false
+   },
+   {
+    "id": "mq:63f443b5dcf2f7e1",
+    "label": "Atomic Playboys",
+    "p": 0.0020129115444993137,
+    "gold": false
+   },
+   {
+    "id": "mq:d06496e57db4fe8b",
+    "label": "Ella Spira",
+    "p": 0.0019615342635644285,
+    "gold": false
+   },
+   {
+    "id": "mq:4dd6db53a3a76bf0",
+    "label": "Flip Records (1994)",
+    "p": 0.00174678053546752,
+    "gold": false
+   },
+   {
+    "id": "mq:8beff604f373a8b4",
+    "label": "The Road to El Dorado",
+    "p": 0.0016851803718803357,
+    "gold": false
+   },
+   {
+    "id": "mq:41ce56725550912b",
+    "label": "Eight Arms to Hold You",
+    "p": 0.0011902691177293988,
+    "gold": false
+   },
+   {
+    "id": "mq:4a06f8f1241d1026",
+    "label": "Tha Blue Carpet Treatment",
+    "p": 0.0011442373516788772,
+    "gold": false
+   },
+   {
+    "id": "mq:388b19ec5a07dba2",
+    "label": "Dear God (XTC song)",
+    "p": 0.0011086687609277533,
+    "gold": false
+   },
+   {
+    "id": "mq:6342cf8cf0557c44",
+    "label": "Break-up of the Beatles",
+    "p": 0.0010349662616612038,
+    "gold": false
+   },
+   {
+    "id": "mq:89152b490c737c5a",
+    "label": "Sulaiman Mohammed Nazif",
+    "p": 0.0010046539384528542,
+    "gold": false
+   },
+   {
+    "id": "mq:61175a90bb82085c",
+    "label": "The Manager and the Salesman",
+    "p": 0.0010030570514101911,
+    "gold": false
+   },
+   {
+    "id": "mq:b9c41112047c8187",
+    "label": "Jim Halpert",
+    "p": 0.0009869321571866678,
+    "gold": false
+   },
+   {
+    "id": "mq:1d34ad061edd381b",
+    "label": "Novum Organum",
+    "p": 0.0009667700731034528,
+    "gold": false
+   },
+   {
+    "id": "mq:a6553e26b3270605",
+    "label": "Soul Train",
+    "p": 0.0009545949150990615,
+    "gold": false
+   },
+   {
+    "id": "mq:eedaeefc059084db",
+    "label": "Give My Love to Rose",
+    "p": 0.000925824546183887,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:686592b68ef0a5f3",
+   "label": "Four Strong Winds",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:7a9262c41e5e550d",
+   "label": "Old Ways",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:30a811342092cc15",
+   "label": "The Beauty of Hindsight",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:e83e49d88d5b737c",
+   "label": "Mona Bone Jakon",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:19151bed72d9f367",
+   "label": "Barbara Pittman",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:19f9a932367a95d0",
+   "label": "Nicolette (album)",
+   "wave": 1,
+   "via": "term:nicolette",
+   "gold": true
+  },
+  {
+   "id": "mq:3b9b8ba33d642de1",
+   "label": "Ain't Living Long Like This",
+   "wave": 2,
+   "via": "term:bros",
+   "gold": false
+  },
+  {
+   "id": "mq:c122f1d7abdc07d7",
+   "label": "Sooner or Later (Larry Graham song)",
+   "wave": 2,
+   "via": "term:bros",
+   "gold": false
+  },
+  {
+   "id": "mq:6c30d495384c4f82",
+   "label": "Terry Dexter (album)",
+   "wave": 2,
+   "via": "term:bros",
+   "gold": false
+  },
+  {
+   "id": "mq:dcbbf0056511a1b7",
+   "label": "The Following",
+   "wave": 2,
+   "via": "term:bros",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:07a694f3b1c618ef",
+    "label": "If Not for You (album)",
+    "gold": false
+   },
+   {
+    "id": "mq:19f9a932367a95d0",
+    "label": "Nicolette (album)",
+    "gold": true
+   },
+   {
+    "id": "mq:8b3fe8141a1e2f54",
+    "label": "One Nil",
+    "gold": false
+   },
+   {
+    "id": "mq:bd4246f92f769121",
+    "label": "Blues",
+    "gold": false
+   },
+   {
+    "id": "mq:76fb05ba6f4f8586",
+    "label": "Still Life (Talking)",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:07a694f3b1c618ef",
+    "label": "If Not for You (album)",
+    "gold": false
+   },
+   {
+    "id": "mq:19f9a932367a95d0",
+    "label": "Nicolette (album)",
+    "gold": true
+   },
+   {
+    "id": "mq:8b3fe8141a1e2f54",
+    "label": "One Nil",
+    "gold": false
+   },
+   {
+    "id": "mq:bd4246f92f769121",
+    "label": "Blues",
+    "gold": false
+   },
+   {
+    "id": "mq:4dd6db53a3a76bf0",
+    "label": "Flip Records (1994)",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:07a694f3b1c618ef",
+    "label": "If Not for You (album)",
+    "gold": false
+   },
+   {
+    "id": "mq:bd4246f92f769121",
+    "label": "Blues",
+    "gold": false
+   },
+   {
+    "id": "mq:e884a8e9e61a0246",
+    "label": "Sony Music",
+    "gold": false
+   },
+   {
+    "id": "mq:d9d7d3c51b6272e0",
+    "label": "Ohio (Crosby, Stills, Nash & Young song)",
+    "gold": false
+   },
+   {
+    "id": "mq:8b3fe8141a1e2f54",
+    "label": "One Nil",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:a54417415a5deffe",
+    "label": "Swag It Out",
+    "gold": false
+   },
+   {
+    "id": "mq:a141117cb8e0cf1c",
+    "label": "Asian Man Records",
+    "gold": false
+   },
+   {
+    "id": "mq:13308a6890aea0cc",
+    "label": "Apple Records",
+    "gold": false
+   },
+   {
+    "id": "mq:e41ad5917b5d0e46",
+    "label": "EmArcy Records",
+    "gold": false
+   },
+   {
+    "id": "mq:649a08379e46a321",
+    "label": "Cargo Records (UK)",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.5,
+  "Q": 0.5,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

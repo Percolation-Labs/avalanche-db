@@ -1,0 +1,646 @@
+{
+ "qid": "card:REM-81",
+ "set": "cards",
+ "question": "What was done about this, and why: workflow: reading a plan's progress works for the role it is granted to?",
+ "gold": [
+  {
+   "id": "commit/0214f32d10",
+   "label": "commit 0214f32: Merge remote-tracking branch 'origin/main' into fix/rem-81-plan-status-reachable",
+   "seed": false
+  },
+  {
+   "id": "commit/1c5673ddaa",
+   "label": "commit 1c5673d: Merge pull request #64 from Percolation-Labs/fix/rem-81-plan-status-reachable",
+   "seed": false
+  },
+  {
+   "id": "commit/239705ffe3",
+   "label": "commit 239705f: Merge remote-tracking branch 'origin/main' into fix/rem-81-plan-status-reachable",
+   "seed": false
+  },
+  {
+   "id": "commit/357e05c46f",
+   "label": "commit 357e05c: Merge remote-tracking branch 'origin/main' into fix/rem-81-plan-status-reachable",
+   "seed": false
+  },
+  {
+   "id": "commit/45eedee92d",
+   "label": "commit 45eedee: Three sessions corrected this file, and one of the corrections is its own thesis",
+   "seed": false
+  },
+  {
+   "id": "commit/5a0de62957",
+   "label": "commit 5a0de62: Six plan functions were granted to a role that could not call any of them",
+   "seed": true
+  },
+  {
+   "id": "commit/f9b35ec338",
+   "label": "commit f9b35ec: Merge remote-tracking branch 'origin/main' into fix/rem-81-plan-status-reachable",
+   "seed": false
+  },
+  {
+   "id": "commit/fca60317f1",
+   "label": "commit fca6031: Merge remote-tracking branch 'origin/main' into fix/rem-81-plan-status-reachable",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "board/cards/REM-81.md#1",
+   "label": "board/cards/REM-81.md",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "specs/workflow-engine/integration-rbac.sql#47",
+   "label": "specs/workflow-engine/integration-rbac.sql",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "specs/workflow-engine/plan-graph.md#18",
+   "label": "specs/workflow-engine/plan-graph.md \u203a `plan_status` is the run beside the plan",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/5a0de62957",
+   "label": "commit 5a0de62: Six plan functions were granted to a role that could not call any of them",
+   "rank": 4,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "board/cards/REM-551.md#4",
+   "label": "board/cards/REM-551.md \u203a Done when",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 2
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/0214f32d10",
+    "label": "commit 0214f32: Merge remote-tracking branch 'origin/main' into fix/rem-81-plan-status-reachable",
+    "role": "gold"
+   },
+   {
+    "id": "commit/1c5673ddaa",
+    "label": "commit 1c5673d: Merge pull request #64 from Percolation-Labs/fix/rem-81-plan-status-reachable",
+    "role": "gold"
+   },
+   {
+    "id": "commit/239705ffe3",
+    "label": "commit 239705f: Merge remote-tracking branch 'origin/main' into fix/rem-81-plan-status-reachable",
+    "role": "gold"
+   },
+   {
+    "id": "commit/357e05c46f",
+    "label": "commit 357e05c: Merge remote-tracking branch 'origin/main' into fix/rem-81-plan-status-reachable",
+    "role": "gold"
+   },
+   {
+    "id": "commit/45eedee92d",
+    "label": "commit 45eedee: Three sessions corrected this file, and one of the corrections is its own thesis",
+    "role": "gold"
+   },
+   {
+    "id": "commit/5a0de62957",
+    "label": "commit 5a0de62: Six plan functions were granted to a role that could not call any of them",
+    "role": "gold"
+   },
+   {
+    "id": "commit/f9b35ec338",
+    "label": "commit f9b35ec: Merge remote-tracking branch 'origin/main' into fix/rem-81-plan-status-reachable",
+    "role": "gold"
+   },
+   {
+    "id": "commit/fca60317f1",
+    "label": "commit fca6031: Merge remote-tracking branch 'origin/main' into fix/rem-81-plan-status-reachable",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/0214f32d10",
+    "b": "commit/239705ffe3",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "status reachable",
+      "width": 6
+     },
+     {
+      "kind": "term",
+      "key": "plan status",
+      "width": 9
+     },
+     {
+      "kind": "term",
+      "key": "fix rem",
+      "width": 72
+     },
+     {
+      "kind": "term",
+      "key": "tracking branch",
+      "width": 84
+     },
+     {
+      "kind": "term",
+      "key": "branch origin",
+      "width": 84
+     }
+    ]
+   },
+   {
+    "a": "commit/0214f32d10",
+    "b": "commit/357e05c46f",
+    "via": [
+     {
+      "kind": "term",
+      "key": "status reachable",
+      "width": 6
+     },
+     {
+      "kind": "term",
+      "key": "plan status",
+      "width": 9
+     },
+     {
+      "kind": "term",
+      "key": "fix rem",
+      "width": 72
+     },
+     {
+      "kind": "term",
+      "key": "tracking branch",
+      "width": 84
+     },
+     {
+      "kind": "term",
+      "key": "branch origin",
+      "width": 84
+     }
+    ]
+   },
+   {
+    "a": "commit/0214f32d10",
+    "b": "commit/fca60317f1",
+    "via": [
+     {
+      "kind": "term",
+      "key": "status reachable",
+      "width": 6
+     },
+     {
+      "kind": "term",
+      "key": "plan status",
+      "width": 9
+     },
+     {
+      "kind": "term",
+      "key": "fix rem",
+      "width": 72
+     },
+     {
+      "kind": "term",
+      "key": "tracking branch",
+      "width": 84
+     },
+     {
+      "kind": "term",
+      "key": "branch origin",
+      "width": 84
+     }
+    ]
+   },
+   {
+    "a": "commit/1c5673ddaa",
+    "b": "commit/5a0de62957",
+    "via": [
+     {
+      "kind": "term",
+      "key": "six plan",
+      "width": 3
+     },
+     {
+      "kind": "term",
+      "key": "plan functions",
+      "width": 7
+     }
+    ]
+   },
+   {
+    "a": "commit/357e05c46f",
+    "b": "commit/f9b35ec338",
+    "via": [
+     {
+      "kind": "term",
+      "key": "status reachable",
+      "width": 6
+     },
+     {
+      "kind": "term",
+      "key": "plan status",
+      "width": 9
+     },
+     {
+      "kind": "term",
+      "key": "fix rem",
+      "width": 72
+     },
+     {
+      "kind": "term",
+      "key": "tracking branch",
+      "width": 84
+     },
+     {
+      "kind": "term",
+      "key": "branch origin",
+      "width": 84
+     }
+    ]
+   },
+   {
+    "a": "commit/45eedee92d",
+    "b": "commit/5a0de62957",
+    "via": [
+     {
+      "kind": "term",
+      "key": "rem 81",
+      "width": 8
+     }
+    ]
+   },
+   {
+    "a": "commit/5a0de62957",
+    "b": "commit/fca60317f1",
+    "via": [
+     {
+      "kind": "beside"
+     }
+    ]
+   }
+  ],
+  "cost": 7,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   1,
+   1,
+   2,
+   2,
+   1,
+   1,
+   1,
+   1,
+   2,
+   1,
+   1,
+   1,
+   1,
+   2,
+   2,
+   1,
+   1,
+   2,
+   2,
+   1,
+   1,
+   1,
+   2,
+   2,
+   2,
+   1,
+   1
+  ],
+  "entry": {
+   "seed": "commit/5a0de62957",
+   "gold": "commit/5a0de62957",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 2653,
+  "within_2_doors": 33257,
+  "gold_within_1": 3,
+  "gold_within_2": 4,
+  "top_U": [
+   {
+    "id": "specs/workflow-engine/integration-rbac.sql#49",
+    "label": "specs/workflow-engine/integration-rbac.sql",
+    "p": 0.007003398972217827,
+    "gold": false
+   },
+   {
+    "id": "specs/workflow-engine/plan-graph.md#19",
+    "label": "specs/workflow-engine/plan-graph.md \u203a `plan_status` is the run beside the plan",
+    "p": 0.0050029091354156195,
+    "gold": false
+   },
+   {
+    "id": "specs/workflow-engine/integration-rbac.sql#48",
+    "label": "specs/workflow-engine/integration-rbac.sql",
+    "p": 0.002813595348162179,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-618.md#7",
+    "label": "board/cards/REM-618.md \u203a Log",
+    "p": 0.002049376996619194,
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-ui/README.md#14",
+    "label": "applications/percolate-ui/README.md \u203a Define, run and repeat a briefing",
+    "p": 0.00204093208596808,
+    "gold": false
+   },
+   {
+    "id": "specs/world-model-ingestion/ingestion.md#13",
+    "label": "specs/world-model-ingestion/ingestion.md \u203a Whose run a pull returns",
+    "p": 0.0018198607274150643,
+    "gold": false
+   },
+   {
+    "id": "specs/workflow-engine/integration-rbac.sql#50",
+    "label": "specs/workflow-engine/integration-rbac.sql",
+    "p": 0.0018096754032268178,
+    "gold": false
+   },
+   {
+    "id": "commit/8efb89b258",
+    "label": "commit 8efb89b: A session id had two derivations and a retired workflow still ran",
+    "p": 0.0017345212879727315,
+    "gold": false
+   },
+   {
+    "id": "commit/715ac92440",
+    "label": "commit 715ac92: An external_id was a key to anybody's run",
+    "p": 0.00168491655910194,
+    "gold": false
+   },
+   {
+    "id": "commit/8c3154b46f",
+    "label": "commit 8c3154b: A person's SQL step reads only the task history of runs they may see (REM-551)",
+    "p": 0.0015447081198604346,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-567.md#4",
+    "label": "board/cards/REM-567.md \u203a Done when",
+    "p": 0.0014823919165312884,
+    "gold": false
+   },
+   {
+    "id": "specs/identity/closing.sql#6",
+    "label": "specs/identity/closing.sql",
+    "p": 0.0014627205804008771,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-81.md#2",
+    "label": "board/cards/REM-81.md \u203a Log",
+    "p": 0.0013967697596706534,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-551.md#5",
+    "label": "board/cards/REM-551.md \u203a Log",
+    "p": 0.0013779844039296394,
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-ui/artifacts/workflow-new-agent-manifest.yaml#2",
+    "label": "applications/percolate-ui/artifacts/workflow-new-agent-manifest.yaml",
+    "p": 0.001255643616195401,
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-ui/artifacts/workflow-composition-manifest.yaml#2",
+    "label": "applications/percolate-ui/artifacts/workflow-composition-manifest.yaml",
+    "p": 0.0012555707106096739,
+    "gold": false
+   },
+   {
+    "id": "commit/37ed4cd487",
+    "label": "commit 37ed4cd: rows, not schema: the rule, and a gate that reads specs/ (REM-655) (#335)",
+    "p": 0.001242601143409518,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-551.md#3",
+    "label": "board/cards/REM-551.md \u203a Evidence",
+    "p": 0.0011948479536786055,
+    "gold": false
+   },
+   {
+    "id": "specs/design/core-repository-move.md#11",
+    "label": "specs/design/core-repository-move.md \u203a 6. get-percolate",
+    "p": 0.0011929315717828027,
+    "gold": false
+   },
+   {
+    "id": "commit/0a179da65a",
+    "label": "commit 0a179da: Probe the plan instead of only reading it, and say what each step returns",
+    "p": 0.0011871443977181672,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "board/cards/REM-81.md#1",
+   "label": "board/cards/REM-81.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/workflow-engine/integration-rbac.sql#47",
+   "label": "specs/workflow-engine/integration-rbac.sql",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/workflow-engine/plan-graph.md#18",
+   "label": "specs/workflow-engine/plan-graph.md \u203a `plan_status` is the run beside the plan",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/5a0de62957",
+   "label": "commit 5a0de62: Six plan functions were granted to a role that could not call any of them",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "board/cards/REM-551.md#4",
+   "label": "board/cards/REM-551.md \u203a Done when",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/workflow-engine/integration-rbac.sql#49",
+   "label": "specs/workflow-engine/integration-rbac.sql",
+   "wave": 1,
+   "via": "term:plan_status permission",
+   "gold": false
+  },
+  {
+   "id": "commit/45eedee92d",
+   "label": "commit 45eedee: Three sessions corrected this file, and one of the corrections is its own thesis",
+   "wave": 2,
+   "via": "term:rem 81",
+   "gold": true
+  },
+  {
+   "id": "board/cards/REM-81.md#2",
+   "label": "board/cards/REM-81.md \u203a Log",
+   "wave": 2,
+   "via": "term:rem 81",
+   "gold": false
+  },
+  {
+   "id": "meta/postmortems/2026-09-12-true-when-it-was-measured.md#23",
+   "label": "meta/postmortems/2026-09-12-true-when-it-was-measured.md \u203a 7. What this needs",
+   "wave": 2,
+   "via": "term:rem 81",
+   "gold": false
+  },
+  {
+   "id": "specs/workflow-engine/plan-graph.md#19",
+   "label": "specs/workflow-engine/plan-graph.md \u203a `plan_status` is the run beside the plan",
+   "wave": 2,
+   "via": "term:rem 81",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "specs/workflow-engine/integration-rbac.sql#49",
+    "label": "specs/workflow-engine/integration-rbac.sql",
+    "gold": false
+   },
+   {
+    "id": "specs/workflow-engine/plan-graph.md#19",
+    "label": "specs/workflow-engine/plan-graph.md \u203a `plan_status` is the run beside the plan",
+    "gold": false
+   },
+   {
+    "id": "specs/workflow-engine/integration-rbac.sql#48",
+    "label": "specs/workflow-engine/integration-rbac.sql",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-618.md#7",
+    "label": "board/cards/REM-618.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-ui/README.md#14",
+    "label": "applications/percolate-ui/README.md \u203a Define, run and repeat a briefing",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "specs/workflow-engine/integration-rbac.sql#49",
+    "label": "specs/workflow-engine/integration-rbac.sql",
+    "gold": false
+   },
+   {
+    "id": "specs/workflow-engine/plan-graph.md#19",
+    "label": "specs/workflow-engine/plan-graph.md \u203a `plan_status` is the run beside the plan",
+    "gold": false
+   },
+   {
+    "id": "specs/workflow-engine/integration-rbac.sql#50",
+    "label": "specs/workflow-engine/integration-rbac.sql",
+    "gold": false
+   },
+   {
+    "id": "specs/identity/closing.sql#6",
+    "label": "specs/identity/closing.sql",
+    "gold": false
+   },
+   {
+    "id": "commit/0a179da65a",
+    "label": "commit 0a179da: Probe the plan instead of only reading it, and say what each step returns",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/29be4b2a74",
+    "label": "commit 29be4b2: board: REM-551 in-progress \u2192 done",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-551.md#2",
+    "label": "board/cards/REM-551.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "specs/workflow-engine/plan-graph.md#20",
+    "label": "specs/workflow-engine/plan-graph.md \u203a `plan_status` is the run beside the plan",
+    "gold": false
+   },
+   {
+    "id": "commit/1c5673ddaa",
+    "label": "commit 1c5673d: Merge pull request #64 from Percolation-Labs/fix/rem-81-plan-status-reachable",
+    "gold": true
+   },
+   {
+    "id": "board/cards/REM-77.md#2",
+    "label": "board/cards/REM-77.md \u203a Log",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "commit/1c5673ddaa",
+    "label": "commit 1c5673d: Merge pull request #64 from Percolation-Labs/fix/rem-81-plan-status-reachable",
+    "gold": true
+   },
+   {
+    "id": "board/cards/REM-296.md#4",
+    "label": "board/cards/REM-296.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-528.md#4",
+    "label": "board/cards/REM-528.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-608.md#4",
+    "label": "board/cards/REM-608.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1166.md#6",
+    "label": "board/cards/REM-1166.md \u203a Done when",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.14285714285714285,
+  "S": 0.14285714285714285
+ }
+}

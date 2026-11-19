@@ -1,0 +1,417 @@
+{
+ "qid": "card:REM-255",
+ "set": "cards",
+ "question": "What was done about this, and why: rbac: a decision can be asked in exactly one org, so a shared-org grant does not open every org?",
+ "gold": [
+  {
+   "id": "commit/29b298ff42",
+   "label": "commit 29b298f: A decision can be asked in exactly one org, and a shared-org grant does not count in it (REM-255)",
+   "seed": true
+  },
+  {
+   "id": "commit/5523598598",
+   "label": "commit 5523598: Merge pull request #197 from Percolation-Labs/amartey/rem-255-decide-in-one-org",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/8fbc499eeb",
+   "label": "commit 8fbc499: board: file REM-255 rbac: a decision can be asked in exactly one org, so a shared-org grant does not ope",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/29b298ff42",
+   "label": "commit 29b298f: A decision can be asked in exactly one org, and a shared-org grant does not count in it (REM-255)",
+   "rank": 2,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "board/cards/REM-255.md#1",
+   "label": "board/cards/REM-255.md",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "specs/user-rbac/spec.md#10",
+   "label": "specs/user-rbac/spec.md \u203a A shared-org grant, inside one org's decision",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-255.md#2",
+   "label": "board/cards/REM-255.md \u203a Goal",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/29b298ff42",
+    "label": "commit 29b298f: A decision can be asked in exactly one org, and a shared-org grant does not count in it (REM-255)",
+    "role": "gold"
+   },
+   {
+    "id": "commit/5523598598",
+    "label": "commit 5523598: Merge pull request #197 from Percolation-Labs/amartey/rem-255-decide-in-one-org",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/29b298ff42",
+    "b": "commit/5523598598",
+    "via": [
+     {
+      "kind": "term",
+      "key": "org grant",
+      "width": 15
+     },
+     {
+      "kind": "term",
+      "key": "rem 255",
+      "width": 24
+     },
+     {
+      "kind": "term",
+      "key": "shared org",
+      "width": 54
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "commit/29b298ff42",
+   "gold": "commit/29b298ff42",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 649,
+  "within_2_doors": 31192,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "board/cards/REM-255.md#7",
+    "label": "board/cards/REM-255.md \u203a Log",
+    "p": 0.010402489580226777,
+    "gold": false
+   },
+   {
+    "id": "specs/user-rbac/schema.sql#90",
+    "label": "specs/user-rbac/schema.sql",
+    "p": 0.008388326280577344,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-255.md#3",
+    "label": "board/cards/REM-255.md \u203a Evidence",
+    "p": 0.004541501781923183,
+    "gold": false
+   },
+   {
+    "id": "meta/probes/2026-09-19-application-core-compatibility.md#3",
+    "label": "meta/probes/2026-09-19-application-core-compatibility.md \u203a Initial result and repair",
+    "p": 0.004457480376742786,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-249.md#6",
+    "label": "board/cards/REM-249.md \u203a Log",
+    "p": 0.003159354508259683,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-249.md#7",
+    "label": "board/cards/REM-249.md \u203a Log",
+    "p": 0.0030609909473459595,
+    "gold": false
+   },
+   {
+    "id": "commit/5523598598",
+    "label": "commit 5523598: Merge pull request #197 from Percolation-Labs/amartey/rem-255-decide-in-one-org",
+    "p": 0.00284422587160676,
+    "gold": true
+   },
+   {
+    "id": "specs/percolate-application/access-and-limits.md#6",
+    "label": "specs/percolate-application/access-and-limits.md \u203a Capabilities",
+    "p": 0.0027005095473507236,
+    "gold": false
+   },
+   {
+    "id": "commit/97c7926dbd",
+    "label": "commit 97c7926: board: percolate-application-32 takes REM-255",
+    "p": 0.0026640836973281356,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-155.md#12",
+    "label": "board/cards/REM-155.md \u203a 2026-09-14T14:21:47.349Z \u00b7 Amartey",
+    "p": 0.0026509716677429,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-255.md#5",
+    "label": "board/cards/REM-255.md \u203a Scope",
+    "p": 0.002538187642911205,
+    "gold": false
+   },
+   {
+    "id": "commit/554d804e00",
+    "label": "commit 554d804: board: file REM-254 extension: a version bump moves every versioned reference, or refuses before editing",
+    "p": 0.00243370023466647,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1192.md#2",
+    "label": "board/cards/REM-1192.md \u203a Goal",
+    "p": 0.002402076715420356,
+    "gold": false
+   },
+   {
+    "id": "commit/026d79c298",
+    "label": "commit 026d79c: board: file REM-256 tours: an AI agent calls every API path and MCP tool on production for the latest re",
+    "p": 0.002362429328348008,
+    "gold": false
+   },
+   {
+    "id": "specs/design/core-product.md#8",
+    "label": "specs/design/core-product.md \u203a 5. Decisions, 19 October",
+    "p": 0.0023046633822425317,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-267.md#7",
+    "label": "board/cards/REM-267.md \u203a Log",
+    "p": 0.0021360828197399028,
+    "gold": false
+   },
+   {
+    "id": "specs/research-platform/schema.sql#35",
+    "label": "specs/research-platform/schema.sql",
+    "p": 0.0020342772096627994,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/authoring-and-publication.md#13",
+    "label": "specs/percolate-application/authoring-and-publication.md \u203a 5. A3 \u2014 List publicly or add an exact revision to a publicati",
+    "p": 0.0019612615335894285,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-255.md#4",
+    "label": "board/cards/REM-255.md \u203a Done when",
+    "p": 0.0018031962174467932,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-261.md#8",
+    "label": "board/cards/REM-261.md \u203a Log",
+    "p": 0.001770385229303415,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/8fbc499eeb",
+   "label": "commit 8fbc499: board: file REM-255 rbac: a decision can be asked in exactly one org, so a shared-org grant does not ope",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/29b298ff42",
+   "label": "commit 29b298f: A decision can be asked in exactly one org, and a shared-org grant does not count in it (REM-255)",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "board/cards/REM-255.md#1",
+   "label": "board/cards/REM-255.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/user-rbac/spec.md#10",
+   "label": "specs/user-rbac/spec.md \u203a A shared-org grant, inside one org's decision",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-255.md#2",
+   "label": "board/cards/REM-255.md \u203a Goal",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/67da07225a",
+   "label": "commit 67da072: board: REM-255 in-progress \u2192 done",
+   "wave": 1,
+   "via": "term:rem 255",
+   "gold": false
+  },
+  {
+   "id": "commit/5523598598",
+   "label": "commit 5523598: Merge pull request #197 from Percolation-Labs/amartey/rem-255-decide-in-one-org",
+   "wave": 1,
+   "via": "term:rem 255",
+   "gold": true
+  },
+  {
+   "id": "board/cards/REM-255.md#3",
+   "label": "board/cards/REM-255.md \u203a Evidence",
+   "wave": 1,
+   "via": "term:rem 255",
+   "gold": false
+  },
+  {
+   "id": "commit/97c7926dbd",
+   "label": "commit 97c7926: board: percolate-application-32 takes REM-255",
+   "wave": 1,
+   "via": "term:rem 255",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-255.md#6",
+   "label": "board/cards/REM-255.md \u203a Links",
+   "wave": 1,
+   "via": "term:rem 255",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "board/cards/REM-255.md#7",
+    "label": "board/cards/REM-255.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "specs/user-rbac/schema.sql#90",
+    "label": "specs/user-rbac/schema.sql",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-255.md#3",
+    "label": "board/cards/REM-255.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "meta/probes/2026-09-19-application-core-compatibility.md#3",
+    "label": "meta/probes/2026-09-19-application-core-compatibility.md \u203a Initial result and repair",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-249.md#6",
+    "label": "board/cards/REM-249.md \u203a Log",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "board/cards/REM-255.md#7",
+    "label": "board/cards/REM-255.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "specs/user-rbac/schema.sql#90",
+    "label": "specs/user-rbac/schema.sql",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-249.md#6",
+    "label": "board/cards/REM-249.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-249.md#7",
+    "label": "board/cards/REM-249.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/access-and-limits.md#6",
+    "label": "specs/percolate-application/access-and-limits.md \u203a Capabilities",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/5523598598",
+    "label": "commit 5523598: Merge pull request #197 from Percolation-Labs/amartey/rem-255-decide-in-one-org",
+    "gold": true
+   },
+   {
+    "id": "board/cards/REM-255.md#5",
+    "label": "board/cards/REM-255.md \u203a Scope",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-255.md#4",
+    "label": "board/cards/REM-255.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-255.md#3",
+    "label": "board/cards/REM-255.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "commit/67da07225a",
+    "label": "commit 67da072: board: REM-255 in-progress \u2192 done",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "commit/5523598598",
+    "label": "commit 5523598: Merge pull request #197 from Percolation-Labs/amartey/rem-255-decide-in-one-org",
+    "gold": true
+   },
+   {
+    "id": "board/cards/REM-255.md#4",
+    "label": "board/cards/REM-255.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-249.md#7",
+    "label": "board/cards/REM-249.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-249.md#6",
+    "label": "board/cards/REM-249.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "specs/user-rbac/schema.sql#90",
+    "label": "specs/user-rbac/schema.sql",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 1.0,
+  "S": 1.0
+ }
+}

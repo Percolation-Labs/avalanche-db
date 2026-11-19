@@ -1,0 +1,410 @@
+{
+ "qid": "card:REM-755",
+ "set": "cards",
+ "question": "What was done about this, and why: claims: retire a question so the graph and the job stop offering it?",
+ "gold": [
+  {
+   "id": "commit/bdb25111e5",
+   "label": "commit bdb2511: coalescing: a claim's time is the time it describes (#397)",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/635e3e6c37",
+   "label": "commit 635e3e6: board: file REM-755 claims: retire a question so the graph and the job stop offering it",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-755.md#1",
+   "label": "board/cards/REM-755.md",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-761.md#1",
+   "label": "board/cards/REM-761.md",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "meta/skills/coalescing-runs/SKILL.md#10",
+   "label": "meta/skills/coalescing-runs/SKILL.md \u203a Gaps this skill works around",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "board/cards/REM-761.md#2",
+   "label": "board/cards/REM-761.md \u203a Log",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 2
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "board/cards/REM-761.md#1",
+    "label": "board/cards/REM-761.md",
+    "role": "seed"
+   },
+   {
+    "id": "commit/bdb25111e5",
+    "label": "commit bdb2511: coalescing: a claim's time is the time it describes (#397)",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "board/cards/REM-761.md#1",
+    "b": "commit/bdb25111e5",
+    "via": [
+     {
+      "kind": "term",
+      "key": "question rem",
+      "width": 8
+     },
+     {
+      "kind": "term",
+      "key": "retiring",
+      "width": 15
+     },
+     {
+      "kind": "term",
+      "key": "rem 755",
+      "width": 15
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [],
+  "entry": {
+   "seed": "board/cards/REM-761.md#1",
+   "gold": "commit/bdb25111e5",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 1362,
+  "within_2_doors": 34444,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "commit/79ce9a5b48",
+    "label": "commit 79ce9a5: board: file REM-761 questions: retire a superseded question in the app until core can (REM-755)",
+    "p": 0.006162580201790166,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-755.md#3",
+    "label": "board/cards/REM-755.md \u203a Log",
+    "p": 0.004712674902159631,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-755.md#2",
+    "label": "board/cards/REM-755.md",
+    "p": 0.004158277565735164,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-764.md#1",
+    "label": "board/cards/REM-764.md",
+    "p": 0.004114049327391175,
+    "gold": false
+   },
+   {
+    "id": "commit/d5ab165aae",
+    "label": "commit d5ab165: docs: record the illustrated questions paper and qualified codebase results",
+    "p": 0.0020216382386750303,
+    "gold": false
+   },
+   {
+    "id": "commit/d296498f8c",
+    "label": "commit d296498: board: questions-paper checks in, working",
+    "p": 0.002013386789950685,
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-self-model/learnings.md#2",
+    "label": "applications/percolate-self-model/learnings.md \u203a What we learned building the project's history into Percolate",
+    "p": 0.0017446820455344605,
+    "gold": false
+   },
+   {
+    "id": "meta/skills/coalescing-runs/SKILL.md#9",
+    "label": "meta/skills/coalescing-runs/SKILL.md \u203a Reporting back",
+    "p": 0.0015223681040099164,
+    "gold": false
+   },
+   {
+    "id": "specs/build-knit-dream/coalescing.md#18",
+    "label": "specs/build-knit-dream/coalescing.md \u203a 5.5 Rules that hold at every stage",
+    "p": 0.0014312677853904935,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-228.md#2",
+    "label": "board/cards/REM-228.md \u203a Goal",
+    "p": 0.0012622341486348346,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-865.md#4",
+    "label": "board/cards/REM-865.md \u203a Done when",
+    "p": 0.0012367917888763855,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-434.md#7",
+    "label": "board/cards/REM-434.md \u203a Log",
+    "p": 0.0012104913961971024,
+    "gold": false
+   },
+   {
+    "id": "meta/skills/coalescing-runs/SKILL.md#5",
+    "label": "meta/skills/coalescing-runs/SKILL.md \u203a Run A: refresh the opinions map",
+    "p": 0.0012094401542548615,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-764.md#2",
+    "label": "board/cards/REM-764.md \u203a Log",
+    "p": 0.0011392485396948667,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-10-07-dogfooding-the-dev-instance.md#1",
+    "label": "meta/postmortems/2026-10-07-dogfooding-the-dev-instance.md",
+    "p": 0.0011339145731889013,
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-10-20-lme-seeded-taxonomy/evidence_atlas/render_process.py#4",
+    "label": "meta/spikes/2026-10-20-lme-seeded-taxonomy/evidence_atlas/render_process.py",
+    "p": 0.0011289931440333775,
+    "gold": false
+   },
+   {
+    "id": "commit/7903f71633",
+    "label": "commit 7903f71: Prose in a statement is not a table it reads",
+    "p": 0.0011236980737762503,
+    "gold": false
+   },
+   {
+    "id": "specs/build-knit-dream/coalescing.md#17",
+    "label": "specs/build-knit-dream/coalescing.md \u203a 5.4 The join: Jev assigns every claim and gives its stance",
+    "p": 0.0011191831451890747,
+    "gold": false
+   },
+   {
+    "id": "commit/37ed4cd487",
+    "label": "commit 37ed4cd: rows, not schema: the rule, and a gate that reads specs/ (REM-655) (#335)",
+    "p": 0.001103086350843174,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-762.md#1",
+    "label": "board/cards/REM-762.md",
+    "p": 0.0011011573712092707,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/635e3e6c37",
+   "label": "commit 635e3e6: board: file REM-755 claims: retire a question so the graph and the job stop offering it",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-755.md#1",
+   "label": "board/cards/REM-755.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-761.md#1",
+   "label": "board/cards/REM-761.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/skills/coalescing-runs/SKILL.md#10",
+   "label": "meta/skills/coalescing-runs/SKILL.md \u203a Gaps this skill works around",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-761.md#2",
+   "label": "board/cards/REM-761.md \u203a Log",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-755.md#3",
+   "label": "board/cards/REM-755.md \u203a Log",
+   "wave": 1,
+   "via": "term:question_retired",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-755.md#2",
+   "label": "board/cards/REM-755.md",
+   "wave": 2,
+   "via": "term:retire_question",
+   "gold": false
+  },
+  {
+   "id": "specs/percolate-application/data-governance.md#12",
+   "label": "specs/percolate-application/data-governance.md \u203a G. Discovery (In the Air)",
+   "wave": 3,
+   "via": "term:retired question",
+   "gold": false
+  },
+  {
+   "id": "commit/79ce9a5b48",
+   "label": "commit 79ce9a5: board: file REM-761 questions: retire a superseded question in the app until core can (REM-755)",
+   "wave": 4,
+   "via": "term:superseded question",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-998.md#4",
+   "label": "board/cards/REM-998.md \u203a Done when",
+   "wave": 5,
+   "via": "term:question_web",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "commit/79ce9a5b48",
+    "label": "commit 79ce9a5: board: file REM-761 questions: retire a superseded question in the app until core can (REM-755)",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-755.md#3",
+    "label": "board/cards/REM-755.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-755.md#2",
+    "label": "board/cards/REM-755.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-764.md#1",
+    "label": "board/cards/REM-764.md",
+    "gold": false
+   },
+   {
+    "id": "commit/d5ab165aae",
+    "label": "commit d5ab165: docs: record the illustrated questions paper and qualified codebase results",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "commit/79ce9a5b48",
+    "label": "commit 79ce9a5: board: file REM-761 questions: retire a superseded question in the app until core can (REM-755)",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-755.md#2",
+    "label": "board/cards/REM-755.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-764.md#1",
+    "label": "board/cards/REM-764.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-755.md#3",
+    "label": "board/cards/REM-755.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-self-model/learnings.md#2",
+    "label": "applications/percolate-self-model/learnings.md \u203a What we learned building the project's history into Percolate",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/79ce9a5b48",
+    "label": "commit 79ce9a5: board: file REM-761 questions: retire a superseded question in the app until core can (REM-755)",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-755.md#2",
+    "label": "board/cards/REM-755.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-865.md#4",
+    "label": "board/cards/REM-865.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-182.md#1",
+    "label": "board/cards/REM-182.md",
+    "gold": false
+   },
+   {
+    "id": "commit/8c54763ab1",
+    "label": "commit 8c54763: board: REM-761 in-progress \u2192 done",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "commit/79ce9a5b48",
+    "label": "commit 79ce9a5: board: file REM-761 questions: retire a superseded question in the app until core can (REM-755)",
+    "gold": false
+   },
+   {
+    "id": "specs/agentic/reference/skills.yaml#12",
+    "label": "specs/agentic/reference/skills.yaml",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-706.md#4",
+    "label": "board/cards/REM-706.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-764.md#1",
+    "label": "board/cards/REM-764.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1001.md#4",
+    "label": "board/cards/REM-1001.md \u203a Done when",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

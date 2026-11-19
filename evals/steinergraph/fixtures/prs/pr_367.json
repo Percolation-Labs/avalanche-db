@@ -1,0 +1,410 @@
+{
+ "qid": "pr:367",
+ "set": "prs",
+ "question": "What work went into this, and why: aiq.resolution_candidates: what a resolver is asked to decide?",
+ "gold": [
+  {
+   "id": "commit/31ee9cf5fd",
+   "label": "commit 31ee9cf: aiq.resolution_candidates: what a resolver is asked to decide",
+   "seed": true
+  },
+  {
+   "id": "commit/f1ee145a63",
+   "label": "commit f1ee145: resolution_candidates: drop decided pairs after choosing the top k, not before",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/720193d142",
+   "label": "commit 720193d: Merge pull request #367 from Percolation-Labs/amartey/jev-resolver",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/31ee9cf5fd",
+   "label": "commit 31ee9cf: aiq.resolution_candidates: what a resolver is asked to decide",
+   "rank": 2,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "meta/spikes/2026-09-30-jev-decisions/README.md#15",
+   "label": "meta/spikes/2026-09-30-jev-decisions/README.md \u203a The resolver in core, end to end",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "meta/spikes/2026-09-30-jev-decisions/e2e_resolver.py#1",
+   "label": "meta/spikes/2026-09-30-jev-decisions/e2e_resolver.py",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "specs/world-model-ingestion/graph.sql#45",
+   "label": "specs/world-model-ingestion/graph.sql",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/31ee9cf5fd",
+    "label": "commit 31ee9cf: aiq.resolution_candidates: what a resolver is asked to decide",
+    "role": "gold"
+   },
+   {
+    "id": "commit/f1ee145a63",
+    "label": "commit f1ee145: resolution_candidates: drop decided pairs after choosing the top k, not before",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/31ee9cf5fd",
+    "b": "commit/f1ee145a63",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "resolution_candidates",
+      "width": 9
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "commit/31ee9cf5fd",
+   "gold": "commit/31ee9cf5fd",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 2515,
+  "within_2_doors": 33374,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "commit/0e367c9250",
+    "label": "commit 0e367c9: Merge pull request #366 from Percolation-Labs/amartey/jev-robustness",
+    "p": 0.006875016181536115,
+    "gold": false
+   },
+   {
+    "id": "specs/world-model-ingestion/graph.sql#46",
+    "label": "specs/world-model-ingestion/graph.sql",
+    "p": 0.00641805788695922,
+    "gold": false
+   },
+   {
+    "id": "commit/f1ee145a63",
+    "label": "commit f1ee145: resolution_candidates: drop decided pairs after choosing the top k, not before",
+    "p": 0.006317172063906531,
+    "gold": true
+   },
+   {
+    "id": "commit/930dbb8089",
+    "label": "commit 930dbb8: resolution_candidates: propose a node by its summary as well as its keys",
+    "p": 0.005389448563952226,
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-09-30-jev-decisions/e2e_resolver.py#2",
+    "label": "meta/spikes/2026-09-30-jev-decisions/e2e_resolver.py",
+    "p": 0.0053409950708650155,
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-09-30-jev-decisions/er_companies.py#2",
+    "label": "meta/spikes/2026-09-30-jev-decisions/er_companies.py",
+    "p": 0.004124775034974713,
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-09-30-jev-decisions/er_companies.py#5",
+    "label": "meta/spikes/2026-09-30-jev-decisions/er_companies.py",
+    "p": 0.0037123680629596438,
+    "gold": false
+   },
+   {
+    "id": "commit/8b2c936e7c",
+    "label": "commit 8b2c936: extension 0.2.21: opened after v0.2.20",
+    "p": 0.0035499287330632793,
+    "gold": false
+   },
+   {
+    "id": "commit/e3566dd5d9",
+    "label": "commit e3566dd: Merge pull request #361 from Percolation-Labs/amartey/jev-card-routing",
+    "p": 0.003047181075252419,
+    "gold": false
+   },
+   {
+    "id": "commit/7a7729def2",
+    "label": "commit 7a7729d: Merge pull request #360 from Percolation-Labs/amartey/jev-on-our-labels",
+    "p": 0.0028106726525455785,
+    "gold": false
+   },
+   {
+    "id": "specs/world-model-ingestion/graph.sql#44",
+    "label": "specs/world-model-ingestion/graph.sql",
+    "p": 0.0027129129896756297,
+    "gold": false
+   },
+   {
+    "id": "specs/world-model-ingestion/graph.sql#47",
+    "label": "specs/world-model-ingestion/graph.sql",
+    "p": 0.00247651587565432,
+    "gold": false
+   },
+   {
+    "id": "commit/04e2bdafb8",
+    "label": "commit 04e2bda: spike: what moves a Jev decision -- batching no, wording yes, distractors cost recall",
+    "p": 0.002138685897036702,
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-09-30-jev-decisions/e2e_resolver.py#3",
+    "label": "meta/spikes/2026-09-30-jev-decisions/e2e_resolver.py",
+    "p": 0.0020814297609594037,
+    "gold": false
+   },
+   {
+    "id": "specs/world-model-ingestion/graph.sql#49",
+    "label": "specs/world-model-ingestion/graph.sql",
+    "p": 0.0019147301947158532,
+    "gold": false
+   },
+   {
+    "id": "specs/world-model-ingestion/graph.sql#50",
+    "label": "specs/world-model-ingestion/graph.sql",
+    "p": 0.0018954696311750314,
+    "gold": false
+   },
+   {
+    "id": "specs/world-model-ingestion/graph.sql#43",
+    "label": "specs/world-model-ingestion/graph.sql",
+    "p": 0.001454887481192514,
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-09-30-jev-decisions/er_companies.py#8",
+    "label": "meta/spikes/2026-09-30-jev-decisions/er_companies.py",
+    "p": 0.0014503685849614385,
+    "gold": false
+   },
+   {
+    "id": "specs/world-model-ingestion/graph.sql#38",
+    "label": "specs/world-model-ingestion/graph.sql",
+    "p": 0.0013501138518183563,
+    "gold": false
+   },
+   {
+    "id": "commit/bb06a7e1e0",
+    "label": "commit bb06a7e: Identity ledger: a decision_model tier, and \"not the same\" as a decision",
+    "p": 0.0012781520018890931,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/720193d142",
+   "label": "commit 720193d: Merge pull request #367 from Percolation-Labs/amartey/jev-resolver",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/31ee9cf5fd",
+   "label": "commit 31ee9cf: aiq.resolution_candidates: what a resolver is asked to decide",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "meta/spikes/2026-09-30-jev-decisions/README.md#15",
+   "label": "meta/spikes/2026-09-30-jev-decisions/README.md \u203a The resolver in core, end to end",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/spikes/2026-09-30-jev-decisions/e2e_resolver.py#1",
+   "label": "meta/spikes/2026-09-30-jev-decisions/e2e_resolver.py",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/world-model-ingestion/graph.sql#45",
+   "label": "specs/world-model-ingestion/graph.sql",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/world-model-ingestion/graph.sql#46",
+   "label": "specs/world-model-ingestion/graph.sql",
+   "wave": 1,
+   "via": "term:resolution_candidates",
+   "gold": false
+  },
+  {
+   "id": "commit/f1ee145a63",
+   "label": "commit f1ee145: resolution_candidates: drop decided pairs after choosing the top k, not before",
+   "wave": 1,
+   "via": "term:resolution_candidates",
+   "gold": true
+  },
+  {
+   "id": "commit/930dbb8089",
+   "label": "commit 930dbb8: resolution_candidates: propose a node by its summary as well as its keys",
+   "wave": 1,
+   "via": "term:resolution_candidates",
+   "gold": false
+  },
+  {
+   "id": "specs/world-model-ingestion/graph.sql#50",
+   "label": "specs/world-model-ingestion/graph.sql",
+   "wave": 1,
+   "via": "term:resolution_candidates",
+   "gold": false
+  },
+  {
+   "id": "specs/world-model-ingestion/graph.sql#49",
+   "label": "specs/world-model-ingestion/graph.sql",
+   "wave": 1,
+   "via": "term:resolution_candidates",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "commit/0e367c9250",
+    "label": "commit 0e367c9: Merge pull request #366 from Percolation-Labs/amartey/jev-robustness",
+    "gold": false
+   },
+   {
+    "id": "specs/world-model-ingestion/graph.sql#46",
+    "label": "specs/world-model-ingestion/graph.sql",
+    "gold": false
+   },
+   {
+    "id": "commit/f1ee145a63",
+    "label": "commit f1ee145: resolution_candidates: drop decided pairs after choosing the top k, not before",
+    "gold": true
+   },
+   {
+    "id": "commit/930dbb8089",
+    "label": "commit 930dbb8: resolution_candidates: propose a node by its summary as well as its keys",
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-09-30-jev-decisions/e2e_resolver.py#2",
+    "label": "meta/spikes/2026-09-30-jev-decisions/e2e_resolver.py",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "specs/world-model-ingestion/graph.sql#46",
+    "label": "specs/world-model-ingestion/graph.sql",
+    "gold": false
+   },
+   {
+    "id": "commit/f1ee145a63",
+    "label": "commit f1ee145: resolution_candidates: drop decided pairs after choosing the top k, not before",
+    "gold": true
+   },
+   {
+    "id": "commit/930dbb8089",
+    "label": "commit 930dbb8: resolution_candidates: propose a node by its summary as well as its keys",
+    "gold": false
+   },
+   {
+    "id": "specs/world-model-ingestion/graph.sql#44",
+    "label": "specs/world-model-ingestion/graph.sql",
+    "gold": false
+   },
+   {
+    "id": "specs/world-model-ingestion/graph.sql#50",
+    "label": "specs/world-model-ingestion/graph.sql",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/930dbb8089",
+    "label": "commit 930dbb8: resolution_candidates: propose a node by its summary as well as its keys",
+    "gold": false
+   },
+   {
+    "id": "commit/f1ee145a63",
+    "label": "commit f1ee145: resolution_candidates: drop decided pairs after choosing the top k, not before",
+    "gold": true
+   },
+   {
+    "id": "specs/world-model-ingestion/graph.sql#46",
+    "label": "specs/world-model-ingestion/graph.sql",
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-09-30-jev-decisions/er_companies.py#2",
+    "label": "meta/spikes/2026-09-30-jev-decisions/er_companies.py",
+    "gold": false
+   },
+   {
+    "id": "specs/world-model-ingestion/graph.sql#47",
+    "label": "specs/world-model-ingestion/graph.sql",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "specs/world-model-ingestion/graph.sql#50",
+    "label": "specs/world-model-ingestion/graph.sql",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261029-150027-f96b.md#1",
+    "label": "board/messages/M-20261029-150027-f96b.md",
+    "gold": false
+   },
+   {
+    "id": "specs/world-model-ingestion/graph.sql#46",
+    "label": "specs/world-model-ingestion/graph.sql",
+    "gold": false
+   },
+   {
+    "id": "commit/930dbb8089",
+    "label": "commit 930dbb8: resolution_candidates: propose a node by its summary as well as its keys",
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-self-model/dreaming/reduce/graph/closure.py#4",
+    "label": "applications/percolate-self-model/dreaming/reduce/graph/closure.py",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 1.0,
+  "Q": 1.0,
+  "LQ": 1.0,
+  "S": 0.0
+ }
+}

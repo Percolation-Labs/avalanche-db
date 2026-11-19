@@ -1,0 +1,447 @@
+{
+ "qid": "RW:2hop__56307_604644",
+ "set": "mq",
+ "question": "What is the record label of the Hey Now, You're A Rockstar singer?",
+ "gold": [
+  {
+   "id": "mq:5fe5bc63d3f6639e",
+   "label": "All Star (song)",
+   "seed": false
+  },
+  {
+   "id": "mq:d97aff0fd1842bdb",
+   "label": "Magic (Smash Mouth album)",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:60bb082ac9486176",
+   "label": "Equity Music Group",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "mq:ca912b6c45aa8f73",
+   "label": "One Night in America",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "mq:5f644acb307f3319",
+   "label": "Larry Norman",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "mq:e83e49d88d5b737c",
+   "label": "Mona Bone Jakon",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "mq:bf5987883ec556cd",
+   "label": "Hey There Lonely Girl",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:5fe5bc63d3f6639e",
+    "label": "All Star (song)",
+    "role": "gold"
+   },
+   {
+    "id": "mq:bf5987883ec556cd",
+    "label": "Hey There Lonely Girl",
+    "role": "seed"
+   },
+   {
+    "id": "mq:d97aff0fd1842bdb",
+    "label": "Magic (Smash Mouth album)",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:5fe5bc63d3f6639e",
+    "b": "mq:bf5987883ec556cd",
+    "via": [
+     {
+      "kind": "term",
+      "key": "peaking",
+      "width": 43
+     }
+    ]
+   },
+   {
+    "a": "mq:5fe5bc63d3f6639e",
+    "b": "mq:d97aff0fd1842bdb",
+    "via": [
+     {
+      "kind": "near",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "band smash",
+      "width": 3
+     },
+     {
+      "kind": "term",
+      "key": "smash mouth",
+      "width": 4
+     },
+     {
+      "kind": "term",
+      "key": "smash",
+      "width": 13
+     },
+     {
+      "kind": "term",
+      "key": "american rock",
+      "width": 41
+     },
+     {
+      "kind": "term",
+      "key": "mouth",
+      "width": 92
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "mq:bf5987883ec556cd",
+   "gold": "mq:5fe5bc63d3f6639e",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 1020,
+  "within_2_doors": 19688,
+  "gold_within_1": 1,
+  "gold_within_2": 1,
+  "top_U": [
+   {
+    "id": "mq:49415f30145a0445",
+    "label": "Emotional Rain",
+    "p": 0.003502640263863401,
+    "gold": false
+   },
+   {
+    "id": "mq:eb26c93a7320a60b",
+    "label": "House music",
+    "p": 0.0030374942266102266,
+    "gold": false
+   },
+   {
+    "id": "mq:62bb7ceb3eadec70",
+    "label": "Never Get Out of These Blues Alive",
+    "p": 0.002486653915368652,
+    "gold": false
+   },
+   {
+    "id": "mq:63f443b5dcf2f7e1",
+    "label": "Atomic Playboys",
+    "p": 0.002309332833371227,
+    "gold": false
+   },
+   {
+    "id": "mq:f71324f0cbd26863",
+    "label": "Beyonc\u00e9",
+    "p": 0.002272604544659119,
+    "gold": false
+   },
+   {
+    "id": "mq:0e5864cd5a5ea04b",
+    "label": "Charlie Musselwhite",
+    "p": 0.0022686222204577416,
+    "gold": false
+   },
+   {
+    "id": "mq:a9fc28448cf0c44e",
+    "label": "Rosetta Pebble",
+    "p": 0.002073111921848509,
+    "gold": false
+   },
+   {
+    "id": "mq:1aba1968f33b6874",
+    "label": "Delta Hardware",
+    "p": 0.0018873437430381235,
+    "gold": false
+   },
+   {
+    "id": "mq:02b8ebe616986c2b",
+    "label": "Sanctuary (Charlie Musselwhite album)",
+    "p": 0.0018386668449019662,
+    "gold": false
+   },
+   {
+    "id": "mq:a786c4b871382932",
+    "label": "Annie, I'm Not Your Daddy",
+    "p": 0.0017240872551408646,
+    "gold": false
+   },
+   {
+    "id": "mq:3a14f3156af99079",
+    "label": "Boom Boom (John Lee Hooker song)",
+    "p": 0.0013852335083658217,
+    "gold": false
+   },
+   {
+    "id": "mq:93867c471e2ddf4d",
+    "label": "The World's Billionaires",
+    "p": 0.0012957792243663009,
+    "gold": false
+   },
+   {
+    "id": "mq:cb66fc5018b6fa9c",
+    "label": "Aidan Turner",
+    "p": 0.0012452865516760405,
+    "gold": false
+   },
+   {
+    "id": "mq:857d7d369e5b2298",
+    "label": "Lee Aaron (album)",
+    "p": 0.001218184648257852,
+    "gold": false
+   },
+   {
+    "id": "mq:95489318e1ff1537",
+    "label": "Richard Fink",
+    "p": 0.0011428908361089262,
+    "gold": false
+   },
+   {
+    "id": "mq:faa94e5db694ceca",
+    "label": "The Three Stooges (2012 film)",
+    "p": 0.001077401292917821,
+    "gold": false
+   },
+   {
+    "id": "mq:124f02be1abb33fa",
+    "label": "The Invitations",
+    "p": 0.0010085518808279896,
+    "gold": false
+   },
+   {
+    "id": "mq:89152b490c737c5a",
+    "label": "Sulaiman Mohammed Nazif",
+    "p": 0.0010067625200948763,
+    "gold": false
+   },
+   {
+    "id": "mq:6e5c73d61c5d5fe8",
+    "label": "Bone Thugs-n-Harmony",
+    "p": 0.0010016035076082443,
+    "gold": false
+   },
+   {
+    "id": "mq:6342cf8cf0557c44",
+    "label": "Break-up of the Beatles",
+    "p": 0.0009948789068670162,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:60bb082ac9486176",
+   "label": "Equity Music Group",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:ca912b6c45aa8f73",
+   "label": "One Night in America",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:5f644acb307f3319",
+   "label": "Larry Norman",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:e83e49d88d5b737c",
+   "label": "Mona Bone Jakon",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:bf5987883ec556cd",
+   "label": "Hey There Lonely Girl",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:e5122578736a339b",
+   "label": "Human Highway",
+   "wave": 1,
+   "via": "term:hey",
+   "gold": false
+  },
+  {
+   "id": "mq:6c0665ef5e1aa5ad",
+   "label": "Hey Now Now",
+   "wave": 1,
+   "via": "term:hey",
+   "gold": false
+  },
+  {
+   "id": "mq:7225c13758c9cc24",
+   "label": "The Mickey Rooney Show",
+   "wave": 1,
+   "via": "term:hey",
+   "gold": false
+  },
+  {
+   "id": "mq:d7b81dbda02168a9",
+   "label": "Hey Mami/Play It Right",
+   "wave": 1,
+   "via": "term:hey",
+   "gold": false
+  },
+  {
+   "id": "mq:71409f07389d7d07",
+   "label": "Hei tie",
+   "wave": 1,
+   "via": "term:hey",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:49415f30145a0445",
+    "label": "Emotional Rain",
+    "gold": false
+   },
+   {
+    "id": "mq:eb26c93a7320a60b",
+    "label": "House music",
+    "gold": false
+   },
+   {
+    "id": "mq:62bb7ceb3eadec70",
+    "label": "Never Get Out of These Blues Alive",
+    "gold": false
+   },
+   {
+    "id": "mq:63f443b5dcf2f7e1",
+    "label": "Atomic Playboys",
+    "gold": false
+   },
+   {
+    "id": "mq:f71324f0cbd26863",
+    "label": "Beyonc\u00e9",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:f71324f0cbd26863",
+    "label": "Beyonc\u00e9",
+    "gold": false
+   },
+   {
+    "id": "mq:02b8ebe616986c2b",
+    "label": "Sanctuary (Charlie Musselwhite album)",
+    "gold": false
+   },
+   {
+    "id": "mq:e41ad5917b5d0e46",
+    "label": "EmArcy Records",
+    "gold": false
+   },
+   {
+    "id": "mq:e884a8e9e61a0246",
+    "label": "Sony Music",
+    "gold": false
+   },
+   {
+    "id": "mq:49415f30145a0445",
+    "label": "Emotional Rain",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:f71324f0cbd26863",
+    "label": "Beyonc\u00e9",
+    "gold": false
+   },
+   {
+    "id": "mq:e884a8e9e61a0246",
+    "label": "Sony Music",
+    "gold": false
+   },
+   {
+    "id": "mq:fcd5a170f75ab76a",
+    "label": "Beyonc\u00e9",
+    "gold": false
+   },
+   {
+    "id": "mq:02b8ebe616986c2b",
+    "label": "Sanctuary (Charlie Musselwhite album)",
+    "gold": false
+   },
+   {
+    "id": "mq:9309985dff87da6e",
+    "label": "I Can Only Imagine (MercyMe song)",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:a54417415a5deffe",
+    "label": "Swag It Out",
+    "gold": false
+   },
+   {
+    "id": "mq:6338f892d445b30a",
+    "label": "Falling Out (Serena Ryder album)",
+    "gold": false
+   },
+   {
+    "id": "mq:96fde81bca0e8ced",
+    "label": "Hey There Delilah",
+    "gold": false
+   },
+   {
+    "id": "mq:19151bed72d9f367",
+    "label": "Barbara Pittman",
+    "gold": false
+   },
+   {
+    "id": "mq:b241a5da40c5e398",
+    "label": "Gameface",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

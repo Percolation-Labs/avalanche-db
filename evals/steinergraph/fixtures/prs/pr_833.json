@@ -1,0 +1,436 @@
+{
+ "qid": "pr:833",
+ "set": "prs",
+ "question": "What work went into this, and why: Reference world over BEAM: test 1 replicates on a second real corpus?",
+ "gold": [
+  {
+   "id": "commit/20fcbd4e5e",
+   "label": "commit 20fcbd4: Reference world test 1 replicates over BEAM: D6 - today documented +.018 n.s., natural +.038, hidden +.0",
+   "seed": true
+  },
+  {
+   "id": "commit/3ad06e27d4",
+   "label": "commit 3ad06e2: Reference world over BEAM: built at $0 (153 fresh DEV questions), passes R1-R2 (overlap .594, width .659",
+   "seed": false
+  },
+  {
+   "id": "commit/8a23a01e0e",
+   "label": "commit 8a23a01: reference-world RESULT: mark the BEAM-vs-MuSiQue explanation as untested",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/6fa30cfa1b",
+   "label": "commit 6fa30cf: Merge pull request #833 from Percolation-Labs/bill/rw-beam",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/messages/M-20261117-142546-167b.md#1",
+   "label": "board/messages/M-20261117-142546-167b.md",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/20fcbd4e5e",
+   "label": "commit 20fcbd4: Reference world test 1 replicates over BEAM: D6 - today documented +.018 n.s., natural +.038, hidden +.0",
+   "rank": 3,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "meta/lab/results/reference-world/RESULT.md#5",
+   "label": "meta/lab/results/reference-world/RESULT.md \u203a Test 1 over BEAM: it replicates (17 Nov ~14:50Z)",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/messages/M-20261117-132252-05f6.md#1",
+   "label": "board/messages/M-20261117-132252-05f6.md",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/20fcbd4e5e",
+    "label": "commit 20fcbd4: Reference world test 1 replicates over BEAM: D6 - today documented +.018 n.s., natural +.038, hidden +.0",
+    "role": "gold"
+   },
+   {
+    "id": "commit/3ad06e27d4",
+    "label": "commit 3ad06e2: Reference world over BEAM: built at $0 (153 fresh DEV questions), passes R1-R2 (overlap .594, width .659",
+    "role": "gold"
+   },
+   {
+    "id": "commit/8a23a01e0e",
+    "label": "commit 8a23a01: reference-world RESULT: mark the BEAM-vs-MuSiQue explanation as untested",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/20fcbd4e5e",
+    "b": "commit/3ad06e27d4",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "reference world",
+      "width": 87
+     }
+    ]
+   },
+   {
+    "a": "commit/20fcbd4e5e",
+    "b": "commit/8a23a01e0e",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "reference world",
+      "width": 87
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   1,
+   1
+  ],
+  "entry": {
+   "seed": "commit/20fcbd4e5e",
+   "gold": "commit/20fcbd4e5e",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 1122,
+  "within_2_doors": 31737,
+  "gold_within_1": 2,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "meta/lab/results/reference-world/test1-beam.txt#1",
+    "label": "meta/lab/results/reference-world/test1-beam.txt",
+    "p": 0.00560921007646938,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/reference-world/test1.txt#1",
+    "label": "meta/lab/results/reference-world/test1.txt",
+    "p": 0.004593233501726149,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/reference-world/RESULT.md#1",
+    "label": "meta/lab/results/reference-world/RESULT.md \u203a Reference world over MuSiQue, test 1: the hidden-gold dial drives D6's gain",
+    "p": 0.003914825350963698,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/reference-world/REGISTERED.md#7",
+    "label": "meta/lab/results/reference-world/REGISTERED.md \u203a Test 1 over BEAM: the same dial on a second real corpus (registered 17 ",
+    "p": 0.003531268150505275,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/reference-world/REGISTERED.md#6",
+    "label": "meta/lab/results/reference-world/REGISTERED.md \u203a Test 1 over BEAM: the same dial on a second real corpus (registered 17 ",
+    "p": 0.0035203281916089207,
+    "gold": false
+   },
+   {
+    "id": "commit/7d801a70b2",
+    "label": "commit 7d801a7: board: bill acknowledges 1 message(s)",
+    "p": 0.0034565864482601623,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261117-140738-298f.md#1",
+    "label": "board/messages/M-20261117-140738-298f.md",
+    "p": 0.003415678617081186,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/reference-world/RESULT.md#4",
+    "label": "meta/lab/results/reference-world/RESULT.md \u203a What it changes",
+    "p": 0.0033510085775818265,
+    "gold": false
+   },
+   {
+    "id": "commit/2f3f56eec2",
+    "label": "commit 2f3f56e: board: board-watch messages all",
+    "p": 0.003318131597717665,
+    "gold": false
+   },
+   {
+    "id": "commit/3ad06e27d4",
+    "label": "commit 3ad06e2: Reference world over BEAM: built at $0 (153 fresh DEV questions), passes R1-R2 (overlap .594, width .659",
+    "p": 0.002886679104829247,
+    "gold": true
+   },
+   {
+    "id": "meta/lab/worlds/rw_score.py#4",
+    "label": "meta/lab/worlds/rw_score.py",
+    "p": 0.0026926525420239867,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/cornerstone/RESULT.md#8",
+    "label": "meta/lab/results/cornerstone/RESULT.md \u203a w125 and width-only: the open questions settled (17 Nov ~13:10Z, $0)",
+    "p": 0.002532328757331125,
+    "gold": false
+   },
+   {
+    "id": "commit/8a23a01e0e",
+    "label": "commit 8a23a01: reference-world RESULT: mark the BEAM-vs-MuSiQue explanation as untested",
+    "p": 0.002511151991372107,
+    "gold": true
+   },
+   {
+    "id": "meta/lab/results/reference-world/RESULT.md#6",
+    "label": "meta/lab/results/reference-world/RESULT.md \u203a Test 1 over BEAM: it replicates (17 Nov ~14:50Z)",
+    "p": 0.0024086950725407197,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/reference-world/RESULT.md#2",
+    "label": "meta/lab/results/reference-world/RESULT.md \u203a Reference world over MuSiQue, test 1: the hidden-gold dial drives D6's gain",
+    "p": 0.0020388507731698884,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/reference-world/PLAN.md#2",
+    "label": "meta/lab/results/reference-world/PLAN.md \u203a The reference world over MuSiQue (bill, 17 Nov)",
+    "p": 0.001913569904431774,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/worlds/rw_score.py#1",
+    "label": "meta/lab/worlds/rw_score.py",
+    "p": 0.0018670052017564622,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/reference-world/REGISTERED.md#5",
+    "label": "meta/lab/results/reference-world/REGISTERED.md \u203a Predictions",
+    "p": 0.0017979838835392597,
+    "gold": false
+   },
+   {
+    "id": "commit/90152773b6",
+    "label": "commit 9015277: board: bill acknowledges 1 message(s)",
+    "p": 0.0017653734841423141,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/worlds/rw_gold_words.py#1",
+    "label": "meta/lab/worlds/rw_gold_words.py",
+    "p": 0.0017583148086450344,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/6fa30cfa1b",
+   "label": "commit 6fa30cf: Merge pull request #833 from Percolation-Labs/bill/rw-beam",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/messages/M-20261117-142546-167b.md#1",
+   "label": "board/messages/M-20261117-142546-167b.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/20fcbd4e5e",
+   "label": "commit 20fcbd4: Reference world test 1 replicates over BEAM: D6 - today documented +.018 n.s., natural +.038, hidden +.0",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "meta/lab/results/reference-world/RESULT.md#5",
+   "label": "meta/lab/results/reference-world/RESULT.md \u203a Test 1 over BEAM: it replicates (17 Nov ~14:50Z)",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/messages/M-20261117-132252-05f6.md#1",
+   "label": "board/messages/M-20261117-132252-05f6.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/messages/M-20261117-141417-adf8.md#1",
+   "label": "board/messages/M-20261117-141417-adf8.md",
+   "wave": 1,
+   "via": "term:second real",
+   "gold": false
+  },
+  {
+   "id": "specs/ai-query-layer/brief.md#15",
+   "label": "specs/ai-query-layer/brief.md \u203a 3.5 Core + extensions \u2014 for both the schema and the algorithms",
+   "wave": 1,
+   "via": "term:second real",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/operators-hotpot/RESULT.md#2",
+   "label": "meta/lab/results/operators-hotpot/RESULT.md \u203a Why",
+   "wave": 1,
+   "via": "term:second real",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/operators-beam/RESULT.md#2",
+   "label": "meta/lab/results/operators-beam/RESULT.md \u203a 780, #785 and #794 found the walk beats search on MuSiQue under operator (b)",
+   "wave": 1,
+   "via": "term:second real",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/jev-doors/WRITEUP.md#10",
+   "label": "meta/lab/results/jev-doors/WRITEUP.md \u203a Update, 17 Nov: a second real dataset",
+   "wave": 1,
+   "via": "term:second real",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "meta/lab/results/reference-world/test1-beam.txt#1",
+    "label": "meta/lab/results/reference-world/test1-beam.txt",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/reference-world/test1.txt#1",
+    "label": "meta/lab/results/reference-world/test1.txt",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/reference-world/RESULT.md#1",
+    "label": "meta/lab/results/reference-world/RESULT.md \u203a Reference world over MuSiQue, test 1: the hidden-gold dial drives D6's gain",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/reference-world/REGISTERED.md#7",
+    "label": "meta/lab/results/reference-world/REGISTERED.md \u203a Test 1 over BEAM: the same dial on a second real corpus (registered 17 ",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/reference-world/REGISTERED.md#6",
+    "label": "meta/lab/results/reference-world/REGISTERED.md \u203a Test 1 over BEAM: the same dial on a second real corpus (registered 17 ",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "meta/lab/results/reference-world/REGISTERED.md#6",
+    "label": "meta/lab/results/reference-world/REGISTERED.md \u203a Test 1 over BEAM: the same dial on a second real corpus (registered 17 ",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/reference-world/REGISTERED.md#7",
+    "label": "meta/lab/results/reference-world/REGISTERED.md \u203a Test 1 over BEAM: the same dial on a second real corpus (registered 17 ",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/reference-world/RESULT.md#1",
+    "label": "meta/lab/results/reference-world/RESULT.md \u203a Reference world over MuSiQue, test 1: the hidden-gold dial drives D6's gain",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/cornerstone/RESULT.md#8",
+    "label": "meta/lab/results/cornerstone/RESULT.md \u203a w125 and width-only: the open questions settled (17 Nov ~13:10Z, $0)",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261117-140738-298f.md#1",
+    "label": "board/messages/M-20261117-140738-298f.md",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/8a23a01e0e",
+    "label": "commit 8a23a01: reference-world RESULT: mark the BEAM-vs-MuSiQue explanation as untested",
+    "gold": true
+   },
+   {
+    "id": "commit/7d801a70b2",
+    "label": "commit 7d801a7: board: bill acknowledges 1 message(s)",
+    "gold": false
+   },
+   {
+    "id": "commit/2f3f56eec2",
+    "label": "commit 2f3f56e: board: board-watch messages all",
+    "gold": false
+   },
+   {
+    "id": "commit/3ad06e27d4",
+    "label": "commit 3ad06e2: Reference world over BEAM: built at $0 (153 fresh DEV questions), passes R1-R2 (overlap .594, width .659",
+    "gold": true
+   },
+   {
+    "id": "commit/38ea526d0b",
+    "label": "commit 38ea526: Cornerstone correction (Sirsh 13:22Z): the reference world stays the cornerstone; w125 was a failed cons",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "meta/lab/results/reference-world/PLAN.md#3",
+    "label": "meta/lab/results/reference-world/PLAN.md \u203a The reference world over MuSiQue (bill, 17 Nov)",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/reference-world/REGISTERED.md#6",
+    "label": "meta/lab/results/reference-world/REGISTERED.md \u203a Test 1 over BEAM: the same dial on a second real corpus (registered 17 ",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/reference-world/RESULT.md#6",
+    "label": "meta/lab/results/reference-world/RESULT.md \u203a Test 1 over BEAM: it replicates (17 Nov ~14:50Z)",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/reference-world/REGISTERED.md#7",
+    "label": "meta/lab/results/reference-world/REGISTERED.md \u203a Test 1 over BEAM: the same dial on a second real corpus (registered 17 ",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/cornerstone/RESULT.md#8",
+    "label": "meta/lab/results/cornerstone/RESULT.md \u203a w125 and width-only: the open questions settled (17 Nov ~13:10Z, $0)",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 1.0,
+  "S": 0.0
+ }
+}

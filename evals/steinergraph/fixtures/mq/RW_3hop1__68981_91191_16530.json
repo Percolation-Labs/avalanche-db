@@ -1,0 +1,480 @@
+{
+ "qid": "RW:3hop1__68981_91191_16530",
+ "set": "mq",
+ "question": "Who was appointed arbitrator by the first convert to the faith that is the most common religion in Southeast Asia?",
+ "gold": [
+  {
+   "id": "mq:66e23683e705bcc7",
+   "label": "Umayyad Caliphate",
+   "seed": false
+  },
+  {
+   "id": "mq:cddc902141434aae",
+   "label": "Religion in Asia",
+   "seed": false
+  },
+  {
+   "id": "mq:f141caf101d5c1d1",
+   "label": "Identity of the first male Muslim",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:0fc4fe77f3926110",
+   "label": "Southeast Asia",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:896976acb9a213f5",
+   "label": "Southeast Asia",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:4dc13f29d5b45963",
+   "label": "Eswatini",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:b2786bd754babb55",
+   "label": "Southeast Asia",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "mq:e3e4cb4ddf5357f8",
+   "label": "Southeast Asia",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:66e23683e705bcc7",
+    "label": "Umayyad Caliphate",
+    "role": "gold"
+   },
+   {
+    "id": "mq:896976acb9a213f5",
+    "label": "Southeast Asia",
+    "role": "seed"
+   },
+   {
+    "id": "mq:cddc902141434aae",
+    "label": "Religion in Asia",
+    "role": "gold"
+   },
+   {
+    "id": "mq:f141caf101d5c1d1",
+    "label": "Identity of the first male Muslim",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:66e23683e705bcc7",
+    "b": "mq:f141caf101d5c1d1",
+    "via": [
+     {
+      "kind": "term",
+      "key": "dispute",
+      "width": 25
+     },
+     {
+      "kind": "term",
+      "key": "ibn",
+      "width": 51
+     },
+     {
+      "kind": "term",
+      "key": "ali",
+      "width": 69
+     }
+    ]
+   },
+   {
+    "a": "mq:896976acb9a213f5",
+    "b": "mq:cddc902141434aae",
+    "via": [
+     {
+      "kind": "near",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "timor",
+      "width": 14
+     },
+     {
+      "kind": "term",
+      "key": "brunei",
+      "width": 14
+     },
+     {
+      "kind": "term",
+      "key": "cambodia",
+      "width": 28
+     },
+     {
+      "kind": "term",
+      "key": "laos",
+      "width": 41
+     },
+     {
+      "kind": "term",
+      "key": "singapore",
+      "width": 42
+     }
+    ]
+   },
+   {
+    "a": "mq:cddc902141434aae",
+    "b": "mq:f141caf101d5c1d1",
+    "via": [
+     {
+      "kind": "term",
+      "key": "islam",
+      "width": 87
+     }
+    ]
+   }
+  ],
+  "cost": 3,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   2,
+   1,
+   1
+  ],
+  "entry": {
+   "seed": "mq:896976acb9a213f5",
+   "gold": "mq:cddc902141434aae",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 3164,
+  "within_2_doors": 17922,
+  "gold_within_1": 2,
+  "gold_within_2": 1,
+  "top_U": [
+   {
+    "id": "mq:4b2c285a4c0c7e33",
+    "label": "Southeast Asia",
+    "p": 0.0026984603414561136,
+    "gold": false
+   },
+   {
+    "id": "mq:1d87222f3256c1a0",
+    "label": "Eritrea",
+    "p": 0.0017334854206018692,
+    "gold": false
+   },
+   {
+    "id": "mq:87d8138531a2a935",
+    "label": "Chenla",
+    "p": 0.0015960259001989152,
+    "gold": false
+   },
+   {
+    "id": "mq:25522567bfe8309b",
+    "label": "Myanmar",
+    "p": 0.0012112551940057878,
+    "gold": false
+   },
+   {
+    "id": "mq:6f346b0ee08fd42c",
+    "label": "Nigeria",
+    "p": 0.0009625746380138495,
+    "gold": false
+   },
+   {
+    "id": "mq:2a89dee005f4e5da",
+    "label": "Anna Pavlova",
+    "p": 0.0009604434014549985,
+    "gold": false
+   },
+   {
+    "id": "mq:00a47ace063d7e14",
+    "label": "N\u00e9nette",
+    "p": 0.0009477672884826567,
+    "gold": false
+   },
+   {
+    "id": "mq:d06496e57db4fe8b",
+    "label": "Ella Spira",
+    "p": 0.000935698437476398,
+    "gold": false
+   },
+   {
+    "id": "mq:02484e543f627b5f",
+    "label": "Lion",
+    "p": 0.0009182859441389906,
+    "gold": false
+   },
+   {
+    "id": "mq:d47725f531d70976",
+    "label": "Chrerng Polroth",
+    "p": 0.0008395626888722691,
+    "gold": false
+   },
+   {
+    "id": "mq:48553a9ed8a98867",
+    "label": "Amazon rainforest",
+    "p": 0.0008046946778068119,
+    "gold": false
+   },
+   {
+    "id": "mq:7c43baa5ae3a0542",
+    "label": "Indonesia",
+    "p": 0.0007638248625736341,
+    "gold": false
+   },
+   {
+    "id": "mq:418f515cf34be3dc",
+    "label": "Georgina Parkinson",
+    "p": 0.0007560425562023491,
+    "gold": false
+   },
+   {
+    "id": "mq:87a78d27acb2d1e8",
+    "label": "Coffee",
+    "p": 0.0007430071718882664,
+    "gold": false
+   },
+   {
+    "id": "mq:15f5db40e7951231",
+    "label": "Protestantism",
+    "p": 0.0007351089105688325,
+    "gold": false
+   },
+   {
+    "id": "mq:a8a35c779dc97e9c",
+    "label": "South Yemen insurgency",
+    "p": 0.0007262130046876734,
+    "gold": false
+   },
+   {
+    "id": "mq:5079f6e9066f2e8b",
+    "label": "Beyonc\u00e9",
+    "p": 0.0007222979957655209,
+    "gold": false
+   },
+   {
+    "id": "mq:5cec93758b12aa16",
+    "label": "Hydrogen",
+    "p": 0.0007076959692939042,
+    "gold": false
+   },
+   {
+    "id": "mq:b46b96920fb8ca15",
+    "label": "Ashkenazi Jews",
+    "p": 0.0007073360042672297,
+    "gold": false
+   },
+   {
+    "id": "mq:b347b24f9e60546c",
+    "label": "Egypt",
+    "p": 0.0007065559954405934,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:0fc4fe77f3926110",
+   "label": "Southeast Asia",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:896976acb9a213f5",
+   "label": "Southeast Asia",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:4dc13f29d5b45963",
+   "label": "Eswatini",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:b2786bd754babb55",
+   "label": "Southeast Asia",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:e3e4cb4ddf5357f8",
+   "label": "Southeast Asia",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:c0c69ec1beac319b",
+   "label": "European colonisation of Southeast Asia",
+   "wave": 1,
+   "via": "term:malacca",
+   "gold": false
+  },
+  {
+   "id": "mq:ed4688515adf09f1",
+   "label": "Southeast Asia",
+   "wave": 1,
+   "via": "term:malacca",
+   "gold": false
+  },
+  {
+   "id": "mq:0de554f212419553",
+   "label": "Umayyad Caliphate",
+   "wave": 2,
+   "via": "term:embraced islam",
+   "gold": false
+  },
+  {
+   "id": "mq:f141caf101d5c1d1",
+   "label": "Identity of the first male Muslim",
+   "wave": 2,
+   "via": "term:embraced islam",
+   "gold": true
+  },
+  {
+   "id": "mq:d39d5e5aeab56a9d",
+   "label": "Umayyad Caliphate",
+   "wave": 3,
+   "via": "term:muawiyah",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:4b2c285a4c0c7e33",
+    "label": "Southeast Asia",
+    "gold": false
+   },
+   {
+    "id": "mq:1d87222f3256c1a0",
+    "label": "Eritrea",
+    "gold": false
+   },
+   {
+    "id": "mq:87d8138531a2a935",
+    "label": "Chenla",
+    "gold": false
+   },
+   {
+    "id": "mq:25522567bfe8309b",
+    "label": "Myanmar",
+    "gold": false
+   },
+   {
+    "id": "mq:6f346b0ee08fd42c",
+    "label": "Nigeria",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:4b2c285a4c0c7e33",
+    "label": "Southeast Asia",
+    "gold": false
+   },
+   {
+    "id": "mq:ed4688515adf09f1",
+    "label": "Southeast Asia",
+    "gold": false
+   },
+   {
+    "id": "mq:d75b7108108127d9",
+    "label": "History of India",
+    "gold": false
+   },
+   {
+    "id": "mq:3bcc0b6b0f58efe7",
+    "label": "Religion in Israel",
+    "gold": false
+   },
+   {
+    "id": "mq:c0c69ec1beac319b",
+    "label": "European colonisation of Southeast Asia",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:4b2c285a4c0c7e33",
+    "label": "Southeast Asia",
+    "gold": false
+   },
+   {
+    "id": "mq:ed4688515adf09f1",
+    "label": "Southeast Asia",
+    "gold": false
+   },
+   {
+    "id": "mq:3bcc0b6b0f58efe7",
+    "label": "Religion in Israel",
+    "gold": false
+   },
+   {
+    "id": "mq:d75b7108108127d9",
+    "label": "History of India",
+    "gold": false
+   },
+   {
+    "id": "mq:c0c69ec1beac319b",
+    "label": "European colonisation of Southeast Asia",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:eccca99e60c37545",
+    "label": "Southeast Asia",
+    "gold": false
+   },
+   {
+    "id": "mq:322057558a0f2d3a",
+    "label": "Khabarovsk",
+    "gold": false
+   },
+   {
+    "id": "mq:5c454b4db862c6ef",
+    "label": "History of India",
+    "gold": false
+   },
+   {
+    "id": "mq:ed4688515adf09f1",
+    "label": "Southeast Asia",
+    "gold": false
+   },
+   {
+    "id": "mq:7d2e2b63f0c90663",
+    "label": "Penang betta",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

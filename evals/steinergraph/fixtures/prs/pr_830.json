@@ -1,0 +1,426 @@
+{
+ "qid": "pr:830",
+ "set": "prs",
+ "question": "What work went into this, and why: door-pick-diagnostic: Jev's b-m5 misses are description (11) and choice (14), never presentation (0)?",
+ "gold": [
+  {
+   "id": "commit/0eaab47045",
+   "label": "commit 0eaab47: door-pick-diagnostic: register the presentation/description/decision classes before scoring",
+   "seed": true
+  },
+  {
+   "id": "commit/4e9ff1007b",
+   "label": "commit 4e9ff10: door-pick-diagnostic: Jev's b-m5 misses vs the oracle are 0 not-presented, 11 not-described, 14 not-chos",
+   "seed": true
+  },
+  {
+   "id": "commit/d904a8bc75",
+   "label": "commit d904a8b: door-pick-diagnostic: fix a quote typo and the wave-2 page-size range",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/2da653a825",
+   "label": "commit 2da653a: Merge pull request #830 from Percolation-Labs/james/door-pick-diagnostic",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "meta/lab/results/door-pick-diagnostic/RESULT.md#1",
+   "label": "meta/lab/results/door-pick-diagnostic/RESULT.md \u203a Where Jev's b-m5 walks lose gold to the oracle's: presentation or choi",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 3
+  },
+  {
+   "id": "commit/0eaab47045",
+   "label": "commit 0eaab47: door-pick-diagnostic: register the presentation/description/decision classes before scoring",
+   "rank": 3,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "meta/lab/results/door-pick-diagnostic/RESULT.md#4",
+   "label": "meta/lab/results/door-pick-diagnostic/RESULT.md \u203a Result (17 Nov 2026)",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "commit/4e9ff1007b",
+   "label": "commit 4e9ff10: door-pick-diagnostic: Jev's b-m5 misses vs the oracle are 0 not-presented, 11 not-described, 14 not-chos",
+   "rank": 5,
+   "gold": true,
+   "doors_to_gold": 0
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/0eaab47045",
+    "label": "commit 0eaab47: door-pick-diagnostic: register the presentation/description/decision classes before scoring",
+    "role": "gold"
+   },
+   {
+    "id": "commit/4e9ff1007b",
+    "label": "commit 4e9ff10: door-pick-diagnostic: Jev's b-m5 misses vs the oracle are 0 not-presented, 11 not-described, 14 not-chos",
+    "role": "gold"
+   },
+   {
+    "id": "commit/d904a8bc75",
+    "label": "commit d904a8b: door-pick-diagnostic: fix a quote typo and the wave-2 page-size range",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/0eaab47045",
+    "b": "commit/4e9ff1007b",
+    "via": [
+     {
+      "kind": "beside"
+     }
+    ]
+   },
+   {
+    "a": "commit/4e9ff1007b",
+    "b": "commit/d904a8bc75",
+    "via": [
+     {
+      "kind": "beside"
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   2,
+   1
+  ],
+  "entry": {
+   "seed": "commit/0eaab47045",
+   "gold": "commit/0eaab47045",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 419,
+  "within_2_doors": 27785,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "commit/6d490de71c",
+    "label": "commit 6d490de: board: james messages all",
+    "p": 0.026509660597288542,
+    "gold": false
+   },
+   {
+    "id": "commit/d904a8bc75",
+    "label": "commit d904a8b: door-pick-diagnostic: fix a quote typo and the wave-2 page-size range",
+    "p": 0.014652791745100594,
+    "gold": true
+   },
+   {
+    "id": "commit/517bcbf9c0",
+    "label": "commit 517bcbf: board: bill messages sirsh",
+    "p": 0.009355279277985995,
+    "gold": false
+   },
+   {
+    "id": "commit/3046fadaf3",
+    "label": "commit 3046fad: board: james messages all",
+    "p": 0.009196673613250045,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/door-pick-diagnostic/RESULT.md#2",
+    "label": "meta/lab/results/door-pick-diagnostic/RESULT.md \u203a Registration (17 Nov 2026, written before anything was scored)",
+    "p": 0.0090682079429003,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261114-191139-e898.md#1",
+    "label": "board/messages/M-20261114-191139-e898.md",
+    "p": 0.008791324634202718,
+    "gold": false
+   },
+   {
+    "id": "commit/85886ea9c1",
+    "label": "commit 85886ea: Merge pull request #828 from Percolation-Labs/james/jev-bm5-replication",
+    "p": 0.008072980104653852,
+    "gold": false
+   },
+   {
+    "id": "commit/81b9671538",
+    "label": "commit 81b9671: board: bill messages sirsh",
+    "p": 0.00742608702206729,
+    "gold": false
+   },
+   {
+    "id": "commit/8f15096735",
+    "label": "commit 8f15096: Merge pull request #829 from Percolation-Labs/bill/reference-world",
+    "p": 0.005140972203132363,
+    "gold": false
+   },
+   {
+    "id": "commit/55e5ec665e",
+    "label": "commit 55e5ec6: board: bill acknowledges 1 message(s)",
+    "p": 0.005023476473684395,
+    "gold": false
+   },
+   {
+    "id": "commit/88cb1548b8",
+    "label": "commit 88cb154: board: bill acknowledges 1 message(s)",
+    "p": 0.004340043114644258,
+    "gold": false
+   },
+   {
+    "id": "commit/66a1d2b33f",
+    "label": "commit 66a1d2b: board: board-watch messages all",
+    "p": 0.0026252946394209387,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-k3-room0/RESULT.md#6",
+    "label": "meta/lab/results/jev-k3-room0/RESULT.md \u203a Result (17 Nov 2026)",
+    "p": 0.0019383184425987448,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/qasper-miss-stages.md#2",
+    "label": "meta/lab/results/qasper-miss-stages.md \u203a Where QASPER's walks lose an answer, by stage (bill and james, 4 Nov)",
+    "p": 0.0019345690885390053,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/door-pick-diagnostic/RESULT.md#5",
+    "label": "meta/lab/results/door-pick-diagnostic/RESULT.md \u203a Result (17 Nov 2026)",
+    "p": 0.001933988665308501,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/qasper-miss-stages.md#1",
+    "label": "meta/lab/results/qasper-miss-stages.md \u203a Where QASPER's walks lose an answer, by stage (bill and james, 4 Nov)",
+    "p": 0.0018986148154037186,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261117-083102-f7b7.md#1",
+    "label": "board/messages/M-20261117-083102-f7b7.md",
+    "p": 0.0018623511031067828,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261024-124309-0320.md#1",
+    "label": "board/messages/M-20261024-124309-0320.md",
+    "p": 0.0017913187695947218,
+    "gold": false
+   },
+   {
+    "id": "commit/29c7d4c861",
+    "label": "commit 29c7d4c: Merge pull request #805 from Percolation-Labs/james/door-read-share",
+    "p": 0.0015499715657692668,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/door-pick-diagnostic/diagnose.py#4",
+    "label": "meta/lab/results/door-pick-diagnostic/diagnose.py",
+    "p": 0.001548233665553938,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/2da653a825",
+   "label": "commit 2da653a: Merge pull request #830 from Percolation-Labs/james/door-pick-diagnostic",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/door-pick-diagnostic/RESULT.md#1",
+   "label": "meta/lab/results/door-pick-diagnostic/RESULT.md \u203a Where Jev's b-m5 walks lose gold to the oracle's: presentation or choi",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/0eaab47045",
+   "label": "commit 0eaab47: door-pick-diagnostic: register the presentation/description/decision classes before scoring",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "meta/lab/results/door-pick-diagnostic/RESULT.md#4",
+   "label": "meta/lab/results/door-pick-diagnostic/RESULT.md \u203a Result (17 Nov 2026)",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/4e9ff1007b",
+   "label": "commit 4e9ff10: door-pick-diagnostic: Jev's b-m5 misses vs the oracle are 0 not-presented, 11 not-described, 14 not-chos",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "board/messages/M-20261028-213424-5b5a.md#2",
+   "label": "board/messages/M-20261028-213424-5b5a.md",
+   "wave": 1,
+   "via": "term:missed pieces",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/door-pick-diagnostic/score-result.md#2",
+   "label": "meta/lab/results/door-pick-diagnostic/score-result.md \u203a Missed pieces by class",
+   "wave": 1,
+   "via": "term:missed pieces",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/door-pick-diagnostic/diagnose.py#4",
+   "label": "meta/lab/results/door-pick-diagnostic/diagnose.py",
+   "wave": 1,
+   "via": "term:missed pieces",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/beam-reach/reach-result.md#2",
+   "label": "meta/lab/results/beam-reach/reach-result.md \u203a Distance over all door types together",
+   "wave": 1,
+   "via": "term:missed pieces",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/door-pick-diagnostic/RESULT.md#7",
+   "label": "meta/lab/results/door-pick-diagnostic/RESULT.md \u203a Postmortem",
+   "wave": 1,
+   "via": "term:missed pieces",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "commit/6d490de71c",
+    "label": "commit 6d490de: board: james messages all",
+    "gold": false
+   },
+   {
+    "id": "commit/d904a8bc75",
+    "label": "commit d904a8b: door-pick-diagnostic: fix a quote typo and the wave-2 page-size range",
+    "gold": true
+   },
+   {
+    "id": "commit/517bcbf9c0",
+    "label": "commit 517bcbf: board: bill messages sirsh",
+    "gold": false
+   },
+   {
+    "id": "commit/3046fadaf3",
+    "label": "commit 3046fad: board: james messages all",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/door-pick-diagnostic/RESULT.md#2",
+    "label": "meta/lab/results/door-pick-diagnostic/RESULT.md \u203a Registration (17 Nov 2026, written before anything was scored)",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "meta/lab/results/door-pick-diagnostic/RESULT.md#2",
+    "label": "meta/lab/results/door-pick-diagnostic/RESULT.md \u203a Registration (17 Nov 2026, written before anything was scored)",
+    "gold": false
+   },
+   {
+    "id": "commit/d904a8bc75",
+    "label": "commit d904a8b: door-pick-diagnostic: fix a quote typo and the wave-2 page-size range",
+    "gold": true
+   },
+   {
+    "id": "meta/lab/results/door-pick-diagnostic/RESULT.md#5",
+    "label": "meta/lab/results/door-pick-diagnostic/RESULT.md \u203a Result (17 Nov 2026)",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/door-pick-diagnostic/diagnose.py#1",
+    "label": "meta/lab/results/door-pick-diagnostic/diagnose.py",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/door-pick-diagnostic/RESULT.md#3",
+    "label": "meta/lab/results/door-pick-diagnostic/RESULT.md \u203a Registration (17 Nov 2026, written before anything was scored)",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "meta/lab/results/door-pick-diagnostic/RESULT.md#2",
+    "label": "meta/lab/results/door-pick-diagnostic/RESULT.md \u203a Registration (17 Nov 2026, written before anything was scored)",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/door-pick-diagnostic/score-result.md#2",
+    "label": "meta/lab/results/door-pick-diagnostic/score-result.md \u203a Missed pieces by class",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/door-pick-diagnostic/score-result.md#3",
+    "label": "meta/lab/results/door-pick-diagnostic/score-result.md \u203a jev: every miss, wave by wave",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/door-pick-diagnostic/score-result.md#1",
+    "label": "meta/lab/results/door-pick-diagnostic/score-result.md \u203a Door-pick diagnostic: b-m5 walks that read less gold than the or",
+    "gold": false
+   },
+   {
+    "id": "commit/d904a8bc75",
+    "label": "commit d904a8b: door-pick-diagnostic: fix a quote typo and the wave-2 page-size range",
+    "gold": true
+   }
+  ],
+  "S": [
+   {
+    "id": "board/messages/M-20261117-134711-aea4.md#1",
+    "label": "board/messages/M-20261117-134711-aea4.md",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/door-pick-diagnostic/RESULT.md#3",
+    "label": "meta/lab/results/door-pick-diagnostic/RESULT.md \u203a Registration (17 Nov 2026, written before anything was scored)",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/walk-vs-search/POSTMORTEM.md#13",
+    "label": "meta/lab/results/walk-vs-search/POSTMORTEM.md \u203a 5. Published results and this week's nulls, by presentation and choice",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/walk-vs-search/POSTMORTEM.md#12",
+    "label": "meta/lab/results/walk-vs-search/POSTMORTEM.md \u203a 5. Published results and this week's nulls, by presentation and choice",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/door-pick-diagnostic/score-result.md#3",
+    "label": "meta/lab/results/door-pick-diagnostic/score-result.md \u203a jev: every miss, wave by wave",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 1.0,
+  "Q": 1.0,
+  "LQ": 1.0,
+  "S": 0.0
+ }
+}

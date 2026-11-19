@@ -1,0 +1,410 @@
+{
+ "qid": "card:REM-467",
+ "set": "cards",
+ "question": "What was done about this, and why: specs: the twelve specs both trees edited say one thing, in the source?",
+ "gold": [
+  {
+   "id": "commit/1e10a6d83e",
+   "label": "commit 1e10a6d: access-and-limits: the capability table keeps one row per capability in four columns (REM-467)",
+   "seed": false
+  },
+  {
+   "id": "commit/476543e73c",
+   "label": "commit 476543e: specs/percolate-application: the twelve specs both trees edited say one thing (REM-467)",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/03afd72c8a",
+   "label": "commit 03afd72: board: file REM-467 specs: the fourteen specs both trees edited say one thing, in the source",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-467.md#1",
+   "label": "board/cards/REM-467.md",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/476543e73c",
+   "label": "commit 476543e: specs/percolate-application: the twelve specs both trees edited say one thing (REM-467)",
+   "rank": 3,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "board/cards/REM-467.md#6",
+   "label": "board/cards/REM-467.md \u203a Log",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "specs/percolate-application/README.md#2",
+   "label": "specs/percolate-application/README.md \u203a This directory is the source (REM-431)",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/1e10a6d83e",
+    "label": "commit 1e10a6d: access-and-limits: the capability table keeps one row per capability in four columns (REM-467)",
+    "role": "gold"
+   },
+   {
+    "id": "commit/476543e73c",
+    "label": "commit 476543e: specs/percolate-application: the twelve specs both trees edited say one thing (REM-467)",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/1e10a6d83e",
+    "b": "commit/476543e73c",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "rem 467",
+      "width": 18
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "commit/476543e73c",
+   "gold": "commit/476543e73c",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 1592,
+  "within_2_doors": 34117,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "board/cards/REM-467.md#5",
+    "label": "board/cards/REM-467.md \u203a Scope",
+    "p": 0.0071007179122515845,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-467.md#2",
+    "label": "board/cards/REM-467.md \u203a Goal",
+    "p": 0.00516802553734149,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-431.md#7",
+    "label": "board/cards/REM-431.md \u203a Log",
+    "p": 0.00480592599847864,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-467.md#4",
+    "label": "board/cards/REM-467.md \u203a Done when",
+    "p": 0.0027305777020013296,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-467.md#3",
+    "label": "board/cards/REM-467.md \u203a Evidence",
+    "p": 0.002725192347709713,
+    "gold": false
+   },
+   {
+    "id": "commit/c012708274",
+    "label": "commit c012708: board: p8-subsystems-5e takes REM-466",
+    "p": 0.002241817201484429,
+    "gold": false
+   },
+   {
+    "id": "commit/aca231ee69",
+    "label": "commit aca231e: board: REM-462 in-progress \u2192 done",
+    "p": 0.002232196988343805,
+    "gold": false
+   },
+   {
+    "id": "commit/1e10a6d83e",
+    "label": "commit 1e10a6d: access-and-limits: the capability table keeps one row per capability in four columns (REM-467)",
+    "p": 0.00223094941360234,
+    "gold": true
+   },
+   {
+    "id": "commit/72078a7a60",
+    "label": "commit 72078a7: data-model: hub_app.call_counts, per person and day, read only by the admin activity view (REM-1165)",
+    "p": 0.0015566379595365527,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-431.md#3",
+    "label": "board/cards/REM-431.md \u203a Evidence",
+    "p": 0.0014894467202284645,
+    "gold": false
+   },
+   {
+    "id": "specs/user-rbac/schema.sql#34",
+    "label": "specs/user-rbac/schema.sql",
+    "p": 0.0014595134242617214,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/sequence.md#3",
+    "label": "specs/percolate-application/sequence.md \u203a Planning deliverables \u2014 this task",
+    "p": 0.0014426634217526617,
+    "gold": false
+   },
+   {
+    "id": "commit/2053bc0271",
+    "label": "commit 2053bc0: board: note on REM-467",
+    "p": 0.001263637151487331,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-286.md#9",
+    "label": "board/cards/REM-286.md \u203a Log",
+    "p": 0.0012561022917890925,
+    "gold": false
+   },
+   {
+    "id": "commit/83eebd76f0",
+    "label": "commit 83eebd7: specs: twelve diverged, release-and-gitops is reconciled (REM-431)",
+    "p": 0.0012465575352474502,
+    "gold": false
+   },
+   {
+    "id": "commit/53b0253df8",
+    "label": "commit 53b0253: board: edit REM-467 title",
+    "p": 0.0011540130245286618,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-431.md#6",
+    "label": "board/cards/REM-431.md \u203a Log",
+    "p": 0.001153004301601668,
+    "gold": false
+   },
+   {
+    "id": "commit/046717a5d4",
+    "label": "commit 046717a: board: note on REM-467",
+    "p": 0.0011495959763154749,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-431.md#1",
+    "label": "board/cards/REM-431.md",
+    "p": 0.0011336438411381133,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/drafter.md#62",
+    "label": "specs/percolate-application/drafter.md \u203a 5. A journey that stays in the margin",
+    "p": 0.0011319688006034537,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/03afd72c8a",
+   "label": "commit 03afd72: board: file REM-467 specs: the fourteen specs both trees edited say one thing, in the source",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-467.md#1",
+   "label": "board/cards/REM-467.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/476543e73c",
+   "label": "commit 476543e: specs/percolate-application: the twelve specs both trees edited say one thing (REM-467)",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "board/cards/REM-467.md#6",
+   "label": "board/cards/REM-467.md \u203a Log",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/percolate-application/README.md#2",
+   "label": "specs/percolate-application/README.md \u203a This directory is the source (REM-431)",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-467.md#3",
+   "label": "board/cards/REM-467.md \u203a Evidence",
+   "wave": 1,
+   "via": "term:rem 431",
+   "gold": false
+  },
+  {
+   "id": "commit/a5482e8034",
+   "label": "commit a5482e8: Merge pull request #241 from Percolation-Labs/amartey/rem-431-one-spec-source",
+   "wave": 1,
+   "via": "term:rem 431",
+   "gold": false
+  },
+  {
+   "id": "commit/83eebd76f0",
+   "label": "commit 83eebd7: specs: twelve diverged, release-and-gitops is reconciled (REM-431)",
+   "wave": 1,
+   "via": "term:rem 431",
+   "gold": false
+  },
+  {
+   "id": "commit/71854d493e",
+   "label": "commit 71854d4: specs: release-and-gitops holds its body here, the source (REM-431)",
+   "wave": 1,
+   "via": "term:rem 431",
+   "gold": false
+  },
+  {
+   "id": "commit/eadc7b43c7",
+   "label": "commit eadc7b4: board: REM-431 in-progress \u2192 done",
+   "wave": 1,
+   "via": "term:rem 431",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "board/cards/REM-467.md#5",
+    "label": "board/cards/REM-467.md \u203a Scope",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-467.md#2",
+    "label": "board/cards/REM-467.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-431.md#7",
+    "label": "board/cards/REM-431.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-467.md#4",
+    "label": "board/cards/REM-467.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-467.md#3",
+    "label": "board/cards/REM-467.md \u203a Evidence",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "board/cards/REM-467.md#2",
+    "label": "board/cards/REM-467.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-431.md#7",
+    "label": "board/cards/REM-431.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-467.md#3",
+    "label": "board/cards/REM-467.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-467.md#5",
+    "label": "board/cards/REM-467.md \u203a Scope",
+    "gold": false
+   },
+   {
+    "id": "commit/83eebd76f0",
+    "label": "commit 83eebd7: specs: twelve diverged, release-and-gitops is reconciled (REM-431)",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "board/cards/REM-467.md#2",
+    "label": "board/cards/REM-467.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "commit/ef339dd65f",
+    "label": "commit ef339dd: board: REM-467 in-progress \u2192 done",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-431.md#2",
+    "label": "board/cards/REM-431.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "commit/83eebd76f0",
+    "label": "commit 83eebd7: specs: twelve diverged, release-and-gitops is reconciled (REM-431)",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-467.md#3",
+    "label": "board/cards/REM-467.md \u203a Evidence",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "board/cards/REM-467.md#2",
+    "label": "board/cards/REM-467.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-431.md#2",
+    "label": "board/cards/REM-431.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "commit/83eebd76f0",
+    "label": "commit 83eebd7: specs: twelve diverged, release-and-gitops is reconciled (REM-431)",
+    "gold": false
+   },
+   {
+    "id": "specs/world-model-ingestion/extraction.md#7",
+    "label": "specs/world-model-ingestion/extraction.md \u203a The unit is (source \u00d7 document type), not source",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-467.md#3",
+    "label": "board/cards/REM-467.md \u203a Evidence",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

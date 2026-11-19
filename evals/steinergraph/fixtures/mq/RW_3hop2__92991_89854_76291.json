@@ -1,0 +1,461 @@
+{
+ "qid": "RW:3hop2__92991_89854_76291",
+ "set": "mq",
+ "question": "When did the party holding the majority in the House of Representatives take control of the determiner of rules of the House and Senate?",
+ "gold": [
+  {
+   "id": "mq:0c3875782c5c338d",
+   "label": "114th United States Congress",
+   "seed": false
+  },
+  {
+   "id": "mq:817fd0ee314209b6",
+   "label": "Standing Rules of the United States Senate",
+   "seed": false
+  },
+  {
+   "id": "mq:e3de0ee582ca38ce",
+   "label": "2014 United States Senate elections",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:276e86dd88f88f02",
+   "label": "Majority leader",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:ebc444437e031f03",
+   "label": "2002 United States House of Representatives elections",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:31cc6ab3ffa4f12b",
+   "label": "Party leaders of the United States House of Representatives",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:7396b63081b53343",
+   "label": "Party leaders of the United States Senate",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:1fa083e5adc5547b",
+   "label": "Party leaders of the United States House of Representatives",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:0c3875782c5c338d",
+    "label": "114th United States Congress",
+    "role": "gold"
+   },
+   {
+    "id": "mq:7396b63081b53343",
+    "label": "Party leaders of the United States Senate",
+    "role": "seed"
+   },
+   {
+    "id": "mq:817fd0ee314209b6",
+    "label": "Standing Rules of the United States Senate",
+    "role": "gold"
+   },
+   {
+    "id": "mq:e3de0ee582ca38ce",
+    "label": "2014 United States Senate elections",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:0c3875782c5c338d",
+    "b": "mq:817fd0ee314209b6",
+    "via": [
+     {
+      "kind": "term",
+      "key": "states senate",
+      "width": 23
+     }
+    ]
+   },
+   {
+    "a": "mq:0c3875782c5c338d",
+    "b": "mq:e3de0ee582ca38ce",
+    "via": [
+     {
+      "kind": "term",
+      "key": "states senate",
+      "width": 23
+     },
+     {
+      "kind": "term",
+      "key": "republicans",
+      "width": 37
+     },
+     {
+      "kind": "term",
+      "key": "seats",
+      "width": 81
+     }
+    ]
+   },
+   {
+    "a": "mq:7396b63081b53343",
+    "b": "mq:817fd0ee314209b6",
+    "via": [
+     {
+      "kind": "term",
+      "key": "procedure",
+      "width": 15
+     },
+     {
+      "kind": "term",
+      "key": "states senate",
+      "width": 23
+     }
+    ]
+   }
+  ],
+  "cost": 3,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   1,
+   1
+  ],
+  "entry": {
+   "seed": "mq:7396b63081b53343",
+   "gold": "mq:817fd0ee314209b6",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 2298,
+  "within_2_doors": 18755,
+  "gold_within_1": 3,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "mq:85c44dd86623342b",
+    "label": "Party leaders of the United States House of Representatives",
+    "p": 0.004629223608580365,
+    "gold": false
+   },
+   {
+    "id": "mq:f2a60931baaaf042",
+    "label": "2010 United States House of Representatives elections",
+    "p": 0.003696688248286161,
+    "gold": false
+   },
+   {
+    "id": "mq:970681b324ddeb1e",
+    "label": "Party leaders of the United States House of Representatives",
+    "p": 0.0031745269863173143,
+    "gold": false
+   },
+   {
+    "id": "mq:fb1f51dec7ae1c0f",
+    "label": "North Carolina",
+    "p": 0.0027333761697613855,
+    "gold": false
+   },
+   {
+    "id": "mq:61cb5a458dddb036",
+    "label": "110th United States Congress",
+    "p": 0.0022187631797560064,
+    "gold": false
+   },
+   {
+    "id": "mq:cd9d3e67161c7ade",
+    "label": "President pro tempore of the United States Senate",
+    "p": 0.002017118895333373,
+    "gold": false
+   },
+   {
+    "id": "mq:321627616e6d6ea9",
+    "label": "Party leaders of the United States House of Representatives",
+    "p": 0.002013469554315252,
+    "gold": false
+   },
+   {
+    "id": "mq:66a0ea6370b325e7",
+    "label": "Senate of Kenya",
+    "p": 0.0018766570434298362,
+    "gold": false
+   },
+   {
+    "id": "mq:6838acae8ae5f418",
+    "label": "United States House of Representatives",
+    "p": 0.0017557086509404761,
+    "gold": false
+   },
+   {
+    "id": "mq:66588c2492b3c9e1",
+    "label": "2008 United States Senate elections",
+    "p": 0.0017231990801117954,
+    "gold": false
+   },
+   {
+    "id": "mq:e0cb042bfd92b652",
+    "label": "Montana",
+    "p": 0.0016760167628861492,
+    "gold": false
+   },
+   {
+    "id": "mq:b2db756855439ea7",
+    "label": "Party leaders of the United States House of Representatives",
+    "p": 0.0015722891499168079,
+    "gold": false
+   },
+   {
+    "id": "mq:d0d855f5df1f1a06",
+    "label": "Force",
+    "p": 0.0014977298564674945,
+    "gold": false
+   },
+   {
+    "id": "mq:9770e275cc6be4a7",
+    "label": "Official Monster Raving Loony Party",
+    "p": 0.0014843706626607362,
+    "gold": false
+   },
+   {
+    "id": "mq:4971e59c265e4aca",
+    "label": "Dissolution of the Soviet Union",
+    "p": 0.0014259994910324574,
+    "gold": false
+   },
+   {
+    "id": "mq:3ef46fe47cb01681",
+    "label": "Batman: Arkham",
+    "p": 0.0011276628469641147,
+    "gold": false
+   },
+   {
+    "id": "mq:ec8720069c3f38c5",
+    "label": "1946 United States House of Representatives elections",
+    "p": 0.0011204214129223397,
+    "gold": false
+   },
+   {
+    "id": "mq:f11a93cd58efe521",
+    "label": "Enrique del Moral",
+    "p": 0.0011201809183317966,
+    "gold": false
+   },
+   {
+    "id": "mq:5d1474f7afbce213",
+    "label": "New Deal",
+    "p": 0.001101158295638024,
+    "gold": false
+   },
+   {
+    "id": "mq:fbb76c7ce18a5ae9",
+    "label": "Democratic Party of Oregon",
+    "p": 0.000983632228849595,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:276e86dd88f88f02",
+   "label": "Majority leader",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:ebc444437e031f03",
+   "label": "2002 United States House of Representatives elections",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:31cc6ab3ffa4f12b",
+   "label": "Party leaders of the United States House of Representatives",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:7396b63081b53343",
+   "label": "Party leaders of the United States Senate",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:1fa083e5adc5547b",
+   "label": "Party leaders of the United States House of Representatives",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:85c44dd86623342b",
+   "label": "Party leaders of the United States House of Representatives",
+   "wave": 1,
+   "via": "term:nancy pelosi",
+   "gold": false
+  },
+  {
+   "id": "mq:61cb5a458dddb036",
+   "label": "110th United States Congress",
+   "wave": 1,
+   "via": "term:nancy pelosi",
+   "gold": false
+  },
+  {
+   "id": "mq:9cf3c9eecf3280fb",
+   "label": "Party leaders of the United States Senate",
+   "wave": 2,
+   "via": "term:democrats",
+   "gold": false
+  },
+  {
+   "id": "mq:31030e3ff52b4592",
+   "label": "2018 United States Senate elections",
+   "wave": 2,
+   "via": "term:democrats",
+   "gold": false
+  },
+  {
+   "id": "mq:e5748053fc09b474",
+   "label": "San Diego",
+   "wave": 2,
+   "via": "term:democrats",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:85c44dd86623342b",
+    "label": "Party leaders of the United States House of Representatives",
+    "gold": false
+   },
+   {
+    "id": "mq:f2a60931baaaf042",
+    "label": "2010 United States House of Representatives elections",
+    "gold": false
+   },
+   {
+    "id": "mq:970681b324ddeb1e",
+    "label": "Party leaders of the United States House of Representatives",
+    "gold": false
+   },
+   {
+    "id": "mq:fb1f51dec7ae1c0f",
+    "label": "North Carolina",
+    "gold": false
+   },
+   {
+    "id": "mq:61cb5a458dddb036",
+    "label": "110th United States Congress",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:85c44dd86623342b",
+    "label": "Party leaders of the United States House of Representatives",
+    "gold": false
+   },
+   {
+    "id": "mq:970681b324ddeb1e",
+    "label": "Party leaders of the United States House of Representatives",
+    "gold": false
+   },
+   {
+    "id": "mq:fb1f51dec7ae1c0f",
+    "label": "North Carolina",
+    "gold": false
+   },
+   {
+    "id": "mq:f2a60931baaaf042",
+    "label": "2010 United States House of Representatives elections",
+    "gold": false
+   },
+   {
+    "id": "mq:61cb5a458dddb036",
+    "label": "110th United States Congress",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:85c44dd86623342b",
+    "label": "Party leaders of the United States House of Representatives",
+    "gold": false
+   },
+   {
+    "id": "mq:970681b324ddeb1e",
+    "label": "Party leaders of the United States House of Representatives",
+    "gold": false
+   },
+   {
+    "id": "mq:f2a60931baaaf042",
+    "label": "2010 United States House of Representatives elections",
+    "gold": false
+   },
+   {
+    "id": "mq:fb1f51dec7ae1c0f",
+    "label": "North Carolina",
+    "gold": false
+   },
+   {
+    "id": "mq:321627616e6d6ea9",
+    "label": "Party leaders of the United States House of Representatives",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:fb1f51dec7ae1c0f",
+    "label": "North Carolina",
+    "gold": false
+   },
+   {
+    "id": "mq:0c3875782c5c338d",
+    "label": "114th United States Congress",
+    "gold": true
+   },
+   {
+    "id": "mq:970681b324ddeb1e",
+    "label": "Party leaders of the United States House of Representatives",
+    "gold": false
+   },
+   {
+    "id": "mq:391cf4343407f2d7",
+    "label": "44th United States Congress",
+    "gold": false
+   },
+   {
+    "id": "mq:bacbc905a3fc2483",
+    "label": "Speaker of the United States House of Representatives",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.3333333333333333
+ }
+}

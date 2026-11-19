@@ -1,0 +1,383 @@
+{
+ "qid": "card:REM-748",
+ "set": "cards",
+ "question": "What was done about this, and why: access: the capability table says what a caller meets, not only the static rule?",
+ "gold": [
+  {
+   "id": "commit/359858d588",
+   "label": "commit 359858d: access-and-limits: the capability table says what a caller meets (REM-748)",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/efbcf9dcde",
+   "label": "commit efbcf9d: board: file REM-748 access: the capability table says what a caller meets, not only the static rule",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/359858d588",
+   "label": "commit 359858d: access-and-limits: the capability table says what a caller meets (REM-748)",
+   "rank": 2,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "board/cards/REM-748.md#2",
+   "label": "board/cards/REM-748.md \u203a Goal",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-748.md#1",
+   "label": "board/cards/REM-748.md",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-748.md#5",
+   "label": "board/cards/REM-748.md \u203a Log",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/359858d588",
+    "label": "commit 359858d: access-and-limits: the capability table says what a caller meets (REM-748)",
+    "role": "gold"
+   }
+  ],
+  "links": [],
+  "cost": 0,
+  "detached_gold": [],
+  "gold_pair_doors": [],
+  "entry": {
+   "seed": "commit/359858d588",
+   "gold": "commit/359858d588",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 476,
+  "within_2_doors": 30345,
+  "gold_within_1": 0,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "specs/percolate-application/access-and-limits.md#6",
+    "label": "specs/percolate-application/access-and-limits.md \u203a Capabilities",
+    "p": 0.008289900773289964,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-748.md#4",
+    "label": "board/cards/REM-748.md \u203a Done when",
+    "p": 0.005667370089294363,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-274.md#8",
+    "label": "board/cards/REM-274.md \u203a Log",
+    "p": 0.0053952350636098855,
+    "gold": false
+   },
+   {
+    "id": "commit/ce34fcf911",
+    "label": "commit ce34fcf: board: p8-subsystems-9c takes REM-748",
+    "p": 0.005272733099181244,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/access-and-limits.md#9",
+    "label": "specs/percolate-application/access-and-limits.md \u203a Who owns each policy",
+    "p": 0.005190989257128483,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-274.md#7",
+    "label": "board/cards/REM-274.md \u203a Log",
+    "p": 0.004218131586529476,
+    "gold": false
+   },
+   {
+    "id": "commit/7a718eccf2",
+    "label": "commit 7a718ec: board: p8-subsystems-4b messages all",
+    "p": 0.004129549532278658,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/access-and-limits.md#5",
+    "label": "specs/percolate-application/access-and-limits.md \u203a Capabilities",
+    "p": 0.003934618403382578,
+    "gold": false
+   },
+   {
+    "id": "commit/a3c956ec7d",
+    "label": "commit a3c956e: board: file REM-747 coalescing: a stance says whether it answers what ought to be or what is, and contra",
+    "p": 0.0031565313819143298,
+    "gold": false
+   },
+   {
+    "id": "commit/2db927fff6",
+    "label": "commit 2db927f: Merge pull request #383 from Percolation-Labs/amartey/question-web-core",
+    "p": 0.003143384394045845,
+    "gold": false
+   },
+   {
+    "id": "commit/fe39f542ad",
+    "label": "commit fe39f54: board: tick REM-748 box 1",
+    "p": 0.0030524793139297536,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-748.md#3",
+    "label": "board/cards/REM-748.md \u203a Evidence",
+    "p": 0.003008499006195697,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1087.md#6",
+    "label": "board/cards/REM-1087.md \u203a Log",
+    "p": 0.002760582607361303,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-467.md#6",
+    "label": "board/cards/REM-467.md \u203a Log",
+    "p": 0.002745666759899382,
+    "gold": false
+   },
+   {
+    "id": "commit/37ed4cd487",
+    "label": "commit 37ed4cd: rows, not schema: the rule, and a gate that reads specs/ (REM-655) (#335)",
+    "p": 0.0025874213169755685,
+    "gold": false
+   },
+   {
+    "id": "specs/user-rbac/schema.sql#81",
+    "label": "specs/user-rbac/schema.sql",
+    "p": 0.002464287051927682,
+    "gold": false
+   },
+   {
+    "id": "commit/1e10a6d83e",
+    "label": "commit 1e10a6d: access-and-limits: the capability table keeps one row per capability in four columns (REM-467)",
+    "p": 0.002435809810217473,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-171.md#9",
+    "label": "board/cards/REM-171.md \u203a 2026-09-13T16:09:52.403Z \u00b7 Percolation Labs",
+    "p": 0.0024166048949445535,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1087.md#4",
+    "label": "board/cards/REM-1087.md \u203a Done when",
+    "p": 0.0023806844739274295,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/drafter.md#76",
+    "label": "specs/percolate-application/drafter.md \u203a 8. MCP and companion parity",
+    "p": 0.0023677175719567407,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/efbcf9dcde",
+   "label": "commit efbcf9d: board: file REM-748 access: the capability table says what a caller meets, not only the static rule",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/359858d588",
+   "label": "commit 359858d: access-and-limits: the capability table says what a caller meets (REM-748)",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "board/cards/REM-748.md#2",
+   "label": "board/cards/REM-748.md \u203a Goal",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-748.md#1",
+   "label": "board/cards/REM-748.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-748.md#5",
+   "label": "board/cards/REM-748.md \u203a Log",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/percolate-application/access-and-limits.md#6",
+   "label": "specs/percolate-application/access-and-limits.md \u203a Capabilities",
+   "wave": 1,
+   "via": "term:rem 748",
+   "gold": false
+  },
+  {
+   "id": "applications/percolate-self-model/product.md#39",
+   "label": "applications/percolate-self-model/product.md \u203a Structure, cost and current truth (6\u20137 Oct)",
+   "wave": 1,
+   "via": "term:rem 748",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-748.md#4",
+   "label": "board/cards/REM-748.md \u203a Done when",
+   "wave": 1,
+   "via": "term:rem 748",
+   "gold": false
+  },
+  {
+   "id": "commit/7b89567241",
+   "label": "commit 7b89567: board: REM-748 in-progress \u2192 done",
+   "wave": 1,
+   "via": "term:rem 748",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-748.md#3",
+   "label": "board/cards/REM-748.md \u203a Evidence",
+   "wave": 1,
+   "via": "term:rem 748",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "specs/percolate-application/access-and-limits.md#6",
+    "label": "specs/percolate-application/access-and-limits.md \u203a Capabilities",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-748.md#4",
+    "label": "board/cards/REM-748.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-274.md#8",
+    "label": "board/cards/REM-274.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "commit/ce34fcf911",
+    "label": "commit ce34fcf: board: p8-subsystems-9c takes REM-748",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/access-and-limits.md#9",
+    "label": "specs/percolate-application/access-and-limits.md \u203a Who owns each policy",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "specs/percolate-application/access-and-limits.md#6",
+    "label": "specs/percolate-application/access-and-limits.md \u203a Capabilities",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/access-and-limits.md#9",
+    "label": "specs/percolate-application/access-and-limits.md \u203a Who owns each policy",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/access-and-limits.md#5",
+    "label": "specs/percolate-application/access-and-limits.md \u203a Capabilities",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-274.md#8",
+    "label": "board/cards/REM-274.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-274.md#7",
+    "label": "board/cards/REM-274.md \u203a Log",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "board/cards/REM-748.md#4",
+    "label": "board/cards/REM-748.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "commit/7b89567241",
+    "label": "commit 7b89567: board: REM-748 in-progress \u2192 done",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1087.md#4",
+    "label": "board/cards/REM-1087.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "commit/43496c7506",
+    "label": "commit 43496c7: board: file REM-1085 release: one table says which extension, parser and core versions go together",
+    "gold": false
+   },
+   {
+    "id": "commit/1e10a6d83e",
+    "label": "commit 1e10a6d: access-and-limits: the capability table keeps one row per capability in four columns (REM-467)",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "commit/1e10a6d83e",
+    "label": "commit 1e10a6d: access-and-limits: the capability table keeps one row per capability in four columns (REM-467)",
+    "gold": false
+   },
+   {
+    "id": "commit/174de3ddf4",
+    "label": "commit 174de3d: board: file REM-274 access: get_my_access marks a capability live when core allows it and a route serves",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-274.md#1",
+    "label": "board/cards/REM-274.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1087.md#4",
+    "label": "board/cards/REM-1087.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/access-and-limits.md#6",
+    "label": "specs/percolate-application/access-and-limits.md \u203a Capabilities",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": null,
+  "Q": null,
+  "LQ": null,
+  "S": null
+ }
+}

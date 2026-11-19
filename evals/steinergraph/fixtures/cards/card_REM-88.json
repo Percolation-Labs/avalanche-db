@@ -1,0 +1,405 @@
+{
+ "qid": "card:REM-88",
+ "set": "cards",
+ "question": "What was done about this, and why: aiq: reading one edge costs one lookup, not a scan of every node the caller can see?",
+ "gold": [
+  {
+   "id": "commit/569d18bf50",
+   "label": "commit 569d18b: Neither graph fixture could be built, so no verdict could be re-run (#54)",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "board/cards/REM-88.md#1",
+   "label": "board/cards/REM-88.md",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-976.md#2",
+   "label": "board/cards/REM-976.md \u203a Goal",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "specs/ai-query-layer/USAGE.md#32",
+   "label": "specs/ai-query-layer/USAGE.md \u203a A narrow tenant still gets a full page",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "specs/world-model-ingestion/graph-index.md#24",
+   "label": "specs/world-model-ingestion/graph-index.md \u203a (a) Registered Postgres kind, name resolves \u2014 use the real node",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "specs/ai-query-layer/integration-rbac.sql#4",
+   "label": "specs/ai-query-layer/integration-rbac.sql",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 2
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "board/cards/REM-88.md#1",
+    "label": "board/cards/REM-88.md",
+    "role": "seed"
+   },
+   {
+    "id": "commit/569d18bf50",
+    "label": "commit 569d18b: Neither graph fixture could be built, so no verdict could be re-run (#54)",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "board/cards/REM-88.md#1",
+    "b": "commit/569d18bf50",
+    "via": [
+     {
+      "kind": "term",
+      "key": "rem 88",
+      "width": 4
+     },
+     {
+      "kind": "term",
+      "key": "seq scan",
+      "width": 19
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [],
+  "entry": {
+   "seed": "board/cards/REM-88.md#1",
+   "gold": "commit/569d18bf50",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 2521,
+  "within_2_doors": 33784,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "meta/postmortems/2026-09-04-query-layer-at-scale.md#2",
+    "label": "meta/postmortems/2026-09-04-query-layer-at-scale.md \u203a 1. The bug: an index that gives up before the tenant filter does",
+    "p": 0.0029964873545535423,
+    "gold": false
+   },
+   {
+    "id": "specs/world-model-ingestion/graph.sql#23",
+    "label": "specs/world-model-ingestion/graph.sql",
+    "p": 0.002918671714555064,
+    "gold": false
+   },
+   {
+    "id": "specs/ai-query-layer/graph-identity.md#8",
+    "label": "specs/ai-query-layer/graph-identity.md \u203a Keys (lookup index)",
+    "p": 0.0025854871265639694,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-976.md#3",
+    "label": "board/cards/REM-976.md \u203a Evidence",
+    "p": 0.002181773935254855,
+    "gold": false
+   },
+   {
+    "id": "specs/world-model-ingestion/graph-index.md#26",
+    "label": "specs/world-model-ingestion/graph-index.md \u203a (c) Registered Postgres kind, name does not resolve \u2014 a candidate, never a ",
+    "p": 0.0020290599824518774,
+    "gold": false
+   },
+   {
+    "id": "specs/ai-query-layer/USAGE.md#33",
+    "label": "specs/ai-query-layer/USAGE.md \u203a A narrow tenant still gets a full page",
+    "p": 0.0020064503925171975,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-976.md#6",
+    "label": "board/cards/REM-976.md \u203a Log",
+    "p": 0.0019086691885684315,
+    "gold": false
+   },
+   {
+    "id": "scenarios/round-4.md#7",
+    "label": "scenarios/round-4.md \u203a Verified claims (measured, not asserted)",
+    "p": 0.0017767157447973346,
+    "gold": false
+   },
+   {
+    "id": "commit/1bdf416a57",
+    "label": "commit 1bdf416: The vector index gave up before the tenant filter did",
+    "p": 0.0016934888889798372,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-88.md#2",
+    "label": "board/cards/REM-88.md \u203a Log",
+    "p": 0.0015540327238677543,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-71.md#7",
+    "label": "board/cards/REM-71.md \u203a 2026-09-12T08:14:17.724Z \u00b7 Percolation Labs",
+    "p": 0.0014945903286208645,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-171.md#14",
+    "label": "board/cards/REM-171.md \u203a 2026-09-14T13:43:34.699Z \u00b7 Amartey",
+    "p": 0.0014418734842435693,
+    "gold": false
+   },
+   {
+    "id": "commit/af900efdb3",
+    "label": "commit af900ef: The two memory limits become settings, because a limit nobody can turn is a bug",
+    "p": 0.001360963924821046,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-518.md#2",
+    "label": "board/cards/REM-518.md \u203a Goal",
+    "p": 0.0013594245897016644,
+    "gold": false
+   },
+   {
+    "id": "commit/c5c030a539",
+    "label": "commit c5c030a: Add USAGE.md; fix four permission gaps found by exercising the REST path",
+    "p": 0.0013144207027700767,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261114-214615-1640.md#1",
+    "label": "board/messages/M-20261114-214615-1640.md",
+    "p": 0.0012828457383938074,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-976.md#4",
+    "label": "board/cards/REM-976.md \u203a Done when",
+    "p": 0.0011353129132574231,
+    "gold": false
+   },
+   {
+    "id": "commit/9a87941f19",
+    "label": "commit 9a87941: Three measured findings from REM-71, and the one the convergence gate caught (#104)",
+    "p": 0.0011006685089270927,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-04-query-layer-at-scale.md#3",
+    "label": "meta/postmortems/2026-09-04-query-layer-at-scale.md \u203a 1. The bug: an index that gives up before the tenant filter does",
+    "p": 0.0009978181962412287,
+    "gold": false
+   },
+   {
+    "id": "specs/ai-query-layer/graph-identity.md#41",
+    "label": "specs/ai-query-layer/graph-identity.md \u203a Theory",
+    "p": 0.0008872852139306523,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "board/cards/REM-88.md#1",
+   "label": "board/cards/REM-88.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-976.md#2",
+   "label": "board/cards/REM-976.md \u203a Goal",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/ai-query-layer/USAGE.md#32",
+   "label": "specs/ai-query-layer/USAGE.md \u203a A narrow tenant still gets a full page",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/world-model-ingestion/graph-index.md#24",
+   "label": "specs/world-model-ingestion/graph-index.md \u203a (a) Registered Postgres kind, name resolves \u2014 use the real node",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/ai-query-layer/integration-rbac.sql#4",
+   "label": "specs/ai-query-layer/integration-rbac.sql",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-88.md#2",
+   "label": "board/cards/REM-88.md \u203a Log",
+   "wave": 1,
+   "via": "term:rem 88",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-71.md#7",
+   "label": "board/cards/REM-71.md \u203a 2026-09-12T08:14:17.724Z \u00b7 Percolation Labs",
+   "wave": 1,
+   "via": "term:rem 88",
+   "gold": false
+  },
+  {
+   "id": "commit/569d18bf50",
+   "label": "commit 569d18b: Neither graph fixture could be built, so no verdict could be re-run (#54)",
+   "wave": 1,
+   "via": "term:rem 88",
+   "gold": true
+  },
+  {
+   "id": "specs/ai-query-layer/graph-identity.md#42",
+   "label": "specs/ai-query-layer/graph-identity.md \u203a Theory",
+   "wave": 2,
+   "via": "term:indexed src_id",
+   "gold": false
+  },
+  {
+   "id": "specs/world-model-ingestion/graph-index.md#37",
+   "label": "specs/world-model-ingestion/graph-index.md \u203a 4.5 Promotion must rewrite edges before it evicts \u2014 this is the sharp edge",
+   "wave": 3,
+   "via": "term:node_keys_via_node",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "meta/postmortems/2026-09-04-query-layer-at-scale.md#2",
+    "label": "meta/postmortems/2026-09-04-query-layer-at-scale.md \u203a 1. The bug: an index that gives up before the tenant filter does",
+    "gold": false
+   },
+   {
+    "id": "specs/world-model-ingestion/graph.sql#23",
+    "label": "specs/world-model-ingestion/graph.sql",
+    "gold": false
+   },
+   {
+    "id": "specs/ai-query-layer/graph-identity.md#8",
+    "label": "specs/ai-query-layer/graph-identity.md \u203a Keys (lookup index)",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-976.md#3",
+    "label": "board/cards/REM-976.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "specs/world-model-ingestion/graph-index.md#26",
+    "label": "specs/world-model-ingestion/graph-index.md \u203a (c) Registered Postgres kind, name does not resolve \u2014 a candidate, never a ",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "specs/ai-query-layer/graph-identity.md#8",
+    "label": "specs/ai-query-layer/graph-identity.md \u203a Keys (lookup index)",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-976.md#6",
+    "label": "board/cards/REM-976.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-04-query-layer-at-scale.md#2",
+    "label": "meta/postmortems/2026-09-04-query-layer-at-scale.md \u203a 1. The bug: an index that gives up before the tenant filter does",
+    "gold": false
+   },
+   {
+    "id": "scenarios/round-4.md#7",
+    "label": "scenarios/round-4.md \u203a Verified claims (measured, not asserted)",
+    "gold": false
+   },
+   {
+    "id": "commit/1bdf416a57",
+    "label": "commit 1bdf416: The vector index gave up before the tenant filter did",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/d0b946036f",
+    "label": "commit d0b9460: board: file REM-976 graph: a key resolves to the caller's own node before a shared one",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-976.md#3",
+    "label": "board/cards/REM-976.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-976.md#1",
+    "label": "board/cards/REM-976.md",
+    "gold": false
+   },
+   {
+    "id": "commit/0f30bf53f2",
+    "label": "commit 0f30bf5: graph-identity: a key resolves to the reader's own node before a shared one (REM-976)",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-976.md#4",
+    "label": "board/cards/REM-976.md \u203a Done when",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "scenarios/round-4.md#3",
+    "label": "scenarios/round-4.md \u203a 1. LOOKUP returned the same node once per matching key",
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-04-query-layer-at-scale.md#8",
+    "label": "meta/postmortems/2026-09-04-query-layer-at-scale.md \u203a 4. What the review did *not* find, which is worth recording",
+    "gold": false
+   },
+   {
+    "id": "specs/world-model-ingestion/graph.sql#37",
+    "label": "specs/world-model-ingestion/graph.sql",
+    "gold": false
+   },
+   {
+    "id": "specs/ai-query-layer/graph-identity.md#23",
+    "label": "specs/ai-query-layer/graph-identity.md \u203a What an edge is worth \u2014 use, and weight (edge-standing.sql)",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-976.md#6",
+    "label": "board/cards/REM-976.md \u203a Log",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

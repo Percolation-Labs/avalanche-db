@@ -1,0 +1,463 @@
+{
+ "qid": "RW:2hop__34734_92852",
+ "set": "mq",
+ "question": "When did the U.S. stop trading with the country that started hostilities?",
+ "gold": [
+  {
+   "id": "mq:5032995580fa9bef",
+   "label": "Events leading to the attack on Pearl Harbor",
+   "seed": false
+  },
+  {
+   "id": "mq:5046c20632e56813",
+   "label": "Pacific War",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:3b20a598b990ea54",
+   "label": "Declaration of war by the United States",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:0b46b70d3067ae6b",
+   "label": "Just Got Started Lovin' You",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:7395d25891ebf40b",
+   "label": "Just Got Started Lovin' You",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:23d0a70f5d13d80c",
+   "label": "Icelandair",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "mq:813bc9de66861869",
+   "label": "Guinea-Bissau",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 2
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:3b20a598b990ea54",
+    "label": "Declaration of war by the United States",
+    "role": "seed"
+   },
+   {
+    "id": "mq:5032995580fa9bef",
+    "label": "Events leading to the attack on Pearl Harbor",
+    "role": "gold"
+   },
+   {
+    "id": "mq:5046c20632e56813",
+    "label": "Pacific War",
+    "role": "gold"
+   },
+   {
+    "id": "mq:cb38c7b4dbc26593",
+    "label": "Military history of the United States during World War II",
+    "role": "connector"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:3b20a598b990ea54",
+    "b": "mq:5032995580fa9bef",
+    "via": [
+     {
+      "kind": "term",
+      "key": "axis",
+      "width": 35
+     }
+    ]
+   },
+   {
+    "a": "mq:5032995580fa9bef",
+    "b": "mq:cb38c7b4dbc26593",
+    "via": [
+     {
+      "kind": "near",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "deter",
+      "width": 3
+     },
+     {
+      "kind": "term",
+      "key": "pearl harbor",
+      "width": 12
+     },
+     {
+      "kind": "term",
+      "key": "pearl",
+      "width": 37
+     },
+     {
+      "kind": "term",
+      "key": "harbor",
+      "width": 49
+     }
+    ]
+   },
+   {
+    "a": "mq:5046c20632e56813",
+    "b": "mq:cb38c7b4dbc26593",
+    "via": [
+     {
+      "kind": "term",
+      "key": "december 1941",
+      "width": 7
+     },
+     {
+      "kind": "term",
+      "key": "theater",
+      "width": 75
+     }
+    ]
+   }
+  ],
+  "cost": 3,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   2
+  ],
+  "entry": {
+   "seed": "mq:3b20a598b990ea54",
+   "gold": "mq:5032995580fa9bef",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 1814,
+  "within_2_doors": 19259,
+  "gold_within_1": 2,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "mq:8bdf41f6b6581101",
+    "label": "Sunset Man",
+    "p": 0.007585580625523067,
+    "gold": false
+   },
+   {
+    "id": "mq:6c04b515ca71352c",
+    "label": "Shake What God Gave Ya",
+    "p": 0.002347787183195572,
+    "gold": false
+   },
+   {
+    "id": "mq:12291fa93ea26489",
+    "label": "Groovy Little Summer Song",
+    "p": 0.0021962404465834884,
+    "gold": false
+   },
+   {
+    "id": "mq:b68ec50c2323db30",
+    "label": "Days of Our Lives (James Otto album)",
+    "p": 0.0020519540998737967,
+    "gold": false
+   },
+   {
+    "id": "mq:4bd1f4ca9611b8ce",
+    "label": "Brit Air",
+    "p": 0.0014732364721596629,
+    "gold": false
+   },
+   {
+    "id": "mq:aaadbb405e6ca728",
+    "label": "Jabukovac, Negotin",
+    "p": 0.0014716037112044974,
+    "gold": false
+   },
+   {
+    "id": "mq:c4544dae795121a2",
+    "label": "Transavia Denmark",
+    "p": 0.001438335694972297,
+    "gold": false
+   },
+   {
+    "id": "mq:f1d9b2d394210f67",
+    "label": "Lovin' All Night",
+    "p": 0.0014077743498305882,
+    "gold": false
+   },
+   {
+    "id": "mq:a92e4eafe3d7b54d",
+    "label": "Sky UK",
+    "p": 0.001402484287707853,
+    "gold": false
+   },
+   {
+    "id": "mq:bec6bd6a1184668d",
+    "label": "Curtiss NC",
+    "p": 0.0013212618689118917,
+    "gold": false
+   },
+   {
+    "id": "mq:c614533c6ee76b27",
+    "label": "I'm Lovin' It (song)",
+    "p": 0.0012789850523687286,
+    "gold": false
+   },
+   {
+    "id": "mq:7848eb9595345665",
+    "label": "New Haven, Connecticut",
+    "p": 0.0012597512627641496,
+    "gold": false
+   },
+   {
+    "id": "mq:51225c5c171ecd3b",
+    "label": "Macintosh",
+    "p": 0.0012038442750837417,
+    "gold": false
+   },
+   {
+    "id": "mq:85673fe5ea116e14",
+    "label": "Follow That Dream",
+    "p": 0.0012025650373031892,
+    "gold": false
+   },
+   {
+    "id": "mq:bac2ca302e1f991a",
+    "label": "Lovin' You",
+    "p": 0.0012005700946962797,
+    "gold": false
+   },
+   {
+    "id": "mq:fc3ed9a06fd74980",
+    "label": "California State Senate",
+    "p": 0.0011237366073403464,
+    "gold": false
+   },
+   {
+    "id": "mq:928fb4ea83a13fbf",
+    "label": "Political party",
+    "p": 0.0009186501395153738,
+    "gold": false
+   },
+   {
+    "id": "mq:431de0ede34f4e24",
+    "label": "Daylight saving time in the United States",
+    "p": 0.0008849484579528963,
+    "gold": false
+   },
+   {
+    "id": "mq:1c638a1efd20f4b1",
+    "label": "Military history of the United States during World War II",
+    "p": 0.0007958083397955034,
+    "gold": false
+   },
+   {
+    "id": "mq:6f033e8841e50e5f",
+    "label": "I'm Lovin' It (song)",
+    "p": 0.0007354480096285677,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:3b20a598b990ea54",
+   "label": "Declaration of war by the United States",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:0b46b70d3067ae6b",
+   "label": "Just Got Started Lovin' You",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:7395d25891ebf40b",
+   "label": "Just Got Started Lovin' You",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:23d0a70f5d13d80c",
+   "label": "Icelandair",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:813bc9de66861869",
+   "label": "Guinea-Bissau",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:0416cafd9120d5af",
+   "label": "United States declaration of war on Japan",
+   "wave": 1,
+   "via": "term:president franklin",
+   "gold": false
+  },
+  {
+   "id": "mq:8338e7d2af8aa9de",
+   "label": "Federal Emergency Relief Administration",
+   "wave": 1,
+   "via": "term:president franklin",
+   "gold": false
+  },
+  {
+   "id": "mq:3574a94f872684f0",
+   "label": "John Hodgdon",
+   "wave": 1,
+   "via": "term:president franklin",
+   "gold": false
+  },
+  {
+   "id": "mq:a711b8bab8ab2c62",
+   "label": "National Industrial Recovery Act of 1933",
+   "wave": 1,
+   "via": "term:president franklin",
+   "gold": false
+  },
+  {
+   "id": "mq:6e7d64914139f40d",
+   "label": "USS Greer (DD-145)",
+   "wave": 1,
+   "via": "term:president franklin",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:8bdf41f6b6581101",
+    "label": "Sunset Man",
+    "gold": false
+   },
+   {
+    "id": "mq:6c04b515ca71352c",
+    "label": "Shake What God Gave Ya",
+    "gold": false
+   },
+   {
+    "id": "mq:12291fa93ea26489",
+    "label": "Groovy Little Summer Song",
+    "gold": false
+   },
+   {
+    "id": "mq:b68ec50c2323db30",
+    "label": "Days of Our Lives (James Otto album)",
+    "gold": false
+   },
+   {
+    "id": "mq:4bd1f4ca9611b8ce",
+    "label": "Brit Air",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:8bdf41f6b6581101",
+    "label": "Sunset Man",
+    "gold": false
+   },
+   {
+    "id": "mq:c4544dae795121a2",
+    "label": "Transavia Denmark",
+    "gold": false
+   },
+   {
+    "id": "mq:46015f0dd3e80f21",
+    "label": "Guinea-Bissau",
+    "gold": false
+   },
+   {
+    "id": "mq:b68ec50c2323db30",
+    "label": "Days of Our Lives (James Otto album)",
+    "gold": false
+   },
+   {
+    "id": "mq:a92e4eafe3d7b54d",
+    "label": "Sky UK",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:8bdf41f6b6581101",
+    "label": "Sunset Man",
+    "gold": false
+   },
+   {
+    "id": "mq:c4544dae795121a2",
+    "label": "Transavia Denmark",
+    "gold": false
+   },
+   {
+    "id": "mq:a92e4eafe3d7b54d",
+    "label": "Sky UK",
+    "gold": false
+   },
+   {
+    "id": "mq:dd886fb2525b1efa",
+    "label": "Myanmar",
+    "gold": false
+   },
+   {
+    "id": "mq:705781ad17eacc38",
+    "label": "Myanmar",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:f46126e743d87729",
+    "label": "Chang Kia-ngau",
+    "gold": false
+   },
+   {
+    "id": "mq:656b9b9fa18a908d",
+    "label": "Dream Walkin'",
+    "gold": false
+   },
+   {
+    "id": "mq:d701ef5765370565",
+    "label": "Too Hot to Stop",
+    "gold": false
+   },
+   {
+    "id": "mq:6ffb003cc2ed9c99",
+    "label": "Police",
+    "gold": false
+   },
+   {
+    "id": "mq:196963867ef86361",
+    "label": "I'm Leaving It Up to You",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

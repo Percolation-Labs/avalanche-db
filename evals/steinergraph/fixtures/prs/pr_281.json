@@ -1,0 +1,467 @@
+{
+ "qid": "pr:281",
+ "set": "prs",
+ "question": "What work went into this, and why: CI on p8-arm gets a disk cap and a guard that pauses it for production?",
+ "gold": [
+  {
+   "id": "commit/583658dadd",
+   "label": "commit 583658d: CI on p8-arm gets a disk cap and a guard that pauses it for production",
+   "seed": true
+  },
+  {
+   "id": "commit/8f60ab0228",
+   "label": "commit 8f60ab0: P8_RUNNER is set per repository; an org variable reads empty on GitHub Free",
+   "seed": false
+  },
+  {
+   "id": "commit/d60533e436",
+   "label": "commit d60533e: Runners serve the whole org; release and @claude run on them too",
+   "seed": false
+  },
+  {
+   "id": "commit/ff2fe1a394",
+   "label": "commit ff2fe1a: Runner work directories are bind mounts, because checkout's auth does not follow symlinks",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/583658dadd",
+   "label": "commit 583658d: CI on p8-arm gets a disk cap and a guard that pauses it for production",
+   "rank": 1,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "commit/0c04d74070",
+   "label": "commit 0c04d74: Merge pull request #281 from Percolation-Labs/amartey/runner-guard",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "dev/runner/guard.sh#1",
+   "label": "dev/runner/guard.sh",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "meta/postmortems/2026-11-16-ci-temp-dirs-exhausted-production-inodes.md#3",
+   "label": "meta/postmortems/2026-11-16-ci-temp-dirs-exhausted-production-inodes.md",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-634.md#2",
+   "label": "board/cards/REM-634.md \u203a Goal",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/583658dadd",
+    "label": "commit 583658d: CI on p8-arm gets a disk cap and a guard that pauses it for production",
+    "role": "gold"
+   },
+   {
+    "id": "commit/8f60ab0228",
+    "label": "commit 8f60ab0: P8_RUNNER is set per repository; an org variable reads empty on GitHub Free",
+    "role": "gold"
+   },
+   {
+    "id": "commit/d60533e436",
+    "label": "commit d60533e: Runners serve the whole org; release and @claude run on them too",
+    "role": "gold"
+   },
+   {
+    "id": "commit/ff2fe1a394",
+    "label": "commit ff2fe1a: Runner work directories are bind mounts, because checkout's auth does not follow symlinks",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/583658dadd",
+    "b": "commit/ff2fe1a394",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "srv",
+      "width": 27
+     }
+    ]
+   },
+   {
+    "a": "commit/8f60ab0228",
+    "b": "commit/d60533e436",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "near",
+      "width": 4
+     },
+     {
+      "kind": "term",
+      "key": "org variable",
+      "width": 3
+     },
+     {
+      "kind": "term",
+      "key": "p8_runner",
+      "width": 15
+     }
+    ]
+   },
+   {
+    "a": "commit/d60533e436",
+    "b": "commit/ff2fe1a394",
+    "via": [
+     {
+      "kind": "beside"
+     }
+    ]
+   }
+  ],
+  "cost": 3,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   2,
+   1,
+   1,
+   1,
+   2,
+   1
+  ],
+  "entry": {
+   "seed": "commit/583658dadd",
+   "gold": "commit/583658dadd",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 1834,
+  "within_2_doors": 34292,
+  "gold_within_1": 3,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "dev/runner/guard.sh#3",
+    "label": "dev/runner/guard.sh",
+    "p": 0.008593212769871992,
+    "gold": false
+   },
+   {
+    "id": "dev/runner/guard.sh#2",
+    "label": "dev/runner/guard.sh",
+    "p": 0.006835486679682395,
+    "gold": false
+   },
+   {
+    "id": "dev/runner/install.sh#1",
+    "label": "dev/runner/install.sh",
+    "p": 0.006464898988003376,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1340.md#4",
+    "label": "board/cards/REM-1340.md \u203a Log",
+    "p": 0.004919271136617703,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-11-16-ci-temp-dirs-exhausted-production-inodes.md#4",
+    "label": "meta/postmortems/2026-11-16-ci-temp-dirs-exhausted-production-inodes.md",
+    "p": 0.0043940335464149,
+    "gold": false
+   },
+   {
+    "id": "dev/runner/install.sh#5",
+    "label": "dev/runner/install.sh",
+    "p": 0.00428195920087217,
+    "gold": false
+   },
+   {
+    "id": "dev/runner/status.sh#1",
+    "label": "dev/runner/status.sh",
+    "p": 0.0039194101604559635,
+    "gold": false
+   },
+   {
+    "id": "commit/e34afcdf6e",
+    "label": "commit e34afcd: board: file REM-634 ci: p8-arm's image cache is pruned before it pauses the runners",
+    "p": 0.003667517361377362,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-634.md#3",
+    "label": "board/cards/REM-634.md \u203a Evidence",
+    "p": 0.0036459065218681233,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261116-230044-0038.md#1",
+    "label": "board/messages/M-20261116-230044-0038.md",
+    "p": 0.003301599116249141,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-11-16-ci-temp-dirs-exhausted-production-inodes.md#1",
+    "label": "meta/postmortems/2026-11-16-ci-temp-dirs-exhausted-production-inodes.md",
+    "p": 0.0032141546656221905,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1340.md#3",
+    "label": "board/cards/REM-1340.md \u203a Done when",
+    "p": 0.0030066430293093326,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1335.md#2",
+    "label": "board/cards/REM-1335.md \u203a Goal",
+    "p": 0.0028514788455507437,
+    "gold": false
+   },
+   {
+    "id": "commit/fca2205aa5",
+    "label": "commit fca2205: connecting-claude-and-chatgpt: any agent connects by the person's approval, verified with Kimi",
+    "p": 0.002589598646011413,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-634.md#1",
+    "label": "board/cards/REM-634.md",
+    "p": 0.0025501704167069793,
+    "gold": false
+   },
+   {
+    "id": "dev/runner/install.sh#3",
+    "label": "dev/runner/install.sh",
+    "p": 0.002508867270676367,
+    "gold": false
+   },
+   {
+    "id": "commit/4f88f03fbc",
+    "label": "commit 4f88f03: p8-arm's image cache is pruned before it pauses the runners (REM-634) (#345)",
+    "p": 0.002337127414878,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-11-16-ci-temp-dirs-exhausted-production-inodes.md#2",
+    "label": "meta/postmortems/2026-11-16-ci-temp-dirs-exhausted-production-inodes.md",
+    "p": 0.0021324200624936586,
+    "gold": false
+   },
+   {
+    "id": "commit/f6900d81be",
+    "label": "commit f6900d8: Merge pull request #285 from Percolation-Labs/amartey/kimi-oauth-approval-doc",
+    "p": 0.0019680992893676666,
+    "gold": false
+   },
+   {
+    "id": "dev/runner/guard.sh#4",
+    "label": "dev/runner/guard.sh",
+    "p": 0.0018533899054120622,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/583658dadd",
+   "label": "commit 583658d: CI on p8-arm gets a disk cap and a guard that pauses it for production",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "commit/0c04d74070",
+   "label": "commit 0c04d74: Merge pull request #281 from Percolation-Labs/amartey/runner-guard",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "dev/runner/guard.sh#1",
+   "label": "dev/runner/guard.sh",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/postmortems/2026-11-16-ci-temp-dirs-exhausted-production-inodes.md#3",
+   "label": "meta/postmortems/2026-11-16-ci-temp-dirs-exhausted-production-inodes.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-634.md#2",
+   "label": "board/cards/REM-634.md \u203a Goal",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "dev/runner/install.sh#5",
+   "label": "dev/runner/install.sh",
+   "wave": 1,
+   "via": "term:dirs exhausted",
+   "gold": false
+  },
+  {
+   "id": "meta/postmortems/2026-11-16-ci-temp-dirs-exhausted-production-inodes.md#5",
+   "label": "meta/postmortems/2026-11-16-ci-temp-dirs-exhausted-production-inodes.md",
+   "wave": 1,
+   "via": "term:dirs exhausted",
+   "gold": false
+  },
+  {
+   "id": "meta/postmortems/2026-11-16-ci-temp-dirs-exhausted-production-inodes.md#1",
+   "label": "meta/postmortems/2026-11-16-ci-temp-dirs-exhausted-production-inodes.md",
+   "wave": 1,
+   "via": "term:dirs exhausted",
+   "gold": false
+  },
+  {
+   "id": "board/messages/M-20261116-230044-0038.md#1",
+   "label": "board/messages/M-20261116-230044-0038.md",
+   "wave": 1,
+   "via": "term:dirs exhausted",
+   "gold": false
+  },
+  {
+   "id": "meta/postmortems/2026-11-16-ci-temp-dirs-exhausted-production-inodes.md#2",
+   "label": "meta/postmortems/2026-11-16-ci-temp-dirs-exhausted-production-inodes.md",
+   "wave": 1,
+   "via": "term:dirs exhausted",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "dev/runner/guard.sh#3",
+    "label": "dev/runner/guard.sh",
+    "gold": false
+   },
+   {
+    "id": "dev/runner/guard.sh#2",
+    "label": "dev/runner/guard.sh",
+    "gold": false
+   },
+   {
+    "id": "dev/runner/install.sh#1",
+    "label": "dev/runner/install.sh",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1340.md#4",
+    "label": "board/cards/REM-1340.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-11-16-ci-temp-dirs-exhausted-production-inodes.md#4",
+    "label": "meta/postmortems/2026-11-16-ci-temp-dirs-exhausted-production-inodes.md",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "dev/runner/install.sh#1",
+    "label": "dev/runner/install.sh",
+    "gold": false
+   },
+   {
+    "id": "dev/runner/guard.sh#3",
+    "label": "dev/runner/guard.sh",
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-11-16-ci-temp-dirs-exhausted-production-inodes.md#1",
+    "label": "meta/postmortems/2026-11-16-ci-temp-dirs-exhausted-production-inodes.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1340.md#4",
+    "label": "board/cards/REM-1340.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "dev/runner/install.sh#5",
+    "label": "dev/runner/install.sh",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/e34afcdf6e",
+    "label": "commit e34afcd: board: file REM-634 ci: p8-arm's image cache is pruned before it pauses the runners",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-634.md#1",
+    "label": "board/cards/REM-634.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1335.md#2",
+    "label": "board/cards/REM-1335.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-634.md#3",
+    "label": "board/cards/REM-634.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1331.md#3",
+    "label": "board/cards/REM-1331.md \u203a Decided (james, 8 Nov, on Sirsh's 13:16Z \"nobody blocked\"; the spec's proposed defaults)",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "board/cards/REM-634.md#3",
+    "label": "board/cards/REM-634.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "commit/a485b0271f",
+    "label": "commit a485b02: CI temp folders can no longer use up production's inodes (REM-1340)",
+    "gold": false
+   },
+   {
+    "id": "commit/4f88f03fbc",
+    "label": "commit 4f88f03: p8-arm's image cache is pruned before it pauses the runners (REM-634) (#345)",
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-11-16-ci-temp-dirs-exhausted-production-inodes.md#1",
+    "label": "meta/postmortems/2026-11-16-ci-temp-dirs-exhausted-production-inodes.md",
+    "gold": false
+   },
+   {
+    "id": "dev/runner/install.sh#1",
+    "label": "dev/runner/install.sh",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

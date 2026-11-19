@@ -1,0 +1,431 @@
+{
+ "qid": "pr:679",
+ "set": "prs",
+ "question": "What work went into this, and why: walklab q4: two-stage judge replication (noise check and other corpora)?",
+ "gold": [
+  {
+   "id": "commit/13e5216e97",
+   "label": "commit 13e5216: walklab q4: fix --describe rare after the main merge (main's _emb is a dict; use its _vec, same model an",
+   "seed": false
+  },
+  {
+   "id": "commit/8111a96bef",
+   "label": "commit 8111a96: walklab q4: two-stage replication -- the 8 H walks reproduce +4 at replicate 1 (13 -> 17, 0 losses); MuS",
+   "seed": true
+  },
+  {
+   "id": "commit/90c593b291",
+   "label": "commit 90c593b: walklab q4: register two-stage + walk-time rare terms against two-stage alone (8 H walks; 12 other MuSiQ",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/55484b685b",
+   "label": "commit 55484b6: Merge pull request #679 from Percolation-Labs/cory/q3-topk",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/8111a96bef",
+   "label": "commit 8111a96: walklab q4: two-stage replication -- the 8 H walks reproduce +4 at replicate 1 (13 -> 17, 0 losses); MuS",
+   "rank": 2,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "commit/dd89d62402",
+   "label": "commit dd89d62: walklab q4: two-stage replication, part (b) BEAM -- 11 vs P-first's 11 on the 3 saturated walks (+1 on 1",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/ea393c1d6e",
+   "label": "commit ea393c1: walklab q4: register the two-stage replication (12 MuSiQue, 3 BEAM + 3 QASPER, a second replicate of the",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/b1ebcdfb92",
+   "label": "commit b1ebcdf: walklab q4: two-stage judge (listwise re-judge of each round's top 30) -- 3 of 11 H misses recovered, 15",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/13e5216e97",
+    "label": "commit 13e5216: walklab q4: fix --describe rare after the main merge (main's _emb is a dict; use its _vec, same model an",
+    "role": "gold"
+   },
+   {
+    "id": "commit/8111a96bef",
+    "label": "commit 8111a96: walklab q4: two-stage replication -- the 8 H walks reproduce +4 at replicate 1 (13 -> 17, 0 losses); MuS",
+    "role": "gold"
+   },
+   {
+    "id": "commit/90c593b291",
+    "label": "commit 90c593b: walklab q4: register two-stage + walk-time rare terms against two-stage alone (8 H walks; 12 other MuSiQ",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/13e5216e97",
+    "b": "commit/90c593b291",
+    "via": [
+     {
+      "kind": "beside"
+     }
+    ]
+   },
+   {
+    "a": "commit/8111a96bef",
+    "b": "commit/90c593b291",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "two stage",
+      "width": 74
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   2,
+   1,
+   1
+  ],
+  "entry": {
+   "seed": "commit/8111a96bef",
+   "gold": "commit/8111a96bef",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 297,
+  "within_2_doors": 25822,
+  "gold_within_1": 1,
+  "gold_within_2": 1,
+  "top_U": [
+   {
+    "id": "commit/98104add68",
+    "label": "commit 98104ad: Merge pull request #678 from Percolation-Labs/mike/listwise-beam",
+    "p": 0.007607888935580327,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-listwise/beam-result.txt#1",
+    "label": "meta/lab/results/q4-listwise/beam-result.txt",
+    "p": 0.007177860402241463,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-listwise-rep/result.txt#1",
+    "label": "meta/lab/results/q4-listwise-rep/result.txt",
+    "p": 0.006486950281777815,
+    "gold": false
+   },
+   {
+    "id": "commit/d770e6d94a",
+    "label": "commit d770e6d: Merge remote-tracking branch 'origin/main' into cory/q3-topk",
+    "p": 0.006425845997118468,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-listwise/result.txt#1",
+    "label": "meta/lab/results/q4-listwise/result.txt",
+    "p": 0.004624229569642244,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-listwise/REPLICATE-RULE.md#2",
+    "label": "meta/lab/results/q4-listwise/REPLICATE-RULE.md \u203a The two-stage judge: is +4 noise, and does it travel? (registered befor",
+    "p": 0.0044767457040150406,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-listwise/REPLICATE-RULE.md#1",
+    "label": "meta/lab/results/q4-listwise/REPLICATE-RULE.md \u203a The two-stage judge: is +4 noise, and does it travel? (registered befor",
+    "p": 0.0042949387064264025,
+    "gold": false
+   },
+   {
+    "id": "commit/b6e190e004",
+    "label": "commit b6e190e: walklab q4: runner --listwise CACHE (two-stage judge: re-judge each round's top 30 in one listwise call,",
+    "p": 0.003722904312246931,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261101-124201-8861.md#1",
+    "label": "board/messages/M-20261101-124201-8861.md",
+    "p": 0.003640751193057955,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261102-220200-5973.md#1",
+    "label": "board/messages/M-20261102-220200-5973.md",
+    "p": 0.0032143479673726323,
+    "gold": false
+   },
+   {
+    "id": "commit/9dc7267141",
+    "label": "commit 9dc7267: board: sally messages bill",
+    "p": 0.0029843553149834293,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261102-212208-3578.md#1",
+    "label": "board/messages/M-20261102-212208-3578.md",
+    "p": 0.0026768377048757724,
+    "gold": false
+   },
+   {
+    "id": "commit/d1bace6daf",
+    "label": "commit d1bace6: walklab q4: register the two-stage judge (listwise re-judge of each round's top 30, travel its 3 picks, ",
+    "p": 0.0026489551399985867,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261104-185106-e223.md#1",
+    "label": "board/messages/M-20261104-185106-e223.md",
+    "p": 0.0024762324470885087,
+    "gold": false
+   },
+   {
+    "id": "commit/eadbc2c60f",
+    "label": "commit eadbc2c: Merge pull request #682 from Percolation-Labs/mike/jev-stage0",
+    "p": 0.002388821590205321,
+    "gold": false
+   },
+   {
+    "id": "commit/a7bda0fdb9",
+    "label": "commit a7bda0f: walklab q4: replication amended before part (b): mike takes BEAM; QASPER's 3 fixed (d6401cec, 2cd37743, ",
+    "p": 0.002319951985888185,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261102-221043-dff2.md#1",
+    "label": "board/messages/M-20261102-221043-dff2.md",
+    "p": 0.0022364738115756124,
+    "gold": false
+   },
+   {
+    "id": "commit/90c593b291",
+    "label": "commit 90c593b: walklab q4: register two-stage + walk-time rare terms against two-stage alone (8 H walks; 12 other MuSiQ",
+    "p": 0.002221253519724583,
+    "gold": true
+   },
+   {
+    "id": "board/messages/M-20261103-115815-9ff4.md#1",
+    "label": "board/messages/M-20261103-115815-9ff4.md",
+    "p": 0.0021335575859338127,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-listwise-rep/result.txt#2",
+    "label": "meta/lab/results/q4-listwise-rep/result.txt",
+    "p": 0.0021186626420841214,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/55484b685b",
+   "label": "commit 55484b6: Merge pull request #679 from Percolation-Labs/cory/q3-topk",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/8111a96bef",
+   "label": "commit 8111a96: walklab q4: two-stage replication -- the 8 H walks reproduce +4 at replicate 1 (13 -> 17, 0 losses); MuS",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "commit/dd89d62402",
+   "label": "commit dd89d62: walklab q4: two-stage replication, part (b) BEAM -- 11 vs P-first's 11 on the 3 saturated walks (+1 on 1",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/ea393c1d6e",
+   "label": "commit ea393c1: walklab q4: register the two-stage replication (12 MuSiQue, 3 BEAM + 3 QASPER, a second replicate of the",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/b1ebcdfb92",
+   "label": "commit b1ebcdf: walklab q4: two-stage judge (listwise re-judge of each round's top 30) -- 3 of 11 H misses recovered, 15",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/q4-listwise-rep/result.txt#1",
+   "label": "meta/lab/results/q4-listwise-rep/result.txt",
+   "wave": 1,
+   "via": "term:judge listwise",
+   "gold": false
+  },
+  {
+   "id": "commit/d1bace6daf",
+   "label": "commit d1bace6: walklab q4: register the two-stage judge (listwise re-judge of each round's top 30, travel its 3 picks, ",
+   "wave": 1,
+   "via": "term:judge listwise",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/q4-listwise/REPLICATE-RULE.md#1",
+   "label": "meta/lab/results/q4-listwise/REPLICATE-RULE.md \u203a The two-stage judge: is +4 noise, and does it travel? (registered befor",
+   "wave": 1,
+   "via": "term:judge listwise",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/configs/musique/judge/misses.py#1",
+   "label": "meta/lab/configs/musique/judge/misses.py",
+   "wave": 2,
+   "via": "term:judgement misses",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/q4-listwise/REPLICATE-RULE.md#2",
+   "label": "meta/lab/results/q4-listwise/REPLICATE-RULE.md \u203a The two-stage judge: is +4 noise, and does it travel? (registered befor",
+   "wave": 2,
+   "via": "term:judgement misses",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "commit/98104add68",
+    "label": "commit 98104ad: Merge pull request #678 from Percolation-Labs/mike/listwise-beam",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-listwise/beam-result.txt#1",
+    "label": "meta/lab/results/q4-listwise/beam-result.txt",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-listwise-rep/result.txt#1",
+    "label": "meta/lab/results/q4-listwise-rep/result.txt",
+    "gold": false
+   },
+   {
+    "id": "commit/d770e6d94a",
+    "label": "commit d770e6d: Merge remote-tracking branch 'origin/main' into cory/q3-topk",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-listwise/result.txt#1",
+    "label": "meta/lab/results/q4-listwise/result.txt",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "commit/98104add68",
+    "label": "commit 98104ad: Merge pull request #678 from Percolation-Labs/mike/listwise-beam",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-listwise/beam-result.txt#1",
+    "label": "meta/lab/results/q4-listwise/beam-result.txt",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-listwise-rep/result.txt#1",
+    "label": "meta/lab/results/q4-listwise-rep/result.txt",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-listwise/REPLICATE-RULE.md#2",
+    "label": "meta/lab/results/q4-listwise/REPLICATE-RULE.md \u203a The two-stage judge: is +4 noise, and does it travel? (registered befor",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-listwise/REPLICATE-RULE.md#1",
+    "label": "meta/lab/results/q4-listwise/REPLICATE-RULE.md \u203a The two-stage judge: is +4 noise, and does it travel? (registered befor",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/98104add68",
+    "label": "commit 98104ad: Merge pull request #678 from Percolation-Labs/mike/listwise-beam",
+    "gold": false
+   },
+   {
+    "id": "commit/d1bace6daf",
+    "label": "commit d1bace6: walklab q4: register the two-stage judge (listwise re-judge of each round's top 30, travel its 3 picks, ",
+    "gold": false
+   },
+   {
+    "id": "commit/eadbc2c60f",
+    "label": "commit eadbc2c: Merge pull request #682 from Percolation-Labs/mike/jev-stage0",
+    "gold": false
+   },
+   {
+    "id": "commit/b6e190e004",
+    "label": "commit b6e190e: walklab q4: runner --listwise CACHE (two-stage judge: re-judge each round's top 30 in one listwise call,",
+    "gold": false
+   },
+   {
+    "id": "commit/90c593b291",
+    "label": "commit 90c593b: walklab q4: register two-stage + walk-time rare terms against two-stage alone (8 H walks; 12 other MuSiQ",
+    "gold": true
+   }
+  ],
+  "S": [
+   {
+    "id": "commit/d1bace6daf",
+    "label": "commit d1bace6: walklab q4: register the two-stage judge (listwise re-judge of each round's top 30, travel its 3 picks, ",
+    "gold": false
+   },
+   {
+    "id": "commit/98104add68",
+    "label": "commit 98104ad: Merge pull request #678 from Percolation-Labs/mike/listwise-beam",
+    "gold": false
+   },
+   {
+    "id": "commit/b6e190e004",
+    "label": "commit b6e190e: walklab q4: runner --listwise CACHE (two-stage judge: re-judge each round's top 30 in one listwise call,",
+    "gold": false
+   },
+   {
+    "id": "commit/b74fb9a587",
+    "label": "commit b74fb9a: Merge pull request #671 from Percolation-Labs/cory/q3-topk",
+    "gold": false
+   },
+   {
+    "id": "commit/90c593b291",
+    "label": "commit 90c593b: walklab q4: register two-stage + walk-time rare terms against two-stage alone (8 H walks; 12 other MuSiQ",
+    "gold": true
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.5,
+  "S": 0.5
+ }
+}

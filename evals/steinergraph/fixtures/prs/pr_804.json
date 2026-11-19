@@ -1,0 +1,426 @@
+{
+ "qid": "pr:804",
+ "set": "prs",
+ "question": "What work went into this, and why: D6 on BEAM, the second wide-door dataset: +.031 over today's door, +.079 where the gold is hidden?",
+ "gold": [
+  {
+   "id": "commit/6672329749",
+   "label": "commit 6672329: D6 on BEAM: register before any score; ingestion-time entities; scorer on james's pages",
+   "seed": false
+  },
+  {
+   "id": "commit/9d33db824c",
+   "label": "commit 9d33db8: D6 on BEAM: +.031 [+.012,+.051] over today's door, +.079 on hidden-gold pages; the gain tracks how often",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/1c9ed03993",
+   "label": "commit 1c9ed03: Merge pull request #804 from Percolation-Labs/bill/d6-beam",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "board/messages/M-20261116-234331-c0c2.md#1",
+   "label": "board/messages/M-20261116-234331-c0c2.md",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/messages/M-20261117-002452-2a7c.md#1",
+   "label": "board/messages/M-20261117-002452-2a7c.md",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "meta/lab/results/jev-doors/BEAM.md#2",
+   "label": "meta/lab/results/jev-doors/BEAM.md \u203a D6 on BEAM: the second wide-door dataset (registered 17 Nov ~00:45Z, before any BEA",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "meta/lab/results/jev-doors/BEAM.md#1",
+   "label": "meta/lab/results/jev-doors/BEAM.md \u203a D6 on BEAM: the second wide-door dataset (registered 17 Nov ~00:45Z, before any BEA",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 2
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "board/messages/M-20261116-234331-c0c2.md#1",
+    "label": "board/messages/M-20261116-234331-c0c2.md",
+    "role": "seed"
+   },
+   {
+    "id": "commit/6672329749",
+    "label": "commit 6672329: D6 on BEAM: register before any score; ingestion-time entities; scorer on james's pages",
+    "role": "gold"
+   },
+   {
+    "id": "commit/9d33db824c",
+    "label": "commit 9d33db8: D6 on BEAM: +.031 [+.012,+.051] over today's door, +.079 on hidden-gold pages; the gain tracks how often",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "board/messages/M-20261116-234331-c0c2.md#1",
+    "b": "commit/9d33db824c",
+    "via": [
+     {
+      "kind": "term",
+      "key": "gold pages",
+      "width": 3
+     },
+     {
+      "kind": "term",
+      "key": "hidden gold",
+      "width": 18
+     }
+    ]
+   },
+   {
+    "a": "commit/6672329749",
+    "b": "commit/9d33db824c",
+    "via": [
+     {
+      "kind": "beside"
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "board/messages/M-20261116-234331-c0c2.md#1",
+   "gold": "commit/9d33db824c",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 1631,
+  "within_2_doors": 32003,
+  "gold_within_1": 2,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "board/messages/M-20261116-235823-793d.md#1",
+    "label": "board/messages/M-20261116-235823-793d.md",
+    "p": 0.005881911546765049,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261117-000359-d3a7.md#1",
+    "label": "board/messages/M-20261117-000359-d3a7.md",
+    "p": 0.005677177677266758,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-doors/BEAM.md#3",
+    "label": "meta/lab/results/jev-doors/BEAM.md \u203a Result (17 Nov, ~01:00Z): D6 holds on BEAM",
+    "p": 0.00505840308434951,
+    "gold": false
+   },
+   {
+    "id": "commit/fb2cefb7a3",
+    "label": "commit fb2cefb: board: board-watch messages all",
+    "p": 0.004524118516519544,
+    "gold": false
+   },
+   {
+    "id": "commit/b68487fb2b",
+    "label": "commit b68487f: board: james acknowledges 1 message(s)",
+    "p": 0.004457510659652818,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-doors/HOTPOT.md#2",
+    "label": "meta/lab/results/jev-doors/HOTPOT.md \u203a D6 on a second real dataset: HotpotQA (registered 16 Nov ~23:45Z, before any Hotp",
+    "p": 0.0044321099075357966,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-doors/WRITEUP.md#10",
+    "label": "meta/lab/results/jev-doors/WRITEUP.md \u203a Update, 17 Nov: a second real dataset",
+    "p": 0.004191910346644674,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-doors/HOTPOT.md#3",
+    "label": "meta/lab/results/jev-doors/HOTPOT.md \u203a Result (17 Nov, ~00:05Z): a null, explained by narrow doors",
+    "p": 0.0032996617512125142,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-doors/HOTPOT.md#1",
+    "label": "meta/lab/results/jev-doors/HOTPOT.md \u203a D6 on a second real dataset: HotpotQA (registered 16 Nov ~23:45Z, before any Hotp",
+    "p": 0.0028356376499273227,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/kappa/REGISTERED.md#6",
+    "label": "meta/lab/results/kappa/REGISTERED.md \u203a Round 5: kappa on BEAM, the second real dataset (registered 17 Nov ~09:30Z, befor",
+    "p": 0.0024535021060458385,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/operators-beam/RESULT.md#1",
+    "label": "meta/lab/results/operators-beam/RESULT.md \u203a Operators (a) and (b) on BEAM: a third dataset, conversational doors",
+    "p": 0.002056254934533086,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261116-233821-b983.md#1",
+    "label": "board/messages/M-20261116-233821-b983.md",
+    "p": 0.001982776421244441,
+    "gold": false
+   },
+   {
+    "id": "commit/22a12cb58e",
+    "label": "commit 22a12cb: board: bill acknowledges 1 message(s)",
+    "p": 0.001975059360641929,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-doors/BEAM.md#4",
+    "label": "meta/lab/results/jev-doors/BEAM.md \u203a Where D6 now stands, across four corpora",
+    "p": 0.0017049800899638142,
+    "gold": false
+   },
+   {
+    "id": "commit/89547c2f73",
+    "label": "commit 89547c2: board: bill messages james",
+    "p": 0.0016244765429455166,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/worlds/mq_split.py#1",
+    "label": "meta/lab/worlds/mq_split.py",
+    "p": 0.0015585476773448004,
+    "gold": false
+   },
+   {
+    "id": "commit/4c725fc41c",
+    "label": "commit 4c725fc: knowable.py prints how much of each walk came through doors; addenda for #794, #800, #803",
+    "p": 0.0014540287077891162,
+    "gold": false
+   },
+   {
+    "id": "commit/248af4a090",
+    "label": "commit 248af4a: Round 4: prompt re-tuning on D6 does not pass; write-up of the ceiling and door evidence (WRITEUP.md)",
+    "p": 0.001392447996259956,
+    "gold": false
+   },
+   {
+    "id": "commit/9d33db824c",
+    "label": "commit 9d33db8: D6 on BEAM: +.031 [+.012,+.051] over today's door, +.079 on hidden-gold pages; the gain tracks how often",
+    "p": 0.0013321825665282257,
+    "gold": true
+   },
+   {
+    "id": "board/messages/M-20261116-215722-4275.md#1",
+    "label": "board/messages/M-20261116-215722-4275.md",
+    "p": 0.0013223073670289528,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/1c9ed03993",
+   "label": "commit 1c9ed03: Merge pull request #804 from Percolation-Labs/bill/d6-beam",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/messages/M-20261116-234331-c0c2.md#1",
+   "label": "board/messages/M-20261116-234331-c0c2.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/messages/M-20261117-002452-2a7c.md#1",
+   "label": "board/messages/M-20261117-002452-2a7c.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/jev-doors/BEAM.md#2",
+   "label": "meta/lab/results/jev-doors/BEAM.md \u203a D6 on BEAM: the second wide-door dataset (registered 17 Nov ~00:45Z, before any BEA",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/jev-doors/BEAM.md#1",
+   "label": "meta/lab/results/jev-doors/BEAM.md \u203a D6 on BEAM: the second wide-door dataset (registered 17 Nov ~00:45Z, before any BEA",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/messages/M-20261117-085332-96ab.md#1",
+   "label": "board/messages/M-20261117-085332-96ab.md",
+   "wave": 1,
+   "via": "term:real dataset",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/operators-hotpot/RESULT.md#2",
+   "label": "meta/lab/results/operators-hotpot/RESULT.md \u203a Why",
+   "wave": 1,
+   "via": "term:real dataset",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/operators-beam/RESULT.md#2",
+   "label": "meta/lab/results/operators-beam/RESULT.md \u203a 780, #785 and #794 found the walk beats search on MuSiQue under operator (b)",
+   "wave": 1,
+   "via": "term:real dataset",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/jev-doors/WRITEUP.md#10",
+   "label": "meta/lab/results/jev-doors/WRITEUP.md \u203a Update, 17 Nov: a second real dataset",
+   "wave": 1,
+   "via": "term:real dataset",
+   "gold": false
+  },
+  {
+   "id": "board/messages/M-20261116-214238-37f1.md#2",
+   "label": "board/messages/M-20261116-214238-37f1.md",
+   "wave": 1,
+   "via": "term:real dataset",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "board/messages/M-20261116-235823-793d.md#1",
+    "label": "board/messages/M-20261116-235823-793d.md",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261117-000359-d3a7.md#1",
+    "label": "board/messages/M-20261117-000359-d3a7.md",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-doors/BEAM.md#3",
+    "label": "meta/lab/results/jev-doors/BEAM.md \u203a Result (17 Nov, ~01:00Z): D6 holds on BEAM",
+    "gold": false
+   },
+   {
+    "id": "commit/fb2cefb7a3",
+    "label": "commit fb2cefb: board: board-watch messages all",
+    "gold": false
+   },
+   {
+    "id": "commit/b68487fb2b",
+    "label": "commit b68487f: board: james acknowledges 1 message(s)",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "board/messages/M-20261116-235823-793d.md#1",
+    "label": "board/messages/M-20261116-235823-793d.md",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-doors/WRITEUP.md#10",
+    "label": "meta/lab/results/jev-doors/WRITEUP.md \u203a Update, 17 Nov: a second real dataset",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-doors/BEAM.md#3",
+    "label": "meta/lab/results/jev-doors/BEAM.md \u203a Result (17 Nov, ~01:00Z): D6 holds on BEAM",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-doors/HOTPOT.md#2",
+    "label": "meta/lab/results/jev-doors/HOTPOT.md \u203a D6 on a second real dataset: HotpotQA (registered 16 Nov ~23:45Z, before any Hotp",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-doors/HOTPOT.md#3",
+    "label": "meta/lab/results/jev-doors/HOTPOT.md \u203a Result (17 Nov, ~00:05Z): a null, explained by narrow doors",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "board/messages/M-20261116-235823-793d.md#1",
+    "label": "board/messages/M-20261116-235823-793d.md",
+    "gold": false
+   },
+   {
+    "id": "commit/248af4a090",
+    "label": "commit 248af4a: Round 4: prompt re-tuning on D6 does not pass; write-up of the ceiling and door evidence (WRITEUP.md)",
+    "gold": false
+   },
+   {
+    "id": "commit/9d33db824c",
+    "label": "commit 9d33db8: D6 on BEAM: +.031 [+.012,+.051] over today's door, +.079 on hidden-gold pages; the gain tracks how often",
+    "gold": true
+   },
+   {
+    "id": "meta/lab/results/operators-beam/RESULT.md#1",
+    "label": "meta/lab/results/operators-beam/RESULT.md \u203a Operators (a) and (b) on BEAM: a third dataset, conversational doors",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-doors/WRITEUP.md#10",
+    "label": "meta/lab/results/jev-doors/WRITEUP.md \u203a Update, 17 Nov: a second real dataset",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "meta/lab/results/jev-doors/WRITEUP.md#10",
+    "label": "meta/lab/results/jev-doors/WRITEUP.md \u203a Update, 17 Nov: a second real dataset",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261116-235823-793d.md#1",
+    "label": "board/messages/M-20261116-235823-793d.md",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/reference-world/RESULT.md#5",
+    "label": "meta/lab/results/reference-world/RESULT.md \u203a Test 1 over BEAM: it replicates (17 Nov ~14:50Z)",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261116-234335-df2c.md#1",
+    "label": "board/messages/M-20261116-234335-df2c.md",
+    "gold": false
+   },
+   {
+    "id": "commit/9d33db824c",
+    "label": "commit 9d33db8: D6 on BEAM: +.031 [+.012,+.051] over today's door, +.079 on hidden-gold pages; the gain tracks how often",
+    "gold": true
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.5,
+  "S": 0.5
+ }
+}

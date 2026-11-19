@@ -1,0 +1,405 @@
+{
+ "qid": "pr:769",
+ "set": "prs",
+ "question": "What work went into this, and why: Blind doors: registered, capture and scorer; stopped unscored at the 20:45Z reassignment?",
+ "gold": [
+  {
+   "id": "commit/004add920a",
+   "label": "commit 004add9: Blind-door experiment registered before scoring: question-blind graph-only doors vs md5 and near",
+   "seed": false
+  },
+  {
+   "id": "commit/6a98dec6e2",
+   "label": "commit 6a98dec: Blind doors: capture and scorer, stopped unscored at the 20:45Z reassignment",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/6a98dec6e2",
+   "label": "commit 6a98dec: Blind doors: capture and scorer, stopped unscored at the 20:45Z reassignment",
+   "rank": 1,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "commit/c8e6a9aff0",
+   "label": "commit c8e6a9a: Merge pull request #769 from Percolation-Labs/james/blind-door",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "meta/lab/results/ranking-eval/REGISTERED.md#3",
+   "label": "meta/lab/results/ranking-eval/REGISTERED.md \u203a Doors",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "meta/lab/results/blind-door/RESULT.md#1",
+   "label": "meta/lab/results/blind-door/RESULT.md \u203a Blind doors: a door that describes the graph, scored on the same pages as md5 an",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/messages/M-20261115-213013-d8de.md#1",
+   "label": "board/messages/M-20261115-213013-d8de.md",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/004add920a",
+    "label": "commit 004add9: Blind-door experiment registered before scoring: question-blind graph-only doors vs md5 and near",
+    "role": "gold"
+   },
+   {
+    "id": "commit/6a98dec6e2",
+    "label": "commit 6a98dec: Blind doors: capture and scorer, stopped unscored at the 20:45Z reassignment",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/004add920a",
+    "b": "commit/6a98dec6e2",
+    "via": [
+     {
+      "kind": "beside"
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "commit/6a98dec6e2",
+   "gold": "commit/6a98dec6e2",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 574,
+  "within_2_doors": 27437,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "meta/lab/results/blind-door/capture.py#1",
+    "label": "meta/lab/results/blind-door/capture.py",
+    "p": 0.00620618549714312,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/blind-door/RESULT.md#3",
+    "label": "meta/lab/results/blind-door/RESULT.md \u203a The doors",
+    "p": 0.005877897576503102,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261115-213027-aba1.md#1",
+    "label": "board/messages/M-20261115-213027-aba1.md",
+    "p": 0.005708383040879738,
+    "gold": false
+   },
+   {
+    "id": "commit/004add920a",
+    "label": "commit 004add9: Blind-door experiment registered before scoring: question-blind graph-only doors vs md5 and near",
+    "p": 0.0037570287468794692,
+    "gold": true
+   },
+   {
+    "id": "board/messages/M-20261115-203126-3005.md#1",
+    "label": "board/messages/M-20261115-203126-3005.md",
+    "p": 0.003635647792266093,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261029-142808-16d4.md#1",
+    "label": "board/messages/M-20261029-142808-16d4.md",
+    "p": 0.002599597102868969,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261115-212011-fa8b.md#1",
+    "label": "board/messages/M-20261115-212011-fa8b.md",
+    "p": 0.0023859508417926065,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261029-142339-a7cc.md#1",
+    "label": "board/messages/M-20261029-142339-a7cc.md",
+    "p": 0.0023305965363983943,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261116-085045-cc34.md#1",
+    "label": "board/messages/M-20261116-085045-cc34.md",
+    "p": 0.002281240127438856,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261116-215429-689b.md#1",
+    "label": "board/messages/M-20261116-215429-689b.md",
+    "p": 0.0019931040592920824,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/blind-door/RESULT.md#2",
+    "label": "meta/lab/results/blind-door/RESULT.md \u203a Why",
+    "p": 0.0019513862777624756,
+    "gold": false
+   },
+   {
+    "id": "commit/03e3eefa45",
+    "label": "commit 03e3eef: board: james messages sirsh",
+    "p": 0.0019426284059183702,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/ranking-eval/capture.py#1",
+    "label": "meta/lab/results/ranking-eval/capture.py",
+    "p": 0.0019002446320124295,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/blind-door/score.py#1",
+    "label": "meta/lab/results/blind-door/score.py",
+    "p": 0.0018628902201102567,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261026-223131-d8de.md#1",
+    "label": "board/messages/M-20261026-223131-d8de.md",
+    "p": 0.0018347716955955384,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261116-080958-d0bc.md#1",
+    "label": "board/messages/M-20261116-080958-d0bc.md",
+    "p": 0.0017704839842789942,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/ranking-eval/capture.py#2",
+    "label": "meta/lab/results/ranking-eval/capture.py",
+    "p": 0.0017486104610648194,
+    "gold": false
+   },
+   {
+    "id": "commit/e4801d1bd8",
+    "label": "commit e4801d1: board: bill messages sirsh",
+    "p": 0.0017107506620418717,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/blind-door/capture.py#2",
+    "label": "meta/lab/results/blind-door/capture.py",
+    "p": 0.0016519231465079518,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/worlds/DESIGN.md#1",
+    "label": "meta/lab/results/worlds/DESIGN.md \u203a Worlds: synthetic graphs with oracle-labelled doors, and a loop that improves them (",
+    "p": 0.0015987066486598536,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/6a98dec6e2",
+   "label": "commit 6a98dec: Blind doors: capture and scorer, stopped unscored at the 20:45Z reassignment",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "commit/c8e6a9aff0",
+   "label": "commit c8e6a9a: Merge pull request #769 from Percolation-Labs/james/blind-door",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/ranking-eval/REGISTERED.md#3",
+   "label": "meta/lab/results/ranking-eval/REGISTERED.md \u203a Doors",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/blind-door/RESULT.md#1",
+   "label": "meta/lab/results/blind-door/RESULT.md \u203a Blind doors: a door that describes the graph, scored on the same pages as md5 an",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/messages/M-20261115-213013-d8de.md#1",
+   "label": "board/messages/M-20261115-213013-d8de.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/ranking-eval/RESULT.md#8",
+   "label": "meta/lab/results/ranking-eval/RESULT.md \u203a Postmortem",
+   "wave": 1,
+   "via": "term:blind door",
+   "gold": false
+  },
+  {
+   "id": "commit/004add920a",
+   "label": "commit 004add9: Blind-door experiment registered before scoring: question-blind graph-only doors vs md5 and near",
+   "wave": 1,
+   "via": "term:blind door",
+   "gold": true
+  },
+  {
+   "id": "meta/lab/results/blind-door/RESULT.md#2",
+   "label": "meta/lab/results/blind-door/RESULT.md \u203a Why",
+   "wave": 1,
+   "via": "term:blind door",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/blind-door/score.py#2",
+   "label": "meta/lab/results/blind-door/score.py",
+   "wave": 1,
+   "via": "term:blind door",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/blind-door/capture.py#2",
+   "label": "meta/lab/results/blind-door/capture.py",
+   "wave": 1,
+   "via": "term:blind door",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "meta/lab/results/blind-door/capture.py#1",
+    "label": "meta/lab/results/blind-door/capture.py",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/blind-door/RESULT.md#3",
+    "label": "meta/lab/results/blind-door/RESULT.md \u203a The doors",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261115-213027-aba1.md#1",
+    "label": "board/messages/M-20261115-213027-aba1.md",
+    "gold": false
+   },
+   {
+    "id": "commit/004add920a",
+    "label": "commit 004add9: Blind-door experiment registered before scoring: question-blind graph-only doors vs md5 and near",
+    "gold": true
+   },
+   {
+    "id": "board/messages/M-20261115-203126-3005.md#1",
+    "label": "board/messages/M-20261115-203126-3005.md",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "board/messages/M-20261115-213027-aba1.md#1",
+    "label": "board/messages/M-20261115-213027-aba1.md",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/blind-door/capture.py#1",
+    "label": "meta/lab/results/blind-door/capture.py",
+    "gold": false
+   },
+   {
+    "id": "commit/004add920a",
+    "label": "commit 004add9: Blind-door experiment registered before scoring: question-blind graph-only doors vs md5 and near",
+    "gold": true
+   },
+   {
+    "id": "meta/lab/results/ranking-eval/capture.py#1",
+    "label": "meta/lab/results/ranking-eval/capture.py",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261115-203126-3005.md#1",
+    "label": "board/messages/M-20261115-203126-3005.md",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/004add920a",
+    "label": "commit 004add9: Blind-door experiment registered before scoring: question-blind graph-only doors vs md5 and near",
+    "gold": true
+   },
+   {
+    "id": "board/messages/M-20261115-213027-aba1.md#1",
+    "label": "board/messages/M-20261115-213027-aba1.md",
+    "gold": false
+   },
+   {
+    "id": "commit/7a9af27cda",
+    "label": "commit 7a9af27: board: james acknowledges 2 message(s)",
+    "gold": false
+   },
+   {
+    "id": "commit/e4801d1bd8",
+    "label": "commit e4801d1: board: bill messages sirsh",
+    "gold": false
+   },
+   {
+    "id": "commit/03e3eefa45",
+    "label": "commit 03e3eef: board: james messages sirsh",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "board/messages/M-20261115-213027-aba1.md#1",
+    "label": "board/messages/M-20261115-213027-aba1.md",
+    "gold": false
+   },
+   {
+    "id": "commit/004add920a",
+    "label": "commit 004add9: Blind-door experiment registered before scoring: question-blind graph-only doors vs md5 and near",
+    "gold": true
+   },
+   {
+    "id": "commit/279afab8c5",
+    "label": "commit 279afab: Group doors registered: term doors grouped by near-graph topic at ingestion; $0 gate met (929 -> 61.5 do",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/ranking-eval/capture.py#1",
+    "label": "meta/lab/results/ranking-eval/capture.py",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/blind-door/capture.py#1",
+    "label": "meta/lab/results/blind-door/capture.py",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 1.0,
+  "Q": 1.0,
+  "LQ": 1.0,
+  "S": 1.0
+ }
+}

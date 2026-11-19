@@ -1,0 +1,443 @@
+{
+ "qid": "card:REM-79",
+ "set": "cards",
+ "question": "What was done about this, and why: release: percolate_build says the parser came from a commit that did not build it?",
+ "gold": [
+  {
+   "id": "commit/1acc8f9ce2",
+   "label": "commit 1acc8f9: Three tickets that share one upgrade hop: the parser stamp, the rows a restore loses, and the upload it ",
+   "seed": false
+  },
+  {
+   "id": "commit/31a94ddd00",
+   "label": "commit 31a94dd: A gate that can write: the hook rebuilt the served database and a test committed to the branch (#88)",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "board/cards/REM-79.md#1",
+   "label": "board/cards/REM-79.md",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-79.md#2",
+   "label": "board/cards/REM-79.md \u203a Goal",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/3b3e226bb1",
+   "label": "commit 3b3e226: A build that says what it was made from, and a release you can rehearse",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/43496c7506",
+   "label": "commit 43496c7: board: file REM-1085 release: one table says which extension, parser and core versions go together",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "commit/07f3216139",
+   "label": "commit 07f3216: Merge pull request #37 from Percolation-Labs/docs/parser-release-note",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 2
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "board/cards/REM-79.md#2",
+    "label": "board/cards/REM-79.md \u203a Goal",
+    "role": "seed"
+   },
+   {
+    "id": "commit/1acc8f9ce2",
+    "label": "commit 1acc8f9: Three tickets that share one upgrade hop: the parser stamp, the rows a restore loses, and the upload it ",
+    "role": "gold"
+   },
+   {
+    "id": "commit/31a94ddd00",
+    "label": "commit 31a94dd: A gate that can write: the hook rebuilt the served database and a test committed to the branch (#88)",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "board/cards/REM-79.md#2",
+    "b": "commit/1acc8f9ce2",
+    "via": [
+     {
+      "kind": "term",
+      "key": "parser row",
+      "width": 3
+     },
+     {
+      "kind": "term",
+      "key": "rem 79",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "parse head",
+      "width": 11
+     },
+     {
+      "kind": "term",
+      "key": "percolate_build",
+      "width": 16
+     },
+     {
+      "kind": "term",
+      "key": "git rev",
+      "width": 41
+     }
+    ]
+   },
+   {
+    "a": "commit/1acc8f9ce2",
+    "b": "commit/31a94ddd00",
+    "via": [
+     {
+      "kind": "term",
+      "key": "rem 79",
+      "width": 5
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "board/cards/REM-79.md#2",
+   "gold": "commit/1acc8f9ce2",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 2111,
+  "within_2_doors": 33864,
+  "gold_within_1": 2,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "board/cards/REM-1085.md#1",
+    "label": "board/cards/REM-1085.md",
+    "p": 0.004647709051141431,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1085.md#2",
+    "label": "board/cards/REM-1085.md \u203a Goal",
+    "p": 0.004099386114493643,
+    "gold": false
+   },
+   {
+    "id": "commit/f5d20fb523",
+    "label": "commit f5d20fb: The fast image path cannot see a parser change, so say so here",
+    "p": 0.0039447939589233915,
+    "gold": false
+   },
+   {
+    "id": "commit/1acc8f9ce2",
+    "label": "commit 1acc8f9: Three tickets that share one upgrade hop: the parser stamp, the rows a restore loses, and the upload it ",
+    "p": 0.0035035405141825267,
+    "gold": true
+   },
+   {
+    "id": "board/cards/REM-78.md#1",
+    "label": "board/cards/REM-78.md",
+    "p": 0.003458311162789145,
+    "gold": false
+   },
+   {
+    "id": "commit/159972dd24",
+    "label": "commit 159972d: Merge pull request #39 from Percolation-Labs/docs/parser-lag-message",
+    "p": 0.0031209309859358573,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-79.md#3",
+    "label": "board/cards/REM-79.md \u203a Log",
+    "p": 0.002327545491997163,
+    "gold": false
+   },
+   {
+    "id": "commit/144bbe1606",
+    "label": "commit 144bbe1: board: sally takes REM-1085",
+    "p": 0.002247026530701467,
+    "gold": false
+   },
+   {
+    "id": "commit/8ce5b985a9",
+    "label": "commit 8ce5b98: board: note on REM-1085",
+    "p": 0.0021860284642297168,
+    "gold": false
+   },
+   {
+    "id": "commit/31a94ddd00",
+    "label": "commit 31a94dd: A gate that can write: the hook rebuilt the served database and a test committed to the branch (#88)",
+    "p": 0.0021248145819096264,
+    "gold": true
+   },
+   {
+    "id": "commit/c33c384979",
+    "label": "commit c33c384: board: note on REM-1085",
+    "p": 0.0020520138374170594,
+    "gold": false
+   },
+   {
+    "id": "commit/345f1ff648",
+    "label": "commit 345f1ff: board: REM-1085 in-progress \u2192 done",
+    "p": 0.0020174626634752034,
+    "gold": false
+   },
+   {
+    "id": "commit/e876d6320c",
+    "label": "commit e876d63: board: edit REM-1085 labels severity",
+    "p": 0.0019823700176800417,
+    "gold": false
+   },
+   {
+    "id": "commit/15dae00c1a",
+    "label": "commit 15dae00: board: file REM-1086 install: a newcomer's first sign-in needs no hand-built JWT",
+    "p": 0.001965801340676171,
+    "gold": false
+   },
+   {
+    "id": "commit/5f33516f0a",
+    "label": "commit 5f33516: board: file REM-1084 install: the docs claim only the Postgres versions and hosts the gate has run on",
+    "p": 0.0019549978169908265,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1035.md#7",
+    "label": "board/cards/REM-1035.md \u203a Log",
+    "p": 0.00180640106395708,
+    "gold": false
+   },
+   {
+    "id": "commit/bb398a9717",
+    "label": "commit bb398a9: One home for the parser-lag note, and the reasoning behind it",
+    "p": 0.0017311460152982664,
+    "gold": false
+   },
+   {
+    "id": "commit/37ed4cd487",
+    "label": "commit 37ed4cd: rows, not schema: the rule, and a gate that reads specs/ (REM-655) (#335)",
+    "p": 0.0016045323283645227,
+    "gold": false
+   },
+   {
+    "id": "dev/README.md#10",
+    "label": "dev/README.md \u203a Why this directory exists",
+    "p": 0.0015696792778771998,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-12-the-diagnosis-was-the-expensive-half.md#4",
+    "label": "meta/postmortems/2026-09-12-the-diagnosis-was-the-expensive-half.md \u203a 2. The wrong explanations were sound, and that is ",
+    "p": 0.0015422534069584738,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "board/cards/REM-79.md#1",
+   "label": "board/cards/REM-79.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-79.md#2",
+   "label": "board/cards/REM-79.md \u203a Goal",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/3b3e226bb1",
+   "label": "commit 3b3e226: A build that says what it was made from, and a release you can rehearse",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/43496c7506",
+   "label": "commit 43496c7: board: file REM-1085 release: one table says which extension, parser and core versions go together",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/07f3216139",
+   "label": "commit 07f3216: Merge pull request #37 from Percolation-Labs/docs/parser-release-note",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/1acc8f9ce2",
+   "label": "commit 1acc8f9: Three tickets that share one upgrade hop: the parser stamp, the rows a restore loses, and the upload it ",
+   "wave": 1,
+   "via": "term:rem 79",
+   "gold": true
+  },
+  {
+   "id": "board/cards/REM-79.md#3",
+   "label": "board/cards/REM-79.md \u203a Log",
+   "wave": 1,
+   "via": "term:rem 79",
+   "gold": false
+  },
+  {
+   "id": "commit/31a94ddd00",
+   "label": "commit 31a94dd: A gate that can write: the hook rebuilt the served database and a test committed to the branch (#88)",
+   "wave": 1,
+   "via": "term:rem 79",
+   "gold": true
+  },
+  {
+   "id": "specs/ai-query-layer/USAGE.md#46",
+   "label": "specs/ai-query-layer/USAGE.md \u203a `aiq.schema_facets`",
+   "wave": 2,
+   "via": "term:parser change",
+   "gold": false
+  },
+  {
+   "id": "meta/postmortems/README.md#47",
+   "label": "meta/postmortems/README.md \u203a A diagnostic that reports its configuration as its observation",
+   "wave": 2,
+   "via": "term:parser change",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "board/cards/REM-1085.md#1",
+    "label": "board/cards/REM-1085.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1085.md#2",
+    "label": "board/cards/REM-1085.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "commit/f5d20fb523",
+    "label": "commit f5d20fb: The fast image path cannot see a parser change, so say so here",
+    "gold": false
+   },
+   {
+    "id": "commit/1acc8f9ce2",
+    "label": "commit 1acc8f9: Three tickets that share one upgrade hop: the parser stamp, the rows a restore loses, and the upload it ",
+    "gold": true
+   },
+   {
+    "id": "board/cards/REM-78.md#1",
+    "label": "board/cards/REM-78.md",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "board/cards/REM-1085.md#1",
+    "label": "board/cards/REM-1085.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1085.md#2",
+    "label": "board/cards/REM-1085.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-12-the-diagnosis-was-the-expensive-half.md#4",
+    "label": "meta/postmortems/2026-09-12-the-diagnosis-was-the-expensive-half.md \u203a 2. The wrong explanations were sound, and that is ",
+    "gold": false
+   },
+   {
+    "id": "commit/1acc8f9ce2",
+    "label": "commit 1acc8f9: Three tickets that share one upgrade hop: the parser stamp, the rows a restore loses, and the upload it ",
+    "gold": true
+   },
+   {
+    "id": "commit/f5d20fb523",
+    "label": "commit f5d20fb: The fast image path cannot see a parser change, so say so here",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/345f1ff648",
+    "label": "commit 345f1ff: board: REM-1085 in-progress \u2192 done",
+    "gold": false
+   },
+   {
+    "id": "commit/159972dd24",
+    "label": "commit 159972d: Merge pull request #39 from Percolation-Labs/docs/parser-lag-message",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-79.md#3",
+    "label": "board/cards/REM-79.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1085.md#1",
+    "label": "board/cards/REM-1085.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1085.md#2",
+    "label": "board/cards/REM-1085.md \u203a Goal",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "meta/postmortems/2026-09-12-the-diagnosis-was-the-expensive-half.md#4",
+    "label": "meta/postmortems/2026-09-12-the-diagnosis-was-the-expensive-half.md \u203a 2. The wrong explanations were sound, and that is ",
+    "gold": false
+   },
+   {
+    "id": "PACKAGING.md#20",
+    "label": "PACKAGING.md \u203a Three paths to a running change, and keeping them apart",
+    "gold": false
+   },
+   {
+    "id": "PACKAGING.md#18",
+    "label": "PACKAGING.md \u203a Three paths to a running change, and keeping them apart",
+    "gold": false
+   },
+   {
+    "id": "commit/aafd81906d",
+    "label": "commit aafd819: A skill that says to fix what you find, rather than report it well",
+    "gold": false
+   },
+   {
+    "id": "commit/2839952642",
+    "label": "commit 2839952: Say when the parser under test is older than the tree",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.5,
+  "Q": 0.5,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

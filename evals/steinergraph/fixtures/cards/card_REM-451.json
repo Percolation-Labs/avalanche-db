@@ -1,0 +1,417 @@
+{
+ "qid": "card:REM-451",
+ "set": "cards",
+ "question": "What was done about this, and why: authoring: a slash key attaches a claim, source or artifact to the text?",
+ "gold": [
+  {
+   "id": "commit/b446155a63",
+   "label": "commit b446155: Merge pull request #252 from Percolation-Labs/amartey/rem-451-slash-spec",
+   "seed": true
+  },
+  {
+   "id": "commit/ee75aaf03e",
+   "label": "commit ee75aaf: authoring-and-publication \u00a73: citing from the keyboard (REM-451)",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/96e3379dec",
+   "label": "commit 96e3379: board: file REM-451 authoring: a slash key attaches a claim, source or artifact to the text",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-451.md#1",
+   "label": "board/cards/REM-451.md",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/25f9606f92",
+   "label": "commit 25f9606: authoring-and-publication: an artifact is brought into the prose by citing it (REM-452)",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "specs/percolate-application/authoring-and-publication.md#9",
+   "label": "specs/percolate-application/authoring-and-publication.md \u203a 3. A1 \u2014 Edit an owned research package in the browser",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/b446155a63",
+   "label": "commit b446155: Merge pull request #252 from Percolation-Labs/amartey/rem-451-slash-spec",
+   "rank": 5,
+   "gold": true,
+   "doors_to_gold": 0
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/b446155a63",
+    "label": "commit b446155: Merge pull request #252 from Percolation-Labs/amartey/rem-451-slash-spec",
+    "role": "gold"
+   },
+   {
+    "id": "commit/ee75aaf03e",
+    "label": "commit ee75aaf: authoring-and-publication \u00a73: citing from the keyboard (REM-451)",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/b446155a63",
+    "b": "commit/ee75aaf03e",
+    "via": [
+     {
+      "kind": "term",
+      "key": "keyboard rem",
+      "width": 4
+     },
+     {
+      "kind": "term",
+      "key": "rem 451",
+      "width": 20
+     },
+     {
+      "kind": "term",
+      "key": "keyboard",
+      "width": 100
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "commit/b446155a63",
+   "gold": "commit/b446155a63",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 1204,
+  "within_2_doors": 33668,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "board/cards/REM-451.md#2",
+    "label": "board/cards/REM-451.md \u203a Goal",
+    "p": 0.010075159195764684,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-451.md#7",
+    "label": "board/cards/REM-451.md \u203a Log",
+    "p": 0.0066618034088252115,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-450.md#5",
+    "label": "board/cards/REM-450.md \u203a Scope",
+    "p": 0.005060884178790852,
+    "gold": false
+   },
+   {
+    "id": "commit/6d27822e3f",
+    "label": "commit 6d27822: board: REM-451 in-progress \u2192 done",
+    "p": 0.0036039685779256153,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-452.md#7",
+    "label": "board/cards/REM-452.md \u203a Log",
+    "p": 0.0035015707630490366,
+    "gold": false
+   },
+   {
+    "id": "commit/dbd1024151",
+    "label": "commit dbd1024: board: file REM-539 reading: a printed reading puts each claim, figure and table in its place: inline, f",
+    "p": 0.0032322072606216596,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-451.md#3",
+    "label": "board/cards/REM-451.md \u203a Evidence",
+    "p": 0.003101680777635368,
+    "gold": false
+   },
+   {
+    "id": "commit/ee75aaf03e",
+    "label": "commit ee75aaf: authoring-and-publication \u00a73: citing from the keyboard (REM-451)",
+    "p": 0.0030896148299200256,
+    "gold": true
+   },
+   {
+    "id": "board/cards/REM-539.md#4",
+    "label": "board/cards/REM-539.md \u203a Done when",
+    "p": 0.0028177875994197187,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/focus-canvas-contract.md#6",
+    "label": "specs/percolate-application/focus-canvas-contract.md \u203a Views and movement",
+    "p": 0.0027916002646468986,
+    "gold": false
+   },
+   {
+    "id": "commit/095143846e",
+    "label": "commit 0951438: readers-board spec: name claims.question_evidence and the landed \u00a77 change (REM-485)",
+    "p": 0.002631179267209222,
+    "gold": false
+   },
+   {
+    "id": "commit/26daf478d7",
+    "label": "commit 26daf47: board: file REM-452 decide: may an artifact sit inside the prose, or only be linked from it",
+    "p": 0.0024990877119485753,
+    "gold": false
+   },
+   {
+    "id": "commit/acde0db43d",
+    "label": "commit acde0db: board: file REM-450 authoring: an owner edits the brief where it is read, in a surface built for writing",
+    "p": 0.0023890701875764263,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/library-board.md#15",
+    "label": "specs/percolate-application/library-board.md \u203a 12. Delivery gates",
+    "p": 0.002261149591065603,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-539.md#1",
+    "label": "board/cards/REM-539.md",
+    "p": 0.0020724786519129416,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-451.md#4",
+    "label": "board/cards/REM-451.md \u203a Done when",
+    "p": 0.001903499830153151,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-455.md#7",
+    "label": "board/cards/REM-455.md \u203a Log",
+    "p": 0.0017309955094132485,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-451.md#5",
+    "label": "board/cards/REM-451.md \u203a Scope",
+    "p": 0.0016611539928158684,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-452.md#4",
+    "label": "board/cards/REM-452.md \u203a Done when",
+    "p": 0.0015866478020502223,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-452.md#6",
+    "label": "board/cards/REM-452.md \u203a Links",
+    "p": 0.0015291262262432876,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/96e3379dec",
+   "label": "commit 96e3379: board: file REM-451 authoring: a slash key attaches a claim, source or artifact to the text",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-451.md#1",
+   "label": "board/cards/REM-451.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/25f9606f92",
+   "label": "commit 25f9606: authoring-and-publication: an artifact is brought into the prose by citing it (REM-452)",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/percolate-application/authoring-and-publication.md#9",
+   "label": "specs/percolate-application/authoring-and-publication.md \u203a 3. A1 \u2014 Edit an owned research package in the browser",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/b446155a63",
+   "label": "commit b446155: Merge pull request #252 from Percolation-Labs/amartey/rem-451-slash-spec",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "board/cards/REM-451.md#3",
+   "label": "board/cards/REM-451.md \u203a Evidence",
+   "wave": 1,
+   "via": "term:rem 451",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-451.md#6",
+   "label": "board/cards/REM-451.md \u203a Links",
+   "wave": 1,
+   "via": "term:rem 451",
+   "gold": false
+  },
+  {
+   "id": "commit/ee75aaf03e",
+   "label": "commit ee75aaf: authoring-and-publication \u00a73: citing from the keyboard (REM-451)",
+   "wave": 1,
+   "via": "term:rem 451",
+   "gold": true
+  },
+  {
+   "id": "board/cards/REM-451.md#2",
+   "label": "board/cards/REM-451.md \u203a Goal",
+   "wave": 1,
+   "via": "term:rem 451",
+   "gold": false
+  },
+  {
+   "id": "commit/6d27822e3f",
+   "label": "commit 6d27822: board: REM-451 in-progress \u2192 done",
+   "wave": 1,
+   "via": "term:rem 451",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "board/cards/REM-451.md#2",
+    "label": "board/cards/REM-451.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-451.md#7",
+    "label": "board/cards/REM-451.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-450.md#5",
+    "label": "board/cards/REM-450.md \u203a Scope",
+    "gold": false
+   },
+   {
+    "id": "commit/6d27822e3f",
+    "label": "commit 6d27822: board: REM-451 in-progress \u2192 done",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-452.md#7",
+    "label": "board/cards/REM-452.md \u203a Log",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "board/cards/REM-451.md#2",
+    "label": "board/cards/REM-451.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-451.md#7",
+    "label": "board/cards/REM-451.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-450.md#5",
+    "label": "board/cards/REM-450.md \u203a Scope",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-452.md#7",
+    "label": "board/cards/REM-452.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-539.md#4",
+    "label": "board/cards/REM-539.md \u203a Done when",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "board/cards/REM-451.md#2",
+    "label": "board/cards/REM-451.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "commit/ee75aaf03e",
+    "label": "commit ee75aaf: authoring-and-publication \u00a73: citing from the keyboard (REM-451)",
+    "gold": true
+   },
+   {
+    "id": "board/cards/REM-451.md#6",
+    "label": "board/cards/REM-451.md \u203a Links",
+    "gold": false
+   },
+   {
+    "id": "commit/6d27822e3f",
+    "label": "commit 6d27822: board: REM-451 in-progress \u2192 done",
+    "gold": false
+   },
+   {
+    "id": "commit/28b0b21f77",
+    "label": "commit 28b0b21: Merge pull request #275 from Percolation-Labs/amartey/rem-452-decision",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "board/cards/REM-451.md#7",
+    "label": "board/cards/REM-451.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-450.md#5",
+    "label": "board/cards/REM-450.md \u203a Scope",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-434.md#2",
+    "label": "board/cards/REM-434.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-539.md#4",
+    "label": "board/cards/REM-539.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-451.md#2",
+    "label": "board/cards/REM-451.md \u203a Goal",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 1.0,
+  "S": 0.0
+ }
+}

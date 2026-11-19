@@ -1,0 +1,440 @@
+{
+ "qid": "RW:3hop1__786632_831637_91775",
+ "set": "mq",
+ "question": "What does seal stand for in the U.S. military branch that operates destroyers, as well as the USS Edsall?",
+ "gold": [
+  {
+   "id": "mq:5de82255791981ef",
+   "label": "List of destroyer classes of the United States Navy",
+   "seed": false
+  },
+  {
+   "id": "mq:7032c6ce88440737",
+   "label": "USS Edsall (DE-129)",
+   "seed": true
+  },
+  {
+   "id": "mq:8491a65de95efc12",
+   "label": "United States Navy SEALs",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:7032c6ce88440737",
+   "label": "USS Edsall (DE-129)",
+   "rank": 1,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:327af66579fea4be",
+   "label": "USS Holder (DE-401)",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:761625c524acc63d",
+   "label": "USS Rhodes (DE-384)",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:97e86f59406050fe",
+   "label": "USS Kirkpatrick (DE-318)",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:65b08e876e8e3fb9",
+   "label": "Naval Battle of Guadalcanal",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:5de82255791981ef",
+    "label": "List of destroyer classes of the United States Navy",
+    "role": "gold"
+   },
+   {
+    "id": "mq:7032c6ce88440737",
+    "label": "USS Edsall (DE-129)",
+    "role": "gold"
+   },
+   {
+    "id": "mq:8491a65de95efc12",
+    "label": "United States Navy SEALs",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:5de82255791981ef",
+    "b": "mq:7032c6ce88440737",
+    "via": [
+     {
+      "kind": "term",
+      "key": "destroyer",
+      "width": 28
+     },
+     {
+      "kind": "term",
+      "key": "states navy",
+      "width": 83
+     }
+    ]
+   },
+   {
+    "a": "mq:5de82255791981ef",
+    "b": "mq:8491a65de95efc12",
+    "via": [
+     {
+      "kind": "term",
+      "key": "warfare",
+      "width": 48
+     },
+     {
+      "kind": "term",
+      "key": "states navy",
+      "width": 83
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   1,
+   1
+  ],
+  "entry": {
+   "seed": "mq:7032c6ce88440737",
+   "gold": "mq:7032c6ce88440737",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 1857,
+  "within_2_doors": 19214,
+  "gold_within_1": 2,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "mq:c9fd263669b8bff9",
+    "label": "White Motor Company",
+    "p": 0.0020583696904818024,
+    "gold": false
+   },
+   {
+    "id": "mq:8598e42e9cf161c1",
+    "label": "AGM-28 Hound Dog",
+    "p": 0.001879432967322043,
+    "gold": false
+   },
+   {
+    "id": "mq:4600f6b483acb880",
+    "label": "USS Kilty (DD-137)",
+    "p": 0.0017367482904735128,
+    "gold": false
+   },
+   {
+    "id": "mq:9ab1cf8b202bcf4e",
+    "label": "Municipal Stadium (Kansas City, Missouri)",
+    "p": 0.0016531167492042807,
+    "gold": false
+   },
+   {
+    "id": "mq:98c097080705bf34",
+    "label": "Pacific War series",
+    "p": 0.0015951178055856807,
+    "gold": false
+   },
+   {
+    "id": "mq:9837550623abbfe3",
+    "label": "List of destroyer classes of the Royal Navy",
+    "p": 0.001531834872311765,
+    "gold": false
+   },
+   {
+    "id": "mq:6e7d64914139f40d",
+    "label": "USS Greer (DD-145)",
+    "p": 0.0015034013623821082,
+    "gold": false
+   },
+   {
+    "id": "mq:011f40e38dfbb718",
+    "label": "Battle of the Bay of Biscay",
+    "p": 0.001493320168243602,
+    "gold": false
+   },
+   {
+    "id": "mq:6e693ab95258f1be",
+    "label": "USS Charles R. Greer (DE-23)",
+    "p": 0.0014730440346771255,
+    "gold": false
+   },
+   {
+    "id": "mq:e9d6dfe75aef28f8",
+    "label": "USS Brooklyn (CL-40)",
+    "p": 0.0014707868477698935,
+    "gold": false
+   },
+   {
+    "id": "mq:01040f11ae2d8590",
+    "label": "USS Kane (DD-235)",
+    "p": 0.001425451507441999,
+    "gold": false
+   },
+   {
+    "id": "mq:5de82255791981ef",
+    "label": "List of destroyer classes of the United States Navy",
+    "p": 0.0011905145264550728,
+    "gold": true
+   },
+   {
+    "id": "mq:287aceb8e82da81e",
+    "label": "Deptford",
+    "p": 0.0011828619299866937,
+    "gold": false
+   },
+   {
+    "id": "mq:f6072541b79a844f",
+    "label": "Atomic bombings of Hiroshima and Nagasaki",
+    "p": 0.0011334647390742782,
+    "gold": false
+   },
+   {
+    "id": "mq:b43d0a6c6a5940cf",
+    "label": "Shrek the Third",
+    "p": 0.0011234544316332561,
+    "gold": false
+   },
+   {
+    "id": "mq:543f407be53955ae",
+    "label": "Bradford Knapp",
+    "p": 0.001103686003359307,
+    "gold": false
+   },
+   {
+    "id": "mq:13c62169a40685d2",
+    "label": "USS Daly (DD-519)",
+    "p": 0.0010849668074873944,
+    "gold": false
+   },
+   {
+    "id": "mq:80a8a8133f16a2a1",
+    "label": "HMS Bristol (D23)",
+    "p": 0.0010376589636189877,
+    "gold": false
+   },
+   {
+    "id": "mq:1643a0b20846425a",
+    "label": "USS Porter (DDG-78)",
+    "p": 0.0009593287466253261,
+    "gold": false
+   },
+   {
+    "id": "mq:b82745163ab35814",
+    "label": "USS Hornet (CV-8)",
+    "p": 0.0009316414283639349,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:7032c6ce88440737",
+   "label": "USS Edsall (DE-129)",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:327af66579fea4be",
+   "label": "USS Holder (DE-401)",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:761625c524acc63d",
+   "label": "USS Rhodes (DE-384)",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:97e86f59406050fe",
+   "label": "USS Kirkpatrick (DE-318)",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:65b08e876e8e3fb9",
+   "label": "Naval Battle of Guadalcanal",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:5e9fd61d3afe81f4",
+   "label": "USS Reliable (SP-352)",
+   "wave": 1,
+   "via": "term:states navy",
+   "gold": false
+  },
+  {
+   "id": "mq:2e2701c1167f1796",
+   "label": "USS Dextrous (AM-341)",
+   "wave": 1,
+   "via": "term:states navy",
+   "gold": false
+  },
+  {
+   "id": "mq:c7dff9a453e2842d",
+   "label": "USS Pegasus (PHM-1)",
+   "wave": 1,
+   "via": "term:states navy",
+   "gold": false
+  },
+  {
+   "id": "mq:8d85d5214569bb91",
+   "label": "USS Acme (MSO-508)",
+   "wave": 1,
+   "via": "term:states navy",
+   "gold": false
+  },
+  {
+   "id": "mq:4fc3eb6381940649",
+   "label": "USS Prevail (AM-107)",
+   "wave": 1,
+   "via": "term:states navy",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:c9fd263669b8bff9",
+    "label": "White Motor Company",
+    "gold": false
+   },
+   {
+    "id": "mq:8598e42e9cf161c1",
+    "label": "AGM-28 Hound Dog",
+    "gold": false
+   },
+   {
+    "id": "mq:4600f6b483acb880",
+    "label": "USS Kilty (DD-137)",
+    "gold": false
+   },
+   {
+    "id": "mq:9ab1cf8b202bcf4e",
+    "label": "Municipal Stadium (Kansas City, Missouri)",
+    "gold": false
+   },
+   {
+    "id": "mq:98c097080705bf34",
+    "label": "Pacific War series",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:5de82255791981ef",
+    "label": "List of destroyer classes of the United States Navy",
+    "gold": true
+   },
+   {
+    "id": "mq:4600f6b483acb880",
+    "label": "USS Kilty (DD-137)",
+    "gold": false
+   },
+   {
+    "id": "mq:b82745163ab35814",
+    "label": "USS Hornet (CV-8)",
+    "gold": false
+   },
+   {
+    "id": "mq:01040f11ae2d8590",
+    "label": "USS Kane (DD-235)",
+    "gold": false
+   },
+   {
+    "id": "mq:ba8c91b3c6c2c537",
+    "label": "USS Mahan (DDG-42)",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:b82745163ab35814",
+    "label": "USS Hornet (CV-8)",
+    "gold": false
+   },
+   {
+    "id": "mq:5de82255791981ef",
+    "label": "List of destroyer classes of the United States Navy",
+    "gold": true
+   },
+   {
+    "id": "mq:ba8c91b3c6c2c537",
+    "label": "USS Mahan (DDG-42)",
+    "gold": false
+   },
+   {
+    "id": "mq:6e7d64914139f40d",
+    "label": "USS Greer (DD-145)",
+    "gold": false
+   },
+   {
+    "id": "mq:e9d6dfe75aef28f8",
+    "label": "USS Brooklyn (CL-40)",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:1fe9e02316936775",
+    "label": "The Wreckers",
+    "gold": false
+   },
+   {
+    "id": "mq:21ae9a7077631850",
+    "label": "Permanent Court of International Justice",
+    "gold": false
+   },
+   {
+    "id": "mq:5de82255791981ef",
+    "label": "List of destroyer classes of the United States Navy",
+    "gold": true
+   },
+   {
+    "id": "mq:b82745163ab35814",
+    "label": "USS Hornet (CV-8)",
+    "gold": false
+   },
+   {
+    "id": "mq:7cd7ef86cdf05462",
+    "label": "Seal Online",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.5,
+  "LQ": 0.5,
+  "S": 0.5
+ }
+}

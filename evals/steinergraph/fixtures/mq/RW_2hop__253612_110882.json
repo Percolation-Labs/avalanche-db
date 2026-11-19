@@ -1,0 +1,448 @@
+{
+ "qid": "RW:2hop__253612_110882",
+ "set": "mq",
+ "question": "What is the date of birth of the performer of Stand Up?",
+ "gold": [
+  {
+   "id": "mq:385b29f588028e7f",
+   "label": "Stand Up (James Cottriall song)",
+   "seed": false
+  },
+  {
+   "id": "mq:6f28e542b4593f38",
+   "label": "James Cottriall",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:5f823b4d2f2b4c9d",
+   "label": "Giovanni Cifolelli",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "mq:a69043e285fc22a0",
+   "label": "Clara Morris",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "mq:8ad4566a783dddcc",
+   "label": "Christmas",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "mq:80a5d530c6b5c055",
+   "label": "Peter Fliesteden",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "mq:25aba84f8b3cb625",
+   "label": "William Shakespeare",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:25aba84f8b3cb625",
+    "label": "William Shakespeare",
+    "role": "seed"
+   },
+   {
+    "id": "mq:385b29f588028e7f",
+    "label": "Stand Up (James Cottriall song)",
+    "role": "gold"
+   },
+   {
+    "id": "mq:6f28e542b4593f38",
+    "label": "James Cottriall",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:25aba84f8b3cb625",
+    "b": "mq:6f28e542b4593f38",
+    "via": [
+     {
+      "kind": "term",
+      "key": "stratford",
+      "width": 6
+     },
+     {
+      "kind": "term",
+      "key": "avon",
+      "width": 6
+     }
+    ]
+   },
+   {
+    "a": "mq:385b29f588028e7f",
+    "b": "mq:6f28e542b4593f38",
+    "via": [
+     {
+      "kind": "term",
+      "key": "cottriall",
+      "width": 6
+     },
+     {
+      "kind": "term",
+      "key": "james cottriall",
+      "width": 6
+     },
+     {
+      "kind": "term",
+      "key": "english musician",
+      "width": 12
+     },
+     {
+      "kind": "term",
+      "key": "austrian",
+      "width": 64
+     },
+     {
+      "kind": "term",
+      "key": "austria",
+      "width": 95
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "mq:25aba84f8b3cb625",
+   "gold": "mq:6f28e542b4593f38",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 1818,
+  "within_2_doors": 19235,
+  "gold_within_1": 1,
+  "gold_within_2": 1,
+  "top_U": [
+   {
+    "id": "mq:2a80b625102b6e17",
+    "label": "Engleby",
+    "p": 0.0020051866805374454,
+    "gold": false
+   },
+   {
+    "id": "mq:0d96ded84c3985f8",
+    "label": "Andronikos V Palaiologos",
+    "p": 0.0015560107679744135,
+    "gold": false
+   },
+   {
+    "id": "mq:30b5003b9250523f",
+    "label": "New Swabia",
+    "p": 0.0015472069007477901,
+    "gold": false
+   },
+   {
+    "id": "mq:2ff2ba39737d7113",
+    "label": "Rhine",
+    "p": 0.0015304068423911317,
+    "gold": false
+   },
+   {
+    "id": "mq:a36e614ac3ad53e5",
+    "label": "Maureen Payne",
+    "p": 0.0015277761680437987,
+    "gold": false
+   },
+   {
+    "id": "mq:e2f2baafb59ba3a5",
+    "label": "Peter Winter",
+    "p": 0.001498505540644303,
+    "gold": false
+   },
+   {
+    "id": "mq:620b322a43f3b4b1",
+    "label": "Mandolin",
+    "p": 0.0013367430060110684,
+    "gold": false
+   },
+   {
+    "id": "mq:facc76280e25168d",
+    "label": "Oldest people",
+    "p": 0.0013291443757165453,
+    "gold": false
+   },
+   {
+    "id": "mq:9cd12484033b4b18",
+    "label": "Yang Meng",
+    "p": 0.0013034997243125991,
+    "gold": false
+   },
+   {
+    "id": "mq:571291265c0060e8",
+    "label": "William Shakespeare",
+    "p": 0.0012405320789606645,
+    "gold": false
+   },
+   {
+    "id": "mq:9901dd9336516c23",
+    "label": "Rhein-Lahn-Kreis",
+    "p": 0.0012352548026780847,
+    "gold": false
+   },
+   {
+    "id": "mq:f1033757803e13e9",
+    "label": "Mandolin",
+    "p": 0.0011841954781356718,
+    "gold": false
+   },
+   {
+    "id": "mq:e4d1c1085eb44116",
+    "label": "Bartolomeo Campagnoli",
+    "p": 0.0011415712935278885,
+    "gold": false
+   },
+   {
+    "id": "mq:cbf4a872efd2f552",
+    "label": "Al Viola",
+    "p": 0.001104561024942957,
+    "gold": false
+   },
+   {
+    "id": "mq:e68c8aa0ac521c26",
+    "label": "History of Canada",
+    "p": 0.0010939211800017278,
+    "gold": false
+   },
+   {
+    "id": "mq:ed42ea988e6d5f02",
+    "label": "Treaty of Allahabad",
+    "p": 0.0010929323759612437,
+    "gold": false
+   },
+   {
+    "id": "mq:15d9d3fafa8e20f7",
+    "label": "Antonio Vivaldi",
+    "p": 0.0009346431635172031,
+    "gold": false
+   },
+   {
+    "id": "mq:cce603a35f888563",
+    "label": "Rhine",
+    "p": 0.0009300768738358423,
+    "gold": false
+   },
+   {
+    "id": "mq:76a39350768a759a",
+    "label": "Pope Paul VI",
+    "p": 0.0009235293698750948,
+    "gold": false
+   },
+   {
+    "id": "mq:235202071d338ab5",
+    "label": "Fr\u00e9d\u00e9ric Chopin",
+    "p": 0.0008801421967686804,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:5f823b4d2f2b4c9d",
+   "label": "Giovanni Cifolelli",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:a69043e285fc22a0",
+   "label": "Clara Morris",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:8ad4566a783dddcc",
+   "label": "Christmas",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:80a5d530c6b5c055",
+   "label": "Peter Fliesteden",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:25aba84f8b3cb625",
+   "label": "William Shakespeare",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:c1db20a4f3a101ef",
+   "label": "Christoph Froschauer",
+   "wave": 1,
+   "via": "term:april 1564",
+   "gold": false
+  },
+  {
+   "id": "mq:571291265c0060e8",
+   "label": "William Shakespeare",
+   "wave": 1,
+   "via": "term:april 1564",
+   "gold": false
+  },
+  {
+   "id": "mq:fa11258e90984eba",
+   "label": "Phonograph record",
+   "wave": 2,
+   "via": "term:performer",
+   "gold": false
+  },
+  {
+   "id": "mq:38d0a489f8a73518",
+   "label": "Phonograph record",
+   "wave": 2,
+   "via": "term:performer",
+   "gold": false
+  },
+  {
+   "id": "mq:56765d951824cfbe",
+   "label": "Body Pressure",
+   "wave": 2,
+   "via": "term:performer",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:2a80b625102b6e17",
+    "label": "Engleby",
+    "gold": false
+   },
+   {
+    "id": "mq:0d96ded84c3985f8",
+    "label": "Andronikos V Palaiologos",
+    "gold": false
+   },
+   {
+    "id": "mq:30b5003b9250523f",
+    "label": "New Swabia",
+    "gold": false
+   },
+   {
+    "id": "mq:2ff2ba39737d7113",
+    "label": "Rhine",
+    "gold": false
+   },
+   {
+    "id": "mq:a36e614ac3ad53e5",
+    "label": "Maureen Payne",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:a36e614ac3ad53e5",
+    "label": "Maureen Payne",
+    "gold": false
+   },
+   {
+    "id": "mq:0d96ded84c3985f8",
+    "label": "Andronikos V Palaiologos",
+    "gold": false
+   },
+   {
+    "id": "mq:facc76280e25168d",
+    "label": "Oldest people",
+    "gold": false
+   },
+   {
+    "id": "mq:9cd12484033b4b18",
+    "label": "Yang Meng",
+    "gold": false
+   },
+   {
+    "id": "mq:8a8ce8ba08f59313",
+    "label": "Mary, mother of Jesus",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:0d96ded84c3985f8",
+    "label": "Andronikos V Palaiologos",
+    "gold": false
+   },
+   {
+    "id": "mq:facc76280e25168d",
+    "label": "Oldest people",
+    "gold": false
+   },
+   {
+    "id": "mq:a36e614ac3ad53e5",
+    "label": "Maureen Payne",
+    "gold": false
+   },
+   {
+    "id": "mq:9cd12484033b4b18",
+    "label": "Yang Meng",
+    "gold": false
+   },
+   {
+    "id": "mq:8a8ce8ba08f59313",
+    "label": "Mary, mother of Jesus",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:414d9ad1a3811a9d",
+    "label": "Shirley Abicair",
+    "gold": false
+   },
+   {
+    "id": "mq:a36e614ac3ad53e5",
+    "label": "Maureen Payne",
+    "gold": false
+   },
+   {
+    "id": "mq:4b06637de11c56f6",
+    "label": "\u0160vitrigaila",
+    "gold": false
+   },
+   {
+    "id": "mq:91547dcbeb62d8b5",
+    "label": "Ana Free",
+    "gold": false
+   },
+   {
+    "id": "mq:6a5882834a41227e",
+    "label": "Pak Nam-gi",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

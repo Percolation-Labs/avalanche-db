@@ -1,0 +1,412 @@
+{
+ "qid": "RW:2hop__89632_40480",
+ "set": "mq",
+ "question": "Where did Huguenot nobility settle in the state where the Patriot was filmed?",
+ "gold": [
+  {
+   "id": "mq:590bd94242bc197b",
+   "label": "The Patriot (2000 film)",
+   "seed": false
+  },
+  {
+   "id": "mq:a43da6aa287a1033",
+   "label": "Huguenots",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:3e37c3eaf600ead1",
+   "label": "Adafersaw Yenadu",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:a43da6aa287a1033",
+   "label": "Huguenots",
+   "rank": 2,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:e2c427462d911a96",
+   "label": "Huguenots",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:ae55766903e88330",
+   "label": "Szlachta",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:1ed443994c4f4eb5",
+   "label": "Szlachta",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:590bd94242bc197b",
+    "label": "The Patriot (2000 film)",
+    "role": "gold"
+   },
+   {
+    "id": "mq:a43da6aa287a1033",
+    "label": "Huguenots",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:590bd94242bc197b",
+    "b": "mq:a43da6aa287a1033",
+    "via": [
+     {
+      "kind": "term",
+      "key": "charleston south",
+      "width": 23
+     },
+     {
+      "kind": "term",
+      "key": "charleston",
+      "width": 32
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "mq:a43da6aa287a1033",
+   "gold": "mq:a43da6aa287a1033",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 2768,
+  "within_2_doors": 18319,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "mq:b50e021cfb8117b5",
+    "label": "Murdock Kennedy",
+    "p": 0.0045731760291944585,
+    "gold": false
+   },
+   {
+    "id": "mq:23791d327bc7d951",
+    "label": "Szlachta",
+    "p": 0.0023694581836912116,
+    "gold": false
+   },
+   {
+    "id": "mq:f87392434110ba32",
+    "label": "Szlachta",
+    "p": 0.0021465022341655053,
+    "gold": false
+   },
+   {
+    "id": "mq:d02b785612521479",
+    "label": "Szlachta",
+    "p": 0.001894459732921608,
+    "gold": false
+   },
+   {
+    "id": "mq:6a2e06d72424e093",
+    "label": "Swedish Livonia",
+    "p": 0.0016873426267375064,
+    "gold": false
+   },
+   {
+    "id": "mq:1db5acc55f6e4b45",
+    "label": "Szlachta",
+    "p": 0.0016371143570488235,
+    "gold": false
+   },
+   {
+    "id": "mq:670da0e8a82a2913",
+    "label": "Szlachta",
+    "p": 0.0013798285896341664,
+    "gold": false
+   },
+   {
+    "id": "mq:e3674733fdae9e6a",
+    "label": "Zhejiang",
+    "p": 0.0012422316028094132,
+    "gold": false
+   },
+   {
+    "id": "mq:d3cf747c7d943714",
+    "label": "Paramun",
+    "p": 0.0012268337301737256,
+    "gold": false
+   },
+   {
+    "id": "mq:1758c9246842da63",
+    "label": "Table of Ranks",
+    "p": 0.0012242508580956157,
+    "gold": false
+   },
+   {
+    "id": "mq:0ef8ef96da5be12a",
+    "label": "Traitor or Patriot",
+    "p": 0.001196277942798842,
+    "gold": false
+   },
+   {
+    "id": "mq:e5d4272e41d2fe3d",
+    "label": "Williamsburg: the Story of a Patriot",
+    "p": 0.0011740046717076172,
+    "gold": false
+   },
+   {
+    "id": "mq:2a5e598b047aeb40",
+    "label": "Patriot Day",
+    "p": 0.0011675323229616127,
+    "gold": false
+   },
+   {
+    "id": "mq:77581d1df7efba8e",
+    "label": "Angela Merkel",
+    "p": 0.0010715674072015473,
+    "gold": false
+   },
+   {
+    "id": "mq:cd9d3e67161c7ade",
+    "label": "President pro tempore of the United States Senate",
+    "p": 0.001019474103992,
+    "gold": false
+   },
+   {
+    "id": "mq:7cbb582b55dfd5d7",
+    "label": "Ashkenazi Jews",
+    "p": 0.0010193121275208269,
+    "gold": false
+   },
+   {
+    "id": "mq:a7fd581afcac1836",
+    "label": "Protestantism",
+    "p": 0.000999427209316762,
+    "gold": false
+   },
+   {
+    "id": "mq:d0c4f5ad53d19119",
+    "label": "Russian language",
+    "p": 0.0009591669940253155,
+    "gold": false
+   },
+   {
+    "id": "mq:22adcfe09939f34a",
+    "label": "Joachim Kirschner",
+    "p": 0.0009527696613273309,
+    "gold": false
+   },
+   {
+    "id": "mq:4431bffbc6343838",
+    "label": "Huguenots",
+    "p": 0.0009478175750291106,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:3e37c3eaf600ead1",
+   "label": "Adafersaw Yenadu",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:a43da6aa287a1033",
+   "label": "Huguenots",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:e2c427462d911a96",
+   "label": "Huguenots",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:ae55766903e88330",
+   "label": "Szlachta",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:1ed443994c4f4eb5",
+   "label": "Szlachta",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:6827c27b65d49f47",
+   "label": "New York City",
+   "wave": 1,
+   "via": "term:charleston south",
+   "gold": false
+  },
+  {
+   "id": "mq:ca5d6c8c2f28ec00",
+   "label": "Charleston, South Carolina",
+   "wave": 1,
+   "via": "term:charleston south",
+   "gold": false
+  },
+  {
+   "id": "mq:37f0a29476b5a321",
+   "label": "Old Bethel United Methodist Church",
+   "wave": 1,
+   "via": "term:charleston south",
+   "gold": false
+  },
+  {
+   "id": "mq:bfa44716252f19ae",
+   "label": "Charleston, South Carolina",
+   "wave": 1,
+   "via": "term:charleston south",
+   "gold": false
+  },
+  {
+   "id": "mq:14b1993f2721e4af",
+   "label": "Thomas Tudor Tucker",
+   "wave": 1,
+   "via": "term:charleston south",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:b50e021cfb8117b5",
+    "label": "Murdock Kennedy",
+    "gold": false
+   },
+   {
+    "id": "mq:23791d327bc7d951",
+    "label": "Szlachta",
+    "gold": false
+   },
+   {
+    "id": "mq:f87392434110ba32",
+    "label": "Szlachta",
+    "gold": false
+   },
+   {
+    "id": "mq:d02b785612521479",
+    "label": "Szlachta",
+    "gold": false
+   },
+   {
+    "id": "mq:6a2e06d72424e093",
+    "label": "Swedish Livonia",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:23791d327bc7d951",
+    "label": "Szlachta",
+    "gold": false
+   },
+   {
+    "id": "mq:f87392434110ba32",
+    "label": "Szlachta",
+    "gold": false
+   },
+   {
+    "id": "mq:4431bffbc6343838",
+    "label": "Huguenots",
+    "gold": false
+   },
+   {
+    "id": "mq:d02b785612521479",
+    "label": "Szlachta",
+    "gold": false
+   },
+   {
+    "id": "mq:1db5acc55f6e4b45",
+    "label": "Szlachta",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:23791d327bc7d951",
+    "label": "Szlachta",
+    "gold": false
+   },
+   {
+    "id": "mq:f87392434110ba32",
+    "label": "Szlachta",
+    "gold": false
+   },
+   {
+    "id": "mq:4431bffbc6343838",
+    "label": "Huguenots",
+    "gold": false
+   },
+   {
+    "id": "mq:684c0bccbc8241e7",
+    "label": "Huguenots",
+    "gold": false
+   },
+   {
+    "id": "mq:84ffa15524c1eff0",
+    "label": "Huguenots",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:e5d4272e41d2fe3d",
+    "label": "Williamsburg: the Story of a Patriot",
+    "gold": false
+   },
+   {
+    "id": "mq:1f5d431349ea6e4e",
+    "label": "Keala Settle",
+    "gold": false
+   },
+   {
+    "id": "mq:d02b785612521479",
+    "label": "Szlachta",
+    "gold": false
+   },
+   {
+    "id": "mq:4431bffbc6343838",
+    "label": "Huguenots",
+    "gold": false
+   },
+   {
+    "id": "mq:1db5acc55f6e4b45",
+    "label": "Szlachta",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

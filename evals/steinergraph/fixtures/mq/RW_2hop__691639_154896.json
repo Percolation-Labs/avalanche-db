@@ -1,0 +1,421 @@
+{
+ "qid": "RW:2hop__691639_154896",
+ "set": "mq",
+ "question": "What year did the insurgency start in the area where People's Vanguard Party's headquarters locate?",
+ "gold": [
+  {
+   "id": "mq:1c84d27025dbec5b",
+   "label": "People's Vanguard Party (South Yemen)",
+   "seed": true
+  },
+  {
+   "id": "mq:a8a35c779dc97e9c",
+   "label": "South Yemen insurgency",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:1c84d27025dbec5b",
+   "label": "People's Vanguard Party (South Yemen)",
+   "rank": 1,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:a45b6e8708bb8192",
+   "label": "Locate Triulzi railway station",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "mq:bef2c13a2389b1c8",
+   "label": "Patrick Aga",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "mq:b2cd66a3b47ab4f0",
+   "label": "Idris Abubakar",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "mq:e828e45aeaa0d0c3",
+   "label": "Ideology of the Communist Party of the Soviet Union",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:1c84d27025dbec5b",
+    "label": "People's Vanguard Party (South Yemen)",
+    "role": "gold"
+   },
+   {
+    "id": "mq:a8a35c779dc97e9c",
+    "label": "South Yemen insurgency",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:1c84d27025dbec5b",
+    "b": "mq:a8a35c779dc97e9c",
+    "via": [
+     {
+      "kind": "near",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "yemeni",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "south yemen",
+      "width": 6
+     },
+     {
+      "kind": "term",
+      "key": "yemen",
+      "width": 16
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "mq:1c84d27025dbec5b",
+   "gold": "mq:1c84d27025dbec5b",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 1194,
+  "within_2_doors": 19844,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "mq:4a228130cfd8f54d",
+    "label": "Abubakar Girei",
+    "p": 0.007263132201514395,
+    "gold": false
+   },
+   {
+    "id": "mq:8cdcd0fc0c32e25f",
+    "label": "Abdulahi Bala Adamu",
+    "p": 0.007043169895445935,
+    "gold": false
+   },
+   {
+    "id": "mq:3daa267390c2047f",
+    "label": "Abdul Yandoma",
+    "p": 0.006443475524058234,
+    "gold": false
+   },
+   {
+    "id": "mq:0be59481051e1c79",
+    "label": "Fred Aghogho Brume",
+    "p": 0.006346464858315784,
+    "gold": false
+   },
+   {
+    "id": "mq:3a0c1f34afa92145",
+    "label": "Adamu Gumba",
+    "p": 0.005238049986113218,
+    "gold": false
+   },
+   {
+    "id": "mq:b00463e045fa947f",
+    "label": "Leonid Brezhnev",
+    "p": 0.0029854413673831,
+    "gold": false
+   },
+   {
+    "id": "mq:89152b490c737c5a",
+    "label": "Sulaiman Mohammed Nazif",
+    "p": 0.002975591421190767,
+    "gold": false
+   },
+   {
+    "id": "mq:bb35567cafcc3c86",
+    "label": "Salim Rubai Ali",
+    "p": 0.002438554595774378,
+    "gold": false
+   },
+   {
+    "id": "mq:469678ed04b4476f",
+    "label": "Puppy",
+    "p": 0.0024220986101333997,
+    "gold": false
+   },
+   {
+    "id": "mq:69e0231df5a51095",
+    "label": "Richmond, Virginia",
+    "p": 0.002416190950460115,
+    "gold": false
+   },
+   {
+    "id": "mq:8299e8d0d444547c",
+    "label": "Sociology of the Internet",
+    "p": 0.002402176366540372,
+    "gold": false
+   },
+   {
+    "id": "mq:731cf4e890388a17",
+    "label": "Festus Olabode Ola",
+    "p": 0.0019482053250615072,
+    "gold": false
+   },
+   {
+    "id": "mq:6e91d53bed0e1399",
+    "label": "Siege of Genoa (1800)",
+    "p": 0.0017436856373803104,
+    "gold": false
+   },
+   {
+    "id": "mq:3358858581d80377",
+    "label": "Muammar Gaddafi",
+    "p": 0.0016765187065180488,
+    "gold": false
+   },
+   {
+    "id": "mq:ce7f1fb44c400fd1",
+    "label": "List of leaders of the Soviet Union",
+    "p": 0.0016322734545445971,
+    "gold": false
+   },
+   {
+    "id": "mq:3b93ecf5d9f5be60",
+    "label": "Civil rights movement (1896\u20131954)",
+    "p": 0.001421317943878655,
+    "gold": false
+   },
+   {
+    "id": "mq:2924363f7e87d175",
+    "label": "Nanjing",
+    "p": 0.0013538895766703456,
+    "gold": false
+   },
+   {
+    "id": "mq:369bf881b4c4aa22",
+    "label": "Abubakar Ibn Umar Garba",
+    "p": 0.0012325537583877473,
+    "gold": false
+   },
+   {
+    "id": "mq:c3c1389d70555f49",
+    "label": "The Blitz",
+    "p": 0.001142736349311574,
+    "gold": false
+   },
+   {
+    "id": "mq:0d276e7ea6820d81",
+    "label": "Abdul Fattah Ismail",
+    "p": 0.0011317575538227537,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:1c84d27025dbec5b",
+   "label": "People's Vanguard Party (South Yemen)",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:a45b6e8708bb8192",
+   "label": "Locate Triulzi railway station",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:bef2c13a2389b1c8",
+   "label": "Patrick Aga",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:b2cd66a3b47ab4f0",
+   "label": "Idris Abubakar",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:e828e45aeaa0d0c3",
+   "label": "Ideology of the Communist Party of the Soviet Union",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:0d276e7ea6820d81",
+   "label": "Abdul Fattah Ismail",
+   "wave": 1,
+   "via": "term:south yemen",
+   "gold": false
+  },
+  {
+   "id": "mq:a8a35c779dc97e9c",
+   "label": "South Yemen insurgency",
+   "wave": 1,
+   "via": "term:south yemen",
+   "gold": true
+  },
+  {
+   "id": "mq:ca8c9e0c4d4f438e",
+   "label": "EgyptAir Flight 763",
+   "wave": 1,
+   "via": "term:south yemen",
+   "gold": false
+  },
+  {
+   "id": "mq:6421666ff3e70d66",
+   "label": "Geography of Saudi Arabia",
+   "wave": 1,
+   "via": "term:south yemen",
+   "gold": false
+  },
+  {
+   "id": "mq:56c37a73d065a4da",
+   "label": "Cold War",
+   "wave": 1,
+   "via": "term:south yemen",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:4a228130cfd8f54d",
+    "label": "Abubakar Girei",
+    "gold": false
+   },
+   {
+    "id": "mq:8cdcd0fc0c32e25f",
+    "label": "Abdulahi Bala Adamu",
+    "gold": false
+   },
+   {
+    "id": "mq:3daa267390c2047f",
+    "label": "Abdul Yandoma",
+    "gold": false
+   },
+   {
+    "id": "mq:0be59481051e1c79",
+    "label": "Fred Aghogho Brume",
+    "gold": false
+   },
+   {
+    "id": "mq:3a0c1f34afa92145",
+    "label": "Adamu Gumba",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:4a228130cfd8f54d",
+    "label": "Abubakar Girei",
+    "gold": false
+   },
+   {
+    "id": "mq:8cdcd0fc0c32e25f",
+    "label": "Abdulahi Bala Adamu",
+    "gold": false
+   },
+   {
+    "id": "mq:0be59481051e1c79",
+    "label": "Fred Aghogho Brume",
+    "gold": false
+   },
+   {
+    "id": "mq:3daa267390c2047f",
+    "label": "Abdul Yandoma",
+    "gold": false
+   },
+   {
+    "id": "mq:3a0c1f34afa92145",
+    "label": "Adamu Gumba",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:4a228130cfd8f54d",
+    "label": "Abubakar Girei",
+    "gold": false
+   },
+   {
+    "id": "mq:8cdcd0fc0c32e25f",
+    "label": "Abdulahi Bala Adamu",
+    "gold": false
+   },
+   {
+    "id": "mq:0be59481051e1c79",
+    "label": "Fred Aghogho Brume",
+    "gold": false
+   },
+   {
+    "id": "mq:3daa267390c2047f",
+    "label": "Abdul Yandoma",
+    "gold": false
+   },
+   {
+    "id": "mq:3a0c1f34afa92145",
+    "label": "Adamu Gumba",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:8cdcd0fc0c32e25f",
+    "label": "Abdulahi Bala Adamu",
+    "gold": false
+   },
+   {
+    "id": "mq:3daa267390c2047f",
+    "label": "Abdul Yandoma",
+    "gold": false
+   },
+   {
+    "id": "mq:026a5993f8dbcaef",
+    "label": "Cambodian Civil War",
+    "gold": false
+   },
+   {
+    "id": "mq:4a228130cfd8f54d",
+    "label": "Abubakar Girei",
+    "gold": false
+   },
+   {
+    "id": "mq:0be59481051e1c79",
+    "label": "Fred Aghogho Brume",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

@@ -1,0 +1,463 @@
+{
+ "qid": "card:REM-130",
+ "set": "cards",
+ "question": "What was done about this, and why: docs: the house-voice checker runs on every push instead of when somebody remembers?",
+ "gold": [
+  {
+   "id": "commit/1361ce8c33",
+   "label": "commit 1361ce8: The house-voice gate did not say what it had read, and both halves cost time (#140)",
+   "seed": false
+  },
+  {
+   "id": "commit/36fd6706c0",
+   "label": "commit 36fd670: The house-voice checker runs on what you wrote, because the tree is 882 behind (#129)",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "board/cards/REM-130.md#1",
+   "label": "board/cards/REM-130.md",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-145.md#2",
+   "label": "board/cards/REM-145.md \u203a Goal",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/ee79da8239",
+   "label": "commit ee79da8: board: file REM-284 docs: the 13 house-voice phrases added in the last 48 hours are rewritten",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "research-notes/essay-graph/corpus/house-style-sirsh-medium/notes.md#1",
+   "label": "research-notes/essay-graph/corpus/house-style-sirsh-medium/notes.md \u203a The house voice",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "dev/check.sh#5",
+   "label": "dev/check.sh",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/1361ce8c33",
+    "label": "commit 1361ce8: The house-voice gate did not say what it had read, and both halves cost time (#140)",
+    "role": "gold"
+   },
+   {
+    "id": "commit/36fd6706c0",
+    "label": "commit 36fd670: The house-voice checker runs on what you wrote, because the tree is 882 behind (#129)",
+    "role": "gold"
+   },
+   {
+    "id": "dev/check.sh#5",
+    "label": "dev/check.sh",
+    "role": "seed"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/1361ce8c33",
+    "b": "commit/36fd6706c0",
+    "via": [
+     {
+      "kind": "term",
+      "key": "working vocabulary",
+      "width": 4
+     },
+     {
+      "kind": "term",
+      "key": "engineering prose",
+      "width": 8
+     },
+     {
+      "kind": "term",
+      "key": "rem 130",
+      "width": 10
+     },
+     {
+      "kind": "term",
+      "key": "hits across",
+      "width": 12
+     },
+     {
+      "kind": "term",
+      "key": "session_01s1pabrhajkqr7kqzbmgfac",
+      "width": 15
+     }
+    ]
+   },
+   {
+    "a": "commit/36fd6706c0",
+    "b": "dev/check.sh#5",
+    "via": [
+     {
+      "kind": "term",
+      "key": "working vocabulary",
+      "width": 4
+     },
+     {
+      "kind": "term",
+      "key": "writer rather",
+      "width": 4
+     },
+     {
+      "kind": "term",
+      "key": "exceptions list",
+      "width": 6
+     },
+     {
+      "kind": "term",
+      "key": "edits across",
+      "width": 7
+     },
+     {
+      "kind": "term",
+      "key": "engineering prose",
+      "width": 8
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "dev/check.sh#5",
+   "gold": "commit/36fd6706c0",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 1318,
+  "within_2_doors": 33112,
+  "gold_within_1": 2,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "commit/a9b242c6eb",
+    "label": "commit a9b242c: docs: the house-voice phrases added since 6cb70e8 are rewritten, outside the cards (REM-284)",
+    "p": 0.0071256923385000105,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-284.md#1",
+    "label": "board/cards/REM-284.md",
+    "p": 0.006972528959041688,
+    "gold": false
+   },
+   {
+    "id": "research-notes/essay-graph/corpus/house-style-sirsh-medium/notes.md#2",
+    "label": "research-notes/essay-graph/corpus/house-style-sirsh-medium/notes.md \u203a What he says the model gets wrong",
+    "p": 0.004518065233577678,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-130.md#2",
+    "label": "board/cards/REM-130.md \u203a Goal",
+    "p": 0.003794286663553861,
+    "gold": false
+   },
+   {
+    "id": "commit/36fd6706c0",
+    "label": "commit 36fd670: The house-voice checker runs on what you wrote, because the tree is 882 behind (#129)",
+    "p": 0.003782162952616781,
+    "gold": true
+   },
+   {
+    "id": "board/cards/REM-145.md#1",
+    "label": "board/cards/REM-145.md",
+    "p": 0.003781775111813325,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-145.md#3",
+    "label": "board/cards/REM-145.md \u203a Evidence",
+    "p": 0.0036504947975590546,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-284.md#2",
+    "label": "board/cards/REM-284.md \u203a Goal",
+    "p": 0.0030947494627887474,
+    "gold": false
+   },
+   {
+    "id": "commit/67c3d8b05d",
+    "label": "commit 67c3d8b: board: file REM-285 evaluation: stance_eval.py exits non-zero when the gate for widening search does not",
+    "p": 0.002914068521419337,
+    "gold": false
+   },
+   {
+    "id": "commit/a98a8efb35",
+    "label": "commit a98a8ef: board: file REM-283 access: the reading-list limit is a core plan limit, not a Python constant",
+    "p": 0.0027676874774458394,
+    "gold": false
+   },
+   {
+    "id": "research-notes/essay-graph/corpus/house-style-sirsh-medium/notes.md#4",
+    "label": "research-notes/essay-graph/corpus/house-style-sirsh-medium/notes.md \u203a The habits, from the docs-writing skill",
+    "p": 0.0026805489821972715,
+    "gold": false
+   },
+   {
+    "id": "research-notes/essay-graph/corpus/house-style-sirsh-medium/notes.md#3",
+    "label": "research-notes/essay-graph/corpus/house-style-sirsh-medium/notes.md \u203a What measuring it showed",
+    "p": 0.002512647064320859,
+    "gold": false
+   },
+   {
+    "id": "commit/b6794a01d0",
+    "label": "commit b6794a0: The skill said the scope was an open question, and it was answered today (#142)",
+    "p": 0.002179142323756769,
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-self-model/dreaming/README.md#4",
+    "label": "applications/percolate-self-model/dreaming/README.md \u203a Quick check",
+    "p": 0.002068871101931183,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-951.md#1",
+    "label": "board/cards/REM-951.md",
+    "p": 0.0020574877776752014,
+    "gold": false
+   },
+   {
+    "id": "commit/abcc1a9f84",
+    "label": "commit abcc1a9: The dream evaluators passed only when somebody ran them by hand",
+    "p": 0.0019519660937169145,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-144.md#2",
+    "label": "board/cards/REM-144.md \u203a Goal",
+    "p": 0.001950835918057882,
+    "gold": false
+   },
+   {
+    "id": "commit/6ce58f9442",
+    "label": "commit 6ce58f9: board: file REM-951 agents: get_guide remembers which capabilities each person was offered",
+    "p": 0.0019250271989643389,
+    "gold": false
+   },
+   {
+    "id": "meta/skills/docs-writing/banned.py#6",
+    "label": "meta/skills/docs-writing/banned.py",
+    "p": 0.001821530420875824,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-284.md#7",
+    "label": "board/cards/REM-284.md \u203a Log",
+    "p": 0.0016400871547551936,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "board/cards/REM-130.md#1",
+   "label": "board/cards/REM-130.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-145.md#2",
+   "label": "board/cards/REM-145.md \u203a Goal",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/ee79da8239",
+   "label": "commit ee79da8: board: file REM-284 docs: the 13 house-voice phrases added in the last 48 hours are rewritten",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "research-notes/essay-graph/corpus/house-style-sirsh-medium/notes.md#1",
+   "label": "research-notes/essay-graph/corpus/house-style-sirsh-medium/notes.md \u203a The house voice",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "dev/check.sh#5",
+   "label": "dev/check.sh",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/1361ce8c33",
+   "label": "commit 1361ce8: The house-voice gate did not say what it had read, and both halves cost time (#140)",
+   "wave": 1,
+   "via": "term:rem 130",
+   "gold": true
+  },
+  {
+   "id": "board/cards/REM-130.md#3",
+   "label": "board/cards/REM-130.md \u203a Evidence",
+   "wave": 1,
+   "via": "term:rem 130",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-144.md#8",
+   "label": "board/cards/REM-144.md \u203a Links",
+   "wave": 1,
+   "via": "term:rem 130",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-130.md#2",
+   "label": "board/cards/REM-130.md \u203a Goal",
+   "wave": 1,
+   "via": "term:rem 130",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-130.md#4",
+   "label": "board/cards/REM-130.md \u203a Log",
+   "wave": 1,
+   "via": "term:rem 130",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "commit/a9b242c6eb",
+    "label": "commit a9b242c: docs: the house-voice phrases added since 6cb70e8 are rewritten, outside the cards (REM-284)",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-284.md#1",
+    "label": "board/cards/REM-284.md",
+    "gold": false
+   },
+   {
+    "id": "research-notes/essay-graph/corpus/house-style-sirsh-medium/notes.md#2",
+    "label": "research-notes/essay-graph/corpus/house-style-sirsh-medium/notes.md \u203a What he says the model gets wrong",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-130.md#2",
+    "label": "board/cards/REM-130.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "commit/36fd6706c0",
+    "label": "commit 36fd670: The house-voice checker runs on what you wrote, because the tree is 882 behind (#129)",
+    "gold": true
+   }
+  ],
+  "Q": [
+   {
+    "id": "board/cards/REM-284.md#1",
+    "label": "board/cards/REM-284.md",
+    "gold": false
+   },
+   {
+    "id": "commit/a9b242c6eb",
+    "label": "commit a9b242c: docs: the house-voice phrases added since 6cb70e8 are rewritten, outside the cards (REM-284)",
+    "gold": false
+   },
+   {
+    "id": "commit/36fd6706c0",
+    "label": "commit 36fd670: The house-voice checker runs on what you wrote, because the tree is 882 behind (#129)",
+    "gold": true
+   },
+   {
+    "id": "board/cards/REM-145.md#1",
+    "label": "board/cards/REM-145.md",
+    "gold": false
+   },
+   {
+    "id": "research-notes/essay-graph/corpus/house-style-sirsh-medium/notes.md#4",
+    "label": "research-notes/essay-graph/corpus/house-style-sirsh-medium/notes.md \u203a The habits, from the docs-writing skill",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "board/cards/REM-284.md#1",
+    "label": "board/cards/REM-284.md",
+    "gold": false
+   },
+   {
+    "id": "commit/c1bdffba08",
+    "label": "commit c1bdffb: Operators on BEAM: wording (house voice)",
+    "gold": false
+   },
+   {
+    "id": "commit/a289362200",
+    "label": "commit a289362: musique-near: house-voice fix in the result note",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-145.md#1",
+    "label": "board/cards/REM-145.md",
+    "gold": false
+   },
+   {
+    "id": "commit/a608c8174e",
+    "label": "commit a608c81: REGISTERED.md: one word changed for the house-voice gate ('ranked plainly' -> 'ranked with no filter'); ",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "board/cards/REM-439.md#2",
+    "label": "board/cards/REM-439.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "meta/skills/docs-writing/SKILL.md#1",
+    "label": "meta/skills/docs-writing/SKILL.md",
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-12-described-three-lines-up.md#33",
+    "label": "meta/postmortems/2026-09-12-described-three-lines-up.md \u203a 9. What is being done",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-284.md#1",
+    "label": "board/cards/REM-284.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-145.md#1",
+    "label": "board/cards/REM-145.md",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.5,
+  "Q": 0.5,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

@@ -1,0 +1,596 @@
+{
+ "qid": "pr:686",
+ "set": "prs",
+ "question": "What work went into this, and why: walklab dreaming: tail operations on MuSiQue, the repo and BEAM (a cache of repairs, not a floor-lifter)?",
+ "gold": [
+  {
+   "id": "commit/21919917cd",
+   "label": "commit 2191991: walklab dreaming: the tail operations built from DEV EDGE misses (MuSiQue 7 items: 6 created edges, 20 p",
+   "seed": false
+  },
+  {
+   "id": "commit/28fd7fe157",
+   "label": "commit 28fd7fe: walklab dreaming: amend dream-tail before BEAM -- 0 documents shared across BEAM's DEV/held-out graphs, ",
+   "seed": false
+  },
+  {
+   "id": "commit/50d7844edf",
+   "label": "commit 50d7844: walklab dreaming: BEAM tail ops -- all arms .000 (held-out questions live in other conversations' graphs",
+   "seed": false
+  },
+  {
+   "id": "commit/5f9cc17a44",
+   "label": "commit 5f9cc17: walklab dreaming: tail ops rebuilt under the amendment (MuSiQue 18 created, 20 prune, 7 hubs; repo 12, 4",
+   "seed": false
+  },
+  {
+   "id": "commit/877b936379",
+   "label": "commit 877b936: walklab dreaming: amend dream-tail before scoring -- work list adds each corpus's bottom-10% DEV questio",
+   "seed": false
+  },
+  {
+   "id": "commit/9f5b99416b",
+   "label": "commit 9f5b994: walklab dreaming: tail operations scored -- create lifts MuSiQue's held-out tail +.025 over control (all",
+   "seed": true
+  },
+  {
+   "id": "commit/a6d02fc5c3",
+   "label": "commit a6d02fc: walklab dreaming: BEAM tail ops built (1 DEV EDGE item + 15 DEV tail questions: 8 created edges, 0 prune",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/18b49bf0d4",
+   "label": "commit 18b49bf: Merge pull request #686 from Percolation-Labs/cory/q3-topk",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "meta/lab/results/dream-tail/result.txt#4",
+   "label": "meta/lab/results/dream-tail/result.txt",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/messages/M-20261103-082654-8713.md#1",
+   "label": "board/messages/M-20261103-082654-8713.md",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/messages/M-20261103-083125-3cdc.md#1",
+   "label": "board/messages/M-20261103-083125-3cdc.md",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/9f5b99416b",
+   "label": "commit 9f5b994: walklab dreaming: tail operations scored -- create lifts MuSiQue's held-out tail +.025 over control (all",
+   "rank": 5,
+   "gold": true,
+   "doors_to_gold": 0
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/21919917cd",
+    "label": "commit 2191991: walklab dreaming: the tail operations built from DEV EDGE misses (MuSiQue 7 items: 6 created edges, 20 p",
+    "role": "gold"
+   },
+   {
+    "id": "commit/28fd7fe157",
+    "label": "commit 28fd7fe: walklab dreaming: amend dream-tail before BEAM -- 0 documents shared across BEAM's DEV/held-out graphs, ",
+    "role": "gold"
+   },
+   {
+    "id": "commit/50d7844edf",
+    "label": "commit 50d7844: walklab dreaming: BEAM tail ops -- all arms .000 (held-out questions live in other conversations' graphs",
+    "role": "gold"
+   },
+   {
+    "id": "commit/5f9cc17a44",
+    "label": "commit 5f9cc17: walklab dreaming: tail ops rebuilt under the amendment (MuSiQue 18 created, 20 prune, 7 hubs; repo 12, 4",
+    "role": "gold"
+   },
+   {
+    "id": "commit/877b936379",
+    "label": "commit 877b936: walklab dreaming: amend dream-tail before scoring -- work list adds each corpus's bottom-10% DEV questio",
+    "role": "gold"
+   },
+   {
+    "id": "commit/9f5b99416b",
+    "label": "commit 9f5b994: walklab dreaming: tail operations scored -- create lifts MuSiQue's held-out tail +.025 over control (all",
+    "role": "gold"
+   },
+   {
+    "id": "commit/a6d02fc5c3",
+    "label": "commit a6d02fc: walklab dreaming: BEAM tail ops built (1 DEV EDGE item + 15 DEV tail questions: 8 created edges, 0 prune",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/21919917cd",
+    "b": "commit/877b936379",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "walklab dreaming",
+      "width": 32
+     }
+    ]
+   },
+   {
+    "a": "commit/28fd7fe157",
+    "b": "commit/877b936379",
+    "via": [
+     {
+      "kind": "near",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "amend dream",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "dreaming amend",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "dream tail",
+      "width": 12
+     },
+     {
+      "kind": "term",
+      "key": "amend",
+      "width": 32
+     },
+     {
+      "kind": "term",
+      "key": "walklab dreaming",
+      "width": 32
+     }
+    ]
+   },
+   {
+    "a": "commit/28fd7fe157",
+    "b": "commit/a6d02fc5c3",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "walklab dreaming",
+      "width": 32
+     }
+    ]
+   },
+   {
+    "a": "commit/50d7844edf",
+    "b": "commit/a6d02fc5c3",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "beam tail",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "tail ops",
+      "width": 3
+     },
+     {
+      "kind": "term",
+      "key": "dreaming beam",
+      "width": 3
+     },
+     {
+      "kind": "term",
+      "key": "created edges",
+      "width": 16
+     },
+     {
+      "kind": "term",
+      "key": "walklab dreaming",
+      "width": 32
+     }
+    ]
+   },
+   {
+    "a": "commit/5f9cc17a44",
+    "b": "commit/877b936379",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "walklab dreaming",
+      "width": 32
+     }
+    ]
+   },
+   {
+    "a": "commit/5f9cc17a44",
+    "b": "commit/9f5b99416b",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "dreaming tail",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "walklab dreaming",
+      "width": 32
+     }
+    ]
+   }
+  ],
+  "cost": 6,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  "entry": {
+   "seed": "commit/9f5b99416b",
+   "gold": "commit/9f5b99416b",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 682,
+  "within_2_doors": 31290,
+  "gold_within_1": 6,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "meta/lab/results/dream-tail/result.txt#1",
+    "label": "meta/lab/results/dream-tail/result.txt",
+    "p": 0.008535677800511132,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/dream-tail/result.txt#2",
+    "label": "meta/lab/results/dream-tail/result.txt",
+    "p": 0.005610136775727768,
+    "gold": false
+   },
+   {
+    "id": "commit/50d7844edf",
+    "label": "commit 50d7844: walklab dreaming: BEAM tail ops -- all arms .000 (held-out questions live in other conversations' graphs",
+    "p": 0.004843929086929497,
+    "gold": true
+   },
+   {
+    "id": "meta/lab/results/dream-tail/result.txt#3",
+    "label": "meta/lab/results/dream-tail/result.txt",
+    "p": 0.004260733738288279,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/q4/dream_tail_score.py#1",
+    "label": "meta/lab/q4/dream_tail_score.py",
+    "p": 0.003850864214538503,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/q4/dream_tail_ops.py#1",
+    "label": "meta/lab/q4/dream_tail_ops.py",
+    "p": 0.003839338708055899,
+    "gold": false
+   },
+   {
+    "id": "commit/5f9cc17a44",
+    "label": "commit 5f9cc17: walklab dreaming: tail ops rebuilt under the amendment (MuSiQue 18 created, 20 prune, 7 hubs; repo 12, 4",
+    "p": 0.003243785065759915,
+    "gold": true
+   },
+   {
+    "id": "meta/lab/results/dream-tail/RULE.md#2",
+    "label": "meta/lab/results/dream-tail/RULE.md \u203a Dreaming to lift the floor: create (with a stated relation), prune and hub, learne",
+    "p": 0.0028231583060929527,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261103-103936-647a.md#2",
+    "label": "board/messages/M-20261103-103936-647a.md",
+    "p": 0.002812083874694385,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261102-190354-2bd2.md#1",
+    "label": "board/messages/M-20261102-190354-2bd2.md",
+    "p": 0.0026837086549883057,
+    "gold": false
+   },
+   {
+    "id": "commit/a6d02fc5c3",
+    "label": "commit a6d02fc: walklab dreaming: BEAM tail ops built (1 DEV EDGE item + 15 DEV tail questions: 8 created edges, 0 prune",
+    "p": 0.0024046154538482794,
+    "gold": true
+   },
+   {
+    "id": "meta/lab/results/dream-spectral/relabel-result.txt#2",
+    "label": "meta/lab/results/dream-spectral/relabel-result.txt",
+    "p": 0.002353435330800815,
+    "gold": false
+   },
+   {
+    "id": "commit/844e2816c9",
+    "label": "commit 844e281: board: bill messages sirsh",
+    "p": 0.0022459967937127055,
+    "gold": false
+   },
+   {
+    "id": "commit/21919917cd",
+    "label": "commit 2191991: walklab dreaming: the tail operations built from DEV EDGE misses (MuSiQue 7 items: 6 created edges, 20 p",
+    "p": 0.002220547264876225,
+    "gold": true
+   },
+   {
+    "id": "commit/59b16df49b",
+    "label": "commit 59b16df: board: train-watch messages all",
+    "p": 0.0020243990638910522,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261102-200715-bbb6.md#1",
+    "label": "board/messages/M-20261102-200715-bbb6.md",
+    "p": 0.0018121317393905913,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261102-191526-ea7f.md#1",
+    "label": "board/messages/M-20261102-191526-ea7f.md",
+    "p": 0.0017291498302154542,
+    "gold": false
+   },
+   {
+    "id": "specs/graph-evolution/benchmarks/README.md#2",
+    "label": "specs/graph-evolution/benchmarks/README.md \u203a Crispness comes first",
+    "p": 0.0017188932547998847,
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-10-20-lme-seeded-taxonomy/in_percolate/beam_query.py#2",
+    "label": "meta/spikes/2026-10-20-lme-seeded-taxonomy/in_percolate/beam_query.py",
+    "p": 0.0016551198577772703,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/q4/dream_tail_ops.py#5",
+    "label": "meta/lab/q4/dream_tail_ops.py",
+    "p": 0.0016312464186987428,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/18b49bf0d4",
+   "label": "commit 18b49bf: Merge pull request #686 from Percolation-Labs/cory/q3-topk",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/dream-tail/result.txt#4",
+   "label": "meta/lab/results/dream-tail/result.txt",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/messages/M-20261103-082654-8713.md#1",
+   "label": "board/messages/M-20261103-082654-8713.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/messages/M-20261103-083125-3cdc.md#1",
+   "label": "board/messages/M-20261103-083125-3cdc.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/9f5b99416b",
+   "label": "commit 9f5b994: walklab dreaming: tail operations scored -- create lifts MuSiQue's held-out tail +.025 over control (all",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "meta/lab/results/dream-tail/RULE.md#3",
+   "label": "meta/lab/results/dream-tail/RULE.md \u203a Dreaming to lift the floor: create (with a stated relation), prune and hub, learne",
+   "wave": 1,
+   "via": "term:dream tail",
+   "gold": false
+  },
+  {
+   "id": "commit/877b936379",
+   "label": "commit 877b936: walklab dreaming: amend dream-tail before scoring -- work list adds each corpus's bottom-10% DEV questio",
+   "wave": 1,
+   "via": "term:dream tail",
+   "gold": true
+  },
+  {
+   "id": "commit/28fd7fe157",
+   "label": "commit 28fd7fe: walklab dreaming: amend dream-tail before BEAM -- 0 documents shared across BEAM's DEV/held-out graphs, ",
+   "wave": 1,
+   "via": "term:dream tail",
+   "gold": true
+  },
+  {
+   "id": "meta/lab/results/dream-tail/result.txt#1",
+   "label": "meta/lab/results/dream-tail/result.txt",
+   "wave": 1,
+   "via": "term:dream tail",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/q4/dream_tail_ops.py#1",
+   "label": "meta/lab/q4/dream_tail_ops.py",
+   "wave": 1,
+   "via": "term:dream tail",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "meta/lab/results/dream-tail/result.txt#1",
+    "label": "meta/lab/results/dream-tail/result.txt",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/dream-tail/result.txt#2",
+    "label": "meta/lab/results/dream-tail/result.txt",
+    "gold": false
+   },
+   {
+    "id": "commit/50d7844edf",
+    "label": "commit 50d7844: walklab dreaming: BEAM tail ops -- all arms .000 (held-out questions live in other conversations' graphs",
+    "gold": true
+   },
+   {
+    "id": "meta/lab/results/dream-tail/result.txt#3",
+    "label": "meta/lab/results/dream-tail/result.txt",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/q4/dream_tail_score.py#1",
+    "label": "meta/lab/q4/dream_tail_score.py",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "meta/lab/results/dream-tail/result.txt#1",
+    "label": "meta/lab/results/dream-tail/result.txt",
+    "gold": false
+   },
+   {
+    "id": "commit/50d7844edf",
+    "label": "commit 50d7844: walklab dreaming: BEAM tail ops -- all arms .000 (held-out questions live in other conversations' graphs",
+    "gold": true
+   },
+   {
+    "id": "meta/lab/results/dream-tail/result.txt#2",
+    "label": "meta/lab/results/dream-tail/result.txt",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/dream-tail/RULE.md#2",
+    "label": "meta/lab/results/dream-tail/RULE.md \u203a Dreaming to lift the floor: create (with a stated relation), prune and hub, learne",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/dream-tail/result.txt#3",
+    "label": "meta/lab/results/dream-tail/result.txt",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/50d7844edf",
+    "label": "commit 50d7844: walklab dreaming: BEAM tail ops -- all arms .000 (held-out questions live in other conversations' graphs",
+    "gold": true
+   },
+   {
+    "id": "commit/5f9cc17a44",
+    "label": "commit 5f9cc17: walklab dreaming: tail ops rebuilt under the amendment (MuSiQue 18 created, 20 prune, 7 hubs; repo 12, 4",
+    "gold": true
+   },
+   {
+    "id": "commit/a6d02fc5c3",
+    "label": "commit a6d02fc: walklab dreaming: BEAM tail ops built (1 DEV EDGE item + 15 DEV tail questions: 8 created edges, 0 prune",
+    "gold": true
+   },
+   {
+    "id": "commit/21919917cd",
+    "label": "commit 2191991: walklab dreaming: the tail operations built from DEV EDGE misses (MuSiQue 7 items: 6 created edges, 20 p",
+    "gold": true
+   },
+   {
+    "id": "meta/lab/results/dream-tail/result.txt#1",
+    "label": "meta/lab/results/dream-tail/result.txt",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "commit/21919917cd",
+    "label": "commit 2191991: walklab dreaming: the tail operations built from DEV EDGE misses (MuSiQue 7 items: 6 created edges, 20 p",
+    "gold": true
+   },
+   {
+    "id": "commit/50d7844edf",
+    "label": "commit 50d7844: walklab dreaming: BEAM tail ops -- all arms .000 (held-out questions live in other conversations' graphs",
+    "gold": true
+   },
+   {
+    "id": "meta/lab/results/dream-tail/result.txt#1",
+    "label": "meta/lab/results/dream-tail/result.txt",
+    "gold": false
+   },
+   {
+    "id": "commit/5f9cc17a44",
+    "label": "commit 5f9cc17: walklab dreaming: tail ops rebuilt under the amendment (MuSiQue 18 created, 20 prune, 7 hubs; repo 12, 4",
+    "gold": true
+   },
+   {
+    "id": "meta/lab/results/dream-metric/TAIL.md#1",
+    "label": "meta/lab/results/dream-metric/TAIL.md \u203a Dreaming's tail metric: the definition and the tail sets, fixed before any opera",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.16666666666666666,
+  "Q": 0.16666666666666666,
+  "LQ": 0.6666666666666666,
+  "S": 0.5
+ }
+}

@@ -1,0 +1,427 @@
+{
+ "qid": "card:REM-311",
+ "set": "cards",
+ "question": "What was done about this, and why: rbac: a core upgrade that changes a permission kind keeps the role permissions granted on it?",
+ "gold": [
+  {
+   "id": "commit/9374b39cde",
+   "label": "commit 9374b39: An upgrade keeps research:publish on an application's publication role (REM-311)",
+   "seed": true
+  },
+  {
+   "id": "commit/ef8d4fecb6",
+   "label": "commit ef8d4fe: Merge pull request #211 from Percolation-Labs/amartey/upgrade-keeps-application-roles",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/6c1eac2ff8",
+   "label": "commit 6c1eac2: board: file REM-311 rbac: a core upgrade that changes a permission kind keeps the role permissions grant",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-311.md#1",
+   "label": "board/cards/REM-311.md",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-311.md#2",
+   "label": "board/cards/REM-311.md \u203a Goal",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-311.md#4",
+   "label": "board/cards/REM-311.md \u203a Done when",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/9374b39cde",
+   "label": "commit 9374b39: An upgrade keeps research:publish on an application's publication role (REM-311)",
+   "rank": 5,
+   "gold": true,
+   "doors_to_gold": 0
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/9374b39cde",
+    "label": "commit 9374b39: An upgrade keeps research:publish on an application's publication role (REM-311)",
+    "role": "gold"
+   },
+   {
+    "id": "commit/ef8d4fecb6",
+    "label": "commit ef8d4fe: Merge pull request #211 from Percolation-Labs/amartey/upgrade-keeps-application-roles",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/9374b39cde",
+    "b": "commit/ef8d4fecb6",
+    "via": [
+     {
+      "kind": "term",
+      "key": "publication role",
+      "width": 3
+     },
+     {
+      "kind": "term",
+      "key": "keeps research",
+      "width": 4
+     },
+     {
+      "kind": "term",
+      "key": "role rem",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "upgrade keeps",
+      "width": 8
+     },
+     {
+      "kind": "term",
+      "key": "rem 311",
+      "width": 27
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "commit/9374b39cde",
+   "gold": "commit/9374b39cde",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 954,
+  "within_2_doors": 32236,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "board/cards/REM-311.md#7",
+    "label": "board/cards/REM-311.md \u203a Log",
+    "p": 0.010128071767534535,
+    "gold": false
+   },
+   {
+    "id": "specs/user-rbac/schema.sql#14",
+    "label": "specs/user-rbac/schema.sql",
+    "p": 0.0051944089927780076,
+    "gold": false
+   },
+   {
+    "id": "commit/ef8d4fecb6",
+    "label": "commit ef8d4fe: Merge pull request #211 from Percolation-Labs/amartey/upgrade-keeps-application-roles",
+    "p": 0.0051269103846305585,
+    "gold": true
+   },
+   {
+    "id": "board/cards/REM-305.md#8",
+    "label": "board/cards/REM-305.md \u203a Log",
+    "p": 0.004887535278165166,
+    "gold": false
+   },
+   {
+    "id": "commit/6cd48b2a5c",
+    "label": "commit 6cd48b2: board: note on REM-306",
+    "p": 0.0034333285045785216,
+    "gold": false
+   },
+   {
+    "id": "commit/ad2101212c",
+    "label": "commit ad21012: An upgrade keeps application roles grantable (REM-193)",
+    "p": 0.0033032504219496083,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-306.md#9",
+    "label": "board/cards/REM-306.md \u203a Log",
+    "p": 0.003195556939632283,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-311.md#3",
+    "label": "board/cards/REM-311.md \u203a Evidence",
+    "p": 0.003114522776871098,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-305.md#9",
+    "label": "board/cards/REM-305.md \u203a Log",
+    "p": 0.0024055223759746223,
+    "gold": false
+   },
+   {
+    "id": "commit/a054012ec3",
+    "label": "commit a054012: board: REM-293 in-progress \u2192 done",
+    "p": 0.002390722434466861,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-318.md#7",
+    "label": "board/cards/REM-318.md \u203a Log",
+    "p": 0.0021667738240484487,
+    "gold": false
+   },
+   {
+    "id": "commit/cbc9ee3535",
+    "label": "commit cbc9ee3: Merge pull request #176 from Percolation-Labs/amartey/rem-193-upgrade-prunes-app-roles",
+    "p": 0.0021309972956856417,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-dream/vocab-3.txt#1",
+    "label": "meta/lab/results/q4-dream/vocab-3.txt",
+    "p": 0.0019830598716505084,
+    "gold": false
+   },
+   {
+    "id": "commit/65bb4fcd34",
+    "label": "commit 65bb4fc: A person can delegate publishing to one of their agent's credentials, in one publication",
+    "p": 0.001952414169972592,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-dream/vocab-all.txt#4",
+    "label": "meta/lab/results/q4-dream/vocab-all.txt",
+    "p": 0.0019340316958910237,
+    "gold": false
+   },
+   {
+    "id": "dev/init/02-seed.sql#3",
+    "label": "dev/init/02-seed.sql",
+    "p": 0.0019115377420156647,
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-ui/mockups/build.py#41",
+    "label": "applications/percolate-ui/mockups/build.py",
+    "p": 0.001873932341033779,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-dream/vocab-2.txt#2",
+    "label": "meta/lab/results/q4-dream/vocab-2.txt",
+    "p": 0.0018539946387518848,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-287.md#9",
+    "label": "board/cards/REM-287.md \u203a Log",
+    "p": 0.0018334889604084662,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-311.md#5",
+    "label": "board/cards/REM-311.md \u203a Scope",
+    "p": 0.0017715773682398426,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/6c1eac2ff8",
+   "label": "commit 6c1eac2: board: file REM-311 rbac: a core upgrade that changes a permission kind keeps the role permissions grant",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-311.md#1",
+   "label": "board/cards/REM-311.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-311.md#2",
+   "label": "board/cards/REM-311.md \u203a Goal",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-311.md#4",
+   "label": "board/cards/REM-311.md \u203a Done when",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/9374b39cde",
+   "label": "commit 9374b39: An upgrade keeps research:publish on an application's publication role (REM-311)",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "meta/postmortems/README.md#18",
+   "label": "meta/postmortems/README.md \u203a A defect that exists only in the DATA of an upgraded database",
+   "wave": 1,
+   "via": "term:rem 311",
+   "gold": false
+  },
+  {
+   "id": "commit/628ff667df",
+   "label": "commit 628ff66: board: REM-311 in-progress \u2192 done",
+   "wave": 1,
+   "via": "term:rem 311",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-318.md#3",
+   "label": "board/cards/REM-318.md \u203a Evidence",
+   "wave": 1,
+   "via": "term:rem 311",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-318.md#2",
+   "label": "board/cards/REM-318.md \u203a Goal",
+   "wave": 1,
+   "via": "term:rem 311",
+   "gold": false
+  },
+  {
+   "id": "commit/ef8d4fecb6",
+   "label": "commit ef8d4fe: Merge pull request #211 from Percolation-Labs/amartey/upgrade-keeps-application-roles",
+   "wave": 1,
+   "via": "term:rem 311",
+   "gold": true
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "board/cards/REM-311.md#7",
+    "label": "board/cards/REM-311.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "specs/user-rbac/schema.sql#14",
+    "label": "specs/user-rbac/schema.sql",
+    "gold": false
+   },
+   {
+    "id": "commit/ef8d4fecb6",
+    "label": "commit ef8d4fe: Merge pull request #211 from Percolation-Labs/amartey/upgrade-keeps-application-roles",
+    "gold": true
+   },
+   {
+    "id": "board/cards/REM-305.md#8",
+    "label": "board/cards/REM-305.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "commit/6cd48b2a5c",
+    "label": "commit 6cd48b2: board: note on REM-306",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "board/cards/REM-311.md#7",
+    "label": "board/cards/REM-311.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "specs/user-rbac/schema.sql#14",
+    "label": "specs/user-rbac/schema.sql",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-305.md#8",
+    "label": "board/cards/REM-305.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "commit/ef8d4fecb6",
+    "label": "commit ef8d4fe: Merge pull request #211 from Percolation-Labs/amartey/upgrade-keeps-application-roles",
+    "gold": true
+   },
+   {
+    "id": "commit/ad2101212c",
+    "label": "commit ad21012: An upgrade keeps application roles grantable (REM-193)",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/ef8d4fecb6",
+    "label": "commit ef8d4fe: Merge pull request #211 from Percolation-Labs/amartey/upgrade-keeps-application-roles",
+    "gold": true
+   },
+   {
+    "id": "commit/628ff667df",
+    "label": "commit 628ff66: board: REM-311 in-progress \u2192 done",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-318.md#2",
+    "label": "board/cards/REM-318.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-311.md#8",
+    "label": "board/cards/REM-311.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "commit/2cf274cdd6",
+    "label": "commit 2cf274c: release-and-gitops: a core upgrade moves the backup and operator Jobs' image too (REM-470)",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "commit/ad2101212c",
+    "label": "commit ad21012: An upgrade keeps application roles grantable (REM-193)",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-318.md#2",
+    "label": "board/cards/REM-318.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-287.md#9",
+    "label": "board/cards/REM-287.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "specs/user-rbac/schema.sql#14",
+    "label": "specs/user-rbac/schema.sql",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-305.md#8",
+    "label": "board/cards/REM-305.md \u203a Log",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 1.0,
+  "Q": 1.0,
+  "LQ": 1.0,
+  "S": 0.0
+ }
+}

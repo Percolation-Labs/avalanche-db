@@ -1,0 +1,427 @@
+{
+ "qid": "card:REM-543",
+ "set": "cards",
+ "question": "What was done about this, and why: gates: an upstream version mismatch warns in the hook and fails only in CI?",
+ "gold": [
+  {
+   "id": "commit/124380c5f1",
+   "label": "commit 124380c: Merge pull request #283 from Percolation-Labs/amartey/rem-543-upstream-mismatch-warns",
+   "seed": true
+  },
+  {
+   "id": "commit/225b1b8d21",
+   "label": "commit 225b1b8: references.sh \u00a73: an upstream core mismatch warns in the hook, fails in CI (REM-543)",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/8c9bf5274e",
+   "label": "commit 8c9bf52: board: file REM-543 gates: an upstream version mismatch warns in the hook and fails only in CI",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-543.md#1",
+   "label": "board/cards/REM-543.md",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/124380c5f1",
+   "label": "commit 124380c: Merge pull request #283 from Percolation-Labs/amartey/rem-543-upstream-mismatch-warns",
+   "rank": 3,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "commit/225b1b8d21",
+   "label": "commit 225b1b8: references.sh \u00a73: an upstream core mismatch warns in the hook, fails in CI (REM-543)",
+   "rank": 4,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "board/cards/REM-543.md#5",
+   "label": "board/cards/REM-543.md \u203a Log",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/124380c5f1",
+    "label": "commit 124380c: Merge pull request #283 from Percolation-Labs/amartey/rem-543-upstream-mismatch-warns",
+    "role": "gold"
+   },
+   {
+    "id": "commit/225b1b8d21",
+    "label": "commit 225b1b8: references.sh \u00a73: an upstream core mismatch warns in the hook, fails in CI (REM-543)",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/124380c5f1",
+    "b": "commit/225b1b8d21",
+    "via": [
+     {
+      "kind": "term",
+      "key": "core mismatch",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "upstream core",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "hook fails",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "mismatch warns",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "rem 543",
+      "width": 15
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "commit/124380c5f1",
+   "gold": "commit/124380c5f1",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 533,
+  "within_2_doors": 31241,
+  "gold_within_1": 0,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "board/cards/REM-543.md#3",
+    "label": "board/cards/REM-543.md \u203a Done when",
+    "p": 0.010215036447051752,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-543.md#2",
+    "label": "board/cards/REM-543.md \u203a Goal",
+    "p": 0.007902608000762609,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-658.md#6",
+    "label": "board/cards/REM-658.md \u203a Log",
+    "p": 0.005359469884896182,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-543.md#4",
+    "label": "board/cards/REM-543.md \u203a Scope",
+    "p": 0.0043320471697814115,
+    "gold": false
+   },
+   {
+    "id": "dev/references.sh#5",
+    "label": "dev/references.sh",
+    "p": 0.003921527721537957,
+    "gold": false
+   },
+   {
+    "id": "commit/e9bec0f6e9",
+    "label": "commit e9bec0f: board: file REM-544 tests: a fresh application worktree's suite builds the web app or names the skip",
+    "p": 0.003364308233383011,
+    "gold": false
+   },
+   {
+    "id": "commit/c00af117a9",
+    "label": "commit c00af11: board: file REM-542 release: a core release tags main and moves it to the next version in one step",
+    "p": 0.0033172935149459303,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-19-a-night-the-checks-did-not-run.md#13",
+    "label": "meta/postmortems/2026-09-19-a-night-the-checks-did-not-run.md \u203a What changes",
+    "p": 0.0032780222574565355,
+    "gold": false
+   },
+   {
+    "id": "commit/66a4b8927c",
+    "label": "commit 66a4b89: Merge pull request #83 from Percolation-Labs/dependabot/github_actions/actions-0de1d366a6",
+    "p": 0.002510914685670807,
+    "gold": false
+   },
+   {
+    "id": "commit/460877e99f",
+    "label": "commit 460877e: Merge pull request #286 from Percolation-Labs/amartey/rem-513-bootstrap-is-operator",
+    "p": 0.0024959588424411567,
+    "gold": false
+   },
+   {
+    "id": "commit/22d57cad40",
+    "label": "commit 22d57ca: board: REM-563 in-progress \u2192 done",
+    "p": 0.002414289315041855,
+    "gold": false
+   },
+   {
+    "id": "commit/294f259db9",
+    "label": "commit 294f259: Postmortem: a night the checks did not run (18\u201319 Sep)",
+    "p": 0.002273474148299507,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-19-a-night-the-checks-did-not-run.md#1",
+    "label": "meta/postmortems/2026-09-19-a-night-the-checks-did-not-run.md",
+    "p": 0.0022304651912734797,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-655.md#17",
+    "label": "board/cards/REM-655.md \u203a Log",
+    "p": 0.0021312555687802623,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-19-a-night-the-checks-did-not-run.md#14",
+    "label": "meta/postmortems/2026-09-19-a-night-the-checks-did-not-run.md \u203a What changes",
+    "p": 0.002045996645934156,
+    "gold": false
+   },
+   {
+    "id": "commit/ba32db6c50",
+    "label": "commit ba32db6: board: REM-543 in-progress \u2192 review",
+    "p": 0.001971046010510968,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/casebook/CASEBOOK.md#12",
+    "label": "meta/lab/results/casebook/CASEBOOK.md \u203a Every miss",
+    "p": 0.00192460309369613,
+    "gold": false
+   },
+   {
+    "id": "commit/7334fdee33",
+    "label": "commit 7334fde: board: p8-subsystems-a6 takes REM-543",
+    "p": 0.0019043911219002734,
+    "gold": false
+   },
+   {
+    "id": "commit/c7f00af37d",
+    "label": "commit c7f00af: board: REM-543 review \u2192 done",
+    "p": 0.0018852636961387513,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-658.md#7",
+    "label": "board/cards/REM-658.md \u203a Log",
+    "p": 0.0011327369648439388,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/8c9bf5274e",
+   "label": "commit 8c9bf52: board: file REM-543 gates: an upstream version mismatch warns in the hook and fails only in CI",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-543.md#1",
+   "label": "board/cards/REM-543.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/124380c5f1",
+   "label": "commit 124380c: Merge pull request #283 from Percolation-Labs/amartey/rem-543-upstream-mismatch-warns",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "commit/225b1b8d21",
+   "label": "commit 225b1b8: references.sh \u00a73: an upstream core mismatch warns in the hook, fails in CI (REM-543)",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "board/cards/REM-543.md#5",
+   "label": "board/cards/REM-543.md \u203a Log",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-543.md#2",
+   "label": "board/cards/REM-543.md \u203a Goal",
+   "wave": 1,
+   "via": "term:rem 543",
+   "gold": false
+  },
+  {
+   "id": "commit/ba32db6c50",
+   "label": "commit ba32db6: board: REM-543 in-progress \u2192 review",
+   "wave": 1,
+   "via": "term:rem 543",
+   "gold": false
+  },
+  {
+   "id": "commit/c7f00af37d",
+   "label": "commit c7f00af: board: REM-543 review \u2192 done",
+   "wave": 1,
+   "via": "term:rem 543",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-543.md#3",
+   "label": "board/cards/REM-543.md \u203a Done when",
+   "wave": 1,
+   "via": "term:rem 543",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-543.md#4",
+   "label": "board/cards/REM-543.md \u203a Scope",
+   "wave": 1,
+   "via": "term:rem 543",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "board/cards/REM-543.md#3",
+    "label": "board/cards/REM-543.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-543.md#2",
+    "label": "board/cards/REM-543.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-658.md#6",
+    "label": "board/cards/REM-658.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-543.md#4",
+    "label": "board/cards/REM-543.md \u203a Scope",
+    "gold": false
+   },
+   {
+    "id": "dev/references.sh#5",
+    "label": "dev/references.sh",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "board/cards/REM-543.md#3",
+    "label": "board/cards/REM-543.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-543.md#2",
+    "label": "board/cards/REM-543.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-19-a-night-the-checks-did-not-run.md#13",
+    "label": "meta/postmortems/2026-09-19-a-night-the-checks-did-not-run.md \u203a What changes",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-658.md#6",
+    "label": "board/cards/REM-658.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "dev/references.sh#5",
+    "label": "dev/references.sh",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "board/cards/REM-543.md#3",
+    "label": "board/cards/REM-543.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-543.md#2",
+    "label": "board/cards/REM-543.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "commit/c7f00af37d",
+    "label": "commit c7f00af: board: REM-543 review \u2192 done",
+    "gold": false
+   },
+   {
+    "id": "commit/da4d3730a6",
+    "label": "commit da4d373: board: file REM-810 gates: the board warns when the shared hooksPath turns absolute",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-810.md#1",
+    "label": "board/cards/REM-810.md",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "board/cards/REM-543.md#3",
+    "label": "board/cards/REM-543.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-543.md#2",
+    "label": "board/cards/REM-543.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-371.md#2",
+    "label": "board/cards/REM-371.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "commit/da4d3730a6",
+    "label": "commit da4d373: board: file REM-810 gates: the board warns when the shared hooksPath turns absolute",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-803.md#5",
+    "label": "board/cards/REM-803.md \u203a Log",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": null,
+  "Q": null,
+  "LQ": null,
+  "S": null
+ }
+}

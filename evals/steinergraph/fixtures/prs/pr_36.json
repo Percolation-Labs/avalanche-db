@@ -1,0 +1,605 @@
+{
+ "qid": "pr:36",
+ "set": "prs",
+ "question": "What work went into this, and why: A retracted edge went on answering every walk, and five views answered for the wrong tenant?",
+ "gold": [
+  {
+   "id": "commit/034b4e4f04",
+   "label": "commit 034b4e4: Three fixes the new assertions found in the fix itself",
+   "seed": false
+  },
+  {
+   "id": "commit/13296e4f4c",
+   "label": "commit 13296e4: What a parser rebuild costs, where the next person will look for it",
+   "seed": false
+  },
+  {
+   "id": "commit/2d54769a16",
+   "label": "commit 2d54769: A retracted edge went on answering every walk and every GRAPH query",
+   "seed": true
+  },
+  {
+   "id": "commit/848feb3dd2",
+   "label": "commit 848feb3: Say what the view sweep did not cover",
+   "seed": false
+  },
+  {
+   "id": "commit/9138e6c002",
+   "label": "commit 9138e6c: The self-model's from-zero load, and what it proved about REM-60",
+   "seed": false
+  },
+  {
+   "id": "commit/a6f71fc27c",
+   "label": "commit a6f71fc: Two new assertions would have passed with their subject missing",
+   "seed": false
+  },
+  {
+   "id": "commit/f127838197",
+   "label": "commit f127838: The measured numbers, taken when the machine was quieter",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/b11c109c3a",
+   "label": "commit b11c109: Merge pull request #36 from Percolation-Labs/fix/rem-51-60-65-edge-currency",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/2d54769a16",
+   "label": "commit 2d54769: A retracted edge went on answering every walk and every GRAPH query",
+   "rank": 2,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "meta/postmortems/2026-09-12-the-queue-is-the-product.md#1",
+   "label": "meta/postmortems/2026-09-12-the-queue-is-the-product.md \u203a Seven PRs in five hours, and the code was the cheap part",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "specs/ai-query-layer/graph-identity.md#16",
+   "label": "specs/ai-query-layer/graph-identity.md \u203a Edge table (canonical for soft links)",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "specs/world-model-ingestion/graph.sql#32",
+   "label": "specs/world-model-ingestion/graph.sql",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/034b4e4f04",
+    "label": "commit 034b4e4: Three fixes the new assertions found in the fix itself",
+    "role": "gold"
+   },
+   {
+    "id": "commit/13296e4f4c",
+    "label": "commit 13296e4: What a parser rebuild costs, where the next person will look for it",
+    "role": "gold"
+   },
+   {
+    "id": "commit/2d54769a16",
+    "label": "commit 2d54769: A retracted edge went on answering every walk and every GRAPH query",
+    "role": "gold"
+   },
+   {
+    "id": "commit/848feb3dd2",
+    "label": "commit 848feb3: Say what the view sweep did not cover",
+    "role": "gold"
+   },
+   {
+    "id": "commit/9138e6c002",
+    "label": "commit 9138e6c: The self-model's from-zero load, and what it proved about REM-60",
+    "role": "gold"
+   },
+   {
+    "id": "commit/a6f71fc27c",
+    "label": "commit a6f71fc: Two new assertions would have passed with their subject missing",
+    "role": "gold"
+   },
+   {
+    "id": "commit/f127838197",
+    "label": "commit f127838: The measured numbers, taken when the machine was quieter",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/034b4e4f04",
+    "b": "commit/9138e6c002",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "session_01vfjyxea5x5qrbv8w3fceig",
+      "width": 12
+     },
+     {
+      "kind": "term",
+      "key": "code session_01vfjyxea5x5qrbv8w3fceig",
+      "width": 12
+     },
+     {
+      "kind": "term",
+      "key": "retracted",
+      "width": 92
+     }
+    ]
+   },
+   {
+    "a": "commit/034b4e4f04",
+    "b": "commit/a6f71fc27c",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "session_01vfjyxea5x5qrbv8w3fceig",
+      "width": 12
+     },
+     {
+      "kind": "term",
+      "key": "code session_01vfjyxea5x5qrbv8w3fceig",
+      "width": 12
+     }
+    ]
+   },
+   {
+    "a": "commit/13296e4f4c",
+    "b": "commit/848feb3dd2",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "session_01vfjyxea5x5qrbv8w3fceig",
+      "width": 12
+     },
+     {
+      "kind": "term",
+      "key": "code session_01vfjyxea5x5qrbv8w3fceig",
+      "width": 12
+     }
+    ]
+   },
+   {
+    "a": "commit/13296e4f4c",
+    "b": "commit/f127838197",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "session_01vfjyxea5x5qrbv8w3fceig",
+      "width": 12
+     },
+     {
+      "kind": "term",
+      "key": "code session_01vfjyxea5x5qrbv8w3fceig",
+      "width": 12
+     },
+     {
+      "kind": "term",
+      "key": "test run",
+      "width": 41
+     }
+    ]
+   },
+   {
+    "a": "commit/2d54769a16",
+    "b": "commit/9138e6c002",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "model refresh",
+      "width": 8
+     },
+     {
+      "kind": "term",
+      "key": "code session_01vfjyxea5x5qrbv8w3fceig",
+      "width": 12
+     },
+     {
+      "kind": "term",
+      "key": "session_01vfjyxea5x5qrbv8w3fceig",
+      "width": 12
+     },
+     {
+      "kind": "term",
+      "key": "rem 60",
+      "width": 13
+     },
+     {
+      "kind": "term",
+      "key": "edge_retractions",
+      "width": 13
+     }
+    ]
+   },
+   {
+    "a": "commit/a6f71fc27c",
+    "b": "commit/f127838197",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "session_01vfjyxea5x5qrbv8w3fceig",
+      "width": 12
+     },
+     {
+      "kind": "term",
+      "key": "code session_01vfjyxea5x5qrbv8w3fceig",
+      "width": 12
+     }
+    ]
+   }
+  ],
+  "cost": 6,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  "entry": {
+   "seed": "commit/2d54769a16",
+   "gold": "commit/2d54769a16",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 2917,
+  "within_2_doors": 33239,
+  "gold_within_1": 6,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "commit/6aabfe714c",
+    "label": "commit 6aabfe7: Seven PRs in five hours, and the code was the cheap part (#138)",
+    "p": 0.0037247973446282467,
+    "gold": false
+   },
+   {
+    "id": "commit/4bb566c939",
+    "label": "commit 4bb566c: CI builds the parser, so the pair is what is under test (#62)",
+    "p": 0.0034248484312825187,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261029-110335-efd6.md#1",
+    "label": "board/messages/M-20261029-110335-efd6.md",
+    "p": 0.002463120364275523,
+    "gold": false
+   },
+   {
+    "id": "commit/fd94daa01d",
+    "label": "commit fd94daa: A source came back and the graph did not",
+    "p": 0.0020500624595242607,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-11-four-spellings-of-current.md#4",
+    "label": "meta/postmortems/2026-09-11-four-spellings-of-current.md \u203a 3. The two designs worth writing down",
+    "p": 0.0019497603404387365,
+    "gold": false
+   },
+   {
+    "id": "specs/ai-query-layer/graph-identity.md#15",
+    "label": "specs/ai-query-layer/graph-identity.md \u203a Edge table (canonical for soft links)",
+    "p": 0.0019300966006363103,
+    "gold": false
+   },
+   {
+    "id": "commit/f5d20fb523",
+    "label": "commit f5d20fb: The fast image path cannot see a parser change, so say so here",
+    "p": 0.0019165839080891377,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-18-a-day-the-gates-measured-the-machine.md#10",
+    "label": "meta/postmortems/2026-09-18-a-day-the-gates-measured-the-machine.md \u203a The cause under all of it",
+    "p": 0.0015976996812671047,
+    "gold": false
+   },
+   {
+    "id": "specs/world-model-ingestion/graph.sql#31",
+    "label": "specs/world-model-ingestion/graph.sql",
+    "p": 0.0015915253020228693,
+    "gold": false
+   },
+   {
+    "id": "commit/e738284d43",
+    "label": "commit e738284: P8QL: SQL needs no keyword, HYBRID becomes SEARCH, FUZZY prefixes, LOOKUP takes a list",
+    "p": 0.001247235753936379,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-11-four-spellings-of-current.md#2",
+    "label": "meta/postmortems/2026-09-11-four-spellings-of-current.md \u203a 1. The four spellings",
+    "p": 0.0011786935363613785,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-11-four-spellings-of-current.md#3",
+    "label": "meta/postmortems/2026-09-11-four-spellings-of-current.md \u203a 2. What cost the most time",
+    "p": 0.0011759834847224775,
+    "gold": false
+   },
+   {
+    "id": "dev/weekly-report.sh#1",
+    "label": "dev/weekly-report.sh",
+    "p": 0.0011709517987353482,
+    "gold": false
+   },
+   {
+    "id": "PACKAGING.md#20",
+    "label": "PACKAGING.md \u203a Three paths to a running change, and keeping them apart",
+    "p": 0.0011612001880770867,
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-self-model/dreaming/equivalence/graph_assemble.py#5",
+    "label": "applications/percolate-self-model/dreaming/equivalence/graph_assemble.py",
+    "p": 0.0010835051521001923,
+    "gold": false
+   },
+   {
+    "id": "output/full-flow/README.md#4",
+    "label": "output/full-flow/README.md \u203a Rebuild and verification",
+    "p": 0.0010825250970016534,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-12-the-queue-is-the-product.md#2",
+    "label": "meta/postmortems/2026-09-12-the-queue-is-the-product.md \u203a What the day actually looked like, measured",
+    "p": 0.0010655370265208071,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-78.md#1",
+    "label": "board/cards/REM-78.md",
+    "p": 0.0010540168023255466,
+    "gold": false
+   },
+   {
+    "id": "commit/31a94ddd00",
+    "label": "commit 31a94dd: A gate that can write: the hook rebuilt the served database and a test committed to the branch (#88)",
+    "p": 0.0009922732765360227,
+    "gold": false
+   },
+   {
+    "id": "specs/ai-query-layer/graph-identity.md#17",
+    "label": "specs/ai-query-layer/graph-identity.md \u203a Edge table (canonical for soft links)",
+    "p": 0.000950351844919783,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/b11c109c3a",
+   "label": "commit b11c109: Merge pull request #36 from Percolation-Labs/fix/rem-51-60-65-edge-currency",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/2d54769a16",
+   "label": "commit 2d54769: A retracted edge went on answering every walk and every GRAPH query",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "meta/postmortems/2026-09-12-the-queue-is-the-product.md#1",
+   "label": "meta/postmortems/2026-09-12-the-queue-is-the-product.md \u203a Seven PRs in five hours, and the code was the cheap part",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/ai-query-layer/graph-identity.md#16",
+   "label": "specs/ai-query-layer/graph-identity.md \u203a Edge table (canonical for soft links)",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/world-model-ingestion/graph.sql#32",
+   "label": "specs/world-model-ingestion/graph.sql",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/claims/graph.md#50",
+   "label": "specs/claims/graph.md \u203a Four candidate designs",
+   "wave": 1,
+   "via": "term:rem 51",
+   "gold": false
+  },
+  {
+   "id": "PACKAGING.md#20",
+   "label": "PACKAGING.md \u203a Three paths to a running change, and keeping them apart",
+   "wave": 1,
+   "via": "term:rem 51",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-51.md#2",
+   "label": "board/cards/REM-51.md \u203a Log",
+   "wave": 1,
+   "via": "term:rem 51",
+   "gold": false
+  },
+  {
+   "id": "meta/postmortems/2026-09-11-four-spellings-of-current.md#1",
+   "label": "meta/postmortems/2026-09-11-four-spellings-of-current.md \u203a Four spellings of \"current\", and the tests that pinned the wr",
+   "wave": 1,
+   "via": "term:rem 51",
+   "gold": false
+  },
+  {
+   "id": "meta/postmortems/2026-09-11-owner-privileged-views.md#1",
+   "label": "meta/postmortems/2026-09-11-owner-privileged-views.md \u203a The view that was written down as a hazard and left",
+   "wave": 1,
+   "via": "term:rem 51",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "commit/6aabfe714c",
+    "label": "commit 6aabfe7: Seven PRs in five hours, and the code was the cheap part (#138)",
+    "gold": false
+   },
+   {
+    "id": "commit/4bb566c939",
+    "label": "commit 4bb566c: CI builds the parser, so the pair is what is under test (#62)",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261029-110335-efd6.md#1",
+    "label": "board/messages/M-20261029-110335-efd6.md",
+    "gold": false
+   },
+   {
+    "id": "commit/fd94daa01d",
+    "label": "commit fd94daa: A source came back and the graph did not",
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-11-four-spellings-of-current.md#4",
+    "label": "meta/postmortems/2026-09-11-four-spellings-of-current.md \u203a 3. The two designs worth writing down",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "commit/4bb566c939",
+    "label": "commit 4bb566c: CI builds the parser, so the pair is what is under test (#62)",
+    "gold": false
+   },
+   {
+    "id": "commit/fd94daa01d",
+    "label": "commit fd94daa: A source came back and the graph did not",
+    "gold": false
+   },
+   {
+    "id": "commit/6aabfe714c",
+    "label": "commit 6aabfe7: Seven PRs in five hours, and the code was the cheap part (#138)",
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-11-four-spellings-of-current.md#4",
+    "label": "meta/postmortems/2026-09-11-four-spellings-of-current.md \u203a 3. The two designs worth writing down",
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-11-four-spellings-of-current.md#3",
+    "label": "meta/postmortems/2026-09-11-four-spellings-of-current.md \u203a 2. What cost the most time",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "board/messages/M-20261029-110335-efd6.md#1",
+    "label": "board/messages/M-20261029-110335-efd6.md",
+    "gold": false
+   },
+   {
+    "id": "specs/world-model-ingestion/graph-index.md#61",
+    "label": "specs/world-model-ingestion/graph-index.md \u203a 11.2 Weight is the best tier that asserted an edge, not the last",
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-11-four-spellings-of-current.md#3",
+    "label": "meta/postmortems/2026-09-11-four-spellings-of-current.md \u203a 2. What cost the most time",
+    "gold": false
+   },
+   {
+    "id": "commit/beff7e1abd",
+    "label": "commit beff7e1: Merge pull request #35 from Percolation-Labs/fix/rem-45-46-gates-see-everything",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-567.md#3",
+    "label": "board/cards/REM-567.md \u203a Evidence",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "meta/postmortems/2026-09-12-the-diagnosis-was-the-expensive-half.md#1",
+    "label": "meta/postmortems/2026-09-12-the-diagnosis-was-the-expensive-half.md \u203a The diagnosis was the expensive half",
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-06-the-release-ran-fewer-gates-than-a-push.md#1",
+    "label": "meta/postmortems/2026-09-06-the-release-ran-fewer-gates-than-a-push.md \u203a The release ran fewer gates than a push",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1285.md#2",
+    "label": "board/cards/REM-1285.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "commit/f4e107d84d",
+    "label": "commit f4e107d: The graph scale harness could not insert an edge",
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-18-a-day-the-gates-measured-the-machine.md#1",
+    "label": "meta/postmortems/2026-09-18-a-day-the-gates-measured-the-machine.md \u203a A day the gates measured the machine",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

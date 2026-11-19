@@ -1,0 +1,454 @@
+{
+ "qid": "RW:3hop1__305282_282081_10972",
+ "set": "mq",
+ "question": "When did the city where Ill's performer was born elect its first black mayor?",
+ "gold": [
+  {
+   "id": "mq:55b25d5bc46fd394",
+   "label": "Flyin' the Koop",
+   "seed": false
+  },
+  {
+   "id": "mq:d58419bd8140a58e",
+   "label": "Black people",
+   "seed": true
+  },
+  {
+   "id": "mq:df0cce6a8d0ea77f",
+   "label": "III (Stanton Moore album)",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:762b3caba4b29988",
+   "label": "List of mayors of Willoughby",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:6a25cc0834523513",
+   "label": "2017 Atlantic City mayoral election",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "mq:d58419bd8140a58e",
+   "label": "Black people",
+   "rank": 3,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:eb779a37bbeba03d",
+   "label": "Detroit",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:ed697ee069765b54",
+   "label": "E. Denise Simmons",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 2
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:55b25d5bc46fd394",
+    "label": "Flyin' the Koop",
+    "role": "gold"
+   },
+   {
+    "id": "mq:d58419bd8140a58e",
+    "label": "Black people",
+    "role": "gold"
+   },
+   {
+    "id": "mq:df0cce6a8d0ea77f",
+    "label": "III (Stanton Moore album)",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:55b25d5bc46fd394",
+    "b": "mq:d58419bd8140a58e",
+    "via": [
+     {
+      "kind": "term",
+      "key": "orleans",
+      "width": 58
+     }
+    ]
+   },
+   {
+    "a": "mq:55b25d5bc46fd394",
+    "b": "mq:df0cce6a8d0ea77f",
+    "via": [
+     {
+      "kind": "near",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "stanton moore",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "stanton",
+      "width": 9
+     },
+     {
+      "kind": "term",
+      "key": "funk",
+      "width": 25
+     },
+     {
+      "kind": "term",
+      "key": "moore",
+      "width": 39
+     },
+     {
+      "kind": "term",
+      "key": "solo album",
+      "width": 44
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   1,
+   2
+  ],
+  "entry": {
+   "seed": "mq:d58419bd8140a58e",
+   "gold": "mq:d58419bd8140a58e",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 2180,
+  "within_2_doors": 18902,
+  "gold_within_1": 1,
+  "gold_within_2": 1,
+  "top_U": [
+   {
+    "id": "mq:f4aabd416d3a9c11",
+    "label": "Detroit",
+    "p": 0.003992020290522929,
+    "gold": false
+   },
+   {
+    "id": "mq:7ddca550d3859d0a",
+    "label": "Rusty Paul",
+    "p": 0.0029793215595629303,
+    "gold": false
+   },
+   {
+    "id": "mq:1b3114f1b778e3ef",
+    "label": "Hurricane Irma",
+    "p": 0.0025364232588253226,
+    "gold": false
+   },
+   {
+    "id": "mq:86ef27a9a6fca998",
+    "label": "2017 New York City mayoral election",
+    "p": 0.0021888900227986343,
+    "gold": false
+   },
+   {
+    "id": "mq:0fec0ea43a4fa7c9",
+    "label": "2017 New York City mayoral election",
+    "p": 0.0019252219039794293,
+    "gold": false
+   },
+   {
+    "id": "mq:c6e3388a9058a99f",
+    "label": "Sweating sickness",
+    "p": 0.0018430999669475177,
+    "gold": false
+   },
+   {
+    "id": "mq:58cca220e0df6a60",
+    "label": "2017 San Antonio mayoral election",
+    "p": 0.0016784805055321255,
+    "gold": false
+   },
+   {
+    "id": "mq:5fc5a1ee223c7ff7",
+    "label": "Black Hawk, Colorado",
+    "p": 0.0016034686046343344,
+    "gold": false
+   },
+   {
+    "id": "mq:84b4f67c0d0f3288",
+    "label": "Effects of Hurricane Katrina in New Orleans",
+    "p": 0.0015996985874107976,
+    "gold": false
+   },
+   {
+    "id": "mq:3c445f9dbb8aede9",
+    "label": "Nancy Wechsler",
+    "p": 0.001589576840481235,
+    "gold": false
+   },
+   {
+    "id": "mq:2d67c53dd875eeae",
+    "label": "2018 Georgia gubernatorial election",
+    "p": 0.0015859594315833156,
+    "gold": false
+   },
+   {
+    "id": "mq:cbc01230b6b7ed48",
+    "label": "2018 Georgia gubernatorial election",
+    "p": 0.0015131718138802785,
+    "gold": false
+   },
+   {
+    "id": "mq:ef2a2b3dd15eae8e",
+    "label": "Hardin Bigelow",
+    "p": 0.0014267436452096655,
+    "gold": false
+   },
+   {
+    "id": "mq:92324ba5f97aafc5",
+    "label": "Mutiny on the Bounty",
+    "p": 0.0013740534428618508,
+    "gold": false
+   },
+   {
+    "id": "mq:93116bfd9f554d53",
+    "label": "2017 Cincinnati mayoral election",
+    "p": 0.001319542945805319,
+    "gold": false
+   },
+   {
+    "id": "mq:ec929828ecf8ca59",
+    "label": "Love, Simon",
+    "p": 0.0012342154203195334,
+    "gold": false
+   },
+   {
+    "id": "mq:70a5e48edbfbd8a0",
+    "label": "Bangladesh",
+    "p": 0.0012093129984463386,
+    "gold": false
+   },
+   {
+    "id": "mq:d62d390409b86d83",
+    "label": "List of smoking bans in the United States",
+    "p": 0.0011568820218214872,
+    "gold": false
+   },
+   {
+    "id": "mq:3c66ff021b133895",
+    "label": "French Algeria",
+    "p": 0.0010194563183210912,
+    "gold": false
+   },
+   {
+    "id": "mq:9f5853496fa02d4a",
+    "label": "The Walking Dead (season 8)",
+    "p": 0.0010092438336408807,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:762b3caba4b29988",
+   "label": "List of mayors of Willoughby",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:6a25cc0834523513",
+   "label": "2017 Atlantic City mayoral election",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:d58419bd8140a58e",
+   "label": "Black people",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:eb779a37bbeba03d",
+   "label": "Detroit",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:ed697ee069765b54",
+   "label": "E. Denise Simmons",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:95da6a213a2ea134",
+   "label": "A League of Their Own",
+   "wave": 1,
+   "via": "term:coleman",
+   "gold": false
+  },
+  {
+   "id": "mq:a3a175eacec765ed",
+   "label": "Jim Coleman (musician)",
+   "wave": 1,
+   "via": "term:coleman",
+   "gold": false
+  },
+  {
+   "id": "mq:51c9cd885c4ccd52",
+   "label": "Broken Shadows",
+   "wave": 1,
+   "via": "term:coleman",
+   "gold": false
+  },
+  {
+   "id": "mq:cb536c7474747599",
+   "label": "Indu Jain",
+   "wave": 1,
+   "via": "term:coleman",
+   "gold": false
+  },
+  {
+   "id": "mq:f4aabd416d3a9c11",
+   "label": "Detroit",
+   "wave": 1,
+   "via": "term:coleman",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:f4aabd416d3a9c11",
+    "label": "Detroit",
+    "gold": false
+   },
+   {
+    "id": "mq:7ddca550d3859d0a",
+    "label": "Rusty Paul",
+    "gold": false
+   },
+   {
+    "id": "mq:1b3114f1b778e3ef",
+    "label": "Hurricane Irma",
+    "gold": false
+   },
+   {
+    "id": "mq:86ef27a9a6fca998",
+    "label": "2017 New York City mayoral election",
+    "gold": false
+   },
+   {
+    "id": "mq:0fec0ea43a4fa7c9",
+    "label": "2017 New York City mayoral election",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:f4aabd416d3a9c11",
+    "label": "Detroit",
+    "gold": false
+   },
+   {
+    "id": "mq:7ddca550d3859d0a",
+    "label": "Rusty Paul",
+    "gold": false
+   },
+   {
+    "id": "mq:86ef27a9a6fca998",
+    "label": "2017 New York City mayoral election",
+    "gold": false
+   },
+   {
+    "id": "mq:0fec0ea43a4fa7c9",
+    "label": "2017 New York City mayoral election",
+    "gold": false
+   },
+   {
+    "id": "mq:93116bfd9f554d53",
+    "label": "2017 Cincinnati mayoral election",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:f4aabd416d3a9c11",
+    "label": "Detroit",
+    "gold": false
+   },
+   {
+    "id": "mq:c6e3388a9058a99f",
+    "label": "Sweating sickness",
+    "gold": false
+   },
+   {
+    "id": "mq:ef2a2b3dd15eae8e",
+    "label": "Hardin Bigelow",
+    "gold": false
+   },
+   {
+    "id": "mq:7ddca550d3859d0a",
+    "label": "Rusty Paul",
+    "gold": false
+   },
+   {
+    "id": "mq:93116bfd9f554d53",
+    "label": "2017 Cincinnati mayoral election",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:5edbb132033211c4",
+    "label": "Paris",
+    "gold": false
+   },
+   {
+    "id": "mq:439a2ed9084bec6e",
+    "label": "Black Spectre",
+    "gold": false
+   },
+   {
+    "id": "mq:93116bfd9f554d53",
+    "label": "2017 Cincinnati mayoral election",
+    "gold": false
+   },
+   {
+    "id": "mq:aa730883be358f54",
+    "label": "James H. McGee",
+    "gold": false
+   },
+   {
+    "id": "mq:6f058ae6250b3bd2",
+    "label": "Richmond, Virginia",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

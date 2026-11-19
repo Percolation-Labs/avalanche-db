@@ -1,0 +1,405 @@
+{
+ "qid": "pr:789",
+ "set": "prs",
+ "question": "What work went into this, and why: Write-up: the door, not the decider, limits Jev; round 4 prompt re-tuning on D6 does not pass?",
+ "gold": [
+  {
+   "id": "commit/248af4a090",
+   "label": "commit 248af4a: Round 4: prompt re-tuning on D6 does not pass; write-up of the ceiling and door evidence (WRITEUP.md)",
+   "seed": true
+  },
+  {
+   "id": "commit/e9d77a0887",
+   "label": "commit e9d77a0: Round 4: register the alternation back to Jev's prompt on D6, with a two-split rule",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/8a01c63e3b",
+   "label": "commit 8a01c63: Merge pull request #789 from Percolation-Labs/bill/jev-d6-alternate",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "meta/lab/results/jev-doors/RESULT.md#11",
+   "label": "meta/lab/results/jev-doors/RESULT.md \u203a Round 4: re-tuning Jev's prompt on D6 does not pass (16 Nov, ~21:50Z)",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/248af4a090",
+   "label": "commit 248af4a: Round 4: prompt re-tuning on D6 does not pass; write-up of the ceiling and door evidence (WRITEUP.md)",
+   "rank": 3,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "board/messages/M-20261116-213501-e7c6.md#1",
+   "label": "board/messages/M-20261116-213501-e7c6.md",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "meta/lab/results/jev-doors/REGISTERED.md#5",
+   "label": "meta/lab/results/jev-doors/REGISTERED.md \u203a Round 4: the alternation back to Jev, on D6 (registered 16 Nov ~21:35Z, befor",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/248af4a090",
+    "label": "commit 248af4a: Round 4: prompt re-tuning on D6 does not pass; write-up of the ceiling and door evidence (WRITEUP.md)",
+    "role": "gold"
+   },
+   {
+    "id": "commit/e9d77a0887",
+    "label": "commit e9d77a0: Round 4: register the alternation back to Jev's prompt on D6, with a two-split rule",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/248af4a090",
+    "b": "commit/e9d77a0887",
+    "via": [
+     {
+      "kind": "beside"
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "commit/248af4a090",
+   "gold": "commit/248af4a090",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 754,
+  "within_2_doors": 31070,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "commit/e9d77a0887",
+    "label": "commit e9d77a0: Round 4: register the alternation back to Jev's prompt on D6, with a two-split rule",
+    "p": 0.012366574190724353,
+    "gold": true
+   },
+   {
+    "id": "meta/lab/results/jev-doors/WRITEUP.md#11",
+    "label": "meta/lab/results/jev-doors/WRITEUP.md \u203a Limits",
+    "p": 0.006604233789610751,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-doors/WRITEUP.md#1",
+    "label": "meta/lab/results/jev-doors/WRITEUP.md \u203a The door, not the decider: what limits Jev's choice of where to read next",
+    "p": 0.004653285493024512,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-doors/WRITEUP.md#8",
+    "label": "meta/lab/results/jev-doors/WRITEUP.md \u203a Act 4: back to Jev, on the better door",
+    "p": 0.003982043388088495,
+    "gold": false
+   },
+   {
+    "id": "commit/1745554df1",
+    "label": "commit 1745554: board: bill acknowledges 1 message(s)",
+    "p": 0.0036863949367125764,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-doors/WRITEUP.md#7",
+    "label": "meta/lab/results/jev-doors/WRITEUP.md \u203a Act 3: the gain holds everywhere",
+    "p": 0.0031643045783425797,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-doors/RESULT.md#4",
+    "label": "meta/lab/results/jev-doors/RESULT.md \u203a Postmortem",
+    "p": 0.0031268857452393323,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-doors/WRITEUP.md#9",
+    "label": "meta/lab/results/jev-doors/WRITEUP.md \u203a What this means",
+    "p": 0.003004591471350888,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/prompt-real/REGISTERED.md#1",
+    "label": "meta/lab/results/prompt-real/REGISTERED.md \u203a Does the prompt move Jev on real corpora? (registered 17 Nov ~12:35Z, befor",
+    "p": 0.0029531506402647564,
+    "gold": false
+   },
+   {
+    "id": "commit/6265232acd",
+    "label": "commit 6265232: board: sirsh messages all",
+    "p": 0.002907773375553953,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-doors/RESULT.md#10",
+    "label": "meta/lab/results/jev-doors/RESULT.md \u203a Round 3: D6, D3 with today's first snippet kept, is the best door on both graphs ",
+    "p": 0.0028757701953633376,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-doors/WRITEUP.md#4",
+    "label": "meta/lab/results/jev-doors/WRITEUP.md \u203a Method",
+    "p": 0.0028043049554948365,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261116-192549-f060.md#1",
+    "label": "board/messages/M-20261116-192549-f060.md",
+    "p": 0.002754193438571366,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-doors/REGISTERED.md#2",
+    "label": "meta/lab/results/jev-doors/REGISTERED.md \u203a Step 4: better doors on the same graph, with Jev fixed at its ceiling setting",
+    "p": 0.0026891344071519226,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-doors/RESULT.md#3",
+    "label": "meta/lab/results/jev-doors/RESULT.md \u203a The alternation: re-tuning Jev on the new door",
+    "p": 0.002304693282110465,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-doors/WRITEUP.md#6",
+    "label": "meta/lab/results/jev-doors/WRITEUP.md \u203a Act 2: better doors",
+    "p": 0.002297100612181794,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-ceiling/RESULT.md#6",
+    "label": "meta/lab/results/jev-ceiling/RESULT.md \u203a Next (step 4, on the same graph, with Jev fixed at P1 F2)",
+    "p": 0.0022896141476125274,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261028-164517-0a4b.md#1",
+    "label": "board/messages/M-20261028-164517-0a4b.md",
+    "p": 0.002199163326091618,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261028-141233-aad9.md#1",
+    "label": "board/messages/M-20261028-141233-aad9.md",
+    "p": 0.00211743226252213,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261028-182021-694f.md#1",
+    "label": "board/messages/M-20261028-182021-694f.md",
+    "p": 0.0021142596055459296,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/8a01c63e3b",
+   "label": "commit 8a01c63: Merge pull request #789 from Percolation-Labs/bill/jev-d6-alternate",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/jev-doors/RESULT.md#11",
+   "label": "meta/lab/results/jev-doors/RESULT.md \u203a Round 4: re-tuning Jev's prompt on D6 does not pass (16 Nov, ~21:50Z)",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/248af4a090",
+   "label": "commit 248af4a: Round 4: prompt re-tuning on D6 does not pass; write-up of the ceiling and door evidence (WRITEUP.md)",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "board/messages/M-20261116-213501-e7c6.md#1",
+   "label": "board/messages/M-20261116-213501-e7c6.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/jev-doors/REGISTERED.md#5",
+   "label": "meta/lab/results/jev-doors/REGISTERED.md \u203a Round 4: the alternation back to Jev, on D6 (registered 16 Nov ~21:35Z, befor",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/jev-doors/WRITEUP.md#5",
+   "label": "meta/lab/results/jev-doors/WRITEUP.md \u203a Act 1: Jev's ceiling with today's doors",
+   "wave": 1,
+   "via": "term:doors writeup",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/jev-doors/WRITEUP.md#1",
+   "label": "meta/lab/results/jev-doors/WRITEUP.md \u203a The door, not the decider: what limits Jev's choice of where to read next",
+   "wave": 1,
+   "via": "term:doors writeup",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/jev-doors/WRITEUP.md#4",
+   "label": "meta/lab/results/jev-doors/WRITEUP.md \u203a Method",
+   "wave": 1,
+   "via": "term:doors writeup",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/jev-doors/WRITEUP.md#11",
+   "label": "meta/lab/results/jev-doors/WRITEUP.md \u203a Limits",
+   "wave": 1,
+   "via": "term:doors writeup",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/jev-doors/WRITEUP.md#10",
+   "label": "meta/lab/results/jev-doors/WRITEUP.md \u203a Update, 17 Nov: a second real dataset",
+   "wave": 1,
+   "via": "term:doors writeup",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "commit/e9d77a0887",
+    "label": "commit e9d77a0: Round 4: register the alternation back to Jev's prompt on D6, with a two-split rule",
+    "gold": true
+   },
+   {
+    "id": "meta/lab/results/jev-doors/WRITEUP.md#11",
+    "label": "meta/lab/results/jev-doors/WRITEUP.md \u203a Limits",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-doors/WRITEUP.md#1",
+    "label": "meta/lab/results/jev-doors/WRITEUP.md \u203a The door, not the decider: what limits Jev's choice of where to read next",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-doors/WRITEUP.md#8",
+    "label": "meta/lab/results/jev-doors/WRITEUP.md \u203a Act 4: back to Jev, on the better door",
+    "gold": false
+   },
+   {
+    "id": "commit/1745554df1",
+    "label": "commit 1745554: board: bill acknowledges 1 message(s)",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "commit/e9d77a0887",
+    "label": "commit e9d77a0: Round 4: register the alternation back to Jev's prompt on D6, with a two-split rule",
+    "gold": true
+   },
+   {
+    "id": "meta/lab/results/jev-doors/WRITEUP.md#1",
+    "label": "meta/lab/results/jev-doors/WRITEUP.md \u203a The door, not the decider: what limits Jev's choice of where to read next",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-doors/WRITEUP.md#8",
+    "label": "meta/lab/results/jev-doors/WRITEUP.md \u203a Act 4: back to Jev, on the better door",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-doors/RESULT.md#4",
+    "label": "meta/lab/results/jev-doors/RESULT.md \u203a Postmortem",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261116-192549-f060.md#1",
+    "label": "board/messages/M-20261116-192549-f060.md",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/e9d77a0887",
+    "label": "commit e9d77a0: Round 4: register the alternation back to Jev's prompt on D6, with a two-split rule",
+    "gold": true
+   },
+   {
+    "id": "meta/lab/results/jev-doors/WRITEUP.md#1",
+    "label": "meta/lab/results/jev-doors/WRITEUP.md \u203a The door, not the decider: what limits Jev's choice of where to read next",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-doors/RESULT.md#3",
+    "label": "meta/lab/results/jev-doors/RESULT.md \u203a The alternation: re-tuning Jev on the new door",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-doors/RESULT.md#1",
+    "label": "meta/lab/results/jev-doors/RESULT.md \u203a Step 4, round 1: naming what lies behind a door lifts Jev from 64% to 70% of the ",
+    "gold": false
+   },
+   {
+    "id": "commit/1745554df1",
+    "label": "commit 1745554: board: bill acknowledges 1 message(s)",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "meta/lab/results/jev-ceiling/RESULT.md#3",
+    "label": "meta/lab/results/jev-ceiling/RESULT.md \u203a The search (tuning half: worlds 1 and 2, 494 pages, 40 questions)",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-doors/WRITEUP.md#8",
+    "label": "meta/lab/results/jev-doors/WRITEUP.md \u203a Act 4: back to Jev, on the better door",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-doors/RESULT.md#3",
+    "label": "meta/lab/results/jev-doors/RESULT.md \u203a The alternation: re-tuning Jev on the new door",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-doors/RESULT.md#1",
+    "label": "meta/lab/results/jev-doors/RESULT.md \u203a Step 4, round 1: naming what lies behind a door lifts Jev from 64% to 70% of the ",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-ceiling/REGISTERED.md#2",
+    "label": "meta/lab/results/jev-ceiling/REGISTERED.md \u203a Jev's ranking ceiling on one fixed graph (registered 16 Nov ~18:20Z, before",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 1.0,
+  "Q": 1.0,
+  "LQ": 1.0,
+  "S": 0.0
+ }
+}

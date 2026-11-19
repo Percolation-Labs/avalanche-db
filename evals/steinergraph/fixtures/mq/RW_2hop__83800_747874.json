@@ -1,0 +1,462 @@
+{
+ "qid": "RW:2hop__83800_747874",
+ "set": "mq",
+ "question": "Who's the sibling of the player who won the men's wimbledon championship 2016?",
+ "gold": [
+  {
+   "id": "mq:18c463797163d64b",
+   "label": "2016 Wimbledon Championships",
+   "seed": false
+  },
+  {
+   "id": "mq:5765ea6dfe69e01f",
+   "label": "2011 Valencia Open 500 \u2013 Doubles",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:85e2f3fb69f640f1",
+   "label": "2017 Wimbledon Championships \u2013 Men's Singles",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:6e649e10184e7e13",
+   "label": "1980 Wimbledon Championships \u2013 Men's singles final",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:22515a6d69e5a3c2",
+   "label": "2017 Wimbledon Championships \u2013 Men's Singles",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:c7771c687b70ef77",
+   "label": "Roger Federer",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:18480fa611f728ae",
+   "label": "The Championships, Wimbledon",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:18480fa611f728ae",
+    "label": "The Championships, Wimbledon",
+    "role": "seed"
+   },
+   {
+    "id": "mq:18c463797163d64b",
+    "label": "2016 Wimbledon Championships",
+    "role": "gold"
+   },
+   {
+    "id": "mq:5765ea6dfe69e01f",
+    "label": "2011 Valencia Open 500 \u2013 Doubles",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:18480fa611f728ae",
+    "b": "mq:18c463797163d64b",
+    "via": [
+     {
+      "kind": "near",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "ladies singles",
+      "width": 4
+     },
+     {
+      "kind": "term",
+      "key": "andy murray",
+      "width": 8
+     },
+     {
+      "kind": "term",
+      "key": "gentlemen",
+      "width": 11
+     },
+     {
+      "kind": "term",
+      "key": "open era",
+      "width": 11
+     },
+     {
+      "kind": "term",
+      "key": "wimbledon",
+      "width": 22
+     }
+    ]
+   },
+   {
+    "a": "mq:18c463797163d64b",
+    "b": "mq:5765ea6dfe69e01f",
+    "via": [
+     {
+      "kind": "term",
+      "key": "andy murray",
+      "width": 8
+     },
+     {
+      "kind": "term",
+      "key": "murray",
+      "width": 49
+     },
+     {
+      "kind": "term",
+      "key": "defending",
+      "width": 53
+     },
+     {
+      "kind": "term",
+      "key": "andy",
+      "width": 64
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "mq:18480fa611f728ae",
+   "gold": "mq:18c463797163d64b",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 2276,
+  "within_2_doors": 18789,
+  "gold_within_1": 2,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "mq:c1145a4c334125c5",
+    "label": "The Championships, Wimbledon",
+    "p": 0.014519920018524802,
+    "gold": false
+   },
+   {
+    "id": "mq:03a1351dd010dfc7",
+    "label": "2018 Australian Open \u2013 Men's Singles",
+    "p": 0.00769980041868276,
+    "gold": false
+   },
+   {
+    "id": "mq:233816054989f8b1",
+    "label": "2012 US Open \u2013 Men's singles final",
+    "p": 0.006931740913597566,
+    "gold": false
+   },
+   {
+    "id": "mq:64c4d989beb8b72f",
+    "label": "2017 US Open (tennis)",
+    "p": 0.006241856539736277,
+    "gold": false
+   },
+   {
+    "id": "mq:795066101f975800",
+    "label": "2017 Australian Open \u2013 Men's Singles",
+    "p": 0.006149202142416559,
+    "gold": false
+   },
+   {
+    "id": "mq:97f1726f5e312132",
+    "label": "2018 Wimbledon Championships",
+    "p": 0.005257664966647381,
+    "gold": false
+   },
+   {
+    "id": "mq:1588829f79a2c6b3",
+    "label": "1999 Wimbledon Championships \u2013 Men's Singles",
+    "p": 0.0051604742797031694,
+    "gold": false
+   },
+   {
+    "id": "mq:feb87196083e5c82",
+    "label": "2017 French Open \u2013 Men's Singles",
+    "p": 0.004350455324142512,
+    "gold": false
+   },
+   {
+    "id": "mq:96d7a9917588e5db",
+    "label": "List of Wimbledon gentlemen's singles champions",
+    "p": 0.004265868370355611,
+    "gold": false
+   },
+   {
+    "id": "mq:31f178d5cb0b2501",
+    "label": "2018 US Open \u2013 Men's Singles",
+    "p": 0.0038472133561270176,
+    "gold": false
+   },
+   {
+    "id": "mq:08daa05e95b49d2a",
+    "label": "2018 French Open \u2013 Men's Singles",
+    "p": 0.0037175169639866706,
+    "gold": false
+   },
+   {
+    "id": "mq:889e593116fc3710",
+    "label": "2015 Australian Open \u2013 Men's Singles",
+    "p": 0.0036439000101706003,
+    "gold": false
+   },
+   {
+    "id": "mq:1c436c7f0458aa9a",
+    "label": "2017 Australian Open \u2013 Women's Singles",
+    "p": 0.0034270908037256818,
+    "gold": false
+   },
+   {
+    "id": "mq:1141d3335aa9b50d",
+    "label": "2017 US Open \u2013 Women's Singles",
+    "p": 0.0033994885425401426,
+    "gold": false
+   },
+   {
+    "id": "mq:18c463797163d64b",
+    "label": "2016 Wimbledon Championships",
+    "p": 0.003353651386386266,
+    "gold": true
+   },
+   {
+    "id": "mq:0d62194fc458c767",
+    "label": "Rafael Nadal",
+    "p": 0.003226202371835207,
+    "gold": false
+   },
+   {
+    "id": "mq:4a0112f0d87ebd9a",
+    "label": "2017 French Open \u2013 Women's Singles",
+    "p": 0.0030977740710128247,
+    "gold": false
+   },
+   {
+    "id": "mq:3346f20a60507ecf",
+    "label": "2011 Wimbledon Championships",
+    "p": 0.00300379468968606,
+    "gold": false
+   },
+   {
+    "id": "mq:58826e519869757e",
+    "label": "2015 Australian Open",
+    "p": 0.0028259246602617217,
+    "gold": false
+   },
+   {
+    "id": "mq:fb1c760ef701bb10",
+    "label": "Sonchat Ratiwatana",
+    "p": 0.0028164608244698815,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:85e2f3fb69f640f1",
+   "label": "2017 Wimbledon Championships \u2013 Men's Singles",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:6e649e10184e7e13",
+   "label": "1980 Wimbledon Championships \u2013 Men's singles final",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:22515a6d69e5a3c2",
+   "label": "2017 Wimbledon Championships \u2013 Men's Singles",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:c7771c687b70ef77",
+   "label": "Roger Federer",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:18480fa611f728ae",
+   "label": "The Championships, Wimbledon",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:c1145a4c334125c5",
+   "label": "The Championships, Wimbledon",
+   "wave": 1,
+   "via": "term:andy murray",
+   "gold": false
+  },
+  {
+   "id": "mq:5765ea6dfe69e01f",
+   "label": "2011 Valencia Open 500 \u2013 Doubles",
+   "wave": 1,
+   "via": "term:andy murray",
+   "gold": true
+  },
+  {
+   "id": "mq:6a856e89ef9cda55",
+   "label": "BBC Sports Personality of the Year Award",
+   "wave": 1,
+   "via": "term:andy murray",
+   "gold": false
+  },
+  {
+   "id": "mq:18c463797163d64b",
+   "label": "2016 Wimbledon Championships",
+   "wave": 1,
+   "via": "term:andy murray",
+   "gold": true
+  },
+  {
+   "id": "mq:889e593116fc3710",
+   "label": "2015 Australian Open \u2013 Men's Singles",
+   "wave": 1,
+   "via": "term:andy murray",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:c1145a4c334125c5",
+    "label": "The Championships, Wimbledon",
+    "gold": false
+   },
+   {
+    "id": "mq:03a1351dd010dfc7",
+    "label": "2018 Australian Open \u2013 Men's Singles",
+    "gold": false
+   },
+   {
+    "id": "mq:233816054989f8b1",
+    "label": "2012 US Open \u2013 Men's singles final",
+    "gold": false
+   },
+   {
+    "id": "mq:64c4d989beb8b72f",
+    "label": "2017 US Open (tennis)",
+    "gold": false
+   },
+   {
+    "id": "mq:795066101f975800",
+    "label": "2017 Australian Open \u2013 Men's Singles",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:c1145a4c334125c5",
+    "label": "The Championships, Wimbledon",
+    "gold": false
+   },
+   {
+    "id": "mq:97f1726f5e312132",
+    "label": "2018 Wimbledon Championships",
+    "gold": false
+   },
+   {
+    "id": "mq:1588829f79a2c6b3",
+    "label": "1999 Wimbledon Championships \u2013 Men's Singles",
+    "gold": false
+   },
+   {
+    "id": "mq:64c4d989beb8b72f",
+    "label": "2017 US Open (tennis)",
+    "gold": false
+   },
+   {
+    "id": "mq:795066101f975800",
+    "label": "2017 Australian Open \u2013 Men's Singles",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:c1145a4c334125c5",
+    "label": "The Championships, Wimbledon",
+    "gold": false
+   },
+   {
+    "id": "mq:97f1726f5e312132",
+    "label": "2018 Wimbledon Championships",
+    "gold": false
+   },
+   {
+    "id": "mq:64c4d989beb8b72f",
+    "label": "2017 US Open (tennis)",
+    "gold": false
+   },
+   {
+    "id": "mq:1588829f79a2c6b3",
+    "label": "1999 Wimbledon Championships \u2013 Men's Singles",
+    "gold": false
+   },
+   {
+    "id": "mq:795066101f975800",
+    "label": "2017 Australian Open \u2013 Men's Singles",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:c1145a4c334125c5",
+    "label": "The Championships, Wimbledon",
+    "gold": false
+   },
+   {
+    "id": "mq:a7f08bdd40a99b85",
+    "label": "2001 World Men's Handball Championship",
+    "gold": false
+   },
+   {
+    "id": "mq:50b7b5107a1b616e",
+    "label": "Storvreta IBK",
+    "gold": false
+   },
+   {
+    "id": "mq:1588829f79a2c6b3",
+    "label": "1999 Wimbledon Championships \u2013 Men's Singles",
+    "gold": false
+   },
+   {
+    "id": "mq:96692b8bfce2622e",
+    "label": "Peter Varellas",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

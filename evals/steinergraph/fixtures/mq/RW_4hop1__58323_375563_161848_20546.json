@@ -1,0 +1,545 @@
+{
+ "qid": "RW:4hop1__58323_375563_161848_20546",
+ "set": "mq",
+ "question": "Who discovered the country near the country of citizenship of the author of The Book Thief for the Dutch?",
+ "gold": [
+  {
+   "id": "mq:179c563ee4e8b66b",
+   "label": "The Messenger (Zusak novel)",
+   "seed": false
+  },
+  {
+   "id": "mq:3ce8b03349a41b0d",
+   "label": "British Empire",
+   "seed": false
+  },
+  {
+   "id": "mq:72d3d13e1ec8d53b",
+   "label": "The Book Thief (film)",
+   "seed": false
+  },
+  {
+   "id": "mq:d831511ad365ceb1",
+   "label": "1952 Winter Olympics",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:2c80bdf4cfa709f4",
+   "label": "The Book Thief (film)",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:1fe73ab1ca12c360",
+   "label": "Beyond the Grave",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:552927463be4776a",
+   "label": "Mother Country: Britain, the Welfare State, and Nuclear Pollution",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:c56a9d632db3431d",
+   "label": "Demon Thief",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:859cf08ead433621",
+   "label": "Kamilla and the Thief",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:179c563ee4e8b66b",
+    "label": "The Messenger (Zusak novel)",
+    "role": "gold"
+   },
+   {
+    "id": "mq:2c80bdf4cfa709f4",
+    "label": "The Book Thief (film)",
+    "role": "seed"
+   },
+   {
+    "id": "mq:3ce8b03349a41b0d",
+    "label": "British Empire",
+    "role": "gold"
+   },
+   {
+    "id": "mq:72d3d13e1ec8d53b",
+    "label": "The Book Thief (film)",
+    "role": "gold"
+   },
+   {
+    "id": "mq:9ba58c107432d62b",
+    "label": "The Coffee Trader",
+    "role": "connector"
+   },
+   {
+    "id": "mq:cc0a9d8e0443436d",
+    "label": "Niels Juel",
+    "role": "connector"
+   },
+   {
+    "id": "mq:d831511ad365ceb1",
+    "label": "1952 Winter Olympics",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:179c563ee4e8b66b",
+    "b": "mq:72d3d13e1ec8d53b",
+    "via": [
+     {
+      "kind": "near",
+      "width": 4
+     },
+     {
+      "kind": "term",
+      "key": "markus zusak",
+      "width": 3
+     },
+     {
+      "kind": "term",
+      "key": "zusak",
+      "width": 3
+     },
+     {
+      "kind": "term",
+      "key": "markus",
+      "width": 8
+     }
+    ]
+   },
+   {
+    "a": "mq:2c80bdf4cfa709f4",
+    "b": "mq:72d3d13e1ec8d53b",
+    "via": [
+     {
+      "kind": "near",
+      "width": 4
+     },
+     {
+      "kind": "term",
+      "key": "starring geoffrey",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "petroni",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "book thief",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "thief film",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "rush emily",
+      "width": 2
+     }
+    ]
+   },
+   {
+    "a": "mq:3ce8b03349a41b0d",
+    "b": "mq:cc0a9d8e0443436d",
+    "via": [
+     {
+      "kind": "term",
+      "key": "1642",
+      "width": 6
+     }
+    ]
+   },
+   {
+    "a": "mq:72d3d13e1ec8d53b",
+    "b": "mq:9ba58c107432d62b",
+    "via": [
+     {
+      "kind": "term",
+      "key": "jewish refugee",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "refugee",
+      "width": 15
+     }
+    ]
+   },
+   {
+    "a": "mq:72d3d13e1ec8d53b",
+    "b": "mq:cc0a9d8e0443436d",
+    "via": [
+     {
+      "kind": "term",
+      "key": "sophie",
+      "width": 23
+     }
+    ]
+   },
+   {
+    "a": "mq:9ba58c107432d62b",
+    "b": "mq:d831511ad365ceb1",
+    "via": [
+     {
+      "kind": "term",
+      "key": "competitors",
+      "width": 22
+     }
+    ]
+   }
+  ],
+  "cost": 6,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   3,
+   1,
+   3,
+   2,
+   2,
+   2
+  ],
+  "entry": {
+   "seed": "mq:2c80bdf4cfa709f4",
+   "gold": "mq:72d3d13e1ec8d53b",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 3019,
+  "within_2_doors": 18054,
+  "gold_within_1": 4,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "mq:72d3d13e1ec8d53b",
+    "label": "The Book Thief (film)",
+    "p": 0.006397740757775719,
+    "gold": true
+   },
+   {
+    "id": "mq:ae7542eb7c41fcf9",
+    "label": "Lord Loss",
+    "p": 0.006287630188783937,
+    "gold": false
+   },
+   {
+    "id": "mq:7dc7b825434c9b39",
+    "label": "The Post (film)",
+    "p": 0.0022034344669242005,
+    "gold": false
+   },
+   {
+    "id": "mq:63297861371786b3",
+    "label": "The Post (film)",
+    "p": 0.002191183398662977,
+    "gold": false
+   },
+   {
+    "id": "mq:43ca1690f06f9673",
+    "label": "Home (Robinson novel)",
+    "p": 0.0017771972341314012,
+    "gold": false
+   },
+   {
+    "id": "mq:1ac50520beec55f1",
+    "label": "Back to the Future",
+    "p": 0.0012406997692986663,
+    "gold": false
+   },
+   {
+    "id": "mq:174aff90d331792d",
+    "label": "Procession of the Dead (novel)",
+    "p": 0.001157478480416681,
+    "gold": false
+   },
+   {
+    "id": "mq:5934906f4ab8be26",
+    "label": "Petter N\u00e6ss",
+    "p": 0.0010925087232788986,
+    "gold": false
+   },
+   {
+    "id": "mq:be1b71fc86587f7e",
+    "label": "Terje H\u00e5konsen",
+    "p": 0.0010675589993035888,
+    "gold": false
+   },
+   {
+    "id": "mq:37c08a18aab10b8a",
+    "label": "Minnesota Golden Gophers football",
+    "p": 0.0010526793478118598,
+    "gold": false
+   },
+   {
+    "id": "mq:b8c18c2b424334c2",
+    "label": "The Reaper (Grave Digger album)",
+    "p": 0.001045187071637306,
+    "gold": false
+   },
+   {
+    "id": "mq:3f3adb5764da89c7",
+    "label": "Death Note: Light Up the New World",
+    "p": 0.000991654661653387,
+    "gold": false
+   },
+   {
+    "id": "mq:b5b39d626fa7f257",
+    "label": "Big Nate Goes for Broke",
+    "p": 0.0009667346327649504,
+    "gold": false
+   },
+   {
+    "id": "mq:cb47634035296efe",
+    "label": "Orano Cycle",
+    "p": 0.0009181128178201624,
+    "gold": false
+   },
+   {
+    "id": "mq:b837cb27f1e5c191",
+    "label": "Janesville Assembly Plant",
+    "p": 0.0009067473072299814,
+    "gold": false
+   },
+   {
+    "id": "mq:9ed1819236f17436",
+    "label": "Military history of New Zealand during World War II",
+    "p": 0.000905002006356904,
+    "gold": false
+   },
+   {
+    "id": "mq:ce7d3fc766427ada",
+    "label": "Holmeswood",
+    "p": 0.0008833351359133842,
+    "gold": false
+   },
+   {
+    "id": "mq:605fb223820de479",
+    "label": "Rhythm Thief",
+    "p": 0.00083578330733638,
+    "gold": false
+   },
+   {
+    "id": "mq:179c563ee4e8b66b",
+    "label": "The Messenger (Zusak novel)",
+    "p": 0.0007941182368427788,
+    "gold": true
+   },
+   {
+    "id": "mq:34065be4a9c55043",
+    "label": "Close Encounters of the Third Kind",
+    "p": 0.0007640648216723394,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:2c80bdf4cfa709f4",
+   "label": "The Book Thief (film)",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:1fe73ab1ca12c360",
+   "label": "Beyond the Grave",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:552927463be4776a",
+   "label": "Mother Country: Britain, the Welfare State, and Nuclear Pollution",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:c56a9d632db3431d",
+   "label": "Demon Thief",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:859cf08ead433621",
+   "label": "Kamilla and the Thief",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:2ae9d4e1ffc9eeca",
+   "label": "List of Marvel Cinematic Universe films",
+   "wave": 1,
+   "via": "term:markus",
+   "gold": false
+  },
+  {
+   "id": "mq:716b15822d9e92b7",
+   "label": "Markus Joenm\u00e4ki",
+   "wave": 1,
+   "via": "term:markus",
+   "gold": false
+  },
+  {
+   "id": "mq:179c563ee4e8b66b",
+   "label": "The Messenger (Zusak novel)",
+   "wave": 1,
+   "via": "term:markus",
+   "gold": true
+  },
+  {
+   "id": "mq:d9c80906537f7141",
+   "label": "Falkenbach",
+   "wave": 1,
+   "via": "term:markus",
+   "gold": false
+  },
+  {
+   "id": "mq:72d3d13e1ec8d53b",
+   "label": "The Book Thief (film)",
+   "wave": 1,
+   "via": "term:markus",
+   "gold": true
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:72d3d13e1ec8d53b",
+    "label": "The Book Thief (film)",
+    "gold": true
+   },
+   {
+    "id": "mq:ae7542eb7c41fcf9",
+    "label": "Lord Loss",
+    "gold": false
+   },
+   {
+    "id": "mq:7dc7b825434c9b39",
+    "label": "The Post (film)",
+    "gold": false
+   },
+   {
+    "id": "mq:63297861371786b3",
+    "label": "The Post (film)",
+    "gold": false
+   },
+   {
+    "id": "mq:43ca1690f06f9673",
+    "label": "Home (Robinson novel)",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:72d3d13e1ec8d53b",
+    "label": "The Book Thief (film)",
+    "gold": true
+   },
+   {
+    "id": "mq:ae7542eb7c41fcf9",
+    "label": "Lord Loss",
+    "gold": false
+   },
+   {
+    "id": "mq:605fb223820de479",
+    "label": "Rhythm Thief",
+    "gold": false
+   },
+   {
+    "id": "mq:7dc7b825434c9b39",
+    "label": "The Post (film)",
+    "gold": false
+   },
+   {
+    "id": "mq:63297861371786b3",
+    "label": "The Post (film)",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:72d3d13e1ec8d53b",
+    "label": "The Book Thief (film)",
+    "gold": true
+   },
+   {
+    "id": "mq:ae7542eb7c41fcf9",
+    "label": "Lord Loss",
+    "gold": false
+   },
+   {
+    "id": "mq:7dc7b825434c9b39",
+    "label": "The Post (film)",
+    "gold": false
+   },
+   {
+    "id": "mq:63297861371786b3",
+    "label": "The Post (film)",
+    "gold": false
+   },
+   {
+    "id": "mq:8a3fcaee68bf2b50",
+    "label": "Diary of a Wimpy Kid",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:1a11ea44373ca3c1",
+    "label": "Tranquille River",
+    "gold": false
+   },
+   {
+    "id": "mq:72d3d13e1ec8d53b",
+    "label": "The Book Thief (film)",
+    "gold": true
+   },
+   {
+    "id": "mq:53b5ea9fd3de93c8",
+    "label": "Myanmar",
+    "gold": false
+   },
+   {
+    "id": "mq:6289fdc1e62c1114",
+    "label": "Ivo Werner",
+    "gold": false
+   },
+   {
+    "id": "mq:8ec7c04704f3e06c",
+    "label": "Where Dead Voices Gather",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.25,
+  "Q": 0.25,
+  "LQ": 0.25,
+  "S": 0.25
+ }
+}

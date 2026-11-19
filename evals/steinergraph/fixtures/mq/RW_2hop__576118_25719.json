@@ -1,0 +1,433 @@
+{
+ "qid": "RW:2hop__576118_25719",
+ "set": "mq",
+ "question": "At the end of which year did tribes from the area where Linear Pottery culture was found invade the Roman Empire?",
+ "gold": [
+  {
+   "id": "mq:40c5b23cb28b69bf",
+   "label": "Galicia (Spain)",
+   "seed": false
+  },
+  {
+   "id": "mq:6bf069f1e259fe0a",
+   "label": "R\u00f6ssen culture",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:1e9eb1a207782a90",
+   "label": "Buckingham",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "mq:e180ee41bfdedacf",
+   "label": "Germany",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:b1a1574aa46623b2",
+   "label": "History of Germany",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:4475fae5830c2473",
+   "label": "Middle Ages",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:73072aa9a06d1989",
+   "label": "Palermo",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:40c5b23cb28b69bf",
+    "label": "Galicia (Spain)",
+    "role": "gold"
+   },
+   {
+    "id": "mq:6bf069f1e259fe0a",
+    "label": "R\u00f6ssen culture",
+    "role": "gold"
+   },
+   {
+    "id": "mq:73072aa9a06d1989",
+    "label": "Palermo",
+    "role": "seed"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:40c5b23cb28b69bf",
+    "b": "mq:6bf069f1e259fe0a",
+    "via": [
+     {
+      "kind": "term",
+      "key": "central europe",
+      "width": 20
+     }
+    ]
+   },
+   {
+    "a": "mq:40c5b23cb28b69bf",
+    "b": "mq:73072aa9a06d1989",
+    "via": [
+     {
+      "kind": "term",
+      "key": "vandals",
+      "width": 9
+     },
+     {
+      "kind": "term",
+      "key": "germanic",
+      "width": 25
+     },
+     {
+      "kind": "term",
+      "key": "tribes",
+      "width": 66
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "mq:73072aa9a06d1989",
+   "gold": "mq:40c5b23cb28b69bf",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 3192,
+  "within_2_doors": 17897,
+  "gold_within_1": 2,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "mq:46d2ccf8064e86cc",
+    "label": "Revolt of the Batavi",
+    "p": 0.0023009304790767102,
+    "gold": false
+   },
+   {
+    "id": "mq:54cf345f914dc2dd",
+    "label": "Germans",
+    "p": 0.001891766187633787,
+    "gold": false
+   },
+   {
+    "id": "mq:cb66db2b8029eaa4",
+    "label": "Kiln",
+    "p": 0.001761895577073342,
+    "gold": false
+   },
+   {
+    "id": "mq:b634cec3f5774469",
+    "label": "American Revolutionary War",
+    "p": 0.0016262556716074102,
+    "gold": false
+   },
+   {
+    "id": "mq:33a8e39344ddfe8f",
+    "label": "Rhine",
+    "p": 0.0015135622585126607,
+    "gold": false
+   },
+   {
+    "id": "mq:df7e749debd2c107",
+    "label": "Dell",
+    "p": 0.0013345784808869014,
+    "gold": false
+   },
+   {
+    "id": "mq:27dbeb202979c7d2",
+    "label": "Slavs",
+    "p": 0.0012849773396759604,
+    "gold": false
+   },
+   {
+    "id": "mq:817eb52ada0a9bc3",
+    "label": "Middle Ages",
+    "p": 0.0012193231884635503,
+    "gold": false
+   },
+   {
+    "id": "mq:b96025ce886d2239",
+    "label": "Middle Ages",
+    "p": 0.0011799454737596198,
+    "gold": false
+   },
+   {
+    "id": "mq:7221c7fe6f4fc57b",
+    "label": "Roman conquest of Britain",
+    "p": 0.001064650769461163,
+    "gold": false
+   },
+   {
+    "id": "mq:346df97b53a1360d",
+    "label": "Battle of Bolia",
+    "p": 0.0010327566340426247,
+    "gold": false
+   },
+   {
+    "id": "mq:ce34f782bd032f53",
+    "label": "Utrecht",
+    "p": 0.0010040378913365028,
+    "gold": false
+   },
+   {
+    "id": "mq:eacf3b3cabb43998",
+    "label": "Armenia",
+    "p": 0.0009493680007849936,
+    "gold": false
+   },
+   {
+    "id": "mq:71faf7f3e87a212e",
+    "label": "Germans",
+    "p": 0.000904376633688865,
+    "gold": false
+   },
+   {
+    "id": "mq:8a5f3d2a0fdae4e3",
+    "label": "Middle Ages",
+    "p": 0.0008614695300920255,
+    "gold": false
+   },
+   {
+    "id": "mq:83f55a88e932eab9",
+    "label": "Switzerland",
+    "p": 0.0008571686418773508,
+    "gold": false
+   },
+   {
+    "id": "mq:5841342cb8ba0723",
+    "label": "Galicia (Spain)",
+    "p": 0.000818678677011168,
+    "gold": false
+   },
+   {
+    "id": "mq:267e91c1079bce91",
+    "label": "Dissolution of the Soviet Union",
+    "p": 0.0008177552378336901,
+    "gold": false
+   },
+   {
+    "id": "mq:01dfaaccdc3e6424",
+    "label": "Slavs",
+    "p": 0.0008054391774340096,
+    "gold": false
+   },
+   {
+    "id": "mq:993fceaa0ea13fbf",
+    "label": "Mosaic",
+    "p": 0.0008000114160009315,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:1e9eb1a207782a90",
+   "label": "Buckingham",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:e180ee41bfdedacf",
+   "label": "Germany",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:b1a1574aa46623b2",
+   "label": "History of Germany",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:4475fae5830c2473",
+   "label": "Middle Ages",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:73072aa9a06d1989",
+   "label": "Palermo",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:817eb52ada0a9bc3",
+   "label": "Middle Ages",
+   "wave": 1,
+   "via": "term:vandals",
+   "gold": false
+  },
+  {
+   "id": "mq:4180f56e5cd6934a",
+   "label": "Look What I Almost Stepped In...",
+   "wave": 1,
+   "via": "term:vandals",
+   "gold": false
+  },
+  {
+   "id": "mq:fe9ea7050354effb",
+   "label": "Oakfield Cemetery (Wantagh, New York)",
+   "wave": 1,
+   "via": "term:vandals",
+   "gold": false
+  },
+  {
+   "id": "mq:40c5b23cb28b69bf",
+   "label": "Galicia (Spain)",
+   "wave": 1,
+   "via": "term:vandals",
+   "gold": true
+  },
+  {
+   "id": "mq:b96025ce886d2239",
+   "label": "Middle Ages",
+   "wave": 1,
+   "via": "term:vandals",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:46d2ccf8064e86cc",
+    "label": "Revolt of the Batavi",
+    "gold": false
+   },
+   {
+    "id": "mq:54cf345f914dc2dd",
+    "label": "Germans",
+    "gold": false
+   },
+   {
+    "id": "mq:cb66db2b8029eaa4",
+    "label": "Kiln",
+    "gold": false
+   },
+   {
+    "id": "mq:b634cec3f5774469",
+    "label": "American Revolutionary War",
+    "gold": false
+   },
+   {
+    "id": "mq:33a8e39344ddfe8f",
+    "label": "Rhine",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:46d2ccf8064e86cc",
+    "label": "Revolt of the Batavi",
+    "gold": false
+   },
+   {
+    "id": "mq:54cf345f914dc2dd",
+    "label": "Germans",
+    "gold": false
+   },
+   {
+    "id": "mq:817eb52ada0a9bc3",
+    "label": "Middle Ages",
+    "gold": false
+   },
+   {
+    "id": "mq:cb66db2b8029eaa4",
+    "label": "Kiln",
+    "gold": false
+   },
+   {
+    "id": "mq:b634cec3f5774469",
+    "label": "American Revolutionary War",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:54cf345f914dc2dd",
+    "label": "Germans",
+    "gold": false
+   },
+   {
+    "id": "mq:817eb52ada0a9bc3",
+    "label": "Middle Ages",
+    "gold": false
+   },
+   {
+    "id": "mq:46d2ccf8064e86cc",
+    "label": "Revolt of the Batavi",
+    "gold": false
+   },
+   {
+    "id": "mq:c9120a81cd6c2803",
+    "label": "Middle Ages",
+    "gold": false
+   },
+   {
+    "id": "mq:cb66db2b8029eaa4",
+    "label": "Kiln",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:1cabe2ec78e2d4d7",
+    "label": "Roman Republic",
+    "gold": false
+   },
+   {
+    "id": "mq:46d2ccf8064e86cc",
+    "label": "Revolt of the Batavi",
+    "gold": false
+   },
+   {
+    "id": "mq:c9120a81cd6c2803",
+    "label": "Middle Ages",
+    "gold": false
+   },
+   {
+    "id": "mq:da0b3cd3e46a3064",
+    "label": "Roman (given name)",
+    "gold": false
+   },
+   {
+    "id": "mq:112e88d9b21d83f6",
+    "label": "Hellenistic period",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

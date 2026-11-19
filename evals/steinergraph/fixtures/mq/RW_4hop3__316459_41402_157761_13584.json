@@ -1,0 +1,527 @@
+{
+ "qid": "RW:4hop3__316459_41402_157761_13584",
+ "set": "mq",
+ "question": "A country gained control of Florida after the war in which Charles Edmund Nugent saw action. Besides the different areas of that country, what other differences are there between Real Madrid and the team for the city he moved to in 1999?",
+ "gold": [
+  {
+   "id": "mq:178cbfa7a6c59adc",
+   "label": "Jacksonville, Florida",
+   "seed": false
+  },
+  {
+   "id": "mq:1f4a795013383c01",
+   "label": "Charles Edmund Nugent",
+   "seed": true
+  },
+  {
+   "id": "mq:41522c4d9970f9a6",
+   "label": "Flavio Manzoni",
+   "seed": false
+  },
+  {
+   "id": "mq:64a9b72410ca6163",
+   "label": "FC Barcelona",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:1f4a795013383c01",
+   "label": "Charles Edmund Nugent",
+   "rank": 1,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:0589f357129eedf8",
+   "label": "Naples, Florida",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "mq:184da2055d811013",
+   "label": "La Liga",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:2c99c2e65e1a4543",
+   "label": "La Liga",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:55c02633f3c3a62a",
+   "label": "Zinedine Zidane",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:0e6e5eb9ffd8b0c9",
+    "label": "Israel",
+    "role": "connector"
+   },
+   {
+    "id": "mq:178cbfa7a6c59adc",
+    "label": "Jacksonville, Florida",
+    "role": "gold"
+   },
+   {
+    "id": "mq:1f4a795013383c01",
+    "label": "Charles Edmund Nugent",
+    "role": "gold"
+   },
+   {
+    "id": "mq:41522c4d9970f9a6",
+    "label": "Flavio Manzoni",
+    "role": "gold"
+   },
+   {
+    "id": "mq:545f60cbc8416679",
+    "label": "French and Indian War",
+    "role": "connector"
+   },
+   {
+    "id": "mq:64a9b72410ca6163",
+    "label": "FC Barcelona",
+    "role": "gold"
+   },
+   {
+    "id": "mq:f3b0894c51c01d6e",
+    "label": "Article One of the United States Constitution",
+    "role": "connector"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:0e6e5eb9ffd8b0c9",
+    "b": "mq:178cbfa7a6c59adc",
+    "via": [
+     {
+      "kind": "term",
+      "key": "road connecting",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "connecting",
+      "width": 46
+     }
+    ]
+   },
+   {
+    "a": "mq:0e6e5eb9ffd8b0c9",
+    "b": "mq:64a9b72410ca6163",
+    "via": [
+     {
+      "kind": "term",
+      "key": "two cities",
+      "width": 15
+     }
+    ]
+   },
+   {
+    "a": "mq:178cbfa7a6c59adc",
+    "b": "mq:545f60cbc8416679",
+    "via": [
+     {
+      "kind": "term",
+      "key": "sugar cane",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "cane",
+      "width": 8
+     },
+     {
+      "kind": "term",
+      "key": "1763",
+      "width": 16
+     },
+     {
+      "kind": "term",
+      "key": "indian war",
+      "width": 22
+     },
+     {
+      "kind": "term",
+      "key": "sugar",
+      "width": 35
+     }
+    ]
+   },
+   {
+    "a": "mq:1f4a795013383c01",
+    "b": "mq:545f60cbc8416679",
+    "via": [
+     {
+      "kind": "term",
+      "key": "martinique",
+      "width": 3
+     }
+    ]
+   },
+   {
+    "a": "mq:41522c4d9970f9a6",
+    "b": "mq:f3b0894c51c01d6e",
+    "via": [
+     {
+      "kind": "term",
+      "key": "marque",
+      "width": 7
+     }
+    ]
+   },
+   {
+    "a": "mq:64a9b72410ca6163",
+    "b": "mq:f3b0894c51c01d6e",
+    "via": [
+     {
+      "kind": "term",
+      "key": "enactment",
+      "width": 10
+     }
+    ]
+   }
+  ],
+  "cost": 6,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   2,
+   2,
+   2,
+   2,
+   2,
+   2
+  ],
+  "entry": {
+   "seed": "mq:1f4a795013383c01",
+   "gold": "mq:1f4a795013383c01",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 2305,
+  "within_2_doors": 18775,
+  "gold_within_1": 1,
+  "gold_within_2": 2,
+  "top_U": [
+   {
+    "id": "mq:ca68345d6c563058",
+    "label": "Supercopa de Espa\u00f1a",
+    "p": 0.003665221447971774,
+    "gold": false
+   },
+   {
+    "id": "mq:b180d572f97180dd",
+    "label": "List of Chelsea F.C. managers",
+    "p": 0.003648865427273484,
+    "gold": false
+   },
+   {
+    "id": "mq:897790591cf9608e",
+    "label": "NCH Healthcare System",
+    "p": 0.0025346878627848304,
+    "gold": false
+   },
+   {
+    "id": "mq:f87690bad276a2c4",
+    "label": "Our Lady of Guadaloupe Church",
+    "p": 0.0013796800502551818,
+    "gold": false
+   },
+   {
+    "id": "mq:c79da9ca0ecade5c",
+    "label": "FC Barcelona",
+    "p": 0.0013575162472947667,
+    "gold": false
+   },
+   {
+    "id": "mq:1c2602cf716056e3",
+    "label": "List of counties in Florida",
+    "p": 0.0013565881695438064,
+    "gold": false
+   },
+   {
+    "id": "mq:b55834586179c7e3",
+    "label": "Philippine Navy",
+    "p": 0.0012496032691947422,
+    "gold": false
+   },
+   {
+    "id": "mq:b9b3e5c57f54889b",
+    "label": "James Clavell",
+    "p": 0.001194407199202208,
+    "gold": false
+   },
+   {
+    "id": "mq:2fbcae98087faab8",
+    "label": "East India Company",
+    "p": 0.0011815245271539396,
+    "gold": false
+   },
+   {
+    "id": "mq:1c5079213b32502d",
+    "label": "France\u2013Saint Lucia Delimitation Agreement",
+    "p": 0.001175430224001429,
+    "gold": false
+   },
+   {
+    "id": "mq:4eb33705e9cec4ae",
+    "label": "List of La Liga top scorers",
+    "p": 0.00112230749143444,
+    "gold": false
+   },
+   {
+    "id": "mq:31f97933012460c9",
+    "label": "List of Spanish football champions",
+    "p": 0.0011195204629887068,
+    "gold": false
+   },
+   {
+    "id": "mq:eac38f67693daa54",
+    "label": "List of La Liga top scorers",
+    "p": 0.0011178345492034974,
+    "gold": false
+   },
+   {
+    "id": "mq:79a2814d405e07e0",
+    "label": "List of Spanish football champions",
+    "p": 0.0011158554564329457,
+    "gold": false
+   },
+   {
+    "id": "mq:31e247014f35fbc3",
+    "label": "Ferdinand Dau\u010d\u00edk",
+    "p": 0.0009893777451418508,
+    "gold": false
+   },
+   {
+    "id": "mq:e0303a9e64dd497e",
+    "label": "1932 Albanian First Division",
+    "p": 0.0009614707576016651,
+    "gold": false
+   },
+   {
+    "id": "mq:2f6f94a3f87e2899",
+    "label": "Jehovah's Witnesses",
+    "p": 0.0009382850650503265,
+    "gold": false
+   },
+   {
+    "id": "mq:f4fa5c4c58090782",
+    "label": "Gary Rowett",
+    "p": 0.0009377283527154721,
+    "gold": false
+   },
+   {
+    "id": "mq:106d9223af0cf9d2",
+    "label": "Military history of the United States",
+    "p": 0.0009189355532721136,
+    "gold": false
+   },
+   {
+    "id": "mq:da870af4f90f7750",
+    "label": "Kennedy Space Center",
+    "p": 0.0008870648163631761,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:1f4a795013383c01",
+   "label": "Charles Edmund Nugent",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:0589f357129eedf8",
+   "label": "Naples, Florida",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:184da2055d811013",
+   "label": "La Liga",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:2c99c2e65e1a4543",
+   "label": "La Liga",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:55c02633f3c3a62a",
+   "label": "Zinedine Zidane",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:aa3db1fec5d31016",
+   "label": "FC Barcelona",
+   "wave": 1,
+   "via": "term:real madrid",
+   "gold": false
+  },
+  {
+   "id": "mq:84e68afae468c521",
+   "label": "Jos\u00e9 Quirante",
+   "wave": 1,
+   "via": "term:real madrid",
+   "gold": false
+  },
+  {
+   "id": "mq:e77b81b6130c297b",
+   "label": "Spain",
+   "wave": 1,
+   "via": "term:real madrid",
+   "gold": false
+  },
+  {
+   "id": "mq:572ac3470264a227",
+   "label": "El Cl\u00e1sico",
+   "wave": 1,
+   "via": "term:real madrid",
+   "gold": false
+  },
+  {
+   "id": "mq:5674574df26b2a0f",
+   "label": "Forbes' list of the most valuable sports teams",
+   "wave": 1,
+   "via": "term:real madrid",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:ca68345d6c563058",
+    "label": "Supercopa de Espa\u00f1a",
+    "gold": false
+   },
+   {
+    "id": "mq:b180d572f97180dd",
+    "label": "List of Chelsea F.C. managers",
+    "gold": false
+   },
+   {
+    "id": "mq:897790591cf9608e",
+    "label": "NCH Healthcare System",
+    "gold": false
+   },
+   {
+    "id": "mq:f87690bad276a2c4",
+    "label": "Our Lady of Guadaloupe Church",
+    "gold": false
+   },
+   {
+    "id": "mq:c79da9ca0ecade5c",
+    "label": "FC Barcelona",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:ca68345d6c563058",
+    "label": "Supercopa de Espa\u00f1a",
+    "gold": false
+   },
+   {
+    "id": "mq:3027dfd420eaaf9c",
+    "label": "El Cl\u00e1sico",
+    "gold": false
+   },
+   {
+    "id": "mq:430da4437a1625cc",
+    "label": "El Cl\u00e1sico",
+    "gold": false
+   },
+   {
+    "id": "mq:79a2814d405e07e0",
+    "label": "List of Spanish football champions",
+    "gold": false
+   },
+   {
+    "id": "mq:31f97933012460c9",
+    "label": "List of Spanish football champions",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:ca68345d6c563058",
+    "label": "Supercopa de Espa\u00f1a",
+    "gold": false
+   },
+   {
+    "id": "mq:3027dfd420eaaf9c",
+    "label": "El Cl\u00e1sico",
+    "gold": false
+   },
+   {
+    "id": "mq:430da4437a1625cc",
+    "label": "El Cl\u00e1sico",
+    "gold": false
+   },
+   {
+    "id": "mq:1c2602cf716056e3",
+    "label": "List of counties in Florida",
+    "gold": false
+   },
+   {
+    "id": "mq:79a2814d405e07e0",
+    "label": "List of Spanish football champions",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:5d9fc2d0d872ea38",
+    "label": "Gareth Bale",
+    "gold": false
+   },
+   {
+    "id": "mq:430da4437a1625cc",
+    "label": "El Cl\u00e1sico",
+    "gold": false
+   },
+   {
+    "id": "mq:e77b81b6130c297b",
+    "label": "Spain",
+    "gold": false
+   },
+   {
+    "id": "mq:3027dfd420eaaf9c",
+    "label": "El Cl\u00e1sico",
+    "gold": false
+   },
+   {
+    "id": "mq:2f7ccb81f7718549",
+    "label": "Thomas S. Hinde",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

@@ -1,0 +1,491 @@
+{
+ "qid": "card:REM-655",
+ "set": "cards",
+ "question": "What was done about this, and why: core: every table in the extension is voted keep, merge or cut, and a new one costs something?",
+ "gold": [
+  {
+   "id": "commit/37ed4cd487",
+   "label": "commit 37ed4cd: rows, not schema: the rule, and a gate that reads specs/ (REM-655) (#335)",
+   "seed": false
+  },
+  {
+   "id": "commit/4bc5dcbc63",
+   "label": "commit 4bc5dcb: research: the view path keeps readability, and two things the move must fix",
+   "seed": false
+  },
+  {
+   "id": "commit/f230df7906",
+   "label": "commit f230df7: research: the identity invariant as a test REM-655's step 4 must pass",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/bfcf22dcfe",
+   "label": "commit bfcf22d: board: file REM-655 core: every table in the extension is voted keep, merge or cut, and a new one costs ",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-655.md#1",
+   "label": "board/cards/REM-655.md",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-1083.md#2",
+   "label": "board/cards/REM-1083.md \u203a Goal",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-1083.md#4",
+   "label": "board/cards/REM-1083.md \u203a Done when",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-655.md#5",
+   "label": "board/cards/REM-655.md \u203a Scope",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "board/cards/REM-655.md#5",
+    "label": "board/cards/REM-655.md \u203a Scope",
+    "role": "seed"
+   },
+   {
+    "id": "commit/37ed4cd487",
+    "label": "commit 37ed4cd: rows, not schema: the rule, and a gate that reads specs/ (REM-655) (#335)",
+    "role": "gold"
+   },
+   {
+    "id": "commit/4bc5dcbc63",
+    "label": "commit 4bc5dcb: research: the view path keeps readability, and two things the move must fix",
+    "role": "gold"
+   },
+   {
+    "id": "commit/f230df7906",
+    "label": "commit f230df7: research: the identity invariant as a test REM-655's step 4 must pass",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "board/cards/REM-655.md#5",
+    "b": "commit/37ed4cd487",
+    "via": [
+     {
+      "kind": "term",
+      "key": "five systems",
+      "width": 20
+     },
+     {
+      "kind": "term",
+      "key": "rem 655",
+      "width": 77
+     }
+    ]
+   },
+   {
+    "a": "commit/37ed4cd487",
+    "b": "commit/4bc5dcbc63",
+    "via": [
+     {
+      "kind": "term",
+      "key": "invoker closure",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "invoker requirement",
+      "width": 3
+     },
+     {
+      "kind": "term",
+      "key": "view path",
+      "width": 4
+     },
+     {
+      "kind": "term",
+      "key": "revision sees",
+      "width": 4
+     },
+     {
+      "kind": "term",
+      "key": "same_as carries",
+      "width": 4
+     }
+    ]
+   },
+   {
+    "a": "commit/37ed4cd487",
+    "b": "commit/f230df7906",
+    "via": [
+     {
+      "kind": "term",
+      "key": "filter today",
+      "width": 3
+     },
+     {
+      "kind": "term",
+      "key": "test hit",
+      "width": 4
+     },
+     {
+      "kind": "term",
+      "key": "hit first",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "shared edge",
+      "width": 7
+     },
+     {
+      "kind": "term",
+      "key": "second writer",
+      "width": 8
+     }
+    ]
+   }
+  ],
+  "cost": 3,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   1,
+   1
+  ],
+  "entry": {
+   "seed": "board/cards/REM-655.md#5",
+   "gold": "commit/37ed4cd487",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 500,
+  "within_2_doors": 30713,
+  "gold_within_1": 3,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "board/cards/REM-1035.md#6",
+    "label": "board/cards/REM-1035.md \u203a Log",
+    "p": 0.008567126430722716,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1083.md#1",
+    "label": "board/cards/REM-1083.md",
+    "p": 0.007266089165789141,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-655.md#2",
+    "label": "board/cards/REM-655.md \u203a Goal",
+    "p": 0.0070085929171307204,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1083.md#3",
+    "label": "board/cards/REM-1083.md \u203a Evidence",
+    "p": 0.0050577987185269424,
+    "gold": false
+   },
+   {
+    "id": "commit/946db32985",
+    "label": "commit 946db32: board: file REM-1083 core: every table and function names its callers, and the clusters serving little a",
+    "p": 0.0049408865154267675,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1083.md#5",
+    "label": "board/cards/REM-1083.md \u203a Scope",
+    "p": 0.004813823288180086,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-655.md#4",
+    "label": "board/cards/REM-655.md \u203a Done when",
+    "p": 0.00447721445199155,
+    "gold": false
+   },
+   {
+    "id": "commit/37ed4cd487",
+    "label": "commit 37ed4cd: rows, not schema: the rule, and a gate that reads specs/ (REM-655) (#335)",
+    "p": 0.004204816344686249,
+    "gold": true
+   },
+   {
+    "id": "board/cards/REM-655.md#30",
+    "label": "board/cards/REM-655.md \u203a Log",
+    "p": 0.0035622149049280316,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-655.md#7",
+    "label": "board/cards/REM-655.md \u203a Log",
+    "p": 0.00352868568820803,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1083.md#6",
+    "label": "board/cards/REM-1083.md \u203a Log",
+    "p": 0.0035161192367732202,
+    "gold": false
+   },
+   {
+    "id": "commit/62844311db",
+    "label": "commit 6284431: board: edit REM-1083 labels severity",
+    "p": 0.0033305127533843665,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1035.md#7",
+    "label": "board/cards/REM-1035.md \u203a Log",
+    "p": 0.003161447721294153,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1035.md#8",
+    "label": "board/cards/REM-1035.md \u203a Log",
+    "p": 0.0023855748384202713,
+    "gold": false
+   },
+   {
+    "id": "commit/fdd7a22a6a",
+    "label": "commit fdd7a22: board: note on REM-655",
+    "p": 0.0023480451148264947,
+    "gold": false
+   },
+   {
+    "id": "commit/b507fd74ae",
+    "label": "commit b507fd7: board: p8-subsystems-10 checks in, idle",
+    "p": 0.002165828160861262,
+    "gold": false
+   },
+   {
+    "id": "specs/packages/percolate-dev.yaml#3",
+    "label": "specs/packages/percolate-dev.yaml",
+    "p": 0.002112520034105257,
+    "gold": false
+   },
+   {
+    "id": "packages/percolate-dev/manifest.yaml#5",
+    "label": "packages/percolate-dev/manifest.yaml",
+    "p": 0.0021112152706186287,
+    "gold": false
+   },
+   {
+    "id": "dev/generated-output.py#2",
+    "label": "dev/generated-output.py",
+    "p": 0.0019268304290532053,
+    "gold": false
+   },
+   {
+    "id": "specs/README.md#10",
+    "label": "specs/README.md \u203a And two that ship in core without being one of the five",
+    "p": 0.0019198798502315462,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/bfcf22dcfe",
+   "label": "commit bfcf22d: board: file REM-655 core: every table in the extension is voted keep, merge or cut, and a new one costs ",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-655.md#1",
+   "label": "board/cards/REM-655.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-1083.md#2",
+   "label": "board/cards/REM-1083.md \u203a Goal",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-1083.md#4",
+   "label": "board/cards/REM-1083.md \u203a Done when",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-655.md#5",
+   "label": "board/cards/REM-655.md \u203a Scope",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-655.md#4",
+   "label": "board/cards/REM-655.md \u203a Done when",
+   "wave": 1,
+   "via": "term:keep merge",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-655.md#30",
+   "label": "board/cards/REM-655.md \u203a Log",
+   "wave": 1,
+   "via": "term:keep merge",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-655.md#2",
+   "label": "board/cards/REM-655.md \u203a Goal",
+   "wave": 2,
+   "via": "next:board/cards/REM-655.md#1",
+   "gold": false
+  },
+  {
+   "id": "commit/37ed4cd487",
+   "label": "commit 37ed4cd: rows, not schema: the rule, and a gate that reads specs/ (REM-655) (#335)",
+   "wave": 3,
+   "via": "term:table almost",
+   "gold": true
+  },
+  {
+   "id": "specs/user-rbac/schema.sql#28",
+   "label": "specs/user-rbac/schema.sql",
+   "wave": 4,
+   "via": "term:drifts",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "board/cards/REM-1035.md#6",
+    "label": "board/cards/REM-1035.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1083.md#1",
+    "label": "board/cards/REM-1083.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-655.md#2",
+    "label": "board/cards/REM-655.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1083.md#3",
+    "label": "board/cards/REM-1083.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "commit/946db32985",
+    "label": "commit 946db32: board: file REM-1083 core: every table and function names its callers, and the clusters serving little a",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "board/cards/REM-655.md#2",
+    "label": "board/cards/REM-655.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-655.md#4",
+    "label": "board/cards/REM-655.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1035.md#6",
+    "label": "board/cards/REM-1035.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-655.md#30",
+    "label": "board/cards/REM-655.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "commit/37ed4cd487",
+    "label": "commit 37ed4cd: rows, not schema: the rule, and a gate that reads specs/ (REM-655) (#335)",
+    "gold": true
+   }
+  ],
+  "LQ": [
+   {
+    "id": "board/cards/REM-655.md#2",
+    "label": "board/cards/REM-655.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "commit/946db32985",
+    "label": "commit 946db32: board: file REM-1083 core: every table and function names its callers, and the clusters serving little a",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1083.md#1",
+    "label": "board/cards/REM-1083.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-655.md#4",
+    "label": "board/cards/REM-655.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-97.md#1",
+    "label": "board/cards/REM-97.md",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "board/cards/REM-655.md#2",
+    "label": "board/cards/REM-655.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-655.md#4",
+    "label": "board/cards/REM-655.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-12.md#2",
+    "label": "board/cards/REM-12.md \u203a The shape",
+    "gold": false
+   },
+   {
+    "id": "meta/skills/board/SKILL.md#13",
+    "label": "meta/skills/board/SKILL.md \u203a Releases ride the train",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-655.md#30",
+    "label": "board/cards/REM-655.md \u203a Log",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.3333333333333333,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

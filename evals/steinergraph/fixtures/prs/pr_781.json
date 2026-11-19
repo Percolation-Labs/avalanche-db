@@ -1,0 +1,405 @@
+{
+ "qid": "pr:781",
+ "set": "prs",
+ "question": "What work went into this, and why: Step 4 round 1: graph-only doors lift Jev from NDCG .636 to .696 on held-out; prompt re-tuning does not transfer?",
+ "gold": [
+  {
+   "id": "commit/12813953d9",
+   "label": "commit 1281395: Step 4: register graph-only doors D1-D3 before scoring; slice records each door's targets (rows unchange",
+   "seed": false
+  },
+  {
+   "id": "commit/c3fc229ce0",
+   "label": "commit c3fc229: Step 4 round 1: graph-only doors lift Jev from NDCG .636 to .696 on held-out (+.060); prompt re-tuning d",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/c3fc229ce0",
+   "label": "commit c3fc229: Step 4 round 1: graph-only doors lift Jev from NDCG .636 to .696 on held-out (+.060); prompt re-tuning d",
+   "rank": 1,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "commit/7184942dc6",
+   "label": "commit 7184942: Merge pull request #781 from Percolation-Labs/bill/jev-doors",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "meta/lab/results/jev-doors/RESULT.md#11",
+   "label": "meta/lab/results/jev-doors/RESULT.md \u203a Round 4: re-tuning Jev's prompt on D6 does not pass (16 Nov, ~21:50Z)",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "meta/lab/results/jev-doors/REGISTERED.md#5",
+   "label": "meta/lab/results/jev-doors/REGISTERED.md \u203a Round 4: the alternation back to Jev, on D6 (registered 16 Nov ~21:35Z, befor",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "meta/lab/results/jev-doors/RESULT.md#3",
+   "label": "meta/lab/results/jev-doors/RESULT.md \u203a The alternation: re-tuning Jev on the new door",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 3
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/12813953d9",
+    "label": "commit 1281395: Step 4: register graph-only doors D1-D3 before scoring; slice records each door's targets (rows unchange",
+    "role": "gold"
+   },
+   {
+    "id": "commit/c3fc229ce0",
+    "label": "commit c3fc229: Step 4 round 1: graph-only doors lift Jev from NDCG .636 to .696 on held-out (+.060); prompt re-tuning d",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/12813953d9",
+    "b": "commit/c3fc229ce0",
+    "via": [
+     {
+      "kind": "beside"
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "commit/c3fc229ce0",
+   "gold": "commit/c3fc229ce0",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 593,
+  "within_2_doors": 29686,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "commit/12813953d9",
+    "label": "commit 1281395: Step 4: register graph-only doors D1-D3 before scoring; slice records each door's targets (rows unchange",
+    "p": 0.010996973764100014,
+    "gold": true
+   },
+   {
+    "id": "commit/7bcf72d405",
+    "label": "commit 7bcf72d: Worlds slice 1 result: oracle doors lift Jev .538->.718 and amber .484->.590; filter-then-rank helps on ",
+    "p": 0.007177677679923061,
+    "gold": false
+   },
+   {
+    "id": "commit/0801e603c3",
+    "label": "commit 0801e60: Merge pull request #771 from Percolation-Labs/bill/worlds",
+    "p": 0.006862922140005989,
+    "gold": false
+   },
+   {
+    "id": "commit/0e2dcfa35b",
+    "label": "commit 0e2dcfa: Merge pull request #783 from Percolation-Labs/bill/jev-doors-musique",
+    "p": 0.0067395632386400214,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/worlds/RESULT.md#1",
+    "label": "meta/lab/results/worlds/RESULT.md \u203a Worlds, slice 1: oracle doors lift every decider, and the worlds over-reward wide do",
+    "p": 0.00503864120886219,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/prompt-real/REGISTERED.md#1",
+    "label": "meta/lab/results/prompt-real/REGISTERED.md \u203a Does the prompt move Jev on real corpora? (registered 17 Nov ~12:35Z, befor",
+    "p": 0.004872765256805582,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-doors/RESULT.md#4",
+    "label": "meta/lab/results/jev-doors/RESULT.md \u203a Postmortem",
+    "p": 0.004080492109119789,
+    "gold": false
+   },
+   {
+    "id": "commit/e9d77a0887",
+    "label": "commit e9d77a0: Round 4: register the alternation back to Jev's prompt on D6, with a two-split rule",
+    "p": 0.003918741720969074,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261116-182008-f59c.md#1",
+    "label": "board/messages/M-20261116-182008-f59c.md",
+    "p": 0.003812300683150395,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/worlds/wr_filter.py#2",
+    "label": "meta/lab/worlds/wr_filter.py",
+    "p": 0.003149426867529338,
+    "gold": false
+   },
+   {
+    "id": "commit/a5fe329f29",
+    "label": "commit a5fe329: board: james messages sirsh",
+    "p": 0.00300632970365746,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-doors/WRITEUP.md#8",
+    "label": "meta/lab/results/jev-doors/WRITEUP.md \u203a Act 4: back to Jev, on the better door",
+    "p": 0.002981993783254187,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/worlds/ftr_labels.py#3",
+    "label": "meta/lab/worlds/ftr_labels.py",
+    "p": 0.0029659453690502823,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261116-204500-99a8.md#1",
+    "label": "board/messages/M-20261116-204500-99a8.md",
+    "p": 0.0029615269771162732,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261116-192549-f060.md#1",
+    "label": "board/messages/M-20261116-192549-f060.md",
+    "p": 0.0029447519364995604,
+    "gold": false
+   },
+   {
+    "id": "commit/5e61977603",
+    "label": "commit 5e61977: Step 4 round 2: register D4 (links) and D5 (specific names) before scoring",
+    "p": 0.0029014815941851317,
+    "gold": false
+   },
+   {
+    "id": "commit/2d0e85f445",
+    "label": "commit 2d0e85f: board: watch samples 1 process(es) on Sirshs-MacBook-Air",
+    "p": 0.0028923685313718786,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/prompt-real/RESULT.md#1",
+    "label": "meta/lab/results/prompt-real/RESULT.md \u203a The prompt does not move Jev on real corpora either (17 Nov ~13:00Z)",
+    "p": 0.0027940097991898272,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/worlds/FOUND-REGISTERED.md#1",
+    "label": "meta/lab/results/worlds/FOUND-REGISTERED.md \u203a Jev with what was read in its state (registered 16 Nov ~08:58Z, before any",
+    "p": 0.0027555514333705553,
+    "gold": false
+   },
+   {
+    "id": "commit/08a948c3e8",
+    "label": "commit 08a948c: board: james messages sirsh",
+    "p": 0.0026498838432953272,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/c3fc229ce0",
+   "label": "commit c3fc229: Step 4 round 1: graph-only doors lift Jev from NDCG .636 to .696 on held-out (+.060); prompt re-tuning d",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "commit/7184942dc6",
+   "label": "commit 7184942: Merge pull request #781 from Percolation-Labs/bill/jev-doors",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/jev-doors/RESULT.md#11",
+   "label": "meta/lab/results/jev-doors/RESULT.md \u203a Round 4: re-tuning Jev's prompt on D6 does not pass (16 Nov, ~21:50Z)",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/jev-doors/REGISTERED.md#5",
+   "label": "meta/lab/results/jev-doors/REGISTERED.md \u203a Round 4: the alternation back to Jev, on D6 (registered 16 Nov ~21:35Z, befor",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/jev-doors/RESULT.md#3",
+   "label": "meta/lab/results/jev-doors/RESULT.md \u203a The alternation: re-tuning Jev on the new door",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/jev-doors/WRITEUP.md#8",
+   "label": "meta/lab/results/jev-doors/WRITEUP.md \u203a Act 4: back to Jev, on the better door",
+   "wave": 1,
+   "via": "term:writeup",
+   "gold": false
+  },
+  {
+   "id": "commit/248af4a090",
+   "label": "commit 248af4a: Round 4: prompt re-tuning on D6 does not pass; write-up of the ceiling and door evidence (WRITEUP.md)",
+   "wave": 1,
+   "via": "term:writeup",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/jev-doors/WRITEUP.md#1",
+   "label": "meta/lab/results/jev-doors/WRITEUP.md \u203a The door, not the decider: what limits Jev's choice of where to read next",
+   "wave": 1,
+   "via": "term:writeup",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/jev-doors/WRITEUP.md#4",
+   "label": "meta/lab/results/jev-doors/WRITEUP.md \u203a Method",
+   "wave": 1,
+   "via": "term:writeup",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/jev-doors/WRITEUP.md#5",
+   "label": "meta/lab/results/jev-doors/WRITEUP.md \u203a Act 1: Jev's ceiling with today's doors",
+   "wave": 1,
+   "via": "term:writeup",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "commit/12813953d9",
+    "label": "commit 1281395: Step 4: register graph-only doors D1-D3 before scoring; slice records each door's targets (rows unchange",
+    "gold": true
+   },
+   {
+    "id": "commit/7bcf72d405",
+    "label": "commit 7bcf72d: Worlds slice 1 result: oracle doors lift Jev .538->.718 and amber .484->.590; filter-then-rank helps on ",
+    "gold": false
+   },
+   {
+    "id": "commit/0801e603c3",
+    "label": "commit 0801e60: Merge pull request #771 from Percolation-Labs/bill/worlds",
+    "gold": false
+   },
+   {
+    "id": "commit/0e2dcfa35b",
+    "label": "commit 0e2dcfa: Merge pull request #783 from Percolation-Labs/bill/jev-doors-musique",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/worlds/RESULT.md#1",
+    "label": "meta/lab/results/worlds/RESULT.md \u203a Worlds, slice 1: oracle doors lift every decider, and the worlds over-reward wide do",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "commit/0e2dcfa35b",
+    "label": "commit 0e2dcfa: Merge pull request #783 from Percolation-Labs/bill/jev-doors-musique",
+    "gold": false
+   },
+   {
+    "id": "commit/0801e603c3",
+    "label": "commit 0801e60: Merge pull request #771 from Percolation-Labs/bill/worlds",
+    "gold": false
+   },
+   {
+    "id": "commit/7bcf72d405",
+    "label": "commit 7bcf72d: Worlds slice 1 result: oracle doors lift Jev .538->.718 and amber .484->.590; filter-then-rank helps on ",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-doors/RESULT.md#4",
+    "label": "meta/lab/results/jev-doors/RESULT.md \u203a Postmortem",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261116-192549-f060.md#1",
+    "label": "board/messages/M-20261116-192549-f060.md",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/e9d77a0887",
+    "label": "commit e9d77a0: Round 4: register the alternation back to Jev's prompt on D6, with a two-split rule",
+    "gold": false
+   },
+   {
+    "id": "commit/12813953d9",
+    "label": "commit 1281395: Step 4: register graph-only doors D1-D3 before scoring; slice records each door's targets (rows unchange",
+    "gold": true
+   },
+   {
+    "id": "commit/248af4a090",
+    "label": "commit 248af4a: Round 4: prompt re-tuning on D6 does not pass; write-up of the ceiling and door evidence (WRITEUP.md)",
+    "gold": false
+   },
+   {
+    "id": "commit/5e61977603",
+    "label": "commit 5e61977: Step 4 round 2: register D4 (links) and D5 (specific names) before scoring",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261116-182008-f59c.md#1",
+    "label": "board/messages/M-20261116-182008-f59c.md",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "meta/lab/results/jev-doors/RESULT.md#6",
+    "label": "meta/lab/results/jev-doors/RESULT.md \u203a Round 2: relations and specific names do not beat D3 (16 Nov, ~19:45Z)",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261116-193617-4ae4.md#1",
+    "label": "board/messages/M-20261116-193617-4ae4.md",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261116-192549-f060.md#1",
+    "label": "board/messages/M-20261116-192549-f060.md",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261116-182008-f59c.md#1",
+    "label": "board/messages/M-20261116-182008-f59c.md",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-doors/REGISTERED.md#1",
+    "label": "meta/lab/results/jev-doors/REGISTERED.md \u203a Step 4: better doors on the same graph, with Jev fixed at its ceiling setting",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 1.0,
+  "Q": 0.0,
+  "LQ": 1.0,
+  "S": 0.0
+ }
+}

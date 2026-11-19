@@ -1,0 +1,407 @@
+{
+ "qid": "RW:2hop__6827_55848",
+ "set": "mq",
+ "question": "When was the first branch of the company that bought FleetBoston Financial established?",
+ "gold": [
+  {
+   "id": "mq:6a0e37536c30be2c",
+   "label": "Boston",
+   "seed": true
+  },
+  {
+   "id": "mq:d4796c5c359f263b",
+   "label": "Bank of America",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:6b0b89914ae24453",
+   "label": "Bank of America",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:8e091fef171868fc",
+   "label": "First Calgary Financial",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:74759b426bf6df7d",
+   "label": "Standard Insurance Company",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "mq:c5b339e710e52ec6",
+   "label": "PizzaExpress",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:6a0e37536c30be2c",
+   "label": "Boston",
+   "rank": 5,
+   "gold": true,
+   "doors_to_gold": 0
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:6a0e37536c30be2c",
+    "label": "Boston",
+    "role": "gold"
+   },
+   {
+    "id": "mq:d4796c5c359f263b",
+    "label": "Bank of America",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:6a0e37536c30be2c",
+    "b": "mq:d4796c5c359f263b",
+    "via": [
+     {
+      "kind": "term",
+      "key": "merged",
+      "width": 93
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "mq:6a0e37536c30be2c",
+   "gold": "mq:6a0e37536c30be2c",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 2644,
+  "within_2_doors": 18437,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "mq:2107469068de732f",
+    "label": "Servus Credit Union",
+    "p": 0.003894436984987388,
+    "gold": false
+   },
+   {
+    "id": "mq:a66c48e7a134ce8b",
+    "label": "Abraham & Straus",
+    "p": 0.0026734369273270875,
+    "gold": false
+   },
+   {
+    "id": "mq:cc1ae16b83e81435",
+    "label": "Arsenal F.C.",
+    "p": 0.0020477453062374253,
+    "gold": false
+   },
+   {
+    "id": "mq:e3a49602b9107a98",
+    "label": "Great American Ball Park",
+    "p": 0.0017910933574091011,
+    "gold": false
+   },
+   {
+    "id": "mq:5013fbc1f9f1f025",
+    "label": "Equal Credit Opportunity Act",
+    "p": 0.0017327629765059782,
+    "gold": false
+   },
+   {
+    "id": "mq:e8198c25685903e4",
+    "label": "Taishanese people",
+    "p": 0.0016981524870603598,
+    "gold": false
+   },
+   {
+    "id": "mq:c768404ee9b279c2",
+    "label": "Bank of America Home Loans",
+    "p": 0.0013820937118687784,
+    "gold": false
+   },
+   {
+    "id": "mq:c43d0c6d93941976",
+    "label": "1201 Third Avenue",
+    "p": 0.00131749277768674,
+    "gold": false
+   },
+   {
+    "id": "mq:29bea8cf7788445a",
+    "label": "Tan Suee Chieh",
+    "p": 0.0012588145728576077,
+    "gold": false
+   },
+   {
+    "id": "mq:0d48fcbade54a7c4",
+    "label": "Boston",
+    "p": 0.001191464035173886,
+    "gold": false
+   },
+   {
+    "id": "mq:c3287702508624c0",
+    "label": "Sky UK",
+    "p": 0.0011905118676620039,
+    "gold": false
+   },
+   {
+    "id": "mq:4fc00feaba5b035e",
+    "label": "Cape plc",
+    "p": 0.0009710149494032471,
+    "gold": false
+   },
+   {
+    "id": "mq:60bb082ac9486176",
+    "label": "Equity Music Group",
+    "p": 0.0009616020913158957,
+    "gold": false
+   },
+   {
+    "id": "mq:d614ee4c79c2fc62",
+    "label": "John Kerry",
+    "p": 0.0009347556286059607,
+    "gold": false
+   },
+   {
+    "id": "mq:feead34d01838fd0",
+    "label": "Rothschild banking family of France",
+    "p": 0.0008960515148396856,
+    "gold": false
+   },
+   {
+    "id": "mq:a3395686637af6ab",
+    "label": "Tanzania",
+    "p": 0.0008651190460495412,
+    "gold": false
+   },
+   {
+    "id": "mq:aedf000b48ad1bfe",
+    "label": "Marks & Spencer",
+    "p": 0.0008555388794346083,
+    "gold": false
+   },
+   {
+    "id": "mq:f96dd33b746e088a",
+    "label": "CFGQ-FM",
+    "p": 0.0008521781205701823,
+    "gold": false
+   },
+   {
+    "id": "mq:add6b0d331acd469",
+    "label": "Royal Dutch Shell",
+    "p": 0.0008368024460136203,
+    "gold": false
+   },
+   {
+    "id": "mq:0a924c2c53211d1a",
+    "label": "ICICI Bank",
+    "p": 0.0008175889388048233,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:6b0b89914ae24453",
+   "label": "Bank of America",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:8e091fef171868fc",
+   "label": "First Calgary Financial",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:74759b426bf6df7d",
+   "label": "Standard Insurance Company",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:c5b339e710e52ec6",
+   "label": "PizzaExpress",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:6a0e37536c30be2c",
+   "label": "Boston",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:d5ac7ce35f651f90",
+   "label": "Pareni Maya Jalaima",
+   "wave": 1,
+   "via": "term:expensive",
+   "gold": false
+  },
+  {
+   "id": "mq:a14b97cff9054cd0",
+   "label": "Daylight saving time",
+   "wave": 1,
+   "via": "term:expensive",
+   "gold": false
+  },
+  {
+   "id": "mq:829c1d81dec03bbb",
+   "label": "Brigham Young University",
+   "wave": 1,
+   "via": "term:expensive",
+   "gold": false
+  },
+  {
+   "id": "mq:bbbe9053632e9c35",
+   "label": "Water resources",
+   "wave": 1,
+   "via": "term:expensive",
+   "gold": false
+  },
+  {
+   "id": "mq:0589f357129eedf8",
+   "label": "Naples, Florida",
+   "wave": 1,
+   "via": "term:expensive",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:2107469068de732f",
+    "label": "Servus Credit Union",
+    "gold": false
+   },
+   {
+    "id": "mq:a66c48e7a134ce8b",
+    "label": "Abraham & Straus",
+    "gold": false
+   },
+   {
+    "id": "mq:cc1ae16b83e81435",
+    "label": "Arsenal F.C.",
+    "gold": false
+   },
+   {
+    "id": "mq:e3a49602b9107a98",
+    "label": "Great American Ball Park",
+    "gold": false
+   },
+   {
+    "id": "mq:5013fbc1f9f1f025",
+    "label": "Equal Credit Opportunity Act",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:2107469068de732f",
+    "label": "Servus Credit Union",
+    "gold": false
+   },
+   {
+    "id": "mq:a66c48e7a134ce8b",
+    "label": "Abraham & Straus",
+    "gold": false
+   },
+   {
+    "id": "mq:c768404ee9b279c2",
+    "label": "Bank of America Home Loans",
+    "gold": false
+   },
+   {
+    "id": "mq:c43d0c6d93941976",
+    "label": "1201 Third Avenue",
+    "gold": false
+   },
+   {
+    "id": "mq:0a924c2c53211d1a",
+    "label": "ICICI Bank",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:2107469068de732f",
+    "label": "Servus Credit Union",
+    "gold": false
+   },
+   {
+    "id": "mq:a66c48e7a134ce8b",
+    "label": "Abraham & Straus",
+    "gold": false
+   },
+   {
+    "id": "mq:0d48fcbade54a7c4",
+    "label": "Boston",
+    "gold": false
+   },
+   {
+    "id": "mq:c768404ee9b279c2",
+    "label": "Bank of America Home Loans",
+    "gold": false
+   },
+   {
+    "id": "mq:0a924c2c53211d1a",
+    "label": "ICICI Bank",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:724e6e1ed3bb71b1",
+    "label": "Dow Jones & Company",
+    "gold": false
+   },
+   {
+    "id": "mq:033e5f08c3594169",
+    "label": "Coca-Cola Bottling Company of Cape Cod",
+    "gold": false
+   },
+   {
+    "id": "mq:bbc79f4eede3a103",
+    "label": "Jofa",
+    "gold": false
+   },
+   {
+    "id": "mq:09314ca16f064039",
+    "label": "Economic and Financial Crimes Commission",
+    "gold": false
+   },
+   {
+    "id": "mq:4351ce7cc374c8fe",
+    "label": "InteliSpend Prepaid Solutions",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

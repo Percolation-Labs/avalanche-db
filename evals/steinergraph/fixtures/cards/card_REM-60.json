@@ -1,0 +1,451 @@
+{
+ "qid": "card:REM-60",
+ "set": "cards",
+ "question": "What was done about this, and why: aiq: re-deriving one package's edges never retracts another's?",
+ "gold": [
+  {
+   "id": "commit/2d54769a16",
+   "label": "commit 2d54769: A retracted edge went on answering every walk and every GRAPH query",
+   "seed": false
+  },
+  {
+   "id": "commit/9138e6c002",
+   "label": "commit 9138e6c: The self-model's from-zero load, and what it proved about REM-60",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "board/cards/REM-60.md#1",
+   "label": "board/cards/REM-60.md",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-961.md#4",
+   "label": "board/cards/REM-961.md \u203a Done when",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "board/cards/REM-727.md#4",
+   "label": "board/cards/REM-727.md \u203a Done when",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "meta/postmortems/2026-09-08-what-the-move-made-visible.md#2",
+   "label": "meta/postmortems/2026-09-08-what-the-move-made-visible.md \u203a What moved",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "specs/ai-query-layer/reliability.sql#1",
+   "label": "specs/ai-query-layer/reliability.sql",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 2
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "board/cards/REM-60.md#1",
+    "label": "board/cards/REM-60.md",
+    "role": "seed"
+   },
+   {
+    "id": "commit/2d54769a16",
+    "label": "commit 2d54769: A retracted edge went on answering every walk and every GRAPH query",
+    "role": "gold"
+   },
+   {
+    "id": "commit/9138e6c002",
+    "label": "commit 9138e6c: The self-model's from-zero load, and what it proved about REM-60",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "board/cards/REM-60.md#1",
+    "b": "commit/2d54769a16",
+    "via": [
+     {
+      "kind": "term",
+      "key": "rem 60",
+      "width": 13
+     },
+     {
+      "kind": "term",
+      "key": "relation name",
+      "width": 32
+     }
+    ]
+   },
+   {
+    "a": "commit/2d54769a16",
+    "b": "commit/9138e6c002",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "model refresh",
+      "width": 8
+     },
+     {
+      "kind": "term",
+      "key": "code session_01vfjyxea5x5qrbv8w3fceig",
+      "width": 12
+     },
+     {
+      "kind": "term",
+      "key": "session_01vfjyxea5x5qrbv8w3fceig",
+      "width": 12
+     },
+     {
+      "kind": "term",
+      "key": "rem 60",
+      "width": 13
+     },
+     {
+      "kind": "term",
+      "key": "edge_retractions",
+      "width": 13
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "board/cards/REM-60.md#1",
+   "gold": "commit/2d54769a16",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 2116,
+  "within_2_doors": 33671,
+  "gold_within_1": 2,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "board/cards/REM-961.md#6",
+    "label": "board/cards/REM-961.md \u203a Log",
+    "p": 0.009788211042579617,
+    "gold": false
+   },
+   {
+    "id": "research-notes/algorithms/source-reliability.md#2",
+    "label": "research-notes/algorithms/source-reliability.md \u203a The mechanism",
+    "p": 0.00843184179645762,
+    "gold": false
+   },
+   {
+    "id": "research-notes/layering.md#3",
+    "label": "research-notes/layering.md \u203a Layer 1 \u2014 the extension",
+    "p": 0.0040986866620493275,
+    "gold": false
+   },
+   {
+    "id": "commit/7aaad9ec0e",
+    "label": "commit 7aaad9e: Nine objects out of an application and into the extension",
+    "p": 0.0036558022645670854,
+    "gold": false
+   },
+   {
+    "id": "commit/9ac8c04a47",
+    "label": "commit 9ac8c04: The file could not move; two thirds of it could",
+    "p": 0.0016811305951516828,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-08-what-the-move-made-visible.md#1",
+    "label": "meta/postmortems/2026-09-08-what-the-move-made-visible.md \u203a What the move made visible",
+    "p": 0.0012380216345502528,
+    "gold": false
+   },
+   {
+    "id": "commit/bc99c4ed7b",
+    "label": "commit bc99c4e: Upstream: edges carry time, and a consolidation must be able to decline",
+    "p": 0.0012282747730523896,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-60.md#2",
+    "label": "board/cards/REM-60.md \u203a Log",
+    "p": 0.001187567288593436,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261031-135407-5499.md#1",
+    "label": "board/messages/M-20261031-135407-5499.md",
+    "p": 0.0011649945800715684,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-727.md#8",
+    "label": "board/cards/REM-727.md \u203a Log",
+    "p": 0.0011573321867569821,
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-self-model/reliability.sql#1",
+    "label": "applications/percolate-self-model/reliability.sql",
+    "p": 0.001149973638784444,
+    "gold": false
+   },
+   {
+    "id": "commit/83edb6db56",
+    "label": "commit 83edb6d: 06-lake runs its parser sections only where the installed parser has LAKE",
+    "p": 0.0011432290637042844,
+    "gold": false
+   },
+   {
+    "id": "board/team/bill.md#3",
+    "label": "board/team/bill.md \u203a Log",
+    "p": 0.0011410177777403977,
+    "gold": false
+   },
+   {
+    "id": "board/team/focus-canvas.md#3",
+    "label": "board/team/focus-canvas.md \u203a Log",
+    "p": 0.0011338859237336725,
+    "gold": false
+   },
+   {
+    "id": "commit/ea0da2da08",
+    "label": "commit ea0da2d: canvas: preserve fisheye design and use a real article for review (REM-719)",
+    "p": 0.0011000607953259738,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-08-what-the-move-made-visible.md#7",
+    "label": "meta/postmortems/2026-09-08-what-the-move-made-visible.md \u203a The file that could not move, two thirds of which could",
+    "p": 0.001083775761868789,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-08-coverage-before-cleverness.md#13",
+    "label": "meta/postmortems/2026-09-08-coverage-before-cleverness.md \u203a 8. And then nine of them left the application entirely",
+    "p": 0.0010518395968987515,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-11-four-spellings-of-current.md#4",
+    "label": "meta/postmortems/2026-09-11-four-spellings-of-current.md \u203a 3. The two designs worth writing down",
+    "p": 0.001042019465617607,
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-self-model/decisions.sql#6",
+    "label": "applications/percolate-self-model/decisions.sql",
+    "p": 0.001026413436684734,
+    "gold": false
+   },
+   {
+    "id": "specs/ai-query-layer/reliability.sql#2",
+    "label": "specs/ai-query-layer/reliability.sql",
+    "p": 0.0009459934684546222,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "board/cards/REM-60.md#1",
+   "label": "board/cards/REM-60.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-961.md#4",
+   "label": "board/cards/REM-961.md \u203a Done when",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-727.md#4",
+   "label": "board/cards/REM-727.md \u203a Done when",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/postmortems/2026-09-08-what-the-move-made-visible.md#2",
+   "label": "meta/postmortems/2026-09-08-what-the-move-made-visible.md \u203a What moved",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/ai-query-layer/reliability.sql#1",
+   "label": "specs/ai-query-layer/reliability.sql",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/postmortems/2026-09-11-four-spellings-of-current.md#4",
+   "label": "meta/postmortems/2026-09-11-four-spellings-of-current.md \u203a 3. The two designs worth writing down",
+   "wave": 1,
+   "via": "term:rem 60",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-60.md#2",
+   "label": "board/cards/REM-60.md \u203a Log",
+   "wave": 1,
+   "via": "term:rem 60",
+   "gold": false
+  },
+  {
+   "id": "meta/postmortems/2026-09-11-four-spellings-of-current.md#1",
+   "label": "meta/postmortems/2026-09-11-four-spellings-of-current.md \u203a Four spellings of \"current\", and the tests that pinned the wr",
+   "wave": 1,
+   "via": "term:rem 60",
+   "gold": false
+  },
+  {
+   "id": "commit/9138e6c002",
+   "label": "commit 9138e6c: The self-model's from-zero load, and what it proved about REM-60",
+   "wave": 1,
+   "via": "term:rem 60",
+   "gold": true
+  },
+  {
+   "id": "meta/postmortems/2026-09-11-four-spellings-of-current.md#7",
+   "label": "meta/postmortems/2026-09-11-four-spellings-of-current.md \u203a 5. Not verified",
+   "wave": 1,
+   "via": "term:rem 60",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "board/cards/REM-961.md#6",
+    "label": "board/cards/REM-961.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "research-notes/algorithms/source-reliability.md#2",
+    "label": "research-notes/algorithms/source-reliability.md \u203a The mechanism",
+    "gold": false
+   },
+   {
+    "id": "research-notes/layering.md#3",
+    "label": "research-notes/layering.md \u203a Layer 1 \u2014 the extension",
+    "gold": false
+   },
+   {
+    "id": "commit/7aaad9ec0e",
+    "label": "commit 7aaad9e: Nine objects out of an application and into the extension",
+    "gold": false
+   },
+   {
+    "id": "commit/9ac8c04a47",
+    "label": "commit 9ac8c04: The file could not move; two thirds of it could",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "board/cards/REM-961.md#6",
+    "label": "board/cards/REM-961.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "commit/7aaad9ec0e",
+    "label": "commit 7aaad9e: Nine objects out of an application and into the extension",
+    "gold": false
+   },
+   {
+    "id": "research-notes/layering.md#3",
+    "label": "research-notes/layering.md \u203a Layer 1 \u2014 the extension",
+    "gold": false
+   },
+   {
+    "id": "commit/bc99c4ed7b",
+    "label": "commit bc99c4e: Upstream: edges carry time, and a consolidation must be able to decline",
+    "gold": false
+   },
+   {
+    "id": "commit/9ac8c04a47",
+    "label": "commit 9ac8c04: The file could not move; two thirds of it could",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "specs/build-knit-dream/activity-memory.md#15",
+    "label": "specs/build-knit-dream/activity-memory.md \u203a 5. Privacy",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-60.md#2",
+    "label": "board/cards/REM-60.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "commit/131d9de631",
+    "label": "commit 131d9de: board: REM-961 review \u2192 done",
+    "gold": false
+   },
+   {
+    "id": "commit/4cc22b6361",
+    "label": "commit 4cc22b6: board: REM-959 in-progress \u2192 done",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-961.md#6",
+    "label": "board/cards/REM-961.md \u203a Log",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "specs/build-knit-dream/activity-memory.md#15",
+    "label": "specs/build-knit-dream/activity-memory.md \u203a 5. Privacy",
+    "gold": false
+   },
+   {
+    "id": "specs/packages/brief.md#14",
+    "label": "specs/packages/brief.md \u203a 8. A package asserts its own derivation, and the assertion is idempotence",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261028-201539-9948.md#1",
+    "label": "board/messages/M-20261028-201539-9948.md",
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-self-model/decisions.sql#6",
+    "label": "applications/percolate-self-model/decisions.sql",
+    "gold": false
+   },
+   {
+    "id": "specs/world-model-ingestion/brief.md#25",
+    "label": "specs/world-model-ingestion/brief.md \u203a 4.51 Two properties consolidation must have, from the backtest",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

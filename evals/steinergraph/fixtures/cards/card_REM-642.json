@@ -1,0 +1,619 @@
+{
+ "qid": "card:REM-642",
+ "set": "cards",
+ "question": "What was done about this, and why: research: a cited belief is not the citing authors' claim?",
+ "gold": [
+  {
+   "id": "commit/01ef64ef82",
+   "label": "commit 01ef64e: research: a merge may not change who is said to hold the claim (REM-642)",
+   "seed": false
+  },
+  {
+   "id": "commit/26e3303df4",
+   "label": "commit 26e3303: research: background is a claim, and there are three kinds of holder (REM-644)",
+   "seed": false
+  },
+  {
+   "id": "commit/5fa7bd1967",
+   "label": "commit 5fa7bd1: research: freeze a blind reading against the sealed holdout (REM-643)",
+   "seed": false
+  },
+  {
+   "id": "commit/6270b6298c",
+   "label": "commit 6270b62: equivalence: the extractor discards where equivalence lives (REM-633, REM-644)",
+   "seed": false
+  },
+  {
+   "id": "commit/a90165fb6c",
+   "label": "commit a90165f: research: background is a claim, and there are three kinds of holder (REM-644)",
+   "seed": false
+  },
+  {
+   "id": "commit/fa2b2a3821",
+   "label": "commit fa2b2a3: equivalence: reveal the holdout, and score nothing from it (REM-633)",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/e5ffd574a5",
+   "label": "commit e5ffd57: board: file REM-642 research: a cited belief is not the citing authors' claim",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-642.md#1",
+   "label": "board/cards/REM-642.md",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-642.md#4",
+   "label": "board/cards/REM-642.md \u203a Done when",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-642.md#2",
+   "label": "board/cards/REM-642.md \u203a Goal",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "applications/percolate-self-model/dreaming/reduce/graph/attribution.py#1",
+   "label": "applications/percolate-self-model/dreaming/reduce/graph/attribution.py",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "board/cards/REM-642.md#4",
+    "label": "board/cards/REM-642.md \u203a Done when",
+    "role": "seed"
+   },
+   {
+    "id": "commit/01ef64ef82",
+    "label": "commit 01ef64e: research: a merge may not change who is said to hold the claim (REM-642)",
+    "role": "gold"
+   },
+   {
+    "id": "commit/26e3303df4",
+    "label": "commit 26e3303: research: background is a claim, and there are three kinds of holder (REM-644)",
+    "role": "gold"
+   },
+   {
+    "id": "commit/5fa7bd1967",
+    "label": "commit 5fa7bd1: research: freeze a blind reading against the sealed holdout (REM-643)",
+    "role": "gold"
+   },
+   {
+    "id": "commit/6270b6298c",
+    "label": "commit 6270b62: equivalence: the extractor discards where equivalence lives (REM-633, REM-644)",
+    "role": "gold"
+   },
+   {
+    "id": "commit/a90165fb6c",
+    "label": "commit a90165f: research: background is a claim, and there are three kinds of holder (REM-644)",
+    "role": "gold"
+   },
+   {
+    "id": "commit/fa2b2a3821",
+    "label": "commit fa2b2a3: equivalence: reveal the holdout, and score nothing from it (REM-633)",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "board/cards/REM-642.md#4",
+    "b": "commit/6270b6298c",
+    "via": [
+     {
+      "kind": "term",
+      "key": "authored claim",
+      "width": 7
+     },
+     {
+      "kind": "term",
+      "key": "rem 642",
+      "width": 37
+     }
+    ]
+   },
+   {
+    "a": "commit/01ef64ef82",
+    "b": "commit/5fa7bd1967",
+    "via": [
+     {
+      "kind": "term",
+      "key": "1803",
+      "width": 15
+     },
+     {
+      "kind": "term",
+      "key": "rem 642",
+      "width": 37
+     },
+     {
+      "kind": "term",
+      "key": "mergeable",
+      "width": 80
+     }
+    ]
+   },
+   {
+    "a": "commit/26e3303df4",
+    "b": "commit/6270b6298c",
+    "via": [
+     {
+      "kind": "term",
+      "key": "specific ones",
+      "width": 8
+     },
+     {
+      "kind": "term",
+      "key": "attributed propositions",
+      "width": 9
+     },
+     {
+      "kind": "term",
+      "key": "background statement",
+      "width": 12
+     },
+     {
+      "kind": "term",
+      "key": "author attributed",
+      "width": 13
+     },
+     {
+      "kind": "term",
+      "key": "authors make",
+      "width": 16
+     }
+    ]
+   },
+   {
+    "a": "commit/26e3303df4",
+    "b": "commit/a90165fb6c",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "deep copy",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "fix safe",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "elsewhere attributed",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "three special",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "rulings",
+      "width": 2
+     }
+    ]
+   },
+   {
+    "a": "commit/5fa7bd1967",
+    "b": "commit/fa2b2a3821",
+    "via": [
+     {
+      "kind": "term",
+      "key": "reading frozen",
+      "width": 11
+     },
+     {
+      "kind": "term",
+      "key": "p14",
+      "width": 13
+     },
+     {
+      "kind": "term",
+      "key": "sealing",
+      "width": 13
+     },
+     {
+      "kind": "term",
+      "key": "p12",
+      "width": 16
+     },
+     {
+      "kind": "term",
+      "key": "ciphertext",
+      "width": 27
+     }
+    ]
+   },
+   {
+    "a": "commit/6270b6298c",
+    "b": "commit/fa2b2a3821",
+    "via": [
+     {
+      "kind": "term",
+      "key": "matching span",
+      "width": 6
+     },
+     {
+      "kind": "term",
+      "key": "authors assert",
+      "width": 9
+     },
+     {
+      "kind": "term",
+      "key": "h03",
+      "width": 11
+     },
+     {
+      "kind": "term",
+      "key": "p12",
+      "width": 16
+     },
+     {
+      "kind": "term",
+      "key": "rem 643",
+      "width": 36
+     }
+    ]
+   }
+  ],
+  "cost": 6,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  "entry": {
+   "seed": "board/cards/REM-642.md#4",
+   "gold": "commit/6270b6298c",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 1079,
+  "within_2_doors": 32320,
+  "gold_within_1": 6,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "board/cards/REM-642.md#7",
+    "label": "board/cards/REM-642.md \u203a Log",
+    "p": 0.02038279564047514,
+    "gold": false
+   },
+   {
+    "id": "commit/8dc26fa2c5",
+    "label": "commit 8dc26fa: equivalence: declare the label scope jack's run caught, and rule on p11 (REM-633)",
+    "p": 0.006896108578878701,
+    "gold": false
+   },
+   {
+    "id": "commit/8e7e9edc9d",
+    "label": "commit 8e7e9ed: research: two thirds of \"who holds this claim\" is already free (REM-659)",
+    "p": 0.006476573972176657,
+    "gold": false
+   },
+   {
+    "id": "commit/01ef64ef82",
+    "label": "commit 01ef64e: research: a merge may not change who is said to hold the claim (REM-642)",
+    "p": 0.00581480147918121,
+    "gold": true
+   },
+   {
+    "id": "commit/ddcd9025fe",
+    "label": "commit ddcd902: equivalence: the sample held two mergeable labels, so it separated nothing (REM-633)",
+    "p": 0.004383968373670709,
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-self-model/dreaming/reduce/graph/ATTRIBUTION.md#3",
+    "label": "applications/percolate-self-model/dreaming/reduce/graph/ATTRIBUTION.md \u203a The case it cannot reach",
+    "p": 0.004274893399681233,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-642.md#3",
+    "label": "board/cards/REM-642.md \u203a Evidence",
+    "p": 0.003829068881968988,
+    "gold": false
+   },
+   {
+    "id": "commit/5e307d67ae",
+    "label": "commit 5e307d6: board: bob checks in, working",
+    "p": 0.0035203245039646456,
+    "gold": false
+   },
+   {
+    "id": "commit/d09602aa2f",
+    "label": "commit d09602a: board: p8-subsystems-10 takes REM-641",
+    "p": 0.0032511681047592907,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-644.md#7",
+    "label": "board/cards/REM-644.md \u203a Log",
+    "p": 0.003206700197847324,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-648.md#7",
+    "label": "board/cards/REM-648.md \u203a Log",
+    "p": 0.0025737390784265892,
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-self-model/dreaming/reduce/graph/ATTRIBUTION.md#1",
+    "label": "applications/percolate-self-model/dreaming/reduce/graph/ATTRIBUTION.md \u203a Two thirds of \"who holds this claim\" is already",
+    "p": 0.001945827954114816,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-641.md#7",
+    "label": "board/cards/REM-641.md \u203a Log",
+    "p": 0.0018724185711239693,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261030-095112-0629.md#1",
+    "label": "board/messages/M-20261030-095112-0629.md",
+    "p": 0.0018199257968552797,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-644.md#4",
+    "label": "board/cards/REM-644.md \u203a Done when",
+    "p": 0.0017803035724440126,
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-self-model/dreaming/reduce/graph/attribution.py#2",
+    "label": "applications/percolate-self-model/dreaming/reduce/graph/attribution.py",
+    "p": 0.0016854287896676252,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-642.md#5",
+    "label": "board/cards/REM-642.md \u203a Scope",
+    "p": 0.0016849479924073393,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-633.md#14",
+    "label": "board/cards/REM-633.md \u203a Log",
+    "p": 0.001675062709916768,
+    "gold": false
+   },
+   {
+    "id": "commit/6270b6298c",
+    "label": "commit 6270b62: equivalence: the extractor discards where equivalence lives (REM-633, REM-644)",
+    "p": 0.001651641009145229,
+    "gold": true
+   },
+   {
+    "id": "board/cards/REM-633.md#10",
+    "label": "board/cards/REM-633.md \u203a Log",
+    "p": 0.0015681658626824186,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/e5ffd574a5",
+   "label": "commit e5ffd57: board: file REM-642 research: a cited belief is not the citing authors' claim",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-642.md#1",
+   "label": "board/cards/REM-642.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-642.md#4",
+   "label": "board/cards/REM-642.md \u203a Done when",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-642.md#2",
+   "label": "board/cards/REM-642.md \u203a Goal",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "applications/percolate-self-model/dreaming/reduce/graph/attribution.py#1",
+   "label": "applications/percolate-self-model/dreaming/reduce/graph/attribution.py",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "applications/percolate-self-model/dreaming/reduce/graph/ATTRIBUTION.md#5",
+   "label": "applications/percolate-self-model/dreaming/reduce/graph/ATTRIBUTION.md \u203a Running it",
+   "wave": 1,
+   "via": "term:graph attribution",
+   "gold": false
+  },
+  {
+   "id": "applications/percolate-self-model/dreaming/reduce/graph/ATTRIBUTION.md#3",
+   "label": "applications/percolate-self-model/dreaming/reduce/graph/ATTRIBUTION.md \u203a The case it cannot reach",
+   "wave": 1,
+   "via": "term:graph attribution",
+   "gold": false
+  },
+  {
+   "id": "applications/percolate-self-model/dreaming/reduce/graph/ATTRIBUTION.md#2",
+   "label": "applications/percolate-self-model/dreaming/reduce/graph/ATTRIBUTION.md \u203a The derivation, with no new column",
+   "wave": 1,
+   "via": "term:graph attribution",
+   "gold": false
+  },
+  {
+   "id": "applications/percolate-self-model/dreaming/reduce/graph/ATTRIBUTION.md#4",
+   "label": "applications/percolate-self-model/dreaming/reduce/graph/ATTRIBUTION.md \u203a `different_scope` works, and nothing had tried ",
+   "wave": 1,
+   "via": "term:graph attribution",
+   "gold": false
+  },
+  {
+   "id": "applications/percolate-self-model/dreaming/reduce/graph/ATTRIBUTION.md#1",
+   "label": "applications/percolate-self-model/dreaming/reduce/graph/ATTRIBUTION.md \u203a Two thirds of \"who holds this claim\" is already",
+   "wave": 1,
+   "via": "term:graph attribution",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "board/cards/REM-642.md#7",
+    "label": "board/cards/REM-642.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "commit/8dc26fa2c5",
+    "label": "commit 8dc26fa: equivalence: declare the label scope jack's run caught, and rule on p11 (REM-633)",
+    "gold": false
+   },
+   {
+    "id": "commit/8e7e9edc9d",
+    "label": "commit 8e7e9ed: research: two thirds of \"who holds this claim\" is already free (REM-659)",
+    "gold": false
+   },
+   {
+    "id": "commit/01ef64ef82",
+    "label": "commit 01ef64e: research: a merge may not change who is said to hold the claim (REM-642)",
+    "gold": true
+   },
+   {
+    "id": "commit/ddcd9025fe",
+    "label": "commit ddcd902: equivalence: the sample held two mergeable labels, so it separated nothing (REM-633)",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "board/cards/REM-642.md#7",
+    "label": "board/cards/REM-642.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "commit/8e7e9edc9d",
+    "label": "commit 8e7e9ed: research: two thirds of \"who holds this claim\" is already free (REM-659)",
+    "gold": false
+   },
+   {
+    "id": "commit/01ef64ef82",
+    "label": "commit 01ef64e: research: a merge may not change who is said to hold the claim (REM-642)",
+    "gold": true
+   },
+   {
+    "id": "applications/percolate-self-model/dreaming/reduce/graph/ATTRIBUTION.md#3",
+    "label": "applications/percolate-self-model/dreaming/reduce/graph/ATTRIBUTION.md \u203a The case it cannot reach",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-648.md#7",
+    "label": "board/cards/REM-648.md \u203a Log",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/2bfac9294c",
+    "label": "commit 2bfac92: board: REM-642 in-progress \u2192 done",
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-self-model/dreaming/reduce/graph/ATTRIBUTION.md#2",
+    "label": "applications/percolate-self-model/dreaming/reduce/graph/ATTRIBUTION.md \u203a The derivation, with no new column",
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-self-model/dreaming/reduce/graph/ATTRIBUTION.md#1",
+    "label": "applications/percolate-self-model/dreaming/reduce/graph/ATTRIBUTION.md \u203a Two thirds of \"who holds this claim\" is already",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-638.md#1",
+    "label": "board/cards/REM-638.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-642.md#7",
+    "label": "board/cards/REM-642.md \u203a Log",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "commit/8e7e9edc9d",
+    "label": "commit 8e7e9ed: research: two thirds of \"who holds this claim\" is already free (REM-659)",
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-self-model/dreaming/reduce/graph/ATTRIBUTION.md#1",
+    "label": "applications/percolate-self-model/dreaming/reduce/graph/ATTRIBUTION.md \u203a Two thirds of \"who holds this claim\" is already",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-642.md#7",
+    "label": "board/cards/REM-642.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "research-notes/essay-graph/corpus/peroni-shotton-2012-cito/text.txt#4",
+    "label": "research-notes/essay-graph/corpus/peroni-shotton-2012-cito/text.txt",
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-self-model/dreaming/reduce/graph/ATTRIBUTION.md#3",
+    "label": "applications/percolate-self-model/dreaming/reduce/graph/ATTRIBUTION.md \u203a The case it cannot reach",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.16666666666666666,
+  "Q": 0.16666666666666666,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

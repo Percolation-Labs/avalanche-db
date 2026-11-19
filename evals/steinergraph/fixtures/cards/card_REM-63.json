@@ -1,0 +1,400 @@
+{
+ "qid": "card:REM-63",
+ "set": "cards",
+ "question": "What was done about this, and why: dream: Percolate keeps a current account of what its user holds, at a fraction of today's cost?",
+ "gold": [
+  {
+   "id": "commit/cf65508ec5",
+   "label": "commit cf65508: V1 gate names its tracker issue, REM-63",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "board/cards/REM-63.md#1",
+   "label": "board/cards/REM-63.md",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "meta/spikes/2026-10-20-lme-seeded-taxonomy/DREAM.md#1",
+   "label": "meta/spikes/2026-10-20-lme-seeded-taxonomy/DREAM.md \u203a Stage 3, knit and dream: the design for this experiment (v0)",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "board/cards/REM-63.md#2",
+   "label": "board/cards/REM-63.md \u203a Goal",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "meta/spikes/2026-10-17-iterative-query/forage/ROUTECOST.md#2",
+   "label": "meta/spikes/2026-10-17-iterative-query/forage/ROUTECOST.md \u203a Result (18 Oct): P1 HOLDS, and more than holds",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "board/messages/M-20261021-085904-6444.md#1",
+   "label": "board/messages/M-20261021-085904-6444.md",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 2
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "board/cards/REM-63.md#1",
+    "label": "board/cards/REM-63.md",
+    "role": "seed"
+   },
+   {
+    "id": "commit/cf65508ec5",
+    "label": "commit cf65508: V1 gate names its tracker issue, REM-63",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "board/cards/REM-63.md#1",
+    "b": "commit/cf65508ec5",
+    "via": [
+     {
+      "kind": "term",
+      "key": "rem 63",
+      "width": 20
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [],
+  "entry": {
+   "seed": "board/cards/REM-63.md#1",
+   "gold": "commit/cf65508ec5",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 1861,
+  "within_2_doors": 33561,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "meta/spikes/2026-10-17-iterative-query/forage/ROUTECOST.md#1",
+    "label": "meta/spikes/2026-10-17-iterative-query/forage/ROUTECOST.md \u203a Why do the blind graph's cheapest routes cost more? (rule f",
+    "p": 0.004776379617811148,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-63.md#4",
+    "label": "board/cards/REM-63.md \u203a Done when",
+    "p": 0.0038915196468065046,
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-10-17-iterative-query/forage/ROUTECOST.md#3",
+    "label": "meta/spikes/2026-10-17-iterative-query/forage/ROUTECOST.md \u203a The join threshold works through the same mechanism (the pe",
+    "p": 0.0029384141260573437,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-29.md#1",
+    "label": "board/cards/REM-29.md",
+    "p": 0.0029380684248016247,
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-10-20-lme-seeded-taxonomy/README.md#31",
+    "label": "meta/spikes/2026-10-20-lme-seeded-taxonomy/README.md \u203a Cheap tagger validated, and the tagging options priced (Sirsh, M-",
+    "p": 0.002507915202281176,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-63.md#12",
+    "label": "board/cards/REM-63.md \u203a The split: one row per question, worst-first",
+    "p": 0.001822901609575885,
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-10-20-lme-seeded-taxonomy/DREAM.md#2",
+    "label": "meta/spikes/2026-10-20-lme-seeded-taxonomy/DREAM.md \u203a What it starts from",
+    "p": 0.001818418487612405,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/architecture-and-deployment.md#6",
+    "label": "specs/percolate-application/architecture-and-deployment.md \u203a Routes and integration",
+    "p": 0.0016579594748341313,
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-10-20-lme-seeded-taxonomy/README.md#32",
+    "label": "meta/spikes/2026-10-20-lme-seeded-taxonomy/README.md \u203a Cheap tagger validated, and the tagging options priced (Sirsh, M-",
+    "p": 0.0015318623165501935,
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-self-model/reflect/offline/pipeline6.py#1",
+    "label": "applications/percolate-self-model/reflect/offline/pipeline6.py",
+    "p": 0.0014751140099901617,
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-10-20-lme-seeded-taxonomy/in_percolate/graph_scale.py#2",
+    "label": "meta/spikes/2026-10-20-lme-seeded-taxonomy/in_percolate/graph_scale.py",
+    "p": 0.0012661443630535593,
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-self-model/reflect/offline/pipeline.py#1",
+    "label": "applications/percolate-self-model/reflect/offline/pipeline.py",
+    "p": 0.0012173906532307159,
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-10-27-dream-walk-graphs/limits.md#1",
+    "label": "meta/spikes/2026-10-27-dream-walk-graphs/limits.md \u203a Known limits: the narrow questions the walk misses (REM-1219, paper",
+    "p": 0.0011659284618171775,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-873.md#4",
+    "label": "board/cards/REM-873.md \u203a Done when",
+    "p": 0.0011453769596420505,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1228.md#3",
+    "label": "board/cards/REM-1228.md \u203a Evidence",
+    "p": 0.0011426465468474165,
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-10-17-iterative-query/forage/HINDSIGHT.md#14",
+    "label": "meta/spikes/2026-10-17-iterative-query/forage/HINDSIGHT.md \u203a Learning which links to keep, held out by question (registe",
+    "p": 0.0011390926258373357,
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-10-20-lme-seeded-taxonomy/README.md#3",
+    "label": "meta/spikes/2026-10-20-lme-seeded-taxonomy/README.md \u203a The method and the end game (Sirsh, M-20261021-094203-ec09; read ",
+    "p": 0.0011242503454352403,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-63.md#3",
+    "label": "board/cards/REM-63.md \u203a Evidence",
+    "p": 0.0010842365800641967,
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-self-model/reflect/offline/pipeline.py#4",
+    "label": "applications/percolate-self-model/reflect/offline/pipeline.py",
+    "p": 0.001012158793778543,
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-10-17-iterative-query/forage/HINDSIGHT.md#9",
+    "label": "meta/spikes/2026-10-17-iterative-query/forage/HINDSIGHT.md \u203a Grain held apart from wording: coarsened gold (registered b",
+    "p": 0.0010077691109221432,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "board/cards/REM-63.md#1",
+   "label": "board/cards/REM-63.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/spikes/2026-10-20-lme-seeded-taxonomy/DREAM.md#1",
+   "label": "meta/spikes/2026-10-20-lme-seeded-taxonomy/DREAM.md \u203a Stage 3, knit and dream: the design for this experiment (v0)",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-63.md#2",
+   "label": "board/cards/REM-63.md \u203a Goal",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/spikes/2026-10-17-iterative-query/forage/ROUTECOST.md#2",
+   "label": "meta/spikes/2026-10-17-iterative-query/forage/ROUTECOST.md \u203a Result (18 Oct): P1 HOLDS, and more than holds",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/messages/M-20261021-085904-6444.md#1",
+   "label": "board/messages/M-20261021-085904-6444.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "applications/percolate-self-model/reflect/offline/pipeline6.py#1",
+   "label": "applications/percolate-self-model/reflect/offline/pipeline6.py",
+   "wave": 1,
+   "via": "term:recent open",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-63.md#4",
+   "label": "board/cards/REM-63.md \u203a Done when",
+   "wave": 1,
+   "via": "term:recent open",
+   "gold": false
+  },
+  {
+   "id": "applications/percolate-self-model/reflect/offline/pipeline.py#1",
+   "label": "applications/percolate-self-model/reflect/offline/pipeline.py",
+   "wave": 1,
+   "via": "term:recent open",
+   "gold": false
+  },
+  {
+   "id": "applications/percolate-self-model/reflect/offline/pipeline.py#4",
+   "label": "applications/percolate-self-model/reflect/offline/pipeline.py",
+   "wave": 1,
+   "via": "term:recent open",
+   "gold": false
+  },
+  {
+   "id": "applications/percolate-self-model/reflect/offline/README.md#1",
+   "label": "applications/percolate-self-model/reflect/offline/README.md \u203a Offline efficiency measurements, 2026-09-11",
+   "wave": 1,
+   "via": "term:recent open",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "meta/spikes/2026-10-17-iterative-query/forage/ROUTECOST.md#1",
+    "label": "meta/spikes/2026-10-17-iterative-query/forage/ROUTECOST.md \u203a Why do the blind graph's cheapest routes cost more? (rule f",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-63.md#4",
+    "label": "board/cards/REM-63.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-10-17-iterative-query/forage/ROUTECOST.md#3",
+    "label": "meta/spikes/2026-10-17-iterative-query/forage/ROUTECOST.md \u203a The join threshold works through the same mechanism (the pe",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-29.md#1",
+    "label": "board/cards/REM-29.md",
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-10-20-lme-seeded-taxonomy/README.md#31",
+    "label": "meta/spikes/2026-10-20-lme-seeded-taxonomy/README.md \u203a Cheap tagger validated, and the tagging options priced (Sirsh, M-",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "meta/spikes/2026-10-17-iterative-query/forage/ROUTECOST.md#1",
+    "label": "meta/spikes/2026-10-17-iterative-query/forage/ROUTECOST.md \u203a Why do the blind graph's cheapest routes cost more? (rule f",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-63.md#4",
+    "label": "board/cards/REM-63.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-10-20-lme-seeded-taxonomy/README.md#31",
+    "label": "meta/spikes/2026-10-20-lme-seeded-taxonomy/README.md \u203a Cheap tagger validated, and the tagging options priced (Sirsh, M-",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-29.md#1",
+    "label": "board/cards/REM-29.md",
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-10-17-iterative-query/forage/ROUTECOST.md#3",
+    "label": "meta/spikes/2026-10-17-iterative-query/forage/ROUTECOST.md \u203a The join threshold works through the same mechanism (the pe",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "board/messages/M-20261031-111049-c929.md#1",
+    "label": "board/messages/M-20261031-111049-c929.md",
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-10-20-lme-seeded-taxonomy/dream.py#6",
+    "label": "meta/spikes/2026-10-20-lme-seeded-taxonomy/dream.py",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-63.md#15",
+    "label": "board/cards/REM-63.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-969.md#5",
+    "label": "board/cards/REM-969.md \u203a Scope",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-963.md#5",
+    "label": "board/cards/REM-963.md \u203a Scope",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "specs/percolate-application/story-import.md#2",
+    "label": "specs/percolate-application/story-import.md \u203a 1. The promise and the cost boundary",
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-self-model/product.md#38",
+    "label": "applications/percolate-self-model/product.md \u203a Structure, cost and current truth (6\u20137 Oct)",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-394.md#4",
+    "label": "board/cards/REM-394.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/data-governance.md#8",
+    "label": "specs/percolate-application/data-governance.md \u203a C. The account",
+    "gold": false
+   },
+   {
+    "id": "research-notes/mem0-baseline/scores-dream.txt#1",
+    "label": "research-notes/mem0-baseline/scores-dream.txt",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

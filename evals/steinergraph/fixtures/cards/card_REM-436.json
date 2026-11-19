@@ -1,0 +1,448 @@
+{
+ "qid": "card:REM-436",
+ "set": "cards",
+ "question": "What was done about this, and why: research: a package is refused when its title, takeaway or argument carries a house-voice tell?",
+ "gold": [
+  {
+   "id": "commit/18e6ba1ff3",
+   "label": "commit 18e6ba1: spec: an agent's package is refused when its prose carries a house-list phrase (REM-436)",
+   "seed": false
+  },
+  {
+   "id": "commit/e0a319a383",
+   "label": "commit e0a319a: Merge pull request #235 from Percolation-Labs/amartey/rem-436-spec",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/ca9b263cf9",
+   "label": "commit ca9b263: board: file REM-436 research: a package is refused when its title, takeaway or argument carries a house-",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-436.md#1",
+   "label": "board/cards/REM-436.md",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-436.md#2",
+   "label": "board/cards/REM-436.md \u203a Goal",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-436.md#4",
+   "label": "board/cards/REM-436.md \u203a Done when",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-436.md#8",
+   "label": "board/cards/REM-436.md \u203a Log",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "board/cards/REM-436.md#2",
+    "label": "board/cards/REM-436.md \u203a Goal",
+    "role": "seed"
+   },
+   {
+    "id": "commit/18e6ba1ff3",
+    "label": "commit 18e6ba1: spec: an agent's package is refused when its prose carries a house-list phrase (REM-436)",
+    "role": "gold"
+   },
+   {
+    "id": "commit/e0a319a383",
+    "label": "commit e0a319a: Merge pull request #235 from Percolation-Labs/amartey/rem-436-spec",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "board/cards/REM-436.md#2",
+    "b": "commit/18e6ba1ff3",
+    "via": [
+     {
+      "kind": "term",
+      "key": "house list",
+      "width": 18
+     },
+     {
+      "kind": "term",
+      "key": "rem 436",
+      "width": 20
+     }
+    ]
+   },
+   {
+    "a": "commit/18e6ba1ff3",
+    "b": "commit/e0a319a383",
+    "via": [
+     {
+      "kind": "term",
+      "key": "prose carries",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "phrase rem",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "list phrase",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "house list",
+      "width": 18
+     },
+     {
+      "kind": "term",
+      "key": "rem 436",
+      "width": 20
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "board/cards/REM-436.md#2",
+   "gold": "commit/18e6ba1ff3",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 811,
+  "within_2_doors": 32145,
+  "gold_within_1": 2,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "specs/percolate-application/authoring-and-publication.md#17",
+    "label": "specs/percolate-application/authoring-and-publication.md \u203a 6. A4 \u2014 Make the agent contract truthful about sources and re",
+    "p": 0.005111680165743003,
+    "gold": false
+   },
+   {
+    "id": "dev/check.sh#5",
+    "label": "dev/check.sh",
+    "p": 0.00505264708690355,
+    "gold": false
+   },
+   {
+    "id": "commit/3de62c0ac1",
+    "label": "commit 3de62c0: Reword a house-voice tell in the travelled-reads result",
+    "p": 0.004562149946693699,
+    "gold": false
+   },
+   {
+    "id": "commit/18f03fb022",
+    "label": "commit 18f03fb: board: note on REM-436",
+    "p": 0.004390670075766363,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-436.md#3",
+    "label": "board/cards/REM-436.md \u203a Evidence",
+    "p": 0.00417316060481681,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-436.md#9",
+    "label": "board/cards/REM-436.md \u203a Log",
+    "p": 0.0033463573820170164,
+    "gold": false
+   },
+   {
+    "id": "commit/98175f927d",
+    "label": "commit 98175f9: board: note on REM-433",
+    "p": 0.0032868024311641184,
+    "gold": false
+   },
+   {
+    "id": "commit/e0a319a383",
+    "label": "commit e0a319a: Merge pull request #235 from Percolation-Labs/amartey/rem-436-spec",
+    "p": 0.0028087833341307483,
+    "gold": true
+   },
+   {
+    "id": "commit/b6794a01d0",
+    "label": "commit b6794a0: The skill said the scope was an open question, and it was answered today (#142)",
+    "p": 0.0026110549024310915,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-436.md#7",
+    "label": "board/cards/REM-436.md \u203a Log",
+    "p": 0.0025847264303278878,
+    "gold": false
+   },
+   {
+    "id": "commit/18e6ba1ff3",
+    "label": "commit 18e6ba1: spec: an agent's package is refused when its prose carries a house-list phrase (REM-436)",
+    "p": 0.002576218051796322,
+    "gold": true
+   },
+   {
+    "id": "meta/skills/docs-writing/SKILL.md#10",
+    "label": "meta/skills/docs-writing/SKILL.md \u203a A check before committing",
+    "p": 0.0025665360772912484,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-436.md#5",
+    "label": "board/cards/REM-436.md \u203a Scope",
+    "p": 0.0021839561864814847,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-436.md#6",
+    "label": "board/cards/REM-436.md \u203a Links",
+    "p": 0.0016798218349471795,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-437.md#6",
+    "label": "board/cards/REM-437.md \u203a Links",
+    "p": 0.0015820837319737934,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-438.md#6",
+    "label": "board/cards/REM-438.md \u203a Links",
+    "p": 0.0015512351602174066,
+    "gold": false
+   },
+   {
+    "id": "commit/bcf3aee146",
+    "label": "commit bcf3aee: board: file REM-511 discussions: a reader discusses a source or captured resource from the Evidence pane",
+    "p": 0.0014835982097225493,
+    "gold": false
+   },
+   {
+    "id": "commit/56514ac30b",
+    "label": "commit 56514ac: board: REM-436 in-progress \u2192 done",
+    "p": 0.0014605566774958038,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-431.md#6",
+    "label": "board/cards/REM-431.md \u203a Log",
+    "p": 0.0014244211263022117,
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-self-model/product.md#25",
+    "label": "applications/percolate-self-model/product.md \u203a 9. The product route: the project's history as Percolate research (5\u20136 Oc",
+    "p": 0.0014045535761393485,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/ca9b263cf9",
+   "label": "commit ca9b263: board: file REM-436 research: a package is refused when its title, takeaway or argument carries a house-",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-436.md#1",
+   "label": "board/cards/REM-436.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-436.md#2",
+   "label": "board/cards/REM-436.md \u203a Goal",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-436.md#4",
+   "label": "board/cards/REM-436.md \u203a Done when",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-436.md#8",
+   "label": "board/cards/REM-436.md \u203a Log",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/messages/M-20261102-163618-5f4c.md#2",
+   "label": "board/messages/M-20261102-163618-5f4c.md",
+   "wave": 1,
+   "via": "term:takeaway argument",
+   "gold": false
+  },
+  {
+   "id": "specs/percolate-application/authoring-and-publication.md#17",
+   "label": "specs/percolate-application/authoring-and-publication.md \u203a 6. A4 \u2014 Make the agent contract truthful about sources and re",
+   "wave": 1,
+   "via": "term:takeaway argument",
+   "gold": false
+  },
+  {
+   "id": "board/messages/M-20261102-173853-bc58.md#1",
+   "label": "board/messages/M-20261102-173853-bc58.md",
+   "wave": 1,
+   "via": "term:takeaway argument",
+   "gold": false
+  },
+  {
+   "id": "board/messages/M-20261102-173849-ea3b.md#1",
+   "label": "board/messages/M-20261102-173849-ea3b.md",
+   "wave": 1,
+   "via": "term:takeaway argument",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-436.md#9",
+   "label": "board/cards/REM-436.md \u203a Log",
+   "wave": 1,
+   "via": "term:takeaway argument",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "specs/percolate-application/authoring-and-publication.md#17",
+    "label": "specs/percolate-application/authoring-and-publication.md \u203a 6. A4 \u2014 Make the agent contract truthful about sources and re",
+    "gold": false
+   },
+   {
+    "id": "dev/check.sh#5",
+    "label": "dev/check.sh",
+    "gold": false
+   },
+   {
+    "id": "commit/3de62c0ac1",
+    "label": "commit 3de62c0: Reword a house-voice tell in the travelled-reads result",
+    "gold": false
+   },
+   {
+    "id": "commit/18f03fb022",
+    "label": "commit 18f03fb: board: note on REM-436",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-436.md#3",
+    "label": "board/cards/REM-436.md \u203a Evidence",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "specs/percolate-application/authoring-and-publication.md#17",
+    "label": "specs/percolate-application/authoring-and-publication.md \u203a 6. A4 \u2014 Make the agent contract truthful about sources and re",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-436.md#9",
+    "label": "board/cards/REM-436.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "commit/3de62c0ac1",
+    "label": "commit 3de62c0: Reword a house-voice tell in the travelled-reads result",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-436.md#7",
+    "label": "board/cards/REM-436.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "commit/18e6ba1ff3",
+    "label": "commit 18e6ba1: spec: an agent's package is refused when its prose carries a house-list phrase (REM-436)",
+    "gold": true
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/18e6ba1ff3",
+    "label": "commit 18e6ba1: spec: an agent's package is refused when its prose carries a house-list phrase (REM-436)",
+    "gold": true
+   },
+   {
+    "id": "commit/e0a319a383",
+    "label": "commit e0a319a: Merge pull request #235 from Percolation-Labs/amartey/rem-436-spec",
+    "gold": true
+   },
+   {
+    "id": "commit/c1bdffba08",
+    "label": "commit c1bdffb: Operators on BEAM: wording (house voice)",
+    "gold": false
+   },
+   {
+    "id": "commit/a289362200",
+    "label": "commit a289362: musique-near: house-voice fix in the result note",
+    "gold": false
+   },
+   {
+    "id": "commit/3de62c0ac1",
+    "label": "commit 3de62c0: Reword a house-voice tell in the travelled-reads result",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "board/cards/REM-436.md#7",
+    "label": "board/cards/REM-436.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "commit/18e6ba1ff3",
+    "label": "commit 18e6ba1: spec: an agent's package is refused when its prose carries a house-list phrase (REM-436)",
+    "gold": true
+   },
+   {
+    "id": "commit/4eb9df8b7c",
+    "label": "commit 4eb9df8: board: file REM-304 research: a package carries a one-sentence takeaway for readers, and next check show",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-304.md#1",
+    "label": "board/cards/REM-304.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-465.md#7",
+    "label": "board/cards/REM-465.md \u203a Log",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.5,
+  "LQ": 1.0,
+  "S": 0.5
+ }
+}

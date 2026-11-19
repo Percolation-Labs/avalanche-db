@@ -1,0 +1,456 @@
+{
+ "qid": "card:REM-1331",
+ "set": "cards",
+ "question": "What was done about this, and why: avalanche-db: an agent queries the walk with P8QL and sees each step's plan?",
+ "gold": [
+  {
+   "id": "commit/2ed468b9d0",
+   "label": "commit 2ed468b: postmortem: the P8QL eval counted calls, and an agent can loop (REM-1331)",
+   "seed": false
+  },
+  {
+   "id": "commit/b5bfbb6976",
+   "label": "commit b5bfbb6: postmortem: the durable walk's lost path is the third instance (REM-1331 round 9)",
+   "seed": false
+  },
+  {
+   "id": "commit/bc06376e94",
+   "label": "commit bc06376: postmortem: a guess read as a fact, twice (REM-1331 rounds 4-7)",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/903833d408",
+   "label": "commit 903833d: board: file REM-1331 avalanche-db: an agent queries the walk with P8QL and sees each step's plan",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-1331.md#1",
+   "label": "board/cards/REM-1331.md",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-1331.md#2",
+   "label": "board/cards/REM-1331.md \u203a Goal",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "meta/postmortems/2026-11-09-a-guess-read-as-a-fact.md#3",
+   "label": "meta/postmortems/2026-11-09-a-guess-read-as-a-fact.md",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-1331.md#5",
+   "label": "board/cards/REM-1331.md \u203a Log",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/2ed468b9d0",
+    "label": "commit 2ed468b: postmortem: the P8QL eval counted calls, and an agent can loop (REM-1331)",
+    "role": "gold"
+   },
+   {
+    "id": "commit/b5bfbb6976",
+    "label": "commit b5bfbb6: postmortem: the durable walk's lost path is the third instance (REM-1331 round 9)",
+    "role": "gold"
+   },
+   {
+    "id": "commit/bc06376e94",
+    "label": "commit bc06376: postmortem: a guess read as a fact, twice (REM-1331 rounds 4-7)",
+    "role": "gold"
+   },
+   {
+    "id": "meta/postmortems/2026-11-09-a-guess-read-as-a-fact.md#3",
+    "label": "meta/postmortems/2026-11-09-a-guess-read-as-a-fact.md",
+    "role": "seed"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/2ed468b9d0",
+    "b": "commit/b5bfbb6976",
+    "via": [
+     {
+      "kind": "term",
+      "key": "1331",
+      "width": 44
+     },
+     {
+      "kind": "term",
+      "key": "rem 1331",
+      "width": 44
+     }
+    ]
+   },
+   {
+    "a": "commit/2ed468b9d0",
+    "b": "commit/bc06376e94",
+    "via": [
+     {
+      "kind": "term",
+      "key": "1331",
+      "width": 44
+     },
+     {
+      "kind": "term",
+      "key": "rem 1331",
+      "width": 44
+     }
+    ]
+   },
+   {
+    "a": "commit/bc06376e94",
+    "b": "meta/postmortems/2026-11-09-a-guess-read-as-a-fact.md#3",
+    "via": [
+     {
+      "kind": "term",
+      "key": "guess read",
+      "width": 4
+     }
+    ]
+   }
+  ],
+  "cost": 3,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   1,
+   1
+  ],
+  "entry": {
+   "seed": "meta/postmortems/2026-11-09-a-guess-read-as-a-fact.md#3",
+   "gold": "commit/bc06376e94",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 1806,
+  "within_2_doors": 34171,
+  "gold_within_1": 3,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "board/cards/REM-1331.md#4",
+    "label": "board/cards/REM-1331.md \u203a Stages",
+    "p": 0.00678518920213267,
+    "gold": false
+   },
+   {
+    "id": "commit/45c65ffb59",
+    "label": "commit 45c65ff: board: note on REM-1331",
+    "p": 0.00645051710387745,
+    "gold": false
+   },
+   {
+    "id": "commit/2a8003f1a2",
+    "label": "commit 2a8003f: board: note on REM-1331",
+    "p": 0.006236965031490347,
+    "gold": false
+   },
+   {
+    "id": "commit/171b5e4aed",
+    "label": "commit 171b5e4: board: note on REM-1331",
+    "p": 0.006221298376647973,
+    "gold": false
+   },
+   {
+    "id": "commit/449f7cbe28",
+    "label": "commit 449f7cb: board: note on REM-1331",
+    "p": 0.006209784162597919,
+    "gold": false
+   },
+   {
+    "id": "commit/0ddcb9608e",
+    "label": "commit 0ddcb96: board: note on REM-1331",
+    "p": 0.00615268894636961,
+    "gold": false
+   },
+   {
+    "id": "specs/ai-query-layer/brief.md#23",
+    "label": "specs/ai-query-layer/brief.md \u203a 5. Open questions for the full spec",
+    "p": 0.003811797856719201,
+    "gold": false
+   },
+   {
+    "id": "commit/2d67b32067",
+    "label": "commit 2d67b32: board: james acknowledges 1 message(s)",
+    "p": 0.003795369288729714,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1331.md#6",
+    "label": "board/cards/REM-1331.md \u203a Log",
+    "p": 0.0033763809540181015,
+    "gold": false
+   },
+   {
+    "id": "commit/5231f29158",
+    "label": "commit 5231f29: board: note on REM-1331",
+    "p": 0.003309546476599691,
+    "gold": false
+   },
+   {
+    "id": "commit/46a8e04184",
+    "label": "commit 46a8e04: board: james messages sirsh",
+    "p": 0.0032625251759623003,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-11-09-a-guess-read-as-a-fact.md#2",
+    "label": "meta/postmortems/2026-11-09-a-guess-read-as-a-fact.md",
+    "p": 0.0028652866907309255,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1331.md#3",
+    "label": "board/cards/REM-1331.md \u203a Decided (james, 8 Nov, on Sirsh's 13:16Z \"nobody blocked\"; the spec's proposed defaults)",
+    "p": 0.002778889189525587,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261109-020702-542c.md#1",
+    "label": "board/messages/M-20261109-020702-542c.md",
+    "p": 0.0027573545118014845,
+    "gold": false
+   },
+   {
+    "id": "commit/2d3843218d",
+    "label": "commit 2d38432: board: james takes REM-1331",
+    "p": 0.0027230062335325753,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-11-09-a-guess-read-as-a-fact.md#1",
+    "label": "meta/postmortems/2026-11-09-a-guess-read-as-a-fact.md",
+    "p": 0.0025833604355248573,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1172.md#2",
+    "label": "board/cards/REM-1172.md \u203a Goal",
+    "p": 0.0025079458398082084,
+    "gold": false
+   },
+   {
+    "id": "commit/6e2f08648e",
+    "label": "commit 6e2f086: board: watch samples 0 process(es) on Sirshs-MacBook-Air, clears 2 gone: bill's pid 1637 (world-lab slic",
+    "p": 0.0024390083624286417,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261108-131801-1638.md#1",
+    "label": "board/messages/M-20261108-131801-1638.md",
+    "p": 0.0023298913300341837,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-11-08-calls-counted-the-wrong-work.md#1",
+    "label": "meta/postmortems/2026-11-08-calls-counted-the-wrong-work.md",
+    "p": 0.0022037477165431515,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/903833d408",
+   "label": "commit 903833d: board: file REM-1331 avalanche-db: an agent queries the walk with P8QL and sees each step's plan",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-1331.md#1",
+   "label": "board/cards/REM-1331.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-1331.md#2",
+   "label": "board/cards/REM-1331.md \u203a Goal",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/postmortems/2026-11-09-a-guess-read-as-a-fact.md#3",
+   "label": "meta/postmortems/2026-11-09-a-guess-read-as-a-fact.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-1331.md#5",
+   "label": "board/cards/REM-1331.md \u203a Log",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/f73c9037c0",
+   "label": "commit f73c903: board: tick REM-1331 box 3",
+   "wave": 1,
+   "via": "term:rem 1331",
+   "gold": false
+  },
+  {
+   "id": "commit/bc06376e94",
+   "label": "commit bc06376: postmortem: a guess read as a fact, twice (REM-1331 rounds 4-7)",
+   "wave": 1,
+   "via": "term:rem 1331",
+   "gold": true
+  },
+  {
+   "id": "commit/b5bfbb6976",
+   "label": "commit b5bfbb6: postmortem: the durable walk's lost path is the third instance (REM-1331 round 9)",
+   "wave": 1,
+   "via": "term:rem 1331",
+   "gold": true
+  },
+  {
+   "id": "commit/29df627e36",
+   "label": "commit 29df627: board: REM-1331 in-progress \u2192 done",
+   "wave": 1,
+   "via": "term:rem 1331",
+   "gold": false
+  },
+  {
+   "id": "commit/e1ad2dadd3",
+   "label": "commit e1ad2da: board: note on REM-1331",
+   "wave": 1,
+   "via": "term:rem 1331",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "board/cards/REM-1331.md#4",
+    "label": "board/cards/REM-1331.md \u203a Stages",
+    "gold": false
+   },
+   {
+    "id": "commit/45c65ffb59",
+    "label": "commit 45c65ff: board: note on REM-1331",
+    "gold": false
+   },
+   {
+    "id": "commit/2a8003f1a2",
+    "label": "commit 2a8003f: board: note on REM-1331",
+    "gold": false
+   },
+   {
+    "id": "commit/171b5e4aed",
+    "label": "commit 171b5e4: board: note on REM-1331",
+    "gold": false
+   },
+   {
+    "id": "commit/449f7cbe28",
+    "label": "commit 449f7cb: board: note on REM-1331",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "board/cards/REM-1331.md#4",
+    "label": "board/cards/REM-1331.md \u203a Stages",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1331.md#6",
+    "label": "board/cards/REM-1331.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261109-020702-542c.md#1",
+    "label": "board/messages/M-20261109-020702-542c.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1172.md#2",
+    "label": "board/cards/REM-1172.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261108-224710-71db.md#1",
+    "label": "board/messages/M-20261108-224710-71db.md",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/2ed468b9d0",
+    "label": "commit 2ed468b: postmortem: the P8QL eval counted calls, and an agent can loop (REM-1331)",
+    "gold": true
+   },
+   {
+    "id": "commit/29df627e36",
+    "label": "commit 29df627: board: REM-1331 in-progress \u2192 done",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261108-131801-1638.md#1",
+    "label": "board/messages/M-20261108-131801-1638.md",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261108-220033-c40d.md#1",
+    "label": "board/messages/M-20261108-220033-c40d.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1335.md#3",
+    "label": "board/cards/REM-1335.md \u203a Evidence",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "board/messages/M-20261108-220033-c40d.md#1",
+    "label": "board/messages/M-20261108-220033-c40d.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1125.md#4",
+    "label": "board/cards/REM-1125.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1331.md#6",
+    "label": "board/cards/REM-1331.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1335.md#2",
+    "label": "board/cards/REM-1335.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261108-230356-4e2f.md#1",
+    "label": "board/messages/M-20261108-230356-4e2f.md",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.3333333333333333,
+  "S": 0.0
+ }
+}

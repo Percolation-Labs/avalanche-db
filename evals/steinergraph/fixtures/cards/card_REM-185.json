@@ -1,0 +1,614 @@
+{
+ "qid": "card:REM-185",
+ "set": "cards",
+ "question": "What was done about this, and why: research: owners keep private working revisions after submitting or publishing?",
+ "gold": [
+  {
+   "id": "commit/1bf6e6e375",
+   "label": "commit 1bf6e6e: Regenerate the 0.2.3 extension script and upgrade paths for exact-revision exposure (REM-185)",
+   "seed": false
+  },
+  {
+   "id": "commit/8ec9655542",
+   "label": "commit 8ec9655: Merge pull request #175 from Percolation-Labs/amartey/rem-185-exact-revision-exposure",
+   "seed": false
+  },
+  {
+   "id": "commit/961806b4bc",
+   "label": "commit 961806b: A listed work exposes exact revisions, and its owner keeps writing privately (REM-185)",
+   "seed": false
+  },
+  {
+   "id": "commit/a50a914206",
+   "label": "commit a50a914: Merge pull request #177 from Percolation-Labs/amartey/postmortem-rem-185-release-path",
+   "seed": false
+  },
+  {
+   "id": "commit/c9d210f298",
+   "label": "commit c9d210f: Postmortem: a merged core fix is four steps from a reader, and the frictions on the way (REM-185)",
+   "seed": false
+  },
+  {
+   "id": "commit/ea18e519d6",
+   "label": "commit ea18e51: The upgrade check proves a public work keeps every revision it exposed (REM-185)",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "board/cards/REM-185.md#1",
+   "label": "board/cards/REM-185.md",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-183.md#10",
+   "label": "board/cards/REM-183.md \u203a 2026-09-13T19:16:28.870Z \u00b7 Percolation Labs",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-187.md#8",
+   "label": "board/cards/REM-187.md \u203a 2026-09-13T19:18:05.845Z \u00b7 Percolation Labs",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "specs/percolate-application/authoring-and-publication.md#11",
+   "label": "specs/percolate-application/authoring-and-publication.md \u203a 4. A2 \u2014 Keep working drafts editable after submission or publ",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-185.md#2",
+   "label": "board/cards/REM-185.md \u203a Goal",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "board/cards/REM-187.md#8",
+    "label": "board/cards/REM-187.md \u203a 2026-09-13T19:18:05.845Z \u00b7 Percolation Labs",
+    "role": "seed"
+   },
+   {
+    "id": "commit/1bf6e6e375",
+    "label": "commit 1bf6e6e: Regenerate the 0.2.3 extension script and upgrade paths for exact-revision exposure (REM-185)",
+    "role": "gold"
+   },
+   {
+    "id": "commit/8ec9655542",
+    "label": "commit 8ec9655: Merge pull request #175 from Percolation-Labs/amartey/rem-185-exact-revision-exposure",
+    "role": "gold"
+   },
+   {
+    "id": "commit/961806b4bc",
+    "label": "commit 961806b: A listed work exposes exact revisions, and its owner keeps writing privately (REM-185)",
+    "role": "gold"
+   },
+   {
+    "id": "commit/a50a914206",
+    "label": "commit a50a914: Merge pull request #177 from Percolation-Labs/amartey/postmortem-rem-185-release-path",
+    "role": "gold"
+   },
+   {
+    "id": "commit/c9d210f298",
+    "label": "commit c9d210f: Postmortem: a merged core fix is four steps from a reader, and the frictions on the way (REM-185)",
+    "role": "gold"
+   },
+   {
+    "id": "commit/ea18e519d6",
+    "label": "commit ea18e51: The upgrade check proves a public work keeps every revision it exposed (REM-185)",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "board/cards/REM-187.md#8",
+    "b": "commit/961806b4bc",
+    "via": [
+     {
+      "kind": "term",
+      "key": "private successor",
+      "width": 3
+     },
+     {
+      "kind": "term",
+      "key": "private working",
+      "width": 23
+     },
+     {
+      "kind": "term",
+      "key": "privately",
+      "width": 34
+     },
+     {
+      "kind": "term",
+      "key": "rem 185",
+      "width": 38
+     },
+     {
+      "kind": "term",
+      "key": "successor",
+      "width": 64
+     }
+    ]
+   },
+   {
+    "a": "commit/1bf6e6e375",
+    "b": "commit/961806b4bc",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "code session_01jfh8bfj1eemv7spk4v8enw",
+      "width": 3
+     },
+     {
+      "kind": "term",
+      "key": "session_01jfh8bfj1eemv7spk4v8enw",
+      "width": 3
+     },
+     {
+      "kind": "term",
+      "key": "rem 185",
+      "width": 38
+     }
+    ]
+   },
+   {
+    "a": "commit/1bf6e6e375",
+    "b": "commit/c9d210f298",
+    "via": [
+     {
+      "kind": "term",
+      "key": "code session_01jfh8bfj1eemv7spk4v8enw",
+      "width": 3
+     },
+     {
+      "kind": "term",
+      "key": "session_01jfh8bfj1eemv7spk4v8enw",
+      "width": 3
+     },
+     {
+      "kind": "term",
+      "key": "rem 185",
+      "width": 38
+     }
+    ]
+   },
+   {
+    "a": "commit/8ec9655542",
+    "b": "commit/961806b4bc",
+    "via": [
+     {
+      "kind": "term",
+      "key": "writing privately",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "privately rem",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "work exposes",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "exposes exact",
+      "width": 3
+     },
+     {
+      "kind": "term",
+      "key": "owner keeps",
+      "width": 3
+     }
+    ]
+   },
+   {
+    "a": "commit/961806b4bc",
+    "b": "commit/ea18e519d6",
+    "via": [
+     {
+      "kind": "term",
+      "key": "upgrade exposes",
+      "width": 3
+     },
+     {
+      "kind": "term",
+      "key": "public work",
+      "width": 16
+     },
+     {
+      "kind": "term",
+      "key": "every revision",
+      "width": 28
+     },
+     {
+      "kind": "term",
+      "key": "rem 185",
+      "width": 38
+     }
+    ]
+   },
+   {
+    "a": "commit/a50a914206",
+    "b": "commit/c9d210f298",
+    "via": [
+     {
+      "kind": "term",
+      "key": "core fix",
+      "width": 6
+     },
+     {
+      "kind": "term",
+      "key": "merged core",
+      "width": 8
+     },
+     {
+      "kind": "term",
+      "key": "four steps",
+      "width": 24
+     },
+     {
+      "kind": "term",
+      "key": "rem 185",
+      "width": 38
+     }
+    ]
+   }
+  ],
+  "cost": 6,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  "entry": {
+   "seed": "board/cards/REM-187.md#8",
+   "gold": "commit/961806b4bc",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 1543,
+  "within_2_doors": 33553,
+  "gold_within_1": 6,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "board/cards/REM-183.md#9",
+    "label": "board/cards/REM-183.md \u203a 2026-09-13T16:53:52.544Z \u00b7 Percolation Labs",
+    "p": 0.004678284072064569,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-249.md#2",
+    "label": "board/cards/REM-249.md \u203a Goal",
+    "p": 0.0031330779429746517,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/navigation-and-account-flows.md#11",
+    "label": "specs/percolate-application/navigation-and-account-flows.md \u203a 5. Writing, requests and publication",
+    "p": 0.002680551612393169,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-187.md#9",
+    "label": "board/cards/REM-187.md \u203a 2026-09-13T19:18:05.845Z \u00b7 Percolation Labs",
+    "p": 0.0024944726050946464,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/authoring-and-publication.md#12",
+    "label": "specs/percolate-application/authoring-and-publication.md \u203a 4. A2 \u2014 Keep working drafts editable after submission or publ",
+    "p": 0.002145019375298081,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/authoring-handoff.md#1",
+    "label": "specs/percolate-application/authoring-handoff.md \u203a Owner editing and publication handoff",
+    "p": 0.0020307515056481418,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/agent-onboarding.md#5",
+    "label": "specs/percolate-application/agent-onboarding.md \u203a Two stages",
+    "p": 0.002014181181689117,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-186.md#1",
+    "label": "board/cards/REM-186.md",
+    "p": 0.0019977506609582638,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-184.md#1",
+    "label": "board/cards/REM-184.md",
+    "p": 0.0018979573216750822,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-670.md#3",
+    "label": "board/cards/REM-670.md \u203a Evidence",
+    "p": 0.001736605063654845,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/authoring-and-publication.md#18",
+    "label": "specs/percolate-application/authoring-and-publication.md \u203a 7. A5 \u2014 Prove the full browser and agent authoring path on co",
+    "p": 0.0017279376738663994,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/evening-review-2026-09-13.md#4",
+    "label": "specs/percolate-application/evening-review-2026-09-13.md \u203a 2. Highest-priority TODOs",
+    "p": 0.0015123388949424513,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/authoring-and-publication.md#22",
+    "label": "specs/percolate-application/authoring-and-publication.md \u203a 10. Claude ticket map and starting point",
+    "p": 0.0014967243539110065,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/journeys-and-screen-bindings.md#5",
+    "label": "specs/percolate-application/journeys-and-screen-bindings.md \u203a Screen inventory",
+    "p": 0.0013775297590727469,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-185.md#3",
+    "label": "board/cards/REM-185.md \u203a Evidence",
+    "p": 0.0013354089837948186,
+    "gold": false
+   },
+   {
+    "id": "commit/961806b4bc",
+    "label": "commit 961806b: A listed work exposes exact revisions, and its owner keeps writing privately (REM-185)",
+    "p": 0.0013130585070243415,
+    "gold": true
+   },
+   {
+    "id": "specs/percolate-application/sequence.md#8",
+    "label": "specs/percolate-application/sequence.md \u203a After we have evidence from the slice",
+    "p": 0.001276370961103407,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-197.md#3",
+    "label": "board/cards/REM-197.md \u203a Evidence",
+    "p": 0.0012498300696490122,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-171.md#11",
+    "label": "board/cards/REM-171.md \u203a 2026-09-13T16:55:31.128Z \u00b7 Percolation Labs",
+    "p": 0.0011859020473987286,
+    "gold": false
+   },
+   {
+    "id": "specs/research-platform/review-cleanup.md#7",
+    "label": "specs/research-platform/review-cleanup.md \u203a 5. C4 \u2014 Tracker and specification reconciliation",
+    "p": 0.0011745032448473721,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "board/cards/REM-185.md#1",
+   "label": "board/cards/REM-185.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-183.md#10",
+   "label": "board/cards/REM-183.md \u203a 2026-09-13T19:16:28.870Z \u00b7 Percolation Labs",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-187.md#8",
+   "label": "board/cards/REM-187.md \u203a 2026-09-13T19:18:05.845Z \u00b7 Percolation Labs",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/percolate-application/authoring-and-publication.md#11",
+   "label": "specs/percolate-application/authoring-and-publication.md \u203a 4. A2 \u2014 Keep working drafts editable after submission or publ",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-185.md#2",
+   "label": "board/cards/REM-185.md \u203a Goal",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/c9d210f298",
+   "label": "commit c9d210f: Postmortem: a merged core fix is four steps from a reader, and the frictions on the way (REM-185)",
+   "wave": 1,
+   "via": "term:rem 185",
+   "gold": true
+  },
+  {
+   "id": "commit/a50a914206",
+   "label": "commit a50a914: Merge pull request #177 from Percolation-Labs/amartey/postmortem-rem-185-release-path",
+   "wave": 1,
+   "via": "term:rem 185",
+   "gold": true
+  },
+  {
+   "id": "commit/8ec9655542",
+   "label": "commit 8ec9655: Merge pull request #175 from Percolation-Labs/amartey/rem-185-exact-revision-exposure",
+   "wave": 1,
+   "via": "term:rem 185",
+   "gold": true
+  },
+  {
+   "id": "board/cards/REM-185.md#3",
+   "label": "board/cards/REM-185.md \u203a Evidence",
+   "wave": 1,
+   "via": "term:rem 185",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-183.md#7",
+   "label": "board/cards/REM-183.md \u203a Links",
+   "wave": 1,
+   "via": "term:rem 185",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "board/cards/REM-183.md#9",
+    "label": "board/cards/REM-183.md \u203a 2026-09-13T16:53:52.544Z \u00b7 Percolation Labs",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-249.md#2",
+    "label": "board/cards/REM-249.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/navigation-and-account-flows.md#11",
+    "label": "specs/percolate-application/navigation-and-account-flows.md \u203a 5. Writing, requests and publication",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-187.md#9",
+    "label": "board/cards/REM-187.md \u203a 2026-09-13T19:18:05.845Z \u00b7 Percolation Labs",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/authoring-and-publication.md#12",
+    "label": "specs/percolate-application/authoring-and-publication.md \u203a 4. A2 \u2014 Keep working drafts editable after submission or publ",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "board/cards/REM-183.md#9",
+    "label": "board/cards/REM-183.md \u203a 2026-09-13T16:53:52.544Z \u00b7 Percolation Labs",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/authoring-and-publication.md#12",
+    "label": "specs/percolate-application/authoring-and-publication.md \u203a 4. A2 \u2014 Keep working drafts editable after submission or publ",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/authoring-handoff.md#1",
+    "label": "specs/percolate-application/authoring-handoff.md \u203a Owner editing and publication handoff",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-184.md#1",
+    "label": "board/cards/REM-184.md",
+    "gold": false
+   },
+   {
+    "id": "commit/961806b4bc",
+    "label": "commit 961806b: A listed work exposes exact revisions, and its owner keeps writing privately (REM-185)",
+    "gold": true
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/388b95744f",
+    "label": "commit 388b957: board: file REM-269 research: listing an owner's private working revision as saved exposes it, instead o",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-269.md#1",
+    "label": "board/cards/REM-269.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-185.md#4",
+    "label": "board/cards/REM-185.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-236.md#2",
+    "label": "board/cards/REM-236.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-269.md#2",
+    "label": "board/cards/REM-269.md \u203a Goal",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "board/cards/REM-183.md#9",
+    "label": "board/cards/REM-183.md \u203a 2026-09-13T16:53:52.544Z \u00b7 Percolation Labs",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-182.md#4",
+    "label": "board/cards/REM-182.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/authoring-and-publication.md#10",
+    "label": "specs/percolate-application/authoring-and-publication.md \u203a 3. A1 \u2014 Edit an owned research package in the browser",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/journey-network.md#12",
+    "label": "specs/percolate-application/journey-network.md \u203a 3. First encounter, working, returning and finishing",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-236.md#1",
+    "label": "board/cards/REM-236.md",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.16666666666666666,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

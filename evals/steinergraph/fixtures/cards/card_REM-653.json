@@ -1,0 +1,400 @@
+{
+ "qid": "card:REM-653",
+ "set": "cards",
+ "question": "What was done about this, and why: comparison: align claims across N packages in one call?",
+ "gold": [
+  {
+   "id": "commit/0ff90e5e45",
+   "label": "commit 0ff90e5: research: a claim graph over eight papers that says something (REM-652)",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/8f81394a08",
+   "label": "commit 8f81394: board: file REM-653 comparison: align claims across N packages in one call",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-653.md#1",
+   "label": "board/cards/REM-653.md",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-434.md#3",
+   "label": "board/cards/REM-434.md \u203a Evidence",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "board/cards/REM-212.md#2",
+   "label": "board/cards/REM-212.md \u203a Goal",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "specs/percolate-application/search.md#6",
+   "label": "specs/percolate-application/search.md \u203a 3a. Searching the packages you can read (built)",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 2
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/0ff90e5e45",
+    "label": "commit 0ff90e5: research: a claim graph over eight papers that says something (REM-652)",
+    "role": "gold"
+   },
+   {
+    "id": "commit/8f81394a08",
+    "label": "commit 8f81394: board: file REM-653 comparison: align claims across N packages in one call",
+    "role": "seed"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/0ff90e5e45",
+    "b": "commit/8f81394a08",
+    "via": [
+     {
+      "kind": "term",
+      "key": "rem 653",
+      "width": 16
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [],
+  "entry": {
+   "seed": "commit/8f81394a08",
+   "gold": "commit/0ff90e5e45",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 1267,
+  "within_2_doors": 32973,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "board/cards/REM-653.md#2",
+    "label": "board/cards/REM-653.md \u203a Goal",
+    "p": 0.006628853003844563,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-212.md#1",
+    "label": "board/cards/REM-212.md",
+    "p": 0.003664856926239586,
+    "gold": false
+   },
+   {
+    "id": "commit/376a764126",
+    "label": "commit 376a764: board: file REM-654 authoring: decide what guidance at publish time is actually for",
+    "p": 0.003299108079986099,
+    "gold": false
+   },
+   {
+    "id": "commit/36ff6f47d4",
+    "label": "commit 36ff6f4: board: file REM-652 search: a two-letter query word is dropped, and the result never says which arms ran",
+    "p": 0.0031584356289481997,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-653.md#4",
+    "label": "board/cards/REM-653.md \u203a Done when",
+    "p": 0.0020211969388940435,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/comparison-and-trust.md#21",
+    "label": "specs/percolate-application/comparison-and-trust.md \u203a Where it runs",
+    "p": 0.00175431334723381,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-433.md#3",
+    "label": "board/cards/REM-433.md \u203a Evidence",
+    "p": 0.001748636839484906,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-213.md#2",
+    "label": "board/cards/REM-213.md \u203a Goal",
+    "p": 0.0017409773269354233,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-212.md#3",
+    "label": "board/cards/REM-212.md \u203a Evidence",
+    "p": 0.0016439060671306594,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/comparison-and-trust.md#22",
+    "label": "specs/percolate-application/comparison-and-trust.md \u203a First slice",
+    "p": 0.0016159015692768634,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-434.md#8",
+    "label": "board/cards/REM-434.md \u203a Log",
+    "p": 0.0015622205241571782,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-434.md#7",
+    "label": "board/cards/REM-434.md \u203a Log",
+    "p": 0.0015232573179569959,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-652.md#7",
+    "label": "board/cards/REM-652.md \u203a Log",
+    "p": 0.0014870277361555687,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-653.md#3",
+    "label": "board/cards/REM-653.md \u203a Evidence",
+    "p": 0.0014240102461685917,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-573.md#7",
+    "label": "board/cards/REM-573.md \u203a Log",
+    "p": 0.0013096710482382533,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-653.md#7",
+    "label": "board/cards/REM-653.md \u203a Log",
+    "p": 0.0012850105053432916,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-215.md#2",
+    "label": "board/cards/REM-215.md \u203a Goal",
+    "p": 0.001268143741428416,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-653.md#5",
+    "label": "board/cards/REM-653.md \u203a Scope",
+    "p": 0.0012612362442036736,
+    "gold": false
+   },
+   {
+    "id": "commit/0ff90e5e45",
+    "label": "commit 0ff90e5: research: a claim graph over eight papers that says something (REM-652)",
+    "p": 0.0012482526643472608,
+    "gold": true
+   },
+   {
+    "id": "board/cards/REM-432.md#5",
+    "label": "board/cards/REM-432.md \u203a The questions to answer",
+    "p": 0.0011780374476555477,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/8f81394a08",
+   "label": "commit 8f81394: board: file REM-653 comparison: align claims across N packages in one call",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-653.md#1",
+   "label": "board/cards/REM-653.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-434.md#3",
+   "label": "board/cards/REM-434.md \u203a Evidence",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-212.md#2",
+   "label": "board/cards/REM-212.md \u203a Goal",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/percolate-application/search.md#6",
+   "label": "specs/percolate-application/search.md \u203a 3a. Searching the packages you can read (built)",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-653.md#2",
+   "label": "board/cards/REM-653.md \u203a Goal",
+   "wave": 1,
+   "via": "term:rem 653",
+   "gold": false
+  },
+  {
+   "id": "commit/a75ef693b6",
+   "label": "commit a75ef69: board: REM-653 todo \u2192 backlog",
+   "wave": 1,
+   "via": "term:rem 653",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-653.md#6",
+   "label": "board/cards/REM-653.md \u203a Links",
+   "wave": 1,
+   "via": "term:rem 653",
+   "gold": false
+  },
+  {
+   "id": "commit/b6c46808fc",
+   "label": "commit b6c4680: board: edit REM-653 labels severity",
+   "wave": 1,
+   "via": "term:rem 653",
+   "gold": false
+  },
+  {
+   "id": "commit/a6d0778e4d",
+   "label": "commit a6d0778: board: note on REM-653",
+   "wave": 1,
+   "via": "term:rem 653",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "board/cards/REM-653.md#2",
+    "label": "board/cards/REM-653.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-212.md#1",
+    "label": "board/cards/REM-212.md",
+    "gold": false
+   },
+   {
+    "id": "commit/376a764126",
+    "label": "commit 376a764: board: file REM-654 authoring: decide what guidance at publish time is actually for",
+    "gold": false
+   },
+   {
+    "id": "commit/36ff6f47d4",
+    "label": "commit 36ff6f4: board: file REM-652 search: a two-letter query word is dropped, and the result never says which arms ran",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-653.md#4",
+    "label": "board/cards/REM-653.md \u203a Done when",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "board/cards/REM-653.md#2",
+    "label": "board/cards/REM-653.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-212.md#1",
+    "label": "board/cards/REM-212.md",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/comparison-and-trust.md#21",
+    "label": "specs/percolate-application/comparison-and-trust.md \u203a Where it runs",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-433.md#3",
+    "label": "board/cards/REM-433.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/comparison-and-trust.md#12",
+    "label": "specs/percolate-application/comparison-and-trust.md \u203a Finding work that disagrees with a claim",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "board/cards/REM-212.md#1",
+    "label": "board/cards/REM-212.md",
+    "gold": false
+   },
+   {
+    "id": "commit/7fd84cfd23",
+    "label": "commit 7fd84cf: Review ideas flow and align the next UX and trust slice",
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-10-17-iterative-query/align.py#2",
+    "label": "meta/spikes/2026-10-17-iterative-query/align.py",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-212.md#4",
+    "label": "board/cards/REM-212.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-215.md#2",
+    "label": "board/cards/REM-215.md \u203a Goal",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "board/cards/REM-286.md#3",
+    "label": "board/cards/REM-286.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1108.md#4",
+    "label": "board/cards/REM-1108.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-434.md#9",
+    "label": "board/cards/REM-434.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/comparison-and-trust.md#12",
+    "label": "specs/percolate-application/comparison-and-trust.md \u203a Finding work that disagrees with a claim",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-434.md#4",
+    "label": "board/cards/REM-434.md \u203a Done when",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

@@ -1,0 +1,448 @@
+{
+ "qid": "RW:2hop__35137_22940",
+ "set": "mq",
+ "question": "What is the Book of Healing by the writer of The Canon of Medicine referred to in Arabic?",
+ "gold": [
+  {
+   "id": "mq:75fd4c198e0411f2",
+   "label": "Muslim world",
+   "seed": false
+  },
+  {
+   "id": "mq:8bec007c9eb00113",
+   "label": "Avicenna",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:f53aa07087caa546",
+   "label": "History of science",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:42b5402a41ab74cd",
+   "label": "Muslim world",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:d7700578b208c695",
+   "label": "Canon law",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:b23f681b6ee0e885",
+   "label": "Indigenous decolonization",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:562da7cc2773515c",
+   "label": "Yuan dynasty",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:42b5402a41ab74cd",
+    "label": "Muslim world",
+    "role": "seed"
+   },
+   {
+    "id": "mq:75fd4c198e0411f2",
+    "label": "Muslim world",
+    "role": "gold"
+   },
+   {
+    "id": "mq:8bec007c9eb00113",
+    "label": "Avicenna",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:42b5402a41ab74cd",
+    "b": "mq:75fd4c198e0411f2",
+    "via": [
+     {
+      "kind": "term",
+      "key": "medical textbook",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "textbook",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "encyclopedia",
+      "width": 9
+     },
+     {
+      "kind": "term",
+      "key": "muslim world",
+      "width": 15
+     },
+     {
+      "kind": "term",
+      "key": "avicenna",
+      "width": 20
+     }
+    ]
+   },
+   {
+    "a": "mq:75fd4c198e0411f2",
+    "b": "mq:8bec007c9eb00113",
+    "via": [
+     {
+      "kind": "term",
+      "key": "kitab",
+      "width": 3
+     },
+     {
+      "kind": "term",
+      "key": "avicenna",
+      "width": 20
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "mq:42b5402a41ab74cd",
+   "gold": "mq:75fd4c198e0411f2",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 3084,
+  "within_2_doors": 17991,
+  "gold_within_1": 2,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "mq:77c6915a4b67f01f",
+    "label": "Geology",
+    "p": 0.0037709555297354438,
+    "gold": false
+   },
+   {
+    "id": "mq:75fd4c198e0411f2",
+    "label": "Muslim world",
+    "p": 0.0026344001566483036,
+    "gold": true
+   },
+   {
+    "id": "mq:62ffc25582f4a9fc",
+    "label": "Avicenna",
+    "p": 0.0015793970813628285,
+    "gold": false
+   },
+   {
+    "id": "mq:8a974a6e1b1fff8b",
+    "label": "Presbyterianism",
+    "p": 0.0013258536497797702,
+    "gold": false
+   },
+   {
+    "id": "mq:9df2ee6263ffb697",
+    "label": "Avicenna",
+    "p": 0.0012680712459126942,
+    "gold": false
+   },
+   {
+    "id": "mq:c7d92ac05cb3115b",
+    "label": "Political philosophy",
+    "p": 0.0012374355266840647,
+    "gold": false
+   },
+   {
+    "id": "mq:d5e6904c37c5857b",
+    "label": "Middle Ages",
+    "p": 0.0012041806649563888,
+    "gold": false
+   },
+   {
+    "id": "mq:c872b663070f6f7d",
+    "label": "History of medicine",
+    "p": 0.0011306919847230371,
+    "gold": false
+   },
+   {
+    "id": "mq:7ac3a1cabb7514b7",
+    "label": "Iran",
+    "p": 0.001117390464571806,
+    "gold": false
+   },
+   {
+    "id": "mq:e6f545d0153a6de6",
+    "label": "Muslim world",
+    "p": 0.0011082338795714028,
+    "gold": false
+   },
+   {
+    "id": "mq:d3478ef2dac817dd",
+    "label": "Ancient Greek medicine",
+    "p": 0.000984030657813493,
+    "gold": false
+   },
+   {
+    "id": "mq:9b57b97c937b8869",
+    "label": "Infection",
+    "p": 0.0009663501827828028,
+    "gold": false
+   },
+   {
+    "id": "mq:1d87222f3256c1a0",
+    "label": "Eritrea",
+    "p": 0.0009618219603159998,
+    "gold": false
+   },
+   {
+    "id": "mq:1d83f57c7b4b57bc",
+    "label": "Canon law",
+    "p": 0.0009449035869958098,
+    "gold": false
+   },
+   {
+    "id": "mq:5ce56e6f2354697e",
+    "label": "Sino-Tibetan relations during the Ming dynasty",
+    "p": 0.0009339658139593189,
+    "gold": false
+   },
+   {
+    "id": "mq:088e473a1e94c798",
+    "label": "Free Software Movement of India",
+    "p": 0.0008329118453258357,
+    "gold": false
+   },
+   {
+    "id": "mq:07791d03901cdb09",
+    "label": "Quran",
+    "p": 0.0008267570210500012,
+    "gold": false
+   },
+   {
+    "id": "mq:e64d5d76127353e4",
+    "label": "Switzerland",
+    "p": 0.0008197919043614909,
+    "gold": false
+   },
+   {
+    "id": "mq:4d57f509899b8d3a",
+    "label": "Han dynasty",
+    "p": 0.0008141725914587841,
+    "gold": false
+   },
+   {
+    "id": "mq:54a077ff441016e2",
+    "label": "Emperor of Austria",
+    "p": 0.0008052718431747228,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:f53aa07087caa546",
+   "label": "History of science",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:42b5402a41ab74cd",
+   "label": "Muslim world",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:d7700578b208c695",
+   "label": "Canon law",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:b23f681b6ee0e885",
+   "label": "Indigenous decolonization",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:562da7cc2773515c",
+   "label": "Yuan dynasty",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:8bec007c9eb00113",
+   "label": "Avicenna",
+   "wave": 1,
+   "via": "term:healing",
+   "gold": true
+  },
+  {
+   "id": "mq:c1e897b520daf7f1",
+   "label": "MeshLab",
+   "wave": 1,
+   "via": "term:healing",
+   "gold": false
+  },
+  {
+   "id": "mq:4d57f509899b8d3a",
+   "label": "Han dynasty",
+   "wave": 1,
+   "via": "term:healing",
+   "gold": false
+  },
+  {
+   "id": "mq:b5a43b38ad425488",
+   "label": "Apollo",
+   "wave": 1,
+   "via": "term:healing",
+   "gold": false
+  },
+  {
+   "id": "mq:f5d800cc31540ee7",
+   "label": "Martin Winckler",
+   "wave": 1,
+   "via": "term:healing",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:77c6915a4b67f01f",
+    "label": "Geology",
+    "gold": false
+   },
+   {
+    "id": "mq:75fd4c198e0411f2",
+    "label": "Muslim world",
+    "gold": true
+   },
+   {
+    "id": "mq:62ffc25582f4a9fc",
+    "label": "Avicenna",
+    "gold": false
+   },
+   {
+    "id": "mq:8a974a6e1b1fff8b",
+    "label": "Presbyterianism",
+    "gold": false
+   },
+   {
+    "id": "mq:9df2ee6263ffb697",
+    "label": "Avicenna",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:75fd4c198e0411f2",
+    "label": "Muslim world",
+    "gold": true
+   },
+   {
+    "id": "mq:62ffc25582f4a9fc",
+    "label": "Avicenna",
+    "gold": false
+   },
+   {
+    "id": "mq:c872b663070f6f7d",
+    "label": "History of medicine",
+    "gold": false
+   },
+   {
+    "id": "mq:d5e6904c37c5857b",
+    "label": "Middle Ages",
+    "gold": false
+   },
+   {
+    "id": "mq:7ac3a1cabb7514b7",
+    "label": "Iran",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:75fd4c198e0411f2",
+    "label": "Muslim world",
+    "gold": true
+   },
+   {
+    "id": "mq:62ffc25582f4a9fc",
+    "label": "Avicenna",
+    "gold": false
+   },
+   {
+    "id": "mq:c872b663070f6f7d",
+    "label": "History of medicine",
+    "gold": false
+   },
+   {
+    "id": "mq:4d57f509899b8d3a",
+    "label": "Han dynasty",
+    "gold": false
+   },
+   {
+    "id": "mq:d5e6904c37c5857b",
+    "label": "Middle Ages",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:73c7c9bd7a1538a5",
+    "label": "Bible",
+    "gold": false
+   },
+   {
+    "id": "mq:c872b663070f6f7d",
+    "label": "History of medicine",
+    "gold": false
+   },
+   {
+    "id": "mq:75fd4c198e0411f2",
+    "label": "Muslim world",
+    "gold": true
+   },
+   {
+    "id": "mq:62ffc25582f4a9fc",
+    "label": "Avicenna",
+    "gold": false
+   },
+   {
+    "id": "mq:0dc09a6956ebfd72",
+    "label": "Psalm 23",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.5,
+  "Q": 0.5,
+  "LQ": 0.5,
+  "S": 0.5
+ }
+}

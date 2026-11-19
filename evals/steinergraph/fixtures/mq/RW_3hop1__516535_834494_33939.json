@@ -1,0 +1,463 @@
+{
+ "qid": "RW:3hop1__516535_834494_33939",
+ "set": "mq",
+ "question": "In 1900, what was the population of the city in the same county as Allen?",
+ "gold": [
+  {
+   "id": "mq:1c62e523420f3853",
+   "label": "Tucson, Arizona",
+   "seed": true
+  },
+  {
+   "id": "mq:839517897c4dd87e",
+   "label": "Pima County Natural Resources, Parks and Recreation",
+   "seed": false
+  },
+  {
+   "id": "mq:ba386909f13343ac",
+   "label": "Allen, Arizona",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:ba386909f13343ac",
+   "label": "Allen, Arizona",
+   "rank": 1,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:1c62e523420f3853",
+   "label": "Tucson, Arizona",
+   "rank": 2,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:68a2fa9f8ecee946",
+   "label": "Jersey City, New Jersey",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "mq:58ebc91fc94cd45b",
+   "label": "Blumenthal, Texas",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:ca01a67e31782094",
+   "label": "Oklahoma City",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 2
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:1c62e523420f3853",
+    "label": "Tucson, Arizona",
+    "role": "gold"
+   },
+   {
+    "id": "mq:839517897c4dd87e",
+    "label": "Pima County Natural Resources, Parks and Recreation",
+    "role": "gold"
+   },
+   {
+    "id": "mq:ba386909f13343ac",
+    "label": "Allen, Arizona",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:1c62e523420f3853",
+    "b": "mq:839517897c4dd87e",
+    "via": [
+     {
+      "kind": "near",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "pima county",
+      "width": 8
+     },
+     {
+      "kind": "term",
+      "key": "pima",
+      "width": 11
+     },
+     {
+      "kind": "term",
+      "key": "tucson",
+      "width": 19
+     },
+     {
+      "kind": "term",
+      "key": "arizona",
+      "width": 100
+     }
+    ]
+   },
+   {
+    "a": "mq:839517897c4dd87e",
+    "b": "mq:ba386909f13343ac",
+    "via": [
+     {
+      "kind": "near",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "pima county",
+      "width": 8
+     },
+     {
+      "kind": "term",
+      "key": "pima",
+      "width": 11
+     },
+     {
+      "kind": "term",
+      "key": "arizona",
+      "width": 100
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   1,
+   1
+  ],
+  "entry": {
+   "seed": "mq:1c62e523420f3853",
+   "gold": "mq:1c62e523420f3853",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 2456,
+  "within_2_doors": 18615,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "mq:aab46208f2b852eb",
+    "label": "Eric Marcus Municipal Airport",
+    "p": 0.0028281995306512118,
+    "gold": false
+   },
+   {
+    "id": "mq:5c05a372e4ad380f",
+    "label": "Tucson, Arizona",
+    "p": 0.0024579251321756386,
+    "gold": false
+   },
+   {
+    "id": "mq:152b0417c6001be5",
+    "label": "George Stephanopoulos",
+    "p": 0.0024416581837985053,
+    "gold": false
+   },
+   {
+    "id": "mq:420c9aa7148f98aa",
+    "label": "Tucson, Arizona",
+    "p": 0.0018935552134739032,
+    "gold": false
+   },
+   {
+    "id": "mq:0ad658ce32d1043d",
+    "label": "Qing dynasty",
+    "p": 0.0017724490203410814,
+    "gold": false
+   },
+   {
+    "id": "mq:839517897c4dd87e",
+    "label": "Pima County Natural Resources, Parks and Recreation",
+    "p": 0.0015393970750129022,
+    "gold": true
+   },
+   {
+    "id": "mq:27642924491b441c",
+    "label": "Montana",
+    "p": 0.0013067507227941936,
+    "gold": false
+   },
+   {
+    "id": "mq:835c361a353da376",
+    "label": "Helvetia, Arizona",
+    "p": 0.0012553000904395421,
+    "gold": false
+   },
+   {
+    "id": "mq:6b648a9efe2ac83b",
+    "label": "The Real Thing (Dizzy Gillespie album)",
+    "p": 0.0011565617611698283,
+    "gold": false
+   },
+   {
+    "id": "mq:dc0e496b2ee3537a",
+    "label": "Fredericksburg, Lebanon County, Pennsylvania",
+    "p": 0.0011360852358464064,
+    "gold": false
+   },
+   {
+    "id": "mq:e392b2378f8502e0",
+    "label": "Battle of Fredericksburg",
+    "p": 0.0011325090356856377,
+    "gold": false
+   },
+   {
+    "id": "mq:1eaccc0d957cf522",
+    "label": "New York City",
+    "p": 0.001081029992762535,
+    "gold": false
+   },
+   {
+    "id": "mq:7d2bd210672d60e7",
+    "label": "Hyderabad",
+    "p": 0.0010721759624511018,
+    "gold": false
+   },
+   {
+    "id": "mq:011f40e38dfbb718",
+    "label": "Battle of the Bay of Biscay",
+    "p": 0.001052856721316454,
+    "gold": false
+   },
+   {
+    "id": "mq:72c460c7ec1562a6",
+    "label": "Countdown to Zero",
+    "p": 0.0010415178591601645,
+    "gold": false
+   },
+   {
+    "id": "mq:d4cc3771f39ed129",
+    "label": "Dock Bridge",
+    "p": 0.0009489930782347011,
+    "gold": false
+   },
+   {
+    "id": "mq:d42a498d275a0ce5",
+    "label": "Summit, Arizona",
+    "p": 0.0009335084827744286,
+    "gold": false
+   },
+   {
+    "id": "mq:5ff3541fc11d20f6",
+    "label": "Drexel Heights, Arizona",
+    "p": 0.0008989212362570544,
+    "gold": false
+   },
+   {
+    "id": "mq:c73c69fde47d0bda",
+    "label": "Tucson, Arizona",
+    "p": 0.0008980896697724463,
+    "gold": false
+   },
+   {
+    "id": "mq:221f7227f2a5ebf2",
+    "label": "Ocala, Florida",
+    "p": 0.0008906744948462106,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:ba386909f13343ac",
+   "label": "Allen, Arizona",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:1c62e523420f3853",
+   "label": "Tucson, Arizona",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:68a2fa9f8ecee946",
+   "label": "Jersey City, New Jersey",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:58ebc91fc94cd45b",
+   "label": "Blumenthal, Texas",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:ca01a67e31782094",
+   "label": "Oklahoma City",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:d42a498d275a0ce5",
+   "label": "Summit, Arizona",
+   "wave": 1,
+   "via": "term:pima county",
+   "gold": false
+  },
+  {
+   "id": "mq:5ff3541fc11d20f6",
+   "label": "Drexel Heights, Arizona",
+   "wave": 1,
+   "via": "term:pima county",
+   "gold": false
+  },
+  {
+   "id": "mq:835c361a353da376",
+   "label": "Helvetia, Arizona",
+   "wave": 1,
+   "via": "term:pima county",
+   "gold": false
+  },
+  {
+   "id": "mq:aab46208f2b852eb",
+   "label": "Eric Marcus Municipal Airport",
+   "wave": 1,
+   "via": "term:pima county",
+   "gold": false
+  },
+  {
+   "id": "mq:839517897c4dd87e",
+   "label": "Pima County Natural Resources, Parks and Recreation",
+   "wave": 1,
+   "via": "term:pima county",
+   "gold": true
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:aab46208f2b852eb",
+    "label": "Eric Marcus Municipal Airport",
+    "gold": false
+   },
+   {
+    "id": "mq:5c05a372e4ad380f",
+    "label": "Tucson, Arizona",
+    "gold": false
+   },
+   {
+    "id": "mq:152b0417c6001be5",
+    "label": "George Stephanopoulos",
+    "gold": false
+   },
+   {
+    "id": "mq:420c9aa7148f98aa",
+    "label": "Tucson, Arizona",
+    "gold": false
+   },
+   {
+    "id": "mq:0ad658ce32d1043d",
+    "label": "Qing dynasty",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:420c9aa7148f98aa",
+    "label": "Tucson, Arizona",
+    "gold": false
+   },
+   {
+    "id": "mq:5c05a372e4ad380f",
+    "label": "Tucson, Arizona",
+    "gold": false
+   },
+   {
+    "id": "mq:dc0e496b2ee3537a",
+    "label": "Fredericksburg, Lebanon County, Pennsylvania",
+    "gold": false
+   },
+   {
+    "id": "mq:aab46208f2b852eb",
+    "label": "Eric Marcus Municipal Airport",
+    "gold": false
+   },
+   {
+    "id": "mq:d42a498d275a0ce5",
+    "label": "Summit, Arizona",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:420c9aa7148f98aa",
+    "label": "Tucson, Arizona",
+    "gold": false
+   },
+   {
+    "id": "mq:5c05a372e4ad380f",
+    "label": "Tucson, Arizona",
+    "gold": false
+   },
+   {
+    "id": "mq:dc0e496b2ee3537a",
+    "label": "Fredericksburg, Lebanon County, Pennsylvania",
+    "gold": false
+   },
+   {
+    "id": "mq:aab46208f2b852eb",
+    "label": "Eric Marcus Municipal Airport",
+    "gold": false
+   },
+   {
+    "id": "mq:73fb21618dde8641",
+    "label": "New York City",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:e05197eabe48925e",
+    "label": "Cross City, Florida",
+    "gold": false
+   },
+   {
+    "id": "mq:8a7d01dc832fdc89",
+    "label": "Jacksonville, Florida",
+    "gold": false
+   },
+   {
+    "id": "mq:421ff6079fc936ba",
+    "label": "Norton, Kansas",
+    "gold": false
+   },
+   {
+    "id": "mq:1d707b88fdb8f4b2",
+    "label": "Minneapolis, Kansas",
+    "gold": false
+   },
+   {
+    "id": "mq:60b255491e0820e5",
+    "label": "Portage, Wisconsin",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

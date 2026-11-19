@@ -1,0 +1,454 @@
+{
+ "qid": "RW:3hop2__304722_230978_63959",
+ "set": "mq",
+ "question": "When was the last time the team Matthew Webb was a member of beat the winner of the 1894-95 FA Cup?",
+ "gold": [
+  {
+   "id": "mq:23524493ddd1f245",
+   "label": "1894\u201395 FA Cup",
+   "seed": false
+  },
+  {
+   "id": "mq:42316829bc81da2b",
+   "label": "Second City derby",
+   "seed": false
+  },
+  {
+   "id": "mq:592c316a256f6833",
+   "label": "Matthew Webb (footballer)",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:592c316a256f6833",
+   "label": "Matthew Webb (footballer)",
+   "rank": 1,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:728b41facfd549a9",
+   "label": "Michael Waltrip Racing",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "mq:23e3a16e902a2c21",
+   "label": "List of New York Yankees owners and executives",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:6551aa09c939d08b",
+   "label": "2014 FIFA World Cup",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:18e5bbbc7abf9c44",
+   "label": "2023 Rugby World Cup",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:23524493ddd1f245",
+    "label": "1894\u201395 FA Cup",
+    "role": "gold"
+   },
+   {
+    "id": "mq:42316829bc81da2b",
+    "label": "Second City derby",
+    "role": "gold"
+   },
+   {
+    "id": "mq:592c316a256f6833",
+    "label": "Matthew Webb (footballer)",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:23524493ddd1f245",
+    "b": "mq:42316829bc81da2b",
+    "via": [
+     {
+      "kind": "near",
+      "width": 3
+     },
+     {
+      "kind": "term",
+      "key": "aston villa",
+      "width": 9
+     },
+     {
+      "kind": "term",
+      "key": "aston",
+      "width": 13
+     },
+     {
+      "kind": "term",
+      "key": "villa",
+      "width": 40
+     },
+     {
+      "kind": "term",
+      "key": "birmingham",
+      "width": 54
+     }
+    ]
+   },
+   {
+    "a": "mq:42316829bc81da2b",
+    "b": "mq:592c316a256f6833",
+    "via": [
+     {
+      "kind": "term",
+      "key": "birmingham city",
+      "width": 24
+     },
+     {
+      "kind": "term",
+      "key": "birmingham",
+      "width": 54
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   1,
+   1
+  ],
+  "entry": {
+   "seed": "mq:592c316a256f6833",
+   "gold": "mq:592c316a256f6833",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 2841,
+  "within_2_doors": 18243,
+  "gold_within_1": 2,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "mq:93968a784d01ef8f",
+    "label": "2018 FIFA World Cup",
+    "p": 0.003346780682072035,
+    "gold": false
+   },
+   {
+    "id": "mq:2b3f3da6be75c785",
+    "label": "Malcolm Briggs",
+    "p": 0.0022249317732859924,
+    "gold": false
+   },
+   {
+    "id": "mq:1ebf98247909e765",
+    "label": "Carl Edwards",
+    "p": 0.0021313436626468675,
+    "gold": false
+   },
+   {
+    "id": "mq:62eab94f0a6a6550",
+    "label": "Denny Hamlin",
+    "p": 0.0016860550229816364,
+    "gold": false
+   },
+   {
+    "id": "mq:783834012896261e",
+    "label": "2010 FIFA World Cup",
+    "p": 0.001542144227649126,
+    "gold": false
+   },
+   {
+    "id": "mq:2b286038f91aa490",
+    "label": "Birth control in the United States",
+    "p": 0.0013626039972330242,
+    "gold": false
+   },
+   {
+    "id": "mq:f5a134dcd31c2ad8",
+    "label": "Kevin Harvick",
+    "p": 0.001306769363306371,
+    "gold": false
+   },
+   {
+    "id": "mq:644e8589841cc687",
+    "label": "George C. Webb",
+    "p": 0.0012910997680342091,
+    "gold": false
+   },
+   {
+    "id": "mq:04245a05d396e986",
+    "label": "Richmond, Virginia",
+    "p": 0.0012699365319132196,
+    "gold": false
+   },
+   {
+    "id": "mq:7381e76d22464cae",
+    "label": "German reunification",
+    "p": 0.0011920475512152333,
+    "gold": false
+   },
+   {
+    "id": "mq:57df38e5ea2a635d",
+    "label": "Central Wisconsin Airport",
+    "p": 0.0011920022210366993,
+    "gold": false
+   },
+   {
+    "id": "mq:78662b19ed477628",
+    "label": "Supreme Court of California",
+    "p": 0.001105397795730157,
+    "gold": false
+   },
+   {
+    "id": "mq:6496e2a277a0f15f",
+    "label": "Greg Biffle",
+    "p": 0.0010640981941664209,
+    "gold": false
+   },
+   {
+    "id": "mq:292b821676583ce9",
+    "label": "Roush Fenway Racing",
+    "p": 0.0010151583457365572,
+    "gold": false
+   },
+   {
+    "id": "mq:2b31c03f19c08d3b",
+    "label": "Premier League records and statistics",
+    "p": 0.0010089361041919719,
+    "gold": false
+   },
+   {
+    "id": "mq:ffb872e738a750af",
+    "label": "Gordon & MacPhail",
+    "p": 0.0009893092793440683,
+    "gold": false
+   },
+   {
+    "id": "mq:fc03bbca58d976a1",
+    "label": "German reunification",
+    "p": 0.0009540449394788316,
+    "gold": false
+   },
+   {
+    "id": "mq:c79da9ca0ecade5c",
+    "label": "FC Barcelona",
+    "p": 0.0009478601565095175,
+    "gold": false
+   },
+   {
+    "id": "mq:b853852cb6fa0df4",
+    "label": "CKRD-FM",
+    "p": 0.0009442245720265868,
+    "gold": false
+   },
+   {
+    "id": "mq:ece3e96ac3d83985",
+    "label": "No-hitter",
+    "p": 0.000920857868558932,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:592c316a256f6833",
+   "label": "Matthew Webb (footballer)",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:728b41facfd549a9",
+   "label": "Michael Waltrip Racing",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:23e3a16e902a2c21",
+   "label": "List of New York Yankees owners and executives",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:6551aa09c939d08b",
+   "label": "2014 FIFA World Cup",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:18e5bbbc7abf9c44",
+   "label": "2023 Rugby World Cup",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:a0dc9f4817149edc",
+   "label": "A Real Birmingham Family",
+   "wave": 1,
+   "via": "term:birmingham",
+   "gold": false
+  },
+  {
+   "id": "mq:aa94aae0fb39e5fc",
+   "label": "Trevor Dark",
+   "wave": 1,
+   "via": "term:birmingham",
+   "gold": false
+  },
+  {
+   "id": "mq:2c930dbdc864514f",
+   "label": "Ronnie Morris (footballer)",
+   "wave": 1,
+   "via": "term:birmingham",
+   "gold": false
+  },
+  {
+   "id": "mq:219f02a5fee4d671",
+   "label": "Ken Faulkner",
+   "wave": 1,
+   "via": "term:birmingham",
+   "gold": false
+  },
+  {
+   "id": "mq:020d342fbba7b023",
+   "label": "Priestley Riots",
+   "wave": 1,
+   "via": "term:birmingham",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:93968a784d01ef8f",
+    "label": "2018 FIFA World Cup",
+    "gold": false
+   },
+   {
+    "id": "mq:2b3f3da6be75c785",
+    "label": "Malcolm Briggs",
+    "gold": false
+   },
+   {
+    "id": "mq:1ebf98247909e765",
+    "label": "Carl Edwards",
+    "gold": false
+   },
+   {
+    "id": "mq:62eab94f0a6a6550",
+    "label": "Denny Hamlin",
+    "gold": false
+   },
+   {
+    "id": "mq:783834012896261e",
+    "label": "2010 FIFA World Cup",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:f5a134dcd31c2ad8",
+    "label": "Kevin Harvick",
+    "gold": false
+   },
+   {
+    "id": "mq:292b821676583ce9",
+    "label": "Roush Fenway Racing",
+    "gold": false
+   },
+   {
+    "id": "mq:1ebf98247909e765",
+    "label": "Carl Edwards",
+    "gold": false
+   },
+   {
+    "id": "mq:62eab94f0a6a6550",
+    "label": "Denny Hamlin",
+    "gold": false
+   },
+   {
+    "id": "mq:93968a784d01ef8f",
+    "label": "2018 FIFA World Cup",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:f5a134dcd31c2ad8",
+    "label": "Kevin Harvick",
+    "gold": false
+   },
+   {
+    "id": "mq:292b821676583ce9",
+    "label": "Roush Fenway Racing",
+    "gold": false
+   },
+   {
+    "id": "mq:92bf4871ce28ffa3",
+    "label": "Samoa",
+    "gold": false
+   },
+   {
+    "id": "mq:932391c6ee3fcdaf",
+    "label": "Samoa",
+    "gold": false
+   },
+   {
+    "id": "mq:1ebf98247909e765",
+    "label": "Carl Edwards",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:017552c5446e5629",
+    "label": "2010 UEFA Champions League Final",
+    "gold": false
+   },
+   {
+    "id": "mq:a3f16bb07d922b4d",
+    "label": "Antar Osmani",
+    "gold": false
+   },
+   {
+    "id": "mq:93fd21bc5221b81e",
+    "label": "Joseph Cogels",
+    "gold": false
+   },
+   {
+    "id": "mq:be2774b85f03664c",
+    "label": "Richard Wallace (rugby union)",
+    "gold": false
+   },
+   {
+    "id": "mq:596b91f3236c9f14",
+    "label": "Nigeria",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

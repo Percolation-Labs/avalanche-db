@@ -1,0 +1,446 @@
+{
+ "qid": "pr:740",
+ "set": "prs",
+ "question": "What work went into this, and why: Round 2 judges only doors from travelled reads: registered slice, not met?",
+ "gold": [
+  {
+   "id": "commit/3de62c0ac1",
+   "label": "commit 3de62c0: Reword a house-voice tell in the travelled-reads result",
+   "seed": false
+  },
+  {
+   "id": "commit/85374fd43a",
+   "label": "commit 85374fd: Register the travelled-reads round-2 slice before any walk",
+   "seed": false
+  },
+  {
+   "id": "commit/ba5e1fc41a",
+   "label": "commit ba5e1fc: Travelled-reads round-2 slice: no registered prediction met; useful doors came from search reads",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/9ab0630f43",
+   "label": "commit 9ab0630: Merge pull request #740 from Percolation-Labs/bill/round2-travelled",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/ba5e1fc41a",
+   "label": "commit ba5e1fc: Travelled-reads round-2 slice: no registered prediction met; useful doors came from search reads",
+   "rank": 2,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "meta/lab/results/musique-travelled/REGISTERED.md#1",
+   "label": "meta/lab/results/musique-travelled/REGISTERED.md \u203a Round-2 doors only from travelled reads: registration (bill, 14 Nov 2",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/e8fb02927b",
+   "label": "commit e8fb029: Merge pull request #741 from Percolation-Labs/bill/round2-search",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "meta/lab/q4/travelled_doors.py#1",
+   "label": "meta/lab/q4/travelled_doors.py",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/3de62c0ac1",
+    "label": "commit 3de62c0: Reword a house-voice tell in the travelled-reads result",
+    "role": "gold"
+   },
+   {
+    "id": "commit/85374fd43a",
+    "label": "commit 85374fd: Register the travelled-reads round-2 slice before any walk",
+    "role": "gold"
+   },
+   {
+    "id": "commit/ba5e1fc41a",
+    "label": "commit ba5e1fc: Travelled-reads round-2 slice: no registered prediction met; useful doors came from search reads",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/3de62c0ac1",
+    "b": "commit/ba5e1fc41a",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "travelled reads",
+      "width": 31
+     }
+    ]
+   },
+   {
+    "a": "commit/85374fd43a",
+    "b": "commit/ba5e1fc41a",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "reads round",
+      "width": 7
+     },
+     {
+      "kind": "term",
+      "key": "travelled reads",
+      "width": 31
+     },
+     {
+      "kind": "term",
+      "key": "round 2",
+      "width": 67
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   1,
+   1
+  ],
+  "entry": {
+   "seed": "commit/ba5e1fc41a",
+   "gold": "commit/ba5e1fc41a",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 1085,
+  "within_2_doors": 32053,
+  "gold_within_1": 2,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "commit/ee7605e5b1",
+    "label": "commit ee7605e: Merge pull request #742 from Percolation-Labs/bill/round2-share-topk",
+    "p": 0.011925786188757786,
+    "gold": false
+   },
+   {
+    "id": "commit/329930123f",
+    "label": "commit 3299301: Merge pull request #743 from Percolation-Labs/bill/round2-blind-check",
+    "p": 0.007893476323291515,
+    "gold": false
+   },
+   {
+    "id": "commit/16ad282db1",
+    "label": "commit 16ad282: board: bill messages sirsh",
+    "p": 0.005843260130833498,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/musique-share-topk/REGISTERED.md#1",
+    "label": "meta/lab/results/musique-share-topk/REGISTERED.md \u203a Each round travels the same share of its doors: registration (bill, ",
+    "p": 0.00544707066129201,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/q4/share_topk.py#1",
+    "label": "meta/lab/q4/share_topk.py",
+    "p": 0.004357331445894555,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/world-lab/SLICE1.md#12",
+    "label": "meta/lab/results/world-lab/SLICE1.md \u203a Amendment A (bill, 9 Nov, before any walk; no judge call has scored a door)",
+    "p": 0.00426537489877874,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/musique-search-doors/REGISTERED.md#1",
+    "label": "meta/lab/results/musique-search-doors/REGISTERED.md \u203a Round-2 doors only from search reads: registration (bill, 14 Nov 2",
+    "p": 0.00414525898838749,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-miss-census-topk/CAP-RULE.md#1",
+    "label": "meta/lab/results/q4-miss-census-topk/CAP-RULE.md \u203a Top-3 with a cap on a travelled lead's reads (registered before any c",
+    "p": 0.0041016911564308225,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-miss-census-topk/CAP-RULE.md#2",
+    "label": "meta/lab/results/q4-miss-census-topk/CAP-RULE.md \u203a Top-3 with a cap on a travelled lead's reads (registered before any c",
+    "p": 0.003916542104391532,
+    "gold": false
+   },
+   {
+    "id": "commit/6438a0d371",
+    "label": "commit 6438a0d: Merge pull request #739 from Percolation-Labs/bill/musique-round2-haystack",
+    "p": 0.00379303580467146,
+    "gold": false
+   },
+   {
+    "id": "commit/70c92ef10a",
+    "label": "commit 70c92ef: board: bill messages sirsh",
+    "p": 0.0036361033934955256,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/kappa/round2.txt#2",
+    "label": "meta/lab/results/kappa/round2.txt",
+    "p": 0.0034659822727161563,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/musique-share-topk/RESULT.md#1",
+    "label": "meta/lab/results/musique-share-topk/RESULT.md \u203a Each round travels the same share of its doors: result (bill, 14 Nov 202",
+    "p": 0.003380866258049687,
+    "gold": false
+   },
+   {
+    "id": "commit/addb07b804",
+    "label": "commit addb07b: board: james messages sirsh",
+    "p": 0.003366741864333581,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/musique-search-doors/RESULT.md#1",
+    "label": "meta/lab/results/musique-search-doors/RESULT.md \u203a Round-2 doors only from search reads: result (bill, 14 Nov 2026)",
+    "p": 0.0033383662469328793,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/musique-round2/NOTE.md#1",
+    "label": "meta/lab/results/musique-round2/NOTE.md \u203a Round 2 on real text: a haystack, not lost context (bill, 14 Nov 2026; directi",
+    "p": 0.0033144275542405024,
+    "gold": false
+   },
+   {
+    "id": "commit/85374fd43a",
+    "label": "commit 85374fd: Register the travelled-reads round-2 slice before any walk",
+    "p": 0.003118395257449218,
+    "gold": true
+   },
+   {
+    "id": "board/messages/M-20261114-194833-01d5.md#1",
+    "label": "board/messages/M-20261114-194833-01d5.md",
+    "p": 0.0031063363731078015,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/musique-reranker-input/REGISTERED.md#1",
+    "label": "meta/lab/results/musique-reranker-input/REGISTERED.md \u203a Does the edge selector's round-2 floor come from its input? Regi",
+    "p": 0.002678353077440455,
+    "gold": false
+   },
+   {
+    "id": "commit/d60be0e0ff",
+    "label": "commit d60be0e: Register the search-reads round-2 slice on held[6:9] before any walk",
+    "p": 0.0026516091693044148,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/9ab0630f43",
+   "label": "commit 9ab0630: Merge pull request #740 from Percolation-Labs/bill/round2-travelled",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/ba5e1fc41a",
+   "label": "commit ba5e1fc: Travelled-reads round-2 slice: no registered prediction met; useful doors came from search reads",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "meta/lab/results/musique-travelled/REGISTERED.md#1",
+   "label": "meta/lab/results/musique-travelled/REGISTERED.md \u203a Round-2 doors only from travelled reads: registration (bill, 14 Nov 2",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/e8fb02927b",
+   "label": "commit e8fb029: Merge pull request #741 from Percolation-Labs/bill/round2-search",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/q4/travelled_doors.py#1",
+   "label": "meta/lab/q4/travelled_doors.py",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/musique-share-topk/RESULT.md#2",
+   "label": "meta/lab/results/musique-share-topk/RESULT.md \u203a Each round travels the same share of its doors: result (bill, 14 Nov 202",
+   "wave": 1,
+   "via": "term:doors raised",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/musique-travelled/RESULT.md#2",
+   "label": "meta/lab/results/musique-travelled/RESULT.md \u203a Round-2 doors only from travelled reads: result (bill, 14 Nov 2026)",
+   "wave": 1,
+   "via": "term:doors raised",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/musique-round2/NOTE.md#2",
+   "label": "meta/lab/results/musique-round2/NOTE.md \u203a Round 2 on real text: a haystack, not lost context (bill, 14 Nov 2026; directi",
+   "wave": 1,
+   "via": "term:doors raised",
+   "gold": false
+  },
+  {
+   "id": "board/messages/M-20261114-194833-01d5.md#1",
+   "label": "board/messages/M-20261114-194833-01d5.md",
+   "wave": 1,
+   "via": "term:doors raised",
+   "gold": false
+  },
+  {
+   "id": "board/messages/M-20261114-113925-e88f.md#1",
+   "label": "board/messages/M-20261114-113925-e88f.md",
+   "wave": 1,
+   "via": "term:doors raised",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "commit/ee7605e5b1",
+    "label": "commit ee7605e: Merge pull request #742 from Percolation-Labs/bill/round2-share-topk",
+    "gold": false
+   },
+   {
+    "id": "commit/329930123f",
+    "label": "commit 3299301: Merge pull request #743 from Percolation-Labs/bill/round2-blind-check",
+    "gold": false
+   },
+   {
+    "id": "commit/16ad282db1",
+    "label": "commit 16ad282: board: bill messages sirsh",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/musique-share-topk/REGISTERED.md#1",
+    "label": "meta/lab/results/musique-share-topk/REGISTERED.md \u203a Each round travels the same share of its doors: registration (bill, ",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/q4/share_topk.py#1",
+    "label": "meta/lab/q4/share_topk.py",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "commit/ee7605e5b1",
+    "label": "commit ee7605e: Merge pull request #742 from Percolation-Labs/bill/round2-share-topk",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/musique-share-topk/RESULT.md#1",
+    "label": "meta/lab/results/musique-share-topk/RESULT.md \u203a Each round travels the same share of its doors: result (bill, 14 Nov 202",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/musique-search-doors/RESULT.md#1",
+    "label": "meta/lab/results/musique-search-doors/RESULT.md \u203a Round-2 doors only from search reads: result (bill, 14 Nov 2026)",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/musique-share-topk/REGISTERED.md#1",
+    "label": "meta/lab/results/musique-share-topk/REGISTERED.md \u203a Each round travels the same share of its doors: registration (bill, ",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/musique-search-doors/REGISTERED.md#1",
+    "label": "meta/lab/results/musique-search-doors/REGISTERED.md \u203a Round-2 doors only from search reads: registration (bill, 14 Nov 2",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/ee7605e5b1",
+    "label": "commit ee7605e: Merge pull request #742 from Percolation-Labs/bill/round2-share-topk",
+    "gold": false
+   },
+   {
+    "id": "commit/85374fd43a",
+    "label": "commit 85374fd: Register the travelled-reads round-2 slice before any walk",
+    "gold": true
+   },
+   {
+    "id": "commit/d60be0e0ff",
+    "label": "commit d60be0e: Register the search-reads round-2 slice on held[6:9] before any walk",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/musique-search-doors/REGISTERED.md#2",
+    "label": "meta/lab/results/musique-search-doors/REGISTERED.md \u203a Round-2 doors only from search reads: registration (bill, 14 Nov 2",
+    "gold": false
+   },
+   {
+    "id": "commit/889a8ae0da",
+    "label": "commit 889a8ae: Search-reads round-2 slice: 1 of 4 registered predictions met; the source of a read does not predict use",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "commit/889a8ae0da",
+    "label": "commit 889a8ae: Search-reads round-2 slice: 1 of 4 registered predictions met; the source of a read does not predict use",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/musique-share-topk/RESULT.md#1",
+    "label": "meta/lab/results/musique-share-topk/RESULT.md \u203a Each round travels the same share of its doors: result (bill, 14 Nov 202",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261114-194833-01d5.md#1",
+    "label": "board/messages/M-20261114-194833-01d5.md",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/musique-travelled/RESULT.md#1",
+    "label": "meta/lab/results/musique-travelled/RESULT.md \u203a Round-2 doors only from travelled reads: result (bill, 14 Nov 2026)",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/musique-search-doors/RESULT.md#1",
+    "label": "meta/lab/results/musique-search-doors/RESULT.md \u203a Round-2 doors only from search reads: result (bill, 14 Nov 2026)",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.5,
+  "S": 0.0
+ }
+}

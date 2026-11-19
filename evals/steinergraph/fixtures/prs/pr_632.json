@@ -1,0 +1,501 @@
+{
+ "qid": "pr:632",
+ "set": "prs",
+ "question": "What work went into this, and why: MIDB part 1: P7 (the bound with a budget), and use-driven edges' generalisation count?",
+ "gold": [
+  {
+   "id": "commit/3dc4e197a2",
+   "label": "commit 3dc4e19: MIDB part 1, P7 on BEAM 1M: the budget term, and the critical coin as dreaming's target metric",
+   "seed": true
+  },
+  {
+   "id": "commit/6e5ddda8bf",
+   "label": "commit 6e5ddda: MIDB part 1, P7: the structure bound with a budget, tested on known graphs",
+   "seed": true
+  },
+  {
+   "id": "commit/77cf215be2",
+   "label": "commit 77cf215: MIDB dreaming metric: required judge AUC, after fixed-AUC controls failed on MuSiQue",
+   "seed": false
+  },
+  {
+   "id": "commit/b5101c436f",
+   "label": "commit b5101c4: Use-driven edges change no question's graph: cory's 600 restate the term index (generalisation, register",
+   "seed": true
+  },
+  {
+   "id": "commit/cedbad65b7",
+   "label": "commit cedbad6: MIDB part 1: a read cap and relative coin rates for P7's census, and the reference-ranker metric",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/95f335fb07",
+   "label": "commit 95f335f: Merge pull request #632 from Percolation-Labs/sally/structure-budget",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/messages/M-20261102-113043-3e7b.md#1",
+   "label": "board/messages/M-20261102-113043-3e7b.md",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/6e5ddda8bf",
+   "label": "commit 6e5ddda: MIDB part 1, P7: the structure bound with a budget, tested on known graphs",
+   "rank": 3,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "commit/b5101c436f",
+   "label": "commit b5101c4: Use-driven edges change no question's graph: cory's 600 restate the term index (generalisation, register",
+   "rank": 4,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "commit/3dc4e197a2",
+   "label": "commit 3dc4e19: MIDB part 1, P7 on BEAM 1M: the budget term, and the critical coin as dreaming's target metric",
+   "rank": 5,
+   "gold": true,
+   "doors_to_gold": 0
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/3dc4e197a2",
+    "label": "commit 3dc4e19: MIDB part 1, P7 on BEAM 1M: the budget term, and the critical coin as dreaming's target metric",
+    "role": "gold"
+   },
+   {
+    "id": "commit/6e5ddda8bf",
+    "label": "commit 6e5ddda: MIDB part 1, P7: the structure bound with a budget, tested on known graphs",
+    "role": "gold"
+   },
+   {
+    "id": "commit/77cf215be2",
+    "label": "commit 77cf215: MIDB dreaming metric: required judge AUC, after fixed-AUC controls failed on MuSiQue",
+    "role": "gold"
+   },
+   {
+    "id": "commit/b5101c436f",
+    "label": "commit b5101c4: Use-driven edges change no question's graph: cory's 600 restate the term index (generalisation, register",
+    "role": "gold"
+   },
+   {
+    "id": "commit/cedbad65b7",
+    "label": "commit cedbad6: MIDB part 1: a read cap and relative coin rates for P7's census, and the reference-ranker metric",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/3dc4e197a2",
+    "b": "commit/6e5ddda8bf",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "midb part",
+      "width": 34
+     }
+    ]
+   },
+   {
+    "a": "commit/3dc4e197a2",
+    "b": "commit/cedbad65b7",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "target metric",
+      "width": 11
+     },
+     {
+      "kind": "term",
+      "key": "midb part",
+      "width": 34
+     }
+    ]
+   },
+   {
+    "a": "commit/77cf215be2",
+    "b": "commit/b5101c436f",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "random edges",
+      "width": 36
+     }
+    ]
+   },
+   {
+    "a": "commit/77cf215be2",
+    "b": "commit/cedbad65b7",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "ranker metric",
+      "width": 3
+     },
+     {
+      "kind": "term",
+      "key": "fixed auc",
+      "width": 9
+     }
+    ]
+   }
+  ],
+  "cost": 4,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   2,
+   2,
+   1,
+   2,
+   2,
+   1,
+   1,
+   1,
+   2
+  ],
+  "entry": {
+   "seed": "commit/3dc4e197a2",
+   "gold": "commit/3dc4e197a2",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 1011,
+  "within_2_doors": 30628,
+  "gold_within_1": 2,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "board/messages/M-20261102-115514-6973.md#1",
+    "label": "board/messages/M-20261102-115514-6973.md",
+    "p": 0.006082718608025632,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/generalise/RESULT.md#1",
+    "label": "meta/lab/results/generalise/RESULT.md \u203a Do use-driven edges generalise? Result: no change to the graph, for any question",
+    "p": 0.0036642419196617772,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/graph-known/PROPOSITIONS.md#11",
+    "label": "meta/lab/results/graph-known/PROPOSITIONS.md \u203a On BEAM 1M (S, judge-free, $0)",
+    "p": 0.003536593634224324,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261102-101109-e626.md#1",
+    "label": "board/messages/M-20261102-101109-e626.md",
+    "p": 0.003330762097589348,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261102-115436-5377.md#1",
+    "label": "board/messages/M-20261102-115436-5377.md",
+    "p": 0.003174361506611636,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261102-115432-1fab.md#1",
+    "label": "board/messages/M-20261102-115432-1fab.md",
+    "p": 0.0031650380634943988,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/generalise/REGISTRATION.md#1",
+    "label": "meta/lab/results/generalise/REGISTRATION.md \u203a Do use-driven edges generalise? Registration",
+    "p": 0.003054869935331314,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261102-100228-3845.md#1",
+    "label": "board/messages/M-20261102-100228-3845.md",
+    "p": 0.0029241047525326645,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261102-100232-8b98.md#1",
+    "label": "board/messages/M-20261102-100232-8b98.md",
+    "p": 0.0029241047525326645,
+    "gold": false
+   },
+   {
+    "id": "commit/3457946634",
+    "label": "commit 3457946: Generalisation part 2 registered: the judge-side test on the 7 cross-question use edges",
+    "p": 0.0024735786529206504,
+    "gold": false
+   },
+   {
+    "id": "commit/f38fd9a896",
+    "label": "commit f38fd9a: board: james acknowledges 1 message(s)",
+    "p": 0.0022812740635019826,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/configs/structure/p7_budget.py#1",
+    "label": "meta/lab/configs/structure/p7_budget.py",
+    "p": 0.002168517574341528,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/graph-known/PROPOSITIONS.md#12",
+    "label": "meta/lab/results/graph-known/PROPOSITIONS.md \u203a What this gives dreaming: withdrawn",
+    "p": 0.002093456188290033,
+    "gold": false
+   },
+   {
+    "id": "commit/f94b464604",
+    "label": "commit f94b464: Generalisation part 2 result: no use edge is a door; the evidence sentence scores below the walk's lead ",
+    "p": 0.0020850643584485956,
+    "gold": false
+   },
+   {
+    "id": "commit/cedbad65b7",
+    "label": "commit cedbad6: MIDB part 1: a read cap and relative coin rates for P7's census, and the reference-ranker metric",
+    "p": 0.0020830450289491924,
+    "gold": true
+   },
+   {
+    "id": "meta/postmortems/2026-09-12-the-queue-is-the-product.md#6",
+    "label": "meta/postmortems/2026-09-12-the-queue-is-the-product.md \u203a What is not the cause, so nobody optimises it",
+    "p": 0.0020779167928192156,
+    "gold": false
+   },
+   {
+    "id": "commit/c78841ce88",
+    "label": "commit c78841c: Generalisation part 2: the 7-case judge script, with the moot-case amendment registered before any call",
+    "p": 0.002076534427435375,
+    "gold": false
+   },
+   {
+    "id": "commit/5b0817fc55",
+    "label": "commit 5b0817f: board: sally messages james",
+    "p": 0.002067012183790527,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/tests/test_structure_props.py#8",
+    "label": "meta/lab/tests/test_structure_props.py",
+    "p": 0.0018671251574582045,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/configs/structure/p7_budget.py#2",
+    "label": "meta/lab/configs/structure/p7_budget.py",
+    "p": 0.0017550619258973707,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/95f335fb07",
+   "label": "commit 95f335f: Merge pull request #632 from Percolation-Labs/sally/structure-budget",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/messages/M-20261102-113043-3e7b.md#1",
+   "label": "board/messages/M-20261102-113043-3e7b.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/6e5ddda8bf",
+   "label": "commit 6e5ddda: MIDB part 1, P7: the structure bound with a budget, tested on known graphs",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "commit/b5101c436f",
+   "label": "commit b5101c4: Use-driven edges change no question's graph: cory's 600 restate the term index (generalisation, register",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "commit/3dc4e197a2",
+   "label": "commit 3dc4e19: MIDB part 1, P7 on BEAM 1M: the budget term, and the critical coin as dreaming's target metric",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "meta/lab/tests/test_structure_props.py#11",
+   "label": "meta/lab/tests/test_structure_props.py",
+   "wave": 1,
+   "via": "term:structure p7_budget",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/graph-known/PROPOSITIONS.md#11",
+   "label": "meta/lab/results/graph-known/PROPOSITIONS.md \u203a On BEAM 1M (S, judge-free, $0)",
+   "wave": 1,
+   "via": "term:structure p7_budget",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/configs/structure/p7_budget.py#1",
+   "label": "meta/lab/configs/structure/p7_budget.py",
+   "wave": 1,
+   "via": "term:structure p7_budget",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/configs/structure/p7_budget.py#4",
+   "label": "meta/lab/configs/structure/p7_budget.py",
+   "wave": 1,
+   "via": "term:structure p7_budget",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/configs/structure/p7_budget.py#2",
+   "label": "meta/lab/configs/structure/p7_budget.py",
+   "wave": 1,
+   "via": "term:structure p7_budget",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "board/messages/M-20261102-115514-6973.md#1",
+    "label": "board/messages/M-20261102-115514-6973.md",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/generalise/RESULT.md#1",
+    "label": "meta/lab/results/generalise/RESULT.md \u203a Do use-driven edges generalise? Result: no change to the graph, for any question",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/graph-known/PROPOSITIONS.md#11",
+    "label": "meta/lab/results/graph-known/PROPOSITIONS.md \u203a On BEAM 1M (S, judge-free, $0)",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261102-101109-e626.md#1",
+    "label": "board/messages/M-20261102-101109-e626.md",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261102-115436-5377.md#1",
+    "label": "board/messages/M-20261102-115436-5377.md",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "board/messages/M-20261102-115514-6973.md#1",
+    "label": "board/messages/M-20261102-115514-6973.md",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261102-115432-1fab.md#1",
+    "label": "board/messages/M-20261102-115432-1fab.md",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261102-115436-5377.md#1",
+    "label": "board/messages/M-20261102-115436-5377.md",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/generalise/RESULT.md#1",
+    "label": "meta/lab/results/generalise/RESULT.md \u203a Do use-driven edges generalise? Result: no change to the graph, for any question",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261102-101109-e626.md#1",
+    "label": "board/messages/M-20261102-101109-e626.md",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/c78841ce88",
+    "label": "commit c78841c: Generalisation part 2: the 7-case judge script, with the moot-case amendment registered before any call",
+    "gold": false
+   },
+   {
+    "id": "commit/f94b464604",
+    "label": "commit f94b464: Generalisation part 2 result: no use edge is a door; the evidence sentence scores below the walk's lead ",
+    "gold": false
+   },
+   {
+    "id": "commit/3457946634",
+    "label": "commit 3457946: Generalisation part 2 registered: the judge-side test on the 7 cross-question use edges",
+    "gold": false
+   },
+   {
+    "id": "commit/76000fab26",
+    "label": "commit 76000fa: Merge pull request #642 from Percolation-Labs/sally/legibility-7",
+    "gold": false
+   },
+   {
+    "id": "commit/77cf215be2",
+    "label": "commit 77cf215: MIDB dreaming metric: required judge AUC, after fixed-AUC controls failed on MuSiQue",
+    "gold": true
+   }
+  ],
+  "S": [
+   {
+    "id": "commit/3457946634",
+    "label": "commit 3457946: Generalisation part 2 registered: the judge-side test on the 7 cross-question use edges",
+    "gold": false
+   },
+   {
+    "id": "specs/ai-query-layer/graph-algorithms.md#33",
+    "label": "specs/ai-query-layer/graph-algorithms.md \u203a 6. The measurements",
+    "gold": false
+   },
+   {
+    "id": "commit/b158174129",
+    "label": "commit b158174: MIDB part 1: six structure propositions (answer within p hops -> budget), each tested on known graphs",
+    "gold": false
+   },
+   {
+    "id": "commit/76000fab26",
+    "label": "commit 76000fa: Merge pull request #642 from Percolation-Labs/sally/legibility-7",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/graph-known/PROPOSITIONS.md#1",
+    "label": "meta/lab/results/graph-known/PROPOSITIONS.md \u203a MIDB part 1: structure propositions (no walker)",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.5,
+  "S": 0.0
+ }
+}

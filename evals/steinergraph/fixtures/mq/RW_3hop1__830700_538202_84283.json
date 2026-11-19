@@ -1,0 +1,460 @@
+{
+ "qid": "RW:3hop1__830700_538202_84283",
+ "set": "mq",
+ "question": "Who owns the record label of the Shake What God Gave Ya performer?",
+ "gold": [
+  {
+   "id": "mq:6c04b515ca71352c",
+   "label": "Shake What God Gave Ya",
+   "seed": true
+  },
+  {
+   "id": "mq:8bdf41f6b6581101",
+   "label": "Sunset Man",
+   "seed": false
+  },
+  {
+   "id": "mq:d9f976bd5b1a8053",
+   "label": "Warner Records",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:6c04b515ca71352c",
+   "label": "Shake What God Gave Ya",
+   "rank": 1,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:12291fa93ea26489",
+   "label": "Groovy Little Summer Song",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:a54417415a5deffe",
+   "label": "Swag It Out",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:7dbfb4fae94eeffd",
+   "label": "MCA Records",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:615606903db16e37",
+   "label": "God Gave Me You",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:6c04b515ca71352c",
+    "label": "Shake What God Gave Ya",
+    "role": "gold"
+   },
+   {
+    "id": "mq:8bdf41f6b6581101",
+    "label": "Sunset Man",
+    "role": "gold"
+   },
+   {
+    "id": "mq:d9f976bd5b1a8053",
+    "label": "Warner Records",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:6c04b515ca71352c",
+    "b": "mq:8bdf41f6b6581101",
+    "via": [
+     {
+      "kind": "term",
+      "key": "james otto",
+      "width": 6
+     },
+     {
+      "kind": "term",
+      "key": "otto",
+      "width": 46
+     },
+     {
+      "kind": "term",
+      "key": "warner bros",
+      "width": 56
+     },
+     {
+      "kind": "term",
+      "key": "bros",
+      "width": 68
+     },
+     {
+      "kind": "term",
+      "key": "warner",
+      "width": 93
+     }
+    ]
+   },
+   {
+    "a": "mq:6c04b515ca71352c",
+    "b": "mq:d9f976bd5b1a8053",
+    "via": [
+     {
+      "kind": "term",
+      "key": "warner bros",
+      "width": 56
+     },
+     {
+      "kind": "term",
+      "key": "bros",
+      "width": 68
+     },
+     {
+      "kind": "term",
+      "key": "warner",
+      "width": 93
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   1,
+   1
+  ],
+  "entry": {
+   "seed": "mq:6c04b515ca71352c",
+   "gold": "mq:6c04b515ca71352c",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 1221,
+  "within_2_doors": 19679,
+  "gold_within_1": 2,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "mq:4a52569bc81ed03f",
+    "label": "Zendaya (album)",
+    "p": 0.002794406959390859,
+    "gold": false
+   },
+   {
+    "id": "mq:de9bf37860807573",
+    "label": "I Got a Feelin' (Billy Currington song)",
+    "p": 0.002692039978567561,
+    "gold": false
+   },
+   {
+    "id": "mq:7395d25891ebf40b",
+    "label": "Just Got Started Lovin' You",
+    "p": 0.0026250230292279688,
+    "gold": false
+   },
+   {
+    "id": "mq:0b46b70d3067ae6b",
+    "label": "Just Got Started Lovin' You",
+    "p": 0.0026250230292279688,
+    "gold": false
+   },
+   {
+    "id": "mq:b68ec50c2323db30",
+    "label": "Days of Our Lives (James Otto album)",
+    "p": 0.002104449987009929,
+    "gold": false
+   },
+   {
+    "id": "mq:ec215e75ee112f77",
+    "label": "You'll Be in My Heart",
+    "p": 0.0019137085679254058,
+    "gold": false
+   },
+   {
+    "id": "mq:6661fc4188da81cb",
+    "label": "Mary, mother of Jesus",
+    "p": 0.001901242902699246,
+    "gold": false
+   },
+   {
+    "id": "mq:e1f0c9a22d05652f",
+    "label": "Big Blue Note",
+    "p": 0.0015910090353679924,
+    "gold": false
+   },
+   {
+    "id": "mq:41f648369dc46f6a",
+    "label": "Hydrogen",
+    "p": 0.0014846680586850529,
+    "gold": false
+   },
+   {
+    "id": "mq:8bdf41f6b6581101",
+    "label": "Sunset Man",
+    "p": 0.0014705392506042872,
+    "gold": true
+   },
+   {
+    "id": "mq:80750e5ba80e996e",
+    "label": "Teach Me How to Dougie",
+    "p": 0.0013753944382314928,
+    "gold": false
+   },
+   {
+    "id": "mq:06b10a2fe2ebd414",
+    "label": "My Toot Toot",
+    "p": 0.0013609573294328598,
+    "gold": false
+   },
+   {
+    "id": "mq:3c7f98f5227b5653",
+    "label": "Cool It Now",
+    "p": 0.0011974136564262697,
+    "gold": false
+   },
+   {
+    "id": "mq:f12ba26513729f43",
+    "label": "A Goofy Movie",
+    "p": 0.0011961866560663119,
+    "gold": false
+   },
+   {
+    "id": "mq:2276769ffb75d6fc",
+    "label": "A Goofy Movie",
+    "p": 0.001187867685572805,
+    "gold": false
+   },
+   {
+    "id": "mq:a61a46530000e9cf",
+    "label": "I'm a Fire (album)",
+    "p": 0.001185224626811209,
+    "gold": false
+   },
+   {
+    "id": "mq:47a073c4fd4e86e0",
+    "label": "Groovy Decay",
+    "p": 0.0011474450570134816,
+    "gold": false
+   },
+   {
+    "id": "mq:b70afa728e0b3f32",
+    "label": "Groovy Situation",
+    "p": 0.0011376665500564377,
+    "gold": false
+   },
+   {
+    "id": "mq:17fa9c568ed59081",
+    "label": "Pretty/Groovy",
+    "p": 0.001123333095047978,
+    "gold": false
+   },
+   {
+    "id": "mq:92a3eb4a9e3ee311",
+    "label": "If You See Him/If You See Her",
+    "p": 0.0011114107418259752,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:6c04b515ca71352c",
+   "label": "Shake What God Gave Ya",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:12291fa93ea26489",
+   "label": "Groovy Little Summer Song",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:a54417415a5deffe",
+   "label": "Swag It Out",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:7dbfb4fae94eeffd",
+   "label": "MCA Records",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:615606903db16e37",
+   "label": "God Gave Me You",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:7395d25891ebf40b",
+   "label": "Just Got Started Lovin' You",
+   "wave": 1,
+   "via": "term:james otto",
+   "gold": false
+  },
+  {
+   "id": "mq:b68ec50c2323db30",
+   "label": "Days of Our Lives (James Otto album)",
+   "wave": 1,
+   "via": "term:james otto",
+   "gold": false
+  },
+  {
+   "id": "mq:0b46b70d3067ae6b",
+   "label": "Just Got Started Lovin' You",
+   "wave": 1,
+   "via": "term:james otto",
+   "gold": false
+  },
+  {
+   "id": "mq:8bdf41f6b6581101",
+   "label": "Sunset Man",
+   "wave": 1,
+   "via": "term:james otto",
+   "gold": true
+  },
+  {
+   "id": "mq:a61a46530000e9cf",
+   "label": "I'm a Fire (album)",
+   "wave": 2,
+   "via": "term:mca nashville",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:4a52569bc81ed03f",
+    "label": "Zendaya (album)",
+    "gold": false
+   },
+   {
+    "id": "mq:de9bf37860807573",
+    "label": "I Got a Feelin' (Billy Currington song)",
+    "gold": false
+   },
+   {
+    "id": "mq:7395d25891ebf40b",
+    "label": "Just Got Started Lovin' You",
+    "gold": false
+   },
+   {
+    "id": "mq:0b46b70d3067ae6b",
+    "label": "Just Got Started Lovin' You",
+    "gold": false
+   },
+   {
+    "id": "mq:b68ec50c2323db30",
+    "label": "Days of Our Lives (James Otto album)",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:6661fc4188da81cb",
+    "label": "Mary, mother of Jesus",
+    "gold": false
+   },
+   {
+    "id": "mq:565396c6333cc0d8",
+    "label": "Shake Some Action",
+    "gold": false
+   },
+   {
+    "id": "mq:4a52569bc81ed03f",
+    "label": "Zendaya (album)",
+    "gold": false
+   },
+   {
+    "id": "mq:0d38058859ecd485",
+    "label": "Shake 'Em On Down",
+    "gold": false
+   },
+   {
+    "id": "mq:1b1e775ca5828124",
+    "label": "Shake Ya Ass",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:6661fc4188da81cb",
+    "label": "Mary, mother of Jesus",
+    "gold": false
+   },
+   {
+    "id": "mq:e884a8e9e61a0246",
+    "label": "Sony Music",
+    "gold": false
+   },
+   {
+    "id": "mq:4a52569bc81ed03f",
+    "label": "Zendaya (album)",
+    "gold": false
+   },
+   {
+    "id": "mq:1b1e775ca5828124",
+    "label": "Shake Ya Ass",
+    "gold": false
+   },
+   {
+    "id": "mq:9309985dff87da6e",
+    "label": "I Can Only Imagine (MercyMe song)",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:1b1e775ca5828124",
+    "label": "Shake Ya Ass",
+    "gold": false
+   },
+   {
+    "id": "mq:6a2561e9c5c24d23",
+    "label": "The Seer (Swans album)",
+    "gold": false
+   },
+   {
+    "id": "mq:e71d73fdcef2de66",
+    "label": "I Can Only Imagine (MercyMe song)",
+    "gold": false
+   },
+   {
+    "id": "mq:9309985dff87da6e",
+    "label": "I Can Only Imagine (MercyMe song)",
+    "gold": false
+   },
+   {
+    "id": "mq:8e7010039eb30c12",
+    "label": "God Save the Queen/Under Heavy Manners",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

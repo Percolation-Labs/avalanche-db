@@ -1,0 +1,448 @@
+{
+ "qid": "card:REM-684",
+ "set": "cards",
+ "question": "What was done about this, and why: research: execute iterative policies through P8QL and a typed decision adapter?",
+ "gold": [
+  {
+   "id": "commit/4db2e04113",
+   "label": "commit 4db2e04: research: test the REM-681 routing split on 16 real questions (REM-684, REM-687)",
+   "seed": false
+  },
+  {
+   "id": "commit/ab17677a71",
+   "label": "commit ab17677: research: adapter v2 and verifier-input measurements on real questions (REM-684, REM-687)",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "board/cards/REM-684.md#1",
+   "label": "board/cards/REM-684.md",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/8aa175c355",
+   "label": "commit 8aa175c: research: define P8QL execution for iterative decision policies",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "commit/0f91e1a7d0",
+   "label": "commit 0f91e1a: board: make P8QL and typed decision execution the iterative research contract",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "board/cards/REM-681.md#2",
+   "label": "board/cards/REM-681.md \u203a Goal",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-682.md#9",
+   "label": "board/cards/REM-682.md \u203a Log",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "board/cards/REM-682.md#9",
+    "label": "board/cards/REM-682.md \u203a Log",
+    "role": "seed"
+   },
+   {
+    "id": "commit/4db2e04113",
+    "label": "commit 4db2e04: research: test the REM-681 routing split on 16 real questions (REM-684, REM-687)",
+    "role": "gold"
+   },
+   {
+    "id": "commit/ab17677a71",
+    "label": "commit ab17677: research: adapter v2 and verifier-input measurements on real questions (REM-684, REM-687)",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "board/cards/REM-682.md#9",
+    "b": "commit/4db2e04113",
+    "via": [
+     {
+      "kind": "term",
+      "key": "action ids",
+      "width": 16
+     },
+     {
+      "kind": "term",
+      "key": "verifier",
+      "width": 63
+     }
+    ]
+   },
+   {
+    "a": "commit/4db2e04113",
+    "b": "commit/ab17677a71",
+    "via": [
+     {
+      "kind": "term",
+      "key": "questions rem",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "rem 687",
+      "width": 26
+     },
+     {
+      "kind": "term",
+      "key": "rem 684",
+      "width": 31
+     },
+     {
+      "kind": "term",
+      "key": "real questions",
+      "width": 34
+     },
+     {
+      "kind": "term",
+      "key": "verifier",
+      "width": 63
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "board/cards/REM-682.md#9",
+   "gold": "commit/4db2e04113",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 1281,
+  "within_2_doors": 33773,
+  "gold_within_1": 2,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "board/cards/REM-684.md#2",
+    "label": "board/cards/REM-684.md \u203a Goal",
+    "p": 0.01347804185346057,
+    "gold": false
+   },
+   {
+    "id": "commit/973bba02eb",
+    "label": "commit 973bba0: board: iterative-research-tickets takes REM-682",
+    "p": 0.005658570172092482,
+    "gold": false
+   },
+   {
+    "id": "board/team/iterative-research-tickets.md#2",
+    "label": "board/team/iterative-research-tickets.md \u203a Log",
+    "p": 0.00432572654189671,
+    "gold": false
+   },
+   {
+    "id": "specs/build-knit-dream/reachability.md#20",
+    "label": "specs/build-knit-dream/reachability.md \u203a 9.2 Separate query authoring from decision execution",
+    "p": 0.0040021894880181525,
+    "gold": false
+   },
+   {
+    "id": "specs/build-knit-dream/reachability.md#21",
+    "label": "specs/build-knit-dream/reachability.md \u203a 9.2 Separate query authoring from decision execution",
+    "p": 0.003622299611936237,
+    "gold": false
+   },
+   {
+    "id": "specs/build-knit-dream/reachability.md#16",
+    "label": "specs/build-knit-dream/reachability.md \u203a 9. P8QL is the query abstraction; an adapter executes decisions",
+    "p": 0.0034024109044005725,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-681.md#10",
+    "label": "board/cards/REM-681.md \u203a Log",
+    "p": 0.0032554274201380407,
+    "gold": false
+   },
+   {
+    "id": "board/team/iterative-research-tickets.md#1",
+    "label": "board/team/iterative-research-tickets.md",
+    "p": 0.0030227221025600944,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-682.md#1",
+    "label": "board/cards/REM-682.md",
+    "p": 0.0028906079932889597,
+    "gold": false
+   },
+   {
+    "id": "commit/04c73ca367",
+    "label": "commit 04c73ca: board: REM-682 in-progress \u2192 backlog",
+    "p": 0.002842077620936889,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-682.md#10",
+    "label": "board/cards/REM-682.md \u203a Log",
+    "p": 0.0026802708955968495,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-690.md#2",
+    "label": "board/cards/REM-690.md \u203a Goal",
+    "p": 0.002541483203037025,
+    "gold": false
+   },
+   {
+    "id": "specs/build-knit-dream/reachability.md#1",
+    "label": "specs/build-knit-dream/reachability.md \u203a Bounded evidence reachability in Build\u2013Knit\u2013Dream",
+    "p": 0.0024238014525470113,
+    "gold": false
+   },
+   {
+    "id": "commit/3648027706",
+    "label": "commit 3648027: board: file REM-682 research: define useful query classes and freeze the iterative-query protocol",
+    "p": 0.0023624936592373637,
+    "gold": false
+   },
+   {
+    "id": "specs/build-knit-dream/reachability.md#22",
+    "label": "specs/build-knit-dream/reachability.md \u203a 9.3 Evaluation consequences",
+    "p": 0.0021212238097671307,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-682.md#2",
+    "label": "board/cards/REM-682.md \u203a Goal",
+    "p": 0.002079588478795686,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-681.md#8",
+    "label": "board/cards/REM-681.md \u203a Log",
+    "p": 0.0020295417971104503,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1261.md#1",
+    "label": "board/cards/REM-1261.md",
+    "p": 0.0019666141589863876,
+    "gold": false
+   },
+   {
+    "id": "commit/9bf6dcbe45",
+    "label": "commit 9bf6dcb: board: file REM-1261 research: define Kappa through recursive decision value",
+    "p": 0.001945183272388207,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-684.md#4",
+    "label": "board/cards/REM-684.md \u203a Done when",
+    "p": 0.0018969343321486513,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "board/cards/REM-684.md#1",
+   "label": "board/cards/REM-684.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/8aa175c355",
+   "label": "commit 8aa175c: research: define P8QL execution for iterative decision policies",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/0f91e1a7d0",
+   "label": "commit 0f91e1a: board: make P8QL and typed decision execution the iterative research contract",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-681.md#2",
+   "label": "board/cards/REM-681.md \u203a Goal",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-682.md#9",
+   "label": "board/cards/REM-682.md \u203a Log",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-684.md#2",
+   "label": "board/cards/REM-684.md \u203a Goal",
+   "wave": 1,
+   "via": "term:p8ql execution",
+   "gold": false
+  },
+  {
+   "id": "specs/build-knit-dream/reachability.md#21",
+   "label": "specs/build-knit-dream/reachability.md \u203a 9.2 Separate query authoring from decision execution",
+   "wave": 2,
+   "via": "term:action ids",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-689.md#4",
+   "label": "board/cards/REM-689.md \u203a Done when",
+   "wave": 2,
+   "via": "term:action ids",
+   "gold": false
+  },
+  {
+   "id": "board/team/iterative-research-tickets.md#1",
+   "label": "board/team/iterative-research-tickets.md",
+   "wave": 2,
+   "via": "term:action ids",
+   "gold": false
+  },
+  {
+   "id": "commit/4db2e04113",
+   "label": "commit 4db2e04: research: test the REM-681 routing split on 16 real questions (REM-684, REM-687)",
+   "wave": 2,
+   "via": "term:action ids",
+   "gold": true
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "board/cards/REM-684.md#2",
+    "label": "board/cards/REM-684.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "commit/973bba02eb",
+    "label": "commit 973bba0: board: iterative-research-tickets takes REM-682",
+    "gold": false
+   },
+   {
+    "id": "board/team/iterative-research-tickets.md#2",
+    "label": "board/team/iterative-research-tickets.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "specs/build-knit-dream/reachability.md#20",
+    "label": "specs/build-knit-dream/reachability.md \u203a 9.2 Separate query authoring from decision execution",
+    "gold": false
+   },
+   {
+    "id": "specs/build-knit-dream/reachability.md#21",
+    "label": "specs/build-knit-dream/reachability.md \u203a 9.2 Separate query authoring from decision execution",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "board/cards/REM-684.md#2",
+    "label": "board/cards/REM-684.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "board/team/iterative-research-tickets.md#2",
+    "label": "board/team/iterative-research-tickets.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/team/iterative-research-tickets.md#1",
+    "label": "board/team/iterative-research-tickets.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-681.md#10",
+    "label": "board/cards/REM-681.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "specs/build-knit-dream/reachability.md#22",
+    "label": "specs/build-knit-dream/reachability.md \u203a 9.3 Evaluation consequences",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/973bba02eb",
+    "label": "commit 973bba0: board: iterative-research-tickets takes REM-682",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-684.md#2",
+    "label": "board/cards/REM-684.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "commit/ab43354b4f",
+    "label": "commit ab43354: board: iterative-research-tickets checks in, ended",
+    "gold": false
+   },
+   {
+    "id": "commit/1c7f8bd4ae",
+    "label": "commit 1c7f8bd: board: iterative-research-tickets checks in, working",
+    "gold": false
+   },
+   {
+    "id": "commit/d4c9f3c798",
+    "label": "commit d4c9f3c: board: iterative-research-tickets checks in, ended",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "board/cards/REM-684.md#2",
+    "label": "board/cards/REM-684.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "specs/build-knit-dream/reachability.md#22",
+    "label": "specs/build-knit-dream/reachability.md \u203a 9.3 Evaluation consequences",
+    "gold": false
+   },
+   {
+    "id": "board/team/iterative-research-tickets.md#1",
+    "label": "board/team/iterative-research-tickets.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-682.md#10",
+    "label": "board/cards/REM-682.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "specs/build-knit-dream/reachability.md#21",
+    "label": "specs/build-knit-dream/reachability.md \u203a 9.2 Separate query authoring from decision execution",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

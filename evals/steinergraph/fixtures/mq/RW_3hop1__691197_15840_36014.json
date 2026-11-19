@@ -1,0 +1,460 @@
+{
+ "qid": "RW:3hop1__691197_15840_36014",
+ "set": "mq",
+ "question": "What was Nintendo's limit on games per developer per year on the platform of Yoshi?",
+ "gold": [
+  {
+   "id": "mq:12b37018dddda498",
+   "label": "Super Nintendo Entertainment System",
+   "seed": true
+  },
+  {
+   "id": "mq:2dfbf22e79f33c19",
+   "label": "Yoshi (video game)",
+   "seed": true
+  },
+  {
+   "id": "mq:6f03dca82a759573",
+   "label": "Nintendo Entertainment System",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:182baf4b3fa11f62",
+   "label": "Yoshi's Story",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:49e2638e9989510d",
+   "label": "Yoshi's Woolly World",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:2dfbf22e79f33c19",
+   "label": "Yoshi (video game)",
+   "rank": 3,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:12b37018dddda498",
+   "label": "Super Nintendo Entertainment System",
+   "rank": 4,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:42fb541317a3eb07",
+   "label": "Nintendo Entertainment System",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:12b37018dddda498",
+    "label": "Super Nintendo Entertainment System",
+    "role": "gold"
+   },
+   {
+    "id": "mq:2dfbf22e79f33c19",
+    "label": "Yoshi (video game)",
+    "role": "gold"
+   },
+   {
+    "id": "mq:6f03dca82a759573",
+    "label": "Nintendo Entertainment System",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:12b37018dddda498",
+    "b": "mq:2dfbf22e79f33c19",
+    "via": [
+     {
+      "kind": "term",
+      "key": "entertainment system",
+      "width": 32
+     },
+     {
+      "kind": "term",
+      "key": "nintendo entertainment",
+      "width": 32
+     },
+     {
+      "kind": "term",
+      "key": "nintendo",
+      "width": 79
+     }
+    ]
+   },
+   {
+    "a": "mq:12b37018dddda498",
+    "b": "mq:6f03dca82a759573",
+    "via": [
+     {
+      "kind": "term",
+      "key": "super nintendo",
+      "width": 11
+     },
+     {
+      "kind": "term",
+      "key": "nes",
+      "width": 12
+     },
+     {
+      "kind": "term",
+      "key": "entertainment system",
+      "width": 32
+     },
+     {
+      "kind": "term",
+      "key": "nintendo entertainment",
+      "width": 32
+     },
+     {
+      "kind": "term",
+      "key": "console",
+      "width": 33
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   1,
+   1
+  ],
+  "entry": {
+   "seed": "mq:12b37018dddda498",
+   "gold": "mq:12b37018dddda498",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 2251,
+  "within_2_doors": 18825,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "mq:8736755535d9441c",
+    "label": "Super Mario Bros. 3",
+    "p": 0.004364837495002464,
+    "gold": false
+   },
+   {
+    "id": "mq:3dca673dd89a7bc4",
+    "label": "Kirby's Return to Dream Land",
+    "p": 0.0028308198619849618,
+    "gold": false
+   },
+   {
+    "id": "mq:8beaa31992ebb623",
+    "label": "New Super Mario Bros. Wii",
+    "p": 0.0027898571830665526,
+    "gold": false
+   },
+   {
+    "id": "mq:06aadc8339bbdf7c",
+    "label": "Donkey Kong",
+    "p": 0.002294246308091309,
+    "gold": false
+   },
+   {
+    "id": "mq:10ac699b4ca93f61",
+    "label": "Super Mario Bros.",
+    "p": 0.00228020033540009,
+    "gold": false
+   },
+   {
+    "id": "mq:7a9081853b17ed82",
+    "label": "Cosmo's Cosmic Adventure",
+    "p": 0.0020901624227680684,
+    "gold": false
+   },
+   {
+    "id": "mq:e2deab82d7e92534",
+    "label": "Warlocked",
+    "p": 0.0018851532577294843,
+    "gold": false
+   },
+   {
+    "id": "mq:7cdce716045e41aa",
+    "label": "Super Mario Bros. 2",
+    "p": 0.0018720851575210317,
+    "gold": false
+   },
+   {
+    "id": "mq:d3c9b268bc888a96",
+    "label": "Little Samson",
+    "p": 0.0017656671850389725,
+    "gold": false
+   },
+   {
+    "id": "mq:e3974e7a333da732",
+    "label": "Chakan: The Forever Man",
+    "p": 0.0015502296031183406,
+    "gold": false
+   },
+   {
+    "id": "mq:e42bc1b4897cee68",
+    "label": "Broforce",
+    "p": 0.0014204408636147043,
+    "gold": false
+   },
+   {
+    "id": "mq:ef7beb69e2bdc0c5",
+    "label": "Mammillaria mammillaris",
+    "p": 0.0012922501059326283,
+    "gold": false
+   },
+   {
+    "id": "mq:f98bd669a3407831",
+    "label": "Tokimeki Memorial Girl's Side: 3rd Story",
+    "p": 0.0012604442513618503,
+    "gold": false
+   },
+   {
+    "id": "mq:a868a26def4e1cee",
+    "label": "Philips CD-i",
+    "p": 0.0012588189612361233,
+    "gold": false
+   },
+   {
+    "id": "mq:6ae295934d806722",
+    "label": "Super Nintendo Entertainment System",
+    "p": 0.0012237059000648125,
+    "gold": false
+   },
+   {
+    "id": "mq:b0f827021863617b",
+    "label": "List of The Nightmare Before Christmas characters",
+    "p": 0.0012235493359221456,
+    "gold": false
+   },
+   {
+    "id": "mq:c4e488a07e69c477",
+    "label": "Super Nintendo Entertainment System",
+    "p": 0.001215342608209238,
+    "gold": false
+   },
+   {
+    "id": "mq:522645a29e1979bd",
+    "label": "Kalakalappu",
+    "p": 0.001152525265349595,
+    "gold": false
+   },
+   {
+    "id": "mq:da314d9a1df28f7f",
+    "label": "Super Nintendo Entertainment System",
+    "p": 0.0011406777681735407,
+    "gold": false
+   },
+   {
+    "id": "mq:b2dac7fbc916708c",
+    "label": "Nightshade (1992 video game)",
+    "p": 0.0011363468887609684,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:182baf4b3fa11f62",
+   "label": "Yoshi's Story",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:49e2638e9989510d",
+   "label": "Yoshi's Woolly World",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:2dfbf22e79f33c19",
+   "label": "Yoshi (video game)",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:12b37018dddda498",
+   "label": "Super Nintendo Entertainment System",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:42fb541317a3eb07",
+   "label": "Nintendo Entertainment System",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:8736755535d9441c",
+   "label": "Super Mario Bros. 3",
+   "wave": 1,
+   "via": "term:nintendo entertainment",
+   "gold": false
+  },
+  {
+   "id": "mq:a19c77876fb1d5e1",
+   "label": "Nintendo Entertainment System",
+   "wave": 1,
+   "via": "term:nintendo entertainment",
+   "gold": false
+  },
+  {
+   "id": "mq:53404e4a4eab72fb",
+   "label": "Star Voyager",
+   "wave": 1,
+   "via": "term:nintendo entertainment",
+   "gold": false
+  },
+  {
+   "id": "mq:8f51d4f7fefdd51f",
+   "label": "Knight Rider (video game)",
+   "wave": 1,
+   "via": "term:nintendo entertainment",
+   "gold": false
+  },
+  {
+   "id": "mq:f03cce2766ef4407",
+   "label": "Sunman (video game)",
+   "wave": 1,
+   "via": "term:nintendo entertainment",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:8736755535d9441c",
+    "label": "Super Mario Bros. 3",
+    "gold": false
+   },
+   {
+    "id": "mq:3dca673dd89a7bc4",
+    "label": "Kirby's Return to Dream Land",
+    "gold": false
+   },
+   {
+    "id": "mq:8beaa31992ebb623",
+    "label": "New Super Mario Bros. Wii",
+    "gold": false
+   },
+   {
+    "id": "mq:06aadc8339bbdf7c",
+    "label": "Donkey Kong",
+    "gold": false
+   },
+   {
+    "id": "mq:10ac699b4ca93f61",
+    "label": "Super Mario Bros.",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:8736755535d9441c",
+    "label": "Super Mario Bros. 3",
+    "gold": false
+   },
+   {
+    "id": "mq:10ac699b4ca93f61",
+    "label": "Super Mario Bros.",
+    "gold": false
+   },
+   {
+    "id": "mq:9b9fb0266a31a2e2",
+    "label": "Super Smash Bros.",
+    "gold": false
+   },
+   {
+    "id": "mq:965f119ef97b0db0",
+    "label": "Super Smash Bros.",
+    "gold": false
+   },
+   {
+    "id": "mq:5865dc9f17070812",
+    "label": "Donkey Kong Country: Tropical Freeze",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:10ac699b4ca93f61",
+    "label": "Super Mario Bros.",
+    "gold": false
+   },
+   {
+    "id": "mq:9b9fb0266a31a2e2",
+    "label": "Super Smash Bros.",
+    "gold": false
+   },
+   {
+    "id": "mq:8736755535d9441c",
+    "label": "Super Mario Bros. 3",
+    "gold": false
+   },
+   {
+    "id": "mq:965f119ef97b0db0",
+    "label": "Super Smash Bros.",
+    "gold": false
+   },
+   {
+    "id": "mq:a868a26def4e1cee",
+    "label": "Philips CD-i",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:5865dc9f17070812",
+    "label": "Donkey Kong Country: Tropical Freeze",
+    "gold": false
+   },
+   {
+    "id": "mq:9b9fb0266a31a2e2",
+    "label": "Super Smash Bros.",
+    "gold": false
+   },
+   {
+    "id": "mq:90e70a6c7f876c98",
+    "label": "Nintendo Entertainment System",
+    "gold": false
+   },
+   {
+    "id": "mq:7cdce716045e41aa",
+    "label": "Super Mario Bros. 2",
+    "gold": false
+   },
+   {
+    "id": "mq:b5edc5ea7477b5f6",
+    "label": "Kirby's Dream Land",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

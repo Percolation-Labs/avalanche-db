@@ -1,0 +1,405 @@
+{
+ "qid": "card:REM-1003",
+ "set": "cards",
+ "question": "What was done about this, and why: test: research/32 does not depend on planner statistics?",
+ "gold": [
+  {
+   "id": "commit/79f78cfcca",
+   "label": "commit 79f78cf: Merge pull request #479 from Percolation-Labs/terry/rem-1001-145",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/a1b5db4b0d",
+   "label": "commit a1b5db4: board: file REM-1003 test: research/32 does not depend on planner statistics",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/b0798f798b",
+   "label": "commit b0798f7: board: delete REM-1005 tests: research/32's buffer bound does not depend on the planner's statistics",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/563ff3e716",
+   "label": "commit 563ff3e: board: file REM-1005 tests: research/32's buffer bound does not depend on the planner's statistics",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "board/cards/REM-1003.md#1",
+   "label": "board/cards/REM-1003.md",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-1003.md#2",
+   "label": "board/cards/REM-1003.md \u203a Goal",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/79f78cfcca",
+    "label": "commit 79f78cf: Merge pull request #479 from Percolation-Labs/terry/rem-1001-145",
+    "role": "gold"
+   },
+   {
+    "id": "commit/a1b5db4b0d",
+    "label": "commit a1b5db4: board: file REM-1003 test: research/32 does not depend on planner statistics",
+    "role": "seed"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/79f78cfcca",
+    "b": "commit/a1b5db4b0d",
+    "via": [
+     {
+      "kind": "term",
+      "key": "rem 1003",
+      "width": 21
+     },
+     {
+      "kind": "term",
+      "key": "1003",
+      "width": 27
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [],
+  "entry": {
+   "seed": "commit/a1b5db4b0d",
+   "gold": "commit/79f78cfcca",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 318,
+  "within_2_doors": 28707,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "commit/55b9539476",
+    "label": "commit 55b9539: board: note on REM-1003",
+    "p": 0.007091188571961463,
+    "gold": false
+   },
+   {
+    "id": "commit/09e5be8568",
+    "label": "commit 09e5be8: board: bob takes REM-1003",
+    "p": 0.006236852906088894,
+    "gold": false
+   },
+   {
+    "id": "commit/35c71acce0",
+    "label": "commit 35c71ac: board: REM-1001 requires #145 (REM-1003)",
+    "p": 0.00569344430062112,
+    "gold": false
+   },
+   {
+    "id": "commit/03652d6faf",
+    "label": "commit 03652d6: board: REM-1003 in-progress \u2192 done",
+    "p": 0.0055150858014044075,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1003.md#5",
+    "label": "board/cards/REM-1003.md \u203a Scope",
+    "p": 0.005332561946348433,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-10-19-core-shipped-in-a-day.md#6",
+    "label": "meta/postmortems/2026-10-19-core-shipped-in-a-day.md \u203a Mistakes, by whoever made them",
+    "p": 0.004969341993269913,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1001.md#4",
+    "label": "board/cards/REM-1001.md \u203a Done when",
+    "p": 0.004716941753959372,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1001.md#6",
+    "label": "board/cards/REM-1001.md \u203a Log",
+    "p": 0.004686159967214176,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1003.md#3",
+    "label": "board/cards/REM-1003.md \u203a Evidence",
+    "p": 0.003092203294120246,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-299.md#7",
+    "label": "board/cards/REM-299.md \u203a Log",
+    "p": 0.0029594942374641855,
+    "gold": false
+   },
+   {
+    "id": "commit/16d647ad64",
+    "label": "commit 16d647a: Merge pull request #477 from Percolation-Labs/terry/rem-1001-docs-pr",
+    "p": 0.002922471808895232,
+    "gold": false
+   },
+   {
+    "id": "commit/f6c4379a32",
+    "label": "commit f6c4379: board: file REM-1004 docs: an example that returns nothing fails, whoever runs it",
+    "p": 0.0026319690280525382,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1003.md#6",
+    "label": "board/cards/REM-1003.md \u203a Log",
+    "p": 0.0026217344769901823,
+    "gold": false
+   },
+   {
+    "id": "specs/build-knit-dream/coalescing.md#29",
+    "label": "specs/build-knit-dream/coalescing.md \u203a 8. Order of work",
+    "p": 0.002604625554290981,
+    "gold": false
+   },
+   {
+    "id": "commit/6a5ee64c1d",
+    "label": "commit 6a5ee64: A revision written inside a workflow run records that run, and a forged or borrowed run is refused (REM-",
+    "p": 0.0025904937184311424,
+    "gold": false
+   },
+   {
+    "id": "commit/2d743f5582",
+    "label": "commit 2d743f5: board: tick REM-1001 box 12",
+    "p": 0.0025289349867020183,
+    "gold": false
+   },
+   {
+    "id": "commit/79f78cfcca",
+    "label": "commit 79f78cf: Merge pull request #479 from Percolation-Labs/terry/rem-1001-145",
+    "p": 0.002430971023760933,
+    "gold": true
+   },
+   {
+    "id": "board/cards/REM-1003.md#4",
+    "label": "board/cards/REM-1003.md \u203a Done when",
+    "p": 0.002404038669562716,
+    "gold": false
+   },
+   {
+    "id": "specs/design/core-product.md#9",
+    "label": "specs/design/core-product.md \u203a 6. Surprises",
+    "p": 0.0023861984775099924,
+    "gold": false
+   },
+   {
+    "id": "board/board.py#1",
+    "label": "board/board.py",
+    "p": 0.0023859966040078095,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/a1b5db4b0d",
+   "label": "commit a1b5db4: board: file REM-1003 test: research/32 does not depend on planner statistics",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/b0798f798b",
+   "label": "commit b0798f7: board: delete REM-1005 tests: research/32's buffer bound does not depend on the planner's statistics",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/563ff3e716",
+   "label": "commit 563ff3e: board: file REM-1005 tests: research/32's buffer bound does not depend on the planner's statistics",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-1003.md#1",
+   "label": "board/cards/REM-1003.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-1003.md#2",
+   "label": "board/cards/REM-1003.md \u203a Goal",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/55b9539476",
+   "label": "commit 55b9539: board: note on REM-1003",
+   "wave": 1,
+   "via": "term:1003",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-1003.md#5",
+   "label": "board/cards/REM-1003.md \u203a Scope",
+   "wave": 1,
+   "via": "term:1003",
+   "gold": false
+  },
+  {
+   "id": "commit/35c71acce0",
+   "label": "commit 35c71ac: board: REM-1001 requires #145 (REM-1003)",
+   "wave": 1,
+   "via": "term:1003",
+   "gold": false
+  },
+  {
+   "id": "commit/03652d6faf",
+   "label": "commit 03652d6: board: REM-1003 in-progress \u2192 done",
+   "wave": 1,
+   "via": "term:1003",
+   "gold": false
+  },
+  {
+   "id": "commit/79f78cfcca",
+   "label": "commit 79f78cf: Merge pull request #479 from Percolation-Labs/terry/rem-1001-145",
+   "wave": 1,
+   "via": "term:1003",
+   "gold": true
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "commit/55b9539476",
+    "label": "commit 55b9539: board: note on REM-1003",
+    "gold": false
+   },
+   {
+    "id": "commit/09e5be8568",
+    "label": "commit 09e5be8: board: bob takes REM-1003",
+    "gold": false
+   },
+   {
+    "id": "commit/35c71acce0",
+    "label": "commit 35c71ac: board: REM-1001 requires #145 (REM-1003)",
+    "gold": false
+   },
+   {
+    "id": "commit/03652d6faf",
+    "label": "commit 03652d6: board: REM-1003 in-progress \u2192 done",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1003.md#5",
+    "label": "board/cards/REM-1003.md \u203a Scope",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "board/cards/REM-1001.md#4",
+    "label": "board/cards/REM-1001.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-839.md#5",
+    "label": "board/cards/REM-839.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1006.md#2",
+    "label": "board/cards/REM-1006.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1001.md#6",
+    "label": "board/cards/REM-1001.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-299.md#7",
+    "label": "board/cards/REM-299.md \u203a Log",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "board/cards/REM-1003.md#4",
+    "label": "board/cards/REM-1003.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "commit/03652d6faf",
+    "label": "commit 03652d6: board: REM-1003 in-progress \u2192 done",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1003.md#5",
+    "label": "board/cards/REM-1003.md \u203a Scope",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1003.md#6",
+    "label": "board/cards/REM-1003.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1006.md#2",
+    "label": "board/cards/REM-1006.md \u203a Goal",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "meta/postmortems/2026-11-02-a-rolled-back-walk-plans-the-next-as-empty.md#4",
+    "label": "meta/postmortems/2026-11-02-a-rolled-back-walk-plans-the-next-as-empty.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1006.md#4",
+    "label": "board/cards/REM-1006.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "commit/18414e93d9",
+    "label": "commit 18414e9: Reference world test 2 registered: does the state's gain (K6 - K0) depend on bridges being named? $0 ran",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-959.md#6",
+    "label": "board/cards/REM-959.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-10-20-lme-seeded-taxonomy/in_percolate/topology.py#8",
+    "label": "meta/spikes/2026-10-20-lme-seeded-taxonomy/in_percolate/topology.py",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

@@ -1,0 +1,405 @@
+{
+ "qid": "card:REM-287",
+ "set": "cards",
+ "question": "What was done about this, and why: deploy: production backs itself up daily to object storage, so an upgrade never stops for a hand dump?",
+ "gold": [
+  {
+   "id": "commit/089789e8cc",
+   "label": "commit 089789e: The extension ledger records 0.2.5 in production, and the cost-of-motion postmortem names what the chain",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/3e8f138363",
+   "label": "commit 3e8f138: board: file REM-287 deploy: production backs itself up daily to object storage, so an upgrade never stop",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-287.md#1",
+   "label": "board/cards/REM-287.md",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-287.md#2",
+   "label": "board/cards/REM-287.md \u203a Goal",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-287.md#4",
+   "label": "board/cards/REM-287.md \u203a Done when",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-287.md#8",
+   "label": "board/cards/REM-287.md \u203a Log",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "board/cards/REM-287.md#1",
+    "label": "board/cards/REM-287.md",
+    "role": "seed"
+   },
+   {
+    "id": "commit/089789e8cc",
+    "label": "commit 089789e: The extension ledger records 0.2.5 in production, and the cost-of-motion postmortem names what the chain",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "board/cards/REM-287.md#1",
+    "b": "commit/089789e8cc",
+    "via": [
+     {
+      "kind": "term",
+      "key": "scheduled backups",
+      "width": 6
+     },
+     {
+      "kind": "term",
+      "key": "rem 287",
+      "width": 42
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [],
+  "entry": {
+   "seed": "board/cards/REM-287.md#1",
+   "gold": "commit/089789e8cc",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 770,
+  "within_2_doors": 32333,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "board/cards/REM-287.md#7",
+    "label": "board/cards/REM-287.md \u203a Log",
+    "p": 0.006615511812764965,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/release-and-gitops.md#9",
+    "label": "specs/percolate-application/release-and-gitops.md \u203a Backups",
+    "p": 0.005380488951233084,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-287.md#9",
+    "label": "board/cards/REM-287.md \u203a Log",
+    "p": 0.0032011515802591478,
+    "gold": false
+   },
+   {
+    "id": "commit/ee08573e06",
+    "label": "commit ee08573: board: file REM-1020 workflow: a retried step backs off, so a short outage is ridden out",
+    "p": 0.002933071158496799,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-287.md#3",
+    "label": "board/cards/REM-287.md \u203a Evidence",
+    "p": 0.0027483392519255874,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-692.md#2",
+    "label": "board/cards/REM-692.md \u203a Goal",
+    "p": 0.0026563148280397413,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261029-101307-63f8.md#1",
+    "label": "board/messages/M-20261029-101307-63f8.md",
+    "p": 0.002622680294043183,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-294.md#3",
+    "label": "board/cards/REM-294.md \u203a Evidence",
+    "p": 0.00261993986094883,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-294.md#4",
+    "label": "board/cards/REM-294.md \u203a Done when",
+    "p": 0.001962855391470256,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-294.md#10",
+    "label": "board/cards/REM-294.md \u203a Log",
+    "p": 0.0019395423834660237,
+    "gold": false
+   },
+   {
+    "id": "commit/138be11817",
+    "label": "commit 138be11: board: file REM-288 deploy: every operator step is one documented command the shipped image runs, with n",
+    "p": 0.0018963592550746734,
+    "gold": false
+   },
+   {
+    "id": "commit/3d77907739",
+    "label": "commit 3d77907: board: note on REM-271",
+    "p": 0.0017972181168730706,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-287.md#10",
+    "label": "board/cards/REM-287.md \u203a Log",
+    "p": 0.0015031188127944796,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-294.md#7",
+    "label": "board/cards/REM-294.md \u203a Log",
+    "p": 0.0014646172098652683,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-287.md#5",
+    "label": "board/cards/REM-287.md \u203a Scope",
+    "p": 0.0014193218720160953,
+    "gold": false
+   },
+   {
+    "id": "commit/2c28508d78",
+    "label": "commit 2c28508: Nobody could have upgraded to 0.1.3, and the check that says so had been skipped",
+    "p": 0.001359084892544602,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-226.md#1",
+    "label": "board/cards/REM-226.md",
+    "p": 0.0013571137224845159,
+    "gold": false
+   },
+   {
+    "id": "site/ai-tells-and-style.md#4",
+    "label": "site/ai-tells-and-style.md \u203a 2. Overclaiming",
+    "p": 0.0013545447315147416,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-14-the-cost-of-motion.md#15",
+    "label": "meta/postmortems/2026-09-14-the-cost-of-motion.md \u203a 7. What a production chain still needs a person, or a workaround, fo",
+    "p": 0.00133040889904407,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-230.md#1",
+    "label": "board/cards/REM-230.md",
+    "p": 0.0012983086511560399,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/3e8f138363",
+   "label": "commit 3e8f138: board: file REM-287 deploy: production backs itself up daily to object storage, so an upgrade never stop",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-287.md#1",
+   "label": "board/cards/REM-287.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-287.md#2",
+   "label": "board/cards/REM-287.md \u203a Goal",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-287.md#4",
+   "label": "board/cards/REM-287.md \u203a Done when",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-287.md#8",
+   "label": "board/cards/REM-287.md \u203a Log",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/d6d29346c0",
+   "label": "commit d6d2934: board: note on REM-287",
+   "wave": 1,
+   "via": "term:rem 287",
+   "gold": false
+  },
+  {
+   "id": "commit/dd0813c2b5",
+   "label": "commit dd0813c: board: REM-287 in-progress \u2192 done",
+   "wave": 1,
+   "via": "term:rem 287",
+   "gold": false
+  },
+  {
+   "id": "commit/c9d071552a",
+   "label": "commit c9d0715: board: note on REM-287",
+   "wave": 1,
+   "via": "term:rem 287",
+   "gold": false
+  },
+  {
+   "id": "commit/5be3225d34",
+   "label": "commit 5be3225: board: percolate-application-ad takes REM-287",
+   "wave": 1,
+   "via": "term:rem 287",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-292.md#6",
+   "label": "board/cards/REM-292.md \u203a Links",
+   "wave": 1,
+   "via": "term:rem 287",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "board/cards/REM-287.md#7",
+    "label": "board/cards/REM-287.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/release-and-gitops.md#9",
+    "label": "specs/percolate-application/release-and-gitops.md \u203a Backups",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-287.md#9",
+    "label": "board/cards/REM-287.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "commit/ee08573e06",
+    "label": "commit ee08573: board: file REM-1020 workflow: a retried step backs off, so a short outage is ridden out",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-287.md#3",
+    "label": "board/cards/REM-287.md \u203a Evidence",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "specs/percolate-application/release-and-gitops.md#9",
+    "label": "specs/percolate-application/release-and-gitops.md \u203a Backups",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-287.md#9",
+    "label": "board/cards/REM-287.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-294.md#7",
+    "label": "board/cards/REM-294.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-294.md#10",
+    "label": "board/cards/REM-294.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-287.md#7",
+    "label": "board/cards/REM-287.md \u203a Log",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/2e3926fae5",
+    "label": "commit 2e3926f: board: file REM-1008 production: the object store is Hetzner Object Storage, not an in-cluster MinIO",
+    "gold": false
+   },
+   {
+    "id": "commit/dd0813c2b5",
+    "label": "commit dd0813c: board: REM-287 in-progress \u2192 done",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-294.md#4",
+    "label": "board/cards/REM-294.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-692.md#2",
+    "label": "board/cards/REM-692.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-287.md#3",
+    "label": "board/cards/REM-287.md \u203a Evidence",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "specs/percolate-application/release-and-gitops.md#9",
+    "label": "specs/percolate-application/release-and-gitops.md \u203a Backups",
+    "gold": false
+   },
+   {
+    "id": "meta/compliance/ropa.md#13",
+    "label": "meta/compliance/ropa.md \u203a 10. Backups",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-294.md#4",
+    "label": "board/cards/REM-294.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-14-the-cost-of-motion.md#15",
+    "label": "meta/postmortems/2026-09-14-the-cost-of-motion.md \u203a 7. What a production chain still needs a person, or a workaround, fo",
+    "gold": false
+   },
+   {
+    "id": "commit/2e3926fae5",
+    "label": "commit 2e3926f: board: file REM-1008 production: the object store is Hetzner Object Storage, not an in-cluster MinIO",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

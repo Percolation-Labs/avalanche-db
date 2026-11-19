@@ -1,0 +1,416 @@
+{
+ "qid": "RW:2hop__107690_124896",
+ "set": "mq",
+ "question": "Who was the father of The Portrait of George Dyer Talking's creator?",
+ "gold": [
+  {
+   "id": "mq:091b7ab3d2b75562",
+   "label": "Francis Bacon",
+   "seed": false
+  },
+  {
+   "id": "mq:1283879242322e80",
+   "label": "Portrait of George Dyer Talking",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:1283879242322e80",
+   "label": "Portrait of George Dyer Talking",
+   "rank": 1,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:0f96a5643b1157f1",
+   "label": "Three Studies of the Male Back",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:a1f461084797a482",
+   "label": "Look Who's Talking",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:c125403acf4ad3bd",
+   "label": "Portrait of Fr\u00e9d\u00e9ric Chopin and George Sand",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:17e92bd436229b57",
+   "label": "Portrait of D\u00fcrer's Father at 70",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:091b7ab3d2b75562",
+    "label": "Francis Bacon",
+    "role": "gold"
+   },
+   {
+    "id": "mq:1283879242322e80",
+    "label": "Portrait of George Dyer Talking",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:091b7ab3d2b75562",
+    "b": "mq:1283879242322e80",
+    "via": [
+     {
+      "kind": "near",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "francis bacon",
+      "width": 7
+     },
+     {
+      "kind": "term",
+      "key": "bacon",
+      "width": 15
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "mq:1283879242322e80",
+   "gold": "mq:1283879242322e80",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 2755,
+  "within_2_doors": 18324,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "mq:d40a937a885ab98b",
+    "label": "Look Who's Talking Too",
+    "p": 0.005166295776552254,
+    "gold": false
+   },
+   {
+    "id": "mq:ddc26fc860082a71",
+    "label": "Mademoiselle Rose",
+    "p": 0.00229379448733658,
+    "gold": false
+   },
+   {
+    "id": "mq:b1d431e00e586712",
+    "label": "The Holy Family with the Dragonfly",
+    "p": 0.0014823299080630268,
+    "gold": false
+   },
+   {
+    "id": "mq:1dbe9b2afd492b7e",
+    "label": "Look Who's Talking Now",
+    "p": 0.0014333379534782794,
+    "gold": false
+   },
+   {
+    "id": "mq:2b2198fa4e0ddf04",
+    "label": "Ruby Loftus Screwing a Breech Ring",
+    "p": 0.0013665034742663252,
+    "gold": false
+   },
+   {
+    "id": "mq:ee96fa82b9b59598",
+    "label": "David's Mother",
+    "p": 0.0013073092653543624,
+    "gold": false
+   },
+   {
+    "id": "mq:4ffe48d61e9b135d",
+    "label": "Fast Times at Ridgemont High",
+    "p": 0.00120232073281272,
+    "gold": false
+   },
+   {
+    "id": "mq:8afee6696d7fa3a9",
+    "label": "Head I",
+    "p": 0.001114744238026212,
+    "gold": false
+   },
+   {
+    "id": "mq:0014bec71b3bbd7e",
+    "label": "Streams of Expression",
+    "p": 0.001101278253242873,
+    "gold": false
+   },
+   {
+    "id": "mq:162629cddc17b8c6",
+    "label": "Devil's Angels",
+    "p": 0.001094053592081088,
+    "gold": false
+   },
+   {
+    "id": "mq:b6c34a189c01e8cf",
+    "label": "Prizes (novel)",
+    "p": 0.0010905388174682722,
+    "gold": false
+   },
+   {
+    "id": "mq:091b7ab3d2b75562",
+    "label": "Francis Bacon",
+    "p": 0.0009956439311774236,
+    "gold": true
+   },
+   {
+    "id": "mq:c0397ca88b69eef6",
+    "label": "Andrey Kivilev",
+    "p": 0.0009884740113668615,
+    "gold": false
+   },
+   {
+    "id": "mq:4a4e64ab8b462165",
+    "label": "Fr\u00e9d\u00e9ric Chopin",
+    "p": 0.0008915139938535993,
+    "gold": false
+   },
+   {
+    "id": "mq:7b3d25015ec44fcf",
+    "label": "The Baby-Sitters Club (TV series)",
+    "p": 0.0008607267226217649,
+    "gold": false
+   },
+   {
+    "id": "mq:d0eaaeebc1c6b490",
+    "label": "NTFS",
+    "p": 0.000841694242372048,
+    "gold": false
+   },
+   {
+    "id": "mq:74d0ba01a5f535bb",
+    "label": "Vera Drake",
+    "p": 0.0008409942194510313,
+    "gold": false
+   },
+   {
+    "id": "mq:8eff4923c2a63361",
+    "label": "Emotion",
+    "p": 0.0008345951908950076,
+    "gold": false
+   },
+   {
+    "id": "mq:e6231c022329be46",
+    "label": "Jacques Duchaussoy",
+    "p": 0.0008256271516584348,
+    "gold": false
+   },
+   {
+    "id": "mq:6e8cfe5af93e13bc",
+    "label": "Dyer, West Virginia",
+    "p": 0.0007589534319956973,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:1283879242322e80",
+   "label": "Portrait of George Dyer Talking",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:0f96a5643b1157f1",
+   "label": "Three Studies of the Male Back",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:a1f461084797a482",
+   "label": "Look Who's Talking",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:c125403acf4ad3bd",
+   "label": "Portrait of Fr\u00e9d\u00e9ric Chopin and George Sand",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:17e92bd436229b57",
+   "label": "Portrait of D\u00fcrer's Father at 70",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:e6231c022329be46",
+   "label": "Jacques Duchaussoy",
+   "wave": 1,
+   "via": "near:mq:0f96a5643b1157f1",
+   "gold": false
+  },
+  {
+   "id": "mq:6e8cfe5af93e13bc",
+   "label": "Dyer, West Virginia",
+   "wave": 1,
+   "via": "near:mq:0f96a5643b1157f1",
+   "gold": false
+  },
+  {
+   "id": "mq:49842798d80db6ec",
+   "label": "Triptych of the Annunciation",
+   "wave": 1,
+   "via": "near:mq:0f96a5643b1157f1",
+   "gold": false
+  },
+  {
+   "id": "mq:091b7ab3d2b75562",
+   "label": "Francis Bacon",
+   "wave": 1,
+   "via": "near:mq:0f96a5643b1157f1",
+   "gold": true
+  },
+  {
+   "id": "mq:200bd278592b8be8",
+   "label": "Portrait of Lavinia Vecellio",
+   "wave": 2,
+   "via": "near:mq:1283879242322e80",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:d40a937a885ab98b",
+    "label": "Look Who's Talking Too",
+    "gold": false
+   },
+   {
+    "id": "mq:ddc26fc860082a71",
+    "label": "Mademoiselle Rose",
+    "gold": false
+   },
+   {
+    "id": "mq:b1d431e00e586712",
+    "label": "The Holy Family with the Dragonfly",
+    "gold": false
+   },
+   {
+    "id": "mq:1dbe9b2afd492b7e",
+    "label": "Look Who's Talking Now",
+    "gold": false
+   },
+   {
+    "id": "mq:2b2198fa4e0ddf04",
+    "label": "Ruby Loftus Screwing a Breech Ring",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:d40a937a885ab98b",
+    "label": "Look Who's Talking Too",
+    "gold": false
+   },
+   {
+    "id": "mq:6e8cfe5af93e13bc",
+    "label": "Dyer, West Virginia",
+    "gold": false
+   },
+   {
+    "id": "mq:200bd278592b8be8",
+    "label": "Portrait of Lavinia Vecellio",
+    "gold": false
+   },
+   {
+    "id": "mq:1dbe9b2afd492b7e",
+    "label": "Look Who's Talking Now",
+    "gold": false
+   },
+   {
+    "id": "mq:ebc026d9d72f61f8",
+    "label": "Portrait of Pietro Aretino",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:d40a937a885ab98b",
+    "label": "Look Who's Talking Too",
+    "gold": false
+   },
+   {
+    "id": "mq:4535a4b7fb8747c1",
+    "label": "William IV",
+    "gold": false
+   },
+   {
+    "id": "mq:41b5e3441156d040",
+    "label": "George VI",
+    "gold": false
+   },
+   {
+    "id": "mq:d73b851fb400d34e",
+    "label": "George II of Great Britain",
+    "gold": false
+   },
+   {
+    "id": "mq:1dbe9b2afd492b7e",
+    "label": "Look Who's Talking Now",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:6e8cfe5af93e13bc",
+    "label": "Dyer, West Virginia",
+    "gold": false
+   },
+   {
+    "id": "mq:d73b851fb400d34e",
+    "label": "George II of Great Britain",
+    "gold": false
+   },
+   {
+    "id": "mq:8cfe56dc7f9b82f3",
+    "label": "The Graham Children",
+    "gold": false
+   },
+   {
+    "id": "mq:c5b567412a2ff209",
+    "label": "Willow Creek Formation",
+    "gold": false
+   },
+   {
+    "id": "mq:d8c2d2e14d092ea1",
+    "label": "Meiklejohn Glacier",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

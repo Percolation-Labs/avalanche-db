@@ -1,0 +1,426 @@
+{
+ "qid": "RW:2hop__197470_271394",
+ "set": "mq",
+ "question": "Where was Tyler MacDuff's child educated?",
+ "gold": [
+  {
+   "id": "mq:27cb5284641a0885",
+   "label": "Dana MacDuff",
+   "seed": true
+  },
+  {
+   "id": "mq:8a2f833ffa503c20",
+   "label": "Dana MacDuff",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:27cb5284641a0885",
+   "label": "Dana MacDuff",
+   "rank": 1,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:a874c32fb74e31cb",
+   "label": "David Gardiner Tyler",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:87cad7819a1295ed",
+   "label": "Macduff (Macbeth)",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:8a2f833ffa503c20",
+   "label": "Dana MacDuff",
+   "rank": 4,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:db8a4239d1a3ef37",
+   "label": "Macbeth",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:27cb5284641a0885",
+    "label": "Dana MacDuff",
+    "role": "gold"
+   },
+   {
+    "id": "mq:8a2f833ffa503c20",
+    "label": "Dana MacDuff",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:27cb5284641a0885",
+    "b": "mq:8a2f833ffa503c20",
+    "via": [
+     {
+      "kind": "near",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "dana macduff",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "macduff",
+      "width": 6
+     },
+     {
+      "kind": "term",
+      "key": "dana",
+      "width": 16
+     },
+     {
+      "kind": "term",
+      "key": "blair",
+      "width": 23
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "mq:27cb5284641a0885",
+   "gold": "mq:27cb5284641a0885",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 2098,
+  "within_2_doors": 18963,
+  "gold_within_1": 0,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "mq:082a16128d9a2db5",
+    "label": "Macbeth, King of Scotland",
+    "p": 0.004241304231151703,
+    "gold": false
+   },
+   {
+    "id": "mq:0008cccea14402e9",
+    "label": "Macbeth",
+    "p": 0.0024369895921005327,
+    "gold": false
+   },
+   {
+    "id": "mq:280847d8d72dd315",
+    "label": "Lively Grove, Illinois",
+    "p": 0.002410051815658894,
+    "gold": false
+   },
+   {
+    "id": "mq:4152c443172d7110",
+    "label": "Jesse Bennett",
+    "p": 0.0022992157143882194,
+    "gold": false
+   },
+   {
+    "id": "mq:7076a8a54be21cfa",
+    "label": "Arthur Fowler",
+    "p": 0.0016168086675513863,
+    "gold": false
+   },
+   {
+    "id": "mq:f0e07ddc865c8e0b",
+    "label": "William Howard Taft High School (Chicago)",
+    "p": 0.001503917200106696,
+    "gold": false
+   },
+   {
+    "id": "mq:9c5435cf5b48d782",
+    "label": "Crawling Sky",
+    "p": 0.0014494479563954708,
+    "gold": false
+   },
+   {
+    "id": "mq:1afaaec136aa9ffb",
+    "label": "Female reproductive system",
+    "p": 0.0012780439731245625,
+    "gold": false
+   },
+   {
+    "id": "mq:9a46895d8f274333",
+    "label": "Richmond, Virginia",
+    "p": 0.0012333393660654748,
+    "gold": false
+   },
+   {
+    "id": "mq:b8719790aa3b7538",
+    "label": "Fletcher Webster",
+    "p": 0.0012133083864737761,
+    "gold": false
+   },
+   {
+    "id": "mq:65991bd23200353e",
+    "label": "Oskar Maria Graf",
+    "p": 0.0011627368072116859,
+    "gold": false
+   },
+   {
+    "id": "mq:ac9875b6c1128639",
+    "label": "Princess Sophia Dorothea of Prussia",
+    "p": 0.0011552569058926722,
+    "gold": false
+   },
+   {
+    "id": "mq:1b45408d72be6b8c",
+    "label": "Dufferin Street bridges",
+    "p": 0.0011466591823531803,
+    "gold": false
+   },
+   {
+    "id": "mq:9a4a5d47b9e01622",
+    "label": "Rockefeller Center Christmas Tree",
+    "p": 0.0011389671898173728,
+    "gold": false
+   },
+   {
+    "id": "mq:f751bcc67d07ccb6",
+    "label": "Rudy Boesch",
+    "p": 0.0010659953931079372,
+    "gold": false
+   },
+   {
+    "id": "mq:55b343f0c51e38f9",
+    "label": "Josh Anderson (baseball)",
+    "p": 0.000991419567506663,
+    "gold": false
+   },
+   {
+    "id": "mq:77aecaf170d9f4bd",
+    "label": "Raymond M\u00e1rquez",
+    "p": 0.000979180839846496,
+    "gold": false
+   },
+   {
+    "id": "mq:f9dea2a4f48e9db0",
+    "label": "Banquo",
+    "p": 0.0009448141318371984,
+    "gold": false
+   },
+   {
+    "id": "mq:8ab0109f99bdf654",
+    "label": "Banquo",
+    "p": 0.0009136826989295314,
+    "gold": false
+   },
+   {
+    "id": "mq:02bb6cc9d49e23a0",
+    "label": "Banquo",
+    "p": 0.0009124937023374003,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:27cb5284641a0885",
+   "label": "Dana MacDuff",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:a874c32fb74e31cb",
+   "label": "David Gardiner Tyler",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:87cad7819a1295ed",
+   "label": "Macduff (Macbeth)",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:8a2f833ffa503c20",
+   "label": "Dana MacDuff",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:db8a4239d1a3ef37",
+   "label": "Macbeth",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:f0e07ddc865c8e0b",
+   "label": "William Howard Taft High School (Chicago)",
+   "wave": 1,
+   "via": "term:international baccalaureate",
+   "gold": false
+  },
+  {
+   "id": "mq:cef2826925d1afcc",
+   "label": "Winston-Salem State University",
+   "wave": 2,
+   "via": "term:baccalaureate",
+   "gold": false
+  },
+  {
+   "id": "mq:9b2c32d2a060b0f4",
+   "label": "Washington University in St. Louis",
+   "wave": 3,
+   "via": "term:graduate",
+   "gold": false
+  },
+  {
+   "id": "mq:cd45a5b3bb1ed82e",
+   "label": "Madrasa",
+   "wave": 3,
+   "via": "term:graduate",
+   "gold": false
+  },
+  {
+   "id": "mq:932dc95c3a0a0e8d",
+   "label": "Afzal Ahmed Khan",
+   "wave": 3,
+   "via": "term:graduate",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:082a16128d9a2db5",
+    "label": "Macbeth, King of Scotland",
+    "gold": false
+   },
+   {
+    "id": "mq:0008cccea14402e9",
+    "label": "Macbeth",
+    "gold": false
+   },
+   {
+    "id": "mq:280847d8d72dd315",
+    "label": "Lively Grove, Illinois",
+    "gold": false
+   },
+   {
+    "id": "mq:4152c443172d7110",
+    "label": "Jesse Bennett",
+    "gold": false
+   },
+   {
+    "id": "mq:7076a8a54be21cfa",
+    "label": "Arthur Fowler",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:082a16128d9a2db5",
+    "label": "Macbeth, King of Scotland",
+    "gold": false
+   },
+   {
+    "id": "mq:0008cccea14402e9",
+    "label": "Macbeth",
+    "gold": false
+   },
+   {
+    "id": "mq:4152c443172d7110",
+    "label": "Jesse Bennett",
+    "gold": false
+   },
+   {
+    "id": "mq:8cf0434ecf93a22c",
+    "label": "Tyler Lepley",
+    "gold": false
+   },
+   {
+    "id": "mq:cb52cfe42528608d",
+    "label": "The Haves and the Have Nots (TV series)",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:082a16128d9a2db5",
+    "label": "Macbeth, King of Scotland",
+    "gold": false
+   },
+   {
+    "id": "mq:0008cccea14402e9",
+    "label": "Macbeth",
+    "gold": false
+   },
+   {
+    "id": "mq:cb52cfe42528608d",
+    "label": "The Haves and the Have Nots (TV series)",
+    "gold": false
+   },
+   {
+    "id": "mq:f80550cf583596e4",
+    "label": "Lily Winters",
+    "gold": false
+   },
+   {
+    "id": "mq:8cf0434ecf93a22c",
+    "label": "Tyler Lepley",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:082a16128d9a2db5",
+    "label": "Macbeth, King of Scotland",
+    "gold": false
+   },
+   {
+    "id": "mq:8cf0434ecf93a22c",
+    "label": "Tyler Lepley",
+    "gold": false
+   },
+   {
+    "id": "mq:b8719790aa3b7538",
+    "label": "Fletcher Webster",
+    "gold": false
+   },
+   {
+    "id": "mq:4055741944e484a9",
+    "label": "Albert Tyler (biologist)",
+    "gold": false
+   },
+   {
+    "id": "mq:77d073fe7904154d",
+    "label": "Dinner at the Homesick Restaurant",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": null,
+  "Q": null,
+  "LQ": null,
+  "S": null
+ }
+}

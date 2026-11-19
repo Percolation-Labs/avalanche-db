@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 442" font-family="system-ui, sans-serif" font-size="12">
+<style>.t{fill:#1d1d1f}.m{fill:#6e6e73}.e{stroke:#0a7d5a;stroke-width:2;fill:none}.k{fill:#0a7d5a;font-size:10px}</style>
+<rect width="1180" height="442" fill="#fff"/>
+<text x="20" y="28" font-size="15" font-weight="600" class="t">Cards · spread: card:REM-58</text>
+<text x="20" y="50" class="m">What was done about this, and why: workflow: a run&#x27;s derived ids and &quot;the current definition&quot; each resolve one way?</text>
+<text x="40" y="78" font-weight="600" class="m">search’s seeds</text><text x="430" y="78" font-weight="600" class="m">connectors and walk reads</text><text x="820" y="78" font-weight="600" class="m">gold</text>
+<path class="e" d="M970,96 C970.0,96 970.0,142 970,142"/>
+<rect x="927.0" y="104.0" width="92.8" height="15" rx="3" fill="#fff" opacity=".9"/>
+<text class="k" x="930.0" y="115.0">“fix rem” (72)</text>
+<path class="e" d="M970,96 C970.0,96 970.0,188 970,188"/>
+<rect x="927.0" y="127.0" width="92.8" height="15" rx="3" fill="#fff" opacity=".9"/>
+<text class="k" x="930.0" y="138.0">“fix rem” (72)</text>
+<path class="e" d="M970,96 C970.0,96 970.0,234 970,234"/>
+<rect x="927.0" y="150.0" width="43.2" height="15" rx="3" fill="#fff" opacity=".9"/>
+<text class="k" x="930.0" y="161.0">Beside</text>
+<path class="e" d="M970,142 C775.0,142 775.0,96 580,96"/>
+<rect x="732.0" y="104.0" width="43.2" height="15" rx="3" fill="#fff" opacity=".9"/>
+<text class="k" x="735.0" y="115.0">Beside</text>
+<path class="e" d="M580,96 C700.0,96 700.0,326 820,326"/>
+<rect x="657.0" y="196.0" width="117.60000000000001" height="15" rx="3" fill="#fff" opacity=".9"/>
+<text class="k" x="660.0" y="207.0">“version desc” (5)</text>
+<path class="e" d="M970,234 C970.0,234 970.0,280 970,280"/>
+<rect x="927.0" y="242.0" width="43.2" height="15" rx="3" fill="#fff" opacity=".9"/>
+<text class="k" x="930.0" y="253.0">Beside</text>
+<path class="e" d="M970,326 C580.0,326 580.0,280 190,280"/>
+<rect x="537.0" y="288.0" width="86.60000000000001" height="15" rx="3" fill="#fff" opacity=".9"/>
+<text class="k" x="540.0" y="299.0">“run org” (2)</text>
+<rect x="820" y="81" width="340" height="28" rx="6" fill="#f5c400" stroke="#0a7d5a" stroke-width="2"/>
+<text x="828" y="100" class="t">commit 3547ae9: Merge remote-tracking branc…</text>
+<rect x="820" y="127" width="340" height="28" rx="6" fill="#f5c400" stroke="#0a7d5a" stroke-width="2"/>
+<text x="828" y="146" class="t">commit 6a18901: Merge remote-tracking branc…</text>
+<rect x="430" y="81" width="340" height="28" rx="6" fill="#f2f2f4" stroke="#0a7d5a" stroke-width="2"/>
+<text x="438" y="100" class="t">commit 8efb89b: A session id had two deriva…</text>
+<rect x="820" y="173" width="340" height="28" rx="6" fill="#f5c400" stroke="#0a7d5a" stroke-width="2"/>
+<text x="828" y="192" class="t">commit 9bb61a3: Merge pull request #70 from…</text>
+<rect x="820" y="219" width="340" height="28" rx="6" fill="#f5c400" stroke="#0a7d5a" stroke-width="2"/>
+<text x="828" y="238" class="t">commit a9f5d2b: Merge remote-tracking branc…</text>
+<rect x="820" y="265" width="340" height="28" rx="6" fill="#f5c400" stroke="#0a7d5a" stroke-width="2"/>
+<text x="828" y="284" class="t">commit b568d2f: Merge remote-tracking branc…</text>
+<rect x="820" y="311" width="340" height="28" rx="6" fill="#f5c400" stroke="#0a7d5a" stroke-width="2"/>
+<text x="828" y="330" class="t">commit be64025: A workflow definition belon…</text>
+<rect x="40" y="265" width="340" height="28" rx="6" fill="#dbe9ff" stroke="#0a7d5a" stroke-width="2"/>
+<text x="48" y="284" class="t">specs/workflow-engine/spec.md › (b) Which o…</text>
+<rect x="40" y="127" width="340" height="28" rx="6" fill="#dbe9ff" stroke="#c7c7cc" stroke-width="1"/>
+<text x="48" y="146" class="t">board/cards/REM-58.md</text>
+<rect x="40" y="219" width="340" height="28" rx="6" fill="#dbe9ff" stroke="#c7c7cc" stroke-width="1"/>
+<text x="48" y="238" class="t">specs/workflow-engine/YAML.md › Templates</text>
+<rect x="40" y="81" width="340" height="28" rx="6" fill="#dbe9ff" stroke="#c7c7cc" stroke-width="1"/>
+<text x="48" y="100" class="t">board/cards/REM-40.md</text>
+<rect x="40" y="173" width="340" height="28" rx="6" fill="#dbe9ff" stroke="#c7c7cc" stroke-width="1"/>
+<text x="48" y="192" class="t">specs/workflow-engine/README.md › Data flow…</text>
+<rect x="430" y="127" width="340" height="28" rx="6" fill="#f2f2f4" stroke="#c7c7cc" stroke-width="1"/>
+<text x="438" y="146" class="t">board/cards/REM-171.md › 2026-09-14T13:43:3…</text>
+<text x="768" y="146" text-anchor="end" class="m" font-size="10">walk w1</text>
+<rect x="430" y="173" width="340" height="28" rx="6" fill="#f2f2f4" stroke="#c7c7cc" stroke-width="1"/>
+<text x="438" y="192" class="t">commit 13cc1a2: Counting up produces a numb…</text>
+<text x="768" y="192" text-anchor="end" class="m" font-size="10">walk w1</text>
+<rect x="430" y="265" width="340" height="28" rx="6" fill="#f2f2f4" stroke="#c7c7cc" stroke-width="1"/>
+<text x="438" y="284" class="t">specs/workflow-engine/integration-rbac.sql</text>
+<text x="768" y="284" text-anchor="end" class="m" font-size="10">walk w1</text>
+<rect x="430" y="311" width="340" height="28" rx="6" fill="#f2f2f4" stroke="#c7c7cc" stroke-width="1"/>
+<text x="438" y="330" class="t">specs/workflow-engine/integration-rbac.sql</text>
+<text x="768" y="330" text-anchor="end" class="m" font-size="10">walk w1</text>
+<rect x="430" y="219" width="340" height="28" rx="6" fill="#f2f2f4" stroke="#c7c7cc" stroke-width="1"/>
+<text x="438" y="238" class="t">commit 5fed31a: A run of an org&#x27;s workflow …</text>
+<text x="768" y="238" text-anchor="end" class="m" font-size="10">walk w1</text>
+<text x="20" y="408" class="m">Steiner cost 7 links; nearest seed 1 doors from gold; graph within 1 door of the seeds: 1,663 passages, within 2: 32,695</text>
+<text x="20" y="428" class="m">recall@5 beyond the seeds: search 0.00, U 0.00, Q 0.17, LQ 0.00. Yellow gold, blue seeds, green-edged nodes and links form the Steiner graph.</text>
+</svg>

@@ -1,0 +1,383 @@
+{
+ "qid": "card:REM-780",
+ "set": "cards",
+ "question": "What was done about this, and why: authoring: show reviewer creation and comments in an interactive page study?",
+ "gold": [
+  {
+   "id": "commit/3505c883cc",
+   "label": "commit 3505c88: Add reviewer and idea-lineage page study for Drafter (REM-780)",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/98c437fd2f",
+   "label": "commit 98c437f: board: file REM-780 authoring: show reviewer creation and comments in an interactive page study",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-780.md#1",
+   "label": "board/cards/REM-780.md",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/3505c883cc",
+   "label": "commit 3505c88: Add reviewer and idea-lineage page study for Drafter (REM-780)",
+   "rank": 3,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "output/drafter-study/README.md#1",
+   "label": "output/drafter-study/README.md \u203a Drafter: three interactive page studies",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-780.md#3",
+   "label": "board/cards/REM-780.md \u203a Log",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/3505c883cc",
+    "label": "commit 3505c88: Add reviewer and idea-lineage page study for Drafter (REM-780)",
+    "role": "gold"
+   }
+  ],
+  "links": [],
+  "cost": 0,
+  "detached_gold": [],
+  "gold_pair_doors": [],
+  "entry": {
+   "seed": "commit/3505c883cc",
+   "gold": "commit/3505c883cc",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 1842,
+  "within_2_doors": 34488,
+  "gold_within_1": 0,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "specs/percolate-application/drafter.md#96",
+    "label": "specs/percolate-application/drafter.md \u203a Visual studies",
+    "p": 0.008813725248989651,
+    "gold": false
+   },
+   {
+    "id": "commit/d43fe013fc",
+    "label": "commit d43fe01: board: drafter-reviewers takes REM-780",
+    "p": 0.0074766958162021295,
+    "gold": false
+   },
+   {
+    "id": "commit/4b2021d4f2",
+    "label": "commit 4b2021d: drafter: REM-800 fixed, lens reviewers transform 8 of 8 broken drafts on production (#430)",
+    "p": 0.00712533936965618,
+    "gold": false
+   },
+   {
+    "id": "board/team/drafter-reviewers.md#2",
+    "label": "board/team/drafter-reviewers.md \u203a Log",
+    "p": 0.00685278511554614,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-780.md#2",
+    "label": "board/cards/REM-780.md \u203a Goal",
+    "p": 0.006245310113426017,
+    "gold": false
+   },
+   {
+    "id": "commit/3335a4ab03",
+    "label": "commit 3335a4a: board: REM-780 in-progress \u2192 done",
+    "p": 0.00606028015098562,
+    "gold": false
+   },
+   {
+    "id": "commit/e4887a7499",
+    "label": "commit e4887a7: board: drafter-reviewers checks in, working",
+    "p": 0.0057610374060921695,
+    "gold": false
+   },
+   {
+    "id": "commit/57486c92ac",
+    "label": "commit 57486c9: board: drafter-reviewers checks in, ended",
+    "p": 0.004948100181731695,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-781.md#1",
+    "label": "board/cards/REM-781.md",
+    "p": 0.004803399947852451,
+    "gold": false
+   },
+   {
+    "id": "output/drafter-study/README.md#2",
+    "label": "output/drafter-study/README.md \u203a Drafter: three interactive page studies",
+    "p": 0.0047873083293761085,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-779.md#1",
+    "label": "board/cards/REM-779.md",
+    "p": 0.004693388254173369,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-710.md#1",
+    "label": "board/cards/REM-710.md",
+    "p": 0.004644442363254977,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-779.md#3",
+    "label": "board/cards/REM-779.md \u203a Log",
+    "p": 0.0044961920524930156,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-781.md#3",
+    "label": "board/cards/REM-781.md \u203a Log",
+    "p": 0.00441082241611885,
+    "gold": false
+   },
+   {
+    "id": "commit/dd6f697793",
+    "label": "commit dd6f697: board: file REM-710 authoring: show surviving takeaway marks in the reading",
+    "p": 0.003936657169904672,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-778.md#7",
+    "label": "board/cards/REM-778.md \u203a Log",
+    "p": 0.003897809353329572,
+    "gold": false
+   },
+   {
+    "id": "commit/acd96f3c12",
+    "label": "commit acd96f3: board: drafter-reviewers checks in, ended",
+    "p": 0.003341354337349472,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/drafter.md#1",
+    "label": "specs/percolate-application/drafter.md \u203a Drafter: a document with room to think",
+    "p": 0.0033000590980070766,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-778.md#1",
+    "label": "board/cards/REM-778.md",
+    "p": 0.0031271203994341075,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-777.md#1",
+    "label": "board/cards/REM-777.md",
+    "p": 0.002953649929653507,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/98c437fd2f",
+   "label": "commit 98c437f: board: file REM-780 authoring: show reviewer creation and comments in an interactive page study",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-780.md#1",
+   "label": "board/cards/REM-780.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/3505c883cc",
+   "label": "commit 3505c88: Add reviewer and idea-lineage page study for Drafter (REM-780)",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "output/drafter-study/README.md#1",
+   "label": "output/drafter-study/README.md \u203a Drafter: three interactive page studies",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-780.md#3",
+   "label": "board/cards/REM-780.md \u203a Log",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-780.md#2",
+   "label": "board/cards/REM-780.md \u203a Goal",
+   "wave": 1,
+   "via": "term:rem 780",
+   "gold": false
+  },
+  {
+   "id": "commit/3335a4ab03",
+   "label": "commit 3335a4a: board: REM-780 in-progress \u2192 done",
+   "wave": 1,
+   "via": "term:rem 780",
+   "gold": false
+  },
+  {
+   "id": "commit/d43fe013fc",
+   "label": "commit d43fe01: board: drafter-reviewers takes REM-780",
+   "wave": 1,
+   "via": "term:rem 780",
+   "gold": false
+  },
+  {
+   "id": "specs/percolate-application/drafter.md#96",
+   "label": "specs/percolate-application/drafter.md \u203a Visual studies",
+   "wave": 1,
+   "via": "term:rem 780",
+   "gold": false
+  },
+  {
+   "id": "board/team/drafter-reviewers.md#2",
+   "label": "board/team/drafter-reviewers.md \u203a Log",
+   "wave": 1,
+   "via": "term:rem 780",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "specs/percolate-application/drafter.md#96",
+    "label": "specs/percolate-application/drafter.md \u203a Visual studies",
+    "gold": false
+   },
+   {
+    "id": "commit/d43fe013fc",
+    "label": "commit d43fe01: board: drafter-reviewers takes REM-780",
+    "gold": false
+   },
+   {
+    "id": "commit/4b2021d4f2",
+    "label": "commit 4b2021d: drafter: REM-800 fixed, lens reviewers transform 8 of 8 broken drafts on production (#430)",
+    "gold": false
+   },
+   {
+    "id": "board/team/drafter-reviewers.md#2",
+    "label": "board/team/drafter-reviewers.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-780.md#2",
+    "label": "board/cards/REM-780.md \u203a Goal",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "specs/percolate-application/drafter.md#96",
+    "label": "specs/percolate-application/drafter.md \u203a Visual studies",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-778.md#7",
+    "label": "board/cards/REM-778.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "output/drafter-study/README.md#2",
+    "label": "output/drafter-study/README.md \u203a Drafter: three interactive page studies",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-781.md#3",
+    "label": "board/cards/REM-781.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/team/drafter-reviewers.md#2",
+    "label": "board/team/drafter-reviewers.md \u203a Log",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/3335a4ab03",
+    "label": "commit 3335a4a: board: REM-780 in-progress \u2192 done",
+    "gold": false
+   },
+   {
+    "id": "commit/dd6f697793",
+    "label": "commit dd6f697: board: file REM-710 authoring: show surviving takeaway marks in the reading",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-778.md#1",
+    "label": "board/cards/REM-778.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-781.md#1",
+    "label": "board/cards/REM-781.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-710.md#1",
+    "label": "board/cards/REM-710.md",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "output/drafter-study/README.md#7",
+    "label": "output/drafter-study/README.md \u203a Verification",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-778.md#1",
+    "label": "board/cards/REM-778.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-695.md#8",
+    "label": "board/cards/REM-695.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "output/simple-journeys/README.md#1",
+    "label": "output/simple-journeys/README.md \u203a One essay, three ways to work",
+    "gold": false
+   },
+   {
+    "id": "output/drafter-study/README.md#4",
+    "label": "output/drafter-study/README.md \u203a Reviewers and origins",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": null,
+  "Q": null,
+  "LQ": null,
+  "S": null
+ }
+}

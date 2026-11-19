@@ -1,0 +1,405 @@
+{
+ "qid": "pr:368",
+ "set": "prs",
+ "question": "What work went into this, and why: percolate-core 0.2.4: the pins and versions.toml follow it?",
+ "gold": [
+  {
+   "id": "commit/83ec1399f9",
+   "label": "commit 83ec139: percolate-core 0.2.4: the pins and versions.toml follow it",
+   "seed": true
+  },
+  {
+   "id": "commit/b0eb14788e",
+   "label": "commit b0eb147: CI pulls a published image before starting it",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/e51903df80",
+   "label": "commit e51903d: percolate-core 0.2.5: the pins and versions.toml follow it",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/83ec1399f9",
+   "label": "commit 83ec139: percolate-core 0.2.4: the pins and versions.toml follow it",
+   "rank": 2,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "commit/037cb0f065",
+   "label": "commit 037cb0f: Merge pull request #370 from Percolation-Labs/percolate-core-0.2.5",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/b44bdf7c86",
+   "label": "commit b44bdf7: Merge pull request #368 from Percolation-Labs/percolate-core-0.2.4",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/2cb0a80217",
+   "label": "commit 2cb0a80: Merge pull request #199 from Percolation-Labs/amartey/rem-261-core-0.1.13-pins",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/83ec1399f9",
+    "label": "commit 83ec139: percolate-core 0.2.4: the pins and versions.toml follow it",
+    "role": "gold"
+   },
+   {
+    "id": "commit/b0eb14788e",
+    "label": "commit b0eb147: CI pulls a published image before starting it",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/83ec1399f9",
+    "b": "commit/b0eb14788e",
+    "via": [
+     {
+      "kind": "beside"
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "commit/83ec1399f9",
+   "gold": "commit/83ec1399f9",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 147,
+  "within_2_doors": 23234,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "commit/3b444fffb5",
+    "label": "commit 3b444ff: extension 0.2.22: opened after v0.2.21",
+    "p": 0.015655470712700938,
+    "gold": false
+   },
+   {
+    "id": "commit/79fa96fbee",
+    "label": "commit 79fa96f: percolate-core 0.2.0 is published, so every pin and versions.toml follow it",
+    "p": 0.013155758388798748,
+    "gold": false
+   },
+   {
+    "id": "commit/c6d7869e25",
+    "label": "commit c6d7869: percolate-core 0.1.13 is published, so every pin and versions.toml follow it (REM-261)",
+    "p": 0.013141995129612878,
+    "gold": false
+   },
+   {
+    "id": "commit/da82f8499f",
+    "label": "commit da82f84: percolate-core 0.2.1 is published, so every pin and versions.toml follow it (#322)",
+    "p": 0.010851309599091521,
+    "gold": false
+   },
+   {
+    "id": "commit/8b2c936e7c",
+    "label": "commit 8b2c936: extension 0.2.21: opened after v0.2.20",
+    "p": 0.008825284488839517,
+    "gold": false
+   },
+   {
+    "id": "commit/9476376a6c",
+    "label": "commit 9476376: Pin the build's Postgres headers to the server in the image",
+    "p": 0.008637148797397446,
+    "gold": false
+   },
+   {
+    "id": "commit/5529b55bc0",
+    "label": "commit 5529b55: board: file REM-733 graphs: explore an essay graph by expanding nodes, and change it from an agent",
+    "p": 0.008545057587815074,
+    "gold": false
+   },
+   {
+    "id": "commit/e95e638e9d",
+    "label": "commit e95e638: Merge pull request #369 from Percolation-Labs/amartey/match-summary",
+    "p": 0.006677383048112111,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-658.md#9",
+    "label": "board/cards/REM-658.md \u203a Log",
+    "p": 0.004953588514236625,
+    "gold": false
+   },
+   {
+    "id": "output/simple-journeys/README.md#6",
+    "label": "output/simple-journeys/README.md \u203a What to validate with people",
+    "p": 0.004362378721079909,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-658.md#8",
+    "label": "board/cards/REM-658.md \u203a Log",
+    "p": 0.0041483398416105625,
+    "gold": false
+   },
+   {
+    "id": "commit/1f3b30ae82",
+    "label": "commit 1f3b30a: An agent step can learn who started its run, so it authenticates as that agent (REM-247)",
+    "p": 0.004118914907617662,
+    "gold": false
+   },
+   {
+    "id": "commit/947b7f375f",
+    "label": "commit 947b7f3: board: note on REM-266",
+    "p": 0.004117438244108115,
+    "gold": false
+   },
+   {
+    "id": "commit/2a8932a3e4",
+    "label": "commit 2a8932a: board: REM-266 in-progress \u2192 review",
+    "p": 0.003916549637873696,
+    "gold": false
+   },
+   {
+    "id": "specs/workflow-engine/hired-steps.md#11",
+    "label": "specs/workflow-engine/hired-steps.md \u203a 7. Relation to the judgement queue",
+    "p": 0.0037088205796374746,
+    "gold": false
+   },
+   {
+    "id": "commit/fc6ab75c55",
+    "label": "commit fc6ab75: follow percolate-core 0.2.3 (REM-658) (#337)",
+    "p": 0.003044310047630917,
+    "gold": false
+   },
+   {
+    "id": "commit/3493dda085",
+    "label": "commit 3493dda: Two gates read the wrong thing: a sibling checkout, and a seeded agent CI cannot use (#135)",
+    "p": 0.002788983700091036,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-733.md#1",
+    "label": "board/cards/REM-733.md",
+    "p": 0.002368342911933771,
+    "gold": false
+   },
+   {
+    "id": "commit/b7204e7b54",
+    "label": "commit b7204e7: versions: follow percolate-core 0.2.8",
+    "p": 0.0021878346874708767,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-658.md#10",
+    "label": "board/cards/REM-658.md \u203a Log",
+    "p": 0.00206895445239433,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/e51903df80",
+   "label": "commit e51903d: percolate-core 0.2.5: the pins and versions.toml follow it",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/83ec1399f9",
+   "label": "commit 83ec139: percolate-core 0.2.4: the pins and versions.toml follow it",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "commit/037cb0f065",
+   "label": "commit 037cb0f: Merge pull request #370 from Percolation-Labs/percolate-core-0.2.5",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/b44bdf7c86",
+   "label": "commit b44bdf7: Merge pull request #368 from Percolation-Labs/percolate-core-0.2.4",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/2cb0a80217",
+   "label": "commit 2cb0a80: Merge pull request #199 from Percolation-Labs/amartey/rem-261-core-0.1.13-pins",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/da82f8499f",
+   "label": "commit da82f84: percolate-core 0.2.1 is published, so every pin and versions.toml follow it (#322)",
+   "wave": 1,
+   "via": "term:every pin",
+   "gold": false
+  },
+  {
+   "id": "commit/c6d7869e25",
+   "label": "commit c6d7869: percolate-core 0.1.13 is published, so every pin and versions.toml follow it (REM-261)",
+   "wave": 1,
+   "via": "term:every pin",
+   "gold": false
+  },
+  {
+   "id": "commit/79fa96fbee",
+   "label": "commit 79fa96f: percolate-core 0.2.0 is published, so every pin and versions.toml follow it",
+   "wave": 1,
+   "via": "term:every pin",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-658.md#9",
+   "label": "board/cards/REM-658.md \u203a Log",
+   "wave": 1,
+   "via": "term:every pin",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-658.md#8",
+   "label": "board/cards/REM-658.md \u203a Log",
+   "wave": 1,
+   "via": "term:every pin",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "commit/3b444fffb5",
+    "label": "commit 3b444ff: extension 0.2.22: opened after v0.2.21",
+    "gold": false
+   },
+   {
+    "id": "commit/79fa96fbee",
+    "label": "commit 79fa96f: percolate-core 0.2.0 is published, so every pin and versions.toml follow it",
+    "gold": false
+   },
+   {
+    "id": "commit/c6d7869e25",
+    "label": "commit c6d7869: percolate-core 0.1.13 is published, so every pin and versions.toml follow it (REM-261)",
+    "gold": false
+   },
+   {
+    "id": "commit/da82f8499f",
+    "label": "commit da82f84: percolate-core 0.2.1 is published, so every pin and versions.toml follow it (#322)",
+    "gold": false
+   },
+   {
+    "id": "commit/8b2c936e7c",
+    "label": "commit 8b2c936: extension 0.2.21: opened after v0.2.20",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "commit/79fa96fbee",
+    "label": "commit 79fa96f: percolate-core 0.2.0 is published, so every pin and versions.toml follow it",
+    "gold": false
+   },
+   {
+    "id": "commit/c6d7869e25",
+    "label": "commit c6d7869: percolate-core 0.1.13 is published, so every pin and versions.toml follow it (REM-261)",
+    "gold": false
+   },
+   {
+    "id": "commit/da82f8499f",
+    "label": "commit da82f84: percolate-core 0.2.1 is published, so every pin and versions.toml follow it (#322)",
+    "gold": false
+   },
+   {
+    "id": "dev/references.sh#5",
+    "label": "dev/references.sh",
+    "gold": false
+   },
+   {
+    "id": "dev/train.sh#13",
+    "label": "dev/train.sh",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/da82f8499f",
+    "label": "commit da82f84: percolate-core 0.2.1 is published, so every pin and versions.toml follow it (#322)",
+    "gold": false
+   },
+   {
+    "id": "commit/c6d7869e25",
+    "label": "commit c6d7869: percolate-core 0.1.13 is published, so every pin and versions.toml follow it (REM-261)",
+    "gold": false
+   },
+   {
+    "id": "commit/79fa96fbee",
+    "label": "commit 79fa96f: percolate-core 0.2.0 is published, so every pin and versions.toml follow it",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-658.md#4",
+    "label": "board/cards/REM-658.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "commit/3b444fffb5",
+    "label": "commit 3b444ff: extension 0.2.22: opened after v0.2.21",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "dev/references.sh#5",
+    "label": "dev/references.sh",
+    "gold": false
+   },
+   {
+    "id": "commit/da82f8499f",
+    "label": "commit da82f84: percolate-core 0.2.1 is published, so every pin and versions.toml follow it (#322)",
+    "gold": false
+   },
+   {
+    "id": "commit/a8ea010342",
+    "label": "commit a8ea010: versions: follow percolate-core 0.2.7, which get-percolate publishes",
+    "gold": false
+   },
+   {
+    "id": "commit/c6d7869e25",
+    "label": "commit c6d7869: percolate-core 0.1.13 is published, so every pin and versions.toml follow it (REM-261)",
+    "gold": false
+   },
+   {
+    "id": "commit/79fa96fbee",
+    "label": "commit 79fa96f: percolate-core 0.2.0 is published, so every pin and versions.toml follow it",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

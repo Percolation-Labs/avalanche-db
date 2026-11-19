@@ -1,0 +1,400 @@
+{
+ "qid": "card:REM-368",
+ "set": "cards",
+ "question": "What was done about this, and why: edition: lead with a featured article and clear reading labels?",
+ "gold": [
+  {
+   "id": "commit/e2719913ce",
+   "label": "commit e271991: card-brief --at REF: replay what a take printed at a past commit (#388)",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/92eb917be7",
+   "label": "commit 92eb917: board: file REM-368 edition: lead with a featured article and clear reading labels",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-368.md#1",
+   "label": "board/cards/REM-368.md",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/9c05c8e11e",
+   "label": "commit 9c05c8e: board: file REM-1077 edition: a connected AI can choose the featured article through MCP",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "commit/2be40de5f3",
+   "label": "commit 2be40de: board: file REM-512 edition: an editor sets the featured article through the API, not a constant in the ",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "commit/7ec4d9b024",
+   "label": "commit 7ec4d9b: board: file REM-636 edition: let an editor delegate featured-article selection to an agent or token",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 2
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/92eb917be7",
+    "label": "commit 92eb917: board: file REM-368 edition: lead with a featured article and clear reading labels",
+    "role": "seed"
+   },
+   {
+    "id": "commit/e2719913ce",
+    "label": "commit e271991: card-brief --at REF: replay what a take printed at a past commit (#388)",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/92eb917be7",
+    "b": "commit/e2719913ce",
+    "via": [
+     {
+      "kind": "term",
+      "key": "rem 368",
+      "width": 16
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [],
+  "entry": {
+   "seed": "commit/92eb917be7",
+   "gold": "commit/e2719913ce",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 468,
+  "within_2_doors": 30444,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "board/cards/REM-512.md#1",
+    "label": "board/cards/REM-512.md",
+    "p": 0.012636271088350543,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-636.md#1",
+    "label": "board/cards/REM-636.md",
+    "p": 0.011397547745538196,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/experience.md#20",
+    "label": "specs/percolate-application/experience.md \u203a Edition update \u2014 15 September 2026",
+    "p": 0.008860412960299532,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-636.md#2",
+    "label": "board/cards/REM-636.md \u203a Goal",
+    "p": 0.008102214564372233,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-368.md#2",
+    "label": "board/cards/REM-368.md \u203a Log",
+    "p": 0.007115214195059995,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-636.md#7",
+    "label": "board/cards/REM-636.md \u203a Log",
+    "p": 0.0071047614694484135,
+    "gold": false
+   },
+   {
+    "id": "commit/12a75c28e8",
+    "label": "commit 12a75c2: experience: an editor may have a token carry out the featured-article choice (REM-636)",
+    "p": 0.006449965182827039,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1077.md#1",
+    "label": "board/cards/REM-1077.md",
+    "p": 0.005301279968742483,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1077.md#2",
+    "label": "board/cards/REM-1077.md \u203a Goal",
+    "p": 0.004776537515582102,
+    "gold": false
+   },
+   {
+    "id": "commit/8a7554ae50",
+    "label": "commit 8a7554a: Merge pull request #499 from Percolation-Labs/amartey/rem-636-feature-delegation",
+    "p": 0.0041881681990132424,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261020-091459-4619.md#1",
+    "label": "board/messages/M-20261020-091459-4619.md",
+    "p": 0.0038599423446978648,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1077.md#5",
+    "label": "board/cards/REM-1077.md \u203a Scope",
+    "p": 0.0037017440765748258,
+    "gold": false
+   },
+   {
+    "id": "commit/feab104875",
+    "label": "commit feab104: board: file REM-417 site: the homepage's featured reading opens from anywhere in its panel",
+    "p": 0.00326465162560295,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-512.md#3",
+    "label": "board/cards/REM-512.md \u203a Log",
+    "p": 0.0032131642064349483,
+    "gold": false
+   },
+   {
+    "id": "commit/69f372fbc0",
+    "label": "commit 69f372f: board: tick REM-636 box 1",
+    "p": 0.0031289416674131314,
+    "gold": false
+   },
+   {
+    "id": "commit/5beea12921",
+    "label": "commit 5beea12: board: p8-subsystems-64 takes REM-512",
+    "p": 0.003031117450220759,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1077.md#6",
+    "label": "board/cards/REM-1077.md \u203a Log",
+    "p": 0.0030090447486256695,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261020-092154-5c37.md#1",
+    "label": "board/messages/M-20261020-092154-5c37.md",
+    "p": 0.0029835380054306624,
+    "gold": false
+   },
+   {
+    "id": "commit/d86ddd23e6",
+    "label": "commit d86ddd2: board: edit REM-1077 labels severity",
+    "p": 0.0028872542351573932,
+    "gold": false
+   },
+   {
+    "id": "research-notes/coalescing/question-interface-paper-2026-10-07/paper.md#19",
+    "label": "research-notes/coalescing/question-interface-paper-2026-10-07/paper.md \u203a What the experiments establish",
+    "p": 0.0026740097728604447,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/92eb917be7",
+   "label": "commit 92eb917: board: file REM-368 edition: lead with a featured article and clear reading labels",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-368.md#1",
+   "label": "board/cards/REM-368.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/9c05c8e11e",
+   "label": "commit 9c05c8e: board: file REM-1077 edition: a connected AI can choose the featured article through MCP",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/2be40de5f3",
+   "label": "commit 2be40de: board: file REM-512 edition: an editor sets the featured article through the API, not a constant in the ",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/7ec4d9b024",
+   "label": "commit 7ec4d9b: board: file REM-636 edition: let an editor delegate featured-article selection to an agent or token",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-368.md#2",
+   "label": "board/cards/REM-368.md \u203a Log",
+   "wave": 1,
+   "via": "term:distillations",
+   "gold": false
+  },
+  {
+   "id": "specs/percolate-application/experience.md#20",
+   "label": "specs/percolate-application/experience.md \u203a Edition update \u2014 15 September 2026",
+   "wave": 1,
+   "via": "term:distillations",
+   "gold": false
+  },
+  {
+   "id": "output/ideas-flow-review-2026-09-19/review.md#15",
+   "label": "output/ideas-flow-review-2026-09-19/review.md \u203a What to keep",
+   "wave": 2,
+   "via": "term:upright",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-613.md#2",
+   "label": "board/cards/REM-613.md \u203a Goal",
+   "wave": 3,
+   "via": "term:edition feature",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-389.md#4",
+   "label": "board/cards/REM-389.md \u203a Done when",
+   "wave": 3,
+   "via": "term:edition feature",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "board/cards/REM-512.md#1",
+    "label": "board/cards/REM-512.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-636.md#1",
+    "label": "board/cards/REM-636.md",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/experience.md#20",
+    "label": "specs/percolate-application/experience.md \u203a Edition update \u2014 15 September 2026",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-636.md#2",
+    "label": "board/cards/REM-636.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-368.md#2",
+    "label": "board/cards/REM-368.md \u203a Log",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "board/cards/REM-368.md#2",
+    "label": "board/cards/REM-368.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-512.md#1",
+    "label": "board/cards/REM-512.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-636.md#1",
+    "label": "board/cards/REM-636.md",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/experience.md#20",
+    "label": "specs/percolate-application/experience.md \u203a Edition update \u2014 15 September 2026",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1077.md#1",
+    "label": "board/cards/REM-1077.md",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "board/cards/REM-512.md#1",
+    "label": "board/cards/REM-512.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1077.md#1",
+    "label": "board/cards/REM-1077.md",
+    "gold": false
+   },
+   {
+    "id": "commit/12a75c28e8",
+    "label": "commit 12a75c2: experience: an editor may have a token carry out the featured-article choice (REM-636)",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-636.md#1",
+    "label": "board/cards/REM-636.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1077.md#2",
+    "label": "board/cards/REM-1077.md \u203a Goal",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "board/cards/REM-512.md#1",
+    "label": "board/cards/REM-512.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-636.md#1",
+    "label": "board/cards/REM-636.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-368.md#2",
+    "label": "board/cards/REM-368.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-453.md#4",
+    "label": "board/cards/REM-453.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1077.md#1",
+    "label": "board/cards/REM-1077.md",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

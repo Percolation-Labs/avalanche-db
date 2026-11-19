@@ -1,0 +1,415 @@
+{
+ "qid": "pr:834",
+ "set": "prs",
+ "question": "What work went into this, and why: jev-ranking-saved-pages: Jev as a ranker on 227 saved MuSiQue door pages, with controls ($0)?",
+ "gold": [
+  {
+   "id": "commit/3a32381448",
+   "label": "commit 3a32381: jev-ranking-saved-pages: Jev as a ranker on 227 saved MuSiQue door pages, with controls ($0)",
+   "seed": true
+  },
+  {
+   "id": "commit/f53f6c162f",
+   "label": "commit f53f6c1: jev-ranking-saved-pages: registration before scoring",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/3a32381448",
+   "label": "commit 3a32381: jev-ranking-saved-pages: Jev as a ranker on 227 saved MuSiQue door pages, with controls ($0)",
+   "rank": 1,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "commit/01eba3494e",
+   "label": "commit 01eba34: Merge pull request #834 from Percolation-Labs/james/jev-ranking-saved-pages",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "meta/lab/results/jev-ranking-saved-pages/RESULT.md#1",
+   "label": "meta/lab/results/jev-ranking-saved-pages/RESULT.md \u203a Jev as a ranker of door pages it already scored: NDCG, MRR and reca",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "meta/lab/results/jev-ranking-saved-pages/score-result.md#1",
+   "label": "meta/lab/results/jev-ranking-saved-pages/score-result.md \u203a Jev as a ranker of saved door pages: score result",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "meta/lab/results/jev-ranking-saved-pages/score.py#1",
+   "label": "meta/lab/results/jev-ranking-saved-pages/score.py",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/3a32381448",
+    "label": "commit 3a32381: jev-ranking-saved-pages: Jev as a ranker on 227 saved MuSiQue door pages, with controls ($0)",
+    "role": "gold"
+   },
+   {
+    "id": "commit/f53f6c162f",
+    "label": "commit f53f6c1: jev-ranking-saved-pages: registration before scoring",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/3a32381448",
+    "b": "commit/f53f6c162f",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "ranking saved",
+      "width": 63
+     },
+     {
+      "kind": "term",
+      "key": "saved pages",
+      "width": 68
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "commit/3a32381448",
+   "gold": "commit/3a32381448",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 997,
+  "within_2_doors": 30836,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "meta/lab/results/jev-ranking-saved-pages/score.py#5",
+    "label": "meta/lab/results/jev-ranking-saved-pages/score.py",
+    "p": 0.012899839798673504,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-ranking-saved-pages/RESULT.md#2",
+    "label": "meta/lab/results/jev-ranking-saved-pages/RESULT.md \u203a Registration (17 Nov 2026, committed before anything was scored)",
+    "p": 0.010757185354409131,
+    "gold": false
+   },
+   {
+    "id": "commit/f53f6c162f",
+    "label": "commit f53f6c1: jev-ranking-saved-pages: registration before scoring",
+    "p": 0.005068902042027638,
+    "gold": true
+   },
+   {
+    "id": "meta/lab/results/jev-ranking-refworld/RESULT.md#8",
+    "label": "meta/lab/results/jev-ranking-refworld/RESULT.md \u203a Postmortem",
+    "p": 0.0043800579404956455,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261117-143640-3c3a.md#1",
+    "label": "board/messages/M-20261117-143640-3c3a.md",
+    "p": 0.003011178196208674,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-ranking-size-beam/score.py#1",
+    "label": "meta/lab/results/jev-ranking-size-beam/score.py",
+    "p": 0.002876716786899923,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-ranking-saved-pages/RESULT.md#7",
+    "label": "meta/lab/results/jev-ranking-saved-pages/RESULT.md \u203a Result (17 Nov 2026)",
+    "p": 0.0027761968732936005,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-ranking-saved-pages/score-result.md#20",
+    "label": "meta/lab/results/jev-ranking-saved-pages/score-result.md \u203a Every page (graded relevance)",
+    "p": 0.002725218475931172,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-ranking-saved-pages/score-result.md#27",
+    "label": "meta/lab/results/jev-ranking-saved-pages/score-result.md \u203a Every page (graded relevance)",
+    "p": 0.002704074343642089,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-ranking-saved-pages/score-result.md#32",
+    "label": "meta/lab/results/jev-ranking-saved-pages/score-result.md \u203a Every page (graded relevance)",
+    "p": 0.0026763879389028245,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-ranking-saved-pages/score-result.md#36",
+    "label": "meta/lab/results/jev-ranking-saved-pages/score-result.md \u203a Every page (graded relevance)",
+    "p": 0.00265719706196027,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-ranking-saved-pages/score-result.md#31",
+    "label": "meta/lab/results/jev-ranking-saved-pages/score-result.md \u203a Every page (graded relevance)",
+    "p": 0.0026042840975282915,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-ranking-saved-pages/score.py#6",
+    "label": "meta/lab/results/jev-ranking-saved-pages/score.py",
+    "p": 0.002461632870377078,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261116-181146-dc99.md#1",
+    "label": "board/messages/M-20261116-181146-dc99.md",
+    "p": 0.002412726380992787,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-ranking-refworld/score.py#3",
+    "label": "meta/lab/results/jev-ranking-refworld/score.py",
+    "p": 0.002362971105623909,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-ranking-saved-pages/score-result.md#29",
+    "label": "meta/lab/results/jev-ranking-saved-pages/score-result.md \u203a Every page (graded relevance)",
+    "p": 0.002321740141502673,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-ranking-saved-pages/score-result.md#22",
+    "label": "meta/lab/results/jev-ranking-saved-pages/score-result.md \u203a Every page (graded relevance)",
+    "p": 0.0023004949748691786,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-ranking-saved-pages/score-result.md#38",
+    "label": "meta/lab/results/jev-ranking-saved-pages/score-result.md \u203a Every page (graded relevance)",
+    "p": 0.0022727233640115418,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-ranking-saved-pages/score-result.md#21",
+    "label": "meta/lab/results/jev-ranking-saved-pages/score-result.md \u203a Every page (graded relevance)",
+    "p": 0.002236690697472421,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-ranking-refworld/score.py#1",
+    "label": "meta/lab/results/jev-ranking-refworld/score.py",
+    "p": 0.002199100060064236,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/3a32381448",
+   "label": "commit 3a32381: jev-ranking-saved-pages: Jev as a ranker on 227 saved MuSiQue door pages, with controls ($0)",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "commit/01eba3494e",
+   "label": "commit 01eba34: Merge pull request #834 from Percolation-Labs/james/jev-ranking-saved-pages",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/jev-ranking-saved-pages/RESULT.md#1",
+   "label": "meta/lab/results/jev-ranking-saved-pages/RESULT.md \u203a Jev as a ranker of door pages it already scored: NDCG, MRR and reca",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/jev-ranking-saved-pages/score-result.md#1",
+   "label": "meta/lab/results/jev-ranking-saved-pages/score-result.md \u203a Jev as a ranker of saved door pages: score result",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/jev-ranking-saved-pages/score.py#1",
+   "label": "meta/lab/results/jev-ranking-saved-pages/score.py",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/jev-ranking-saved-pages/score-result.md#23",
+   "label": "meta/lab/results/jev-ranking-saved-pages/score-result.md \u203a Every page (graded relevance)",
+   "wave": 1,
+   "via": "term:saved pages",
+   "gold": false
+  },
+  {
+   "id": "commit/f53f6c162f",
+   "label": "commit f53f6c1: jev-ranking-saved-pages: registration before scoring",
+   "wave": 1,
+   "via": "term:saved pages",
+   "gold": true
+  },
+  {
+   "id": "meta/lab/results/jev-ranking-saved-pages/RESULT.md#5",
+   "label": "meta/lab/results/jev-ranking-saved-pages/RESULT.md \u203a Registration (17 Nov 2026, committed before anything was scored)",
+   "wave": 1,
+   "via": "term:saved pages",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/jev-ranking-saved-pages/score.py#7",
+   "label": "meta/lab/results/jev-ranking-saved-pages/score.py",
+   "wave": 1,
+   "via": "term:saved pages",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/jev-ranking-saved-pages/score-result.md#8",
+   "label": "meta/lab/results/jev-ranking-saved-pages/score-result.md \u203a medium pages (293-905 doors): 77 pages, 63 questions",
+   "wave": 1,
+   "via": "term:saved pages",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "meta/lab/results/jev-ranking-saved-pages/score.py#5",
+    "label": "meta/lab/results/jev-ranking-saved-pages/score.py",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-ranking-saved-pages/RESULT.md#2",
+    "label": "meta/lab/results/jev-ranking-saved-pages/RESULT.md \u203a Registration (17 Nov 2026, committed before anything was scored)",
+    "gold": false
+   },
+   {
+    "id": "commit/f53f6c162f",
+    "label": "commit f53f6c1: jev-ranking-saved-pages: registration before scoring",
+    "gold": true
+   },
+   {
+    "id": "meta/lab/results/jev-ranking-refworld/RESULT.md#8",
+    "label": "meta/lab/results/jev-ranking-refworld/RESULT.md \u203a Postmortem",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261117-143640-3c3a.md#1",
+    "label": "board/messages/M-20261117-143640-3c3a.md",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "meta/lab/results/jev-ranking-saved-pages/score.py#5",
+    "label": "meta/lab/results/jev-ranking-saved-pages/score.py",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-ranking-saved-pages/RESULT.md#2",
+    "label": "meta/lab/results/jev-ranking-saved-pages/RESULT.md \u203a Registration (17 Nov 2026, committed before anything was scored)",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-ranking-size-beam/score.py#1",
+    "label": "meta/lab/results/jev-ranking-size-beam/score.py",
+    "gold": false
+   },
+   {
+    "id": "commit/f53f6c162f",
+    "label": "commit f53f6c1: jev-ranking-saved-pages: registration before scoring",
+    "gold": true
+   },
+   {
+    "id": "meta/lab/results/jev-ranking-refworld/RESULT.md#8",
+    "label": "meta/lab/results/jev-ranking-refworld/RESULT.md \u203a Postmortem",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/f53f6c162f",
+    "label": "commit f53f6c1: jev-ranking-saved-pages: registration before scoring",
+    "gold": true
+   },
+   {
+    "id": "meta/lab/results/jev-ranking-saved-pages/score-result.md#2",
+    "label": "meta/lab/results/jev-ranking-saved-pages/score-result.md \u203a all pages: 227 pages, 112 questions",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-ranking-saved-pages/RESULT.md#2",
+    "label": "meta/lab/results/jev-ranking-saved-pages/RESULT.md \u203a Registration (17 Nov 2026, committed before anything was scored)",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-ranking-saved-pages/score-result.md#3",
+    "label": "meta/lab/results/jev-ranking-saved-pages/score-result.md \u203a wave 1: 110 pages, 110 questions",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-ranking-saved-pages/score-result.md#4",
+    "label": "meta/lab/results/jev-ranking-saved-pages/score-result.md \u203a wave > 1: 117 pages, 65 questions",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "meta/lab/results/jev-ranking-size-beam/RESULT.md#2",
+    "label": "meta/lab/results/jev-ranking-size-beam/RESULT.md \u203a Registration (17 Nov 2026, committed before scoring)",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-ranking-saved-pages/score-result.md#11",
+    "label": "meta/lab/results/jev-ranking-saved-pages/score-result.md \u203a all pages: 227 pages, 112 questions",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-ranking-saved-pages/score-result.md#2",
+    "label": "meta/lab/results/jev-ranking-saved-pages/score-result.md \u203a all pages: 227 pages, 112 questions",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-ranking-size-beam/score-result.md#4",
+    "label": "meta/lab/results/jev-ranking-size-beam/score-result.md \u203a Part 1, #834 MuSiQue saved pages: 227 pages, 112 questions; ter",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-ranking-refworld/RESULT.md#2",
+    "label": "meta/lab/results/jev-ranking-refworld/RESULT.md \u203a Registration (17 Nov 2026, committed before any live call)",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 1.0,
+  "Q": 1.0,
+  "LQ": 1.0,
+  "S": 0.0
+ }
+}

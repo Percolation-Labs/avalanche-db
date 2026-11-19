@@ -1,0 +1,405 @@
+{
+ "qid": "card:REM-20",
+ "set": "cards",
+ "question": "What was done about this, and why: dream: preserve evidence lineage and revalidate derived memory across source revisions?",
+ "gold": [
+  {
+   "id": "commit/221d061d28",
+   "label": "commit 221d061: The evidence ledger's issue closed on the results that already met it",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "board/cards/REM-20.md#1",
+   "label": "board/cards/REM-20.md",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "specs/percolate-application/claim-change-inbox.md#4",
+   "label": "specs/percolate-application/claim-change-inbox.md \u203a 3. Build\u2013Knit\u2013Dream is the implementation path",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "research-notes/build-knit-dream-competitive-review-2026-09-09.md#28",
+   "label": "research-notes/build-knit-dream-competitive-review-2026-09-09.md \u203a Dream: propose, validate, compile, then revalidate",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "applications/percolate-self-model/dreaming/live.sql#7",
+   "label": "applications/percolate-self-model/dreaming/live.sql",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "board/cards/REM-589.md#4",
+   "label": "board/cards/REM-589.md \u203a Done when",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 2
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "board/cards/REM-20.md#1",
+    "label": "board/cards/REM-20.md",
+    "role": "seed"
+   },
+   {
+    "id": "commit/221d061d28",
+    "label": "commit 221d061: The evidence ledger's issue closed on the results that already met it",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "board/cards/REM-20.md#1",
+    "b": "commit/221d061d28",
+    "via": [
+     {
+      "kind": "term",
+      "key": "rem 20",
+      "width": 4
+     },
+     {
+      "kind": "term",
+      "key": "historical reads",
+      "width": 18
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [],
+  "entry": {
+   "seed": "board/cards/REM-20.md#1",
+   "gold": "commit/221d061d28",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 3264,
+  "within_2_doors": 32992,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "specs/research-platform/core-claims-contract.md#11",
+    "label": "specs/research-platform/core-claims-contract.md \u203a C6. Origin identity and dependence keep their reasons",
+    "p": 0.003264697719296759,
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-self-model/dreaming/live.sql#5",
+    "label": "applications/percolate-self-model/dreaming/live.sql",
+    "p": 0.003230522135176757,
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-self-model/dreaming/SPEC.md#5",
+    "label": "applications/percolate-self-model/dreaming/SPEC.md \u203a Data model and responsibilities",
+    "p": 0.0030349365180589363,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-669.md#6",
+    "label": "board/cards/REM-669.md \u203a Log",
+    "p": 0.0030173743794832683,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-589.md#8",
+    "label": "board/cards/REM-589.md \u203a Log",
+    "p": 0.0029731111305463217,
+    "gold": false
+   },
+   {
+    "id": "meta/skills/build-knit-dream/SKILL.md#4",
+    "label": "meta/skills/build-knit-dream/SKILL.md \u203a 2. The layers, from the authoritative spec",
+    "p": 0.0026749261778955657,
+    "gold": false
+   },
+   {
+    "id": "specs/research-platform/core-claims-contract.md#8",
+    "label": "specs/research-platform/core-claims-contract.md \u203a C3. Shared-origin lookup begins at the origin",
+    "p": 0.002120099953160765,
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-self-model/dreaming/test_memory_api.sql#1",
+    "label": "applications/percolate-self-model/dreaming/test_memory_api.sql",
+    "p": 0.0018339348908716095,
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-self-model/dreaming/test_live.sql#1",
+    "label": "applications/percolate-self-model/dreaming/test_live.sql",
+    "p": 0.001748723364033364,
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-self-model/dreaming/live.sql#4",
+    "label": "applications/percolate-self-model/dreaming/live.sql",
+    "p": 0.0016607448027074713,
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-self-model/dreaming/live.sql#6",
+    "label": "applications/percolate-self-model/dreaming/live.sql",
+    "p": 0.0015541267826422883,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-684.md#8",
+    "label": "board/cards/REM-684.md \u203a Log",
+    "p": 0.001244865678463231,
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-self-model/dreaming/live.sql#2",
+    "label": "applications/percolate-self-model/dreaming/live.sql",
+    "p": 0.0012023607831093183,
+    "gold": false
+   },
+   {
+    "id": "specs/world-model-ingestion/sources.sql#2",
+    "label": "specs/world-model-ingestion/sources.sql",
+    "p": 0.0011665106307528982,
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-self-model/schema.sql#23",
+    "label": "applications/percolate-self-model/schema.sql",
+    "p": 0.0011578603912231877,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-20.md#2",
+    "label": "board/cards/REM-20.md \u203a Log",
+    "p": 0.0011504915057962105,
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-10-20-lme-seeded-taxonomy/evidence_atlas/render_iteration.py#4",
+    "label": "meta/spikes/2026-10-20-lme-seeded-taxonomy/evidence_atlas/render_iteration.py",
+    "p": 0.0011450094600986363,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-589.md#3",
+    "label": "board/cards/REM-589.md \u203a Evidence",
+    "p": 0.0011288353643122075,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-589.md#5",
+    "label": "board/cards/REM-589.md \u203a Estimate \u2014 5 points",
+    "p": 0.0011129107444264358,
+    "gold": false
+   },
+   {
+    "id": "research-notes/build-knit-dream-competitive-review-2026-09-09.md#2",
+    "label": "research-notes/build-knit-dream-competitive-review-2026-09-09.md \u203a Executive assessment",
+    "p": 0.0010376726924022286,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "board/cards/REM-20.md#1",
+   "label": "board/cards/REM-20.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/percolate-application/claim-change-inbox.md#4",
+   "label": "specs/percolate-application/claim-change-inbox.md \u203a 3. Build\u2013Knit\u2013Dream is the implementation path",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "research-notes/build-knit-dream-competitive-review-2026-09-09.md#28",
+   "label": "research-notes/build-knit-dream-competitive-review-2026-09-09.md \u203a Dream: propose, validate, compile, then revalidate",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "applications/percolate-self-model/dreaming/live.sql#7",
+   "label": "applications/percolate-self-model/dreaming/live.sql",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-589.md#4",
+   "label": "board/cards/REM-589.md \u203a Done when",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/spikes/2026-09-18-claim-resolution/claims.txt#2",
+   "label": "meta/spikes/2026-09-18-claim-resolution/claims.txt",
+   "wave": 1,
+   "via": "term:evidence history",
+   "gold": false
+  },
+  {
+   "id": "research-notes/build-knit-dream-results-2026-09-10.md#1",
+   "label": "research-notes/build-knit-dream-results-2026-09-10.md \u203a Build\u2013Knit\u2013Dream: implementation and measured results",
+   "wave": 1,
+   "via": "term:evidence history",
+   "gold": false
+  },
+  {
+   "id": "research-notes/build-knit-dream-competitive-review-2026-09-09.md#38",
+   "label": "research-notes/build-knit-dream-competitive-review-2026-09-09.md \u203a Recommended sequence",
+   "wave": 1,
+   "via": "term:evidence history",
+   "gold": false
+  },
+  {
+   "id": "meta/spikes/2026-09-18-claim-resolution/claims.txt#1",
+   "label": "meta/spikes/2026-09-18-claim-resolution/claims.txt",
+   "wave": 1,
+   "via": "term:evidence history",
+   "gold": false
+  },
+  {
+   "id": "output/rem700-acceptance/README.md#5",
+   "label": "output/rem700-acceptance/README.md \u203a A1\u2013A11",
+   "wave": 1,
+   "via": "term:evidence history",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "specs/research-platform/core-claims-contract.md#11",
+    "label": "specs/research-platform/core-claims-contract.md \u203a C6. Origin identity and dependence keep their reasons",
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-self-model/dreaming/live.sql#5",
+    "label": "applications/percolate-self-model/dreaming/live.sql",
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-self-model/dreaming/SPEC.md#5",
+    "label": "applications/percolate-self-model/dreaming/SPEC.md \u203a Data model and responsibilities",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-669.md#6",
+    "label": "board/cards/REM-669.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-589.md#8",
+    "label": "board/cards/REM-589.md \u203a Log",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "applications/percolate-self-model/dreaming/SPEC.md#5",
+    "label": "applications/percolate-self-model/dreaming/SPEC.md \u203a Data model and responsibilities",
+    "gold": false
+   },
+   {
+    "id": "meta/skills/build-knit-dream/SKILL.md#4",
+    "label": "meta/skills/build-knit-dream/SKILL.md \u203a 2. The layers, from the authoritative spec",
+    "gold": false
+   },
+   {
+    "id": "specs/research-platform/core-claims-contract.md#11",
+    "label": "specs/research-platform/core-claims-contract.md \u203a C6. Origin identity and dependence keep their reasons",
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-self-model/dreaming/test_live.sql#1",
+    "label": "applications/percolate-self-model/dreaming/test_live.sql",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-589.md#8",
+    "label": "board/cards/REM-589.md \u203a Log",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "research-notes/build-knit-dream-competitive-review-2026-09-09.md#11",
+    "label": "research-notes/build-knit-dream-competitive-review-2026-09-09.md \u203a 3. Evidence audit: findings that change the conclusio",
+    "gold": false
+   },
+   {
+    "id": "research-notes/build-knit-dream-competitive-review-2026-09-09.md#25",
+    "label": "research-notes/build-knit-dream-competitive-review-2026-09-09.md \u203a 5. A stronger Build\u2013Knit\u2013Dream design",
+    "gold": false
+   },
+   {
+    "id": "research-notes/build-knit-dream-competitive-review-2026-09-09.md#33",
+    "label": "research-notes/build-knit-dream-competitive-review-2026-09-09.md \u203a 7. An experimental programme that can support a compe",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-669.md#6",
+    "label": "board/cards/REM-669.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-20.md#2",
+    "label": "board/cards/REM-20.md \u203a Log",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "research-notes/coalescing/question-interface-paper-2026-10-07/evidence.md#8",
+    "label": "research-notes/coalescing/question-interface-paper-2026-10-07/evidence.md \u203a Differences that affect the argument",
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-self-model/dreaming/README.md#9",
+    "label": "applications/percolate-self-model/dreaming/README.md \u203a Contracts and access",
+    "gold": false
+   },
+   {
+    "id": "research-notes/build-knit-dream-results-2026-09-10.md#2",
+    "label": "research-notes/build-knit-dream-results-2026-09-10.md \u203a What shipped",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-717.md#4",
+    "label": "board/cards/REM-717.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "specs/build-knit-dream/incident-briefing-v0.md#3",
+    "label": "specs/build-knit-dream/incident-briefing-v0.md \u203a Contract and implementation boundary",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

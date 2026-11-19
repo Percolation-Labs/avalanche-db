@@ -1,0 +1,482 @@
+{
+ "qid": "RW:3hop2__89854_36497_76291",
+ "set": "mq",
+ "question": "When did the majority party in the House of Representatives take control of the body which the President calls on for support in his USAF appointments?",
+ "gold": [
+  {
+   "id": "mq:0c3875782c5c338d",
+   "label": "114th United States Congress",
+   "seed": false
+  },
+  {
+   "id": "mq:450dafb44a30356f",
+   "label": "United States Air Force",
+   "seed": false
+  },
+  {
+   "id": "mq:e3de0ee582ca38ce",
+   "label": "2014 United States Senate elections",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:7396b63081b53343",
+   "label": "Party leaders of the United States Senate",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:ebc444437e031f03",
+   "label": "2002 United States House of Representatives elections",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:1fa083e5adc5547b",
+   "label": "Party leaders of the United States House of Representatives",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:bacbc905a3fc2483",
+   "label": "Speaker of the United States House of Representatives",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:da095720e5ba403a",
+   "label": "Speaker of the United States House of Representatives",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:0c3875782c5c338d",
+    "label": "114th United States Congress",
+    "role": "gold"
+   },
+   {
+    "id": "mq:450dafb44a30356f",
+    "label": "United States Air Force",
+    "role": "gold"
+   },
+   {
+    "id": "mq:7396b63081b53343",
+    "label": "Party leaders of the United States Senate",
+    "role": "seed"
+   },
+   {
+    "id": "mq:db981c281dd7009d",
+    "label": "Military budget of the United States",
+    "role": "connector"
+   },
+   {
+    "id": "mq:e3de0ee582ca38ce",
+    "label": "2014 United States Senate elections",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:0c3875782c5c338d",
+    "b": "mq:7396b63081b53343",
+    "via": [
+     {
+      "kind": "term",
+      "key": "states senate",
+      "width": 23
+     }
+    ]
+   },
+   {
+    "a": "mq:0c3875782c5c338d",
+    "b": "mq:db981c281dd7009d",
+    "via": [
+     {
+      "kind": "term",
+      "key": "states federal",
+      "width": 22
+     }
+    ]
+   },
+   {
+    "a": "mq:0c3875782c5c338d",
+    "b": "mq:e3de0ee582ca38ce",
+    "via": [
+     {
+      "kind": "term",
+      "key": "states senate",
+      "width": 23
+     },
+     {
+      "kind": "term",
+      "key": "republicans",
+      "width": 37
+     },
+     {
+      "kind": "term",
+      "key": "seats",
+      "width": 81
+     }
+    ]
+   },
+   {
+    "a": "mq:450dafb44a30356f",
+    "b": "mq:db981c281dd7009d",
+    "via": [
+     {
+      "kind": "term",
+      "key": "uniformed",
+      "width": 3
+     },
+     {
+      "kind": "term",
+      "key": "civilian",
+      "width": 69
+     },
+     {
+      "kind": "term",
+      "key": "air force",
+      "width": 89
+     }
+    ]
+   }
+  ],
+  "cost": 4,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   2,
+   1,
+   2
+  ],
+  "entry": {
+   "seed": "mq:7396b63081b53343",
+   "gold": "mq:0c3875782c5c338d",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 2761,
+  "within_2_doors": 18304,
+  "gold_within_1": 2,
+  "gold_within_2": 1,
+  "top_U": [
+   {
+    "id": "mq:31cc6ab3ffa4f12b",
+    "label": "Party leaders of the United States House of Representatives",
+    "p": 0.0041978387643495955,
+    "gold": false
+   },
+   {
+    "id": "mq:f2a60931baaaf042",
+    "label": "2010 United States House of Representatives elections",
+    "p": 0.003541914624314522,
+    "gold": false
+   },
+   {
+    "id": "mq:cd9d3e67161c7ade",
+    "label": "President pro tempore of the United States Senate",
+    "p": 0.0026197235647538505,
+    "gold": false
+   },
+   {
+    "id": "mq:85c44dd86623342b",
+    "label": "Party leaders of the United States House of Representatives",
+    "p": 0.002365189405300238,
+    "gold": false
+   },
+   {
+    "id": "mq:970681b324ddeb1e",
+    "label": "Party leaders of the United States House of Representatives",
+    "p": 0.0020441246768869966,
+    "gold": false
+   },
+   {
+    "id": "mq:7f62ce334b888749",
+    "label": "Texas House of Representatives",
+    "p": 0.001693217033896237,
+    "gold": false
+   },
+   {
+    "id": "mq:fb1f51dec7ae1c0f",
+    "label": "North Carolina",
+    "p": 0.0015902085039327042,
+    "gold": false
+   },
+   {
+    "id": "mq:5c736c6f8edbc3c4",
+    "label": "2017 Speaker of the United States House of Representatives election",
+    "p": 0.0015361870037280325,
+    "gold": false
+   },
+   {
+    "id": "mq:e0cb042bfd92b652",
+    "label": "Montana",
+    "p": 0.0014967824479993064,
+    "gold": false
+   },
+   {
+    "id": "mq:66588c2492b3c9e1",
+    "label": "2008 United States Senate elections",
+    "p": 0.0012751357469920753,
+    "gold": false
+   },
+   {
+    "id": "mq:cb457ac6abccb08b",
+    "label": "Presidential Succession Act",
+    "p": 0.0012044359125175784,
+    "gold": false
+   },
+   {
+    "id": "mq:61cb5a458dddb036",
+    "label": "110th United States Congress",
+    "p": 0.0011685509232108094,
+    "gold": false
+   },
+   {
+    "id": "mq:f9e19ff9964ed9d2",
+    "label": "Speaker of the United States House of Representatives",
+    "p": 0.0011565430233623037,
+    "gold": false
+   },
+   {
+    "id": "mq:b2db756855439ea7",
+    "label": "Party leaders of the United States House of Representatives",
+    "p": 0.0011356148560596917,
+    "gold": false
+   },
+   {
+    "id": "mq:5d1474f7afbce213",
+    "label": "New Deal",
+    "p": 0.001096671432086364,
+    "gold": false
+   },
+   {
+    "id": "mq:a439b5967faf1e41",
+    "label": "Pope Paul VI",
+    "p": 0.0010845415999661417,
+    "gold": false
+   },
+   {
+    "id": "mq:1c35378a9d840203",
+    "label": "Lodewijk Asscher",
+    "p": 0.001078414754561699,
+    "gold": false
+   },
+   {
+    "id": "mq:3ef46fe47cb01681",
+    "label": "Batman: Arkham",
+    "p": 0.0010350563085848284,
+    "gold": false
+   },
+   {
+    "id": "mq:f11a93cd58efe521",
+    "label": "Enrique del Moral",
+    "p": 0.0010243561723483688,
+    "gold": false
+   },
+   {
+    "id": "mq:321627616e6d6ea9",
+    "label": "Party leaders of the United States House of Representatives",
+    "p": 0.0009794436712489097,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:7396b63081b53343",
+   "label": "Party leaders of the United States Senate",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:ebc444437e031f03",
+   "label": "2002 United States House of Representatives elections",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:1fa083e5adc5547b",
+   "label": "Party leaders of the United States House of Representatives",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:bacbc905a3fc2483",
+   "label": "Speaker of the United States House of Representatives",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:da095720e5ba403a",
+   "label": "Speaker of the United States House of Representatives",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:f2a60931baaaf042",
+   "label": "2010 United States House of Representatives elections",
+   "wave": 1,
+   "via": "term:midterm election",
+   "gold": false
+  },
+  {
+   "id": "mq:5d1474f7afbce213",
+   "label": "New Deal",
+   "wave": 1,
+   "via": "term:midterm election",
+   "gold": false
+  },
+  {
+   "id": "mq:85c44dd86623342b",
+   "label": "Party leaders of the United States House of Representatives",
+   "wave": 2,
+   "via": "term:nancy pelosi",
+   "gold": false
+  },
+  {
+   "id": "mq:31cc6ab3ffa4f12b",
+   "label": "Party leaders of the United States House of Representatives",
+   "wave": 2,
+   "via": "term:nancy pelosi",
+   "gold": false
+  },
+  {
+   "id": "mq:61cb5a458dddb036",
+   "label": "110th United States Congress",
+   "wave": 2,
+   "via": "term:nancy pelosi",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:31cc6ab3ffa4f12b",
+    "label": "Party leaders of the United States House of Representatives",
+    "gold": false
+   },
+   {
+    "id": "mq:f2a60931baaaf042",
+    "label": "2010 United States House of Representatives elections",
+    "gold": false
+   },
+   {
+    "id": "mq:cd9d3e67161c7ade",
+    "label": "President pro tempore of the United States Senate",
+    "gold": false
+   },
+   {
+    "id": "mq:85c44dd86623342b",
+    "label": "Party leaders of the United States House of Representatives",
+    "gold": false
+   },
+   {
+    "id": "mq:970681b324ddeb1e",
+    "label": "Party leaders of the United States House of Representatives",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:31cc6ab3ffa4f12b",
+    "label": "Party leaders of the United States House of Representatives",
+    "gold": false
+   },
+   {
+    "id": "mq:f2a60931baaaf042",
+    "label": "2010 United States House of Representatives elections",
+    "gold": false
+   },
+   {
+    "id": "mq:970681b324ddeb1e",
+    "label": "Party leaders of the United States House of Representatives",
+    "gold": false
+   },
+   {
+    "id": "mq:85c44dd86623342b",
+    "label": "Party leaders of the United States House of Representatives",
+    "gold": false
+   },
+   {
+    "id": "mq:cd9d3e67161c7ade",
+    "label": "President pro tempore of the United States Senate",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:f2a60931baaaf042",
+    "label": "2010 United States House of Representatives elections",
+    "gold": false
+   },
+   {
+    "id": "mq:31cc6ab3ffa4f12b",
+    "label": "Party leaders of the United States House of Representatives",
+    "gold": false
+   },
+   {
+    "id": "mq:970681b324ddeb1e",
+    "label": "Party leaders of the United States House of Representatives",
+    "gold": false
+   },
+   {
+    "id": "mq:85c44dd86623342b",
+    "label": "Party leaders of the United States House of Representatives",
+    "gold": false
+   },
+   {
+    "id": "mq:8b4dfbbcad60a21c",
+    "label": "Compromise of 1877",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:276e86dd88f88f02",
+    "label": "Majority leader",
+    "gold": false
+   },
+   {
+    "id": "mq:970681b324ddeb1e",
+    "label": "Party leaders of the United States House of Representatives",
+    "gold": false
+   },
+   {
+    "id": "mq:ec8720069c3f38c5",
+    "label": "1946 United States House of Representatives elections",
+    "gold": false
+   },
+   {
+    "id": "mq:31cc6ab3ffa4f12b",
+    "label": "Party leaders of the United States House of Representatives",
+    "gold": false
+   },
+   {
+    "id": "mq:3a2ec577ede3fe2f",
+    "label": "Parliament",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

@@ -1,0 +1,409 @@
+{
+ "qid": "card:REM-1332",
+ "set": "cards",
+ "question": "What was done about this, and why: packages: share a private piece by link?",
+ "gold": [
+  {
+   "id": "commit/c99fc86b28",
+   "label": "commit c99fc86: p8-subsystems follows extension 0.2.42 (REM-1332 train)",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/f045bb9f9e",
+   "label": "commit f045bb9: board: file REM-1332 packages: share a private piece by link",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-1332.md#1",
+   "label": "board/cards/REM-1332.md",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-574.md#7",
+   "label": "board/cards/REM-574.md \u203a Log",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 3
+  },
+  {
+   "id": "board/cards/REM-1337.md#4",
+   "label": "board/cards/REM-1337.md \u203a Done when",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "board/cards/REM-783.md#4",
+   "label": "board/cards/REM-783.md \u203a Done when",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 3
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/c99fc86b28",
+    "label": "commit c99fc86: p8-subsystems follows extension 0.2.42 (REM-1332 train)",
+    "role": "gold"
+   },
+   {
+    "id": "commit/f045bb9f9e",
+    "label": "commit f045bb9: board: file REM-1332 packages: share a private piece by link",
+    "role": "seed"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/c99fc86b28",
+    "b": "commit/f045bb9f9e",
+    "via": [
+     {
+      "kind": "near",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "rem 1332",
+      "width": 14
+     },
+     {
+      "kind": "term",
+      "key": "1332",
+      "width": 27
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [],
+  "entry": {
+   "seed": "commit/f045bb9f9e",
+   "gold": "commit/c99fc86b28",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 1739,
+  "within_2_doors": 34156,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "commit/f6fbf16e2a",
+    "label": "commit f6fbf16: board: james takes REM-1332",
+    "p": 0.005001566480234955,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1332.md#2",
+    "label": "board/cards/REM-1332.md \u203a Log",
+    "p": 0.004210126168508961,
+    "gold": false
+   },
+   {
+    "id": "commit/a31f0dcae1",
+    "label": "commit a31f0dc: board: note on REM-1332",
+    "p": 0.0031161186764420323,
+    "gold": false
+   },
+   {
+    "id": "commit/0734ef3a67",
+    "label": "commit 0734ef3: board: REM-1332 in-progress \u2192 done",
+    "p": 0.0029724599852332468,
+    "gold": false
+   },
+   {
+    "id": "commit/df4c21082a",
+    "label": "commit df4c210: board: note on REM-1332",
+    "p": 0.00283805067091261,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-653.md#2",
+    "label": "board/cards/REM-653.md \u203a Goal",
+    "p": 0.002824985004336703,
+    "gold": false
+   },
+   {
+    "id": "commit/c99fc86b28",
+    "label": "commit c99fc86: p8-subsystems follows extension 0.2.42 (REM-1332 train)",
+    "p": 0.0026882306143365584,
+    "gold": true
+   },
+   {
+    "id": "output/ideas-flow-review-2026-09-19/review.md#14",
+    "label": "output/ideas-flow-review-2026-09-19/review.md \u203a B \u00b7 What the website and wireframes currently say",
+    "p": 0.002457436101206185,
+    "gold": false
+   },
+   {
+    "id": "commit/b17732e5bc",
+    "label": "commit b17732e: board: watch samples 1 process(es) on Sirshs-MacBook-Air",
+    "p": 0.002452439699638949,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1337.md#3",
+    "label": "board/cards/REM-1337.md \u203a Evidence",
+    "p": 0.002132529662794449,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/draft-review-invitations.md#6",
+    "label": "specs/percolate-application/draft-review-invitations.md \u203a Not built yet",
+    "p": 0.0017860828263948666,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-783.md#3",
+    "label": "board/cards/REM-783.md \u203a Evidence",
+    "p": 0.0017217968854554896,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-783.md#5",
+    "label": "board/cards/REM-783.md \u203a Scope",
+    "p": 0.0017055995283631754,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261108-175424-82b4.md#1",
+    "label": "board/messages/M-20261108-175424-82b4.md",
+    "p": 0.0015751219314012795,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/draft-review-invitations.md#2",
+    "label": "specs/percolate-application/draft-review-invitations.md \u203a What it does",
+    "p": 0.0015489239308458139,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1337.md#5",
+    "label": "board/cards/REM-1337.md \u203a Log",
+    "p": 0.0015373188499181914,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-573.md#7",
+    "label": "board/cards/REM-573.md \u203a Log",
+    "p": 0.0014430420686138096,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/drafter.md#53",
+    "label": "specs/percolate-application/drafter.md \u203a A critic holds together, and critics combine (REM-798)",
+    "p": 0.0014309292555978368,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1331.md#6",
+    "label": "board/cards/REM-1331.md \u203a Log",
+    "p": 0.0012388426300848116,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261108-201040-a6d3.md#1",
+    "label": "board/messages/M-20261108-201040-a6d3.md",
+    "p": 0.0012111858158994164,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/f045bb9f9e",
+   "label": "commit f045bb9: board: file REM-1332 packages: share a private piece by link",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-1332.md#1",
+   "label": "board/cards/REM-1332.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-574.md#7",
+   "label": "board/cards/REM-574.md \u203a Log",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-1337.md#4",
+   "label": "board/cards/REM-1337.md \u203a Done when",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-783.md#4",
+   "label": "board/cards/REM-783.md \u203a Done when",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/a31f0dcae1",
+   "label": "commit a31f0dc: board: note on REM-1332",
+   "wave": 1,
+   "via": "term:1332",
+   "gold": false
+  },
+  {
+   "id": "board/messages/M-20261108-201040-a6d3.md#1",
+   "label": "board/messages/M-20261108-201040-a6d3.md",
+   "wave": 1,
+   "via": "term:1332",
+   "gold": false
+  },
+  {
+   "id": "commit/0734ef3a67",
+   "label": "commit 0734ef3: board: REM-1332 in-progress \u2192 done",
+   "wave": 1,
+   "via": "term:1332",
+   "gold": false
+  },
+  {
+   "id": "commit/c99fc86b28",
+   "label": "commit c99fc86: p8-subsystems follows extension 0.2.42 (REM-1332 train)",
+   "wave": 1,
+   "via": "term:1332",
+   "gold": true
+  },
+  {
+   "id": "commit/f6fbf16e2a",
+   "label": "commit f6fbf16: board: james takes REM-1332",
+   "wave": 1,
+   "via": "term:1332",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "commit/f6fbf16e2a",
+    "label": "commit f6fbf16: board: james takes REM-1332",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1332.md#2",
+    "label": "board/cards/REM-1332.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "commit/a31f0dcae1",
+    "label": "commit a31f0dc: board: note on REM-1332",
+    "gold": false
+   },
+   {
+    "id": "commit/0734ef3a67",
+    "label": "commit 0734ef3: board: REM-1332 in-progress \u2192 done",
+    "gold": false
+   },
+   {
+    "id": "commit/df4c21082a",
+    "label": "commit df4c210: board: note on REM-1332",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "board/cards/REM-1332.md#2",
+    "label": "board/cards/REM-1332.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-653.md#2",
+    "label": "board/cards/REM-653.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/draft-review-invitations.md#2",
+    "label": "specs/percolate-application/draft-review-invitations.md \u203a What it does",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/draft-review-invitations.md#6",
+    "label": "specs/percolate-application/draft-review-invitations.md \u203a Not built yet",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1337.md#3",
+    "label": "board/cards/REM-1337.md \u203a Evidence",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/0734ef3a67",
+    "label": "commit 0734ef3: board: REM-1332 in-progress \u2192 done",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261108-201040-a6d3.md#1",
+    "label": "board/messages/M-20261108-201040-a6d3.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-653.md#2",
+    "label": "board/cards/REM-653.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/draft-review-invitations.md#6",
+    "label": "specs/percolate-application/draft-review-invitations.md \u203a Not built yet",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261108-175424-82b4.md#1",
+    "label": "board/messages/M-20261108-175424-82b4.md",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "specs/percolate-application/agent-onboarding.md#4",
+    "label": "specs/percolate-application/agent-onboarding.md \u203a Where the lines come from",
+    "gold": false
+   },
+   {
+    "id": "commit/bb84bde4f1",
+    "label": "commit bb84bde: REM-1337: the spec for inviting a reviewer to a private long-form piece, and the card's evidence and don",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/search.md#7",
+    "label": "specs/percolate-application/search.md \u203a 3a. Searching the packages you can read (built)",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-427.md#3",
+    "label": "board/cards/REM-427.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-830.md#4",
+    "label": "board/cards/REM-830.md \u203a Done when",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

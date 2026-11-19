@@ -1,0 +1,434 @@
+{
+ "qid": "RW:3hop2__27069_92991_76291",
+ "set": "mq",
+ "question": "When did the party of Oklahoma's US Senators take control of the body determining the rules of the US House and US Senate?",
+ "gold": [
+  {
+   "id": "mq:817fd0ee314209b6",
+   "label": "Standing Rules of the United States Senate",
+   "seed": false
+  },
+  {
+   "id": "mq:e3de0ee582ca38ce",
+   "label": "2014 United States Senate elections",
+   "seed": false
+  },
+  {
+   "id": "mq:f2c97cae90522a0d",
+   "label": "Oklahoma",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:7396b63081b53343",
+   "label": "Party leaders of the United States Senate",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:a3310e356fb14f30",
+   "label": "Georgia General Assembly",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:8096abfa1b5b00e9",
+   "label": "Nuclear option",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:470b106e686d6668",
+   "label": "Filibuster in the United States Senate",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:f2c97cae90522a0d",
+   "label": "Oklahoma",
+   "rank": 5,
+   "gold": true,
+   "doors_to_gold": 0
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:817fd0ee314209b6",
+    "label": "Standing Rules of the United States Senate",
+    "role": "gold"
+   },
+   {
+    "id": "mq:e3de0ee582ca38ce",
+    "label": "2014 United States Senate elections",
+    "role": "gold"
+   },
+   {
+    "id": "mq:f2c97cae90522a0d",
+    "label": "Oklahoma",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:817fd0ee314209b6",
+    "b": "mq:e3de0ee582ca38ce",
+    "via": [
+     {
+      "kind": "term",
+      "key": "states senate",
+      "width": 23
+     }
+    ]
+   },
+   {
+    "a": "mq:e3de0ee582ca38ce",
+    "b": "mq:f2c97cae90522a0d",
+    "via": [
+     {
+      "kind": "near",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "republicans",
+      "width": 37
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   2,
+   1
+  ],
+  "entry": {
+   "seed": "mq:f2c97cae90522a0d",
+   "gold": "mq:f2c97cae90522a0d",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 3151,
+  "within_2_doors": 17931,
+  "gold_within_1": 2,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "mq:a3141b568174cbe5",
+    "label": "Cabinet of the United States",
+    "p": 0.003635548374346817,
+    "gold": false
+   },
+   {
+    "id": "mq:cd9d3e67161c7ade",
+    "label": "President pro tempore of the United States Senate",
+    "p": 0.0030736062446834484,
+    "gold": false
+   },
+   {
+    "id": "mq:cdaab90f373e4a4b",
+    "label": "Georgia (U.S. state)",
+    "p": 0.003053071072316674,
+    "gold": false
+   },
+   {
+    "id": "mq:f2a60931baaaf042",
+    "label": "2010 United States House of Representatives elections",
+    "p": 0.0029621861735597715,
+    "gold": false
+   },
+   {
+    "id": "mq:0c65af2f01cc2ba6",
+    "label": "State legislature (United States)",
+    "p": 0.0027038408657179564,
+    "gold": false
+   },
+   {
+    "id": "mq:4c3beaa0b0364682",
+    "label": "1827 State of the Union Address",
+    "p": 0.0021583372452534683,
+    "gold": false
+   },
+   {
+    "id": "mq:5c469bd172ca48b7",
+    "label": "Somalia at the 2008 Summer Olympics",
+    "p": 0.0013604569807461545,
+    "gold": false
+   },
+   {
+    "id": "mq:981b5a11e148ac6b",
+    "label": "Arizona",
+    "p": 0.0011217140896943136,
+    "gold": false
+   },
+   {
+    "id": "mq:7f62ce334b888749",
+    "label": "Texas House of Representatives",
+    "p": 0.0010939206729988348,
+    "gold": false
+   },
+   {
+    "id": "mq:dbd1a5e22c753c9d",
+    "label": "Maine",
+    "p": 0.001092634243542427,
+    "gold": false
+   },
+   {
+    "id": "mq:0f9823720614fd32",
+    "label": "Bia\u0142ystok",
+    "p": 0.0010505744744350883,
+    "gold": false
+   },
+   {
+    "id": "mq:970681b324ddeb1e",
+    "label": "Party leaders of the United States House of Representatives",
+    "p": 0.0009859364861905895,
+    "gold": false
+   },
+   {
+    "id": "mq:d52a70548c693759",
+    "label": "National Assembly of Pakistan",
+    "p": 0.0009463062690182288,
+    "gold": false
+   },
+   {
+    "id": "mq:4c2d738e1d618ac9",
+    "label": "Girl",
+    "p": 0.0009325253428988678,
+    "gold": false
+   },
+   {
+    "id": "mq:c7629b1a72c705db",
+    "label": "National Assembly of Pakistan",
+    "p": 0.0009225176941456966,
+    "gold": false
+   },
+   {
+    "id": "mq:e5dde76779e70fa2",
+    "label": "Vice President of the United States",
+    "p": 0.0008948067250650135,
+    "gold": false
+   },
+   {
+    "id": "mq:f9e19ff9964ed9d2",
+    "label": "Speaker of the United States House of Representatives",
+    "p": 0.0008593244906744497,
+    "gold": false
+   },
+   {
+    "id": "mq:f4af634e20910e06",
+    "label": "Founding Fathers of the United States",
+    "p": 0.0008461250295319037,
+    "gold": false
+   },
+   {
+    "id": "mq:91bc105de715ebb8",
+    "label": "Fifth Amendment to the United States Constitution",
+    "p": 0.000844208410936036,
+    "gold": false
+   },
+   {
+    "id": "mq:c1cf9033abb09743",
+    "label": "2004 United States presidential election",
+    "p": 0.0008361161754395965,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:7396b63081b53343",
+   "label": "Party leaders of the United States Senate",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:a3310e356fb14f30",
+   "label": "Georgia General Assembly",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:8096abfa1b5b00e9",
+   "label": "Nuclear option",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:470b106e686d6668",
+   "label": "Filibuster in the United States Senate",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:f2c97cae90522a0d",
+   "label": "Oklahoma",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:b2eaa9f1ccd1804b",
+   "label": "2018 Wisconsin gubernatorial election",
+   "wave": 1,
+   "via": "term:states senate",
+   "gold": false
+  },
+  {
+   "id": "mq:9cf3c9eecf3280fb",
+   "label": "Party leaders of the United States Senate",
+   "wave": 1,
+   "via": "term:states senate",
+   "gold": false
+  },
+  {
+   "id": "mq:31030e3ff52b4592",
+   "label": "2018 United States Senate elections",
+   "wave": 1,
+   "via": "term:states senate",
+   "gold": false
+  },
+  {
+   "id": "mq:e3de0ee582ca38ce",
+   "label": "2014 United States Senate elections",
+   "wave": 1,
+   "via": "term:states senate",
+   "gold": true
+  },
+  {
+   "id": "mq:1c78d015d918da05",
+   "label": "2018 United States elections",
+   "wave": 1,
+   "via": "term:states senate",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:a3141b568174cbe5",
+    "label": "Cabinet of the United States",
+    "gold": false
+   },
+   {
+    "id": "mq:cd9d3e67161c7ade",
+    "label": "President pro tempore of the United States Senate",
+    "gold": false
+   },
+   {
+    "id": "mq:cdaab90f373e4a4b",
+    "label": "Georgia (U.S. state)",
+    "gold": false
+   },
+   {
+    "id": "mq:f2a60931baaaf042",
+    "label": "2010 United States House of Representatives elections",
+    "gold": false
+   },
+   {
+    "id": "mq:0c65af2f01cc2ba6",
+    "label": "State legislature (United States)",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:cd9d3e67161c7ade",
+    "label": "President pro tempore of the United States Senate",
+    "gold": false
+   },
+   {
+    "id": "mq:f2a60931baaaf042",
+    "label": "2010 United States House of Representatives elections",
+    "gold": false
+   },
+   {
+    "id": "mq:cdaab90f373e4a4b",
+    "label": "Georgia (U.S. state)",
+    "gold": false
+   },
+   {
+    "id": "mq:d52a70548c693759",
+    "label": "National Assembly of Pakistan",
+    "gold": false
+   },
+   {
+    "id": "mq:c7629b1a72c705db",
+    "label": "National Assembly of Pakistan",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:cdaab90f373e4a4b",
+    "label": "Georgia (U.S. state)",
+    "gold": false
+   },
+   {
+    "id": "mq:f2a60931baaaf042",
+    "label": "2010 United States House of Representatives elections",
+    "gold": false
+   },
+   {
+    "id": "mq:cd9d3e67161c7ade",
+    "label": "President pro tempore of the United States Senate",
+    "gold": false
+   },
+   {
+    "id": "mq:dbd1a5e22c753c9d",
+    "label": "Maine",
+    "gold": false
+   },
+   {
+    "id": "mq:981b5a11e148ac6b",
+    "label": "Arizona",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:817fd0ee314209b6",
+    "label": "Standing Rules of the United States Senate",
+    "gold": true
+   },
+   {
+    "id": "mq:a0d1b40c6b5ef859",
+    "label": "Liberia",
+    "gold": false
+   },
+   {
+    "id": "mq:7b9a448346655265",
+    "label": "Party leaders of the United States Senate",
+    "gold": false
+   },
+   {
+    "id": "mq:e0cb042bfd92b652",
+    "label": "Montana",
+    "gold": false
+   },
+   {
+    "id": "mq:61cb5a458dddb036",
+    "label": "110th United States Congress",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.5
+ }
+}

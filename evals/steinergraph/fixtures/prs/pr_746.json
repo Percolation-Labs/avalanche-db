@@ -1,0 +1,491 @@
+{
+ "qid": "pr:746",
+ "set": "prs",
+ "question": "What work went into this, and why: Postmortem: why the walk beat search in October and not this week?",
+ "gold": [
+  {
+   "id": "commit/1d7f3d08e3",
+   "label": "commit 1d7f3d0: Postmortem: the edge selector on Jev's gain rounds, 2 of 5 scored (1 chosen); stopped under memory press",
+   "seed": false
+  },
+  {
+   "id": "commit/9805f3dbfe",
+   "label": "commit 9805f3d: Postmortem: james's spot-check -- \u00a73b is selected on Jev's wins (miss rounds are the open test); misses ",
+   "seed": false
+  },
+  {
+   "id": "commit/d4d55bbcc4",
+   "label": "commit d4d55bb: Postmortem: third gain round scored (sazerac: 109th of 232, A .52); 1 of 3 chosen, 'not the decision mod",
+   "seed": false
+  },
+  {
+   "id": "commit/edd39ff12d",
+   "label": "commit edd39ff: Postmortem: the published MuSiQue walk-vs-search result replays exactly in today's harness (.64 vs .44, ",
+   "seed": false
+  },
+  {
+   "id": "commit/f9055e0702",
+   "label": "commit f9055e0: Postmortem: drop the regenerable attrib.jsonl (attrib.py prints it at $0)",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/f69e9d3a21",
+   "label": "commit f69e9d3: Merge pull request #746 from Percolation-Labs/bill/walk-postmortem",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "meta/lab/results/walk-vs-search/POSTMORTEM.md#2",
+   "label": "meta/lab/results/walk-vs-search/POSTMORTEM.md \u203a Why the walk beat search in October and not this week: a postmortem (bil",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "meta/lab/results/walk-vs-search/POSTMORTEM.md#1",
+   "label": "meta/lab/results/walk-vs-search/POSTMORTEM.md \u203a Why the walk beat search in October and not this week: a postmortem (bil",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "board/messages/M-20261115-090446-da2d.md#1",
+   "label": "board/messages/M-20261115-090446-da2d.md",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "meta/spikes/2026-10-17-iterative-query/results/equal-rows-curve.txt#1",
+   "label": "meta/spikes/2026-10-17-iterative-query/results/equal-rows-curve.txt",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 2
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "board/messages/M-20261115-090446-da2d.md#1",
+    "label": "board/messages/M-20261115-090446-da2d.md",
+    "role": "seed"
+   },
+   {
+    "id": "commit/1d7f3d08e3",
+    "label": "commit 1d7f3d0: Postmortem: the edge selector on Jev's gain rounds, 2 of 5 scored (1 chosen); stopped under memory press",
+    "role": "gold"
+   },
+   {
+    "id": "commit/9805f3dbfe",
+    "label": "commit 9805f3d: Postmortem: james's spot-check -- \u00a73b is selected on Jev's wins (miss rounds are the open test); misses ",
+    "role": "gold"
+   },
+   {
+    "id": "commit/d4d55bbcc4",
+    "label": "commit d4d55bb: Postmortem: third gain round scored (sazerac: 109th of 232, A .52); 1 of 3 chosen, 'not the decision mod",
+    "role": "gold"
+   },
+   {
+    "id": "commit/edd39ff12d",
+    "label": "commit edd39ff: Postmortem: the published MuSiQue walk-vs-search result replays exactly in today's harness (.64 vs .44, ",
+    "role": "gold"
+   },
+   {
+    "id": "commit/f9055e0702",
+    "label": "commit f9055e0: Postmortem: drop the regenerable attrib.jsonl (attrib.py prints it at $0)",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "board/messages/M-20261115-090446-da2d.md#1",
+    "b": "commit/d4d55bbcc4",
+    "via": [
+     {
+      "kind": "near",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "sazerac",
+      "width": 8
+     }
+    ]
+   },
+   {
+    "a": "commit/1d7f3d08e3",
+    "b": "commit/d4d55bbcc4",
+    "via": [
+     {
+      "kind": "beside"
+     }
+    ]
+   },
+   {
+    "a": "commit/1d7f3d08e3",
+    "b": "commit/f9055e0702",
+    "via": [
+     {
+      "kind": "beside"
+     }
+    ]
+   },
+   {
+    "a": "commit/9805f3dbfe",
+    "b": "commit/d4d55bbcc4",
+    "via": [
+     {
+      "kind": "beside"
+     }
+    ]
+   },
+   {
+    "a": "commit/edd39ff12d",
+    "b": "commit/f9055e0702",
+    "via": [
+     {
+      "kind": "beside"
+     }
+    ]
+   }
+  ],
+  "cost": 5,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   2,
+   1,
+   1,
+   1,
+   1,
+   2,
+   3,
+   2,
+   2,
+   1
+  ],
+  "entry": {
+   "seed": "board/messages/M-20261115-090446-da2d.md#1",
+   "gold": "commit/d4d55bbcc4",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 1562,
+  "within_2_doors": 32344,
+  "gold_within_1": 4,
+  "gold_within_2": 1,
+  "top_U": [
+   {
+    "id": "board/messages/M-20261115-083045-c2cd.md#1",
+    "label": "board/messages/M-20261115-083045-c2cd.md",
+    "p": 0.008136292555754352,
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-10-17-iterative-query/dream/equal_rows.py#1",
+    "label": "meta/spikes/2026-10-17-iterative-query/dream/equal_rows.py",
+    "p": 0.005120298910242895,
+    "gold": false
+   },
+   {
+    "id": "commit/639fbaf33f",
+    "label": "commit 639fbaf: Merge james/midb-musique-judge: the records behind the MIDB paper's MuSiQue figures (CLAIMS 1.18, 2.19)",
+    "p": 0.004257081212565564,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/walk-vs-search/POSTMORTEM.md#9",
+    "label": "meta/lab/results/walk-vs-search/POSTMORTEM.md \u203a 3b. This week's decision model, on the rounds where Jev made the gains",
+    "p": 0.0035519691964139336,
+    "gold": false
+   },
+   {
+    "id": "commit/69a046f2fc",
+    "label": "commit 69a046f: board: bill messages sirsh",
+    "p": 0.003549939209318711,
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-10-17-iterative-query/DREAM.md#17",
+    "label": "meta/spikes/2026-10-17-iterative-query/DREAM.md \u203a Stage 3, part 1's result (computed, then stopped by Sirsh's reorientat",
+    "p": 0.0034454192682477507,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/walk-vs-search/POSTMORTEM.md#4",
+    "label": "meta/lab/results/walk-vs-search/POSTMORTEM.md \u203a 1. The published walk-vs-search results (james, from the Percolate piece",
+    "p": 0.0032214197099150114,
+    "gold": false
+   },
+   {
+    "id": "commit/1e13aa08a6",
+    "label": "commit 1e13aa0: board: bill messages sirsh",
+    "p": 0.0029274480352932367,
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-10-17-iterative-query/dream/equal_rows.py#2",
+    "label": "meta/spikes/2026-10-17-iterative-query/dream/equal_rows.py",
+    "p": 0.002880019949473001,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-miss-census/result.txt#3",
+    "label": "meta/lab/results/q4-miss-census/result.txt",
+    "p": 0.0028180577253027516,
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-10-17-iterative-query/DREAM.md#11",
+    "label": "meta/spikes/2026-10-17-iterative-query/DREAM.md \u203a Round 2's result: Build claims FAIL gate 2 on reach again",
+    "p": 0.002591058942113886,
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-10-17-iterative-query/DREAM.md#16",
+    "label": "meta/spikes/2026-10-17-iterative-query/DREAM.md \u203a Stage 3, part 1: the equal-rows curve (rule fixed before it runs)",
+    "p": 0.002449936986073197,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/walk-vs-search/POSTMORTEM.md#3",
+    "label": "meta/lab/results/walk-vs-search/POSTMORTEM.md \u203a 1. The published walk-vs-search results (james, from the Percolate piece",
+    "p": 0.00217613174684214,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/walk-vs-search/POSTMORTEM.md#7",
+    "label": "meta/lab/results/walk-vs-search/POSTMORTEM.md \u203a 3. Rerun of P1 in today's harness (bill)",
+    "p": 0.00195972962444152,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261029-143207-f7d3.md#1",
+    "label": "board/messages/M-20261029-143207-f7d3.md",
+    "p": 0.0019028415357864562,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261029-143106-73ae.md#1",
+    "label": "board/messages/M-20261029-143106-73ae.md",
+    "p": 0.0018875020668504552,
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-10-29-lead-information/sweep/LEAN-SWEEP.md#8",
+    "label": "meta/spikes/2026-10-29-lead-information/sweep/LEAN-SWEEP.md \u203a Decided before running (sally's review, 14:38Z)",
+    "p": 0.0017570648664395352,
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-10-29-lead-information/sweep/LEAN-SWEEP.md#1",
+    "label": "meta/spikes/2026-10-29-lead-information/sweep/LEAN-SWEEP.md \u203a The lean V0 sweep: spend the least to prove the most (REM-",
+    "p": 0.0017036292980994884,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261031-110952-d24e.md#1",
+    "label": "board/messages/M-20261031-110952-d24e.md",
+    "p": 0.0016862549295148105,
+    "gold": false
+   },
+   {
+    "id": "commit/f9f6ca5738",
+    "label": "commit f9f6ca5: Merge pull request #747 from Percolation-Labs/james/merge-musique-judge",
+    "p": 0.0016700587596447396,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/f69e9d3a21",
+   "label": "commit f69e9d3: Merge pull request #746 from Percolation-Labs/bill/walk-postmortem",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/walk-vs-search/POSTMORTEM.md#2",
+   "label": "meta/lab/results/walk-vs-search/POSTMORTEM.md \u203a Why the walk beat search in October and not this week: a postmortem (bil",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/walk-vs-search/POSTMORTEM.md#1",
+   "label": "meta/lab/results/walk-vs-search/POSTMORTEM.md \u203a Why the walk beat search in October and not this week: a postmortem (bil",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/messages/M-20261115-090446-da2d.md#1",
+   "label": "board/messages/M-20261115-090446-da2d.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/spikes/2026-10-17-iterative-query/results/equal-rows-curve.txt#1",
+   "label": "meta/spikes/2026-10-17-iterative-query/results/equal-rows-curve.txt",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/messages/M-20261115-090808-4ec7.md#1",
+   "label": "board/messages/M-20261115-090808-4ec7.md",
+   "wave": 1,
+   "via": "term:search postmortem",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/walk-vs-search/POSTMORTEM.md#6",
+   "label": "meta/lab/results/walk-vs-search/POSTMORTEM.md \u203a 2. What differs this week",
+   "wave": 1,
+   "via": "term:search postmortem",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/walk-vs-search/POSTMORTEM.md#10",
+   "label": "meta/lab/results/walk-vs-search/POSTMORTEM.md \u203a 3b. This week's decision model, on the rounds where Jev made the gains",
+   "wave": 1,
+   "via": "term:search postmortem",
+   "gold": false
+  },
+  {
+   "id": "commit/639fbaf33f",
+   "label": "commit 639fbaf: Merge james/midb-musique-judge: the records behind the MIDB paper's MuSiQue figures (CLAIMS 1.18, 2.19)",
+   "wave": 1,
+   "via": "term:search postmortem",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/walk-vs-search/POSTMORTEM.md#13",
+   "label": "meta/lab/results/walk-vs-search/POSTMORTEM.md \u203a 5. Published results and this week's nulls, by presentation and choice",
+   "wave": 1,
+   "via": "term:search postmortem",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "board/messages/M-20261115-083045-c2cd.md#1",
+    "label": "board/messages/M-20261115-083045-c2cd.md",
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-10-17-iterative-query/dream/equal_rows.py#1",
+    "label": "meta/spikes/2026-10-17-iterative-query/dream/equal_rows.py",
+    "gold": false
+   },
+   {
+    "id": "commit/639fbaf33f",
+    "label": "commit 639fbaf: Merge james/midb-musique-judge: the records behind the MIDB paper's MuSiQue figures (CLAIMS 1.18, 2.19)",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/walk-vs-search/POSTMORTEM.md#9",
+    "label": "meta/lab/results/walk-vs-search/POSTMORTEM.md \u203a 3b. This week's decision model, on the rounds where Jev made the gains",
+    "gold": false
+   },
+   {
+    "id": "commit/69a046f2fc",
+    "label": "commit 69a046f: board: bill messages sirsh",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "board/messages/M-20261115-083045-c2cd.md#1",
+    "label": "board/messages/M-20261115-083045-c2cd.md",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/walk-vs-search/POSTMORTEM.md#9",
+    "label": "meta/lab/results/walk-vs-search/POSTMORTEM.md \u203a 3b. This week's decision model, on the rounds where Jev made the gains",
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-10-17-iterative-query/dream/equal_rows.py#1",
+    "label": "meta/spikes/2026-10-17-iterative-query/dream/equal_rows.py",
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-10-17-iterative-query/dream/equal_rows.py#2",
+    "label": "meta/spikes/2026-10-17-iterative-query/dream/equal_rows.py",
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-10-17-iterative-query/DREAM.md#16",
+    "label": "meta/spikes/2026-10-17-iterative-query/DREAM.md \u203a Stage 3, part 1: the equal-rows curve (rule fixed before it runs)",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "meta/lab/results/walk-vs-search/POSTMORTEM.md#4",
+    "label": "meta/lab/results/walk-vs-search/POSTMORTEM.md \u203a 1. The published walk-vs-search results (james, from the Percolate piece",
+    "gold": false
+   },
+   {
+    "id": "commit/edd39ff12d",
+    "label": "commit edd39ff: Postmortem: the published MuSiQue walk-vs-search result replays exactly in today's harness (.64 vs .44, ",
+    "gold": true
+   },
+   {
+    "id": "meta/spikes/2026-10-17-iterative-query/dream/equal_rows.py#2",
+    "label": "meta/spikes/2026-10-17-iterative-query/dream/equal_rows.py",
+    "gold": false
+   },
+   {
+    "id": "commit/69a046f2fc",
+    "label": "commit 69a046f: board: bill messages sirsh",
+    "gold": false
+   },
+   {
+    "id": "commit/1e13aa08a6",
+    "label": "commit 1e13aa0: board: bill messages sirsh",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "meta/lab/results/walk-vs-search/POSTMORTEM.md#6",
+    "label": "meta/lab/results/walk-vs-search/POSTMORTEM.md \u203a 2. What differs this week",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/walk-vs-search/POSTMORTEM.md#5",
+    "label": "meta/lab/results/walk-vs-search/POSTMORTEM.md \u203a 2. What differs this week",
+    "gold": false
+   },
+   {
+    "id": "commit/59dcfb5cac",
+    "label": "commit 59dcfb5: research-package: a package records how deep the work went, turns and search depth (REM-548)",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261115-082221-60c4.md#1",
+    "label": "board/messages/M-20261115-082221-60c4.md",
+    "gold": false
+   },
+   {
+    "id": "specs/design/muddling-through-walkthrough.md#1",
+    "label": "specs/design/muddling-through-walkthrough.md \u203a Muddling Through: the walkthrough",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.2,
+  "S": 0.0
+ }
+}

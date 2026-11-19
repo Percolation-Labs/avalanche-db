@@ -1,0 +1,450 @@
+{
+ "qid": "RW:3hop1__617062_127905_46748",
+ "set": "mq",
+ "question": "What is the longest win streak in the league that Jim Wilson's team plays for?",
+ "gold": [
+  {
+   "id": "mq:55df87ece1aa512b",
+   "label": "Jim Wilson (first baseman)",
+   "seed": false
+  },
+  {
+   "id": "mq:7b5814a15ada3ace",
+   "label": "List of Major League Baseball longest winning streaks",
+   "seed": true
+  },
+  {
+   "id": "mq:e5626003ff4b1e18",
+   "label": "Cleveland Indians",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:de6d2df7568ba746",
+   "label": "List of Major League Baseball longest winning streaks",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:f57e794895999f13",
+   "label": "Winning streak",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:7b5814a15ada3ace",
+   "label": "List of Major League Baseball longest winning streaks",
+   "rank": 3,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:59ef198c7d78b88d",
+   "label": "Army\u2013Navy Game",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:41230fe222a5fd42",
+   "label": "Michigan\u2013Michigan State football rivalry",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:55df87ece1aa512b",
+    "label": "Jim Wilson (first baseman)",
+    "role": "gold"
+   },
+   {
+    "id": "mq:7b5814a15ada3ace",
+    "label": "List of Major League Baseball longest winning streaks",
+    "role": "gold"
+   },
+   {
+    "id": "mq:e5626003ff4b1e18",
+    "label": "Cleveland Indians",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:55df87ece1aa512b",
+    "b": "mq:7b5814a15ada3ace",
+    "via": [
+     {
+      "kind": "term",
+      "key": "indians",
+      "width": 65
+     }
+    ]
+   },
+   {
+    "a": "mq:7b5814a15ada3ace",
+    "b": "mq:e5626003ff4b1e18",
+    "via": [
+     {
+      "kind": "term",
+      "key": "cleveland indians",
+      "width": 21
+     },
+     {
+      "kind": "term",
+      "key": "american league",
+      "width": 44
+     },
+     {
+      "kind": "term",
+      "key": "indians",
+      "width": 65
+     },
+     {
+      "kind": "term",
+      "key": "mlb",
+      "width": 92
+     },
+     {
+      "kind": "term",
+      "key": "cleveland",
+      "width": 93
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   1,
+   1
+  ],
+  "entry": {
+   "seed": "mq:7b5814a15ada3ace",
+   "gold": "mq:7b5814a15ada3ace",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 1507,
+  "within_2_doors": 19557,
+  "gold_within_1": 2,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "mq:ba620a4bb81e0f18",
+    "label": "Michigan\u2013Michigan State football rivalry",
+    "p": 0.016235006079859858,
+    "gold": false
+   },
+   {
+    "id": "mq:eef76c79773591e5",
+    "label": "Michigan\u2013Notre Dame football rivalry",
+    "p": 0.0054181632763373126,
+    "gold": false
+   },
+   {
+    "id": "mq:680250ddc600f473",
+    "label": "Michigan State\u2013Notre Dame football rivalry",
+    "p": 0.004236283331703765,
+    "gold": false
+   },
+   {
+    "id": "mq:a729d779456d4814",
+    "label": "Florida\u2013Georgia football rivalry",
+    "p": 0.004148850072230289,
+    "gold": false
+   },
+   {
+    "id": "mq:2827ea6ee9616793",
+    "label": "Chennai Super Kings\u2013Mumbai Indians rivalry",
+    "p": 0.0037840763512173602,
+    "gold": false
+   },
+   {
+    "id": "mq:6405098119b2217e",
+    "label": "List of National Basketball Association longest winning streaks",
+    "p": 0.0034254532203124854,
+    "gold": false
+   },
+   {
+    "id": "mq:b675b4f74333762e",
+    "label": "Cardinals\u2013Cubs rivalry",
+    "p": 0.0033413947113475986,
+    "gold": false
+   },
+   {
+    "id": "mq:b5a3f3adf5b7c32d",
+    "label": "List of Major League Baseball All-Star Games",
+    "p": 0.00319233797446018,
+    "gold": false
+   },
+   {
+    "id": "mq:3e64bfafeaf7c226",
+    "label": "Alabama\u2013Georgia football rivalry",
+    "p": 0.0028465418111759356,
+    "gold": false
+   },
+   {
+    "id": "mq:92cef82692951f3d",
+    "label": "Cavaliers\u2013Warriors rivalry",
+    "p": 0.0027291364077095376,
+    "gold": false
+   },
+   {
+    "id": "mq:d6753d4b76c0d58b",
+    "label": "Cowboys\u2013Steelers rivalry",
+    "p": 0.0026214621496031655,
+    "gold": false
+   },
+   {
+    "id": "mq:a724a2cdd37d6fa8",
+    "label": "UConn Huskies women's basketball",
+    "p": 0.0022943973006720056,
+    "gold": false
+   },
+   {
+    "id": "mq:48421f63691cdeea",
+    "label": "Longest NCAA Division I football winning streaks",
+    "p": 0.0022608976431155972,
+    "gold": false
+   },
+   {
+    "id": "mq:3027dfd420eaaf9c",
+    "label": "El Cl\u00e1sico",
+    "p": 0.002240268633541149,
+    "gold": false
+   },
+   {
+    "id": "mq:430da4437a1625cc",
+    "label": "El Cl\u00e1sico",
+    "p": 0.0020115470913141206,
+    "gold": false
+   },
+   {
+    "id": "mq:37a57ad38009a838",
+    "label": "Army\u2013Navy Game",
+    "p": 0.0018143023059839136,
+    "gold": false
+   },
+   {
+    "id": "mq:da4c63f830194de5",
+    "label": "Dugout (baseball)",
+    "p": 0.0017554484778358691,
+    "gold": false
+   },
+   {
+    "id": "mq:e20d638f37ca6723",
+    "label": "Chicago Cubs",
+    "p": 0.0016915062779620602,
+    "gold": false
+   },
+   {
+    "id": "mq:42c22434e263ecdd",
+    "label": "Chicago Cubs",
+    "p": 0.0016607397612634234,
+    "gold": false
+   },
+   {
+    "id": "mq:848b65a6a2c48215",
+    "label": "New England Patriots",
+    "p": 0.0014351158041824002,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:de6d2df7568ba746",
+   "label": "List of Major League Baseball longest winning streaks",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:f57e794895999f13",
+   "label": "Winning streak",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:7b5814a15ada3ace",
+   "label": "List of Major League Baseball longest winning streaks",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:59ef198c7d78b88d",
+   "label": "Army\u2013Navy Game",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:41230fe222a5fd42",
+   "label": "Michigan\u2013Michigan State football rivalry",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:2fbcae98087faab8",
+   "label": "East India Company",
+   "wave": 1,
+   "via": "term:indians",
+   "gold": false
+  },
+  {
+   "id": "mq:b0fda458c65fca83",
+   "label": "Multiracial Americans",
+   "wave": 1,
+   "via": "term:indians",
+   "gold": false
+  },
+  {
+   "id": "mq:c5b7a0602225d484",
+   "label": "Mexico City",
+   "wave": 1,
+   "via": "term:indians",
+   "gold": false
+  },
+  {
+   "id": "mq:7f920bafcd28121d",
+   "label": "Klickitat War",
+   "wave": 1,
+   "via": "term:indians",
+   "gold": false
+  },
+  {
+   "id": "mq:0052e2fb9adb99e9",
+   "label": "Camden Indians",
+   "wave": 1,
+   "via": "term:indians",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:ba620a4bb81e0f18",
+    "label": "Michigan\u2013Michigan State football rivalry",
+    "gold": false
+   },
+   {
+    "id": "mq:eef76c79773591e5",
+    "label": "Michigan\u2013Notre Dame football rivalry",
+    "gold": false
+   },
+   {
+    "id": "mq:680250ddc600f473",
+    "label": "Michigan State\u2013Notre Dame football rivalry",
+    "gold": false
+   },
+   {
+    "id": "mq:a729d779456d4814",
+    "label": "Florida\u2013Georgia football rivalry",
+    "gold": false
+   },
+   {
+    "id": "mq:2827ea6ee9616793",
+    "label": "Chennai Super Kings\u2013Mumbai Indians rivalry",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:ba620a4bb81e0f18",
+    "label": "Michigan\u2013Michigan State football rivalry",
+    "gold": false
+   },
+   {
+    "id": "mq:eef76c79773591e5",
+    "label": "Michigan\u2013Notre Dame football rivalry",
+    "gold": false
+   },
+   {
+    "id": "mq:680250ddc600f473",
+    "label": "Michigan State\u2013Notre Dame football rivalry",
+    "gold": false
+   },
+   {
+    "id": "mq:a729d779456d4814",
+    "label": "Florida\u2013Georgia football rivalry",
+    "gold": false
+   },
+   {
+    "id": "mq:b675b4f74333762e",
+    "label": "Cardinals\u2013Cubs rivalry",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:ba620a4bb81e0f18",
+    "label": "Michigan\u2013Michigan State football rivalry",
+    "gold": false
+   },
+   {
+    "id": "mq:eef76c79773591e5",
+    "label": "Michigan\u2013Notre Dame football rivalry",
+    "gold": false
+   },
+   {
+    "id": "mq:680250ddc600f473",
+    "label": "Michigan State\u2013Notre Dame football rivalry",
+    "gold": false
+   },
+   {
+    "id": "mq:2827ea6ee9616793",
+    "label": "Chennai Super Kings\u2013Mumbai Indians rivalry",
+    "gold": false
+   },
+   {
+    "id": "mq:a729d779456d4814",
+    "label": "Florida\u2013Georgia football rivalry",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:ba620a4bb81e0f18",
+    "label": "Michigan\u2013Michigan State football rivalry",
+    "gold": false
+   },
+   {
+    "id": "mq:52dd9db425db755f",
+    "label": "List of NBA franchise post-season streaks",
+    "gold": false
+   },
+   {
+    "id": "mq:3e64bfafeaf7c226",
+    "label": "Alabama\u2013Georgia football rivalry",
+    "gold": false
+   },
+   {
+    "id": "mq:6405098119b2217e",
+    "label": "List of National Basketball Association longest winning streaks",
+    "gold": false
+   },
+   {
+    "id": "mq:dbe0beecb2cd93b4",
+    "label": "Philadelphia Union",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

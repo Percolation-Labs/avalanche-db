@@ -1,0 +1,412 @@
+{
+ "qid": "RW:2hop__25788_990",
+ "set": "mq",
+ "question": "In which generation did iPod start providing compatibility with the object designed to standardize connection of computer peripherals?",
+ "gold": [
+  {
+   "id": "mq:09d0ba73f5e83f74",
+   "label": "USB",
+   "seed": true
+  },
+  {
+   "id": "mq:20bc40e90c18f37c",
+   "label": "IPod",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:09d0ba73f5e83f74",
+   "label": "USB",
+   "rank": 1,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:02f65596b3e3ea64",
+   "label": "IPod Touch (5th generation)",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:20bc40e90c18f37c",
+   "label": "IPod",
+   "rank": 3,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:19393e15e31991a7",
+   "label": "IPod Nano",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:0974bea52bb483c0",
+   "label": "IPod",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:09d0ba73f5e83f74",
+    "label": "USB",
+    "role": "gold"
+   },
+   {
+    "id": "mq:20bc40e90c18f37c",
+    "label": "IPod",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:09d0ba73f5e83f74",
+    "b": "mq:20bc40e90c18f37c",
+    "via": [
+     {
+      "kind": "term",
+      "key": "usb",
+      "width": 31
+     },
+     {
+      "kind": "term",
+      "key": "ports",
+      "width": 37
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "mq:09d0ba73f5e83f74",
+   "gold": "mq:09d0ba73f5e83f74",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 2472,
+  "within_2_doors": 18597,
+  "gold_within_1": 0,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "mq:83d95cf7e0a2eda1",
+    "label": "IPod",
+    "p": 0.004320903975713311,
+    "gold": false
+   },
+   {
+    "id": "mq:953301e4aafbb375",
+    "label": "IPod",
+    "p": 0.0042322781605329575,
+    "gold": false
+   },
+   {
+    "id": "mq:48fc6789c533ae63",
+    "label": "IPod",
+    "p": 0.002637024894776009,
+    "gold": false
+   },
+   {
+    "id": "mq:a86f711a9e49acc5",
+    "label": "IPod",
+    "p": 0.0023249811190686853,
+    "gold": false
+   },
+   {
+    "id": "mq:8eabb5270fcefff9",
+    "label": "IPod",
+    "p": 0.0020991406284745274,
+    "gold": false
+   },
+   {
+    "id": "mq:160eab8ba8aa12ef",
+    "label": "IPod Nano",
+    "p": 0.0020563751110698157,
+    "gold": false
+   },
+   {
+    "id": "mq:2877ff861328412d",
+    "label": "IPod",
+    "p": 0.0019307200742067505,
+    "gold": false
+   },
+   {
+    "id": "mq:efc2e91df3bcbc59",
+    "label": "IOS version history",
+    "p": 0.0019011361568192868,
+    "gold": false
+   },
+   {
+    "id": "mq:1f933d3a042ed543",
+    "label": "IOS version history",
+    "p": 0.0018848445664166014,
+    "gold": false
+   },
+   {
+    "id": "mq:d344519d140d5305",
+    "label": "IPod",
+    "p": 0.0017268187194889651,
+    "gold": false
+   },
+   {
+    "id": "mq:3a7deeda1d589579",
+    "label": "CD player",
+    "p": 0.0016984594801973218,
+    "gold": false
+   },
+   {
+    "id": "mq:02c97aa16d2d4eae",
+    "label": "Macintosh",
+    "p": 0.0016284217854755049,
+    "gold": false
+   },
+   {
+    "id": "mq:9755f5f9e181648f",
+    "label": "Windows Server 2012",
+    "p": 0.0015611705173961933,
+    "gold": false
+   },
+   {
+    "id": "mq:188d7e3b6109e532",
+    "label": "IPod",
+    "p": 0.0014980111980708896,
+    "gold": false
+   },
+   {
+    "id": "mq:9ce0cc2ed6c17367",
+    "label": "Macintosh",
+    "p": 0.0014855390649313053,
+    "gold": false
+   },
+   {
+    "id": "mq:b359f4e95cf1dd67",
+    "label": "IPod",
+    "p": 0.00145657207797215,
+    "gold": false
+   },
+   {
+    "id": "mq:ca2ef97bf1b15bf0",
+    "label": "Apple Watch",
+    "p": 0.0014127433406497098,
+    "gold": false
+   },
+   {
+    "id": "mq:a9122505318e7c80",
+    "label": "USB",
+    "p": 0.0013622079766214335,
+    "gold": false
+   },
+   {
+    "id": "mq:c016ff461b8e4042",
+    "label": "USB",
+    "p": 0.0013199011291258958,
+    "gold": false
+   },
+   {
+    "id": "mq:e7807f0f47fab4e5",
+    "label": "USB",
+    "p": 0.001297481566980239,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:09d0ba73f5e83f74",
+   "label": "USB",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:02f65596b3e3ea64",
+   "label": "IPod Touch (5th generation)",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:20bc40e90c18f37c",
+   "label": "IPod",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:19393e15e31991a7",
+   "label": "IPod Nano",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:0974bea52bb483c0",
+   "label": "IPod",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:ae15da99e872cbd9",
+   "label": "Sean O. Cota",
+   "wave": 1,
+   "via": "term:third generation",
+   "gold": false
+  },
+  {
+   "id": "mq:f3a3d8bce2e9d1d6",
+   "label": "Glock",
+   "wave": 1,
+   "via": "term:third generation",
+   "gold": false
+  },
+  {
+   "id": "mq:1ca0be1902d73557",
+   "label": "IPad (4th generation)",
+   "wave": 1,
+   "via": "term:third generation",
+   "gold": false
+  },
+  {
+   "id": "mq:8eabb5270fcefff9",
+   "label": "IPod",
+   "wave": 1,
+   "via": "term:third generation",
+   "gold": false
+  },
+  {
+   "id": "mq:822789bb2105f5a2",
+   "label": "Acura RL",
+   "wave": 1,
+   "via": "term:third generation",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:83d95cf7e0a2eda1",
+    "label": "IPod",
+    "gold": false
+   },
+   {
+    "id": "mq:953301e4aafbb375",
+    "label": "IPod",
+    "gold": false
+   },
+   {
+    "id": "mq:48fc6789c533ae63",
+    "label": "IPod",
+    "gold": false
+   },
+   {
+    "id": "mq:a86f711a9e49acc5",
+    "label": "IPod",
+    "gold": false
+   },
+   {
+    "id": "mq:8eabb5270fcefff9",
+    "label": "IPod",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:953301e4aafbb375",
+    "label": "IPod",
+    "gold": false
+   },
+   {
+    "id": "mq:83d95cf7e0a2eda1",
+    "label": "IPod",
+    "gold": false
+   },
+   {
+    "id": "mq:8eabb5270fcefff9",
+    "label": "IPod",
+    "gold": false
+   },
+   {
+    "id": "mq:2877ff861328412d",
+    "label": "IPod",
+    "gold": false
+   },
+   {
+    "id": "mq:188d7e3b6109e532",
+    "label": "IPod",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:83d95cf7e0a2eda1",
+    "label": "IPod",
+    "gold": false
+   },
+   {
+    "id": "mq:953301e4aafbb375",
+    "label": "IPod",
+    "gold": false
+   },
+   {
+    "id": "mq:8eabb5270fcefff9",
+    "label": "IPod",
+    "gold": false
+   },
+   {
+    "id": "mq:a86f711a9e49acc5",
+    "label": "IPod",
+    "gold": false
+   },
+   {
+    "id": "mq:188d7e3b6109e532",
+    "label": "IPod",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:2f254bb615ef1480",
+    "label": "IPod",
+    "gold": false
+   },
+   {
+    "id": "mq:188d7e3b6109e532",
+    "label": "IPod",
+    "gold": false
+   },
+   {
+    "id": "mq:2877ff861328412d",
+    "label": "IPod",
+    "gold": false
+   },
+   {
+    "id": "mq:953301e4aafbb375",
+    "label": "IPod",
+    "gold": false
+   },
+   {
+    "id": "mq:8eabb5270fcefff9",
+    "label": "IPod",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": null,
+  "Q": null,
+  "LQ": null,
+  "S": null
+ }
+}

@@ -1,0 +1,407 @@
+{
+ "qid": "card:REM-634",
+ "set": "cards",
+ "question": "What was done about this, and why: ci: p8-arm's image cache is pruned before it pauses the runners?",
+ "gold": [
+  {
+   "id": "commit/4f88f03fbc",
+   "label": "commit 4f88f03: p8-arm's image cache is pruned before it pauses the runners (REM-634) (#345)",
+   "seed": true
+  },
+  {
+   "id": "commit/74b5a1ea93",
+   "label": "commit 74b5a1e: card-brief: an in-progress neighbour says who holds it and on which branch (#387)",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/e34afcdf6e",
+   "label": "commit e34afcd: board: file REM-634 ci: p8-arm's image cache is pruned before it pauses the runners",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-634.md#2",
+   "label": "board/cards/REM-634.md \u203a Goal",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/4f88f03fbc",
+   "label": "commit 4f88f03: p8-arm's image cache is pruned before it pauses the runners (REM-634) (#345)",
+   "rank": 3,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "board/cards/REM-634.md#1",
+   "label": "board/cards/REM-634.md",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-672.md#4",
+   "label": "board/cards/REM-672.md \u203a Done when",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/4f88f03fbc",
+    "label": "commit 4f88f03: p8-arm's image cache is pruned before it pauses the runners (REM-634) (#345)",
+    "role": "gold"
+   },
+   {
+    "id": "commit/74b5a1ea93",
+    "label": "commit 74b5a1e: card-brief: an in-progress neighbour says who holds it and on which branch (#387)",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/4f88f03fbc",
+    "b": "commit/74b5a1ea93",
+    "via": [
+     {
+      "kind": "term",
+      "key": "rem 634",
+      "width": 24
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "commit/4f88f03fbc",
+   "gold": "commit/4f88f03fbc",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 855,
+  "within_2_doors": 33502,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "dev/runner/guard.sh#2",
+    "label": "dev/runner/guard.sh",
+    "p": 0.010926969165007289,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-634.md#3",
+    "label": "board/cards/REM-634.md \u203a Evidence",
+    "p": 0.006391197777785699,
+    "gold": false
+   },
+   {
+    "id": "dev/runner/status.sh#1",
+    "label": "dev/runner/status.sh",
+    "p": 0.006250169556034083,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-672.md#6",
+    "label": "board/cards/REM-672.md \u203a Log",
+    "p": 0.005948066223125598,
+    "gold": false
+   },
+   {
+    "id": "dev/runner/guard.sh#1",
+    "label": "dev/runner/guard.sh",
+    "p": 0.005533574142872991,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-634.md#7",
+    "label": "board/cards/REM-634.md \u203a Log",
+    "p": 0.004962115673826712,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-672.md#3",
+    "label": "board/cards/REM-672.md \u203a For Sirsh",
+    "p": 0.00397854241961556,
+    "gold": false
+   },
+   {
+    "id": "dev/runner/guard.sh#3",
+    "label": "dev/runner/guard.sh",
+    "p": 0.003773891812641587,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-11-16-ci-temp-dirs-exhausted-production-inodes.md#3",
+    "label": "meta/postmortems/2026-11-16-ci-temp-dirs-exhausted-production-inodes.md",
+    "p": 0.0032904916979716262,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-672.md#2",
+    "label": "board/cards/REM-672.md \u203a Goal",
+    "p": 0.0029431444261196755,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1340.md#4",
+    "label": "board/cards/REM-1340.md \u203a Log",
+    "p": 0.0027883545797251644,
+    "gold": false
+   },
+   {
+    "id": "commit/62aa6db3bf",
+    "label": "commit 62aa6db: board: file REM-635 research: test whether core dreaming adds claim value over ordinary deduplication",
+    "p": 0.002480587448783921,
+    "gold": false
+   },
+   {
+    "id": "commit/c79117d4e3",
+    "label": "commit c79117d: board: idea-shape-spike checks in, ended",
+    "p": 0.0024594578673885034,
+    "gold": false
+   },
+   {
+    "id": "dev/runner/install.sh#5",
+    "label": "dev/runner/install.sh",
+    "p": 0.0024278471550325414,
+    "gold": false
+   },
+   {
+    "id": "dev/runner/install.sh#4",
+    "label": "dev/runner/install.sh",
+    "p": 0.002420495564836224,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-11-16-ci-temp-dirs-exhausted-production-inodes.md#4",
+    "label": "meta/postmortems/2026-11-16-ci-temp-dirs-exhausted-production-inodes.md",
+    "p": 0.0024136204446450612,
+    "gold": false
+   },
+   {
+    "id": "commit/583658dadd",
+    "label": "commit 583658d: CI on p8-arm gets a disk cap and a guard that pauses it for production",
+    "p": 0.002219891493388764,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261116-230044-0038.md#1",
+    "label": "board/messages/M-20261116-230044-0038.md",
+    "p": 0.0021435735763096994,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-634.md#4",
+    "label": "board/cards/REM-634.md \u203a Done when",
+    "p": 0.002057131617599512,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-11-16-ci-temp-dirs-exhausted-production-inodes.md#1",
+    "label": "meta/postmortems/2026-11-16-ci-temp-dirs-exhausted-production-inodes.md",
+    "p": 0.0020047165366447817,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/e34afcdf6e",
+   "label": "commit e34afcd: board: file REM-634 ci: p8-arm's image cache is pruned before it pauses the runners",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-634.md#2",
+   "label": "board/cards/REM-634.md \u203a Goal",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/4f88f03fbc",
+   "label": "commit 4f88f03: p8-arm's image cache is pruned before it pauses the runners (REM-634) (#345)",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "board/cards/REM-634.md#1",
+   "label": "board/cards/REM-634.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-672.md#4",
+   "label": "board/cards/REM-672.md \u203a Done when",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "dev/runner/guard.sh#1",
+   "label": "dev/runner/guard.sh",
+   "wave": 1,
+   "via": "term:prune k3s",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-634.md#7",
+   "label": "board/cards/REM-634.md \u203a Log",
+   "wave": 1,
+   "via": "term:prune k3s",
+   "gold": false
+  },
+  {
+   "id": "commit/38f9080aec",
+   "label": "commit 38f9080: board: file REM-672 ci: install REM-634's image-prune guard on p8-arm",
+   "wave": 2,
+   "via": "term:rem 634",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-634.md#4",
+   "label": "board/cards/REM-634.md \u203a Done when",
+   "wave": 2,
+   "via": "term:rem 634",
+   "gold": false
+  },
+  {
+   "id": "commit/82cb1cbc8f",
+   "label": "commit 82cb1cb: board: REM-634 review \u2192 done",
+   "wave": 2,
+   "via": "term:rem 634",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "dev/runner/guard.sh#2",
+    "label": "dev/runner/guard.sh",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-634.md#3",
+    "label": "board/cards/REM-634.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "dev/runner/status.sh#1",
+    "label": "dev/runner/status.sh",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-672.md#6",
+    "label": "board/cards/REM-672.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "dev/runner/guard.sh#1",
+    "label": "dev/runner/guard.sh",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "dev/runner/guard.sh#2",
+    "label": "dev/runner/guard.sh",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-634.md#3",
+    "label": "board/cards/REM-634.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1340.md#4",
+    "label": "board/cards/REM-1340.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "dev/runner/guard.sh#1",
+    "label": "dev/runner/guard.sh",
+    "gold": false
+   },
+   {
+    "id": "dev/runner/status.sh#1",
+    "label": "dev/runner/status.sh",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/0c04d74070",
+    "label": "commit 0c04d74: Merge pull request #281 from Percolation-Labs/amartey/runner-guard",
+    "gold": false
+   },
+   {
+    "id": "commit/38f9080aec",
+    "label": "commit 38f9080: board: file REM-672 ci: install REM-634's image-prune guard on p8-arm",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-672.md#2",
+    "label": "board/cards/REM-672.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "commit/82cb1cbc8f",
+    "label": "commit 82cb1cb: board: REM-634 review \u2192 done",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-672.md#1",
+    "label": "board/cards/REM-672.md",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "board/cards/REM-1340.md#4",
+    "label": "board/cards/REM-1340.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1340.md#3",
+    "label": "board/cards/REM-1340.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "commit/583658dadd",
+    "label": "commit 583658d: CI on p8-arm gets a disk cap and a guard that pauses it for production",
+    "gold": false
+   },
+   {
+    "id": "commit/a485b0271f",
+    "label": "commit a485b02: CI temp folders can no longer use up production's inodes (REM-1340)",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261103-162759-d558.md#1",
+    "label": "board/messages/M-20261103-162759-d558.md",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

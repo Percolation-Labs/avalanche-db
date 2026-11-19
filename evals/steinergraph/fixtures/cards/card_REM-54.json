@@ -1,0 +1,457 @@
+{
+ "qid": "card:REM-54",
+ "set": "cards",
+ "question": "What was done about this, and why: agentic: an agent row runs the model it names, whichever path calls it?",
+ "gold": [
+  {
+   "id": "commit/57bd05be7b",
+   "label": "commit 57bd05b: An agent row worked on the runtime or on agent_call, depending on how its model was spelled",
+   "seed": false
+  },
+  {
+   "id": "commit/da2f464e1f",
+   "label": "commit da2f464: Merge pull request #28 from Percolation-Labs/fix/rem-54-agent-model-grammar",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "board/cards/REM-54.md#1",
+   "label": "board/cards/REM-54.md",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "specs/agentic/schema.sql#42",
+   "label": "specs/agentic/schema.sql",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-70.md#1",
+   "label": "board/cards/REM-70.md",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "specs/agentic/brief.md#3",
+   "label": "specs/agentic/brief.md \u203a 2. What we're keeping from p8k8's agentic system, and what we're not",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "specs/agentic/reference/runtime.py#2",
+   "label": "specs/agentic/reference/runtime.py",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "board/cards/REM-70.md#1",
+    "label": "board/cards/REM-70.md",
+    "role": "seed"
+   },
+   {
+    "id": "commit/57bd05be7b",
+    "label": "commit 57bd05b: An agent row worked on the runtime or on agent_call, depending on how its model was spelled",
+    "role": "gold"
+   },
+   {
+    "id": "commit/da2f464e1f",
+    "label": "commit da2f464: Merge pull request #28 from Percolation-Labs/fix/rem-54-agent-model-grammar",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "board/cards/REM-70.md#1",
+    "b": "commit/da2f464e1f",
+    "via": [
+     {
+      "kind": "term",
+      "key": "model grammar",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "rem 54",
+      "width": 12
+     },
+     {
+      "kind": "term",
+      "key": "grammar",
+      "width": 85
+     }
+    ]
+   },
+   {
+    "a": "commit/57bd05be7b",
+    "b": "commit/da2f464e1f",
+    "via": [
+     {
+      "kind": "near",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "agent_call depending",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "row worked",
+      "width": 4
+     },
+     {
+      "kind": "term",
+      "key": "agent_call",
+      "width": 11
+     },
+     {
+      "kind": "term",
+      "key": "rem 54",
+      "width": 12
+     },
+     {
+      "kind": "term",
+      "key": "agent row",
+      "width": 42
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "board/cards/REM-70.md#1",
+   "gold": "commit/da2f464e1f",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 2701,
+  "within_2_doors": 33260,
+  "gold_within_1": 2,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "commit/754d285617",
+    "label": "commit 754d285: Two loaders, two dialects, and an agent that could do nothing",
+    "p": 0.005035060538911004,
+    "gold": false
+   },
+   {
+    "id": "commit/da2f464e1f",
+    "label": "commit da2f464: Merge pull request #28 from Percolation-Labs/fix/rem-54-agent-model-grammar",
+    "p": 0.0024714951327744683,
+    "gold": true
+   },
+   {
+    "id": "commit/ddfdc5b4ba",
+    "label": "commit ddfdc5b: An agent is a row, so every agent gets a request builder",
+    "p": 0.0022695102222655165,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-70.md#2",
+    "label": "board/cards/REM-70.md \u203a Log",
+    "p": 0.0021098881260822673,
+    "gold": false
+   },
+   {
+    "id": "commit/57bd05be7b",
+    "label": "commit 57bd05b: An agent row worked on the runtime or on agent_call, depending on how its model was spelled",
+    "p": 0.001965638558891307,
+    "gold": true
+   },
+   {
+    "id": "specs/agentic/schema.sql#37",
+    "label": "specs/agentic/schema.sql",
+    "p": 0.0019389715052990839,
+    "gold": false
+   },
+   {
+    "id": "specs/agentic/brief.md#49",
+    "label": "specs/agentic/brief.md \u203a 6.1 Which component turns the document into the row",
+    "p": 0.0018991357905369175,
+    "gold": false
+   },
+   {
+    "id": "specs/agentic/schema.sql#18",
+    "label": "specs/agentic/schema.sql",
+    "p": 0.0016800325258467573,
+    "gold": false
+   },
+   {
+    "id": "packages/apply.py#2",
+    "label": "packages/apply.py",
+    "p": 0.0014523518823923928,
+    "gold": false
+   },
+   {
+    "id": "specs/agentic/schema.sql#7",
+    "label": "specs/agentic/schema.sql",
+    "p": 0.001392580434570222,
+    "gold": false
+   },
+   {
+    "id": "specs/agentic/reference/README.md#11",
+    "label": "specs/agentic/reference/README.md \u203a Against a real model",
+    "p": 0.001374795146022008,
+    "gold": false
+   },
+   {
+    "id": "scenarios/tour/compose.yml#5",
+    "label": "scenarios/tour/compose.yml",
+    "p": 0.0013685307743158657,
+    "gold": false
+   },
+   {
+    "id": "packages/run_agent.py#3",
+    "label": "packages/run_agent.py",
+    "p": 0.001269290196376179,
+    "gold": false
+   },
+   {
+    "id": "specs/agentic/schema.sql#39",
+    "label": "specs/agentic/schema.sql",
+    "p": 0.0012494220720101938,
+    "gold": false
+   },
+   {
+    "id": "specs/agentic/brief.md#52",
+    "label": "specs/agentic/brief.md \u203a 7. Core schema shape",
+    "p": 0.0012063485240362572,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-54.md#2",
+    "label": "board/cards/REM-54.md \u203a Log",
+    "p": 0.0011952210947893485,
+    "gold": false
+   },
+   {
+    "id": "specs/agentic/schema.sql#43",
+    "label": "specs/agentic/schema.sql",
+    "p": 0.0011562113918401702,
+    "gold": false
+   },
+   {
+    "id": "specs/agentic/schema.sql#72",
+    "label": "specs/agentic/schema.sql",
+    "p": 0.0011062765333707714,
+    "gold": false
+   },
+   {
+    "id": "specs/agentic/reference/README.md#8",
+    "label": "specs/agentic/reference/README.md \u203a Running an agent",
+    "p": 0.0011061469629586628,
+    "gold": false
+   },
+   {
+    "id": "specs/agentic/schema.sql#61",
+    "label": "specs/agentic/schema.sql",
+    "p": 0.00107280636086893,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "board/cards/REM-54.md#1",
+   "label": "board/cards/REM-54.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/agentic/schema.sql#42",
+   "label": "specs/agentic/schema.sql",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-70.md#1",
+   "label": "board/cards/REM-70.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/agentic/brief.md#3",
+   "label": "specs/agentic/brief.md \u203a 2. What we're keeping from p8k8's agentic system, and what we're not",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/agentic/reference/runtime.py#2",
+   "label": "specs/agentic/reference/runtime.py",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/world-model-ingestion/ingestion.sql#4",
+   "label": "specs/world-model-ingestion/ingestion.sql",
+   "wave": 1,
+   "via": "term:rem 54",
+   "gold": false
+  },
+  {
+   "id": "commit/da2f464e1f",
+   "label": "commit da2f464: Merge pull request #28 from Percolation-Labs/fix/rem-54-agent-model-grammar",
+   "wave": 1,
+   "via": "term:rem 54",
+   "gold": true
+  },
+  {
+   "id": "board/cards/REM-54.md#2",
+   "label": "board/cards/REM-54.md \u203a Log",
+   "wave": 1,
+   "via": "term:rem 54",
+   "gold": false
+  },
+  {
+   "id": "specs/agentic/brief.md#52",
+   "label": "specs/agentic/brief.md \u203a 7. Core schema shape",
+   "wave": 1,
+   "via": "term:rem 54",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-71.md#6",
+   "label": "board/cards/REM-71.md \u203a Links",
+   "wave": 1,
+   "via": "term:rem 54",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "commit/754d285617",
+    "label": "commit 754d285: Two loaders, two dialects, and an agent that could do nothing",
+    "gold": false
+   },
+   {
+    "id": "commit/da2f464e1f",
+    "label": "commit da2f464: Merge pull request #28 from Percolation-Labs/fix/rem-54-agent-model-grammar",
+    "gold": true
+   },
+   {
+    "id": "commit/ddfdc5b4ba",
+    "label": "commit ddfdc5b: An agent is a row, so every agent gets a request builder",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-70.md#2",
+    "label": "board/cards/REM-70.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "commit/57bd05be7b",
+    "label": "commit 57bd05b: An agent row worked on the runtime or on agent_call, depending on how its model was spelled",
+    "gold": true
+   }
+  ],
+  "Q": [
+   {
+    "id": "commit/754d285617",
+    "label": "commit 754d285: Two loaders, two dialects, and an agent that could do nothing",
+    "gold": false
+   },
+   {
+    "id": "specs/agentic/schema.sql#18",
+    "label": "specs/agentic/schema.sql",
+    "gold": false
+   },
+   {
+    "id": "commit/ddfdc5b4ba",
+    "label": "commit ddfdc5b: An agent is a row, so every agent gets a request builder",
+    "gold": false
+   },
+   {
+    "id": "commit/57bd05be7b",
+    "label": "commit 57bd05b: An agent row worked on the runtime or on agent_call, depending on how its model was spelled",
+    "gold": true
+   },
+   {
+    "id": "specs/agentic/brief.md#49",
+    "label": "specs/agentic/brief.md \u203a 6.1 Which component turns the document into the row",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/73c746bf9f",
+    "label": "commit 73c746b: Merge pull request #45 from Percolation-Labs/fix/rem-70-one-agent-translation",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-54.md#2",
+    "label": "board/cards/REM-54.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "commit/3bd5373289",
+    "label": "commit 3bd5373: board: file REM-1042 agentic: an agent row names a context query the runtime reads as the caller each tu",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-146.md#1",
+    "label": "board/cards/REM-146.md",
+    "gold": false
+   },
+   {
+    "id": "commit/da2f464e1f",
+    "label": "commit da2f464: Merge pull request #28 from Percolation-Labs/fix/rem-54-agent-model-grammar",
+    "gold": true
+   }
+  ],
+  "S": [
+   {
+    "id": "specs/agentic/schema.sql#18",
+    "label": "specs/agentic/schema.sql",
+    "gold": false
+   },
+   {
+    "id": "commit/3bd5373289",
+    "label": "commit 3bd5373: board: file REM-1042 agentic: an agent row names a context query the runtime reads as the caller each tu",
+    "gold": false
+   },
+   {
+    "id": "specs/workflow-engine/plan-graph.md#5",
+    "label": "specs/workflow-engine/plan-graph.md \u203a 3. The vocabulary, closed",
+    "gold": false
+   },
+   {
+    "id": "specs/agentic/plugins.md#11",
+    "label": "specs/agentic/plugins.md \u203a 5.1 Attachment: a skill surface, exactly like a tool surface",
+    "gold": false
+   },
+   {
+    "id": "specs/agentic/reference/skills.py#4",
+    "label": "specs/agentic/reference/skills.py",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 1.0,
+  "Q": 0.5,
+  "LQ": 0.5,
+  "S": 0.0
+ }
+}

@@ -1,0 +1,423 @@
+{
+ "qid": "RW:2hop__9512_36630",
+ "set": "mq",
+ "question": "Which countries found economic growth while cog-railways were built in the Alps?",
+ "gold": [
+  {
+   "id": "mq:5dce05a063b67c11",
+   "label": "Great power",
+   "seed": false
+  },
+  {
+   "id": "mq:b3d228bc46051ef7",
+   "label": "Alps",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:b3d228bc46051ef7",
+   "label": "Alps",
+   "rank": 1,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:f381dff36207a185",
+   "label": "Economic inequality",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "mq:9a0c111ef48f8623",
+   "label": "Economic inequality",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:743c57ebf8fbec65",
+   "label": "Schneeberg Railway (cog railway)",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:166ef321bc9886aa",
+   "label": "Alps",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:5dce05a063b67c11",
+    "label": "Great power",
+    "role": "gold"
+   },
+   {
+    "id": "mq:897c06d2bfeecc85",
+    "label": "Yuan dynasty",
+    "role": "connector"
+   },
+   {
+    "id": "mq:b3d228bc46051ef7",
+    "label": "Alps",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:5dce05a063b67c11",
+    "b": "mq:897c06d2bfeecc85",
+    "via": [
+     {
+      "kind": "term",
+      "key": "stagnated",
+      "width": 4
+     }
+    ]
+   },
+   {
+    "a": "mq:897c06d2bfeecc85",
+    "b": "mq:b3d228bc46051ef7",
+    "via": [
+     {
+      "kind": "term",
+      "key": "eternal",
+      "width": 10
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   2
+  ],
+  "entry": {
+   "seed": "mq:b3d228bc46051ef7",
+   "gold": "mq:b3d228bc46051ef7",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 3388,
+  "within_2_doors": 17690,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "mq:1ed7ab2fda482a5c",
+    "label": "McGillivray Pass",
+    "p": 0.0029154125067477527,
+    "gold": false
+   },
+   {
+    "id": "mq:073e072d021de96f",
+    "label": "Dashengguan Yangtze River Bridge",
+    "p": 0.001667155202532303,
+    "gold": false
+   },
+   {
+    "id": "mq:24f1362d0a86f43f",
+    "label": "Standard 52-card deck",
+    "p": 0.0016664475845013613,
+    "gold": false
+   },
+   {
+    "id": "mq:71098f856703b930",
+    "label": "Neunkirchen District, Austria",
+    "p": 0.0016616151030732888,
+    "gold": false
+   },
+   {
+    "id": "mq:cad4695806a8ead8",
+    "label": "Economic inequality",
+    "p": 0.0013728644295327656,
+    "gold": false
+   },
+   {
+    "id": "mq:b69def4eeb4f6207",
+    "label": "Economic inequality",
+    "p": 0.0010173461351118598,
+    "gold": false
+   },
+   {
+    "id": "mq:12d8749db3c89b25",
+    "label": "Economic inequality",
+    "p": 0.0009882853459225814,
+    "gold": false
+   },
+   {
+    "id": "mq:7a245b17e5d40777",
+    "label": "Economic inequality",
+    "p": 0.0009625680904802058,
+    "gold": false
+   },
+   {
+    "id": "mq:f73f74cf1991b393",
+    "label": "Sports in Canada",
+    "p": 0.00084928163825787,
+    "gold": false
+   },
+   {
+    "id": "mq:dcdc6582cc7acdb0",
+    "label": "Economy of Greece",
+    "p": 0.0007817656787308365,
+    "gold": false
+   },
+   {
+    "id": "mq:3a4b81b7e03cf53d",
+    "label": "Hyderabad",
+    "p": 0.0007733661206554892,
+    "gold": false
+   },
+   {
+    "id": "mq:f55079f3560ed63a",
+    "label": "Czech language",
+    "p": 0.0007695014423776805,
+    "gold": false
+   },
+   {
+    "id": "mq:f6e82ea7156bcd86",
+    "label": "Namibia",
+    "p": 0.0007541462482165091,
+    "gold": false
+   },
+   {
+    "id": "mq:8d07857bc1a61a0f",
+    "label": "B\u00fclach District",
+    "p": 0.0007487678431699017,
+    "gold": false
+   },
+   {
+    "id": "mq:0998f93182ac6b19",
+    "label": "Ski-Doo",
+    "p": 0.0007478252786218908,
+    "gold": false
+   },
+   {
+    "id": "mq:57417b6802ba4803",
+    "label": "Volkswagen Group",
+    "p": 0.0007219446227244127,
+    "gold": false
+   },
+   {
+    "id": "mq:b85b9854b4260461",
+    "label": "Atlantic City, New Jersey",
+    "p": 0.000721751055327639,
+    "gold": false
+   },
+   {
+    "id": "mq:fecc3c4921703663",
+    "label": "CGR class C1 and C1a",
+    "p": 0.0007100454845926716,
+    "gold": false
+   },
+   {
+    "id": "mq:5f1bdb765926badb",
+    "label": "Economic inequality",
+    "p": 0.0007071552386043529,
+    "gold": false
+   },
+   {
+    "id": "mq:9f7d99c6977de27a",
+    "label": "Bert Hinkler",
+    "p": 0.0007065966056600617,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:b3d228bc46051ef7",
+   "label": "Alps",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:f381dff36207a185",
+   "label": "Economic inequality",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:9a0c111ef48f8623",
+   "label": "Economic inequality",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:743c57ebf8fbec65",
+   "label": "Schneeberg Railway (cog railway)",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:166ef321bc9886aa",
+   "label": "Alps",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:2a555402e15ac9c4",
+   "label": "Miel Campioni",
+   "wave": 1,
+   "via": "term:switzerland",
+   "gold": false
+  },
+  {
+   "id": "mq:e37d04b702891b6d",
+   "label": "1957 Swiss referendums",
+   "wave": 1,
+   "via": "term:switzerland",
+   "gold": false
+  },
+  {
+   "id": "mq:4ca7e0b3b8c711a4",
+   "label": "Switzerland",
+   "wave": 1,
+   "via": "term:switzerland",
+   "gold": false
+  },
+  {
+   "id": "mq:835c361a353da376",
+   "label": "Helvetia, Arizona",
+   "wave": 1,
+   "via": "term:switzerland",
+   "gold": false
+  },
+  {
+   "id": "mq:60032677a52ae650",
+   "label": "Talk to Me (Kiss song)",
+   "wave": 1,
+   "via": "term:switzerland",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:1ed7ab2fda482a5c",
+    "label": "McGillivray Pass",
+    "gold": false
+   },
+   {
+    "id": "mq:073e072d021de96f",
+    "label": "Dashengguan Yangtze River Bridge",
+    "gold": false
+   },
+   {
+    "id": "mq:24f1362d0a86f43f",
+    "label": "Standard 52-card deck",
+    "gold": false
+   },
+   {
+    "id": "mq:71098f856703b930",
+    "label": "Neunkirchen District, Austria",
+    "gold": false
+   },
+   {
+    "id": "mq:cad4695806a8ead8",
+    "label": "Economic inequality",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:cad4695806a8ead8",
+    "label": "Economic inequality",
+    "gold": false
+   },
+   {
+    "id": "mq:7a245b17e5d40777",
+    "label": "Economic inequality",
+    "gold": false
+   },
+   {
+    "id": "mq:12d8749db3c89b25",
+    "label": "Economic inequality",
+    "gold": false
+   },
+   {
+    "id": "mq:bdafbcf7af85ba5c",
+    "label": "History of rail transport in India",
+    "gold": false
+   },
+   {
+    "id": "mq:f366a92d1e33aa37",
+    "label": "Rail transport in India",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:881094f230002a49",
+    "label": "History of the New York City Subway",
+    "gold": false
+   },
+   {
+    "id": "mq:7f9032d2607b7ecd",
+    "label": "History of the New York City Subway",
+    "gold": false
+   },
+   {
+    "id": "mq:cad4695806a8ead8",
+    "label": "Economic inequality",
+    "gold": false
+   },
+   {
+    "id": "mq:7a245b17e5d40777",
+    "label": "Economic inequality",
+    "gold": false
+   },
+   {
+    "id": "mq:12d8749db3c89b25",
+    "label": "Economic inequality",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:6f995273626b93b8",
+    "label": "Alps",
+    "gold": false
+   },
+   {
+    "id": "mq:cad4695806a8ead8",
+    "label": "Economic inequality",
+    "gold": false
+   },
+   {
+    "id": "mq:7a245b17e5d40777",
+    "label": "Economic inequality",
+    "gold": false
+   },
+   {
+    "id": "mq:1f8bc9609b9cb23d",
+    "label": "Alps",
+    "gold": false
+   },
+   {
+    "id": "mq:fecc3c4921703663",
+    "label": "CGR class C1 and C1a",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

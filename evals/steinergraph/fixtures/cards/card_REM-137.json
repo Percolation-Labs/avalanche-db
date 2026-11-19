@@ -1,0 +1,415 @@
+{
+ "qid": "card:REM-137",
+ "set": "cards",
+ "question": "What was done about this, and why: process: a rule that must reach every session has somewhere in the repository to live?",
+ "gold": [
+  {
+   "id": "commit/ff82f47fd1",
+   "label": "commit ff82f47: A dozen lines is what a fresh session is handed, and none of them were ours (#128)",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "board/cards/REM-137.md#1",
+   "label": "board/cards/REM-137.md",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-137.md#2",
+   "label": "board/cards/REM-137.md \u203a Goal",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-239.md#10",
+   "label": "board/cards/REM-239.md \u203a 2026-09-14T12:57:07.518Z \u00b7 Amartey",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "board/cards/REM-1285.md#5",
+   "label": "board/cards/REM-1285.md \u203a Log",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "board/messages/M-20261029-094935-63c1.md#1",
+   "label": "board/messages/M-20261029-094935-63c1.md",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "board/cards/REM-137.md#2",
+    "label": "board/cards/REM-137.md \u203a Goal",
+    "role": "seed"
+   },
+   {
+    "id": "commit/ff82f47fd1",
+    "label": "commit ff82f47: A dozen lines is what a fresh session is handed, and none of them were ours (#128)",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "board/cards/REM-137.md#2",
+    "b": "commit/ff82f47fd1",
+    "via": [
+     {
+      "kind": "term",
+      "key": "user memory",
+      "width": 3
+     },
+     {
+      "kind": "term",
+      "key": "rem 137",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "first edit",
+      "width": 21
+     },
+     {
+      "kind": "term",
+      "key": "pointers",
+      "width": 39
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [],
+  "entry": {
+   "seed": "board/cards/REM-137.md#2",
+   "gold": "commit/ff82f47fd1",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 1680,
+  "within_2_doors": 34058,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "commit/ff82f47fd1",
+    "label": "commit ff82f47: A dozen lines is what a fresh session is handed, and none of them were ours (#128)",
+    "p": 0.005509595203944574,
+    "gold": true
+   },
+   {
+    "id": "board/cards/REM-137.md#3",
+    "label": "board/cards/REM-137.md \u203a Evidence",
+    "p": 0.005034035464813336,
+    "gold": false
+   },
+   {
+    "id": "commit/65ea0d3397",
+    "label": "commit 65ea0d3: board: a dead session is told from a quiet one, and the watcher marks it ended (REM-1285)",
+    "p": 0.00245298679151378,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-137.md#4",
+    "label": "board/cards/REM-137.md \u203a Log",
+    "p": 0.002371784427124494,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261103-140619-6c7e.md#1",
+    "label": "board/messages/M-20261103-140619-6c7e.md",
+    "p": 0.0021083833825165407,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-592.md#3",
+    "label": "board/cards/REM-592.md \u203a Evidence",
+    "p": 0.0020997712715636213,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-153.md#3",
+    "label": "board/cards/REM-153.md \u203a Evidence",
+    "p": 0.0020938252187532014,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1105.md#6",
+    "label": "board/cards/REM-1105.md \u203a Log",
+    "p": 0.0019670403449095217,
+    "gold": false
+   },
+   {
+    "id": "specs/agentic/plugins.md#44",
+    "label": "specs/agentic/plugins.md \u203a 12. Open questions",
+    "p": 0.0019485841998622988,
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-10-20-lme-seeded-taxonomy/README.md#24",
+    "label": "meta/spikes/2026-10-20-lme-seeded-taxonomy/README.md \u203a Routing on v2, 21 Oct (protocol `lme-seeded-taxonomy-route-v2`, `",
+    "p": 0.001943814988793682,
+    "gold": false
+   },
+   {
+    "id": "board/board.py#49",
+    "label": "board/board.py",
+    "p": 0.0018697441473097254,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-239.md#9",
+    "label": "board/cards/REM-239.md \u203a 2026-09-14T12:57:07.518Z \u00b7 Amartey",
+    "p": 0.0017082224068218123,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261106-174547-9950.md#1",
+    "label": "board/messages/M-20261106-174547-9950.md",
+    "p": 0.001386954944270943,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-239.md#5",
+    "label": "board/cards/REM-239.md \u203a Estimate \u2014 3 points",
+    "p": 0.0013721992728714292,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-285.md#7",
+    "label": "board/cards/REM-285.md \u203a Log",
+    "p": 0.0013505733280952106,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-133.md#1",
+    "label": "board/cards/REM-133.md",
+    "p": 0.0010698814329270902,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-138.md#1",
+    "label": "board/cards/REM-138.md",
+    "p": 0.0010610729145027558,
+    "gold": false
+   },
+   {
+    "id": "AGENTS.md#1",
+    "label": "AGENTS.md \u203a Before your first edit",
+    "p": 0.0010528619358395742,
+    "gold": false
+   },
+   {
+    "id": "CLAUDE.md#1",
+    "label": "CLAUDE.md \u203a Before your first edit",
+    "p": 0.0010486156333041191,
+    "gold": false
+   },
+   {
+    "id": "commit/37ed4cd487",
+    "label": "commit 37ed4cd: rows, not schema: the rule, and a gate that reads specs/ (REM-655) (#335)",
+    "p": 0.0009751910793262358,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "board/cards/REM-137.md#1",
+   "label": "board/cards/REM-137.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-137.md#2",
+   "label": "board/cards/REM-137.md \u203a Goal",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-239.md#10",
+   "label": "board/cards/REM-239.md \u203a 2026-09-14T12:57:07.518Z \u00b7 Amartey",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-1285.md#5",
+   "label": "board/cards/REM-1285.md \u203a Log",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/messages/M-20261029-094935-63c1.md#1",
+   "label": "board/messages/M-20261029-094935-63c1.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/ff82f47fd1",
+   "label": "commit ff82f47: A dozen lines is what a fresh session is handed, and none of them were ours (#128)",
+   "wave": 1,
+   "via": "term:rem 137",
+   "gold": true
+  },
+  {
+   "id": "board/cards/REM-137.md#3",
+   "label": "board/cards/REM-137.md \u203a Evidence",
+   "wave": 1,
+   "via": "term:rem 137",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-137.md#4",
+   "label": "board/cards/REM-137.md \u203a Log",
+   "wave": 1,
+   "via": "term:rem 137",
+   "gold": false
+  },
+  {
+   "id": "specs/agentic/plugins.md#5",
+   "label": "specs/agentic/plugins.md \u203a 2. Why a skill is a shared system instruction, not part of one agent's prompt",
+   "wave": 2,
+   "via": "term:first edit",
+   "gold": false
+  },
+  {
+   "id": "AGENTS.md#1",
+   "label": "AGENTS.md \u203a Before your first edit",
+   "wave": 2,
+   "via": "term:first edit",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "commit/ff82f47fd1",
+    "label": "commit ff82f47: A dozen lines is what a fresh session is handed, and none of them were ours (#128)",
+    "gold": true
+   },
+   {
+    "id": "board/cards/REM-137.md#3",
+    "label": "board/cards/REM-137.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "commit/65ea0d3397",
+    "label": "commit 65ea0d3: board: a dead session is told from a quiet one, and the watcher marks it ended (REM-1285)",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-137.md#4",
+    "label": "board/cards/REM-137.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261103-140619-6c7e.md#1",
+    "label": "board/messages/M-20261103-140619-6c7e.md",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "commit/ff82f47fd1",
+    "label": "commit ff82f47: A dozen lines is what a fresh session is handed, and none of them were ours (#128)",
+    "gold": true
+   },
+   {
+    "id": "board/messages/M-20261103-140619-6c7e.md#1",
+    "label": "board/messages/M-20261103-140619-6c7e.md",
+    "gold": false
+   },
+   {
+    "id": "board/board.py#49",
+    "label": "board/board.py",
+    "gold": false
+   },
+   {
+    "id": "commit/65ea0d3397",
+    "label": "commit 65ea0d3: board: a dead session is told from a quiet one, and the watcher marks it ended (REM-1285)",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-239.md#9",
+    "label": "board/cards/REM-239.md \u203a 2026-09-14T12:57:07.518Z \u00b7 Amartey",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "board/cards/REM-137.md#4",
+    "label": "board/cards/REM-137.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-133.md#1",
+    "label": "board/cards/REM-133.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-138.md#1",
+    "label": "board/cards/REM-138.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-137.md#3",
+    "label": "board/cards/REM-137.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "commit/45a0944718",
+    "label": "commit 45a0944: board: REM-239 in-progress \u2192 done",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "board/cards/REM-458.md#7",
+    "label": "board/cards/REM-458.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261019-213651-3cae.md#1",
+    "label": "board/messages/M-20261019-213651-3cae.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-223.md#1",
+    "label": "board/cards/REM-223.md",
+    "gold": false
+   },
+   {
+    "id": "commit/8f0aadf8fe",
+    "label": "commit 8f0aadf: Finish the move somebody left half-done, and put back what I deleted",
+    "gold": false
+   },
+   {
+    "id": "commit/8d5c6f8ca2",
+    "label": "commit 8d5c6f8: The rule was present, shared, and read, and it did not fire (#119)",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 1.0,
+  "Q": 1.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

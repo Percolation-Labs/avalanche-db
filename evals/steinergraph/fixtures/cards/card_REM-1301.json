@@ -1,0 +1,417 @@
+{
+ "qid": "card:REM-1301",
+ "set": "cards",
+ "question": "What was done about this, and why: board: a registered job whose work runs in a container reads as busy, not idle?",
+ "gold": [
+  {
+   "id": "commit/c6c990ef62",
+   "label": "commit c6c990e: Postmortem: a busy database read as a stalled job (REM-1300, REM-1301)",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/ae968a5664",
+   "label": "commit ae968a5: board: file REM-1301 board: a registered job whose work runs in a container reads as busy, not idle",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-1301.md#1",
+   "label": "board/cards/REM-1301.md",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-1301.md#2",
+   "label": "board/cards/REM-1301.md \u203a Goal",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "meta/postmortems/2026-11-04-a-busy-database-read-as-a-stalled-job.md#4",
+   "label": "meta/postmortems/2026-11-04-a-busy-database-read-as-a-stalled-job.md",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-1301.md#4",
+   "label": "board/cards/REM-1301.md \u203a Done when",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/ae968a5664",
+    "label": "commit ae968a5: board: file REM-1301 board: a registered job whose work runs in a container reads as busy, not idle",
+    "role": "seed"
+   },
+   {
+    "id": "commit/c6c990ef62",
+    "label": "commit c6c990e: Postmortem: a busy database read as a stalled job (REM-1300, REM-1301)",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/ae968a5664",
+    "b": "commit/c6c990ef62",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "near",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "rem 1301",
+      "width": 9
+     },
+     {
+      "kind": "term",
+      "key": "1301",
+      "width": 11
+     },
+     {
+      "kind": "term",
+      "key": "busy",
+      "width": 79
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [],
+  "entry": {
+   "seed": "commit/ae968a5664",
+   "gold": "commit/c6c990ef62",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 631,
+  "within_2_doors": 32181,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "commit/c6c990ef62",
+    "label": "commit c6c990e: Postmortem: a busy database read as a stalled job (REM-1300, REM-1301)",
+    "p": 0.009115146174729504,
+    "gold": true
+   },
+   {
+    "id": "meta/postmortems/2026-11-04-a-busy-database-read-as-a-stalled-job.md#1",
+    "label": "meta/postmortems/2026-11-04-a-busy-database-read-as-a-stalled-job.md",
+    "p": 0.00811989920753725,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-11-04-a-busy-database-read-as-a-stalled-job.md#2",
+    "label": "meta/postmortems/2026-11-04-a-busy-database-read-as-a-stalled-job.md",
+    "p": 0.0071189126793943834,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1301.md#3",
+    "label": "board/cards/REM-1301.md \u203a Evidence",
+    "p": 0.006949314274769302,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1301.md#5",
+    "label": "board/cards/REM-1301.md \u203a Log",
+    "p": 0.006636661617377553,
+    "gold": false
+   },
+   {
+    "id": "commit/f808da6b26",
+    "label": "commit f808da6: Both halves said 0.2.0, and one of them was a day behind (#133)",
+    "p": 0.0034975949978456153,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-11-04-a-busy-database-read-as-a-stalled-job.md#3",
+    "label": "meta/postmortems/2026-11-04-a-busy-database-read-as-a-stalled-job.md",
+    "p": 0.003241530280666198,
+    "gold": false
+   },
+   {
+    "id": "commit/b92a2282d8",
+    "label": "commit b92a228: Merge pull request #694 from Percolation-Labs/bill/proc-pid-reuse",
+    "p": 0.003110465794520507,
+    "gold": false
+   },
+   {
+    "id": "commit/acec12a94b",
+    "label": "commit acec12a: board: file REM-1300 walk: aiq.use_edges answers one read without rebuilding the graph",
+    "p": 0.002479846881356181,
+    "gold": false
+   },
+   {
+    "id": "dev/runner/queue.sh#1",
+    "label": "dev/runner/queue.sh",
+    "p": 0.0024101826702474815,
+    "gold": false
+   },
+   {
+    "id": "commit/9aaf2960b6",
+    "label": "commit 9aaf296: the jobs column lists the jobs that exist, not the workflow (REM-663) (#341)",
+    "p": 0.002147878087000364,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1300.md#4",
+    "label": "board/cards/REM-1300.md \u203a Done when",
+    "p": 0.0021206400781513305,
+    "gold": false
+   },
+   {
+    "id": "meta/compliance/ropa.md#4",
+    "label": "meta/compliance/ropa.md \u203a 1. Accounts, sign-in and sessions",
+    "p": 0.001872258080565602,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-947.md#7",
+    "label": "board/cards/REM-947.md \u203a Log",
+    "p": 0.0017313616588858643,
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-self-model/product.md#35",
+    "label": "applications/percolate-self-model/product.md \u203a Against \u00a78",
+    "p": 0.0016756901156892046,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261103-162331-7e90.md#1",
+    "label": "board/messages/M-20261103-162331-7e90.md",
+    "p": 0.0016301063202398673,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-301.md#2",
+    "label": "board/cards/REM-301.md \u203a Goal",
+    "p": 0.0016109139617549657,
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-10-20-lme-seeded-taxonomy/in_percolate/measure.sh#2",
+    "label": "meta/spikes/2026-10-20-lme-seeded-taxonomy/in_percolate/measure.sh",
+    "p": 0.001601599547238905,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261101-122238-4f67.md#1",
+    "label": "board/messages/M-20261101-122238-4f67.md",
+    "p": 0.0015854391903853682,
+    "gold": false
+   },
+   {
+    "id": "output/simple-journeys/README.md#5",
+    "label": "output/simple-journeys/README.md \u203a Walkthrough",
+    "p": 0.0015757863580794112,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/ae968a5664",
+   "label": "commit ae968a5: board: file REM-1301 board: a registered job whose work runs in a container reads as busy, not idle",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-1301.md#1",
+   "label": "board/cards/REM-1301.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-1301.md#2",
+   "label": "board/cards/REM-1301.md \u203a Goal",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/postmortems/2026-11-04-a-busy-database-read-as-a-stalled-job.md#4",
+   "label": "meta/postmortems/2026-11-04-a-busy-database-read-as-a-stalled-job.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-1301.md#4",
+   "label": "board/cards/REM-1301.md \u203a Done when",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-1301.md#5",
+   "label": "board/cards/REM-1301.md \u203a Log",
+   "wave": 1,
+   "via": "term:rem 1301",
+   "gold": false
+  },
+  {
+   "id": "commit/c6c990ef62",
+   "label": "commit c6c990e: Postmortem: a busy database read as a stalled job (REM-1300, REM-1301)",
+   "wave": 1,
+   "via": "term:rem 1301",
+   "gold": true
+  },
+  {
+   "id": "board/cards/REM-1301.md#3",
+   "label": "board/cards/REM-1301.md \u203a Evidence",
+   "wave": 1,
+   "via": "term:rem 1301",
+   "gold": false
+  },
+  {
+   "id": "meta/postmortems/2026-11-04-a-busy-database-read-as-a-stalled-job.md#1",
+   "label": "meta/postmortems/2026-11-04-a-busy-database-read-as-a-stalled-job.md",
+   "wave": 1,
+   "via": "term:rem 1301",
+   "gold": false
+  },
+  {
+   "id": "commit/8bda184fae",
+   "label": "commit 8bda184: Merge pull request #699 from Percolation-Labs/bill/pm-use-edges-sweep",
+   "wave": 2,
+   "via": "term:busy database",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "commit/c6c990ef62",
+    "label": "commit c6c990e: Postmortem: a busy database read as a stalled job (REM-1300, REM-1301)",
+    "gold": true
+   },
+   {
+    "id": "meta/postmortems/2026-11-04-a-busy-database-read-as-a-stalled-job.md#1",
+    "label": "meta/postmortems/2026-11-04-a-busy-database-read-as-a-stalled-job.md",
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-11-04-a-busy-database-read-as-a-stalled-job.md#2",
+    "label": "meta/postmortems/2026-11-04-a-busy-database-read-as-a-stalled-job.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1301.md#3",
+    "label": "board/cards/REM-1301.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1301.md#5",
+    "label": "board/cards/REM-1301.md \u203a Log",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "meta/postmortems/2026-11-04-a-busy-database-read-as-a-stalled-job.md#2",
+    "label": "meta/postmortems/2026-11-04-a-busy-database-read-as-a-stalled-job.md",
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-11-04-a-busy-database-read-as-a-stalled-job.md#1",
+    "label": "meta/postmortems/2026-11-04-a-busy-database-read-as-a-stalled-job.md",
+    "gold": false
+   },
+   {
+    "id": "commit/c6c990ef62",
+    "label": "commit c6c990e: Postmortem: a busy database read as a stalled job (REM-1300, REM-1301)",
+    "gold": true
+   },
+   {
+    "id": "meta/postmortems/2026-11-04-a-busy-database-read-as-a-stalled-job.md#3",
+    "label": "meta/postmortems/2026-11-04-a-busy-database-read-as-a-stalled-job.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1301.md#3",
+    "label": "board/cards/REM-1301.md \u203a Evidence",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/c6c990ef62",
+    "label": "commit c6c990e: Postmortem: a busy database read as a stalled job (REM-1300, REM-1301)",
+    "gold": true
+   },
+   {
+    "id": "commit/8bda184fae",
+    "label": "commit 8bda184: Merge pull request #699 from Percolation-Labs/bill/pm-use-edges-sweep",
+    "gold": false
+   },
+   {
+    "id": "commit/3b99d17259",
+    "label": "commit 3b99d17: board: file REM-841 dev: a push passes the unit budget on a busy machine",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-841.md#2",
+    "label": "board/cards/REM-841.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "commit/b92a2282d8",
+    "label": "commit b92a228: Merge pull request #694 from Percolation-Labs/bill/proc-pid-reuse",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "commit/65ea0d3397",
+    "label": "commit 65ea0d3: board: a dead session is told from a quiet one, and the watcher marks it ended (REM-1285)",
+    "gold": false
+   },
+   {
+    "id": "dev/check.sh#14",
+    "label": "dev/check.sh",
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-11-04-a-busy-database-read-as-a-stalled-job.md#2",
+    "label": "meta/postmortems/2026-11-04-a-busy-database-read-as-a-stalled-job.md",
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-11-04-a-busy-database-read-as-a-stalled-job.md#1",
+    "label": "meta/postmortems/2026-11-04-a-busy-database-read-as-a-stalled-job.md",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261104-122508-887f.md#1",
+    "label": "board/messages/M-20261104-122508-887f.md",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 1.0,
+  "Q": 1.0,
+  "LQ": 1.0,
+  "S": 0.0
+ }
+}

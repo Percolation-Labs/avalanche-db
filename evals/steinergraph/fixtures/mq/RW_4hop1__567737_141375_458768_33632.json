@@ -1,0 +1,528 @@
+{
+ "qid": "RW:4hop1__567737_141375_458768_33632",
+ "set": "mq",
+ "question": "What day is the feast held in the city containing the headquarters of the company, that owns the record label that released Study in Brown?",
+ "gold": [
+  {
+   "id": "mq:6b128c0e2d6f06b5",
+   "label": "Study in Brown",
+   "seed": false
+  },
+  {
+   "id": "mq:c1cb18e21135e934",
+   "label": "Santa Monica, California",
+   "seed": false
+  },
+  {
+   "id": "mq:ca71e65436e86e9d",
+   "label": "The Right Stuff Records",
+   "seed": false
+  },
+  {
+   "id": "mq:e41ad5917b5d0e46",
+   "label": "EmArcy Records",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:2f0c510916acf406",
+   "label": "Dragonfly (Masami Okui album)",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:b241a5da40c5e398",
+   "label": "Gameface",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:0b28739e4d7f596f",
+   "label": "Sony Music",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:11869f6492e971df",
+   "label": "El Trilogy",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "mq:d23f269eb819cfb0",
+   "label": "Brown and Roach Incorporated",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:6b128c0e2d6f06b5",
+    "label": "Study in Brown",
+    "role": "gold"
+   },
+   {
+    "id": "mq:c1cb18e21135e934",
+    "label": "Santa Monica, California",
+    "role": "gold"
+   },
+   {
+    "id": "mq:ca71e65436e86e9d",
+    "label": "The Right Stuff Records",
+    "role": "gold"
+   },
+   {
+    "id": "mq:d23f269eb819cfb0",
+    "label": "Brown and Roach Incorporated",
+    "role": "seed"
+   },
+   {
+    "id": "mq:e41ad5917b5d0e46",
+    "label": "EmArcy Records",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:6b128c0e2d6f06b5",
+    "b": "mq:d23f269eb819cfb0",
+    "via": [
+     {
+      "kind": "near",
+      "width": 4
+     },
+     {
+      "kind": "term",
+      "key": "max roach",
+      "width": 3
+     },
+     {
+      "kind": "term",
+      "key": "clifford brown",
+      "width": 3
+     },
+     {
+      "kind": "term",
+      "key": "emarcy",
+      "width": 4
+     },
+     {
+      "kind": "term",
+      "key": "clifford",
+      "width": 14
+     },
+     {
+      "kind": "term",
+      "key": "roach",
+      "width": 19
+     }
+    ]
+   },
+   {
+    "a": "mq:6b128c0e2d6f06b5",
+    "b": "mq:e41ad5917b5d0e46",
+    "via": [
+     {
+      "kind": "near",
+      "width": 4
+     },
+     {
+      "kind": "term",
+      "key": "emarcy records",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "emarcy",
+      "width": 4
+     }
+    ]
+   },
+   {
+    "a": "mq:c1cb18e21135e934",
+    "b": "mq:ca71e65436e86e9d",
+    "via": [
+     {
+      "kind": "term",
+      "key": "monica california",
+      "width": 8
+     },
+     {
+      "kind": "term",
+      "key": "santa monica",
+      "width": 12
+     },
+     {
+      "kind": "term",
+      "key": "monica",
+      "width": 22
+     }
+    ]
+   },
+   {
+    "a": "mq:ca71e65436e86e9d",
+    "b": "mq:e41ad5917b5d0e46",
+    "via": [
+     {
+      "kind": "term",
+      "key": "universal music",
+      "width": 12
+     },
+     {
+      "kind": "term",
+      "key": "music group",
+      "width": 33
+     },
+     {
+      "kind": "term",
+      "key": "record label",
+      "width": 83
+     },
+     {
+      "kind": "term",
+      "key": "universal",
+      "width": 96
+     }
+    ]
+   }
+  ],
+  "cost": 4,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   2,
+   2,
+   1,
+   1,
+   2,
+   1
+  ],
+  "entry": {
+   "seed": "mq:d23f269eb819cfb0",
+   "gold": "mq:6b128c0e2d6f06b5",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 1881,
+  "within_2_doors": 19126,
+  "gold_within_1": 3,
+  "gold_within_2": 1,
+  "top_U": [
+   {
+    "id": "mq:fa49b3fc17142eb2",
+    "label": "Jam Session (album)",
+    "p": 0.005617847021263269,
+    "gold": false
+   },
+   {
+    "id": "mq:6b128c0e2d6f06b5",
+    "label": "Study in Brown",
+    "p": 0.0033083830933570714,
+    "gold": true
+   },
+   {
+    "id": "mq:19b5e3142bfa71b2",
+    "label": "Members, Don't Git Weary",
+    "p": 0.0032063600051906375,
+    "gold": false
+   },
+   {
+    "id": "mq:799357cbcee3c09d",
+    "label": "Breakwater Cat",
+    "p": 0.0029955764275986538,
+    "gold": false
+   },
+   {
+    "id": "mq:24527b79d7ed071b",
+    "label": "Face of a Fighter",
+    "p": 0.002933206650114009,
+    "gold": false
+   },
+   {
+    "id": "mq:5a209cac4e3500f4",
+    "label": "Insect",
+    "p": 0.0025095466180144305,
+    "gold": false
+   },
+   {
+    "id": "mq:b1d431e00e586712",
+    "label": "The Holy Family with the Dragonfly",
+    "p": 0.0024941056582603763,
+    "gold": false
+   },
+   {
+    "id": "mq:0e48ad99219cb349",
+    "label": "Sony Music",
+    "p": 0.0023374795415997897,
+    "gold": false
+   },
+   {
+    "id": "mq:b40770c4a8355772",
+    "label": "Claudio Pari",
+    "p": 0.001768264547659406,
+    "gold": false
+   },
+   {
+    "id": "mq:d076601405845fed",
+    "label": "Kim Pyong-il",
+    "p": 0.0017286571289862364,
+    "gold": false
+   },
+   {
+    "id": "mq:1be1d0ae3376035d",
+    "label": "Guitar Moods",
+    "p": 0.0016951653083588066,
+    "gold": false
+   },
+   {
+    "id": "mq:0645887e03a73921",
+    "label": "Kinfolk (album)",
+    "p": 0.0014170618136996576,
+    "gold": false
+   },
+   {
+    "id": "mq:78d3a02f76765c33",
+    "label": "Association of Christian Schools, Colleges and Universities",
+    "p": 0.0014157788242413157,
+    "gold": false
+   },
+   {
+    "id": "mq:2bb05ac59a1be54e",
+    "label": "Duke's Big 4",
+    "p": 0.0013742062739220673,
+    "gold": false
+   },
+   {
+    "id": "mq:8dadfd6d1e926432",
+    "label": "American Idol",
+    "p": 0.001288108954650718,
+    "gold": false
+   },
+   {
+    "id": "mq:e41ad5917b5d0e46",
+    "label": "EmArcy Records",
+    "p": 0.001183448476642452,
+    "gold": true
+   },
+   {
+    "id": "mq:a358cc7448f417eb",
+    "label": "Chemical Heart",
+    "p": 0.0011815531006095109,
+    "gold": false
+   },
+   {
+    "id": "mq:1ff67150603ad523",
+    "label": "Pro Evolution Soccer 2",
+    "p": 0.0011608397015093357,
+    "gold": false
+   },
+   {
+    "id": "mq:5d6b7086e4adebd9",
+    "label": "Sony Music",
+    "p": 0.0011062487365696065,
+    "gold": false
+   },
+   {
+    "id": "mq:15b8a32c3f1186cd",
+    "label": "She's in Love with the Boy",
+    "p": 0.001103164015621163,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:2f0c510916acf406",
+   "label": "Dragonfly (Masami Okui album)",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:b241a5da40c5e398",
+   "label": "Gameface",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:0b28739e4d7f596f",
+   "label": "Sony Music",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:11869f6492e971df",
+   "label": "El Trilogy",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:d23f269eb819cfb0",
+   "label": "Brown and Roach Incorporated",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:7108884d2282caac",
+   "label": "These Are the Vistas",
+   "wave": 1,
+   "via": "term:columbia records",
+   "gold": false
+  },
+  {
+   "id": "mq:904c41e5f589be39",
+   "label": "The Essential Simon and Garfunkel",
+   "wave": 1,
+   "via": "term:columbia records",
+   "gold": false
+  },
+  {
+   "id": "mq:559d6feb89fe244b",
+   "label": "Sony Music",
+   "wave": 1,
+   "via": "term:columbia records",
+   "gold": false
+  },
+  {
+   "id": "mq:9d3f1e5465a7a0bd",
+   "label": "New York City (You're a Woman)",
+   "wave": 1,
+   "via": "term:columbia records",
+   "gold": false
+  },
+  {
+   "id": "mq:62c9f3ef43051775",
+   "label": "You Never Know Who Your Friends Are",
+   "wave": 1,
+   "via": "term:columbia records",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:fa49b3fc17142eb2",
+    "label": "Jam Session (album)",
+    "gold": false
+   },
+   {
+    "id": "mq:6b128c0e2d6f06b5",
+    "label": "Study in Brown",
+    "gold": true
+   },
+   {
+    "id": "mq:19b5e3142bfa71b2",
+    "label": "Members, Don't Git Weary",
+    "gold": false
+   },
+   {
+    "id": "mq:799357cbcee3c09d",
+    "label": "Breakwater Cat",
+    "gold": false
+   },
+   {
+    "id": "mq:24527b79d7ed071b",
+    "label": "Face of a Fighter",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:fa49b3fc17142eb2",
+    "label": "Jam Session (album)",
+    "gold": false
+   },
+   {
+    "id": "mq:24527b79d7ed071b",
+    "label": "Face of a Fighter",
+    "gold": false
+   },
+   {
+    "id": "mq:6b128c0e2d6f06b5",
+    "label": "Study in Brown",
+    "gold": true
+   },
+   {
+    "id": "mq:e41ad5917b5d0e46",
+    "label": "EmArcy Records",
+    "gold": true
+   },
+   {
+    "id": "mq:2bb05ac59a1be54e",
+    "label": "Duke's Big 4",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:fa49b3fc17142eb2",
+    "label": "Jam Session (album)",
+    "gold": false
+   },
+   {
+    "id": "mq:6b128c0e2d6f06b5",
+    "label": "Study in Brown",
+    "gold": true
+   },
+   {
+    "id": "mq:e884a8e9e61a0246",
+    "label": "Sony Music",
+    "gold": false
+   },
+   {
+    "id": "mq:24527b79d7ed071b",
+    "label": "Face of a Fighter",
+    "gold": false
+   },
+   {
+    "id": "mq:e41ad5917b5d0e46",
+    "label": "EmArcy Records",
+    "gold": true
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:e14358b36532040c",
+    "label": "777 (number)",
+    "gold": false
+   },
+   {
+    "id": "mq:e41ad5917b5d0e46",
+    "label": "EmArcy Records",
+    "gold": true
+   },
+   {
+    "id": "mq:649a08379e46a321",
+    "label": "Cargo Records (UK)",
+    "gold": false
+   },
+   {
+    "id": "mq:e884a8e9e61a0246",
+    "label": "Sony Music",
+    "gold": false
+   },
+   {
+    "id": "mq:73ad596a3f888423",
+    "label": "Our Lady of the Rosary",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.25,
+  "Q": 0.5,
+  "LQ": 0.5,
+  "S": 0.25
+ }
+}

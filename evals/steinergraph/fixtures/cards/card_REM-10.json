@@ -1,0 +1,443 @@
+{
+ "qid": "card:REM-10",
+ "set": "cards",
+ "question": "What was done about this, and why: agentic: an agent regression fails a test in this repo, not just in percolate-core?",
+ "gold": [
+  {
+   "id": "commit/8a34a4e7fc",
+   "label": "commit 8a34a4e: A turn is a gate now, and the first one it drove found a release blocker (#115)",
+   "seed": false
+  },
+  {
+   "id": "commit/8b440c62b4",
+   "label": "commit 8b440c6: A citation that resolves to nothing fails a gate now, and 23 of them did (#125)",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "board/cards/REM-10.md#1",
+   "label": "board/cards/REM-10.md",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-10.md#2",
+   "label": "board/cards/REM-10.md \u203a Goal",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "specs/agentic/brief.md#59",
+   "label": "specs/agentic/brief.md \u203a 10.1 A subpackage of `percolate-core`, in its own repository",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "board/cards/REM-983.md#4",
+   "label": "board/cards/REM-983.md \u203a Done when",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "meta/skills/spec-driven-development/references/tool-surface.md#2",
+   "label": "meta/skills/spec-driven-development/references/tool-surface.md \u203a The manifest, as measured",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 2
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "board/cards/REM-10.md#1",
+    "label": "board/cards/REM-10.md",
+    "role": "seed"
+   },
+   {
+    "id": "commit/8a34a4e7fc",
+    "label": "commit 8a34a4e: A turn is a gate now, and the first one it drove found a release blocker (#115)",
+    "role": "gold"
+   },
+   {
+    "id": "commit/8b440c62b4",
+    "label": "commit 8b440c6: A citation that resolves to nothing fails a gate now, and 23 of them did (#125)",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "board/cards/REM-10.md#1",
+    "b": "commit/8a34a4e7fc",
+    "via": [
+     {
+      "kind": "term",
+      "key": "rem 10",
+      "width": 9
+     }
+    ]
+   },
+   {
+    "a": "commit/8a34a4e7fc",
+    "b": "commit/8b440c62b4",
+    "via": [
+     {
+      "kind": "term",
+      "key": "rem 10",
+      "width": 9
+     },
+     {
+      "kind": "term",
+      "key": "session_01s1pabrhajkqr7kqzbmgfac",
+      "width": 15
+     },
+     {
+      "kind": "term",
+      "key": "code session_01s1pabrhajkqr7kqzbmgfac",
+      "width": 15
+     },
+     {
+      "kind": "term",
+      "key": "many words",
+      "width": 15
+     },
+     {
+      "kind": "term",
+      "key": "file says",
+      "width": 20
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "board/cards/REM-10.md#1",
+   "gold": "commit/8a34a4e7fc",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 947,
+  "within_2_doors": 31921,
+  "gold_within_1": 2,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "PACKAGING.md#3",
+    "label": "PACKAGING.md \u203a The shape, as built",
+    "p": 0.003838024765232535,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-10.md#3",
+    "label": "board/cards/REM-10.md \u203a Evidence",
+    "p": 0.0036992614844151145,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-730.md#2",
+    "label": "board/cards/REM-730.md \u203a Goal",
+    "p": 0.0033397592057495674,
+    "gold": false
+   },
+   {
+    "id": "commit/8c2462d929",
+    "label": "commit 8c2462d: packages/p8: one distribution, four subpackages, one CLI",
+    "p": 0.0024279601685152155,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-04-query-layer-at-scale.md#6",
+    "label": "meta/postmortems/2026-09-04-query-layer-at-scale.md \u203a 3. `/dev/shm`: two defaults that collide exactly",
+    "p": 0.0021280922116122844,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-dream/vocab-3.txt#3",
+    "label": "meta/lab/results/q4-dream/vocab-3.txt",
+    "p": 0.002119668192862235,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-dream/vocab-2.txt#3",
+    "label": "meta/lab/results/q4-dream/vocab-2.txt",
+    "p": 0.002067977845252168,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-dream/vocab-all.txt#1",
+    "label": "meta/lab/results/q4-dream/vocab-all.txt",
+    "p": 0.0020411555225451727,
+    "gold": false
+   },
+   {
+    "id": "research-notes/build-knit-dream-results-2026-09-10.md#7",
+    "label": "research-notes/build-knit-dream-results-2026-09-10.md \u203a Running application and regression checks",
+    "p": 0.0020404125893248174,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-983.md#5",
+    "label": "board/cards/REM-983.md \u203a Scope",
+    "p": 0.0020403293035387744,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-983.md#3",
+    "label": "board/cards/REM-983.md \u203a Evidence",
+    "p": 0.0020255400547080533,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-dream/vocab-1.txt#1",
+    "label": "meta/lab/results/q4-dream/vocab-1.txt",
+    "p": 0.002015780492300829,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/drafter.md#12",
+    "label": "specs/percolate-application/drafter.md \u203a Density and interruption",
+    "p": 0.00199885145344091,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-671.md#3",
+    "label": "board/cards/REM-671.md \u203a Evidence",
+    "p": 0.0019199922280649082,
+    "gold": false
+   },
+   {
+    "id": "commit/8a34a4e7fc",
+    "label": "commit 8a34a4e: A turn is a gate now, and the first one it drove found a release blocker (#115)",
+    "p": 0.00176082932501288,
+    "gold": true
+   },
+   {
+    "id": "specs/agentic/workflow-composition-ui.md#5",
+    "label": "specs/agentic/workflow-composition-ui.md \u203a Authoring contract",
+    "p": 0.0017328148899382946,
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-10-20-lme-seeded-taxonomy/in_percolate/beam_view.py#1",
+    "label": "meta/spikes/2026-10-20-lme-seeded-taxonomy/in_percolate/beam_view.py",
+    "p": 0.0017184210669710317,
+    "gold": false
+   },
+   {
+    "id": "dev/docker-compose.yml#8",
+    "label": "dev/docker-compose.yml",
+    "p": 0.0015296204351068839,
+    "gold": false
+   },
+   {
+    "id": "commit/8b440c62b4",
+    "label": "commit 8b440c6: A citation that resolves to nothing fails a gate now, and 23 of them did (#125)",
+    "p": 0.0013962075644082781,
+    "gold": true
+   },
+   {
+    "id": "meta/postmortems/2026-09-04-issues-filed-for-shipped-work.md#1",
+    "label": "meta/postmortems/2026-09-04-issues-filed-for-shipped-work.md \u203a Two tickets for work that had already shipped",
+    "p": 0.0013872842707449563,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "board/cards/REM-10.md#1",
+   "label": "board/cards/REM-10.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-10.md#2",
+   "label": "board/cards/REM-10.md \u203a Goal",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/agentic/brief.md#59",
+   "label": "specs/agentic/brief.md \u203a 10.1 A subpackage of `percolate-core`, in its own repository",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-983.md#4",
+   "label": "board/cards/REM-983.md \u203a Done when",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/skills/spec-driven-development/references/tool-surface.md#2",
+   "label": "meta/skills/spec-driven-development/references/tool-surface.md \u203a The manifest, as measured",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/8a34a4e7fc",
+   "label": "commit 8a34a4e: A turn is a gate now, and the first one it drove found a release blocker (#115)",
+   "wave": 1,
+   "via": "term:rem 10",
+   "gold": true
+  },
+  {
+   "id": "board/cards/REM-10.md#3",
+   "label": "board/cards/REM-10.md \u203a Evidence",
+   "wave": 1,
+   "via": "term:rem 10",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-10.md#4",
+   "label": "board/cards/REM-10.md \u203a Log",
+   "wave": 1,
+   "via": "term:rem 10",
+   "gold": false
+  },
+  {
+   "id": "meta/postmortems/2026-09-04-issues-filed-for-shipped-work.md#1",
+   "label": "meta/postmortems/2026-09-04-issues-filed-for-shipped-work.md \u203a Two tickets for work that had already shipped",
+   "wave": 1,
+   "via": "term:rem 10",
+   "gold": false
+  },
+  {
+   "id": "board/test_board.py#11",
+   "label": "board/test_board.py",
+   "wave": 1,
+   "via": "term:rem 10",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "PACKAGING.md#3",
+    "label": "PACKAGING.md \u203a The shape, as built",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-10.md#3",
+    "label": "board/cards/REM-10.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-730.md#2",
+    "label": "board/cards/REM-730.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "commit/8c2462d929",
+    "label": "commit 8c2462d: packages/p8: one distribution, four subpackages, one CLI",
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-04-query-layer-at-scale.md#6",
+    "label": "meta/postmortems/2026-09-04-query-layer-at-scale.md \u203a 3. `/dev/shm`: two defaults that collide exactly",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "PACKAGING.md#3",
+    "label": "PACKAGING.md \u203a The shape, as built",
+    "gold": false
+   },
+   {
+    "id": "commit/8c2462d929",
+    "label": "commit 8c2462d: packages/p8: one distribution, four subpackages, one CLI",
+    "gold": false
+   },
+   {
+    "id": "research-notes/build-knit-dream-results-2026-09-10.md#7",
+    "label": "research-notes/build-knit-dream-results-2026-09-10.md \u203a Running application and regression checks",
+    "gold": false
+   },
+   {
+    "id": "commit/8a34a4e7fc",
+    "label": "commit 8a34a4e: A turn is a gate now, and the first one it drove found a release blocker (#115)",
+    "gold": true
+   },
+   {
+    "id": "meta/lab/results/q4-dream/vocab-all.txt#1",
+    "label": "meta/lab/results/q4-dream/vocab-all.txt",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "board/cards/REM-983.md#5",
+    "label": "board/cards/REM-983.md \u203a Scope",
+    "gold": false
+   },
+   {
+    "id": "commit/048138ac76",
+    "label": "commit 048138a: board: file REM-983 agentic: an agent's past versions are rows you can select",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-983.md#1",
+    "label": "board/cards/REM-983.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-10.md#4",
+    "label": "board/cards/REM-10.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "commit/0cdfe0fbe3",
+    "label": "commit 0cdfe0f: board: REM-983 in-progress \u2192 done",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "specs/agentic/brief.md#49",
+    "label": "specs/agentic/brief.md \u203a 6.1 Which component turns the document into the row",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1045.md#4",
+    "label": "board/cards/REM-1045.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-960.md#4",
+    "label": "board/cards/REM-960.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "specs/agentic/declarations.md#22",
+    "label": "specs/agentic/declarations.md \u203a 10. What is left out, and which test each fails",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-470.md#4",
+    "label": "board/cards/REM-470.md \u203a Done when",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.5,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

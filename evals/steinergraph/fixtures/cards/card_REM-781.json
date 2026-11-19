@@ -1,0 +1,410 @@
+{
+ "qid": "card:REM-781",
+ "set": "cards",
+ "question": "What was done about this, and why: authoring: reconcile the Drafter reviewer spec with the shipped typed model?",
+ "gold": [
+  {
+   "id": "commit/a17f69c1f6",
+   "label": "commit a17f69c: Reconcile Drafter reviewer model with application aec1e71 (REM-781)",
+   "seed": true
+  },
+  {
+   "id": "commit/b7a37f9e72",
+   "label": "commit b7a37f9: Clarify database boundary for saved reviewer criteria (REM-781)",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/919657ed13",
+   "label": "commit 919657e: board: file REM-781 authoring: reconcile the Drafter reviewer spec with the shipped typed model",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-781.md#1",
+   "label": "board/cards/REM-781.md",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-781.md#3",
+   "label": "board/cards/REM-781.md \u203a Log",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/a17f69c1f6",
+   "label": "commit a17f69c: Reconcile Drafter reviewer model with application aec1e71 (REM-781)",
+   "rank": 4,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "board/cards/REM-780.md#1",
+   "label": "board/cards/REM-780.md",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 2
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/a17f69c1f6",
+    "label": "commit a17f69c: Reconcile Drafter reviewer model with application aec1e71 (REM-781)",
+    "role": "gold"
+   },
+   {
+    "id": "commit/b7a37f9e72",
+    "label": "commit b7a37f9: Clarify database boundary for saved reviewer criteria (REM-781)",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/a17f69c1f6",
+    "b": "commit/b7a37f9e72",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "rem 781",
+      "width": 13
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "commit/a17f69c1f6",
+   "gold": "commit/a17f69c1f6",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 851,
+  "within_2_doors": 32993,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "board/team/drafter-reviewers.md#2",
+    "label": "board/team/drafter-reviewers.md \u203a Log",
+    "p": 0.010679404474886068,
+    "gold": false
+   },
+   {
+    "id": "board/team/drafter-reviewers.md#1",
+    "label": "board/team/drafter-reviewers.md",
+    "p": 0.008516923275867108,
+    "gold": false
+   },
+   {
+    "id": "commit/98c437fd2f",
+    "label": "commit 98c437f: board: file REM-780 authoring: show reviewer creation and comments in an interactive page study",
+    "p": 0.00843923492626473,
+    "gold": false
+   },
+   {
+    "id": "commit/f70df1ed77",
+    "label": "commit f70df1e: board: drafter-reviewers takes REM-781",
+    "p": 0.007338995526488332,
+    "gold": false
+   },
+   {
+    "id": "output/drafter-study/README.md#1",
+    "label": "output/drafter-study/README.md \u203a Drafter: three interactive page studies",
+    "p": 0.006828267013963649,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-779.md#1",
+    "label": "board/cards/REM-779.md",
+    "p": 0.006159809641678501,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-780.md#3",
+    "label": "board/cards/REM-780.md \u203a Log",
+    "p": 0.005983183689239267,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/drafter.md#1",
+    "label": "specs/percolate-application/drafter.md \u203a Drafter: a document with room to think",
+    "p": 0.005119551644395995,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-779.md#3",
+    "label": "board/cards/REM-779.md \u203a Log",
+    "p": 0.005091041148228204,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-781.md#2",
+    "label": "board/cards/REM-781.md \u203a Goal",
+    "p": 0.005019774784532159,
+    "gold": false
+   },
+   {
+    "id": "commit/acd96f3c12",
+    "label": "commit acd96f3: board: drafter-reviewers checks in, ended",
+    "p": 0.00430627404618815,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-778.md#1",
+    "label": "board/cards/REM-778.md",
+    "p": 0.004238650416479278,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-778.md#7",
+    "label": "board/cards/REM-778.md \u203a Log",
+    "p": 0.004171662941123665,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-777.md#1",
+    "label": "board/cards/REM-777.md",
+    "p": 0.004088438351796467,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/drafter.md#94",
+    "label": "specs/percolate-application/drafter.md \u203a 12. Evidence and implementation handoff",
+    "p": 0.0040232478118481085,
+    "gold": false
+   },
+   {
+    "id": "commit/b3b4c97c9e",
+    "label": "commit b3b4c97: drafter, reviewer-management: a reviewer is a lens, theory and examples priming Claude for a bounded tra",
+    "p": 0.004007567326891944,
+    "gold": false
+   },
+   {
+    "id": "commit/b7a37f9e72",
+    "label": "commit b7a37f9: Clarify database boundary for saved reviewer criteria (REM-781)",
+    "p": 0.003840005205066271,
+    "gold": true
+   },
+   {
+    "id": "commit/d43fe013fc",
+    "label": "commit d43fe01: board: drafter-reviewers takes REM-780",
+    "p": 0.003454337937625571,
+    "gold": false
+   },
+   {
+    "id": "commit/262d10a624",
+    "label": "commit 262d10a: board: drafter-reviewers takes REM-779",
+    "p": 0.0030464545324585413,
+    "gold": false
+   },
+   {
+    "id": "commit/3505c883cc",
+    "label": "commit 3505c88: Add reviewer and idea-lineage page study for Drafter (REM-780)",
+    "p": 0.0029328682104144245,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/919657ed13",
+   "label": "commit 919657e: board: file REM-781 authoring: reconcile the Drafter reviewer spec with the shipped typed model",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-781.md#1",
+   "label": "board/cards/REM-781.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-781.md#3",
+   "label": "board/cards/REM-781.md \u203a Log",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/a17f69c1f6",
+   "label": "commit a17f69c: Reconcile Drafter reviewer model with application aec1e71 (REM-781)",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "board/cards/REM-780.md#1",
+   "label": "board/cards/REM-780.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/percolate-application/drafter.md#28",
+   "label": "specs/percolate-application/drafter.md \u203a Shipped reviewer contract",
+   "wave": 1,
+   "via": "term:aec1e71",
+   "gold": false
+  },
+  {
+   "id": "board/team/drafter-reviewers.md#1",
+   "label": "board/team/drafter-reviewers.md",
+   "wave": 1,
+   "via": "term:aec1e71",
+   "gold": false
+  },
+  {
+   "id": "specs/percolate-application/drafter.md#1",
+   "label": "specs/percolate-application/drafter.md \u203a Drafter: a document with room to think",
+   "wave": 1,
+   "via": "term:aec1e71",
+   "gold": false
+  },
+  {
+   "id": "specs/percolate-application/drafter.md#71",
+   "label": "specs/percolate-application/drafter.md \u203a 7. Storage: reuse the appropriate existing tables",
+   "wave": 1,
+   "via": "term:aec1e71",
+   "gold": false
+  },
+  {
+   "id": "board/team/drafter-reviewers.md#2",
+   "label": "board/team/drafter-reviewers.md \u203a Log",
+   "wave": 1,
+   "via": "term:aec1e71",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "board/team/drafter-reviewers.md#2",
+    "label": "board/team/drafter-reviewers.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/team/drafter-reviewers.md#1",
+    "label": "board/team/drafter-reviewers.md",
+    "gold": false
+   },
+   {
+    "id": "commit/98c437fd2f",
+    "label": "commit 98c437f: board: file REM-780 authoring: show reviewer creation and comments in an interactive page study",
+    "gold": false
+   },
+   {
+    "id": "commit/f70df1ed77",
+    "label": "commit f70df1e: board: drafter-reviewers takes REM-781",
+    "gold": false
+   },
+   {
+    "id": "output/drafter-study/README.md#1",
+    "label": "output/drafter-study/README.md \u203a Drafter: three interactive page studies",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "board/team/drafter-reviewers.md#2",
+    "label": "board/team/drafter-reviewers.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/team/drafter-reviewers.md#1",
+    "label": "board/team/drafter-reviewers.md",
+    "gold": false
+   },
+   {
+    "id": "output/drafter-study/README.md#1",
+    "label": "output/drafter-study/README.md \u203a Drafter: three interactive page studies",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-780.md#3",
+    "label": "board/cards/REM-780.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-779.md#1",
+    "label": "board/cards/REM-779.md",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/f70df1ed77",
+    "label": "commit f70df1e: board: drafter-reviewers takes REM-781",
+    "gold": false
+   },
+   {
+    "id": "commit/075fc21671",
+    "label": "commit 075fc21: Preserve development database upgrades and reconcile concurrent access work",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-779.md#1",
+    "label": "board/cards/REM-779.md",
+    "gold": false
+   },
+   {
+    "id": "commit/d31e72ad3c",
+    "label": "commit d31e72a: board: REM-781 in-progress \u2192 done",
+    "gold": false
+   },
+   {
+    "id": "commit/acd96f3c12",
+    "label": "commit acd96f3: board: drafter-reviewers checks in, ended",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "specs/percolate-application/drafter.md#1",
+    "label": "specs/percolate-application/drafter.md \u203a Drafter: a document with room to think",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-778.md#1",
+    "label": "board/cards/REM-778.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-779.md#1",
+    "label": "board/cards/REM-779.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-777.md#1",
+    "label": "board/cards/REM-777.md",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/reviewer-management.md#1",
+    "label": "specs/percolate-application/reviewer-management.md \u203a Reviewer management and avatar registries",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

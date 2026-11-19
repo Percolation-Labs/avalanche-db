@@ -1,0 +1,421 @@
+{
+ "qid": "RW:2hop__821197_368148",
+ "set": "mq",
+ "question": "In which county is Southern Maryland Electric Cooperative headquartered?",
+ "gold": [
+  {
+   "id": "mq:1361f10f1aa8377b",
+   "label": "Southern Maryland Electric Cooperative",
+   "seed": true
+  },
+  {
+   "id": "mq:99b19931f5a33e9e",
+   "label": "Hughesville, Maryland",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:1361f10f1aa8377b",
+   "label": "Southern Maryland Electric Cooperative",
+   "rank": 1,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:81342c518b46e9e7",
+   "label": "Province of Maryland",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:36a72a433f4441bc",
+   "label": "Prysmian Group",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:3b6d195e899cf951",
+   "label": "Southern California Edison",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:1d92ac24f1f561a3",
+   "label": "New Carrollton, Maryland",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:1361f10f1aa8377b",
+    "label": "Southern Maryland Electric Cooperative",
+    "role": "gold"
+   },
+   {
+    "id": "mq:99b19931f5a33e9e",
+    "label": "Hughesville, Maryland",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:1361f10f1aa8377b",
+    "b": "mq:99b19931f5a33e9e",
+    "via": [
+     {
+      "kind": "near",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "hughesville maryland",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "hughesville",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "maryland",
+      "width": 86
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "mq:1361f10f1aa8377b",
+   "gold": "mq:1361f10f1aa8377b",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 1918,
+  "within_2_doors": 19152,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "mq:99b19931f5a33e9e",
+    "label": "Hughesville, Maryland",
+    "p": 0.0035244869831395427,
+    "gold": true
+   },
+   {
+    "id": "mq:6103d2283cc48c84",
+    "label": "Naches River",
+    "p": 0.0015662080784418233,
+    "gold": false
+   },
+   {
+    "id": "mq:0b9a6129211cae83",
+    "label": "Hanford Site",
+    "p": 0.0015526248485348848,
+    "gold": false
+   },
+   {
+    "id": "mq:69e08ee934f44b8d",
+    "label": "Albert Einstein Memorial",
+    "p": 0.001514847076192093,
+    "gold": false
+   },
+   {
+    "id": "mq:5fe0d84f889c7918",
+    "label": "Bank of America",
+    "p": 0.0014435879742555578,
+    "gold": false
+   },
+   {
+    "id": "mq:f73c4d423ced4305",
+    "label": "Poe Dam",
+    "p": 0.0014308835042922893,
+    "gold": false
+   },
+   {
+    "id": "mq:6b402acf2f62e013",
+    "label": "Succession to the British throne",
+    "p": 0.0013107861582367115,
+    "gold": false
+   },
+   {
+    "id": "mq:da10118cd0422a25",
+    "label": "Succession to the British throne",
+    "p": 0.0013107861582367115,
+    "gold": false
+   },
+   {
+    "id": "mq:5f2e4b9275f408a6",
+    "label": "Copper",
+    "p": 0.0012716837253315908,
+    "gold": false
+   },
+   {
+    "id": "mq:b8ca487e5753e106",
+    "label": "Content (Upper Marlboro, Maryland)",
+    "p": 0.0012652521887501328,
+    "gold": false
+   },
+   {
+    "id": "mq:c8a568ad1aecc1fc",
+    "label": "Bellevue (Accokeek, Maryland)",
+    "p": 0.001260565025109908,
+    "gold": false
+   },
+   {
+    "id": "mq:8da8292b957ae6f9",
+    "label": "Oklahoma",
+    "p": 0.001256106719318049,
+    "gold": false
+   },
+   {
+    "id": "mq:c30492aedd2c8d90",
+    "label": "Huntington Lake",
+    "p": 0.0012156430668073127,
+    "gold": false
+   },
+   {
+    "id": "mq:251e2f47d2f93aea",
+    "label": "Landover, Maryland",
+    "p": 0.0012122564732292224,
+    "gold": false
+   },
+   {
+    "id": "mq:46c992824cc11b95",
+    "label": "Elizabeth II",
+    "p": 0.001167396507722804,
+    "gold": false
+   },
+   {
+    "id": "mq:c3b451076fa1e9f8",
+    "label": "Calvert Beach-Long Beach, Maryland",
+    "p": 0.0011648804518622005,
+    "gold": false
+   },
+   {
+    "id": "mq:2fe5207f232d1889",
+    "label": "2002 World Series",
+    "p": 0.0011585488919527945,
+    "gold": false
+   },
+   {
+    "id": "mq:7c6e215245e4596e",
+    "label": "Puerto Rico Electric Power Authority",
+    "p": 0.001134667110916497,
+    "gold": false
+   },
+   {
+    "id": "mq:c0fe44788209d957",
+    "label": "Roman Catholic Archdiocese of Washington",
+    "p": 0.001065694530735333,
+    "gold": false
+   },
+   {
+    "id": "mq:7f41086918788692",
+    "label": "General Electric",
+    "p": 0.0010621995050966331,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:1361f10f1aa8377b",
+   "label": "Southern Maryland Electric Cooperative",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:81342c518b46e9e7",
+   "label": "Province of Maryland",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:36a72a433f4441bc",
+   "label": "Prysmian Group",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:3b6d195e899cf951",
+   "label": "Southern California Edison",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:1d92ac24f1f561a3",
+   "label": "New Carrollton, Maryland",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:99b19931f5a33e9e",
+   "label": "Hughesville, Maryland",
+   "wave": 1,
+   "via": "term:hughesville",
+   "gold": true
+  },
+  {
+   "id": "mq:d73e3bfee96ddfad",
+   "label": "Choptank River",
+   "wave": 2,
+   "via": "term:county maryland",
+   "gold": false
+  },
+  {
+   "id": "mq:cbe87909e0a43a76",
+   "label": "Keedy House",
+   "wave": 2,
+   "via": "term:county maryland",
+   "gold": false
+  },
+  {
+   "id": "mq:27d5a401c3acfad7",
+   "label": "New Windsor Historic District",
+   "wave": 2,
+   "via": "term:county maryland",
+   "gold": false
+  },
+  {
+   "id": "mq:108924e1afd657de",
+   "label": "Woburn Manor",
+   "wave": 2,
+   "via": "term:county maryland",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:99b19931f5a33e9e",
+    "label": "Hughesville, Maryland",
+    "gold": true
+   },
+   {
+    "id": "mq:6103d2283cc48c84",
+    "label": "Naches River",
+    "gold": false
+   },
+   {
+    "id": "mq:0b9a6129211cae83",
+    "label": "Hanford Site",
+    "gold": false
+   },
+   {
+    "id": "mq:69e08ee934f44b8d",
+    "label": "Albert Einstein Memorial",
+    "gold": false
+   },
+   {
+    "id": "mq:5fe0d84f889c7918",
+    "label": "Bank of America",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:99b19931f5a33e9e",
+    "label": "Hughesville, Maryland",
+    "gold": true
+   },
+   {
+    "id": "mq:7f41086918788692",
+    "label": "General Electric",
+    "gold": false
+   },
+   {
+    "id": "mq:f73c4d423ced4305",
+    "label": "Poe Dam",
+    "gold": false
+   },
+   {
+    "id": "mq:c3b451076fa1e9f8",
+    "label": "Calvert Beach-Long Beach, Maryland",
+    "gold": false
+   },
+   {
+    "id": "mq:b8ca487e5753e106",
+    "label": "Content (Upper Marlboro, Maryland)",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:99b19931f5a33e9e",
+    "label": "Hughesville, Maryland",
+    "gold": true
+   },
+   {
+    "id": "mq:7f41086918788692",
+    "label": "General Electric",
+    "gold": false
+   },
+   {
+    "id": "mq:c8a568ad1aecc1fc",
+    "label": "Bellevue (Accokeek, Maryland)",
+    "gold": false
+   },
+   {
+    "id": "mq:b8ca487e5753e106",
+    "label": "Content (Upper Marlboro, Maryland)",
+    "gold": false
+   },
+   {
+    "id": "mq:f73c4d423ced4305",
+    "label": "Poe Dam",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:d73e3bfee96ddfad",
+    "label": "Choptank River",
+    "gold": false
+   },
+   {
+    "id": "mq:6f31396b7cdd38b4",
+    "label": "GOVECS",
+    "gold": false
+   },
+   {
+    "id": "mq:99b19931f5a33e9e",
+    "label": "Hughesville, Maryland",
+    "gold": true
+   },
+   {
+    "id": "mq:d84d06c3c5e7ca2a",
+    "label": "Elk Ridge (Maryland)",
+    "gold": false
+   },
+   {
+    "id": "mq:251e2f47d2f93aea",
+    "label": "Landover, Maryland",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 1.0,
+  "Q": 1.0,
+  "LQ": 1.0,
+  "S": 1.0
+ }
+}

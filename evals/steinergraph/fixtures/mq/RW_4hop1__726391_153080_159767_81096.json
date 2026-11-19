@@ -1,0 +1,459 @@
+{
+ "qid": "RW:4hop1__726391_153080_159767_81096",
+ "set": "mq",
+ "question": "Who won the Indy car race in the largest city and capitol of the state where the Oh Yeah performer is from?",
+ "gold": [
+  {
+   "id": "mq:61b69b6ad4ea2409",
+   "label": "Arizona",
+   "seed": false
+  },
+  {
+   "id": "mq:68c091e277deca7f",
+   "label": "Oh Yeah (Charles Mingus album)",
+   "seed": false
+  },
+  {
+   "id": "mq:98a07edb3ccc50d9",
+   "label": "Charles Mingus",
+   "seed": false
+  },
+  {
+   "id": "mq:b3ad856a89e2d181",
+   "label": "Desert Diamond West Valley Phoenix Grand Prix",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:e6332f488b953c06",
+   "label": "Logan Gomez",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:9dfe53febdf0e7e8",
+   "label": "2001 Honda Indy 300",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:b3ad856a89e2d181",
+   "label": "Desert Diamond West Valley Phoenix Grand Prix",
+   "rank": 3,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:3b1700398625a563",
+   "label": "Mark Dismore",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:18c72ec7bbd6bde4",
+   "label": "Homero Richards",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 2
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:61b69b6ad4ea2409",
+    "label": "Arizona",
+    "role": "gold"
+   },
+   {
+    "id": "mq:68c091e277deca7f",
+    "label": "Oh Yeah (Charles Mingus album)",
+    "role": "gold"
+   },
+   {
+    "id": "mq:98a07edb3ccc50d9",
+    "label": "Charles Mingus",
+    "role": "gold"
+   },
+   {
+    "id": "mq:b3ad856a89e2d181",
+    "label": "Desert Diamond West Valley Phoenix Grand Prix",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:61b69b6ad4ea2409",
+    "b": "mq:98a07edb3ccc50d9",
+    "via": [
+     {
+      "kind": "term",
+      "key": "arizona",
+      "width": 100
+     }
+    ]
+   },
+   {
+    "a": "mq:61b69b6ad4ea2409",
+    "b": "mq:b3ad856a89e2d181",
+    "via": [
+     {
+      "kind": "term",
+      "key": "phoenix",
+      "width": 38
+     }
+    ]
+   },
+   {
+    "a": "mq:68c091e277deca7f",
+    "b": "mq:98a07edb3ccc50d9",
+    "via": [
+     {
+      "kind": "term",
+      "key": "charles mingus",
+      "width": 18
+     },
+     {
+      "kind": "term",
+      "key": "mingus",
+      "width": 18
+     }
+    ]
+   }
+  ],
+  "cost": 3,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   2,
+   1,
+   1,
+   1,
+   2,
+   2
+  ],
+  "entry": {
+   "seed": "mq:b3ad856a89e2d181",
+   "gold": "mq:b3ad856a89e2d181",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 2902,
+  "within_2_doors": 18176,
+  "gold_within_1": 1,
+  "gold_within_2": 2,
+  "top_U": [
+   {
+    "id": "mq:0c6139fa9126174d",
+    "label": "Tony Renna",
+    "p": 0.005814709431368262,
+    "gold": false
+   },
+   {
+    "id": "mq:cf42723bf38760fc",
+    "label": "2002 Brazilian Grand Prix",
+    "p": 0.0031330189212168554,
+    "gold": false
+   },
+   {
+    "id": "mq:ff339d8f272f699a",
+    "label": "Joshua Gomez",
+    "p": 0.0026033069892695314,
+    "gold": false
+   },
+   {
+    "id": "mq:1c7921db0e1d338a",
+    "label": "Lewis Hamilton",
+    "p": 0.002522173339978367,
+    "gold": false
+   },
+   {
+    "id": "mq:342463495925a975",
+    "label": "Matt Carter (racing driver)",
+    "p": 0.0024503852992652764,
+    "gold": false
+   },
+   {
+    "id": "mq:074051ac808a451d",
+    "label": "2015 Brazilian Grand Prix",
+    "p": 0.002294981875154122,
+    "gold": false
+   },
+   {
+    "id": "mq:79daa64351b0c113",
+    "label": "Dan Pohl",
+    "p": 0.0020397854350642374,
+    "gold": false
+   },
+   {
+    "id": "mq:f1744eb60b8b9700",
+    "label": "Robert J. Richards",
+    "p": 0.002008466936990302,
+    "gold": false
+   },
+   {
+    "id": "mq:358f50335be44dd6",
+    "label": "North Carolina",
+    "p": 0.0020032142939174855,
+    "gold": false
+   },
+   {
+    "id": "mq:2c0059bff1969ea6",
+    "label": "Jeff Krogh",
+    "p": 0.0018459342974252422,
+    "gold": false
+   },
+   {
+    "id": "mq:93ab671480fcda22",
+    "label": "Dwyane Wade",
+    "p": 0.0016794858925302297,
+    "gold": false
+   },
+   {
+    "id": "mq:b5ddf9120c554c92",
+    "label": "Jeff Altenburg",
+    "p": 0.0016678255138678872,
+    "gold": false
+   },
+   {
+    "id": "mq:b87d1f8c21bf6da9",
+    "label": "Elmer George",
+    "p": 0.0016603744354388794,
+    "gold": false
+   },
+   {
+    "id": "mq:04245a05d396e986",
+    "label": "Richmond, Virginia",
+    "p": 0.0016060758132751293,
+    "gold": false
+   },
+   {
+    "id": "mq:b06c6e703e21717a",
+    "label": "1969 Mexican Grand Prix",
+    "p": 0.0015955455746182634,
+    "gold": false
+   },
+   {
+    "id": "mq:10d60fd3d501625d",
+    "label": "2018 Indianapolis 500",
+    "p": 0.001563118923802203,
+    "gold": false
+   },
+   {
+    "id": "mq:f5a134dcd31c2ad8",
+    "label": "Kevin Harvick",
+    "p": 0.0014821034308620663,
+    "gold": false
+   },
+   {
+    "id": "mq:89536de267723b8a",
+    "label": "NASCAR Speedway Division",
+    "p": 0.0013418672042913205,
+    "gold": false
+   },
+   {
+    "id": "mq:292b821676583ce9",
+    "label": "Roush Fenway Racing",
+    "p": 0.001154716679318933,
+    "gold": false
+   },
+   {
+    "id": "mq:40dd2830b17d3e2e",
+    "label": "2018 French Grand Prix",
+    "p": 0.0010845133935319944,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:e6332f488b953c06",
+   "label": "Logan Gomez",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:9dfe53febdf0e7e8",
+   "label": "2001 Honda Indy 300",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:b3ad856a89e2d181",
+   "label": "Desert Diamond West Valley Phoenix Grand Prix",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:3b1700398625a563",
+   "label": "Mark Dismore",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:18c72ec7bbd6bde4",
+   "label": "Homero Richards",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:4f3feab5e77053ad",
+   "label": "Two Figures",
+   "wave": 1,
+   "via": "term:indianapolis",
+   "gold": false
+  },
+  {
+   "id": "mq:c55fd7db82d0e778",
+   "label": "Greenfield, Indiana",
+   "wave": 1,
+   "via": "term:indianapolis",
+   "gold": false
+  },
+  {
+   "id": "mq:89536de267723b8a",
+   "label": "NASCAR Speedway Division",
+   "wave": 1,
+   "via": "term:indianapolis",
+   "gold": false
+  },
+  {
+   "id": "mq:2dc98ef6009756c0",
+   "label": "John J. Barton",
+   "wave": 1,
+   "via": "term:indianapolis",
+   "gold": false
+  },
+  {
+   "id": "mq:79f11d5d5b904fd8",
+   "label": "Indianapolis News",
+   "wave": 1,
+   "via": "term:indianapolis",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:0c6139fa9126174d",
+    "label": "Tony Renna",
+    "gold": false
+   },
+   {
+    "id": "mq:cf42723bf38760fc",
+    "label": "2002 Brazilian Grand Prix",
+    "gold": false
+   },
+   {
+    "id": "mq:ff339d8f272f699a",
+    "label": "Joshua Gomez",
+    "gold": false
+   },
+   {
+    "id": "mq:1c7921db0e1d338a",
+    "label": "Lewis Hamilton",
+    "gold": false
+   },
+   {
+    "id": "mq:342463495925a975",
+    "label": "Matt Carter (racing driver)",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:0c6139fa9126174d",
+    "label": "Tony Renna",
+    "gold": false
+   },
+   {
+    "id": "mq:342463495925a975",
+    "label": "Matt Carter (racing driver)",
+    "gold": false
+   },
+   {
+    "id": "mq:cf42723bf38760fc",
+    "label": "2002 Brazilian Grand Prix",
+    "gold": false
+   },
+   {
+    "id": "mq:b5ddf9120c554c92",
+    "label": "Jeff Altenburg",
+    "gold": false
+   },
+   {
+    "id": "mq:04245a05d396e986",
+    "label": "Richmond, Virginia",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:0c6139fa9126174d",
+    "label": "Tony Renna",
+    "gold": false
+   },
+   {
+    "id": "mq:cf42723bf38760fc",
+    "label": "2002 Brazilian Grand Prix",
+    "gold": false
+   },
+   {
+    "id": "mq:04245a05d396e986",
+    "label": "Richmond, Virginia",
+    "gold": false
+   },
+   {
+    "id": "mq:62eab94f0a6a6550",
+    "label": "Denny Hamlin",
+    "gold": false
+   },
+   {
+    "id": "mq:f5a134dcd31c2ad8",
+    "label": "Kevin Harvick",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:b5ddf9120c554c92",
+    "label": "Jeff Altenburg",
+    "gold": false
+   },
+   {
+    "id": "mq:aa5c15102fcdd486",
+    "label": "Colorado Springs, Colorado",
+    "gold": false
+   },
+   {
+    "id": "mq:0c6139fa9126174d",
+    "label": "Tony Renna",
+    "gold": false
+   },
+   {
+    "id": "mq:fb067165ef32630b",
+    "label": "Minnesota State Capitol",
+    "gold": false
+   },
+   {
+    "id": "mq:afb12fbcde36bd2e",
+    "label": "2004 United States presidential election",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

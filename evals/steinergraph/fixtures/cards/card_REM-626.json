@@ -1,0 +1,443 @@
+{
+ "qid": "card:REM-626",
+ "set": "cards",
+ "question": "What was done about this, and why: reading: a claim's matches in other packages load fast?",
+ "gold": [
+  {
+   "id": "commit/4226d2de38",
+   "label": "commit 4226d2d: Merge pull request #326 from Percolation-Labs/amartey/rem-626-tx-policy-indexes",
+   "seed": false
+  },
+  {
+   "id": "commit/5925bfd695",
+   "label": "commit 5925bfd: A claim page checks access only on the rows it reads (REM-626)",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/87cbfdb54d",
+   "label": "commit 87cbfdb: board: file REM-626 reading: a claim's matches in other packages load fast",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-626.md#1",
+   "label": "board/cards/REM-626.md",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-435.md#4",
+   "label": "board/cards/REM-435.md \u203a Done when",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "board/cards/REM-653.md#2",
+   "label": "board/cards/REM-653.md \u203a Goal",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "board/cards/REM-653.md#3",
+   "label": "board/cards/REM-653.md \u203a Evidence",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 2
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/4226d2de38",
+    "label": "commit 4226d2d: Merge pull request #326 from Percolation-Labs/amartey/rem-626-tx-policy-indexes",
+    "role": "gold"
+   },
+   {
+    "id": "commit/5925bfd695",
+    "label": "commit 5925bfd: A claim page checks access only on the rows it reads (REM-626)",
+    "role": "gold"
+   },
+   {
+    "id": "commit/87cbfdb54d",
+    "label": "commit 87cbfdb: board: file REM-626 reading: a claim's matches in other packages load fast",
+    "role": "seed"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/4226d2de38",
+    "b": "commit/5925bfd695",
+    "via": [
+     {
+      "kind": "term",
+      "key": "page checks",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "checks access",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "reads rem",
+      "width": 6
+     },
+     {
+      "kind": "term",
+      "key": "rem 626",
+      "width": 15
+     },
+     {
+      "kind": "term",
+      "key": "claim page",
+      "width": 41
+     }
+    ]
+   },
+   {
+    "a": "commit/4226d2de38",
+    "b": "commit/87cbfdb54d",
+    "via": [
+     {
+      "kind": "term",
+      "key": "rem 626",
+      "width": 15
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "commit/87cbfdb54d",
+   "gold": "commit/4226d2de38",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 663,
+  "within_2_doors": 31297,
+  "gold_within_1": 2,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "board/cards/REM-626.md#2",
+    "label": "board/cards/REM-626.md \u203a Goal",
+    "p": 0.0076263155712640775,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-653.md#4",
+    "label": "board/cards/REM-653.md \u203a Done when",
+    "p": 0.006192673135893707,
+    "gold": false
+   },
+   {
+    "id": "commit/ebbbd62279",
+    "label": "commit ebbbd62: board: file REM-627 decide: In the Air sends people-naming post text to Moonshot with no transfer safegu",
+    "p": 0.005026589285490264,
+    "gold": false
+   },
+   {
+    "id": "commit/f68127d510",
+    "label": "commit f68127d: board: file REM-625 guides: Percolate serves the writing-style guide and its filter refuses the mechanic",
+    "p": 0.00488641298219316,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-430.md#8",
+    "label": "board/cards/REM-430.md \u203a Log",
+    "p": 0.003125516245259079,
+    "gold": false
+   },
+   {
+    "id": "applications/README.md#1",
+    "label": "applications/README.md \u203a Applications \u2014 what gets built on top of `specs/`",
+    "p": 0.003123308451090836,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-626.md#3",
+    "label": "board/cards/REM-626.md \u203a Evidence",
+    "p": 0.0030322627188497622,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-653.md#1",
+    "label": "board/cards/REM-653.md",
+    "p": 0.0022511264039560375,
+    "gold": false
+   },
+   {
+    "id": "commit/5925bfd695",
+    "label": "commit 5925bfd: A claim page checks access only on the rows it reads (REM-626)",
+    "p": 0.002200150520865844,
+    "gold": true
+   },
+   {
+    "id": "commit/35212816e1",
+    "label": "commit 3521281: board: file REM-434 spec: a claim is an entity with identity, and endorsement, opposition and implicatio",
+    "p": 0.0019404722777169076,
+    "gold": false
+   },
+   {
+    "id": "commit/4226d2de38",
+    "label": "commit 4226d2d: Merge pull request #326 from Percolation-Labs/amartey/rem-626-tx-policy-indexes",
+    "p": 0.0019200581988901581,
+    "gold": true
+   },
+   {
+    "id": "commit/65b1e31340",
+    "label": "commit 65b1e31: comparison-and-trust: the comparison contract is built (REM-212)",
+    "p": 0.0018724809903406963,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-626.md#5",
+    "label": "board/cards/REM-626.md \u203a Log",
+    "p": 0.0018101267783808721,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1332.md#1",
+    "label": "board/cards/REM-1332.md",
+    "p": 0.0018067038490401962,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/reviewer-management.md#3",
+    "label": "specs/percolate-application/reviewer-management.md \u203a Three distinct records",
+    "p": 0.0017797171752531014,
+    "gold": false
+   },
+   {
+    "id": "commit/f045bb9f9e",
+    "label": "commit f045bb9: board: file REM-1332 packages: share a private piece by link",
+    "p": 0.0017000077118420143,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-652.md#3",
+    "label": "board/cards/REM-652.md \u203a Evidence",
+    "p": 0.0016393446609775225,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-626.md#4",
+    "label": "board/cards/REM-626.md \u203a Done when",
+    "p": 0.0015861934151782061,
+    "gold": false
+   },
+   {
+    "id": "specs/claims/schema.sql#49",
+    "label": "specs/claims/schema.sql",
+    "p": 0.0015627137449857156,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/agents-and-workflows.md#18",
+    "label": "specs/percolate-application/agents-and-workflows.md \u203a MCP adapter",
+    "p": 0.001544758868971513,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/87cbfdb54d",
+   "label": "commit 87cbfdb: board: file REM-626 reading: a claim's matches in other packages load fast",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-626.md#1",
+   "label": "board/cards/REM-626.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-435.md#4",
+   "label": "board/cards/REM-435.md \u203a Done when",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-653.md#2",
+   "label": "board/cards/REM-653.md \u203a Goal",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-653.md#3",
+   "label": "board/cards/REM-653.md \u203a Evidence",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/a40987a1d6",
+   "label": "commit a40987a: board: REM-626 in-progress \u2192 done",
+   "wave": 1,
+   "via": "term:rem 626",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-626.md#3",
+   "label": "board/cards/REM-626.md \u203a Evidence",
+   "wave": 1,
+   "via": "term:rem 626",
+   "gold": false
+  },
+  {
+   "id": "commit/4226d2de38",
+   "label": "commit 4226d2d: Merge pull request #326 from Percolation-Labs/amartey/rem-626-tx-policy-indexes",
+   "wave": 1,
+   "via": "term:rem 626",
+   "gold": true
+  },
+  {
+   "id": "commit/61224d0256",
+   "label": "commit 61224d0: board: p8-subsystems-93 takes REM-626",
+   "wave": 1,
+   "via": "term:rem 626",
+   "gold": false
+  },
+  {
+   "id": "commit/308272fac8",
+   "label": "commit 308272f: board: note on REM-626",
+   "wave": 1,
+   "via": "term:rem 626",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "board/cards/REM-626.md#2",
+    "label": "board/cards/REM-626.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-653.md#4",
+    "label": "board/cards/REM-653.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "commit/ebbbd62279",
+    "label": "commit ebbbd62: board: file REM-627 decide: In the Air sends people-naming post text to Moonshot with no transfer safegu",
+    "gold": false
+   },
+   {
+    "id": "commit/f68127d510",
+    "label": "commit f68127d: board: file REM-625 guides: Percolate serves the writing-style guide and its filter refuses the mechanic",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-430.md#8",
+    "label": "board/cards/REM-430.md \u203a Log",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "board/cards/REM-653.md#4",
+    "label": "board/cards/REM-653.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-626.md#2",
+    "label": "board/cards/REM-626.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-430.md#8",
+    "label": "board/cards/REM-430.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-626.md#3",
+    "label": "board/cards/REM-626.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-653.md#1",
+    "label": "board/cards/REM-653.md",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "board/cards/REM-653.md#4",
+    "label": "board/cards/REM-653.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-653.md#1",
+    "label": "board/cards/REM-653.md",
+    "gold": false
+   },
+   {
+    "id": "commit/8f81394a08",
+    "label": "commit 8f81394: board: file REM-653 comparison: align claims across N packages in one call",
+    "gold": false
+   },
+   {
+    "id": "commit/a40987a1d6",
+    "label": "commit a40987a: board: REM-626 in-progress \u2192 done",
+    "gold": false
+   },
+   {
+    "id": "commit/f045bb9f9e",
+    "label": "commit f045bb9: board: file REM-1332 packages: share a private piece by link",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "board/cards/REM-615.md#1",
+    "label": "board/cards/REM-615.md",
+    "gold": false
+   },
+   {
+    "id": "specs/claims/graph.md#21",
+    "label": "specs/claims/graph.md \u203a What same means",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-574.md#7",
+    "label": "board/cards/REM-574.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261028-135227-eb2a.md#1",
+    "label": "board/messages/M-20261028-135227-eb2a.md",
+    "gold": false
+   },
+   {
+    "id": "commit/c0dc83aa86",
+    "label": "commit c0dc83a: board: file REM-520 reading: the application lists packages a page at a time, and list_packages is retir",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

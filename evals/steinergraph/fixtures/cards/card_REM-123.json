@@ -1,0 +1,504 @@
+{
+ "qid": "card:REM-123",
+ "set": "cards",
+ "question": "What was done about this, and why: aiq: the cheapest tier of mention resolution uses an index?",
+ "gold": [
+  {
+   "id": "commit/9a87941f19",
+   "label": "commit 9a87941: Three measured findings from REM-71, and the one the convergence gate caught (#104)",
+   "seed": false
+  },
+  {
+   "id": "commit/be640251dd",
+   "label": "commit be64025: A workflow definition belonged to nobody, so starting one asked nothing (#107)",
+   "seed": false
+  },
+  {
+   "id": "commit/d3ee23991d",
+   "label": "commit d3ee239: The invented issue number was a real issue, which is what a gate cannot catch (#112)",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "board/cards/REM-123.md#1",
+   "label": "board/cards/REM-123.md",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-123.md#2",
+   "label": "board/cards/REM-123.md \u203a Goal",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-116.md#1",
+   "label": "board/cards/REM-116.md",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-71.md#2",
+   "label": "board/cards/REM-71.md \u203a Goal",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-71.md#16",
+   "label": "board/cards/REM-71.md \u203a 2026-09-12T14:30:56.116Z \u00b7 Percolation Labs",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "board/cards/REM-71.md#16",
+    "label": "board/cards/REM-71.md \u203a 2026-09-12T14:30:56.116Z \u00b7 Percolation Labs",
+    "role": "seed"
+   },
+   {
+    "id": "commit/9a87941f19",
+    "label": "commit 9a87941: Three measured findings from REM-71, and the one the convergence gate caught (#104)",
+    "role": "gold"
+   },
+   {
+    "id": "commit/be640251dd",
+    "label": "commit be64025: A workflow definition belonged to nobody, so starting one asked nothing (#107)",
+    "role": "gold"
+   },
+   {
+    "id": "commit/d3ee23991d",
+    "label": "commit d3ee239: The invented issue number was a real issue, which is what a gate cannot catch (#112)",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "board/cards/REM-71.md#16",
+    "b": "commit/9a87941f19",
+    "via": [
+     {
+      "kind": "term",
+      "key": "backoff ceiling",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "queue_stale_timeout",
+      "width": 7
+     },
+     {
+      "kind": "term",
+      "key": "cheapest tier",
+      "width": 7
+     },
+     {
+      "kind": "term",
+      "key": "stale_timeout_default",
+      "width": 7
+     },
+     {
+      "kind": "term",
+      "key": "rem 125",
+      "width": 10
+     }
+    ]
+   },
+   {
+    "a": "commit/9a87941f19",
+    "b": "commit/be640251dd",
+    "via": [
+     {
+      "kind": "term",
+      "key": "cheapest tier",
+      "width": 7
+     },
+     {
+      "kind": "term",
+      "key": "mention resolution",
+      "width": 14
+     },
+     {
+      "kind": "term",
+      "key": "rem 123",
+      "width": 16
+     },
+     {
+      "kind": "term",
+      "key": "row rather",
+      "width": 22
+     },
+     {
+      "kind": "term",
+      "key": "column default",
+      "width": 30
+     }
+    ]
+   },
+   {
+    "a": "commit/be640251dd",
+    "b": "commit/d3ee23991d",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "issue number",
+      "width": 4
+     },
+     {
+      "kind": "term",
+      "key": "rem 123",
+      "width": 16
+     },
+     {
+      "kind": "term",
+      "key": "workflow definition",
+      "width": 16
+     },
+     {
+      "kind": "term",
+      "key": "rem 42",
+      "width": 18
+     }
+    ]
+   }
+  ],
+  "cost": 3,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   1,
+   1
+  ],
+  "entry": {
+   "seed": "board/cards/REM-71.md#16",
+   "gold": "commit/9a87941f19",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 832,
+  "within_2_doors": 32927,
+  "gold_within_1": 3,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "commit/9a87941f19",
+    "label": "commit 9a87941: Three measured findings from REM-71, and the one the convergence gate caught (#104)",
+    "p": 0.009095172630194666,
+    "gold": true
+   },
+   {
+    "id": "board/cards/REM-71.md#10",
+    "label": "board/cards/REM-71.md \u203a 2026-09-12T12:09:18.990Z \u00b7 Percolation Labs",
+    "p": 0.0034688765029945237,
+    "gold": false
+   },
+   {
+    "id": "commit/be640251dd",
+    "label": "commit be64025: A workflow definition belonged to nobody, so starting one asked nothing (#107)",
+    "p": 0.00339031498666523,
+    "gold": true
+   },
+   {
+    "id": "board/cards/REM-123.md#3",
+    "label": "board/cards/REM-123.md \u203a Evidence",
+    "p": 0.0029481430044591334,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-71.md#1",
+    "label": "board/cards/REM-71.md",
+    "p": 0.0027652221839203584,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-71.md#3",
+    "label": "board/cards/REM-71.md \u203a Evidence",
+    "p": 0.00259053967865645,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-117.md#1",
+    "label": "board/cards/REM-117.md",
+    "p": 0.0024517952356656434,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-71.md#17",
+    "label": "board/cards/REM-71.md \u203a 2026-09-12T14:30:56.116Z \u00b7 Percolation Labs",
+    "p": 0.0023851365859232977,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-116.md#2",
+    "label": "board/cards/REM-116.md \u203a Log",
+    "p": 0.0023642488214910082,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-124.md#1",
+    "label": "board/cards/REM-124.md",
+    "p": 0.0023332164096904625,
+    "gold": false
+   },
+   {
+    "id": "commit/f63f7997dd",
+    "label": "commit f63f799: Merge pull request #27 from Percolation-Labs/fix/rem-55-one-bootstrap",
+    "p": 0.0020735159409827368,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-71.md#15",
+    "label": "board/cards/REM-71.md \u203a 2026-09-12T13:52:55.279Z \u00b7 Percolation Labs",
+    "p": 0.0020497017241101188,
+    "gold": false
+   },
+   {
+    "id": "meta/skills/board/TEMPLATE.md#17",
+    "label": "meta/skills/board/TEMPLATE.md \u203a If the card does not fit the template",
+    "p": 0.0019731084555881405,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-71.md#14",
+    "label": "board/cards/REM-71.md \u203a 2026-09-12T13:52:55.279Z \u00b7 Percolation Labs",
+    "p": 0.001939820155851891,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-118.md#1",
+    "label": "board/cards/REM-118.md",
+    "p": 0.001923582950602899,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-71.md#6",
+    "label": "board/cards/REM-71.md \u203a Links",
+    "p": 0.0019151884745938301,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-71.md#12",
+    "label": "board/cards/REM-71.md \u203a 2026-09-12T12:46:32.833Z \u00b7 Percolation Labs",
+    "p": 0.0018326638582602556,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-556.md#1",
+    "label": "board/cards/REM-556.md",
+    "p": 0.0017635842175821625,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-93.md#1",
+    "label": "board/cards/REM-93.md",
+    "p": 0.0017454980166910002,
+    "gold": false
+   },
+   {
+    "id": "specs/world-model-ingestion/graph-index.md#24",
+    "label": "specs/world-model-ingestion/graph-index.md \u203a (a) Registered Postgres kind, name resolves \u2014 use the real node",
+    "p": 0.0017437911073438363,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "board/cards/REM-123.md#1",
+   "label": "board/cards/REM-123.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-123.md#2",
+   "label": "board/cards/REM-123.md \u203a Goal",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-116.md#1",
+   "label": "board/cards/REM-116.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-71.md#2",
+   "label": "board/cards/REM-71.md \u203a Goal",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-71.md#16",
+   "label": "board/cards/REM-71.md \u203a 2026-09-12T14:30:56.116Z \u00b7 Percolation Labs",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-71.md#15",
+   "label": "board/cards/REM-71.md \u203a 2026-09-12T13:52:55.279Z \u00b7 Percolation Labs",
+   "wave": 1,
+   "via": "term:rem 123",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-134.md#3",
+   "label": "board/cards/REM-134.md \u203a Evidence",
+   "wave": 1,
+   "via": "term:rem 123",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-123.md#4",
+   "label": "board/cards/REM-123.md \u203a Log",
+   "wave": 1,
+   "via": "term:rem 123",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-123.md#3",
+   "label": "board/cards/REM-123.md \u203a Evidence",
+   "wave": 1,
+   "via": "term:rem 123",
+   "gold": false
+  },
+  {
+   "id": "meta/postmortems/2026-09-12-described-three-lines-up.md#6",
+   "label": "meta/postmortems/2026-09-12-described-three-lines-up.md \u203a 1. Three lines up, same commit, same author",
+   "wave": 1,
+   "via": "term:rem 123",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "commit/9a87941f19",
+    "label": "commit 9a87941: Three measured findings from REM-71, and the one the convergence gate caught (#104)",
+    "gold": true
+   },
+   {
+    "id": "board/cards/REM-71.md#10",
+    "label": "board/cards/REM-71.md \u203a 2026-09-12T12:09:18.990Z \u00b7 Percolation Labs",
+    "gold": false
+   },
+   {
+    "id": "commit/be640251dd",
+    "label": "commit be64025: A workflow definition belonged to nobody, so starting one asked nothing (#107)",
+    "gold": true
+   },
+   {
+    "id": "board/cards/REM-123.md#3",
+    "label": "board/cards/REM-123.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-71.md#1",
+    "label": "board/cards/REM-71.md",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "commit/9a87941f19",
+    "label": "commit 9a87941: Three measured findings from REM-71, and the one the convergence gate caught (#104)",
+    "gold": true
+   },
+   {
+    "id": "meta/postmortems/2026-09-12-described-three-lines-up.md#4",
+    "label": "meta/postmortems/2026-09-12-described-three-lines-up.md \u203a 1. Three lines up, same commit, same author",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-71.md#10",
+    "label": "board/cards/REM-71.md \u203a 2026-09-12T12:09:18.990Z \u00b7 Percolation Labs",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-124.md#1",
+    "label": "board/cards/REM-124.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-123.md#3",
+    "label": "board/cards/REM-123.md \u203a Evidence",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "board/cards/REM-123.md#4",
+    "label": "board/cards/REM-123.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-123.md#3",
+    "label": "board/cards/REM-123.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-124.md#1",
+    "label": "board/cards/REM-124.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-71.md#8",
+    "label": "board/cards/REM-71.md \u203a 2026-09-12T08:14:17.724Z \u00b7 Percolation Labs",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-124.md#4",
+    "label": "board/cards/REM-124.md \u203a Log",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "commit/9a87941f19",
+    "label": "commit 9a87941: Three measured findings from REM-71, and the one the convergence gate caught (#104)",
+    "gold": true
+   },
+   {
+    "id": "specs/world-model-ingestion/graph-index.md#63",
+    "label": "specs/world-model-ingestion/graph-index.md \u203a 11.4 Resolution inside a SECURITY DEFINER writer is not RLS-filtered",
+    "gold": false
+   },
+   {
+    "id": "specs/ai-query-layer/graph-identity.md#11",
+    "label": "specs/ai-query-layer/graph-identity.md \u203a Resolution ledger (D11)",
+    "gold": false
+   },
+   {
+    "id": "specs/ai-query-layer/graph-identity.md#12",
+    "label": "specs/ai-query-layer/graph-identity.md \u203a Resolution ledger (D11)",
+    "gold": false
+   },
+   {
+    "id": "specs/ai-query-layer/graph-identity.md#13",
+    "label": "specs/ai-query-layer/graph-identity.md \u203a Resolution ledger (D11)",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.6666666666666666,
+  "Q": 0.3333333333333333,
+  "LQ": 0.0,
+  "S": 0.3333333333333333
+ }
+}

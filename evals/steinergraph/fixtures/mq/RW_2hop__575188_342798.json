@@ -1,0 +1,431 @@
+{
+ "qid": "RW:2hop__575188_342798",
+ "set": "mq",
+ "question": "Who is the child of Mahmoud Mirza's father?",
+ "gold": [
+  {
+   "id": "mq:5cbb7d19a6a6bbf7",
+   "label": "Mahmoud Mirza",
+   "seed": true
+  },
+  {
+   "id": "mq:a7de60bc1e4cbe5e",
+   "label": "Amanollah Khan Zia' os-Soltan",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:5cbb7d19a6a6bbf7",
+   "label": "Mahmoud Mirza",
+   "rank": 1,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:4f1256d700c3e93f",
+   "label": "Khasim Mirza",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:8410f76b07a5304f",
+   "label": "Khosrow Mirza",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:00319bd909807003",
+   "label": "Mirza Mehdy Ispahani",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:2e38d3cf1ddc6196",
+   "label": "Mahmoud Ahmadinejad",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:5cbb7d19a6a6bbf7",
+    "label": "Mahmoud Mirza",
+    "role": "gold"
+   },
+   {
+    "id": "mq:a7de60bc1e4cbe5e",
+    "label": "Amanollah Khan Zia' os-Soltan",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:5cbb7d19a6a6bbf7",
+    "b": "mq:a7de60bc1e4cbe5e",
+    "via": [
+     {
+      "kind": "near",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "shah qajar",
+      "width": 3
+     },
+     {
+      "kind": "term",
+      "key": "ali shah",
+      "width": 4
+     },
+     {
+      "kind": "term",
+      "key": "qajar",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "mohammad ali",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "mohammad",
+      "width": 17
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "mq:5cbb7d19a6a6bbf7",
+   "gold": "mq:5cbb7d19a6a6bbf7",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 1032,
+  "within_2_doors": 19959,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "mq:baf8aee0687e4552",
+    "label": "Bahram Mirza",
+    "p": 0.011005719189864765,
+    "gold": false
+   },
+   {
+    "id": "mq:0fefcf90e2c131b0",
+    "label": "Hatef Esfahani",
+    "p": 0.010657521857959366,
+    "gold": false
+   },
+   {
+    "id": "mq:a7de60bc1e4cbe5e",
+    "label": "Amanollah Khan Zia' os-Soltan",
+    "p": 0.006076350404917216,
+    "gold": true
+   },
+   {
+    "id": "mq:bf948d1ce6e24751",
+    "label": "Abdolali Bazargan",
+    "p": 0.004525194381855547,
+    "gold": false
+   },
+   {
+    "id": "mq:8f5e3a3d7bfe0eed",
+    "label": "Mirz\u0259haqverdili",
+    "p": 0.0032554814910522793,
+    "gold": false
+   },
+   {
+    "id": "mq:c03564c7534802eb",
+    "label": "Alag",
+    "p": 0.0027288025248364376,
+    "gold": false
+   },
+   {
+    "id": "mq:be0c70171c8be7ec",
+    "label": "Idries Shah",
+    "p": 0.0026249903581415357,
+    "gold": false
+   },
+   {
+    "id": "mq:3220791c59e80357",
+    "label": "Islamic Iran Solidarity Party",
+    "p": 0.002326439024026105,
+    "gold": false
+   },
+   {
+    "id": "mq:0135e1ee9f48ce6a",
+    "label": "Queen Zixi of Ix",
+    "p": 0.0022213708939982763,
+    "gold": false
+   },
+   {
+    "id": "mq:e5378d418a883cbe",
+    "label": "Spoils system",
+    "p": 0.0019308312535983858,
+    "gold": false
+   },
+   {
+    "id": "mq:e9a61b2b58590907",
+    "label": "PBA on KBS",
+    "p": 0.0018029134462031172,
+    "gold": false
+   },
+   {
+    "id": "mq:af19afbeed088bfe",
+    "label": "Bell Huey family",
+    "p": 0.0017981146030807758,
+    "gold": false
+   },
+   {
+    "id": "mq:2c1b592be9b23884",
+    "label": "Mahmoud Shakibi",
+    "p": 0.001548513344688897,
+    "gold": false
+   },
+   {
+    "id": "mq:15130933b60faffa",
+    "label": "Humayun's Tomb",
+    "p": 0.0015466219713028652,
+    "gold": false
+   },
+   {
+    "id": "mq:80eeabbc77b371a4",
+    "label": "Bahadur Shah Zafar",
+    "p": 0.0015403440339161138,
+    "gold": false
+   },
+   {
+    "id": "mq:19cfa7baf0931bc4",
+    "label": "Hugo Casillas",
+    "p": 0.0014457179354534432,
+    "gold": false
+   },
+   {
+    "id": "mq:f36f3398c7634732",
+    "label": "2011 Family Circle Cup \u2013 Doubles",
+    "p": 0.0012646875792220323,
+    "gold": false
+   },
+   {
+    "id": "mq:4e5a2eb709401d53",
+    "label": "Communist Party of India",
+    "p": 0.0010497931528715436,
+    "gold": false
+   },
+   {
+    "id": "mq:ff223dcb4a98849f",
+    "label": "Tarana-e-Pakistan",
+    "p": 0.0009908537250298676,
+    "gold": false
+   },
+   {
+    "id": "mq:cef73bc20d757931",
+    "label": "Mahmoud Karim",
+    "p": 0.0008682753246498497,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:5cbb7d19a6a6bbf7",
+   "label": "Mahmoud Mirza",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:4f1256d700c3e93f",
+   "label": "Khasim Mirza",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:8410f76b07a5304f",
+   "label": "Khosrow Mirza",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:00319bd909807003",
+   "label": "Mirza Mehdy Ispahani",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:2e38d3cf1ddc6196",
+   "label": "Mahmoud Ahmadinejad",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:a7de60bc1e4cbe5e",
+   "label": "Amanollah Khan Zia' os-Soltan",
+   "wave": 1,
+   "via": "term:shah qajar",
+   "gold": true
+  },
+  {
+   "id": "mq:baf8aee0687e4552",
+   "label": "Bahram Mirza",
+   "wave": 1,
+   "via": "term:shah qajar",
+   "gold": false
+  },
+  {
+   "id": "mq:be0c70171c8be7ec",
+   "label": "Idries Shah",
+   "wave": 2,
+   "via": "term:ali shah",
+   "gold": false
+  },
+  {
+   "id": "mq:2c1b592be9b23884",
+   "label": "Mahmoud Shakibi",
+   "wave": 3,
+   "via": "near:mq:5cbb7d19a6a6bbf7",
+   "gold": false
+  },
+  {
+   "id": "mq:0fefcf90e2c131b0",
+   "label": "Hatef Esfahani",
+   "wave": 4,
+   "via": "term:mirza",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:baf8aee0687e4552",
+    "label": "Bahram Mirza",
+    "gold": false
+   },
+   {
+    "id": "mq:0fefcf90e2c131b0",
+    "label": "Hatef Esfahani",
+    "gold": false
+   },
+   {
+    "id": "mq:a7de60bc1e4cbe5e",
+    "label": "Amanollah Khan Zia' os-Soltan",
+    "gold": true
+   },
+   {
+    "id": "mq:bf948d1ce6e24751",
+    "label": "Abdolali Bazargan",
+    "gold": false
+   },
+   {
+    "id": "mq:8f5e3a3d7bfe0eed",
+    "label": "Mirz\u0259haqverdili",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:baf8aee0687e4552",
+    "label": "Bahram Mirza",
+    "gold": false
+   },
+   {
+    "id": "mq:0fefcf90e2c131b0",
+    "label": "Hatef Esfahani",
+    "gold": false
+   },
+   {
+    "id": "mq:bf948d1ce6e24751",
+    "label": "Abdolali Bazargan",
+    "gold": false
+   },
+   {
+    "id": "mq:8f5e3a3d7bfe0eed",
+    "label": "Mirz\u0259haqverdili",
+    "gold": false
+   },
+   {
+    "id": "mq:2c1b592be9b23884",
+    "label": "Mahmoud Shakibi",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:baf8aee0687e4552",
+    "label": "Bahram Mirza",
+    "gold": false
+   },
+   {
+    "id": "mq:0fefcf90e2c131b0",
+    "label": "Hatef Esfahani",
+    "gold": false
+   },
+   {
+    "id": "mq:bf948d1ce6e24751",
+    "label": "Abdolali Bazargan",
+    "gold": false
+   },
+   {
+    "id": "mq:80eeabbc77b371a4",
+    "label": "Bahadur Shah Zafar",
+    "gold": false
+   },
+   {
+    "id": "mq:2c1b592be9b23884",
+    "label": "Mahmoud Shakibi",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:784175b837d536d9",
+    "label": "Mahmoud Salem",
+    "gold": false
+   },
+   {
+    "id": "mq:baf8aee0687e4552",
+    "label": "Bahram Mirza",
+    "gold": false
+   },
+   {
+    "id": "mq:1b288b351d466d3a",
+    "label": "Shaker Mahmoud",
+    "gold": false
+   },
+   {
+    "id": "mq:2c1b592be9b23884",
+    "label": "Mahmoud Shakibi",
+    "gold": false
+   },
+   {
+    "id": "mq:cef73bc20d757931",
+    "label": "Mahmoud Karim",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 1.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

@@ -1,0 +1,626 @@
+{
+ "qid": "pr:38",
+ "set": "prs",
+ "question": "What work went into this, and why: The journey suite ran on no push, and the sixteen it was hiding?",
+ "gold": [
+  {
+   "id": "commit/17e56b9830",
+   "label": "commit 17e56b9: ci-database.sh fell back to a `pip` that does not exist",
+   "seed": false
+  },
+  {
+   "id": "commit/44984e9722",
+   "label": "commit 44984e9: The contract gate read an application's tables as the extension's",
+   "seed": false
+  },
+  {
+   "id": "commit/6dd80104ed",
+   "label": "commit 6dd8010: Ten eval scenarios described a schema that had moved on without them",
+   "seed": false
+  },
+  {
+   "id": "commit/71d488b296",
+   "label": "commit 71d488b: The shared tier stopped being a null org_id and six journeys went quiet",
+   "seed": false
+  },
+  {
+   "id": "commit/8d3d0b6b29",
+   "label": "commit 8d3d0b6: query/03 asserted a catalogue's literal content, so a second registration reddened it",
+   "seed": false
+  },
+  {
+   "id": "commit/abcbf90082",
+   "label": "commit abcbf90: The journey suite ran on no push, and nothing anywhere said it should",
+   "seed": true
+  },
+  {
+   "id": "commit/d1caf56857",
+   "label": "commit d1caf56: register_fetched wrote a resource its own caller could not read",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/3fb099f63b",
+   "label": "commit 3fb099f: Merge pull request #38 from Percolation-Labs/fix/rem-75-evals-are-a-gate",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/abcbf90082",
+   "label": "commit abcbf90: The journey suite ran on no push, and nothing anywhere said it should",
+   "rank": 2,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "meta/postmortems/2026-09-06-the-release-ran-fewer-gates-than-a-push.md#1",
+   "label": "meta/postmortems/2026-09-06-the-release-ran-fewer-gates-than-a-push.md \u203a The release ran fewer gates than a push",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/e7b90b6a36",
+   "label": "commit e7b90b6: release-and-gitops: one application build at a time, and it is the latest main",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-600.md#2",
+   "label": "board/cards/REM-600.md \u203a Goal",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/17e56b9830",
+    "label": "commit 17e56b9: ci-database.sh fell back to a `pip` that does not exist",
+    "role": "gold"
+   },
+   {
+    "id": "commit/44984e9722",
+    "label": "commit 44984e9: The contract gate read an application's tables as the extension's",
+    "role": "gold"
+   },
+   {
+    "id": "commit/6dd80104ed",
+    "label": "commit 6dd8010: Ten eval scenarios described a schema that had moved on without them",
+    "role": "gold"
+   },
+   {
+    "id": "commit/71d488b296",
+    "label": "commit 71d488b: The shared tier stopped being a null org_id and six journeys went quiet",
+    "role": "gold"
+   },
+   {
+    "id": "commit/8d3d0b6b29",
+    "label": "commit 8d3d0b6: query/03 asserted a catalogue's literal content, so a second registration reddened it",
+    "role": "gold"
+   },
+   {
+    "id": "commit/abcbf90082",
+    "label": "commit abcbf90: The journey suite ran on no push, and nothing anywhere said it should",
+    "role": "gold"
+   },
+   {
+    "id": "commit/d1caf56857",
+    "label": "commit d1caf56: register_fetched wrote a resource its own caller could not read",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/17e56b9830",
+    "b": "commit/8d3d0b6b29",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "session_017gj4utc87dqz4ydnmrd2ra",
+      "width": 48
+     },
+     {
+      "kind": "term",
+      "key": "code session_017gj4utc87dqz4ydnmrd2ra",
+      "width": 48
+     }
+    ]
+   },
+   {
+    "a": "commit/17e56b9830",
+    "b": "commit/abcbf90082",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "session_017gj4utc87dqz4ydnmrd2ra",
+      "width": 48
+     },
+     {
+      "kind": "term",
+      "key": "code session_017gj4utc87dqz4ydnmrd2ra",
+      "width": 48
+     }
+    ]
+   },
+   {
+    "a": "commit/44984e9722",
+    "b": "commit/6dd80104ed",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "calder",
+      "width": 3
+     },
+     {
+      "kind": "term",
+      "key": "session_017gj4utc87dqz4ydnmrd2ra",
+      "width": 48
+     },
+     {
+      "kind": "term",
+      "key": "code session_017gj4utc87dqz4ydnmrd2ra",
+      "width": 48
+     }
+    ]
+   },
+   {
+    "a": "commit/44984e9722",
+    "b": "commit/71d488b296",
+    "via": [
+     {
+      "kind": "near",
+      "width": 1
+     },
+     {
+      "kind": "term",
+      "key": "calder",
+      "width": 3
+     },
+     {
+      "kind": "term",
+      "key": "went red",
+      "width": 43
+     },
+     {
+      "kind": "term",
+      "key": "session_017gj4utc87dqz4ydnmrd2ra",
+      "width": 48
+     },
+     {
+      "kind": "term",
+      "key": "code session_017gj4utc87dqz4ydnmrd2ra",
+      "width": 48
+     }
+    ]
+   },
+   {
+    "a": "commit/44984e9722",
+    "b": "commit/8d3d0b6b29",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "evals fixture",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "tests evals",
+      "width": 30
+     },
+     {
+      "kind": "term",
+      "key": "went red",
+      "width": 43
+     },
+     {
+      "kind": "term",
+      "key": "session_017gj4utc87dqz4ydnmrd2ra",
+      "width": 48
+     },
+     {
+      "kind": "term",
+      "key": "code session_017gj4utc87dqz4ydnmrd2ra",
+      "width": 48
+     }
+    ]
+   },
+   {
+    "a": "commit/6dd80104ed",
+    "b": "commit/d1caf56857",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "coll",
+      "width": 8
+     },
+     {
+      "kind": "term",
+      "key": "session_017gj4utc87dqz4ydnmrd2ra",
+      "width": 48
+     },
+     {
+      "kind": "term",
+      "key": "code session_017gj4utc87dqz4ydnmrd2ra",
+      "width": 48
+     },
+     {
+      "kind": "term",
+      "key": "register_upload",
+      "width": 71
+     },
+     {
+      "kind": "term",
+      "key": "external_id",
+      "width": 92
+     }
+    ]
+   }
+  ],
+  "cost": 6,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  "entry": {
+   "seed": "commit/abcbf90082",
+   "gold": "commit/abcbf90082",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 1716,
+  "within_2_doors": 33820,
+  "gold_within_1": 6,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "commit/eeafed31ab",
+    "label": "commit eeafed3: The release wrote five files and committed four",
+    "p": 0.005122736254179404,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-559.md#5",
+    "label": "board/cards/REM-559.md \u203a Log",
+    "p": 0.004274740000797625,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-75.md#1",
+    "label": "board/cards/REM-75.md",
+    "p": 0.002906272868253857,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-06-the-release-ran-fewer-gates-than-a-push.md#2",
+    "label": "meta/postmortems/2026-09-06-the-release-ran-fewer-gates-than-a-push.md \u203a The shape: a push is gated harder than a releas",
+    "p": 0.002626450927191024,
+    "gold": false
+   },
+   {
+    "id": "commit/da2f464e1f",
+    "label": "commit da2f464: Merge pull request #28 from Percolation-Labs/fix/rem-54-agent-model-grammar",
+    "p": 0.002086146507065047,
+    "gold": false
+   },
+   {
+    "id": "commit/07f3216139",
+    "label": "commit 07f3216: Merge pull request #37 from Percolation-Labs/docs/parser-release-note",
+    "p": 0.00196568725985079,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-557.md#5",
+    "label": "board/cards/REM-557.md \u203a Log",
+    "p": 0.0017309974330859382,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-174.md#8",
+    "label": "board/cards/REM-174.md \u203a 2026-09-13T16:50:37.747Z \u00b7 Percolation Labs",
+    "p": 0.0016166168064183353,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-247.md#6",
+    "label": "board/cards/REM-247.md \u203a Log",
+    "p": 0.0015918030630188923,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-536.md#2",
+    "label": "board/cards/REM-536.md \u203a Goal",
+    "p": 0.0015848964054463218,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-06-the-release-ran-fewer-gates-than-a-push.md#4",
+    "label": "meta/postmortems/2026-09-06-the-release-ran-fewer-gates-than-a-push.md \u203a Four things I got wrong",
+    "p": 0.0012830416513760483,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/release-and-gitops.md#12",
+    "label": "specs/percolate-application/release-and-gitops.md \u203a Releasing the application",
+    "p": 0.0012545078119776771,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/README.md#27",
+    "label": "meta/postmortems/README.md \u203a A gate that exists and is not on the release path is a gate the release does not have",
+    "p": 0.0012533277617298878,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-06-the-release-ran-fewer-gates-than-a-push.md#3",
+    "label": "meta/postmortems/2026-09-06-the-release-ran-fewer-gates-than-a-push.md \u203a The shape: a push is gated harder than a releas",
+    "p": 0.0011382688768841998,
+    "gold": false
+   },
+   {
+    "id": ".github/workflows/check.yml#2",
+    "label": ".github/workflows/check.yml",
+    "p": 0.0011276569377555907,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-19-hand-deploys-raced-the-queue.md#2",
+    "label": "meta/postmortems/2026-09-19-hand-deploys-raced-the-queue.md \u203a Hand deploys raced the queue",
+    "p": 0.0011078202851621467,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-600.md#1",
+    "label": "board/cards/REM-600.md",
+    "p": 0.001049752740595535,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-20-rebuilt-what-core-owned.md#3",
+    "label": "meta/postmortems/2026-09-20-rebuilt-what-core-owned.md \u203a Why, three times",
+    "p": 0.0010439354660229834,
+    "gold": false
+   },
+   {
+    "id": "commit/b32b2f7bf8",
+    "label": "commit b32b2f7: board: REM-559 in-progress \u2192 canceled",
+    "p": 0.0010437725987600226,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-610.md#2",
+    "label": "board/cards/REM-610.md \u203a Goal",
+    "p": 0.001026174368132384,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/3fb099f63b",
+   "label": "commit 3fb099f: Merge pull request #38 from Percolation-Labs/fix/rem-75-evals-are-a-gate",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/abcbf90082",
+   "label": "commit abcbf90: The journey suite ran on no push, and nothing anywhere said it should",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "meta/postmortems/2026-09-06-the-release-ran-fewer-gates-than-a-push.md#1",
+   "label": "meta/postmortems/2026-09-06-the-release-ran-fewer-gates-than-a-push.md \u203a The release ran fewer gates than a push",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/e7b90b6a36",
+   "label": "commit e7b90b6: release-and-gitops: one application build at a time, and it is the latest main",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-600.md#2",
+   "label": "board/cards/REM-600.md \u203a Goal",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-75.md#1",
+   "label": "board/cards/REM-75.md",
+   "wave": 1,
+   "via": "term:journey suite",
+   "gold": false
+  },
+  {
+   "id": "commit/726db39eee",
+   "label": "commit 726db39: The connector catalogue was readable by anybody who had not signed in",
+   "wave": 2,
+   "via": "term:suite runs",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-559.md#1",
+   "label": "board/cards/REM-559.md",
+   "wave": 2,
+   "via": "term:suite runs",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-947.md#4",
+   "label": "board/cards/REM-947.md \u203a Done when",
+   "wave": 2,
+   "via": "term:suite runs",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-716.md#2",
+   "label": "board/cards/REM-716.md \u203a Goal",
+   "wave": 2,
+   "via": "term:suite runs",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "commit/eeafed31ab",
+    "label": "commit eeafed3: The release wrote five files and committed four",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-559.md#5",
+    "label": "board/cards/REM-559.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-75.md#1",
+    "label": "board/cards/REM-75.md",
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-06-the-release-ran-fewer-gates-than-a-push.md#2",
+    "label": "meta/postmortems/2026-09-06-the-release-ran-fewer-gates-than-a-push.md \u203a The shape: a push is gated harder than a releas",
+    "gold": false
+   },
+   {
+    "id": "commit/da2f464e1f",
+    "label": "commit da2f464: Merge pull request #28 from Percolation-Labs/fix/rem-54-agent-model-grammar",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "board/cards/REM-75.md#1",
+    "label": "board/cards/REM-75.md",
+    "gold": false
+   },
+   {
+    "id": "commit/eeafed31ab",
+    "label": "commit eeafed3: The release wrote five files and committed four",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-559.md#5",
+    "label": "board/cards/REM-559.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-06-the-release-ran-fewer-gates-than-a-push.md#2",
+    "label": "meta/postmortems/2026-09-06-the-release-ran-fewer-gates-than-a-push.md \u203a The shape: a push is gated harder than a releas",
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/README.md#27",
+    "label": "meta/postmortems/README.md \u203a A gate that exists and is not on the release path is a gate the release does not have",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "board/cards/REM-75.md#1",
+    "label": "board/cards/REM-75.md",
+    "gold": false
+   },
+   {
+    "id": "commit/eeafed31ab",
+    "label": "commit eeafed3: The release wrote five files and committed four",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-559.md#5",
+    "label": "board/cards/REM-559.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-600.md#1",
+    "label": "board/cards/REM-600.md",
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-06-the-release-ran-fewer-gates-than-a-push.md#2",
+    "label": "meta/postmortems/2026-09-06-the-release-ran-fewer-gates-than-a-push.md \u203a The shape: a push is gated harder than a releas",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "board/cards/REM-841.md#5",
+    "label": "board/cards/REM-841.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "commit/dd23d1e31a",
+    "label": "commit dd23d1e: board: file REM-559 ci: the application suite runs on every push to main",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-75.md#1",
+    "label": "board/cards/REM-75.md",
+    "gold": false
+   },
+   {
+    "id": "commit/8bd3ab31f1",
+    "label": "commit 8bd3ab3: Sixteen fixes went to the copy that failed and left its siblings",
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/README.md#27",
+    "label": "meta/postmortems/README.md \u203a A gate that exists and is not on the release path is a gate the release does not have",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

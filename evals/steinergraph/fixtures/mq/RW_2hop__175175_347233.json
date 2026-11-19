@@ -1,0 +1,422 @@
+{
+ "qid": "RW:2hop__175175_347233",
+ "set": "mq",
+ "question": "In which county did Snappy Tomato Pizza form?",
+ "gold": [
+  {
+   "id": "mq:1c76e44bc0c37362",
+   "label": "Fort Mitchell, Kentucky",
+   "seed": false
+  },
+  {
+   "id": "mq:5dad60a4f8846b32",
+   "label": "Snappy Tomato Pizza",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:5dad60a4f8846b32",
+   "label": "Snappy Tomato Pizza",
+   "rank": 1,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:a028e3d12f4fb853",
+   "label": "Sicilian pizza",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:fc998c3357f41cff",
+   "label": "2010 United States tomato shortage",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:3fc901d2cec607e1",
+   "label": "New Haven, Connecticut",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:d7dba4d57fdd2827",
+   "label": "Jet's Pizza",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:1c76e44bc0c37362",
+    "label": "Fort Mitchell, Kentucky",
+    "role": "gold"
+   },
+   {
+    "id": "mq:5dad60a4f8846b32",
+    "label": "Snappy Tomato Pizza",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:1c76e44bc0c37362",
+    "b": "mq:5dad60a4f8846b32",
+    "via": [
+     {
+      "kind": "term",
+      "key": "fort mitchell",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "mitchell kentucky",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "mitchell",
+      "width": 60
+     },
+     {
+      "kind": "term",
+      "key": "kentucky",
+      "width": 83
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "mq:5dad60a4f8846b32",
+   "gold": "mq:5dad60a4f8846b32",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 2048,
+  "within_2_doors": 19032,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "mq:68939bb6a8ae0c9c",
+    "label": "WRVF",
+    "p": 0.005620340978008643,
+    "gold": false
+   },
+   {
+    "id": "mq:1c76e44bc0c37362",
+    "label": "Fort Mitchell, Kentucky",
+    "p": 0.0034221447955303796,
+    "gold": true
+   },
+   {
+    "id": "mq:86bb4500ba03f68a",
+    "label": "Uncle Maddio's Pizza Joint",
+    "p": 0.0024341925387901565,
+    "gold": false
+   },
+   {
+    "id": "mq:ccf2eab8033e9802",
+    "label": "Little Caesars",
+    "p": 0.002362170685038146,
+    "gold": false
+   },
+   {
+    "id": "mq:6f4729996b4a4676",
+    "label": "Pizza Hut",
+    "p": 0.0023324078341753944,
+    "gold": false
+   },
+   {
+    "id": "mq:13960ac045ae5cae",
+    "label": "Chumak (company)",
+    "p": 0.0022462751412156007,
+    "gold": false
+   },
+   {
+    "id": "mq:c96fd673b6896466",
+    "label": "Super Bowl XLVIII",
+    "p": 0.001892285846714885,
+    "gold": false
+   },
+   {
+    "id": "mq:341f9dcae9693dd9",
+    "label": "Houston",
+    "p": 0.0017644771725168864,
+    "gold": false
+   },
+   {
+    "id": "mq:e4e1f3655f75c3c5",
+    "label": "Love Yourself",
+    "p": 0.0017264513508477128,
+    "gold": false
+   },
+   {
+    "id": "mq:a4e12fe930310c7a",
+    "label": "Pizza Man",
+    "p": 0.0016494819866766368,
+    "gold": false
+   },
+   {
+    "id": "mq:501c7a94506c0cf7",
+    "label": "Culver's",
+    "p": 0.0016489843165662138,
+    "gold": false
+   },
+   {
+    "id": "mq:e45a62eb8a40b9ab",
+    "label": "Gado-gado",
+    "p": 0.0015054464293497473,
+    "gold": false
+   },
+   {
+    "id": "mq:6c520444e113b83a",
+    "label": "Houston",
+    "p": 0.0014607737164716102,
+    "gold": false
+   },
+   {
+    "id": "mq:5b97c1786c062c67",
+    "label": "Opor",
+    "p": 0.001406179062045718,
+    "gold": false
+   },
+   {
+    "id": "mq:65636f4d0d6f5b7f",
+    "label": "Cassata",
+    "p": 0.0013952760721555062,
+    "gold": false
+   },
+   {
+    "id": "mq:cd6533894938a836",
+    "label": "You Were on My Mind",
+    "p": 0.0013729480685986356,
+    "gold": false
+   },
+   {
+    "id": "mq:1265ce795be327c2",
+    "label": "List of Bob's Burgers characters",
+    "p": 0.001306207651446822,
+    "gold": false
+   },
+   {
+    "id": "mq:24a71c165f9d1211",
+    "label": "List of Bob's Burgers characters",
+    "p": 0.0012734644556996236,
+    "gold": false
+   },
+   {
+    "id": "mq:c4bb155da4e24a1c",
+    "label": "Vadeli",
+    "p": 0.001112134535061964,
+    "gold": false
+   },
+   {
+    "id": "mq:fb8c7b30e95db92e",
+    "label": "Papa John's Pizza",
+    "p": 0.0010424055169119006,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:5dad60a4f8846b32",
+   "label": "Snappy Tomato Pizza",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:a028e3d12f4fb853",
+   "label": "Sicilian pizza",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:fc998c3357f41cff",
+   "label": "2010 United States tomato shortage",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:3fc901d2cec607e1",
+   "label": "New Haven, Connecticut",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:d7dba4d57fdd2827",
+   "label": "Jet's Pizza",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:1c76e44bc0c37362",
+   "label": "Fort Mitchell, Kentucky",
+   "wave": 1,
+   "via": "term:fort mitchell",
+   "gold": true
+  },
+  {
+   "id": "mq:34ecfc859429767d",
+   "label": "Ant-Man (film)",
+   "wave": 2,
+   "via": "term:mitchell",
+   "gold": false
+  },
+  {
+   "id": "mq:edee714f51021a49",
+   "label": "Little Green (song)",
+   "wave": 2,
+   "via": "term:mitchell",
+   "gold": false
+  },
+  {
+   "id": "mq:b53c449cc251d0d1",
+   "label": "Billy Mitchell",
+   "wave": 2,
+   "via": "term:mitchell",
+   "gold": false
+  },
+  {
+   "id": "mq:6271a31f18633299",
+   "label": "Summer Soft",
+   "wave": 2,
+   "via": "term:mitchell",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:68939bb6a8ae0c9c",
+    "label": "WRVF",
+    "gold": false
+   },
+   {
+    "id": "mq:1c76e44bc0c37362",
+    "label": "Fort Mitchell, Kentucky",
+    "gold": true
+   },
+   {
+    "id": "mq:86bb4500ba03f68a",
+    "label": "Uncle Maddio's Pizza Joint",
+    "gold": false
+   },
+   {
+    "id": "mq:ccf2eab8033e9802",
+    "label": "Little Caesars",
+    "gold": false
+   },
+   {
+    "id": "mq:6f4729996b4a4676",
+    "label": "Pizza Hut",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:6f4729996b4a4676",
+    "label": "Pizza Hut",
+    "gold": false
+   },
+   {
+    "id": "mq:ccf2eab8033e9802",
+    "label": "Little Caesars",
+    "gold": false
+   },
+   {
+    "id": "mq:86bb4500ba03f68a",
+    "label": "Uncle Maddio's Pizza Joint",
+    "gold": false
+   },
+   {
+    "id": "mq:13960ac045ae5cae",
+    "label": "Chumak (company)",
+    "gold": false
+   },
+   {
+    "id": "mq:a4e12fe930310c7a",
+    "label": "Pizza Man",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:ccf2eab8033e9802",
+    "label": "Little Caesars",
+    "gold": false
+   },
+   {
+    "id": "mq:6f4729996b4a4676",
+    "label": "Pizza Hut",
+    "gold": false
+   },
+   {
+    "id": "mq:86bb4500ba03f68a",
+    "label": "Uncle Maddio's Pizza Joint",
+    "gold": false
+   },
+   {
+    "id": "mq:13960ac045ae5cae",
+    "label": "Chumak (company)",
+    "gold": false
+   },
+   {
+    "id": "mq:fb8c7b30e95db92e",
+    "label": "Papa John's Pizza",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:6f4729996b4a4676",
+    "label": "Pizza Hut",
+    "gold": false
+   },
+   {
+    "id": "mq:ccf2eab8033e9802",
+    "label": "Little Caesars",
+    "gold": false
+   },
+   {
+    "id": "mq:86bb4500ba03f68a",
+    "label": "Uncle Maddio's Pizza Joint",
+    "gold": false
+   },
+   {
+    "id": "mq:a4e12fe930310c7a",
+    "label": "Pizza Man",
+    "gold": false
+   },
+   {
+    "id": "mq:fb8c7b30e95db92e",
+    "label": "Papa John's Pizza",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 1.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

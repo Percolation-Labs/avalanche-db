@@ -1,0 +1,438 @@
+{
+ "qid": "card:REM-348",
+ "set": "cards",
+ "question": "What was done about this, and why: reading: a reader follows the publication a reading is published in, on web, iOS and Android?",
+ "gold": [
+  {
+   "id": "commit/3bce6b1b2f",
+   "label": "commit 3bce6b1: Postmortem: the readings moved into core and no screen was checked (REM-348)",
+   "seed": false
+  },
+  {
+   "id": "commit/bb74b2468e",
+   "label": "commit bb74b24: Merge pull request #217 from Percolation-Labs/amartey/rem-348-postmortem",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/ea8afee79c",
+   "label": "commit ea8afee: board: file REM-348 reading: a reader follows the publication a reading is published in, on web, iOS and",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-348.md#1",
+   "label": "board/cards/REM-348.md",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-348.md#2",
+   "label": "board/cards/REM-348.md \u203a Goal",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-348.md#4",
+   "label": "board/cards/REM-348.md \u203a Done when",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-487.md#2",
+   "label": "board/cards/REM-487.md \u203a Goal",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 2
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "board/cards/REM-348.md#2",
+    "label": "board/cards/REM-348.md \u203a Goal",
+    "role": "seed"
+   },
+   {
+    "id": "commit/3bce6b1b2f",
+    "label": "commit 3bce6b1: Postmortem: the readings moved into core and no screen was checked (REM-348)",
+    "role": "gold"
+   },
+   {
+    "id": "commit/bb74b2468e",
+    "label": "commit bb74b24: Merge pull request #217 from Percolation-Labs/amartey/rem-348-postmortem",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "board/cards/REM-348.md#2",
+    "b": "commit/3bce6b1b2f",
+    "via": [
+     {
+      "kind": "term",
+      "key": "readings moved",
+      "width": 14
+     },
+     {
+      "kind": "term",
+      "key": "rem 348",
+      "width": 30
+     }
+    ]
+   },
+   {
+    "a": "commit/3bce6b1b2f",
+    "b": "commit/bb74b2468e",
+    "via": [
+     {
+      "kind": "term",
+      "key": "checked rem",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "readings moved",
+      "width": 14
+     },
+     {
+      "kind": "term",
+      "key": "rem 348",
+      "width": 30
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "board/cards/REM-348.md#2",
+   "gold": "commit/3bce6b1b2f",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 368,
+  "within_2_doors": 26280,
+  "gold_within_1": 2,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "board/cards/REM-348.md#8",
+    "label": "board/cards/REM-348.md \u203a Log",
+    "p": 0.012214796530257335,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-348.md#3",
+    "label": "board/cards/REM-348.md \u203a Evidence",
+    "p": 0.006968888419466232,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-15-the-readings-moved-and-no-screen-was-checked.md#3",
+    "label": "meta/postmortems/2026-09-15-the-readings-moved-and-no-screen-was-checked.md \u203a 1. Screens keyed on values only the seed f",
+    "p": 0.0057424343283890575,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-487.md#1",
+    "label": "board/cards/REM-487.md",
+    "p": 0.004375317703759711,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-347.md#6",
+    "label": "board/cards/REM-347.md \u203a Log",
+    "p": 0.004290358446563249,
+    "gold": false
+   },
+   {
+    "id": "commit/76a26a9244",
+    "label": "commit 76a26a9: board: percolate-application-ad takes REM-348",
+    "p": 0.004237178047811693,
+    "gold": false
+   },
+   {
+    "id": "commit/e844dcc6f6",
+    "label": "commit e844dcc: board: note on REM-347",
+    "p": 0.0038144330706222913,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-487.md#3",
+    "label": "board/cards/REM-487.md \u203a Evidence",
+    "p": 0.003630842646694761,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-348.md#5",
+    "label": "board/cards/REM-348.md \u203a Scope",
+    "p": 0.003618755236683784,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-15-the-readings-moved-and-no-screen-was-checked.md#2",
+    "label": "meta/postmortems/2026-09-15-the-readings-moved-and-no-screen-was-checked.md \u203a 1. Screens keyed on values only the seed f",
+    "p": 0.0033030314345927317,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-349.md#8",
+    "label": "board/cards/REM-349.md \u203a Log",
+    "p": 0.002853648437675674,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-15-the-readings-moved-and-no-screen-was-checked.md#1",
+    "label": "meta/postmortems/2026-09-15-the-readings-moved-and-no-screen-was-checked.md \u203a The readings moved into core and no screen",
+    "p": 0.0026261443975456734,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-390.md#7",
+    "label": "board/cards/REM-390.md \u203a Log",
+    "p": 0.002594536346246469,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/semantic-editing-acceptance.md#7",
+    "label": "specs/percolate-application/semantic-editing-acceptance.md \u203a A1. Writer \u2192 Percolate: mark a sentence",
+    "p": 0.002556222668296156,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-390.md#4",
+    "label": "board/cards/REM-390.md \u203a Done when",
+    "p": 0.002460762147173722,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-349.md#4",
+    "label": "board/cards/REM-349.md \u203a Done when",
+    "p": 0.002436405619814721,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/navigation-and-account-flows.md#10",
+    "label": "specs/percolate-application/navigation-and-account-flows.md \u203a 4. Marketplace and Library",
+    "p": 0.0021967306520919855,
+    "gold": false
+   },
+   {
+    "id": "commit/228a6c1d77",
+    "label": "commit 228a6c1: board: file REM-487 native: a writer publishes a reading from a phone",
+    "p": 0.0018275633109073378,
+    "gold": false
+   },
+   {
+    "id": "commit/326b0aa7a4",
+    "label": "commit 326b0aa: board: file REM-914 shitsville: physical phones sustain a measured rendering budget without flicker",
+    "p": 0.001801093334856281,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-914.md#3",
+    "label": "board/cards/REM-914.md \u203a Evidence",
+    "p": 0.0016368563770595217,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/ea8afee79c",
+   "label": "commit ea8afee: board: file REM-348 reading: a reader follows the publication a reading is published in, on web, iOS and",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-348.md#1",
+   "label": "board/cards/REM-348.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-348.md#2",
+   "label": "board/cards/REM-348.md \u203a Goal",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-348.md#4",
+   "label": "board/cards/REM-348.md \u203a Done when",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-487.md#2",
+   "label": "board/cards/REM-487.md \u203a Goal",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-348.md#3",
+   "label": "board/cards/REM-348.md \u203a Evidence",
+   "wave": 1,
+   "via": "term:follow percolation",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-390.md#3",
+   "label": "board/cards/REM-390.md \u203a Evidence",
+   "wave": 1,
+   "via": "term:follow percolation",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-390.md#2",
+   "label": "board/cards/REM-390.md \u203a Goal",
+   "wave": 1,
+   "via": "term:follow percolation",
+   "gold": false
+  },
+  {
+   "id": "meta/postmortems/2026-09-15-the-readings-moved-and-no-screen-was-checked.md#1",
+   "label": "meta/postmortems/2026-09-15-the-readings-moved-and-no-screen-was-checked.md \u203a The readings moved into core and no screen",
+   "wave": 1,
+   "via": "term:follow percolation",
+   "gold": false
+  },
+  {
+   "id": "meta/postmortems/2026-09-15-the-readings-moved-and-no-screen-was-checked.md#3",
+   "label": "meta/postmortems/2026-09-15-the-readings-moved-and-no-screen-was-checked.md \u203a 1. Screens keyed on values only the seed f",
+   "wave": 1,
+   "via": "term:follow percolation",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "board/cards/REM-348.md#8",
+    "label": "board/cards/REM-348.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-348.md#3",
+    "label": "board/cards/REM-348.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-15-the-readings-moved-and-no-screen-was-checked.md#3",
+    "label": "meta/postmortems/2026-09-15-the-readings-moved-and-no-screen-was-checked.md \u203a 1. Screens keyed on values only the seed f",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-487.md#1",
+    "label": "board/cards/REM-487.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-347.md#6",
+    "label": "board/cards/REM-347.md \u203a Log",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "board/cards/REM-348.md#8",
+    "label": "board/cards/REM-348.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-348.md#3",
+    "label": "board/cards/REM-348.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-487.md#3",
+    "label": "board/cards/REM-487.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-15-the-readings-moved-and-no-screen-was-checked.md#3",
+    "label": "meta/postmortems/2026-09-15-the-readings-moved-and-no-screen-was-checked.md \u203a 1. Screens keyed on values only the seed f",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-349.md#4",
+    "label": "board/cards/REM-349.md \u203a Done when",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "board/cards/REM-487.md#1",
+    "label": "board/cards/REM-487.md",
+    "gold": false
+   },
+   {
+    "id": "commit/228a6c1d77",
+    "label": "commit 228a6c1: board: file REM-487 native: a writer publishes a reading from a phone",
+    "gold": false
+   },
+   {
+    "id": "commit/d49eba6dc5",
+    "label": "commit d49eba6: board: file REM-398 account: sign in with Apple, Google or email on web, iOS and Android",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-469.md#2",
+    "label": "board/cards/REM-469.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-398.md#1",
+    "label": "board/cards/REM-398.md",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "board/cards/REM-349.md#4",
+    "label": "board/cards/REM-349.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-488.md#2",
+    "label": "board/cards/REM-488.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-427.md#5",
+    "label": "board/cards/REM-427.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-429.md#2",
+    "label": "board/cards/REM-429.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-514.md#6",
+    "label": "board/cards/REM-514.md \u203a Log",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

@@ -1,0 +1,432 @@
+{
+ "qid": "card:REM-1088",
+ "set": "cards",
+ "question": "What was done about this, and why: security: every security definer function a caller can reach is listed with the check it makes?",
+ "gold": [
+  {
+   "id": "commit/eae149a722",
+   "label": "commit eae149a: REM-1088: the definer audit's table and reproductions, kept where the next audit can start from them",
+   "seed": false
+  },
+  {
+   "id": "commit/fb3a62f74f",
+   "label": "commit fb3a62f: Merge pull request #524 from Percolation-Labs/amartey/rem-1088-audit-record",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/27622cbe5f",
+   "label": "commit 27622cb: board: file REM-1088 security: every security definer function a caller can reach is listed with the che",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "board/cards/REM-1088.md#1",
+   "label": "board/cards/REM-1088.md",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-1088.md#2",
+   "label": "board/cards/REM-1088.md \u203a Goal",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "scenarios/round-3.md#4",
+   "label": "scenarios/round-3.md \u203a 3. A non-owner cancels someone else's running workflow",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "specs/workflow-engine/integration-rbac.sql#24",
+   "label": "specs/workflow-engine/integration-rbac.sql",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 2
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "board/cards/REM-1088.md#1",
+    "label": "board/cards/REM-1088.md",
+    "role": "seed"
+   },
+   {
+    "id": "commit/eae149a722",
+    "label": "commit eae149a: REM-1088: the definer audit's table and reproductions, kept where the next audit can start from them",
+    "role": "gold"
+   },
+   {
+    "id": "commit/fb3a62f74f",
+    "label": "commit fb3a62f: Merge pull request #524 from Percolation-Labs/amartey/rem-1088-audit-record",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "board/cards/REM-1088.md#1",
+    "b": "commit/eae149a722",
+    "via": [
+     {
+      "kind": "term",
+      "key": "definer audit",
+      "width": 51
+     }
+    ]
+   },
+   {
+    "a": "commit/eae149a722",
+    "b": "commit/fb3a62f74f",
+    "via": [
+     {
+      "kind": "near",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "reproductions",
+      "width": 4
+     },
+     {
+      "kind": "term",
+      "key": "definer audit",
+      "width": 51
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "board/cards/REM-1088.md#1",
+   "gold": "commit/eae149a722",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 1625,
+  "within_2_doors": 33206,
+  "gold_within_1": 2,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "commit/4aecd6aae4",
+    "label": "commit 4aecd6a: Four bugs found by prototyping workflow+rbac against real cases",
+    "p": 0.009181050697206317,
+    "gold": false
+   },
+   {
+    "id": "commit/15ee2ddfeb",
+    "label": "commit 15ee2dd: board: p8-subsystems-a2 acknowledges 1 message(s)",
+    "p": 0.004055088748277928,
+    "gold": false
+   },
+   {
+    "id": "commit/bd2d751179",
+    "label": "commit bd2d751: board: p8-subsystems-a2 messages all",
+    "p": 0.003935976800661276,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1035.md#7",
+    "label": "board/cards/REM-1035.md \u203a Log",
+    "p": 0.0035948370005540295,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261023-051607-ddfe.md#1",
+    "label": "board/messages/M-20261023-051607-ddfe.md",
+    "p": 0.0034524823071392387,
+    "gold": false
+   },
+   {
+    "id": "commit/4b95cee366",
+    "label": "commit 4b95cee: Prototype workflow+rbac against real cases: 7 bugs found and fixed",
+    "p": 0.0030773583027942667,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261021-111046-9ba4.md#2",
+    "label": "board/messages/M-20261021-111046-9ba4.md",
+    "p": 0.0029250104589781324,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261023-135006-1f67.md#1",
+    "label": "board/messages/M-20261023-135006-1f67.md",
+    "p": 0.002762629517730721,
+    "gold": false
+   },
+   {
+    "id": "commit/f3d877146a",
+    "label": "commit f3d8771: board: file REM-1089 rbac: every row policy is classified, and the hot ones are held sub-linear at a mil",
+    "p": 0.0020034000912719204,
+    "gold": false
+   },
+   {
+    "id": "commit/4a016d597c",
+    "label": "commit 4a016d5: board: file REM-1087 extension: a feature that is off says so and names its switch",
+    "p": 0.001788854358135708,
+    "gold": false
+   },
+   {
+    "id": "specs/world-model-ingestion/schema.sql#8",
+    "label": "specs/world-model-ingestion/schema.sql",
+    "p": 0.0016416753443574375,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1088.md#6",
+    "label": "board/cards/REM-1088.md \u203a Log",
+    "p": 0.0015208254799228323,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1089.md#6",
+    "label": "board/cards/REM-1089.md \u203a Log",
+    "p": 0.0014407001610805038,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1088.md#3",
+    "label": "board/cards/REM-1088.md \u203a Evidence",
+    "p": 0.0014183342761189678,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1090.md#6",
+    "label": "board/cards/REM-1090.md \u203a Log",
+    "p": 0.0014160806367938003,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1083.md#6",
+    "label": "board/cards/REM-1083.md \u203a Log",
+    "p": 0.0014056572390345574,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1089.md#1",
+    "label": "board/cards/REM-1089.md",
+    "p": 0.001276248107201283,
+    "gold": false
+   },
+   {
+    "id": "specs/workflow-engine/integration-rbac.sql#34",
+    "label": "specs/workflow-engine/integration-rbac.sql",
+    "p": 0.0011994204989900184,
+    "gold": false
+   },
+   {
+    "id": "commit/37ed4cd487",
+    "label": "commit 37ed4cd: rows, not schema: the rule, and a gate that reads specs/ (REM-655) (#335)",
+    "p": 0.0011870886788757744,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1111.md#6",
+    "label": "board/cards/REM-1111.md \u203a Log",
+    "p": 0.001163797167725855,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/27622cbe5f",
+   "label": "commit 27622cb: board: file REM-1088 security: every security definer function a caller can reach is listed with the che",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-1088.md#1",
+   "label": "board/cards/REM-1088.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-1088.md#2",
+   "label": "board/cards/REM-1088.md \u203a Goal",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "scenarios/round-3.md#4",
+   "label": "scenarios/round-3.md \u203a 3. A non-owner cancels someone else's running workflow",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/workflow-engine/integration-rbac.sql#24",
+   "label": "specs/workflow-engine/integration-rbac.sql",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-1088.md#7",
+   "label": "board/cards/REM-1088.md \u203a Log",
+   "wave": 1,
+   "via": "term:definer audit",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-1101.md#5",
+   "label": "board/cards/REM-1101.md \u203a Scope",
+   "wave": 1,
+   "via": "term:definer audit",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-1112.md#1",
+   "label": "board/cards/REM-1112.md",
+   "wave": 1,
+   "via": "term:definer audit",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-1111.md#1",
+   "label": "board/cards/REM-1111.md",
+   "wave": 1,
+   "via": "term:definer audit",
+   "gold": false
+  },
+  {
+   "id": "commit/fb3a62f74f",
+   "label": "commit fb3a62f: Merge pull request #524 from Percolation-Labs/amartey/rem-1088-audit-record",
+   "wave": 1,
+   "via": "term:definer audit",
+   "gold": true
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "commit/4aecd6aae4",
+    "label": "commit 4aecd6a: Four bugs found by prototyping workflow+rbac against real cases",
+    "gold": false
+   },
+   {
+    "id": "commit/15ee2ddfeb",
+    "label": "commit 15ee2dd: board: p8-subsystems-a2 acknowledges 1 message(s)",
+    "gold": false
+   },
+   {
+    "id": "commit/bd2d751179",
+    "label": "commit bd2d751: board: p8-subsystems-a2 messages all",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1035.md#7",
+    "label": "board/cards/REM-1035.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261023-051607-ddfe.md#1",
+    "label": "board/messages/M-20261023-051607-ddfe.md",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "commit/4aecd6aae4",
+    "label": "commit 4aecd6a: Four bugs found by prototyping workflow+rbac against real cases",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1035.md#7",
+    "label": "board/cards/REM-1035.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "commit/4b95cee366",
+    "label": "commit 4b95cee: Prototype workflow+rbac against real cases: 7 bugs found and fixed",
+    "gold": false
+   },
+   {
+    "id": "specs/world-model-ingestion/schema.sql#8",
+    "label": "specs/world-model-ingestion/schema.sql",
+    "gold": false
+   },
+   {
+    "id": "commit/2615ca0f99",
+    "label": "commit 2615ca0: workflow-engine: add the role model it never had; fix silent data loss under RLS",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/f5766a0c36",
+    "label": "commit f5766a0: board: file REM-1067 security: an author can change only the agents they own",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1088.md#3",
+    "label": "board/cards/REM-1088.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1067.md#3",
+    "label": "board/cards/REM-1067.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1067.md#1",
+    "label": "board/cards/REM-1067.md",
+    "gold": false
+   },
+   {
+    "id": "commit/fa28ec2bca",
+    "label": "commit fa28ec2: board: REM-1067 review \u2192 done",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "board/cards/REM-76.md#1",
+    "label": "board/cards/REM-76.md",
+    "gold": false
+   },
+   {
+    "id": "PACKAGING.md#14",
+    "label": "PACKAGING.md \u203a What each service may do to the database",
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-11-fixed-at-the-copy-that-failed.md#6",
+    "label": "meta/postmortems/2026-09-11-fixed-at-the-copy-that-failed.md \u203a 3. Why security keeps failing: three whys",
+    "gold": false
+   },
+   {
+    "id": "commit/846b4216dd",
+    "label": "commit 846b421: SECURITY INVOKER and a column-level grant: the fifth gate was the important one",
+    "gold": false
+   },
+   {
+    "id": "specs/ai-query-layer/brief.md#10",
+    "label": "specs/ai-query-layer/brief.md \u203a 3. Plain relational SQL, on PostgreSQL 18",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

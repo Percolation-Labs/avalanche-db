@@ -1,0 +1,445 @@
+{
+ "qid": "RW:3hop1__102461_24918_24991",
+ "set": "mq",
+ "question": "What went down after the Soviet President visiting the the birth country of Andrey Dashkov while the protests were taking place departed from the Kremlin?",
+ "gold": [
+  {
+   "id": "mq:23686f0f7a0ddf32",
+   "label": "Andrey Dashkov",
+   "seed": true
+  },
+  {
+   "id": "mq:e1790e7f58ea9e42",
+   "label": "Dissolution of the Soviet Union",
+   "seed": true
+  },
+  {
+   "id": "mq:e17eb0f25570e86d",
+   "label": "Dissolution of the Soviet Union",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:23686f0f7a0ddf32",
+   "label": "Andrey Dashkov",
+   "rank": 1,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:6397185a25167c78",
+   "label": "Moscow Kremlin",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:e1790e7f58ea9e42",
+   "label": "Dissolution of the Soviet Union",
+   "rank": 3,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:8666d705cb1945ca",
+   "label": "This Is Us",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "mq:e9cc80be485a6132",
+   "label": "1886 United States House of Representatives elections",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 2
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:23686f0f7a0ddf32",
+    "label": "Andrey Dashkov",
+    "role": "gold"
+   },
+   {
+    "id": "mq:e1790e7f58ea9e42",
+    "label": "Dissolution of the Soviet Union",
+    "role": "gold"
+   },
+   {
+    "id": "mq:e17eb0f25570e86d",
+    "label": "Dissolution of the Soviet Union",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:23686f0f7a0ddf32",
+    "b": "mq:e17eb0f25570e86d",
+    "via": [
+     {
+      "kind": "term",
+      "key": "ukraine",
+      "width": 59
+     }
+    ]
+   },
+   {
+    "a": "mq:e1790e7f58ea9e42",
+    "b": "mq:e17eb0f25570e86d",
+    "via": [
+     {
+      "kind": "term",
+      "key": "gorbachev",
+      "width": 17
+     },
+     {
+      "kind": "term",
+      "key": "deputies",
+      "width": 22
+     },
+     {
+      "kind": "term",
+      "key": "marking",
+      "width": 28
+     },
+     {
+      "kind": "term",
+      "key": "dissolution",
+      "width": 45
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   2,
+   1,
+   1
+  ],
+  "entry": {
+   "seed": "mq:23686f0f7a0ddf32",
+   "gold": "mq:23686f0f7a0ddf32",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 2658,
+  "within_2_doors": 18428,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "mq:446c632ab45dded5",
+    "label": "This Is Us",
+    "p": 0.013802620813605686,
+    "gold": false
+   },
+   {
+    "id": "mq:937b885612501544",
+    "label": "John Peter Altgeld",
+    "p": 0.003910910047762501,
+    "gold": false
+   },
+   {
+    "id": "mq:f044ad7914ab20b5",
+    "label": "List of Moscow Kremlin towers",
+    "p": 0.002931458439371096,
+    "gold": false
+   },
+   {
+    "id": "mq:5f1ce3540df24482",
+    "label": "Moscow",
+    "p": 0.002021716338384624,
+    "gold": false
+   },
+   {
+    "id": "mq:2a0aefbf5a8be64e",
+    "label": "Victor Heck",
+    "p": 0.0013907715187074553,
+    "gold": false
+   },
+   {
+    "id": "mq:adb06744cc5f3171",
+    "label": "Grover Cleveland",
+    "p": 0.001321330812260862,
+    "gold": false
+   },
+   {
+    "id": "mq:ff92ba2c0c72b7bd",
+    "label": "Spider-Man (1967 TV series)",
+    "p": 0.0013053020100945742,
+    "gold": false
+   },
+   {
+    "id": "mq:6d751b50d0f7dcdf",
+    "label": "Soldiers Live",
+    "p": 0.0012995813672103853,
+    "gold": false
+   },
+   {
+    "id": "mq:b7a9437ecdb60a35",
+    "label": "Dissolution of the Soviet Union",
+    "p": 0.001292903594381725,
+    "gold": false
+   },
+   {
+    "id": "mq:c49dfd326cdf0caf",
+    "label": "Esther Cleveland",
+    "p": 0.001267291081234255,
+    "gold": false
+   },
+   {
+    "id": "mq:f2a60931baaaf042",
+    "label": "2010 United States House of Representatives elections",
+    "p": 0.0011627630967582746,
+    "gold": false
+   },
+   {
+    "id": "mq:77d6eb2ef068c147",
+    "label": "Kremlin Senate",
+    "p": 0.0011212984756764496,
+    "gold": false
+   },
+   {
+    "id": "mq:4b6fd79d6221b14b",
+    "label": "Yasyn Khamid",
+    "p": 0.0011144530340484989,
+    "gold": false
+   },
+   {
+    "id": "mq:eaae98034bcb80e6",
+    "label": "Grand Palace",
+    "p": 0.0010668765875461548,
+    "gold": false
+   },
+   {
+    "id": "mq:efa109a09a9541e9",
+    "label": "Mexico City",
+    "p": 0.0010333149155032906,
+    "gold": false
+   },
+   {
+    "id": "mq:0e28a503f8310126",
+    "label": "Alek Rapoport",
+    "p": 0.00102709238532187,
+    "gold": false
+   },
+   {
+    "id": "mq:bc79a8145955a6c0",
+    "label": "John Deere World Headquarters",
+    "p": 0.0010171967716991108,
+    "gold": false
+   },
+   {
+    "id": "mq:ebc444437e031f03",
+    "label": "2002 United States House of Representatives elections",
+    "p": 0.0009482667080081339,
+    "gold": false
+   },
+   {
+    "id": "mq:3b1175ee92cdbb42",
+    "label": "Just the Two of Us (Grover Washington Jr. song)",
+    "p": 0.0009469028886579783,
+    "gold": false
+   },
+   {
+    "id": "mq:ee7dbfd7e76b4e83",
+    "label": "Kievan Rus'",
+    "p": 0.0008523448992023158,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:23686f0f7a0ddf32",
+   "label": "Andrey Dashkov",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:6397185a25167c78",
+   "label": "Moscow Kremlin",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:e1790e7f58ea9e42",
+   "label": "Dissolution of the Soviet Union",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:8666d705cb1945ca",
+   "label": "This Is Us",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:e9cc80be485a6132",
+   "label": "1886 United States House of Representatives elections",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:56c37a73d065a4da",
+   "label": "Cold War",
+   "wave": 1,
+   "via": "term:gorbachev",
+   "gold": false
+  },
+  {
+   "id": "mq:c5a4b06a3452764e",
+   "label": "Sevastopol International Airport",
+   "wave": 1,
+   "via": "term:gorbachev",
+   "gold": false
+  },
+  {
+   "id": "mq:14239c35f58c84ea",
+   "label": "Dissolution of the Soviet Union",
+   "wave": 1,
+   "via": "term:gorbachev",
+   "gold": false
+  },
+  {
+   "id": "mq:9e2215e689504bd6",
+   "label": "Russian Soviet Federative Socialist Republic",
+   "wave": 1,
+   "via": "term:gorbachev",
+   "gold": false
+  },
+  {
+   "id": "mq:cabdd21271463711",
+   "label": "Dissolution of the Soviet Union",
+   "wave": 1,
+   "via": "term:gorbachev",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:446c632ab45dded5",
+    "label": "This Is Us",
+    "gold": false
+   },
+   {
+    "id": "mq:937b885612501544",
+    "label": "John Peter Altgeld",
+    "gold": false
+   },
+   {
+    "id": "mq:f044ad7914ab20b5",
+    "label": "List of Moscow Kremlin towers",
+    "gold": false
+   },
+   {
+    "id": "mq:5f1ce3540df24482",
+    "label": "Moscow",
+    "gold": false
+   },
+   {
+    "id": "mq:2a0aefbf5a8be64e",
+    "label": "Victor Heck",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:446c632ab45dded5",
+    "label": "This Is Us",
+    "gold": false
+   },
+   {
+    "id": "mq:f044ad7914ab20b5",
+    "label": "List of Moscow Kremlin towers",
+    "gold": false
+   },
+   {
+    "id": "mq:b7a9437ecdb60a35",
+    "label": "Dissolution of the Soviet Union",
+    "gold": false
+   },
+   {
+    "id": "mq:df3ef19f08302f3e",
+    "label": "Andrey Dostoevsky",
+    "gold": false
+   },
+   {
+    "id": "mq:8223dd8f26aadd4d",
+    "label": "Andrey Shumilin",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:446c632ab45dded5",
+    "label": "This Is Us",
+    "gold": false
+   },
+   {
+    "id": "mq:f044ad7914ab20b5",
+    "label": "List of Moscow Kremlin towers",
+    "gold": false
+   },
+   {
+    "id": "mq:b7a9437ecdb60a35",
+    "label": "Dissolution of the Soviet Union",
+    "gold": false
+   },
+   {
+    "id": "mq:df3ef19f08302f3e",
+    "label": "Andrey Dostoevsky",
+    "gold": false
+   },
+   {
+    "id": "mq:ee7dbfd7e76b4e83",
+    "label": "Kievan Rus'",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:8224156bc0e818b6",
+    "label": "Josip Broz Tito",
+    "gold": false
+   },
+   {
+    "id": "mq:b7a9437ecdb60a35",
+    "label": "Dissolution of the Soviet Union",
+    "gold": false
+   },
+   {
+    "id": "mq:446c632ab45dded5",
+    "label": "This Is Us",
+    "gold": false
+   },
+   {
+    "id": "mq:df3ef19f08302f3e",
+    "label": "Andrey Dostoevsky",
+    "gold": false
+   },
+   {
+    "id": "mq:f044ad7914ab20b5",
+    "label": "List of Moscow Kremlin towers",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

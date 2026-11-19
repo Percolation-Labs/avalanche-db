@@ -1,0 +1,450 @@
+{
+ "qid": "RW:3hop1__63037_567566_84283",
+ "set": "mq",
+ "question": "Who is the owner of the record label that singer of the theme song from the movie Arthur belongs to?",
+ "gold": [
+  {
+   "id": "mq:08b2610feb1873e2",
+   "label": "Back of My Mind",
+   "seed": false
+  },
+  {
+   "id": "mq:2001c0817ed0aa38",
+   "label": "Arthur's Theme (Best That You Can Do)",
+   "seed": true
+  },
+  {
+   "id": "mq:d9f976bd5b1a8053",
+   "label": "Warner Records",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:5f644acb307f3319",
+   "label": "Larry Norman",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:50df4c9c9a1379d2",
+   "label": "The Movie Song Album",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:2001c0817ed0aa38",
+   "label": "Arthur's Theme (Best That You Can Do)",
+   "rank": 3,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:f95a7c82f33c1aae",
+   "label": "Jason Paige",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:a54417415a5deffe",
+   "label": "Swag It Out",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:08b2610feb1873e2",
+    "label": "Back of My Mind",
+    "role": "gold"
+   },
+   {
+    "id": "mq:2001c0817ed0aa38",
+    "label": "Arthur's Theme (Best That You Can Do)",
+    "role": "gold"
+   },
+   {
+    "id": "mq:d9f976bd5b1a8053",
+    "label": "Warner Records",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:08b2610feb1873e2",
+    "b": "mq:2001c0817ed0aa38",
+    "via": [
+     {
+      "kind": "term",
+      "key": "another page",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "christopher cross",
+      "width": 6
+     },
+     {
+      "kind": "term",
+      "key": "page",
+      "width": 45
+     }
+    ]
+   },
+   {
+    "a": "mq:08b2610feb1873e2",
+    "b": "mq:d9f976bd5b1a8053",
+    "via": [
+     {
+      "kind": "term",
+      "key": "warner bros",
+      "width": 56
+     },
+     {
+      "kind": "term",
+      "key": "bros",
+      "width": 68
+     },
+     {
+      "kind": "term",
+      "key": "warner",
+      "width": 93
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   1,
+   2
+  ],
+  "entry": {
+   "seed": "mq:2001c0817ed0aa38",
+   "gold": "mq:2001c0817ed0aa38",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 1573,
+  "within_2_doors": 19382,
+  "gold_within_1": 1,
+  "gold_within_2": 1,
+  "top_U": [
+   {
+    "id": "mq:4a52569bc81ed03f",
+    "label": "Zendaya (album)",
+    "p": 0.0026105358957800055,
+    "gold": false
+   },
+   {
+    "id": "mq:f71324f0cbd26863",
+    "label": "Beyonc\u00e9",
+    "p": 0.002437509711600781,
+    "gold": false
+   },
+   {
+    "id": "mq:117a6ae6560789fa",
+    "label": "Walt Disney World",
+    "p": 0.0022903093884452724,
+    "gold": false
+   },
+   {
+    "id": "mq:ec215e75ee112f77",
+    "label": "You'll Be in My Heart",
+    "p": 0.0018936034103048695,
+    "gold": false
+   },
+   {
+    "id": "mq:131b8697a0f528c9",
+    "label": "Pok\u00e9mon Trading Card Game",
+    "p": 0.0017448707694120939,
+    "gold": false
+   },
+   {
+    "id": "mq:b8f214c73732138a",
+    "label": "Pok\u00e9mon Trading Card Game",
+    "p": 0.001732532829123867,
+    "gold": false
+   },
+   {
+    "id": "mq:33b7644d8cbb5d2d",
+    "label": "Think of Laura",
+    "p": 0.0016688791824304658,
+    "gold": false
+   },
+   {
+    "id": "mq:7a675b5e10eb6a86",
+    "label": "Beauty and the Beast (2017 film)",
+    "p": 0.0014856530004478201,
+    "gold": false
+   },
+   {
+    "id": "mq:c30f94c92d3a7d63",
+    "label": "Sylvan Beach Union Chapel",
+    "p": 0.0014159753226324354,
+    "gold": false
+   },
+   {
+    "id": "mq:b8f7c1231efb0ca5",
+    "label": "All Right",
+    "p": 0.0013560030807190616,
+    "gold": false
+   },
+   {
+    "id": "mq:7db5e8c6c09e6faa",
+    "label": "Jenna Boyd",
+    "p": 0.0013376883963821563,
+    "gold": false
+   },
+   {
+    "id": "mq:8302729304d61819",
+    "label": "Jenna Boyd",
+    "p": 0.0013376883938251798,
+    "gold": false
+   },
+   {
+    "id": "mq:80750e5ba80e996e",
+    "label": "Teach Me How to Dougie",
+    "p": 0.0013306313417846677,
+    "gold": false
+   },
+   {
+    "id": "mq:60d074cad4ac9a83",
+    "label": "Another Page",
+    "p": 0.0013156517128819936,
+    "gold": false
+   },
+   {
+    "id": "mq:3c37ce7fb3e36a2f",
+    "label": "Liza and David",
+    "p": 0.0012996240191481582,
+    "gold": false
+   },
+   {
+    "id": "mq:81501b6de32f95b1",
+    "label": "King (miniseries)",
+    "p": 0.001200926909570749,
+    "gold": false
+   },
+   {
+    "id": "mq:113f1de5a4104498",
+    "label": "William Michals",
+    "p": 0.001126252681915655,
+    "gold": false
+   },
+   {
+    "id": "mq:8a3ee8a0fad2f8e6",
+    "label": "2018 ACC Men's Basketball Tournament",
+    "p": 0.0010964975401661402,
+    "gold": false
+   },
+   {
+    "id": "mq:faa94e5db694ceca",
+    "label": "The Three Stooges (2012 film)",
+    "p": 0.001075205775383451,
+    "gold": false
+   },
+   {
+    "id": "mq:e6648d3509ca5444",
+    "label": "Tim Long",
+    "p": 0.001046961427775195,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:5f644acb307f3319",
+   "label": "Larry Norman",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:50df4c9c9a1379d2",
+   "label": "The Movie Song Album",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:2001c0817ed0aa38",
+   "label": "Arthur's Theme (Best That You Can Do)",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:f95a7c82f33c1aae",
+   "label": "Jason Paige",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:a54417415a5deffe",
+   "label": "Swag It Out",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:60d074cad4ac9a83",
+   "label": "Another Page",
+   "wave": 1,
+   "via": "term:another page",
+   "gold": false
+  },
+  {
+   "id": "mq:33b7644d8cbb5d2d",
+   "label": "Think of Laura",
+   "wave": 1,
+   "via": "term:another page",
+   "gold": false
+  },
+  {
+   "id": "mq:08b2610feb1873e2",
+   "label": "Back of My Mind",
+   "wave": 1,
+   "via": "term:another page",
+   "gold": true
+  },
+  {
+   "id": "mq:b8f7c1231efb0ca5",
+   "label": "All Right",
+   "wave": 1,
+   "via": "term:another page",
+   "gold": false
+  },
+  {
+   "id": "mq:55b1c439b68f987a",
+   "label": "Hangin' with Mr. Cooper",
+   "wave": 2,
+   "via": "term:warner",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:4a52569bc81ed03f",
+    "label": "Zendaya (album)",
+    "gold": false
+   },
+   {
+    "id": "mq:f71324f0cbd26863",
+    "label": "Beyonc\u00e9",
+    "gold": false
+   },
+   {
+    "id": "mq:117a6ae6560789fa",
+    "label": "Walt Disney World",
+    "gold": false
+   },
+   {
+    "id": "mq:ec215e75ee112f77",
+    "label": "You'll Be in My Heart",
+    "gold": false
+   },
+   {
+    "id": "mq:131b8697a0f528c9",
+    "label": "Pok\u00e9mon Trading Card Game",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:33b7644d8cbb5d2d",
+    "label": "Think of Laura",
+    "gold": false
+   },
+   {
+    "id": "mq:b8f7c1231efb0ca5",
+    "label": "All Right",
+    "gold": false
+   },
+   {
+    "id": "mq:f71324f0cbd26863",
+    "label": "Beyonc\u00e9",
+    "gold": false
+   },
+   {
+    "id": "mq:60d074cad4ac9a83",
+    "label": "Another Page",
+    "gold": false
+   },
+   {
+    "id": "mq:5ce29220d5470037",
+    "label": "Aretha Franklin",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:33b7644d8cbb5d2d",
+    "label": "Think of Laura",
+    "gold": false
+   },
+   {
+    "id": "mq:f71324f0cbd26863",
+    "label": "Beyonc\u00e9",
+    "gold": false
+   },
+   {
+    "id": "mq:b8f7c1231efb0ca5",
+    "label": "All Right",
+    "gold": false
+   },
+   {
+    "id": "mq:5ce29220d5470037",
+    "label": "Aretha Franklin",
+    "gold": false
+   },
+   {
+    "id": "mq:9309985dff87da6e",
+    "label": "I Can Only Imagine (MercyMe song)",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:bc59301ad1c3249b",
+    "label": "Se Va Conmigo",
+    "gold": false
+   },
+   {
+    "id": "mq:33b7644d8cbb5d2d",
+    "label": "Think of Laura",
+    "gold": false
+   },
+   {
+    "id": "mq:f8460d1f85da2f94",
+    "label": "Al Bell",
+    "gold": false
+   },
+   {
+    "id": "mq:02222a2ef8fb2b2d",
+    "label": "Tittsworth",
+    "gold": false
+   },
+   {
+    "id": "mq:b2c66be8f904a67c",
+    "label": "Theme from The Greatest American Hero (Believe It or Not)",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

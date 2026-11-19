@@ -1,0 +1,484 @@
+{
+ "qid": "RW:4hop2__9988_158985_70784_61381",
+ "set": "mq",
+ "question": "When was the region immediately north of the region prevailing with the disgrace of the Near East and the site of the most growth in desalination for agricultural use established?",
+ "gold": [
+  {
+   "id": "mq:6421666ff3e70d66",
+   "label": "Geography of Saudi Arabia",
+   "seed": false
+  },
+  {
+   "id": "mq:bbbe9053632e9c35",
+   "label": "Water resources",
+   "seed": true
+  },
+  {
+   "id": "mq:ec91dd0e33450587",
+   "label": "Saudi Arabia",
+   "seed": false
+  },
+  {
+   "id": "mq:f7e20fac3cd1b17b",
+   "label": "Near East",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:bbbe9053632e9c35",
+   "label": "Water resources",
+   "rank": 1,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:90ba1b333321cc21",
+   "label": "Near East",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:bef6afe37e37ebc1",
+   "label": "Hertfordshire",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "mq:b5be102c3021dffa",
+   "label": "North Gosford, New South Wales",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "mq:f7e20fac3cd1b17b",
+   "label": "Near East",
+   "rank": 5,
+   "gold": true,
+   "doors_to_gold": 0
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:6421666ff3e70d66",
+    "label": "Geography of Saudi Arabia",
+    "role": "gold"
+   },
+   {
+    "id": "mq:bbbe9053632e9c35",
+    "label": "Water resources",
+    "role": "gold"
+   },
+   {
+    "id": "mq:ec91dd0e33450587",
+    "label": "Saudi Arabia",
+    "role": "gold"
+   },
+   {
+    "id": "mq:f7e20fac3cd1b17b",
+    "label": "Near East",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:6421666ff3e70d66",
+    "b": "mq:bbbe9053632e9c35",
+    "via": [
+     {
+      "kind": "term",
+      "key": "persian gulf",
+      "width": 25
+     },
+     {
+      "kind": "term",
+      "key": "persian",
+      "width": 66
+     },
+     {
+      "kind": "term",
+      "key": "populated",
+      "width": 74
+     },
+     {
+      "kind": "term",
+      "key": "extensive",
+      "width": 85
+     }
+    ]
+   },
+   {
+    "a": "mq:6421666ff3e70d66",
+    "b": "mq:ec91dd0e33450587",
+    "via": [
+     {
+      "kind": "term",
+      "key": "saudi arabia",
+      "width": 33
+     },
+     {
+      "kind": "term",
+      "key": "saudi",
+      "width": 42
+     },
+     {
+      "kind": "term",
+      "key": "arabia",
+      "width": 47
+     }
+    ]
+   },
+   {
+    "a": "mq:ec91dd0e33450587",
+    "b": "mq:f7e20fac3cd1b17b",
+    "via": [
+     {
+      "kind": "term",
+      "key": "distinct regions",
+      "width": 3
+     },
+     {
+      "kind": "term",
+      "key": "distinct",
+      "width": 79
+     }
+    ]
+   }
+  ],
+  "cost": 3,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   1,
+   2,
+   2,
+   2,
+   1
+  ],
+  "entry": {
+   "seed": "mq:bbbe9053632e9c35",
+   "gold": "mq:bbbe9053632e9c35",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 2034,
+  "within_2_doors": 19043,
+  "gold_within_1": 2,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "mq:1b8a486541e998f2",
+    "label": "Separate Lies",
+    "p": 0.0033498850425972334,
+    "gold": false
+   },
+   {
+    "id": "mq:e563360fa96e30e5",
+    "label": "Game pie",
+    "p": 0.0024558352252339387,
+    "gold": false
+   },
+   {
+    "id": "mq:d0543ff66fd42917",
+    "label": "Vilnius County",
+    "p": 0.002300901517805367,
+    "gold": false
+   },
+   {
+    "id": "mq:306d4462f8940a05",
+    "label": "Vauxhall Motors",
+    "p": 0.0022917033061581916,
+    "gold": false
+   },
+   {
+    "id": "mq:aba160bb8515fa32",
+    "label": "Antarctica",
+    "p": 0.0022323670222269116,
+    "gold": false
+   },
+   {
+    "id": "mq:60e6c816e86ef03a",
+    "label": "Christopher Harris (cricketer, born 1942)",
+    "p": 0.0018569206557310994,
+    "gold": false
+   },
+   {
+    "id": "mq:cb8221e37b92ab90",
+    "label": "East Stone Gap, Virginia",
+    "p": 0.0016978898778976866,
+    "gold": false
+   },
+   {
+    "id": "mq:31079487322163af",
+    "label": "Chaffey Dam",
+    "p": 0.0013386204265793322,
+    "gold": false
+   },
+   {
+    "id": "mq:ec91dd0e33450587",
+    "label": "Saudi Arabia",
+    "p": 0.001318482789753005,
+    "gold": true
+   },
+   {
+    "id": "mq:6ecef76324ac3d1b",
+    "label": "Rhine",
+    "p": 0.0012957967143475244,
+    "gold": false
+   },
+   {
+    "id": "mq:1c75656f271e9a7b",
+    "label": "Beardy River",
+    "p": 0.001243041559543864,
+    "gold": false
+   },
+   {
+    "id": "mq:517d12600a724fdd",
+    "label": "National Cycle Route 57",
+    "p": 0.001219390841263056,
+    "gold": false
+   },
+   {
+    "id": "mq:e26a8aed03622992",
+    "label": "Hertfordshire Fire and Rescue Service",
+    "p": 0.001204193463744561,
+    "gold": false
+   },
+   {
+    "id": "mq:9691cf1b00968b04",
+    "label": "Arabian Peninsula",
+    "p": 0.001191351359656923,
+    "gold": false
+   },
+   {
+    "id": "mq:9b757b0147f2f134",
+    "label": "Sahara",
+    "p": 0.0010963058458019845,
+    "gold": false
+   },
+   {
+    "id": "mq:10b48cc87d78e39a",
+    "label": "Striation Valley",
+    "p": 0.0010880424874437395,
+    "gold": false
+   },
+   {
+    "id": "mq:e323633f6ca9c8c5",
+    "label": "Mount Wilkinson",
+    "p": 0.0010768145570896777,
+    "gold": false
+   },
+   {
+    "id": "mq:02d282981e5181f2",
+    "label": "Joinville Island group",
+    "p": 0.0010564028629064567,
+    "gold": false
+   },
+   {
+    "id": "mq:bab78f94142910f4",
+    "label": "Wyndham Hazelton",
+    "p": 0.0010263000878878473,
+    "gold": false
+   },
+   {
+    "id": "mq:ee42790b4cd8284c",
+    "label": "Protestantism",
+    "p": 0.0010006575124517603,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:bbbe9053632e9c35",
+   "label": "Water resources",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:90ba1b333321cc21",
+   "label": "Near East",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:bef6afe37e37ebc1",
+   "label": "Hertfordshire",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:b5be102c3021dffa",
+   "label": "North Gosford, New South Wales",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:f7e20fac3cd1b17b",
+   "label": "Near East",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:8aa1997b1110efe6",
+   "label": "Dubai",
+   "wave": 1,
+   "via": "term:persian gulf",
+   "gold": false
+  },
+  {
+   "id": "mq:8f5774f19a64f293",
+   "label": "Mohammad Ebrahimi",
+   "wave": 1,
+   "via": "term:persian gulf",
+   "gold": false
+  },
+  {
+   "id": "mq:efeb17af56ff1e59",
+   "label": "Operation Praying Mantis",
+   "wave": 1,
+   "via": "term:persian gulf",
+   "gold": false
+  },
+  {
+   "id": "mq:57df83b95819f90b",
+   "label": "Alghanim Industries",
+   "wave": 1,
+   "via": "term:persian gulf",
+   "gold": false
+  },
+  {
+   "id": "mq:febd202c2bb0a8a4",
+   "label": "Battle of Qurah and Umm al Maradim",
+   "wave": 1,
+   "via": "term:persian gulf",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:1b8a486541e998f2",
+    "label": "Separate Lies",
+    "gold": false
+   },
+   {
+    "id": "mq:e563360fa96e30e5",
+    "label": "Game pie",
+    "gold": false
+   },
+   {
+    "id": "mq:d0543ff66fd42917",
+    "label": "Vilnius County",
+    "gold": false
+   },
+   {
+    "id": "mq:306d4462f8940a05",
+    "label": "Vauxhall Motors",
+    "gold": false
+   },
+   {
+    "id": "mq:aba160bb8515fa32",
+    "label": "Antarctica",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:10b48cc87d78e39a",
+    "label": "Striation Valley",
+    "gold": false
+   },
+   {
+    "id": "mq:e323633f6ca9c8c5",
+    "label": "Mount Wilkinson",
+    "gold": false
+   },
+   {
+    "id": "mq:ee42790b4cd8284c",
+    "label": "Protestantism",
+    "gold": false
+   },
+   {
+    "id": "mq:76988f439345670f",
+    "label": "Near East",
+    "gold": false
+   },
+   {
+    "id": "mq:31079487322163af",
+    "label": "Chaffey Dam",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:10b48cc87d78e39a",
+    "label": "Striation Valley",
+    "gold": false
+   },
+   {
+    "id": "mq:17084325a3315710",
+    "label": "Middle Ages",
+    "gold": false
+   },
+   {
+    "id": "mq:76988f439345670f",
+    "label": "Near East",
+    "gold": false
+   },
+   {
+    "id": "mq:31079487322163af",
+    "label": "Chaffey Dam",
+    "gold": false
+   },
+   {
+    "id": "mq:c2356221b73aac93",
+    "label": "Middle Ages",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:9dd76c77c0d07c55",
+    "label": "Banana production in the United States",
+    "gold": false
+   },
+   {
+    "id": "mq:1e3658b936e95791",
+    "label": "Near East",
+    "gold": false
+   },
+   {
+    "id": "mq:fb3b114de90bdcdd",
+    "label": "Agriculture in Pennsylvania",
+    "gold": false
+   },
+   {
+    "id": "mq:10b48cc87d78e39a",
+    "label": "Striation Valley",
+    "gold": false
+   },
+   {
+    "id": "mq:5a4af433d49a8ad8",
+    "label": "North East Side (Denver)",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

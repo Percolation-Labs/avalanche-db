@@ -1,0 +1,435 @@
+{
+ "qid": "RW:3hop2__88342_93066_90766",
+ "set": "mq",
+ "question": "When was the last time the team that won the American League East in 2017 and the Dodgers met in the championship event that precedes the MLB MVP award?",
+ "gold": [
+  {
+   "id": "mq:6d3bce377ac48e09",
+   "label": "2017 American League Championship Series",
+   "seed": true
+  },
+  {
+   "id": "mq:6de5dfbb1d234e67",
+   "label": "Dodgers\u2013Yankees rivalry",
+   "seed": false
+  },
+  {
+   "id": "mq:823be9f0a54383c5",
+   "label": "Major League Baseball Most Valuable Player Award",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:3684a44e8f9ada9e",
+   "label": "Los Angeles Dodgers",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:0c16567f66f2b110",
+   "label": "Los Angeles Dodgers",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:ce0b6c4326b89851",
+   "label": "Hart Memorial Trophy",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:4c4690cbcc89a7d5",
+   "label": "Jackie Robinson",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:6d3bce377ac48e09",
+   "label": "2017 American League Championship Series",
+   "rank": 5,
+   "gold": true,
+   "doors_to_gold": 0
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:6d3bce377ac48e09",
+    "label": "2017 American League Championship Series",
+    "role": "gold"
+   },
+   {
+    "id": "mq:6de5dfbb1d234e67",
+    "label": "Dodgers\u2013Yankees rivalry",
+    "role": "gold"
+   },
+   {
+    "id": "mq:823be9f0a54383c5",
+    "label": "Major League Baseball Most Valuable Player Award",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:6d3bce377ac48e09",
+    "b": "mq:6de5dfbb1d234e67",
+    "via": [
+     {
+      "kind": "term",
+      "key": "american league",
+      "width": 44
+     },
+     {
+      "kind": "term",
+      "key": "yankees",
+      "width": 46
+     }
+    ]
+   },
+   {
+    "a": "mq:6de5dfbb1d234e67",
+    "b": "mq:823be9f0a54383c5",
+    "via": [
+     {
+      "kind": "term",
+      "key": "world series",
+      "width": 83
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   2,
+   1
+  ],
+  "entry": {
+   "seed": "mq:6d3bce377ac48e09",
+   "gold": "mq:6d3bce377ac48e09",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 1730,
+  "within_2_doors": 19318,
+  "gold_within_1": 2,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "mq:105eed014313f0ca",
+    "label": "Houston Astros",
+    "p": 0.003049086165535689,
+    "gold": false
+   },
+   {
+    "id": "mq:845d472fa8323414",
+    "label": "Houston Astros",
+    "p": 0.0029927169232701364,
+    "gold": false
+   },
+   {
+    "id": "mq:ced43bb471c09545",
+    "label": "1955 World Series",
+    "p": 0.002749640708972324,
+    "gold": false
+   },
+   {
+    "id": "mq:9b0d277f535e3f90",
+    "label": "List of Silver Slugger Award winners at second base",
+    "p": 0.002233980762965454,
+    "gold": false
+   },
+   {
+    "id": "mq:9e8e3eec5525c142",
+    "label": "List of World Series champions",
+    "p": 0.0018711208068197158,
+    "gold": false
+   },
+   {
+    "id": "mq:c3c05bd5ec05c707",
+    "label": "Detroit Tigers",
+    "p": 0.0018169083373239282,
+    "gold": false
+   },
+   {
+    "id": "mq:79bdd557e723a655",
+    "label": "Houston Astros",
+    "p": 0.0017729816537340967,
+    "gold": false
+   },
+   {
+    "id": "mq:83d0a86d31d8a59e",
+    "label": "2003 World Series",
+    "p": 0.0016737042874107682,
+    "gold": false
+   },
+   {
+    "id": "mq:c26f1287a039b9dc",
+    "label": "New York Yankees",
+    "p": 0.0016579000037928128,
+    "gold": false
+   },
+   {
+    "id": "mq:2c8af1a1e67ad8ea",
+    "label": "1973\u201374 WHA season",
+    "p": 0.0016450850747756166,
+    "gold": false
+   },
+   {
+    "id": "mq:d86d0ecc3365d50b",
+    "label": "Los Angeles Angels",
+    "p": 0.0016342334511636376,
+    "gold": false
+   },
+   {
+    "id": "mq:e5626003ff4b1e18",
+    "label": "Cleveland Indians",
+    "p": 0.001633659260709896,
+    "gold": false
+   },
+   {
+    "id": "mq:6d443ce041c3c3b9",
+    "label": "Atlanta Braves",
+    "p": 0.0015637880731763185,
+    "gold": false
+   },
+   {
+    "id": "mq:da4c63f830194de5",
+    "label": "Dugout (baseball)",
+    "p": 0.0014815661423166985,
+    "gold": false
+   },
+   {
+    "id": "mq:9329d80ca4402dda",
+    "label": "Johnson Fry",
+    "p": 0.0014790125169767405,
+    "gold": false
+   },
+   {
+    "id": "mq:0596887fe32f04ff",
+    "label": "Major League Baseball All-Star Game Most Valuable Player Award",
+    "p": 0.0013998283855699808,
+    "gold": false
+   },
+   {
+    "id": "mq:8dc01efac488b1b3",
+    "label": "Houston Astros",
+    "p": 0.0013708523960737943,
+    "gold": false
+   },
+   {
+    "id": "mq:6c00d2e43c55960b",
+    "label": "Lee Smith (baseball)",
+    "p": 0.001288339526226372,
+    "gold": false
+   },
+   {
+    "id": "mq:9e9d3db63967bc9b",
+    "label": "Dallas Cowboys",
+    "p": 0.001223746853223246,
+    "gold": false
+   },
+   {
+    "id": "mq:b1b6fc46a26c1924",
+    "label": "Lin Chih-chieh",
+    "p": 0.0011754767620995906,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:3684a44e8f9ada9e",
+   "label": "Los Angeles Dodgers",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:0c16567f66f2b110",
+   "label": "Los Angeles Dodgers",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:ce0b6c4326b89851",
+   "label": "Hart Memorial Trophy",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:4c4690cbcc89a7d5",
+   "label": "Jackie Robinson",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:6d3bce377ac48e09",
+   "label": "2017 American League Championship Series",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:89a8b1eabdf2f0e6",
+   "label": "2016 NCAA Division I Baseball Tournament",
+   "wave": 1,
+   "via": "term:championship series",
+   "gold": false
+  },
+  {
+   "id": "mq:ed366f62b423b5a5",
+   "label": "Oscar Taveras",
+   "wave": 1,
+   "via": "term:championship series",
+   "gold": false
+  },
+  {
+   "id": "mq:b22c77d03958fe34",
+   "label": "2005 World Series",
+   "wave": 1,
+   "via": "term:championship series",
+   "gold": false
+  },
+  {
+   "id": "mq:77bbdc259f564533",
+   "label": "2017 World Series",
+   "wave": 1,
+   "via": "term:championship series",
+   "gold": false
+  },
+  {
+   "id": "mq:210bea00ae553200",
+   "label": "2016 World Series",
+   "wave": 1,
+   "via": "term:championship series",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:105eed014313f0ca",
+    "label": "Houston Astros",
+    "gold": false
+   },
+   {
+    "id": "mq:845d472fa8323414",
+    "label": "Houston Astros",
+    "gold": false
+   },
+   {
+    "id": "mq:ced43bb471c09545",
+    "label": "1955 World Series",
+    "gold": false
+   },
+   {
+    "id": "mq:9b0d277f535e3f90",
+    "label": "List of Silver Slugger Award winners at second base",
+    "gold": false
+   },
+   {
+    "id": "mq:9e8e3eec5525c142",
+    "label": "List of World Series champions",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:ced43bb471c09545",
+    "label": "1955 World Series",
+    "gold": false
+   },
+   {
+    "id": "mq:105eed014313f0ca",
+    "label": "Houston Astros",
+    "gold": false
+   },
+   {
+    "id": "mq:845d472fa8323414",
+    "label": "Houston Astros",
+    "gold": false
+   },
+   {
+    "id": "mq:608f2041d902d140",
+    "label": "LeBron James",
+    "gold": false
+   },
+   {
+    "id": "mq:acccf8f0b227f7bc",
+    "label": "LeBron James",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:acccf8f0b227f7bc",
+    "label": "LeBron James",
+    "gold": false
+   },
+   {
+    "id": "mq:b0e95466c2090cad",
+    "label": "LeBron James",
+    "gold": false
+   },
+   {
+    "id": "mq:608f2041d902d140",
+    "label": "LeBron James",
+    "gold": false
+   },
+   {
+    "id": "mq:105eed014313f0ca",
+    "label": "Houston Astros",
+    "gold": false
+   },
+   {
+    "id": "mq:845d472fa8323414",
+    "label": "Houston Astros",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:ced43bb471c09545",
+    "label": "1955 World Series",
+    "gold": false
+   },
+   {
+    "id": "mq:0596887fe32f04ff",
+    "label": "Major League Baseball All-Star Game Most Valuable Player Award",
+    "gold": false
+   },
+   {
+    "id": "mq:8dc01efac488b1b3",
+    "label": "Houston Astros",
+    "gold": false
+   },
+   {
+    "id": "mq:77bbdc259f564533",
+    "label": "2017 World Series",
+    "gold": false
+   },
+   {
+    "id": "mq:3fa0d01343e553ab",
+    "label": "2017 World Series",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

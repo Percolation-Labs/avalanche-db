@@ -1,0 +1,466 @@
+{
+ "qid": "card:REM-138",
+ "set": "cards",
+ "question": "What was done about this, and why: process: the 12 September wave gets one postmortem, written from what each session alone could see?",
+ "gold": [
+  {
+   "id": "commit/9eb61150b4",
+   "label": "commit 9eb6115: The frame was the error, and this file asserted it wrongly on main for an hour (#139)",
+   "seed": false
+  },
+  {
+   "id": "commit/ad4fb2cb29",
+   "label": "commit ad4fb2c: The diagnosis was the expensive half (#137)",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "board/cards/REM-138.md#1",
+   "label": "board/cards/REM-138.md",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "meta/postmortems/2026-09-12-the-diagnosis-was-the-expensive-half.md#1",
+   "label": "meta/postmortems/2026-09-12-the-diagnosis-was-the-expensive-half.md \u203a The diagnosis was the expensive half",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/047039f908",
+   "label": "commit 047039f: Postmortem: the cost of motion on 14 September, written by three sessions",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/messages/M-20261101-131830-31fd.md#1",
+   "label": "board/messages/M-20261101-131830-31fd.md",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "board/messages/M-20261101-131835-968d.md#1",
+   "label": "board/messages/M-20261101-131835-968d.md",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 2
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/9eb61150b4",
+    "label": "commit 9eb6115: The frame was the error, and this file asserted it wrongly on main for an hour (#139)",
+    "role": "gold"
+   },
+   {
+    "id": "commit/ad4fb2cb29",
+    "label": "commit ad4fb2c: The diagnosis was the expensive half (#137)",
+    "role": "gold"
+   },
+   {
+    "id": "meta/postmortems/2026-09-12-the-diagnosis-was-the-expensive-half.md#1",
+    "label": "meta/postmortems/2026-09-12-the-diagnosis-was-the-expensive-half.md \u203a The diagnosis was the expensive half",
+    "role": "seed"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/9eb61150b4",
+    "b": "commit/ad4fb2cb29",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "ad4fb2c",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "retraction carries",
+      "width": 3
+     },
+     {
+      "kind": "term",
+      "key": "rem 138",
+      "width": 8
+     },
+     {
+      "kind": "term",
+      "key": "session_01xbmmjq7evyjesaz3ipjxuy",
+      "width": 32
+     },
+     {
+      "kind": "term",
+      "key": "code session_01xbmmjq7evyjesaz3ipjxuy",
+      "width": 32
+     }
+    ]
+   },
+   {
+    "a": "commit/ad4fb2cb29",
+    "b": "meta/postmortems/2026-09-12-the-diagnosis-was-the-expensive-half.md#1",
+    "via": [
+     {
+      "kind": "term",
+      "key": "six concurrent",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "costly hour",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "postmortem took",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "entries collected",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "took six",
+      "width": 3
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "meta/postmortems/2026-09-12-the-diagnosis-was-the-expensive-half.md#1",
+   "gold": "commit/ad4fb2cb29",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 2116,
+  "within_2_doors": 34159,
+  "gold_within_1": 2,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "commit/ad4fb2cb29",
+    "label": "commit ad4fb2c: The diagnosis was the expensive half (#137)",
+    "p": 0.007193979121011977,
+    "gold": true
+   },
+   {
+    "id": "board/cards/REM-138.md#2",
+    "label": "board/cards/REM-138.md \u203a Goal",
+    "p": 0.0037064007651164224,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261101-133001-1f3b.md#1",
+    "label": "board/messages/M-20261101-133001-1f3b.md",
+    "p": 0.0021708242082380575,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261101-133005-2fb4.md#1",
+    "label": "board/messages/M-20261101-133005-2fb4.md",
+    "p": 0.0021708242082380575,
+    "gold": false
+   },
+   {
+    "id": "commit/81f0640395",
+    "label": "commit 81f0640: Merge pull request #205 from Percolation-Labs/amartey/postmortem-cost-of-motion",
+    "p": 0.0018147070125656176,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261101-132248-6227.md#1",
+    "label": "board/messages/M-20261101-132248-6227.md",
+    "p": 0.0017276448334841165,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261030-165835-8daa.md#1",
+    "label": "board/messages/M-20261030-165835-8daa.md",
+    "p": 0.0016695290548409197,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261030-165831-b014.md#1",
+    "label": "board/messages/M-20261030-165831-b014.md",
+    "p": 0.0016695290548409197,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-12-the-diagnosis-was-the-expensive-half.md#18",
+    "label": "meta/postmortems/2026-09-12-the-diagnosis-was-the-expensive-half.md \u203a 8. What to take from this",
+    "p": 0.0013338597014796076,
+    "gold": false
+   },
+   {
+    "id": "commit/1f215d74b7",
+    "label": "commit 1f215d7: Postmortem: the self-modification wait is a floor, at least 80 minutes (per -ad)",
+    "p": 0.001262404953345094,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-138.md#3",
+    "label": "board/cards/REM-138.md \u203a Why this row exists rather than a document",
+    "p": 0.0011250154140910883,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-14-the-cost-of-motion.md#2",
+    "label": "meta/postmortems/2026-09-14-the-cost-of-motion.md \u203a 1. Refusals cost more than releases did",
+    "p": 0.0011205436537762008,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-14-the-cost-of-motion.md#4",
+    "label": "meta/postmortems/2026-09-14-the-cost-of-motion.md \u203a 1. Refusals cost more than releases did",
+    "p": 0.0011020615358259987,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-board/result.txt#1",
+    "label": "meta/lab/results/q4-board/result.txt",
+    "p": 0.0010928600660223228,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261102-173818-264c.md#1",
+    "label": "board/messages/M-20261102-173818-264c.md",
+    "p": 0.0010704213659054977,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-12-the-diagnosis-was-the-expensive-half.md#2",
+    "label": "meta/postmortems/2026-09-12-the-diagnosis-was-the-expensive-half.md \u203a 1. Five sessions, five expensive hours, and not on",
+    "p": 0.0010680874371599167,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-board/result.txt#4",
+    "label": "meta/lab/results/q4-board/result.txt",
+    "p": 0.0010386345222927777,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/q4/board_graph.py#1",
+    "label": "meta/lab/q4/board_graph.py",
+    "p": 0.0010164282255494114,
+    "gold": false
+   },
+   {
+    "id": "commit/7661b5d702",
+    "label": "commit 7661b5d: board: file REM-272 api: middleware refusals keep the v1 error contract and request ID",
+    "p": 0.0009661159502386839,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-14-a-merged-fix-is-four-steps-from-a-reader.md#1",
+    "label": "meta/postmortems/2026-09-14-a-merged-fix-is-four-steps-from-a-reader.md \u203a A merged fix is four steps from a reader",
+    "p": 0.0009474298336812119,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "board/cards/REM-138.md#1",
+   "label": "board/cards/REM-138.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/postmortems/2026-09-12-the-diagnosis-was-the-expensive-half.md#1",
+   "label": "meta/postmortems/2026-09-12-the-diagnosis-was-the-expensive-half.md \u203a The diagnosis was the expensive half",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/047039f908",
+   "label": "commit 047039f: Postmortem: the cost of motion on 14 September, written by three sessions",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/messages/M-20261101-131830-31fd.md#1",
+   "label": "board/messages/M-20261101-131830-31fd.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/messages/M-20261101-131835-968d.md#1",
+   "label": "board/messages/M-20261101-131835-968d.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-138.md#3",
+   "label": "board/cards/REM-138.md \u203a Why this row exists rather than a document",
+   "wave": 1,
+   "via": "term:rem 138",
+   "gold": false
+  },
+  {
+   "id": "meta/postmortems/2026-09-12-the-diagnosis-was-the-expensive-half.md#18",
+   "label": "meta/postmortems/2026-09-12-the-diagnosis-was-the-expensive-half.md \u203a 8. What to take from this",
+   "wave": 1,
+   "via": "term:rem 138",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-138.md#2",
+   "label": "board/cards/REM-138.md \u203a Goal",
+   "wave": 1,
+   "via": "term:rem 138",
+   "gold": false
+  },
+  {
+   "id": "commit/9eb61150b4",
+   "label": "commit 9eb6115: The frame was the error, and this file asserted it wrongly on main for an hour (#139)",
+   "wave": 1,
+   "via": "term:rem 138",
+   "gold": true
+  },
+  {
+   "id": "board/cards/REM-138.md#4",
+   "label": "board/cards/REM-138.md \u203a Log",
+   "wave": 1,
+   "via": "term:rem 138",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "commit/ad4fb2cb29",
+    "label": "commit ad4fb2c: The diagnosis was the expensive half (#137)",
+    "gold": true
+   },
+   {
+    "id": "board/cards/REM-138.md#2",
+    "label": "board/cards/REM-138.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261101-133001-1f3b.md#1",
+    "label": "board/messages/M-20261101-133001-1f3b.md",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261101-133005-2fb4.md#1",
+    "label": "board/messages/M-20261101-133005-2fb4.md",
+    "gold": false
+   },
+   {
+    "id": "commit/81f0640395",
+    "label": "commit 81f0640: Merge pull request #205 from Percolation-Labs/amartey/postmortem-cost-of-motion",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "commit/ad4fb2cb29",
+    "label": "commit ad4fb2c: The diagnosis was the expensive half (#137)",
+    "gold": true
+   },
+   {
+    "id": "board/cards/REM-138.md#2",
+    "label": "board/cards/REM-138.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "commit/81f0640395",
+    "label": "commit 81f0640: Merge pull request #205 from Percolation-Labs/amartey/postmortem-cost-of-motion",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261030-165835-8daa.md#1",
+    "label": "board/messages/M-20261030-165835-8daa.md",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261030-165831-b014.md#1",
+    "label": "board/messages/M-20261030-165831-b014.md",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "board/cards/REM-137.md#1",
+    "label": "board/cards/REM-137.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-138.md#2",
+    "label": "board/cards/REM-138.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-133.md#1",
+    "label": "board/cards/REM-133.md",
+    "gold": false
+   },
+   {
+    "id": "commit/1f215d74b7",
+    "label": "commit 1f215d7: Postmortem: the self-modification wait is a floor, at least 80 minutes (per -ad)",
+    "gold": false
+   },
+   {
+    "id": "commit/81f0640395",
+    "label": "commit 81f0640: Merge pull request #205 from Percolation-Labs/amartey/postmortem-cost-of-motion",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "commit/294f259db9",
+    "label": "commit 294f259: Postmortem: a night the checks did not run (18\u201319 Sep)",
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-12-described-three-lines-up.md#1",
+    "label": "meta/postmortems/2026-09-12-described-three-lines-up.md \u203a The hazard was described three lines up",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-239.md#9",
+    "label": "board/cards/REM-239.md \u203a 2026-09-14T12:57:07.518Z \u00b7 Amartey",
+    "gold": false
+   },
+   {
+    "id": "meta/skills/board/SKILL.md#5",
+    "label": "meta/skills/board/SKILL.md \u203a Check in",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-870.md#4",
+    "label": "board/cards/REM-870.md \u203a Done when",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.5,
+  "Q": 0.5,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

@@ -1,0 +1,400 @@
+{
+ "qid": "card:REM-614",
+ "set": "cards",
+ "question": "What was done about this, and why: Fix Library AI link label and arrow overlap?",
+ "gold": [
+  {
+   "id": "commit/529d39e0fe",
+   "label": "commit 529d39e: Merge pull request #313 from Percolation-Labs/codex/rem-614-layout-note",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/f752d32932",
+   "label": "commit f752d32: board: file REM-614 Fix Library AI link label and arrow overlap",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "board/cards/REM-614.md#1",
+   "label": "board/cards/REM-614.md",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-614.md#2",
+   "label": "board/cards/REM-614.md \u203a Log",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "meta/postmortems/2026-09-19-a-fitting-link-hid-overlapping-text.md#1",
+   "label": "meta/postmortems/2026-09-19-a-fitting-link-hid-overlapping-text.md",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "meta/postmortems/2026-09-19-a-fitting-link-hid-overlapping-text.md#2",
+   "label": "meta/postmortems/2026-09-19-a-fitting-link-hid-overlapping-text.md",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 2
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "board/cards/REM-614.md#1",
+    "label": "board/cards/REM-614.md",
+    "role": "seed"
+   },
+   {
+    "id": "commit/529d39e0fe",
+    "label": "commit 529d39e: Merge pull request #313 from Percolation-Labs/codex/rem-614-layout-note",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "board/cards/REM-614.md#1",
+    "b": "commit/529d39e0fe",
+    "via": [
+     {
+      "kind": "term",
+      "key": "codex rem",
+      "width": 55
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [],
+  "entry": {
+   "seed": "board/cards/REM-614.md#1",
+   "gold": "commit/529d39e0fe",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 1803,
+  "within_2_doors": 34948,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "board/team/codex-reading-room.md#2",
+    "label": "board/team/codex-reading-room.md \u203a Log",
+    "p": 0.008024576337967824,
+    "gold": false
+   },
+   {
+    "id": "commit/59d698b9f4",
+    "label": "commit 59d698b: board: codex-reading-room takes REM-614",
+    "p": 0.0037453293566552565,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-613.md#5",
+    "label": "board/cards/REM-613.md \u203a Log",
+    "p": 0.0032871452151408214,
+    "gold": false
+   },
+   {
+    "id": "commit/42cd9c806e",
+    "label": "commit 42cd9c8: board: codex-reading-room checks in, ended",
+    "p": 0.002643901157800688,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-615.md#2",
+    "label": "board/cards/REM-615.md \u203a Log",
+    "p": 0.0024896596178653405,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-457.md#2",
+    "label": "board/cards/REM-457.md \u203a Goal",
+    "p": 0.0020228802631495697,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-602.md#6",
+    "label": "board/cards/REM-602.md \u203a Log",
+    "p": 0.002012947298999016,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-602.md#5",
+    "label": "board/cards/REM-602.md \u203a Log",
+    "p": 0.0019183387703876585,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-376.md#1",
+    "label": "board/cards/REM-376.md",
+    "p": 0.0019129630201113884,
+    "gold": false
+   },
+   {
+    "id": "meta/skills/claim-dependency-graph/SKILL.md#22",
+    "label": "meta/skills/claim-dependency-graph/SKILL.md \u203a 13. Extract the runnable unit, not its first line",
+    "p": 0.0018274628001867027,
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-10-29-v0-document/figures-v162.md#11",
+    "label": "meta/spikes/2026-10-29-v0-document/figures-v162.md \u203a 69. b-3446d13488 \u2014 rendered",
+    "p": 0.0016863745369612587,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-618.md#7",
+    "label": "board/cards/REM-618.md \u203a Log",
+    "p": 0.0016699634087963741,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-616.md#2",
+    "label": "board/cards/REM-616.md \u203a Log",
+    "p": 0.0014575480884068976,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/reading-room.md#6",
+    "label": "specs/percolate-application/reading-room.md \u203a Discovery cards and local review (REM-602)",
+    "p": 0.0014267780056892393,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-615.md#1",
+    "label": "board/cards/REM-615.md",
+    "p": 0.0012875887778205529,
+    "gold": false
+   },
+   {
+    "id": "commit/739b69dc67",
+    "label": "commit 739b69d: board: REM-614 in-progress \u2192 done",
+    "p": 0.0012852041854390765,
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-ui/artifacts/workflow-composition-manifest.yaml#2",
+    "label": "applications/percolate-ui/artifacts/workflow-composition-manifest.yaml",
+    "p": 0.0012178278729135775,
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-ui/artifacts/workflow-new-agent-manifest.yaml#2",
+    "label": "applications/percolate-ui/artifacts/workflow-new-agent-manifest.yaml",
+    "p": 0.0012176089699401965,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-458.md#4",
+    "label": "board/cards/REM-458.md \u203a Done when",
+    "p": 0.0012090684713868868,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-754.md#4",
+    "label": "board/cards/REM-754.md \u203a Log",
+    "p": 0.001117719331300846,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/f752d32932",
+   "label": "commit f752d32: board: file REM-614 Fix Library AI link label and arrow overlap",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-614.md#1",
+   "label": "board/cards/REM-614.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-614.md#2",
+   "label": "board/cards/REM-614.md \u203a Log",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/postmortems/2026-09-19-a-fitting-link-hid-overlapping-text.md#1",
+   "label": "meta/postmortems/2026-09-19-a-fitting-link-hid-overlapping-text.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/postmortems/2026-09-19-a-fitting-link-hid-overlapping-text.md#2",
+   "label": "meta/postmortems/2026-09-19-a-fitting-link-hid-overlapping-text.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/739b69dc67",
+   "label": "commit 739b69d: board: REM-614 in-progress \u2192 done",
+   "wave": 1,
+   "via": "term:rem 614",
+   "gold": false
+  },
+  {
+   "id": "commit/59d698b9f4",
+   "label": "commit 59d698b: board: codex-reading-room takes REM-614",
+   "wave": 1,
+   "via": "term:rem 614",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-618.md#7",
+   "label": "board/cards/REM-618.md \u203a Log",
+   "wave": 1,
+   "via": "term:rem 614",
+   "gold": false
+  },
+  {
+   "id": "board/team/codex-reading-room.md#2",
+   "label": "board/team/codex-reading-room.md \u203a Log",
+   "wave": 1,
+   "via": "term:rem 614",
+   "gold": false
+  },
+  {
+   "id": "commit/529d39e0fe",
+   "label": "commit 529d39e: Merge pull request #313 from Percolation-Labs/codex/rem-614-layout-note",
+   "wave": 2,
+   "via": "term:library label",
+   "gold": true
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "board/team/codex-reading-room.md#2",
+    "label": "board/team/codex-reading-room.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "commit/59d698b9f4",
+    "label": "commit 59d698b: board: codex-reading-room takes REM-614",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-613.md#5",
+    "label": "board/cards/REM-613.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "commit/42cd9c806e",
+    "label": "commit 42cd9c8: board: codex-reading-room checks in, ended",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-615.md#2",
+    "label": "board/cards/REM-615.md \u203a Log",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "board/team/codex-reading-room.md#2",
+    "label": "board/team/codex-reading-room.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-613.md#5",
+    "label": "board/cards/REM-613.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-457.md#2",
+    "label": "board/cards/REM-457.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-376.md#1",
+    "label": "board/cards/REM-376.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-615.md#2",
+    "label": "board/cards/REM-615.md \u203a Log",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "board/cards/REM-457.md#2",
+    "label": "board/cards/REM-457.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-458.md#4",
+    "label": "board/cards/REM-458.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "commit/739b69dc67",
+    "label": "commit 739b69d: board: REM-614 in-progress \u2192 done",
+    "gold": false
+   },
+   {
+    "id": "commit/529d39e0fe",
+    "label": "commit 529d39e: Merge pull request #313 from Percolation-Labs/codex/rem-614-layout-note",
+    "gold": true
+   },
+   {
+    "id": "board/cards/REM-583.md#1",
+    "label": "board/cards/REM-583.md",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "commit/3bb79dfd80",
+    "label": "commit 3bb79df: Record the Library label overlap and corrected geometry check",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-458.md#4",
+    "label": "board/cards/REM-458.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/experience.md#5",
+    "label": "specs/percolate-application/experience.md \u203a Actions and links",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-451.md#4",
+    "label": "board/cards/REM-451.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-457.md#3",
+    "label": "board/cards/REM-457.md \u203a Evidence",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 1.0,
+  "S": 0.0
+ }
+}

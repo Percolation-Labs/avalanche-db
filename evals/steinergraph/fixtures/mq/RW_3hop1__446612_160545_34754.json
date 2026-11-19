@@ -1,0 +1,439 @@
+{
+ "qid": "RW:3hop1__446612_160545_34754",
+ "set": "mq",
+ "question": "What does the US believe caused the country where Ercole Manfredi died to help Japan?",
+ "gold": [
+  {
+   "id": "mq:04dc16ca643eab0b",
+   "label": "Bang Bon District",
+   "seed": false
+  },
+  {
+   "id": "mq:65680a1337c834f5",
+   "label": "Ercole Manfredi",
+   "seed": true
+  },
+  {
+   "id": "mq:b8cb6c43ceea833b",
+   "label": "Pacific War",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:8d58011d606d1fa5",
+   "label": "Le pillole di Ercole",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:65680a1337c834f5",
+   "label": "Ercole Manfredi",
+   "rank": 2,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:298f99fd8fa1f039",
+   "label": "The Twelve Spies",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "mq:705043ae7620a7f0",
+   "label": "Indigenous peoples of the Americas",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "mq:79562adff6b7e41d",
+   "label": "American Chamber of Commerce Japan",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 2
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:04dc16ca643eab0b",
+    "label": "Bang Bon District",
+    "role": "gold"
+   },
+   {
+    "id": "mq:65680a1337c834f5",
+    "label": "Ercole Manfredi",
+    "role": "gold"
+   },
+   {
+    "id": "mq:b8cb6c43ceea833b",
+    "label": "Pacific War",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:04dc16ca643eab0b",
+    "b": "mq:65680a1337c834f5",
+    "via": [
+     {
+      "kind": "near",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "thai",
+      "width": 22
+     },
+     {
+      "kind": "term",
+      "key": "bangkok",
+      "width": 24
+     }
+    ]
+   },
+   {
+    "a": "mq:04dc16ca643eab0b",
+    "b": "mq:b8cb6c43ceea833b",
+    "via": [
+     {
+      "kind": "term",
+      "key": "thailand",
+      "width": 72
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   1,
+   2
+  ],
+  "entry": {
+   "seed": "mq:65680a1337c834f5",
+   "gold": "mq:65680a1337c834f5",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 3651,
+  "within_2_doors": 17430,
+  "gold_within_1": 1,
+  "gold_within_2": 1,
+  "top_U": [
+   {
+    "id": "mq:2562ed1916898524",
+    "label": "The Twelve Spies",
+    "p": 0.0022188686959480255,
+    "gold": false
+   },
+   {
+    "id": "mq:67fe664049693100",
+    "label": "Ashok Kumar Mago",
+    "p": 0.0014330657881936278,
+    "gold": false
+   },
+   {
+    "id": "mq:89f78146d852c8a4",
+    "label": "Texian Army",
+    "p": 0.0012054183811303447,
+    "gold": false
+   },
+   {
+    "id": "mq:5813e75ec175254f",
+    "label": "Eiffel Tower",
+    "p": 0.001184167115444963,
+    "gold": false
+   },
+   {
+    "id": "mq:019cae99eccd236a",
+    "label": "Toyota Automobile Museum",
+    "p": 0.0011715922895147255,
+    "gold": false
+   },
+   {
+    "id": "mq:6b550f97a12147bd",
+    "label": "Tommy (1975 film)",
+    "p": 0.0010893097651633646,
+    "gold": false
+   },
+   {
+    "id": "mq:ed308fd2aa0c6f37",
+    "label": "Ralph Helfer",
+    "p": 0.0010641010947142853,
+    "gold": false
+   },
+   {
+    "id": "mq:ee99d3910a37ca6d",
+    "label": "Presbyterianism",
+    "p": 0.0010547267857549082,
+    "gold": false
+   },
+   {
+    "id": "mq:ea58f4f873dc7d59",
+    "label": "Bejaratana",
+    "p": 0.00103058975147287,
+    "gold": false
+   },
+   {
+    "id": "mq:7662835537eb025f",
+    "label": "James A. Farley Building",
+    "p": 0.0010282577376115793,
+    "gold": false
+   },
+   {
+    "id": "mq:084c0e3dd00596ee",
+    "label": "Seth",
+    "p": 0.0010222737258589547,
+    "gold": false
+   },
+   {
+    "id": "mq:ca537394e0446a5b",
+    "label": "Mill Tract Farm",
+    "p": 0.0009926271934314148,
+    "gold": false
+   },
+   {
+    "id": "mq:fb8bff6be4a6a5c6",
+    "label": "Bug (2002 film)",
+    "p": 0.0009754013877241086,
+    "gold": false
+   },
+   {
+    "id": "mq:19daf67d061b9659",
+    "label": "Stadio San Nicola",
+    "p": 0.0009137649833689991,
+    "gold": false
+   },
+   {
+    "id": "mq:bcfbffc87b32e149",
+    "label": "Beauty of the World",
+    "p": 0.0008938273899750096,
+    "gold": false
+   },
+   {
+    "id": "mq:249fa14ab20f3ca5",
+    "label": "Pharmaceutical industry",
+    "p": 0.0008679524820353497,
+    "gold": false
+   },
+   {
+    "id": "mq:63bd19f1ef6fbe92",
+    "label": "Amschel Moses Rothschild",
+    "p": 0.000842121581430824,
+    "gold": false
+   },
+   {
+    "id": "mq:22d51ce9857d59b1",
+    "label": "Finances of the British royal family",
+    "p": 0.0007859490746016526,
+    "gold": false
+   },
+   {
+    "id": "mq:1369c472cc0da1d1",
+    "label": "Finances of the British royal family",
+    "p": 0.0007859490746016526,
+    "gold": false
+   },
+   {
+    "id": "mq:9dc11f17d711f118",
+    "label": "Between Miracles",
+    "p": 0.0007312372484641154,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:8d58011d606d1fa5",
+   "label": "Le pillole di Ercole",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:65680a1337c834f5",
+   "label": "Ercole Manfredi",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:298f99fd8fa1f039",
+   "label": "The Twelve Spies",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:705043ae7620a7f0",
+   "label": "Indigenous peoples of the Americas",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:79562adff6b7e41d",
+   "label": "American Chamber of Commerce Japan",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:45d774023fb4d3f5",
+   "label": "Route 3 (Laos)",
+   "wave": 1,
+   "via": "term:thai",
+   "gold": false
+  },
+  {
+   "id": "mq:e1a90f534655ed2e",
+   "label": "Karedok",
+   "wave": 1,
+   "via": "term:thai",
+   "gold": false
+  },
+  {
+   "id": "mq:ded9bd3fdb512aa6",
+   "label": "2014 Thai League Cup",
+   "wave": 1,
+   "via": "term:thai",
+   "gold": false
+  },
+  {
+   "id": "mq:4e67311ec7b9c445",
+   "label": "Ban Sam Ruen",
+   "wave": 1,
+   "via": "term:thai",
+   "gold": false
+  },
+  {
+   "id": "mq:b52812b64ff73f62",
+   "label": "Jonas Anderson",
+   "wave": 1,
+   "via": "term:thai",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:2562ed1916898524",
+    "label": "The Twelve Spies",
+    "gold": false
+   },
+   {
+    "id": "mq:67fe664049693100",
+    "label": "Ashok Kumar Mago",
+    "gold": false
+   },
+   {
+    "id": "mq:89f78146d852c8a4",
+    "label": "Texian Army",
+    "gold": false
+   },
+   {
+    "id": "mq:5813e75ec175254f",
+    "label": "Eiffel Tower",
+    "gold": false
+   },
+   {
+    "id": "mq:019cae99eccd236a",
+    "label": "Toyota Automobile Museum",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:fb8bff6be4a6a5c6",
+    "label": "Bug (2002 film)",
+    "gold": false
+   },
+   {
+    "id": "mq:9dc11f17d711f118",
+    "label": "Between Miracles",
+    "gold": false
+   },
+   {
+    "id": "mq:019cae99eccd236a",
+    "label": "Toyota Automobile Museum",
+    "gold": false
+   },
+   {
+    "id": "mq:12a20073fd00ab4c",
+    "label": "Maria Landi",
+    "gold": false
+   },
+   {
+    "id": "mq:a334ecc12c11f92e",
+    "label": "Santa Maria in Porto Altarpiece",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:fb8bff6be4a6a5c6",
+    "label": "Bug (2002 film)",
+    "gold": false
+   },
+   {
+    "id": "mq:9dc11f17d711f118",
+    "label": "Between Miracles",
+    "gold": false
+   },
+   {
+    "id": "mq:019cae99eccd236a",
+    "label": "Toyota Automobile Museum",
+    "gold": false
+   },
+   {
+    "id": "mq:966a9f5ef2b92981",
+    "label": "Surrender of Japan",
+    "gold": false
+   },
+   {
+    "id": "mq:5982884798d3f10b",
+    "label": "Surrender of Japan",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:12a20073fd00ab4c",
+    "label": "Maria Landi",
+    "gold": false
+   },
+   {
+    "id": "mq:4a9f8eff4d092d84",
+    "label": "2000\u201301 Japan Figure Skating Championships",
+    "gold": false
+   },
+   {
+    "id": "mq:fb8bff6be4a6a5c6",
+    "label": "Bug (2002 film)",
+    "gold": false
+   },
+   {
+    "id": "mq:9dc11f17d711f118",
+    "label": "Between Miracles",
+    "gold": false
+   },
+   {
+    "id": "mq:338dab97bbbdf67d",
+    "label": "Jehovah's Witnesses",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

@@ -1,0 +1,433 @@
+{
+ "qid": "card:REM-390",
+ "set": "cards",
+ "question": "What was done about this, and why: library: a reader follows a writer from an article, and Library lists the writers they follow?",
+ "gold": [
+  {
+   "id": "commit/3bd2cd56f1",
+   "label": "commit 3bd2cd5: Merge pull request #258 from Percolation-Labs/amartey/rem-390-follow-spec",
+   "seed": false
+  },
+  {
+   "id": "commit/8ed1e91602",
+   "label": "commit 8ed1e91: navigation-and-account-flows: following a writer, and Library's list (REM-390)",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/508053784f",
+   "label": "commit 5080537: board: file REM-390 library: a reader follows a writer from an article, and Library lists the writers th",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-390.md#4",
+   "label": "board/cards/REM-390.md \u203a Done when",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-390.md#2",
+   "label": "board/cards/REM-390.md \u203a Goal",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-390.md#1",
+   "label": "board/cards/REM-390.md",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "specs/percolate-application/navigation-and-account-flows.md#10",
+   "label": "specs/percolate-application/navigation-and-account-flows.md \u203a 4. Marketplace and Library",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/3bd2cd56f1",
+    "label": "commit 3bd2cd5: Merge pull request #258 from Percolation-Labs/amartey/rem-390-follow-spec",
+    "role": "gold"
+   },
+   {
+    "id": "commit/508053784f",
+    "label": "commit 5080537: board: file REM-390 library: a reader follows a writer from an article, and Library lists the writers th",
+    "role": "seed"
+   },
+   {
+    "id": "commit/8ed1e91602",
+    "label": "commit 8ed1e91: navigation-and-account-flows: following a writer, and Library's list (REM-390)",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/3bd2cd56f1",
+    "b": "commit/508053784f",
+    "via": [
+     {
+      "kind": "term",
+      "key": "rem 390",
+      "width": 23
+     }
+    ]
+   },
+   {
+    "a": "commit/3bd2cd56f1",
+    "b": "commit/8ed1e91602",
+    "via": [
+     {
+      "kind": "term",
+      "key": "flows following",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "list rem",
+      "width": 7
+     },
+     {
+      "kind": "term",
+      "key": "rem 390",
+      "width": 23
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "commit/508053784f",
+   "gold": "commit/3bd2cd56f1",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 1066,
+  "within_2_doors": 32951,
+  "gold_within_1": 2,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "board/cards/REM-390.md#7",
+    "label": "board/cards/REM-390.md \u203a Log",
+    "p": 0.013807223666332406,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-390.md#3",
+    "label": "board/cards/REM-390.md \u203a Evidence",
+    "p": 0.0058722171537396685,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1221.md#6",
+    "label": "board/cards/REM-1221.md \u203a Log",
+    "p": 0.004750815551151797,
+    "gold": false
+   },
+   {
+    "id": "commit/961a29016e",
+    "label": "commit 961a290: board: file REM-389 reading: an article and its Edition card show the writer's avatar and name",
+    "p": 0.003996217416587582,
+    "gold": false
+   },
+   {
+    "id": "commit/edc457cea3",
+    "label": "commit edc457c: board: note on REM-389",
+    "p": 0.003846707057432968,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1221.md#5",
+    "label": "board/cards/REM-1221.md \u203a Done when",
+    "p": 0.0037614520206240023,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-391.md#2",
+    "label": "board/cards/REM-391.md \u203a Goal",
+    "p": 0.0034595470736474656,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-389.md#7",
+    "label": "board/cards/REM-389.md \u203a Log",
+    "p": 0.002978494084698353,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-390.md#5",
+    "label": "board/cards/REM-390.md \u203a Scope",
+    "p": 0.0027317177650311893,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-348.md#2",
+    "label": "board/cards/REM-348.md \u203a Goal",
+    "p": 0.0025760384335063347,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-348.md#8",
+    "label": "board/cards/REM-348.md \u203a Log",
+    "p": 0.0025091544840944407,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/navigation-and-account-flows.md#9",
+    "label": "specs/percolate-application/navigation-and-account-flows.md \u203a 4. Marketplace and Library",
+    "p": 0.0019133620169808731,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-15-the-readings-moved-and-no-screen-was-checked.md#3",
+    "label": "meta/postmortems/2026-09-15-the-readings-moved-and-no-screen-was-checked.md \u203a 1. Screens keyed on values only the seed f",
+    "p": 0.0017670279382696178,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-347.md#6",
+    "label": "board/cards/REM-347.md \u203a Log",
+    "p": 0.0016217901351918574,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1002.md#4",
+    "label": "board/cards/REM-1002.md \u203a Done when",
+    "p": 0.0016203946197033171,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-348.md#1",
+    "label": "board/cards/REM-348.md",
+    "p": 0.0015748153739183022,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-348.md#3",
+    "label": "board/cards/REM-348.md \u203a Evidence",
+    "p": 0.0015721526945386693,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-516.md#3",
+    "label": "board/cards/REM-516.md \u203a Evidence",
+    "p": 0.001552881853868523,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-390.md#6",
+    "label": "board/cards/REM-390.md \u203a Links",
+    "p": 0.0014904580330939675,
+    "gold": false
+   },
+   {
+    "id": "commit/ea8afee79c",
+    "label": "commit ea8afee: board: file REM-348 reading: a reader follows the publication a reading is published in, on web, iOS and",
+    "p": 0.0014808548488542846,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/508053784f",
+   "label": "commit 5080537: board: file REM-390 library: a reader follows a writer from an article, and Library lists the writers th",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-390.md#4",
+   "label": "board/cards/REM-390.md \u203a Done when",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-390.md#2",
+   "label": "board/cards/REM-390.md \u203a Goal",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-390.md#1",
+   "label": "board/cards/REM-390.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/percolate-application/navigation-and-account-flows.md#10",
+   "label": "specs/percolate-application/navigation-and-account-flows.md \u203a 4. Marketplace and Library",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/3bd2cd56f1",
+   "label": "commit 3bd2cd5: Merge pull request #258 from Percolation-Labs/amartey/rem-390-follow-spec",
+   "wave": 1,
+   "via": "term:rem 390",
+   "gold": true
+  },
+  {
+   "id": "commit/e14b45a23b",
+   "label": "commit e14b45a: board: REM-390 in-progress \u2192 done",
+   "wave": 1,
+   "via": "term:rem 390",
+   "gold": false
+  },
+  {
+   "id": "commit/89582e2259",
+   "label": "commit 89582e2: board: REM-390 in-progress \u2192 todo",
+   "wave": 1,
+   "via": "term:rem 390",
+   "gold": false
+  },
+  {
+   "id": "commit/5f8d902686",
+   "label": "commit 5f8d902: board: percolate-application-70 takes REM-390",
+   "wave": 1,
+   "via": "term:rem 390",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-391.md#6",
+   "label": "board/cards/REM-391.md \u203a Links",
+   "wave": 1,
+   "via": "term:rem 390",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "board/cards/REM-390.md#7",
+    "label": "board/cards/REM-390.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-390.md#3",
+    "label": "board/cards/REM-390.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1221.md#6",
+    "label": "board/cards/REM-1221.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "commit/961a29016e",
+    "label": "commit 961a290: board: file REM-389 reading: an article and its Edition card show the writer's avatar and name",
+    "gold": false
+   },
+   {
+    "id": "commit/edc457cea3",
+    "label": "commit edc457c: board: note on REM-389",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "board/cards/REM-390.md#7",
+    "label": "board/cards/REM-390.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-389.md#7",
+    "label": "board/cards/REM-389.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-391.md#2",
+    "label": "board/cards/REM-391.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1221.md#5",
+    "label": "board/cards/REM-1221.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1221.md#6",
+    "label": "board/cards/REM-1221.md \u203a Log",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/3bd2cd56f1",
+    "label": "commit 3bd2cd5: Merge pull request #258 from Percolation-Labs/amartey/rem-390-follow-spec",
+    "gold": true
+   },
+   {
+    "id": "commit/8ed1e91602",
+    "label": "commit 8ed1e91: navigation-and-account-flows: following a writer, and Library's list (REM-390)",
+    "gold": true
+   },
+   {
+    "id": "commit/ea8afee79c",
+    "label": "commit ea8afee: board: file REM-348 reading: a reader follows the publication a reading is published in, on web, iOS and",
+    "gold": false
+   },
+   {
+    "id": "commit/e14b45a23b",
+    "label": "commit e14b45a: board: REM-390 in-progress \u2192 done",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-390.md#5",
+    "label": "board/cards/REM-390.md \u203a Scope",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "board/cards/REM-389.md#7",
+    "label": "board/cards/REM-389.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/readers-board.md#2",
+    "label": "specs/percolate-application/readers-board.md \u203a 1. What it is for",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/library-board.md#16",
+    "label": "specs/percolate-application/library-board.md \u203a 13. Questions: one language for Library, the board and the first run",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-391.md#2",
+    "label": "board/cards/REM-391.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "commit/920c3a8deb",
+    "label": "commit 920c3a8: library-board \u00a713.3: a Library question follows a core question, and what changed in its answers (REM-57",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 1.0,
+  "S": 0.0
+ }
+}

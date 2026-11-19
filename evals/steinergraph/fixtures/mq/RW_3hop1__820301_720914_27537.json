@@ -1,0 +1,479 @@
+{
+ "qid": "RW:3hop1__820301_720914_27537",
+ "set": "mq",
+ "question": "Why did Roncalli leave the place where Crucifixion's creator died?",
+ "gold": [
+  {
+   "id": "mq:9d060c86efe7fef1",
+   "label": "Crucifixion (Titian)",
+   "seed": false
+  },
+  {
+   "id": "mq:b5509bc978d54554",
+   "label": "The Martyrdom of Saint Lawrence (Titian)",
+   "seed": false
+  },
+  {
+   "id": "mq:da86bc73e96d2254",
+   "label": "Pope John XXIII",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:b9d5ffd1c628055d",
+   "label": "Pope John XXIII",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:e39f136c630c46b1",
+   "label": "Crucifixion of Jesus",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:dad6557387b609f4",
+   "label": "Roncalli High School (Indiana)",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:4b2aa3f99dbe2320",
+   "label": "Crucifixion of Jesus",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:b403d69beafecb77",
+   "label": "Gethsemane",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:9d060c86efe7fef1",
+    "label": "Crucifixion (Titian)",
+    "role": "gold"
+   },
+   {
+    "id": "mq:b5509bc978d54554",
+    "label": "The Martyrdom of Saint Lawrence (Titian)",
+    "role": "gold"
+   },
+   {
+    "id": "mq:b9d5ffd1c628055d",
+    "label": "Pope John XXIII",
+    "role": "seed"
+   },
+   {
+    "id": "mq:da86bc73e96d2254",
+    "label": "Pope John XXIII",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:9d060c86efe7fef1",
+    "b": "mq:b5509bc978d54554",
+    "via": [
+     {
+      "kind": "near",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "1558",
+      "width": 10
+     },
+     {
+      "kind": "term",
+      "key": "titian",
+      "width": 21
+     }
+    ]
+   },
+   {
+    "a": "mq:b5509bc978d54554",
+    "b": "mq:da86bc73e96d2254",
+    "via": [
+     {
+      "kind": "term",
+      "key": "venice",
+      "width": 54
+     }
+    ]
+   },
+   {
+    "a": "mq:b9d5ffd1c628055d",
+    "b": "mq:da86bc73e96d2254",
+    "via": [
+     {
+      "kind": "near",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "late pius",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "pontiff",
+      "width": 4
+     },
+     {
+      "kind": "term",
+      "key": "roncalli",
+      "width": 8
+     },
+     {
+      "kind": "term",
+      "key": "pius xii",
+      "width": 8
+     },
+     {
+      "kind": "term",
+      "key": "xii",
+      "width": 14
+     }
+    ]
+   }
+  ],
+  "cost": 3,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   2,
+   1
+  ],
+  "entry": {
+   "seed": "mq:b9d5ffd1c628055d",
+   "gold": "mq:da86bc73e96d2254",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 1985,
+  "within_2_doors": 19080,
+  "gold_within_1": 2,
+  "gold_within_2": 1,
+  "top_U": [
+   {
+    "id": "mq:1b52ae41a3460daa",
+    "label": "Pope John XXIII",
+    "p": 0.005399555739668338,
+    "gold": false
+   },
+   {
+    "id": "mq:5888014d3d1ec0c7",
+    "label": "The Last Supper (Leonardo)",
+    "p": 0.0032993643239127555,
+    "gold": false
+   },
+   {
+    "id": "mq:da86bc73e96d2254",
+    "label": "Pope John XXIII",
+    "p": 0.0027562237915612314,
+    "gold": true
+   },
+   {
+    "id": "mq:9e81436f4623f01e",
+    "label": "Pope John XXIII",
+    "p": 0.002230143810511693,
+    "gold": false
+   },
+   {
+    "id": "mq:32dafaf0fbdb1d5d",
+    "label": "Pope John XXIII",
+    "p": 0.0020985787690292936,
+    "gold": false
+   },
+   {
+    "id": "mq:cba82458020a0d82",
+    "label": "Olive",
+    "p": 0.0017062049543009501,
+    "gold": false
+   },
+   {
+    "id": "mq:5132e3bca25edb33",
+    "label": "I Will Not Bow",
+    "p": 0.001661326385684836,
+    "gold": false
+   },
+   {
+    "id": "mq:a439b5967faf1e41",
+    "label": "Pope Paul VI",
+    "p": 0.001456139102164883,
+    "gold": false
+   },
+   {
+    "id": "mq:f0bc9540cee7991c",
+    "label": "Military history of the United States",
+    "p": 0.0013264217876751557,
+    "gold": false
+   },
+   {
+    "id": "mq:843a200265236010",
+    "label": "Pope John XXIII",
+    "p": 0.0013032492485718606,
+    "gold": false
+   },
+   {
+    "id": "mq:520eb59b1c5e96d0",
+    "label": "Pope John XXIII",
+    "p": 0.0012055246537711938,
+    "gold": false
+   },
+   {
+    "id": "mq:276e1293d0ef7ba0",
+    "label": "Crucifixion of Jesus",
+    "p": 0.0011988919756580041,
+    "gold": false
+   },
+   {
+    "id": "mq:4c602c330641170d",
+    "label": "Sant Mart\u00ed d'Emp\u00faries",
+    "p": 0.0011675872360553303,
+    "gold": false
+   },
+   {
+    "id": "mq:d826540cf306c758",
+    "label": "The Crucifixion of St Julia",
+    "p": 0.0009833633085425514,
+    "gold": false
+   },
+   {
+    "id": "mq:a74427e6e1ae1eff",
+    "label": "German reunification",
+    "p": 0.0009682418208687119,
+    "gold": false
+   },
+   {
+    "id": "mq:543240d0e5e28d8d",
+    "label": "Celts",
+    "p": 0.000879245581260601,
+    "gold": false
+   },
+   {
+    "id": "mq:6b6507cc851ceb94",
+    "label": "Hellenistic period",
+    "p": 0.0008496712201328345,
+    "gold": false
+   },
+   {
+    "id": "mq:5a40ef57a66f8d39",
+    "label": "Canonization of Pope John XXIII and Pope John Paul II",
+    "p": 0.0008066373129090575,
+    "gold": false
+   },
+   {
+    "id": "mq:0d954eb474eb60ef",
+    "label": "Pope Paul VI",
+    "p": 0.0007971291750795292,
+    "gold": false
+   },
+   {
+    "id": "mq:4eccda4bdade6615",
+    "label": "Pope John XXIII",
+    "p": 0.0007943189167947446,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:b9d5ffd1c628055d",
+   "label": "Pope John XXIII",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:e39f136c630c46b1",
+   "label": "Crucifixion of Jesus",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:dad6557387b609f4",
+   "label": "Roncalli High School (Indiana)",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:4b2aa3f99dbe2320",
+   "label": "Crucifixion of Jesus",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:b403d69beafecb77",
+   "label": "Gethsemane",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:da86bc73e96d2254",
+   "label": "Pope John XXIII",
+   "wave": 1,
+   "via": "term:late pius",
+   "gold": true
+  },
+  {
+   "id": "mq:520eb59b1c5e96d0",
+   "label": "Pope John XXIII",
+   "wave": 2,
+   "via": "term:pope pius",
+   "gold": false
+  },
+  {
+   "id": "mq:4eccda4bdade6615",
+   "label": "Pope John XXIII",
+   "wave": 2,
+   "via": "term:pope pius",
+   "gold": false
+  },
+  {
+   "id": "mq:32dafaf0fbdb1d5d",
+   "label": "Pope John XXIII",
+   "wave": 2,
+   "via": "term:pope pius",
+   "gold": false
+  },
+  {
+   "id": "mq:360c7ff0bc5623cc",
+   "label": "Flag of Vatican City",
+   "wave": 2,
+   "via": "term:pope pius",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:1b52ae41a3460daa",
+    "label": "Pope John XXIII",
+    "gold": false
+   },
+   {
+    "id": "mq:5888014d3d1ec0c7",
+    "label": "The Last Supper (Leonardo)",
+    "gold": false
+   },
+   {
+    "id": "mq:da86bc73e96d2254",
+    "label": "Pope John XXIII",
+    "gold": true
+   },
+   {
+    "id": "mq:9e81436f4623f01e",
+    "label": "Pope John XXIII",
+    "gold": false
+   },
+   {
+    "id": "mq:32dafaf0fbdb1d5d",
+    "label": "Pope John XXIII",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:1b52ae41a3460daa",
+    "label": "Pope John XXIII",
+    "gold": false
+   },
+   {
+    "id": "mq:da86bc73e96d2254",
+    "label": "Pope John XXIII",
+    "gold": true
+   },
+   {
+    "id": "mq:9e81436f4623f01e",
+    "label": "Pope John XXIII",
+    "gold": false
+   },
+   {
+    "id": "mq:32dafaf0fbdb1d5d",
+    "label": "Pope John XXIII",
+    "gold": false
+   },
+   {
+    "id": "mq:276e1293d0ef7ba0",
+    "label": "Crucifixion of Jesus",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:1b52ae41a3460daa",
+    "label": "Pope John XXIII",
+    "gold": false
+   },
+   {
+    "id": "mq:9e81436f4623f01e",
+    "label": "Pope John XXIII",
+    "gold": false
+   },
+   {
+    "id": "mq:da86bc73e96d2254",
+    "label": "Pope John XXIII",
+    "gold": true
+   },
+   {
+    "id": "mq:32dafaf0fbdb1d5d",
+    "label": "Pope John XXIII",
+    "gold": false
+   },
+   {
+    "id": "mq:276e1293d0ef7ba0",
+    "label": "Crucifixion of Jesus",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:e97c9ce9546e7e32",
+    "label": "The Man from U.N.C.L.E.",
+    "gold": false
+   },
+   {
+    "id": "mq:843a200265236010",
+    "label": "Pope John XXIII",
+    "gold": false
+   },
+   {
+    "id": "mq:276e1293d0ef7ba0",
+    "label": "Crucifixion of Jesus",
+    "gold": false
+   },
+   {
+    "id": "mq:2e27d656273d7d4a",
+    "label": "Crucifixion of Jesus",
+    "gold": false
+   },
+   {
+    "id": "mq:d826540cf306c758",
+    "label": "The Crucifixion of St Julia",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.3333333333333333,
+  "Q": 0.3333333333333333,
+  "LQ": 0.3333333333333333,
+  "S": 0.0
+ }
+}

@@ -1,0 +1,466 @@
+{
+ "qid": "RW:3hop1__635099_131926_89261",
+ "set": "mq",
+ "question": "Where does the body of water by the city where Write This Down was formed empty into the Gulf of Mexico?",
+ "gold": [
+  {
+   "id": "mq:2178e5ca445d37b6",
+   "label": "Write This Down (band)",
+   "seed": false
+  },
+  {
+   "id": "mq:72cb7ead3ba4477f",
+   "label": "Mississippi River",
+   "seed": false
+  },
+  {
+   "id": "mq:fa5ce36f072ada0a",
+   "label": "Minneapolis",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:c9c971f6300c0ba4",
+   "label": "Gulf of Mexico",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:3237b5df056c576c",
+   "label": "Gulf of Mexico",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:aeabed357883b6cc",
+   "label": "Cedar Bayou",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "mq:013607371227311f",
+   "label": "Mexico City",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "mq:4ca772688948d344",
+   "label": "Gulf of Mexico",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:2178e5ca445d37b6",
+    "label": "Write This Down (band)",
+    "role": "gold"
+   },
+   {
+    "id": "mq:4ca772688948d344",
+    "label": "Gulf of Mexico",
+    "role": "seed"
+   },
+   {
+    "id": "mq:72cb7ead3ba4477f",
+    "label": "Mississippi River",
+    "role": "gold"
+   },
+   {
+    "id": "mq:fa5ce36f072ada0a",
+    "label": "Minneapolis",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:2178e5ca445d37b6",
+    "b": "mq:fa5ce36f072ada0a",
+    "via": [
+     {
+      "kind": "term",
+      "key": "minneapolis",
+      "width": 40
+     }
+    ]
+   },
+   {
+    "a": "mq:4ca772688948d344",
+    "b": "mq:72cb7ead3ba4477f",
+    "via": [
+     {
+      "kind": "term",
+      "key": "american continent",
+      "width": 7
+     },
+     {
+      "kind": "term",
+      "key": "continent",
+      "width": 60
+     },
+     {
+      "kind": "term",
+      "key": "louisiana",
+      "width": 72
+     },
+     {
+      "kind": "term",
+      "key": "north american",
+      "width": 83
+     },
+     {
+      "kind": "term",
+      "key": "basin",
+      "width": 92
+     }
+    ]
+   },
+   {
+    "a": "mq:72cb7ead3ba4477f",
+    "b": "mq:fa5ce36f072ada0a",
+    "via": [
+     {
+      "kind": "term",
+      "key": "mississippi river",
+      "width": 54
+     }
+    ]
+   }
+  ],
+  "cost": 3,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   2,
+   1,
+   1
+  ],
+  "entry": {
+   "seed": "mq:4ca772688948d344",
+   "gold": "mq:72cb7ead3ba4477f",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 2488,
+  "within_2_doors": 18599,
+  "gold_within_1": 2,
+  "gold_within_2": 1,
+  "top_U": [
+   {
+    "id": "mq:3b75a0598196daf8",
+    "label": "Tropical Storm Allison",
+    "p": 0.0019819636293707255,
+    "gold": false
+   },
+   {
+    "id": "mq:142d8a3e67d54ee1",
+    "label": "Colorado River (Texas)",
+    "p": 0.0019273361770226185,
+    "gold": false
+   },
+   {
+    "id": "mq:a94e7c470887ac85",
+    "label": "History of Mexico City",
+    "p": 0.001843010619981624,
+    "gold": false
+   },
+   {
+    "id": "mq:ca2eef577e0d896d",
+    "label": "Mexico",
+    "p": 0.001686298831055825,
+    "gold": false
+   },
+   {
+    "id": "mq:b3efe51b58293228",
+    "label": "Beaufort Sea",
+    "p": 0.0015615511986471187,
+    "gold": false
+   },
+   {
+    "id": "mq:0ec39f1daaf4ce2f",
+    "label": "Alps",
+    "p": 0.0014350686772420225,
+    "gold": false
+   },
+   {
+    "id": "mq:bf1181b3b1738ddc",
+    "label": "Alluvial (horse)",
+    "p": 0.0014043190772673963,
+    "gold": false
+   },
+   {
+    "id": "mq:27a02e06265a1260",
+    "label": "Valdes Peninsula",
+    "p": 0.001352830356111485,
+    "gold": false
+   },
+   {
+    "id": "mq:fa3e1dca284f0f8e",
+    "label": "Blue Bayou",
+    "p": 0.0013473661827261018,
+    "gold": false
+   },
+   {
+    "id": "mq:6b0721cdbb293b65",
+    "label": "Yucat\u00e1n Peninsula",
+    "p": 0.0012416092196266164,
+    "gold": false
+   },
+   {
+    "id": "mq:b29fb40799699ec3",
+    "label": "Sedimentary rock",
+    "p": 0.0011490062332188337,
+    "gold": false
+   },
+   {
+    "id": "mq:4b16200e74fc282d",
+    "label": "Clean Water Act",
+    "p": 0.0011473944118685958,
+    "gold": false
+   },
+   {
+    "id": "mq:bf8ad20ff8af34bf",
+    "label": "Mamaroneck River",
+    "p": 0.001067735667540918,
+    "gold": false
+   },
+   {
+    "id": "mq:7c460db9c0106843",
+    "label": "Salt-Water Poems and Ballads",
+    "p": 0.0010116428731653385,
+    "gold": false
+   },
+   {
+    "id": "mq:fb5bcde2bd31e19b",
+    "label": "Beer",
+    "p": 0.0009622582071173896,
+    "gold": false
+   },
+   {
+    "id": "mq:73f366a43c2205f5",
+    "label": "History of the Ming dynasty",
+    "p": 0.0009371447334570555,
+    "gold": false
+   },
+   {
+    "id": "mq:ae501b972332c938",
+    "label": "Ottoman Empire",
+    "p": 0.0008989652198341952,
+    "gold": false
+   },
+   {
+    "id": "mq:024bb529bac0cb8c",
+    "label": "Panther Park",
+    "p": 0.0008932830456226373,
+    "gold": false
+   },
+   {
+    "id": "mq:81341846f450627a",
+    "label": "Nanjing",
+    "p": 0.0008907084621805387,
+    "gold": false
+   },
+   {
+    "id": "mq:ccc584f532c6e2ab",
+    "label": "Water resources of China",
+    "p": 0.0006794961837147574,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:c9c971f6300c0ba4",
+   "label": "Gulf of Mexico",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:3237b5df056c576c",
+   "label": "Gulf of Mexico",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:aeabed357883b6cc",
+   "label": "Cedar Bayou",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:013607371227311f",
+   "label": "Mexico City",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:4ca772688948d344",
+   "label": "Gulf of Mexico",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:142d8a3e67d54ee1",
+   "label": "Colorado River (Texas)",
+   "wave": 1,
+   "via": "term:matagorda",
+   "gold": false
+  },
+  {
+   "id": "mq:f3848e1537cf242b",
+   "label": "Chicana/o studies",
+   "wave": 2,
+   "via": "term:san antonio",
+   "gold": false
+  },
+  {
+   "id": "mq:954349c348f0a631",
+   "label": "2017\u201318 NCAA Division I men's basketball season",
+   "wave": 2,
+   "via": "term:san antonio",
+   "gold": false
+  },
+  {
+   "id": "mq:1795640a64afc979",
+   "label": "2017\u201318 NCAA Division I men's basketball season",
+   "wave": 2,
+   "via": "term:san antonio",
+   "gold": false
+  },
+  {
+   "id": "mq:58cca220e0df6a60",
+   "label": "2017 San Antonio mayoral election",
+   "wave": 2,
+   "via": "term:san antonio",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:3b75a0598196daf8",
+    "label": "Tropical Storm Allison",
+    "gold": false
+   },
+   {
+    "id": "mq:142d8a3e67d54ee1",
+    "label": "Colorado River (Texas)",
+    "gold": false
+   },
+   {
+    "id": "mq:a94e7c470887ac85",
+    "label": "History of Mexico City",
+    "gold": false
+   },
+   {
+    "id": "mq:ca2eef577e0d896d",
+    "label": "Mexico",
+    "gold": false
+   },
+   {
+    "id": "mq:b3efe51b58293228",
+    "label": "Beaufort Sea",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:142d8a3e67d54ee1",
+    "label": "Colorado River (Texas)",
+    "gold": false
+   },
+   {
+    "id": "mq:ca2eef577e0d896d",
+    "label": "Mexico",
+    "gold": false
+   },
+   {
+    "id": "mq:a94e7c470887ac85",
+    "label": "History of Mexico City",
+    "gold": false
+   },
+   {
+    "id": "mq:3b75a0598196daf8",
+    "label": "Tropical Storm Allison",
+    "gold": false
+   },
+   {
+    "id": "mq:6b0721cdbb293b65",
+    "label": "Yucat\u00e1n Peninsula",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:ca2eef577e0d896d",
+    "label": "Mexico",
+    "gold": false
+   },
+   {
+    "id": "mq:3b75a0598196daf8",
+    "label": "Tropical Storm Allison",
+    "gold": false
+   },
+   {
+    "id": "mq:142d8a3e67d54ee1",
+    "label": "Colorado River (Texas)",
+    "gold": false
+   },
+   {
+    "id": "mq:a94e7c470887ac85",
+    "label": "History of Mexico City",
+    "gold": false
+   },
+   {
+    "id": "mq:041e80a4cc5bced7",
+    "label": "Philadelphia",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:939da0c9e81928f9",
+    "label": "Geography of the United States",
+    "gold": false
+   },
+   {
+    "id": "mq:142d8a3e67d54ee1",
+    "label": "Colorado River (Texas)",
+    "gold": false
+   },
+   {
+    "id": "mq:b3466d06767ede20",
+    "label": "Ekulu River",
+    "gold": false
+   },
+   {
+    "id": "mq:1a00db3311a520fc",
+    "label": "Humaya River",
+    "gold": false
+   },
+   {
+    "id": "mq:55dd1002be19f182",
+    "label": "Comalcalco (archaeological site)",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

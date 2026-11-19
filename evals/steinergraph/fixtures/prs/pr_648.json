@@ -1,0 +1,448 @@
+{
+ "qid": "pr:648",
+ "set": "prs",
+ "question": "What work went into this, and why: walklab q3: Settings.topk -- travel each round's top-k judged leads instead of the .5 gate?",
+ "gold": [
+  {
+   "id": "commit/1ab290d7fe",
+   "label": "commit 1ab290d: walklab q3: register the top-3 travel rule against the .5 gate on the 7 judged walks, before any is run",
+   "seed": false
+  },
+  {
+   "id": "commit/44f62e6fb4",
+   "label": "commit 44f62e6: walklab Q4: the edges-from-use loop -- a 'use' lead kind, its evidence on the lead, and the driver (not ",
+   "seed": false
+  },
+  {
+   "id": "commit/66a990b515",
+   "label": "commit 66a990b: walklab q3: Settings.topk -- travel each round's top-k judged leads instead of the .5 gate (off by defau",
+   "seed": true
+  },
+  {
+   "id": "commit/cef6d4c7cd",
+   "label": "commit cef6d4c: walklab q3: top-3 travel vs the .5 gate on 7 judged walks -- 16/20 vs 15/20 items (Vivaldi completes), n",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/66a990b515",
+   "label": "commit 66a990b: walklab q3: Settings.topk -- travel each round's top-k judged leads instead of the .5 gate (off by defau",
+   "rank": 1,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "commit/4ee706bb25",
+   "label": "commit 4ee706b: Merge pull request #648 from Percolation-Labs/cory/q3-topk",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "meta/lab/results/q4-miss-census-topk-RULE.md#1",
+   "label": "meta/lab/results/q4-miss-census-topk-RULE.md \u203a Judged walks with \"travel the round's top 3\" in place of the .5 gate (reg",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "meta/lab/walklab/engine.py#2",
+   "label": "meta/lab/walklab/engine.py",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "specs/decision-walks/README.md#24",
+   "label": "specs/decision-walks/README.md \u203a Travel: a relative gate for a low-calibrated judge (proposed for walk.sql)",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/1ab290d7fe",
+    "label": "commit 1ab290d: walklab q3: register the top-3 travel rule against the .5 gate on the 7 judged walks, before any is run",
+    "role": "gold"
+   },
+   {
+    "id": "commit/44f62e6fb4",
+    "label": "commit 44f62e6: walklab Q4: the edges-from-use loop -- a 'use' lead kind, its evidence on the lead, and the driver (not ",
+    "role": "gold"
+   },
+   {
+    "id": "commit/66a990b515",
+    "label": "commit 66a990b: walklab q3: Settings.topk -- travel each round's top-k judged leads instead of the .5 gate (off by defau",
+    "role": "gold"
+   },
+   {
+    "id": "commit/cef6d4c7cd",
+    "label": "commit cef6d4c: walklab q3: top-3 travel vs the .5 gate on 7 judged walks -- 16/20 vs 15/20 items (Vivaldi completes), n",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/1ab290d7fe",
+    "b": "commit/44f62e6fb4",
+    "via": [
+     {
+      "kind": "beside"
+     }
+    ]
+   },
+   {
+    "a": "commit/1ab290d7fe",
+    "b": "commit/66a990b515",
+    "via": [
+     {
+      "kind": "beside"
+     }
+    ]
+   },
+   {
+    "a": "commit/66a990b515",
+    "b": "commit/cef6d4c7cd",
+    "via": [
+     {
+      "kind": "beside"
+     }
+    ]
+   }
+  ],
+  "cost": 3,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   1,
+   1,
+   1,
+   2,
+   1
+  ],
+  "entry": {
+   "seed": "commit/66a990b515",
+   "gold": "commit/66a990b515",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 1741,
+  "within_2_doors": 32993,
+  "gold_within_1": 3,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "board/messages/M-20261105-105828-086b.md#1",
+    "label": "board/messages/M-20261105-105828-086b.md",
+    "p": 0.0054195132016073445,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-switch-cost/PROPOSAL.md#6",
+    "label": "meta/lab/results/q4-switch-cost/PROPOSAL.md \u203a What I would switch on first",
+    "p": 0.004621100995704852,
+    "gold": false
+   },
+   {
+    "id": "commit/755fbce6a0",
+    "label": "commit 755fbce: board: bill messages sirsh",
+    "p": 0.0036482907069336273,
+    "gold": false
+   },
+   {
+    "id": "commit/801a586f8c",
+    "label": "commit 801a586: board: bill messages sirsh",
+    "p": 0.0031817471421333927,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/README.md#7",
+    "label": "meta/lab/README.md \u203a Stage 3a: one engine, proven identical to the product",
+    "p": 0.0030789034158243385,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261102-135409-bf54.md#1",
+    "label": "board/messages/M-20261102-135409-bf54.md",
+    "p": 0.0028015694133076445,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/README.md#14",
+    "label": "meta/lab/README.md \u203a Finding (a): why irrelevant leads are accepted. The base rate, not the ranking ($0, product verdict",
+    "p": 0.002487139551852625,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-miss-census-topk/FLOOR-RULE.md#1",
+    "label": "meta/lab/results/q4-miss-census-topk/FLOOR-RULE.md \u203a The miss split on judged walks under the new walk rule: top 3 plus ",
+    "p": 0.002391292543619182,
+    "gold": false
+   },
+   {
+    "id": "commit/b09e592a8d",
+    "label": "commit b09e592: decision-walks: travel by a relative gate on a low-calibrated judge -- top 3 a round, cap 10 targets (pr",
+    "p": 0.002380047209496914,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261114-201036-168a.md#1",
+    "label": "board/messages/M-20261114-201036-168a.md",
+    "p": 0.0022870835024610655,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/README.md#10",
+    "label": "meta/lab/README.md \u203a Stage 3b: deciders, scorecard and configs, with the first decomposition at no cost",
+    "p": 0.0021673890775170367,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q2-gate/README.md#2",
+    "label": "meta/lab/results/q2-gate/README.md \u203a Quadrant 2: the product walk's travel gate is absolute, and on chain-like data it r",
+    "p": 0.0021425556170662574,
+    "gold": false
+   },
+   {
+    "id": "commit/9d694c8e0c",
+    "label": "commit 9d694c8: walklab q3: register landing a capped lead's targets by their rare terms (5.14 ranking) instead of searc",
+    "p": 0.001783248771243841,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-miss-census-qasper/ONEK-RULE.md#1",
+    "label": "meta/lab/results/q4-miss-census-qasper/ONEK-RULE.md \u203a Per-target judging in the top-k shape: each wide lead opens its to",
+    "p": 0.0017572936356192827,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-listwise-rep/result.txt#1",
+    "label": "meta/lab/results/q4-listwise-rep/result.txt",
+    "p": 0.0017551245753454417,
+    "gold": false
+   },
+   {
+    "id": "commit/48eecefaf2",
+    "label": "commit 48eecef: walklab q3: register a cap on leads' share of a wave's reads (lead_share .5) on top of P-first, on BEAM'",
+    "p": 0.001747265632724468,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-miss-census-topk-RULE.md#2",
+    "label": "meta/lab/results/q4-miss-census-topk-RULE.md \u203a Judged walks with \"travel the round's top 3\" in place of the .5 gate (reg",
+    "p": 0.0015630610393047915,
+    "gold": false
+   },
+   {
+    "id": "commit/cef6d4c7cd",
+    "label": "commit cef6d4c: walklab q3: top-3 travel vs the .5 gate on 7 judged walks -- 16/20 vs 15/20 items (Vivaldi completes), n",
+    "p": 0.001560375333725287,
+    "gold": true
+   },
+   {
+    "id": "commit/1ab290d7fe",
+    "label": "commit 1ab290d: walklab q3: register the top-3 travel rule against the .5 gate on the 7 judged walks, before any is run",
+    "p": 0.0015299421369116138,
+    "gold": true
+   },
+   {
+    "id": "specs/decision-walks/README.md#26",
+    "label": "specs/decision-walks/README.md \u203a Travel: a relative gate for a low-calibrated judge (proposed for walk.sql)",
+    "p": 0.0015009275998514354,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/66a990b515",
+   "label": "commit 66a990b: walklab q3: Settings.topk -- travel each round's top-k judged leads instead of the .5 gate (off by defau",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "commit/4ee706bb25",
+   "label": "commit 4ee706b: Merge pull request #648 from Percolation-Labs/cory/q3-topk",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/q4-miss-census-topk-RULE.md#1",
+   "label": "meta/lab/results/q4-miss-census-topk-RULE.md \u203a Judged walks with \"travel the round's top 3\" in place of the .5 gate (reg",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/walklab/engine.py#2",
+   "label": "meta/lab/walklab/engine.py",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/decision-walks/README.md#24",
+   "label": "specs/decision-walks/README.md \u203a Travel: a relative gate for a low-calibrated judge (proposed for walk.sql)",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/q4-miss-census-topk/FLOOR-RULE.md#2",
+   "label": "meta/lab/results/q4-miss-census-topk/FLOOR-RULE.md \u203a The miss split on judged walks under the new walk rule: top 3 plus ",
+   "wave": 1,
+   "via": "term:census topk",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/q4-miss-census-topk/CAP-RULE.md#2",
+   "label": "meta/lab/results/q4-miss-census-topk/CAP-RULE.md \u203a Top-3 with a cap on a travelled lead's reads (registered before any c",
+   "wave": 1,
+   "via": "term:census topk",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/q4-miss-census-topk/cap-result.txt#3",
+   "label": "meta/lab/results/q4-miss-census-topk/cap-result.txt",
+   "wave": 1,
+   "via": "term:census topk",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/q4-miss-census-topk/result.txt#3",
+   "label": "meta/lab/results/q4-miss-census-topk/result.txt",
+   "wave": 1,
+   "via": "term:census topk",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/q4-miss-census-topk-RULE.md#2",
+   "label": "meta/lab/results/q4-miss-census-topk-RULE.md \u203a Judged walks with \"travel the round's top 3\" in place of the .5 gate (reg",
+   "wave": 1,
+   "via": "term:census topk",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "board/messages/M-20261105-105828-086b.md#1",
+    "label": "board/messages/M-20261105-105828-086b.md",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-switch-cost/PROPOSAL.md#6",
+    "label": "meta/lab/results/q4-switch-cost/PROPOSAL.md \u203a What I would switch on first",
+    "gold": false
+   },
+   {
+    "id": "commit/755fbce6a0",
+    "label": "commit 755fbce: board: bill messages sirsh",
+    "gold": false
+   },
+   {
+    "id": "commit/801a586f8c",
+    "label": "commit 801a586: board: bill messages sirsh",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/README.md#7",
+    "label": "meta/lab/README.md \u203a Stage 3a: one engine, proven identical to the product",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "meta/lab/results/q4-switch-cost/PROPOSAL.md#6",
+    "label": "meta/lab/results/q4-switch-cost/PROPOSAL.md \u203a What I would switch on first",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-miss-census-topk/FLOOR-RULE.md#1",
+    "label": "meta/lab/results/q4-miss-census-topk/FLOOR-RULE.md \u203a The miss split on judged walks under the new walk rule: top 3 plus ",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q2-gate/README.md#2",
+    "label": "meta/lab/results/q2-gate/README.md \u203a Quadrant 2: the product walk's travel gate is absolute, and on chain-like data it r",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-miss-census-topk/cap-result.txt#1",
+    "label": "meta/lab/results/q4-miss-census-topk/cap-result.txt",
+    "gold": false
+   },
+   {
+    "id": "specs/decision-walks/README.md#25",
+    "label": "specs/decision-walks/README.md \u203a Travel: a relative gate for a low-calibrated judge (proposed for walk.sql)",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/1ab290d7fe",
+    "label": "commit 1ab290d: walklab q3: register the top-3 travel rule against the .5 gate on the 7 judged walks, before any is run",
+    "gold": true
+   },
+   {
+    "id": "meta/lab/results/q4-miss-census-topk-RULE.md#2",
+    "label": "meta/lab/results/q4-miss-census-topk-RULE.md \u203a Judged walks with \"travel the round's top 3\" in place of the .5 gate (reg",
+    "gold": false
+   },
+   {
+    "id": "commit/b09e592a8d",
+    "label": "commit b09e592: decision-walks: travel by a relative gate on a low-calibrated judge -- top 3 a round, cap 10 targets (pr",
+    "gold": false
+   },
+   {
+    "id": "commit/cef6d4c7cd",
+    "label": "commit cef6d4c: walklab q3: top-3 travel vs the .5 gate on 7 judged walks -- 16/20 vs 15/20 items (Vivaldi completes), n",
+    "gold": true
+   },
+   {
+    "id": "commit/7e2d8f1938",
+    "label": "commit 7e2d8f1: decision-walks travel rule: a union -- the round's top 3 plus every lead at P >= .5 (bill, Sirsh 14:05Z)",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "meta/lab/results/q4-miss-census-topk/result.txt#1",
+    "label": "meta/lab/results/q4-miss-census-topk/result.txt",
+    "gold": false
+   },
+   {
+    "id": "commit/b09e592a8d",
+    "label": "commit b09e592: decision-walks: travel by a relative gate on a low-calibrated judge -- top 3 a round, cap 10 targets (pr",
+    "gold": false
+   },
+   {
+    "id": "specs/decision-walks/README.md#25",
+    "label": "specs/decision-walks/README.md \u203a Travel: a relative gate for a low-calibrated judge (proposed for walk.sql)",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-switch-cost/PROPOSAL.md#2",
+    "label": "meta/lab/results/q4-switch-cost/PROPOSAL.md \u203a The rule (percolate #357, #359)",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/q4/use_loop.py#2",
+    "label": "meta/lab/q4/use_loop.py",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.6666666666666666,
+  "S": 0.0
+ }
+}

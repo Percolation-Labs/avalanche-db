@@ -1,0 +1,443 @@
+{
+ "qid": "card:REM-691",
+ "set": "cards",
+ "question": "What was done about this, and why: navigation: guide-only recipes on ten real claims (phase 0)?",
+ "gold": [
+  {
+   "id": "commit/8b0b6164ce",
+   "label": "commit 8b0b616: Merge pull request #353 from Percolation-Labs/amartey/concept-navigation-phase0",
+   "seed": false
+  },
+  {
+   "id": "commit/e919a6e78e",
+   "label": "commit e919a6e: concept-navigation: phase 0 result against the stop rule (REM-691)",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/db298b5189",
+   "label": "commit db298b5: board: file REM-691 navigation: guide-only recipes on ten real claims (phase 0)",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-691.md#1",
+   "label": "board/cards/REM-691.md",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "specs/percolate-application/concept-navigation.md#23",
+   "label": "specs/percolate-application/concept-navigation.md \u203a 10. Plan",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/d4d7228bae",
+   "label": "commit d4d7228: Spec: concept navigation, research assistant modes over the claims graph",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-691.md#5",
+   "label": "board/cards/REM-691.md \u203a Log",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/8b0b6164ce",
+    "label": "commit 8b0b616: Merge pull request #353 from Percolation-Labs/amartey/concept-navigation-phase0",
+    "role": "gold"
+   },
+   {
+    "id": "commit/e919a6e78e",
+    "label": "commit e919a6e: concept-navigation: phase 0 result against the stop rule (REM-691)",
+    "role": "gold"
+   },
+   {
+    "id": "specs/percolate-application/concept-navigation.md#23",
+    "label": "specs/percolate-application/concept-navigation.md \u203a 10. Plan",
+    "role": "seed"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/8b0b6164ce",
+    "b": "commit/e919a6e78e",
+    "via": [
+     {
+      "kind": "term",
+      "key": "navigation phase",
+      "width": 3
+     },
+     {
+      "kind": "term",
+      "key": "rem 691",
+      "width": 18
+     },
+     {
+      "kind": "term",
+      "key": "concept navigation",
+      "width": 68
+     }
+    ]
+   },
+   {
+    "a": "commit/e919a6e78e",
+    "b": "specs/percolate-application/concept-navigation.md#23",
+    "via": [
+     {
+      "kind": "term",
+      "key": "rem 691",
+      "width": 18
+     },
+     {
+      "kind": "term",
+      "key": "stop rule",
+      "width": 32
+     },
+     {
+      "kind": "term",
+      "key": "concept navigation",
+      "width": 68
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "specs/percolate-application/concept-navigation.md#23",
+   "gold": "commit/e919a6e78e",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 1452,
+  "within_2_doors": 34204,
+  "gold_within_1": 2,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "board/cards/REM-691.md#3",
+    "label": "board/cards/REM-691.md \u203a Done when",
+    "p": 0.009520990640473674,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/README.md#5",
+    "label": "specs/percolate-application/README.md \u203a Read in this order",
+    "p": 0.006087307500907557,
+    "gold": false
+   },
+   {
+    "id": "board/team/p8-subsystems-f6.md#2",
+    "label": "board/team/p8-subsystems-f6.md \u203a Log",
+    "p": 0.005404979817228136,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-692.md#5",
+    "label": "board/cards/REM-692.md \u203a Log",
+    "p": 0.004769886107755476,
+    "gold": false
+   },
+   {
+    "id": "commit/d5c6cacd4b",
+    "label": "commit d5c6cac: Merge pull request #351 from Percolation-Labs/amartey/concept-navigation",
+    "p": 0.004751735304198832,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-691.md#2",
+    "label": "board/cards/REM-691.md \u203a Goal",
+    "p": 0.004287164671679885,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/concept-navigation.md#1",
+    "label": "specs/percolate-application/concept-navigation.md \u203a Concept navigation: research assistant modes",
+    "p": 0.003727651615637587,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-692.md#1",
+    "label": "board/cards/REM-692.md",
+    "p": 0.002945454603829798,
+    "gold": false
+   },
+   {
+    "id": "commit/e683c03de8",
+    "label": "commit e683c03: board: file REM-692 navigation: move catalogue and read-only navigate_concepts tool (phase 1)",
+    "p": 0.0029209723842177947,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/concept-navigation.md#21",
+    "label": "specs/percolate-application/concept-navigation.md \u203a 8. Surfaces",
+    "p": 0.002849822589101111,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/concept-navigation.md#24",
+    "label": "specs/percolate-application/concept-navigation.md \u203a 10. Plan",
+    "p": 0.0024427992181683404,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-921.md#3",
+    "label": "board/cards/REM-921.md \u203a Evidence",
+    "p": 0.002158574780404204,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-942.md#3",
+    "label": "board/cards/REM-942.md \u203a Evidence",
+    "p": 0.0021576036093965876,
+    "gold": false
+   },
+   {
+    "id": "commit/5102c07813",
+    "label": "commit 5102c07: data-model: hub_app.user_emails, linked addresses confirmed in the account's own browser (#350)",
+    "p": 0.0018466356192123512,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-691.md#4",
+    "label": "board/cards/REM-691.md \u203a Scope",
+    "p": 0.0016914004127345464,
+    "gold": false
+   },
+   {
+    "id": "output/claims-atlas/app.js#5",
+    "label": "output/claims-atlas/app.js",
+    "p": 0.0016103119320986107,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-693.md#1",
+    "label": "board/cards/REM-693.md",
+    "p": 0.0015600604685848728,
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-10-17-iterative-query/forage/perfect_graph.py#1",
+    "label": "meta/spikes/2026-10-17-iterative-query/forage/perfect_graph.py",
+    "p": 0.001546764009535461,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/concept-navigation.md#16",
+    "label": "specs/percolate-application/concept-navigation.md \u203a 5. Modes are recipes",
+    "p": 0.0015452900159612652,
+    "gold": false
+   },
+   {
+    "id": "meta/skills/dogfooding/SKILL.md#2",
+    "label": "meta/skills/dogfooding/SKILL.md \u203a The one rule",
+    "p": 0.0015240470362513376,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/db298b5189",
+   "label": "commit db298b5: board: file REM-691 navigation: guide-only recipes on ten real claims (phase 0)",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-691.md#1",
+   "label": "board/cards/REM-691.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/percolate-application/concept-navigation.md#23",
+   "label": "specs/percolate-application/concept-navigation.md \u203a 10. Plan",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/d4d7228bae",
+   "label": "commit d4d7228: Spec: concept navigation, research assistant modes over the claims graph",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-691.md#5",
+   "label": "board/cards/REM-691.md \u203a Log",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-691.md#3",
+   "label": "board/cards/REM-691.md \u203a Done when",
+   "wave": 1,
+   "via": "term:rem 691",
+   "gold": false
+  },
+  {
+   "id": "commit/e919a6e78e",
+   "label": "commit e919a6e: concept-navigation: phase 0 result against the stop rule (REM-691)",
+   "wave": 1,
+   "via": "term:rem 691",
+   "gold": true
+  },
+  {
+   "id": "commit/387e63dc1f",
+   "label": "commit 387e63d: board: REM-691 in-progress \u2192 done",
+   "wave": 1,
+   "via": "term:rem 691",
+   "gold": false
+  },
+  {
+   "id": "commit/8b0b6164ce",
+   "label": "commit 8b0b616: Merge pull request #353 from Percolation-Labs/amartey/concept-navigation-phase0",
+   "wave": 1,
+   "via": "term:rem 691",
+   "gold": true
+  },
+  {
+   "id": "board/cards/REM-691.md#2",
+   "label": "board/cards/REM-691.md \u203a Goal",
+   "wave": 1,
+   "via": "term:rem 691",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "board/cards/REM-691.md#3",
+    "label": "board/cards/REM-691.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/README.md#5",
+    "label": "specs/percolate-application/README.md \u203a Read in this order",
+    "gold": false
+   },
+   {
+    "id": "board/team/p8-subsystems-f6.md#2",
+    "label": "board/team/p8-subsystems-f6.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-692.md#5",
+    "label": "board/cards/REM-692.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "commit/d5c6cacd4b",
+    "label": "commit d5c6cac: Merge pull request #351 from Percolation-Labs/amartey/concept-navigation",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "board/cards/REM-691.md#3",
+    "label": "board/cards/REM-691.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/concept-navigation.md#21",
+    "label": "specs/percolate-application/concept-navigation.md \u203a 8. Surfaces",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-692.md#5",
+    "label": "board/cards/REM-692.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/team/p8-subsystems-f6.md#2",
+    "label": "board/team/p8-subsystems-f6.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/README.md#5",
+    "label": "specs/percolate-application/README.md \u203a Read in this order",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "board/cards/REM-691.md#4",
+    "label": "board/cards/REM-691.md \u203a Scope",
+    "gold": false
+   },
+   {
+    "id": "commit/8b0b6164ce",
+    "label": "commit 8b0b616: Merge pull request #353 from Percolation-Labs/amartey/concept-navigation-phase0",
+    "gold": true
+   },
+   {
+    "id": "commit/e919a6e78e",
+    "label": "commit e919a6e: concept-navigation: phase 0 result against the stop rule (REM-691)",
+    "gold": true
+   },
+   {
+    "id": "board/cards/REM-694.md#4",
+    "label": "board/cards/REM-694.md \u203a Scope",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-693.md#4",
+    "label": "board/cards/REM-693.md \u203a Scope",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "specs/percolate-application/concept-navigation.md#21",
+    "label": "specs/percolate-application/concept-navigation.md \u203a 8. Surfaces",
+    "gold": false
+   },
+   {
+    "id": "commit/854de70a0f",
+    "label": "commit 854de70: board: file REM-694 navigation: the trail on the claim page (phase 3)",
+    "gold": false
+   },
+   {
+    "id": "commit/0341445d37",
+    "label": "commit 0341445: Specify guide quality and thinking-first journey navigation",
+    "gold": false
+   },
+   {
+    "id": "commit/e919a6e78e",
+    "label": "commit e919a6e: concept-navigation: phase 0 result against the stop rule (REM-691)",
+    "gold": true
+   },
+   {
+    "id": "commit/e683c03de8",
+    "label": "commit e683c03: board: file REM-692 navigation: move catalogue and read-only navigate_concepts tool (phase 1)",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 1.0,
+  "S": 0.5
+ }
+}

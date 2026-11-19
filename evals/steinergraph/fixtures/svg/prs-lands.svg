@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 396" font-family="system-ui, sans-serif" font-size="12">
+<style>.t{fill:#1d1d1f}.m{fill:#6e6e73}.e{stroke:#0a7d5a;stroke-width:2;fill:none}.k{fill:#0a7d5a;font-size:10px}</style>
+<rect width="1180" height="396" fill="#fff"/>
+<text x="20" y="28" font-size="15" font-weight="600" class="t">PR titles · lands: pr:632</text>
+<text x="20" y="50" class="m">What work went into this, and why: MIDB part 1: P7 (the bound with a budget), and use-driven edges&#x27; generalisation count?</text>
+<text x="40" y="78" font-weight="600" class="m">search’s seeds</text><text x="430" y="78" font-weight="600" class="m">connectors and walk reads</text><text x="820" y="78" font-weight="600" class="m">gold</text>
+<path class="e" d="M190,142 C190.0,142 190.0,188 190,188"/>
+<rect x="147.0" y="150.0" width="43.2" height="15" rx="3" fill="#fff" opacity=".9"/>
+<text class="k" x="150.0" y="161.0">Beside</text>
+<path class="e" d="M190,142 C505.0,142 505.0,142 820,142"/>
+<rect x="462.0" y="127.0" width="43.2" height="15" rx="3" fill="#fff" opacity=".9"/>
+<text class="k" x="465.0" y="138.0">Beside</text>
+<path class="e" d="M970,96 C580.0,96 580.0,280 190,280"/>
+<rect x="537.0" y="173.0" width="43.2" height="15" rx="3" fill="#fff" opacity=".9"/>
+<text class="k" x="540.0" y="184.0">Beside</text>
+<path class="e" d="M970,96 C970.0,96 970.0,142 970,142"/>
+<rect x="927.0" y="104.0" width="43.2" height="15" rx="3" fill="#fff" opacity=".9"/>
+<text class="k" x="930.0" y="115.0">Beside</text>
+<rect x="40" y="127" width="340" height="28" rx="6" fill="#f5c400" stroke="#0a7d5a" stroke-width="2"/>
+<text x="48" y="146" class="t">commit 3dc4e19: MIDB part 1, P7 on BEAM 1M:…</text>
+<rect x="40" y="173" width="340" height="28" rx="6" fill="#f5c400" stroke="#0a7d5a" stroke-width="2"/>
+<text x="48" y="192" class="t">commit 6e5ddda: MIDB part 1, P7: the struct…</text>
+<rect x="820" y="81" width="340" height="28" rx="6" fill="#f5c400" stroke="#0a7d5a" stroke-width="2"/>
+<text x="828" y="100" class="t">commit 77cf215: MIDB dreaming metric: requi…</text>
+<text x="1158" y="100" text-anchor="end" class="m" font-size="10">LQ top 5</text>
+<rect x="40" y="265" width="340" height="28" rx="6" fill="#f5c400" stroke="#0a7d5a" stroke-width="2"/>
+<text x="48" y="284" class="t">commit b5101c4: Use-driven edges change no …</text>
+<rect x="820" y="127" width="340" height="28" rx="6" fill="#f5c400" stroke="#0a7d5a" stroke-width="2"/>
+<text x="828" y="146" class="t">commit cedbad6: MIDB part 1: a read cap and…</text>
+<rect x="40" y="219" width="340" height="28" rx="6" fill="#dbe9ff" stroke="#c7c7cc" stroke-width="1"/>
+<text x="48" y="238" class="t">commit 95f335f: Merge pull request #632 fro…</text>
+<rect x="40" y="81" width="340" height="28" rx="6" fill="#dbe9ff" stroke="#c7c7cc" stroke-width="1"/>
+<text x="48" y="100" class="t">board/messages/M-20261102-113043-3e7b.md</text>
+<rect x="430" y="265" width="340" height="28" rx="6" fill="#f2f2f4" stroke="#c7c7cc" stroke-width="1"/>
+<text x="438" y="284" class="t">meta/lab/tests/test_structure_props.py</text>
+<text x="768" y="284" text-anchor="end" class="m" font-size="10">walk w1</text>
+<rect x="430" y="219" width="340" height="28" rx="6" fill="#f2f2f4" stroke="#c7c7cc" stroke-width="1"/>
+<text x="438" y="238" class="t">meta/lab/results/graph-known/PROPOSITIONS.m…</text>
+<text x="768" y="238" text-anchor="end" class="m" font-size="10">walk w1</text>
+<rect x="430" y="81" width="340" height="28" rx="6" fill="#f2f2f4" stroke="#c7c7cc" stroke-width="1"/>
+<text x="438" y="100" class="t">meta/lab/configs/structure/p7_budget.py</text>
+<text x="768" y="100" text-anchor="end" class="m" font-size="10">walk w1</text>
+<rect x="430" y="127" width="340" height="28" rx="6" fill="#f2f2f4" stroke="#c7c7cc" stroke-width="1"/>
+<text x="438" y="146" class="t">meta/lab/configs/structure/p7_budget.py</text>
+<text x="768" y="146" text-anchor="end" class="m" font-size="10">walk w1</text>
+<rect x="430" y="173" width="340" height="28" rx="6" fill="#f2f2f4" stroke="#c7c7cc" stroke-width="1"/>
+<text x="438" y="192" class="t">meta/lab/configs/structure/p7_budget.py</text>
+<text x="768" y="192" text-anchor="end" class="m" font-size="10">walk w1</text>
+<text x="20" y="362" class="m">Steiner cost 4 links; nearest seed 0 doors from gold; graph within 1 door of the seeds: 1,011 passages, within 2: 30,628</text>
+<text x="20" y="382" class="m">recall@5 beyond the seeds: search 0.00, U 0.00, Q 0.00, LQ 0.50. Yellow gold, blue seeds, green-edged nodes and links form the Steiner graph.</text>
+</svg>

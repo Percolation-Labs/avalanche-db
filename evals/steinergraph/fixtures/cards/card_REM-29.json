@@ -1,0 +1,491 @@
+{
+ "qid": "card:REM-29",
+ "set": "cards",
+ "question": "What was done about this, and why: dream: measure when maintained views earn their lifecycle cost?",
+ "gold": [
+  {
+   "id": "commit/634ed9f258",
+   "label": "commit 634ed9f: Two research gates were tracked in a place nobody was looking",
+   "seed": false
+  },
+  {
+   "id": "commit/7a3e02ef85",
+   "label": "commit 7a3e02e: Dream's algebra gets a gate before it gets a spec",
+   "seed": false
+  },
+  {
+   "id": "commit/ac56611f0e",
+   "label": "commit ac56611: Merge pull request #51 from Percolation-Labs/docs/bkd-gates-tracked-in-the-spec",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "board/cards/REM-29.md#1",
+   "label": "board/cards/REM-29.md",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "specs/build-knit-dream/sequence.md#9",
+   "label": "specs/build-knit-dream/sequence.md \u203a G3. Establish ordinary maintained views and full lifecycle costs",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "specs/build-knit-dream/sequence.md#8",
+   "label": "specs/build-knit-dream/sequence.md \u203a G3. Establish ordinary maintained views and full lifecycle costs",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "applications/percolate-self-model/dreaming/stream/LIFECYCLE.md#1",
+   "label": "applications/percolate-self-model/dreaming/stream/LIFECYCLE.md \u203a Maintained-view lifecycle experiment: lifecycle-v1",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-595.md#2",
+   "label": "board/cards/REM-595.md \u203a Goal",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 2
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/634ed9f258",
+    "label": "commit 634ed9f: Two research gates were tracked in a place nobody was looking",
+    "role": "gold"
+   },
+   {
+    "id": "commit/7a3e02ef85",
+    "label": "commit 7a3e02e: Dream's algebra gets a gate before it gets a spec",
+    "role": "gold"
+   },
+   {
+    "id": "commit/ac56611f0e",
+    "label": "commit ac56611: Merge pull request #51 from Percolation-Labs/docs/bkd-gates-tracked-in-the-spec",
+    "role": "gold"
+   },
+   {
+    "id": "specs/build-knit-dream/sequence.md#8",
+    "label": "specs/build-knit-dream/sequence.md \u203a G3. Establish ordinary maintained views and full lifecycle costs",
+    "role": "seed"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/634ed9f258",
+    "b": "commit/7a3e02ef85",
+    "via": [
+     {
+      "kind": "term",
+      "key": "rem 29",
+      "width": 8
+     },
+     {
+      "kind": "term",
+      "key": "tracked",
+      "width": 82
+     }
+    ]
+   },
+   {
+    "a": "commit/634ed9f258",
+    "b": "commit/ac56611f0e",
+    "via": [
+     {
+      "kind": "term",
+      "key": "place nobody",
+      "width": 4
+     },
+     {
+      "kind": "term",
+      "key": "two research",
+      "width": 6
+     },
+     {
+      "kind": "term",
+      "key": "rem 29",
+      "width": 8
+     },
+     {
+      "kind": "term",
+      "key": "rem 28",
+      "width": 9
+     },
+     {
+      "kind": "term",
+      "key": "research gates",
+      "width": 9
+     }
+    ]
+   },
+   {
+    "a": "commit/7a3e02ef85",
+    "b": "specs/build-knit-dream/sequence.md#8",
+    "via": [
+     {
+      "kind": "term",
+      "key": "membership guards",
+      "width": 6
+     },
+     {
+      "kind": "term",
+      "key": "rem 29",
+      "width": 8
+     },
+     {
+      "kind": "term",
+      "key": "incremental maintenance",
+      "width": 11
+     },
+     {
+      "kind": "term",
+      "key": "dream sequence",
+      "width": 25
+     },
+     {
+      "kind": "term",
+      "key": "tracked",
+      "width": 82
+     }
+    ]
+   }
+  ],
+  "cost": 3,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   1,
+   1
+  ],
+  "entry": {
+   "seed": "specs/build-knit-dream/sequence.md#8",
+   "gold": "commit/7a3e02ef85",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 2017,
+  "within_2_doors": 33562,
+  "gold_within_1": 3,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "board/cards/REM-30.md#1",
+    "label": "board/cards/REM-30.md",
+    "p": 0.005018816125991023,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-31.md#1",
+    "label": "board/cards/REM-31.md",
+    "p": 0.004965279886346678,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-32.md#1",
+    "label": "board/cards/REM-32.md",
+    "p": 0.004938595906822801,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-28.md#1",
+    "label": "board/cards/REM-28.md",
+    "p": 0.004921897453640993,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-27.md#1",
+    "label": "board/cards/REM-27.md",
+    "p": 0.004902764522439464,
+    "gold": false
+   },
+   {
+    "id": "research-notes/build-knit-dream-stream-2026-09-10.md#7",
+    "label": "research-notes/build-knit-dream-stream-2026-09-10.md \u203a What is still open",
+    "p": 0.0037060718368233307,
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-self-model/dreaming/stream/LIFECYCLE.md#2",
+    "label": "applications/percolate-self-model/dreaming/stream/LIFECYCLE.md \u203a Competitors",
+    "p": 0.003554091428930347,
+    "gold": false
+   },
+   {
+    "id": "specs/research-platform/core-research-programme.md#7",
+    "label": "specs/research-platform/core-research-programme.md \u203a R2. Measure claims under changing evidence",
+    "p": 0.0034250645660311523,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-681.md#9",
+    "label": "board/cards/REM-681.md \u203a Log",
+    "p": 0.003136609198099236,
+    "gold": false
+   },
+   {
+    "id": "specs/research-platform/core-research-programme.md#6",
+    "label": "specs/research-platform/core-research-programme.md \u203a R2. Measure claims under changing evidence",
+    "p": 0.0029218409842634726,
+    "gold": false
+   },
+   {
+    "id": "specs/build-knit-dream/sequence.md#6",
+    "label": "specs/build-knit-dream/sequence.md \u203a G2. Evaluate memory after changes, not only final questions",
+    "p": 0.00280003797487447,
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-self-model/dreaming/stream/LIFECYCLE.md#3",
+    "label": "applications/percolate-self-model/dreaming/stream/LIFECYCLE.md \u203a Fixed workload and timing boundaries",
+    "p": 0.0022954243523503385,
+    "gold": false
+   },
+   {
+    "id": "specs/build-knit-dream/sequence.md#10",
+    "label": "specs/build-knit-dream/sequence.md \u203a G4. Select useful combinations under a changing workload",
+    "p": 0.0020004741212688343,
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-self-model/dreaming/README.md#17",
+    "label": "applications/percolate-self-model/dreaming/README.md \u203a Conditional bundle and extraction-contract tests",
+    "p": 0.001945608427785422,
+    "gold": false
+   },
+   {
+    "id": "specs/build-knit-dream/sequence.md#11",
+    "label": "specs/build-knit-dream/sequence.md \u203a G5. Test semantic value against stronger retrieval",
+    "p": 0.0019260170470844472,
+    "gold": false
+   },
+   {
+    "id": "specs/research-platform/core-trust-delivery.md#1",
+    "label": "specs/research-platform/core-trust-delivery.md \u203a Core trust delivery map",
+    "p": 0.0019053753612825793,
+    "gold": false
+   },
+   {
+    "id": "research-notes/build-knit-dream-external-baseline-2026-09-10.md#7",
+    "label": "research-notes/build-knit-dream-external-baseline-2026-09-10.md \u203a Dependence, costs and limitations",
+    "p": 0.0016747598043998343,
+    "gold": false
+   },
+   {
+    "id": "research-notes/build-knit-dream-external-baseline-2026-09-10.md#8",
+    "label": "research-notes/build-knit-dream-external-baseline-2026-09-10.md \u203a What changes next",
+    "p": 0.0016124874066727045,
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-self-model/dreaming/SPEC.md#12",
+    "label": "applications/percolate-self-model/dreaming/SPEC.md \u203a Evaluation and contribution gates",
+    "p": 0.00159173061589861,
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-self-model/dreaming/stream/LIFECYCLE.md#4",
+    "label": "applications/percolate-self-model/dreaming/stream/LIFECYCLE.md \u203a Fixed workload and timing boundaries",
+    "p": 0.0015330250794455688,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "board/cards/REM-29.md#1",
+   "label": "board/cards/REM-29.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/build-knit-dream/sequence.md#9",
+   "label": "specs/build-knit-dream/sequence.md \u203a G3. Establish ordinary maintained views and full lifecycle costs",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/build-knit-dream/sequence.md#8",
+   "label": "specs/build-knit-dream/sequence.md \u203a G3. Establish ordinary maintained views and full lifecycle costs",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "applications/percolate-self-model/dreaming/stream/LIFECYCLE.md#1",
+   "label": "applications/percolate-self-model/dreaming/stream/LIFECYCLE.md \u203a Maintained-view lifecycle experiment: lifecycle-v1",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-595.md#2",
+   "label": "board/cards/REM-595.md \u203a Goal",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "research-notes/build-knit-dream-stream-2026-09-10.md#7",
+   "label": "research-notes/build-knit-dream-stream-2026-09-10.md \u203a What is still open",
+   "wave": 1,
+   "via": "term:rem 29",
+   "gold": false
+  },
+  {
+   "id": "commit/ac56611f0e",
+   "label": "commit ac56611: Merge pull request #51 from Percolation-Labs/docs/bkd-gates-tracked-in-the-spec",
+   "wave": 1,
+   "via": "term:rem 29",
+   "gold": true
+  },
+  {
+   "id": "board/cards/REM-29.md#2",
+   "label": "board/cards/REM-29.md \u203a Log",
+   "wave": 1,
+   "via": "term:rem 29",
+   "gold": false
+  },
+  {
+   "id": "commit/634ed9f258",
+   "label": "commit 634ed9f: Two research gates were tracked in a place nobody was looking",
+   "wave": 1,
+   "via": "term:rem 29",
+   "gold": true
+  },
+  {
+   "id": "commit/7a3e02ef85",
+   "label": "commit 7a3e02e: Dream's algebra gets a gate before it gets a spec",
+   "wave": 1,
+   "via": "term:rem 29",
+   "gold": true
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "board/cards/REM-30.md#1",
+    "label": "board/cards/REM-30.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-31.md#1",
+    "label": "board/cards/REM-31.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-32.md#1",
+    "label": "board/cards/REM-32.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-28.md#1",
+    "label": "board/cards/REM-28.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-27.md#1",
+    "label": "board/cards/REM-27.md",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "specs/research-platform/core-research-programme.md#6",
+    "label": "specs/research-platform/core-research-programme.md \u203a R2. Measure claims under changing evidence",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-27.md#1",
+    "label": "board/cards/REM-27.md",
+    "gold": false
+   },
+   {
+    "id": "research-notes/build-knit-dream-stream-2026-09-10.md#7",
+    "label": "research-notes/build-knit-dream-stream-2026-09-10.md \u203a What is still open",
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-self-model/dreaming/SPEC.md#12",
+    "label": "applications/percolate-self-model/dreaming/SPEC.md \u203a Evaluation and contribution gates",
+    "gold": false
+   },
+   {
+    "id": "research-notes/build-knit-dream-external-baseline-2026-09-10.md#8",
+    "label": "research-notes/build-knit-dream-external-baseline-2026-09-10.md \u203a What changes next",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "applications/percolate-self-model/dreaming/SPEC.md#1",
+    "label": "applications/percolate-self-model/dreaming/SPEC.md \u203a Build\u2013Knit\u2013Dream: useful, maintained memory",
+    "gold": false
+   },
+   {
+    "id": "commit/494fdef883",
+    "label": "commit 494fdef: board: file REM-595 research: measure the full cost of claims under changing evidence",
+    "gold": false
+   },
+   {
+    "id": "commit/b6edc1a015",
+    "label": "commit b6edc1a: board: file REM-735 graphs: a maintained concept library with a quality gate, favourites and your own co",
+    "gold": false
+   },
+   {
+    "id": "specs/research-platform/core-research-programme.md#6",
+    "label": "specs/research-platform/core-research-programme.md \u203a R2. Measure claims under changing evidence",
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-self-model/dreaming/stream/LIFECYCLE.md#5",
+    "label": "applications/percolate-self-model/dreaming/stream/LIFECYCLE.md \u203a Gate and decisions",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "specs/research-platform/core-research-programme.md#6",
+    "label": "specs/research-platform/core-research-programme.md \u203a R2. Measure claims under changing evidence",
+    "gold": false
+   },
+   {
+    "id": "research-notes/build-knit-dream-stream-2026-09-10.md#5",
+    "label": "research-notes/build-knit-dream-stream-2026-09-10.md \u203a Maintenance correctness is not truth",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-681.md#1",
+    "label": "board/cards/REM-681.md",
+    "gold": false
+   },
+   {
+    "id": "commit/35b007da32",
+    "label": "commit 35b007d: board: file REM-681 research: establish when iterative queries earn their indexing cost",
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-self-model/dreaming/stream/LIFECYCLE.md#5",
+    "label": "applications/percolate-self-model/dreaming/stream/LIFECYCLE.md \u203a Gate and decisions",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

@@ -1,0 +1,510 @@
+{
+ "qid": "pr:96",
+ "set": "prs",
+ "question": "What work went into this, and why: A two-minute lease bound a five-minute task, and the number had four copies?",
+ "gold": [
+  {
+   "id": "commit/24d1f91f2c",
+   "label": "commit 24d1f91: The new default reached fresh installs and not upgrades, which is a fifth copy",
+   "seed": false
+  },
+  {
+   "id": "commit/6034424ec3",
+   "label": "commit 6034424: The clock check listed three job names, and the spec's open items now say what moved",
+   "seed": false
+  },
+  {
+   "id": "commit/bc0b1a2480",
+   "label": "commit bc0b1a2: A fourth answer to \"which interpreter\", named in check.sh's header and left there",
+   "seed": false
+  },
+  {
+   "id": "commit/ff1a652f14",
+   "label": "commit ff1a652: A two-minute lease bound a five-minute task, and the number had four copies",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/8710a526d8",
+   "label": "commit 8710a52: Merge pull request #96 from Percolation-Labs/fix/rem-109-long-task-finishes-once",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/ff1a652f14",
+   "label": "commit ff1a652: A two-minute lease bound a five-minute task, and the number had four copies",
+   "rank": 2,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "board/cards/REM-1074.md#2",
+   "label": "board/cards/REM-1074.md \u203a Goal",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "meta/spikes/2026-10-27-dream-walk-graphs/durability/README.md#4",
+   "label": "meta/spikes/2026-10-27-dream-walk-graphs/durability/README.md \u203a 3. Two of four workers killed, the others left running (",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "specs/world-model-ingestion/polling.sql#2",
+   "label": "specs/world-model-ingestion/polling.sql",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/24d1f91f2c",
+    "label": "commit 24d1f91: The new default reached fresh installs and not upgrades, which is a fifth copy",
+    "role": "gold"
+   },
+   {
+    "id": "commit/6034424ec3",
+    "label": "commit 6034424: The clock check listed three job names, and the spec's open items now say what moved",
+    "role": "gold"
+   },
+   {
+    "id": "commit/bc0b1a2480",
+    "label": "commit bc0b1a2: A fourth answer to \"which interpreter\", named in check.sh's header and left there",
+    "role": "gold"
+   },
+   {
+    "id": "commit/ff1a652f14",
+    "label": "commit ff1a652: A two-minute lease bound a five-minute task, and the number had four copies",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/24d1f91f2c",
+    "b": "commit/bc0b1a2480",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "session_019s6crlfsdqqf1wbadpxvj3",
+      "width": 19
+     },
+     {
+      "kind": "term",
+      "key": "code session_019s6crlfsdqqf1wbadpxvj3",
+      "width": 19
+     },
+     {
+      "kind": "term",
+      "key": "interpreter",
+      "width": 55
+     },
+     {
+      "kind": "term",
+      "key": "dev upgrade",
+      "width": 83
+     }
+    ]
+   },
+   {
+    "a": "commit/6034424ec3",
+    "b": "commit/ff1a652f14",
+    "via": [
+     {
+      "kind": "term",
+      "key": "reaps",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "gate caught",
+      "width": 14
+     },
+     {
+      "kind": "term",
+      "key": "session_019s6crlfsdqqf1wbadpxvj3",
+      "width": 19
+     },
+     {
+      "kind": "term",
+      "key": "code session_019s6crlfsdqqf1wbadpxvj3",
+      "width": 19
+     },
+     {
+      "kind": "term",
+      "key": "rem 109",
+      "width": 21
+     }
+    ]
+   },
+   {
+    "a": "commit/bc0b1a2480",
+    "b": "commit/ff1a652f14",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "session_019s6crlfsdqqf1wbadpxvj3",
+      "width": 19
+     },
+     {
+      "kind": "term",
+      "key": "code session_019s6crlfsdqqf1wbadpxvj3",
+      "width": 19
+     },
+     {
+      "kind": "term",
+      "key": "rem 109",
+      "width": 21
+     },
+     {
+      "kind": "term",
+      "key": "dev reload",
+      "width": 79
+     }
+    ]
+   }
+  ],
+  "cost": 3,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  "entry": {
+   "seed": "commit/ff1a652f14",
+   "gold": "commit/ff1a652f14",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 3380,
+  "within_2_doors": 33467,
+  "gold_within_1": 3,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "board/team/p8-subsystems-08.md#2",
+    "label": "board/team/p8-subsystems-08.md \u203a Log",
+    "p": 0.0031607881848101553,
+    "gold": false
+   },
+   {
+    "id": "specs/world-model-ingestion/brief.md#9",
+    "label": "specs/world-model-ingestion/brief.md \u203a 3.5a The cadence is a column, and the schedule is derived from it",
+    "p": 0.002884499001273082,
+    "gold": false
+   },
+   {
+    "id": "specs/world-model-ingestion/polling.sql#3",
+    "label": "specs/world-model-ingestion/polling.sql",
+    "p": 0.0026647487641403666,
+    "gold": false
+   },
+   {
+    "id": "commit/09b1f0fe13",
+    "label": "commit 09b1f0f: A cadence was a value in a column and somebody's memory (#105)",
+    "p": 0.0024674966499049988,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-10-20-the-board-sorted-research-first.md#5",
+    "label": "meta/postmortems/2026-10-20-the-board-sorted-research-first.md \u203a Why it drifted",
+    "p": 0.0024371347829674787,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1074.md#6",
+    "label": "board/cards/REM-1074.md \u203a Log",
+    "p": 0.0021538970981132798,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1074.md#4",
+    "label": "board/cards/REM-1074.md \u203a Done when",
+    "p": 0.0018019932586628743,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261028-135943-902a.md#1",
+    "label": "board/messages/M-20261028-135943-902a.md",
+    "p": 0.0016795514199634146,
+    "gold": false
+   },
+   {
+    "id": "specs/workflow-engine/plan-graph.md#25",
+    "label": "specs/workflow-engine/plan-graph.md \u203a 9. Status, and what running it found",
+    "p": 0.0016586368657112516,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1074.md#3",
+    "label": "board/cards/REM-1074.md \u203a Evidence",
+    "p": 0.0014086995798836069,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-881.md#2",
+    "label": "board/cards/REM-881.md \u203a Goal",
+    "p": 0.001386347291531012,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1074.md#1",
+    "label": "board/cards/REM-1074.md",
+    "p": 0.0013848162455899356,
+    "gold": false
+   },
+   {
+    "id": "commit/3fc8482e88",
+    "label": "commit 3fc8482: REM-1219: durability, the lease-reclaim path shown (two of four workers killed mid-walk)",
+    "p": 0.0013387608908334218,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261028-132056-876f.md#1",
+    "label": "board/messages/M-20261028-132056-876f.md",
+    "p": 0.0013344886001609726,
+    "gold": false
+   },
+   {
+    "id": "commit/c32330c291",
+    "label": "commit c32330c: board: REM-1074 in-progress \u2192 done",
+    "p": 0.0012936929971425267,
+    "gold": false
+   },
+   {
+    "id": "k8s/kind/manifests/faultsrv.yaml#1",
+    "label": "k8s/kind/manifests/faultsrv.yaml",
+    "p": 0.001287354573190823,
+    "gold": false
+   },
+   {
+    "id": "commit/c7a6180140",
+    "label": "commit c7a6180: board: note on REM-1074",
+    "p": 0.001276245825870344,
+    "gold": false
+   },
+   {
+    "id": "specs/world-model-ingestion/polling.sql#4",
+    "label": "specs/world-model-ingestion/polling.sql",
+    "p": 0.0012521768821288936,
+    "gold": false
+   },
+   {
+    "id": "commit/ce3d63b1db",
+    "label": "commit ce3d63b: board: note on REM-1074",
+    "p": 0.0012318111566663988,
+    "gold": false
+   },
+   {
+    "id": "commit/f5a19544f6",
+    "label": "commit f5a1954: A turn costs two connections, and nothing said so where somebody would look (#98)",
+    "p": 0.0012285456980595886,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/8710a526d8",
+   "label": "commit 8710a52: Merge pull request #96 from Percolation-Labs/fix/rem-109-long-task-finishes-once",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/ff1a652f14",
+   "label": "commit ff1a652: A two-minute lease bound a five-minute task, and the number had four copies",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "board/cards/REM-1074.md#2",
+   "label": "board/cards/REM-1074.md \u203a Goal",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/spikes/2026-10-27-dream-walk-graphs/durability/README.md#4",
+   "label": "meta/spikes/2026-10-27-dream-walk-graphs/durability/README.md \u203a 3. Two of four workers killed, the others left running (",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/world-model-ingestion/polling.sql#2",
+   "label": "specs/world-model-ingestion/polling.sql",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/9a87941f19",
+   "label": "commit 9a87941: Three measured findings from REM-71, and the one the convergence gate caught (#104)",
+   "wave": 1,
+   "via": "term:rem 109",
+   "gold": false
+  },
+  {
+   "id": "meta/postmortems/2026-09-12-described-three-lines-up.md#12",
+   "label": "meta/postmortems/2026-09-12-described-three-lines-up.md \u203a 3. The controlled experiment: REM-109",
+   "wave": 1,
+   "via": "term:rem 109",
+   "gold": false
+  },
+  {
+   "id": "meta/postmortems/2026-09-12-described-three-lines-up.md#13",
+   "label": "meta/postmortems/2026-09-12-described-three-lines-up.md \u203a 3. The controlled experiment: REM-109",
+   "wave": 1,
+   "via": "term:rem 109",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-109.md#2",
+   "label": "board/cards/REM-109.md \u203a Log",
+   "wave": 1,
+   "via": "term:rem 109",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-71.md#17",
+   "label": "board/cards/REM-71.md \u203a 2026-09-12T14:30:56.116Z \u00b7 Percolation Labs",
+   "wave": 1,
+   "via": "term:rem 109",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "board/team/p8-subsystems-08.md#2",
+    "label": "board/team/p8-subsystems-08.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "specs/world-model-ingestion/brief.md#9",
+    "label": "specs/world-model-ingestion/brief.md \u203a 3.5a The cadence is a column, and the schedule is derived from it",
+    "gold": false
+   },
+   {
+    "id": "specs/world-model-ingestion/polling.sql#3",
+    "label": "specs/world-model-ingestion/polling.sql",
+    "gold": false
+   },
+   {
+    "id": "commit/09b1f0fe13",
+    "label": "commit 09b1f0f: A cadence was a value in a column and somebody's memory (#105)",
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-10-20-the-board-sorted-research-first.md#5",
+    "label": "meta/postmortems/2026-10-20-the-board-sorted-research-first.md \u203a Why it drifted",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "specs/world-model-ingestion/brief.md#9",
+    "label": "specs/world-model-ingestion/brief.md \u203a 3.5a The cadence is a column, and the schedule is derived from it",
+    "gold": false
+   },
+   {
+    "id": "commit/09b1f0fe13",
+    "label": "commit 09b1f0f: A cadence was a value in a column and somebody's memory (#105)",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261028-135943-902a.md#1",
+    "label": "board/messages/M-20261028-135943-902a.md",
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-10-20-the-board-sorted-research-first.md#5",
+    "label": "meta/postmortems/2026-10-20-the-board-sorted-research-first.md \u203a Why it drifted",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-881.md#2",
+    "label": "board/cards/REM-881.md \u203a Goal",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/0b8603a087",
+    "label": "commit 0b8603a: Merge pull request #100 from Percolation-Labs/docs/the-file-told-somebody",
+    "gold": false
+   },
+   {
+    "id": "specs/world-model-ingestion/polling.sql#3",
+    "label": "specs/world-model-ingestion/polling.sql",
+    "gold": false
+   },
+   {
+    "id": "commit/3fc8482e88",
+    "label": "commit 3fc8482: REM-1219: durability, the lease-reclaim path shown (two of four workers killed mid-walk)",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-881.md#2",
+    "label": "board/cards/REM-881.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261028-135943-902a.md#1",
+    "label": "board/messages/M-20261028-135943-902a.md",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "meta/lab/results/q4-switch-cost/result.txt#1",
+    "label": "meta/lab/results/q4-switch-cost/result.txt",
+    "gold": false
+   },
+   {
+    "id": "specs/workflow-engine/spec.md#29",
+    "label": "specs/workflow-engine/spec.md \u203a 14. Precedent check: Microsoft's `pg_durable` \u2014 build our own for now, documented as a p",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261028-135943-902a.md#1",
+    "label": "board/messages/M-20261028-135943-902a.md",
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-10-19-core-shipped-in-a-day.md#9",
+    "label": "meta/postmortems/2026-10-19-core-shipped-in-a-day.md \u203a What went better than expected",
+    "gold": false
+   },
+   {
+    "id": "specs/workflow-engine/failure-modes.md#2",
+    "label": "specs/workflow-engine/failure-modes.md \u203a 1. Failures that report success",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

@@ -1,0 +1,410 @@
+{
+ "qid": "pr:650",
+ "set": "prs",
+ "question": "What work went into this, and why: decision-walks: travel by a relative gate on a low-calibrated judge (top 3 plus every lead at P >= .5, cap 10 targets) -- proposed for walk.sql?",
+ "gold": [
+  {
+   "id": "commit/7e2d8f1938",
+   "label": "commit 7e2d8f1: decision-walks travel rule: a union -- the round's top 3 plus every lead at P >= .5 (bill, Sirsh 14:05Z)",
+   "seed": false
+  },
+  {
+   "id": "commit/b09e592a8d",
+   "label": "commit b09e592: decision-walks: travel by a relative gate on a low-calibrated judge -- top 3 a round, cap 10 targets (pr",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/6a2f06ebca",
+   "label": "commit 6a2f06e: Merge pull request #650 from Percolation-Labs/mike/spec-travel-rule",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/b09e592a8d",
+   "label": "commit b09e592: decision-walks: travel by a relative gate on a low-calibrated judge -- top 3 a round, cap 10 targets (pr",
+   "rank": 2,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "specs/decision-walks/README.md#24",
+   "label": "specs/decision-walks/README.md \u203a Travel: a relative gate for a low-calibrated judge (proposed for walk.sql)",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "specs/decision-walks/README.md#25",
+   "label": "specs/decision-walks/README.md \u203a Travel: a relative gate for a low-calibrated judge (proposed for walk.sql)",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "specs/decision-walks/README.md#27",
+   "label": "specs/decision-walks/README.md \u203a Travel: a relative gate for a low-calibrated judge (proposed for walk.sql)",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/7e2d8f1938",
+    "label": "commit 7e2d8f1: decision-walks travel rule: a union -- the round's top 3 plus every lead at P >= .5 (bill, Sirsh 14:05Z)",
+    "role": "gold"
+   },
+   {
+    "id": "commit/b09e592a8d",
+    "label": "commit b09e592: decision-walks: travel by a relative gate on a low-calibrated judge -- top 3 a round, cap 10 targets (pr",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/7e2d8f1938",
+    "b": "commit/b09e592a8d",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "walks travel",
+      "width": 4
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "commit/b09e592a8d",
+   "gold": "commit/b09e592a8d",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 1430,
+  "within_2_doors": 32427,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "specs/decision-walks/README.md#26",
+    "label": "specs/decision-walks/README.md \u203a Travel: a relative gate for a low-calibrated judge (proposed for walk.sql)",
+    "p": 0.005121035434054494,
+    "gold": false
+   },
+   {
+    "id": "commit/822d531c01",
+    "label": "commit 822d531: Merge pull request #661 from Percolation-Labs/mike/spec-travel-order",
+    "p": 0.003098401245548168,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q2-gate/README.md#3",
+    "label": "meta/lab/results/q2-gate/README.md \u203a Quadrant 2: the product walk's travel gate is absolute, and on chain-like data it r",
+    "p": 0.002987507000062909,
+    "gold": false
+   },
+   {
+    "id": "commit/3dc7643e79",
+    "label": "commit 3dc7643: walklab Q2: the product walk's absolute travel gate rarely opens on chain-like data -- 31% of MuSiQue Je",
+    "p": 0.0026934967501918822,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q2-gate/README.md#2",
+    "label": "meta/lab/results/q2-gate/README.md \u203a Quadrant 2: the product walk's travel gate is absolute, and on chain-like data it r",
+    "p": 0.0026589395065693827,
+    "gold": false
+   },
+   {
+    "id": "commit/7e2d8f1938",
+    "label": "commit 7e2d8f1: decision-walks travel rule: a union -- the round's top 3 plus every lead at P >= .5 (bill, Sirsh 14:05Z)",
+    "p": 0.0025675329893852343,
+    "gold": true
+   },
+   {
+    "id": "meta/lab/results/q4-switch-cost/PROPOSAL.md#2",
+    "label": "meta/lab/results/q4-switch-cost/PROPOSAL.md \u203a The rule (percolate #357, #359)",
+    "p": 0.0023092230886763297,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/casebook/README.md#1",
+    "label": "meta/lab/results/casebook/README.md \u203a Casebook of misses",
+    "p": 0.002232484472275142,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261102-140444-81c8.md#1",
+    "label": "board/messages/M-20261102-140444-81c8.md",
+    "p": 0.0020240928354526917,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-miss-census-topk/cap-result.txt#2",
+    "label": "meta/lab/results/q4-miss-census-topk/cap-result.txt",
+    "p": 0.001937912660199177,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261102-221100-5587.md#1",
+    "label": "board/messages/M-20261102-221100-5587.md",
+    "p": 0.0019328414126368227,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q2-topk-fidelity/README.md#1",
+    "label": "meta/lab/results/q2-topk-fidelity/README.md \u203a walk.sql's walk.travel topk reads what the lab engine reads (2 Nov, mike)",
+    "p": 0.0017906657739143405,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-switch-cost/PROPOSAL.md#6",
+    "label": "meta/lab/results/q4-switch-cost/PROPOSAL.md \u203a What I would switch on first",
+    "p": 0.0017876379745992916,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-miss-census-topk/cap-result.txt#1",
+    "label": "meta/lab/results/q4-miss-census-topk/cap-result.txt",
+    "p": 0.0016732931384208386,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q2-topk-fidelity/fidelity.py#1",
+    "label": "meta/lab/results/q2-topk-fidelity/fidelity.py",
+    "p": 0.0016637782023229178,
+    "gold": false
+   },
+   {
+    "id": "commit/b7c6e3920c",
+    "label": "commit b7c6e39: board: sirsh messages bill",
+    "p": 0.0016636614872401806,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261102-135409-bf54.md#1",
+    "label": "board/messages/M-20261102-135409-bf54.md",
+    "p": 0.0016067640216974376,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-jev-stage0/RULE.md#1",
+    "label": "meta/lab/results/q4-jev-stage0/RULE.md \u203a Jev stage 0: the proposed travel rule against today's gate, with the real judge",
+    "p": 0.0015993265016336264,
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-10-10-lens-library/notes/iterative_revision_convergence.txt#4",
+    "label": "meta/spikes/2026-10-10-lens-library/notes/iterative_revision_convergence.txt",
+    "p": 0.0015967365166223624,
+    "gold": false
+   },
+   {
+    "id": "commit/2f96a3a77f",
+    "label": "commit 2f96a3a: board: bill acknowledges 1 message(s)",
+    "p": 0.001553261973435159,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/6a2f06ebca",
+   "label": "commit 6a2f06e: Merge pull request #650 from Percolation-Labs/mike/spec-travel-rule",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/b09e592a8d",
+   "label": "commit b09e592: decision-walks: travel by a relative gate on a low-calibrated judge -- top 3 a round, cap 10 targets (pr",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "specs/decision-walks/README.md#24",
+   "label": "specs/decision-walks/README.md \u203a Travel: a relative gate for a low-calibrated judge (proposed for walk.sql)",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/decision-walks/README.md#25",
+   "label": "specs/decision-walks/README.md \u203a Travel: a relative gate for a low-calibrated judge (proposed for walk.sql)",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/decision-walks/README.md#27",
+   "label": "specs/decision-walks/README.md \u203a Travel: a relative gate for a low-calibrated judge (proposed for walk.sql)",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/messages/M-20261102-130923-f245.md#1",
+   "label": "board/messages/M-20261102-130923-f245.md",
+   "wave": 1,
+   "via": "term:musique jev",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/dream-metric/OBSERVABLES.md#8",
+   "label": "meta/lab/results/dream-metric/OBSERVABLES.md \u203a Limits",
+   "wave": 1,
+   "via": "term:musique jev",
+   "gold": false
+  },
+  {
+   "id": "commit/66c26f3360",
+   "label": "commit 66c26f3: walklab: a real judge on MuSiQue -- Jev half closes the gap (.44 -> .64 of .96 @100, held-out), $2.88 fo",
+   "wave": 1,
+   "via": "term:musique jev",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/musique-judge/pdist.txt#1",
+   "label": "meta/lab/results/musique-judge/pdist.txt",
+   "wave": 1,
+   "via": "term:musique jev",
+   "gold": false
+  },
+  {
+   "id": "commit/2d89fd1c33",
+   "label": "commit 2d89fd1: Merge pull request #644 from Percolation-Labs/mike/q2-gate-census",
+   "wave": 1,
+   "via": "term:musique jev",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "specs/decision-walks/README.md#26",
+    "label": "specs/decision-walks/README.md \u203a Travel: a relative gate for a low-calibrated judge (proposed for walk.sql)",
+    "gold": false
+   },
+   {
+    "id": "commit/822d531c01",
+    "label": "commit 822d531: Merge pull request #661 from Percolation-Labs/mike/spec-travel-order",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q2-gate/README.md#3",
+    "label": "meta/lab/results/q2-gate/README.md \u203a Quadrant 2: the product walk's travel gate is absolute, and on chain-like data it r",
+    "gold": false
+   },
+   {
+    "id": "commit/3dc7643e79",
+    "label": "commit 3dc7643: walklab Q2: the product walk's absolute travel gate rarely opens on chain-like data -- 31% of MuSiQue Je",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q2-gate/README.md#2",
+    "label": "meta/lab/results/q2-gate/README.md \u203a Quadrant 2: the product walk's travel gate is absolute, and on chain-like data it r",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "specs/decision-walks/README.md#26",
+    "label": "specs/decision-walks/README.md \u203a Travel: a relative gate for a low-calibrated judge (proposed for walk.sql)",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q2-gate/README.md#2",
+    "label": "meta/lab/results/q2-gate/README.md \u203a Quadrant 2: the product walk's travel gate is absolute, and on chain-like data it r",
+    "gold": false
+   },
+   {
+    "id": "commit/3dc7643e79",
+    "label": "commit 3dc7643: walklab Q2: the product walk's absolute travel gate rarely opens on chain-like data -- 31% of MuSiQue Je",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-miss-census-topk/cap-result.txt#2",
+    "label": "meta/lab/results/q4-miss-census-topk/cap-result.txt",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-switch-cost/PROPOSAL.md#2",
+    "label": "meta/lab/results/q4-switch-cost/PROPOSAL.md \u203a The rule (percolate #357, #359)",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/7e2d8f1938",
+    "label": "commit 7e2d8f1: decision-walks travel rule: a union -- the round's top 3 plus every lead at P >= .5 (bill, Sirsh 14:05Z)",
+    "gold": true
+   },
+   {
+    "id": "commit/822d531c01",
+    "label": "commit 822d531: Merge pull request #661 from Percolation-Labs/mike/spec-travel-order",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-switch-cost/PROPOSAL.md#2",
+    "label": "meta/lab/results/q4-switch-cost/PROPOSAL.md \u203a The rule (percolate #357, #359)",
+    "gold": false
+   },
+   {
+    "id": "commit/ff05cd5f2c",
+    "label": "commit ff05cd5: decision-walks: the order of travel inside topk's open set is an open point (ledger 5.32)",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-switch-cost/PROPOSAL.md#1",
+    "label": "meta/lab/results/q4-switch-cost/PROPOSAL.md \u203a Switching on the new walk rule: a proposal for Sirsh (mike, 2 Nov 2026)",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "specs/decision-walks/README.md#26",
+    "label": "specs/decision-walks/README.md \u203a Travel: a relative gate for a low-calibrated judge (proposed for walk.sql)",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-miss-census-topk/cap-result.txt#2",
+    "label": "meta/lab/results/q4-miss-census-topk/cap-result.txt",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-miss-census-topk/result.txt#3",
+    "label": "meta/lab/results/q4-miss-census-topk/result.txt",
+    "gold": false
+   },
+   {
+    "id": "commit/3dc7643e79",
+    "label": "commit 3dc7643: walklab Q2: the product walk's absolute travel gate rarely opens on chain-like data -- 31% of MuSiQue Je",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-miss-census-topk/cap-result.txt#1",
+    "label": "meta/lab/results/q4-miss-census-topk/cap-result.txt",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 1.0,
+  "S": 0.0
+ }
+}

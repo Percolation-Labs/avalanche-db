@@ -1,0 +1,509 @@
+{
+ "qid": "RW:3hop1__131829_39743_24526",
+ "set": "mq",
+ "question": "What is the average winter daytime temperature in the region containing Richmond, in the state where WXBX is located?",
+ "gold": [
+  {
+   "id": "mq:679e7c3ae7f12891",
+   "label": "North Carolina",
+   "seed": false
+  },
+  {
+   "id": "mq:a890dbf8116b7a17",
+   "label": "WXBX",
+   "seed": false
+  },
+  {
+   "id": "mq:e6a61dfaf0670649",
+   "label": "Richmond, Virginia",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:6fbeb99e2764cddd",
+   "label": "Alaska",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:d9d3f076def943b4",
+   "label": "Victoria (Australia)",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:ffdc5580c452ff73",
+   "label": "Bucharest",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:6d61b3afd532eca5",
+   "label": "Kathmandu",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "mq:7b9e12adabcade94",
+   "label": "New York City",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:13e0361a2fb7e2ec",
+    "label": "Columbia, South Carolina",
+    "role": "connector"
+   },
+   {
+    "id": "mq:679e7c3ae7f12891",
+    "label": "North Carolina",
+    "role": "gold"
+   },
+   {
+    "id": "mq:6fbeb99e2764cddd",
+    "label": "Alaska",
+    "role": "seed"
+   },
+   {
+    "id": "mq:a890dbf8116b7a17",
+    "label": "WXBX",
+    "role": "gold"
+   },
+   {
+    "id": "mq:e6a61dfaf0670649",
+    "label": "Richmond, Virginia",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:13e0361a2fb7e2ec",
+    "b": "mq:a890dbf8116b7a17",
+    "via": [
+     {
+      "kind": "term",
+      "key": "three rivers",
+      "width": 5
+     }
+    ]
+   },
+   {
+    "a": "mq:13e0361a2fb7e2ec",
+    "b": "mq:e6a61dfaf0670649",
+    "via": [
+     {
+      "kind": "near",
+      "width": 4
+     },
+     {
+      "kind": "term",
+      "key": "ridge mountains",
+      "width": 3
+     },
+     {
+      "kind": "term",
+      "key": "piedmont region",
+      "width": 4
+     },
+     {
+      "kind": "term",
+      "key": "blue ridge",
+      "width": 6
+     },
+     {
+      "kind": "term",
+      "key": "piedmont",
+      "width": 13
+     },
+     {
+      "kind": "term",
+      "key": "census bureau",
+      "width": 30
+     }
+    ]
+   },
+   {
+    "a": "mq:679e7c3ae7f12891",
+    "b": "mq:6fbeb99e2764cddd",
+    "via": [
+     {
+      "kind": "near",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "freezing",
+      "width": 10
+     },
+     {
+      "kind": "term",
+      "key": "averages",
+      "width": 17
+     },
+     {
+      "kind": "term",
+      "key": "precipitation",
+      "width": 18
+     },
+     {
+      "kind": "term",
+      "key": "temperatures",
+      "width": 48
+     }
+    ]
+   },
+   {
+    "a": "mq:679e7c3ae7f12891",
+    "b": "mq:e6a61dfaf0670649",
+    "via": [
+     {
+      "kind": "near",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "piedmont",
+      "width": 13
+     }
+    ]
+   }
+  ],
+  "cost": 4,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   2,
+   1,
+   2
+  ],
+  "entry": {
+   "seed": "mq:6fbeb99e2764cddd",
+   "gold": "mq:679e7c3ae7f12891",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 2493,
+  "within_2_doors": 18589,
+  "gold_within_1": 1,
+  "gold_within_2": 2,
+  "top_U": [
+   {
+    "id": "mq:e7dc2cbf92b7dc2f",
+    "label": "Sichuan",
+    "p": 0.005511347878546069,
+    "gold": false
+   },
+   {
+    "id": "mq:b1154b80daf8dd44",
+    "label": "New Delhi",
+    "p": 0.004515614245136658,
+    "gold": false
+   },
+   {
+    "id": "mq:31fef13f2c183d28",
+    "label": "Delhi",
+    "p": 0.0038501508529416705,
+    "gold": false
+   },
+   {
+    "id": "mq:e2c9826d4224b30b",
+    "label": "Atlantic City, New Jersey",
+    "p": 0.0036628183758374427,
+    "gold": false
+   },
+   {
+    "id": "mq:8c708167b19069fd",
+    "label": "Climate of the United States",
+    "p": 0.003607042305219071,
+    "gold": false
+   },
+   {
+    "id": "mq:99a17411f627cfe1",
+    "label": "Canada",
+    "p": 0.003275025310945823,
+    "gold": false
+   },
+   {
+    "id": "mq:ad12cd0ae410f803",
+    "label": "Tucson, Arizona",
+    "p": 0.0028072414302230324,
+    "gold": false
+   },
+   {
+    "id": "mq:96736f8e44fa3579",
+    "label": "Phoenix, Arizona",
+    "p": 0.002634647256001613,
+    "gold": false
+   },
+   {
+    "id": "mq:26eb719330156152",
+    "label": "Winter",
+    "p": 0.002459428645703509,
+    "gold": false
+   },
+   {
+    "id": "mq:a2b394afb9143381",
+    "label": "Germany",
+    "p": 0.0024361129216609397,
+    "gold": false
+   },
+   {
+    "id": "mq:7d1d002223fe846b",
+    "label": "Southeast Asia",
+    "p": 0.0022158780595277427,
+    "gold": false
+   },
+   {
+    "id": "mq:10f19c83202a5d02",
+    "label": "Climate of Chile",
+    "p": 0.0018922963282159524,
+    "gold": false
+   },
+   {
+    "id": "mq:6314ed0b34442005",
+    "label": "Seattle",
+    "p": 0.0018423178769190448,
+    "gold": false
+   },
+   {
+    "id": "mq:7951a9a63e883816",
+    "label": "Mount Stirling",
+    "p": 0.0018127689243262234,
+    "gold": false
+   },
+   {
+    "id": "mq:fad1924fd6f3d9e4",
+    "label": "Russkaya Station",
+    "p": 0.0016573343641545014,
+    "gold": false
+   },
+   {
+    "id": "mq:c5b88426198165ab",
+    "label": "Imperial Valley",
+    "p": 0.0016256471630985794,
+    "gold": false
+   },
+   {
+    "id": "mq:36d9cc36350d3f53",
+    "label": "Victoria (Australia)",
+    "p": 0.0015279702272780215,
+    "gold": false
+   },
+   {
+    "id": "mq:187fc3350bc39ec1",
+    "label": "Galicia (Spain)",
+    "p": 0.0015134931184300432,
+    "gold": false
+   },
+   {
+    "id": "mq:d3d13cafd6a0fc9d",
+    "label": "Climate of California",
+    "p": 0.0015067996629443072,
+    "gold": false
+   },
+   {
+    "id": "mq:679e7c3ae7f12891",
+    "label": "North Carolina",
+    "p": 0.0014812374276711936,
+    "gold": true
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:6fbeb99e2764cddd",
+   "label": "Alaska",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:d9d3f076def943b4",
+   "label": "Victoria (Australia)",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:ffdc5580c452ff73",
+   "label": "Bucharest",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:6d61b3afd532eca5",
+   "label": "Kathmandu",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:7b9e12adabcade94",
+   "label": "New York City",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:26eb719330156152",
+   "label": "Winter",
+   "wave": 1,
+   "via": "term:colder",
+   "gold": false
+  },
+  {
+   "id": "mq:679e7c3ae7f12891",
+   "label": "North Carolina",
+   "wave": 1,
+   "via": "term:colder",
+   "gold": true
+  },
+  {
+   "id": "mq:059c551c81c8dc94",
+   "label": "Colder Weather",
+   "wave": 1,
+   "via": "term:colder",
+   "gold": false
+  },
+  {
+   "id": "mq:384ff2e0fd42d9a9",
+   "label": "Norway",
+   "wave": 1,
+   "via": "term:colder",
+   "gold": false
+  },
+  {
+   "id": "mq:a7ad476ff64f529b",
+   "label": "Goodrich Corporation",
+   "wave": 2,
+   "via": "term:north carolina",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:e7dc2cbf92b7dc2f",
+    "label": "Sichuan",
+    "gold": false
+   },
+   {
+    "id": "mq:b1154b80daf8dd44",
+    "label": "New Delhi",
+    "gold": false
+   },
+   {
+    "id": "mq:31fef13f2c183d28",
+    "label": "Delhi",
+    "gold": false
+   },
+   {
+    "id": "mq:e2c9826d4224b30b",
+    "label": "Atlantic City, New Jersey",
+    "gold": false
+   },
+   {
+    "id": "mq:8c708167b19069fd",
+    "label": "Climate of the United States",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:31fef13f2c183d28",
+    "label": "Delhi",
+    "gold": false
+   },
+   {
+    "id": "mq:b1154b80daf8dd44",
+    "label": "New Delhi",
+    "gold": false
+   },
+   {
+    "id": "mq:96736f8e44fa3579",
+    "label": "Phoenix, Arizona",
+    "gold": false
+   },
+   {
+    "id": "mq:99a17411f627cfe1",
+    "label": "Canada",
+    "gold": false
+   },
+   {
+    "id": "mq:e2c9826d4224b30b",
+    "label": "Atlantic City, New Jersey",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:31fef13f2c183d28",
+    "label": "Delhi",
+    "gold": false
+   },
+   {
+    "id": "mq:b1154b80daf8dd44",
+    "label": "New Delhi",
+    "gold": false
+   },
+   {
+    "id": "mq:96736f8e44fa3579",
+    "label": "Phoenix, Arizona",
+    "gold": false
+   },
+   {
+    "id": "mq:99a17411f627cfe1",
+    "label": "Canada",
+    "gold": false
+   },
+   {
+    "id": "mq:e7dc2cbf92b7dc2f",
+    "label": "Sichuan",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:288157cc2fdb82dc",
+    "label": "Plymouth",
+    "gold": false
+   },
+   {
+    "id": "mq:31fef13f2c183d28",
+    "label": "Delhi",
+    "gold": false
+   },
+   {
+    "id": "mq:57685d5952e3bab9",
+    "label": "Eden Creek",
+    "gold": false
+   },
+   {
+    "id": "mq:071329547590c123",
+    "label": "Shannon Brook",
+    "gold": false
+   },
+   {
+    "id": "mq:96736f8e44fa3579",
+    "label": "Phoenix, Arizona",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

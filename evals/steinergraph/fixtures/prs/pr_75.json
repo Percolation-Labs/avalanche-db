@@ -1,0 +1,412 @@
+{
+ "qid": "pr:75",
+ "set": "prs",
+ "question": "What work went into this, and why: A corrected vocabulary row reached fresh installs and nowhere else?",
+ "gold": [
+  {
+   "id": "commit/78ab16e34f",
+   "label": "commit 78ab16e: Regenerate the extension SQL against main",
+   "seed": false
+  },
+  {
+   "id": "commit/b1dd7c49f7",
+   "label": "commit b1dd7c4: A corrected vocabulary row reached fresh installs and nowhere else",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/6002b45d4d",
+   "label": "commit 6002b45: Merge pull request #75 from Percolation-Labs/fix/rem-68-vocabulary-reaches-upgrades",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/b1dd7c49f7",
+   "label": "commit b1dd7c4: A corrected vocabulary row reached fresh installs and nowhere else",
+   "rank": 2,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "commit/d8a393dc5b",
+   "label": "commit d8a393d: The views REM-62 added reached fresh installs and not upgrades",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-68.md#1",
+   "label": "board/cards/REM-68.md",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "meta/postmortems/2026-09-04-user-rbac-review.md#6",
+   "label": "meta/postmortems/2026-09-04-user-rbac-review.md \u203a 3. An upgraded database's vocabulary pointed at policies that no longe",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/78ab16e34f",
+    "label": "commit 78ab16e: Regenerate the extension SQL against main",
+    "role": "gold"
+   },
+   {
+    "id": "commit/b1dd7c49f7",
+    "label": "commit b1dd7c4: A corrected vocabulary row reached fresh installs and nowhere else",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/78ab16e34f",
+    "b": "commit/b1dd7c49f7",
+    "via": [
+     {
+      "kind": "term",
+      "key": "session_01pakd8pby78bs7qljjk4b4j",
+      "width": 19
+     },
+     {
+      "kind": "term",
+      "key": "code session_01pakd8pby78bs7qljjk4b4j",
+      "width": 19
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "commit/b1dd7c49f7",
+   "gold": "commit/b1dd7c49f7",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 2396,
+  "within_2_doors": 33366,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "specs/user-rbac/schema.sql#10",
+    "label": "specs/user-rbac/schema.sql",
+    "p": 0.003995306395234682,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-12-true-when-it-was-measured.md#18",
+    "label": "meta/postmortems/2026-09-12-true-when-it-was-measured.md \u203a 6. Trend or one-off, against the ledger",
+    "p": 0.002940385071642959,
+    "gold": false
+   },
+   {
+    "id": "commit/35d194432d",
+    "label": "commit 35d1944: Merge pull request #76 from Percolation-Labs/fix/rem-62-regenerate-extension-sql",
+    "p": 0.0023399317715911026,
+    "gold": false
+   },
+   {
+    "id": "commit/37ed4cd487",
+    "label": "commit 37ed4cd: rows, not schema: the rule, and a gate that reads specs/ (REM-655) (#335)",
+    "p": 0.002329541064442934,
+    "gold": false
+   },
+   {
+    "id": "commit/1b0e2a434d",
+    "label": "commit 1b0e2a4: Merge remote-tracking branch 'origin/main' into fix/rem-68-vocabulary-reaches-upgrades",
+    "p": 0.0019033141267666726,
+    "gold": false
+   },
+   {
+    "id": "commit/8a1a912442",
+    "label": "commit 8a1a912: Merge remote-tracking branch 'origin/main' into fix/rem-68-vocabulary-reaches-upgrades",
+    "p": 0.00187408187909171,
+    "gold": false
+   },
+   {
+    "id": "commit/f533c0726b",
+    "label": "commit f533c07: Merge remote-tracking branch 'origin/main' into fix/rem-68-vocabulary-reaches-upgrades",
+    "p": 0.001843458366414403,
+    "gold": false
+   },
+   {
+    "id": "commit/24d1f91f2c",
+    "label": "commit 24d1f91: The new default reached fresh installs and not upgrades, which is a fifth copy",
+    "p": 0.001803400911327563,
+    "gold": false
+   },
+   {
+    "id": "commit/3e0dbe007a",
+    "label": "commit 3e0dbe0: Merge remote-tracking branch 'origin/main' into fix/rem-68-vocabulary-reaches-upgrades",
+    "p": 0.001768250773792622,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-12-true-when-it-was-measured.md#11",
+    "label": "meta/postmortems/2026-09-12-true-when-it-was-measured.md \u203a 4. A gate that is red about the machine",
+    "p": 0.0017479806658708104,
+    "gold": false
+   },
+   {
+    "id": "specs/world-model-ingestion/integration.sql#3",
+    "label": "specs/world-model-ingestion/integration.sql",
+    "p": 0.0016981919338292695,
+    "gold": false
+   },
+   {
+    "id": "commit/7b30bd5884",
+    "label": "commit 7b30bd5: An administered database, upgraded, still means what admin means",
+    "p": 0.001695866173721194,
+    "gold": false
+   },
+   {
+    "id": "commit/06d5ea069c",
+    "label": "commit 06d5ea0: A backup carried every resource and none of the channels they point at",
+    "p": 0.0015515708966357025,
+    "gold": false
+   },
+   {
+    "id": "commit/31a94ddd00",
+    "label": "commit 31a94dd: A gate that can write: the hook rebuilt the served database and a test committed to the branch (#88)",
+    "p": 0.001515564283475915,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-68.md#2",
+    "label": "board/cards/REM-68.md \u203a Log",
+    "p": 0.0014028991858951877,
+    "gold": false
+   },
+   {
+    "id": "specs/agentic/declarations.md#23",
+    "label": "specs/agentic/declarations.md \u203a 11. What is new, and the order to build it",
+    "p": 0.0012062105215882549,
+    "gold": false
+   },
+   {
+    "id": "commit/cbc9effe0e",
+    "label": "commit cbc9eff: The branch that announced \"all sessions revoked\" had never once run",
+    "p": 0.0011758932068994792,
+    "gold": false
+   },
+   {
+    "id": "specs/identity/declarations.sql#3",
+    "label": "specs/identity/declarations.sql",
+    "p": 0.0011609898822885316,
+    "gold": false
+   },
+   {
+    "id": "commit/be640251dd",
+    "label": "commit be64025: A workflow definition belonged to nobody, so starting one asked nothing (#107)",
+    "p": 0.0011030667929072273,
+    "gold": false
+   },
+   {
+    "id": "specs/identity/declarations.sql#4",
+    "label": "specs/identity/declarations.sql",
+    "p": 0.0010664339153545154,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/6002b45d4d",
+   "label": "commit 6002b45: Merge pull request #75 from Percolation-Labs/fix/rem-68-vocabulary-reaches-upgrades",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/b1dd7c49f7",
+   "label": "commit b1dd7c4: A corrected vocabulary row reached fresh installs and nowhere else",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "commit/d8a393dc5b",
+   "label": "commit d8a393d: The views REM-62 added reached fresh installs and not upgrades",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-68.md#1",
+   "label": "board/cards/REM-68.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/postmortems/2026-09-04-user-rbac-review.md#6",
+   "label": "meta/postmortems/2026-09-04-user-rbac-review.md \u203a 3. An upgraded database's vocabulary pointed at policies that no longe",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/identity/declarations.sql#5",
+   "label": "specs/identity/declarations.sql",
+   "wave": 1,
+   "via": "term:fresh installs",
+   "gold": false
+  },
+  {
+   "id": "commit/35d194432d",
+   "label": "commit 35d1944: Merge pull request #76 from Percolation-Labs/fix/rem-62-regenerate-extension-sql",
+   "wave": 1,
+   "via": "term:fresh installs",
+   "gold": false
+  },
+  {
+   "id": "meta/postmortems/2026-09-12-described-three-lines-up.md#12",
+   "label": "meta/postmortems/2026-09-12-described-three-lines-up.md \u203a 3. The controlled experiment: REM-109",
+   "wave": 1,
+   "via": "term:fresh installs",
+   "gold": false
+  },
+  {
+   "id": "meta/postmortems/2026-09-04-resource-scoping.md#4",
+   "label": "meta/postmortems/2026-09-04-resource-scoping.md \u203a 2. Fresh installs and upgrades are different databases",
+   "wave": 1,
+   "via": "term:fresh installs",
+   "gold": false
+  },
+  {
+   "id": "meta/postmortems/2026-09-04-resource-scoping.md#3",
+   "label": "meta/postmortems/2026-09-04-resource-scoping.md \u203a 2. Fresh installs and upgrades are different databases",
+   "wave": 1,
+   "via": "term:fresh installs",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "specs/user-rbac/schema.sql#10",
+    "label": "specs/user-rbac/schema.sql",
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-12-true-when-it-was-measured.md#18",
+    "label": "meta/postmortems/2026-09-12-true-when-it-was-measured.md \u203a 6. Trend or one-off, against the ledger",
+    "gold": false
+   },
+   {
+    "id": "commit/35d194432d",
+    "label": "commit 35d1944: Merge pull request #76 from Percolation-Labs/fix/rem-62-regenerate-extension-sql",
+    "gold": false
+   },
+   {
+    "id": "commit/37ed4cd487",
+    "label": "commit 37ed4cd: rows, not schema: the rule, and a gate that reads specs/ (REM-655) (#335)",
+    "gold": false
+   },
+   {
+    "id": "commit/1b0e2a434d",
+    "label": "commit 1b0e2a4: Merge remote-tracking branch 'origin/main' into fix/rem-68-vocabulary-reaches-upgrades",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "specs/user-rbac/schema.sql#10",
+    "label": "specs/user-rbac/schema.sql",
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-12-true-when-it-was-measured.md#18",
+    "label": "meta/postmortems/2026-09-12-true-when-it-was-measured.md \u203a 6. Trend or one-off, against the ledger",
+    "gold": false
+   },
+   {
+    "id": "commit/35d194432d",
+    "label": "commit 35d1944: Merge pull request #76 from Percolation-Labs/fix/rem-62-regenerate-extension-sql",
+    "gold": false
+   },
+   {
+    "id": "commit/24d1f91f2c",
+    "label": "commit 24d1f91: The new default reached fresh installs and not upgrades, which is a fifth copy",
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-12-true-when-it-was-measured.md#11",
+    "label": "meta/postmortems/2026-09-12-true-when-it-was-measured.md \u203a 4. A gate that is red about the machine",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/35d194432d",
+    "label": "commit 35d1944: Merge pull request #76 from Percolation-Labs/fix/rem-62-regenerate-extension-sql",
+    "gold": false
+   },
+   {
+    "id": "specs/user-rbac/schema.sql#10",
+    "label": "specs/user-rbac/schema.sql",
+    "gold": false
+   },
+   {
+    "id": "commit/1b0e2a434d",
+    "label": "commit 1b0e2a4: Merge remote-tracking branch 'origin/main' into fix/rem-68-vocabulary-reaches-upgrades",
+    "gold": false
+   },
+   {
+    "id": "commit/3e0dbe007a",
+    "label": "commit 3e0dbe0: Merge remote-tracking branch 'origin/main' into fix/rem-68-vocabulary-reaches-upgrades",
+    "gold": false
+   },
+   {
+    "id": "commit/8a1a912442",
+    "label": "commit 8a1a912: Merge remote-tracking branch 'origin/main' into fix/rem-68-vocabulary-reaches-upgrades",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "specs/user-rbac/schema.sql#10",
+    "label": "specs/user-rbac/schema.sql",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-487.md#2",
+    "label": "board/cards/REM-487.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "commit/35d194432d",
+    "label": "commit 35d1944: Merge pull request #76 from Percolation-Labs/fix/rem-62-regenerate-extension-sql",
+    "gold": false
+   },
+   {
+    "id": "commit/24d1f91f2c",
+    "label": "commit 24d1f91: The new default reached fresh installs and not upgrades, which is a fifth copy",
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-12-described-three-lines-up.md#12",
+    "label": "meta/postmortems/2026-09-12-described-three-lines-up.md \u203a 3. The controlled experiment: REM-109",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

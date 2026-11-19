@@ -1,0 +1,434 @@
+{
+ "qid": "RW:3hop1__145924_131905_41948",
+ "set": "mq",
+ "question": "Besides the Irish Channel and the body of water by the city Caspar Voght died in, what else lowered in the last cold phase?",
+ "gold": [
+  {
+   "id": "mq:2ff2ba39737d7113",
+   "label": "Rhine",
+   "seed": true
+  },
+  {
+   "id": "mq:4b9087563e4666cf",
+   "label": "Hamburg",
+   "seed": false
+  },
+  {
+   "id": "mq:ccb33dec9b0e9a54",
+   "label": "Caspar Voght",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:2ff2ba39737d7113",
+   "label": "Rhine",
+   "rank": 1,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:ccb33dec9b0e9a54",
+   "label": "Caspar Voght",
+   "rank": 2,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:22b6fa06f70bafa7",
+   "label": "Human hair growth",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:cc30ebc858b7abaf",
+   "label": "Irish Channel, New Orleans",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:4d57f509899b8d3a",
+   "label": "Han dynasty",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:2ff2ba39737d7113",
+    "label": "Rhine",
+    "role": "gold"
+   },
+   {
+    "id": "mq:4b9087563e4666cf",
+    "label": "Hamburg",
+    "role": "gold"
+   },
+   {
+    "id": "mq:ccb33dec9b0e9a54",
+    "label": "Caspar Voght",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:2ff2ba39737d7113",
+    "b": "mq:4b9087563e4666cf",
+    "via": [
+     {
+      "kind": "term",
+      "key": "north sea",
+      "width": 21
+     }
+    ]
+   },
+   {
+    "a": "mq:4b9087563e4666cf",
+    "b": "mq:ccb33dec9b0e9a54",
+    "via": [
+     {
+      "kind": "near",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "hamburg",
+      "width": 29
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   2,
+   1
+  ],
+  "entry": {
+   "seed": "mq:2ff2ba39737d7113",
+   "gold": "mq:2ff2ba39737d7113",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 3048,
+  "within_2_doors": 18032,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "mq:b8fdae5568005437",
+    "label": "Milan, New Orleans",
+    "p": 0.009898354996063952,
+    "gold": false
+   },
+   {
+    "id": "mq:c0f4b5e81b333a8a",
+    "label": "English Channel",
+    "p": 0.002461542287289897,
+    "gold": false
+   },
+   {
+    "id": "mq:1a57932af607ae47",
+    "label": "English Channel",
+    "p": 0.002437911824679234,
+    "gold": false
+   },
+   {
+    "id": "mq:982cb9ee8b541c86",
+    "label": "Pleistocene",
+    "p": 0.0022514466838115515,
+    "gold": false
+   },
+   {
+    "id": "mq:c872b663070f6f7d",
+    "label": "History of medicine",
+    "p": 0.0017557265476474788,
+    "gold": false
+   },
+   {
+    "id": "mq:28dcd9d79e9f6960",
+    "label": "Ralph de Toledano",
+    "p": 0.001736581549440227,
+    "gold": false
+   },
+   {
+    "id": "mq:e345adc339bbe9ce",
+    "label": "Hair transplantation",
+    "p": 0.001627899411571737,
+    "gold": false
+   },
+   {
+    "id": "mq:d4d2e2e3902630e7",
+    "label": "Black Monday (1987)",
+    "p": 0.0014431624387038597,
+    "gold": false
+   },
+   {
+    "id": "mq:294636a9a0777796",
+    "label": "Aragorn",
+    "p": 0.0014424335403803782,
+    "gold": false
+   },
+   {
+    "id": "mq:10f29b08c3bc43a0",
+    "label": "Han dynasty",
+    "p": 0.0013389576111275676,
+    "gold": false
+   },
+   {
+    "id": "mq:80a5d530c6b5c055",
+    "label": "Peter Fliesteden",
+    "p": 0.0013107907708510681,
+    "gold": false
+   },
+   {
+    "id": "mq:aedb2b7d6edfe8ff",
+    "label": "HMAS Doomba",
+    "p": 0.0012932113324733176,
+    "gold": false
+   },
+   {
+    "id": "mq:e57923f5adb0b256",
+    "label": "United Nations Population Fund",
+    "p": 0.0012467673478527672,
+    "gold": false
+   },
+   {
+    "id": "mq:cc244caf652ce66a",
+    "label": "Rick Leventhal",
+    "p": 0.0012284094255800028,
+    "gold": false
+   },
+   {
+    "id": "mq:34109bb84f7deff4",
+    "label": "Clinical death",
+    "p": 0.0012247045969079565,
+    "gold": false
+   },
+   {
+    "id": "mq:efd2f0d15b6e45d1",
+    "label": "Beverly Loraine Greene",
+    "p": 0.0009351032698669947,
+    "gold": false
+   },
+   {
+    "id": "mq:c8b15d73596e7de2",
+    "label": "History of India",
+    "p": 0.0009178400523639116,
+    "gold": false
+   },
+   {
+    "id": "mq:d9a8f0eb3e8cc4c8",
+    "label": "Bonneville flood",
+    "p": 0.0009087423938025901,
+    "gold": false
+   },
+   {
+    "id": "mq:be833f65bc924b78",
+    "label": "Economy of the United States",
+    "p": 0.0008000839561824757,
+    "gold": false
+   },
+   {
+    "id": "mq:a0875775a9e8c04d",
+    "label": "Music of The Lord of the Rings film series",
+    "p": 0.0007960396882543082,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:2ff2ba39737d7113",
+   "label": "Rhine",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:ccb33dec9b0e9a54",
+   "label": "Caspar Voght",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:22b6fa06f70bafa7",
+   "label": "Human hair growth",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:cc30ebc858b7abaf",
+   "label": "Irish Channel, New Orleans",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:4d57f509899b8d3a",
+   "label": "Han dynasty",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:d9a8f0eb3e8cc4c8",
+   "label": "Bonneville flood",
+   "wave": 1,
+   "via": "term:ice age",
+   "gold": false
+  },
+  {
+   "id": "mq:982cb9ee8b541c86",
+   "label": "Pleistocene",
+   "wave": 1,
+   "via": "term:ice age",
+   "gold": false
+  },
+  {
+   "id": "mq:ddf4fd7b42c9ac77",
+   "label": "Dornbusch (Hiddensee)",
+   "wave": 1,
+   "via": "term:ice age",
+   "gold": false
+  },
+  {
+   "id": "mq:601b06c5329ec613",
+   "label": "Alps",
+   "wave": 1,
+   "via": "term:ice age",
+   "gold": false
+  },
+  {
+   "id": "mq:b468046536c5f49b",
+   "label": "Geological history of Earth",
+   "wave": 1,
+   "via": "term:ice age",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:b8fdae5568005437",
+    "label": "Milan, New Orleans",
+    "gold": false
+   },
+   {
+    "id": "mq:c0f4b5e81b333a8a",
+    "label": "English Channel",
+    "gold": false
+   },
+   {
+    "id": "mq:1a57932af607ae47",
+    "label": "English Channel",
+    "gold": false
+   },
+   {
+    "id": "mq:982cb9ee8b541c86",
+    "label": "Pleistocene",
+    "gold": false
+   },
+   {
+    "id": "mq:c872b663070f6f7d",
+    "label": "History of medicine",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:c0f4b5e81b333a8a",
+    "label": "English Channel",
+    "gold": false
+   },
+   {
+    "id": "mq:1a57932af607ae47",
+    "label": "English Channel",
+    "gold": false
+   },
+   {
+    "id": "mq:b8fdae5568005437",
+    "label": "Milan, New Orleans",
+    "gold": false
+   },
+   {
+    "id": "mq:c872b663070f6f7d",
+    "label": "History of medicine",
+    "gold": false
+   },
+   {
+    "id": "mq:ad95be900918b5d0",
+    "label": "Bacteria",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:c0f4b5e81b333a8a",
+    "label": "English Channel",
+    "gold": false
+   },
+   {
+    "id": "mq:1a57932af607ae47",
+    "label": "English Channel",
+    "gold": false
+   },
+   {
+    "id": "mq:b8fdae5568005437",
+    "label": "Milan, New Orleans",
+    "gold": false
+   },
+   {
+    "id": "mq:c872b663070f6f7d",
+    "label": "History of medicine",
+    "gold": false
+   },
+   {
+    "id": "mq:ad95be900918b5d0",
+    "label": "Bacteria",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:c0f4b5e81b333a8a",
+    "label": "English Channel",
+    "gold": false
+   },
+   {
+    "id": "mq:1a57932af607ae47",
+    "label": "English Channel",
+    "gold": false
+   },
+   {
+    "id": "mq:be8344184d47fbbb",
+    "label": "Hubert Latham",
+    "gold": false
+   },
+   {
+    "id": "mq:1a34d96260bae03e",
+    "label": "Harrisville Pond",
+    "gold": false
+   },
+   {
+    "id": "mq:b3466d06767ede20",
+    "label": "Ekulu River",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

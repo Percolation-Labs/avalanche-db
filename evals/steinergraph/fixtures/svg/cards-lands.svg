@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 396" font-family="system-ui, sans-serif" font-size="12">
+<style>.t{fill:#1d1d1f}.m{fill:#6e6e73}.e{stroke:#0a7d5a;stroke-width:2;fill:none}.k{fill:#0a7d5a;font-size:10px}</style>
+<rect width="1180" height="396" fill="#fff"/>
+<text x="20" y="28" font-size="15" font-weight="600" class="t">Cards · lands: card:REM-83</text>
+<text x="20" y="50" class="m">What was done about this, and why: packages: a channel a package declares is visible to the code that fills it?</text>
+<text x="40" y="78" font-weight="600" class="m">search’s seeds</text><text x="430" y="78" font-weight="600" class="m">connectors and walk reads</text><text x="820" y="78" font-weight="600" class="m">gold</text>
+<path class="e" d="M970,96 C580.0,96 580.0,142 190,142"/>
+<rect x="537.0" y="104.0" width="136.20000000000002" height="15" rx="3" fill="#fff" opacity=".9"/>
+<text class="k" x="540.0" y="115.0">“package channel” (5)</text>
+<path class="e" d="M970,96 C580.0,96 580.0,234 190,234"/>
+<rect x="537.0" y="150.0" width="136.20000000000002" height="15" rx="3" fill="#fff" opacity=".9"/>
+<text class="k" x="540.0" y="161.0">“channel visible” (5)</text>
+<path class="e" d="M970,96 C580.0,96 580.0,280 190,280"/>
+<rect x="537.0" y="173.0" width="43.2" height="15" rx="3" fill="#fff" opacity=".9"/>
+<text class="k" x="540.0" y="184.0">Beside</text>
+<path class="e" d="M970,142 C775.0,142 775.0,96 580,96"/>
+<rect x="732.0" y="104.0" width="154.8" height="15" rx="3" fill="#fff" opacity=".9"/>
+<text class="k" x="735.0" y="115.0">“shared_org private” (7)</text>
+<path class="e" d="M190,142 C310.0,142 310.0,96 430,96"/>
+<rect x="267.0" y="104.0" width="117.60000000000001" height="15" rx="3" fill="#fff" opacity=".9"/>
+<text class="k" x="270.0" y="115.0">“code filling” (2)</text>
+<path class="e" d="M190,188 C190.0,188 190.0,280 190,280"/>
+<rect x="147.0" y="219.0" width="43.2" height="15" rx="3" fill="#fff" opacity=".9"/>
+<text class="k" x="150.0" y="230.0">Beside</text>
+<rect x="820" y="81" width="340" height="28" rx="6" fill="#f5c400" stroke="#0a7d5a" stroke-width="2"/>
+<text x="828" y="100" class="t">commit 139b4c7: Merge remote-tracking branc…</text>
+<text x="1158" y="100" text-anchor="end" class="m" font-size="10">LQ top 5</text>
+<rect x="820" y="127" width="340" height="28" rx="6" fill="#f5c400" stroke="#0a7d5a" stroke-width="2"/>
+<text x="828" y="146" class="t">commit 1acc8f9: Three tickets that share on…</text>
+<rect x="40" y="127" width="340" height="28" rx="6" fill="#f5c400" stroke="#0a7d5a" stroke-width="2"/>
+<text x="48" y="146" class="t">commit 31360cd: Merge pull request #61 from…</text>
+<rect x="40" y="173" width="340" height="28" rx="6" fill="#f5c400" stroke="#0a7d5a" stroke-width="2"/>
+<text x="48" y="192" class="t">commit 9f6f5c3: Merge remote-tracking branc…</text>
+<rect x="40" y="219" width="340" height="28" rx="6" fill="#f5c400" stroke="#0a7d5a" stroke-width="2"/>
+<text x="48" y="238" class="t">commit b39fb0b: Merge remote-tracking branc…</text>
+<rect x="40" y="265" width="340" height="28" rx="6" fill="#f5c400" stroke="#0a7d5a" stroke-width="2"/>
+<text x="48" y="284" class="t">commit d215722: Merge remote-tracking branc…</text>
+<rect x="430" y="81" width="340" height="28" rx="6" fill="#f2f2f4" stroke="#0a7d5a" stroke-width="2"/>
+<text x="438" y="100" class="t">commit eb3be1b: A package declared a channe…</text>
+<text x="768" y="100" text-anchor="end" class="m" font-size="10">walk w1</text>
+<rect x="40" y="81" width="340" height="28" rx="6" fill="#dbe9ff" stroke="#c7c7cc" stroke-width="1"/>
+<text x="48" y="100" class="t">board/cards/REM-83.md</text>
+<rect x="430" y="265" width="340" height="28" rx="6" fill="#f2f2f4" stroke="#c7c7cc" stroke-width="1"/>
+<text x="438" y="284" class="t">specs/world-model-ingestion/integration.sql</text>
+<text x="768" y="284" text-anchor="end" class="m" font-size="10">walk w1</text>
+<rect x="430" y="173" width="340" height="28" rx="6" fill="#f2f2f4" stroke="#c7c7cc" stroke-width="1"/>
+<text x="438" y="192" class="t">commit 41474e0: A load from zero registers …</text>
+<text x="768" y="192" text-anchor="end" class="m" font-size="10">walk w1</text>
+<rect x="430" y="219" width="340" height="28" rx="6" fill="#f2f2f4" stroke="#c7c7cc" stroke-width="1"/>
+<text x="438" y="238" class="t">specs/packages/schema.sql</text>
+<text x="768" y="238" text-anchor="end" class="m" font-size="10">walk w1</text>
+<rect x="430" y="127" width="340" height="28" rx="6" fill="#f2f2f4" stroke="#c7c7cc" stroke-width="1"/>
+<text x="438" y="146" class="t">board/cards/REM-100.md</text>
+<text x="768" y="146" text-anchor="end" class="m" font-size="10">walk w2</text>
+<text x="20" y="362" class="m">Steiner cost 6 links; nearest seed 0 doors from gold; graph within 1 door of the seeds: 526 passages, within 2: 29,097</text>
+<text x="20" y="382" class="m">recall@5 beyond the seeds: search 0.50, U 0.50, Q 0.50, LQ 0.50. Yellow gold, blue seeds, green-edged nodes and links form the Steiner graph.</text>
+</svg>

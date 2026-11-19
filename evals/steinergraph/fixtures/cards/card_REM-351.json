@@ -1,0 +1,453 @@
+{
+ "qid": "card:REM-351",
+ "set": "cards",
+ "question": "What was done about this, and why: specs: marketplace search has one agreed design: what is searchable, what is embedded, who pays and the request shape?",
+ "gold": [
+  {
+   "id": "commit/31c39f9f76",
+   "label": "commit 31c39f9: Merge pull request #293 from Percolation-Labs/amartey/rem-351-search-spec",
+   "seed": false
+  },
+  {
+   "id": "commit/c82e0f99db",
+   "label": "commit c82e0f9: search: the marketplace search as built, and the semantic half proposed (REM-351)",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/eb7459d05e",
+   "label": "commit eb7459d: board: file REM-351 specs: marketplace search has one agreed design: what is searchable, what is embedde",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-351.md#1",
+   "label": "board/cards/REM-351.md",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-351.md#2",
+   "label": "board/cards/REM-351.md \u203a Goal",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-351.md#4",
+   "label": "board/cards/REM-351.md \u203a Done when",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-351.md#7",
+   "label": "board/cards/REM-351.md \u203a Log",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "board/cards/REM-351.md#7",
+    "label": "board/cards/REM-351.md \u203a Log",
+    "role": "seed"
+   },
+   {
+    "id": "commit/31c39f9f76",
+    "label": "commit 31c39f9: Merge pull request #293 from Percolation-Labs/amartey/rem-351-search-spec",
+    "role": "gold"
+   },
+   {
+    "id": "commit/c82e0f99db",
+    "label": "commit c82e0f9: search: the marketplace search as built, and the semantic half proposed (REM-351)",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "board/cards/REM-351.md#7",
+    "b": "commit/31c39f9f76",
+    "via": [
+     {
+      "kind": "term",
+      "key": "semantic half",
+      "width": 4
+     },
+     {
+      "kind": "term",
+      "key": "marketplace search",
+      "width": 19
+     },
+     {
+      "kind": "term",
+      "key": "rem 351",
+      "width": 29
+     }
+    ]
+   },
+   {
+    "a": "commit/31c39f9f76",
+    "b": "commit/c82e0f99db",
+    "via": [
+     {
+      "kind": "term",
+      "key": "half proposed",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "proposed rem",
+      "width": 3
+     },
+     {
+      "kind": "term",
+      "key": "semantic half",
+      "width": 4
+     },
+     {
+      "kind": "term",
+      "key": "marketplace search",
+      "width": 19
+     },
+     {
+      "kind": "term",
+      "key": "rem 351",
+      "width": 29
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "board/cards/REM-351.md#7",
+   "gold": "commit/31c39f9f76",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 1884,
+  "within_2_doors": 34552,
+  "gold_within_1": 2,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "commit/9021275670",
+    "label": "commit 9021275: specs: marketplace cards open with the chosen picture or a topic filler, and charts fill the band (REM-3",
+    "p": 0.002921805460247577,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-351.md#3",
+    "label": "board/cards/REM-351.md \u203a Evidence",
+    "p": 0.0027401867464874646,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-352.md#4",
+    "label": "board/cards/REM-352.md \u203a Done when",
+    "p": 0.002708755507760692,
+    "gold": false
+   },
+   {
+    "id": "commit/55bd85cd84",
+    "label": "commit 55bd85c: board: file REM-352 marketplace: one search endpoint and MCP tool find research by tags, titles, categor",
+    "p": 0.002642264690030701,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-352.md#7",
+    "label": "board/cards/REM-352.md \u203a Log",
+    "p": 0.0024893611100020607,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-286.md#7",
+    "label": "board/cards/REM-286.md \u203a Log",
+    "p": 0.0024389955155021065,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-352.md#5",
+    "label": "board/cards/REM-352.md \u203a Scope",
+    "p": 0.0022440356808768303,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/search.md#8",
+    "label": "specs/percolate-application/search.md \u203a 4. Semantic search (proposed)",
+    "p": 0.002221456507072153,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-351.md#5",
+    "label": "board/cards/REM-351.md \u203a Scope",
+    "p": 0.0018962044480367534,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-352.md#2",
+    "label": "board/cards/REM-352.md \u203a Goal",
+    "p": 0.001818931879954458,
+    "gold": false
+   },
+   {
+    "id": "commit/b6a29d61a5",
+    "label": "commit b6a29d6: board: file REM-350 agents: a connected AI tells the person where their article is and how editing and p",
+    "p": 0.0017388993155544041,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261029-114917-ff9b.md#1",
+    "label": "board/messages/M-20261029-114917-ff9b.md",
+    "p": 0.0017328252951988195,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261029-114906-b53a.md#1",
+    "label": "board/messages/M-20261029-114906-b53a.md",
+    "p": 0.0017252871041606402,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261029-114911-f57a.md#1",
+    "label": "board/messages/M-20261029-114911-f57a.md",
+    "p": 0.0017252871041606402,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-360.md#1",
+    "label": "board/cards/REM-360.md",
+    "p": 0.0016359407832675168,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-348.md#8",
+    "label": "board/cards/REM-348.md \u203a Log",
+    "p": 0.0014366787105134162,
+    "gold": false
+   },
+   {
+    "id": "commit/31c39f9f76",
+    "label": "commit 31c39f9: Merge pull request #293 from Percolation-Labs/amartey/rem-351-search-spec",
+    "p": 0.0014263032264954065,
+    "gold": true
+   },
+   {
+    "id": "commit/5af07aaecc",
+    "label": "commit 5af07aa: board: file REM-360 specs: the Library board has one agreed design: ideas with a maturity, effort and ta",
+    "p": 0.001380873675764751,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/spa-plan.md#9",
+    "label": "specs/percolate-application/spa-plan.md \u203a 5. API-first content appearance",
+    "p": 0.0013758868841817916,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-351.md#6",
+    "label": "board/cards/REM-351.md \u203a Links",
+    "p": 0.0013724972823407203,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/eb7459d05e",
+   "label": "commit eb7459d: board: file REM-351 specs: marketplace search has one agreed design: what is searchable, what is embedde",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-351.md#1",
+   "label": "board/cards/REM-351.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-351.md#2",
+   "label": "board/cards/REM-351.md \u203a Goal",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-351.md#4",
+   "label": "board/cards/REM-351.md \u203a Done when",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-351.md#7",
+   "label": "board/cards/REM-351.md \u203a Log",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-582.md#3",
+   "label": "board/cards/REM-582.md \u203a Evidence",
+   "wave": 1,
+   "via": "term:api search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-582.md#4",
+   "label": "board/cards/REM-582.md \u203a Done when",
+   "wave": 1,
+   "via": "term:api search",
+   "gold": false
+  },
+  {
+   "id": "research-notes/fastembed-local-embedding-2026-09-20.md#7",
+   "label": "research-notes/fastembed-local-embedding-2026-09-20.md \u203a What that means at scale",
+   "wave": 1,
+   "via": "term:api search",
+   "gold": false
+  },
+  {
+   "id": "specs/percolate-application/search.md#2",
+   "label": "specs/percolate-application/search.md \u203a 1. One search, two ways in (built)",
+   "wave": 1,
+   "via": "term:api search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-352.md#4",
+   "label": "board/cards/REM-352.md \u203a Done when",
+   "wave": 1,
+   "via": "term:api search",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "commit/9021275670",
+    "label": "commit 9021275: specs: marketplace cards open with the chosen picture or a topic filler, and charts fill the band (REM-3",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-351.md#3",
+    "label": "board/cards/REM-351.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-352.md#4",
+    "label": "board/cards/REM-352.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "commit/55bd85cd84",
+    "label": "commit 55bd85c: board: file REM-352 marketplace: one search endpoint and MCP tool find research by tags, titles, categor",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-352.md#7",
+    "label": "board/cards/REM-352.md \u203a Log",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "board/cards/REM-352.md#7",
+    "label": "board/cards/REM-352.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/search.md#8",
+    "label": "specs/percolate-application/search.md \u203a 4. Semantic search (proposed)",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-352.md#4",
+    "label": "board/cards/REM-352.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "commit/55bd85cd84",
+    "label": "commit 55bd85c: board: file REM-352 marketplace: one search endpoint and MCP tool find research by tags, titles, categor",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-286.md#7",
+    "label": "board/cards/REM-286.md \u203a Log",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/31c39f9f76",
+    "label": "commit 31c39f9: Merge pull request #293 from Percolation-Labs/amartey/rem-351-search-spec",
+    "gold": true
+   },
+   {
+    "id": "commit/c82e0f99db",
+    "label": "commit c82e0f9: search: the marketplace search as built, and the semantic half proposed (REM-351)",
+    "gold": true
+   },
+   {
+    "id": "commit/024508ddd0",
+    "label": "commit 024508d: board: REM-351 in-progress \u2192 done",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-582.md#6",
+    "label": "board/cards/REM-582.md \u203a Scope",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-352.md#3",
+    "label": "board/cards/REM-352.md \u203a Evidence",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "board/cards/REM-352.md#7",
+    "label": "board/cards/REM-352.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/how-it-works.md#2",
+    "label": "specs/percolate-application/how-it-works.md \u203a How Percolate works",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-582.md#7",
+    "label": "board/cards/REM-582.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "commit/7855c1fef9",
+    "label": "commit 7855c1f: Merge pull request #289 from Percolation-Labs/amartey/marketplace-search-spec",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/search.md#5",
+    "label": "specs/percolate-application/search.md \u203a 3. Ranking and cost (built)",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 1.0,
+  "S": 0.0
+ }
+}

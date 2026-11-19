@@ -1,0 +1,417 @@
+{
+ "qid": "RW:2hop__307218_161450",
+ "set": "mq",
+ "question": "In what part of the country is Minudasht County?",
+ "gold": [
+  {
+   "id": "mq:424409576b8b3b94",
+   "label": "Minudasht County",
+   "seed": true
+  },
+  {
+   "id": "mq:b95bbf15db052c69",
+   "label": "Golestan Province",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:424409576b8b3b94",
+   "label": "Minudasht County",
+   "rank": 1,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:752ceed4181522c2",
+   "label": "Golestan Province",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:a172dab4cc01ea51",
+   "label": "Tony Dale",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "mq:7abe0d68e55a464e",
+   "label": "Kaunas County",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "mq:39f531f62becc3af",
+   "label": "Sunset Ridge Country Club",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 2
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:424409576b8b3b94",
+    "label": "Minudasht County",
+    "role": "gold"
+   },
+   {
+    "id": "mq:b95bbf15db052c69",
+    "label": "Golestan Province",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:424409576b8b3b94",
+    "b": "mq:b95bbf15db052c69",
+    "via": [
+     {
+      "kind": "term",
+      "key": "golestan",
+      "width": 10
+     },
+     {
+      "kind": "term",
+      "key": "golestan province",
+      "width": 10
+     },
+     {
+      "kind": "term",
+      "key": "iran",
+      "width": 96
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "mq:424409576b8b3b94",
+   "gold": "mq:424409576b8b3b94",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 1493,
+  "within_2_doors": 19582,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "mq:404d0fffb2e0c26e",
+    "label": "Maraveh Tappeh County",
+    "p": 0.007669338475289001,
+    "gold": false
+   },
+   {
+    "id": "mq:cb8dfb3202fe2db3",
+    "label": "Gilan Tappeh",
+    "p": 0.007429748284784258,
+    "gold": false
+   },
+   {
+    "id": "mq:f440420582b24965",
+    "label": "Aqqala County",
+    "p": 0.005524353661279604,
+    "gold": false
+   },
+   {
+    "id": "mq:e0463322e6bec574",
+    "label": "Gonbad-e Kavus County",
+    "p": 0.005441837647057419,
+    "gold": false
+   },
+   {
+    "id": "mq:a0709c206ebb245e",
+    "label": "Voshmgir District",
+    "p": 0.00495851204551642,
+    "gold": false
+   },
+   {
+    "id": "mq:d0543ff66fd42917",
+    "label": "Vilnius County",
+    "p": 0.004542452021522566,
+    "gold": false
+   },
+   {
+    "id": "mq:1516209c96badb2a",
+    "label": "Kaskan Qajaq",
+    "p": 0.004093866252287629,
+    "gold": false
+   },
+   {
+    "id": "mq:03a4a8f170573dad",
+    "label": "Bandar-e Gaz County",
+    "p": 0.0037941257662202593,
+    "gold": false
+   },
+   {
+    "id": "mq:b95bbf15db052c69",
+    "label": "Golestan Province",
+    "p": 0.0029648685007131826,
+    "gold": true
+   },
+   {
+    "id": "mq:dbee87c73d82b30c",
+    "label": "Harris Theater (Chicago)",
+    "p": 0.0024892469267235053,
+    "gold": false
+   },
+   {
+    "id": "mq:2ac65c8c285aba02",
+    "label": "WPGG",
+    "p": 0.002474849970689385,
+    "gold": false
+   },
+   {
+    "id": "mq:8fb7cfa90e0331a6",
+    "label": "\u0104\u017euolynas",
+    "p": 0.0022932574340355314,
+    "gold": false
+   },
+   {
+    "id": "mq:6c934c01bdbe582a",
+    "label": "Laisv\u0117s al\u0117ja",
+    "p": 0.0022396692735501965,
+    "gold": false
+   },
+   {
+    "id": "mq:b897c7fae5378f79",
+    "label": "Bandar-e Olya",
+    "p": 0.0022361458426621056,
+    "gold": false
+   },
+   {
+    "id": "mq:9666772f9a5b8a41",
+    "label": "Vincentas Sladkevi\u010dius",
+    "p": 0.0021282190170557077,
+    "gold": false
+   },
+   {
+    "id": "mq:9822284f788cc1c7",
+    "label": "Willamette River",
+    "p": 0.0020352642616360828,
+    "gold": false
+   },
+   {
+    "id": "mq:476b7e4ca96ef773",
+    "label": "Tappeh Dar",
+    "p": 0.0017100175491485637,
+    "gold": false
+   },
+   {
+    "id": "mq:b5ed373ce57e17da",
+    "label": "Yaqin Ali Tappeh",
+    "p": 0.001674696779952215,
+    "gold": false
+   },
+   {
+    "id": "mq:6604244cd8a5abca",
+    "label": "Sar Gaz-e Pain",
+    "p": 0.001582438704844873,
+    "gold": false
+   },
+   {
+    "id": "mq:feb79b255ec556f6",
+    "label": "Akbarabad-e Khaleseh Tappeh Ginu",
+    "p": 0.0015187109243672446,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:424409576b8b3b94",
+   "label": "Minudasht County",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:752ceed4181522c2",
+   "label": "Golestan Province",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:a172dab4cc01ea51",
+   "label": "Tony Dale",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:7abe0d68e55a464e",
+   "label": "Kaunas County",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:39f531f62becc3af",
+   "label": "Sunset Ridge Country Club",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:cb8dfb3202fe2db3",
+   "label": "Gilan Tappeh",
+   "wave": 1,
+   "via": "term:golestan",
+   "gold": false
+  },
+  {
+   "id": "mq:b95bbf15db052c69",
+   "label": "Golestan Province",
+   "wave": 1,
+   "via": "term:golestan",
+   "gold": true
+  },
+  {
+   "id": "mq:a0709c206ebb245e",
+   "label": "Voshmgir District",
+   "wave": 1,
+   "via": "term:golestan",
+   "gold": false
+  },
+  {
+   "id": "mq:404d0fffb2e0c26e",
+   "label": "Maraveh Tappeh County",
+   "wave": 1,
+   "via": "term:golestan",
+   "gold": false
+  },
+  {
+   "id": "mq:f440420582b24965",
+   "label": "Aqqala County",
+   "wave": 1,
+   "via": "term:golestan",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:404d0fffb2e0c26e",
+    "label": "Maraveh Tappeh County",
+    "gold": false
+   },
+   {
+    "id": "mq:cb8dfb3202fe2db3",
+    "label": "Gilan Tappeh",
+    "gold": false
+   },
+   {
+    "id": "mq:f440420582b24965",
+    "label": "Aqqala County",
+    "gold": false
+   },
+   {
+    "id": "mq:e0463322e6bec574",
+    "label": "Gonbad-e Kavus County",
+    "gold": false
+   },
+   {
+    "id": "mq:a0709c206ebb245e",
+    "label": "Voshmgir District",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:d0543ff66fd42917",
+    "label": "Vilnius County",
+    "gold": false
+   },
+   {
+    "id": "mq:404d0fffb2e0c26e",
+    "label": "Maraveh Tappeh County",
+    "gold": false
+   },
+   {
+    "id": "mq:f440420582b24965",
+    "label": "Aqqala County",
+    "gold": false
+   },
+   {
+    "id": "mq:e0463322e6bec574",
+    "label": "Gonbad-e Kavus County",
+    "gold": false
+   },
+   {
+    "id": "mq:cb8dfb3202fe2db3",
+    "label": "Gilan Tappeh",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:404d0fffb2e0c26e",
+    "label": "Maraveh Tappeh County",
+    "gold": false
+   },
+   {
+    "id": "mq:d0543ff66fd42917",
+    "label": "Vilnius County",
+    "gold": false
+   },
+   {
+    "id": "mq:e0463322e6bec574",
+    "label": "Gonbad-e Kavus County",
+    "gold": false
+   },
+   {
+    "id": "mq:f440420582b24965",
+    "label": "Aqqala County",
+    "gold": false
+   },
+   {
+    "id": "mq:e1cfff8a48b7a464",
+    "label": "Israel",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:d0543ff66fd42917",
+    "label": "Vilnius County",
+    "gold": false
+   },
+   {
+    "id": "mq:f4596ec39e3ab16c",
+    "label": "Chunggang County",
+    "gold": false
+   },
+   {
+    "id": "mq:2482d326820e6476",
+    "label": "Norwegian County Road 13",
+    "gold": false
+   },
+   {
+    "id": "mq:1081eddd2a89f530",
+    "label": "Kexholm County",
+    "gold": false
+   },
+   {
+    "id": "mq:6b99554eb3070fc8",
+    "label": "Pinellas County, Florida",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

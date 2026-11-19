@@ -1,0 +1,520 @@
+{
+ "qid": "pr:126",
+ "set": "prs",
+ "question": "What work went into this, and why: reload.sh announced which container it would rebuild rather than asking?",
+ "gold": [
+  {
+   "id": "commit/8635be7edb",
+   "label": "commit 8635be7: The default container is also where a gate goes red about the machine",
+   "seed": false
+  },
+  {
+   "id": "commit/a7312d6373",
+   "label": "commit a7312d6: p8dev was rebuilt at 18:01:09 by a push, which makes this an incident",
+   "seed": false
+  },
+  {
+   "id": "commit/d387842842",
+   "label": "commit d387842: \"Every worktree\" excluded the only tree the harm happens in",
+   "seed": false
+  },
+  {
+   "id": "commit/e2857c1000",
+   "label": "commit e2857c1: reload.sh announced which container it would rebuild rather than asking",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/33d45e4ee0",
+   "label": "commit 33d45e4: Merge pull request #126 from Percolation-Labs/fix/rem-131-reload-names-its-container",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/e2857c1000",
+   "label": "commit e2857c1: reload.sh announced which container it would rebuild rather than asking",
+   "rank": 2,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "board/cards/REM-131.md#3",
+   "label": "board/cards/REM-131.md \u203a Evidence",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "dev/check.sh#3",
+   "label": "dev/check.sh",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "dev/lib/container.sh#3",
+   "label": "dev/lib/container.sh",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/8635be7edb",
+    "label": "commit 8635be7: The default container is also where a gate goes red about the machine",
+    "role": "gold"
+   },
+   {
+    "id": "commit/a7312d6373",
+    "label": "commit a7312d6: p8dev was rebuilt at 18:01:09 by a push, which makes this an incident",
+    "role": "gold"
+   },
+   {
+    "id": "commit/d387842842",
+    "label": "commit d387842: \"Every worktree\" excluded the only tree the harm happens in",
+    "role": "gold"
+   },
+   {
+    "id": "commit/e2857c1000",
+    "label": "commit e2857c1: reload.sh announced which container it would rebuild rather than asking",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/8635be7edb",
+    "b": "commit/d387842842",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "tree runs",
+      "width": 3
+     },
+     {
+      "kind": "term",
+      "key": "eleven worktrees",
+      "width": 3
+     },
+     {
+      "kind": "term",
+      "key": "green dev",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "ten tree",
+      "width": 15
+     },
+     {
+      "kind": "term",
+      "key": "session_019s6crlfsdqqf1wbadpxvj3",
+      "width": 19
+     }
+    ]
+   },
+   {
+    "a": "commit/8635be7edb",
+    "b": "commit/e2857c1000",
+    "via": [
+     {
+      "kind": "term",
+      "key": "default container",
+      "width": 4
+     },
+     {
+      "kind": "term",
+      "key": "container rather",
+      "width": 4
+     },
+     {
+      "kind": "term",
+      "key": "lib container",
+      "width": 12
+     },
+     {
+      "kind": "term",
+      "key": "ten tree",
+      "width": 15
+     },
+     {
+      "kind": "term",
+      "key": "session_019s6crlfsdqqf1wbadpxvj3",
+      "width": 19
+     }
+    ]
+   },
+   {
+    "a": "commit/a7312d6373",
+    "b": "commit/d387842842",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "hook half",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "green dev",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "ten tree",
+      "width": 15
+     },
+     {
+      "kind": "term",
+      "key": "previous commit",
+      "width": 17
+     },
+     {
+      "kind": "term",
+      "key": "session_019s6crlfsdqqf1wbadpxvj3",
+      "width": 19
+     }
+    ]
+   }
+  ],
+  "cost": 3,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  "entry": {
+   "seed": "commit/e2857c1000",
+   "gold": "commit/e2857c1000",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 2975,
+  "within_2_doors": 33965,
+  "gold_within_1": 3,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "meta/postmortems/2026-09-12-described-three-lines-up.md#18",
+    "label": "meta/postmortems/2026-09-12-described-three-lines-up.md \u203a 4. The board, which is not prose, and failed in every directio",
+    "p": 0.005412725539076534,
+    "gold": false
+   },
+   {
+    "id": "dev/lib/container.sh#1",
+    "label": "dev/lib/container.sh",
+    "p": 0.0052149918604307245,
+    "gold": false
+   },
+   {
+    "id": "dev/lib/container.sh#2",
+    "label": "dev/lib/container.sh",
+    "p": 0.0046884132552685726,
+    "gold": false
+   },
+   {
+    "id": "commit/5f83121f2e",
+    "label": "commit 5f83121: Merge remote-tracking branch 'origin/main' into fix/rem-131-reload-names-its-container",
+    "p": 0.0040125931072151014,
+    "gold": false
+   },
+   {
+    "id": "commit/bc0b1a2480",
+    "label": "commit bc0b1a2: A fourth answer to \"which interpreter\", named in check.sh's header and left there",
+    "p": 0.003191582997934733,
+    "gold": false
+   },
+   {
+    "id": "commit/8635be7edb",
+    "label": "commit 8635be7: The default container is also where a gate goes red about the machine",
+    "p": 0.002789722721195309,
+    "gold": true
+   },
+   {
+    "id": "dev/reload.sh#2",
+    "label": "dev/reload.sh",
+    "p": 0.0025577820507514505,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261029-013444-e412.md#1",
+    "label": "board/messages/M-20261029-013444-e412.md",
+    "p": 0.0022908723714357435,
+    "gold": false
+   },
+   {
+    "id": "commit/f65074be37",
+    "label": "commit f65074b: board: file REM-1288 board: a disk floor, so a full disk is announced before it kills running jobs",
+    "p": 0.0022193848088007885,
+    "gold": false
+   },
+   {
+    "id": "commit/17547b9115",
+    "label": "commit 17547b9: The ledger that decides which gate to build next was wrong about itself, three times out of four (#124)",
+    "p": 0.0021733527964537752,
+    "gold": false
+   },
+   {
+    "id": "commit/8a34a4e7fc",
+    "label": "commit 8a34a4e: A turn is a gate now, and the first one it drove found a release blocker (#115)",
+    "p": 0.0020856727299098134,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-536.md#3",
+    "label": "board/cards/REM-536.md \u203a Evidence",
+    "p": 0.0020594681857880417,
+    "gold": false
+   },
+   {
+    "id": "commit/d387842842",
+    "label": "commit d387842: \"Every worktree\" excluded the only tree the harm happens in",
+    "p": 0.0018011384936221962,
+    "gold": true
+   },
+   {
+    "id": "board/cards/REM-131.md#2",
+    "label": "board/cards/REM-131.md \u203a Goal",
+    "p": 0.0017200375181673068,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-131.md#4",
+    "label": "board/cards/REM-131.md \u203a Log",
+    "p": 0.0015490779844264647,
+    "gold": false
+   },
+   {
+    "id": "dev/README.md#9",
+    "label": "dev/README.md \u203a Why this directory exists",
+    "p": 0.0015096788442607468,
+    "gold": false
+   },
+   {
+    "id": "commit/b28e67a593",
+    "label": "commit b28e67a: The dependence unit is the extractor, and spacing needs history we had deleted",
+    "p": 0.001093227215255865,
+    "gold": false
+   },
+   {
+    "id": "dev/ci-database.sh#2",
+    "label": "dev/ci-database.sh",
+    "p": 0.0010779803355605254,
+    "gold": false
+   },
+   {
+    "id": "commit/c396654111",
+    "label": "commit c396654: Three scripts asked which interpreter, and two of them got it wrong",
+    "p": 0.0010534524233356826,
+    "gold": false
+   },
+   {
+    "id": "research-notes/next-steps-v0.md#9",
+    "label": "research-notes/next-steps-v0.md \u203a 3.3 Fix the dependence unit, add spacing \u2014 **DONE, half of it inert**",
+    "p": 0.0010478645893241972,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/33d45e4ee0",
+   "label": "commit 33d45e4: Merge pull request #126 from Percolation-Labs/fix/rem-131-reload-names-its-container",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/e2857c1000",
+   "label": "commit e2857c1: reload.sh announced which container it would rebuild rather than asking",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "board/cards/REM-131.md#3",
+   "label": "board/cards/REM-131.md \u203a Evidence",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "dev/check.sh#3",
+   "label": "dev/check.sh",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "dev/lib/container.sh#3",
+   "label": "dev/lib/container.sh",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "dev/reload.sh#2",
+   "label": "dev/reload.sh",
+   "wave": 1,
+   "via": "term:rem 131",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-131.md#1",
+   "label": "board/cards/REM-131.md",
+   "wave": 1,
+   "via": "term:rem 131",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-131.md#2",
+   "label": "board/cards/REM-131.md \u203a Goal",
+   "wave": 1,
+   "via": "term:rem 131",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-131.md#4",
+   "label": "board/cards/REM-131.md \u203a Log",
+   "wave": 1,
+   "via": "term:rem 131",
+   "gold": false
+  },
+  {
+   "id": "dev/lib/container.sh#1",
+   "label": "dev/lib/container.sh",
+   "wave": 1,
+   "via": "term:rem 131",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "meta/postmortems/2026-09-12-described-three-lines-up.md#18",
+    "label": "meta/postmortems/2026-09-12-described-three-lines-up.md \u203a 4. The board, which is not prose, and failed in every directio",
+    "gold": false
+   },
+   {
+    "id": "dev/lib/container.sh#1",
+    "label": "dev/lib/container.sh",
+    "gold": false
+   },
+   {
+    "id": "dev/lib/container.sh#2",
+    "label": "dev/lib/container.sh",
+    "gold": false
+   },
+   {
+    "id": "commit/5f83121f2e",
+    "label": "commit 5f83121: Merge remote-tracking branch 'origin/main' into fix/rem-131-reload-names-its-container",
+    "gold": false
+   },
+   {
+    "id": "commit/bc0b1a2480",
+    "label": "commit bc0b1a2: A fourth answer to \"which interpreter\", named in check.sh's header and left there",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "dev/lib/container.sh#1",
+    "label": "dev/lib/container.sh",
+    "gold": false
+   },
+   {
+    "id": "dev/lib/container.sh#2",
+    "label": "dev/lib/container.sh",
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-12-described-three-lines-up.md#18",
+    "label": "meta/postmortems/2026-09-12-described-three-lines-up.md \u203a 4. The board, which is not prose, and failed in every directio",
+    "gold": false
+   },
+   {
+    "id": "commit/5f83121f2e",
+    "label": "commit 5f83121: Merge remote-tracking branch 'origin/main' into fix/rem-131-reload-names-its-container",
+    "gold": false
+   },
+   {
+    "id": "dev/reload.sh#2",
+    "label": "dev/reload.sh",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/5f83121f2e",
+    "label": "commit 5f83121: Merge remote-tracking branch 'origin/main' into fix/rem-131-reload-names-its-container",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-131.md#2",
+    "label": "board/cards/REM-131.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-12-described-three-lines-up.md#18",
+    "label": "meta/postmortems/2026-09-12-described-three-lines-up.md \u203a 4. The board, which is not prose, and failed in every directio",
+    "gold": false
+   },
+   {
+    "id": "dev/lib/container.sh#1",
+    "label": "dev/lib/container.sh",
+    "gold": false
+   },
+   {
+    "id": "dev/lib/container.sh#2",
+    "label": "dev/lib/container.sh",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "dev/lib/container.sh#1",
+    "label": "dev/lib/container.sh",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-131.md#1",
+    "label": "board/cards/REM-131.md",
+    "gold": false
+   },
+   {
+    "id": "dev/scale/graph/README.md#1",
+    "label": "dev/scale/graph/README.md \u203a Graph algorithm scale harness",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-131.md#2",
+    "label": "board/cards/REM-131.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-12-described-three-lines-up.md#18",
+    "label": "meta/postmortems/2026-09-12-described-three-lines-up.md \u203a 4. The board, which is not prose, and failed in every directio",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

@@ -1,0 +1,415 @@
+{
+ "qid": "card:REM-145",
+ "set": "cards",
+ "question": "What was done about this, and why: docs: the published pages are gated against the house-voice list?",
+ "gold": [
+  {
+   "id": "commit/b6794a01d0",
+   "label": "commit b6794a0: The skill said the scope was an open question, and it was answered today (#142)",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "board/cards/REM-145.md#1",
+   "label": "board/cards/REM-145.md",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-439.md#2",
+   "label": "board/cards/REM-439.md \u203a Goal",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-145.md#2",
+   "label": "board/cards/REM-145.md \u203a Goal",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "meta/skills/docs-writing/SKILL.md#1",
+   "label": "meta/skills/docs-writing/SKILL.md",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/ee79da8239",
+   "label": "commit ee79da8: board: file REM-284 docs: the 13 house-voice phrases added in the last 48 hours are rewritten",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 2
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "board/cards/REM-145.md#1",
+    "label": "board/cards/REM-145.md",
+    "role": "seed"
+   },
+   {
+    "id": "commit/b6794a01d0",
+    "label": "commit b6794a0: The skill said the scope was an open question, and it was answered today (#142)",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "board/cards/REM-145.md#1",
+    "b": "commit/b6794a01d0",
+    "via": [
+     {
+      "kind": "term",
+      "key": "rem 145",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "published pages",
+      "width": 23
+     },
+     {
+      "kind": "term",
+      "key": "skills docs",
+      "width": 57
+     },
+     {
+      "kind": "term",
+      "key": "docs writing",
+      "width": 69
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [],
+  "entry": {
+   "seed": "board/cards/REM-145.md#1",
+   "gold": "commit/b6794a01d0",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 649,
+  "within_2_doors": 31551,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "commit/a9b242c6eb",
+    "label": "commit a9b242c: docs: the house-voice phrases added since 6cb70e8 are rewritten, outside the cards (REM-284)",
+    "p": 0.007092079820192434,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-284.md#1",
+    "label": "board/cards/REM-284.md",
+    "p": 0.006959993446340917,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-439.md#1",
+    "label": "board/cards/REM-439.md",
+    "p": 0.004662072256465379,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-145.md#3",
+    "label": "board/cards/REM-145.md \u203a Evidence",
+    "p": 0.004623578586379731,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-284.md#2",
+    "label": "board/cards/REM-284.md \u203a Goal",
+    "p": 0.0031258574571109672,
+    "gold": false
+   },
+   {
+    "id": "commit/67c3d8b05d",
+    "label": "commit 67c3d8b: board: file REM-285 evaluation: stance_eval.py exits non-zero when the gate for widening search does not",
+    "p": 0.0029116556791537775,
+    "gold": false
+   },
+   {
+    "id": "commit/b6794a01d0",
+    "label": "commit b6794a0: The skill said the scope was an open question, and it was answered today (#142)",
+    "p": 0.002894226321943987,
+    "gold": true
+   },
+   {
+    "id": "board/cards/REM-130.md#1",
+    "label": "board/cards/REM-130.md",
+    "p": 0.002777261877348956,
+    "gold": false
+   },
+   {
+    "id": "commit/a98a8efb35",
+    "label": "commit a98a8ef: board: file REM-283 access: the reading-list limit is a core plan limit, not a Python constant",
+    "p": 0.0027648889170555145,
+    "gold": false
+   },
+   {
+    "id": "commit/4d02d81a8b",
+    "label": "commit 4d02d81: board: file REM-439 docs: the published pages drop the construction, and the checker reads them again",
+    "p": 0.002623705089055922,
+    "gold": false
+   },
+   {
+    "id": "specs/design/core-repository-move.md#18",
+    "label": "specs/design/core-repository-move.md \u203a 9. The steps",
+    "p": 0.002560300444358594,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-439.md#3",
+    "label": "board/cards/REM-439.md \u203a Evidence",
+    "p": 0.0024927136852859032,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-130.md#2",
+    "label": "board/cards/REM-130.md \u203a Goal",
+    "p": 0.0022534826508946245,
+    "gold": false
+   },
+   {
+    "id": "commit/54b8eb04e6",
+    "label": "commit 54b8eb0: The construction is checked on a diff, not a corpus (REM-438 follow-up)",
+    "p": 0.001925231396384853,
+    "gold": false
+   },
+   {
+    "id": "commit/ea7a64c98c",
+    "label": "commit ea7a64c: Make the image install itself, build for both architectures, and add a docs voice",
+    "p": 0.001922312127145394,
+    "gold": false
+   },
+   {
+    "id": "meta/skills/docs-writing/banned.py#6",
+    "label": "meta/skills/docs-writing/banned.py",
+    "p": 0.001763206937320884,
+    "gold": false
+   },
+   {
+    "id": "meta/skills/docs-writing/SKILL.md#2",
+    "label": "meta/skills/docs-writing/SKILL.md \u203a Where the files are, and why they are somewhere else",
+    "p": 0.001740937406215837,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-145.md#4",
+    "label": "board/cards/REM-145.md \u203a Log",
+    "p": 0.0017356480409931243,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-439.md#7",
+    "label": "board/cards/REM-439.md \u203a Log",
+    "p": 0.0017132102159420884,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-144.md#2",
+    "label": "board/cards/REM-144.md \u203a Goal",
+    "p": 0.0016729410645220945,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "board/cards/REM-145.md#1",
+   "label": "board/cards/REM-145.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-439.md#2",
+   "label": "board/cards/REM-439.md \u203a Goal",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-145.md#2",
+   "label": "board/cards/REM-145.md \u203a Goal",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/skills/docs-writing/SKILL.md#1",
+   "label": "meta/skills/docs-writing/SKILL.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/ee79da8239",
+   "label": "commit ee79da8: board: file REM-284 docs: the 13 house-voice phrases added in the last 48 hours are rewritten",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/skills/docs-writing/banned.py#4",
+   "label": "meta/skills/docs-writing/banned.py",
+   "wave": 1,
+   "via": "term:skills docs",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-130.md#3",
+   "label": "board/cards/REM-130.md \u203a Evidence",
+   "wave": 1,
+   "via": "term:skills docs",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-284.md#3",
+   "label": "board/cards/REM-284.md \u203a Evidence",
+   "wave": 1,
+   "via": "term:skills docs",
+   "gold": false
+  },
+  {
+   "id": "meta/skills/docs-writing/SKILL.md#12",
+   "label": "meta/skills/docs-writing/SKILL.md \u203a A check before committing",
+   "wave": 1,
+   "via": "term:skills docs",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-439.md#1",
+   "label": "board/cards/REM-439.md",
+   "wave": 1,
+   "via": "term:skills docs",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "commit/a9b242c6eb",
+    "label": "commit a9b242c: docs: the house-voice phrases added since 6cb70e8 are rewritten, outside the cards (REM-284)",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-284.md#1",
+    "label": "board/cards/REM-284.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-439.md#1",
+    "label": "board/cards/REM-439.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-145.md#3",
+    "label": "board/cards/REM-145.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-284.md#2",
+    "label": "board/cards/REM-284.md \u203a Goal",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "board/cards/REM-284.md#1",
+    "label": "board/cards/REM-284.md",
+    "gold": false
+   },
+   {
+    "id": "commit/a9b242c6eb",
+    "label": "commit a9b242c: docs: the house-voice phrases added since 6cb70e8 are rewritten, outside the cards (REM-284)",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-439.md#1",
+    "label": "board/cards/REM-439.md",
+    "gold": false
+   },
+   {
+    "id": "commit/b6794a01d0",
+    "label": "commit b6794a0: The skill said the scope was an open question, and it was answered today (#142)",
+    "gold": true
+   },
+   {
+    "id": "commit/36fd6706c0",
+    "label": "commit 36fd670: The house-voice checker runs on what you wrote, because the tree is 882 behind (#129)",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/4d02d81a8b",
+    "label": "commit 4d02d81: board: file REM-439 docs: the published pages drop the construction, and the checker reads them again",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-284.md#1",
+    "label": "board/cards/REM-284.md",
+    "gold": false
+   },
+   {
+    "id": "commit/c1bdffba08",
+    "label": "commit c1bdffb: Operators on BEAM: wording (house voice)",
+    "gold": false
+   },
+   {
+    "id": "commit/a289362200",
+    "label": "commit a289362: musique-near: house-voice fix in the result note",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-439.md#1",
+    "label": "board/cards/REM-439.md",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "research-notes/essay-graph/corpus/house-style-sirsh-medium/notes.md#1",
+    "label": "research-notes/essay-graph/corpus/house-style-sirsh-medium/notes.md \u203a The house voice",
+    "gold": false
+   },
+   {
+    "id": "commit/36fd6706c0",
+    "label": "commit 36fd670: The house-voice checker runs on what you wrote, because the tree is 882 behind (#129)",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-284.md#1",
+    "label": "board/cards/REM-284.md",
+    "gold": false
+   },
+   {
+    "id": "commit/1361ce8c33",
+    "label": "commit 1361ce8: The house-voice gate did not say what it had read, and both halves cost time (#140)",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-130.md#1",
+    "label": "board/cards/REM-130.md",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 1.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}
