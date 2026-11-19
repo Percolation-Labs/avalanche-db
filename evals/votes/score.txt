@@ -1,0 +1,25 @@
+grid 42 points; uniform θ = (-1.0, 0.0)
+learned θ (dev): cards (-1.0, -0.5) (dev 0.843 vs uniform 0.841), PR titles (-2.0, -1.0) (dev 0.817 vs uniform 0.752), MuSiQue (-1.0, 0.0) (dev 0.824 vs uniform 0.824); pooled (-1.0, -1.0)
+
+test       arm                       width-matched AUC  AUC per target  gold top-10 / of
+cards      uniform (-1.0, 0.0)                   0.802           0.665          59 / 135
+cards      learned (-1.0, -0.5)                  0.800           0.685          58 / 135
+cards      pooled (-1.0, -1.0)                   0.787           0.713          49 / 135
+cards      random θ (grid mean)                  0.780           0.707        44.0 / 135
+cards      learned, shuffled links               0.504           0.560           — / 135
+
+PR titles  uniform (-1.0, 0.0)                   0.733           0.689           55 / 87
+PR titles  learned (-2.0, -1.0)                  0.785           0.735           55 / 87
+PR titles  pooled (-1.0, -1.0)                   0.765           0.745           55 / 87
+PR titles  random θ (grid mean)                  0.709           0.672         34.2 / 87
+PR titles  learned, shuffled links               0.534           0.552            — / 87
+
+MuSiQue    uniform (-1.0, 0.0)                   0.826           0.563          37 / 133
+MuSiQue    learned (-1.0, 0.0)                   0.826           0.563          37 / 133
+MuSiQue    pooled (-1.0, -1.0)                   0.825           0.570          33 / 133
+MuSiQue    random θ (grid mean)                  0.793           0.611        25.5 / 133
+MuSiQue    learned, shuffled links               0.520           0.557           — / 133
+
+learned − uniform (width-matched, test): cards -0.002, PR titles +0.052, MuSiQue +0.000
+beats random θ: True, True, True; shuffled < .56: True, True, True
+VERDICT: fail
