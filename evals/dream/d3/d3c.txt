@@ -1,0 +1,12 @@
+prs θ=(-2.0,-1.0): dev G0 0.731 (gold door 0.80)
+  f=0.02: removed 20315 | dev 0.744 (gold door 0.79)
+  f=0.05: removed 50788 | dev 0.747 (gold door 0.78) INELIGIBLE
+  f=0.1: removed 101577 | dev 0.746 (gold door 0.76) INELIGIBLE
+  f=0.2: removed 203155 | dev 0.742 (gold door 0.75) INELIGIBLE
+  chosen f=0.02 | TEST G0 0.726 (gold door 1.00) | G_edit 0.725 (1.00) | random removal 0.727 (1.00)
+cards θ=(-1.0,-0.5): dev G0 0.819 (gold door 0.77)
+  f=0.02: removed 20315 | dev 0.819 (gold door 0.75)
+  f=0.05: removed 50788 | dev 0.823 (gold door 0.75)
+  f=0.1: removed 101577 | dev 0.821 (gold door 0.75)
+  f=0.2: removed 203155 | dev 0.849 (gold door 0.73) INELIGIBLE
+  chosen f=0.05 | TEST G0 0.783 (gold door 1.00) | G_edit 0.834 (0.93) | random removal 0.787 (1.00)
