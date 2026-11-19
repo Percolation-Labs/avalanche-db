@@ -1,0 +1,452 @@
+{
+ "qid": "card:REM-443",
+ "set": "cards",
+ "question": "What was done about this, and why: hub: the package guide tells the AI how to bring a reader in?",
+ "gold": [
+  {
+   "id": "commit/67e6a8c3ae",
+   "label": "commit 67e6a8c: experience.md: the usability study checks first contact with a subject (REM-443)",
+   "seed": false
+  },
+  {
+   "id": "commit/8474648f4e",
+   "label": "commit 8474648: Merge pull request #236 from Percolation-Labs/amartey/rem-443-spec-orientation",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/4e5f87f116",
+   "label": "commit 4e5f87f: board: file REM-443 hub: the package guide tells the AI how to bring a reader in",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-443.md#1",
+   "label": "board/cards/REM-443.md",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-437.md#2",
+   "label": "board/cards/REM-437.md \u203a Goal",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "commit/71146743c0",
+   "label": "commit 7114674: board: file REM-314 hub: every package-page section tells writers and readers its job and the feeling it",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "commit/a9f2ecb03d",
+   "label": "commit a9f2ecb: board: file REM-437 research: the guide says what evidence a package owes the reader it is published to",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 2
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/4e5f87f116",
+    "label": "commit 4e5f87f: board: file REM-443 hub: the package guide tells the AI how to bring a reader in",
+    "role": "seed"
+   },
+   {
+    "id": "commit/67e6a8c3ae",
+    "label": "commit 67e6a8c: experience.md: the usability study checks first contact with a subject (REM-443)",
+    "role": "gold"
+   },
+   {
+    "id": "commit/8474648f4e",
+    "label": "commit 8474648: Merge pull request #236 from Percolation-Labs/amartey/rem-443-spec-orientation",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/4e5f87f116",
+    "b": "commit/67e6a8c3ae",
+    "via": [
+     {
+      "kind": "term",
+      "key": "rem 443",
+      "width": 14
+     },
+     {
+      "kind": "term",
+      "key": "package guide",
+      "width": 18
+     }
+    ]
+   },
+   {
+    "a": "commit/67e6a8c3ae",
+    "b": "commit/8474648f4e",
+    "via": [
+     {
+      "kind": "near",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "study checks",
+      "width": 3
+     },
+     {
+      "kind": "term",
+      "key": "subject rem",
+      "width": 3
+     },
+     {
+      "kind": "term",
+      "key": "usability study",
+      "width": 4
+     },
+     {
+      "kind": "term",
+      "key": "checks first",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "first contact",
+      "width": 11
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "commit/4e5f87f116",
+   "gold": "commit/67e6a8c3ae",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 291,
+  "within_2_doors": 26267,
+  "gold_within_1": 2,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "board/cards/REM-314.md#1",
+    "label": "board/cards/REM-314.md",
+    "p": 0.010444121610430988,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-437.md#1",
+    "label": "board/cards/REM-437.md",
+    "p": 0.010141832671603738,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-443.md#7",
+    "label": "board/cards/REM-443.md \u203a Log",
+    "p": 0.0069857420573111425,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-443.md#2",
+    "label": "board/cards/REM-443.md \u203a Goal",
+    "p": 0.006835253781887037,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-437.md#5",
+    "label": "board/cards/REM-437.md \u203a Scope",
+    "p": 0.006479643665161995,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-437.md#3",
+    "label": "board/cards/REM-437.md \u203a Evidence",
+    "p": 0.005865089475108496,
+    "gold": false
+   },
+   {
+    "id": "commit/01015d424b",
+    "label": "commit 01015d4: board: percolate-application-66 takes REM-437",
+    "p": 0.0048821134823187,
+    "gold": false
+   },
+   {
+    "id": "commit/9e0ecbdadf",
+    "label": "commit 9e0ecbd: board: percolate-application-68 takes REM-441",
+    "p": 0.004047742355354082,
+    "gold": false
+   },
+   {
+    "id": "commit/83e2ef5e98",
+    "label": "commit 83e2ef5: board: REM-441 in-progress \u2192 done",
+    "p": 0.004038464198531518,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-437.md#7",
+    "label": "board/cards/REM-437.md \u203a Log",
+    "p": 0.003560037321011235,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-437.md#4",
+    "label": "board/cards/REM-437.md \u203a Done when",
+    "p": 0.003019563284252316,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-788.md#2",
+    "label": "board/cards/REM-788.md \u203a Goal",
+    "p": 0.0029953839130089626,
+    "gold": false
+   },
+   {
+    "id": "commit/b937a51385",
+    "label": "commit b937a51: board: REM-437 in-progress \u2192 done",
+    "p": 0.002985388847234255,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/semantic-editing-workspace.md#8",
+    "label": "specs/percolate-application/semantic-editing-workspace.md \u203a What the interface research requires",
+    "p": 0.0029605632360381476,
+    "gold": false
+   },
+   {
+    "id": "dev/docker-compose.yml#1",
+    "label": "dev/docker-compose.yml",
+    "p": 0.002952180083657352,
+    "gold": false
+   },
+   {
+    "id": "dev/stacks.sh#1",
+    "label": "dev/stacks.sh",
+    "p": 0.002945861350200751,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/experience.md#18",
+    "label": "specs/percolate-application/experience.md \u203a Quality checks",
+    "p": 0.0029274729942771706,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/research-runs.md#13",
+    "label": "specs/percolate-application/research-runs.md \u203a 9. Limits, privacy and parity",
+    "p": 0.002832289472385221,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-437.md#6",
+    "label": "board/cards/REM-437.md \u203a Links",
+    "p": 0.0025950935208544144,
+    "gold": false
+   },
+   {
+    "id": "commit/18f03fb022",
+    "label": "commit 18f03fb: board: note on REM-436",
+    "p": 0.0025831308026274457,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/4e5f87f116",
+   "label": "commit 4e5f87f: board: file REM-443 hub: the package guide tells the AI how to bring a reader in",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-443.md#1",
+   "label": "board/cards/REM-443.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-437.md#2",
+   "label": "board/cards/REM-437.md \u203a Goal",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/71146743c0",
+   "label": "commit 7114674: board: file REM-314 hub: every package-page section tells writers and readers its job and the feeling it",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/a9f2ecb03d",
+   "label": "commit a9f2ecb: board: file REM-437 research: the guide says what evidence a package owes the reader it is published to",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/c6ccaa4774",
+   "label": "commit c6ccaa4: board: note on REM-443",
+   "wave": 1,
+   "via": "term:rem 443",
+   "gold": false
+  },
+  {
+   "id": "commit/ff35637aef",
+   "label": "commit ff35637: board: REM-443 in-progress \u2192 done",
+   "wave": 1,
+   "via": "term:rem 443",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-443.md#3",
+   "label": "board/cards/REM-443.md \u203a Evidence",
+   "wave": 1,
+   "via": "term:rem 443",
+   "gold": false
+  },
+  {
+   "id": "commit/8474648f4e",
+   "label": "commit 8474648: Merge pull request #236 from Percolation-Labs/amartey/rem-443-spec-orientation",
+   "wave": 1,
+   "via": "term:rem 443",
+   "gold": true
+  },
+  {
+   "id": "board/cards/REM-443.md#6",
+   "label": "board/cards/REM-443.md \u203a Links",
+   "wave": 1,
+   "via": "term:rem 443",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "board/cards/REM-314.md#1",
+    "label": "board/cards/REM-314.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-437.md#1",
+    "label": "board/cards/REM-437.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-443.md#7",
+    "label": "board/cards/REM-443.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-443.md#2",
+    "label": "board/cards/REM-443.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-437.md#5",
+    "label": "board/cards/REM-437.md \u203a Scope",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "board/cards/REM-437.md#1",
+    "label": "board/cards/REM-437.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-314.md#1",
+    "label": "board/cards/REM-314.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-443.md#2",
+    "label": "board/cards/REM-443.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-443.md#7",
+    "label": "board/cards/REM-443.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-437.md#3",
+    "label": "board/cards/REM-437.md \u203a Evidence",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "board/cards/REM-437.md#1",
+    "label": "board/cards/REM-437.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-314.md#1",
+    "label": "board/cards/REM-314.md",
+    "gold": false
+   },
+   {
+    "id": "commit/b937a51385",
+    "label": "commit b937a51: board: REM-437 in-progress \u2192 done",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-437.md#6",
+    "label": "board/cards/REM-437.md \u203a Links",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-443.md#2",
+    "label": "board/cards/REM-443.md \u203a Goal",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "board/cards/REM-313.md#4",
+    "label": "board/cards/REM-313.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-443.md#2",
+    "label": "board/cards/REM-443.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-314.md#1",
+    "label": "board/cards/REM-314.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-437.md#1",
+    "label": "board/cards/REM-437.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-304.md#4",
+    "label": "board/cards/REM-304.md \u203a Done when",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

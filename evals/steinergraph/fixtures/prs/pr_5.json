@@ -1,0 +1,430 @@
+{
+ "qid": "pr:5",
+ "set": "prs",
+ "question": "What work went into this, and why: Let a step write its own SQL, with the allow-list as a policy?",
+ "gold": [
+  {
+   "id": "commit/829cf48dd7",
+   "label": "commit 829cf48: Let a step write its own SQL, and keep the allow-list as a setting",
+   "seed": false
+  },
+  {
+   "id": "commit/e69233b1a1",
+   "label": "commit e69233b: Revise the specs for a step that runs SQL, and register the new surface",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/e6b3ef918f",
+   "label": "commit e6b3ef9: Merge pull request #5 from percolating-sirsh/open-sql",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "specs/workflow-engine/YAML.md#9",
+   "label": "specs/workflow-engine/YAML.md \u203a Whose rows a step sees: the person who started the run",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/e69233b1a1",
+   "label": "commit e69233b: Revise the specs for a step that runs SQL, and register the new surface",
+   "rank": 3,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "specs/workflow-engine/YAML.md#14",
+   "label": "specs/workflow-engine/YAML.md \u203a `p8ql:` with plain SQL now executes too",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "specs/workflow-engine/YAML.md#4",
+   "label": "specs/workflow-engine/YAML.md \u203a Step types",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/829cf48dd7",
+    "label": "commit 829cf48: Let a step write its own SQL, and keep the allow-list as a setting",
+    "role": "gold"
+   },
+   {
+    "id": "commit/e69233b1a1",
+    "label": "commit e69233b: Revise the specs for a step that runs SQL, and register the new surface",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/829cf48dd7",
+    "b": "commit/e69233b1a1",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "data step",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "read cannot",
+      "width": 6
+     },
+     {
+      "kind": "term",
+      "key": "transaction_read_only",
+      "width": 8
+     },
+     {
+      "kind": "term",
+      "key": "p8ql select",
+      "width": 8
+     },
+     {
+      "kind": "term",
+      "key": "sec pipeline",
+      "width": 8
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "commit/e69233b1a1",
+   "gold": "commit/e69233b1a1",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 2288,
+  "within_2_doors": 33241,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "commit/829cf48dd7",
+    "label": "commit 829cf48: Let a step write its own SQL, and keep the allow-list as a setting",
+    "p": 0.00811318661246243,
+    "gold": true
+   },
+   {
+    "id": "commit/f9876ad264",
+    "label": "commit f9876ad: The lockdown for owner-privileged SQL did not cover the door authors use",
+    "p": 0.0054544364486363356,
+    "gold": false
+   },
+   {
+    "id": "commit/ccdb3ef73b",
+    "label": "commit ccdb3ef: Starting a workflow was the way round the gate on defining one",
+    "p": 0.004353141404792039,
+    "gold": false
+   },
+   {
+    "id": "commit/29f052d0eb",
+    "label": "commit 29f052d: Merge pull request #7 from percolating-sirsh/plan-graph",
+    "p": 0.0033044200749682145,
+    "gold": false
+   },
+   {
+    "id": "commit/9316bcbf1c",
+    "label": "commit 9316bcb: Merge pull request #9 from percolating-sirsh/plan-probe",
+    "p": 0.0032607550500891648,
+    "gold": false
+   },
+   {
+    "id": "specs/workflow-engine/failure-modes.md#4",
+    "label": "specs/workflow-engine/failure-modes.md \u203a 1. Failures that report success",
+    "p": 0.0021234155281224768,
+    "gold": false
+   },
+   {
+    "id": "commit/5e6e1c03ab",
+    "label": "commit 5e6e1c0: Merge pull request #10 from percolating-sirsh/scoped-finding",
+    "p": 0.001996918267637298,
+    "gold": false
+   },
+   {
+    "id": "commit/444a3a3600",
+    "label": "commit 444a3a3: Merge pull request #11 from percolating-sirsh/fix-open-findings",
+    "p": 0.0019129700532257298,
+    "gold": false
+   },
+   {
+    "id": "specs/ai-query-layer/integration-workflow.sql#2",
+    "label": "specs/ai-query-layer/integration-workflow.sql",
+    "p": 0.0018085159375897477,
+    "gold": false
+   },
+   {
+    "id": "commit/17239d24d1",
+    "label": "commit 17239d2: Merge pull request #14 from percolating-sirsh/agent-skills",
+    "p": 0.0017976433276403858,
+    "gold": false
+   },
+   {
+    "id": "specs/ai-query-layer/integration-workflow.sql#3",
+    "label": "specs/ai-query-layer/integration-workflow.sql",
+    "p": 0.0017693362635611116,
+    "gold": false
+   },
+   {
+    "id": "specs/workflow-engine/YAML.md#13",
+    "label": "specs/workflow-engine/YAML.md \u203a `p8ql:` with plain SQL now executes too",
+    "p": 0.0017547870735248137,
+    "gold": false
+   },
+   {
+    "id": "commit/5fd61638db",
+    "label": "commit 5fd6163: Walk the journeys rather than the mechanisms, and find four defects doing it",
+    "p": 0.001480153195368689,
+    "gold": false
+   },
+   {
+    "id": "commit/8398e07062",
+    "label": "commit 8398e07: Try to build scoped SQL, and record the rule that stops it",
+    "p": 0.0014392081602501738,
+    "gold": false
+   },
+   {
+    "id": "commit/78cbf16a6b",
+    "label": "commit 78cbf16: Expand a definition along what it names, and find two of the fixtures wrong",
+    "p": 0.0009822840486640892,
+    "gold": false
+   },
+   {
+    "id": "specs/workflow-engine/README.md#3",
+    "label": "specs/workflow-engine/README.md \u203a Compilation \u2014 what it compiles to",
+    "p": 0.0009613296833133031,
+    "gold": false
+   },
+   {
+    "id": "specs/workflow-engine/YAML.md#12",
+    "label": "specs/workflow-engine/YAML.md \u203a A `{{template}}` in a statement is a bound value, never a fragment",
+    "p": 0.000937915576217078,
+    "gold": false
+   },
+   {
+    "id": "commit/516edc69ff",
+    "label": "commit 516edc6: Merge pull request #12 from percolating-sirsh/portable-pgvector",
+    "p": 0.0009349937007826682,
+    "gold": false
+   },
+   {
+    "id": "commit/cc0fc91ca7",
+    "label": "commit cc0fc91: A step that named one dependency twice waited for both of them",
+    "p": 0.0009325082950361692,
+    "gold": false
+   },
+   {
+    "id": "commit/9a97cea763",
+    "label": "commit 9a97cea: Merge pull request #6 from percolating-sirsh/leanness-pass",
+    "p": 0.0009167577212828022,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/e6b3ef918f",
+   "label": "commit e6b3ef9: Merge pull request #5 from percolating-sirsh/open-sql",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/workflow-engine/YAML.md#9",
+   "label": "specs/workflow-engine/YAML.md \u203a Whose rows a step sees: the person who started the run",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/e69233b1a1",
+   "label": "commit e69233b: Revise the specs for a step that runs SQL, and register the new surface",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "specs/workflow-engine/YAML.md#14",
+   "label": "specs/workflow-engine/YAML.md \u203a `p8ql:` with plain SQL now executes too",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/workflow-engine/YAML.md#4",
+   "label": "specs/workflow-engine/YAML.md \u203a Step types",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/829cf48dd7",
+   "label": "commit 829cf48: Let a step write its own SQL, and keep the allow-list as a setting",
+   "wave": 1,
+   "via": "term:session_01na9mw6lfipxpwabewiwvh4",
+   "gold": true
+  },
+  {
+   "id": "commit/95c1aa29ab",
+   "label": "commit 95c1aa2: Say what the design is answerable to, and make expressive mean the hard thing",
+   "wave": 1,
+   "via": "term:session_01na9mw6lfipxpwabewiwvh4",
+   "gold": false
+  },
+  {
+   "id": "commit/a82b27a8c8",
+   "label": "commit a82b27a: Say in claude.yml which secret it needs, because unset it fails silently",
+   "wave": 1,
+   "via": "term:session_01na9mw6lfipxpwabewiwvh4",
+   "gold": false
+  },
+  {
+   "id": "commit/eccc6aeeaf",
+   "label": "commit eccc6ae: Show the headers and the env a step needs, and stop defects leaking between steps",
+   "wave": 1,
+   "via": "term:session_01na9mw6lfipxpwabewiwvh4",
+   "gold": false
+  },
+  {
+   "id": "commit/8398e07062",
+   "label": "commit 8398e07: Try to build scoped SQL, and record the rule that stops it",
+   "wave": 1,
+   "via": "term:session_01na9mw6lfipxpwabewiwvh4",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "commit/829cf48dd7",
+    "label": "commit 829cf48: Let a step write its own SQL, and keep the allow-list as a setting",
+    "gold": true
+   },
+   {
+    "id": "commit/f9876ad264",
+    "label": "commit f9876ad: The lockdown for owner-privileged SQL did not cover the door authors use",
+    "gold": false
+   },
+   {
+    "id": "commit/ccdb3ef73b",
+    "label": "commit ccdb3ef: Starting a workflow was the way round the gate on defining one",
+    "gold": false
+   },
+   {
+    "id": "commit/29f052d0eb",
+    "label": "commit 29f052d: Merge pull request #7 from percolating-sirsh/plan-graph",
+    "gold": false
+   },
+   {
+    "id": "commit/9316bcbf1c",
+    "label": "commit 9316bcb: Merge pull request #9 from percolating-sirsh/plan-probe",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "commit/829cf48dd7",
+    "label": "commit 829cf48: Let a step write its own SQL, and keep the allow-list as a setting",
+    "gold": true
+   },
+   {
+    "id": "commit/f9876ad264",
+    "label": "commit f9876ad: The lockdown for owner-privileged SQL did not cover the door authors use",
+    "gold": false
+   },
+   {
+    "id": "commit/ccdb3ef73b",
+    "label": "commit ccdb3ef: Starting a workflow was the way round the gate on defining one",
+    "gold": false
+   },
+   {
+    "id": "specs/workflow-engine/failure-modes.md#4",
+    "label": "specs/workflow-engine/failure-modes.md \u203a 1. Failures that report success",
+    "gold": false
+   },
+   {
+    "id": "specs/ai-query-layer/integration-workflow.sql#3",
+    "label": "specs/ai-query-layer/integration-workflow.sql",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/829cf48dd7",
+    "label": "commit 829cf48: Let a step write its own SQL, and keep the allow-list as a setting",
+    "gold": true
+   },
+   {
+    "id": "commit/5e6e1c03ab",
+    "label": "commit 5e6e1c0: Merge pull request #10 from percolating-sirsh/scoped-finding",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1210.md#3",
+    "label": "board/cards/REM-1210.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "commit/c09120c67c",
+    "label": "commit c09120c: Merge remote-tracking branch 'origin/main' into open-sql",
+    "gold": false
+   },
+   {
+    "id": "commit/f9876ad264",
+    "label": "commit f9876ad: The lockdown for owner-privileged SQL did not cover the door authors use",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "commit/829cf48dd7",
+    "label": "commit 829cf48: Let a step write its own SQL, and keep the allow-list as a setting",
+    "gold": true
+   },
+   {
+    "id": "specs/workflow-engine/README.md#3",
+    "label": "specs/workflow-engine/README.md \u203a Compilation \u2014 what it compiles to",
+    "gold": false
+   },
+   {
+    "id": "specs/world-model-ingestion/lake.md#7",
+    "label": "specs/world-model-ingestion/lake.md \u203a 3.2 The seal",
+    "gold": false
+   },
+   {
+    "id": "specs/workflow-engine/YAML.md#28",
+    "label": "specs/workflow-engine/YAML.md \u203a The fan-in",
+    "gold": false
+   },
+   {
+    "id": "specs/workflow-engine/YAML.md#6",
+    "label": "specs/workflow-engine/YAML.md \u203a A step may carry its own SQL",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 1.0,
+  "Q": 1.0,
+  "LQ": 1.0,
+  "S": 1.0
+ }
+}

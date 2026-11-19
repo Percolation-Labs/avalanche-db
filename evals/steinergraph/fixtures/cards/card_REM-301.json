@@ -1,0 +1,383 @@
+{
+ "qid": "card:REM-301",
+ "set": "cards",
+ "question": "What was done about this, and why: blog: a published entry of unlisted work does not read \"private import\" to its readers?",
+ "gold": [
+  {
+   "id": "commit/eac1f55a0b",
+   "label": "commit eac1f55: specs: a blog entry of unlisted work reads as published (REM-301)",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/9fba54eb51",
+   "label": "commit 9fba54e: board: file REM-301 blog: a published entry of unlisted work does not read \"private import\" to its reade",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-301.md#1",
+   "label": "board/cards/REM-301.md",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-301.md#2",
+   "label": "board/cards/REM-301.md \u203a Goal",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-301.md#4",
+   "label": "board/cards/REM-301.md \u203a Done when",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/eac1f55a0b",
+   "label": "commit eac1f55: specs: a blog entry of unlisted work reads as published (REM-301)",
+   "rank": 5,
+   "gold": true,
+   "doors_to_gold": 0
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/eac1f55a0b",
+    "label": "commit eac1f55: specs: a blog entry of unlisted work reads as published (REM-301)",
+    "role": "gold"
+   }
+  ],
+  "links": [],
+  "cost": 0,
+  "detached_gold": [],
+  "gold_pair_doors": [],
+  "entry": {
+   "seed": "commit/eac1f55a0b",
+   "gold": "commit/eac1f55a0b",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 189,
+  "within_2_doors": 23924,
+  "gold_within_1": 0,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "board/cards/REM-301.md#8",
+    "label": "board/cards/REM-301.md \u203a Log",
+    "p": 0.013636947109538482,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-301.md#3",
+    "label": "board/cards/REM-301.md \u203a Evidence",
+    "p": 0.007009469489981913,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/authoring-and-publication.md#19",
+    "label": "specs/percolate-application/authoring-and-publication.md \u203a 7. A5 \u2014 Prove the full browser and agent authoring path on co",
+    "p": 0.004333175624400224,
+    "gold": false
+   },
+   {
+    "id": "board/team/p8-subsystems-d4.md#2",
+    "label": "board/team/p8-subsystems-d4.md \u203a Log",
+    "p": 0.003745710719444954,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-298.md#9",
+    "label": "board/cards/REM-298.md \u203a Log",
+    "p": 0.003352890443854679,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/research-runs.md#19",
+    "label": "specs/percolate-application/research-runs.md \u203a 13. What two runs changed (28 September)",
+    "p": 0.0027816708901486084,
+    "gold": false
+   },
+   {
+    "id": "commit/3dfaf7f9c1",
+    "label": "commit 3dfaf7f: board: note on REM-298",
+    "p": 0.002700311649798056,
+    "gold": false
+   },
+   {
+    "id": "commit/3a02752d6f",
+    "label": "commit 3a02752: board: REM-298 in-progress \u2192 done",
+    "p": 0.0026983677086247974,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/authoring-and-publication.md#18",
+    "label": "specs/percolate-application/authoring-and-publication.md \u203a 7. A5 \u2014 Prove the full browser and agent authoring path on co",
+    "p": 0.002431102435600552,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-301.md#5",
+    "label": "board/cards/REM-301.md \u203a Estimate \u2014 1 point",
+    "p": 0.002413860346010138,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-429.md#6",
+    "label": "board/cards/REM-429.md \u203a Note on an inverted assertion",
+    "p": 0.002346753544133,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1303.md#6",
+    "label": "board/cards/REM-1303.md \u203a Log",
+    "p": 0.0021641085457828344,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/agents-and-workflows.md#26",
+    "label": "specs/percolate-application/agents-and-workflows.md \u203a Acceptance scenarios",
+    "p": 0.0021186886805049992,
+    "gold": false
+   },
+   {
+    "id": "commit/a5d9cdc1b8",
+    "label": "commit a5d9cdc: board: note on REM-157",
+    "p": 0.002111249721237677,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-670.md#6",
+    "label": "board/cards/REM-670.md \u203a Log",
+    "p": 0.0020796752691636393,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-303.md#8",
+    "label": "board/cards/REM-303.md \u203a Log",
+    "p": 0.002045219555889255,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-301.md#6",
+    "label": "board/cards/REM-301.md \u203a Scope",
+    "p": 0.0019408459523772635,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-298.md#8",
+    "label": "board/cards/REM-298.md \u203a Log",
+    "p": 0.0018936462497665075,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-303.md#1",
+    "label": "board/cards/REM-303.md",
+    "p": 0.0018510623353791963,
+    "gold": false
+   },
+   {
+    "id": "commit/833a64f9a1",
+    "label": "commit 833a64f: specs: every web page has one H1, and the sign-in gate's heading is it on a private route (REM-277)",
+    "p": 0.0018342981847986662,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/9fba54eb51",
+   "label": "commit 9fba54e: board: file REM-301 blog: a published entry of unlisted work does not read \"private import\" to its reade",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-301.md#1",
+   "label": "board/cards/REM-301.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-301.md#2",
+   "label": "board/cards/REM-301.md \u203a Goal",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-301.md#4",
+   "label": "board/cards/REM-301.md \u203a Done when",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/eac1f55a0b",
+   "label": "commit eac1f55: specs: a blog entry of unlisted work reads as published (REM-301)",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "board/cards/REM-301.md#5",
+   "label": "board/cards/REM-301.md \u203a Estimate \u2014 1 point",
+   "wave": 1,
+   "via": "term:rem 301",
+   "gold": false
+  },
+  {
+   "id": "commit/9f33bc86b5",
+   "label": "commit 9f33bc8: board: REM-301 in-progress \u2192 done",
+   "wave": 1,
+   "via": "term:rem 301",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-301.md#6",
+   "label": "board/cards/REM-301.md \u203a Scope",
+   "wave": 1,
+   "via": "term:rem 301",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-389.md#6",
+   "label": "board/cards/REM-389.md \u203a Links",
+   "wave": 1,
+   "via": "term:rem 301",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-301.md#3",
+   "label": "board/cards/REM-301.md \u203a Evidence",
+   "wave": 1,
+   "via": "term:rem 301",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "board/cards/REM-301.md#8",
+    "label": "board/cards/REM-301.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-301.md#3",
+    "label": "board/cards/REM-301.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/authoring-and-publication.md#19",
+    "label": "specs/percolate-application/authoring-and-publication.md \u203a 7. A5 \u2014 Prove the full browser and agent authoring path on co",
+    "gold": false
+   },
+   {
+    "id": "board/team/p8-subsystems-d4.md#2",
+    "label": "board/team/p8-subsystems-d4.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-298.md#9",
+    "label": "board/cards/REM-298.md \u203a Log",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "board/cards/REM-301.md#8",
+    "label": "board/cards/REM-301.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-301.md#3",
+    "label": "board/cards/REM-301.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/authoring-and-publication.md#19",
+    "label": "specs/percolate-application/authoring-and-publication.md \u203a 7. A5 \u2014 Prove the full browser and agent authoring path on co",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-298.md#9",
+    "label": "board/cards/REM-298.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-429.md#6",
+    "label": "board/cards/REM-429.md \u203a Note on an inverted assertion",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "board/cards/REM-429.md#6",
+    "label": "board/cards/REM-429.md \u203a Note on an inverted assertion",
+    "gold": false
+   },
+   {
+    "id": "commit/f9eb1246b0",
+    "label": "commit f9eb124: board: file REM-303 blog: a writer moves their published entry to a newer revision from the page",
+    "gold": false
+   },
+   {
+    "id": "commit/a545a9e16f",
+    "label": "commit a545a9e: board: file REM-620 reading: Save for later on a published but unlisted reading fails with 404",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-228.md#4",
+    "label": "board/cards/REM-228.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-303.md#1",
+    "label": "board/cards/REM-303.md",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "board/cards/REM-301.md#8",
+    "label": "board/cards/REM-301.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-429.md#6",
+    "label": "board/cards/REM-429.md \u203a Note on an inverted assertion",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-620.md#4",
+    "label": "board/cards/REM-620.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-440.md#4",
+    "label": "board/cards/REM-440.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/authoring-and-publication.md#19",
+    "label": "specs/percolate-application/authoring-and-publication.md \u203a 7. A5 \u2014 Prove the full browser and agent authoring path on co",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": null,
+  "Q": null,
+  "LQ": null,
+  "S": null
+ }
+}

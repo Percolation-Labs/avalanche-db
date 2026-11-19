@@ -1,0 +1,427 @@
+{
+ "qid": "card:REM-478",
+ "set": "cards",
+ "question": "What was done about this, and why: claims: two claims in different packages are the same only by a confirmed assertion, never by a merge?",
+ "gold": [
+  {
+   "id": "commit/688df6b0ee",
+   "label": "commit 688df6b: claims: two claims in different packages are the same only by a confirmed assertion, never by a merge (R",
+   "seed": true
+  },
+  {
+   "id": "commit/b28bccc7ec",
+   "label": "commit b28bccc: claims: relations are assertions in one vocabulary, made in a transaction and never updated (REM-474)",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/5ce73ce692",
+   "label": "commit 5ce73ce: board: file REM-478 claims: two claims in different packages are the same only by a confirmed assertion,",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-478.md#1",
+   "label": "board/cards/REM-478.md",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/688df6b0ee",
+   "label": "commit 688df6b: claims: two claims in different packages are the same only by a confirmed assertion, never by a merge (R",
+   "rank": 3,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "specs/claims/graph.md#18",
+   "label": "specs/claims/graph.md \u203a Across packages",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "applications/percolate-self-model/dreaming/reduce/core-exercise/README.md#4",
+   "label": "applications/percolate-self-model/dreaming/reduce/core-exercise/README.md \u203a A proposal costs nothing, and that is the wh",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/688df6b0ee",
+    "label": "commit 688df6b: claims: two claims in different packages are the same only by a confirmed assertion, never by a merge (R",
+    "role": "gold"
+   },
+   {
+    "id": "commit/b28bccc7ec",
+    "label": "commit b28bccc: claims: relations are assertions in one vocabulary, made in a transaction and never updated (REM-474)",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/688df6b0ee",
+    "b": "commit/b28bccc7ec",
+    "via": [
+     {
+      "kind": "term",
+      "key": "p8ci dev",
+      "width": 14
+     },
+     {
+      "kind": "term",
+      "key": "gates dev",
+      "width": 14
+     },
+     {
+      "kind": "term",
+      "key": "rem 478",
+      "width": 19
+     },
+     {
+      "kind": "term",
+      "key": "p8ci",
+      "width": 25
+     },
+     {
+      "kind": "term",
+      "key": "assert_relation",
+      "width": 49
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "commit/688df6b0ee",
+   "gold": "commit/688df6b0ee",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 1198,
+  "within_2_doors": 31865,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "commit/230bc6580f",
+    "label": "commit 230bc65: research: a proposal costs nothing, measured in core (REM-649 box 2)",
+    "p": 0.004722460208038219,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-478.md#2",
+    "label": "board/cards/REM-478.md \u203a Goal",
+    "p": 0.003694322795669534,
+    "gold": false
+   },
+   {
+    "id": "specs/claims/graph.md#55",
+    "label": "specs/claims/graph.md \u203a 15. Build sequence",
+    "p": 0.0036463198838557623,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-649.md#8",
+    "label": "board/cards/REM-649.md \u203a Log",
+    "p": 0.003390198124602362,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-478.md#6",
+    "label": "board/cards/REM-478.md \u203a Log",
+    "p": 0.003272822745806653,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-435.md#8",
+    "label": "board/cards/REM-435.md \u203a Log",
+    "p": 0.0032505972867448714,
+    "gold": false
+   },
+   {
+    "id": "commit/480237a99d",
+    "label": "commit 480237a: board: file REM-479 claims: comparisons are comparative assertions in core, not documents in the applica",
+    "p": 0.002432352862114164,
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-self-model/dreaming/reduce/core-exercise/propose.py#1",
+    "label": "applications/percolate-self-model/dreaming/reduce/core-exercise/propose.py",
+    "p": 0.0023094013727781477,
+    "gold": false
+   },
+   {
+    "id": "commit/ea3f0677ff",
+    "label": "commit ea3f067: board: file REM-477 claims: an origin is an entity, and independent evidence is counted from it",
+    "p": 0.0021926060285262995,
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-self-model/dreaming/reduce/graph/REDUCTION.md#2",
+    "label": "applications/percolate-self-model/dreaming/reduce/graph/REDUCTION.md \u203a Why this is the property that matters",
+    "p": 0.002077044473910962,
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-self-model/dreaming/reduce/graph/reduction_safety.py#5",
+    "label": "applications/percolate-self-model/dreaming/reduce/graph/reduction_safety.py",
+    "p": 0.0020672146617224884,
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-self-model/dreaming/reduce/core-exercise/README.md#5",
+    "label": "applications/percolate-self-model/dreaming/reduce/core-exercise/README.md \u203a What core made this probe do",
+    "p": 0.00206266859417984,
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-self-model/dreaming/shape/README.md#5",
+    "label": "applications/percolate-self-model/dreaming/shape/README.md \u203a Controls and compression",
+    "p": 0.0018346557007379808,
+    "gold": false
+   },
+   {
+    "id": "output/critics-story/build_story.py#5",
+    "label": "output/critics-story/build_story.py",
+    "p": 0.0018005568679423847,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-477.md#3",
+    "label": "board/cards/REM-477.md \u203a Done when",
+    "p": 0.0017858538904218348,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-500.md#6",
+    "label": "board/cards/REM-500.md \u203a Log",
+    "p": 0.001765097197561463,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-432.md#9",
+    "label": "board/cards/REM-432.md \u203a Log",
+    "p": 0.0015308262713292972,
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-self-model/dreaming/reduce/challenge/README.md#2",
+    "label": "applications/percolate-self-model/dreaming/reduce/challenge/README.md \u203a Why this step exists",
+    "p": 0.0014649162277481685,
+    "gold": false
+   },
+   {
+    "id": "commit/b28bccc7ec",
+    "label": "commit b28bccc: claims: relations are assertions in one vocabulary, made in a transaction and never updated (REM-474)",
+    "p": 0.0014353509053911405,
+    "gold": true
+   },
+   {
+    "id": "applications/percolate-self-model/dreaming/reduce/core-exercise/README.md#6",
+    "label": "applications/percolate-self-model/dreaming/reduce/core-exercise/README.md \u203a What core has no column for",
+    "p": 0.0013707953037855884,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/5ce73ce692",
+   "label": "commit 5ce73ce: board: file REM-478 claims: two claims in different packages are the same only by a confirmed assertion,",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-478.md#1",
+   "label": "board/cards/REM-478.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/688df6b0ee",
+   "label": "commit 688df6b: claims: two claims in different packages are the same only by a confirmed assertion, never by a merge (R",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "specs/claims/graph.md#18",
+   "label": "specs/claims/graph.md \u203a Across packages",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "applications/percolate-self-model/dreaming/reduce/core-exercise/README.md#4",
+   "label": "applications/percolate-self-model/dreaming/reduce/core-exercise/README.md \u203a A proposal costs nothing, and that is the wh",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/a81ad3caa5",
+   "label": "commit a81ad3c: board: p8-subsystems-cb takes REM-478",
+   "wave": 1,
+   "via": "term:rem 478",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-478.md#4",
+   "label": "board/cards/REM-478.md \u203a Estimate \u2014 3 points",
+   "wave": 1,
+   "via": "term:rem 478",
+   "gold": false
+  },
+  {
+   "id": "commit/3f24316872",
+   "label": "commit 3f24316: board: REM-478 in-progress \u2192 done",
+   "wave": 1,
+   "via": "term:rem 478",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-478.md#3",
+   "label": "board/cards/REM-478.md \u203a Done when",
+   "wave": 1,
+   "via": "term:rem 478",
+   "gold": false
+  },
+  {
+   "id": "commit/ab9b5fa0fc",
+   "label": "commit ab9b5fa: board: edit REM-478 depends",
+   "wave": 1,
+   "via": "term:rem 478",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "commit/230bc6580f",
+    "label": "commit 230bc65: research: a proposal costs nothing, measured in core (REM-649 box 2)",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-478.md#2",
+    "label": "board/cards/REM-478.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "specs/claims/graph.md#55",
+    "label": "specs/claims/graph.md \u203a 15. Build sequence",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-649.md#8",
+    "label": "board/cards/REM-649.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-478.md#6",
+    "label": "board/cards/REM-478.md \u203a Log",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "commit/230bc6580f",
+    "label": "commit 230bc65: research: a proposal costs nothing, measured in core (REM-649 box 2)",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-649.md#8",
+    "label": "board/cards/REM-649.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-self-model/dreaming/reduce/core-exercise/propose.py#1",
+    "label": "applications/percolate-self-model/dreaming/reduce/core-exercise/propose.py",
+    "gold": false
+   },
+   {
+    "id": "commit/3a79a94949",
+    "label": "commit 3a79a94: research: reduction costs nothing, so it is always safe to attempt (REM-661)",
+    "gold": false
+   },
+   {
+    "id": "commit/53d031621f",
+    "label": "commit 53d0316: research: reduction costs nothing, so it is always safe to attempt (REM-661)",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/997f177ec0",
+    "label": "commit 997f177: board: file REM-432 decide: what a relationship between two claims is, what finds one, and where it is p",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-432.md#1",
+    "label": "board/cards/REM-432.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-432.md#2",
+    "label": "board/cards/REM-432.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "commit/3f24316872",
+    "label": "commit 3f24316: board: REM-478 in-progress \u2192 done",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-478.md#5",
+    "label": "board/cards/REM-478.md \u203a Scope",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "applications/percolate-self-model/dreaming/reduce/graph/REDUCTION.md#2",
+    "label": "applications/percolate-self-model/dreaming/reduce/graph/REDUCTION.md \u203a Why this is the property that matters",
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-self-model/dreaming/reduce/core-exercise/propose.py#1",
+    "label": "applications/percolate-self-model/dreaming/reduce/core-exercise/propose.py",
+    "gold": false
+   },
+   {
+    "id": "specs/claims/graph.md#9",
+    "label": "specs/claims/graph.md \u203a 3. The model",
+    "gold": false
+   },
+   {
+    "id": "commit/3a79a94949",
+    "label": "commit 3a79a94: research: reduction costs nothing, so it is always safe to attempt (REM-661)",
+    "gold": false
+   },
+   {
+    "id": "commit/53d031621f",
+    "label": "commit 53d0316: research: reduction costs nothing, so it is always safe to attempt (REM-661)",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

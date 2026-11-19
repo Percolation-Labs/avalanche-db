@@ -1,0 +1,403 @@
+{
+ "qid": "card:REM-699",
+ "set": "cards",
+ "question": "What was done about this, and why: authoring: mark a draft from a phone?",
+ "gold": [
+  {
+   "id": "commit/bb0a10a41f",
+   "label": "commit bb0a10a: Semantic editing: three spikes become four build slices, tested in browser and MCP together (REM-651)",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/afffc2832b",
+   "label": "commit afffc28: board: file REM-699 authoring: mark a draft from a phone",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-699.md#1",
+   "label": "board/cards/REM-699.md",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/c0172d810a",
+   "label": "commit c0172d8: board: file REM-651 authoring: mark a span in a draft and leave the reviser a note",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-697.md#8",
+   "label": "board/cards/REM-697.md \u203a Log",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-697.md#1",
+   "label": "board/cards/REM-697.md",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/afffc2832b",
+    "label": "commit afffc28: board: file REM-699 authoring: mark a draft from a phone",
+    "role": "seed"
+   },
+   {
+    "id": "commit/bb0a10a41f",
+    "label": "commit bb0a10a: Semantic editing: three spikes become four build slices, tested in browser and MCP together (REM-651)",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/afffc2832b",
+    "b": "commit/bb0a10a41f",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "rem 699",
+      "width": 22
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [],
+  "entry": {
+   "seed": "commit/afffc2832b",
+   "gold": "commit/bb0a10a41f",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 747,
+  "within_2_doors": 32125,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "board/cards/REM-651.md#1",
+    "label": "board/cards/REM-651.md",
+    "p": 0.009314180743963108,
+    "gold": false
+   },
+   {
+    "id": "commit/bb0a10a41f",
+    "label": "commit bb0a10a: Semantic editing: three spikes become four build slices, tested in browser and MCP together (REM-651)",
+    "p": 0.007578452755700826,
+    "gold": true
+   },
+   {
+    "id": "board/cards/REM-651.md#7",
+    "label": "board/cards/REM-651.md \u203a Log",
+    "p": 0.006489340650258012,
+    "gold": false
+   },
+   {
+    "id": "commit/a489ee0ace",
+    "label": "commit a489ee0: board: note on REM-692",
+    "p": 0.004981211031778767,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-651.md#2",
+    "label": "board/cards/REM-651.md \u203a Goal",
+    "p": 0.004939739835547262,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-699.md#2",
+    "label": "board/cards/REM-699.md \u203a Goal",
+    "p": 0.004643519507511003,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/semantic-editing-workspace.md#37",
+    "label": "specs/percolate-application/semantic-editing-workspace.md \u203a 12. Build slices",
+    "p": 0.0036163346922076325,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-697.md#2",
+    "label": "board/cards/REM-697.md \u203a Goal",
+    "p": 0.0035624452362081078,
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-10-10-lens-library/notes/public_domain_example_pairs.txt#14",
+    "label": "meta/spikes/2026-10-10-lens-library/notes/public_domain_example_pairs.txt",
+    "p": 0.003361058981904344,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-696.md#8",
+    "label": "board/cards/REM-696.md \u203a Log",
+    "p": 0.0032651690668569436,
+    "gold": false
+   },
+   {
+    "id": "commit/73daefee95",
+    "label": "commit 73daefe: board: file REM-650 reading: a stat figure with a word unit overlaps its neighbour on the card",
+    "p": 0.0032622643600358995,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-698.md#8",
+    "label": "board/cards/REM-698.md \u203a Log",
+    "p": 0.0032346034552612757,
+    "gold": false
+   },
+   {
+    "id": "commit/36ff6f47d4",
+    "label": "commit 36ff6f4: board: file REM-652 search: a two-letter query word is dropped, and the result never says which arms ran",
+    "p": 0.0031220592834245,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-697.md#7",
+    "label": "board/cards/REM-697.md \u203a Links",
+    "p": 0.00275423353885928,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/semantic-editing-workspace.md#17",
+    "label": "specs/percolate-application/semantic-editing-workspace.md \u203a One small marking interaction",
+    "p": 0.0027109792732171825,
+    "gold": false
+   },
+   {
+    "id": "board/team/semantic-workspace-review.md#2",
+    "label": "board/team/semantic-workspace-review.md \u203a Log",
+    "p": 0.002489853790112188,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-695.md#8",
+    "label": "board/cards/REM-695.md \u203a Log",
+    "p": 0.0023969833461464675,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/semantic-editing-workspace.md#39",
+    "label": "specs/percolate-application/semantic-editing-workspace.md \u203a S2. Marking in the browser reader",
+    "p": 0.0020820762733392384,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-699.md#4",
+    "label": "board/cards/REM-699.md \u203a Done when",
+    "p": 0.002009671034989591,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-700.md#7",
+    "label": "board/cards/REM-700.md \u203a Links",
+    "p": 0.002009182999363752,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/afffc2832b",
+   "label": "commit afffc28: board: file REM-699 authoring: mark a draft from a phone",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-699.md#1",
+   "label": "board/cards/REM-699.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/c0172d810a",
+   "label": "commit c0172d8: board: file REM-651 authoring: mark a span in a draft and leave the reviser a note",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-697.md#8",
+   "label": "board/cards/REM-697.md \u203a Log",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-697.md#1",
+   "label": "board/cards/REM-697.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/bce641d899",
+   "label": "commit bce641d: board: edit REM-699 labels severity",
+   "wave": 1,
+   "via": "term:rem 699",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-699.md#5",
+   "label": "board/cards/REM-699.md \u203a Estimate",
+   "wave": 1,
+   "via": "term:rem 699",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-700.md#6",
+   "label": "board/cards/REM-700.md \u203a Scope",
+   "wave": 1,
+   "via": "term:rem 699",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-699.md#8",
+   "label": "board/cards/REM-699.md \u203a Log",
+   "wave": 1,
+   "via": "term:rem 699",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-700.md#7",
+   "label": "board/cards/REM-700.md \u203a Links",
+   "wave": 1,
+   "via": "term:rem 699",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "board/cards/REM-651.md#1",
+    "label": "board/cards/REM-651.md",
+    "gold": false
+   },
+   {
+    "id": "commit/bb0a10a41f",
+    "label": "commit bb0a10a: Semantic editing: three spikes become four build slices, tested in browser and MCP together (REM-651)",
+    "gold": true
+   },
+   {
+    "id": "board/cards/REM-651.md#7",
+    "label": "board/cards/REM-651.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "commit/a489ee0ace",
+    "label": "commit a489ee0: board: note on REM-692",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-651.md#2",
+    "label": "board/cards/REM-651.md \u203a Goal",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "board/cards/REM-651.md#1",
+    "label": "board/cards/REM-651.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-651.md#7",
+    "label": "board/cards/REM-651.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-651.md#2",
+    "label": "board/cards/REM-651.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-698.md#8",
+    "label": "board/cards/REM-698.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "commit/bb0a10a41f",
+    "label": "commit bb0a10a: Semantic editing: three spikes become four build slices, tested in browser and MCP together (REM-651)",
+    "gold": true
+   }
+  ],
+  "LQ": [
+   {
+    "id": "board/cards/REM-651.md#1",
+    "label": "board/cards/REM-651.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-651.md#2",
+    "label": "board/cards/REM-651.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-698.md#1",
+    "label": "board/cards/REM-698.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-697.md#5",
+    "label": "board/cards/REM-697.md \u203a Estimate",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-699.md#6",
+    "label": "board/cards/REM-699.md \u203a Scope",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "commit/2915aa3be8",
+    "label": "commit 2915aa3: board: file REM-697 authoring: spike phone marking in the existing reader tabs",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-651.md#1",
+    "label": "board/cards/REM-651.md",
+    "gold": false
+   },
+   {
+    "id": "commit/c1ca274d24",
+    "label": "commit c1ca274: board: file REM-708 authoring: keep the Mark button clear of selected words",
+    "gold": false
+   },
+   {
+    "id": "commit/2859de90dd",
+    "label": "commit 2859de9: board: file REM-1078 authoring: a mark on the takeaway band keeps its words readable",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/semantic-editing-workspace.md#41",
+    "label": "specs/percolate-application/semantic-editing-workspace.md \u203a S4. Marking from a phone",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 1.0,
+  "Q": 1.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

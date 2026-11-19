@@ -1,0 +1,410 @@
+{
+ "qid": "pr:665",
+ "set": "prs",
+ "question": "What work went into this, and why: Core claim (1) on the repo and BEAM: the bound holds low on three corpora; floor and reads-per-wave cap?",
+ "gold": [
+  {
+   "id": "commit/0fcdc72f3d",
+   "label": "commit 0fcdc72: Core claim (1) across MuSiQue, the repo and BEAM: the top-3 bound holds low on all three; floor + reads-",
+   "seed": true
+  },
+  {
+   "id": "commit/edaa49ab4e",
+   "label": "commit edaa49a: Core claim (1) on the repo, first pass on 4 walks: items stay a lower bound; the floor breaks the cap fa",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/0fcdc72f3d",
+   "label": "commit 0fcdc72: Core claim (1) across MuSiQue, the repo and BEAM: the top-3 bound holds low on all three; floor + reads-",
+   "rank": 1,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "commit/12a5ef0db8",
+   "label": "commit 12a5ef0: Merge pull request #665 from Percolation-Labs/sally/dream-metric-repo",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/messages/M-20261102-173453-0151.md#1",
+   "label": "board/messages/M-20261102-173453-0151.md",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "meta/lab/results/dream-metric/CORPORA.md#3",
+   "label": "meta/lab/results/dream-metric/CORPORA.md \u203a 664). Rule: top 3, cap 10, read 100, with a .5 floor on all except the 7 MuSi",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "meta/lab/results/walker-claim/qasper/RESULT.md#4",
+   "label": "meta/lab/results/walker-claim/qasper/RESULT.md \u203a What holds",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/0fcdc72f3d",
+    "label": "commit 0fcdc72: Core claim (1) across MuSiQue, the repo and BEAM: the top-3 bound holds low on all three; floor + reads-",
+    "role": "gold"
+   },
+   {
+    "id": "commit/edaa49ab4e",
+    "label": "commit edaa49a: Core claim (1) on the repo, first pass on 4 walks: items stay a lower bound; the floor breaks the cap fa",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/0fcdc72f3d",
+    "b": "commit/edaa49ab4e",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "core claim",
+      "width": 39
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "commit/0fcdc72f3d",
+   "gold": "commit/0fcdc72f3d",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 1293,
+  "within_2_doors": 31769,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "meta/lab/results/walker-claim/qasper/RESULT.md#2",
+    "label": "meta/lab/results/walker-claim/qasper/RESULT.md \u203a Results",
+    "p": 0.004739665412224422,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/dream-metric/CORPORA.md#4",
+    "label": "meta/lab/results/dream-metric/CORPORA.md \u203a 664). Rule: top 3, cap 10, read 100, with a .5 floor on all except the 7 MuSi",
+    "p": 0.004305727001248214,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/dream-metric/CORPORA.md#2",
+    "label": "meta/lab/results/dream-metric/CORPORA.md \u203a 664). Rule: top 3, cap 10, read 100, with a .5 floor on all except the 7 MuSi",
+    "p": 0.003931260908900131,
+    "gold": false
+   },
+   {
+    "id": "commit/edaa49ab4e",
+    "label": "commit edaa49a: Core claim (1) on the repo, first pass on 4 walks: items stay a lower bound; the floor breaks the cap fa",
+    "p": 0.0038178925614788172,
+    "gold": true
+   },
+   {
+    "id": "commit/922d37891b",
+    "label": "commit 922d378: walklab dreaming: spectral primitives on sally's 40 balls -- S&S prune cuts walker commute 87% (beats ra",
+    "p": 0.003664215904742627,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261102-163732-64bf.md#1",
+    "label": "board/messages/M-20261102-163732-64bf.md",
+    "p": 0.0034384989102334666,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261102-173457-1167.md#1",
+    "label": "board/messages/M-20261102-173457-1167.md",
+    "p": 0.0033717041176404387,
+    "gold": false
+   },
+   {
+    "id": "commit/2a2907c18e",
+    "label": "commit 2a2907c: Signposted reach: s(e) fitted to top-of-round mass (ties random); HELD-OUT items 7.6 predicted vs 10 obs",
+    "p": 0.0030909550272960533,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261102-173551-9df0.md#1",
+    "label": "board/messages/M-20261102-173551-9df0.md",
+    "p": 0.0029381904827231924,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261102-210813-f195.md#1",
+    "label": "board/messages/M-20261102-210813-f195.md",
+    "p": 0.0024326307319297866,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/dream-metric/repo/RESULT-4.md#2",
+    "label": "meta/lab/results/dream-metric/repo/RESULT-4.md \u203a Core claim (1) on the second corpus, this repository: first pass on cor",
+    "p": 0.0023419319677139712,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261102-104045-3184.md#1",
+    "label": "board/messages/M-20261102-104045-3184.md",
+    "p": 0.002296004575238187,
+    "gold": false
+   },
+   {
+    "id": "commit/4a3073682b",
+    "label": "commit 4a30736: board: james acknowledges 1 message(s)",
+    "p": 0.0021243897748845337,
+    "gold": false
+   },
+   {
+    "id": "commit/24ae7c4d25",
+    "label": "commit 24ae7c4: board: sirsh messages james",
+    "p": 0.002088734501187751,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261102-173911-b507.md#1",
+    "label": "board/messages/M-20261102-173911-b507.md",
+    "p": 0.0020111128452013024,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/dream-metric/TIGHT.md#1",
+    "label": "meta/lab/results/dream-metric/TIGHT.md \u203a A tighter bound for a ranking judge: the 2.27 open question, first pass (2 Nov,",
+    "p": 0.0019634411559814988,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/walker-claim/qasper/RESULT.md#3",
+    "label": "meta/lab/results/walker-claim/qasper/RESULT.md \u203a Results",
+    "p": 0.001706998558760566,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/dream-metric/repo/RESULT-4.md#1",
+    "label": "meta/lab/results/dream-metric/repo/RESULT-4.md \u203a Core claim (1) on the second corpus, this repository: first pass on cor",
+    "p": 0.001657046838799304,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261102-152135-f7d0.md#1",
+    "label": "board/messages/M-20261102-152135-f7d0.md",
+    "p": 0.001543622538521059,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-miss-census-qasper/result.txt#2",
+    "label": "meta/lab/results/q4-miss-census-qasper/result.txt",
+    "p": 0.0014940040616826867,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/0fcdc72f3d",
+   "label": "commit 0fcdc72: Core claim (1) across MuSiQue, the repo and BEAM: the top-3 bound holds low on all three; floor + reads-",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "commit/12a5ef0db8",
+   "label": "commit 12a5ef0: Merge pull request #665 from Percolation-Labs/sally/dream-metric-repo",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/messages/M-20261102-173453-0151.md#1",
+   "label": "board/messages/M-20261102-173453-0151.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/dream-metric/CORPORA.md#3",
+   "label": "meta/lab/results/dream-metric/CORPORA.md \u203a 664). Rule: top 3, cap 10, read 100, with a .5 floor on all except the 7 MuSi",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/walker-claim/qasper/RESULT.md#4",
+   "label": "meta/lab/results/walker-claim/qasper/RESULT.md \u203a What holds",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/dream-metric/CORPORA.md#2",
+   "label": "meta/lab/results/dream-metric/CORPORA.md \u203a 664). Rule: top 3, cap 10, read 100, with a .5 floor on all except the 7 MuSi",
+   "wave": 1,
+   "via": "term:metric corpora",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/dream-metric/CORPORA.md#4",
+   "label": "meta/lab/results/dream-metric/CORPORA.md \u203a 664). Rule: top 3, cap 10, read 100, with a .5 floor on all except the 7 MuSi",
+   "wave": 1,
+   "via": "term:metric corpora",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/dream-metric/CORPORA.md#1",
+   "label": "meta/lab/results/dream-metric/CORPORA.md \u203a Core claim (1) across three corpora: MuSiQue, this repository, BEAM (2 Nov, s",
+   "wave": 1,
+   "via": "term:metric corpora",
+   "gold": false
+  },
+  {
+   "id": "board/messages/M-20261102-163732-64bf.md#1",
+   "label": "board/messages/M-20261102-163732-64bf.md",
+   "wave": 2,
+   "via": "term:result 4",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/dream-metric/repo/RESULT-4.md#2",
+   "label": "meta/lab/results/dream-metric/repo/RESULT-4.md \u203a Core claim (1) on the second corpus, this repository: first pass on cor",
+   "wave": 2,
+   "via": "term:result 4",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "meta/lab/results/walker-claim/qasper/RESULT.md#2",
+    "label": "meta/lab/results/walker-claim/qasper/RESULT.md \u203a Results",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/dream-metric/CORPORA.md#4",
+    "label": "meta/lab/results/dream-metric/CORPORA.md \u203a 664). Rule: top 3, cap 10, read 100, with a .5 floor on all except the 7 MuSi",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/dream-metric/CORPORA.md#2",
+    "label": "meta/lab/results/dream-metric/CORPORA.md \u203a 664). Rule: top 3, cap 10, read 100, with a .5 floor on all except the 7 MuSi",
+    "gold": false
+   },
+   {
+    "id": "commit/edaa49ab4e",
+    "label": "commit edaa49a: Core claim (1) on the repo, first pass on 4 walks: items stay a lower bound; the floor breaks the cap fa",
+    "gold": true
+   },
+   {
+    "id": "commit/922d37891b",
+    "label": "commit 922d378: walklab dreaming: spectral primitives on sally's 40 balls -- S&S prune cuts walker commute 87% (beats ra",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "meta/lab/results/dream-metric/CORPORA.md#4",
+    "label": "meta/lab/results/dream-metric/CORPORA.md \u203a 664). Rule: top 3, cap 10, read 100, with a .5 floor on all except the 7 MuSi",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/walker-claim/qasper/RESULT.md#2",
+    "label": "meta/lab/results/walker-claim/qasper/RESULT.md \u203a Results",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/dream-metric/CORPORA.md#2",
+    "label": "meta/lab/results/dream-metric/CORPORA.md \u203a 664). Rule: top 3, cap 10, read 100, with a .5 floor on all except the 7 MuSi",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261102-173551-9df0.md#1",
+    "label": "board/messages/M-20261102-173551-9df0.md",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261102-163732-64bf.md#1",
+    "label": "board/messages/M-20261102-163732-64bf.md",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/edaa49ab4e",
+    "label": "commit edaa49a: Core claim (1) on the repo, first pass on 4 walks: items stay a lower bound; the floor breaks the cap fa",
+    "gold": true
+   },
+   {
+    "id": "board/messages/M-20261102-173457-1167.md#1",
+    "label": "board/messages/M-20261102-173457-1167.md",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/walker-claim/qasper/RESULT.md#3",
+    "label": "meta/lab/results/walker-claim/qasper/RESULT.md \u203a Results",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261102-210813-f195.md#1",
+    "label": "board/messages/M-20261102-210813-f195.md",
+    "gold": false
+   },
+   {
+    "id": "commit/2a2907c18e",
+    "label": "commit 2a2907c: Signposted reach: s(e) fitted to top-of-round mass (ties random); HELD-OUT items 7.6 predicted vs 10 obs",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "board/messages/M-20261102-173551-9df0.md#1",
+    "label": "board/messages/M-20261102-173551-9df0.md",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261102-210813-f195.md#1",
+    "label": "board/messages/M-20261102-210813-f195.md",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-lead-share/result.txt#1",
+    "label": "meta/lab/results/q4-lead-share/result.txt",
+    "gold": false
+   },
+   {
+    "id": "commit/edaa49ab4e",
+    "label": "commit edaa49a: Core claim (1) on the repo, first pass on 4 walks: items stay a lower bound; the floor breaks the cap fa",
+    "gold": true
+   },
+   {
+    "id": "commit/068191ba2d",
+    "label": "commit 068191b: Tighter bound, first pass: P-first as one rank event (m_t in place of 3, per-item per-wave cap); a lower",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 1.0,
+  "Q": 0.0,
+  "LQ": 1.0,
+  "S": 1.0
+ }
+}

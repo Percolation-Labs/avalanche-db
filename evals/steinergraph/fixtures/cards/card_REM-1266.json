@@ -1,0 +1,410 @@
+{
+ "qid": "card:REM-1266",
+ "set": "cards",
+ "question": "What was done about this, and why: tutorials: review and re-run the Percolate tutorial series before publishing?",
+ "gold": [
+  {
+   "id": "commit/b39a2db133",
+   "label": "commit b39a2db: REM-1266: the tutorial series card, fleshed out from a block-by-block check against percolate main",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/3bba0e14be",
+   "label": "commit 3bba0e1: board: file REM-1266 tutorials: review and re-run the Percolate tutorial series before publishing",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-1266.md#1",
+   "label": "board/cards/REM-1266.md",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/53924bb115",
+   "label": "commit 53924bb: board: file REM-1309 tutorials: the write-ups, the BEAM/QASPER tutorial and the four-piece series, redra",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "board/cards/REM-1309.md#1",
+   "label": "board/cards/REM-1309.md",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "board/messages/M-20261105-132714-a0e8.md#1",
+   "label": "board/messages/M-20261105-132714-a0e8.md",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 2
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/3bba0e14be",
+    "label": "commit 3bba0e1: board: file REM-1266 tutorials: review and re-run the Percolate tutorial series before publishing",
+    "role": "seed"
+   },
+   {
+    "id": "commit/b39a2db133",
+    "label": "commit b39a2db: REM-1266: the tutorial series card, fleshed out from a block-by-block check against percolate main",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/3bba0e14be",
+    "b": "commit/b39a2db133",
+    "via": [
+     {
+      "kind": "term",
+      "key": "tutorial series",
+      "width": 8
+     },
+     {
+      "kind": "term",
+      "key": "rem 1266",
+      "width": 29
+     },
+     {
+      "kind": "term",
+      "key": "1266",
+      "width": 33
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [],
+  "entry": {
+   "seed": "commit/3bba0e14be",
+   "gold": "commit/b39a2db133",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 1113,
+  "within_2_doors": 33933,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "board/cards/REM-1309.md#3",
+    "label": "board/cards/REM-1309.md \u203a Log",
+    "p": 0.006743189853655536,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1266.md#6",
+    "label": "board/cards/REM-1266.md \u203a Log",
+    "p": 0.0031512454871649694,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1266.md#2",
+    "label": "board/cards/REM-1266.md \u203a Goal",
+    "p": 0.00313160534598138,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261105-132741-93bd.md#1",
+    "label": "board/messages/M-20261105-132741-93bd.md",
+    "p": 0.0031101788867035074,
+    "gold": false
+   },
+   {
+    "id": "commit/1f2c354a07",
+    "label": "commit 1f2c354: board: note on REM-1266",
+    "p": 0.0029402338121521485,
+    "gold": false
+   },
+   {
+    "id": "commit/ea9973d7c4",
+    "label": "commit ea9973d: board: note on REM-1266",
+    "p": 0.0029327642595340106,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261105-131819-0285.md#1",
+    "label": "board/messages/M-20261105-131819-0285.md",
+    "p": 0.0029130723039590607,
+    "gold": false
+   },
+   {
+    "id": "commit/cf7647d3ad",
+    "label": "commit cf7647d: board: REM-1266 in-progress \u2192 done",
+    "p": 0.0027871749090753834,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1267.md#6",
+    "label": "board/cards/REM-1267.md \u203a Log",
+    "p": 0.0027719359272636163,
+    "gold": false
+   },
+   {
+    "id": "commit/a48daa22a2",
+    "label": "commit a48daa2: board: note on REM-1266",
+    "p": 0.0027676816094799267,
+    "gold": false
+   },
+   {
+    "id": "commit/c3daab7f9f",
+    "label": "commit c3daab7: board: cory takes REM-1266",
+    "p": 0.0026513616836207816,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261030-110107-6d03.md#1",
+    "label": "board/messages/M-20261030-110107-6d03.md",
+    "p": 0.0026311651934688685,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261105-132741-93bd.md#2",
+    "label": "board/messages/M-20261105-132741-93bd.md",
+    "p": 0.002583237312257168,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261030-110239-981f.md#1",
+    "label": "board/messages/M-20261030-110239-981f.md",
+    "p": 0.0025807828925207316,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1309.md#4",
+    "label": "board/cards/REM-1309.md \u203a Log",
+    "p": 0.002261029879954231,
+    "gold": false
+   },
+   {
+    "id": "commit/940a4e7281",
+    "label": "commit 940a4e7: board: timmy messages cory",
+    "p": 0.0022480150921559768,
+    "gold": false
+   },
+   {
+    "id": "commit/6bb10ca4f8",
+    "label": "commit 6bb10ca: board: timmy acknowledges 1 message(s)",
+    "p": 0.0022474495732553793,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261030-110003-4d05.md#1",
+    "label": "board/messages/M-20261030-110003-4d05.md",
+    "p": 0.002109561485304219,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261030-105815-5239.md#1",
+    "label": "board/messages/M-20261030-105815-5239.md",
+    "p": 0.0020478906018507855,
+    "gold": false
+   },
+   {
+    "id": "output/trust-claims-tutorial-2026-09-19/lab.sql#4",
+    "label": "output/trust-claims-tutorial-2026-09-19/lab.sql",
+    "p": 0.001888312502197801,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/3bba0e14be",
+   "label": "commit 3bba0e1: board: file REM-1266 tutorials: review and re-run the Percolate tutorial series before publishing",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-1266.md#1",
+   "label": "board/cards/REM-1266.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/53924bb115",
+   "label": "commit 53924bb: board: file REM-1309 tutorials: the write-ups, the BEAM/QASPER tutorial and the four-piece series, redra",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-1309.md#1",
+   "label": "board/cards/REM-1309.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/messages/M-20261105-132714-a0e8.md#1",
+   "label": "board/messages/M-20261105-132714-a0e8.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/c3daab7f9f",
+   "label": "commit c3daab7: board: cory takes REM-1266",
+   "wave": 1,
+   "via": "term:1266",
+   "gold": false
+  },
+  {
+   "id": "commit/cf7647d3ad",
+   "label": "commit cf7647d: board: REM-1266 in-progress \u2192 done",
+   "wave": 1,
+   "via": "term:1266",
+   "gold": false
+  },
+  {
+   "id": "commit/b39a2db133",
+   "label": "commit b39a2db: REM-1266: the tutorial series card, fleshed out from a block-by-block check against percolate main",
+   "wave": 1,
+   "via": "term:1266",
+   "gold": true
+  },
+  {
+   "id": "board/cards/REM-1266.md#2",
+   "label": "board/cards/REM-1266.md \u203a Goal",
+   "wave": 1,
+   "via": "term:1266",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-1266.md#5",
+   "label": "board/cards/REM-1266.md \u203a Scope",
+   "wave": 1,
+   "via": "term:1266",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "board/cards/REM-1309.md#3",
+    "label": "board/cards/REM-1309.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1266.md#6",
+    "label": "board/cards/REM-1266.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1266.md#2",
+    "label": "board/cards/REM-1266.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261105-132741-93bd.md#1",
+    "label": "board/messages/M-20261105-132741-93bd.md",
+    "gold": false
+   },
+   {
+    "id": "commit/1f2c354a07",
+    "label": "commit 1f2c354: board: note on REM-1266",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "board/cards/REM-1309.md#3",
+    "label": "board/cards/REM-1309.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261105-131819-0285.md#1",
+    "label": "board/messages/M-20261105-131819-0285.md",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261105-132741-93bd.md#2",
+    "label": "board/messages/M-20261105-132741-93bd.md",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261030-110239-981f.md#1",
+    "label": "board/messages/M-20261030-110239-981f.md",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261030-110003-4d05.md#1",
+    "label": "board/messages/M-20261030-110003-4d05.md",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "board/messages/M-20261105-132741-93bd.md#3",
+    "label": "board/messages/M-20261105-132741-93bd.md",
+    "gold": false
+   },
+   {
+    "id": "commit/b39a2db133",
+    "label": "commit b39a2db: REM-1266: the tutorial series card, fleshed out from a block-by-block check against percolate main",
+    "gold": true
+   },
+   {
+    "id": "board/cards/REM-1266.md#2",
+    "label": "board/cards/REM-1266.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261030-160916-38b9.md#1",
+    "label": "board/messages/M-20261030-160916-38b9.md",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261105-131819-0285.md#1",
+    "label": "board/messages/M-20261105-131819-0285.md",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "board/messages/M-20261103-134714-b0ab.md#1",
+    "label": "board/messages/M-20261103-134714-b0ab.md",
+    "gold": false
+   },
+   {
+    "id": "commit/b39a2db133",
+    "label": "commit b39a2db: REM-1266: the tutorial series card, fleshed out from a block-by-block check against percolate main",
+    "gold": true
+   },
+   {
+    "id": "board/messages/M-20261030-160916-38b9.md#1",
+    "label": "board/messages/M-20261030-160916-38b9.md",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261105-131819-0285.md#1",
+    "label": "board/messages/M-20261105-131819-0285.md",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261103-134638-b0d2.md#1",
+    "label": "board/messages/M-20261103-134638-b0d2.md",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 1.0,
+  "S": 1.0
+ }
+}

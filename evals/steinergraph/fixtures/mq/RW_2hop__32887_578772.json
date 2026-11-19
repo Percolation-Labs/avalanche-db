@@ -1,0 +1,407 @@
+{
+ "qid": "RW:2hop__32887_578772",
+ "set": "mq",
+ "question": "What is the dynasty the oldest wooden buildings in China be dated to an example of?",
+ "gold": [
+  {
+   "id": "mq:0066118456459904",
+   "label": "T\u00e1ng (surname)",
+   "seed": false
+  },
+  {
+   "id": "mq:42ff38d5177ffc40",
+   "label": "Han dynasty",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:42ff38d5177ffc40",
+   "label": "Han dynasty",
+   "rank": 1,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:b8242fd585fa4784",
+   "label": "Dagenham idol",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:21d89cb921b6f6f6",
+   "label": "History of books",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:c5ee77f7343ebff2",
+   "label": "Mammal",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:8e849fc12a5fe0ec",
+   "label": "Lejonstr\u00f6msbron",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:0066118456459904",
+    "label": "T\u00e1ng (surname)",
+    "role": "gold"
+   },
+   {
+    "id": "mq:42ff38d5177ffc40",
+    "label": "Han dynasty",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:0066118456459904",
+    "b": "mq:42ff38d5177ffc40",
+    "via": [
+     {
+      "kind": "term",
+      "key": "tang",
+      "width": 38
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "mq:42ff38d5177ffc40",
+   "gold": "mq:42ff38d5177ffc40",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 2206,
+  "within_2_doors": 18871,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "mq:8ccb090602a8ed72",
+    "label": "Mesozoic",
+    "p": 0.0038126241179257604,
+    "gold": false
+   },
+   {
+    "id": "mq:3531f21e81160cdd",
+    "label": "Ctenophora",
+    "p": 0.0024595910737757035,
+    "gold": false
+   },
+   {
+    "id": "mq:2fccb99c31e65f61",
+    "label": "Petroleum Street Bridge",
+    "p": 0.002439646819444549,
+    "gold": false
+   },
+   {
+    "id": "mq:cd32fc1239f9906b",
+    "label": "Winhill/Losehill",
+    "p": 0.00221768643910726,
+    "gold": false
+   },
+   {
+    "id": "mq:c74dde046b27754a",
+    "label": "Neolithic",
+    "p": 0.002162159198179606,
+    "gold": false
+   },
+   {
+    "id": "mq:6bf069f1e259fe0a",
+    "label": "R\u00f6ssen culture",
+    "p": 0.001794747220382896,
+    "gold": false
+   },
+   {
+    "id": "mq:3070c30b235f4b95",
+    "label": "Himachal Pradesh",
+    "p": 0.001696236376005008,
+    "gold": false
+   },
+   {
+    "id": "mq:29426cb9b4bc2ec4",
+    "label": "Architecture",
+    "p": 0.0016150330280155648,
+    "gold": false
+   },
+   {
+    "id": "mq:602e0e155e6028ed",
+    "label": "Ctenophora",
+    "p": 0.0013753305697945814,
+    "gold": false
+   },
+   {
+    "id": "mq:dbc73c44770a2c92",
+    "label": "Channel Islands",
+    "p": 0.0013069197978380091,
+    "gold": false
+   },
+   {
+    "id": "mq:52606061511fd3f8",
+    "label": "Opening of the North Atlantic Ocean",
+    "p": 0.0012701217216404984,
+    "gold": false
+   },
+   {
+    "id": "mq:ee1a029fad8a2a10",
+    "label": "Colin O'Mahony",
+    "p": 0.0012237172915042713,
+    "gold": false
+   },
+   {
+    "id": "mq:24346e9b11e1f791",
+    "label": "Hipermercado G\u00e9ant",
+    "p": 0.0011958762190305964,
+    "gold": false
+   },
+   {
+    "id": "mq:6936d903b13f5ef8",
+    "label": "Madonna (entertainer)",
+    "p": 0.0011643146126275275,
+    "gold": false
+   },
+   {
+    "id": "mq:c8b15d73596e7de2",
+    "label": "History of India",
+    "p": 0.0011351007902576744,
+    "gold": false
+   },
+   {
+    "id": "mq:fd65ca9ce32a897a",
+    "label": "History of China",
+    "p": 0.000972317861829231,
+    "gold": false
+   },
+   {
+    "id": "mq:58566ae5b9fddfc2",
+    "label": "List of VFL/AFL wooden spoons",
+    "p": 0.0009685942089428385,
+    "gold": false
+   },
+   {
+    "id": "mq:a42798be4abed711",
+    "label": "Fantastic Beasts and Where to Find Them (film)",
+    "p": 0.0009148962999992401,
+    "gold": false
+   },
+   {
+    "id": "mq:62b389823b6c5ada",
+    "label": "Fantastic Beasts and Where to Find Them (film)",
+    "p": 0.0009107935963164611,
+    "gold": false
+   },
+   {
+    "id": "mq:12b7755b1eb22a50",
+    "label": "Changji",
+    "p": 0.0008643950239321103,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:42ff38d5177ffc40",
+   "label": "Han dynasty",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:b8242fd585fa4784",
+   "label": "Dagenham idol",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:21d89cb921b6f6f6",
+   "label": "History of books",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:c5ee77f7343ebff2",
+   "label": "Mammal",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:8e849fc12a5fe0ec",
+   "label": "Lejonstr\u00f6msbron",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:621334bb12913235",
+   "label": "Printing press",
+   "wave": 1,
+   "via": "term:tang dynasty",
+   "gold": false
+  },
+  {
+   "id": "mq:12b7755b1eb22a50",
+   "label": "Changji",
+   "wave": 1,
+   "via": "term:tang dynasty",
+   "gold": false
+  },
+  {
+   "id": "mq:f0cade90394b68eb",
+   "label": "Empress Dowager Wang (Rui)",
+   "wave": 1,
+   "via": "term:tang dynasty",
+   "gold": false
+  },
+  {
+   "id": "mq:e9809a1f930f3e76",
+   "label": "House of Harmony and Vengeance",
+   "wave": 1,
+   "via": "term:tang dynasty",
+   "gold": false
+  },
+  {
+   "id": "mq:9cd12484033b4b18",
+   "label": "Yang Meng",
+   "wave": 1,
+   "via": "term:tang dynasty",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:8ccb090602a8ed72",
+    "label": "Mesozoic",
+    "gold": false
+   },
+   {
+    "id": "mq:3531f21e81160cdd",
+    "label": "Ctenophora",
+    "gold": false
+   },
+   {
+    "id": "mq:2fccb99c31e65f61",
+    "label": "Petroleum Street Bridge",
+    "gold": false
+   },
+   {
+    "id": "mq:cd32fc1239f9906b",
+    "label": "Winhill/Losehill",
+    "gold": false
+   },
+   {
+    "id": "mq:c74dde046b27754a",
+    "label": "Neolithic",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:fd65ca9ce32a897a",
+    "label": "History of China",
+    "gold": false
+   },
+   {
+    "id": "mq:2fccb99c31e65f61",
+    "label": "Petroleum Street Bridge",
+    "gold": false
+   },
+   {
+    "id": "mq:58566ae5b9fddfc2",
+    "label": "List of VFL/AFL wooden spoons",
+    "gold": false
+   },
+   {
+    "id": "mq:06182e419bd4415f",
+    "label": "Wooden Arms",
+    "gold": false
+   },
+   {
+    "id": "mq:c4547a7282943b7a",
+    "label": "Song dynasty",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:fd65ca9ce32a897a",
+    "label": "History of China",
+    "gold": false
+   },
+   {
+    "id": "mq:c4547a7282943b7a",
+    "label": "Song dynasty",
+    "gold": false
+   },
+   {
+    "id": "mq:2fccb99c31e65f61",
+    "label": "Petroleum Street Bridge",
+    "gold": false
+   },
+   {
+    "id": "mq:065581b3fc5b2c7a",
+    "label": "Sino-Tibetan relations during the Ming dynasty",
+    "gold": false
+   },
+   {
+    "id": "mq:1aa22b3a3e75842e",
+    "label": "Sino-Tibetan relations during the Ming dynasty",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:fd65ca9ce32a897a",
+    "label": "History of China",
+    "gold": false
+   },
+   {
+    "id": "mq:f68b334f26b21d33",
+    "label": "Old York Gaol",
+    "gold": false
+   },
+   {
+    "id": "mq:b96eb5888e38405a",
+    "label": "Qing dynasty",
+    "gold": false
+   },
+   {
+    "id": "mq:38330fc538c54028",
+    "label": "Chen dynasty",
+    "gold": false
+   },
+   {
+    "id": "mq:e517823e2265165e",
+    "label": "Yuan dynasty",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

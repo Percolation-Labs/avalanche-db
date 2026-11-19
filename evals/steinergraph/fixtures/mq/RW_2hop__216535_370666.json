@@ -1,0 +1,416 @@
+{
+ "qid": "RW:2hop__216535_370666",
+ "set": "mq",
+ "question": "In what city is Alain Lascoux's employer located?",
+ "gold": [
+  {
+   "id": "mq:16706719d2c18397",
+   "label": "Alain Lascoux",
+   "seed": true
+  },
+  {
+   "id": "mq:3e8cabccb2ce7439",
+   "label": "Tian Yunzhang",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:16706719d2c18397",
+   "label": "Alain Lascoux",
+   "rank": 1,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:a81c4782b57a5aaa",
+   "label": "Young tableau",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:e84ce64678d0e9c7",
+   "label": "Alain Milon",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:4480585c53baf8e5",
+   "label": "Alain Gustave",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:605ce3702adb9bce",
+   "label": "Alain Terzian",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:16706719d2c18397",
+    "label": "Alain Lascoux",
+    "role": "gold"
+   },
+   {
+    "id": "mq:3e8cabccb2ce7439",
+    "label": "Tian Yunzhang",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:16706719d2c18397",
+    "b": "mq:3e8cabccb2ce7439",
+    "via": [
+     {
+      "kind": "near",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "nankai university",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "nankai",
+      "width": 2
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "mq:16706719d2c18397",
+   "gold": "mq:16706719d2c18397",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 1563,
+  "within_2_doors": 19438,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "mq:3e8cabccb2ce7439",
+    "label": "Tian Yunzhang",
+    "p": 0.004854103985711238,
+    "gold": true
+   },
+   {
+    "id": "mq:5aa57f053efcedcf",
+    "label": "La Ferme C\u00e9l\u00e9brit\u00e9s",
+    "p": 0.004095877565703274,
+    "gold": false
+   },
+   {
+    "id": "mq:ab0d5654bbf23603",
+    "label": "Group (mathematics)",
+    "p": 0.0031525424879963607,
+    "gold": false
+   },
+   {
+    "id": "mq:55f3b1de745ea814",
+    "label": "Nestor Morales Stadium",
+    "p": 0.0026033076545173557,
+    "gold": false
+   },
+   {
+    "id": "mq:07cd951a08113182",
+    "label": "Jean-Christophe Mitterrand",
+    "p": 0.002397984919658323,
+    "gold": false
+   },
+   {
+    "id": "mq:e8c2319f4621e974",
+    "label": "French Connection II",
+    "p": 0.0023605821895709114,
+    "gold": false
+   },
+   {
+    "id": "mq:dfe1044833bba648",
+    "label": "John von Neumann",
+    "p": 0.002287025028458215,
+    "gold": false
+   },
+   {
+    "id": "mq:f25399b2392581a5",
+    "label": "Philippe Flajolet",
+    "p": 0.0022546140725618023,
+    "gold": false
+   },
+   {
+    "id": "mq:8315079ec967a4fd",
+    "label": "Daniel Marsin",
+    "p": 0.0017700636108801278,
+    "gold": false
+   },
+   {
+    "id": "mq:d046bc92b8a4ba60",
+    "label": "Jean Delville",
+    "p": 0.0017127765798503856,
+    "gold": false
+   },
+   {
+    "id": "mq:18f9e4fc7b3e83f7",
+    "label": "Malliavin's absolute continuity lemma",
+    "p": 0.0016954650450025652,
+    "gold": false
+   },
+   {
+    "id": "mq:916468b1f0f46056",
+    "label": "Fran\u00e7ois Pillet",
+    "p": 0.0016757556188083111,
+    "gold": false
+   },
+   {
+    "id": "mq:040431759590070e",
+    "label": "Kath & Kimderella",
+    "p": 0.001662060413257479,
+    "gold": false
+   },
+   {
+    "id": "mq:e6b37bc5c5e3adc5",
+    "label": "Louis Fran\u00e7ois Antoine Arbogast",
+    "p": 0.00163095340069222,
+    "gold": false
+   },
+   {
+    "id": "mq:256d6e94776ff653",
+    "label": "United States Army",
+    "p": 0.0014140204560550316,
+    "gold": false
+   },
+   {
+    "id": "mq:c638f7620006ce27",
+    "label": "Toyota",
+    "p": 0.0013838981575944689,
+    "gold": false
+   },
+   {
+    "id": "mq:ee0c883cedfa62f9",
+    "label": "Pakistan and the United Nations",
+    "p": 0.0013726980880474405,
+    "gold": false
+   },
+   {
+    "id": "mq:3c7abe27339ca072",
+    "label": "Lang's theorem",
+    "p": 0.0011978150870003655,
+    "gold": false
+   },
+   {
+    "id": "mq:a0d524c71b622a24",
+    "label": "The Last Savage",
+    "p": 0.0011851872428516573,
+    "gold": false
+   },
+   {
+    "id": "mq:d02d0aa124d13719",
+    "label": "Lac-Pythonga, Quebec",
+    "p": 0.0011782274442039037,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:16706719d2c18397",
+   "label": "Alain Lascoux",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:a81c4782b57a5aaa",
+   "label": "Young tableau",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:e84ce64678d0e9c7",
+   "label": "Alain Milon",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:4480585c53baf8e5",
+   "label": "Alain Gustave",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:605ce3702adb9bce",
+   "label": "Alain Terzian",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:3e8cabccb2ce7439",
+   "label": "Tian Yunzhang",
+   "wave": 1,
+   "via": "term:nankai",
+   "gold": true
+  },
+  {
+   "id": "mq:b2ced1fe2f449e36",
+   "label": "Qiao Guanhua",
+   "wave": 2,
+   "via": "term:tianjin",
+   "gold": false
+  },
+  {
+   "id": "mq:512c51e9aca88e13",
+   "label": "Tianjin Port (Group) Company",
+   "wave": 2,
+   "via": "term:tianjin",
+   "gold": false
+  },
+  {
+   "id": "mq:843b0da81391a6fe",
+   "label": "Xiao Shuxian",
+   "wave": 2,
+   "via": "term:tianjin",
+   "gold": false
+  },
+  {
+   "id": "mq:f6113036747b6930",
+   "label": "Zong Lei",
+   "wave": 2,
+   "via": "term:tianjin",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:3e8cabccb2ce7439",
+    "label": "Tian Yunzhang",
+    "gold": true
+   },
+   {
+    "id": "mq:5aa57f053efcedcf",
+    "label": "La Ferme C\u00e9l\u00e9brit\u00e9s",
+    "gold": false
+   },
+   {
+    "id": "mq:ab0d5654bbf23603",
+    "label": "Group (mathematics)",
+    "gold": false
+   },
+   {
+    "id": "mq:55f3b1de745ea814",
+    "label": "Nestor Morales Stadium",
+    "gold": false
+   },
+   {
+    "id": "mq:07cd951a08113182",
+    "label": "Jean-Christophe Mitterrand",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:07cd951a08113182",
+    "label": "Jean-Christophe Mitterrand",
+    "gold": false
+   },
+   {
+    "id": "mq:e8c2319f4621e974",
+    "label": "French Connection II",
+    "gold": false
+   },
+   {
+    "id": "mq:040431759590070e",
+    "label": "Kath & Kimderella",
+    "gold": false
+   },
+   {
+    "id": "mq:55f3b1de745ea814",
+    "label": "Nestor Morales Stadium",
+    "gold": false
+   },
+   {
+    "id": "mq:5aa57f053efcedcf",
+    "label": "La Ferme C\u00e9l\u00e9brit\u00e9s",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:040431759590070e",
+    "label": "Kath & Kimderella",
+    "gold": false
+   },
+   {
+    "id": "mq:07cd951a08113182",
+    "label": "Jean-Christophe Mitterrand",
+    "gold": false
+   },
+   {
+    "id": "mq:e8c2319f4621e974",
+    "label": "French Connection II",
+    "gold": false
+   },
+   {
+    "id": "mq:55f3b1de745ea814",
+    "label": "Nestor Morales Stadium",
+    "gold": false
+   },
+   {
+    "id": "mq:5aa57f053efcedcf",
+    "label": "La Ferme C\u00e9l\u00e9brit\u00e9s",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:bcd13ca7cb5a8699",
+    "label": "New York City",
+    "gold": false
+   },
+   {
+    "id": "mq:23ca264bcd641bbc",
+    "label": "Form I-9",
+    "gold": false
+   },
+   {
+    "id": "mq:fcc6eb5e7d9283af",
+    "label": "New Haven, Connecticut",
+    "gold": false
+   },
+   {
+    "id": "mq:7127730ea445b207",
+    "label": "Full-time",
+    "gold": false
+   },
+   {
+    "id": "mq:5283bdb0b357330e",
+    "label": "Forced Vengeance",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 1.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

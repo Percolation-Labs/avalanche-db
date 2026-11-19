@@ -1,0 +1,458 @@
+{
+ "qid": "card:REM-147",
+ "set": "cards",
+ "question": "What was done about this, and why: release: core 0.1.9 refuses the shipped sample, because the published extension is 0.1.6?",
+ "gold": [
+  {
+   "id": "commit/1cdd7524c5",
+   "label": "commit 1cdd752: A probe proves the line you changed; only the command proves the path (#152)",
+   "seed": false
+  },
+  {
+   "id": "commit/3f7604f05b",
+   "label": "commit 3f7604f: A pairing constraint has two directions and I recorded one (#146)",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "board/cards/REM-147.md#1",
+   "label": "board/cards/REM-147.md",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-147.md#2",
+   "label": "board/cards/REM-147.md \u203a Goal",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/fbd9b678a0",
+   "label": "commit fbd9b67: dev/train.sh: one script runs the release train, leg by leg (REM-1097)",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "meta/postmortems/README.md#55",
+   "label": "meta/postmortems/README.md \u203a A fix proved by a probe, and a release cut on it",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/messages/M-20261108-004521-a5ec.md#1",
+   "label": "board/messages/M-20261108-004521-a5ec.md",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 2
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/1cdd7524c5",
+    "label": "commit 1cdd752: A probe proves the line you changed; only the command proves the path (#152)",
+    "role": "gold"
+   },
+   {
+    "id": "commit/3f7604f05b",
+    "label": "commit 3f7604f: A pairing constraint has two directions and I recorded one (#146)",
+    "role": "gold"
+   },
+   {
+    "id": "meta/postmortems/README.md#55",
+    "label": "meta/postmortems/README.md \u203a A fix proved by a probe, and a release cut on it",
+    "role": "seed"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/1cdd7524c5",
+    "b": "commit/3f7604f05b",
+    "via": [
+     {
+      "kind": "term",
+      "key": "rem 147",
+      "width": 7
+     },
+     {
+      "kind": "term",
+      "key": "checked dev",
+      "width": 11
+     },
+     {
+      "kind": "term",
+      "key": "coldstart",
+      "width": 41
+     },
+     {
+      "kind": "term",
+      "key": "unreleased",
+      "width": 90
+     }
+    ]
+   },
+   {
+    "a": "commit/1cdd7524c5",
+    "b": "meta/postmortems/README.md#55",
+    "via": [
+     {
+      "kind": "term",
+      "key": "command proves",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "loader passed",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "passed org_id",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "org_id explicitly",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "channel insert",
+      "width": 3
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "meta/postmortems/README.md#55",
+   "gold": "commit/1cdd7524c5",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 1748,
+  "within_2_doors": 34164,
+  "gold_within_1": 2,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "commit/1cdd7524c5",
+    "label": "commit 1cdd752: A probe proves the line you changed; only the command proves the path (#152)",
+    "p": 0.0070900686640554544,
+    "gold": true
+   },
+   {
+    "id": "board/cards/REM-1097.md#6",
+    "label": "board/cards/REM-1097.md \u203a Log",
+    "p": 0.005421255841129523,
+    "gold": false
+   },
+   {
+    "id": "commit/8c800614ba",
+    "label": "commit 8c80061: Attachment is a surface, not an expansion: make agents.skills lazy",
+    "p": 0.004072891850191453,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-147.md#3",
+    "label": "board/cards/REM-147.md \u203a Evidence",
+    "p": 0.0037948048537507512,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/README.md#56",
+    "label": "meta/postmortems/README.md \u203a A fix proved by a probe, and a release cut on it",
+    "p": 0.003199529099794258,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261104-134019-bb96.md#1",
+    "label": "board/messages/M-20261104-134019-bb96.md",
+    "p": 0.002960165171099433,
+    "gold": false
+   },
+   {
+    "id": "PACKAGING.md#1",
+    "label": "PACKAGING.md \u203a Python packaging and deployment",
+    "p": 0.0018589284338309583,
+    "gold": false
+   },
+   {
+    "id": "commit/3f7604f05b",
+    "label": "commit 3f7604f: A pairing constraint has two directions and I recorded one (#146)",
+    "p": 0.001792350482558376,
+    "gold": true
+   },
+   {
+    "id": "board/cards/REM-147.md#4",
+    "label": "board/cards/REM-147.md \u203a Log",
+    "p": 0.001679124299615111,
+    "gold": false
+   },
+   {
+    "id": "dev/train.sh#1",
+    "label": "dev/train.sh",
+    "p": 0.0016780550285318584,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1290.md#4",
+    "label": "board/cards/REM-1290.md \u203a Done when",
+    "p": 0.001668520112514758,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1155.md#5",
+    "label": "board/cards/REM-1155.md \u203a Scope",
+    "p": 0.0015926467666207804,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1170.md#5",
+    "label": "board/cards/REM-1170.md \u203a Log",
+    "p": 0.001419921419549,
+    "gold": false
+   },
+   {
+    "id": "dev/train.sh#21",
+    "label": "dev/train.sh",
+    "p": 0.001349075551402657,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261107-230933-51cc.md#1",
+    "label": "board/messages/M-20261107-230933-51cc.md",
+    "p": 0.0011014916716288652,
+    "gold": false
+   },
+   {
+    "id": "dev/train.sh#2",
+    "label": "dev/train.sh",
+    "p": 0.0009564790187606765,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/writer-onboarding.md#8",
+    "label": "specs/percolate-application/writer-onboarding.md \u203a 5. Changing this journey",
+    "p": 0.000870006193114982,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1203.md#6",
+    "label": "board/cards/REM-1203.md \u203a Log",
+    "p": 0.0008547183045201253,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261106-110433-3e67.md#1",
+    "label": "board/messages/M-20261106-110433-3e67.md",
+    "p": 0.0007957595358827696,
+    "gold": false
+   },
+   {
+    "id": "demo/quickstart-v2/README.md#3",
+    "label": "demo/quickstart-v2/README.md \u203a Capture and build",
+    "p": 0.0007583381898384165,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "board/cards/REM-147.md#1",
+   "label": "board/cards/REM-147.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-147.md#2",
+   "label": "board/cards/REM-147.md \u203a Goal",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/fbd9b678a0",
+   "label": "commit fbd9b67: dev/train.sh: one script runs the release train, leg by leg (REM-1097)",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/postmortems/README.md#55",
+   "label": "meta/postmortems/README.md \u203a A fix proved by a probe, and a release cut on it",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/messages/M-20261108-004521-a5ec.md#1",
+   "label": "board/messages/M-20261108-004521-a5ec.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/1cdd7524c5",
+   "label": "commit 1cdd752: A probe proves the line you changed; only the command proves the path (#152)",
+   "wave": 1,
+   "via": "term:rem 147",
+   "gold": true
+  },
+  {
+   "id": "board/cards/REM-147.md#3",
+   "label": "board/cards/REM-147.md \u203a Evidence",
+   "wave": 1,
+   "via": "term:rem 147",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-147.md#4",
+   "label": "board/cards/REM-147.md \u203a Log",
+   "wave": 1,
+   "via": "term:rem 147",
+   "gold": false
+  },
+  {
+   "id": "PACKAGING.md#1",
+   "label": "PACKAGING.md \u203a Python packaging and deployment",
+   "wave": 1,
+   "via": "term:rem 147",
+   "gold": false
+  },
+  {
+   "id": "commit/3f7604f05b",
+   "label": "commit 3f7604f: A pairing constraint has two directions and I recorded one (#146)",
+   "wave": 1,
+   "via": "term:rem 147",
+   "gold": true
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "commit/1cdd7524c5",
+    "label": "commit 1cdd752: A probe proves the line you changed; only the command proves the path (#152)",
+    "gold": true
+   },
+   {
+    "id": "board/cards/REM-1097.md#6",
+    "label": "board/cards/REM-1097.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "commit/8c800614ba",
+    "label": "commit 8c80061: Attachment is a surface, not an expansion: make agents.skills lazy",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-147.md#3",
+    "label": "board/cards/REM-147.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/README.md#56",
+    "label": "meta/postmortems/README.md \u203a A fix proved by a probe, and a release cut on it",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "commit/1cdd7524c5",
+    "label": "commit 1cdd752: A probe proves the line you changed; only the command proves the path (#152)",
+    "gold": true
+   },
+   {
+    "id": "meta/postmortems/README.md#56",
+    "label": "meta/postmortems/README.md \u203a A fix proved by a probe, and a release cut on it",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1097.md#6",
+    "label": "board/cards/REM-1097.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261104-134019-bb96.md#1",
+    "label": "board/messages/M-20261104-134019-bb96.md",
+    "gold": false
+   },
+   {
+    "id": "dev/train.sh#1",
+    "label": "dev/train.sh",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "board/cards/REM-147.md#4",
+    "label": "board/cards/REM-147.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "commit/7ade4f3f27",
+    "label": "commit 7ade4f3: follow the 2026-10-26 train: extension 0.2.31, core 0.2.11",
+    "gold": false
+   },
+   {
+    "id": "commit/339826a8ed",
+    "label": "commit 339826a: follow the 2026-10-28 train: extension 0.2.33, core 0.2.13",
+    "gold": false
+   },
+   {
+    "id": "commit/e326e2730f",
+    "label": "commit e326e27: follow the 2026-10-23 train: extension 0.2.30, core 0.2.10",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261107-230933-51cc.md#1",
+    "label": "board/messages/M-20261107-230933-51cc.md",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "dev/train.sh#1",
+    "label": "dev/train.sh",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-311.md#4",
+    "label": "board/cards/REM-311.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-19-hand-deploys-raced-the-queue.md#9",
+    "label": "meta/postmortems/2026-09-19-hand-deploys-raced-the-queue.md \u203a What would have prevented it",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-609.md#4",
+    "label": "board/cards/REM-609.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261027-190721-bcb2.md#1",
+    "label": "board/messages/M-20261027-190721-bcb2.md",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.5,
+  "Q": 0.5,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

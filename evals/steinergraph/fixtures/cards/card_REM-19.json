@@ -1,0 +1,494 @@
+{
+ "qid": "card:REM-19",
+ "set": "cards",
+ "question": "What was done about this, and why: dream: make null, attention and temporal evaluations measure their stated claims?",
+ "gold": [
+  {
+   "id": "commit/221d061d28",
+   "label": "commit 221d061: The evidence ledger's issue closed on the results that already met it",
+   "seed": false
+  },
+  {
+   "id": "commit/abcc1a9f84",
+   "label": "commit abcc1a9: The dream evaluators passed only when somebody ran them by hand",
+   "seed": false
+  },
+  {
+   "id": "commit/ec5c58d68b",
+   "label": "commit ec5c58d: Merge pull request #50 from Percolation-Labs/fix/rem-19-dream-tests-are-a-gate",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "board/cards/REM-19.md#1",
+   "label": "board/cards/REM-19.md",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-673.md#3",
+   "label": "board/cards/REM-673.md \u203a Log",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "board/cards/REM-673.md#1",
+   "label": "board/cards/REM-673.md",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "board/team/temporal-attention.md#2",
+   "label": "board/team/temporal-attention.md \u203a Log",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "research-notes/temporal-attention/README.md#1",
+   "label": "research-notes/temporal-attention/README.md \u203a Temporal attention has a simple, sound core",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 2
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "board/cards/REM-19.md#1",
+    "label": "board/cards/REM-19.md",
+    "role": "seed"
+   },
+   {
+    "id": "commit/221d061d28",
+    "label": "commit 221d061: The evidence ledger's issue closed on the results that already met it",
+    "role": "gold"
+   },
+   {
+    "id": "commit/abcc1a9f84",
+    "label": "commit abcc1a9: The dream evaluators passed only when somebody ran them by hand",
+    "role": "gold"
+   },
+   {
+    "id": "commit/ec5c58d68b",
+    "label": "commit ec5c58d: Merge pull request #50 from Percolation-Labs/fix/rem-19-dream-tests-are-a-gate",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "board/cards/REM-19.md#1",
+    "b": "commit/abcc1a9f84",
+    "via": [
+     {
+      "kind": "near",
+      "width": 1
+     },
+     {
+      "kind": "term",
+      "key": "temporal candidate",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "rem 19",
+      "width": 8
+     },
+     {
+      "kind": "term",
+      "key": "evaluators",
+      "width": 9
+     },
+     {
+      "kind": "term",
+      "key": "sampler",
+      "width": 14
+     },
+     {
+      "kind": "term",
+      "key": "denominators",
+      "width": 22
+     }
+    ]
+   },
+   {
+    "a": "commit/221d061d28",
+    "b": "commit/abcc1a9f84",
+    "via": [
+     {
+      "kind": "term",
+      "key": "rem 19",
+      "width": 8
+     }
+    ]
+   },
+   {
+    "a": "commit/abcc1a9f84",
+    "b": "commit/ec5c58d68b",
+    "via": [
+     {
+      "kind": "near",
+      "width": 4
+     },
+     {
+      "kind": "term",
+      "key": "evaluators passed",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "dream evaluators",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "somebody ran",
+      "width": 7
+     },
+     {
+      "kind": "term",
+      "key": "rem 19",
+      "width": 8
+     },
+     {
+      "kind": "term",
+      "key": "evaluators",
+      "width": 9
+     }
+    ]
+   }
+  ],
+  "cost": 3,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   1,
+   1
+  ],
+  "entry": {
+   "seed": "board/cards/REM-19.md#1",
+   "gold": "commit/abcc1a9f84",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 1525,
+  "within_2_doors": 33502,
+  "gold_within_1": 3,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "board/team/temporal-attention.md#1",
+    "label": "board/team/temporal-attention.md",
+    "p": 0.014325520440216004,
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-self-model/dreaming/SPEC.md#10",
+    "label": "applications/percolate-self-model/dreaming/SPEC.md \u203a Evaluation and contribution gates",
+    "p": 0.004577791017177154,
+    "gold": false
+   },
+   {
+    "id": "research-notes/temporal-attention/README.md#3",
+    "label": "research-notes/temporal-attention/README.md \u203a Result",
+    "p": 0.004252071251772757,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-673.md#2",
+    "label": "board/cards/REM-673.md \u203a Goal",
+    "p": 0.003722346031282954,
+    "gold": false
+   },
+   {
+    "id": "commit/abcc1a9f84",
+    "label": "commit abcc1a9: The dream evaluators passed only when somebody ran them by hand",
+    "p": 0.0035685941076327586,
+    "gold": true
+   },
+   {
+    "id": "commit/e8c404c18a",
+    "label": "commit e8c404c: board: file REM-673 research: test temporal attention against ordinary state maintenance",
+    "p": 0.0032512962922954516,
+    "gold": false
+   },
+   {
+    "id": "research-notes/temporal-attention/README.md#8",
+    "label": "research-notes/temporal-attention/README.md \u203a Decision",
+    "p": 0.0027018722279830696,
+    "gold": false
+   },
+   {
+    "id": "research-notes/h-to-g/jev-review-2026-09-26.md#2",
+    "label": "research-notes/h-to-g/jev-review-2026-09-26.md \u203a Finding",
+    "p": 0.002168265453560847,
+    "gold": false
+   },
+   {
+    "id": "commit/b3c7e4a313",
+    "label": "commit b3c7e4a: research: freeze a temporal attention mechanism test (REM-673)",
+    "p": 0.0020647399072361333,
+    "gold": false
+   },
+   {
+    "id": "research-notes/temporal-attention/PROTOCOL.md#3",
+    "label": "research-notes/temporal-attention/PROTOCOL.md \u203a Arms",
+    "p": 0.0019799628324412566,
+    "gold": false
+   },
+   {
+    "id": "research-notes/temporal-attention/PROTOCOL.md#6",
+    "label": "research-notes/temporal-attention/PROTOCOL.md \u203a Measurements and decision",
+    "p": 0.0019146768061488017,
+    "gold": false
+   },
+   {
+    "id": "commit/ff7f039bc7",
+    "label": "commit ff7f039: research: temporal attention passes with no advantage over ordinary maintenance (REM-673)",
+    "p": 0.0018759207918465897,
+    "gold": false
+   },
+   {
+    "id": "research-notes/build-knit-dream-briefing-v0-2026-09-10.md#6",
+    "label": "research-notes/build-knit-dream-briefing-v0-2026-09-10.md \u203a What this does, and does not, establish",
+    "p": 0.001583689900842793,
+    "gold": false
+   },
+   {
+    "id": "research-notes/temporal-attention/README.md#2",
+    "label": "research-notes/temporal-attention/README.md \u203a The one idea",
+    "p": 0.0015684971532697375,
+    "gold": false
+   },
+   {
+    "id": "research-notes/temporal-attention/README.md#7",
+    "label": "research-notes/temporal-attention/README.md \u203a What it costs",
+    "p": 0.001567304394974807,
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-self-model/dreaming/signals/spike.py#7",
+    "label": "applications/percolate-self-model/dreaming/signals/spike.py",
+    "p": 0.0015304741353975276,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-19.md#2",
+    "label": "board/cards/REM-19.md \u203a Log",
+    "p": 0.0015275379851638544,
+    "gold": false
+   },
+   {
+    "id": "research-notes/build-knit-dream-briefing-v0-2026-09-10.md#3",
+    "label": "research-notes/build-knit-dream-briefing-v0-2026-09-10.md \u203a Evidence and checks",
+    "p": 0.001463887145725339,
+    "gold": false
+   },
+   {
+    "id": "commit/313d4181c6",
+    "label": "commit 313d418: board: temporal-attention takes REM-673",
+    "p": 0.0014436277785220854,
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-10-20-lme-seeded-taxonomy/statistical_walks/report.py#1",
+    "label": "meta/spikes/2026-10-20-lme-seeded-taxonomy/statistical_walks/report.py",
+    "p": 0.0014328306522363792,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "board/cards/REM-19.md#1",
+   "label": "board/cards/REM-19.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-673.md#3",
+   "label": "board/cards/REM-673.md \u203a Log",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-673.md#1",
+   "label": "board/cards/REM-673.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/team/temporal-attention.md#2",
+   "label": "board/team/temporal-attention.md \u203a Log",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "research-notes/temporal-attention/README.md#1",
+   "label": "research-notes/temporal-attention/README.md \u203a Temporal attention has a simple, sound core",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/abcc1a9f84",
+   "label": "commit abcc1a9: The dream evaluators passed only when somebody ran them by hand",
+   "wave": 1,
+   "via": "near:board/cards/REM-19.md#1",
+   "gold": true
+  },
+  {
+   "id": "meta/postmortems/2026-09-12-true-when-it-was-measured.md#11",
+   "label": "meta/postmortems/2026-09-12-true-when-it-was-measured.md \u203a 4. A gate that is red about the machine",
+   "wave": 2,
+   "via": "term:evaluators",
+   "gold": false
+  },
+  {
+   "id": "commit/ec5c58d68b",
+   "label": "commit ec5c58d: Merge pull request #50 from Percolation-Labs/fix/rem-19-dream-tests-are-a-gate",
+   "wave": 2,
+   "via": "term:evaluators",
+   "gold": true
+  },
+  {
+   "id": "specs/build-knit-dream/sequence.md#14",
+   "label": "specs/build-knit-dream/sequence.md \u203a Research memory",
+   "wave": 2,
+   "via": "term:evaluators",
+   "gold": false
+  },
+  {
+   "id": "research-notes/lessons-from-rama-2026-09-19.md#6",
+   "label": "research-notes/lessons-from-rama-2026-09-19.md \u203a Two smaller notes",
+   "wave": 2,
+   "via": "term:evaluators",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "board/team/temporal-attention.md#1",
+    "label": "board/team/temporal-attention.md",
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-self-model/dreaming/SPEC.md#10",
+    "label": "applications/percolate-self-model/dreaming/SPEC.md \u203a Evaluation and contribution gates",
+    "gold": false
+   },
+   {
+    "id": "research-notes/temporal-attention/README.md#3",
+    "label": "research-notes/temporal-attention/README.md \u203a Result",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-673.md#2",
+    "label": "board/cards/REM-673.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "commit/abcc1a9f84",
+    "label": "commit abcc1a9: The dream evaluators passed only when somebody ran them by hand",
+    "gold": true
+   }
+  ],
+  "Q": [
+   {
+    "id": "board/team/temporal-attention.md#1",
+    "label": "board/team/temporal-attention.md",
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-self-model/dreaming/SPEC.md#10",
+    "label": "applications/percolate-self-model/dreaming/SPEC.md \u203a Evaluation and contribution gates",
+    "gold": false
+   },
+   {
+    "id": "research-notes/temporal-attention/README.md#3",
+    "label": "research-notes/temporal-attention/README.md \u203a Result",
+    "gold": false
+   },
+   {
+    "id": "commit/abcc1a9f84",
+    "label": "commit abcc1a9: The dream evaluators passed only when somebody ran them by hand",
+    "gold": true
+   },
+   {
+    "id": "research-notes/temporal-attention/PROTOCOL.md#3",
+    "label": "research-notes/temporal-attention/PROTOCOL.md \u203a Arms",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/313d4181c6",
+    "label": "commit 313d418: board: temporal-attention takes REM-673",
+    "gold": false
+   },
+   {
+    "id": "commit/c98d38e610",
+    "label": "commit c98d38e: research: implement frozen temporal attention comparison (REM-673)",
+    "gold": false
+   },
+   {
+    "id": "commit/ff7f039bc7",
+    "label": "commit ff7f039: research: temporal attention passes with no advantage over ordinary maintenance (REM-673)",
+    "gold": false
+   },
+   {
+    "id": "commit/35d0377e3c",
+    "label": "commit 35d0377: board: temporal-attention checks in, working",
+    "gold": false
+   },
+   {
+    "id": "commit/ef93269d5c",
+    "label": "commit ef93269: board: temporal-attention checks in, ended",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "commit/313d4181c6",
+    "label": "commit 313d418: board: temporal-attention takes REM-673",
+    "gold": false
+   },
+   {
+    "id": "commit/35d0377e3c",
+    "label": "commit 35d0377: board: temporal-attention checks in, working",
+    "gold": false
+   },
+   {
+    "id": "commit/ef93269d5c",
+    "label": "commit ef93269: board: temporal-attention checks in, ended",
+    "gold": false
+   },
+   {
+    "id": "board/team/temporal-attention.md#1",
+    "label": "board/team/temporal-attention.md",
+    "gold": false
+   },
+   {
+    "id": "research-notes/temporal-attention/PROTOCOL.md#1",
+    "label": "research-notes/temporal-attention/PROTOCOL.md \u203a Temporal attention: answer changes, v1",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.3333333333333333,
+  "Q": 0.3333333333333333,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

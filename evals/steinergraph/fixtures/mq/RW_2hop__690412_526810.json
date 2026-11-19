@@ -1,0 +1,417 @@
+{
+ "qid": "RW:2hop__690412_526810",
+ "set": "mq",
+ "question": "For what river does the river on which Pa Sak Jolasid Dam is located serve as the mouth?",
+ "gold": [
+  {
+   "id": "mq:af1440fbaa4ac70e",
+   "label": "Pa Sak Jolasid Dam",
+   "seed": true
+  },
+  {
+   "id": "mq:ca16d78c1ebe6c23",
+   "label": "List of tributaries of the Chao Phraya River",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:af1440fbaa4ac70e",
+   "label": "Pa Sak Jolasid Dam",
+   "rank": 1,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:0486ea9af477d88c",
+   "label": "Bumping River",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:65baf5bdc348c6bc",
+   "label": "Tarka River",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:9bfc291725fab25b",
+   "label": "Bloemhoek Dam",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:5d545c41e6bc831a",
+   "label": "Albeni Falls Dam",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:af1440fbaa4ac70e",
+    "label": "Pa Sak Jolasid Dam",
+    "role": "gold"
+   },
+   {
+    "id": "mq:ca16d78c1ebe6c23",
+    "label": "List of tributaries of the Chao Phraya River",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:af1440fbaa4ac70e",
+    "b": "mq:ca16d78c1ebe6c23",
+    "via": [
+     {
+      "kind": "term",
+      "key": "sak river",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "sak",
+      "width": 3
+     },
+     {
+      "kind": "term",
+      "key": "thailand",
+      "width": 72
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "mq:af1440fbaa4ac70e",
+   "gold": "mq:af1440fbaa4ac70e",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 1124,
+  "within_2_doors": 19906,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "mq:6103d2283cc48c84",
+    "label": "Naches River",
+    "p": 0.0061633791167486395,
+    "gold": false
+   },
+   {
+    "id": "mq:9deb90fcc7cf6276",
+    "label": "Gamkapoort Dam",
+    "p": 0.004802187444986263,
+    "gold": false
+   },
+   {
+    "id": "mq:ca16d78c1ebe6c23",
+    "label": "List of tributaries of the Chao Phraya River",
+    "p": 0.003903554112971315,
+    "gold": true
+   },
+   {
+    "id": "mq:c9c3c2ff3ccbac64",
+    "label": "San Phi Suea",
+    "p": 0.003697012080902118,
+    "gold": false
+   },
+   {
+    "id": "mq:2103ac973008600a",
+    "label": "Orange River",
+    "p": 0.00323508177553194,
+    "gold": false
+   },
+   {
+    "id": "mq:d8cb2839fe436bdc",
+    "label": "Tavo (river)",
+    "p": 0.0021196048890224682,
+    "gold": false
+   },
+   {
+    "id": "mq:05f4261ce446c528",
+    "label": "Finances of The Church of Jesus Christ of Latter-day Saints",
+    "p": 0.0020405870318358577,
+    "gold": false
+   },
+   {
+    "id": "mq:1f920a72f1253141",
+    "label": "Steve Alcorn",
+    "p": 0.0019853182866644476,
+    "gold": false
+   },
+   {
+    "id": "mq:0b3ed5536736297f",
+    "label": "Nong Nam Sai, Sikhio",
+    "p": 0.0017661337406479013,
+    "gold": false
+   },
+   {
+    "id": "mq:5fce4378d4423e05",
+    "label": "Nam Nao National Park",
+    "p": 0.0017596239330764463,
+    "gold": false
+   },
+   {
+    "id": "mq:e1e466d45c372f27",
+    "label": "Ban Pae",
+    "p": 0.0016701034481768561,
+    "gold": false
+   },
+   {
+    "id": "mq:55a9b1a54be598d5",
+    "label": "Plymouth",
+    "p": 0.001536104584266638,
+    "gold": false
+   },
+   {
+    "id": "mq:ae9f71bf1cad06e4",
+    "label": "Montevideo",
+    "p": 0.001511469492632115,
+    "gold": false
+   },
+   {
+    "id": "mq:737149f5d9753221",
+    "label": "Choeng Doi",
+    "p": 0.0014793584978762726,
+    "gold": false
+   },
+   {
+    "id": "mq:e2f71b363ecacdc1",
+    "label": "Kit Kat",
+    "p": 0.0014509541969736947,
+    "gold": false
+   },
+   {
+    "id": "mq:f98267069649905b",
+    "label": "Lam Takhong Dam",
+    "p": 0.0013154964880040842,
+    "gold": false
+   },
+   {
+    "id": "mq:b33cd45b9f2cd2a6",
+    "label": "Mae Yao",
+    "p": 0.0012809760831391616,
+    "gold": false
+   },
+   {
+    "id": "mq:4aa7d45bdc2539ae",
+    "label": "Drift: The Unmooring of American Military Power",
+    "p": 0.0012525662808969863,
+    "gold": false
+   },
+   {
+    "id": "mq:bdea8283589e902b",
+    "label": "Treur River",
+    "p": 0.0011944696425443728,
+    "gold": false
+   },
+   {
+    "id": "mq:8c3f54af507ac46b",
+    "label": "Notus, Idaho",
+    "p": 0.0011942199984597602,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:af1440fbaa4ac70e",
+   "label": "Pa Sak Jolasid Dam",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:0486ea9af477d88c",
+   "label": "Bumping River",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:65baf5bdc348c6bc",
+   "label": "Tarka River",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:9bfc291725fab25b",
+   "label": "Bloemhoek Dam",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:5d545c41e6bc831a",
+   "label": "Albeni Falls Dam",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:ca16d78c1ebe6c23",
+   "label": "List of tributaries of the Chao Phraya River",
+   "wave": 1,
+   "via": "term:sak river",
+   "gold": true
+  },
+  {
+   "id": "mq:5fce4378d4423e05",
+   "label": "Nam Nao National Park",
+   "wave": 2,
+   "via": "term:sak",
+   "gold": false
+  },
+  {
+   "id": "mq:8300c98c1d807d37",
+   "label": "Rama VII Bridge",
+   "wave": 3,
+   "via": "term:chao",
+   "gold": false
+  },
+  {
+   "id": "mq:4c06f37c349541ef",
+   "label": "The Breakup Guru",
+   "wave": 3,
+   "via": "term:chao",
+   "gold": false
+  },
+  {
+   "id": "mq:ee1bdb3523d32b67",
+   "label": "Vat Yotkeo",
+   "wave": 3,
+   "via": "term:chao",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:6103d2283cc48c84",
+    "label": "Naches River",
+    "gold": false
+   },
+   {
+    "id": "mq:9deb90fcc7cf6276",
+    "label": "Gamkapoort Dam",
+    "gold": false
+   },
+   {
+    "id": "mq:ca16d78c1ebe6c23",
+    "label": "List of tributaries of the Chao Phraya River",
+    "gold": true
+   },
+   {
+    "id": "mq:c9c3c2ff3ccbac64",
+    "label": "San Phi Suea",
+    "gold": false
+   },
+   {
+    "id": "mq:2103ac973008600a",
+    "label": "Orange River",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:9deb90fcc7cf6276",
+    "label": "Gamkapoort Dam",
+    "gold": false
+   },
+   {
+    "id": "mq:ca16d78c1ebe6c23",
+    "label": "List of tributaries of the Chao Phraya River",
+    "gold": true
+   },
+   {
+    "id": "mq:2103ac973008600a",
+    "label": "Orange River",
+    "gold": false
+   },
+   {
+    "id": "mq:6103d2283cc48c84",
+    "label": "Naches River",
+    "gold": false
+   },
+   {
+    "id": "mq:57f499ce77aaf092",
+    "label": "Ankang Dam",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:ca16d78c1ebe6c23",
+    "label": "List of tributaries of the Chao Phraya River",
+    "gold": true
+   },
+   {
+    "id": "mq:2103ac973008600a",
+    "label": "Orange River",
+    "gold": false
+   },
+   {
+    "id": "mq:6103d2283cc48c84",
+    "label": "Naches River",
+    "gold": false
+   },
+   {
+    "id": "mq:9deb90fcc7cf6276",
+    "label": "Gamkapoort Dam",
+    "gold": false
+   },
+   {
+    "id": "mq:00882cc79b63038d",
+    "label": "Lostock Dam",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:481e7fe39d430569",
+    "label": "J. Percy Priest Dam",
+    "gold": false
+   },
+   {
+    "id": "mq:76adbbf65ce727ea",
+    "label": "Minnehaha Creek",
+    "gold": false
+   },
+   {
+    "id": "mq:3573b402f68a22e9",
+    "label": "Enloe Dam and Powerplant",
+    "gold": false
+   },
+   {
+    "id": "mq:882cae23d8e33c1b",
+    "label": "Umchabezi River",
+    "gold": false
+   },
+   {
+    "id": "mq:9deb90fcc7cf6276",
+    "label": "Gamkapoort Dam",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 1.0,
+  "Q": 1.0,
+  "LQ": 1.0,
+  "S": 0.0
+ }
+}

@@ -1,0 +1,410 @@
+{
+ "qid": "pr:558",
+ "set": "prs",
+ "question": "What work went into this, and why: weekly-report: units on every result, decisions before work?",
+ "gold": [
+  {
+   "id": "commit/2dd002105d",
+   "label": "commit 2dd0021: weekly-report: started by Sirsh's request for now, not the launchd job",
+   "seed": false
+  },
+  {
+   "id": "commit/b4d7a72078",
+   "label": "commit b4d7a72: weekly-report: units on every result, decisions before work, gaps in the opening",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/b4d7a72078",
+   "label": "commit b4d7a72: weekly-report: units on every result, decisions before work, gaps in the opening",
+   "rank": 1,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "commit/338ffc4104",
+   "label": "commit 338ffc4: Merge pull request #558 from Percolation-Labs/amartey/weekly-report-review",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "meta/skills/weekly-report/SKILL.md#7",
+   "label": "meta/skills/weekly-report/SKILL.md \u203a Log",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "meta/skills/weekly-report/SKILL.md#6",
+   "label": "meta/skills/weekly-report/SKILL.md \u203a Shape",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "meta/skills/weekly-report/SKILL.md#1",
+   "label": "meta/skills/weekly-report/SKILL.md",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/2dd002105d",
+    "label": "commit 2dd0021: weekly-report: started by Sirsh's request for now, not the launchd job",
+    "role": "gold"
+   },
+   {
+    "id": "commit/b4d7a72078",
+    "label": "commit b4d7a72: weekly-report: units on every result, decisions before work, gaps in the opening",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/2dd002105d",
+    "b": "commit/b4d7a72078",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "weekly report",
+      "width": 28
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "commit/b4d7a72078",
+   "gold": "commit/b4d7a72078",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 623,
+  "within_2_doors": 32700,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "commit/9d6e548ae4",
+    "label": "commit 9d6e548: Merge remote-tracking branch 'origin/main' into amartey/weekly-report-review",
+    "p": 0.007008924268220758,
+    "gold": false
+   },
+   {
+    "id": "commit/ac4ce32933",
+    "label": "commit ac4ce32: Merge pull request #557 from Percolation-Labs/amartey/weekly-report",
+    "p": 0.0055146062781125955,
+    "gold": false
+   },
+   {
+    "id": "meta/skills/weekly-report/SKILL.md#5",
+    "label": "meta/skills/weekly-report/SKILL.md \u203a Steps",
+    "p": 0.005096921441898294,
+    "gold": false
+   },
+   {
+    "id": "meta/skills/weekly-report/SKILL.md#2",
+    "label": "meta/skills/weekly-report/SKILL.md \u203a The weekly report",
+    "p": 0.005081184465503815,
+    "gold": false
+   },
+   {
+    "id": "dev/weekly-report.sh#1",
+    "label": "dev/weekly-report.sh",
+    "p": 0.004435187312346937,
+    "gold": false
+   },
+   {
+    "id": "commit/3b0d395b7d",
+    "label": "commit 3b0d395: board: sirsh messages sally",
+    "p": 0.0043379492841842055,
+    "gold": false
+   },
+   {
+    "id": "dev/weekly-report.sh#4",
+    "label": "dev/weekly-report.sh",
+    "p": 0.004261392862357776,
+    "gold": false
+   },
+   {
+    "id": "meta/skills/weekly-report/SKILL.md#3",
+    "label": "meta/skills/weekly-report/SKILL.md \u203a How it starts",
+    "p": 0.004158155386339349,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-613.md#5",
+    "label": "board/cards/REM-613.md \u203a Log",
+    "p": 0.004151325540574211,
+    "gold": false
+   },
+   {
+    "id": "meta/skills/weekly-report/SKILL.md#4",
+    "label": "meta/skills/weekly-report/SKILL.md \u203a Steps",
+    "p": 0.00411303668210517,
+    "gold": false
+   },
+   {
+    "id": "commit/2dd002105d",
+    "label": "commit 2dd0021: weekly-report: started by Sirsh's request for now, not the launchd job",
+    "p": 0.003939281434666361,
+    "gold": true
+   },
+   {
+    "id": "board/messages/M-20261027-080855-2c20.md#1",
+    "label": "board/messages/M-20261027-080855-2c20.md",
+    "p": 0.0035016495146372316,
+    "gold": false
+   },
+   {
+    "id": "commit/1b3cca9c99",
+    "label": "commit 1b3cca9: board: james messages sirsh",
+    "p": 0.0034219361724205518,
+    "gold": false
+   },
+   {
+    "id": "commit/4479d6d5da",
+    "label": "commit 4479d6d: weekly-report: gather the week's facts and file the report card every Monday",
+    "p": 0.003076190571845138,
+    "gold": false
+   },
+   {
+    "id": "meta/compliance/osa-illegal-content.md#1",
+    "label": "meta/compliance/osa-illegal-content.md \u203a Online Safety Act: illegal content risk assessment",
+    "p": 0.0027992364944159254,
+    "gold": false
+   },
+   {
+    "id": "dev/weekly-report.sh#3",
+    "label": "dev/weekly-report.sh",
+    "p": 0.002772800349497916,
+    "gold": false
+   },
+   {
+    "id": "dev/a-sweep-moves-pins-not-records.py#4",
+    "label": "dev/a-sweep-moves-pins-not-records.py",
+    "p": 0.002748779371042747,
+    "gold": false
+   },
+   {
+    "id": "commit/5f9e77fce3",
+    "label": "commit 5f9e77f: board: train-watch messages all",
+    "p": 0.002651100596997539,
+    "gold": false
+   },
+   {
+    "id": "meta/compliance/osa-illegal-content.md#7",
+    "label": "meta/compliance/osa-illegal-content.md \u203a 4. Record, report, review",
+    "p": 0.0025893353399858298,
+    "gold": false
+   },
+   {
+    "id": "dev/a-sweep-moves-pins-not-records.py#6",
+    "label": "dev/a-sweep-moves-pins-not-records.py",
+    "p": 0.0024200868015713476,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/b4d7a72078",
+   "label": "commit b4d7a72: weekly-report: units on every result, decisions before work, gaps in the opening",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "commit/338ffc4104",
+   "label": "commit 338ffc4: Merge pull request #558 from Percolation-Labs/amartey/weekly-report-review",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/skills/weekly-report/SKILL.md#7",
+   "label": "meta/skills/weekly-report/SKILL.md \u203a Log",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/skills/weekly-report/SKILL.md#6",
+   "label": "meta/skills/weekly-report/SKILL.md \u203a Shape",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/skills/weekly-report/SKILL.md#1",
+   "label": "meta/skills/weekly-report/SKILL.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/skills/weekly-report/SKILL.md#5",
+   "label": "meta/skills/weekly-report/SKILL.md \u203a Steps",
+   "wave": 1,
+   "via": "term:skills weekly",
+   "gold": false
+  },
+  {
+   "id": "meta/skills/weekly-report/SKILL.md#2",
+   "label": "meta/skills/weekly-report/SKILL.md \u203a The weekly report",
+   "wave": 1,
+   "via": "term:skills weekly",
+   "gold": false
+  },
+  {
+   "id": "meta/skills/weekly-report/SKILL.md#3",
+   "label": "meta/skills/weekly-report/SKILL.md \u203a How it starts",
+   "wave": 1,
+   "via": "term:skills weekly",
+   "gold": false
+  },
+  {
+   "id": "dev/weekly-report.sh#4",
+   "label": "dev/weekly-report.sh",
+   "wave": 1,
+   "via": "term:skills weekly",
+   "gold": false
+  },
+  {
+   "id": "meta/skills/weekly-report/SKILL.md#4",
+   "label": "meta/skills/weekly-report/SKILL.md \u203a Steps",
+   "wave": 1,
+   "via": "term:skills weekly",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "commit/9d6e548ae4",
+    "label": "commit 9d6e548: Merge remote-tracking branch 'origin/main' into amartey/weekly-report-review",
+    "gold": false
+   },
+   {
+    "id": "commit/ac4ce32933",
+    "label": "commit ac4ce32: Merge pull request #557 from Percolation-Labs/amartey/weekly-report",
+    "gold": false
+   },
+   {
+    "id": "meta/skills/weekly-report/SKILL.md#5",
+    "label": "meta/skills/weekly-report/SKILL.md \u203a Steps",
+    "gold": false
+   },
+   {
+    "id": "meta/skills/weekly-report/SKILL.md#2",
+    "label": "meta/skills/weekly-report/SKILL.md \u203a The weekly report",
+    "gold": false
+   },
+   {
+    "id": "dev/weekly-report.sh#1",
+    "label": "dev/weekly-report.sh",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "dev/weekly-report.sh#1",
+    "label": "dev/weekly-report.sh",
+    "gold": false
+   },
+   {
+    "id": "meta/skills/weekly-report/SKILL.md#2",
+    "label": "meta/skills/weekly-report/SKILL.md \u203a The weekly report",
+    "gold": false
+   },
+   {
+    "id": "commit/4479d6d5da",
+    "label": "commit 4479d6d: weekly-report: gather the week's facts and file the report card every Monday",
+    "gold": false
+   },
+   {
+    "id": "commit/ac4ce32933",
+    "label": "commit ac4ce32: Merge pull request #557 from Percolation-Labs/amartey/weekly-report",
+    "gold": false
+   },
+   {
+    "id": "dev/weekly-report.sh#4",
+    "label": "dev/weekly-report.sh",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "meta/skills/weekly-report/SKILL.md#2",
+    "label": "meta/skills/weekly-report/SKILL.md \u203a The weekly report",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261027-075302-4a1e.md#1",
+    "label": "board/messages/M-20261027-075302-4a1e.md",
+    "gold": false
+   },
+   {
+    "id": "commit/9d6e548ae4",
+    "label": "commit 9d6e548: Merge remote-tracking branch 'origin/main' into amartey/weekly-report-review",
+    "gold": false
+   },
+   {
+    "id": "commit/ac4ce32933",
+    "label": "commit ac4ce32: Merge pull request #557 from Percolation-Labs/amartey/weekly-report",
+    "gold": false
+   },
+   {
+    "id": "commit/2dd002105d",
+    "label": "commit 2dd0021: weekly-report: started by Sirsh's request for now, not the launchd job",
+    "gold": true
+   }
+  ],
+  "S": [
+   {
+    "id": "dev/weekly-report.sh#1",
+    "label": "dev/weekly-report.sh",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261027-080132-64c5.md#1",
+    "label": "board/messages/M-20261027-080132-64c5.md",
+    "gold": false
+   },
+   {
+    "id": "commit/ac4ce32933",
+    "label": "commit ac4ce32: Merge pull request #557 from Percolation-Labs/amartey/weekly-report",
+    "gold": false
+   },
+   {
+    "id": "meta/skills/weekly-report/SKILL.md#4",
+    "label": "meta/skills/weekly-report/SKILL.md \u203a Steps",
+    "gold": false
+   },
+   {
+    "id": "meta/skills/weekly-report/SKILL.md#2",
+    "label": "meta/skills/weekly-report/SKILL.md \u203a The weekly report",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 1.0,
+  "S": 0.0
+ }
+}

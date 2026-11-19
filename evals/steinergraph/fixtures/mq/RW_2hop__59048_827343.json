@@ -1,0 +1,453 @@
+{
+ "qid": "RW:2hop__59048_827343",
+ "set": "mq",
+ "question": "Whose sister played Susie in miracle on 34th street?",
+ "gold": [
+  {
+   "id": "mq:45d5c9de8b30febf",
+   "label": "Miracle on 34th Street",
+   "seed": false
+  },
+  {
+   "id": "mq:798b0c2774b3fb1a",
+   "label": "Five Finger Exercise",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:12e72349b13cf02b",
+   "label": "Miracle on 34th Street",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:a4015ebc39fae919",
+   "label": "Miracle on Ice",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:1eafed84f20b50f6",
+   "label": "Miracle on 34th Street",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:90d59af551c0bc10",
+   "label": "Tora Suber",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:14ddbeb2af03df9c",
+   "label": "Susie Bootja Bootja Napaltjarri",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 2
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:12e72349b13cf02b",
+    "label": "Miracle on 34th Street",
+    "role": "seed"
+   },
+   {
+    "id": "mq:45d5c9de8b30febf",
+    "label": "Miracle on 34th Street",
+    "role": "gold"
+   },
+   {
+    "id": "mq:798b0c2774b3fb1a",
+    "label": "Five Finger Exercise",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:12e72349b13cf02b",
+    "b": "mq:45d5c9de8b30febf",
+    "via": [
+     {
+      "kind": "term",
+      "key": "john payne",
+      "width": 4
+     },
+     {
+      "kind": "term",
+      "key": "natalie wood",
+      "width": 6
+     },
+     {
+      "kind": "term",
+      "key": "payne",
+      "width": 11
+     },
+     {
+      "kind": "term",
+      "key": "miracle",
+      "width": 29
+     },
+     {
+      "kind": "term",
+      "key": "natalie",
+      "width": 30
+     }
+    ]
+   },
+   {
+    "a": "mq:45d5c9de8b30febf",
+    "b": "mq:798b0c2774b3fb1a",
+    "via": [
+     {
+      "kind": "term",
+      "key": "natalie wood",
+      "width": 6
+     },
+     {
+      "kind": "term",
+      "key": "natalie",
+      "width": 30
+     },
+     {
+      "kind": "term",
+      "key": "wood",
+      "width": 75
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "mq:12e72349b13cf02b",
+   "gold": "mq:45d5c9de8b30febf",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 1971,
+  "within_2_doors": 19108,
+  "gold_within_1": 2,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "mq:6339bd9cc8e47c77",
+    "label": "Miracle on 34th Street",
+    "p": 0.003376416940887754,
+    "gold": false
+   },
+   {
+    "id": "mq:1f5f6ad204c5ef43",
+    "label": "Arisan!",
+    "p": 0.003162113885205818,
+    "gold": false
+   },
+   {
+    "id": "mq:e3aa75020dd80a67",
+    "label": "The Biggest Loser (season 16)",
+    "p": 0.0030661681245320533,
+    "gold": false
+   },
+   {
+    "id": "mq:c45e30e405a98c58",
+    "label": "The Proud and Profane",
+    "p": 0.002932798915626999,
+    "gold": false
+   },
+   {
+    "id": "mq:73b1a977ab0b27ee",
+    "label": "Miracle on 34th Street",
+    "p": 0.0024072186961220567,
+    "gold": false
+   },
+   {
+    "id": "mq:7ec0151f855dfe4e",
+    "label": "The Joey Bishop Show (TV series)",
+    "p": 0.0019580455276000303,
+    "gold": false
+   },
+   {
+    "id": "mq:b9810998fd4005f0",
+    "label": "Dwight D. Eisenhower",
+    "p": 0.001955287605433162,
+    "gold": false
+   },
+   {
+    "id": "mq:45d5c9de8b30febf",
+    "label": "Miracle on 34th Street",
+    "p": 0.0015152312586940674,
+    "gold": true
+   },
+   {
+    "id": "mq:aa74a77cd151d3e9",
+    "label": "The Miracle of Sound in Motion",
+    "p": 0.001422487505787106,
+    "gold": false
+   },
+   {
+    "id": "mq:18c463797163d64b",
+    "label": "2016 Wimbledon Championships",
+    "p": 0.0013648839572731396,
+    "gold": false
+   },
+   {
+    "id": "mq:68fa867eef56afd9",
+    "label": "Jeff Allan",
+    "p": 0.001341616146811903,
+    "gold": false
+   },
+   {
+    "id": "mq:cb810f77c396a09f",
+    "label": "2011 Australian Open \u2013 Men's Doubles",
+    "p": 0.0013264497789635327,
+    "gold": false
+   },
+   {
+    "id": "mq:7dc7b825434c9b39",
+    "label": "The Post (film)",
+    "p": 0.0013164434159275398,
+    "gold": false
+   },
+   {
+    "id": "mq:63297861371786b3",
+    "label": "The Post (film)",
+    "p": 0.0013049812321379072,
+    "gold": false
+   },
+   {
+    "id": "mq:3ca4c602b642b3d1",
+    "label": "Pictou County Wellness Centre",
+    "p": 0.0012248053575134236,
+    "gold": false
+   },
+   {
+    "id": "mq:377d6d5eadfb7e35",
+    "label": "Ernest Saves Christmas",
+    "p": 0.0012139182096091395,
+    "gold": false
+   },
+   {
+    "id": "mq:50d2b38bc6234870",
+    "label": "List of first overall WNBA draft picks",
+    "p": 0.0010322986420439127,
+    "gold": false
+   },
+   {
+    "id": "mq:cc8ca875db5e9f6a",
+    "label": "Gobi Desert",
+    "p": 0.001017501659224618,
+    "gold": false
+   },
+   {
+    "id": "mq:1b6c9fa44c677755",
+    "label": "Toccara Williams",
+    "p": 0.00101106980161744,
+    "gold": false
+   },
+   {
+    "id": "mq:723f82542f9a3e45",
+    "label": "Lake County, Oregon",
+    "p": 0.0010040462999879986,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:12e72349b13cf02b",
+   "label": "Miracle on 34th Street",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:a4015ebc39fae919",
+   "label": "Miracle on Ice",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:1eafed84f20b50f6",
+   "label": "Miracle on 34th Street",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:90d59af551c0bc10",
+   "label": "Tora Suber",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:14ddbeb2af03df9c",
+   "label": "Susie Bootja Bootja Napaltjarri",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:156365be70c8a99a",
+   "label": "Marni Nixon",
+   "wave": 1,
+   "via": "term:natalie wood",
+   "gold": false
+  },
+  {
+   "id": "mq:798b0c2774b3fb1a",
+   "label": "Five Finger Exercise",
+   "wave": 1,
+   "via": "term:natalie wood",
+   "gold": true
+  },
+  {
+   "id": "mq:45d5c9de8b30febf",
+   "label": "Miracle on 34th Street",
+   "wave": 1,
+   "via": "term:natalie wood",
+   "gold": true
+  },
+  {
+   "id": "mq:6339bd9cc8e47c77",
+   "label": "Miracle on 34th Street",
+   "wave": 1,
+   "via": "term:natalie wood",
+   "gold": false
+  },
+  {
+   "id": "mq:73b1a977ab0b27ee",
+   "label": "Miracle on 34th Street",
+   "wave": 2,
+   "via": "near:mq:12e72349b13cf02b",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:6339bd9cc8e47c77",
+    "label": "Miracle on 34th Street",
+    "gold": false
+   },
+   {
+    "id": "mq:1f5f6ad204c5ef43",
+    "label": "Arisan!",
+    "gold": false
+   },
+   {
+    "id": "mq:e3aa75020dd80a67",
+    "label": "The Biggest Loser (season 16)",
+    "gold": false
+   },
+   {
+    "id": "mq:c45e30e405a98c58",
+    "label": "The Proud and Profane",
+    "gold": false
+   },
+   {
+    "id": "mq:73b1a977ab0b27ee",
+    "label": "Miracle on 34th Street",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:6339bd9cc8e47c77",
+    "label": "Miracle on 34th Street",
+    "gold": false
+   },
+   {
+    "id": "mq:73b1a977ab0b27ee",
+    "label": "Miracle on 34th Street",
+    "gold": false
+   },
+   {
+    "id": "mq:38d1360e7e86beec",
+    "label": "Miracle on 34th Street",
+    "gold": false
+   },
+   {
+    "id": "mq:45d5c9de8b30febf",
+    "label": "Miracle on 34th Street",
+    "gold": true
+   },
+   {
+    "id": "mq:47148bb769eaa52e",
+    "label": "I Know What You Did Last Summer",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:6339bd9cc8e47c77",
+    "label": "Miracle on 34th Street",
+    "gold": false
+   },
+   {
+    "id": "mq:73b1a977ab0b27ee",
+    "label": "Miracle on 34th Street",
+    "gold": false
+   },
+   {
+    "id": "mq:47148bb769eaa52e",
+    "label": "I Know What You Did Last Summer",
+    "gold": false
+   },
+   {
+    "id": "mq:38d1360e7e86beec",
+    "label": "Miracle on 34th Street",
+    "gold": false
+   },
+   {
+    "id": "mq:61531cd333da4e32",
+    "label": "I Know What You Did Last Summer",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:73b1a977ab0b27ee",
+    "label": "Miracle on 34th Street",
+    "gold": false
+   },
+   {
+    "id": "mq:97a08a8a6c75017d",
+    "label": "Susie, Washington",
+    "gold": false
+   },
+   {
+    "id": "mq:018d75e2184e88c4",
+    "label": "Bit part",
+    "gold": false
+   },
+   {
+    "id": "mq:45d5c9de8b30febf",
+    "label": "Miracle on 34th Street",
+    "gold": true
+   },
+   {
+    "id": "mq:6339bd9cc8e47c77",
+    "label": "Miracle on 34th Street",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.5,
+  "LQ": 0.0,
+  "S": 0.5
+ }
+}

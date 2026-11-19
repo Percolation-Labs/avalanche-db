@@ -1,0 +1,570 @@
+{
+ "qid": "pr:828",
+ "set": "prs",
+ "question": "What work went into this, and why: jev-bm5-replication + jev-bm5-multihop: b-m5 does not beat k=1 on fresh 2-hop or 3/4-hop questions; k=1 stays everywhere?",
+ "gold": [
+  {
+   "id": "commit/0ba82d2516",
+   "label": "commit 0ba82d2: jev-bm5-replication: register Jev b-m5 vs k=1 on 50 fresh MuSiQue questions (before any live call)",
+   "seed": false
+  },
+  {
+   "id": "commit/1a28fe1d7b",
+   "label": "commit 1a28fe1: jev-bm5-multihop: register Jev b-m5 vs k=1 on 30 fresh 3/4-hop room>0 questions, oracle gate first (befo",
+   "seed": true
+  },
+  {
+   "id": "commit/3443373108",
+   "label": "commit 3443373: jev-bm5-multihop: result, oracle gate +.050 (P2) but Jev b-m5 - k=1 -.003 [-.072, +.061] on 30 fresh 3/4",
+   "seed": true
+  },
+  {
+   "id": "commit/58109bcb12",
+   "label": "commit 58109bc: jev-bm5-multihop: state the oracle-match count exactly (3 of 8)",
+   "seed": false
+  },
+  {
+   "id": "commit/a24711a22a",
+   "label": "commit a24711a: jev-bm5-multihop: oracle gate passes (+.050), priced ($0.45 projected, no cut)",
+   "seed": false
+  },
+  {
+   "id": "commit/c33fa670d5",
+   "label": "commit c33fa67: jev-bm5-replication: result, P1 holds (+.042), P2 fails (.000 on 20 fresh 2-hop room>0); k=1 stays ($0.6",
+   "seed": true
+  },
+  {
+   "id": "commit/f2f3c645c7",
+   "label": "commit f2f3c64: jev-bm5-replication: priced ($0.57 projected, no cut)",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/85886ea9c1",
+   "label": "commit 85886ea: Merge pull request #828 from Percolation-Labs/james/jev-bm5-replication",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/c33fa670d5",
+   "label": "commit c33fa67: jev-bm5-replication: result, P1 holds (+.042), P2 fails (.000 on 20 fresh 2-hop room>0); k=1 stays ($0.6",
+   "rank": 2,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "commit/3443373108",
+   "label": "commit 3443373: jev-bm5-multihop: result, oracle gate +.050 (P2) but Jev b-m5 - k=1 -.003 [-.072, +.061] on 30 fresh 3/4",
+   "rank": 3,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "meta/lab/results/jev-bm5-multihop/pick.py#1",
+   "label": "meta/lab/results/jev-bm5-multihop/pick.py",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/1a28fe1d7b",
+   "label": "commit 1a28fe1: jev-bm5-multihop: register Jev b-m5 vs k=1 on 30 fresh 3/4-hop room>0 questions, oracle gate first (befo",
+   "rank": 5,
+   "gold": true,
+   "doors_to_gold": 0
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/0ba82d2516",
+    "label": "commit 0ba82d2: jev-bm5-replication: register Jev b-m5 vs k=1 on 50 fresh MuSiQue questions (before any live call)",
+    "role": "gold"
+   },
+   {
+    "id": "commit/1a28fe1d7b",
+    "label": "commit 1a28fe1: jev-bm5-multihop: register Jev b-m5 vs k=1 on 30 fresh 3/4-hop room>0 questions, oracle gate first (befo",
+    "role": "gold"
+   },
+   {
+    "id": "commit/3443373108",
+    "label": "commit 3443373: jev-bm5-multihop: result, oracle gate +.050 (P2) but Jev b-m5 - k=1 -.003 [-.072, +.061] on 30 fresh 3/4",
+    "role": "gold"
+   },
+   {
+    "id": "commit/58109bcb12",
+    "label": "commit 58109bc: jev-bm5-multihop: state the oracle-match count exactly (3 of 8)",
+    "role": "gold"
+   },
+   {
+    "id": "commit/a24711a22a",
+    "label": "commit a24711a: jev-bm5-multihop: oracle gate passes (+.050), priced ($0.45 projected, no cut)",
+    "role": "gold"
+   },
+   {
+    "id": "commit/c33fa670d5",
+    "label": "commit c33fa67: jev-bm5-replication: result, P1 holds (+.042), P2 fails (.000 on 20 fresh 2-hop room>0); k=1 stays ($0.6",
+    "role": "gold"
+   },
+   {
+    "id": "commit/f2f3c645c7",
+    "label": "commit f2f3c64: jev-bm5-replication: priced ($0.57 projected, no cut)",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/0ba82d2516",
+    "b": "commit/f2f3c645c7",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "bm5 replication",
+      "width": 35
+     },
+     {
+      "kind": "term",
+      "key": "replication",
+      "width": 90
+     }
+    ]
+   },
+   {
+    "a": "commit/1a28fe1d7b",
+    "b": "commit/a24711a22a",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "oracle gate",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "bm5 multihop",
+      "width": 35
+     }
+    ]
+   },
+   {
+    "a": "commit/1a28fe1d7b",
+    "b": "commit/c33fa670d5",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "hop room",
+      "width": 7
+     }
+    ]
+   },
+   {
+    "a": "commit/3443373108",
+    "b": "commit/58109bcb12",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "bm5 multihop",
+      "width": 35
+     }
+    ]
+   },
+   {
+    "a": "commit/3443373108",
+    "b": "commit/a24711a22a",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "oracle gate",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "bm5 multihop",
+      "width": 35
+     }
+    ]
+   },
+   {
+    "a": "commit/c33fa670d5",
+    "b": "commit/f2f3c645c7",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "bm5 replication",
+      "width": 35
+     },
+     {
+      "kind": "term",
+      "key": "replication",
+      "width": 90
+     }
+    ]
+   }
+  ],
+  "cost": 6,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   2,
+   2,
+   2,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   2,
+   1,
+   1,
+   2,
+   2,
+   1,
+   2,
+   2,
+   2,
+   1,
+   1
+  ],
+  "entry": {
+   "seed": "commit/1a28fe1d7b",
+   "gold": "commit/1a28fe1d7b",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 707,
+  "within_2_doors": 28880,
+  "gold_within_1": 4,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "commit/a24711a22a",
+    "label": "commit a24711a: jev-bm5-multihop: oracle gate passes (+.050), priced ($0.45 projected, no cut)",
+    "p": 0.011415157392115481,
+    "gold": true
+   },
+   {
+    "id": "board/messages/M-20261117-132453-667d.md#1",
+    "label": "board/messages/M-20261117-132453-667d.md",
+    "p": 0.006230246427761812,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-bm5-replication/pick.py#2",
+    "label": "meta/lab/results/jev-bm5-replication/pick.py",
+    "p": 0.0061316490887210135,
+    "gold": false
+   },
+   {
+    "id": "commit/58109bcb12",
+    "label": "commit 58109bc: jev-bm5-multihop: state the oracle-match count exactly (3 of 8)",
+    "p": 0.005648860353708407,
+    "gold": true
+   },
+   {
+    "id": "meta/lab/results/jev-bm5-multihop/drive.py#1",
+    "label": "meta/lab/results/jev-bm5-multihop/drive.py",
+    "p": 0.005552766812206129,
+    "gold": false
+   },
+   {
+    "id": "commit/6dc158dd54",
+    "label": "commit 6dc158d: Merge pull request #820 from Percolation-Labs/james/door-budget-guard",
+    "p": 0.004393469049961531,
+    "gold": false
+   },
+   {
+    "id": "commit/f2f3c645c7",
+    "label": "commit f2f3c64: jev-bm5-replication: priced ($0.57 projected, no cut)",
+    "p": 0.004308107981622598,
+    "gold": true
+   },
+   {
+    "id": "meta/lab/results/jev-bm5-replication/pick.py#1",
+    "label": "meta/lab/results/jev-bm5-replication/pick.py",
+    "p": 0.0038756332382016223,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-bm5-multihop/score.py#1",
+    "label": "meta/lab/results/jev-bm5-multihop/score.py",
+    "p": 0.003584714136901194,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-bm5-replication/RESULT.md#8",
+    "label": "meta/lab/results/jev-bm5-replication/RESULT.md \u203a Postmortem",
+    "p": 0.003475862540936858,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-ranking-saved-pages/score.py#1",
+    "label": "meta/lab/results/jev-ranking-saved-pages/score.py",
+    "p": 0.00329753931959317,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261117-130434-6663.md#1",
+    "label": "board/messages/M-20261117-130434-6663.md",
+    "p": 0.002973586422535346,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-bm5-replication/score.py#1",
+    "label": "meta/lab/results/jev-bm5-replication/score.py",
+    "p": 0.0028892393202304637,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-bm5-multihop/RESULT.md#3",
+    "label": "meta/lab/results/jev-bm5-multihop/RESULT.md \u203a 826 \u2192 #828 series, on #828's branch.",
+    "p": 0.002816307801149385,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-bm5-multihop/pick.py#2",
+    "label": "meta/lab/results/jev-bm5-multihop/pick.py",
+    "p": 0.0024324960966125497,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-bm5-multihop/RESULT.md#6",
+    "label": "meta/lab/results/jev-bm5-multihop/RESULT.md \u203a Result (17 Nov 2026)",
+    "p": 0.002390823503220898,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-bm5-multihop/RESULT.md#8",
+    "label": "meta/lab/results/jev-bm5-multihop/RESULT.md \u203a Postmortem",
+    "p": 0.002243038476315217,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-bm5-replication/score.py#3",
+    "label": "meta/lab/results/jev-bm5-replication/score.py",
+    "p": 0.002228905421646315,
+    "gold": false
+   },
+   {
+    "id": "commit/6d490de71c",
+    "label": "commit 6d490de: board: james messages all",
+    "p": 0.00216316235593864,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-bm5-replication/score.py#2",
+    "label": "meta/lab/results/jev-bm5-replication/score.py",
+    "p": 0.0020894851134653798,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/85886ea9c1",
+   "label": "commit 85886ea: Merge pull request #828 from Percolation-Labs/james/jev-bm5-replication",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/c33fa670d5",
+   "label": "commit c33fa67: jev-bm5-replication: result, P1 holds (+.042), P2 fails (.000 on 20 fresh 2-hop room>0); k=1 stays ($0.6",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "commit/3443373108",
+   "label": "commit 3443373: jev-bm5-multihop: result, oracle gate +.050 (P2) but Jev b-m5 - k=1 -.003 [-.072, +.061] on 30 fresh 3/4",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "meta/lab/results/jev-bm5-multihop/pick.py#1",
+   "label": "meta/lab/results/jev-bm5-multihop/pick.py",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/1a28fe1d7b",
+   "label": "commit 1a28fe1: jev-bm5-multihop: register Jev b-m5 vs k=1 on 30 fresh 3/4-hop room>0 questions, oracle gate first (befo",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "meta/lab/results/jev-ranking-saved-pages/RESULT.md#2",
+   "label": "meta/lab/results/jev-ranking-saved-pages/RESULT.md \u203a Registration (17 Nov 2026, committed before anything was scored)",
+   "wave": 1,
+   "via": "term:bm5 multihop",
+   "gold": false
+  },
+  {
+   "id": "commit/a24711a22a",
+   "label": "commit a24711a: jev-bm5-multihop: oracle gate passes (+.050), priced ($0.45 projected, no cut)",
+   "wave": 1,
+   "via": "term:bm5 multihop",
+   "gold": true
+  },
+  {
+   "id": "commit/58109bcb12",
+   "label": "commit 58109bc: jev-bm5-multihop: state the oracle-match count exactly (3 of 8)",
+   "wave": 1,
+   "via": "term:bm5 multihop",
+   "gold": true
+  },
+  {
+   "id": "meta/lab/results/jev-bm5-multihop/pick.py#2",
+   "label": "meta/lab/results/jev-bm5-multihop/pick.py",
+   "wave": 1,
+   "via": "term:bm5 multihop",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/jev-bm5-multihop/RESULT.md#1",
+   "label": "meta/lab/results/jev-bm5-multihop/RESULT.md \u203a Jev b-m5 against k = 1 on fresh 3- and 4-hop MuSiQue questions: is b-m5's ",
+   "wave": 1,
+   "via": "term:bm5 multihop",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "commit/a24711a22a",
+    "label": "commit a24711a: jev-bm5-multihop: oracle gate passes (+.050), priced ($0.45 projected, no cut)",
+    "gold": true
+   },
+   {
+    "id": "board/messages/M-20261117-132453-667d.md#1",
+    "label": "board/messages/M-20261117-132453-667d.md",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-bm5-replication/pick.py#2",
+    "label": "meta/lab/results/jev-bm5-replication/pick.py",
+    "gold": false
+   },
+   {
+    "id": "commit/58109bcb12",
+    "label": "commit 58109bc: jev-bm5-multihop: state the oracle-match count exactly (3 of 8)",
+    "gold": true
+   },
+   {
+    "id": "meta/lab/results/jev-bm5-multihop/drive.py#1",
+    "label": "meta/lab/results/jev-bm5-multihop/drive.py",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "commit/a24711a22a",
+    "label": "commit a24711a: jev-bm5-multihop: oracle gate passes (+.050), priced ($0.45 projected, no cut)",
+    "gold": true
+   },
+   {
+    "id": "meta/lab/results/jev-bm5-multihop/drive.py#1",
+    "label": "meta/lab/results/jev-bm5-multihop/drive.py",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-bm5-replication/pick.py#2",
+    "label": "meta/lab/results/jev-bm5-replication/pick.py",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261117-132453-667d.md#1",
+    "label": "board/messages/M-20261117-132453-667d.md",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-bm5-multihop/RESULT.md#3",
+    "label": "meta/lab/results/jev-bm5-multihop/RESULT.md \u203a 826 \u2192 #828 series, on #828's branch.",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/f2f3c645c7",
+    "label": "commit f2f3c64: jev-bm5-replication: priced ($0.57 projected, no cut)",
+    "gold": true
+   },
+   {
+    "id": "commit/a24711a22a",
+    "label": "commit a24711a: jev-bm5-multihop: oracle gate passes (+.050), priced ($0.45 projected, no cut)",
+    "gold": true
+   },
+   {
+    "id": "commit/58109bcb12",
+    "label": "commit 58109bc: jev-bm5-multihop: state the oracle-match count exactly (3 of 8)",
+    "gold": true
+   },
+   {
+    "id": "board/messages/M-20261117-132453-667d.md#1",
+    "label": "board/messages/M-20261117-132453-667d.md",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-bm5-multihop/pick.py#2",
+    "label": "meta/lab/results/jev-bm5-multihop/pick.py",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "meta/lab/results/jev-bm5-multihop/RESULT.md#1",
+    "label": "meta/lab/results/jev-bm5-multihop/RESULT.md \u203a Jev b-m5 against k = 1 on fresh 3- and 4-hop MuSiQue questions: is b-m5's ",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-bm5-multihop/RESULT.md#6",
+    "label": "meta/lab/results/jev-bm5-multihop/RESULT.md \u203a Result (17 Nov 2026)",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-bm5-multihop/RESULT.md#3",
+    "label": "meta/lab/results/jev-bm5-multihop/RESULT.md \u203a 826 \u2192 #828 series, on #828's branch.",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-bm5-multihop/score-result.md#1",
+    "label": "meta/lab/results/jev-bm5-multihop/score-result.md \u203a Jev b-m5 against k = 1 on fresh 3- and 4-hop MuSiQue room > 0 questi",
+    "gold": false
+   },
+   {
+    "id": "commit/0ba82d2516",
+    "label": "commit 0ba82d2: jev-bm5-replication: register Jev b-m5 vs k=1 on 50 fresh MuSiQue questions (before any live call)",
+    "gold": true
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.5,
+  "Q": 0.25,
+  "LQ": 0.75,
+  "S": 0.25
+ }
+}

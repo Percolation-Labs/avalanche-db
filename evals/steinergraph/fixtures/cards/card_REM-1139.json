@@ -1,0 +1,448 @@
+{
+ "qid": "card:REM-1139",
+ "set": "cards",
+ "question": "What was done about this, and why: publication: percolate-core cites no private material?",
+ "gold": [
+  {
+   "id": "commit/626945b44a",
+   "label": "commit 626945b: k8s/examples: the ScaledObject's annotation names no private path, as percolate-core's render now emits ",
+   "seed": false
+  },
+  {
+   "id": "commit/d7ec8f1ca6",
+   "label": "commit d7ec8f1: Merge pull request #527 from Percolation-Labs/amartey/rem-1139-example-annotation",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/81dc732878",
+   "label": "commit 81dc732: board: file REM-1139 publication: percolate-core cites no private material",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-1139.md#1",
+   "label": "board/cards/REM-1139.md",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-437.md#4",
+   "label": "board/cards/REM-437.md \u203a Done when",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "board/cards/REM-1139.md#2",
+   "label": "board/cards/REM-1139.md \u203a Goal",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "specs/percolate-application/data-governance.md#11",
+   "label": "specs/percolate-application/data-governance.md \u203a F. Third-party material",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 2
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/626945b44a",
+    "label": "commit 626945b: k8s/examples: the ScaledObject's annotation names no private path, as percolate-core's render now emits ",
+    "role": "gold"
+   },
+   {
+    "id": "commit/81dc732878",
+    "label": "commit 81dc732: board: file REM-1139 publication: percolate-core cites no private material",
+    "role": "seed"
+   },
+   {
+    "id": "commit/d7ec8f1ca6",
+    "label": "commit d7ec8f1: Merge pull request #527 from Percolation-Labs/amartey/rem-1139-example-annotation",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/626945b44a",
+    "b": "commit/81dc732878",
+    "via": [
+     {
+      "kind": "term",
+      "key": "rem 1139",
+      "width": 21
+     },
+     {
+      "kind": "term",
+      "key": "1139",
+      "width": 23
+     }
+    ]
+   },
+   {
+    "a": "commit/626945b44a",
+    "b": "commit/d7ec8f1ca6",
+    "via": [
+     {
+      "kind": "term",
+      "key": "annotation names",
+      "width": 4
+     },
+     {
+      "kind": "term",
+      "key": "private path",
+      "width": 6
+     },
+     {
+      "kind": "term",
+      "key": "rem 1139",
+      "width": 21
+     },
+     {
+      "kind": "term",
+      "key": "k8s examples",
+      "width": 22
+     },
+     {
+      "kind": "term",
+      "key": "1139",
+      "width": 23
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "commit/81dc732878",
+   "gold": "commit/626945b44a",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 1094,
+  "within_2_doors": 33514,
+  "gold_within_1": 2,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "commit/d610e18190",
+    "label": "commit d610e18: board: p8-subsystems-ee takes REM-1139",
+    "p": 0.00686586702864228,
+    "gold": false
+   },
+   {
+    "id": "commit/4735cadc63",
+    "label": "commit 4735cad: board: REM-1139 review \u2192 done",
+    "p": 0.005315831425818688,
+    "gold": false
+   },
+   {
+    "id": "commit/a5167011ec",
+    "label": "commit a516701: board: note on REM-1139",
+    "p": 0.0052675155656485145,
+    "gold": false
+   },
+   {
+    "id": "commit/78eb3d4b90",
+    "label": "commit 78eb3d4: board: note on REM-1139",
+    "p": 0.005098088721691773,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261023-051607-ddfe.md#1",
+    "label": "board/messages/M-20261023-051607-ddfe.md",
+    "p": 0.005060180748527968,
+    "gold": false
+   },
+   {
+    "id": "commit/0d1d7ec055",
+    "label": "commit 0d1d7ec: board: note on REM-1139",
+    "p": 0.004990215347544632,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261023-152731-482f.md#1",
+    "label": "board/messages/M-20261023-152731-482f.md",
+    "p": 0.0042171598940197765,
+    "gold": false
+   },
+   {
+    "id": "commit/1e580402a0",
+    "label": "commit 1e58040: board: REM-1139 in-progress \u2192 review",
+    "p": 0.0033199952052813076,
+    "gold": false
+   },
+   {
+    "id": "board/team/p8-subsystems-ee.md#3",
+    "label": "board/team/p8-subsystems-ee.md \u203a Log",
+    "p": 0.0032376504137921406,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1139.md#3",
+    "label": "board/cards/REM-1139.md \u203a What to change",
+    "p": 0.0031807807556146583,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1035.md#7",
+    "label": "board/cards/REM-1035.md \u203a Log",
+    "p": 0.0030460505296592438,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1139.md#4",
+    "label": "board/cards/REM-1139.md \u203a Done when",
+    "p": 0.0027804615468666185,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1139.md#5",
+    "label": "board/cards/REM-1139.md \u203a Log",
+    "p": 0.002599772576147664,
+    "gold": false
+   },
+   {
+    "id": "commit/d7ec8f1ca6",
+    "label": "commit d7ec8f1: Merge pull request #527 from Percolation-Labs/amartey/rem-1139-example-annotation",
+    "p": 0.002341878367878251,
+    "gold": true
+   },
+   {
+    "id": "commit/391d79dc7e",
+    "label": "commit 391d79d: board: codex-jev-samples takes REM-1138",
+    "p": 0.0022582829538769647,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1080.md#7",
+    "label": "board/cards/REM-1080.md \u203a Log",
+    "p": 0.0022222294088520235,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1106.md#7",
+    "label": "board/cards/REM-1106.md \u203a Log",
+    "p": 0.002171147637481652,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261023-043954-c1d4.md#1",
+    "label": "board/messages/M-20261023-043954-c1d4.md",
+    "p": 0.002044932692346375,
+    "gold": false
+   },
+   {
+    "id": "board/team/cory.md#2",
+    "label": "board/team/cory.md \u203a Log",
+    "p": 0.0018644734790646165,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261023-051607-ddfe.md#2",
+    "label": "board/messages/M-20261023-051607-ddfe.md",
+    "p": 0.001858763874718885,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/81dc732878",
+   "label": "commit 81dc732: board: file REM-1139 publication: percolate-core cites no private material",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-1139.md#1",
+   "label": "board/cards/REM-1139.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-437.md#4",
+   "label": "board/cards/REM-437.md \u203a Done when",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-1139.md#2",
+   "label": "board/cards/REM-1139.md \u203a Goal",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/percolate-application/data-governance.md#11",
+   "label": "specs/percolate-application/data-governance.md \u203a F. Third-party material",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/78eb3d4b90",
+   "label": "commit 78eb3d4: board: note on REM-1139",
+   "wave": 1,
+   "via": "term:1139",
+   "gold": false
+  },
+  {
+   "id": "commit/1e580402a0",
+   "label": "commit 1e58040: board: REM-1139 in-progress \u2192 review",
+   "wave": 1,
+   "via": "term:1139",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-1139.md#4",
+   "label": "board/cards/REM-1139.md \u203a Done when",
+   "wave": 1,
+   "via": "term:1139",
+   "gold": false
+  },
+  {
+   "id": "commit/4735cadc63",
+   "label": "commit 4735cad: board: REM-1139 review \u2192 done",
+   "wave": 1,
+   "via": "term:1139",
+   "gold": false
+  },
+  {
+   "id": "commit/0d1d7ec055",
+   "label": "commit 0d1d7ec: board: note on REM-1139",
+   "wave": 1,
+   "via": "term:1139",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "commit/d610e18190",
+    "label": "commit d610e18: board: p8-subsystems-ee takes REM-1139",
+    "gold": false
+   },
+   {
+    "id": "commit/4735cadc63",
+    "label": "commit 4735cad: board: REM-1139 review \u2192 done",
+    "gold": false
+   },
+   {
+    "id": "commit/a5167011ec",
+    "label": "commit a516701: board: note on REM-1139",
+    "gold": false
+   },
+   {
+    "id": "commit/78eb3d4b90",
+    "label": "commit 78eb3d4: board: note on REM-1139",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261023-051607-ddfe.md#1",
+    "label": "board/messages/M-20261023-051607-ddfe.md",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "board/messages/M-20261023-051607-ddfe.md#1",
+    "label": "board/messages/M-20261023-051607-ddfe.md",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261023-152731-482f.md#1",
+    "label": "board/messages/M-20261023-152731-482f.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1080.md#7",
+    "label": "board/cards/REM-1080.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1139.md#4",
+    "label": "board/cards/REM-1139.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1139.md#5",
+    "label": "board/cards/REM-1139.md \u203a Log",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/4735cadc63",
+    "label": "commit 4735cad: board: REM-1139 review \u2192 done",
+    "gold": false
+   },
+   {
+    "id": "commit/626945b44a",
+    "label": "commit 626945b: k8s/examples: the ScaledObject's annotation names no private path, as percolate-core's render now emits ",
+    "gold": true
+   },
+   {
+    "id": "board/cards/REM-1139.md#4",
+    "label": "board/cards/REM-1139.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "commit/b937a51385",
+    "label": "commit b937a51: board: REM-437 in-progress \u2192 done",
+    "gold": false
+   },
+   {
+    "id": "commit/d7ec8f1ca6",
+    "label": "commit d7ec8f1: Merge pull request #527 from Percolation-Labs/amartey/rem-1139-example-annotation",
+    "gold": true
+   }
+  ],
+  "S": [
+   {
+    "id": "board/cards/REM-1080.md#4",
+    "label": "board/cards/REM-1080.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1080.md#7",
+    "label": "board/cards/REM-1080.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-654.md#4",
+    "label": "board/cards/REM-654.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-298.md#4",
+    "label": "board/cards/REM-298.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-429.md#4",
+    "label": "board/cards/REM-429.md \u203a Done when",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 1.0,
+  "S": 0.0
+ }
+}

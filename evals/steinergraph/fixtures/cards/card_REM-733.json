@@ -1,0 +1,586 @@
+{
+ "qid": "card:REM-733",
+ "set": "cards",
+ "question": "What was done about this, and why: graphs: explore an essay graph by expanding nodes, and change it from an agent?",
+ "gold": [
+  {
+   "id": "commit/00212229f6",
+   "label": "commit 0021222: Essay graph: export the corpus as percolate-application's writing library (REM-733)",
+   "seed": false
+  },
+  {
+   "id": "commit/6f70be0cd0",
+   "label": "commit 6f70be0: Merge pull request #372 from Percolation-Labs/amartey/essay-graph-projections",
+   "seed": false
+  },
+  {
+   "id": "commit/6fc6c5e514",
+   "label": "commit 6fc6c5e: Merge pull request #371 from Percolation-Labs/amartey/essay-graph",
+   "seed": false
+  },
+  {
+   "id": "commit/a1ca069e49",
+   "label": "commit a1ca069: Essay graph run 1: three projections of the essay (REM-733)",
+   "seed": false
+  },
+  {
+   "id": "commit/d4915a313a",
+   "label": "commit d4915a3: Merge pull request #373 from Percolation-Labs/amartey/essay-graph-library",
+   "seed": false
+  },
+  {
+   "id": "commit/fc32dc6959",
+   "label": "commit fc32dc6: Essay evolution as a graph: brief, corpus and run 1 (REM-733)",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/5529b55bc0",
+   "label": "commit 5529b55: board: file REM-733 graphs: explore an essay graph by expanding nodes, and change it from an agent",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-733.md#1",
+   "label": "board/cards/REM-733.md",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-733.md#6",
+   "label": "board/cards/REM-733.md \u203a Log",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-733.md#4",
+   "label": "board/cards/REM-733.md \u203a Done when",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-733.md#2",
+   "label": "board/cards/REM-733.md \u203a Goal",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "board/cards/REM-733.md#6",
+    "label": "board/cards/REM-733.md \u203a Log",
+    "role": "seed"
+   },
+   {
+    "id": "commit/00212229f6",
+    "label": "commit 0021222: Essay graph: export the corpus as percolate-application's writing library (REM-733)",
+    "role": "gold"
+   },
+   {
+    "id": "commit/6f70be0cd0",
+    "label": "commit 6f70be0: Merge pull request #372 from Percolation-Labs/amartey/essay-graph-projections",
+    "role": "gold"
+   },
+   {
+    "id": "commit/6fc6c5e514",
+    "label": "commit 6fc6c5e: Merge pull request #371 from Percolation-Labs/amartey/essay-graph",
+    "role": "gold"
+   },
+   {
+    "id": "commit/a1ca069e49",
+    "label": "commit a1ca069: Essay graph run 1: three projections of the essay (REM-733)",
+    "role": "gold"
+   },
+   {
+    "id": "commit/d4915a313a",
+    "label": "commit d4915a3: Merge pull request #373 from Percolation-Labs/amartey/essay-graph-library",
+    "role": "gold"
+   },
+   {
+    "id": "commit/fc32dc6959",
+    "label": "commit fc32dc6: Essay evolution as a graph: brief, corpus and run 1 (REM-733)",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "board/cards/REM-733.md#6",
+    "b": "commit/00212229f6",
+    "via": [
+     {
+      "kind": "term",
+      "key": "writing library",
+      "width": 8
+     },
+     {
+      "kind": "term",
+      "key": "rem 733",
+      "width": 33
+     }
+    ]
+   },
+   {
+    "a": "commit/00212229f6",
+    "b": "commit/d4915a313a",
+    "via": [
+     {
+      "kind": "term",
+      "key": "library rem",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "writing library",
+      "width": 8
+     },
+     {
+      "kind": "term",
+      "key": "rem 733",
+      "width": 33
+     }
+    ]
+   },
+   {
+    "a": "commit/6f70be0cd0",
+    "b": "commit/6fc6c5e514",
+    "via": [
+     {
+      "kind": "term",
+      "key": "amartey essay",
+      "width": 4
+     },
+     {
+      "kind": "term",
+      "key": "rem 733",
+      "width": 33
+     }
+    ]
+   },
+   {
+    "a": "commit/6f70be0cd0",
+    "b": "commit/a1ca069e49",
+    "via": [
+     {
+      "kind": "term",
+      "key": "three projections",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "essay rem",
+      "width": 3
+     },
+     {
+      "kind": "term",
+      "key": "graph run",
+      "width": 30
+     },
+     {
+      "kind": "term",
+      "key": "rem 733",
+      "width": 33
+     },
+     {
+      "kind": "term",
+      "key": "projections",
+      "width": 53
+     }
+    ]
+   },
+   {
+    "a": "commit/6f70be0cd0",
+    "b": "commit/d4915a313a",
+    "via": [
+     {
+      "kind": "term",
+      "key": "amartey essay",
+      "width": 4
+     },
+     {
+      "kind": "term",
+      "key": "rem 733",
+      "width": 33
+     }
+    ]
+   },
+   {
+    "a": "commit/6fc6c5e514",
+    "b": "commit/fc32dc6959",
+    "via": [
+     {
+      "kind": "term",
+      "key": "brief corpus",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "essay evolution",
+      "width": 4
+     },
+     {
+      "kind": "term",
+      "key": "graph brief",
+      "width": 32
+     },
+     {
+      "kind": "term",
+      "key": "rem 733",
+      "width": 33
+     },
+     {
+      "kind": "term",
+      "key": "evolution",
+      "width": 97
+     }
+    ]
+   }
+  ],
+  "cost": 6,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  "entry": {
+   "seed": "board/cards/REM-733.md#6",
+   "gold": "commit/00212229f6",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 1120,
+  "within_2_doors": 33522,
+  "gold_within_1": 6,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "board/cards/REM-733.md#3",
+    "label": "board/cards/REM-733.md \u203a Evidence",
+    "p": 0.004637185509570272,
+    "gold": false
+   },
+   {
+    "id": "commit/30121fb577",
+    "label": "commit 30121fb: board: p8-subsystems-e6 takes REM-733",
+    "p": 0.004256487972374892,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-735.md#1",
+    "label": "board/cards/REM-735.md",
+    "p": 0.0038840243488498668,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-734.md#1",
+    "label": "board/cards/REM-734.md",
+    "p": 0.0034925386814761926,
+    "gold": false
+   },
+   {
+    "id": "commit/037cb0f065",
+    "label": "commit 037cb0f: Merge pull request #370 from Percolation-Labs/percolate-core-0.2.5",
+    "p": 0.0034920957615333834,
+    "gold": false
+   },
+   {
+    "id": "specs/essay-graph/brief.md#2",
+    "label": "specs/essay-graph/brief.md \u203a What we want to find out",
+    "p": 0.003233297897922324,
+    "gold": false
+   },
+   {
+    "id": "commit/fc32dc6959",
+    "label": "commit fc32dc6: Essay evolution as a graph: brief, corpus and run 1 (REM-733)",
+    "p": 0.002443733867291608,
+    "gold": true
+   },
+   {
+    "id": "board/messages/M-20261026-134504-2e14.md#1",
+    "label": "board/messages/M-20261026-134504-2e14.md",
+    "p": 0.002152458524468457,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-733.md#5",
+    "label": "board/cards/REM-733.md \u203a Scope",
+    "p": 0.0021385015277789986,
+    "gold": false
+   },
+   {
+    "id": "commit/6fc6c5e514",
+    "label": "commit 6fc6c5e: Merge pull request #371 from Percolation-Labs/amartey/essay-graph",
+    "p": 0.0019646897565454703,
+    "gold": true
+   },
+   {
+    "id": "specs/percolate-application/drafter.md#69",
+    "label": "specs/percolate-application/drafter.md \u203a 7. Storage: reuse the appropriate existing tables",
+    "p": 0.001948875198877717,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-734.md#3",
+    "label": "board/cards/REM-734.md \u203a Evidence",
+    "p": 0.0016868424818748129,
+    "gold": false
+   },
+   {
+    "id": "commit/d4915a313a",
+    "label": "commit d4915a3: Merge pull request #373 from Percolation-Labs/amartey/essay-graph-library",
+    "p": 0.0014805208242651062,
+    "gold": true
+   },
+   {
+    "id": "commit/b6edc1a015",
+    "label": "commit b6edc1a: board: file REM-735 graphs: a maintained concept library with a quality gate, favourites and your own co",
+    "p": 0.0013011430445971234,
+    "gold": false
+   },
+   {
+    "id": "commit/6f70be0cd0",
+    "label": "commit 6f70be0: Merge pull request #372 from Percolation-Labs/amartey/essay-graph-projections",
+    "p": 0.0012986512712378794,
+    "gold": true
+   },
+   {
+    "id": "commit/010c49c945",
+    "label": "commit 010c49c: board: tick REM-733 box 3",
+    "p": 0.0012300085582540071,
+    "gold": false
+   },
+   {
+    "id": "commit/18a9269fcf",
+    "label": "commit 18a9269: board: tick REM-733 box 2",
+    "p": 0.0012235461124239164,
+    "gold": false
+   },
+   {
+    "id": "commit/a1ca069e49",
+    "label": "commit a1ca069: Essay graph run 1: three projections of the essay (REM-733)",
+    "p": 0.0011947441297986104,
+    "gold": true
+   },
+   {
+    "id": "specs/essay-graph/brief.md#14",
+    "label": "specs/essay-graph/brief.md \u203a Moves",
+    "p": 0.0011921068161957111,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-733.md#7",
+    "label": "board/cards/REM-733.md \u203a Log",
+    "p": 0.001166824495623815,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/5529b55bc0",
+   "label": "commit 5529b55: board: file REM-733 graphs: explore an essay graph by expanding nodes, and change it from an agent",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-733.md#1",
+   "label": "board/cards/REM-733.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-733.md#6",
+   "label": "board/cards/REM-733.md \u203a Log",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-733.md#4",
+   "label": "board/cards/REM-733.md \u203a Done when",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-733.md#2",
+   "label": "board/cards/REM-733.md \u203a Goal",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-727.md#8",
+   "label": "board/cards/REM-727.md \u203a Log",
+   "wave": 1,
+   "via": "term:rem 733",
+   "gold": false
+  },
+  {
+   "id": "commit/6f70be0cd0",
+   "label": "commit 6f70be0: Merge pull request #372 from Percolation-Labs/amartey/essay-graph-projections",
+   "wave": 1,
+   "via": "term:rem 733",
+   "gold": true
+  },
+  {
+   "id": "commit/d4915a313a",
+   "label": "commit d4915a3: Merge pull request #373 from Percolation-Labs/amartey/essay-graph-library",
+   "wave": 1,
+   "via": "term:rem 733",
+   "gold": true
+  },
+  {
+   "id": "commit/00212229f6",
+   "label": "commit 0021222: Essay graph: export the corpus as percolate-application's writing library (REM-733)",
+   "wave": 1,
+   "via": "term:rem 733",
+   "gold": true
+  },
+  {
+   "id": "commit/20853df0a9",
+   "label": "commit 20853df: board: REM-733 in-progress \u2192 todo",
+   "wave": 1,
+   "via": "term:rem 733",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "board/cards/REM-733.md#3",
+    "label": "board/cards/REM-733.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "commit/30121fb577",
+    "label": "commit 30121fb: board: p8-subsystems-e6 takes REM-733",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-735.md#1",
+    "label": "board/cards/REM-735.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-734.md#1",
+    "label": "board/cards/REM-734.md",
+    "gold": false
+   },
+   {
+    "id": "commit/037cb0f065",
+    "label": "commit 037cb0f: Merge pull request #370 from Percolation-Labs/percolate-core-0.2.5",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "board/cards/REM-733.md#3",
+    "label": "board/cards/REM-733.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "specs/essay-graph/brief.md#2",
+    "label": "specs/essay-graph/brief.md \u203a What we want to find out",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-735.md#1",
+    "label": "board/cards/REM-735.md",
+    "gold": false
+   },
+   {
+    "id": "commit/fc32dc6959",
+    "label": "commit fc32dc6: Essay evolution as a graph: brief, corpus and run 1 (REM-733)",
+    "gold": true
+   },
+   {
+    "id": "board/cards/REM-734.md#1",
+    "label": "board/cards/REM-734.md",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/00212229f6",
+    "label": "commit 0021222: Essay graph: export the corpus as percolate-application's writing library (REM-733)",
+    "gold": true
+   },
+   {
+    "id": "commit/d4915a313a",
+    "label": "commit d4915a3: Merge pull request #373 from Percolation-Labs/amartey/essay-graph-library",
+    "gold": true
+   },
+   {
+    "id": "commit/6fc6c5e514",
+    "label": "commit 6fc6c5e: Merge pull request #371 from Percolation-Labs/amartey/essay-graph",
+    "gold": true
+   },
+   {
+    "id": "commit/6f70be0cd0",
+    "label": "commit 6f70be0: Merge pull request #372 from Percolation-Labs/amartey/essay-graph-projections",
+    "gold": true
+   },
+   {
+    "id": "board/cards/REM-734.md#1",
+    "label": "board/cards/REM-734.md",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "commit/fc32dc6959",
+    "label": "commit fc32dc6: Essay evolution as a graph: brief, corpus and run 1 (REM-733)",
+    "gold": true
+   },
+   {
+    "id": "research-notes/essay-graph/tools/export_library.py#1",
+    "label": "research-notes/essay-graph/tools/export_library.py",
+    "gold": false
+   },
+   {
+    "id": "research-notes/essay-graph/corpus/bereiter-scardamalia-1987-psychology-of-written-composition/notes.md#6",
+    "label": "research-notes/essay-graph/corpus/bereiter-scardamalia-1987-psychology-of-written-composition/notes.md \u203a Mapping to an e",
+    "gold": false
+   },
+   {
+    "id": "research-notes/essay-graph/corpus/reed-et-al-2010-aif-illocutionary-connections/notes.md#4",
+    "label": "research-notes/essay-graph/corpus/reed-et-al-2010-aif-illocutionary-connections/notes.md \u203a For an essay graph",
+    "gold": false
+   },
+   {
+    "id": "commit/a1ca069e49",
+    "label": "commit a1ca069: Essay graph run 1: three projections of the essay (REM-733)",
+    "gold": true
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.16666666666666666,
+  "LQ": 0.6666666666666666,
+  "S": 0.3333333333333333
+ }
+}

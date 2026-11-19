@@ -1,0 +1,435 @@
+{
+ "qid": "card:REM-75",
+ "set": "cards",
+ "question": "What was done about this, and why: evals: the journey suite runs on every push, or it does not exist?",
+ "gold": [
+  {
+   "id": "commit/3fb099f63b",
+   "label": "commit 3fb099f: Merge pull request #38 from Percolation-Labs/fix/rem-75-evals-are-a-gate",
+   "seed": true
+  },
+  {
+   "id": "commit/8ea09f77f6",
+   "label": "commit 8ea09f7: \"Has it finished\" was written down nine times instead of being asked",
+   "seed": false
+  },
+  {
+   "id": "commit/eb3be1bbc2",
+   "label": "commit eb3be1b: A package declared a channel that the code filling it could not see",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "board/cards/REM-75.md#1",
+   "label": "board/cards/REM-75.md",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/3fb099f63b",
+   "label": "commit 3fb099f: Merge pull request #38 from Percolation-Labs/fix/rem-75-evals-are-a-gate",
+   "rank": 2,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "commit/abcbf90082",
+   "label": "commit abcbf90: The journey suite ran on no push, and nothing anywhere said it should",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/dd23d1e31a",
+   "label": "commit dd23d1e: board: file REM-559 ci: the application suite runs on every push to main",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "scenarios/evals/README.md#9",
+   "label": "scenarios/evals/README.md \u203a Adding a journey",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/3fb099f63b",
+    "label": "commit 3fb099f: Merge pull request #38 from Percolation-Labs/fix/rem-75-evals-are-a-gate",
+    "role": "gold"
+   },
+   {
+    "id": "commit/8ea09f77f6",
+    "label": "commit 8ea09f7: \"Has it finished\" was written down nine times instead of being asked",
+    "role": "gold"
+   },
+   {
+    "id": "commit/eb3be1bbc2",
+    "label": "commit eb3be1b: A package declared a channel that the code filling it could not see",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/3fb099f63b",
+    "b": "commit/8ea09f77f6",
+    "via": [
+     {
+      "kind": "term",
+      "key": "sixteen",
+      "width": 74
+     }
+    ]
+   },
+   {
+    "a": "commit/8ea09f77f6",
+    "b": "commit/eb3be1bbc2",
+    "via": [
+     {
+      "kind": "term",
+      "key": "rem 75",
+      "width": 9
+     },
+     {
+      "kind": "term",
+      "key": "inserted",
+      "width": 79
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   2,
+   1
+  ],
+  "entry": {
+   "seed": "commit/3fb099f63b",
+   "gold": "commit/3fb099f63b",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 1881,
+  "within_2_doors": 33328,
+  "gold_within_1": 2,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "board/cards/REM-559.md#1",
+    "label": "board/cards/REM-559.md",
+    "p": 0.004241241889119382,
+    "gold": false
+   },
+   {
+    "id": "commit/bbd60b6cbd",
+    "label": "commit bbd60b6: Merge pull request #31 from Percolation-Labs/docs/rem-67-refusal",
+    "p": 0.0030566963734613584,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-19-claim-pages-outgrew-the-core-fixture.md#2",
+    "label": "meta/postmortems/2026-09-19-claim-pages-outgrew-the-core-fixture.md \u203a Claim pages outgrew the core fixture",
+    "p": 0.0030350861219562513,
+    "gold": false
+   },
+   {
+    "id": "commit/4fd7ca9ca5",
+    "label": "commit 4fd7ca9: board: file REM-558 app: rate limits hold across pods and do not reset at 2,000 keys",
+    "p": 0.002840556269896939,
+    "gold": false
+   },
+   {
+    "id": "commit/db8e815267",
+    "label": "commit db8e815: board: file REM-560 ci: claude.yml runs on the self-hosted runner only for trusted authors",
+    "p": 0.002769483434404333,
+    "gold": false
+   },
+   {
+    "id": "commit/e68cfe225f",
+    "label": "commit e68cfe2: Every gate compares the tree with itself; nobody had been the user",
+    "p": 0.0022135745059861144,
+    "gold": false
+   },
+   {
+    "id": "commit/da2f464e1f",
+    "label": "commit da2f464: Merge pull request #28 from Percolation-Labs/fix/rem-54-agent-model-grammar",
+    "p": 0.0021020224632398448,
+    "gold": false
+   },
+   {
+    "id": "commit/07f3216139",
+    "label": "commit 07f3216: Merge pull request #37 from Percolation-Labs/docs/parser-release-note",
+    "p": 0.0019926332779660644,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-75.md#2",
+    "label": "board/cards/REM-75.md \u203a Log",
+    "p": 0.001661877355818483,
+    "gold": false
+   },
+   {
+    "id": "commit/e657aa0d20",
+    "label": "commit e657aa0: content/01 told the tenancy refusal from a permission denial by SQLSTATE",
+    "p": 0.0016327851390541455,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-434.md#9",
+    "label": "board/cards/REM-434.md \u203a Log",
+    "p": 0.0015308451841793845,
+    "gold": false
+   },
+   {
+    "id": "scenarios/evals/README.md#4",
+    "label": "scenarios/evals/README.md \u203a Why this is not automated, and must not become automated",
+    "p": 0.001444468106258255,
+    "gold": false
+   },
+   {
+    "id": "commit/e7b90b6a36",
+    "label": "commit e7b90b6: release-and-gitops: one application build at a time, and it is the latest main",
+    "p": 0.0014378259703924047,
+    "gold": false
+   },
+   {
+    "id": "meta/skills/dogfooding/SKILL.md#4",
+    "label": "meta/skills/dogfooding/SKILL.md \u203a 1. Dream up a job, not a feature",
+    "p": 0.0013861617502356864,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-557.md#5",
+    "label": "board/cards/REM-557.md \u203a Log",
+    "p": 0.0012626880064034985,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-559.md#5",
+    "label": "board/cards/REM-559.md \u203a Log",
+    "p": 0.001245354724403509,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-559.md#2",
+    "label": "board/cards/REM-559.md \u203a Goal",
+    "p": 0.0012400589032281872,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-174.md#8",
+    "label": "board/cards/REM-174.md \u203a 2026-09-13T16:50:37.747Z \u00b7 Percolation Labs",
+    "p": 0.0011589890607993844,
+    "gold": false
+   },
+   {
+    "id": "scenarios/evals/README.md#8",
+    "label": "scenarios/evals/README.md \u203a Verdicts",
+    "p": 0.001070307098373093,
+    "gold": false
+   },
+   {
+    "id": "commit/4addbc64fb",
+    "label": "commit 4addbc6: The load path nobody had run lately had rotted in four places",
+    "p": 0.0010061876114690498,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "board/cards/REM-75.md#1",
+   "label": "board/cards/REM-75.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/3fb099f63b",
+   "label": "commit 3fb099f: Merge pull request #38 from Percolation-Labs/fix/rem-75-evals-are-a-gate",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "commit/abcbf90082",
+   "label": "commit abcbf90: The journey suite ran on no push, and nothing anywhere said it should",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/dd23d1e31a",
+   "label": "commit dd23d1e: board: file REM-559 ci: the application suite runs on every push to main",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "scenarios/evals/README.md#9",
+   "label": "scenarios/evals/README.md \u203a Adding a journey",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/7fe5930d7e",
+   "label": "commit 7fe5930: An agent step compiled a call that asked the model nothing",
+   "wave": 1,
+   "via": "term:tests evals",
+   "gold": false
+  },
+  {
+   "id": "meta/skills/dogfooding/SKILL.md#9",
+   "label": "meta/skills/dogfooding/SKILL.md \u203a 6. Pin it, then fix it",
+   "wave": 1,
+   "via": "term:tests evals",
+   "gold": false
+  },
+  {
+   "id": "meta/skills/dogfooding/SKILL.md#8",
+   "label": "meta/skills/dogfooding/SKILL.md \u203a 5. Classify before fixing",
+   "wave": 1,
+   "via": "term:tests evals",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/q2-describe/README.md#2",
+   "label": "meta/lab/results/q2-describe/README.md \u203a Quadrant 2: any graph built to the spec can be described (2 Nov, mike)",
+   "wave": 1,
+   "via": "term:tests evals",
+   "gold": false
+  },
+  {
+   "id": "scenarios/evals/README.md#4",
+   "label": "scenarios/evals/README.md \u203a Why this is not automated, and must not become automated",
+   "wave": 1,
+   "via": "term:tests evals",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "board/cards/REM-559.md#1",
+    "label": "board/cards/REM-559.md",
+    "gold": false
+   },
+   {
+    "id": "commit/bbd60b6cbd",
+    "label": "commit bbd60b6: Merge pull request #31 from Percolation-Labs/docs/rem-67-refusal",
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-19-claim-pages-outgrew-the-core-fixture.md#2",
+    "label": "meta/postmortems/2026-09-19-claim-pages-outgrew-the-core-fixture.md \u203a Claim pages outgrew the core fixture",
+    "gold": false
+   },
+   {
+    "id": "commit/4fd7ca9ca5",
+    "label": "commit 4fd7ca9: board: file REM-558 app: rate limits hold across pods and do not reset at 2,000 keys",
+    "gold": false
+   },
+   {
+    "id": "commit/db8e815267",
+    "label": "commit db8e815: board: file REM-560 ci: claude.yml runs on the self-hosted runner only for trusted authors",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "commit/e68cfe225f",
+    "label": "commit e68cfe2: Every gate compares the tree with itself; nobody had been the user",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-559.md#1",
+    "label": "board/cards/REM-559.md",
+    "gold": false
+   },
+   {
+    "id": "scenarios/evals/README.md#4",
+    "label": "scenarios/evals/README.md \u203a Why this is not automated, and must not become automated",
+    "gold": false
+   },
+   {
+    "id": "commit/e7b90b6a36",
+    "label": "commit e7b90b6: release-and-gitops: one application build at a time, and it is the latest main",
+    "gold": false
+   },
+   {
+    "id": "scenarios/README.md#5",
+    "label": "scenarios/README.md \u203a Journey evals",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "board/cards/REM-559.md#1",
+    "label": "board/cards/REM-559.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-559.md#4",
+    "label": "board/cards/REM-559.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "commit/351598b7c6",
+    "label": "commit 351598b: Merge pull request #179 from Percolation-Labs/fix/delete-only-push-skips-the-tree-gate",
+    "gold": false
+   },
+   {
+    "id": "commit/056d6e6fd4",
+    "label": "commit 056d6e6: release-and-gitops: a push to the application's main runs the tests, not a release (REM-559)",
+    "gold": false
+   },
+   {
+    "id": "commit/e7b90b6a36",
+    "label": "commit e7b90b6: release-and-gitops: one application build at a time, and it is the latest main",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "scenarios/evals/runs/2026-09-04-J2.md#7",
+    "label": "scenarios/evals/runs/2026-09-04-J2.md \u203a Act 2: the registry validates in a function, and its table has no trigger",
+    "gold": false
+   },
+   {
+    "id": "scenarios/evals/J1-mill-lane.md#27",
+    "label": "scenarios/evals/J1-mill-lane.md \u203a Closing the journey",
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-12-a-gate-that-can-write.md#8",
+    "label": "meta/postmortems/2026-09-12-a-gate-that-can-write.md \u203a 2. Three whys",
+    "gold": false
+   },
+   {
+    "id": "commit/e7b90b6a36",
+    "label": "commit e7b90b6: release-and-gitops: one application build at a time, and it is the latest main",
+    "gold": false
+   },
+   {
+    "id": "scenarios/evals/README.md#1",
+    "label": "scenarios/evals/README.md \u203a Journey evals \u2014 a person, performed",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

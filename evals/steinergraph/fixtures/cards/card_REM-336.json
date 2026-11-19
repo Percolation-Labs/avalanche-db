@@ -1,0 +1,410 @@
+{
+ "qid": "card:REM-336",
+ "set": "cards",
+ "question": "What was done about this, and why: hub: the app runs only on core, with the SQLite preview store and its fallbacks deleted?",
+ "gold": [
+  {
+   "id": "commit/9a5d5f3cb7",
+   "label": "commit 9a5d5f3: specs: compliance \u00a71 and \u00a75 follow REM-182 and REM-336, with identity in Postgres and the retired SQLite",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/a6b3502f47",
+   "label": "commit a6b3502: board: file REM-336 hub: the app runs only on core, with the SQLite preview store and its fallbacks dele",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-336.md#1",
+   "label": "board/cards/REM-336.md",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-336.md#4",
+   "label": "board/cards/REM-336.md \u203a Done when",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/f0f96ca3a0",
+   "label": "commit f0f96ca: board: file REM-295 hub: Postgres is the app's only store, with no SQLite, preview fallback or data volu",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "board/cards/REM-295.md#7",
+   "label": "board/cards/REM-295.md \u203a Log",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "board/cards/REM-295.md#7",
+    "label": "board/cards/REM-295.md \u203a Log",
+    "role": "seed"
+   },
+   {
+    "id": "commit/9a5d5f3cb7",
+    "label": "commit 9a5d5f3: specs: compliance \u00a71 and \u00a75 follow REM-182 and REM-336, with identity in Postgres and the retired SQLite",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "board/cards/REM-295.md#7",
+    "b": "commit/9a5d5f3cb7",
+    "via": [
+     {
+      "kind": "term",
+      "key": "retired sqlite",
+      "width": 8
+     },
+     {
+      "kind": "term",
+      "key": "rem 336",
+      "width": 32
+     },
+     {
+      "kind": "term",
+      "key": "rem 182",
+      "width": 62
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [],
+  "entry": {
+   "seed": "board/cards/REM-295.md#7",
+   "gold": "commit/9a5d5f3cb7",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 1149,
+  "within_2_doors": 33563,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "board/cards/REM-336.md#2",
+    "label": "board/cards/REM-336.md \u203a Goal",
+    "p": 0.009544179702618408,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-295.md#1",
+    "label": "board/cards/REM-295.md",
+    "p": 0.007918988709155575,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-336.md#7",
+    "label": "board/cards/REM-336.md \u203a Log",
+    "p": 0.004380811888258022,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-295.md#2",
+    "label": "board/cards/REM-295.md \u203a Goal",
+    "p": 0.0037447295335913547,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-336.md#3",
+    "label": "board/cards/REM-336.md \u203a Evidence",
+    "p": 0.002780384821576032,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-295.md#4",
+    "label": "board/cards/REM-295.md \u203a Done when",
+    "p": 0.002758355365486274,
+    "gold": false
+   },
+   {
+    "id": "commit/093fe6a461",
+    "label": "commit 093fe6a: board: file REM-296 hub: drafts, proposals, reading lists and comparisons live in the app's Postgres sch",
+    "p": 0.0026108506928237967,
+    "gold": false
+   },
+   {
+    "id": "commit/07d42cf6b9",
+    "label": "commit 07d42cf: board: note on REM-161",
+    "p": 0.002468687132599595,
+    "gold": false
+   },
+   {
+    "id": "commit/05015fae05",
+    "label": "commit 05015fa: board: file REM-337 deploy: the app mounts no data volume and a release rolls out without taking the sit",
+    "p": 0.0024254250277749687,
+    "gold": false
+   },
+   {
+    "id": "commit/6d9688c9c4",
+    "label": "commit 6d9688c: board: percolate-application-ad takes REM-295",
+    "p": 0.0023952522621954664,
+    "gold": false
+   },
+   {
+    "id": "research-notes/h-to-g/real-questions/harness.py#3",
+    "label": "research-notes/h-to-g/real-questions/harness.py",
+    "p": 0.0023136318209068902,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1306.md#2",
+    "label": "board/cards/REM-1306.md \u203a Goal",
+    "p": 0.002283090461548127,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/release-and-gitops.md#13",
+    "label": "specs/percolate-application/release-and-gitops.md \u203a Releasing the application",
+    "p": 0.002053256759430573,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-336.md#9",
+    "label": "board/cards/REM-336.md \u203a Log",
+    "p": 0.0018237417135732025,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-182.md#14",
+    "label": "board/cards/REM-182.md \u203a Log",
+    "p": 0.0017099286675895354,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-336.md#5",
+    "label": "board/cards/REM-336.md \u203a Scope",
+    "p": 0.0016351190803094414,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-333.md#6",
+    "label": "board/cards/REM-333.md \u203a Log",
+    "p": 0.0015487448749627827,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-336.md#8",
+    "label": "board/cards/REM-336.md \u203a Log",
+    "p": 0.0014439025992242448,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-337.md#4",
+    "label": "board/cards/REM-337.md \u203a Done when",
+    "p": 0.0013778901213242919,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/release-and-gitops.md#18",
+    "label": "specs/percolate-application/release-and-gitops.md \u203a Turning core on for the application",
+    "p": 0.0013719103265786025,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/a6b3502f47",
+   "label": "commit a6b3502: board: file REM-336 hub: the app runs only on core, with the SQLite preview store and its fallbacks dele",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-336.md#1",
+   "label": "board/cards/REM-336.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-336.md#4",
+   "label": "board/cards/REM-336.md \u203a Done when",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/f0f96ca3a0",
+   "label": "commit f0f96ca: board: file REM-295 hub: Postgres is the app's only store, with no SQLite, preview fallback or data volu",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-295.md#7",
+   "label": "board/cards/REM-295.md \u203a Log",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/d324835407",
+   "label": "commit d324835: board: percolate-application-ad takes REM-336",
+   "wave": 1,
+   "via": "term:rem 336",
+   "gold": false
+  },
+  {
+   "id": "commit/365f394970",
+   "label": "commit 365f394: board: REM-336 in-progress \u2192 done",
+   "wave": 1,
+   "via": "term:rem 336",
+   "gold": false
+  },
+  {
+   "id": "commit/9e04a89370",
+   "label": "commit 9e04a89: board: note on REM-336",
+   "wave": 1,
+   "via": "term:rem 336",
+   "gold": false
+  },
+  {
+   "id": "commit/c5cfe95d87",
+   "label": "commit c5cfe95: board: note on REM-336",
+   "wave": 1,
+   "via": "term:rem 336",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-348.md#6",
+   "label": "board/cards/REM-348.md \u203a Links",
+   "wave": 1,
+   "via": "term:rem 336",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "board/cards/REM-336.md#2",
+    "label": "board/cards/REM-336.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-295.md#1",
+    "label": "board/cards/REM-295.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-336.md#7",
+    "label": "board/cards/REM-336.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-295.md#2",
+    "label": "board/cards/REM-295.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-336.md#3",
+    "label": "board/cards/REM-336.md \u203a Evidence",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "board/cards/REM-336.md#2",
+    "label": "board/cards/REM-336.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-295.md#1",
+    "label": "board/cards/REM-295.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-336.md#7",
+    "label": "board/cards/REM-336.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-295.md#2",
+    "label": "board/cards/REM-295.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-295.md#4",
+    "label": "board/cards/REM-295.md \u203a Done when",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "board/cards/REM-295.md#1",
+    "label": "board/cards/REM-295.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-336.md#2",
+    "label": "board/cards/REM-336.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-295.md#2",
+    "label": "board/cards/REM-295.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-295.md#4",
+    "label": "board/cards/REM-295.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "commit/d87a2819ef",
+    "label": "commit d87a281: board: file REM-315 api: a package core holds is listed once, not again from the preview store",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "board/cards/REM-295.md#4",
+    "label": "board/cards/REM-295.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-336.md#2",
+    "label": "board/cards/REM-336.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-295.md#1",
+    "label": "board/cards/REM-295.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-295.md#2",
+    "label": "board/cards/REM-295.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-182.md#1",
+    "label": "board/cards/REM-182.md",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

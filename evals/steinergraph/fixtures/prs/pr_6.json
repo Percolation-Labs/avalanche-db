@@ -1,0 +1,451 @@
+{
+ "qid": "pr:6",
+ "set": "prs",
+ "question": "What work went into this, and why: The fifteen review findings, with the assertion that would have caught each?",
+ "gold": [
+  {
+   "id": "commit/8680fb4114",
+   "label": "commit 8680fb4: Ask the compiler what it accepts, instead of assuming the .so kept up",
+   "seed": false
+  },
+  {
+   "id": "commit/be81ba8ad1",
+   "label": "commit be81ba8: Fix what a review of the scale work found, and assert each one where it broke",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/9a97cea763",
+   "label": "commit 9a97cea: Merge pull request #6 from percolating-sirsh/leanness-pass",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/cf9be2ff5f",
+   "label": "commit cf9be2f: board: file REM-1034 app: the application review's fifteen observations, triaged",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "meta/postmortems/2026-09-16-a-day-of-releases-nobody-read.md#5",
+   "label": "meta/postmortems/2026-09-16-a-day-of-releases-nobody-read.md \u203a 4. Two reverts, and fifteen releases",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/5ebff4f8e5",
+   "label": "commit 5ebff4f: Two gates caught two of mine: an undeclared surface and three vacuous assertions",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "commit/a8c382fbab",
+   "label": "commit a8c382f: `In Review` said the work was out of your hands, and it is not",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 2
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/8680fb4114",
+    "label": "commit 8680fb4: Ask the compiler what it accepts, instead of assuming the .so kept up",
+    "role": "gold"
+   },
+   {
+    "id": "commit/be81ba8ad1",
+    "label": "commit be81ba8: Fix what a review of the scale work found, and assert each one where it broke",
+    "role": "gold"
+   },
+   {
+    "id": "meta/postmortems/2026-09-16-a-day-of-releases-nobody-read.md#5",
+    "label": "meta/postmortems/2026-09-16-a-day-of-releases-nobody-read.md \u203a 4. Two reverts, and fifteen releases",
+    "role": "seed"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/8680fb4114",
+    "b": "commit/be81ba8ad1",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "substitute_item",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "partition_by",
+      "width": 14
+     },
+     {
+      "kind": "term",
+      "key": "batch_size",
+      "width": 48
+     },
+     {
+      "kind": "term",
+      "key": "batching",
+      "width": 65
+     }
+    ]
+   },
+   {
+    "a": "commit/be81ba8ad1",
+    "b": "meta/postmortems/2026-09-16-a-day-of-releases-nobody-read.md#5",
+    "via": [
+     {
+      "kind": "term",
+      "key": "batching",
+      "width": 65
+     },
+     {
+      "kind": "term",
+      "key": "fifteen",
+      "width": 72
+     },
+     {
+      "kind": "term",
+      "key": "reverted",
+      "width": 73
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "meta/postmortems/2026-09-16-a-day-of-releases-nobody-read.md#5",
+   "gold": "commit/be81ba8ad1",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 1982,
+  "within_2_doors": 34432,
+  "gold_within_1": 2,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "board/cards/REM-1034.md#1",
+    "label": "board/cards/REM-1034.md",
+    "p": 0.006741753039421557,
+    "gold": false
+   },
+   {
+    "id": "commit/29f052d0eb",
+    "label": "commit 29f052d: Merge pull request #7 from percolating-sirsh/plan-graph",
+    "p": 0.0033134155094598225,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1034.md#2",
+    "label": "board/cards/REM-1034.md \u203a Goal",
+    "p": 0.0030691049033146293,
+    "gold": false
+   },
+   {
+    "id": "commit/6db4619584",
+    "label": "commit 6db4619: Read Gotham for what it settles, and take the four tables it argues for",
+    "p": 0.002947691788328385,
+    "gold": false
+   },
+   {
+    "id": "commit/8be039c0d9",
+    "label": "commit 8be039c: Lift one guard out of three files, and label the bodies that never run",
+    "p": 0.002902169446625238,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-16-a-day-of-releases-nobody-read.md#4",
+    "label": "meta/postmortems/2026-09-16-a-day-of-releases-nobody-read.md \u203a 3. The check covering the reading surface asserted nothin",
+    "p": 0.0025762115327922996,
+    "gold": false
+   },
+   {
+    "id": "commit/9316bcbf1c",
+    "label": "commit 9316bcb: Merge pull request #9 from percolating-sirsh/plan-probe",
+    "p": 0.0018526233702470527,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1034.md#4",
+    "label": "board/cards/REM-1034.md \u203a Done when",
+    "p": 0.0018429971922822774,
+    "gold": false
+   },
+   {
+    "id": "commit/e6b3ef918f",
+    "label": "commit e6b3ef9: Merge pull request #5 from percolating-sirsh/open-sql",
+    "p": 0.0017835250242577076,
+    "gold": false
+   },
+   {
+    "id": "commit/c8a131a0ae",
+    "label": "commit c8a131a: board: note on REM-1034",
+    "p": 0.001756039290830036,
+    "gold": false
+   },
+   {
+    "id": "commit/6727216e6a",
+    "label": "commit 6727216: board: edit REM-1034 labels severity",
+    "p": 0.0017492352413107264,
+    "gold": false
+   },
+   {
+    "id": "commit/ab249f828a",
+    "label": "commit ab249f8: board: note on REM-1034",
+    "p": 0.0017353784385605224,
+    "gold": false
+   },
+   {
+    "id": "commit/2fe9a8cde4",
+    "label": "commit 2fe9a8c: Let @claude actually run gh, so the cross-repo token is not inert",
+    "p": 0.001691272037619538,
+    "gold": false
+   },
+   {
+    "id": "commit/5e708458f9",
+    "label": "commit 5e70845: board: file REM-1033 app: scheduled jobs run as Percolate workflows",
+    "p": 0.001689431524649727,
+    "gold": false
+   },
+   {
+    "id": "commit/5e6e1c03ab",
+    "label": "commit 5e6e1c0: Merge pull request #10 from percolating-sirsh/scoped-finding",
+    "p": 0.0016722625236518362,
+    "gold": false
+   },
+   {
+    "id": "commit/444a3a3600",
+    "label": "commit 444a3a3: Merge pull request #11 from percolating-sirsh/fix-open-findings",
+    "p": 0.00163420017879224,
+    "gold": false
+   },
+   {
+    "id": "commit/8398e07062",
+    "label": "commit 8398e07: Try to build scoped SQL, and record the rule that stops it",
+    "p": 0.0016319976724542878,
+    "gold": false
+   },
+   {
+    "id": "commit/d0bf1d59aa",
+    "label": "commit d0bf1d5: board: file REM-1035 open source: the readiness review of extension and core, carved into cards",
+    "p": 0.001604602127224294,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-12-true-when-it-was-measured.md#23",
+    "label": "meta/postmortems/2026-09-12-true-when-it-was-measured.md \u203a 7. What this needs",
+    "p": 0.0012297523210864681,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1034.md#6",
+    "label": "board/cards/REM-1034.md \u203a Log",
+    "p": 0.0011748179106328375,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/9a97cea763",
+   "label": "commit 9a97cea: Merge pull request #6 from percolating-sirsh/leanness-pass",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/cf9be2ff5f",
+   "label": "commit cf9be2f: board: file REM-1034 app: the application review's fifteen observations, triaged",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/postmortems/2026-09-16-a-day-of-releases-nobody-read.md#5",
+   "label": "meta/postmortems/2026-09-16-a-day-of-releases-nobody-read.md \u203a 4. Two reverts, and fifteen releases",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/5ebff4f8e5",
+   "label": "commit 5ebff4f: Two gates caught two of mine: an undeclared surface and three vacuous assertions",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/a8c382fbab",
+   "label": "commit a8c382f: `In Review` said the work was out of your hands, and it is not",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/postmortems/2026-10-20-the-board-sorted-research-first.md#4",
+   "label": "meta/postmortems/2026-10-20-the-board-sorted-research-first.md \u203a Why it drifted",
+   "wave": 1,
+   "via": "term:rem 1034",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-1034.md#4",
+   "label": "board/cards/REM-1034.md \u203a Done when",
+   "wave": 1,
+   "via": "term:rem 1034",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-1034.md#1",
+   "label": "board/cards/REM-1034.md",
+   "wave": 1,
+   "via": "term:rem 1034",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-1034.md#3",
+   "label": "board/cards/REM-1034.md \u203a Evidence",
+   "wave": 1,
+   "via": "term:rem 1034",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-1034.md#2",
+   "label": "board/cards/REM-1034.md \u203a Goal",
+   "wave": 1,
+   "via": "term:rem 1034",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "board/cards/REM-1034.md#1",
+    "label": "board/cards/REM-1034.md",
+    "gold": false
+   },
+   {
+    "id": "commit/29f052d0eb",
+    "label": "commit 29f052d: Merge pull request #7 from percolating-sirsh/plan-graph",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1034.md#2",
+    "label": "board/cards/REM-1034.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "commit/6db4619584",
+    "label": "commit 6db4619: Read Gotham for what it settles, and take the four tables it argues for",
+    "gold": false
+   },
+   {
+    "id": "commit/8be039c0d9",
+    "label": "commit 8be039c: Lift one guard out of three files, and label the bodies that never run",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "board/cards/REM-1034.md#1",
+    "label": "board/cards/REM-1034.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1034.md#2",
+    "label": "board/cards/REM-1034.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-171.md#12",
+    "label": "board/cards/REM-171.md \u203a 2026-09-13T17:58:33.188Z \u00b7 Percolation Labs",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-188.md#7",
+    "label": "board/cards/REM-188.md \u203a 2026-09-13T17:58:34.639Z \u00b7 Percolation Labs",
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-16-a-day-of-releases-nobody-read.md#4",
+    "label": "meta/postmortems/2026-09-16-a-day-of-releases-nobody-read.md \u203a 3. The check covering the reading surface asserted nothin",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "board/cards/REM-1034.md#1",
+    "label": "board/cards/REM-1034.md",
+    "gold": false
+   },
+   {
+    "id": "commit/9457c87572",
+    "label": "commit 9457c87: Merge pull request #84 from Percolation-Labs/docs/in-review-is-not-parked",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1034.md#2",
+    "label": "board/cards/REM-1034.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "commit/444a3a3600",
+    "label": "commit 444a3a3: Merge pull request #11 from percolating-sirsh/fix-open-findings",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-188.md#2",
+    "label": "board/cards/REM-188.md \u203a Goal",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "board/cards/REM-1034.md#3",
+    "label": "board/cards/REM-1034.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1034.md#2",
+    "label": "board/cards/REM-1034.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "research-notes/build-knit-dream-competitive-review-2026-09-09.md#11",
+    "label": "research-notes/build-knit-dream-competitive-review-2026-09-09.md \u203a 3. Evidence audit: findings that change the conclusio",
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-ui/PRE-REVIEW-2026-09-10.md#6",
+    "label": "applications/percolate-ui/PRE-REVIEW-2026-09-10.md \u203a Handoff into the final review",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1034.md#1",
+    "label": "board/cards/REM-1034.md",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

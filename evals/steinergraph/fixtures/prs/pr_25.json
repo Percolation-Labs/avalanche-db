@@ -1,0 +1,425 @@
+{
+ "qid": "pr:25",
+ "set": "prs",
+ "question": "What work went into this, and why: The tour's fixes, and the tour that found them?",
+ "gold": [
+  {
+   "id": "commit/2982f467c7",
+   "label": "commit 2982f46: The tour's fixes, and the tour that found them",
+   "seed": true
+  },
+  {
+   "id": "commit/cca8039502",
+   "label": "commit cca8039: Keep the tour as a worked test-plan reference",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/acc06486ac",
+   "label": "commit acc0648: Merge pull request #25 from Percolation-Labs/tour-fixes",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 3
+  },
+  {
+   "id": "meta/postmortems/2026-09-29-canvas-transitions-lost-context.md#1",
+   "label": "meta/postmortems/2026-09-29-canvas-transitions-lost-context.md",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "board/messages/M-20261028-162819-b994.md#1",
+   "label": "board/messages/M-20261028-162819-b994.md",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/2982f467c7",
+   "label": "commit 2982f46: The tour's fixes, and the tour that found them",
+   "rank": 4,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "scenarios/tour/lib.py#1",
+   "label": "scenarios/tour/lib.py",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 2
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/2982f467c7",
+    "label": "commit 2982f46: The tour's fixes, and the tour that found them",
+    "role": "gold"
+   },
+   {
+    "id": "commit/cca8039502",
+    "label": "commit cca8039: Keep the tour as a worked test-plan reference",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/2982f467c7",
+    "b": "commit/cca8039502",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "subsystem end",
+      "width": 3
+     },
+     {
+      "kind": "term",
+      "key": "code session_01uufmbn6wramme2axubsx7g",
+      "width": 4
+     },
+     {
+      "kind": "term",
+      "key": "session_01uufmbn6wramme2axubsx7g",
+      "width": 4
+     },
+     {
+      "kind": "term",
+      "key": "every subsystem",
+      "width": 18
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "commit/2982f467c7",
+   "gold": "commit/2982f467c7",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 2706,
+  "within_2_doors": 34090,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "board/cards/REM-726.md#2",
+    "label": "board/cards/REM-726.md \u203a Log",
+    "p": 0.008582896388009305,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-726.md#1",
+    "label": "board/cards/REM-726.md",
+    "p": 0.008311735113983029,
+    "gold": false
+   },
+   {
+    "id": "commit/8bd3ab31f1",
+    "label": "commit 8bd3ab3: Sixteen fixes went to the copy that failed and left its siblings",
+    "p": 0.006678580852242641,
+    "gold": false
+   },
+   {
+    "id": "commit/e59b0bff36",
+    "label": "commit e59b0bf: Merge pull request #24 from Percolation-Labs/rem-38-workflow-reads-need-a-definer",
+    "p": 0.006600194141740084,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1226.md#6",
+    "label": "board/cards/REM-1226.md \u203a Log",
+    "p": 0.003363487394223467,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-29-canvas-transitions-lost-context.md#2",
+    "label": "meta/postmortems/2026-09-29-canvas-transitions-lost-context.md \u203a What failed",
+    "p": 0.002909813605647413,
+    "gold": false
+   },
+   {
+    "id": "scenarios/tour/render.py#3",
+    "label": "scenarios/tour/render.py",
+    "p": 0.0026249509818322345,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261028-162655-bb2e.md#1",
+    "label": "board/messages/M-20261028-162655-bb2e.md",
+    "p": 0.0024320851672934947,
+    "gold": false
+   },
+   {
+    "id": "scenarios/tour/lib.py#4",
+    "label": "scenarios/tour/lib.py",
+    "p": 0.0019593412409620718,
+    "gold": false
+   },
+   {
+    "id": "commit/6c08ad2f1a",
+    "label": "commit 6c08ad2: board: file REM-726 canvas: keep unfinished critiques and return to the visible thought",
+    "p": 0.001715022263238014,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/drafter.md#93",
+    "label": "specs/percolate-application/drafter.md \u203a 12. Evidence and implementation handoff",
+    "p": 0.0013919096953876207,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-29-canvas-transitions-lost-context.md#3",
+    "label": "meta/postmortems/2026-09-29-canvas-transitions-lost-context.md \u203a What changes the outcome",
+    "p": 0.001375022550886194,
+    "gold": false
+   },
+   {
+    "id": "scenarios/tour/render.py#9",
+    "label": "scenarios/tour/render.py",
+    "p": 0.0013309439057218868,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261028-164638-96fb.md#1",
+    "label": "board/messages/M-20261028-164638-96fb.md",
+    "p": 0.0013159757432331524,
+    "gold": false
+   },
+   {
+    "id": "scenarios/tour/lib.py#2",
+    "label": "scenarios/tour/lib.py",
+    "p": 0.0013058277886322368,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1226.md#2",
+    "label": "board/cards/REM-1226.md \u203a Goal",
+    "p": 0.0012609243224252042,
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-10-29-lead-information/describe/desc2-tgt.txt#3",
+    "label": "meta/spikes/2026-10-29-lead-information/describe/desc2-tgt.txt",
+    "p": 0.0012483563505611142,
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-10-27-dream-walk-graphs/desc2-tgt.txt#3",
+    "label": "meta/spikes/2026-10-27-dream-walk-graphs/desc2-tgt.txt",
+    "p": 0.001243199515457381,
+    "gold": false
+   },
+   {
+    "id": "commit/476e01ff20",
+    "label": "commit 476e01f: Item 4 said how context arrives and never said where it may go (#150)",
+    "p": 0.001210261575081092,
+    "gold": false
+   },
+   {
+    "id": "commit/c2f56627aa",
+    "label": "commit c2f5662: A workflow step reads as the person who started the run",
+    "p": 0.0011816256732861173,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/acc06486ac",
+   "label": "commit acc0648: Merge pull request #25 from Percolation-Labs/tour-fixes",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/postmortems/2026-09-29-canvas-transitions-lost-context.md#1",
+   "label": "meta/postmortems/2026-09-29-canvas-transitions-lost-context.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/messages/M-20261028-162819-b994.md#1",
+   "label": "board/messages/M-20261028-162819-b994.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/2982f467c7",
+   "label": "commit 2982f46: The tour's fixes, and the tour that found them",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "scenarios/tour/lib.py#1",
+   "label": "scenarios/tour/lib.py",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "scenarios/tour/lib.py#3",
+   "label": "scenarios/tour/lib.py",
+   "wave": 1,
+   "via": "term:tour lib",
+   "gold": false
+  },
+  {
+   "id": "scenarios/tour/lib.py#4",
+   "label": "scenarios/tour/lib.py",
+   "wave": 1,
+   "via": "term:tour lib",
+   "gold": false
+  },
+  {
+   "id": "scenarios/tour/lib.py#6",
+   "label": "scenarios/tour/lib.py",
+   "wave": 1,
+   "via": "term:tour lib",
+   "gold": false
+  },
+  {
+   "id": "scenarios/tour/lib.py#8",
+   "label": "scenarios/tour/lib.py",
+   "wave": 1,
+   "via": "term:tour lib",
+   "gold": false
+  },
+  {
+   "id": "scenarios/tour/lib.py#5",
+   "label": "scenarios/tour/lib.py",
+   "wave": 1,
+   "via": "term:tour lib",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "board/cards/REM-726.md#2",
+    "label": "board/cards/REM-726.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-726.md#1",
+    "label": "board/cards/REM-726.md",
+    "gold": false
+   },
+   {
+    "id": "commit/8bd3ab31f1",
+    "label": "commit 8bd3ab3: Sixteen fixes went to the copy that failed and left its siblings",
+    "gold": false
+   },
+   {
+    "id": "commit/e59b0bff36",
+    "label": "commit e59b0bf: Merge pull request #24 from Percolation-Labs/rem-38-workflow-reads-need-a-definer",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1226.md#6",
+    "label": "board/cards/REM-1226.md \u203a Log",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "board/cards/REM-726.md#2",
+    "label": "board/cards/REM-726.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-726.md#1",
+    "label": "board/cards/REM-726.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1226.md#6",
+    "label": "board/cards/REM-1226.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "commit/8bd3ab31f1",
+    "label": "commit 8bd3ab3: Sixteen fixes went to the copy that failed and left its siblings",
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-29-canvas-transitions-lost-context.md#2",
+    "label": "meta/postmortems/2026-09-29-canvas-transitions-lost-context.md \u203a What failed",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/8bd3ab31f1",
+    "label": "commit 8bd3ab3: Sixteen fixes went to the copy that failed and left its siblings",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-726.md#1",
+    "label": "board/cards/REM-726.md",
+    "gold": false
+   },
+   {
+    "id": "scenarios/tour/lib.py#4",
+    "label": "scenarios/tour/lib.py",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-726.md#2",
+    "label": "board/cards/REM-726.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "commit/cca8039502",
+    "label": "commit cca8039: Keep the tour as a worked test-plan reference",
+    "gold": true
+   }
+  ],
+  "S": [
+   {
+    "id": "board/cards/REM-1155.md#3",
+    "label": "board/cards/REM-1155.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-144.md#2",
+    "label": "board/cards/REM-144.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "scenarios/tour/render.py#19",
+    "label": "scenarios/tour/render.py",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1014.md#4",
+    "label": "board/cards/REM-1014.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "scenarios/tour/up.sh#1",
+    "label": "scenarios/tour/up.sh",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 1.0,
+  "S": 0.0
+ }
+}

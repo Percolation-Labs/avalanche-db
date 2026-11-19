@@ -1,0 +1,424 @@
+{
+ "qid": "pr:210",
+ "set": "prs",
+ "question": "What work went into this, and why: A person can delegate publishing to one of their agent's credentials, in one publication?",
+ "gold": [
+  {
+   "id": "commit/3fd3f2e37b",
+   "label": "commit 3fd3f2e: Register rbac.delegations and the delegation functions with the surface, dump and execute grants",
+   "seed": false
+  },
+  {
+   "id": "commit/65bb4fcd34",
+   "label": "commit 65bb4fc: A person can delegate publishing to one of their agent's credentials, in one publication",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/084aff6297",
+   "label": "commit 084aff6: Merge pull request #210 from Percolation-Labs/amartey/agent-publish-delegation",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/65bb4fcd34",
+   "label": "commit 65bb4fc: A person can delegate publishing to one of their agent's credentials, in one publication",
+   "rank": 2,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "specs/percolate-application/agents-and-workflows.md#6",
+   "label": "specs/percolate-application/agents-and-workflows.md \u203a Agent connection and authentication",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "specs/percolate-application/connecting-claude-and-chatgpt.md#8",
+   "label": "specs/percolate-application/connecting-claude-and-chatgpt.md \u203a Any other agent (verified 19 September 2026 with Kimi)",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "specs/percolate-application/access-and-limits.md#6",
+   "label": "specs/percolate-application/access-and-limits.md \u203a Capabilities",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/3fd3f2e37b",
+    "label": "commit 3fd3f2e: Register rbac.delegations and the delegation functions with the surface, dump and execute grants",
+    "role": "gold"
+   },
+   {
+    "id": "commit/65bb4fcd34",
+    "label": "commit 65bb4fc: A person can delegate publishing to one of their agent's credentials, in one publication",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/3fd3f2e37b",
+    "b": "commit/65bb4fcd34",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "near",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "code session_01lfgh4wkyoz4kr44vbez84d",
+      "width": 4
+     },
+     {
+      "kind": "term",
+      "key": "session_01lfgh4wkyoz4kr44vbez84d",
+      "width": 4
+     },
+     {
+      "kind": "term",
+      "key": "delegations",
+      "width": 27
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "commit/65bb4fcd34",
+   "gold": "commit/65bb4fcd34",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 2548,
+  "within_2_doors": 33881,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "board/cards/REM-302.md#7",
+    "label": "board/cards/REM-302.md \u203a Log",
+    "p": 0.00656475205973938,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-302.md#3",
+    "label": "board/cards/REM-302.md \u203a Evidence",
+    "p": 0.004353823467503014,
+    "gold": false
+   },
+   {
+    "id": "commit/7ec4d9b024",
+    "label": "commit 7ec4d9b: board: file REM-636 edition: let an editor delegate featured-article selection to an agent or token",
+    "p": 0.0027060200228135596,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-636.md#2",
+    "label": "board/cards/REM-636.md \u203a Goal",
+    "p": 0.0026702022740823566,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/how-it-works.md#8",
+    "label": "specs/percolate-application/how-it-works.md \u203a Connecting your own agents",
+    "p": 0.0025530532280880853,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-636.md#7",
+    "label": "board/cards/REM-636.md \u203a Log",
+    "p": 0.0023819652073963408,
+    "gold": false
+   },
+   {
+    "id": "specs/user-rbac/schema.sql#84",
+    "label": "specs/user-rbac/schema.sql",
+    "p": 0.0022208478579338956,
+    "gold": false
+   },
+   {
+    "id": "commit/4eb9df8b7c",
+    "label": "commit 4eb9df8: board: file REM-304 research: a package carries a one-sentence takeaway for readers, and next check show",
+    "p": 0.0020175789800997304,
+    "gold": false
+   },
+   {
+    "id": "commit/f9eb1246b0",
+    "label": "commit f9eb124: board: file REM-303 blog: a writer moves their published entry to a newer revision from the page",
+    "p": 0.0020151847754217396,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/connecting-claude-and-chatgpt.md#7",
+    "label": "specs/percolate-application/connecting-claude-and-chatgpt.md \u203a Any other agent (verified 19 September 2026 with Kimi)",
+    "p": 0.0018511886791720178,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/experience.md#20",
+    "label": "specs/percolate-application/experience.md \u203a Edition update \u2014 15 September 2026",
+    "p": 0.001801697619589898,
+    "gold": false
+   },
+   {
+    "id": "specs/user-rbac/schema.sql#87",
+    "label": "specs/user-rbac/schema.sql",
+    "p": 0.001750517327696111,
+    "gold": false
+   },
+   {
+    "id": "specs/user-rbac/schema.sql#81",
+    "label": "specs/user-rbac/schema.sql",
+    "p": 0.0016944376412670456,
+    "gold": false
+   },
+   {
+    "id": "commit/3fd3f2e37b",
+    "label": "commit 3fd3f2e: Register rbac.delegations and the delegation functions with the surface, dump and execute grants",
+    "p": 0.0016284270465261824,
+    "gold": true
+   },
+   {
+    "id": "commit/5501635ae7",
+    "label": "commit 5501635: Delegated publication is on by default for a connected AI, with opt-out (REM-302)",
+    "p": 0.0016230448898862263,
+    "gold": false
+   },
+   {
+    "id": "commit/fca2205aa5",
+    "label": "commit fca2205: connecting-claude-and-chatgpt: any agent connects by the person's approval, verified with Kimi",
+    "p": 0.0015730098880507,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-171.md#14",
+    "label": "board/cards/REM-171.md \u203a 2026-09-14T13:43:34.699Z \u00b7 Amartey",
+    "p": 0.001358199790240262,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/agents-and-workflows.md#13",
+    "label": "specs/percolate-application/agents-and-workflows.md \u203a Proposed REST surface",
+    "p": 0.0013475773668952561,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-302.md#1",
+    "label": "board/cards/REM-302.md",
+    "p": 0.001309417899551399,
+    "gold": false
+   },
+   {
+    "id": "commit/cc005a0ec9",
+    "label": "commit cc005a0: board: file REM-302 hub: a person lets their connected agent publish to one publication, and can take it",
+    "p": 0.0012685370072563875,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/084aff6297",
+   "label": "commit 084aff6: Merge pull request #210 from Percolation-Labs/amartey/agent-publish-delegation",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/65bb4fcd34",
+   "label": "commit 65bb4fc: A person can delegate publishing to one of their agent's credentials, in one publication",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "specs/percolate-application/agents-and-workflows.md#6",
+   "label": "specs/percolate-application/agents-and-workflows.md \u203a Agent connection and authentication",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/percolate-application/connecting-claude-and-chatgpt.md#8",
+   "label": "specs/percolate-application/connecting-claude-and-chatgpt.md \u203a Any other agent (verified 19 September 2026 with Kimi)",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/percolate-application/access-and-limits.md#6",
+   "label": "specs/percolate-application/access-and-limits.md \u203a Capabilities",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-704.md#6",
+   "label": "board/cards/REM-704.md \u203a Links",
+   "wave": 1,
+   "via": "term:rem 302",
+   "gold": false
+  },
+  {
+   "id": "commit/443c679ccb",
+   "label": "commit 443c679: board: REM-302 in-progress \u2192 done",
+   "wave": 1,
+   "via": "term:rem 302",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-302.md#1",
+   "label": "board/cards/REM-302.md",
+   "wave": 1,
+   "via": "term:rem 302",
+   "gold": false
+  },
+  {
+   "id": "commit/be63dbf9f0",
+   "label": "commit be63dbf: board: note on REM-302",
+   "wave": 1,
+   "via": "term:rem 302",
+   "gold": false
+  },
+  {
+   "id": "commit/508abde8fd",
+   "label": "commit 508abde: board: p8-subsystems-7e takes REM-302",
+   "wave": 1,
+   "via": "term:rem 302",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "board/cards/REM-302.md#7",
+    "label": "board/cards/REM-302.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-302.md#3",
+    "label": "board/cards/REM-302.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "commit/7ec4d9b024",
+    "label": "commit 7ec4d9b: board: file REM-636 edition: let an editor delegate featured-article selection to an agent or token",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-636.md#2",
+    "label": "board/cards/REM-636.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/how-it-works.md#8",
+    "label": "specs/percolate-application/how-it-works.md \u203a Connecting your own agents",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "board/cards/REM-302.md#7",
+    "label": "board/cards/REM-302.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-302.md#3",
+    "label": "board/cards/REM-302.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-636.md#7",
+    "label": "board/cards/REM-636.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/connecting-claude-and-chatgpt.md#7",
+    "label": "specs/percolate-application/connecting-claude-and-chatgpt.md \u203a Any other agent (verified 19 September 2026 with Kimi)",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-636.md#2",
+    "label": "board/cards/REM-636.md \u203a Goal",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/7ec4d9b024",
+    "label": "commit 7ec4d9b: board: file REM-636 edition: let an editor delegate featured-article selection to an agent or token",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-636.md#2",
+    "label": "board/cards/REM-636.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-636.md#1",
+    "label": "board/cards/REM-636.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-302.md#1",
+    "label": "board/cards/REM-302.md",
+    "gold": false
+   },
+   {
+    "id": "commit/cc005a0ec9",
+    "label": "commit cc005a0: board: file REM-302 hub: a person lets their connected agent publish to one publication, and can take it",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "commit/6da4489c97",
+    "label": "commit 6da4489: A publication's pin moves under the grant that set it (REM-423, core 0.2.10)",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-487.md#4",
+    "label": "board/cards/REM-487.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/agent-onboarding.md#1",
+    "label": "specs/percolate-application/agent-onboarding.md \u203a What a connected AI tells the person",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-444.md#2",
+    "label": "board/cards/REM-444.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "specs/user-rbac/schema.sql#81",
+    "label": "specs/user-rbac/schema.sql",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

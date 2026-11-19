@@ -1,0 +1,410 @@
+{
+ "qid": "pr:782",
+ "set": "prs",
+ "question": "What work went into this, and why: Step 4 round 2: relation links and specific names do not beat D3; D3 stays at NDCG .696 held-out?",
+ "gold": [
+  {
+   "id": "commit/5e61977603",
+   "label": "commit 5e61977: Step 4 round 2: register D4 (links) and D5 (specific names) before scoring",
+   "seed": true
+  },
+  {
+   "id": "commit/91d085f848",
+   "label": "commit 91d085f: Step 4 round 2: relation links and specific names do not beat D3 (.662 vs .674 tune); D3 stays at .696 h",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/91d085f848",
+   "label": "commit 91d085f: Step 4 round 2: relation links and specific names do not beat D3 (.662 vs .674 tune); D3 stays at .696 h",
+   "rank": 1,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "meta/lab/results/jev-doors/RESULT.md#6",
+   "label": "meta/lab/results/jev-doors/RESULT.md \u203a Round 2: relations and specific names do not beat D3 (16 Nov, ~19:45Z)",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/d2219e4cf4",
+   "label": "commit d2219e4: Merge pull request #782 from Percolation-Labs/bill/jev-doors-2",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/messages/M-20261116-193617-4ae4.md#1",
+   "label": "board/messages/M-20261116-193617-4ae4.md",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "commit/5e61977603",
+   "label": "commit 5e61977: Step 4 round 2: register D4 (links) and D5 (specific names) before scoring",
+   "rank": 5,
+   "gold": true,
+   "doors_to_gold": 0
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/5e61977603",
+    "label": "commit 5e61977: Step 4 round 2: register D4 (links) and D5 (specific names) before scoring",
+    "role": "gold"
+   },
+   {
+    "id": "commit/91d085f848",
+    "label": "commit 91d085f: Step 4 round 2: relation links and specific names do not beat D3 (.662 vs .674 tune); D3 stays at .696 h",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/5e61977603",
+    "b": "commit/91d085f848",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "specific names",
+      "width": 6
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "commit/5e61977603",
+   "gold": "commit/5e61977603",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 578,
+  "within_2_doors": 29548,
+  "gold_within_1": 0,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "meta/lab/worlds/doors.py#2",
+    "label": "meta/lab/worlds/doors.py",
+    "p": 0.012794002149183489,
+    "gold": false
+   },
+   {
+    "id": "commit/7184942dc6",
+    "label": "commit 7184942: Merge pull request #781 from Percolation-Labs/bill/jev-doors",
+    "p": 0.011021437275021662,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-doors/REGISTERED.md#3",
+    "label": "meta/lab/results/jev-doors/REGISTERED.md \u203a Round 2 (registered 16 Nov ~19:30Z, before any round-2 door is scored)",
+    "p": 0.00942564473963036,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-doors/RESULT.md#7",
+    "label": "meta/lab/results/jev-doors/RESULT.md \u203a Postmortem",
+    "p": 0.00693562838216562,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/walklab/experiments/e6_relations.py#1",
+    "label": "meta/lab/walklab/experiments/e6_relations.py",
+    "p": 0.006608980622783465,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-996.md#2",
+    "label": "board/cards/REM-996.md \u203a Goal",
+    "p": 0.0065185071940789775,
+    "gold": false
+   },
+   {
+    "id": "commit/963b269072",
+    "label": "commit 963b269: board: james runs pid 87459 on Sirshs-MacBook-Air: jev-search-targets-200 live: Jev doors + search targe",
+    "p": 0.004574662613229636,
+    "gold": false
+   },
+   {
+    "id": "commit/bc710bb98a",
+    "label": "commit bc710bb: board: james ends pid 62150 on Sirshs-MacBook-Air",
+    "p": 0.004550976638097906,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261030-075642-1425.md#1",
+    "label": "board/messages/M-20261030-075642-1425.md",
+    "p": 0.002433032865681466,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/stale-assumptions-audit/AUDIT.md#2",
+    "label": "meta/lab/results/stale-assumptions-audit/AUDIT.md \u203a The finding that orders everything else",
+    "p": 0.0023928936641991524,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-doors/RESULT.md#5",
+    "label": "meta/lab/results/jev-doors/RESULT.md \u203a Next round (step 4 again, Jev fixed at P1 F2)",
+    "p": 0.0022839757806386294,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/kappa/RESULT.md#5",
+    "label": "meta/lab/results/kappa/RESULT.md \u203a Round 2: rarest-first names do not carry the bridge better (17 Nov, ~00:35Z)",
+    "p": 0.0017914394147943576,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/worlds/mq_doors.py#3",
+    "label": "meta/lab/worlds/mq_doors.py",
+    "p": 0.0017691014419938527,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261117-001333-aa54.md#1",
+    "label": "board/messages/M-20261117-001333-aa54.md",
+    "p": 0.0017504215887455706,
+    "gold": false
+   },
+   {
+    "id": "commit/0e2dcfa35b",
+    "label": "commit 0e2dcfa: Merge pull request #783 from Percolation-Labs/bill/jev-doors-musique",
+    "p": 0.0015836440260598536,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-doors/RESULT.md#2",
+    "label": "meta/lab/results/jev-doors/RESULT.md \u203a Result",
+    "p": 0.001265335604933482,
+    "gold": false
+   },
+   {
+    "id": "commit/cca48abdf7",
+    "label": "commit cca48ab: board: james runs pid 62150 on Sirshs-MacBook-Air: jev-search-targets-200 step 1: oracle and search A1 o",
+    "p": 0.0012472307752539478,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-doors/RESULT.md#4",
+    "label": "meta/lab/results/jev-doors/RESULT.md \u203a Postmortem",
+    "p": 0.0012312186154432641,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261116-203359-d158.md#1",
+    "label": "board/messages/M-20261116-203359-d158.md",
+    "p": 0.0012111756745080428,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261028-145802-d742.md#1",
+    "label": "board/messages/M-20261028-145802-d742.md",
+    "p": 0.001120223179599453,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/91d085f848",
+   "label": "commit 91d085f: Step 4 round 2: relation links and specific names do not beat D3 (.662 vs .674 tune); D3 stays at .696 h",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "meta/lab/results/jev-doors/RESULT.md#6",
+   "label": "meta/lab/results/jev-doors/RESULT.md \u203a Round 2: relations and specific names do not beat D3 (16 Nov, ~19:45Z)",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/d2219e4cf4",
+   "label": "commit d2219e4: Merge pull request #782 from Percolation-Labs/bill/jev-doors-2",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/messages/M-20261116-193617-4ae4.md#1",
+   "label": "board/messages/M-20261116-193617-4ae4.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/5e61977603",
+   "label": "commit 5e61977: Step 4 round 2: register D4 (links) and D5 (specific names) before scoring",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "meta/lab/results/jev-doors/RESULT.md#7",
+   "label": "meta/lab/results/jev-doors/RESULT.md \u203a Postmortem",
+   "wave": 1,
+   "via": "term:better summary",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/worlds/mq_doors.py#3",
+   "label": "meta/lab/worlds/mq_doors.py",
+   "wave": 2,
+   "via": "term:shared first",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/jev-doors/RESULT.md#4",
+   "label": "meta/lab/results/jev-doors/RESULT.md \u203a Postmortem",
+   "wave": 2,
+   "via": "term:shared first",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/jev-doors/REGISTERED.md#3",
+   "label": "meta/lab/results/jev-doors/REGISTERED.md \u203a Round 2 (registered 16 Nov ~19:30Z, before any round-2 door is scored)",
+   "wave": 2,
+   "via": "term:shared first",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/jev-doors/REGISTERED.md#1",
+   "label": "meta/lab/results/jev-doors/REGISTERED.md \u203a Step 4: better doors on the same graph, with Jev fixed at its ceiling setting",
+   "wave": 2,
+   "via": "term:shared first",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "meta/lab/worlds/doors.py#2",
+    "label": "meta/lab/worlds/doors.py",
+    "gold": false
+   },
+   {
+    "id": "commit/7184942dc6",
+    "label": "commit 7184942: Merge pull request #781 from Percolation-Labs/bill/jev-doors",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-doors/REGISTERED.md#3",
+    "label": "meta/lab/results/jev-doors/REGISTERED.md \u203a Round 2 (registered 16 Nov ~19:30Z, before any round-2 door is scored)",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-doors/RESULT.md#7",
+    "label": "meta/lab/results/jev-doors/RESULT.md \u203a Postmortem",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/walklab/experiments/e6_relations.py#1",
+    "label": "meta/lab/walklab/experiments/e6_relations.py",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "meta/lab/worlds/doors.py#2",
+    "label": "meta/lab/worlds/doors.py",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-doors/REGISTERED.md#3",
+    "label": "meta/lab/results/jev-doors/REGISTERED.md \u203a Round 2 (registered 16 Nov ~19:30Z, before any round-2 door is scored)",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-doors/RESULT.md#7",
+    "label": "meta/lab/results/jev-doors/RESULT.md \u203a Postmortem",
+    "gold": false
+   },
+   {
+    "id": "commit/7184942dc6",
+    "label": "commit 7184942: Merge pull request #781 from Percolation-Labs/bill/jev-doors",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-doors/RESULT.md#5",
+    "label": "meta/lab/results/jev-doors/RESULT.md \u203a Next round (step 4 again, Jev fixed at P1 F2)",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/7184942dc6",
+    "label": "commit 7184942: Merge pull request #781 from Percolation-Labs/bill/jev-doors",
+    "gold": false
+   },
+   {
+    "id": "commit/c3fc229ce0",
+    "label": "commit c3fc229: Step 4 round 1: graph-only doors lift Jev from NDCG .636 to .696 on held-out (+.060); prompt re-tuning d",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/worlds/doors.py#2",
+    "label": "meta/lab/worlds/doors.py",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-doors/RESULT.md#7",
+    "label": "meta/lab/results/jev-doors/RESULT.md \u203a Postmortem",
+    "gold": false
+   },
+   {
+    "id": "commit/12813953d9",
+    "label": "commit 1281395: Step 4: register graph-only doors D1-D3 before scoring; slice records each door's targets (rows unchange",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "board/messages/M-20261116-192549-f060.md#1",
+    "label": "board/messages/M-20261116-192549-f060.md",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-doors/REGISTERED.md#3",
+    "label": "meta/lab/results/jev-doors/REGISTERED.md \u203a Round 2 (registered 16 Nov ~19:30Z, before any round-2 door is scored)",
+    "gold": false
+   },
+   {
+    "id": "commit/c3fc229ce0",
+    "label": "commit c3fc229: Step 4 round 1: graph-only doors lift Jev from NDCG .636 to .696 on held-out (+.060); prompt re-tuning d",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-doors/RESULT.md#5",
+    "label": "meta/lab/results/jev-doors/RESULT.md \u203a Next round (step 4 again, Jev fixed at P1 F2)",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/kappa/RESULT.md#5",
+    "label": "meta/lab/results/kappa/RESULT.md \u203a Round 2: rarest-first names do not carry the bridge better (17 Nov, ~00:35Z)",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": null,
+  "Q": null,
+  "LQ": null,
+  "S": null
+ }
+}

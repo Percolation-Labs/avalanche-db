@@ -1,0 +1,417 @@
+{
+ "qid": "RW:2hop__20059_236755",
+ "set": "mq",
+ "question": "What is a notable work from the person who said the term 'intellectual property' operates as a catch-all",
+ "gold": [
+  {
+   "id": "mq:63dd4c096c909b42",
+   "label": "Intellectual property",
+   "seed": true
+  },
+  {
+   "id": "mq:a71dceb9140c5033",
+   "label": "GNU Manifesto",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:63dd4c096c909b42",
+   "label": "Intellectual property",
+   "rank": 1,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:aa038fd3aba10122",
+   "label": "Intellectual property",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:6ff25bcff60a24b8",
+   "label": "Victoria Espinel",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:5ff5a09531446618",
+   "label": "Intellectual property",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:56ca250301d138a2",
+   "label": "Intellectual property",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:63dd4c096c909b42",
+    "label": "Intellectual property",
+    "role": "gold"
+   },
+   {
+    "id": "mq:a71dceb9140c5033",
+    "label": "GNU Manifesto",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:63dd4c096c909b42",
+    "b": "mq:a71dceb9140c5033",
+    "via": [
+     {
+      "kind": "term",
+      "key": "richard stallman",
+      "width": 6
+     },
+     {
+      "kind": "term",
+      "key": "stallman",
+      "width": 6
+     },
+     {
+      "kind": "term",
+      "key": "free software",
+      "width": 33
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "mq:63dd4c096c909b42",
+   "gold": "mq:63dd4c096c909b42",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 3661,
+  "within_2_doors": 17422,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "mq:e6241bd84bbe0eef",
+    "label": "Paris Convention for the Protection of Industrial Property",
+    "p": 0.0017617295789919003,
+    "gold": false
+   },
+   {
+    "id": "mq:afd824c1bd7b7873",
+    "label": "Friedrich Hayek",
+    "p": 0.0014273472450609425,
+    "gold": false
+   },
+   {
+    "id": "mq:3c66ff021b133895",
+    "label": "French Algeria",
+    "p": 0.001405896479158366,
+    "gold": false
+   },
+   {
+    "id": "mq:8e9a315ff70f08a3",
+    "label": "Ontario Provincial Confederation of Regions Party",
+    "p": 0.0014015011608351877,
+    "gold": false
+   },
+   {
+    "id": "mq:bc360bbf7543d7c2",
+    "label": "Convention to propose amendments to the United States Constitution",
+    "p": 0.0013918203260614643,
+    "gold": false
+   },
+   {
+    "id": "mq:0ea68979162577bb",
+    "label": "Law of the United States",
+    "p": 0.0013623199307999712,
+    "gold": false
+   },
+   {
+    "id": "mq:b145674c9cdead5d",
+    "label": "John Kerry",
+    "p": 0.0012134241007960432,
+    "gold": false
+   },
+   {
+    "id": "mq:7acfdd126cc17418",
+    "label": "Intellectual property",
+    "p": 0.0010833821290633242,
+    "gold": false
+   },
+   {
+    "id": "mq:2d7e790e964f803d",
+    "label": "Richard Stallman",
+    "p": 0.0009172172005722798,
+    "gold": false
+   },
+   {
+    "id": "mq:4f83b84c03a68d2b",
+    "label": "Boston",
+    "p": 0.0008871410186679812,
+    "gold": false
+   },
+   {
+    "id": "mq:b9b01fe5b97cc9fd",
+    "label": "Gamal Abdel Nasser",
+    "p": 0.0007981179751001495,
+    "gold": false
+   },
+   {
+    "id": "mq:8d3408e84588c6d1",
+    "label": "Red",
+    "p": 0.0007961010734351451,
+    "gold": false
+   },
+   {
+    "id": "mq:ca9a354af214412d",
+    "label": "Made to Worship",
+    "p": 0.0007593890812627028,
+    "gold": false
+   },
+   {
+    "id": "mq:1879c50bdea57034",
+    "label": "Jim Halpert",
+    "p": 0.000687101411459241,
+    "gold": false
+   },
+   {
+    "id": "mq:5a74554542aa310e",
+    "label": "Bellver Castle",
+    "p": 0.0006823007041139174,
+    "gold": false
+   },
+   {
+    "id": "mq:0c418e13eff2e5c6",
+    "label": "Northwestern University",
+    "p": 0.0006172322448993915,
+    "gold": false
+   },
+   {
+    "id": "mq:1c35378a9d840203",
+    "label": "Lodewijk Asscher",
+    "p": 0.0006139682708055629,
+    "gold": false
+   },
+   {
+    "id": "mq:3b337a932656faf0",
+    "label": "Franco-Prussian War",
+    "p": 0.0005989392596544687,
+    "gold": false
+   },
+   {
+    "id": "mq:fe759f687578ff69",
+    "label": "States of Germany",
+    "p": 0.0005831680446464948,
+    "gold": false
+   },
+   {
+    "id": "mq:4952f4ac2b57750e",
+    "label": "GNU Free Documentation License",
+    "p": 0.0005817509752803252,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:63dd4c096c909b42",
+   "label": "Intellectual property",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:aa038fd3aba10122",
+   "label": "Intellectual property",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:6ff25bcff60a24b8",
+   "label": "Victoria Espinel",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:5ff5a09531446618",
+   "label": "Intellectual property",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:56ca250301d138a2",
+   "label": "Intellectual property",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:531db05340e6eeb1",
+   "label": "GNU/Linux naming controversy",
+   "wave": 1,
+   "via": "term:richard stallman",
+   "gold": false
+  },
+  {
+   "id": "mq:a71dceb9140c5033",
+   "label": "GNU Manifesto",
+   "wave": 1,
+   "via": "term:richard stallman",
+   "gold": true
+  },
+  {
+   "id": "mq:7ac856a97fca6f87",
+   "label": "The Free Software Definition",
+   "wave": 1,
+   "via": "term:richard stallman",
+   "gold": false
+  },
+  {
+   "id": "mq:2d7e790e964f803d",
+   "label": "Richard Stallman",
+   "wave": 1,
+   "via": "term:richard stallman",
+   "gold": false
+  },
+  {
+   "id": "mq:cbc28cd620100b4f",
+   "label": "Jonas \u00d6berg",
+   "wave": 1,
+   "via": "term:richard stallman",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:e6241bd84bbe0eef",
+    "label": "Paris Convention for the Protection of Industrial Property",
+    "gold": false
+   },
+   {
+    "id": "mq:afd824c1bd7b7873",
+    "label": "Friedrich Hayek",
+    "gold": false
+   },
+   {
+    "id": "mq:3c66ff021b133895",
+    "label": "French Algeria",
+    "gold": false
+   },
+   {
+    "id": "mq:8e9a315ff70f08a3",
+    "label": "Ontario Provincial Confederation of Regions Party",
+    "gold": false
+   },
+   {
+    "id": "mq:bc360bbf7543d7c2",
+    "label": "Convention to propose amendments to the United States Constitution",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:e6241bd84bbe0eef",
+    "label": "Paris Convention for the Protection of Industrial Property",
+    "gold": false
+   },
+   {
+    "id": "mq:7acfdd126cc17418",
+    "label": "Intellectual property",
+    "gold": false
+   },
+   {
+    "id": "mq:504b971b9447b8f7",
+    "label": "Intellectual property",
+    "gold": false
+   },
+   {
+    "id": "mq:01eb1da60b3a0eeb",
+    "label": "Dean Dinwoodey",
+    "gold": false
+   },
+   {
+    "id": "mq:0ea68979162577bb",
+    "label": "Law of the United States",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:7acfdd126cc17418",
+    "label": "Intellectual property",
+    "gold": false
+   },
+   {
+    "id": "mq:0ea68979162577bb",
+    "label": "Law of the United States",
+    "gold": false
+   },
+   {
+    "id": "mq:88c849fe8454d3e8",
+    "label": "Draw-a-Person test",
+    "gold": false
+   },
+   {
+    "id": "mq:86ca976be7b65bfe",
+    "label": "Draw-a-Person test",
+    "gold": false
+   },
+   {
+    "id": "mq:504b971b9447b8f7",
+    "label": "Intellectual property",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:e9c6539ddc80b8cd",
+    "label": "Intellectual property",
+    "gold": false
+   },
+   {
+    "id": "mq:504b971b9447b8f7",
+    "label": "Intellectual property",
+    "gold": false
+   },
+   {
+    "id": "mq:01eb1da60b3a0eeb",
+    "label": "Dean Dinwoodey",
+    "gold": false
+   },
+   {
+    "id": "mq:dd25babebc8ef6e9",
+    "label": "Kasowitz Benson Torres",
+    "gold": false
+   },
+   {
+    "id": "mq:7acfdd126cc17418",
+    "label": "Intellectual property",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

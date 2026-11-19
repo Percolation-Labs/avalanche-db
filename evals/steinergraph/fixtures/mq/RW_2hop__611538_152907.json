@@ -1,0 +1,421 @@
+{
+ "qid": "RW:2hop__611538_152907",
+ "set": "mq",
+ "question": "What city is the star of 'Three Strangers in Rome' from?",
+ "gold": [
+  {
+   "id": "mq:79f2de780efcbc38",
+   "label": "Claudia Cardinale",
+   "seed": false
+  },
+  {
+   "id": "mq:ab6711e1ac876561",
+   "label": "Three Strangers in Rome",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:ab6711e1ac876561",
+   "label": "Three Strangers in Rome",
+   "rank": 1,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:2f472c2706874eb5",
+   "label": "Where Will I Be Now",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:14f429f6f95335a5",
+   "label": "History of Rome",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "mq:f2f2b8d698ee36ed",
+   "label": "History of Rome",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "mq:636c25717f71d58a",
+   "label": "Trevi Fountain",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 2
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:79f2de780efcbc38",
+    "label": "Claudia Cardinale",
+    "role": "gold"
+   },
+   {
+    "id": "mq:ab6711e1ac876561",
+    "label": "Three Strangers in Rome",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:79f2de780efcbc38",
+    "b": "mq:ab6711e1ac876561",
+    "via": [
+     {
+      "kind": "near",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "claudia cardinale",
+      "width": 7
+     },
+     {
+      "kind": "term",
+      "key": "cardinale",
+      "width": 7
+     },
+     {
+      "kind": "term",
+      "key": "claudia",
+      "width": 15
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "mq:ab6711e1ac876561",
+   "gold": "mq:ab6711e1ac876561",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 1799,
+  "within_2_doors": 19269,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "mq:8df2d536864de826",
+    "label": "Julia Livilla",
+    "p": 0.002546638747642715,
+    "gold": false
+   },
+   {
+    "id": "mq:8d094743c3d1c103",
+    "label": "Yani Gellman",
+    "p": 0.0024076773867911243,
+    "gold": false
+   },
+   {
+    "id": "mq:60fe1a695f9ff25d",
+    "label": "Sous les pieds des femmes",
+    "p": 0.0022065547917299935,
+    "gold": false
+   },
+   {
+    "id": "mq:48952f87f9eb678e",
+    "label": "Les v\u00eapres siciliennes",
+    "p": 0.002187212465140018,
+    "gold": false
+   },
+   {
+    "id": "mq:be2e6b5053bcc73d",
+    "label": "Shakalaka Boom Boom",
+    "p": 0.0021340417719582804,
+    "gold": false
+   },
+   {
+    "id": "mq:403a75ee508d1bf3",
+    "label": "Signora Enrica",
+    "p": 0.0018671479293564945,
+    "gold": false
+   },
+   {
+    "id": "mq:c6420e653f0b1131",
+    "label": "History of India",
+    "p": 0.0018195685086327968,
+    "gold": false
+   },
+   {
+    "id": "mq:d678acc16af6773c",
+    "label": "Yale University",
+    "p": 0.001783112361654348,
+    "gold": false
+   },
+   {
+    "id": "mq:54cf345f914dc2dd",
+    "label": "Germans",
+    "p": 0.0017283193203864405,
+    "gold": false
+   },
+   {
+    "id": "mq:79f2de780efcbc38",
+    "label": "Claudia Cardinale",
+    "p": 0.001725404218655007,
+    "gold": true
+   },
+   {
+    "id": "mq:51601b357b7f0292",
+    "label": "A Spoonful of Sugar",
+    "p": 0.0015974664551869403,
+    "gold": false
+   },
+   {
+    "id": "mq:c5c3a281ddac5d15",
+    "label": "A Summer in La Goulette",
+    "p": 0.0015387677415900196,
+    "gold": false
+   },
+   {
+    "id": "mq:b72478c30ae83191",
+    "label": "Audace colpo dei soliti ignoti",
+    "p": 0.0015327253019066433,
+    "gold": false
+   },
+   {
+    "id": "mq:7f17849fdd50d596",
+    "label": "Rome",
+    "p": 0.001395361280977535,
+    "gold": false
+   },
+   {
+    "id": "mq:56061c2dacf502a8",
+    "label": "Villa Foscari",
+    "p": 0.0013580251717055837,
+    "gold": false
+   },
+   {
+    "id": "mq:b6d2f57837158e96",
+    "label": "House of Windsor",
+    "p": 0.0012414321327855046,
+    "gold": false
+   },
+   {
+    "id": "mq:92ff35c3bb240291",
+    "label": "Three Coins in the Fountain (film)",
+    "p": 0.0012355706216287707,
+    "gold": false
+   },
+   {
+    "id": "mq:33ccb4c6429bfb0c",
+    "label": "Br'er Fox and Br'er Bear",
+    "p": 0.0011914640398385857,
+    "gold": false
+   },
+   {
+    "id": "mq:83c14c70679fa9d5",
+    "label": "Ricky Wilde",
+    "p": 0.001187082494309452,
+    "gold": false
+   },
+   {
+    "id": "mq:142d8a3e67d54ee1",
+    "label": "Colorado River (Texas)",
+    "p": 0.001167641483576434,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:ab6711e1ac876561",
+   "label": "Three Strangers in Rome",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:2f472c2706874eb5",
+   "label": "Where Will I Be Now",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:14f429f6f95335a5",
+   "label": "History of Rome",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:f2f2b8d698ee36ed",
+   "label": "History of Rome",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:636c25717f71d58a",
+   "label": "Trevi Fountain",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:403a75ee508d1bf3",
+   "label": "Signora Enrica",
+   "wave": 1,
+   "via": "term:claudia cardinale",
+   "gold": false
+  },
+  {
+   "id": "mq:c5c3a281ddac5d15",
+   "label": "A Summer in La Goulette",
+   "wave": 1,
+   "via": "term:claudia cardinale",
+   "gold": false
+  },
+  {
+   "id": "mq:60fe1a695f9ff25d",
+   "label": "Sous les pieds des femmes",
+   "wave": 1,
+   "via": "term:claudia cardinale",
+   "gold": false
+  },
+  {
+   "id": "mq:b72478c30ae83191",
+   "label": "Audace colpo dei soliti ignoti",
+   "wave": 1,
+   "via": "term:claudia cardinale",
+   "gold": false
+  },
+  {
+   "id": "mq:d70589ec19c0a916",
+   "label": "The Skin",
+   "wave": 1,
+   "via": "term:claudia cardinale",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:8df2d536864de826",
+    "label": "Julia Livilla",
+    "gold": false
+   },
+   {
+    "id": "mq:8d094743c3d1c103",
+    "label": "Yani Gellman",
+    "gold": false
+   },
+   {
+    "id": "mq:60fe1a695f9ff25d",
+    "label": "Sous les pieds des femmes",
+    "gold": false
+   },
+   {
+    "id": "mq:48952f87f9eb678e",
+    "label": "Les v\u00eapres siciliennes",
+    "gold": false
+   },
+   {
+    "id": "mq:be2e6b5053bcc73d",
+    "label": "Shakalaka Boom Boom",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:7f17849fdd50d596",
+    "label": "Rome",
+    "gold": false
+   },
+   {
+    "id": "mq:7a7ee0dd25a47908",
+    "label": "Strangers No More",
+    "gold": false
+   },
+   {
+    "id": "mq:48952f87f9eb678e",
+    "label": "Les v\u00eapres siciliennes",
+    "gold": false
+   },
+   {
+    "id": "mq:774c5dde974bea79",
+    "label": "Roman Republic",
+    "gold": false
+   },
+   {
+    "id": "mq:f2b859f582bd0f43",
+    "label": "The Real World: Cancun",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:7f17849fdd50d596",
+    "label": "Rome",
+    "gold": false
+   },
+   {
+    "id": "mq:dd886fb2525b1efa",
+    "label": "Myanmar",
+    "gold": false
+   },
+   {
+    "id": "mq:705781ad17eacc38",
+    "label": "Myanmar",
+    "gold": false
+   },
+   {
+    "id": "mq:7a7ee0dd25a47908",
+    "label": "Strangers No More",
+    "gold": false
+   },
+   {
+    "id": "mq:48952f87f9eb678e",
+    "label": "Les v\u00eapres siciliennes",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:ad62a6bedd60d56e",
+    "label": "Roman Republic",
+    "gold": false
+   },
+   {
+    "id": "mq:7a7ee0dd25a47908",
+    "label": "Strangers No More",
+    "gold": false
+   },
+   {
+    "id": "mq:7f17849fdd50d596",
+    "label": "Rome",
+    "gold": false
+   },
+   {
+    "id": "mq:f2b859f582bd0f43",
+    "label": "The Real World: Cancun",
+    "gold": false
+   },
+   {
+    "id": "mq:3454a0fbbb43c337",
+    "label": "Municipio XIX",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

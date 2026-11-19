@@ -1,0 +1,400 @@
+{
+ "qid": "card:REM-609",
+ "set": "cards",
+ "question": "What was done about this, and why: deploy: a manifests run never moves the core chart backwards?",
+ "gold": [
+  {
+   "id": "commit/812180bb57",
+   "label": "commit 812180b: postmortem: hand deploys raced the queue (19 Sep, 11:45Z to 15:10Z)",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/a131319517",
+   "label": "commit a131319: board: file REM-609 deploy: a manifests run never moves the core chart backwards",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/b2df12496f",
+   "label": "commit b2df124: board: file REM-610 deploy: a manifests run never moves production core to an older chart",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "board/cards/REM-609.md#1",
+   "label": "board/cards/REM-609.md",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-609.md#2",
+   "label": "board/cards/REM-609.md \u203a Goal",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-610.md#1",
+   "label": "board/cards/REM-610.md",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 2
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/812180bb57",
+    "label": "commit 812180b: postmortem: hand deploys raced the queue (19 Sep, 11:45Z to 15:10Z)",
+    "role": "gold"
+   },
+   {
+    "id": "commit/a131319517",
+    "label": "commit a131319: board: file REM-609 deploy: a manifests run never moves the core chart backwards",
+    "role": "seed"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/812180bb57",
+    "b": "commit/a131319517",
+    "via": [
+     {
+      "kind": "term",
+      "key": "rem 609",
+      "width": 17
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [],
+  "entry": {
+   "seed": "commit/a131319517",
+   "gold": "commit/812180bb57",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 385,
+  "within_2_doors": 30659,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "board/cards/REM-610.md#2",
+    "label": "board/cards/REM-610.md \u203a Goal",
+    "p": 0.011603872588323233,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-610.md#3",
+    "label": "board/cards/REM-610.md \u203a Evidence",
+    "p": 0.005617768616941228,
+    "gold": false
+   },
+   {
+    "id": "meta/status/2026-09-19-release-roll-call.md#7",
+    "label": "meta/status/2026-09-19-release-roll-call.md \u203a Corrections",
+    "p": 0.004023846765395516,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-609.md#5",
+    "label": "board/cards/REM-609.md \u203a Log",
+    "p": 0.0037596839681256064,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-610.md#4",
+    "label": "board/cards/REM-610.md \u203a Done when",
+    "p": 0.0031006981453464595,
+    "gold": false
+   },
+   {
+    "id": "commit/7de8869d62",
+    "label": "commit 7de8869: board: note on REM-609",
+    "p": 0.0030937685134675417,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-609.md#3",
+    "label": "board/cards/REM-609.md \u203a Evidence",
+    "p": 0.002825185790120333,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-19-hand-deploys-raced-the-queue.md#4",
+    "label": "meta/postmortems/2026-09-19-hand-deploys-raced-the-queue.md \u203a 1. A hand deploy raced the deploy CI had already queued",
+    "p": 0.002805355607386602,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/README.md#58",
+    "label": "meta/postmortems/README.md \u203a A hand step races the automated copy of itself",
+    "p": 0.0025970307583953623,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1000.md#6",
+    "label": "board/cards/REM-1000.md \u203a Log",
+    "p": 0.0025668917283670164,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-578.md#1",
+    "label": "board/cards/REM-578.md",
+    "p": 0.0025292352104552876,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1008.md#2",
+    "label": "board/cards/REM-1008.md \u203a Decision for Sirsh first",
+    "p": 0.0024898245045964222,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-610.md#5",
+    "label": "board/cards/REM-610.md \u203a Scope",
+    "p": 0.002410106842076619,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-610.md#6",
+    "label": "board/cards/REM-610.md \u203a Log",
+    "p": 0.002333178851666278,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-306.md#5",
+    "label": "board/cards/REM-306.md \u203a Estimate \u2014 2 points",
+    "p": 0.00232522679553514,
+    "gold": false
+   },
+   {
+    "id": "commit/ced79edbeb",
+    "label": "commit ced79ed: board: REM-610 todo \u2192 canceled",
+    "p": 0.002108254684803265,
+    "gold": false
+   },
+   {
+    "id": "commit/70d897e54c",
+    "label": "commit 70d897e: Merge pull request #297 from Percolation-Labs/amartey/rem-548-spec-depth-a6",
+    "p": 0.0020968777089558177,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-19-hand-deploys-raced-the-queue.md#9",
+    "label": "meta/postmortems/2026-09-19-hand-deploys-raced-the-queue.md \u203a What would have prevented it",
+    "p": 0.0020780213049744803,
+    "gold": false
+   },
+   {
+    "id": "commit/3a79a94949",
+    "label": "commit 3a79a94: research: reduction costs nothing, so it is always safe to attempt (REM-661)",
+    "p": 0.002038270040880766,
+    "gold": false
+   },
+   {
+    "id": "commit/53d031621f",
+    "label": "commit 53d0316: research: reduction costs nothing, so it is always safe to attempt (REM-661)",
+    "p": 0.00203618304945146,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/a131319517",
+   "label": "commit a131319: board: file REM-609 deploy: a manifests run never moves the core chart backwards",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/b2df12496f",
+   "label": "commit b2df124: board: file REM-610 deploy: a manifests run never moves production core to an older chart",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-609.md#1",
+   "label": "board/cards/REM-609.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-609.md#2",
+   "label": "board/cards/REM-609.md \u203a Goal",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-610.md#1",
+   "label": "board/cards/REM-610.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/812180bb57",
+   "label": "commit 812180b: postmortem: hand deploys raced the queue (19 Sep, 11:45Z to 15:10Z)",
+   "wave": 1,
+   "via": "term:rem 609",
+   "gold": true
+  },
+  {
+   "id": "meta/status/2026-09-19-release-roll-call.md#6",
+   "label": "meta/status/2026-09-19-release-roll-call.md \u203a Open",
+   "wave": 1,
+   "via": "term:rem 609",
+   "gold": false
+  },
+  {
+   "id": "commit/fa98d4d8fa",
+   "label": "commit fa98d4d: board: REM-609 in-progress \u2192 done",
+   "wave": 1,
+   "via": "term:rem 609",
+   "gold": false
+  },
+  {
+   "id": "commit/acf0462b9f",
+   "label": "commit acf0462: board: p8-subsystems-47 takes REM-609",
+   "wave": 1,
+   "via": "term:rem 609",
+   "gold": false
+  },
+  {
+   "id": "meta/postmortems/2026-09-19-hand-deploys-raced-the-queue.md#4",
+   "label": "meta/postmortems/2026-09-19-hand-deploys-raced-the-queue.md \u203a 1. A hand deploy raced the deploy CI had already queued",
+   "wave": 1,
+   "via": "term:rem 609",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "board/cards/REM-610.md#2",
+    "label": "board/cards/REM-610.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-610.md#3",
+    "label": "board/cards/REM-610.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "meta/status/2026-09-19-release-roll-call.md#7",
+    "label": "meta/status/2026-09-19-release-roll-call.md \u203a Corrections",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-609.md#5",
+    "label": "board/cards/REM-609.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-610.md#4",
+    "label": "board/cards/REM-610.md \u203a Done when",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "board/cards/REM-610.md#2",
+    "label": "board/cards/REM-610.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-610.md#3",
+    "label": "board/cards/REM-610.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-19-hand-deploys-raced-the-queue.md#4",
+    "label": "meta/postmortems/2026-09-19-hand-deploys-raced-the-queue.md \u203a 1. A hand deploy raced the deploy CI had already queued",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-609.md#5",
+    "label": "board/cards/REM-609.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "meta/status/2026-09-19-release-roll-call.md#7",
+    "label": "meta/status/2026-09-19-release-roll-call.md \u203a Corrections",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/dfd17695c6",
+    "label": "commit dfd1769: board: file REM-578 deploy: a manifests run never publishes a digest older than production's",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-578.md#1",
+    "label": "board/cards/REM-578.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-610.md#2",
+    "label": "board/cards/REM-610.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-610.md#4",
+    "label": "board/cards/REM-610.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-610.md#3",
+    "label": "board/cards/REM-610.md \u203a Evidence",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "meta/postmortems/2026-09-19-hand-deploys-raced-the-queue.md#4",
+    "label": "meta/postmortems/2026-09-19-hand-deploys-raced-the-queue.md \u203a 1. A hand deploy raced the deploy CI had already queued",
+    "gold": false
+   },
+   {
+    "id": "commit/dfd17695c6",
+    "label": "commit dfd1769: board: file REM-578 deploy: a manifests run never publishes a digest older than production's",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-609.md#4",
+    "label": "board/cards/REM-609.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-610.md#2",
+    "label": "board/cards/REM-610.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "meta/status/2026-09-19-release-roll-call.md#6",
+    "label": "meta/status/2026-09-19-release-roll-call.md \u203a Open",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

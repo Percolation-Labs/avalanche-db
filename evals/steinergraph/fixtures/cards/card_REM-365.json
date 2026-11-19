@@ -1,0 +1,419 @@
+{
+ "qid": "card:REM-365",
+ "set": "cards",
+ "question": "What was done about this, and why: agents: get_my_access answers in Claude again, and a result whose schema is closed never gains a field?",
+ "gold": [
+  {
+   "id": "commit/564358a1be",
+   "label": "commit 564358a: Postmortem: a new field broke get_my_access in Claude, and closed MCP output schemas are recorded (REM-3",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/2ede853edd",
+   "label": "commit 2ede853: board: file REM-365 agents: get_my_access answers in Claude again, and a result whose schema is closed n",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-365.md#1",
+   "label": "board/cards/REM-365.md",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-365.md#4",
+   "label": "board/cards/REM-365.md \u203a Done when",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-365.md#2",
+   "label": "board/cards/REM-365.md \u203a Goal",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-365.md#7",
+   "label": "board/cards/REM-365.md \u203a Log",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "board/cards/REM-365.md#4",
+    "label": "board/cards/REM-365.md \u203a Done when",
+    "role": "seed"
+   },
+   {
+    "id": "commit/564358a1be",
+    "label": "commit 564358a: Postmortem: a new field broke get_my_access in Claude, and closed MCP output schemas are recorded (REM-3",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "board/cards/REM-365.md#4",
+    "b": "commit/564358a1be",
+    "via": [
+     {
+      "kind": "near",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "closed mcp",
+      "width": 3
+     },
+     {
+      "kind": "term",
+      "key": "mcp output",
+      "width": 6
+     },
+     {
+      "kind": "term",
+      "key": "rem 365",
+      "width": 27
+     },
+     {
+      "kind": "term",
+      "key": "get_my_access",
+      "width": 46
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [],
+  "entry": {
+   "seed": "board/cards/REM-365.md#4",
+   "gold": "commit/564358a1be",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 1090,
+  "within_2_doors": 33664,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "commit/564358a1be",
+    "label": "commit 564358a: Postmortem: a new field broke get_my_access in Claude, and closed MCP output schemas are recorded (REM-3",
+    "p": 0.00798032732895069,
+    "gold": true
+   },
+   {
+    "id": "meta/postmortems/2026-09-15-a-new-field-broke-get-my-access.md#1",
+    "label": "meta/postmortems/2026-09-15-a-new-field-broke-get-my-access.md \u203a A new field broke get_my_access in Claude",
+    "p": 0.007213906574778562,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-365.md#3",
+    "label": "board/cards/REM-365.md \u203a Evidence",
+    "p": 0.0050915777277517355,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-372.md#6",
+    "label": "board/cards/REM-372.md \u203a Log",
+    "p": 0.004280602513141922,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-359.md#6",
+    "label": "board/cards/REM-359.md \u203a Log",
+    "p": 0.004218742235857255,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-441.md#2",
+    "label": "board/cards/REM-441.md \u203a Goal",
+    "p": 0.004178722835075965,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-15-a-new-field-broke-get-my-access.md#3",
+    "label": "meta/postmortems/2026-09-15-a-new-field-broke-get-my-access.md \u203a The fix",
+    "p": 0.003953684719685979,
+    "gold": false
+   },
+   {
+    "id": "commit/174de3ddf4",
+    "label": "commit 174de3d: board: file REM-274 access: get_my_access marks a capability live when core allows it and a route serves",
+    "p": 0.0033888267051363557,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-15-a-new-field-broke-get-my-access.md#2",
+    "label": "meta/postmortems/2026-09-15-a-new-field-broke-get-my-access.md \u203a Three whys",
+    "p": 0.002987489436756252,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-283.md#4",
+    "label": "board/cards/REM-283.md \u203a Done when",
+    "p": 0.0029508994855207645,
+    "gold": false
+   },
+   {
+    "id": "specs/research-platform/core-claims-contract.md#10",
+    "label": "specs/research-platform/core-claims-contract.md \u203a C5. Listings paginate through every layer",
+    "p": 0.0025617104894637356,
+    "gold": false
+   },
+   {
+    "id": "commit/3f48840f08",
+    "label": "commit 3f48840: board: percolate-application-ae takes REM-365",
+    "p": 0.0025262862296801854,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-448.md#4",
+    "label": "board/cards/REM-448.md \u203a Done when",
+    "p": 0.0024659772697492722,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-365.md#8",
+    "label": "board/cards/REM-365.md \u203a Log",
+    "p": 0.0024507421780610673,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-365.md#5",
+    "label": "board/cards/REM-365.md \u203a Scope",
+    "p": 0.0023104002375631994,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-372.md#7",
+    "label": "board/cards/REM-372.md \u203a Log",
+    "p": 0.002019886566494319,
+    "gold": false
+   },
+   {
+    "id": "commit/f07f6c9dab",
+    "label": "commit f07f6c9: board: percolate-application-62 takes REM-355",
+    "p": 0.0020141334888000217,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-274.md#2",
+    "label": "board/cards/REM-274.md \u203a Goal",
+    "p": 0.0020027206471283842,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-350.md#7",
+    "label": "board/cards/REM-350.md \u203a Log",
+    "p": 0.0019895519499737923,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-372.md#3",
+    "label": "board/cards/REM-372.md \u203a Evidence",
+    "p": 0.0019496802698635587,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/2ede853edd",
+   "label": "commit 2ede853: board: file REM-365 agents: get_my_access answers in Claude again, and a result whose schema is closed n",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-365.md#1",
+   "label": "board/cards/REM-365.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-365.md#4",
+   "label": "board/cards/REM-365.md \u203a Done when",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-365.md#2",
+   "label": "board/cards/REM-365.md \u203a Goal",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-365.md#7",
+   "label": "board/cards/REM-365.md \u203a Log",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/postmortems/2026-09-15-a-new-field-broke-get-my-access.md#2",
+   "label": "meta/postmortems/2026-09-15-a-new-field-broke-get-my-access.md \u203a Three whys",
+   "wave": 1,
+   "via": "term:field broke",
+   "gold": false
+  },
+  {
+   "id": "research-notes/fastembed/recall/targets.txt#1",
+   "label": "research-notes/fastembed/recall/targets.txt",
+   "wave": 1,
+   "via": "term:field broke",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-371.md#6",
+   "label": "board/cards/REM-371.md \u203a Links",
+   "wave": 1,
+   "via": "term:field broke",
+   "gold": false
+  },
+  {
+   "id": "meta/postmortems/2026-09-15-a-new-field-broke-get-my-access.md#3",
+   "label": "meta/postmortems/2026-09-15-a-new-field-broke-get-my-access.md \u203a The fix",
+   "wave": 1,
+   "via": "term:field broke",
+   "gold": false
+  },
+  {
+   "id": "commit/564358a1be",
+   "label": "commit 564358a: Postmortem: a new field broke get_my_access in Claude, and closed MCP output schemas are recorded (REM-3",
+   "wave": 1,
+   "via": "term:field broke",
+   "gold": true
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "commit/564358a1be",
+    "label": "commit 564358a: Postmortem: a new field broke get_my_access in Claude, and closed MCP output schemas are recorded (REM-3",
+    "gold": true
+   },
+   {
+    "id": "meta/postmortems/2026-09-15-a-new-field-broke-get-my-access.md#1",
+    "label": "meta/postmortems/2026-09-15-a-new-field-broke-get-my-access.md \u203a A new field broke get_my_access in Claude",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-365.md#3",
+    "label": "board/cards/REM-365.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-372.md#6",
+    "label": "board/cards/REM-372.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-359.md#6",
+    "label": "board/cards/REM-359.md \u203a Log",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "commit/564358a1be",
+    "label": "commit 564358a: Postmortem: a new field broke get_my_access in Claude, and closed MCP output schemas are recorded (REM-3",
+    "gold": true
+   },
+   {
+    "id": "meta/postmortems/2026-09-15-a-new-field-broke-get-my-access.md#1",
+    "label": "meta/postmortems/2026-09-15-a-new-field-broke-get-my-access.md \u203a A new field broke get_my_access in Claude",
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-15-a-new-field-broke-get-my-access.md#2",
+    "label": "meta/postmortems/2026-09-15-a-new-field-broke-get-my-access.md \u203a Three whys",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-365.md#3",
+    "label": "board/cards/REM-365.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-15-a-new-field-broke-get-my-access.md#3",
+    "label": "meta/postmortems/2026-09-15-a-new-field-broke-get-my-access.md \u203a The fix",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/564358a1be",
+    "label": "commit 564358a: Postmortem: a new field broke get_my_access in Claude, and closed MCP output schemas are recorded (REM-3",
+    "gold": true
+   },
+   {
+    "id": "board/cards/REM-283.md#4",
+    "label": "board/cards/REM-283.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "commit/ac7b78a15e",
+    "label": "commit ac7b78a: board: REM-365 in-progress \u2192 done",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-371.md#6",
+    "label": "board/cards/REM-371.md \u203a Links",
+    "gold": false
+   },
+   {
+    "id": "commit/174de3ddf4",
+    "label": "commit 174de3d: board: file REM-274 access: get_my_access marks a capability live when core allows it and a route serves",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "meta/postmortems/2026-09-15-a-new-field-broke-get-my-access.md#2",
+    "label": "meta/postmortems/2026-09-15-a-new-field-broke-get-my-access.md \u203a Three whys",
+    "gold": false
+   },
+   {
+    "id": "commit/564358a1be",
+    "label": "commit 564358a: Postmortem: a new field broke get_my_access in Claude, and closed MCP output schemas are recorded (REM-3",
+    "gold": true
+   },
+   {
+    "id": "meta/postmortems/2026-09-15-a-new-field-broke-get-my-access.md#1",
+    "label": "meta/postmortems/2026-09-15-a-new-field-broke-get-my-access.md \u203a A new field broke get_my_access in Claude",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-372.md#7",
+    "label": "board/cards/REM-372.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-15-a-new-field-broke-get-my-access.md#3",
+    "label": "meta/postmortems/2026-09-15-a-new-field-broke-get-my-access.md \u203a The fix",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 1.0,
+  "Q": 1.0,
+  "LQ": 1.0,
+  "S": 1.0
+ }
+}

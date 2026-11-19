@@ -1,0 +1,427 @@
+{
+ "qid": "card:REM-575",
+ "set": "cards",
+ "question": "What was done about this, and why: library: a followed question explains when one of its published claims changes?",
+ "gold": [
+  {
+   "id": "commit/2103d0d2aa",
+   "label": "commit 2103d0d: Merge pull request #296 from Percolation-Labs/amartey/rem-575-question-changes",
+   "seed": true
+  },
+  {
+   "id": "commit/920c3a8deb",
+   "label": "commit 920c3a8: library-board \u00a713.3: a Library question follows a core question, and what changed in its answers (REM-57",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/27d4473b5e",
+   "label": "commit 27d4473: board: file REM-575 library: a followed question explains when one of its published claims changes",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-575.md#1",
+   "label": "board/cards/REM-575.md",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "output/ideas-flow-review-2026-09-19/review.md#22",
+   "label": "output/ideas-flow-review-2026-09-19/review.md \u203a 05 \u00b7 Return: make one change understandable",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "commit/2103d0d2aa",
+   "label": "commit 2103d0d: Merge pull request #296 from Percolation-Labs/amartey/rem-575-question-changes",
+   "rank": 4,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "specs/percolate-application/research-runs.md#3",
+   "label": "specs/percolate-application/research-runs.md \u203a 2. What already exists",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/2103d0d2aa",
+    "label": "commit 2103d0d: Merge pull request #296 from Percolation-Labs/amartey/rem-575-question-changes",
+    "role": "gold"
+   },
+   {
+    "id": "commit/920c3a8deb",
+    "label": "commit 920c3a8: library-board \u00a713.3: a Library question follows a core question, and what changed in its answers (REM-57",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/2103d0d2aa",
+    "b": "commit/920c3a8deb",
+    "via": [
+     {
+      "kind": "term",
+      "key": "question follows",
+      "width": 3
+     },
+     {
+      "kind": "term",
+      "key": "library question",
+      "width": 6
+     },
+     {
+      "kind": "term",
+      "key": "answers rem",
+      "width": 8
+     },
+     {
+      "kind": "term",
+      "key": "core question",
+      "width": 12
+     },
+     {
+      "kind": "term",
+      "key": "rem 575",
+      "width": 32
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "commit/2103d0d2aa",
+   "gold": "commit/2103d0d2aa",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 1696,
+  "within_2_doors": 33250,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "board/cards/REM-575.md#2",
+    "label": "board/cards/REM-575.md \u203a Goal",
+    "p": 0.004636020837315199,
+    "gold": false
+   },
+   {
+    "id": "commit/920c3a8deb",
+    "label": "commit 920c3a8: library-board \u00a713.3: a Library question follows a core question, and what changed in its answers (REM-57",
+    "p": 0.004013271152436985,
+    "gold": true
+   },
+   {
+    "id": "commit/83742fe601",
+    "label": "commit 83742fe: board: file REM-574 sharing: a carried claim keeps its scope, caveat and exact revision",
+    "p": 0.003244781046528843,
+    "gold": false
+   },
+   {
+    "id": "commit/5f92358dc5",
+    "label": "commit 5f92358: board: file REM-576 evaluation: test whether readers check and carry a claim without gaining false confi",
+    "p": 0.0032441581346234908,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/library-board.md#19",
+    "label": "specs/percolate-application/library-board.md \u203a 13.3 Following a question in core, and what changed (REM-575)",
+    "p": 0.00290038102917069,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-575.md#7",
+    "label": "board/cards/REM-575.md \u203a Log",
+    "p": 0.0027417579134904864,
+    "gold": false
+   },
+   {
+    "id": "specs/research-platform/core-claims-contract.md#14",
+    "label": "specs/research-platform/core-claims-contract.md \u203a C8. Followed claims expose an authorised change feed",
+    "p": 0.002530326018450967,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/research-package.md#18",
+    "label": "specs/percolate-application/research-package.md \u203a 7. Proposed API and representation",
+    "p": 0.0019608325735319134,
+    "gold": false
+   },
+   {
+    "id": "board/team/focus-canvas.md#3",
+    "label": "board/team/focus-canvas.md \u203a Log",
+    "p": 0.0018100320235924954,
+    "gold": false
+   },
+   {
+    "id": "commit/70d897e54c",
+    "label": "commit 70d897e: Merge pull request #297 from Percolation-Labs/amartey/rem-548-spec-depth-a6",
+    "p": 0.00171969102893823,
+    "gold": false
+   },
+   {
+    "id": "commit/57bd3e79d3",
+    "label": "commit 57bd3e7: Record the approved Explore and Edition card presentation (#303)",
+    "p": 0.0017027039193339814,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-583.md#3",
+    "label": "board/cards/REM-583.md \u203a Log",
+    "p": 0.0016289539841287167,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-728.md#8",
+    "label": "board/cards/REM-728.md \u203a Log",
+    "p": 0.0016144758133787836,
+    "gold": false
+   },
+   {
+    "id": "specs/claims/schema.sql#65",
+    "label": "specs/claims/schema.sql",
+    "p": 0.0015890315328938385,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-575.md#3",
+    "label": "board/cards/REM-575.md \u203a Evidence",
+    "p": 0.0015706299156537618,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-646.md#7",
+    "label": "board/cards/REM-646.md \u203a Note on how to run it",
+    "p": 0.0015543181039833678,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/concept-navigation.md#5",
+    "label": "specs/percolate-application/concept-navigation.md \u203a 3. Moves",
+    "p": 0.001540551334398798,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-728.md#2",
+    "label": "board/cards/REM-728.md \u203a Goal",
+    "p": 0.0015133945986135788,
+    "gold": false
+   },
+   {
+    "id": "output/ideas-flow-review-2026-09-19/review.md#24",
+    "label": "output/ideas-flow-review-2026-09-19/review.md \u203a D \u00b7 Research and delivery plan",
+    "p": 0.0014392489851601043,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-575.md#4",
+    "label": "board/cards/REM-575.md \u203a Done when",
+    "p": 0.0014256611181313022,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/27d4473b5e",
+   "label": "commit 27d4473: board: file REM-575 library: a followed question explains when one of its published claims changes",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-575.md#1",
+   "label": "board/cards/REM-575.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "output/ideas-flow-review-2026-09-19/review.md#22",
+   "label": "output/ideas-flow-review-2026-09-19/review.md \u203a 05 \u00b7 Return: make one change understandable",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/2103d0d2aa",
+   "label": "commit 2103d0d: Merge pull request #296 from Percolation-Labs/amartey/rem-575-question-changes",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "specs/percolate-application/research-runs.md#3",
+   "label": "specs/percolate-application/research-runs.md \u203a 2. What already exists",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/ec3a39ddc8",
+   "label": "commit ec3a39d: board: p8-subsystems-a6 takes REM-575",
+   "wave": 1,
+   "via": "term:rem 575",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-575.md#6",
+   "label": "board/cards/REM-575.md \u203a Links",
+   "wave": 1,
+   "via": "term:rem 575",
+   "gold": false
+  },
+  {
+   "id": "commit/6719dda6d6",
+   "label": "commit 6719dda: board: REM-575 in-progress \u2192 review",
+   "wave": 1,
+   "via": "term:rem 575",
+   "gold": false
+  },
+  {
+   "id": "specs/percolate-application/library-board.md#20",
+   "label": "specs/percolate-application/library-board.md \u203a 13.3 Following a question in core, and what changed (REM-575)",
+   "wave": 1,
+   "via": "term:rem 575",
+   "gold": false
+  },
+  {
+   "id": "commit/919a1ac137",
+   "label": "commit 919a1ac: board: REM-575 review \u2192 done",
+   "wave": 1,
+   "via": "term:rem 575",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "board/cards/REM-575.md#2",
+    "label": "board/cards/REM-575.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "commit/920c3a8deb",
+    "label": "commit 920c3a8: library-board \u00a713.3: a Library question follows a core question, and what changed in its answers (REM-57",
+    "gold": true
+   },
+   {
+    "id": "commit/83742fe601",
+    "label": "commit 83742fe: board: file REM-574 sharing: a carried claim keeps its scope, caveat and exact revision",
+    "gold": false
+   },
+   {
+    "id": "commit/5f92358dc5",
+    "label": "commit 5f92358: board: file REM-576 evaluation: test whether readers check and carry a claim without gaining false confi",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/library-board.md#19",
+    "label": "specs/percolate-application/library-board.md \u203a 13.3 Following a question in core, and what changed (REM-575)",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "specs/percolate-application/library-board.md#19",
+    "label": "specs/percolate-application/library-board.md \u203a 13.3 Following a question in core, and what changed (REM-575)",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-575.md#7",
+    "label": "board/cards/REM-575.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "commit/920c3a8deb",
+    "label": "commit 920c3a8: library-board \u00a713.3: a Library question follows a core question, and what changed in its answers (REM-57",
+    "gold": true
+   },
+   {
+    "id": "specs/research-platform/core-claims-contract.md#14",
+    "label": "specs/research-platform/core-claims-contract.md \u203a C8. Followed claims expose an authorised change feed",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-575.md#2",
+    "label": "board/cards/REM-575.md \u203a Goal",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/919a1ac137",
+    "label": "commit 919a1ac: board: REM-575 review \u2192 done",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-418.md#1",
+    "label": "board/cards/REM-418.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-345.md#1",
+    "label": "board/cards/REM-345.md",
+    "gold": false
+   },
+   {
+    "id": "commit/920c3a8deb",
+    "label": "commit 920c3a8: library-board \u00a713.3: a Library question follows a core question, and what changed in its answers (REM-57",
+    "gold": true
+   },
+   {
+    "id": "commit/aaae091004",
+    "label": "commit aaae091: library-board: \u00a713, questions as the one language for Library, the board and the first run (REM-537)",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "specs/percolate-application/library-board.md#19",
+    "label": "specs/percolate-application/library-board.md \u203a 13.3 Following a question in core, and what changed (REM-575)",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-166.md#4",
+    "label": "board/cards/REM-166.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-575.md#7",
+    "label": "board/cards/REM-575.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/concept-navigation.md#5",
+    "label": "specs/percolate-application/concept-navigation.md \u203a 3. Moves",
+    "gold": false
+   },
+   {
+    "id": "commit/0a918ef792",
+    "label": "commit 0a918ef: board: file REM-611 claims: a runnable tutorial explains trust, identity and evidence",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 1.0,
+  "Q": 1.0,
+  "LQ": 1.0,
+  "S": 0.0
+ }
+}

@@ -1,0 +1,410 @@
+{
+ "qid": "card:REM-777",
+ "set": "cards",
+ "question": "What was done about this, and why: authoring: design a quiet structural editor with a recoverable writing journey?",
+ "gold": [
+  {
+   "id": "commit/d6c1d40264",
+   "label": "commit d6c1d40: Specify Drafter structural editing and writing lineage (REM-777)",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/514e78b6ce",
+   "label": "commit 514e78b: board: file REM-777 authoring: design a quiet structural editor with a recoverable writing journey",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-777.md#1",
+   "label": "board/cards/REM-777.md",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-777.md#2",
+   "label": "board/cards/REM-777.md \u203a Goal",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-724.md#3",
+   "label": "board/cards/REM-724.md \u203a Done when",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "specs/percolate-application/semantic-editing-workspace.md#1",
+   "label": "specs/percolate-application/semantic-editing-workspace.md \u203a Semantic editing: marks in the reader, work in chat",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 2
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "board/cards/REM-777.md#2",
+    "label": "board/cards/REM-777.md \u203a Goal",
+    "role": "seed"
+   },
+   {
+    "id": "commit/d6c1d40264",
+    "label": "commit d6c1d40: Specify Drafter structural editing and writing lineage (REM-777)",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "board/cards/REM-777.md#2",
+    "b": "commit/d6c1d40264",
+    "via": [
+     {
+      "kind": "term",
+      "key": "specify drafter",
+      "width": 3
+     },
+     {
+      "kind": "term",
+      "key": "rem 777",
+      "width": 19
+     },
+     {
+      "kind": "term",
+      "key": "specify",
+      "width": 67
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [],
+  "entry": {
+   "seed": "board/cards/REM-777.md#2",
+   "gold": "commit/d6c1d40264",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 1249,
+  "within_2_doors": 32993,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "specs/percolate-application/README.md#4",
+    "label": "specs/percolate-application/README.md \u203a Read in this order",
+    "p": 0.00698164092068389,
+    "gold": false
+   },
+   {
+    "id": "commit/f577859052",
+    "label": "commit f577859: board: drafter-spec takes REM-777",
+    "p": 0.0032419158724395877,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-778.md#1",
+    "label": "board/cards/REM-778.md",
+    "p": 0.0028882697986639012,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-724.md#4",
+    "label": "board/cards/REM-724.md \u203a Log",
+    "p": 0.002882984872200576,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-777.md#6",
+    "label": "board/cards/REM-777.md \u203a Scope",
+    "p": 0.002868024832745805,
+    "gold": false
+   },
+   {
+    "id": "commit/d6c1d40264",
+    "label": "commit d6c1d40: Specify Drafter structural editing and writing lineage (REM-777)",
+    "p": 0.002593597168506948,
+    "gold": true
+   },
+   {
+    "id": "board/cards/REM-778.md#7",
+    "label": "board/cards/REM-778.md \u203a Log",
+    "p": 0.0025415753423083222,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-777.md#3",
+    "label": "board/cards/REM-777.md \u203a Evidence",
+    "p": 0.0025144387203713437,
+    "gold": false
+   },
+   {
+    "id": "board/team/drafter-spec.md#2",
+    "label": "board/team/drafter-spec.md \u203a Log",
+    "p": 0.0024881396638282323,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-570.md#2",
+    "label": "board/cards/REM-570.md \u203a Goal",
+    "p": 0.002322048536090071,
+    "gold": false
+   },
+   {
+    "id": "commit/5f4d00431e",
+    "label": "commit 5f4d004: Specify experimental canvas entry and user critique focus (REM-724)",
+    "p": 0.0022973520147744923,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-07-three-of-four-ingredients-missing.md#6",
+    "label": "meta/postmortems/2026-09-07-three-of-four-ingredients-missing.md \u203a What made it recoverable",
+    "p": 0.002235812578176823,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-779.md#1",
+    "label": "board/cards/REM-779.md",
+    "p": 0.0022148219411233846,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-777.md#8",
+    "label": "board/cards/REM-777.md \u203a Log",
+    "p": 0.0021984449036166376,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-780.md#1",
+    "label": "board/cards/REM-780.md",
+    "p": 0.002113540571375227,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-781.md#1",
+    "label": "board/cards/REM-781.md",
+    "p": 0.0021125491352388605,
+    "gold": false
+   },
+   {
+    "id": "commit/f4093447fe",
+    "label": "commit f409344: board: writing-institute checks in, ended",
+    "p": 0.0020781174697625097,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-695.md#1",
+    "label": "board/cards/REM-695.md",
+    "p": 0.0020653100800368915,
+    "gold": false
+   },
+   {
+    "id": "commit/edf422d455",
+    "label": "commit edf422d: board: file REM-778 authoring: specify Drafter branding, sharing and rich editing parity",
+    "p": 0.0018761705775359602,
+    "gold": false
+   },
+   {
+    "id": "board/team/focus-canvas.md#3",
+    "label": "board/team/focus-canvas.md \u203a Log",
+    "p": 0.001875014313883695,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/514e78b6ce",
+   "label": "commit 514e78b: board: file REM-777 authoring: design a quiet structural editor with a recoverable writing journey",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-777.md#1",
+   "label": "board/cards/REM-777.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-777.md#2",
+   "label": "board/cards/REM-777.md \u203a Goal",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-724.md#3",
+   "label": "board/cards/REM-724.md \u203a Done when",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/percolate-application/semantic-editing-workspace.md#1",
+   "label": "specs/percolate-application/semantic-editing-workspace.md \u203a Semantic editing: marks in the reader, work in chat",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/fec372f2c9",
+   "label": "commit fec372f: board: drafter-spec checks in, working",
+   "wave": 1,
+   "via": "term:drafter spec",
+   "gold": false
+  },
+  {
+   "id": "commit/04964a7f6d",
+   "label": "commit 04964a7: board: drafter-spec checks in, working",
+   "wave": 1,
+   "via": "term:drafter spec",
+   "gold": false
+  },
+  {
+   "id": "commit/9529ad63d7",
+   "label": "commit 9529ad6: board: drafter-spec checks in, ended",
+   "wave": 1,
+   "via": "term:drafter spec",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-777.md#6",
+   "label": "board/cards/REM-777.md \u203a Scope",
+   "wave": 1,
+   "via": "term:drafter spec",
+   "gold": false
+  },
+  {
+   "id": "commit/bdf3eb3178",
+   "label": "commit bdf3eb3: board: drafter-spec checks in, ended",
+   "wave": 1,
+   "via": "term:drafter spec",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "specs/percolate-application/README.md#4",
+    "label": "specs/percolate-application/README.md \u203a Read in this order",
+    "gold": false
+   },
+   {
+    "id": "commit/f577859052",
+    "label": "commit f577859: board: drafter-spec takes REM-777",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-778.md#1",
+    "label": "board/cards/REM-778.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-724.md#4",
+    "label": "board/cards/REM-724.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-777.md#6",
+    "label": "board/cards/REM-777.md \u203a Scope",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "specs/percolate-application/README.md#4",
+    "label": "specs/percolate-application/README.md \u203a Read in this order",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/authoring-and-publication.md#7",
+    "label": "specs/percolate-application/authoring-and-publication.md \u203a 3. A1 \u2014 Edit an owned research package in the browser",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-777.md#6",
+    "label": "board/cards/REM-777.md \u203a Scope",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-724.md#4",
+    "label": "board/cards/REM-724.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-779.md#1",
+    "label": "board/cards/REM-779.md",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/d6c1d40264",
+    "label": "commit d6c1d40: Specify Drafter structural editing and writing lineage (REM-777)",
+    "gold": true
+   },
+   {
+    "id": "board/cards/REM-777.md#6",
+    "label": "board/cards/REM-777.md \u203a Scope",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-724.md#2",
+    "label": "board/cards/REM-724.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "commit/79dc18e47b",
+    "label": "commit 79dc18e: board: REM-777 in-progress \u2192 done",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-570.md#2",
+    "label": "board/cards/REM-570.md \u203a Goal",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "board/cards/REM-777.md#6",
+    "label": "board/cards/REM-777.md \u203a Scope",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/README.md#4",
+    "label": "specs/percolate-application/README.md \u203a Read in this order",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1030.md#5",
+    "label": "board/cards/REM-1030.md \u203a Scope",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/writing-journeys.md#2",
+    "label": "specs/percolate-application/writing-journeys.md \u203a Writing journeys and the user model",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-777.md#8",
+    "label": "board/cards/REM-777.md \u203a Log",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 1.0,
+  "S": 0.0
+ }
+}

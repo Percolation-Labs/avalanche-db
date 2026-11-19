@@ -1,0 +1,466 @@
+{
+ "qid": "card:REM-139",
+ "set": "cards",
+ "question": "What was done about this, and why: tests: a red graph gate means the graph is wrong, not that the .so is a day behind?",
+ "gold": [
+  {
+   "id": "commit/f808da6b26",
+   "label": "commit f808da6: Both halves said 0.2.0, and one of them was a day behind (#133)",
+   "seed": false
+  },
+  {
+   "id": "commit/f9a8448e3b",
+   "label": "commit f9a8448: One key stopped where the other continued, and a comment said it could not (#136)",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "board/cards/REM-139.md#1",
+   "label": "board/cards/REM-139.md",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-139.md#2",
+   "label": "board/cards/REM-139.md \u203a Goal",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "meta/postmortems/README.md#42",
+   "label": "meta/postmortems/README.md \u203a A green gate run has a timestamp, and main moved",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "meta/postmortems/2026-09-08-the-step-the-header-described.md#5",
+   "label": "meta/postmortems/2026-09-08-the-step-the-header-described.md \u203a The defect inside the fix",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "commit/e8ca4dd09c",
+   "label": "commit e8ca4dd: Main's one red gate now says why it is red",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "board/cards/REM-139.md#2",
+    "label": "board/cards/REM-139.md \u203a Goal",
+    "role": "seed"
+   },
+   {
+    "id": "commit/f808da6b26",
+    "label": "commit f808da6: Both halves said 0.2.0, and one of them was a day behind (#133)",
+    "role": "gold"
+   },
+   {
+    "id": "commit/f9a8448e3b",
+    "label": "commit f9a8448: One key stopped where the other continued, and a comment said it could not (#136)",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "board/cards/REM-139.md#2",
+    "b": "commit/f808da6b26",
+    "via": [
+     {
+      "kind": "term",
+      "key": "day behind",
+      "width": 3
+     },
+     {
+      "kind": "term",
+      "key": "rem 139",
+      "width": 8
+     },
+     {
+      "kind": "term",
+      "key": "compiled half",
+      "width": 17
+     },
+     {
+      "kind": "term",
+      "key": "defers",
+      "width": 31
+     },
+     {
+      "kind": "term",
+      "key": "currency",
+      "width": 93
+     }
+    ]
+   },
+   {
+    "a": "commit/f808da6b26",
+    "b": "commit/f9a8448e3b",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "parser currency",
+      "width": 3
+     },
+     {
+      "kind": "term",
+      "key": "lib parser",
+      "width": 3
+     },
+     {
+      "kind": "term",
+      "key": "expired edge",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "without as_of",
+      "width": 6
+     },
+     {
+      "kind": "term",
+      "key": "still traversed",
+      "width": 7
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "board/cards/REM-139.md#2",
+   "gold": "commit/f808da6b26",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 1721,
+  "within_2_doors": 34039,
+  "gold_within_1": 2,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "commit/78e2235ee9",
+    "label": "commit 78e2235: The resolver never did the thing its own header described",
+    "p": 0.006288923308420103,
+    "gold": false
+   },
+   {
+    "id": "commit/f808da6b26",
+    "label": "commit f808da6: Both halves said 0.2.0, and one of them was a day behind (#133)",
+    "p": 0.0058929836220080085,
+    "gold": true
+   },
+   {
+    "id": "board/cards/REM-139.md#3",
+    "label": "board/cards/REM-139.md \u203a Evidence",
+    "p": 0.0034790876766176665,
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-self-model/tests.sql#8",
+    "label": "applications/percolate-self-model/tests.sql",
+    "p": 0.0034228270168912747,
+    "gold": false
+   },
+   {
+    "id": "meta/skills/deployment/SKILL.md#4",
+    "label": "meta/skills/deployment/SKILL.md \u203a 2. Ephemeral staging is where gates actually get checked",
+    "p": 0.0030593271161163367,
+    "gold": false
+   },
+   {
+    "id": "research-notes/algorithms/entropy-gated-resolution.md#7",
+    "label": "research-notes/algorithms/entropy-gated-resolution.md \u203a The step that was missing, added 2026-09-08",
+    "p": 0.002632927535660786,
+    "gold": false
+   },
+   {
+    "id": "PACKAGING.md#25",
+    "label": "PACKAGING.md \u203a Telling a lag red from a real red, without asking anybody",
+    "p": 0.002341219003752132,
+    "gold": false
+   },
+   {
+    "id": "commit/788a499e8d",
+    "label": "commit 788a499: The same fact in both forms, on one afternoon: two derivations missed it, one gate run found it (#120)",
+    "p": 0.0020726058294529104,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-141.md#2",
+    "label": "board/cards/REM-141.md \u203a Goal",
+    "p": 0.001977319522092515,
+    "gold": false
+   },
+   {
+    "id": "commit/f9a8448e3b",
+    "label": "commit f9a8448: One key stopped where the other continued, and a comment said it could not (#136)",
+    "p": 0.0018559025727238542,
+    "gold": true
+   },
+   {
+    "id": "board/cards/REM-339.md#5",
+    "label": "board/cards/REM-339.md \u203a Scope",
+    "p": 0.0018540486388959215,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/README.md#11",
+    "label": "meta/postmortems/README.md \u203a A diagnosis belongs on the failure, not in front of it",
+    "p": 0.0018041448198144454,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-dream/vocab-2.txt#4",
+    "label": "meta/lab/results/q4-dream/vocab-2.txt",
+    "p": 0.001786140679987,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-dream/vocab-3.txt#4",
+    "label": "meta/lab/results/q4-dream/vocab-3.txt",
+    "p": 0.0017697120004147274,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-dream/vocab-1.txt#3",
+    "label": "meta/lab/results/q4-dream/vocab-1.txt",
+    "p": 0.0015955339669235537,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-dream/vocab-all.txt#2",
+    "label": "meta/lab/results/q4-dream/vocab-all.txt",
+    "p": 0.0015502006627578623,
+    "gold": false
+   },
+   {
+    "id": "PACKAGING.md#23",
+    "label": "PACKAGING.md \u203a One version, two files, and the window between them",
+    "p": 0.0014001158159062373,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-12-the-diagnosis-was-the-expensive-half.md#4",
+    "label": "meta/postmortems/2026-09-12-the-diagnosis-was-the-expensive-half.md \u203a 2. The wrong explanations were sound, and that is ",
+    "p": 0.0011768524320454762,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-139.md#4",
+    "label": "board/cards/REM-139.md \u203a Log",
+    "p": 0.0011162638320803787,
+    "gold": false
+   },
+   {
+    "id": "research-notes/algorithms/entropy-gated-resolution.md#6",
+    "label": "research-notes/algorithms/entropy-gated-resolution.md \u203a The step that was missing, added 2026-09-08",
+    "p": 0.0010982366521233226,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "board/cards/REM-139.md#1",
+   "label": "board/cards/REM-139.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-139.md#2",
+   "label": "board/cards/REM-139.md \u203a Goal",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/postmortems/README.md#42",
+   "label": "meta/postmortems/README.md \u203a A green gate run has a timestamp, and main moved",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/postmortems/2026-09-08-the-step-the-header-described.md#5",
+   "label": "meta/postmortems/2026-09-08-the-step-the-header-described.md \u203a The defect inside the fix",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/e8ca4dd09c",
+   "label": "commit e8ca4dd: Main's one red gate now says why it is red",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-139.md#3",
+   "label": "board/cards/REM-139.md \u203a Evidence",
+   "wave": 1,
+   "via": "term:rem 139",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-139.md#4",
+   "label": "board/cards/REM-139.md \u203a Log",
+   "wave": 1,
+   "via": "term:rem 139",
+   "gold": false
+  },
+  {
+   "id": "PACKAGING.md#25",
+   "label": "PACKAGING.md \u203a Telling a lag red from a real red, without asking anybody",
+   "wave": 1,
+   "via": "term:rem 139",
+   "gold": false
+  },
+  {
+   "id": "meta/postmortems/2026-09-12-the-diagnosis-was-the-expensive-half.md#4",
+   "label": "meta/postmortems/2026-09-12-the-diagnosis-was-the-expensive-half.md \u203a 2. The wrong explanations were sound, and that is ",
+   "wave": 1,
+   "via": "term:rem 139",
+   "gold": false
+  },
+  {
+   "id": "commit/f9a8448e3b",
+   "label": "commit f9a8448: One key stopped where the other continued, and a comment said it could not (#136)",
+   "wave": 1,
+   "via": "term:rem 139",
+   "gold": true
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "commit/78e2235ee9",
+    "label": "commit 78e2235: The resolver never did the thing its own header described",
+    "gold": false
+   },
+   {
+    "id": "commit/f808da6b26",
+    "label": "commit f808da6: Both halves said 0.2.0, and one of them was a day behind (#133)",
+    "gold": true
+   },
+   {
+    "id": "board/cards/REM-139.md#3",
+    "label": "board/cards/REM-139.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-self-model/tests.sql#8",
+    "label": "applications/percolate-self-model/tests.sql",
+    "gold": false
+   },
+   {
+    "id": "meta/skills/deployment/SKILL.md#4",
+    "label": "meta/skills/deployment/SKILL.md \u203a 2. Ephemeral staging is where gates actually get checked",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "commit/78e2235ee9",
+    "label": "commit 78e2235: The resolver never did the thing its own header described",
+    "gold": false
+   },
+   {
+    "id": "commit/f808da6b26",
+    "label": "commit f808da6: Both halves said 0.2.0, and one of them was a day behind (#133)",
+    "gold": true
+   },
+   {
+    "id": "applications/percolate-self-model/tests.sql#8",
+    "label": "applications/percolate-self-model/tests.sql",
+    "gold": false
+   },
+   {
+    "id": "research-notes/algorithms/entropy-gated-resolution.md#7",
+    "label": "research-notes/algorithms/entropy-gated-resolution.md \u203a The step that was missing, added 2026-09-08",
+    "gold": false
+   },
+   {
+    "id": "PACKAGING.md#25",
+    "label": "PACKAGING.md \u203a Telling a lag red from a real red, without asking anybody",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "research-notes/algorithms/entropy-gated-resolution.md#7",
+    "label": "research-notes/algorithms/entropy-gated-resolution.md \u203a The step that was missing, added 2026-09-08",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-139.md#4",
+    "label": "board/cards/REM-139.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-139.md#3",
+    "label": "board/cards/REM-139.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "specs/ai-query-layer/graph-identity.md#10",
+    "label": "specs/ai-query-layer/graph-identity.md \u203a Keys (lookup index)",
+    "gold": false
+   },
+   {
+    "id": "PACKAGING.md#25",
+    "label": "PACKAGING.md \u203a Telling a lag red from a real red, without asking anybody",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "PACKAGING.md#25",
+    "label": "PACKAGING.md \u203a Telling a lag red from a real red, without asking anybody",
+    "gold": false
+   },
+   {
+    "id": "commit/0b7af9fd42",
+    "label": "commit 0b7af9f: The release flow, and the window where main is red on purpose",
+    "gold": false
+   },
+   {
+    "id": "commit/891e02919f",
+    "label": "commit 891e029: Main's red gate now says which red it is, and expires the excuse itself (#55)",
+    "gold": false
+   },
+   {
+    "id": "commit/ad4fb2cb29",
+    "label": "commit ad4fb2c: The diagnosis was the expensive half (#137)",
+    "gold": false
+   },
+   {
+    "id": "research-notes/algorithms/entropy-gated-resolution.md#7",
+    "label": "research-notes/algorithms/entropy-gated-resolution.md \u203a The step that was missing, added 2026-09-08",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.5,
+  "Q": 0.5,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

@@ -1,0 +1,484 @@
+{
+ "qid": "card:REM-74",
+ "set": "cards",
+ "question": "What was done about this, and why: self-model: a load from zero registers every relation it writes?",
+ "gold": [
+  {
+   "id": "commit/41474e0bdb",
+   "label": "commit 41474e0: A load from zero registers every relation it writes, and CI runs one",
+   "seed": true
+  },
+  {
+   "id": "commit/458c74ca1a",
+   "label": "commit 458c74c: Merge pull request #48 from Percolation-Labs/fix/rem-74-from-zero",
+   "seed": false
+  },
+  {
+   "id": "commit/9138e6c002",
+   "label": "commit 9138e6c: The self-model's from-zero load, and what it proved about REM-60",
+   "seed": true
+  },
+  {
+   "id": "commit/eb3be1bbc2",
+   "label": "commit eb3be1b: A package declared a channel that the code filling it could not see",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "board/cards/REM-74.md#1",
+   "label": "board/cards/REM-74.md",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/41474e0bdb",
+   "label": "commit 41474e0: A load from zero registers every relation it writes, and CI runs one",
+   "rank": 2,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "applications/percolate-self-model/product.md#20",
+   "label": "applications/percolate-self-model/product.md \u203a Findings about durability",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/9138e6c002",
+   "label": "commit 9138e6c: The self-model's from-zero load, and what it proved about REM-60",
+   "rank": 4,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "applications/percolate-self-model/metrics.sql#3",
+   "label": "applications/percolate-self-model/metrics.sql",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/41474e0bdb",
+    "label": "commit 41474e0: A load from zero registers every relation it writes, and CI runs one",
+    "role": "gold"
+   },
+   {
+    "id": "commit/458c74ca1a",
+    "label": "commit 458c74c: Merge pull request #48 from Percolation-Labs/fix/rem-74-from-zero",
+    "role": "gold"
+   },
+   {
+    "id": "commit/9138e6c002",
+    "label": "commit 9138e6c: The self-model's from-zero load, and what it proved about REM-60",
+    "role": "gold"
+   },
+   {
+    "id": "commit/eb3be1bbc2",
+    "label": "commit eb3be1b: A package declared a channel that the code filling it could not see",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/41474e0bdb",
+    "b": "commit/458c74ca1a",
+    "via": [
+     {
+      "kind": "term",
+      "key": "rem 74",
+      "width": 35
+     }
+    ]
+   },
+   {
+    "a": "commit/41474e0bdb",
+    "b": "commit/9138e6c002",
+    "via": [
+     {
+      "kind": "term",
+      "key": "incremental load",
+      "width": 22
+     },
+     {
+      "kind": "term",
+      "key": "unregistered",
+      "width": 30
+     },
+     {
+      "kind": "term",
+      "key": "rem 74",
+      "width": 35
+     }
+    ]
+   },
+   {
+    "a": "commit/41474e0bdb",
+    "b": "commit/eb3be1bbc2",
+    "via": [
+     {
+      "kind": "term",
+      "key": "api branch",
+      "width": 4
+     },
+     {
+      "kind": "term",
+      "key": "package declared",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "rem 74",
+      "width": 35
+     },
+     {
+      "kind": "term",
+      "key": "register_fetched",
+      "width": 37
+     },
+     {
+      "kind": "term",
+      "key": "two tables",
+      "width": 39
+     }
+    ]
+   }
+  ],
+  "cost": 3,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  "entry": {
+   "seed": "commit/41474e0bdb",
+   "gold": "commit/41474e0bdb",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 2810,
+  "within_2_doors": 33586,
+  "gold_within_1": 2,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "meta/postmortems/2026-09-11-four-spellings-of-current.md#7",
+    "label": "meta/postmortems/2026-09-11-four-spellings-of-current.md \u203a 5. Not verified",
+    "p": 0.0043599809614733925,
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-self-model/catalogue.sql#1",
+    "label": "applications/percolate-self-model/catalogue.sql",
+    "p": 0.003443571026999391,
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-self-model/tests.sql#12",
+    "label": "applications/percolate-self-model/tests.sql",
+    "p": 0.003327333393824937,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1041.md#2",
+    "label": "board/cards/REM-1041.md \u203a Goal",
+    "p": 0.0027148644293090046,
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-self-model/dream.sql#2",
+    "label": "applications/percolate-self-model/dream.sql",
+    "p": 0.002145141577636304,
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-self-model/decisions.sql#5",
+    "label": "applications/percolate-self-model/decisions.sql",
+    "p": 0.0017063692415913395,
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-self-model/schema.sql#12",
+    "label": "applications/percolate-self-model/schema.sql",
+    "p": 0.0015607009422362198,
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-self-model/product.md#19",
+    "label": "applications/percolate-self-model/product.md \u203a Findings about durability",
+    "p": 0.0015036033735491769,
+    "gold": false
+   },
+   {
+    "id": "dev/check.sh#14",
+    "label": "dev/check.sh",
+    "p": 0.0014512847602564298,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-74.md#2",
+    "label": "board/cards/REM-74.md \u203a Log",
+    "p": 0.0013977900294877207,
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-self-model/dreaming/reduce/challenge/challenge.py#5",
+    "label": "applications/percolate-self-model/dreaming/reduce/challenge/challenge.py",
+    "p": 0.0013627423587553888,
+    "gold": false
+   },
+   {
+    "id": "commit/2d54769a16",
+    "label": "commit 2d54769: A retracted edge went on answering every walk and every GRAPH query",
+    "p": 0.0012446199329772156,
+    "gold": false
+   },
+   {
+    "id": "commit/a0f1653236",
+    "label": "commit a0f1653: One stray NUL in a comment, twice, and now a gate for it",
+    "p": 0.001156806122571103,
+    "gold": false
+   },
+   {
+    "id": "commit/de854c3cc0",
+    "label": "commit de854c3: Merge pull request #545 from Percolation-Labs/james/rem-1147-unregistered",
+    "p": 0.0010970465856590234,
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-self-model/schema.sql#11",
+    "label": "applications/percolate-self-model/schema.sql",
+    "p": 0.001096053363302463,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-board/result.txt#5",
+    "label": "meta/lab/results/q4-board/result.txt",
+    "p": 0.0010644102602824113,
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-self-model/schema.sql#13",
+    "label": "applications/percolate-self-model/schema.sql",
+    "p": 0.0010494125131007474,
+    "gold": false
+   },
+   {
+    "id": "commit/37ed4cd487",
+    "label": "commit 37ed4cd: rows, not schema: the rule, and a gate that reads specs/ (REM-655) (#335)",
+    "p": 0.000998954671922208,
+    "gold": false
+   },
+   {
+    "id": "specs/packages/schema.sql#7",
+    "label": "specs/packages/schema.sql",
+    "p": 0.0009804050815776886,
+    "gold": false
+   },
+   {
+    "id": "specs/ai-query-layer/catalogue.sql#8",
+    "label": "specs/ai-query-layer/catalogue.sql",
+    "p": 0.0009451501153928429,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "board/cards/REM-74.md#1",
+   "label": "board/cards/REM-74.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/41474e0bdb",
+   "label": "commit 41474e0: A load from zero registers every relation it writes, and CI runs one",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "applications/percolate-self-model/product.md#20",
+   "label": "applications/percolate-self-model/product.md \u203a Findings about durability",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/9138e6c002",
+   "label": "commit 9138e6c: The self-model's from-zero load, and what it proved about REM-60",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "applications/percolate-self-model/metrics.sql#3",
+   "label": "applications/percolate-self-model/metrics.sql",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/458c74ca1a",
+   "label": "commit 458c74c: Merge pull request #48 from Percolation-Labs/fix/rem-74-from-zero",
+   "wave": 1,
+   "via": "term:rem 74",
+   "gold": true
+  },
+  {
+   "id": "applications/percolate-self-model/product.md#19",
+   "label": "applications/percolate-self-model/product.md \u203a Findings about durability",
+   "wave": 1,
+   "via": "term:rem 74",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-74.md#2",
+   "label": "board/cards/REM-74.md \u203a Log",
+   "wave": 1,
+   "via": "term:rem 74",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-83.md#1",
+   "label": "board/cards/REM-83.md",
+   "wave": 1,
+   "via": "term:rem 74",
+   "gold": false
+  },
+  {
+   "id": "applications/percolate-self-model/schema.sql#15",
+   "label": "applications/percolate-self-model/schema.sql",
+   "wave": 1,
+   "via": "term:rem 74",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "meta/postmortems/2026-09-11-four-spellings-of-current.md#7",
+    "label": "meta/postmortems/2026-09-11-four-spellings-of-current.md \u203a 5. Not verified",
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-self-model/catalogue.sql#1",
+    "label": "applications/percolate-self-model/catalogue.sql",
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-self-model/tests.sql#12",
+    "label": "applications/percolate-self-model/tests.sql",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1041.md#2",
+    "label": "board/cards/REM-1041.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-self-model/dream.sql#2",
+    "label": "applications/percolate-self-model/dream.sql",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "applications/percolate-self-model/catalogue.sql#1",
+    "label": "applications/percolate-self-model/catalogue.sql",
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-self-model/tests.sql#12",
+    "label": "applications/percolate-self-model/tests.sql",
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-self-model/dream.sql#2",
+    "label": "applications/percolate-self-model/dream.sql",
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-self-model/schema.sql#12",
+    "label": "applications/percolate-self-model/schema.sql",
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-self-model/decisions.sql#5",
+    "label": "applications/percolate-self-model/decisions.sql",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "board/cards/REM-74.md#2",
+    "label": "board/cards/REM-74.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "commit/da75de1af5",
+    "label": "commit da75de1: Merge pull request #287 from Percolation-Labs/amartey/selfmodel-private-tmp",
+    "gold": false
+   },
+   {
+    "id": "commit/458c74ca1a",
+    "label": "commit 458c74c: Merge pull request #48 from Percolation-Labs/fix/rem-74-from-zero",
+    "gold": true
+   },
+   {
+    "id": "applications/percolate-self-model/dream.sql#2",
+    "label": "applications/percolate-self-model/dream.sql",
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-self-model/decisions.sql#5",
+    "label": "applications/percolate-self-model/decisions.sql",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "applications/percolate-self-model/schema.sql#12",
+    "label": "applications/percolate-self-model/schema.sql",
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-self-model/decisions.seed.sql#11",
+    "label": "applications/percolate-self-model/decisions.seed.sql",
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-self-model/dream.sql#2",
+    "label": "applications/percolate-self-model/dream.sql",
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-self-model/catalogue.sql#1",
+    "label": "applications/percolate-self-model/catalogue.sql",
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-self-model/tests.sql#12",
+    "label": "applications/percolate-self-model/tests.sql",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.5,
+  "S": 0.0
+ }
+}

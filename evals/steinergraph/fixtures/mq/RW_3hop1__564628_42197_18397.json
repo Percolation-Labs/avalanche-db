@@ -1,0 +1,440 @@
+{
+ "qid": "RW:3hop1__564628_42197_18397",
+ "set": "mq",
+ "question": "Where did the person who argued that the country where Autograph formed had become an imperialist power declare he would intervene in the Korean conflict?",
+ "gold": [
+  {
+   "id": "mq:4aec4bfb579ba905",
+   "label": "Imperialism",
+   "seed": true
+  },
+  {
+   "id": "mq:92d6c665c7279c38",
+   "label": "Korean War",
+   "seed": false
+  },
+  {
+   "id": "mq:f5d734492b1ad749",
+   "label": "Autograph (Russian band)",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:4aec4bfb579ba905",
+   "label": "Imperialism",
+   "rank": 1,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:26e6ea804052c889",
+   "label": "Imperialism",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:0083e4ae049147f5",
+   "label": "Napoleon",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:4c3541d91b089741",
+   "label": "Cuban War of Independence",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:c790b09568607641",
+   "label": "Soviet Union in the Korean War",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:4aec4bfb579ba905",
+    "label": "Imperialism",
+    "role": "gold"
+   },
+   {
+    "id": "mq:92d6c665c7279c38",
+    "label": "Korean War",
+    "role": "gold"
+   },
+   {
+    "id": "mq:f5d734492b1ad749",
+    "label": "Autograph (Russian band)",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:4aec4bfb579ba905",
+    "b": "mq:92d6c665c7279c38",
+    "via": [
+     {
+      "kind": "term",
+      "key": "mao zedong",
+      "width": 6
+     },
+     {
+      "kind": "term",
+      "key": "zedong",
+      "width": 6
+     },
+     {
+      "kind": "term",
+      "key": "mao",
+      "width": 14
+     }
+    ]
+   },
+   {
+    "a": "mq:4aec4bfb579ba905",
+    "b": "mq:f5d734492b1ad749",
+    "via": [
+     {
+      "kind": "term",
+      "key": "ussr",
+      "width": 59
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   1,
+   2
+  ],
+  "entry": {
+   "seed": "mq:4aec4bfb579ba905",
+   "gold": "mq:4aec4bfb579ba905",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 4606,
+  "within_2_doors": 16481,
+  "gold_within_1": 2,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "mq:21ae3007acd23b1a",
+    "label": "Modern history",
+    "p": 0.0022411682063850735,
+    "gold": false
+   },
+   {
+    "id": "mq:29215ad2381e63b3",
+    "label": "Yalu River",
+    "p": 0.0019000718014910286,
+    "gold": false
+   },
+   {
+    "id": "mq:4bdf4409455ebd12",
+    "label": "Korean War",
+    "p": 0.0016763475764296019,
+    "gold": false
+   },
+   {
+    "id": "mq:8fad9ab6c72299f3",
+    "label": "Korean War",
+    "p": 0.001663919012821317,
+    "gold": false
+   },
+   {
+    "id": "mq:b0007052f5e32a47",
+    "label": "Lyall Stuart Scott",
+    "p": 0.001435254826503023,
+    "gold": false
+   },
+   {
+    "id": "mq:5dce05a063b67c11",
+    "label": "Great power",
+    "p": 0.001424990090848632,
+    "gold": false
+   },
+   {
+    "id": "mq:bca5bbb47e488a67",
+    "label": "Decolonization of the Americas",
+    "p": 0.001184150438361812,
+    "gold": false
+   },
+   {
+    "id": "mq:65d7e863a3fd8e97",
+    "label": "Korean War",
+    "p": 0.0010409765857327174,
+    "gold": false
+   },
+   {
+    "id": "mq:a17d5e324dfdd1b7",
+    "label": "Korean War",
+    "p": 0.0009844216457169908,
+    "gold": false
+   },
+   {
+    "id": "mq:f967bb6df4cb9e88",
+    "label": "History of the United States Army",
+    "p": 0.000915527028973614,
+    "gold": false
+   },
+   {
+    "id": "mq:440cc4f5c02415cf",
+    "label": "Mikoyan MiG-31",
+    "p": 0.0007955710588431137,
+    "gold": false
+   },
+   {
+    "id": "mq:19670a168d78a9e6",
+    "label": "List of presidents of the Philippines",
+    "p": 0.000733625218529556,
+    "gold": false
+   },
+   {
+    "id": "mq:b71c52d75541a083",
+    "label": "Australian Cattle Dog",
+    "p": 0.0007269483194374697,
+    "gold": false
+   },
+   {
+    "id": "mq:c6deb4b49718514a",
+    "label": "Cultural Revolution",
+    "p": 0.0007267856092770063,
+    "gold": false
+   },
+   {
+    "id": "mq:8575d162b2c066ac",
+    "label": "Spanish conquest of the Aztec Empire",
+    "p": 0.0007259235047644315,
+    "gold": false
+   },
+   {
+    "id": "mq:ece839cca540ee99",
+    "label": "Pacific War",
+    "p": 0.000651593999161455,
+    "gold": false
+   },
+   {
+    "id": "mq:7bc83e9ab46d039c",
+    "label": "Dwight D. Eisenhower",
+    "p": 0.0006492577289828264,
+    "gold": false
+   },
+   {
+    "id": "mq:18ce7e35bccb9038",
+    "label": "Hokkien",
+    "p": 0.0006227316068974318,
+    "gold": false
+   },
+   {
+    "id": "mq:da6fb17e9609f6e3",
+    "label": "Pam Ewing",
+    "p": 0.0006096862964358463,
+    "gold": false
+   },
+   {
+    "id": "mq:5b18e2428752406d",
+    "label": "Arnold Schwarzenegger",
+    "p": 0.0006042929412258466,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:4aec4bfb579ba905",
+   "label": "Imperialism",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:26e6ea804052c889",
+   "label": "Imperialism",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:0083e4ae049147f5",
+   "label": "Napoleon",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:4c3541d91b089741",
+   "label": "Cuban War of Independence",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:c790b09568607641",
+   "label": "Soviet Union in the Korean War",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:92d6c665c7279c38",
+   "label": "Korean War",
+   "wave": 1,
+   "via": "term:mao",
+   "gold": true
+  },
+  {
+   "id": "mq:e2994def0cccc2b9",
+   "label": "2008 Sichuan earthquake",
+   "wave": 1,
+   "via": "term:mao",
+   "gold": false
+  },
+  {
+   "id": "mq:792b03eb4862c840",
+   "label": "Geng Jimao",
+   "wave": 1,
+   "via": "term:mao",
+   "gold": false
+  },
+  {
+   "id": "mq:61ec38f215dc0720",
+   "label": "Mao Yushi",
+   "wave": 1,
+   "via": "term:mao",
+   "gold": false
+  },
+  {
+   "id": "mq:bbad443569bd8569",
+   "label": "Chiang Ching-kuo",
+   "wave": 1,
+   "via": "term:mao",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:21ae3007acd23b1a",
+    "label": "Modern history",
+    "gold": false
+   },
+   {
+    "id": "mq:29215ad2381e63b3",
+    "label": "Yalu River",
+    "gold": false
+   },
+   {
+    "id": "mq:4bdf4409455ebd12",
+    "label": "Korean War",
+    "gold": false
+   },
+   {
+    "id": "mq:8fad9ab6c72299f3",
+    "label": "Korean War",
+    "gold": false
+   },
+   {
+    "id": "mq:b0007052f5e32a47",
+    "label": "Lyall Stuart Scott",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:4bdf4409455ebd12",
+    "label": "Korean War",
+    "gold": false
+   },
+   {
+    "id": "mq:65d7e863a3fd8e97",
+    "label": "Korean War",
+    "gold": false
+   },
+   {
+    "id": "mq:29215ad2381e63b3",
+    "label": "Yalu River",
+    "gold": false
+   },
+   {
+    "id": "mq:946a4c19ea4cfc8a",
+    "label": "Korean War",
+    "gold": false
+   },
+   {
+    "id": "mq:92d6c665c7279c38",
+    "label": "Korean War",
+    "gold": true
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:4bdf4409455ebd12",
+    "label": "Korean War",
+    "gold": false
+   },
+   {
+    "id": "mq:29215ad2381e63b3",
+    "label": "Yalu River",
+    "gold": false
+   },
+   {
+    "id": "mq:65d7e863a3fd8e97",
+    "label": "Korean War",
+    "gold": false
+   },
+   {
+    "id": "mq:78e8b7439ffd080d",
+    "label": "Powers of the United States Congress",
+    "gold": false
+   },
+   {
+    "id": "mq:8fad9ab6c72299f3",
+    "label": "Korean War",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:946a4c19ea4cfc8a",
+    "label": "Korean War",
+    "gold": false
+   },
+   {
+    "id": "mq:53378bd44d954411",
+    "label": "Shark sanctuary",
+    "gold": false
+   },
+   {
+    "id": "mq:78e8b7439ffd080d",
+    "label": "Powers of the United States Congress",
+    "gold": false
+   },
+   {
+    "id": "mq:678b38f646b2ae4b",
+    "label": "Culture",
+    "gold": false
+   },
+   {
+    "id": "mq:8e9f82cd9f01327c",
+    "label": "Textual criticism",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.5,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

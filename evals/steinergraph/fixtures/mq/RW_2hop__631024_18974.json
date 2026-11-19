@@ -1,0 +1,407 @@
+{
+ "qid": "RW:2hop__631024_18974",
+ "set": "mq",
+ "question": "Who led the military expedition in the province where Gong Beibi was born?",
+ "gold": [
+  {
+   "id": "mq:d3a6059aadbb00aa",
+   "label": "Gong Beibi",
+   "seed": true
+  },
+  {
+   "id": "mq:f8065f63c716f45d",
+   "label": "Hokkien",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:d3a6059aadbb00aa",
+   "label": "Gong Beibi",
+   "rank": 1,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:9f8995c212b5a488",
+   "label": "Siege of Germanicia",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:f8065f63c716f45d",
+   "label": "Hokkien",
+   "rank": 3,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:fa41c0dbad03187b",
+   "label": "Military history of Indonesia",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:b12d30d19631c34b",
+   "label": "Newton\u2013Jenney Party",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:d3a6059aadbb00aa",
+    "label": "Gong Beibi",
+    "role": "gold"
+   },
+   {
+    "id": "mq:f8065f63c716f45d",
+    "label": "Hokkien",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:d3a6059aadbb00aa",
+    "b": "mq:f8065f63c716f45d",
+    "via": [
+     {
+      "kind": "term",
+      "key": "fujian",
+      "width": 13
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "mq:d3a6059aadbb00aa",
+   "gold": "mq:d3a6059aadbb00aa",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 3143,
+  "within_2_doors": 17945,
+  "gold_within_1": 0,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "mq:9dd8c3715eea1745",
+    "label": "Siege of Jerusalem (636\u2013637)",
+    "p": 0.003947264911817371,
+    "gold": false
+   },
+   {
+    "id": "mq:5aad82b73ab58df1",
+    "label": "Empress Dowager Huang",
+    "p": 0.002255031458126305,
+    "gold": false
+   },
+   {
+    "id": "mq:7806d64212f0fcf3",
+    "label": "Beibi",
+    "p": 0.0015023508239384994,
+    "gold": false
+   },
+   {
+    "id": "mq:ecb54a97029bc920",
+    "label": "Battle of the Little Bighorn",
+    "p": 0.0014949175204974296,
+    "gold": false
+   },
+   {
+    "id": "mq:9f298ef82fc30633",
+    "label": "Tang dynasty",
+    "p": 0.0014045944454910858,
+    "gold": false
+   },
+   {
+    "id": "mq:b7b3c541baf149ec",
+    "label": "Detroit",
+    "p": 0.0012582810210783793,
+    "gold": false
+   },
+   {
+    "id": "mq:65fd2d6305deaecf",
+    "label": "Greeks",
+    "p": 0.0011121846796347866,
+    "gold": false
+   },
+   {
+    "id": "mq:17084325a3315710",
+    "label": "Middle Ages",
+    "p": 0.001035331315458879,
+    "gold": false
+   },
+   {
+    "id": "mq:a23fc8d569e7fae4",
+    "label": "AFL Grand Final",
+    "p": 0.000962460578444935,
+    "gold": false
+   },
+   {
+    "id": "mq:3c6c898924790ae3",
+    "label": "Anglo-Spanish War (1585\u20131604)",
+    "p": 0.0009514574279371997,
+    "gold": false
+   },
+   {
+    "id": "mq:54394045ee2c33a7",
+    "label": "Rudolph the Red-Nosed Reindeer",
+    "p": 0.0009350504787166951,
+    "gold": false
+   },
+   {
+    "id": "mq:e15774a90d1db176",
+    "label": "Hokkien",
+    "p": 0.0009312699965043575,
+    "gold": false
+   },
+   {
+    "id": "mq:544285a798fe060e",
+    "label": "Canton of Z\u00fcrich",
+    "p": 0.000925367647544182,
+    "gold": false
+   },
+   {
+    "id": "mq:253920ea6f20c9e1",
+    "label": "Wen-Ying Tsai",
+    "p": 0.0009062869913346917,
+    "gold": false
+   },
+   {
+    "id": "mq:ee4aa5a48df4a138",
+    "label": "Edward Winslow",
+    "p": 0.0008800999741620463,
+    "gold": false
+   },
+   {
+    "id": "mq:e67b9aca0e09b0d1",
+    "label": "Zuchang Gymnasium",
+    "p": 0.0008629845527383356,
+    "gold": false
+   },
+   {
+    "id": "mq:c2356221b73aac93",
+    "label": "Middle Ages",
+    "p": 0.000849387890371707,
+    "gold": false
+   },
+   {
+    "id": "mq:f13da3eb774f5f7f",
+    "label": "Lumapas, Brunei-Muara",
+    "p": 0.0008324519812955811,
+    "gold": false
+   },
+   {
+    "id": "mq:773f3fe94083b8e8",
+    "label": "Black Hills Gold Rush",
+    "p": 0.0008156135634289777,
+    "gold": false
+   },
+   {
+    "id": "mq:bdf3e9dc8f0a6257",
+    "label": "Ali",
+    "p": 0.0008009923144386416,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:d3a6059aadbb00aa",
+   "label": "Gong Beibi",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:9f8995c212b5a488",
+   "label": "Siege of Germanicia",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:f8065f63c716f45d",
+   "label": "Hokkien",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:fa41c0dbad03187b",
+   "label": "Military history of Indonesia",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:b12d30d19631c34b",
+   "label": "Newton\u2013Jenney Party",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:a06f97635a718eab",
+   "label": "Special economic zones of China",
+   "wave": 1,
+   "via": "term:fujian",
+   "gold": false
+  },
+  {
+   "id": "mq:e67b9aca0e09b0d1",
+   "label": "Zuchang Gymnasium",
+   "wave": 1,
+   "via": "term:fujian",
+   "gold": false
+  },
+  {
+   "id": "mq:084be8ba9917654e",
+   "label": "Qing dynasty",
+   "wave": 1,
+   "via": "term:fujian",
+   "gold": false
+  },
+  {
+   "id": "mq:6c0d53cc1969fc0e",
+   "label": "Zhejiang",
+   "wave": 1,
+   "via": "term:fujian",
+   "gold": false
+  },
+  {
+   "id": "mq:353c74c02e4b64f7",
+   "label": "Jinjiang, Fujian",
+   "wave": 1,
+   "via": "term:fujian",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:9dd8c3715eea1745",
+    "label": "Siege of Jerusalem (636\u2013637)",
+    "gold": false
+   },
+   {
+    "id": "mq:5aad82b73ab58df1",
+    "label": "Empress Dowager Huang",
+    "gold": false
+   },
+   {
+    "id": "mq:7806d64212f0fcf3",
+    "label": "Beibi",
+    "gold": false
+   },
+   {
+    "id": "mq:ecb54a97029bc920",
+    "label": "Battle of the Little Bighorn",
+    "gold": false
+   },
+   {
+    "id": "mq:9f298ef82fc30633",
+    "label": "Tang dynasty",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:7806d64212f0fcf3",
+    "label": "Beibi",
+    "gold": false
+   },
+   {
+    "id": "mq:9dd8c3715eea1745",
+    "label": "Siege of Jerusalem (636\u2013637)",
+    "gold": false
+   },
+   {
+    "id": "mq:3c6c898924790ae3",
+    "label": "Anglo-Spanish War (1585\u20131604)",
+    "gold": false
+   },
+   {
+    "id": "mq:773f3fe94083b8e8",
+    "label": "Black Hills Gold Rush",
+    "gold": false
+   },
+   {
+    "id": "mq:52e2ef67ec7b6c84",
+    "label": "Antarctica",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:9dd8c3715eea1745",
+    "label": "Siege of Jerusalem (636\u2013637)",
+    "gold": false
+   },
+   {
+    "id": "mq:7806d64212f0fcf3",
+    "label": "Beibi",
+    "gold": false
+   },
+   {
+    "id": "mq:52e2ef67ec7b6c84",
+    "label": "Antarctica",
+    "gold": false
+   },
+   {
+    "id": "mq:5b10747be6ef4535",
+    "label": "Sima Yuanxian",
+    "gold": false
+   },
+   {
+    "id": "mq:5574181102bab533",
+    "label": "Shackleton Coast",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:7806d64212f0fcf3",
+    "label": "Beibi",
+    "gold": false
+   },
+   {
+    "id": "mq:c4193e17243c72f1",
+    "label": "Gaston de Gerlache",
+    "gold": false
+   },
+   {
+    "id": "mq:3cbaf67e0662e2e2",
+    "label": "Scott's Hut",
+    "gold": false
+   },
+   {
+    "id": "mq:dbe1d6d870d1ca3a",
+    "label": "Battle of Little Blue River",
+    "gold": false
+   },
+   {
+    "id": "mq:52e2ef67ec7b6c84",
+    "label": "Antarctica",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": null,
+  "Q": null,
+  "LQ": null,
+  "S": null
+ }
+}

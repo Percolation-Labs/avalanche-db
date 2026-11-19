@@ -1,0 +1,427 @@
+{
+ "qid": "RW:2hop__21103_16254",
+ "set": "mq",
+ "question": "By 1931, what percentage of the world's Jews were the group of Jews that represented the bulk of modern Jewry?",
+ "gold": [
+  {
+   "id": "mq:1a82acc64f8e6f21",
+   "label": "Jews",
+   "seed": true
+  },
+  {
+   "id": "mq:5e2b1ffe18d8565a",
+   "label": "Ashkenazi Jews",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:1a82acc64f8e6f21",
+   "label": "Jews",
+   "rank": 1,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:d1fc222a1bc68dd6",
+   "label": "Ashkenazi Jews",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:7c7a64d7353b588e",
+   "label": "Orthodox Judaism",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:5e2b1ffe18d8565a",
+   "label": "Ashkenazi Jews",
+   "rank": 4,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:06d8c55525587df7",
+   "label": "Ashkenazi Jews",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:1a82acc64f8e6f21",
+    "label": "Jews",
+    "role": "gold"
+   },
+   {
+    "id": "mq:5e2b1ffe18d8565a",
+    "label": "Ashkenazi Jews",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:1a82acc64f8e6f21",
+    "b": "mq:5e2b1ffe18d8565a",
+    "via": [
+     {
+      "kind": "term",
+      "key": "jews worldwide",
+      "width": 3
+     },
+     {
+      "kind": "term",
+      "key": "jewish population",
+      "width": 16
+     },
+     {
+      "kind": "term",
+      "key": "holocaust",
+      "width": 21
+     },
+     {
+      "kind": "term",
+      "key": "ashkenazi jews",
+      "width": 34
+     },
+     {
+      "kind": "term",
+      "key": "ashkenazi",
+      "width": 34
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "mq:1a82acc64f8e6f21",
+   "gold": "mq:1a82acc64f8e6f21",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 3788,
+  "within_2_doors": 17304,
+  "gold_within_1": 0,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "mq:31f82f17248eb433",
+    "label": "Ashkenazi Jews",
+    "p": 0.0026270055697900064,
+    "gold": false
+   },
+   {
+    "id": "mq:fef86a23c1346a82",
+    "label": "Orthodox Judaism",
+    "p": 0.0025628668726230784,
+    "gold": false
+   },
+   {
+    "id": "mq:809d591aa6f81972",
+    "label": "Jews",
+    "p": 0.0023764314006397753,
+    "gold": false
+   },
+   {
+    "id": "mq:b46b96920fb8ca15",
+    "label": "Ashkenazi Jews",
+    "p": 0.0017428814575093628,
+    "gold": false
+   },
+   {
+    "id": "mq:30ee635731ec47bc",
+    "label": "Ashkenazi Jews",
+    "p": 0.0017390082397523994,
+    "gold": false
+   },
+   {
+    "id": "mq:8ccdb04711a24d8e",
+    "label": "The Bellarosa Connection",
+    "p": 0.0017387487560593837,
+    "gold": false
+   },
+   {
+    "id": "mq:cfd777df36881b3e",
+    "label": "Ashkenazi Jews",
+    "p": 0.0013488778898998058,
+    "gold": false
+   },
+   {
+    "id": "mq:34133393705cfa92",
+    "label": "Jews",
+    "p": 0.0013470573714445093,
+    "gold": false
+   },
+   {
+    "id": "mq:5f8616017cb9e370",
+    "label": "Jews",
+    "p": 0.001326260458169037,
+    "gold": false
+   },
+   {
+    "id": "mq:12130e1d048675eb",
+    "label": "Ashkenazi Jews",
+    "p": 0.0013238957329146268,
+    "gold": false
+   },
+   {
+    "id": "mq:e7bef1c962af4188",
+    "label": "Migraine",
+    "p": 0.001241102032694874,
+    "gold": false
+   },
+   {
+    "id": "mq:dcd659daf264bdcf",
+    "label": "Israel",
+    "p": 0.0012366504178814598,
+    "gold": false
+   },
+   {
+    "id": "mq:9d7c19eaeaaa0ec0",
+    "label": "Jews",
+    "p": 0.001224436770312825,
+    "gold": false
+   },
+   {
+    "id": "mq:45df91149c88a5df",
+    "label": "New Haven, Connecticut",
+    "p": 0.001199668850141582,
+    "gold": false
+   },
+   {
+    "id": "mq:ec914d4b9f1bd6e6",
+    "label": "Ashkenazi Jews",
+    "p": 0.0011796039343353257,
+    "gold": false
+   },
+   {
+    "id": "mq:a349fb512d7d1dde",
+    "label": "Demographics of New Zealand",
+    "p": 0.0011082486379393492,
+    "gold": false
+   },
+   {
+    "id": "mq:7254c0cf67051846",
+    "label": "Orthodox Judaism",
+    "p": 0.0010763663698253436,
+    "gold": false
+   },
+   {
+    "id": "mq:692faa54c0c0a9bc",
+    "label": "Ashkenazi Jews",
+    "p": 0.0010592818615028827,
+    "gold": false
+   },
+   {
+    "id": "mq:56048cb046ebe1e8",
+    "label": "Penguin",
+    "p": 0.0010306532243587593,
+    "gold": false
+   },
+   {
+    "id": "mq:d0c383a49ca9e265",
+    "label": "Ashkenazi Jews",
+    "p": 0.0009692256931332168,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:1a82acc64f8e6f21",
+   "label": "Jews",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:d1fc222a1bc68dd6",
+   "label": "Ashkenazi Jews",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:7c7a64d7353b588e",
+   "label": "Orthodox Judaism",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:5e2b1ffe18d8565a",
+   "label": "Ashkenazi Jews",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:06d8c55525587df7",
+   "label": "Ashkenazi Jews",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:a53cf5038e97ff85",
+   "label": "Ashkenazi Jews",
+   "wave": 1,
+   "via": "term:ashkenazi jews",
+   "gold": false
+  },
+  {
+   "id": "mq:983206dcbc318dc4",
+   "label": "Ashkenazi Jews",
+   "wave": 1,
+   "via": "term:ashkenazi jews",
+   "gold": false
+  },
+  {
+   "id": "mq:90fe68ef42d1d037",
+   "label": "Ashkenazi Jews",
+   "wave": 1,
+   "via": "term:ashkenazi jews",
+   "gold": false
+  },
+  {
+   "id": "mq:64226aa26e48ddab",
+   "label": "Ashkenazi Jews",
+   "wave": 1,
+   "via": "term:ashkenazi jews",
+   "gold": false
+  },
+  {
+   "id": "mq:d71cb466239eeda9",
+   "label": "Albert Einstein",
+   "wave": 1,
+   "via": "term:ashkenazi jews",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:31f82f17248eb433",
+    "label": "Ashkenazi Jews",
+    "gold": false
+   },
+   {
+    "id": "mq:fef86a23c1346a82",
+    "label": "Orthodox Judaism",
+    "gold": false
+   },
+   {
+    "id": "mq:809d591aa6f81972",
+    "label": "Jews",
+    "gold": false
+   },
+   {
+    "id": "mq:b46b96920fb8ca15",
+    "label": "Ashkenazi Jews",
+    "gold": false
+   },
+   {
+    "id": "mq:30ee635731ec47bc",
+    "label": "Ashkenazi Jews",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:809d591aa6f81972",
+    "label": "Jews",
+    "gold": false
+   },
+   {
+    "id": "mq:fef86a23c1346a82",
+    "label": "Orthodox Judaism",
+    "gold": false
+   },
+   {
+    "id": "mq:31f82f17248eb433",
+    "label": "Ashkenazi Jews",
+    "gold": false
+   },
+   {
+    "id": "mq:12130e1d048675eb",
+    "label": "Ashkenazi Jews",
+    "gold": false
+   },
+   {
+    "id": "mq:dcd659daf264bdcf",
+    "label": "Israel",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:809d591aa6f81972",
+    "label": "Jews",
+    "gold": false
+   },
+   {
+    "id": "mq:31f82f17248eb433",
+    "label": "Ashkenazi Jews",
+    "gold": false
+   },
+   {
+    "id": "mq:5f8616017cb9e370",
+    "label": "Jews",
+    "gold": false
+   },
+   {
+    "id": "mq:12130e1d048675eb",
+    "label": "Ashkenazi Jews",
+    "gold": false
+   },
+   {
+    "id": "mq:fef86a23c1346a82",
+    "label": "Orthodox Judaism",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:8ccdb04711a24d8e",
+    "label": "The Bellarosa Connection",
+    "gold": false
+   },
+   {
+    "id": "mq:fef86a23c1346a82",
+    "label": "Orthodox Judaism",
+    "gold": false
+   },
+   {
+    "id": "mq:771da1893869fdf7",
+    "label": "Acts of the Apostles",
+    "gold": false
+   },
+   {
+    "id": "mq:dcd659daf264bdcf",
+    "label": "Israel",
+    "gold": false
+   },
+   {
+    "id": "mq:59f4ab2f585218a6",
+    "label": "Orthodox Judaism",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": null,
+  "Q": null,
+  "LQ": null,
+  "S": null
+ }
+}

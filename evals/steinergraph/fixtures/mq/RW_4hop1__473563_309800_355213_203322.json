@@ -1,0 +1,478 @@
+{
+ "qid": "RW:4hop1__473563_309800_355213_203322",
+ "set": "mq",
+ "question": "Which county shares border with the county having the birth city of the director of Let the Good Times Roll?",
+ "gold": [
+  {
+   "id": "mq:22e04f2d1a8e4849",
+   "label": "Robert Abel (animator)",
+   "seed": false
+  },
+  {
+   "id": "mq:626a824cdc0f2f3c",
+   "label": "Let the Good Times Roll (film)",
+   "seed": true
+  },
+  {
+   "id": "mq:a2972e0b5500c01a",
+   "label": "Gold Hill, North Carolina",
+   "seed": false
+  },
+  {
+   "id": "mq:e6fc5d3f18a1f09f",
+   "label": "Cleveland, North Carolina",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:3c7b55909cbb62dc",
+   "label": "Baranya County",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "mq:626a824cdc0f2f3c",
+   "label": "Let the Good Times Roll (film)",
+   "rank": 2,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:81a1cb18025cefc5",
+   "label": "Mecklenburg County, North Carolina",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:3c8659c74322220a",
+   "label": "Ramapo, New York",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "mq:2238c73790910f36",
+   "label": "Kansas City, Missouri",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 2
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:22e04f2d1a8e4849",
+    "label": "Robert Abel (animator)",
+    "role": "gold"
+   },
+   {
+    "id": "mq:626a824cdc0f2f3c",
+    "label": "Let the Good Times Roll (film)",
+    "role": "gold"
+   },
+   {
+    "id": "mq:a2972e0b5500c01a",
+    "label": "Gold Hill, North Carolina",
+    "role": "gold"
+   },
+   {
+    "id": "mq:e6fc5d3f18a1f09f",
+    "label": "Cleveland, North Carolina",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:22e04f2d1a8e4849",
+    "b": "mq:626a824cdc0f2f3c",
+    "via": [
+     {
+      "kind": "term",
+      "key": "robert abel",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "abel",
+      "width": 13
+     }
+    ]
+   },
+   {
+    "a": "mq:22e04f2d1a8e4849",
+    "b": "mq:e6fc5d3f18a1f09f",
+    "via": [
+     {
+      "kind": "term",
+      "key": "cleveland",
+      "width": 93
+     }
+    ]
+   },
+   {
+    "a": "mq:a2972e0b5500c01a",
+    "b": "mq:e6fc5d3f18a1f09f",
+    "via": [
+     {
+      "kind": "near",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "rowan county",
+      "width": 3
+     },
+     {
+      "kind": "term",
+      "key": "rowan",
+      "width": 7
+     },
+     {
+      "kind": "term",
+      "key": "county north",
+      "width": 23
+     },
+     {
+      "kind": "term",
+      "key": "north carolina",
+      "width": 96
+     }
+    ]
+   }
+  ],
+  "cost": 3,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   2,
+   1,
+   2,
+   2,
+   1
+  ],
+  "entry": {
+   "seed": "mq:626a824cdc0f2f3c",
+   "gold": "mq:626a824cdc0f2f3c",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 1578,
+  "within_2_doors": 19486,
+  "gold_within_1": 3,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "mq:b361b276f206ea9b",
+    "label": "Montebello, New York",
+    "p": 0.004390522414783615,
+    "gold": false
+   },
+   {
+    "id": "mq:f7884672b16b9c2b",
+    "label": "Let the Good Times Roll (Louis Jordan song)",
+    "p": 0.0027672448601882946,
+    "gold": false
+   },
+   {
+    "id": "mq:22e04f2d1a8e4849",
+    "label": "Robert Abel (animator)",
+    "p": 0.0021991921660109376,
+    "gold": true
+   },
+   {
+    "id": "mq:58b9a15b6d123044",
+    "label": "Motley County Independent School District",
+    "p": 0.0019589788537434307,
+    "gold": false
+   },
+   {
+    "id": "mq:ee11e8162e5e0067",
+    "label": "Acura MDX",
+    "p": 0.0019022923081343345,
+    "gold": false
+   },
+   {
+    "id": "mq:bc84d596fc3ab6bb",
+    "label": "William Curphey",
+    "p": 0.0018896109016966706,
+    "gold": false
+   },
+   {
+    "id": "mq:c3107b811f91a682",
+    "label": "Greenville County, South Carolina",
+    "p": 0.001465582609193768,
+    "gold": false
+   },
+   {
+    "id": "mq:b213307fcf9af7c0",
+    "label": "Blue Springs, Missouri",
+    "p": 0.0012634789872699506,
+    "gold": false
+   },
+   {
+    "id": "mq:48a9494555e1c71f",
+    "label": "University of Kansas",
+    "p": 0.0012390376278758628,
+    "gold": false
+   },
+   {
+    "id": "mq:18a62228f8593806",
+    "label": "Jones Point, New York",
+    "p": 0.0012113797593456548,
+    "gold": false
+   },
+   {
+    "id": "mq:f51c4f1bbfc82a4c",
+    "label": "Rockland Boulders",
+    "p": 0.001192503704708361,
+    "gold": false
+   },
+   {
+    "id": "mq:fa4be778b4842eb1",
+    "label": "Orthodox Judaism",
+    "p": 0.0011637118848717353,
+    "gold": false
+   },
+   {
+    "id": "mq:cb573697c5bc8f97",
+    "label": "Beyond Twilight",
+    "p": 0.00115117023737693,
+    "gold": false
+   },
+   {
+    "id": "mq:2e34be1d6b85ae4c",
+    "label": "Juventud Alianza",
+    "p": 0.0011442787771211009,
+    "gold": false
+   },
+   {
+    "id": "mq:6b99554eb3070fc8",
+    "label": "Pinellas County, Florida",
+    "p": 0.0010586975788063114,
+    "gold": false
+   },
+   {
+    "id": "mq:96cc51b90f303d32",
+    "label": "Age of Enlightenment",
+    "p": 0.0010288630077962433,
+    "gold": false
+   },
+   {
+    "id": "mq:9d6ab419efd262db",
+    "label": "Danube",
+    "p": 0.0008913601218166634,
+    "gold": false
+   },
+   {
+    "id": "mq:ca059f42a7a551ba",
+    "label": "Liberty Bridge (Budapest)",
+    "p": 0.0008405956425108842,
+    "gold": false
+   },
+   {
+    "id": "mq:717ebc793a0bea45",
+    "label": "Gresham Palace",
+    "p": 0.0008403492844314436,
+    "gold": false
+   },
+   {
+    "id": "mq:f35c3f2eb9d987d1",
+    "label": "Kazakhstan",
+    "p": 0.0008269492065878991,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:3c7b55909cbb62dc",
+   "label": "Baranya County",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:626a824cdc0f2f3c",
+   "label": "Let the Good Times Roll (film)",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:81a1cb18025cefc5",
+   "label": "Mecklenburg County, North Carolina",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:3c8659c74322220a",
+   "label": "Ramapo, New York",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:2238c73790910f36",
+   "label": "Kansas City, Missouri",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:22e04f2d1a8e4849",
+   "label": "Robert Abel (animator)",
+   "wave": 1,
+   "via": "term:robert abel",
+   "gold": true
+  },
+  {
+   "id": "mq:ed58c316fa43f575",
+   "label": "Tapan K. Datta",
+   "wave": 2,
+   "via": "term:cleveland",
+   "gold": false
+  },
+  {
+   "id": "mq:915cc62a68b6b750",
+   "label": "Hard Knocks (TV series)",
+   "wave": 2,
+   "via": "term:cleveland",
+   "gold": false
+  },
+  {
+   "id": "mq:e6fc5d3f18a1f09f",
+   "label": "Cleveland, North Carolina",
+   "wave": 2,
+   "via": "term:cleveland",
+   "gold": true
+  },
+  {
+   "id": "mq:9dc1de645529d287",
+   "label": "Linndale, Ohio",
+   "wave": 2,
+   "via": "term:cleveland",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:b361b276f206ea9b",
+    "label": "Montebello, New York",
+    "gold": false
+   },
+   {
+    "id": "mq:f7884672b16b9c2b",
+    "label": "Let the Good Times Roll (Louis Jordan song)",
+    "gold": false
+   },
+   {
+    "id": "mq:22e04f2d1a8e4849",
+    "label": "Robert Abel (animator)",
+    "gold": true
+   },
+   {
+    "id": "mq:58b9a15b6d123044",
+    "label": "Motley County Independent School District",
+    "gold": false
+   },
+   {
+    "id": "mq:ee11e8162e5e0067",
+    "label": "Acura MDX",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:f7884672b16b9c2b",
+    "label": "Let the Good Times Roll (Louis Jordan song)",
+    "gold": false
+   },
+   {
+    "id": "mq:b361b276f206ea9b",
+    "label": "Montebello, New York",
+    "gold": false
+   },
+   {
+    "id": "mq:58b9a15b6d123044",
+    "label": "Motley County Independent School District",
+    "gold": false
+   },
+   {
+    "id": "mq:c3107b811f91a682",
+    "label": "Greenville County, South Carolina",
+    "gold": false
+   },
+   {
+    "id": "mq:fa4be778b4842eb1",
+    "label": "Orthodox Judaism",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:f7884672b16b9c2b",
+    "label": "Let the Good Times Roll (Louis Jordan song)",
+    "gold": false
+   },
+   {
+    "id": "mq:b361b276f206ea9b",
+    "label": "Montebello, New York",
+    "gold": false
+   },
+   {
+    "id": "mq:fa4be778b4842eb1",
+    "label": "Orthodox Judaism",
+    "gold": false
+   },
+   {
+    "id": "mq:58b9a15b6d123044",
+    "label": "Motley County Independent School District",
+    "gold": false
+   },
+   {
+    "id": "mq:c3107b811f91a682",
+    "label": "Greenville County, South Carolina",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:3850c9406eab153a",
+    "label": "Blaine, Washington",
+    "gold": false
+   },
+   {
+    "id": "mq:9c251f4ddfe07a2c",
+    "label": "New Albin, Iowa",
+    "gold": false
+   },
+   {
+    "id": "mq:4a52b2dc19472b3d",
+    "label": "Good Little Girls (song)",
+    "gold": false
+   },
+   {
+    "id": "mq:32507a9a0c99bfdf",
+    "label": "Doe Hill, Virginia",
+    "gold": false
+   },
+   {
+    "id": "mq:29e5c618c0f41bb3",
+    "label": "Brokensword, Ohio",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.3333333333333333,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

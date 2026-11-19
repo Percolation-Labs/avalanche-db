@@ -1,0 +1,459 @@
+{
+ "qid": "RW:3hop1__106094_443779_52195",
+ "set": "mq",
+ "question": "Who is the president of the newly declared independent country part of the Commission of Truth and Friendship with the country that made Arisan!??",
+ "gold": [
+  {
+   "id": "mq:17866d9115df51b8",
+   "label": "Indonesia\u2013Timor Leste Commission of Truth and Friendship",
+   "seed": true
+  },
+  {
+   "id": "mq:1f5f6ad204c5ef43",
+   "label": "Arisan!",
+   "seed": false
+  },
+  {
+   "id": "mq:276962cfbb42f582",
+   "label": "East Timor",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:17866d9115df51b8",
+   "label": "Indonesia\u2013Timor Leste Commission of Truth and Friendship",
+   "rank": 1,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:74f32efc9701e253",
+   "label": "Made in USA",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "mq:3b20a598b990ea54",
+   "label": "Declaration of war by the United States",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "mq:beb5290653571cd8",
+   "label": "The Trouble with the Truth (song)",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:b1dcc2c4e0eacea2",
+   "label": "The Truth About Men",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:17866d9115df51b8",
+    "label": "Indonesia\u2013Timor Leste Commission of Truth and Friendship",
+    "role": "gold"
+   },
+   {
+    "id": "mq:1f5f6ad204c5ef43",
+    "label": "Arisan!",
+    "role": "gold"
+   },
+   {
+    "id": "mq:276962cfbb42f582",
+    "label": "East Timor",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:17866d9115df51b8",
+    "b": "mq:1f5f6ad204c5ef43",
+    "via": [
+     {
+      "kind": "term",
+      "key": "indonesian",
+      "width": 45
+     },
+     {
+      "kind": "term",
+      "key": "indonesia",
+      "width": 99
+     }
+    ]
+   },
+   {
+    "a": "mq:17866d9115df51b8",
+    "b": "mq:276962cfbb42f582",
+    "via": [
+     {
+      "kind": "near",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "timor leste",
+      "width": 7
+     },
+     {
+      "kind": "term",
+      "key": "leste",
+      "width": 7
+     },
+     {
+      "kind": "term",
+      "key": "east timor",
+      "width": 8
+     },
+     {
+      "kind": "term",
+      "key": "timor",
+      "width": 14
+     },
+     {
+      "kind": "term",
+      "key": "indonesia",
+      "width": 99
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   1,
+   1
+  ],
+  "entry": {
+   "seed": "mq:17866d9115df51b8",
+   "gold": "mq:17866d9115df51b8",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 2387,
+  "within_2_doors": 18693,
+  "gold_within_1": 2,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "mq:47a26db094a0c547",
+    "label": "Here I Am (Patty Loveless song)",
+    "p": 0.004204664727496912,
+    "gold": false
+   },
+   {
+    "id": "mq:508f50021d3172be",
+    "label": "Official List",
+    "p": 0.003962730957623311,
+    "gold": false
+   },
+   {
+    "id": "mq:8d5617a27bacef95",
+    "label": "Separation of powers under the United States Constitution",
+    "p": 0.0033868772642517368,
+    "gold": false
+   },
+   {
+    "id": "mq:806b0ef7585c51ac",
+    "label": "Philip Elman",
+    "p": 0.003171931677609788,
+    "gold": false
+   },
+   {
+    "id": "mq:8fd95af31ff765d8",
+    "label": "Marzuki Alie",
+    "p": 0.0028816433615296033,
+    "gold": false
+   },
+   {
+    "id": "mq:39007f6910b3e4f7",
+    "label": "That's the Thing About Love",
+    "p": 0.0023728489683001557,
+    "gold": false
+   },
+   {
+    "id": "mq:25ea186bd206ea20",
+    "label": "All the Fun",
+    "p": 0.002322440932542624,
+    "gold": false
+   },
+   {
+    "id": "mq:9d5b1d066c44c987",
+    "label": "When I Call Your Name (Vince Gill song)",
+    "p": 0.0021101193938058063,
+    "gold": false
+   },
+   {
+    "id": "mq:0676af0283021245",
+    "label": "If There Was a Way",
+    "p": 0.0019915824611558644,
+    "gold": false
+   },
+   {
+    "id": "mq:25b7bf2718549058",
+    "label": "IPod",
+    "p": 0.0015390528694153235,
+    "gold": false
+   },
+   {
+    "id": "mq:aaadbb405e6ca728",
+    "label": "Jabukovac, Negotin",
+    "p": 0.0014721973296610133,
+    "gold": false
+   },
+   {
+    "id": "mq:89fd499583d5c8a7",
+    "label": "Drinkin' My Baby Goodbye",
+    "p": 0.0012625872248135564,
+    "gold": false
+   },
+   {
+    "id": "mq:9df4130bd6613408",
+    "label": "Time Marches On (song)",
+    "p": 0.0011775339934920054,
+    "gold": false
+   },
+   {
+    "id": "mq:a943c2c29d60c7b1",
+    "label": "BNA Records",
+    "p": 0.001146276842442305,
+    "gold": false
+   },
+   {
+    "id": "mq:5bc59e0fa5103a45",
+    "label": "Chaim Herzog",
+    "p": 0.0011254603728333076,
+    "gold": false
+   },
+   {
+    "id": "mq:17e9d0c4de965dc8",
+    "label": "Bekka & Billy",
+    "p": 0.0011050643660907413,
+    "gold": false
+   },
+   {
+    "id": "mq:91f1237309c370d5",
+    "label": "Every Light in the House",
+    "p": 0.0010896640165072163,
+    "gold": false
+   },
+   {
+    "id": "mq:7fc2bca1b18ce197",
+    "label": "Humble and Kind",
+    "p": 0.001082845206642686,
+    "gold": false
+   },
+   {
+    "id": "mq:431de0ede34f4e24",
+    "label": "Daylight saving time in the United States",
+    "p": 0.000880768109287566,
+    "gold": false
+   },
+   {
+    "id": "mq:928fb4ea83a13fbf",
+    "label": "Political party",
+    "p": 0.0008739173034500755,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:17866d9115df51b8",
+   "label": "Indonesia\u2013Timor Leste Commission of Truth and Friendship",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:74f32efc9701e253",
+   "label": "Made in USA",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:3b20a598b990ea54",
+   "label": "Declaration of war by the United States",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:beb5290653571cd8",
+   "label": "The Trouble with the Truth (song)",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:b1dcc2c4e0eacea2",
+   "label": "The Truth About Men",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:cddc902141434aae",
+   "label": "Religion in Asia",
+   "wave": 1,
+   "via": "term:leste",
+   "gold": false
+  },
+  {
+   "id": "mq:aa79014a44cf5aa6",
+   "label": "United Nations Security Council Resolution 1264",
+   "wave": 1,
+   "via": "term:leste",
+   "gold": false
+  },
+  {
+   "id": "mq:c8f94b96c9179cec",
+   "label": "Zeferino Martins",
+   "wave": 1,
+   "via": "term:leste",
+   "gold": false
+  },
+  {
+   "id": "mq:a1b7e91cd390f701",
+   "label": "Estanislau da Silva",
+   "wave": 1,
+   "via": "term:leste",
+   "gold": false
+  },
+  {
+   "id": "mq:00b02542f9ff9663",
+   "label": "List of Ramon Magsaysay Award winners",
+   "wave": 1,
+   "via": "term:leste",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:47a26db094a0c547",
+    "label": "Here I Am (Patty Loveless song)",
+    "gold": false
+   },
+   {
+    "id": "mq:508f50021d3172be",
+    "label": "Official List",
+    "gold": false
+   },
+   {
+    "id": "mq:8d5617a27bacef95",
+    "label": "Separation of powers under the United States Constitution",
+    "gold": false
+   },
+   {
+    "id": "mq:806b0ef7585c51ac",
+    "label": "Philip Elman",
+    "gold": false
+   },
+   {
+    "id": "mq:8fd95af31ff765d8",
+    "label": "Marzuki Alie",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:8d5617a27bacef95",
+    "label": "Separation of powers under the United States Constitution",
+    "gold": false
+   },
+   {
+    "id": "mq:47a26db094a0c547",
+    "label": "Here I Am (Patty Loveless song)",
+    "gold": false
+   },
+   {
+    "id": "mq:806b0ef7585c51ac",
+    "label": "Philip Elman",
+    "gold": false
+   },
+   {
+    "id": "mq:25ea186bd206ea20",
+    "label": "All the Fun",
+    "gold": false
+   },
+   {
+    "id": "mq:0676af0283021245",
+    "label": "If There Was a Way",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:8d5617a27bacef95",
+    "label": "Separation of powers under the United States Constitution",
+    "gold": false
+   },
+   {
+    "id": "mq:0416cafd9120d5af",
+    "label": "United States declaration of war on Japan",
+    "gold": false
+   },
+   {
+    "id": "mq:5db8c252b0858f94",
+    "label": "United States declaration of war on Japan",
+    "gold": false
+   },
+   {
+    "id": "mq:0676af0283021245",
+    "label": "If There Was a Way",
+    "gold": false
+   },
+   {
+    "id": "mq:25ea186bd206ea20",
+    "label": "All the Fun",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:2020d2a5a789503f",
+    "label": "Warsaw Pact",
+    "gold": false
+   },
+   {
+    "id": "mq:113b8a4c7ac1b341",
+    "label": "Executive Order 12148",
+    "gold": false
+   },
+   {
+    "id": "mq:417d24cd9b783175",
+    "label": "Rule of law",
+    "gold": false
+   },
+   {
+    "id": "mq:abca2611e0934edc",
+    "label": "My Little Pony: Friendship Is Magic (season 8)",
+    "gold": false
+   },
+   {
+    "id": "mq:c8ed3f4902521aec",
+    "label": "Samoa",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

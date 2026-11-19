@@ -1,0 +1,485 @@
+{
+ "qid": "card:REM-433",
+ "set": "cards",
+ "question": "What was done about this, and why: spike: what Datalog's formalism buys the trust engine, measured against a recursive CTE?",
+ "gold": [
+  {
+   "id": "commit/2787c6cef7",
+   "label": "commit 2787c6c: REM-433: the claims-graph spike chose typed tables and recursive CTEs, with Datalog as the spec language",
+   "seed": false
+  },
+  {
+   "id": "commit/7088eb0905",
+   "label": "commit 7088eb0: Postmortem: a squash rewound two cards, and board.py guard refuses the next one",
+   "seed": false
+  },
+  {
+   "id": "commit/e4f1b9e628",
+   "label": "commit e4f1b9e: claims: the claims graph, specified for core with the application as its second tenant (REM-434)",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/69ebf6a4b6",
+   "label": "commit 69ebf6a: board: file REM-433 spike: what Datalog's formalism buys the trust engine, measured against a recursive ",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-433.md#1",
+   "label": "board/cards/REM-433.md",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-433.md#2",
+   "label": "board/cards/REM-433.md \u203a Goal",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "meta/spikes/2026-09-18-claims-graph/README.md#1",
+   "label": "meta/spikes/2026-09-18-claims-graph/README.md \u203a Spike: how to store and query the claims graph (REM-433)",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-433.md#4",
+   "label": "board/cards/REM-433.md \u203a Done when",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/2787c6cef7",
+    "label": "commit 2787c6c: REM-433: the claims-graph spike chose typed tables and recursive CTEs, with Datalog as the spec language",
+    "role": "gold"
+   },
+   {
+    "id": "commit/7088eb0905",
+    "label": "commit 7088eb0: Postmortem: a squash rewound two cards, and board.py guard refuses the next one",
+    "role": "gold"
+   },
+   {
+    "id": "commit/e4f1b9e628",
+    "label": "commit e4f1b9e: claims: the claims graph, specified for core with the application as its second tenant (REM-434)",
+    "role": "gold"
+   },
+   {
+    "id": "meta/spikes/2026-09-18-claims-graph/README.md#1",
+    "label": "meta/spikes/2026-09-18-claims-graph/README.md \u203a Spike: how to store and query the claims graph (REM-433)",
+    "role": "seed"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/2787c6cef7",
+    "b": "commit/7088eb0905",
+    "via": [
+     {
+      "kind": "term",
+      "key": "rem 433",
+      "width": 53
+     }
+    ]
+   },
+   {
+    "a": "commit/2787c6cef7",
+    "b": "commit/e4f1b9e628",
+    "via": [
+     {
+      "kind": "term",
+      "key": "derived readings",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "six questions",
+      "width": 15
+     },
+     {
+      "kind": "term",
+      "key": "rem 433",
+      "width": 53
+     },
+     {
+      "kind": "term",
+      "key": "designs",
+      "width": 65
+     }
+    ]
+   },
+   {
+    "a": "commit/2787c6cef7",
+    "b": "meta/spikes/2026-09-18-claims-graph/README.md#1",
+    "via": [
+     {
+      "kind": "near",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "side tables",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "typed side",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "wrong answers",
+      "width": 9
+     },
+     {
+      "kind": "term",
+      "key": "recursive ctes",
+      "width": 10
+     },
+     {
+      "kind": "term",
+      "key": "typed append",
+      "width": 11
+     }
+    ]
+   }
+  ],
+  "cost": 3,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   1,
+   1
+  ],
+  "entry": {
+   "seed": "meta/spikes/2026-09-18-claims-graph/README.md#1",
+   "gold": "commit/2787c6cef7",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 1333,
+  "within_2_doors": 33458,
+  "gold_within_1": 3,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "board/cards/REM-433.md#10",
+    "label": "board/cards/REM-433.md \u203a Log",
+    "p": 0.005068226281037318,
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-09-18-claims-graph/README.md#11",
+    "label": "meta/spikes/2026-09-18-claims-graph/README.md \u203a Datalog as vocabulary",
+    "p": 0.004386201531996041,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-433.md#7",
+    "label": "board/cards/REM-433.md \u203a Log",
+    "p": 0.004138149605263446,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-433.md#9",
+    "label": "board/cards/REM-433.md \u203a Log",
+    "p": 0.003603797506662807,
+    "gold": false
+   },
+   {
+    "id": "specs/claims/graph.md#54",
+    "label": "specs/claims/graph.md \u203a Result, 18 September",
+    "p": 0.003429223212863633,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-475.md#6",
+    "label": "board/cards/REM-475.md \u203a Log",
+    "p": 0.0031575485765312178,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-433.md#3",
+    "label": "board/cards/REM-433.md \u203a Evidence",
+    "p": 0.0026686444150107284,
+    "gold": false
+   },
+   {
+    "id": "commit/2787c6cef7",
+    "label": "commit 2787c6c: REM-433: the claims-graph spike chose typed tables and recursive CTEs, with Datalog as the spec language",
+    "p": 0.002447262095821551,
+    "gold": true
+   },
+   {
+    "id": "commit/52b273e964",
+    "label": "commit 52b273e: board: note on REM-433",
+    "p": 0.002057302442946998,
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-09-18-claims-graph/README.md#15",
+    "label": "meta/spikes/2026-09-18-claims-graph/README.md \u203a D: a postgres:18-bookworm container with postgresql-18-pg-mentat from re",
+    "p": 0.0017142558753899238,
+    "gold": false
+   },
+   {
+    "id": "commit/997f177ec0",
+    "label": "commit 997f177: board: file REM-432 decide: what a relationship between two claims is, what finds one, and where it is p",
+    "p": 0.001696494123758574,
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-self-model/dreaming/SPEC.md#13",
+    "label": "applications/percolate-self-model/dreaming/SPEC.md \u203a Evaluation and contribution gates",
+    "p": 0.0015939943986070376,
+    "gold": false
+   },
+   {
+    "id": "research-notes/essay-graph/corpus/reed-et-al-2008-aif-plus/notes.md#5",
+    "label": "research-notes/essay-graph/corpus/reed-et-al-2008-aif-plus/notes.md \u203a For an essay graph",
+    "p": 0.0015669443942994993,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-500.md#3",
+    "label": "board/cards/REM-500.md \u203a Evidence",
+    "p": 0.0015421682063870774,
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-09-18-claims-graph/README.md#9",
+    "label": "meta/spikes/2026-09-18-claims-graph/README.md \u203a What each design taught",
+    "p": 0.001490449489522941,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-dream/vocab-all.txt#5",
+    "label": "meta/lab/results/q4-dream/vocab-all.txt",
+    "p": 0.0014704592509275334,
+    "gold": false
+   },
+   {
+    "id": "specs/claims/graph.md#11",
+    "label": "specs/claims/graph.md \u203a 4. What we take from Datomic, and what we refuse",
+    "p": 0.0014382055995623057,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-dream/vocab-3.txt#1",
+    "label": "meta/lab/results/q4-dream/vocab-3.txt",
+    "p": 0.0014154217329191141,
+    "gold": false
+   },
+   {
+    "id": "specs/claims/graph.md#33",
+    "label": "specs/claims/graph.md \u203a What implication licenses",
+    "p": 0.001363656002286892,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-464.md#5",
+    "label": "board/cards/REM-464.md \u203a Scope",
+    "p": 0.001348328839553906,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/69ebf6a4b6",
+   "label": "commit 69ebf6a: board: file REM-433 spike: what Datalog's formalism buys the trust engine, measured against a recursive ",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-433.md#1",
+   "label": "board/cards/REM-433.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-433.md#2",
+   "label": "board/cards/REM-433.md \u203a Goal",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/spikes/2026-09-18-claims-graph/README.md#1",
+   "label": "meta/spikes/2026-09-18-claims-graph/README.md \u203a Spike: how to store and query the claims graph (REM-433)",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-433.md#4",
+   "label": "board/cards/REM-433.md \u203a Done when",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/claims/graph.md#54",
+   "label": "specs/claims/graph.md \u203a Result, 18 September",
+   "wave": 1,
+   "via": "term:language recursive",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-433.md#10",
+   "label": "board/cards/REM-433.md \u203a Log",
+   "wave": 1,
+   "via": "term:language recursive",
+   "gold": false
+  },
+  {
+   "id": "specs/claims/graph.md#60",
+   "label": "specs/claims/graph.md \u203a 18. Decisions, with what would reopen them",
+   "wave": 2,
+   "via": "term:spec language",
+   "gold": false
+  },
+  {
+   "id": "commit/2787c6cef7",
+   "label": "commit 2787c6c: REM-433: the claims-graph spike chose typed tables and recursive CTEs, with Datalog as the spec language",
+   "wave": 2,
+   "via": "term:spec language",
+   "gold": true
+  },
+  {
+   "id": "board/cards/REM-433.md#5",
+   "label": "board/cards/REM-433.md \u203a Scope",
+   "wave": 3,
+   "via": "term:pg_mentat",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "board/cards/REM-433.md#10",
+    "label": "board/cards/REM-433.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-09-18-claims-graph/README.md#11",
+    "label": "meta/spikes/2026-09-18-claims-graph/README.md \u203a Datalog as vocabulary",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-433.md#7",
+    "label": "board/cards/REM-433.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-433.md#9",
+    "label": "board/cards/REM-433.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "specs/claims/graph.md#54",
+    "label": "specs/claims/graph.md \u203a Result, 18 September",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "board/cards/REM-433.md#10",
+    "label": "board/cards/REM-433.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "specs/claims/graph.md#54",
+    "label": "specs/claims/graph.md \u203a Result, 18 September",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-433.md#9",
+    "label": "board/cards/REM-433.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-09-18-claims-graph/README.md#11",
+    "label": "meta/spikes/2026-09-18-claims-graph/README.md \u203a Datalog as vocabulary",
+    "gold": false
+   },
+   {
+    "id": "commit/2787c6cef7",
+    "label": "commit 2787c6c: REM-433: the claims-graph spike chose typed tables and recursive CTEs, with Datalog as the spec language",
+    "gold": true
+   }
+  ],
+  "LQ": [
+   {
+    "id": "specs/claims/graph.md#53",
+    "label": "specs/claims/graph.md \u203a Exit",
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-09-18-claims-graph/README.md#11",
+    "label": "meta/spikes/2026-09-18-claims-graph/README.md \u203a Datalog as vocabulary",
+    "gold": false
+   },
+   {
+    "id": "commit/55771bd409",
+    "label": "commit 55771bd: board: REM-433 in-progress \u2192 done",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-433.md#6",
+    "label": "board/cards/REM-433.md \u203a Links",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-434.md#5",
+    "label": "board/cards/REM-434.md \u203a Scope",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "meta/spikes/2026-09-18-claims-graph/README.md#11",
+    "label": "meta/spikes/2026-09-18-claims-graph/README.md \u203a Datalog as vocabulary",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-433.md#9",
+    "label": "board/cards/REM-433.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "specs/claims/graph.md#53",
+    "label": "specs/claims/graph.md \u203a Exit",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-433.md#7",
+    "label": "board/cards/REM-433.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-433.md#10",
+    "label": "board/cards/REM-433.md \u203a Log",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.3333333333333333,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

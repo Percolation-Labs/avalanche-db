@@ -1,0 +1,415 @@
+{
+ "qid": "pr:63",
+ "set": "prs",
+ "question": "What work went into this, and why: A comfortable line length is now a number, and the board says what is being worked on?",
+ "gold": [
+  {
+   "id": "commit/75530592b0",
+   "label": "commit 7553059: A comfortable line length is now a number",
+   "seed": true
+  },
+  {
+   "id": "commit/849c7dd858",
+   "label": "commit 849c7dd: The board says what is being worked on before the first edit, not after the last",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/227e349a6a",
+   "label": "commit 227e349: Merge pull request #63 from Percolation-Labs/docs/linear-states-and-measure",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/75530592b0",
+   "label": "commit 7553059: A comfortable line length is now a number",
+   "rank": 2,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "output/full-flow/prototype.js#5",
+   "label": "output/full-flow/prototype.js",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "board/messages/M-20261101-132826-d292.md#1",
+   "label": "board/messages/M-20261101-132826-d292.md",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "meta/lab/results/q4-miss-census-floor/result.txt#2",
+   "label": "meta/lab/results/q4-miss-census-floor/result.txt",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 2
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/75530592b0",
+    "label": "commit 7553059: A comfortable line length is now a number",
+    "role": "gold"
+   },
+   {
+    "id": "commit/849c7dd858",
+    "label": "commit 849c7dd: The board says what is being worked on before the first edit, not after the last",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/75530592b0",
+    "b": "commit/849c7dd858",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "code session_01fsgwrp3yfnxjb89eyr9pmx",
+      "width": 13
+     },
+     {
+      "kind": "term",
+      "key": "session_01fsgwrp3yfnxjb89eyr9pmx",
+      "width": 13
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "commit/75530592b0",
+   "gold": "commit/75530592b0",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 2659,
+  "within_2_doors": 33186,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "board/cards/REM-1275.md#9",
+    "label": "board/cards/REM-1275.md \u203a Log",
+    "p": 0.00689914270060178,
+    "gold": false
+   },
+   {
+    "id": "specs/agentic/ui-design-language.md#10",
+    "label": "specs/agentic/ui-design-language.md \u203a 3.5 Measure, wrapping, and the strings that must not break",
+    "p": 0.006633698991086942,
+    "gold": false
+   },
+   {
+    "id": "specs/agentic/ui-design-language.md#18",
+    "label": "specs/agentic/ui-design-language.md \u203a 8. Implementation sequence",
+    "p": 0.003759247482209737,
+    "gold": false
+   },
+   {
+    "id": "specs/agentic/ui-design-language.md#6",
+    "label": "specs/agentic/ui-design-language.md \u203a 3.1 Page structure and visual tokens",
+    "p": 0.003674249505301753,
+    "gold": false
+   },
+   {
+    "id": "commit/69646e92e5",
+    "label": "commit 69646e9: Merge pull request #91 from Percolation-Labs/docs/linear-estimates",
+    "p": 0.0036339542647342545,
+    "gold": false
+   },
+   {
+    "id": "commit/849c7dd858",
+    "label": "commit 849c7dd: The board says what is being worked on before the first edit, not after the last",
+    "p": 0.0029831803156167287,
+    "gold": true
+   },
+   {
+    "id": "board/cards/REM-602.md#3",
+    "label": "board/cards/REM-602.md \u203a Done when",
+    "p": 0.0024953246227572288,
+    "gold": false
+   },
+   {
+    "id": "output/full-flow/prototype.js#3",
+    "label": "output/full-flow/prototype.js",
+    "p": 0.0024381505381109235,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261101-132343-1a33.md#1",
+    "label": "board/messages/M-20261101-132343-1a33.md",
+    "p": 0.002181506194159584,
+    "gold": false
+   },
+   {
+    "id": "commit/4f354002b0",
+    "label": "commit 4f35400: Merge pull request #66 from Percolation-Labs/docs/rem-24-probe-etiquette",
+    "p": 0.0020484366545032995,
+    "gold": false
+   },
+   {
+    "id": "output/persistent-canvas/canvas.js#6",
+    "label": "output/persistent-canvas/canvas.js",
+    "p": 0.001851673325383113,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-101.md#1",
+    "label": "board/cards/REM-101.md",
+    "p": 0.001804180396050557,
+    "gold": false
+   },
+   {
+    "id": "commit/b7fd025bba",
+    "label": "commit b7fd025: The window is real, and CI is no longer standing in it (#65)",
+    "p": 0.001780088232960923,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261101-132639-8699.md#1",
+    "label": "board/messages/M-20261101-132639-8699.md",
+    "p": 0.0017747943214083944,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-37.md#1",
+    "label": "board/cards/REM-37.md",
+    "p": 0.0015984843687075927,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/casebook/CASEBOOK.md#4",
+    "label": "meta/lab/results/casebook/CASEBOOK.md \u203a Every miss",
+    "p": 0.0015458523665057078,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/casebook/CASEBOOK.md#9",
+    "label": "meta/lab/results/casebook/CASEBOOK.md \u203a Every miss",
+    "p": 0.0015018852074363874,
+    "gold": false
+   },
+   {
+    "id": "output/full-flow/prototype.js#9",
+    "label": "output/full-flow/prototype.js",
+    "p": 0.0014297893181255128,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261101-132101-87c8.md#1",
+    "label": "board/messages/M-20261101-132101-87c8.md",
+    "p": 0.001412003959358038,
+    "gold": false
+   },
+   {
+    "id": "output/full-flow/prototype.js#2",
+    "label": "output/full-flow/prototype.js",
+    "p": 0.001315789672051349,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/227e349a6a",
+   "label": "commit 227e349: Merge pull request #63 from Percolation-Labs/docs/linear-states-and-measure",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/75530592b0",
+   "label": "commit 7553059: A comfortable line length is now a number",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "output/full-flow/prototype.js#5",
+   "label": "output/full-flow/prototype.js",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/messages/M-20261101-132826-d292.md#1",
+   "label": "board/messages/M-20261101-132826-d292.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/q4-miss-census-floor/result.txt#2",
+   "label": "meta/lab/results/q4-miss-census-floor/result.txt",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-37.md#2",
+   "label": "board/cards/REM-37.md \u203a Log",
+   "wave": 1,
+   "via": "term:rem 37",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-37.md#1",
+   "label": "board/cards/REM-37.md",
+   "wave": 1,
+   "via": "term:rem 37",
+   "gold": false
+  },
+  {
+   "id": "specs/agentic/ui-design-language.md#18",
+   "label": "specs/agentic/ui-design-language.md \u203a 8. Implementation sequence",
+   "wave": 1,
+   "via": "term:rem 37",
+   "gold": false
+  },
+  {
+   "id": "commit/565bbd53c8",
+   "label": "commit 565bbd5: Three forward references in this document are now the rules they pointed at",
+   "wave": 1,
+   "via": "term:rem 37",
+   "gold": false
+  },
+  {
+   "id": "specs/agentic/ui-design-language.md#6",
+   "label": "specs/agentic/ui-design-language.md \u203a 3.1 Page structure and visual tokens",
+   "wave": 2,
+   "via": "term:line length",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "board/cards/REM-1275.md#9",
+    "label": "board/cards/REM-1275.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "specs/agentic/ui-design-language.md#10",
+    "label": "specs/agentic/ui-design-language.md \u203a 3.5 Measure, wrapping, and the strings that must not break",
+    "gold": false
+   },
+   {
+    "id": "specs/agentic/ui-design-language.md#18",
+    "label": "specs/agentic/ui-design-language.md \u203a 8. Implementation sequence",
+    "gold": false
+   },
+   {
+    "id": "specs/agentic/ui-design-language.md#6",
+    "label": "specs/agentic/ui-design-language.md \u203a 3.1 Page structure and visual tokens",
+    "gold": false
+   },
+   {
+    "id": "commit/69646e92e5",
+    "label": "commit 69646e9: Merge pull request #91 from Percolation-Labs/docs/linear-estimates",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "specs/agentic/ui-design-language.md#10",
+    "label": "specs/agentic/ui-design-language.md \u203a 3.5 Measure, wrapping, and the strings that must not break",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1275.md#9",
+    "label": "board/cards/REM-1275.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "specs/agentic/ui-design-language.md#6",
+    "label": "specs/agentic/ui-design-language.md \u203a 3.1 Page structure and visual tokens",
+    "gold": false
+   },
+   {
+    "id": "commit/849c7dd858",
+    "label": "commit 849c7dd: The board says what is being worked on before the first edit, not after the last",
+    "gold": true
+   },
+   {
+    "id": "output/persistent-canvas/canvas.js#6",
+    "label": "output/persistent-canvas/canvas.js",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "board/cards/REM-101.md#1",
+    "label": "board/cards/REM-101.md",
+    "gold": false
+   },
+   {
+    "id": "commit/849c7dd858",
+    "label": "commit 849c7dd: The board says what is being worked on before the first edit, not after the last",
+    "gold": true
+   },
+   {
+    "id": "board/messages/M-20261027-074612-69a3.md#1",
+    "label": "board/messages/M-20261027-074612-69a3.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1275.md#9",
+    "label": "board/cards/REM-1275.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-602.md#3",
+    "label": "board/cards/REM-602.md \u203a Done when",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "meta/postmortems/2026-10-10-critics-v0-in-six-releases.md#16",
+    "label": "meta/postmortems/2026-10-10-critics-v0-in-six-releases.md \u203a What would make v0 exciting rather than tolerable",
+    "gold": false
+   },
+   {
+    "id": "meta/skills/dogfooding/SKILL.md#7",
+    "label": "meta/skills/dogfooding/SKILL.md \u203a 4. Write down what stopped you \u2014 including the things you worked around",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-442.md#8",
+    "label": "board/cards/REM-442.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-100.md#1",
+    "label": "board/cards/REM-100.md",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-describe/result.txt#3",
+    "label": "meta/lab/results/q4-describe/result.txt",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 1.0,
+  "LQ": 1.0,
+  "S": 0.0
+ }
+}

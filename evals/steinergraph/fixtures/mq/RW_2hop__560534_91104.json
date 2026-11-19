@@ -1,0 +1,412 @@
+{
+ "qid": "RW:2hop__560534_91104",
+ "set": "mq",
+ "question": "What is the name of the experimental satellite that was the forerunner to the communication satellite of IRS-P3's operator?",
+ "gold": [
+  {
+   "id": "mq:37780991471e5e04",
+   "label": "ATS-6",
+   "seed": true
+  },
+  {
+   "id": "mq:846c29bd3f5ff7f6",
+   "label": "IRS-P3",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:e0b7c249ae6d464a",
+   "label": "IRS-P2",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:ba590ed64ab58da0",
+   "label": "General Satellite",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:37780991471e5e04",
+   "label": "ATS-6",
+   "rank": 3,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:23e0e13ca8ea0ad2",
+   "label": "BeiDou",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:cc99fb9bff0eaa9e",
+   "label": "GSAT-7",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:37780991471e5e04",
+    "label": "ATS-6",
+    "role": "gold"
+   },
+   {
+    "id": "mq:846c29bd3f5ff7f6",
+    "label": "IRS-P3",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:37780991471e5e04",
+    "b": "mq:846c29bd3f5ff7f6",
+    "via": [
+     {
+      "kind": "term",
+      "key": "isro",
+      "width": 8
+     },
+     {
+      "kind": "term",
+      "key": "experimental",
+      "width": 49
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "mq:37780991471e5e04",
+   "gold": "mq:37780991471e5e04",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 1502,
+  "within_2_doors": 19528,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "mq:cdced2962f6a0bee",
+    "label": "Polar Satellite Launch Vehicle",
+    "p": 0.005027517551008195,
+    "gold": false
+   },
+   {
+    "id": "mq:5ea24f47cb743120",
+    "label": "Nigeria",
+    "p": 0.004027749501948874,
+    "gold": false
+   },
+   {
+    "id": "mq:8415509f6a59e10c",
+    "label": "INSAT-4CR",
+    "p": 0.003943996830209585,
+    "gold": false
+   },
+   {
+    "id": "mq:d7b9acfbe9f7fe26",
+    "label": "BeiDou",
+    "p": 0.003546658727879796,
+    "gold": false
+   },
+   {
+    "id": "mq:df49d5531021bc62",
+    "label": "General Satellite",
+    "p": 0.003286685806392876,
+    "gold": false
+   },
+   {
+    "id": "mq:846c29bd3f5ff7f6",
+    "label": "IRS-P3",
+    "p": 0.003127117774037658,
+    "gold": true
+   },
+   {
+    "id": "mq:625a3cf58da617f4",
+    "label": "A. P. J. Abdul Kalam",
+    "p": 0.002294346740398295,
+    "gold": false
+   },
+   {
+    "id": "mq:6a7aae60b530c896",
+    "label": "BeiDou",
+    "p": 0.002185452385019647,
+    "gold": false
+   },
+   {
+    "id": "mq:c070d57d5b403c5c",
+    "label": "BeiDou",
+    "p": 0.002173996430723167,
+    "gold": false
+   },
+   {
+    "id": "mq:7827ab6ba3f347ae",
+    "label": "Hipparcos",
+    "p": 0.002139526912549264,
+    "gold": false
+   },
+   {
+    "id": "mq:a6349ff1cb8bebaf",
+    "label": "Resourcesat-2",
+    "p": 0.001994294304481881,
+    "gold": false
+   },
+   {
+    "id": "mq:3c45cee2388e71e8",
+    "label": "BeiDou",
+    "p": 0.0018030819953944704,
+    "gold": false
+   },
+   {
+    "id": "mq:e5adb21346f7f2d3",
+    "label": "Comcast",
+    "p": 0.001659441841709765,
+    "gold": false
+   },
+   {
+    "id": "mq:754b148f6f791b28",
+    "label": "INSAT-4B",
+    "p": 0.0016029060431255436,
+    "gold": false
+   },
+   {
+    "id": "mq:b41e64988bf052db",
+    "label": "Iran",
+    "p": 0.001566254869620134,
+    "gold": false
+   },
+   {
+    "id": "mq:c0381859199f23e4",
+    "label": "SICRAL 1B",
+    "p": 0.0015016563941008508,
+    "gold": false
+   },
+   {
+    "id": "mq:2069edbb0ff16fe3",
+    "label": "General Satellite",
+    "p": 0.0014060472120755536,
+    "gold": false
+   },
+   {
+    "id": "mq:6b6098cc167ef8d0",
+    "label": "Lockheed Martin A2100",
+    "p": 0.001301884986526771,
+    "gold": false
+   },
+   {
+    "id": "mq:36006a243815d94b",
+    "label": "Photodiode",
+    "p": 0.001223821627974261,
+    "gold": false
+   },
+   {
+    "id": "mq:8467b1eaccc912f6",
+    "label": "Dancing with the Stars (American season 24)",
+    "p": 0.0012198191144677465,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:e0b7c249ae6d464a",
+   "label": "IRS-P2",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:ba590ed64ab58da0",
+   "label": "General Satellite",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:37780991471e5e04",
+   "label": "ATS-6",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:23e0e13ca8ea0ad2",
+   "label": "BeiDou",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:cc99fb9bff0eaa9e",
+   "label": "GSAT-7",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:cdced2962f6a0bee",
+   "label": "Polar Satellite Launch Vehicle",
+   "wave": 1,
+   "via": "term:isro",
+   "gold": false
+  },
+  {
+   "id": "mq:846c29bd3f5ff7f6",
+   "label": "IRS-P3",
+   "wave": 1,
+   "via": "term:isro",
+   "gold": true
+  },
+  {
+   "id": "mq:8415509f6a59e10c",
+   "label": "INSAT-4CR",
+   "wave": 1,
+   "via": "term:isro",
+   "gold": false
+  },
+  {
+   "id": "mq:a6349ff1cb8bebaf",
+   "label": "Resourcesat-2",
+   "wave": 1,
+   "via": "term:isro",
+   "gold": false
+  },
+  {
+   "id": "mq:625a3cf58da617f4",
+   "label": "A. P. J. Abdul Kalam",
+   "wave": 1,
+   "via": "term:isro",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:cdced2962f6a0bee",
+    "label": "Polar Satellite Launch Vehicle",
+    "gold": false
+   },
+   {
+    "id": "mq:5ea24f47cb743120",
+    "label": "Nigeria",
+    "gold": false
+   },
+   {
+    "id": "mq:8415509f6a59e10c",
+    "label": "INSAT-4CR",
+    "gold": false
+   },
+   {
+    "id": "mq:d7b9acfbe9f7fe26",
+    "label": "BeiDou",
+    "gold": false
+   },
+   {
+    "id": "mq:df49d5531021bc62",
+    "label": "General Satellite",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:cdced2962f6a0bee",
+    "label": "Polar Satellite Launch Vehicle",
+    "gold": false
+   },
+   {
+    "id": "mq:5ea24f47cb743120",
+    "label": "Nigeria",
+    "gold": false
+   },
+   {
+    "id": "mq:8415509f6a59e10c",
+    "label": "INSAT-4CR",
+    "gold": false
+   },
+   {
+    "id": "mq:c070d57d5b403c5c",
+    "label": "BeiDou",
+    "gold": false
+   },
+   {
+    "id": "mq:846c29bd3f5ff7f6",
+    "label": "IRS-P3",
+    "gold": true
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:cdced2962f6a0bee",
+    "label": "Polar Satellite Launch Vehicle",
+    "gold": false
+   },
+   {
+    "id": "mq:5ea24f47cb743120",
+    "label": "Nigeria",
+    "gold": false
+   },
+   {
+    "id": "mq:8415509f6a59e10c",
+    "label": "INSAT-4CR",
+    "gold": false
+   },
+   {
+    "id": "mq:c070d57d5b403c5c",
+    "label": "BeiDou",
+    "gold": false
+   },
+   {
+    "id": "mq:7827ab6ba3f347ae",
+    "label": "Hipparcos",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:5ea24f47cb743120",
+    "label": "Nigeria",
+    "gold": false
+   },
+   {
+    "id": "mq:cdced2962f6a0bee",
+    "label": "Polar Satellite Launch Vehicle",
+    "gold": false
+   },
+   {
+    "id": "mq:1892886071f6b7bf",
+    "label": "Communications satellite",
+    "gold": false
+   },
+   {
+    "id": "mq:846c29bd3f5ff7f6",
+    "label": "IRS-P3",
+    "gold": true
+   },
+   {
+    "id": "mq:6a7aae60b530c896",
+    "label": "BeiDou",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 1.0,
+  "LQ": 0.0,
+  "S": 1.0
+ }
+}

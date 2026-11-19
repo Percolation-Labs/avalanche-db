@@ -1,0 +1,435 @@
+{
+ "qid": "RW:3hop1__380590_831637_91775",
+ "set": "mq",
+ "question": "What does the seal stand for in the operator of the list of destroyer classes of the operator of the USS ZigZag seals?",
+ "gold": [
+  {
+   "id": "mq:5de82255791981ef",
+   "label": "List of destroyer classes of the United States Navy",
+   "seed": false
+  },
+  {
+   "id": "mq:6aecdcfff72e6951",
+   "label": "USS Zigzag (SP-106)",
+   "seed": true
+  },
+  {
+   "id": "mq:8491a65de95efc12",
+   "label": "United States Navy SEALs",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:9837550623abbfe3",
+   "label": "List of destroyer classes of the Royal Navy",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:6aecdcfff72e6951",
+   "label": "USS Zigzag (SP-106)",
+   "rank": 2,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:00332ffd2c6cd99a",
+   "label": "HMS Seal (1897)",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:7679b4f3cb8fcb0d",
+   "label": "USS Balch (DD-363)",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:1da48673d8f80d9c",
+   "label": "USS MacLeish (DD-220)",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:5de82255791981ef",
+    "label": "List of destroyer classes of the United States Navy",
+    "role": "gold"
+   },
+   {
+    "id": "mq:6aecdcfff72e6951",
+    "label": "USS Zigzag (SP-106)",
+    "role": "gold"
+   },
+   {
+    "id": "mq:8491a65de95efc12",
+    "label": "United States Navy SEALs",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:5de82255791981ef",
+    "b": "mq:6aecdcfff72e6951",
+    "via": [
+     {
+      "kind": "term",
+      "key": "states navy",
+      "width": 83
+     }
+    ]
+   },
+   {
+    "a": "mq:5de82255791981ef",
+    "b": "mq:8491a65de95efc12",
+    "via": [
+     {
+      "kind": "term",
+      "key": "warfare",
+      "width": 48
+     },
+     {
+      "kind": "term",
+      "key": "states navy",
+      "width": 83
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   1,
+   1
+  ],
+  "entry": {
+   "seed": "mq:6aecdcfff72e6951",
+   "gold": "mq:6aecdcfff72e6951",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 719,
+  "within_2_doors": 20113,
+  "gold_within_1": 2,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "mq:5de82255791981ef",
+    "label": "List of destroyer classes of the United States Navy",
+    "p": 0.0049633844945747374,
+    "gold": true
+   },
+   {
+    "id": "mq:f8063df61ca9fcb7",
+    "label": "Mount Hood",
+    "p": 0.003201570856348136,
+    "gold": false
+   },
+   {
+    "id": "mq:4600f6b483acb880",
+    "label": "USS Kilty (DD-137)",
+    "p": 0.0028724569584701407,
+    "gold": false
+   },
+   {
+    "id": "mq:011f40e38dfbb718",
+    "label": "Battle of the Bay of Biscay",
+    "p": 0.002768871963731325,
+    "gold": false
+   },
+   {
+    "id": "mq:01040f11ae2d8590",
+    "label": "USS Kane (DD-235)",
+    "p": 0.0026809299151663787,
+    "gold": false
+   },
+   {
+    "id": "mq:761625c524acc63d",
+    "label": "USS Rhodes (DE-384)",
+    "p": 0.00245424530576528,
+    "gold": false
+   },
+   {
+    "id": "mq:966a7d4b989cfd81",
+    "label": "USS Goff (DD-247)",
+    "p": 0.002398053441256492,
+    "gold": false
+   },
+   {
+    "id": "mq:43c81101d2e0ebf8",
+    "label": "USS Kajeruna (SP-389)",
+    "p": 0.0022490313022036964,
+    "gold": false
+   },
+   {
+    "id": "mq:1643a0b20846425a",
+    "label": "USS Porter (DDG-78)",
+    "p": 0.00223641720375474,
+    "gold": false
+   },
+   {
+    "id": "mq:47148bb769eaa52e",
+    "label": "I Know What You Did Last Summer",
+    "p": 0.002158391387363342,
+    "gold": false
+   },
+   {
+    "id": "mq:61531cd333da4e32",
+    "label": "I Know What You Did Last Summer",
+    "p": 0.0021405263833938876,
+    "gold": false
+   },
+   {
+    "id": "mq:88006bcaf2e43dd5",
+    "label": "Justice League (film)",
+    "p": 0.002102053036027709,
+    "gold": false
+   },
+   {
+    "id": "mq:87f03dd25c571d79",
+    "label": "Australian Open",
+    "p": 0.0020392069025672367,
+    "gold": false
+   },
+   {
+    "id": "mq:b0e6d2be11f3ea60",
+    "label": "Return of the Crimson Guard",
+    "p": 0.0020307301692385326,
+    "gold": false
+   },
+   {
+    "id": "mq:95124121f30a20d9",
+    "label": "USS Brownson (DD-868)",
+    "p": 0.002019692269271557,
+    "gold": false
+   },
+   {
+    "id": "mq:8f052d6fa2fd8968",
+    "label": "Canadian Bird-class patrol vessel",
+    "p": 0.0019900333712513313,
+    "gold": false
+   },
+   {
+    "id": "mq:c8de416705b33216",
+    "label": "Benson Junction, Florida",
+    "p": 0.0019851599078835307,
+    "gold": false
+   },
+   {
+    "id": "mq:392c440e0ff201c5",
+    "label": "Lake-class patrol vessel",
+    "p": 0.0019185213093118436,
+    "gold": false
+   },
+   {
+    "id": "mq:4d14d5bbbdcfba73",
+    "label": "USS Macdonough (DD-351)",
+    "p": 0.001803929003744875,
+    "gold": false
+   },
+   {
+    "id": "mq:97e86f59406050fe",
+    "label": "USS Kirkpatrick (DE-318)",
+    "p": 0.0017728804993415634,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:9837550623abbfe3",
+   "label": "List of destroyer classes of the Royal Navy",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:6aecdcfff72e6951",
+   "label": "USS Zigzag (SP-106)",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:00332ffd2c6cd99a",
+   "label": "HMS Seal (1897)",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:7679b4f3cb8fcb0d",
+   "label": "USS Balch (DD-363)",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:1da48673d8f80d9c",
+   "label": "USS MacLeish (DD-220)",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:0c9653ad1065bb4f",
+   "label": "Lagos Colony",
+   "wave": 1,
+   "via": "term:hms",
+   "gold": false
+  },
+  {
+   "id": "mq:0e36a0d550222242",
+   "label": "HMS Buzzard (1887)",
+   "wave": 1,
+   "via": "term:hms",
+   "gold": false
+  },
+  {
+   "id": "mq:3e8d904cc4d4f0ef",
+   "label": "HMS Sandfly (1911)",
+   "wave": 1,
+   "via": "term:hms",
+   "gold": false
+  },
+  {
+   "id": "mq:870814a63c0cfa12",
+   "label": "HMS Victory",
+   "wave": 1,
+   "via": "term:hms",
+   "gold": false
+  },
+  {
+   "id": "mq:c08bed4479dd0a1c",
+   "label": "HMS Farnham Castle (K413)",
+   "wave": 1,
+   "via": "term:hms",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:5de82255791981ef",
+    "label": "List of destroyer classes of the United States Navy",
+    "gold": true
+   },
+   {
+    "id": "mq:f8063df61ca9fcb7",
+    "label": "Mount Hood",
+    "gold": false
+   },
+   {
+    "id": "mq:4600f6b483acb880",
+    "label": "USS Kilty (DD-137)",
+    "gold": false
+   },
+   {
+    "id": "mq:011f40e38dfbb718",
+    "label": "Battle of the Bay of Biscay",
+    "gold": false
+   },
+   {
+    "id": "mq:01040f11ae2d8590",
+    "label": "USS Kane (DD-235)",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:761625c524acc63d",
+    "label": "USS Rhodes (DE-384)",
+    "gold": false
+   },
+   {
+    "id": "mq:97e86f59406050fe",
+    "label": "USS Kirkpatrick (DE-318)",
+    "gold": false
+   },
+   {
+    "id": "mq:5de82255791981ef",
+    "label": "List of destroyer classes of the United States Navy",
+    "gold": true
+   },
+   {
+    "id": "mq:ba8c91b3c6c2c537",
+    "label": "USS Mahan (DDG-42)",
+    "gold": false
+   },
+   {
+    "id": "mq:4600f6b483acb880",
+    "label": "USS Kilty (DD-137)",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:761625c524acc63d",
+    "label": "USS Rhodes (DE-384)",
+    "gold": false
+   },
+   {
+    "id": "mq:97e86f59406050fe",
+    "label": "USS Kirkpatrick (DE-318)",
+    "gold": false
+   },
+   {
+    "id": "mq:5de82255791981ef",
+    "label": "List of destroyer classes of the United States Navy",
+    "gold": true
+   },
+   {
+    "id": "mq:ba8c91b3c6c2c537",
+    "label": "USS Mahan (DDG-42)",
+    "gold": false
+   },
+   {
+    "id": "mq:af963a89cb1d7318",
+    "label": "John W. Nyquist",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:4600f6b483acb880",
+    "label": "USS Kilty (DD-137)",
+    "gold": false
+   },
+   {
+    "id": "mq:4d14d5bbbdcfba73",
+    "label": "USS Macdonough (DD-351)",
+    "gold": false
+   },
+   {
+    "id": "mq:966a7d4b989cfd81",
+    "label": "USS Goff (DD-247)",
+    "gold": false
+   },
+   {
+    "id": "mq:ba590ed64ab58da0",
+    "label": "General Satellite",
+    "gold": false
+   },
+   {
+    "id": "mq:6713b09e85463b75",
+    "label": "Anti-aircraft warfare",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.5,
+  "Q": 0.5,
+  "LQ": 0.5,
+  "S": 0.0
+ }
+}

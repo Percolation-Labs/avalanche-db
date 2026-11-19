@@ -1,0 +1,434 @@
+{
+ "qid": "RW:3hop2__326964_851134_7713",
+ "set": "mq",
+ "question": "How long had Pfrang Association's headquarters location been the capitol city of Yaxing Coach's headquarters location?",
+ "gold": [
+  {
+   "id": "mq:ac35e864b56ffaf3",
+   "label": "Nanjing",
+   "seed": false
+  },
+  {
+   "id": "mq:da87a16ee625b1e9",
+   "label": "Pfrang Association",
+   "seed": true
+  },
+  {
+   "id": "mq:eeb0f63c60039f66",
+   "label": "Yaxing Coach",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:eeb0f63c60039f66",
+   "label": "Yaxing Coach",
+   "rank": 1,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:67357f36c7ebc179",
+   "label": "Headquarters of the United Nations",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "mq:45fba461f2b5f204",
+   "label": "Plymouth",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:44e1640306172532",
+   "label": "Place du Colonel Fabien",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "mq:da87a16ee625b1e9",
+   "label": "Pfrang Association",
+   "rank": 5,
+   "gold": true,
+   "doors_to_gold": 0
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:ac35e864b56ffaf3",
+    "label": "Nanjing",
+    "role": "gold"
+   },
+   {
+    "id": "mq:da87a16ee625b1e9",
+    "label": "Pfrang Association",
+    "role": "gold"
+   },
+   {
+    "id": "mq:eeb0f63c60039f66",
+    "label": "Yaxing Coach",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:ac35e864b56ffaf3",
+    "b": "mq:eeb0f63c60039f66",
+    "via": [
+     {
+      "kind": "near",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "yangzhou",
+      "width": 5
+     }
+    ]
+   },
+   {
+    "a": "mq:da87a16ee625b1e9",
+    "b": "mq:eeb0f63c60039f66",
+    "via": [
+     {
+      "kind": "term",
+      "key": "jiangsu",
+      "width": 19
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   1,
+   1
+  ],
+  "entry": {
+   "seed": "mq:da87a16ee625b1e9",
+   "gold": "mq:da87a16ee625b1e9",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 2861,
+  "within_2_doors": 18224,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "mq:4db1a253f3dbe618",
+    "label": "Devil's Highway (film)",
+    "p": 0.003146502266863817,
+    "gold": false
+   },
+   {
+    "id": "mq:f678029f6c8a4f65",
+    "label": "Guangling District",
+    "p": 0.0024378907849466787,
+    "gold": false
+   },
+   {
+    "id": "mq:9cd12484033b4b18",
+    "label": "Yang Meng",
+    "p": 0.0023040128348625283,
+    "gold": false
+   },
+   {
+    "id": "mq:e3eb30b8a6ddbba3",
+    "label": "Arc de Triomphe",
+    "p": 0.0021496629459973895,
+    "gold": false
+   },
+   {
+    "id": "mq:c0f2672ab76d88bb",
+    "label": "Beaver Motorcoach Corporation",
+    "p": 0.002064347113183548,
+    "gold": false
+   },
+   {
+    "id": "mq:29d0f6985acf7c4c",
+    "label": "Paris",
+    "p": 0.0017168013652663463,
+    "gold": false
+   },
+   {
+    "id": "mq:fd1e84807f5e684b",
+    "label": "Air-One Emergency Response Coalition",
+    "p": 0.0016105914286964115,
+    "gold": false
+   },
+   {
+    "id": "mq:6344276cb80094e9",
+    "label": "Police",
+    "p": 0.0016034657778356697,
+    "gold": false
+   },
+   {
+    "id": "mq:3dd8541343c6f866",
+    "label": "I Know Why the Caged Bird Sings",
+    "p": 0.0015087410229551062,
+    "gold": false
+   },
+   {
+    "id": "mq:61b8a8d183a69839",
+    "label": "Cuyuna Country State Recreation Area",
+    "p": 0.0010455744543299038,
+    "gold": false
+   },
+   {
+    "id": "mq:a57dbdcacd2021f3",
+    "label": "China Sunergy",
+    "p": 0.0008693458277574573,
+    "gold": false
+   },
+   {
+    "id": "mq:93ef252d58529e26",
+    "label": "First Indochina War",
+    "p": 0.0008673258382038916,
+    "gold": false
+   },
+   {
+    "id": "mq:7db913cc93f9d9ce",
+    "label": "Ludovic-Oscar Frossard",
+    "p": 0.0008586154788112469,
+    "gold": false
+   },
+   {
+    "id": "mq:756354eeda5492bf",
+    "label": "RCBC Plaza",
+    "p": 0.0008529399730855559,
+    "gold": false
+   },
+   {
+    "id": "mq:b29830ae7702980d",
+    "label": "Xiangshui County",
+    "p": 0.0008377340996918165,
+    "gold": false
+   },
+   {
+    "id": "mq:5895f1507d74a47a",
+    "label": "WFFG-FM",
+    "p": 0.0008292627402023498,
+    "gold": false
+   },
+   {
+    "id": "mq:c8de416705b33216",
+    "label": "Benson Junction, Florida",
+    "p": 0.0008120071975580975,
+    "gold": false
+   },
+   {
+    "id": "mq:bce23e088099d04b",
+    "label": "Chun Nan Jun",
+    "p": 0.000774710908413694,
+    "gold": false
+   },
+   {
+    "id": "mq:0a35b6c1cb97e14c",
+    "label": "Children of General Hospital",
+    "p": 0.0007710121272813603,
+    "gold": false
+   },
+   {
+    "id": "mq:41b5e3441156d040",
+    "label": "George VI",
+    "p": 0.0007688911461479084,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:eeb0f63c60039f66",
+   "label": "Yaxing Coach",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:67357f36c7ebc179",
+   "label": "Headquarters of the United Nations",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:45fba461f2b5f204",
+   "label": "Plymouth",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:44e1640306172532",
+   "label": "Place du Colonel Fabien",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:da87a16ee625b1e9",
+   "label": "Pfrang Association",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:a57dbdcacd2021f3",
+   "label": "China Sunergy",
+   "wave": 1,
+   "via": "term:jiangsu",
+   "gold": false
+  },
+  {
+   "id": "mq:b37df3b51fcea5e6",
+   "label": "Zhejiang",
+   "wave": 1,
+   "via": "term:jiangsu",
+   "gold": false
+  },
+  {
+   "id": "mq:b29830ae7702980d",
+   "label": "Xiangshui County",
+   "wave": 1,
+   "via": "term:jiangsu",
+   "gold": false
+  },
+  {
+   "id": "mq:f678029f6c8a4f65",
+   "label": "Guangling District",
+   "wave": 1,
+   "via": "term:jiangsu",
+   "gold": false
+  },
+  {
+   "id": "mq:ca12bff27560834f",
+   "label": "Nanjing",
+   "wave": 1,
+   "via": "term:jiangsu",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:4db1a253f3dbe618",
+    "label": "Devil's Highway (film)",
+    "gold": false
+   },
+   {
+    "id": "mq:f678029f6c8a4f65",
+    "label": "Guangling District",
+    "gold": false
+   },
+   {
+    "id": "mq:9cd12484033b4b18",
+    "label": "Yang Meng",
+    "gold": false
+   },
+   {
+    "id": "mq:e3eb30b8a6ddbba3",
+    "label": "Arc de Triomphe",
+    "gold": false
+   },
+   {
+    "id": "mq:c0f2672ab76d88bb",
+    "label": "Beaver Motorcoach Corporation",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:e3eb30b8a6ddbba3",
+    "label": "Arc de Triomphe",
+    "gold": false
+   },
+   {
+    "id": "mq:c0f2672ab76d88bb",
+    "label": "Beaver Motorcoach Corporation",
+    "gold": false
+   },
+   {
+    "id": "mq:f678029f6c8a4f65",
+    "label": "Guangling District",
+    "gold": false
+   },
+   {
+    "id": "mq:2369874333abf5a0",
+    "label": "Las Vegas Valley",
+    "gold": false
+   },
+   {
+    "id": "mq:c8de416705b33216",
+    "label": "Benson Junction, Florida",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:e3eb30b8a6ddbba3",
+    "label": "Arc de Triomphe",
+    "gold": false
+   },
+   {
+    "id": "mq:2369874333abf5a0",
+    "label": "Las Vegas Valley",
+    "gold": false
+   },
+   {
+    "id": "mq:c0f2672ab76d88bb",
+    "label": "Beaver Motorcoach Corporation",
+    "gold": false
+   },
+   {
+    "id": "mq:b9372c1ffab9bd2f",
+    "label": "San Antonio",
+    "gold": false
+   },
+   {
+    "id": "mq:f678029f6c8a4f65",
+    "label": "Guangling District",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:8afef6b4b095e8f5",
+    "label": "Avani, Kolar",
+    "gold": false
+   },
+   {
+    "id": "mq:b02145f2ea4151dc",
+    "label": "Love Around",
+    "gold": false
+   },
+   {
+    "id": "mq:c6a4dd39d969411b",
+    "label": "Tennessee",
+    "gold": false
+   },
+   {
+    "id": "mq:e6a814fdde522ac5",
+    "label": "Great Wolf Resorts",
+    "gold": false
+   },
+   {
+    "id": "mq:c2e39d82d996faf3",
+    "label": "United States Snooker Association",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

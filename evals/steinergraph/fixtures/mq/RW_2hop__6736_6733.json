@@ -1,0 +1,441 @@
+{
+ "qid": "RW:2hop__6736_6733",
+ "set": "mq",
+ "question": "To what division does the place where the most speakers are found belong?",
+ "gold": [
+  {
+   "id": "mq:ad6d127dfd12696a",
+   "label": "Catalan language",
+   "seed": false
+  },
+  {
+   "id": "mq:b35a84959116624b",
+   "label": "Catalan language",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:96f5b529afcd49a7",
+   "label": "Somalis",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:8dcc0dca487525e9",
+   "label": "Spanish language",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:12130e1d048675eb",
+   "label": "Ashkenazi Jews",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "mq:a171afff3d71c0af",
+   "label": "Dutch language",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:55ab5964f953f3db",
+   "label": "I Belong to Me",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 2
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:8dcc0dca487525e9",
+    "label": "Spanish language",
+    "role": "seed"
+   },
+   {
+    "id": "mq:ad6d127dfd12696a",
+    "label": "Catalan language",
+    "role": "gold"
+   },
+   {
+    "id": "mq:b35a84959116624b",
+    "label": "Catalan language",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:8dcc0dca487525e9",
+    "b": "mq:ad6d127dfd12696a",
+    "via": [
+     {
+      "kind": "near",
+      "width": 4
+     },
+     {
+      "kind": "term",
+      "key": "speakers",
+      "width": 37
+     }
+    ]
+   },
+   {
+    "a": "mq:ad6d127dfd12696a",
+    "b": "mq:b35a84959116624b",
+    "via": [
+     {
+      "kind": "near",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "central catalan",
+      "width": 4
+     },
+     {
+      "kind": "term",
+      "key": "catalan language",
+      "width": 23
+     },
+     {
+      "kind": "term",
+      "key": "catalan",
+      "width": 36
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "mq:8dcc0dca487525e9",
+   "gold": "mq:ad6d127dfd12696a",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 2660,
+  "within_2_doors": 18430,
+  "gold_within_1": 1,
+  "gold_within_2": 1,
+  "top_U": [
+   {
+    "id": "mq:f599d57a4336d40e",
+    "label": "Spanish language in the United States",
+    "p": 0.005301763257708699,
+    "gold": false
+   },
+   {
+    "id": "mq:4b97594a7779e7ce",
+    "label": "Somalis",
+    "p": 0.0032389470208940693,
+    "gold": false
+   },
+   {
+    "id": "mq:e48e09eaba449bd4",
+    "label": "Dutch language",
+    "p": 0.0021872324492717655,
+    "gold": false
+   },
+   {
+    "id": "mq:2ba5d3097cb05146",
+    "label": "Somalis",
+    "p": 0.0021863641505261914,
+    "gold": false
+   },
+   {
+    "id": "mq:68f68e3d5909ad15",
+    "label": "Marichjhanpi",
+    "p": 0.001936604398732737,
+    "gold": false
+   },
+   {
+    "id": "mq:1acf5f5166cb3850",
+    "label": "New York City",
+    "p": 0.0013566203642821184,
+    "gold": false
+   },
+   {
+    "id": "mq:e6231c022329be46",
+    "label": "Jacques Duchaussoy",
+    "p": 0.0013500129317244225,
+    "gold": false
+   },
+   {
+    "id": "mq:e894cc7ebda6c499",
+    "label": "Somalis",
+    "p": 0.0013239471112066231,
+    "gold": false
+   },
+   {
+    "id": "mq:32f43c747a70c85e",
+    "label": "Galicia (Spain)",
+    "p": 0.0012988769398360614,
+    "gold": false
+   },
+   {
+    "id": "mq:af4c8a07c8d75dfc",
+    "label": "List of Star Trek composers and music",
+    "p": 0.0012173751787476234,
+    "gold": false
+   },
+   {
+    "id": "mq:4e32cde471329a9c",
+    "label": "Germans",
+    "p": 0.0011638547093658818,
+    "gold": false
+   },
+   {
+    "id": "mq:95207532704ca11c",
+    "label": "Up Where We Belong",
+    "p": 0.001141617209071629,
+    "gold": false
+   },
+   {
+    "id": "mq:b72fdd0f193c3690",
+    "label": "Somalis",
+    "p": 0.0011077516377173012,
+    "gold": false
+   },
+   {
+    "id": "mq:d0255feaf0211d89",
+    "label": "Somali Latin alphabet",
+    "p": 0.0010875220356206387,
+    "gold": false
+   },
+   {
+    "id": "mq:a2b394afb9143381",
+    "label": "Germany",
+    "p": 0.0008593859093955608,
+    "gold": false
+   },
+   {
+    "id": "mq:6078b9e8bca9e6ba",
+    "label": "PyQt",
+    "p": 0.0008153062857865903,
+    "gold": false
+   },
+   {
+    "id": "mq:620eaa04c1dc3767",
+    "label": "Old English",
+    "p": 0.0008148972245255812,
+    "gold": false
+   },
+   {
+    "id": "mq:f75a00fbba95f2ad",
+    "label": "Immunogenetics (journal)",
+    "p": 0.0008136715539241452,
+    "gold": false
+   },
+   {
+    "id": "mq:5848e15da1fd8b08",
+    "label": "Russian language",
+    "p": 0.0008116991390734918,
+    "gold": false
+   },
+   {
+    "id": "mq:cfb9991924bc64e8",
+    "label": "Platonic love",
+    "p": 0.0008046749800050771,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:96f5b529afcd49a7",
+   "label": "Somalis",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:8dcc0dca487525e9",
+   "label": "Spanish language",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:12130e1d048675eb",
+   "label": "Ashkenazi Jews",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:a171afff3d71c0af",
+   "label": "Dutch language",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:55ab5964f953f3db",
+   "label": "I Belong to Me",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:2ba5d3097cb05146",
+   "label": "Somalis",
+   "wave": 1,
+   "via": "term:somali language",
+   "gold": false
+  },
+  {
+   "id": "mq:d0255feaf0211d89",
+   "label": "Somali Latin alphabet",
+   "wave": 1,
+   "via": "term:somali language",
+   "gold": false
+  },
+  {
+   "id": "mq:e894cc7ebda6c499",
+   "label": "Somalis",
+   "wave": 1,
+   "via": "term:somali language",
+   "gold": false
+  },
+  {
+   "id": "mq:b7ea3160e146e6d0",
+   "label": "Iranian languages",
+   "wave": 2,
+   "via": "term:speakers",
+   "gold": false
+  },
+  {
+   "id": "mq:f5fdf64298d8985e",
+   "label": "Swedish Sign Language",
+   "wave": 2,
+   "via": "term:speakers",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:f599d57a4336d40e",
+    "label": "Spanish language in the United States",
+    "gold": false
+   },
+   {
+    "id": "mq:4b97594a7779e7ce",
+    "label": "Somalis",
+    "gold": false
+   },
+   {
+    "id": "mq:e48e09eaba449bd4",
+    "label": "Dutch language",
+    "gold": false
+   },
+   {
+    "id": "mq:2ba5d3097cb05146",
+    "label": "Somalis",
+    "gold": false
+   },
+   {
+    "id": "mq:68f68e3d5909ad15",
+    "label": "Marichjhanpi",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:f599d57a4336d40e",
+    "label": "Spanish language in the United States",
+    "gold": false
+   },
+   {
+    "id": "mq:95207532704ca11c",
+    "label": "Up Where We Belong",
+    "gold": false
+   },
+   {
+    "id": "mq:4e32cde471329a9c",
+    "label": "Germans",
+    "gold": false
+   },
+   {
+    "id": "mq:c6f3a5720eee3b86",
+    "label": "Languages of the United States",
+    "gold": false
+   },
+   {
+    "id": "mq:8e947a873374de7a",
+    "label": "Languages of the United States",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:f599d57a4336d40e",
+    "label": "Spanish language in the United States",
+    "gold": false
+   },
+   {
+    "id": "mq:95207532704ca11c",
+    "label": "Up Where We Belong",
+    "gold": false
+   },
+   {
+    "id": "mq:c6f3a5720eee3b86",
+    "label": "Languages of the United States",
+    "gold": false
+   },
+   {
+    "id": "mq:8e947a873374de7a",
+    "label": "Languages of the United States",
+    "gold": false
+   },
+   {
+    "id": "mq:105eed014313f0ca",
+    "label": "Houston Astros",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:637cb8c2b77bbc88",
+    "label": "Darwin's finches",
+    "gold": false
+   },
+   {
+    "id": "mq:95207532704ca11c",
+    "label": "Up Where We Belong",
+    "gold": false
+   },
+   {
+    "id": "mq:f599d57a4336d40e",
+    "label": "Spanish language in the United States",
+    "gold": false
+   },
+   {
+    "id": "mq:a1c4a8dd346d31bb",
+    "label": "BC Lions",
+    "gold": false
+   },
+   {
+    "id": "mq:fb67048549ad3ec2",
+    "label": "Dry Tortugas",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

@@ -1,0 +1,415 @@
+{
+ "qid": "card:REM-801",
+ "set": "cards",
+ "question": "What was done about this, and why: critics: keep private thinking notes outside queued reviews and transformations?",
+ "gold": [
+  {
+   "id": "commit/864f721369",
+   "label": "commit 864f721: Document the live critic queue and private thinking boundary (REM-801)",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/108a8285ce",
+   "label": "commit 108a828: board: file REM-801 critics: keep private thinking notes outside queued reviews and transformations",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-801.md#1",
+   "label": "board/cards/REM-801.md",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-801.md#2",
+   "label": "board/cards/REM-801.md \u203a Goal",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "specs/percolate-application/drafter.md#80",
+   "label": "specs/percolate-application/drafter.md \u203a Durable review handoff",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-801.md#4",
+   "label": "board/cards/REM-801.md \u203a Done when",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/864f721369",
+    "label": "commit 864f721: Document the live critic queue and private thinking boundary (REM-801)",
+    "role": "gold"
+   },
+   {
+    "id": "specs/percolate-application/drafter.md#80",
+    "label": "specs/percolate-application/drafter.md \u203a Durable review handoff",
+    "role": "seed"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/864f721369",
+    "b": "specs/percolate-application/drafter.md#80",
+    "via": [
+     {
+      "kind": "term",
+      "key": "thinking boundary",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "boundary rem",
+      "width": 3
+     },
+     {
+      "kind": "term",
+      "key": "rem 801",
+      "width": 14
+     },
+     {
+      "kind": "term",
+      "key": "private thinking",
+      "width": 21
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [],
+  "entry": {
+   "seed": "specs/percolate-application/drafter.md#80",
+   "gold": "commit/864f721369",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 916,
+  "within_2_doors": 33007,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "board/team/critics-mcp-tour.md#2",
+    "label": "board/team/critics-mcp-tour.md \u203a Log",
+    "p": 0.006106344956964437,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-801.md#5",
+    "label": "board/cards/REM-801.md \u203a Log",
+    "p": 0.005136812800087438,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-801.md#3",
+    "label": "board/cards/REM-801.md \u203a Evidence",
+    "p": 0.004225741080084754,
+    "gold": false
+   },
+   {
+    "id": "commit/232b9ee2f1",
+    "label": "commit 232b9ee: board: critics-mcp-tour takes REM-801",
+    "p": 0.0039732139611387855,
+    "gold": false
+   },
+   {
+    "id": "commit/dd7498efed",
+    "label": "commit dd7498e: docs(critics): keep generators in git and rendered story in bundle",
+    "p": 0.003323391993862307,
+    "gold": false
+   },
+   {
+    "id": "board/team/critics-mcp-tour.md#1",
+    "label": "board/team/critics-mcp-tour.md",
+    "p": 0.00318701508767184,
+    "gold": false
+   },
+   {
+    "id": "commit/864f721369",
+    "label": "commit 864f721: Document the live critic queue and private thinking boundary (REM-801)",
+    "p": 0.0029951913369677223,
+    "gold": true
+   },
+   {
+    "id": "specs/percolate-application/drafter.md#76",
+    "label": "specs/percolate-application/drafter.md \u203a 8. MCP and companion parity",
+    "p": 0.0028753054563466123,
+    "gold": false
+   },
+   {
+    "id": "output/rem700-acceptance/evidence/answers-browser.txt#3",
+    "label": "output/rem700-acceptance/evidence/answers-browser.txt",
+    "p": 0.0026633076956305694,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-816.md#1",
+    "label": "board/cards/REM-816.md",
+    "p": 0.0024677154294089044,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/drafter.md#88",
+    "label": "specs/percolate-application/drafter.md \u203a 11. Acceptance and evaluation",
+    "p": 0.002404782574026212,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1308.md#5",
+    "label": "board/cards/REM-1308.md \u203a Log",
+    "p": 0.0021527441392005494,
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-09-18-claim-resolution/claims.txt#4",
+    "label": "meta/spikes/2026-09-18-claim-resolution/claims.txt",
+    "p": 0.0020675845334898004,
+    "gold": false
+   },
+   {
+    "id": "commit/0818bd57c1",
+    "label": "commit 0818bd5: Merge pull request #431 from Percolation-Labs/amartey/lens-argument-calibration",
+    "p": 0.0018231033369076675,
+    "gold": false
+   },
+   {
+    "id": "commit/56f191c6f0",
+    "label": "commit 56f191c: board: note on REM-801",
+    "p": 0.0014582268448783112,
+    "gold": false
+   },
+   {
+    "id": "output/critics-story/README.md#3",
+    "label": "output/critics-story/README.md \u203a Actual execution",
+    "p": 0.0014454195004346324,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/private-notes.md#3",
+    "label": "specs/percolate-application/private-notes.md \u203a Ordinary thinking notes (REM-1308)",
+    "p": 0.0014261166659493066,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/reviewer-management.md#9",
+    "label": "specs/percolate-application/reviewer-management.md \u203a API and agent contract",
+    "p": 0.0014175035419841683,
+    "gold": false
+   },
+   {
+    "id": "commit/1cdafe923d",
+    "label": "commit 1cdafe9: board: critics-mcp-tour checks in, working",
+    "p": 0.001349098075699938,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1308.md#2",
+    "label": "board/cards/REM-1308.md \u203a Goal",
+    "p": 0.001343859111496914,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/108a8285ce",
+   "label": "commit 108a828: board: file REM-801 critics: keep private thinking notes outside queued reviews and transformations",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-801.md#1",
+   "label": "board/cards/REM-801.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-801.md#2",
+   "label": "board/cards/REM-801.md \u203a Goal",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/percolate-application/drafter.md#80",
+   "label": "specs/percolate-application/drafter.md \u203a Durable review handoff",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-801.md#4",
+   "label": "board/cards/REM-801.md \u203a Done when",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/56f191c6f0",
+   "label": "commit 56f191c: board: note on REM-801",
+   "wave": 1,
+   "via": "term:rem 801",
+   "gold": false
+  },
+  {
+   "id": "commit/864f721369",
+   "label": "commit 864f721: Document the live critic queue and private thinking boundary (REM-801)",
+   "wave": 1,
+   "via": "term:rem 801",
+   "gold": true
+  },
+  {
+   "id": "commit/be9209463e",
+   "label": "commit be92094: board: REM-801 in-progress \u2192 done",
+   "wave": 1,
+   "via": "term:rem 801",
+   "gold": false
+  },
+  {
+   "id": "commit/232b9ee2f1",
+   "label": "commit 232b9ee: board: critics-mcp-tour takes REM-801",
+   "wave": 1,
+   "via": "term:rem 801",
+   "gold": false
+  },
+  {
+   "id": "board/team/critics-mcp-tour.md#1",
+   "label": "board/team/critics-mcp-tour.md",
+   "wave": 1,
+   "via": "term:rem 801",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "board/team/critics-mcp-tour.md#2",
+    "label": "board/team/critics-mcp-tour.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-801.md#5",
+    "label": "board/cards/REM-801.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-801.md#3",
+    "label": "board/cards/REM-801.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "commit/232b9ee2f1",
+    "label": "commit 232b9ee: board: critics-mcp-tour takes REM-801",
+    "gold": false
+   },
+   {
+    "id": "commit/dd7498efed",
+    "label": "commit dd7498e: docs(critics): keep generators in git and rendered story in bundle",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "board/team/critics-mcp-tour.md#2",
+    "label": "board/team/critics-mcp-tour.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-801.md#5",
+    "label": "board/cards/REM-801.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/team/critics-mcp-tour.md#1",
+    "label": "board/team/critics-mcp-tour.md",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/private-notes.md#3",
+    "label": "specs/percolate-application/private-notes.md \u203a Ordinary thinking notes (REM-1308)",
+    "gold": false
+   },
+   {
+    "id": "output/critics-story/README.md#3",
+    "label": "output/critics-story/README.md \u203a Actual execution",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/864f721369",
+    "label": "commit 864f721: Document the live critic queue and private thinking boundary (REM-801)",
+    "gold": true
+   },
+   {
+    "id": "commit/232b9ee2f1",
+    "label": "commit 232b9ee: board: critics-mcp-tour takes REM-801",
+    "gold": false
+   },
+   {
+    "id": "commit/be9209463e",
+    "label": "commit be92094: board: REM-801 in-progress \u2192 done",
+    "gold": false
+   },
+   {
+    "id": "commit/0f962a50bc",
+    "label": "commit 0f962a5: board: file REM-795 reviews return transformations: block operations as one proposal, previewed and acce",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-795.md#1",
+    "label": "board/cards/REM-795.md",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "specs/percolate-application/private-notes.md#3",
+    "label": "specs/percolate-application/private-notes.md \u203a Ordinary thinking notes (REM-1308)",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-814.md#2",
+    "label": "board/cards/REM-814.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/team/critics-mcp-tour.md#2",
+    "label": "board/team/critics-mcp-tour.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1303.md#2",
+    "label": "board/cards/REM-1303.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/draft-review-invitations.md#2",
+    "label": "specs/percolate-application/draft-review-invitations.md \u203a What it does",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 1.0,
+  "S": 0.0
+ }
+}

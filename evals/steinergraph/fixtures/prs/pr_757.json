@@ -1,0 +1,419 @@
+{
+ "qid": "pr:757",
+ "set": "prs",
+ "question": "What work went into this, and why: MiniLM-L6 replication on unseen recorded rounds: does not replicate?",
+ "gold": [
+  {
+   "id": "commit/d7e1e387d8",
+   "label": "commit d7e1e38: Registered: MiniLM-L6 page-10 replication on the 58 other held-out rounds and all DEV rounds (before sco",
+   "seed": true
+  },
+  {
+   "id": "commit/fd02debdcd",
+   "label": "commit fd02deb: MiniLM-L6 replication: ahead of word overlap on unseen HELD-OUT (+.005 lower bound) but not DEV, so it d",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/9fedaa3dc2",
+   "label": "commit 9fedaa3: Merge pull request #757 from Percolation-Labs/bill/minilm-replication",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/fd02debdcd",
+   "label": "commit fd02deb: MiniLM-L6 replication: ahead of word overlap on unseen HELD-OUT (+.005 lower bound) but not DEV, so it d",
+   "rank": 2,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "meta/lab/results/musique-cheap-complement/REPLICATE-RESULT.md#1",
+   "label": "meta/lab/results/musique-cheap-complement/REPLICATE-RESULT.md \u203a Does MiniLM-L6's pass replicate? Result (bill, 15 Nov 20",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "meta/lab/results/musique-cheap-complement/REPLICATE-REGISTERED.md#1",
+   "label": "meta/lab/results/musique-cheap-complement/REPLICATE-REGISTERED.md \u203a Does MiniLM-L6's pass replicate? Registration (bill,",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/d7e1e387d8",
+   "label": "commit d7e1e38: Registered: MiniLM-L6 page-10 replication on the 58 other held-out rounds and all DEV rounds (before sco",
+   "rank": 5,
+   "gold": true,
+   "doors_to_gold": 0
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/d7e1e387d8",
+    "label": "commit d7e1e38: Registered: MiniLM-L6 page-10 replication on the 58 other held-out rounds and all DEV rounds (before sco",
+    "role": "gold"
+   },
+   {
+    "id": "commit/fd02debdcd",
+    "label": "commit fd02deb: MiniLM-L6 replication: ahead of word overlap on unseen HELD-OUT (+.005 lower bound) but not DEV, so it d",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/d7e1e387d8",
+    "b": "commit/fd02debdcd",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "near",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "minilm",
+      "width": 41
+     },
+     {
+      "kind": "term",
+      "key": "replication",
+      "width": 90
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "commit/d7e1e387d8",
+   "gold": "commit/d7e1e387d8",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 949,
+  "within_2_doors": 31930,
+  "gold_within_1": 0,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "commit/d9152a28f3",
+    "label": "commit d9152a2: Registered: MiniLM-L6 cross-encoder and bge-small cosine on the walk's recorded rounds, pages 10 and 20 ",
+    "p": 0.008718837149835993,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261115-122232-44cc.md#1",
+    "label": "board/messages/M-20261115-122232-44cc.md",
+    "p": 0.007597241758451553,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261115-125151-8ec4.md#1",
+    "label": "board/messages/M-20261115-125151-8ec4.md",
+    "p": 0.006537907438388422,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261115-122312-1f22.md#1",
+    "label": "board/messages/M-20261115-122312-1f22.md",
+    "p": 0.005055153815648121,
+    "gold": false
+   },
+   {
+    "id": "commit/feccdee87c",
+    "label": "commit feccdee: Non-LLM decision models on 19 held-out rounds: MiniLM-L6 clears at page 10 (directional), set-encoder do",
+    "p": 0.004482531339121489,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/q4/minilm_replicate.py#2",
+    "label": "meta/lab/q4/minilm_replicate.py",
+    "p": 0.0039026712363164286,
+    "gold": false
+   },
+   {
+    "id": "commit/aa4d80e2ce",
+    "label": "commit aa4d80e: Merge pull request #756 from Percolation-Labs/james/set-encoder-result",
+    "p": 0.003869306097980574,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261115-121624-2975.md#1",
+    "label": "board/messages/M-20261115-121624-2975.md",
+    "p": 0.003455660044112826,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/musique-cheap-complement/REPLICATE-REGISTERED.md#2",
+    "label": "meta/lab/results/musique-cheap-complement/REPLICATE-REGISTERED.md \u203a Does MiniLM-L6's pass replicate? Registration (bill,",
+    "p": 0.0032243504449730887,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261115-112150-b46f.md#1",
+    "label": "board/messages/M-20261115-112150-b46f.md",
+    "p": 0.0030930878571133165,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/musique-cheap-complement/PAIR-RESULT.md#1",
+    "label": "meta/lab/results/musique-cheap-complement/PAIR-RESULT.md \u203a Two pair decision models on the walk's recorded rounds: resul",
+    "p": 0.0029199849920787595,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/q4/minilm_replicate.py#1",
+    "label": "meta/lab/q4/minilm_replicate.py",
+    "p": 0.002762180904375535,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/musique-cheap-complement/REPLICATE-RESULT.md#2",
+    "label": "meta/lab/results/musique-cheap-complement/REPLICATE-RESULT.md \u203a Does MiniLM-L6's pass replicate? Result (bill, 15 Nov 20",
+    "p": 0.002501585507763768,
+    "gold": false
+   },
+   {
+    "id": "commit/953dc32f23",
+    "label": "commit 953dc32: board: board-watch messages all",
+    "p": 0.002465485949718,
+    "gold": false
+   },
+   {
+    "id": "commit/0b6122b568",
+    "label": "commit 0b6122b: board: bill messages sirsh",
+    "p": 0.0024557282334545572,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/musique-cheap-complement/PAIR-REGISTERED.md#1",
+    "label": "meta/lab/results/musique-cheap-complement/PAIR-REGISTERED.md \u203a Two pair decision models on the walk's recorded rounds: r",
+    "p": 0.002301668012353985,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/musique-cheap-complement/SHORTLIST.md#6",
+    "label": "meta/lab/results/musique-cheap-complement/SHORTLIST.md \u203a Picks (agreed by bill and james; to register before any score)",
+    "p": 0.0020660983504159364,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/musique-cheap-complement/PAIR-RESULT.md#2",
+    "label": "meta/lab/results/musique-cheap-complement/PAIR-RESULT.md \u203a Two pair decision models on the walk's recorded rounds: resul",
+    "p": 0.001955937334535215,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/q4/pair_models.py#1",
+    "label": "meta/lab/q4/pair_models.py",
+    "p": 0.0018435947695008194,
+    "gold": false
+   },
+   {
+    "id": "commit/b0fc5a1e60",
+    "label": "commit b0fc5a1: Pair models on the walk's recorded rounds: MiniLM-L6 cross-encoder ties the walk at page 10 (.354 vs .35",
+    "p": 0.001756536236221957,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/9fedaa3dc2",
+   "label": "commit 9fedaa3: Merge pull request #757 from Percolation-Labs/bill/minilm-replication",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/fd02debdcd",
+   "label": "commit fd02deb: MiniLM-L6 replication: ahead of word overlap on unseen HELD-OUT (+.005 lower bound) but not DEV, so it d",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "meta/lab/results/musique-cheap-complement/REPLICATE-RESULT.md#1",
+   "label": "meta/lab/results/musique-cheap-complement/REPLICATE-RESULT.md \u203a Does MiniLM-L6's pass replicate? Result (bill, 15 Nov 20",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/musique-cheap-complement/REPLICATE-REGISTERED.md#1",
+   "label": "meta/lab/results/musique-cheap-complement/REPLICATE-REGISTERED.md \u203a Does MiniLM-L6's pass replicate? Registration (bill,",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/d7e1e387d8",
+   "label": "commit d7e1e38: Registered: MiniLM-L6 page-10 replication on the 58 other held-out rounds and all DEV rounds (before sco",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "meta/lab/results/musique-cheap-complement/REPLICATE-REGISTERED.md#2",
+   "label": "meta/lab/results/musique-cheap-complement/REPLICATE-REGISTERED.md \u203a Does MiniLM-L6's pass replicate? Registration (bill,",
+   "wave": 1,
+   "via": "term:minilm_replicate",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/q4/minilm_replicate.py#3",
+   "label": "meta/lab/q4/minilm_replicate.py",
+   "wave": 1,
+   "via": "term:minilm_replicate",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/q4/minilm_replicate.py#2",
+   "label": "meta/lab/q4/minilm_replicate.py",
+   "wave": 1,
+   "via": "term:minilm_replicate",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/q4/minilm_replicate.py#1",
+   "label": "meta/lab/q4/minilm_replicate.py",
+   "wave": 1,
+   "via": "term:minilm_replicate",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/musique-cheap-complement/REPLICATE-RESULT.md#2",
+   "label": "meta/lab/results/musique-cheap-complement/REPLICATE-RESULT.md \u203a Does MiniLM-L6's pass replicate? Result (bill, 15 Nov 20",
+   "wave": 2,
+   "via": "term:complement replicate",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "commit/d9152a28f3",
+    "label": "commit d9152a2: Registered: MiniLM-L6 cross-encoder and bge-small cosine on the walk's recorded rounds, pages 10 and 20 ",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261115-122232-44cc.md#1",
+    "label": "board/messages/M-20261115-122232-44cc.md",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261115-125151-8ec4.md#1",
+    "label": "board/messages/M-20261115-125151-8ec4.md",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261115-122312-1f22.md#1",
+    "label": "board/messages/M-20261115-122312-1f22.md",
+    "gold": false
+   },
+   {
+    "id": "commit/feccdee87c",
+    "label": "commit feccdee: Non-LLM decision models on 19 held-out rounds: MiniLM-L6 clears at page 10 (directional), set-encoder do",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "board/messages/M-20261115-122232-44cc.md#1",
+    "label": "board/messages/M-20261115-122232-44cc.md",
+    "gold": false
+   },
+   {
+    "id": "commit/d9152a28f3",
+    "label": "commit d9152a2: Registered: MiniLM-L6 cross-encoder and bge-small cosine on the walk's recorded rounds, pages 10 and 20 ",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261115-122312-1f22.md#1",
+    "label": "board/messages/M-20261115-122312-1f22.md",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261115-125151-8ec4.md#1",
+    "label": "board/messages/M-20261115-125151-8ec4.md",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/q4/minilm_replicate.py#2",
+    "label": "meta/lab/q4/minilm_replicate.py",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/d9152a28f3",
+    "label": "commit d9152a2: Registered: MiniLM-L6 cross-encoder and bge-small cosine on the walk's recorded rounds, pages 10 and 20 ",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261115-125151-8ec4.md#1",
+    "label": "board/messages/M-20261115-125151-8ec4.md",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/musique-cheap-complement/REPLICATE-REGISTERED.md#2",
+    "label": "meta/lab/results/musique-cheap-complement/REPLICATE-REGISTERED.md \u203a Does MiniLM-L6's pass replicate? Registration (bill,",
+    "gold": false
+   },
+   {
+    "id": "commit/feccdee87c",
+    "label": "commit feccdee: Non-LLM decision models on 19 held-out rounds: MiniLM-L6 clears at page 10 (directional), set-encoder do",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261115-122232-44cc.md#1",
+    "label": "board/messages/M-20261115-122232-44cc.md",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "commit/b0fc5a1e60",
+    "label": "commit b0fc5a1: Pair models on the walk's recorded rounds: MiniLM-L6 cross-encoder ties the walk at page 10 (.354 vs .35",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261115-122232-44cc.md#1",
+    "label": "board/messages/M-20261115-122232-44cc.md",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261115-122312-1f22.md#1",
+    "label": "board/messages/M-20261115-122312-1f22.md",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/q4/minilm_replicate.py#1",
+    "label": "meta/lab/q4/minilm_replicate.py",
+    "gold": false
+   },
+   {
+    "id": "commit/d9152a28f3",
+    "label": "commit d9152a2: Registered: MiniLM-L6 cross-encoder and bge-small cosine on the walk's recorded rounds, pages 10 and 20 ",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": null,
+  "Q": null,
+  "LQ": null,
+  "S": null
+ }
+}

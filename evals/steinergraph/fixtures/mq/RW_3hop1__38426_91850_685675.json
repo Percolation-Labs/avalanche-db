@@ -1,0 +1,454 @@
+{
+ "qid": "RW:3hop1__38426_91850_685675",
+ "set": "mq",
+ "question": "What team does the person who hit the first home run at the new stadium in South Bronx play for?",
+ "gold": [
+  {
+   "id": "mq:381c5b6a27145095",
+   "label": "The Bronx",
+   "seed": true
+  },
+  {
+   "id": "mq:3bf439dcba7ca155",
+   "label": "Yankee Stadium",
+   "seed": true
+  },
+  {
+   "id": "mq:f5a0a26217d76d55",
+   "label": "Jorge Posada",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:3bf439dcba7ca155",
+   "label": "Yankee Stadium",
+   "rank": 1,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:9ab1cf8b202bcf4e",
+   "label": "Municipal Stadium (Kansas City, Missouri)",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:1ec66a7fb5a68003",
+   "label": "Home run",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:381c5b6a27145095",
+   "label": "The Bronx",
+   "rank": 4,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:5e7d745a40a53492",
+   "label": "Great American Ball Park",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:381c5b6a27145095",
+    "label": "The Bronx",
+    "role": "gold"
+   },
+   {
+    "id": "mq:3bf439dcba7ca155",
+    "label": "Yankee Stadium",
+    "role": "gold"
+   },
+   {
+    "id": "mq:f5a0a26217d76d55",
+    "label": "Jorge Posada",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:381c5b6a27145095",
+    "b": "mq:3bf439dcba7ca155",
+    "via": [
+     {
+      "kind": "term",
+      "key": "yankee stadium",
+      "width": 15
+     },
+     {
+      "kind": "term",
+      "key": "yankee",
+      "width": 18
+     }
+    ]
+   },
+   {
+    "a": "mq:3bf439dcba7ca155",
+    "b": "mq:f5a0a26217d76d55",
+    "via": [
+     {
+      "kind": "near",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "posada",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "jorge posada",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "jorge",
+      "width": 11
+     },
+     {
+      "kind": "term",
+      "key": "yankees",
+      "width": 46
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   2,
+   1
+  ],
+  "entry": {
+   "seed": "mq:381c5b6a27145095",
+   "gold": "mq:381c5b6a27145095",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 3048,
+  "within_2_doors": 18034,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "mq:325242afc01966a7",
+    "label": "Soundview, Bronx",
+    "p": 0.002858130371302424,
+    "gold": false
+   },
+   {
+    "id": "mq:da4c63f830194de5",
+    "label": "Dugout (baseball)",
+    "p": 0.0027876256101806844,
+    "gold": false
+   },
+   {
+    "id": "mq:fae399f9f3d22382",
+    "label": "Astrodome",
+    "p": 0.0022719741311995954,
+    "gold": false
+   },
+   {
+    "id": "mq:1697c9747e1c7538",
+    "label": "List of Major League Baseball career home run leaders",
+    "p": 0.0021485257464551365,
+    "gold": false
+   },
+   {
+    "id": "mq:7e1fef08c31e4b37",
+    "label": "List of Major League Baseball career home run leaders",
+    "p": 0.0021485257464551365,
+    "gold": false
+   },
+   {
+    "id": "mq:264615a38d5c30da",
+    "label": "John Wehner",
+    "p": 0.0016988968685632921,
+    "gold": false
+   },
+   {
+    "id": "mq:fcf69e752a4f15d2",
+    "label": "The Bronx",
+    "p": 0.0015986431990786104,
+    "gold": false
+   },
+   {
+    "id": "mq:f5a0a26217d76d55",
+    "label": "Jorge Posada",
+    "p": 0.0015813762753359114,
+    "gold": true
+   },
+   {
+    "id": "mq:c3c05bd5ec05c707",
+    "label": "Detroit Tigers",
+    "p": 0.0015414839370597661,
+    "gold": false
+   },
+   {
+    "id": "mq:2189a8129e9fc22c",
+    "label": "Chicago Cubs",
+    "p": 0.001513980131645663,
+    "gold": false
+   },
+   {
+    "id": "mq:e8686de5ab39aa79",
+    "label": "Chicago Cubs",
+    "p": 0.0013992255209638396,
+    "gold": false
+   },
+   {
+    "id": "mq:eb29d5e4cc34ab72",
+    "label": "The Bronx",
+    "p": 0.0013953187434380288,
+    "gold": false
+   },
+   {
+    "id": "mq:cf4f6917be887a6d",
+    "label": "Exhibition game",
+    "p": 0.0012712058137217736,
+    "gold": false
+   },
+   {
+    "id": "mq:e3a49602b9107a98",
+    "label": "Great American Ball Park",
+    "p": 0.0012134885793466286,
+    "gold": false
+   },
+   {
+    "id": "mq:c6382d357ab63c74",
+    "label": "1999 Major League Baseball draft",
+    "p": 0.0011970794978075554,
+    "gold": false
+   },
+   {
+    "id": "mq:061a61a81a6d5e78",
+    "label": "List of Major League Baseball career strikeouts by batters leaders",
+    "p": 0.0011623459886849741,
+    "gold": false
+   },
+   {
+    "id": "mq:9c395fe7e1ce4bc4",
+    "label": "Chicago Cubs",
+    "p": 0.0011046067432606617,
+    "gold": false
+   },
+   {
+    "id": "mq:b451275e330e3444",
+    "label": "List of Major League Baseball career on-base percentage leaders",
+    "p": 0.001057555340000486,
+    "gold": false
+   },
+   {
+    "id": "mq:97e86f59406050fe",
+    "label": "USS Kirkpatrick (DE-318)",
+    "p": 0.0010566774977701621,
+    "gold": false
+   },
+   {
+    "id": "mq:0596887fe32f04ff",
+    "label": "Major League Baseball All-Star Game Most Valuable Player Award",
+    "p": 0.0010418686615900423,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:3bf439dcba7ca155",
+   "label": "Yankee Stadium",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:9ab1cf8b202bcf4e",
+   "label": "Municipal Stadium (Kansas City, Missouri)",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:1ec66a7fb5a68003",
+   "label": "Home run",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:381c5b6a27145095",
+   "label": "The Bronx",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:5e7d745a40a53492",
+   "label": "Great American Ball Park",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:c26f1287a039b9dc",
+   "label": "New York Yankees",
+   "wave": 1,
+   "via": "term:yankee stadium",
+   "gold": false
+  },
+  {
+   "id": "mq:8c7de14bb798a026",
+   "label": "1922 World Series",
+   "wave": 1,
+   "via": "term:yankee stadium",
+   "gold": false
+  },
+  {
+   "id": "mq:c4f63d5527e7d733",
+   "label": "South Bronx",
+   "wave": 1,
+   "via": "term:yankee stadium",
+   "gold": false
+  },
+  {
+   "id": "mq:00a77e876c379aa6",
+   "label": "Yankee Stadium",
+   "wave": 1,
+   "via": "term:yankee stadium",
+   "gold": false
+  },
+  {
+   "id": "mq:4e77620c78a3cde6",
+   "label": "The Bronx",
+   "wave": 1,
+   "via": "term:yankee stadium",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:325242afc01966a7",
+    "label": "Soundview, Bronx",
+    "gold": false
+   },
+   {
+    "id": "mq:da4c63f830194de5",
+    "label": "Dugout (baseball)",
+    "gold": false
+   },
+   {
+    "id": "mq:fae399f9f3d22382",
+    "label": "Astrodome",
+    "gold": false
+   },
+   {
+    "id": "mq:1697c9747e1c7538",
+    "label": "List of Major League Baseball career home run leaders",
+    "gold": false
+   },
+   {
+    "id": "mq:7e1fef08c31e4b37",
+    "label": "List of Major League Baseball career home run leaders",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:1697c9747e1c7538",
+    "label": "List of Major League Baseball career home run leaders",
+    "gold": false
+   },
+   {
+    "id": "mq:7e1fef08c31e4b37",
+    "label": "List of Major League Baseball career home run leaders",
+    "gold": false
+   },
+   {
+    "id": "mq:325242afc01966a7",
+    "label": "Soundview, Bronx",
+    "gold": false
+   },
+   {
+    "id": "mq:fcf69e752a4f15d2",
+    "label": "The Bronx",
+    "gold": false
+   },
+   {
+    "id": "mq:fae399f9f3d22382",
+    "label": "Astrodome",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:7e1fef08c31e4b37",
+    "label": "List of Major League Baseball career home run leaders",
+    "gold": false
+   },
+   {
+    "id": "mq:1697c9747e1c7538",
+    "label": "List of Major League Baseball career home run leaders",
+    "gold": false
+   },
+   {
+    "id": "mq:da4c63f830194de5",
+    "label": "Dugout (baseball)",
+    "gold": false
+   },
+   {
+    "id": "mq:fcf69e752a4f15d2",
+    "label": "The Bronx",
+    "gold": false
+   },
+   {
+    "id": "mq:325242afc01966a7",
+    "label": "Soundview, Bronx",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:fcf69e752a4f15d2",
+    "label": "The Bronx",
+    "gold": false
+   },
+   {
+    "id": "mq:2f526f7f4f3bf62b",
+    "label": "Pohang Baseball Stadium",
+    "gold": false
+   },
+   {
+    "id": "mq:1c090aaaaea886fb",
+    "label": "50 home run club",
+    "gold": false
+   },
+   {
+    "id": "mq:c4f63d5527e7d733",
+    "label": "South Bronx",
+    "gold": false
+   },
+   {
+    "id": "mq:e1f6a703a01c360d",
+    "label": "Instant replay in Major League Baseball",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

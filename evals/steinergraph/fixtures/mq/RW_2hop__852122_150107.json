@@ -1,0 +1,411 @@
+{
+ "qid": "RW:2hop__852122_150107",
+ "set": "mq",
+ "question": "Who published Communications of the agency that Michael Schroeder is a member of ?",
+ "gold": [
+  {
+   "id": "mq:07e4e374657c8fb6",
+   "label": "Michael Schroeder",
+   "seed": true
+  },
+  {
+   "id": "mq:bc1955852e8b4493",
+   "label": "Communications of the ACM",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:e13df7924d5d647c",
+   "label": "National Telecommunications Agency (Brazil)",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:07e4e374657c8fb6",
+   "label": "Michael Schroeder",
+   "rank": 2,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:ff0ae722370769fd",
+   "label": "Bruce Davidson (photographer)",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "mq:b353a4ef08ba4dc4",
+   "label": "Terry Schroeder",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:475bf70961e69a56",
+   "label": "Curry Coastal Pilot",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:07e4e374657c8fb6",
+    "label": "Michael Schroeder",
+    "role": "gold"
+   },
+   {
+    "id": "mq:bc1955852e8b4493",
+    "label": "Communications of the ACM",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:07e4e374657c8fb6",
+    "b": "mq:bc1955852e8b4493",
+    "via": [
+     {
+      "kind": "near",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "acm",
+      "width": 10
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "mq:07e4e374657c8fb6",
+   "gold": "mq:07e4e374657c8fb6",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 2278,
+  "within_2_doors": 18783,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "mq:e3bf1ca9bc120ddd",
+    "label": "Joan Llimona",
+    "p": 0.0023020673087667492,
+    "gold": false
+   },
+   {
+    "id": "mq:64643ceafdc5d3d9",
+    "label": "God's House (film)",
+    "p": 0.002167816424144709,
+    "gold": false
+   },
+   {
+    "id": "mq:392da0e70c3487d7",
+    "label": "Myron Orfield",
+    "p": 0.0017821631629294076,
+    "gold": false
+   },
+   {
+    "id": "mq:394776a69069867d",
+    "label": "Age of Enlightenment",
+    "p": 0.0012811631249932077,
+    "gold": false
+   },
+   {
+    "id": "mq:f704654e52655c61",
+    "label": "Aberdeen",
+    "p": 0.0012068637323999622,
+    "gold": false
+   },
+   {
+    "id": "mq:29bb0cc9d215987e",
+    "label": "William Coperthwaite",
+    "p": 0.0011650468884367331,
+    "gold": false
+   },
+   {
+    "id": "mq:2bb5ac170408ef4a",
+    "label": "Socialist Workers' Current",
+    "p": 0.001124771744130715,
+    "gold": false
+   },
+   {
+    "id": "mq:cd217e23536ae79e",
+    "label": "Stassi Schroeder",
+    "p": 0.001119370196083412,
+    "gold": false
+   },
+   {
+    "id": "mq:d84c60bd1cfc9dfb",
+    "label": "Paul W. Schroeder",
+    "p": 0.0011173941025509155,
+    "gold": false
+   },
+   {
+    "id": "mq:1242ffb730e2779b",
+    "label": "Stephen Curry",
+    "p": 0.0010920392846881068,
+    "gold": false
+   },
+   {
+    "id": "mq:6d4edc6897abb7ba",
+    "label": "Matt Davidson (ice hockey)",
+    "p": 0.001077943107670986,
+    "gold": false
+   },
+   {
+    "id": "mq:8d7bf92f34740606",
+    "label": "Stephen Curry",
+    "p": 0.0010776979268367832,
+    "gold": false
+   },
+   {
+    "id": "mq:96692b8bfce2622e",
+    "label": "Peter Varellas",
+    "p": 0.001039176616050431,
+    "gold": false
+   },
+   {
+    "id": "mq:a96f0b7b54b07cc6",
+    "label": "John Meyers (swimmer)",
+    "p": 0.0010292111446151653,
+    "gold": false
+   },
+   {
+    "id": "mq:efa7d0fa6600da7f",
+    "label": "Environmental Science & Technology",
+    "p": 0.0009648999671152494,
+    "gold": false
+   },
+   {
+    "id": "mq:49ae66599d110e44",
+    "label": "Bakor Patel",
+    "p": 0.0009258614827950358,
+    "gold": false
+   },
+   {
+    "id": "mq:55b1c439b68f987a",
+    "label": "Hangin' with Mr. Cooper",
+    "p": 0.0008642150066910618,
+    "gold": false
+   },
+   {
+    "id": "mq:763e948c1549925f",
+    "label": "Iain Davidson",
+    "p": 0.0008028800046253834,
+    "gold": false
+   },
+   {
+    "id": "mq:bc1955852e8b4493",
+    "label": "Communications of the ACM",
+    "p": 0.0007881624541442728,
+    "gold": true
+   },
+   {
+    "id": "mq:b6139b294c975c30",
+    "label": "Kim Jew",
+    "p": 0.0007783049652525653,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:e13df7924d5d647c",
+   "label": "National Telecommunications Agency (Brazil)",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:07e4e374657c8fb6",
+   "label": "Michael Schroeder",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:ff0ae722370769fd",
+   "label": "Bruce Davidson (photographer)",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:b353a4ef08ba4dc4",
+   "label": "Terry Schroeder",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:475bf70961e69a56",
+   "label": "Curry Coastal Pilot",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:c359976e274160f0",
+   "label": "Mobile Computing and Communications Review",
+   "wave": 1,
+   "via": "term:acm",
+   "gold": false
+  },
+  {
+   "id": "mq:1a7acb9a2a600e56",
+   "label": "ACM SIGGRAPH",
+   "wave": 1,
+   "via": "term:acm",
+   "gold": false
+  },
+  {
+   "id": "mq:bc1955852e8b4493",
+   "label": "Communications of the ACM",
+   "wave": 1,
+   "via": "term:acm",
+   "gold": true
+  },
+  {
+   "id": "mq:b64f63c82ce637e8",
+   "label": "ACM Computing Surveys",
+   "wave": 1,
+   "via": "term:acm",
+   "gold": false
+  },
+  {
+   "id": "mq:9f1540e261c02696",
+   "label": "Zhengyou Zhang",
+   "wave": 1,
+   "via": "term:acm",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:e3bf1ca9bc120ddd",
+    "label": "Joan Llimona",
+    "gold": false
+   },
+   {
+    "id": "mq:64643ceafdc5d3d9",
+    "label": "God's House (film)",
+    "gold": false
+   },
+   {
+    "id": "mq:392da0e70c3487d7",
+    "label": "Myron Orfield",
+    "gold": false
+   },
+   {
+    "id": "mq:394776a69069867d",
+    "label": "Age of Enlightenment",
+    "gold": false
+   },
+   {
+    "id": "mq:f704654e52655c61",
+    "label": "Aberdeen",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:d84c60bd1cfc9dfb",
+    "label": "Paul W. Schroeder",
+    "gold": false
+   },
+   {
+    "id": "mq:cd217e23536ae79e",
+    "label": "Stassi Schroeder",
+    "gold": false
+   },
+   {
+    "id": "mq:05bdc0f32d1ff135",
+    "label": "Sinister Journey",
+    "gold": false
+   },
+   {
+    "id": "mq:b978d843a94ff8ee",
+    "label": "Dangerous Venture",
+    "gold": false
+   },
+   {
+    "id": "mq:efa7d0fa6600da7f",
+    "label": "Environmental Science & Technology",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:d84c60bd1cfc9dfb",
+    "label": "Paul W. Schroeder",
+    "gold": false
+   },
+   {
+    "id": "mq:cd217e23536ae79e",
+    "label": "Stassi Schroeder",
+    "gold": false
+   },
+   {
+    "id": "mq:05bdc0f32d1ff135",
+    "label": "Sinister Journey",
+    "gold": false
+   },
+   {
+    "id": "mq:b978d843a94ff8ee",
+    "label": "Dangerous Venture",
+    "gold": false
+   },
+   {
+    "id": "mq:cb34957a988c85f7",
+    "label": "Border Security Force",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:67570fd6c258eb97",
+    "label": "Wireless Personal Communications",
+    "gold": false
+   },
+   {
+    "id": "mq:cd217e23536ae79e",
+    "label": "Stassi Schroeder",
+    "gold": false
+   },
+   {
+    "id": "mq:597a590da78902f6",
+    "label": "The Tree of Seasons",
+    "gold": false
+   },
+   {
+    "id": "mq:d84c60bd1cfc9dfb",
+    "label": "Paul W. Schroeder",
+    "gold": false
+   },
+   {
+    "id": "mq:5feabad141aa204d",
+    "label": "Public Health Agency of Canada",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

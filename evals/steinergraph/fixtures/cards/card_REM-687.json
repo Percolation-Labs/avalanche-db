@@ -1,0 +1,491 @@
+{
+ "qid": "card:REM-687",
+ "set": "cards",
+ "question": "What was done about this, and why: research: measure JEV and LLM routing at matched answer correctness?",
+ "gold": [
+  {
+   "id": "commit/4b2c03501d",
+   "label": "commit 4b2c035: research: real-question verifier, adjudicated labels and repeat runs (REM-687)",
+   "seed": false
+  },
+  {
+   "id": "commit/4db2e04113",
+   "label": "commit 4db2e04: research: test the REM-681 routing split on 16 real questions (REM-684, REM-687)",
+   "seed": false
+  },
+  {
+   "id": "commit/ab17677a71",
+   "label": "commit ab17677: research: adapter v2 and verifier-input measurements on real questions (REM-684, REM-687)",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/4d826fe7e1",
+   "label": "commit 4d826fe: board: file REM-687 research: measure JEV and LLM routing at matched answer correctness",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-687.md#1",
+   "label": "board/cards/REM-687.md",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-687.md#8",
+   "label": "board/cards/REM-687.md \u203a Log",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "research-notes/h-to-g/reachability/README.md#10",
+   "label": "research-notes/h-to-g/reachability/README.md \u203a Tests and cost boundaries",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "board/messages/M-20261020-065657-cc77.md#1",
+   "label": "board/messages/M-20261020-065657-cc77.md",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 2
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "board/cards/REM-687.md#8",
+    "label": "board/cards/REM-687.md \u203a Log",
+    "role": "seed"
+   },
+   {
+    "id": "commit/4b2c03501d",
+    "label": "commit 4b2c035: research: real-question verifier, adjudicated labels and repeat runs (REM-687)",
+    "role": "gold"
+   },
+   {
+    "id": "commit/4db2e04113",
+    "label": "commit 4db2e04: research: test the REM-681 routing split on 16 real questions (REM-684, REM-687)",
+    "role": "gold"
+   },
+   {
+    "id": "commit/ab17677a71",
+    "label": "commit ab17677: research: adapter v2 and verifier-input measurements on real questions (REM-684, REM-687)",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "board/cards/REM-687.md#8",
+    "b": "commit/4db2e04113",
+    "via": [
+     {
+      "kind": "term",
+      "key": "action ids",
+      "width": 16
+     },
+     {
+      "kind": "term",
+      "key": "rem 687",
+      "width": 26
+     },
+     {
+      "kind": "term",
+      "key": "haiku",
+      "width": 52
+     },
+     {
+      "kind": "term",
+      "key": "verifier",
+      "width": 63
+     }
+    ]
+   },
+   {
+    "a": "commit/4b2c03501d",
+    "b": "commit/ab17677a71",
+    "via": [
+     {
+      "kind": "term",
+      "key": "rem 687",
+      "width": 26
+     },
+     {
+      "kind": "term",
+      "key": "verifier",
+      "width": 63
+     },
+     {
+      "kind": "term",
+      "key": "appendix",
+      "width": 83
+     }
+    ]
+   },
+   {
+    "a": "commit/4db2e04113",
+    "b": "commit/ab17677a71",
+    "via": [
+     {
+      "kind": "term",
+      "key": "questions rem",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "rem 687",
+      "width": 26
+     },
+     {
+      "kind": "term",
+      "key": "rem 684",
+      "width": 31
+     },
+     {
+      "kind": "term",
+      "key": "real questions",
+      "width": 34
+     },
+     {
+      "kind": "term",
+      "key": "verifier",
+      "width": 63
+     }
+    ]
+   }
+  ],
+  "cost": 3,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   1,
+   1
+  ],
+  "entry": {
+   "seed": "board/cards/REM-687.md#8",
+   "gold": "commit/4db2e04113",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 2127,
+  "within_2_doors": 33718,
+  "gold_within_1": 3,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "research-notes/h-to-g/reachability/README.md#9",
+    "label": "research-notes/h-to-g/reachability/README.md \u203a Tests and cost boundaries",
+    "p": 0.0035815166692493502,
+    "gold": false
+   },
+   {
+    "id": "commit/2a62a41a36",
+    "label": "commit 2a62a41: board: file REM-686 research: verify iterative answers across evidence and access changes",
+    "p": 0.0028303377607677206,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-687.md#2",
+    "label": "board/cards/REM-687.md \u203a Goal",
+    "p": 0.002796836294140963,
+    "gold": false
+   },
+   {
+    "id": "commit/584255573f",
+    "label": "commit 5842555: board: file REM-688 research: identify workloads where iterative queries repay build and update costs",
+    "p": 0.0026936940024367083,
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-insight-marketplace/spec.md#48",
+    "label": "applications/percolate-insight-marketplace/spec.md \u203a 16.2 Entity Resolution \u2014 A Tiered, Cost-Aware Process",
+    "p": 0.002294515630444154,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-689.md#4",
+    "label": "board/cards/REM-689.md \u203a Done when",
+    "p": 0.002160491368119347,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-686.md#1",
+    "label": "board/cards/REM-686.md",
+    "p": 0.0018935613562359108,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-688.md#1",
+    "label": "board/cards/REM-688.md",
+    "p": 0.0018435289464677903,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-689.md#9",
+    "label": "board/cards/REM-689.md \u203a Log",
+    "p": 0.0018079206096635746,
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-10-20-lme-seeded-taxonomy/evidence_atlas/build_report.py#2",
+    "label": "meta/spikes/2026-10-20-lme-seeded-taxonomy/evidence_atlas/build_report.py",
+    "p": 0.0017558618418768205,
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-10-20-lme-seeded-taxonomy/iteration/answer_probe.py#1",
+    "label": "meta/spikes/2026-10-20-lme-seeded-taxonomy/iteration/answer_probe.py",
+    "p": 0.0017354744215586915,
+    "gold": false
+   },
+   {
+    "id": "specs/build-knit-dream/reachability.md#12",
+    "label": "specs/build-knit-dream/reachability.md \u203a 7. Executable experiment and next research step",
+    "p": 0.0017076601878500434,
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-10-20-lme-seeded-taxonomy/iteration/README.md#3",
+    "label": "meta/spikes/2026-10-20-lme-seeded-taxonomy/iteration/README.md \u203a Contracts and receipts",
+    "p": 0.0017052138382904639,
+    "gold": false
+   },
+   {
+    "id": "specs/build-knit-dream/reachability.md#22",
+    "label": "specs/build-knit-dream/reachability.md \u203a 9.3 Evaluation consequences",
+    "p": 0.0016928674390249189,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1138.md#2",
+    "label": "board/cards/REM-1138.md \u203a Goal",
+    "p": 0.0016003863675016475,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-685.md#8",
+    "label": "board/cards/REM-685.md \u203a Log",
+    "p": 0.001593984197712923,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-689.md#8",
+    "label": "board/cards/REM-689.md \u203a Log",
+    "p": 0.0015633754531149719,
+    "gold": false
+   },
+   {
+    "id": "board/team/iterative-research-tickets.md#2",
+    "label": "board/team/iterative-research-tickets.md \u203a Log",
+    "p": 0.001534469006594698,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-681.md#8",
+    "label": "board/cards/REM-681.md \u203a Log",
+    "p": 0.0015253352142126305,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-687.md#7",
+    "label": "board/cards/REM-687.md \u203a Links",
+    "p": 0.0014978188234062426,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/4d826fe7e1",
+   "label": "commit 4d826fe: board: file REM-687 research: measure JEV and LLM routing at matched answer correctness",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-687.md#1",
+   "label": "board/cards/REM-687.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-687.md#8",
+   "label": "board/cards/REM-687.md \u203a Log",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "research-notes/h-to-g/reachability/README.md#10",
+   "label": "research-notes/h-to-g/reachability/README.md \u203a Tests and cost boundaries",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/messages/M-20261020-065657-cc77.md#1",
+   "label": "board/messages/M-20261020-065657-cc77.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/user-rbac/spec.md#35",
+   "label": "specs/user-rbac/spec.md \u203a 9. Unified cross-system audit view",
+   "wave": 1,
+   "via": "term:real question",
+   "gold": false
+  },
+  {
+   "id": "research-notes/h-to-g/brief-trial/PROTOCOL.md#1",
+   "label": "research-notes/h-to-g/brief-trial/PROTOCOL.md \u203a Real-corpus brief trial",
+   "wave": 1,
+   "via": "term:real question",
+   "gold": false
+  },
+  {
+   "id": "board/messages/M-20261028-165559-42d6.md#1",
+   "label": "board/messages/M-20261028-165559-42d6.md",
+   "wave": 1,
+   "via": "term:real question",
+   "gold": false
+  },
+  {
+   "id": "board/messages/M-20261028-165551-ddb0.md#1",
+   "label": "board/messages/M-20261028-165551-ddb0.md",
+   "wave": 1,
+   "via": "term:real question",
+   "gold": false
+  },
+  {
+   "id": "commit/4b2c03501d",
+   "label": "commit 4b2c035: research: real-question verifier, adjudicated labels and repeat runs (REM-687)",
+   "wave": 1,
+   "via": "term:real question",
+   "gold": true
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "research-notes/h-to-g/reachability/README.md#9",
+    "label": "research-notes/h-to-g/reachability/README.md \u203a Tests and cost boundaries",
+    "gold": false
+   },
+   {
+    "id": "commit/2a62a41a36",
+    "label": "commit 2a62a41: board: file REM-686 research: verify iterative answers across evidence and access changes",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-687.md#2",
+    "label": "board/cards/REM-687.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "commit/584255573f",
+    "label": "commit 5842555: board: file REM-688 research: identify workloads where iterative queries repay build and update costs",
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-insight-marketplace/spec.md#48",
+    "label": "applications/percolate-insight-marketplace/spec.md \u203a 16.2 Entity Resolution \u2014 A Tiered, Cost-Aware Process",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "research-notes/h-to-g/real-questions/README.md#3",
+    "label": "research-notes/h-to-g/real-questions/README.md \u203a What it says",
+    "gold": false
+   },
+   {
+    "id": "specs/build-knit-dream/reachability.md#12",
+    "label": "specs/build-knit-dream/reachability.md \u203a 7. Executable experiment and next research step",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-687.md#4",
+    "label": "board/cards/REM-687.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "specs/build-knit-dream/reachability.md#13",
+    "label": "specs/build-knit-dream/reachability.md \u203a 7. Executable experiment and next research step",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261020-070640-9cce.md#2",
+    "label": "board/messages/M-20261020-070640-9cce.md",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/0a9a5f8d64",
+    "label": "commit 0a9a5f8: research: measure abstract claim signals through BKD ledger",
+    "gold": false
+   },
+   {
+    "id": "commit/494fdef883",
+    "label": "commit 494fdef: board: file REM-595 research: measure the full cost of claims under changing evidence",
+    "gold": false
+   },
+   {
+    "id": "commit/50d81e3089",
+    "label": "commit 50d81e3: board: file REM-677 research: measure composed graph errors under matched pair scores",
+    "gold": false
+   },
+   {
+    "id": "commit/147afffe09",
+    "label": "commit 147afff: board: file REM-689 research: measure the inspection cost of full frontier rankings",
+    "gold": false
+   },
+   {
+    "id": "commit/a12bd591bc",
+    "label": "commit a12bd59: board: file REM-685 research: measure how index construction changes bounded query success",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "research-notes/build-knit-dream-stream-2026-09-10.md#5",
+    "label": "research-notes/build-knit-dream-stream-2026-09-10.md \u203a Maintenance correctness is not truth",
+    "gold": false
+   },
+   {
+    "id": "commit/50d81e3089",
+    "label": "commit 50d81e3: board: file REM-677 research: measure composed graph errors under matched pair scores",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261021-083827-37e0.md#2",
+    "label": "board/messages/M-20261021-083827-37e0.md",
+    "gold": false
+   },
+   {
+    "id": "research-notes/h-to-g/real-questions/README.md#3",
+    "label": "research-notes/h-to-g/real-questions/README.md \u203a What it says",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1148.md#4",
+    "label": "board/cards/REM-1148.md \u203a Done when",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

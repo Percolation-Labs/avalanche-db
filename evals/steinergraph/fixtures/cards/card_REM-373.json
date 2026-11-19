@@ -1,0 +1,471 @@
+{
+ "qid": "card:REM-373",
+ "set": "cards",
+ "question": "What was done about this, and why: openai-plugin: Percolate passes OpenAI's plugin directory review?",
+ "gold": [
+  {
+   "id": "commit/047bea8b49",
+   "label": "commit 047bea8: The legal pages say only what Percolate actually does",
+   "seed": false
+  },
+  {
+   "id": "commit/6f25b9b015",
+   "label": "commit 6f25b9b: Every sentence on the legal pages names its evidence, and the build refuses one that does not",
+   "seed": false
+  },
+  {
+   "id": "commit/ab66754ef1",
+   "label": "commit ab66754: The legal pages describe Percolate as it runs, and a person can find support",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/adba12cbd4",
+   "label": "commit adba12c: board: file REM-373 openai-plugin: Percolate passes OpenAI's plugin directory review",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-373.md#1",
+   "label": "board/cards/REM-373.md",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "specs/percolate-application/writer-onboarding.md#10",
+   "label": "specs/percolate-application/writer-onboarding.md \u203a 7. Not done",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-384.md#3",
+   "label": "board/cards/REM-384.md \u203a Evidence",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "commit/7adb86a0a1",
+   "label": "commit 7adb86a: board: file REM-375 openai-plugin: ChatGPT and Codex can install Percolate as a plugin",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 2
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/047bea8b49",
+    "label": "commit 047bea8: The legal pages say only what Percolate actually does",
+    "role": "gold"
+   },
+   {
+    "id": "commit/6f25b9b015",
+    "label": "commit 6f25b9b: Every sentence on the legal pages names its evidence, and the build refuses one that does not",
+    "role": "gold"
+   },
+   {
+    "id": "commit/ab66754ef1",
+    "label": "commit ab66754: The legal pages describe Percolate as it runs, and a person can find support",
+    "role": "gold"
+   },
+   {
+    "id": "commit/adba12cbd4",
+    "label": "commit adba12c: board: file REM-373 openai-plugin: Percolate passes OpenAI's plugin directory review",
+    "role": "seed"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/047bea8b49",
+    "b": "commit/6f25b9b015",
+    "via": [
+     {
+      "kind": "term",
+      "key": "request logs",
+      "width": 3
+     },
+     {
+      "kind": "term",
+      "key": "deleted automatically",
+      "width": 4
+     },
+     {
+      "kind": "term",
+      "key": "legal pages",
+      "width": 21
+     },
+     {
+      "kind": "term",
+      "key": "rem 373",
+      "width": 40
+     }
+    ]
+   },
+   {
+    "a": "commit/047bea8b49",
+    "b": "commit/adba12cbd4",
+    "via": [
+     {
+      "kind": "term",
+      "key": "rem 373",
+      "width": 40
+     }
+    ]
+   },
+   {
+    "a": "commit/6f25b9b015",
+    "b": "commit/ab66754ef1",
+    "via": [
+     {
+      "kind": "term",
+      "key": "legal pages",
+      "width": 21
+     },
+     {
+      "kind": "term",
+      "key": "rem 373",
+      "width": 40
+     },
+     {
+      "kind": "term",
+      "key": "privacy",
+      "width": 93
+     }
+    ]
+   }
+  ],
+  "cost": 3,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   1,
+   1
+  ],
+  "entry": {
+   "seed": "commit/adba12cbd4",
+   "gold": "commit/047bea8b49",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 710,
+  "within_2_doors": 31688,
+  "gold_within_1": 3,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "board/cards/REM-375.md#1",
+    "label": "board/cards/REM-375.md",
+    "p": 0.012326201559874763,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/writer-onboarding.md#6",
+    "label": "specs/percolate-application/writer-onboarding.md \u203a 4. Connecting each app",
+    "p": 0.009895631456799428,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-379.md#7",
+    "label": "board/cards/REM-379.md \u203a Log",
+    "p": 0.0060257299639468525,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-385.md#7",
+    "label": "board/cards/REM-385.md \u203a Log",
+    "p": 0.0059563298838009185,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-384.md#7",
+    "label": "board/cards/REM-384.md \u203a Log",
+    "p": 0.0055580449703918535,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-378.md#5",
+    "label": "board/cards/REM-378.md \u203a Scope",
+    "p": 0.0044821487995821635,
+    "gold": false
+   },
+   {
+    "id": "commit/75d685530f",
+    "label": "commit 75d6855: board: REM-375 todo \u2192 done",
+    "p": 0.004187026597296542,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-379.md#3",
+    "label": "board/cards/REM-379.md \u203a Evidence",
+    "p": 0.00399740379308543,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-380.md#3",
+    "label": "board/cards/REM-380.md \u203a Evidence",
+    "p": 0.003807786889907343,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-373.md#2",
+    "label": "board/cards/REM-373.md \u203a Goal",
+    "p": 0.0036322962889891726,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-378.md#3",
+    "label": "board/cards/REM-378.md \u203a Evidence",
+    "p": 0.0035694159706530413,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-373.md#7",
+    "label": "board/cards/REM-373.md \u203a Log",
+    "p": 0.0034537696528162518,
+    "gold": false
+   },
+   {
+    "id": "commit/fd7b3eba92",
+    "label": "commit fd7b3eb: board: REM-374 in-progress \u2192 done",
+    "p": 0.003138617172034059,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/writer-onboarding.md#9",
+    "label": "specs/percolate-application/writer-onboarding.md \u203a 6. What went wrong while it was built",
+    "p": 0.0030388949776784476,
+    "gold": false
+   },
+   {
+    "id": "commit/3f0ed04790",
+    "label": "commit 3f0ed04: board: scratch-2026-09-15-44c35e-76 takes REM-373",
+    "p": 0.002889390444873317,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-375.md#2",
+    "label": "board/cards/REM-375.md \u203a Goal",
+    "p": 0.0027484568450057124,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-385.md#5",
+    "label": "board/cards/REM-385.md \u203a Scope",
+    "p": 0.0024190643892333043,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-378.md#4",
+    "label": "board/cards/REM-378.md \u203a Done when",
+    "p": 0.002411563825612298,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-375.md#3",
+    "label": "board/cards/REM-375.md \u203a Evidence",
+    "p": 0.0023988758001255083,
+    "gold": false
+   },
+   {
+    "id": "commit/55fd2cb339",
+    "label": "commit 55fd2cb: board: note on REM-365",
+    "p": 0.002396897708749364,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/adba12cbd4",
+   "label": "commit adba12c: board: file REM-373 openai-plugin: Percolate passes OpenAI's plugin directory review",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-373.md#1",
+   "label": "board/cards/REM-373.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/percolate-application/writer-onboarding.md#10",
+   "label": "specs/percolate-application/writer-onboarding.md \u203a 7. Not done",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-384.md#3",
+   "label": "board/cards/REM-384.md \u203a Evidence",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/7adb86a0a1",
+   "label": "commit 7adb86a: board: file REM-375 openai-plugin: ChatGPT and Codex can install Percolate as a plugin",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/be05a82bf2",
+   "label": "commit be05a82: board: note on REM-373",
+   "wave": 1,
+   "via": "term:rem 373",
+   "gold": false
+  },
+  {
+   "id": "commit/df6e97ecea",
+   "label": "commit df6e97e: board: REM-373 in-progress \u2192 todo",
+   "wave": 1,
+   "via": "term:rem 373",
+   "gold": false
+  },
+  {
+   "id": "commit/0296dfbe7e",
+   "label": "commit 0296dfb: board: REM-373 todo \u2192 backlog",
+   "wave": 1,
+   "via": "term:rem 373",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-373.md#3",
+   "label": "board/cards/REM-373.md \u203a Evidence",
+   "wave": 1,
+   "via": "term:rem 373",
+   "gold": false
+  },
+  {
+   "id": "commit/e90ed262fa",
+   "label": "commit e90ed26: board: REM-373 in-progress \u2192 todo",
+   "wave": 1,
+   "via": "term:rem 373",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "board/cards/REM-375.md#1",
+    "label": "board/cards/REM-375.md",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/writer-onboarding.md#6",
+    "label": "specs/percolate-application/writer-onboarding.md \u203a 4. Connecting each app",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-379.md#7",
+    "label": "board/cards/REM-379.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-385.md#7",
+    "label": "board/cards/REM-385.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-384.md#7",
+    "label": "board/cards/REM-384.md \u203a Log",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "board/cards/REM-375.md#1",
+    "label": "board/cards/REM-375.md",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/writer-onboarding.md#6",
+    "label": "specs/percolate-application/writer-onboarding.md \u203a 4. Connecting each app",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-379.md#7",
+    "label": "board/cards/REM-379.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-378.md#7",
+    "label": "board/cards/REM-378.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-384.md#7",
+    "label": "board/cards/REM-384.md \u203a Log",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "board/cards/REM-375.md#1",
+    "label": "board/cards/REM-375.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-373.md#2",
+    "label": "board/cards/REM-373.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-378.md#5",
+    "label": "board/cards/REM-378.md \u203a Scope",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-375.md#2",
+    "label": "board/cards/REM-375.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-375.md#5",
+    "label": "board/cards/REM-375.md \u203a Scope",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "board/cards/REM-378.md#5",
+    "label": "board/cards/REM-378.md \u203a Scope",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-373.md#2",
+    "label": "board/cards/REM-373.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-375.md#5",
+    "label": "board/cards/REM-375.md \u203a Scope",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-375.md#1",
+    "label": "board/cards/REM-375.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-378.md#7",
+    "label": "board/cards/REM-378.md \u203a Log",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

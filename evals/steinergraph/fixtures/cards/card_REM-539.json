@@ -1,0 +1,418 @@
+{
+ "qid": "card:REM-539",
+ "set": "cards",
+ "question": "What was done about this, and why: reading: a printed reading puts each claim, figure and table in its place: inline, footnote or appendix?",
+ "gold": [
+  {
+   "id": "commit/25f9606f92",
+   "label": "commit 25f9606: authoring-and-publication: an artifact is brought into the prose by citing it (REM-452)",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/dbd1024151",
+   "label": "commit dbd1024: board: file REM-539 reading: a printed reading puts each claim, figure and table in its place: inline, f",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-539.md#1",
+   "label": "board/cards/REM-539.md",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-539.md#4",
+   "label": "board/cards/REM-539.md \u203a Done when",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "specs/percolate-application/authoring-and-publication.md#9",
+   "label": "specs/percolate-application/authoring-and-publication.md \u203a 3. A1 \u2014 Edit an owned research package in the browser",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "specs/percolate-application/research-package.md#4",
+   "label": "specs/percolate-application/research-package.md \u203a 1. What we have decided, and why",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/25f9606f92",
+    "label": "commit 25f9606: authoring-and-publication: an artifact is brought into the prose by citing it (REM-452)",
+    "role": "gold"
+   },
+   {
+    "id": "commit/dbd1024151",
+    "label": "commit dbd1024: board: file REM-539 reading: a printed reading puts each claim, figure and table in its place: inline, f",
+    "role": "seed"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/25f9606f92",
+    "b": "commit/dbd1024151",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "inline footnote",
+      "width": 4
+     },
+     {
+      "kind": "term",
+      "key": "rem 539",
+      "width": 13
+     },
+     {
+      "kind": "term",
+      "key": "footnote",
+      "width": 60
+     },
+     {
+      "kind": "term",
+      "key": "appendix",
+      "width": 83
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [],
+  "entry": {
+   "seed": "commit/dbd1024151",
+   "gold": "commit/25f9606f92",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 1690,
+  "within_2_doors": 33762,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "commit/25f9606f92",
+    "label": "commit 25f9606: authoring-and-publication: an artifact is brought into the prose by citing it (REM-452)",
+    "p": 0.0077008211478649755,
+    "gold": true
+   },
+   {
+    "id": "board/cards/REM-539.md#2",
+    "label": "board/cards/REM-539.md \u203a Goal",
+    "p": 0.005841864657911933,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-550.md#3",
+    "label": "board/cards/REM-550.md \u203a Product ideas",
+    "p": 0.005531564530141621,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/reading-room.md#3",
+    "label": "specs/percolate-application/reading-room.md \u203a Library",
+    "p": 0.004155749427991098,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/README.md#6",
+    "label": "specs/percolate-application/README.md \u203a Source of the direction",
+    "p": 0.0036253551827215443,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/drafter.md#12",
+    "label": "specs/percolate-application/drafter.md \u203a Density and interruption",
+    "p": 0.003137878145303365,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-539.md#3",
+    "label": "board/cards/REM-539.md \u203a Evidence",
+    "p": 0.003119588485376994,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-452.md#7",
+    "label": "board/cards/REM-452.md \u203a Log",
+    "p": 0.0027327204667143027,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-539.md#5",
+    "label": "board/cards/REM-539.md \u203a Scope",
+    "p": 0.00232423699841287,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-461.md#5",
+    "label": "board/cards/REM-461.md \u203a Estimate \u2014 5 points",
+    "p": 0.002147006341209142,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/artifacts-and-thumbnails.md#8",
+    "label": "specs/percolate-application/artifacts-and-thumbnails.md \u203a 4. Images",
+    "p": 0.0015809588220690306,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-539.md#6",
+    "label": "board/cards/REM-539.md \u203a Links",
+    "p": 0.0015641129665664693,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-539.md#7",
+    "label": "board/cards/REM-539.md \u203a Log",
+    "p": 0.001401846521365449,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-451.md#3",
+    "label": "board/cards/REM-451.md \u203a Evidence",
+    "p": 0.0013754431976509092,
+    "gold": false
+   },
+   {
+    "id": "commit/5278621837",
+    "label": "commit 5278621: board: REM-539 backlog \u2192 canceled",
+    "p": 0.0012177421399130646,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-198.md#3",
+    "label": "board/cards/REM-198.md \u203a Evidence",
+    "p": 0.0011738926097982758,
+    "gold": false
+   },
+   {
+    "id": "specs/agentic/brief.md#48",
+    "label": "specs/agentic/brief.md \u203a 6. Migrations for agents \u2014 authored in code, deployed as data",
+    "p": 0.001146702565996227,
+    "gold": false
+   },
+   {
+    "id": "commit/aaade5655c",
+    "label": "commit aaade56: claims: a frame survives projection, and a claim with one answers a question (REM-476)",
+    "p": 0.0011386904097566272,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-313.md#4",
+    "label": "board/cards/REM-313.md \u203a Done when",
+    "p": 0.0011143805942809032,
+    "gold": false
+   },
+   {
+    "id": "commit/c8b33056c7",
+    "label": "commit c8b3305: Merge pull request #274 from Percolation-Labs/amartey/rem-528-to-0.2.13",
+    "p": 0.0011127637903611356,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/dbd1024151",
+   "label": "commit dbd1024: board: file REM-539 reading: a printed reading puts each claim, figure and table in its place: inline, f",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-539.md#1",
+   "label": "board/cards/REM-539.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-539.md#4",
+   "label": "board/cards/REM-539.md \u203a Done when",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/percolate-application/authoring-and-publication.md#9",
+   "label": "specs/percolate-application/authoring-and-publication.md \u203a 3. A1 \u2014 Edit an owned research package in the browser",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/percolate-application/research-package.md#4",
+   "label": "specs/percolate-application/research-package.md \u203a 1. What we have decided, and why",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-539.md#2",
+   "label": "board/cards/REM-539.md \u203a Goal",
+   "wave": 1,
+   "via": "next:board/cards/REM-539.md#1",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-452.md#7",
+   "label": "board/cards/REM-452.md \u203a Log",
+   "wave": 2,
+   "via": "term:rem 539",
+   "gold": false
+  },
+  {
+   "id": "commit/5278621837",
+   "label": "commit 5278621: board: REM-539 backlog \u2192 canceled",
+   "wave": 2,
+   "via": "term:rem 539",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-539.md#7",
+   "label": "board/cards/REM-539.md \u203a Log",
+   "wave": 2,
+   "via": "term:rem 539",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-539.md#6",
+   "label": "board/cards/REM-539.md \u203a Links",
+   "wave": 2,
+   "via": "term:rem 539",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "commit/25f9606f92",
+    "label": "commit 25f9606: authoring-and-publication: an artifact is brought into the prose by citing it (REM-452)",
+    "gold": true
+   },
+   {
+    "id": "board/cards/REM-539.md#2",
+    "label": "board/cards/REM-539.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-550.md#3",
+    "label": "board/cards/REM-550.md \u203a Product ideas",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/reading-room.md#3",
+    "label": "specs/percolate-application/reading-room.md \u203a Library",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/README.md#6",
+    "label": "specs/percolate-application/README.md \u203a Source of the direction",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "commit/25f9606f92",
+    "label": "commit 25f9606: authoring-and-publication: an artifact is brought into the prose by citing it (REM-452)",
+    "gold": true
+   },
+   {
+    "id": "board/cards/REM-539.md#2",
+    "label": "board/cards/REM-539.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-550.md#3",
+    "label": "board/cards/REM-550.md \u203a Product ideas",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/README.md#6",
+    "label": "specs/percolate-application/README.md \u203a Source of the direction",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-539.md#3",
+    "label": "board/cards/REM-539.md \u203a Evidence",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "board/cards/REM-539.md#2",
+    "label": "board/cards/REM-539.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "commit/25f9606f92",
+    "label": "commit 25f9606: authoring-and-publication: an artifact is brought into the prose by citing it (REM-452)",
+    "gold": true
+   },
+   {
+    "id": "board/messages/M-20261029-200915-2a4e.md#1",
+    "label": "board/messages/M-20261029-200915-2a4e.md",
+    "gold": false
+   },
+   {
+    "id": "specs/design/articles/zep-captures-v30/appendix.txt#3",
+    "label": "specs/design/articles/zep-captures-v30/appendix.txt",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261030-000246-6846.md#1",
+    "label": "board/messages/M-20261030-000246-6846.md",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "board/cards/REM-539.md#2",
+    "label": "board/cards/REM-539.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "commit/25f9606f92",
+    "label": "commit 25f9606: authoring-and-publication: an artifact is brought into the prose by citing it (REM-452)",
+    "gold": true
+   },
+   {
+    "id": "board/cards/REM-527.md#4",
+    "label": "board/cards/REM-527.md \u203a Questions to decide",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1223.md#4",
+    "label": "board/cards/REM-1223.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "research-notes/h-to-g/real-questions/README.md#6",
+    "label": "research-notes/h-to-g/real-questions/README.md \u203a Round 2 \u2014 reading verifier, adjudicated labels, repeats (2026-09-27)",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 1.0,
+  "Q": 1.0,
+  "LQ": 1.0,
+  "S": 1.0
+ }
+}

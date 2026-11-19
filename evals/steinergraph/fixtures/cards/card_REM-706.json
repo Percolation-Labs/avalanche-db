@@ -1,0 +1,433 @@
+{
+ "qid": "card:REM-706",
+ "set": "cards",
+ "question": "What was done about this, and why: board: several agents divide a research question?",
+ "gold": [
+  {
+   "id": "commit/95fcffa2d0",
+   "label": "commit 95fcffa: Research runs: what two end-to-end runs changed (REM-706)",
+   "seed": false
+  },
+  {
+   "id": "commit/ff81afd7cc",
+   "label": "commit ff81afd: Research runs are live (REM-706)",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/f1ead2171c",
+   "label": "commit f1ead21: board: file REM-706 board: several agents divide a research question",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "specs/percolate-application/research-runs.md#1",
+   "label": "specs/percolate-application/research-runs.md \u203a Research runs: several agents divide a question on the board",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-706.md#1",
+   "label": "board/cards/REM-706.md",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/a92ed9df5e",
+   "label": "commit a92ed9d: Research runs: several agents divide a question on the board (spec, REM-346 revived)",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-706.md#2",
+   "label": "board/cards/REM-706.md \u203a Goal",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "board/cards/REM-706.md#1",
+    "label": "board/cards/REM-706.md",
+    "role": "seed"
+   },
+   {
+    "id": "commit/95fcffa2d0",
+    "label": "commit 95fcffa: Research runs: what two end-to-end runs changed (REM-706)",
+    "role": "gold"
+   },
+   {
+    "id": "commit/ff81afd7cc",
+    "label": "commit ff81afd: Research runs are live (REM-706)",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "board/cards/REM-706.md#1",
+    "b": "commit/95fcffa2d0",
+    "via": [
+     {
+      "kind": "term",
+      "key": "rem 706",
+      "width": 18
+     },
+     {
+      "kind": "term",
+      "key": "research runs",
+      "width": 33
+     }
+    ]
+   },
+   {
+    "a": "commit/95fcffa2d0",
+    "b": "commit/ff81afd7cc",
+    "via": [
+     {
+      "kind": "term",
+      "key": "rem 706",
+      "width": 18
+     },
+     {
+      "kind": "term",
+      "key": "research runs",
+      "width": 33
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "board/cards/REM-706.md#1",
+   "gold": "commit/95fcffa2d0",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 1039,
+  "within_2_doors": 33459,
+  "gold_within_1": 2,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "board/cards/REM-706.md#8",
+    "label": "board/cards/REM-706.md \u203a Log",
+    "p": 0.004845899529876229,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/research-runs.md#2",
+    "label": "specs/percolate-application/research-runs.md \u203a 1. What the person gets",
+    "p": 0.0038756054660771663,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-706.md#4",
+    "label": "board/cards/REM-706.md \u203a Done when",
+    "p": 0.0027310744773702852,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/library-board.md#15",
+    "label": "specs/percolate-application/library-board.md \u203a 12. Delivery gates",
+    "p": 0.0024081169563401296,
+    "gold": false
+   },
+   {
+    "id": "research-notes/essay-graph/corpus/strunk-1918-elements-of-style/text.txt#41",
+    "label": "research-notes/essay-graph/corpus/strunk-1918-elements-of-style/text.txt",
+    "p": 0.002266787044555194,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-706.md#3",
+    "label": "board/cards/REM-706.md \u203a Evidence",
+    "p": 0.002263761225136833,
+    "gold": false
+   },
+   {
+    "id": "commit/38fdb8a849",
+    "label": "commit 38fdb8a: board: file REM-707 navigation: a carried verdict says which of its claims were reworded since",
+    "p": 0.0022520495703993795,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/research-runs.md#8",
+    "label": "specs/percolate-application/research-runs.md \u203a 5. Coordination rules, from the board this repository already runs",
+    "p": 0.0022026813718604666,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-345.md#6",
+    "label": "board/cards/REM-345.md \u203a Log",
+    "p": 0.0019485650098694611,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261107-201811-bf4c.md#1",
+    "label": "board/messages/M-20261107-201811-bf4c.md",
+    "p": 0.001595560697853308,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/research-runs.md#15",
+    "label": "specs/percolate-application/research-runs.md \u203a 11. Spikes",
+    "p": 0.0015589297277513502,
+    "gold": false
+   },
+   {
+    "id": "board/team/p8-subsystems-7d.md#2",
+    "label": "board/team/p8-subsystems-7d.md \u203a Log",
+    "p": 0.0015402558064987137,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-706.md#6",
+    "label": "board/cards/REM-706.md \u203a Scope",
+    "p": 0.0014047463621441076,
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-10-20-lme-seeded-taxonomy/in_percolate/runs/beam/casebook/casebook.md#20",
+    "label": "meta/spikes/2026-10-20-lme-seeded-taxonomy/in_percolate/runs/beam/casebook/casebook.md \u203a 10M:5:temporal_reasoning:0 (tem",
+    "p": 0.0013696490577230287,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-361.md#5",
+    "label": "board/cards/REM-361.md \u203a Scope",
+    "p": 0.0013687912388723631,
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-10-20-lme-seeded-taxonomy/in_percolate/runs/beam/casebook/dossiers.md#37",
+    "label": "meta/spikes/2026-10-20-lme-seeded-taxonomy/in_percolate/runs/beam/casebook/dossiers.md \u203a 10M:5:temporal_reasoning:0 (tem",
+    "p": 0.0012739548840212732,
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-10-17-iterative-query/dream/gold/dream_build.py#2",
+    "label": "meta/spikes/2026-10-17-iterative-query/dream/gold/dream_build.py",
+    "p": 0.001272280775043017,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-346.md#2",
+    "label": "board/cards/REM-346.md \u203a Goal",
+    "p": 0.0012233946541484373,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/drafter.md#78",
+    "label": "specs/percolate-application/drafter.md \u203a 8. MCP and companion parity",
+    "p": 0.0011837736890192593,
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-10-23-wikispeedia/walker/traces/README.md#3",
+    "label": "meta/spikes/2026-10-23-wikispeedia/walker/traces/README.md \u203a What the ten share",
+    "p": 0.0011406371457563685,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/f1ead2171c",
+   "label": "commit f1ead21: board: file REM-706 board: several agents divide a research question",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/percolate-application/research-runs.md#1",
+   "label": "specs/percolate-application/research-runs.md \u203a Research runs: several agents divide a question on the board",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-706.md#1",
+   "label": "board/cards/REM-706.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/a92ed9df5e",
+   "label": "commit a92ed9d: Research runs: several agents divide a question on the board (spec, REM-346 revived)",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-706.md#2",
+   "label": "board/cards/REM-706.md \u203a Goal",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/percolate-application/research-runs.md#20",
+   "label": "specs/percolate-application/research-runs.md \u203a Rounds three and four: efficiency and editing",
+   "wave": 1,
+   "via": "term:research runs",
+   "gold": false
+  },
+  {
+   "id": "specs/percolate-application/research-runs.md#7",
+   "label": "specs/percolate-application/research-runs.md \u203a 4. Taking, leases and delivering",
+   "wave": 1,
+   "via": "term:research runs",
+   "gold": false
+  },
+  {
+   "id": "specs/percolate-application/research-runs.md#5",
+   "label": "specs/percolate-application/research-runs.md \u203a 3. The model",
+   "wave": 1,
+   "via": "term:research runs",
+   "gold": false
+  },
+  {
+   "id": "specs/percolate-application/research-runs.md#11",
+   "label": "specs/percolate-application/research-runs.md \u203a 7. The recipe, as a guide",
+   "wave": 1,
+   "via": "term:research runs",
+   "gold": false
+  },
+  {
+   "id": "commit/ff81afd7cc",
+   "label": "commit ff81afd: Research runs are live (REM-706)",
+   "wave": 1,
+   "via": "term:research runs",
+   "gold": true
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "board/cards/REM-706.md#8",
+    "label": "board/cards/REM-706.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/research-runs.md#2",
+    "label": "specs/percolate-application/research-runs.md \u203a 1. What the person gets",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-706.md#4",
+    "label": "board/cards/REM-706.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/library-board.md#15",
+    "label": "specs/percolate-application/library-board.md \u203a 12. Delivery gates",
+    "gold": false
+   },
+   {
+    "id": "research-notes/essay-graph/corpus/strunk-1918-elements-of-style/text.txt#41",
+    "label": "research-notes/essay-graph/corpus/strunk-1918-elements-of-style/text.txt",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "specs/percolate-application/research-runs.md#2",
+    "label": "specs/percolate-application/research-runs.md \u203a 1. What the person gets",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-706.md#8",
+    "label": "board/cards/REM-706.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/library-board.md#15",
+    "label": "specs/percolate-application/library-board.md \u203a 12. Delivery gates",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-346.md#2",
+    "label": "board/cards/REM-346.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "research-notes/essay-graph/corpus/strunk-1918-elements-of-style/text.txt#41",
+    "label": "research-notes/essay-graph/corpus/strunk-1918-elements-of-style/text.txt",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/dcb57c40d1",
+    "label": "commit dcb57c4: board: REM-706 in-progress \u2192 done",
+    "gold": false
+   },
+   {
+    "id": "commit/ff81afd7cc",
+    "label": "commit ff81afd: Research runs are live (REM-706)",
+    "gold": true
+   },
+   {
+    "id": "board/cards/REM-706.md#6",
+    "label": "board/cards/REM-706.md \u203a Scope",
+    "gold": false
+   },
+   {
+    "id": "commit/f181ce168b",
+    "label": "commit f181ce1: board: note on REM-706",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-548.md#6",
+    "label": "board/cards/REM-548.md \u203a Links",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "specs/percolate-application/research-runs.md#2",
+    "label": "specs/percolate-application/research-runs.md \u203a 1. What the person gets",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-346.md#2",
+    "label": "board/cards/REM-346.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "research-notes/essay-graph/corpus/strunk-1918-elements-of-style/text.txt#41",
+    "label": "research-notes/essay-graph/corpus/strunk-1918-elements-of-style/text.txt",
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-self-model/product.md#25",
+    "label": "applications/percolate-self-model/product.md \u203a 9. The product route: the project's history as Percolate research (5\u20136 Oc",
+    "gold": false
+   },
+   {
+    "id": "research-notes/coalescing/question-interface-paper-2026-10-07/paper.md#1",
+    "label": "research-notes/coalescing/question-interface-paper-2026-10-07/paper.md \u203a Keeping up without switching off",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.5,
+  "S": 0.0
+ }
+}

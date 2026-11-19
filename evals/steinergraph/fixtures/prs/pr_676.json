@@ -1,0 +1,434 @@
+{
+ "qid": "pr:676",
+ "set": "prs",
+ "question": "What work went into this, and why: A tighter bound for a ranking judge: 2.27 at the depth P-first travels; relabel from the measured lift?",
+ "gold": [
+  {
+   "id": "commit/068191ba2d",
+   "label": "commit 068191b: Tighter bound, first pass: P-first as one rank event (m_t in place of 3, per-item per-wave cap); a lower",
+   "seed": false
+  },
+  {
+   "id": "commit/e515d2300a",
+   "label": "commit e515d23: Tighter bound at depth m_t: a lower bound on four corpora, gap closed 94% repo, 58% BEAM, 31% QASPER; re",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/c122b6cc59",
+   "label": "commit c122b6c: Merge pull request #676 from Percolation-Labs/sally/tight-bound",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/messages/M-20261102-210724-f3ca.md#1",
+   "label": "board/messages/M-20261102-210724-f3ca.md",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/e515d2300a",
+   "label": "commit e515d23: Tighter bound at depth m_t: a lower bound on four corpora, gap closed 94% repo, 58% BEAM, 31% QASPER; re",
+   "rank": 3,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "meta/lab/results/dream-metric/TIGHT.md#6",
+   "label": "meta/lab/results/dream-metric/TIGHT.md \u203a The relabel term, from the measured lift (cory 5.43)",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/messages/M-20261102-210832-0257.md#1",
+   "label": "board/messages/M-20261102-210832-0257.md",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/068191ba2d",
+    "label": "commit 068191b: Tighter bound, first pass: P-first as one rank event (m_t in place of 3, per-item per-wave cap); a lower",
+    "role": "gold"
+   },
+   {
+    "id": "commit/e515d2300a",
+    "label": "commit e515d23: Tighter bound at depth m_t: a lower bound on four corpora, gap closed 94% repo, 58% BEAM, 31% QASPER; re",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/068191ba2d",
+    "b": "commit/e515d2300a",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "near",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "corpora gap",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "gap closed",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "tighter bound",
+      "width": 12
+     },
+     {
+      "kind": "term",
+      "key": "four corpora",
+      "width": 24
+     },
+     {
+      "kind": "term",
+      "key": "m_t",
+      "width": 28
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "commit/e515d2300a",
+   "gold": "commit/e515d2300a",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 814,
+  "within_2_doors": 30203,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "board/messages/M-20261102-204302-3eab.md#1",
+    "label": "board/messages/M-20261102-204302-3eab.md",
+    "p": 0.016431135865199405,
+    "gold": false
+   },
+   {
+    "id": "commit/068191ba2d",
+    "label": "commit 068191b: Tighter bound, first pass: P-first as one rank event (m_t in place of 3, per-item per-wave cap); a lower",
+    "p": 0.013108935977349145,
+    "gold": true
+   },
+   {
+    "id": "meta/lab/results/dream-metric/TIGHT.md#1",
+    "label": "meta/lab/results/dream-metric/TIGHT.md \u203a A tighter bound for a ranking judge: the 2.27 open question, first pass (2 Nov,",
+    "p": 0.008209167124955999,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/configs/structure/signposted_top.py#5",
+    "label": "meta/lab/configs/structure/signposted_top.py",
+    "p": 0.005407834723641412,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/dream-metric/TIGHT.md#2",
+    "label": "meta/lab/results/dream-metric/TIGHT.md \u203a A tighter bound for a ranking judge: the 2.27 open question, first pass (2 Nov,",
+    "p": 0.004711523205389755,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261102-210727-4827.md#1",
+    "label": "board/messages/M-20261102-210727-4827.md",
+    "p": 0.004650926124161062,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/dream-metric/TIGHT.md#5",
+    "label": "meta/lab/results/dream-metric/TIGHT.md \u203a Fitted at the depth the walk travels: rank within m_t (`--pfirst --fitm`, `tigh",
+    "p": 0.004028490964828991,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/configs/structure/twostage.py#1",
+    "label": "meta/lab/configs/structure/twostage.py",
+    "p": 0.003673058540497229,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/dream-metric/TIGHT.md#4",
+    "label": "meta/lab/results/dream-metric/TIGHT.md \u203a Checked on four corpora (`signposted_top.py --pfirst`, `tight/*.txt`; $0, no ne",
+    "p": 0.003097516000964052,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261102-200715-bbb6.md#1",
+    "label": "board/messages/M-20261102-200715-bbb6.md",
+    "p": 0.0028848061165073677,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261102-220233-bdc4.md#1",
+    "label": "board/messages/M-20261102-220233-bdc4.md",
+    "p": 0.002804656604472179,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/dream-metric/TIGHT.md#3",
+    "label": "meta/lab/results/dream-metric/TIGHT.md \u203a Checked on four corpora (`signposted_top.py --pfirst`, `tight/*.txt`; $0, no ne",
+    "p": 0.0027692349269170568,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/dream-metric/TWOSTAGE.md#1",
+    "label": "meta/lab/results/dream-metric/TWOSTAGE.md \u203a The two-stage judge in the bound: a listwise second stage at the top of the ",
+    "p": 0.0021550277549567867,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261102-195201-2971.md#1",
+    "label": "board/messages/M-20261102-195201-2971.md",
+    "p": 0.002019345081105389,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/configs/structure/tail.py#1",
+    "label": "meta/lab/configs/structure/tail.py",
+    "p": 0.0017329456188288023,
+    "gold": false
+   },
+   {
+    "id": "commit/ec78676140",
+    "label": "commit ec78676: board: james messages sally",
+    "p": 0.0017162154996959579,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261103-081712-fc19.md#1",
+    "label": "board/messages/M-20261103-081712-fc19.md",
+    "p": 0.001669647267365328,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261102-220200-5973.md#1",
+    "label": "board/messages/M-20261102-220200-5973.md",
+    "p": 0.0016505571266585929,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261102-220256-1602.md#1",
+    "label": "board/messages/M-20261102-220256-1602.md",
+    "p": 0.0016465872227938128,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/dream-metric/TAIL.md#2",
+    "label": "meta/lab/results/dream-metric/TAIL.md \u203a Dreaming's tail metric: the definition and the tail sets, fixed before any opera",
+    "p": 0.0015696344967523021,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/c122b6cc59",
+   "label": "commit c122b6c: Merge pull request #676 from Percolation-Labs/sally/tight-bound",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/messages/M-20261102-210724-f3ca.md#1",
+   "label": "board/messages/M-20261102-210724-f3ca.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/e515d2300a",
+   "label": "commit e515d23: Tighter bound at depth m_t: a lower bound on four corpora, gap closed 94% repo, 58% BEAM, 31% QASPER; re",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "meta/lab/results/dream-metric/TIGHT.md#6",
+   "label": "meta/lab/results/dream-metric/TIGHT.md \u203a The relabel term, from the measured lift (cory 5.43)",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/messages/M-20261102-210832-0257.md#1",
+   "label": "board/messages/M-20261102-210832-0257.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/dream-metric/TIGHT.md#1",
+   "label": "meta/lab/results/dream-metric/TIGHT.md \u203a A tighter bound for a ranking judge: the 2.27 open question, first pass (2 Nov,",
+   "wave": 1,
+   "via": "term:c_t",
+   "gold": false
+  },
+  {
+   "id": "board/messages/M-20261102-204302-3eab.md#1",
+   "label": "board/messages/M-20261102-204302-3eab.md",
+   "wave": 1,
+   "via": "term:c_t",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/dream-metric/TIGHT.md#3",
+   "label": "meta/lab/results/dream-metric/TIGHT.md \u203a Checked on four corpora (`signposted_top.py --pfirst`, `tight/*.txt`; $0, no ne",
+   "wave": 2,
+   "via": "term:m_t",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/dream-metric/TIGHT.md#2",
+   "label": "meta/lab/results/dream-metric/TIGHT.md \u203a A tighter bound for a ranking judge: the 2.27 open question, first pass (2 Nov,",
+   "wave": 2,
+   "via": "term:m_t",
+   "gold": false
+  },
+  {
+   "id": "commit/068191ba2d",
+   "label": "commit 068191b: Tighter bound, first pass: P-first as one rank event (m_t in place of 3, per-item per-wave cap); a lower",
+   "wave": 2,
+   "via": "term:m_t",
+   "gold": true
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "board/messages/M-20261102-204302-3eab.md#1",
+    "label": "board/messages/M-20261102-204302-3eab.md",
+    "gold": false
+   },
+   {
+    "id": "commit/068191ba2d",
+    "label": "commit 068191b: Tighter bound, first pass: P-first as one rank event (m_t in place of 3, per-item per-wave cap); a lower",
+    "gold": true
+   },
+   {
+    "id": "meta/lab/results/dream-metric/TIGHT.md#1",
+    "label": "meta/lab/results/dream-metric/TIGHT.md \u203a A tighter bound for a ranking judge: the 2.27 open question, first pass (2 Nov,",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/configs/structure/signposted_top.py#5",
+    "label": "meta/lab/configs/structure/signposted_top.py",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/dream-metric/TIGHT.md#2",
+    "label": "meta/lab/results/dream-metric/TIGHT.md \u203a A tighter bound for a ranking judge: the 2.27 open question, first pass (2 Nov,",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "board/messages/M-20261102-204302-3eab.md#1",
+    "label": "board/messages/M-20261102-204302-3eab.md",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/dream-metric/TIGHT.md#1",
+    "label": "meta/lab/results/dream-metric/TIGHT.md \u203a A tighter bound for a ranking judge: the 2.27 open question, first pass (2 Nov,",
+    "gold": false
+   },
+   {
+    "id": "commit/068191ba2d",
+    "label": "commit 068191b: Tighter bound, first pass: P-first as one rank event (m_t in place of 3, per-item per-wave cap); a lower",
+    "gold": true
+   },
+   {
+    "id": "meta/lab/results/dream-metric/TIGHT.md#2",
+    "label": "meta/lab/results/dream-metric/TIGHT.md \u203a A tighter bound for a ranking judge: the 2.27 open question, first pass (2 Nov,",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/dream-metric/TIGHT.md#5",
+    "label": "meta/lab/results/dream-metric/TIGHT.md \u203a Fitted at the depth the walk travels: rank within m_t (`--pfirst --fitm`, `tigh",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/068191ba2d",
+    "label": "commit 068191b: Tighter bound, first pass: P-first as one rank event (m_t in place of 3, per-item per-wave cap); a lower",
+    "gold": true
+   },
+   {
+    "id": "board/messages/M-20261102-210727-4827.md#1",
+    "label": "board/messages/M-20261102-210727-4827.md",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261102-204302-3eab.md#1",
+    "label": "board/messages/M-20261102-204302-3eab.md",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/dream-metric/TIGHT.md#2",
+    "label": "meta/lab/results/dream-metric/TIGHT.md \u203a A tighter bound for a ranking judge: the 2.27 open question, first pass (2 Nov,",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261102-195201-2971.md#1",
+    "label": "board/messages/M-20261102-195201-2971.md",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "board/messages/M-20261102-210813-f195.md#1",
+    "label": "board/messages/M-20261102-210813-f195.md",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/dream-metric/TIGHT.md#1",
+    "label": "meta/lab/results/dream-metric/TIGHT.md \u203a A tighter bound for a ranking judge: the 2.27 open question, first pass (2 Nov,",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261102-204302-3eab.md#1",
+    "label": "board/messages/M-20261102-204302-3eab.md",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/dream-metric/TIGHT.md#5",
+    "label": "meta/lab/results/dream-metric/TIGHT.md \u203a Fitted at the depth the walk travels: rank within m_t (`--pfirst --fitm`, `tigh",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261102-220233-bdc4.md#1",
+    "label": "board/messages/M-20261102-220233-bdc4.md",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 1.0,
+  "Q": 1.0,
+  "LQ": 1.0,
+  "S": 0.0
+ }
+}

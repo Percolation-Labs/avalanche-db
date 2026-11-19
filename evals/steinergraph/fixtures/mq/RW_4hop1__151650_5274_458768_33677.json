@@ -1,0 +1,494 @@
+{
+ "qid": "RW:4hop1__151650_5274_458768_33677",
+ "set": "mq",
+ "question": "When was the most recent Bicycle Friendly Community Award given to the city where the only group larger than the record label of Desde El Principio is headquartered?",
+ "gold": [
+  {
+   "id": "mq:0ab53ea6d24e21ee",
+   "label": "Sony Music",
+   "seed": false
+  },
+  {
+   "id": "mq:130499a3056b377f",
+   "label": "Desde El Principio",
+   "seed": true
+  },
+  {
+   "id": "mq:1361a73b93f8a886",
+   "label": "Santa Monica, California",
+   "seed": true
+  },
+  {
+   "id": "mq:ca71e65436e86e9d",
+   "label": "The Right Stuff Records",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:130499a3056b377f",
+   "label": "Desde El Principio",
+   "rank": 1,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:1361a73b93f8a886",
+   "label": "Santa Monica, California",
+   "rank": 2,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:59967acbcf257238",
+   "label": "Jive Records",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:7dbfb4fae94eeffd",
+   "label": "MCA Records",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:8f313c41eef4ed32",
+   "label": "NBA Defensive Player of the Year Award",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 2
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:0ab53ea6d24e21ee",
+    "label": "Sony Music",
+    "role": "gold"
+   },
+   {
+    "id": "mq:130499a3056b377f",
+    "label": "Desde El Principio",
+    "role": "gold"
+   },
+   {
+    "id": "mq:1361a73b93f8a886",
+    "label": "Santa Monica, California",
+    "role": "gold"
+   },
+   {
+    "id": "mq:ca71e65436e86e9d",
+    "label": "The Right Stuff Records",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:0ab53ea6d24e21ee",
+    "b": "mq:130499a3056b377f",
+    "via": [
+     {
+      "kind": "term",
+      "key": "cbs records",
+      "width": 4
+     },
+     {
+      "kind": "term",
+      "key": "conglomerate",
+      "width": 11
+     },
+     {
+      "kind": "term",
+      "key": "music entertainment",
+      "width": 14
+     },
+     {
+      "kind": "term",
+      "key": "sony music",
+      "width": 25
+     },
+     {
+      "kind": "term",
+      "key": "sony",
+      "width": 77
+     }
+    ]
+   },
+   {
+    "a": "mq:0ab53ea6d24e21ee",
+    "b": "mq:ca71e65436e86e9d",
+    "via": [
+     {
+      "kind": "term",
+      "key": "universal music",
+      "width": 12
+     },
+     {
+      "kind": "term",
+      "key": "music group",
+      "width": 33
+     },
+     {
+      "kind": "term",
+      "key": "universal",
+      "width": 96
+     }
+    ]
+   },
+   {
+    "a": "mq:1361a73b93f8a886",
+    "b": "mq:ca71e65436e86e9d",
+    "via": [
+     {
+      "kind": "term",
+      "key": "monica california",
+      "width": 8
+     },
+     {
+      "kind": "term",
+      "key": "santa monica",
+      "width": 12
+     },
+     {
+      "kind": "term",
+      "key": "monica",
+      "width": 22
+     }
+    ]
+   }
+  ],
+  "cost": 3,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   2,
+   1,
+   2,
+   1,
+   1
+  ],
+  "entry": {
+   "seed": "mq:130499a3056b377f",
+   "gold": "mq:130499a3056b377f",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 1910,
+  "within_2_doors": 19165,
+  "gold_within_1": 2,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "mq:1cbc68222f8469c1",
+    "label": "Michael Jordan",
+    "p": 0.0029799368990876037,
+    "gold": false
+   },
+   {
+    "id": "mq:d38e0b4356832ff4",
+    "label": "Sony Music",
+    "p": 0.002363844312275655,
+    "gold": false
+   },
+   {
+    "id": "mq:8dadfd6d1e926432",
+    "label": "American Idol",
+    "p": 0.002127414293970432,
+    "gold": false
+   },
+   {
+    "id": "mq:0e48ad99219cb349",
+    "label": "Sony Music",
+    "p": 0.001945786852107616,
+    "gold": false
+   },
+   {
+    "id": "mq:ccfd5950f5949fa5",
+    "label": "Adult contemporary music",
+    "p": 0.0016133155049250767,
+    "gold": false
+   },
+   {
+    "id": "mq:e1f0c9a22d05652f",
+    "label": "Big Blue Note",
+    "p": 0.0015360953542539518,
+    "gold": false
+   },
+   {
+    "id": "mq:0ab53ea6d24e21ee",
+    "label": "Sony Music",
+    "p": 0.0015169432423004997,
+    "gold": true
+   },
+   {
+    "id": "mq:41f648369dc46f6a",
+    "label": "Hydrogen",
+    "p": 0.0015000356657062493,
+    "gold": false
+   },
+   {
+    "id": "mq:8467b1eaccc912f6",
+    "label": "Dancing with the Stars (American season 24)",
+    "p": 0.0014978585281500672,
+    "gold": false
+   },
+   {
+    "id": "mq:a7a4013382a5dc6a",
+    "label": "Sony Music",
+    "p": 0.0014490299108500988,
+    "gold": false
+   },
+   {
+    "id": "mq:2b286038f91aa490",
+    "label": "Birth control in the United States",
+    "p": 0.0011819550726479234,
+    "gold": false
+   },
+   {
+    "id": "mq:3b0a6fd5b98937a1",
+    "label": "Arkansas Highway 242",
+    "p": 0.0011743495850028663,
+    "gold": false
+   },
+   {
+    "id": "mq:6c5c56e7ec09f8d7",
+    "label": "Tantalizingly Hot",
+    "p": 0.0010883008113709894,
+    "gold": false
+   },
+   {
+    "id": "mq:fb1fdafe984545e5",
+    "label": "NBA high school draftees",
+    "p": 0.0010669370487440804,
+    "gold": false
+   },
+   {
+    "id": "mq:349324d834fe8520",
+    "label": "Victor Oladipo",
+    "p": 0.0010610988156032064,
+    "gold": false
+   },
+   {
+    "id": "mq:f33b849e9622ff8a",
+    "label": "Crown of Aragon",
+    "p": 0.0010493249034126855,
+    "gold": false
+   },
+   {
+    "id": "mq:92a3eb4a9e3ee311",
+    "label": "If You See Him/If You See Her",
+    "p": 0.0010453363174404786,
+    "gold": false
+   },
+   {
+    "id": "mq:28b322e04441842e",
+    "label": "BBC Sports Personality of the Year Award",
+    "p": 0.0010369280138643974,
+    "gold": false
+   },
+   {
+    "id": "mq:c94bfdf244a632b9",
+    "label": "Fox Sports 1",
+    "p": 0.0010079275267829383,
+    "gold": false
+   },
+   {
+    "id": "mq:271de0ff8a1e37d8",
+    "label": "Eye of the Tiger",
+    "p": 0.0009920396779723743,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:130499a3056b377f",
+   "label": "Desde El Principio",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:1361a73b93f8a886",
+   "label": "Santa Monica, California",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:59967acbcf257238",
+   "label": "Jive Records",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:7dbfb4fae94eeffd",
+   "label": "MCA Records",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:8f313c41eef4ed32",
+   "label": "NBA Defensive Player of the Year Award",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:020990590bbc6bec",
+   "label": "Santa Monica, California",
+   "wave": 1,
+   "via": "term:santa monica",
+   "gold": false
+  },
+  {
+   "id": "mq:ce13b8a396008506",
+   "label": "Santa Monica, California",
+   "wave": 1,
+   "via": "term:santa monica",
+   "gold": false
+  },
+  {
+   "id": "mq:a9b5b7e51b0077a8",
+   "label": "Santa Monica, California",
+   "wave": 1,
+   "via": "term:santa monica",
+   "gold": false
+  },
+  {
+   "id": "mq:ca71e65436e86e9d",
+   "label": "The Right Stuff Records",
+   "wave": 1,
+   "via": "term:santa monica",
+   "gold": true
+  },
+  {
+   "id": "mq:cabbb538689a3ba3",
+   "label": "John Paxton",
+   "wave": 1,
+   "via": "term:santa monica",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:1cbc68222f8469c1",
+    "label": "Michael Jordan",
+    "gold": false
+   },
+   {
+    "id": "mq:d38e0b4356832ff4",
+    "label": "Sony Music",
+    "gold": false
+   },
+   {
+    "id": "mq:8dadfd6d1e926432",
+    "label": "American Idol",
+    "gold": false
+   },
+   {
+    "id": "mq:0e48ad99219cb349",
+    "label": "Sony Music",
+    "gold": false
+   },
+   {
+    "id": "mq:ccfd5950f5949fa5",
+    "label": "Adult contemporary music",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:3b0a6fd5b98937a1",
+    "label": "Arkansas Highway 242",
+    "gold": false
+   },
+   {
+    "id": "mq:0e48ad99219cb349",
+    "label": "Sony Music",
+    "gold": false
+   },
+   {
+    "id": "mq:d38e0b4356832ff4",
+    "label": "Sony Music",
+    "gold": false
+   },
+   {
+    "id": "mq:8dadfd6d1e926432",
+    "label": "American Idol",
+    "gold": false
+   },
+   {
+    "id": "mq:a7a4013382a5dc6a",
+    "label": "Sony Music",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:d38e0b4356832ff4",
+    "label": "Sony Music",
+    "gold": false
+   },
+   {
+    "id": "mq:0e48ad99219cb349",
+    "label": "Sony Music",
+    "gold": false
+   },
+   {
+    "id": "mq:8dadfd6d1e926432",
+    "label": "American Idol",
+    "gold": false
+   },
+   {
+    "id": "mq:3b0a6fd5b98937a1",
+    "label": "Arkansas Highway 242",
+    "gold": false
+   },
+   {
+    "id": "mq:e884a8e9e61a0246",
+    "label": "Sony Music",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:e6a2e93421f788cf",
+    "label": "Cannondale Bicycle Corporation",
+    "gold": false
+   },
+   {
+    "id": "mq:3cdcc9cf54cd69d9",
+    "label": "Biltmore Records",
+    "gold": false
+   },
+   {
+    "id": "mq:3b0a6fd5b98937a1",
+    "label": "Arkansas Highway 242",
+    "gold": false
+   },
+   {
+    "id": "mq:60bb082ac9486176",
+    "label": "Equity Music Group",
+    "gold": false
+   },
+   {
+    "id": "mq:80fe00f506911d4b",
+    "label": "Nothing Records",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

@@ -1,0 +1,405 @@
+{
+ "qid": "pr:699",
+ "set": "prs",
+ "question": "What work went into this, and why: Postmortem: a busy database read as a stalled job?",
+ "gold": [
+  {
+   "id": "commit/9157e1aacb",
+   "label": "commit 9157e1a: Postmortem: the use_edges null traced to an empty stage",
+   "seed": false
+  },
+  {
+   "id": "commit/c6c990ef62",
+   "label": "commit c6c990e: Postmortem: a busy database read as a stalled job (REM-1300, REM-1301)",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/c6c990ef62",
+   "label": "commit c6c990e: Postmortem: a busy database read as a stalled job (REM-1300, REM-1301)",
+   "rank": 1,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "meta/postmortems/2026-11-04-a-busy-database-read-as-a-stalled-job.md#4",
+   "label": "meta/postmortems/2026-11-04-a-busy-database-read-as-a-stalled-job.md",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/8bda184fae",
+   "label": "commit 8bda184: Merge pull request #699 from Percolation-Labs/bill/pm-use-edges-sweep",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "meta/postmortems/2026-11-04-a-busy-database-read-as-a-stalled-job.md#1",
+   "label": "meta/postmortems/2026-11-04-a-busy-database-read-as-a-stalled-job.md",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "meta/postmortems/2026-11-04-a-busy-database-read-as-a-stalled-job.md#2",
+   "label": "meta/postmortems/2026-11-04-a-busy-database-read-as-a-stalled-job.md",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/9157e1aacb",
+    "label": "commit 9157e1a: Postmortem: the use_edges null traced to an empty stage",
+    "role": "gold"
+   },
+   {
+    "id": "commit/c6c990ef62",
+    "label": "commit c6c990e: Postmortem: a busy database read as a stalled job (REM-1300, REM-1301)",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/9157e1aacb",
+    "b": "commit/c6c990ef62",
+    "via": [
+     {
+      "kind": "beside"
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "commit/c6c990ef62",
+   "gold": "commit/c6c990ef62",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 1096,
+  "within_2_doors": 33421,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "meta/postmortems/2026-11-04-a-busy-database-read-as-a-stalled-job.md#3",
+    "label": "meta/postmortems/2026-11-04-a-busy-database-read-as-a-stalled-job.md",
+    "p": 0.007050817116633942,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1301.md#4",
+    "label": "board/cards/REM-1301.md \u203a Done when",
+    "p": 0.006438448201021884,
+    "gold": false
+   },
+   {
+    "id": "commit/ae968a5664",
+    "label": "commit ae968a5: board: file REM-1301 board: a registered job whose work runs in a container reads as busy, not idle",
+    "p": 0.004568848810888516,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1301.md#1",
+    "label": "board/cards/REM-1301.md",
+    "p": 0.004030127617222651,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261104-191020-a6a6.md#1",
+    "label": "board/messages/M-20261104-191020-a6a6.md",
+    "p": 0.0038115312773460883,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1301.md#3",
+    "label": "board/cards/REM-1301.md \u203a Evidence",
+    "p": 0.0037307144554797134,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1301.md#2",
+    "label": "board/cards/REM-1301.md \u203a Goal",
+    "p": 0.0035712519434752984,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1300.md#4",
+    "label": "board/cards/REM-1300.md \u203a Done when",
+    "p": 0.0027831616141358122,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1300.md#1",
+    "label": "board/cards/REM-1300.md",
+    "p": 0.002730975882091088,
+    "gold": false
+   },
+   {
+    "id": "commit/acec12a94b",
+    "label": "commit acec12a: board: file REM-1300 walk: aiq.use_edges answers one read without rebuilding the graph",
+    "p": 0.002499860965892248,
+    "gold": false
+   },
+   {
+    "id": "commit/30900428d7",
+    "label": "commit 3090042: board: james messages bill",
+    "p": 0.0024684737655769327,
+    "gold": false
+   },
+   {
+    "id": "commit/078a90317b",
+    "label": "commit 078a903: board: james acknowledges 1 message(s)",
+    "p": 0.0024572418133548264,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1301.md#5",
+    "label": "board/cards/REM-1301.md \u203a Log",
+    "p": 0.002453566572781657,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1300.md#3",
+    "label": "board/cards/REM-1300.md \u203a Evidence",
+    "p": 0.0021217760610805583,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1300.md#2",
+    "label": "board/cards/REM-1300.md \u203a Goal",
+    "p": 0.002114979179349227,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1300.md#5",
+    "label": "board/cards/REM-1300.md \u203a Log",
+    "p": 0.0019323809976071052,
+    "gold": false
+   },
+   {
+    "id": "specs/trace-field/sequence.md#2",
+    "label": "specs/trace-field/sequence.md \u203a Phase 0 \u2014 assert the reading before building on it",
+    "p": 0.0016612867443921903,
+    "gold": false
+   },
+   {
+    "id": "commit/9157e1aacb",
+    "label": "commit 9157e1a: Postmortem: the use_edges null traced to an empty stage",
+    "p": 0.0015749118023935364,
+    "gold": true
+   },
+   {
+    "id": "board/messages/M-20261104-122453-4aa9.md#1",
+    "label": "board/messages/M-20261104-122453-4aa9.md",
+    "p": 0.0015250773369211948,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261104-121543-7f38.md#1",
+    "label": "board/messages/M-20261104-121543-7f38.md",
+    "p": 0.001513943115579768,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/c6c990ef62",
+   "label": "commit c6c990e: Postmortem: a busy database read as a stalled job (REM-1300, REM-1301)",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "meta/postmortems/2026-11-04-a-busy-database-read-as-a-stalled-job.md#4",
+   "label": "meta/postmortems/2026-11-04-a-busy-database-read-as-a-stalled-job.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/8bda184fae",
+   "label": "commit 8bda184: Merge pull request #699 from Percolation-Labs/bill/pm-use-edges-sweep",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/postmortems/2026-11-04-a-busy-database-read-as-a-stalled-job.md#1",
+   "label": "meta/postmortems/2026-11-04-a-busy-database-read-as-a-stalled-job.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/postmortems/2026-11-04-a-busy-database-read-as-a-stalled-job.md#2",
+   "label": "meta/postmortems/2026-11-04-a-busy-database-read-as-a-stalled-job.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-1301.md#2",
+   "label": "board/cards/REM-1301.md \u203a Goal",
+   "wave": 1,
+   "via": "term:rem 1301",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-1301.md#1",
+   "label": "board/cards/REM-1301.md",
+   "wave": 1,
+   "via": "term:rem 1301",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-1301.md#5",
+   "label": "board/cards/REM-1301.md \u203a Log",
+   "wave": 1,
+   "via": "term:rem 1301",
+   "gold": false
+  },
+  {
+   "id": "commit/ae968a5664",
+   "label": "commit ae968a5: board: file REM-1301 board: a registered job whose work runs in a container reads as busy, not idle",
+   "wave": 1,
+   "via": "term:rem 1301",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-1301.md#4",
+   "label": "board/cards/REM-1301.md \u203a Done when",
+   "wave": 1,
+   "via": "term:rem 1301",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "meta/postmortems/2026-11-04-a-busy-database-read-as-a-stalled-job.md#3",
+    "label": "meta/postmortems/2026-11-04-a-busy-database-read-as-a-stalled-job.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1301.md#4",
+    "label": "board/cards/REM-1301.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "commit/ae968a5664",
+    "label": "commit ae968a5: board: file REM-1301 board: a registered job whose work runs in a container reads as busy, not idle",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1301.md#1",
+    "label": "board/cards/REM-1301.md",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261104-191020-a6a6.md#1",
+    "label": "board/messages/M-20261104-191020-a6a6.md",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "meta/postmortems/2026-11-04-a-busy-database-read-as-a-stalled-job.md#3",
+    "label": "meta/postmortems/2026-11-04-a-busy-database-read-as-a-stalled-job.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1301.md#4",
+    "label": "board/cards/REM-1301.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "commit/ae968a5664",
+    "label": "commit ae968a5: board: file REM-1301 board: a registered job whose work runs in a container reads as busy, not idle",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1301.md#1",
+    "label": "board/cards/REM-1301.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1301.md#2",
+    "label": "board/cards/REM-1301.md \u203a Goal",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/ae968a5664",
+    "label": "commit ae968a5: board: file REM-1301 board: a registered job whose work runs in a container reads as busy, not idle",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261104-191020-a6a6.md#1",
+    "label": "board/messages/M-20261104-191020-a6a6.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1301.md#4",
+    "label": "board/cards/REM-1301.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "commit/9157e1aacb",
+    "label": "commit 9157e1a: Postmortem: the use_edges null traced to an empty stage",
+    "gold": true
+   },
+   {
+    "id": "board/cards/REM-1301.md#1",
+    "label": "board/cards/REM-1301.md",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "meta/postmortems/2026-11-04-a-busy-database-read-as-a-stalled-job.md#3",
+    "label": "meta/postmortems/2026-11-04-a-busy-database-read-as-a-stalled-job.md",
+    "gold": false
+   },
+   {
+    "id": "commit/ae968a5664",
+    "label": "commit ae968a5: board: file REM-1301 board: a registered job whose work runs in a container reads as busy, not idle",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261104-122508-887f.md#1",
+    "label": "board/messages/M-20261104-122508-887f.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1301.md#2",
+    "label": "board/cards/REM-1301.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1301.md#1",
+    "label": "board/cards/REM-1301.md",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 1.0,
+  "S": 0.0
+ }
+}

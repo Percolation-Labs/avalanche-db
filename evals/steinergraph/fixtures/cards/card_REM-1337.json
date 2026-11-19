@@ -1,0 +1,457 @@
+{
+ "qid": "card:REM-1337",
+ "set": "cards",
+ "question": "What was done about this, and why: writing: invite a reviewer to a private draft?",
+ "gold": [
+  {
+   "id": "commit/787b3de44b",
+   "label": "commit 787b3de: Merge pull request #776 from Percolation-Labs/bill/rem-1337-spec",
+   "seed": false
+  },
+  {
+   "id": "commit/bb84bde4f1",
+   "label": "commit bb84bde: REM-1337: the spec for inviting a reviewer to a private long-form piece, and the card's evidence and don",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/9c175586d2",
+   "label": "commit 9c17558: board: file REM-1337 writing: invite a reviewer to a private draft",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-1337.md#1",
+   "label": "board/cards/REM-1337.md",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/messages/M-20261116-112450-3b30.md#1",
+   "label": "board/messages/M-20261116-112450-3b30.md",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-1337.md#2",
+   "label": "board/cards/REM-1337.md \u203a Goal",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/messages/M-20261116-111828-453c.md#1",
+   "label": "board/messages/M-20261116-111828-453c.md",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "board/messages/M-20261116-112450-3b30.md#1",
+    "label": "board/messages/M-20261116-112450-3b30.md",
+    "role": "seed"
+   },
+   {
+    "id": "commit/787b3de44b",
+    "label": "commit 787b3de: Merge pull request #776 from Percolation-Labs/bill/rem-1337-spec",
+    "role": "gold"
+   },
+   {
+    "id": "commit/bb84bde4f1",
+    "label": "commit bb84bde: REM-1337: the spec for inviting a reviewer to a private long-form piece, and the card's evidence and don",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "board/messages/M-20261116-112450-3b30.md#1",
+    "b": "commit/787b3de44b",
+    "via": [
+     {
+      "kind": "term",
+      "key": "private long",
+      "width": 11
+     },
+     {
+      "kind": "term",
+      "key": "rem 1337",
+      "width": 28
+     },
+     {
+      "kind": "term",
+      "key": "1337",
+      "width": 30
+     }
+    ]
+   },
+   {
+    "a": "commit/787b3de44b",
+    "b": "commit/bb84bde4f1",
+    "via": [
+     {
+      "kind": "near",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "private long",
+      "width": 11
+     },
+     {
+      "kind": "term",
+      "key": "rem 1337",
+      "width": 28
+     },
+     {
+      "kind": "term",
+      "key": "1337",
+      "width": 30
+     },
+     {
+      "kind": "term",
+      "key": "inviting",
+      "width": 30
+     },
+     {
+      "kind": "term",
+      "key": "form piece",
+      "width": 42
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "board/messages/M-20261116-112450-3b30.md#1",
+   "gold": "commit/787b3de44b",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 1377,
+  "within_2_doors": 34147,
+  "gold_within_1": 2,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "board/cards/REM-1337.md#5",
+    "label": "board/cards/REM-1337.md \u203a Log",
+    "p": 0.007136316145540413,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261116-200731-af42.md#1",
+    "label": "board/messages/M-20261116-200731-af42.md",
+    "p": 0.005378794831555432,
+    "gold": false
+   },
+   {
+    "id": "commit/2743c1c65a",
+    "label": "commit 2743c1c: board: note on REM-1337",
+    "p": 0.004765768818492539,
+    "gold": false
+   },
+   {
+    "id": "commit/3323f0addc",
+    "label": "commit 3323f0a: board: note on REM-1337",
+    "p": 0.004586965160200901,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1337.md#3",
+    "label": "board/cards/REM-1337.md \u203a Evidence",
+    "p": 0.004097998049634911,
+    "gold": false
+   },
+   {
+    "id": "commit/f29f33642e",
+    "label": "commit f29f336: board: note on REM-1337",
+    "p": 0.004064479960774189,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/draft-review-invitations.md#1",
+    "label": "specs/percolate-application/draft-review-invitations.md \u203a Inviting a person to review a private long-form piece (REM-133",
+    "p": 0.003977315785929292,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261116-115615-e0a0.md#1",
+    "label": "board/messages/M-20261116-115615-e0a0.md",
+    "p": 0.003750817740950492,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261116-111951-549b.md#1",
+    "label": "board/messages/M-20261116-111951-549b.md",
+    "p": 0.003640850145235714,
+    "gold": false
+   },
+   {
+    "id": "commit/9856948e60",
+    "label": "commit 9856948: board: note on REM-1337",
+    "p": 0.003594793681686342,
+    "gold": false
+   },
+   {
+    "id": "commit/bf0ff37fa4",
+    "label": "commit bf0ff37: board: bill takes REM-1337",
+    "p": 0.003511487466408265,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/invitations-by-reputation.md#8",
+    "label": "specs/percolate-application/invitations-by-reputation.md \u203a 4. What the person sees",
+    "p": 0.003182413964080101,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1337.md#4",
+    "label": "board/cards/REM-1337.md \u203a Done when",
+    "p": 0.002509878373796871,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261116-130128-85a8.md#1",
+    "label": "board/messages/M-20261116-130128-85a8.md",
+    "p": 0.0024970819520771866,
+    "gold": false
+   },
+   {
+    "id": "commit/e54d3c9c3d",
+    "label": "commit e54d3c9: board: sirsh messages codex-evidence-app",
+    "p": 0.002432698432707196,
+    "gold": false
+   },
+   {
+    "id": "commit/6708d93d79",
+    "label": "commit 6708d93: board: REM-1337 in-progress \u2192 review",
+    "p": 0.00226985101548881,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/draft-review-invitations.md#6",
+    "label": "specs/percolate-application/draft-review-invitations.md \u203a Not built yet",
+    "p": 0.0022697500723737876,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/draft-review-invitations.md#3",
+    "label": "specs/percolate-application/draft-review-invitations.md \u203a How it is built",
+    "p": 0.0022322878872225605,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261116-113506-98e0.md#1",
+    "label": "board/messages/M-20261116-113506-98e0.md",
+    "p": 0.0021292311573900455,
+    "gold": false
+   },
+   {
+    "id": "commit/fda776bb99",
+    "label": "commit fda776b: Merge pull request #775 from Percolation-Labs/james/jev-topk-stage0",
+    "p": 0.0020756548795985478,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/9c175586d2",
+   "label": "commit 9c17558: board: file REM-1337 writing: invite a reviewer to a private draft",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-1337.md#1",
+   "label": "board/cards/REM-1337.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/messages/M-20261116-112450-3b30.md#1",
+   "label": "board/messages/M-20261116-112450-3b30.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-1337.md#2",
+   "label": "board/cards/REM-1337.md \u203a Goal",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/messages/M-20261116-111828-453c.md#1",
+   "label": "board/messages/M-20261116-111828-453c.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/percolate-application/drafter.md#16",
+   "label": "specs/percolate-application/drafter.md \u203a Begin with brews, claims and questions",
+   "wave": 1,
+   "via": "term:application draft",
+   "gold": false
+  },
+  {
+   "id": "specs/percolate-application/draft-review-invitations.md#1",
+   "label": "specs/percolate-application/draft-review-invitations.md \u203a Inviting a person to review a private long-form piece (REM-133",
+   "wave": 1,
+   "via": "term:application draft",
+   "gold": false
+  },
+  {
+   "id": "specs/percolate-application/draft-review-invitations.md#4",
+   "label": "specs/percolate-application/draft-review-invitations.md \u203a How it is built",
+   "wave": 1,
+   "via": "term:application draft",
+   "gold": false
+  },
+  {
+   "id": "specs/percolate-application/draft-review-invitations.md#5",
+   "label": "specs/percolate-application/draft-review-invitations.md \u203a Evidence",
+   "wave": 1,
+   "via": "term:application draft",
+   "gold": false
+  },
+  {
+   "id": "specs/percolate-application/draft-review-invitations.md#2",
+   "label": "specs/percolate-application/draft-review-invitations.md \u203a What it does",
+   "wave": 1,
+   "via": "term:application draft",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "board/cards/REM-1337.md#5",
+    "label": "board/cards/REM-1337.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261116-200731-af42.md#1",
+    "label": "board/messages/M-20261116-200731-af42.md",
+    "gold": false
+   },
+   {
+    "id": "commit/2743c1c65a",
+    "label": "commit 2743c1c: board: note on REM-1337",
+    "gold": false
+   },
+   {
+    "id": "commit/3323f0addc",
+    "label": "commit 3323f0a: board: note on REM-1337",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1337.md#3",
+    "label": "board/cards/REM-1337.md \u203a Evidence",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "board/messages/M-20261116-115615-e0a0.md#1",
+    "label": "board/messages/M-20261116-115615-e0a0.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1337.md#5",
+    "label": "board/cards/REM-1337.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1337.md#3",
+    "label": "board/cards/REM-1337.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/invitations-by-reputation.md#8",
+    "label": "specs/percolate-application/invitations-by-reputation.md \u203a 4. What the person sees",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/draft-review-invitations.md#1",
+    "label": "specs/percolate-application/draft-review-invitations.md \u203a Inviting a person to review a private long-form piece (REM-133",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/bb84bde4f1",
+    "label": "commit bb84bde: REM-1337: the spec for inviting a reviewer to a private long-form piece, and the card's evidence and don",
+    "gold": true
+   },
+   {
+    "id": "commit/787b3de44b",
+    "label": "commit 787b3de: Merge pull request #776 from Percolation-Labs/bill/rem-1337-spec",
+    "gold": true
+   },
+   {
+    "id": "board/cards/REM-863.md#3",
+    "label": "board/cards/REM-863.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261116-113506-98e0.md#1",
+    "label": "board/messages/M-20261116-113506-98e0.md",
+    "gold": false
+   },
+   {
+    "id": "commit/0e8dd83caf",
+    "label": "commit 0e8dd83: specs: writers invite writers by reputation, and an invitation names its sender by the name they chose",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "specs/percolate-application/writer-onboarding.md#2",
+    "label": "specs/percolate-application/writer-onboarding.md \u203a 1. The journey",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261116-113506-98e0.md#1",
+    "label": "board/messages/M-20261116-113506-98e0.md",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261116-115615-e0a0.md#1",
+    "label": "board/messages/M-20261116-115615-e0a0.md",
+    "gold": false
+   },
+   {
+    "id": "commit/526bbc4cde",
+    "label": "commit 526bbc4: reviewer-management: REM-793 round 2, pedantry on published writing and recall of planted remit violatio",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-783.md#4",
+    "label": "board/cards/REM-783.md \u203a Done when",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 1.0,
+  "S": 0.0
+ }
+}

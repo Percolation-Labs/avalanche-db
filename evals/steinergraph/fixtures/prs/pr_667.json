@@ -1,0 +1,435 @@
+{
+ "qid": "pr:667",
+ "set": "prs",
+ "question": "What work went into this, and why: walklab q3: P-first travel order vs per_target on 29 judged walks?",
+ "gold": [
+  {
+   "id": "commit/3689219351",
+   "label": "commit 3689219: walklab q3: order-test walk records gzipped (78 MB -> about 25 MB in the tree)",
+   "seed": false
+  },
+  {
+   "id": "commit/c74b65d599",
+   "label": "commit c74b65d: walklab q3: P-first travel order vs per_target on 29 judged walks -- repo 27/33 vs 23/33 (b1's 4 cards),",
+   "seed": true
+  },
+  {
+   "id": "commit/f3221b8ae4",
+   "label": "commit f3221b8: walklab q3: order test amended before the comparison walks -- add mike's BEAM displacement walk (16:eo),",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/37b9059e9f",
+   "label": "commit 37b9059: walklab q3: register P-first travel order against per_target on the 28 judged walks, before any is run; ",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/c74b65d599",
+   "label": "commit c74b65d: walklab q3: P-first travel order vs per_target on 29 judged walks -- repo 27/33 vs 23/33 (b1's 4 cards),",
+   "rank": 2,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "commit/5714fd31f8",
+   "label": "commit 5714fd3: Merge pull request #667 from Percolation-Labs/cory/q3-topk",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/c9b136e2de",
+   "label": "commit c9b136e: walklab q3: split order from share on net items -- P-first +4 over per_target (b1 +4), share +1 more (26",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "commit/ff05cd5f2c",
+   "label": "commit ff05cd5: decision-walks: the order of travel inside topk's open set is an open point (ledger 5.32)",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 2
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/3689219351",
+    "label": "commit 3689219: walklab q3: order-test walk records gzipped (78 MB -> about 25 MB in the tree)",
+    "role": "gold"
+   },
+   {
+    "id": "commit/c74b65d599",
+    "label": "commit c74b65d: walklab q3: P-first travel order vs per_target on 29 judged walks -- repo 27/33 vs 23/33 (b1's 4 cards),",
+    "role": "gold"
+   },
+   {
+    "id": "commit/f3221b8ae4",
+    "label": "commit f3221b8: walklab q3: order test amended before the comparison walks -- add mike's BEAM displacement walk (16:eo),",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/3689219351",
+    "b": "commit/c74b65d599",
+    "via": [
+     {
+      "kind": "beside"
+     }
+    ]
+   },
+   {
+    "a": "commit/c74b65d599",
+    "b": "commit/f3221b8ae4",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "near",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "displacement",
+      "width": 29
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   1,
+   1
+  ],
+  "entry": {
+   "seed": "commit/c74b65d599",
+   "gold": "commit/c74b65d599",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 314,
+  "within_2_doors": 25534,
+  "gold_within_1": 2,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "commit/822d531c01",
+    "label": "commit 822d531: Merge pull request #661 from Percolation-Labs/mike/spec-travel-order",
+    "p": 0.006640532800547286,
+    "gold": false
+   },
+   {
+    "id": "commit/461998de9b",
+    "label": "commit 461998d: walklab q4: runner takes --relabel (stored texts replace a lead's quoted part; off by default, replay id",
+    "p": 0.006135590525458692,
+    "gold": false
+   },
+   {
+    "id": "commit/f3221b8ae4",
+    "label": "commit f3221b8: walklab q3: order test amended before the comparison walks -- add mike's BEAM displacement walk (16:eo),",
+    "p": 0.005590657898072662,
+    "gold": true
+   },
+   {
+    "id": "commit/48eecefaf2",
+    "label": "commit 48eecef: walklab q3: register a cap on leads' share of a wave's reads (lead_share .5) on top of P-first, on BEAM'",
+    "p": 0.004741575769629606,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/configs/structure/signposted_top.py#4",
+    "label": "meta/lab/configs/structure/signposted_top.py",
+    "p": 0.004451644816877101,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/dream-metric/TIGHT.md#5",
+    "label": "meta/lab/results/dream-metric/TIGHT.md \u203a Fitted at the depth the walk travels: rank within m_t (`--pfirst --fitm`, `tigh",
+    "p": 0.004332392504407853,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-switch-cost/PROPOSAL.md#5",
+    "label": "meta/lab/results/q4-switch-cost/PROPOSAL.md \u203a Risks",
+    "p": 0.004139106665496325,
+    "gold": false
+   },
+   {
+    "id": "commit/b24b13f49c",
+    "label": "commit b24b13f: walklab q3: lead-share result -- record bill's corrected criterion (net items within budget), post hoc; ",
+    "p": 0.00390465358287638,
+    "gold": false
+   },
+   {
+    "id": "specs/decision-walks/README.md#26",
+    "label": "specs/decision-walks/README.md \u203a Travel: a relative gate for a low-calibrated judge (proposed for walk.sql)",
+    "p": 0.0038058802939417535,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261102-182616-6aa0.md#1",
+    "label": "board/messages/M-20261102-182616-6aa0.md",
+    "p": 0.003785925131867657,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/k3-cost/RESULT.md#5",
+    "label": "meta/lab/results/k3-cost/RESULT.md \u203a Result (17 Nov 2026)",
+    "p": 0.003675228119015556,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-miss-census-floor/ORDER-RULE.md#1",
+    "label": "meta/lab/results/q4-miss-census-floor/ORDER-RULE.md \u203a Travel order inside the open set: P-first against per_target (regi",
+    "p": 0.003314006048523356,
+    "gold": false
+   },
+   {
+    "id": "commit/c805d27803",
+    "label": "commit c805d27: board: bill messages sirsh",
+    "p": 0.0028082139869975258,
+    "gold": false
+   },
+   {
+    "id": "commit/a3731dfe4c",
+    "label": "commit a3731df: walklab q4: repo split at all 8 judge-free misses -- 23/33 read; J 4 (first J: top lead P .95 of 8,324 o",
+    "p": 0.002771154122523886,
+    "gold": false
+   },
+   {
+    "id": "commit/fccbe00ee6",
+    "label": "commit fccbe00: walklab q4: register the judged miss split on QASPER (10 drawn from 97 questions with an item past searc",
+    "p": 0.0027500948545170286,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-order/result.txt#1",
+    "label": "meta/lab/results/q4-order/result.txt",
+    "p": 0.002720629303978375,
+    "gold": false
+   },
+   {
+    "id": "commit/86f6622eea",
+    "label": "commit 86f6622: board: bill messages sirsh",
+    "p": 0.0024883591165322985,
+    "gold": false
+   },
+   {
+    "id": "commit/477e132e88",
+    "label": "commit 477e132: decision-walks: topk travels the open set highest P first (5.35); a lead share is not part of the rule (",
+    "p": 0.002369341767449506,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-miss-census-floor/ORDER-RULE.md#2",
+    "label": "meta/lab/results/q4-miss-census-floor/ORDER-RULE.md \u203a Travel order inside the open set: P-first against per_target (regi",
+    "p": 0.002320929658801561,
+    "gold": false
+   },
+   {
+    "id": "commit/3689219351",
+    "label": "commit 3689219: walklab q3: order-test walk records gzipped (78 MB -> about 25 MB in the tree)",
+    "p": 0.0023110438353250895,
+    "gold": true
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/37b9059e9f",
+   "label": "commit 37b9059: walklab q3: register P-first travel order against per_target on the 28 judged walks, before any is run; ",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/c74b65d599",
+   "label": "commit c74b65d: walklab q3: P-first travel order vs per_target on 29 judged walks -- repo 27/33 vs 23/33 (b1's 4 cards),",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "commit/5714fd31f8",
+   "label": "commit 5714fd3: Merge pull request #667 from Percolation-Labs/cory/q3-topk",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/c9b136e2de",
+   "label": "commit c9b136e: walklab q3: split order from share on net items -- P-first +4 over per_target (b1 +4), share +1 more (26",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/ff05cd5f2c",
+   "label": "commit ff05cd5: decision-walks: the order of travel inside topk's open set is an open point (ledger 5.32)",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/messages/M-20261102-221100-5587.md#1",
+   "label": "board/messages/M-20261102-221100-5587.md",
+   "wave": 1,
+   "via": "term:repo walk",
+   "gold": false
+  },
+  {
+   "id": "board/messages/M-20261102-164624-4de6.md#1",
+   "label": "board/messages/M-20261102-164624-4de6.md",
+   "wave": 1,
+   "via": "term:repo walk",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/q4-miss-census-floor/ORDER-RULE.md#1",
+   "label": "meta/lab/results/q4-miss-census-floor/ORDER-RULE.md \u203a Travel order inside the open set: P-first against per_target (regi",
+   "wave": 1,
+   "via": "term:repo walk",
+   "gold": false
+  },
+  {
+   "id": "specs/decision-walks/README.md#26",
+   "label": "specs/decision-walks/README.md \u203a Travel: a relative gate for a low-calibrated judge (proposed for walk.sql)",
+   "wave": 1,
+   "via": "term:repo walk",
+   "gold": false
+  },
+  {
+   "id": "board/messages/M-20261102-220200-5973.md#1",
+   "label": "board/messages/M-20261102-220200-5973.md",
+   "wave": 1,
+   "via": "term:repo walk",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "commit/822d531c01",
+    "label": "commit 822d531: Merge pull request #661 from Percolation-Labs/mike/spec-travel-order",
+    "gold": false
+   },
+   {
+    "id": "commit/461998de9b",
+    "label": "commit 461998d: walklab q4: runner takes --relabel (stored texts replace a lead's quoted part; off by default, replay id",
+    "gold": false
+   },
+   {
+    "id": "commit/f3221b8ae4",
+    "label": "commit f3221b8: walklab q3: order test amended before the comparison walks -- add mike's BEAM displacement walk (16:eo),",
+    "gold": true
+   },
+   {
+    "id": "commit/48eecefaf2",
+    "label": "commit 48eecef: walklab q3: register a cap on leads' share of a wave's reads (lead_share .5) on top of P-first, on BEAM'",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/configs/structure/signposted_top.py#4",
+    "label": "meta/lab/configs/structure/signposted_top.py",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "commit/822d531c01",
+    "label": "commit 822d531: Merge pull request #661 from Percolation-Labs/mike/spec-travel-order",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-miss-census-floor/ORDER-RULE.md#1",
+    "label": "meta/lab/results/q4-miss-census-floor/ORDER-RULE.md \u203a Travel order inside the open set: P-first against per_target (regi",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-order/result.txt#1",
+    "label": "meta/lab/results/q4-order/result.txt",
+    "gold": false
+   },
+   {
+    "id": "specs/decision-walks/README.md#26",
+    "label": "specs/decision-walks/README.md \u203a Travel: a relative gate for a low-calibrated judge (proposed for walk.sql)",
+    "gold": false
+   },
+   {
+    "id": "commit/f3221b8ae4",
+    "label": "commit f3221b8: walklab q3: order test amended before the comparison walks -- add mike's BEAM displacement walk (16:eo),",
+    "gold": true
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/822d531c01",
+    "label": "commit 822d531: Merge pull request #661 from Percolation-Labs/mike/spec-travel-order",
+    "gold": false
+   },
+   {
+    "id": "commit/461998de9b",
+    "label": "commit 461998d: walklab q4: runner takes --relabel (stored texts replace a lead's quoted part; off by default, replay id",
+    "gold": false
+   },
+   {
+    "id": "commit/48eecefaf2",
+    "label": "commit 48eecef: walklab q3: register a cap on leads' share of a wave's reads (lead_share .5) on top of P-first, on BEAM'",
+    "gold": false
+   },
+   {
+    "id": "commit/b24b13f49c",
+    "label": "commit b24b13f: walklab q3: lead-share result -- record bill's corrected criterion (net items within budget), post hoc; ",
+    "gold": false
+   },
+   {
+    "id": "commit/fccbe00ee6",
+    "label": "commit fccbe00: walklab q4: register the judged miss split on QASPER (10 drawn from 97 questions with an item past searc",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "meta/lab/results/q4-miss-census-topk-RULE.md#1",
+    "label": "meta/lab/results/q4-miss-census-topk-RULE.md \u203a Judged walks with \"travel the round's top 3\" in place of the .5 gate (reg",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-order/result.txt#1",
+    "label": "meta/lab/results/q4-order/result.txt",
+    "gold": false
+   },
+   {
+    "id": "commit/62ff5b0a0e",
+    "label": "commit 62ff5b0: walklab q3: register top-3 with a 10-target travel cap on the 7 judged walks, before any is run",
+    "gold": false
+   },
+   {
+    "id": "commit/1ab290d7fe",
+    "label": "commit 1ab290d: walklab q3: register the top-3 travel rule against the .5 gate on the 7 judged walks, before any is run",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-miss-census-floor/ORDER-RULE.md#1",
+    "label": "meta/lab/results/q4-miss-census-floor/ORDER-RULE.md \u203a Travel order inside the open set: P-first against per_target (regi",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.5,
+  "Q": 0.5,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

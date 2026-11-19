@@ -1,0 +1,450 @@
+{
+ "qid": "pr:796",
+ "set": "prs",
+ "question": "What work went into this, and why: Filter-then-rank on whole waves (3c): entity kind is a weak cut on MuSiQue?",
+ "gold": [
+  {
+   "id": "commit/119cb30f5a",
+   "label": "commit 119cb30: filter-then-rank-waves: moved from filter-then-rank/, which a parallel run (operator c on pages, a608c81",
+   "seed": false
+  },
+  {
+   "id": "commit/1b939230b5",
+   "label": "commit 1b93923: filter-then-rank-waves: note the parallel operator (c) run and that both agree",
+   "seed": false
+  },
+  {
+   "id": "commit/bbcbb18f52",
+   "label": "commit bbcbb18: Filter-then-rank (3c): entity kind is a weak cut on MuSiQue; the question-kind filter keeps no more gold",
+   "seed": true
+  },
+  {
+   "id": "commit/fd4fab1e94",
+   "label": "commit fd4fab1: Filter-then-rank (3c): registration, before any attribute is built or scored",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/29a2ac75c1",
+   "label": "commit 29a2ac7: Merge pull request #796 from Percolation-Labs/james/filter-then-rank",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/bbcbb18f52",
+   "label": "commit bbcbb18: Filter-then-rank (3c): entity kind is a weak cut on MuSiQue; the question-kind filter keeps no more gold",
+   "rank": 2,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "meta/lab/results/filter-then-rank-waves/RESULT.md#6",
+   "label": "meta/lab/results/filter-then-rank-waves/RESULT.md \u203a Result (16 Nov, after the registration above was pushed as fd4fab1e9",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/messages/M-20261116-225700-c451.md#1",
+   "label": "board/messages/M-20261116-225700-c451.md",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "meta/lab/results/filter-then-rank-waves/RESULT.md#11",
+   "label": "meta/lab/results/filter-then-rank-waves/RESULT.md \u203a Postmortem",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/119cb30f5a",
+    "label": "commit 119cb30: filter-then-rank-waves: moved from filter-then-rank/, which a parallel run (operator c on pages, a608c81",
+    "role": "gold"
+   },
+   {
+    "id": "commit/1b939230b5",
+    "label": "commit 1b93923: filter-then-rank-waves: note the parallel operator (c) run and that both agree",
+    "role": "gold"
+   },
+   {
+    "id": "commit/bbcbb18f52",
+    "label": "commit bbcbb18: Filter-then-rank (3c): entity kind is a weak cut on MuSiQue; the question-kind filter keeps no more gold",
+    "role": "gold"
+   },
+   {
+    "id": "commit/fd4fab1e94",
+    "label": "commit fd4fab1: Filter-then-rank (3c): registration, before any attribute is built or scored",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/119cb30f5a",
+    "b": "commit/1b939230b5",
+    "via": [
+     {
+      "kind": "term",
+      "key": "rank waves",
+      "width": 39
+     }
+    ]
+   },
+   {
+    "a": "commit/119cb30f5a",
+    "b": "commit/bbcbb18f52",
+    "via": [
+     {
+      "kind": "beside"
+     }
+    ]
+   },
+   {
+    "a": "commit/bbcbb18f52",
+    "b": "commit/fd4fab1e94",
+    "via": [
+     {
+      "kind": "beside"
+     }
+    ]
+   }
+  ],
+  "cost": 3,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   1,
+   2,
+   2,
+   3,
+   1
+  ],
+  "entry": {
+   "seed": "commit/bbcbb18f52",
+   "gold": "commit/bbcbb18f52",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 1203,
+  "within_2_doors": 32164,
+  "gold_within_1": 3,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "meta/lab/results/filter-then-rank-waves/RESULT.md#7",
+    "label": "meta/lab/results/filter-then-rank-waves/RESULT.md \u203a Experiment 1: rankers on the recorded batch log (50 recorded Jev wal",
+    "p": 0.008661935890955671,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/filter-then-rank-waves/RESULT.md#14",
+    "label": "meta/lab/results/filter-then-rank-waves/RESULT.md \u203a A parallel run reached the same answer",
+    "p": 0.006273442174826039,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/filter-then-rank-waves/RESULT.md#8",
+    "label": "meta/lab/results/filter-then-rank-waves/RESULT.md \u203a Experiment 1: rankers on the recorded batch log (50 recorded Jev wal",
+    "p": 0.004714588910893628,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/filter-then-rank-waves/filters.py#1",
+    "label": "meta/lab/results/filter-then-rank-waves/filters.py",
+    "p": 0.003131220481308094,
+    "gold": false
+   },
+   {
+    "id": "commit/119cb30f5a",
+    "label": "commit 119cb30: filter-then-rank-waves: moved from filter-then-rank/, which a parallel run (operator c on pages, a608c81",
+    "p": 0.0031046877934947973,
+    "gold": true
+   },
+   {
+    "id": "meta/lab/results/filter-then-rank-waves/RESULT.md#10",
+    "label": "meta/lab/results/filter-then-rank-waves/RESULT.md \u203a Predictions",
+    "p": 0.0028373610606171186,
+    "gold": false
+   },
+   {
+    "id": "commit/e5e24d3a3d",
+    "label": "commit e5e24d3: board: james messages sirsh",
+    "p": 0.0026542149418820257,
+    "gold": false
+   },
+   {
+    "id": "commit/b5f4418622",
+    "label": "commit b5f4418: board: james messages sirsh",
+    "p": 0.0025220563120875415,
+    "gold": false
+   },
+   {
+    "id": "commit/3576a722f0",
+    "label": "commit 3576a72: Merge remote-tracking branch 'origin/main' into james/filter-then-rank",
+    "p": 0.0023473562432244563,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/filter-then-rank-waves/RESULT.md#3",
+    "label": "meta/lab/results/filter-then-rank-waves/RESULT.md \u203a Filters (the decider's first pass; all keep every `near` door)",
+    "p": 0.002238976158315984,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261116-220258-e5cb.md#1",
+    "label": "board/messages/M-20261116-220258-e5cb.md",
+    "p": 0.0021833325951018307,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261116-214536-d69b.md#1",
+    "label": "board/messages/M-20261116-214536-d69b.md",
+    "p": 0.0021480459081683447,
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-10-29-lead-information/pilot/pilot_stop.py#2",
+    "label": "meta/spikes/2026-10-29-lead-information/pilot/pilot_stop.py",
+    "p": 0.0021244889950753658,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/filter-then-rank-waves/RESULT.md#4",
+    "label": "meta/lab/results/filter-then-rank-waves/RESULT.md \u203a Experiment 1: rankers on the recorded batch log ($0)",
+    "p": 0.0020671307009124985,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/filter-then-rank-waves/RESULT.md#12",
+    "label": "meta/lab/results/filter-then-rank-waves/RESULT.md \u203a What surprised us",
+    "p": 0.0019953577952889117,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261117-064818-c5a9.md#1",
+    "label": "board/messages/M-20261117-064818-c5a9.md",
+    "p": 0.0017542443158743164,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/filter-then-rank-waves/score1.py#3",
+    "label": "meta/lab/results/filter-then-rank-waves/score1.py",
+    "p": 0.001732246505083954,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/filter-then-rank-waves/RESULT.md#2",
+    "label": "meta/lab/results/filter-then-rank-waves/RESULT.md \u203a What is built (ingestion, question-blind, gold-blind)",
+    "p": 0.001706006592498964,
+    "gold": false
+   },
+   {
+    "id": "commit/fd4fab1e94",
+    "label": "commit fd4fab1: Filter-then-rank (3c): registration, before any attribute is built or scored",
+    "p": 0.0015776865185140412,
+    "gold": true
+   },
+   {
+    "id": "meta/lab/results/filter-then-rank-waves/RESULT.md#13",
+    "label": "meta/lab/results/filter-then-rank-waves/RESULT.md \u203a Built and kept",
+    "p": 0.0014750535847238948,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/29a2ac75c1",
+   "label": "commit 29a2ac7: Merge pull request #796 from Percolation-Labs/james/filter-then-rank",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/bbcbb18f52",
+   "label": "commit bbcbb18: Filter-then-rank (3c): entity kind is a weak cut on MuSiQue; the question-kind filter keeps no more gold",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "meta/lab/results/filter-then-rank-waves/RESULT.md#6",
+   "label": "meta/lab/results/filter-then-rank-waves/RESULT.md \u203a Result (16 Nov, after the registration above was pushed as fd4fab1e9",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/messages/M-20261116-225700-c451.md#1",
+   "label": "board/messages/M-20261116-225700-c451.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/filter-then-rank-waves/RESULT.md#11",
+   "label": "meta/lab/results/filter-then-rank-waves/RESULT.md \u203a Postmortem",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/door-pick-diagnostic/diagnose.py#1",
+   "label": "meta/lab/results/door-pick-diagnostic/diagnose.py",
+   "wave": 1,
+   "via": "term:rank waves",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/filter-then-rank-waves/score1.py#4",
+   "label": "meta/lab/results/filter-then-rank-waves/score1.py",
+   "wave": 1,
+   "via": "term:rank waves",
+   "gold": false
+  },
+  {
+   "id": "commit/1b939230b5",
+   "label": "commit 1b93923: filter-then-rank-waves: note the parallel operator (c) run and that both agree",
+   "wave": 1,
+   "via": "term:rank waves",
+   "gold": true
+  },
+  {
+   "id": "meta/lab/results/filter-then-rank-waves/drive.py#6",
+   "label": "meta/lab/results/filter-then-rank-waves/drive.py",
+   "wave": 1,
+   "via": "term:rank waves",
+   "gold": false
+  },
+  {
+   "id": "commit/119cb30f5a",
+   "label": "commit 119cb30: filter-then-rank-waves: moved from filter-then-rank/, which a parallel run (operator c on pages, a608c81",
+   "wave": 1,
+   "via": "term:rank waves",
+   "gold": true
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "meta/lab/results/filter-then-rank-waves/RESULT.md#7",
+    "label": "meta/lab/results/filter-then-rank-waves/RESULT.md \u203a Experiment 1: rankers on the recorded batch log (50 recorded Jev wal",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/filter-then-rank-waves/RESULT.md#14",
+    "label": "meta/lab/results/filter-then-rank-waves/RESULT.md \u203a A parallel run reached the same answer",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/filter-then-rank-waves/RESULT.md#8",
+    "label": "meta/lab/results/filter-then-rank-waves/RESULT.md \u203a Experiment 1: rankers on the recorded batch log (50 recorded Jev wal",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/filter-then-rank-waves/filters.py#1",
+    "label": "meta/lab/results/filter-then-rank-waves/filters.py",
+    "gold": false
+   },
+   {
+    "id": "commit/119cb30f5a",
+    "label": "commit 119cb30: filter-then-rank-waves: moved from filter-then-rank/, which a parallel run (operator c on pages, a608c81",
+    "gold": true
+   }
+  ],
+  "Q": [
+   {
+    "id": "meta/lab/results/filter-then-rank-waves/RESULT.md#7",
+    "label": "meta/lab/results/filter-then-rank-waves/RESULT.md \u203a Experiment 1: rankers on the recorded batch log (50 recorded Jev wal",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/filter-then-rank-waves/RESULT.md#14",
+    "label": "meta/lab/results/filter-then-rank-waves/RESULT.md \u203a A parallel run reached the same answer",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/filter-then-rank-waves/RESULT.md#8",
+    "label": "meta/lab/results/filter-then-rank-waves/RESULT.md \u203a Experiment 1: rankers on the recorded batch log (50 recorded Jev wal",
+    "gold": false
+   },
+   {
+    "id": "commit/119cb30f5a",
+    "label": "commit 119cb30: filter-then-rank-waves: moved from filter-then-rank/, which a parallel run (operator c on pages, a608c81",
+    "gold": true
+   },
+   {
+    "id": "meta/lab/results/filter-then-rank-waves/filters.py#1",
+    "label": "meta/lab/results/filter-then-rank-waves/filters.py",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/fd4fab1e94",
+    "label": "commit fd4fab1: Filter-then-rank (3c): registration, before any attribute is built or scored",
+    "gold": true
+   },
+   {
+    "id": "commit/119cb30f5a",
+    "label": "commit 119cb30: filter-then-rank-waves: moved from filter-then-rank/, which a parallel run (operator c on pages, a608c81",
+    "gold": true
+   },
+   {
+    "id": "commit/3576a722f0",
+    "label": "commit 3576a72: Merge remote-tracking branch 'origin/main' into james/filter-then-rank",
+    "gold": false
+   },
+   {
+    "id": "commit/1b939230b5",
+    "label": "commit 1b93923: filter-then-rank-waves: note the parallel operator (c) run and that both agree",
+    "gold": true
+   },
+   {
+    "id": "meta/lab/results/filter-then-rank-waves/RESULT.md#12",
+    "label": "meta/lab/results/filter-then-rank-waves/RESULT.md \u203a What surprised us",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "meta/lab/results/filter-then-rank-waves/RESULT.md#14",
+    "label": "meta/lab/results/filter-then-rank-waves/RESULT.md \u203a A parallel run reached the same answer",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/filter-then-rank-waves/RESULT.md#8",
+    "label": "meta/lab/results/filter-then-rank-waves/RESULT.md \u203a Experiment 1: rankers on the recorded batch log (50 recorded Jev wal",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/filter-then-rank-waves/RESULT.md#7",
+    "label": "meta/lab/results/filter-then-rank-waves/RESULT.md \u203a Experiment 1: rankers on the recorded batch log (50 recorded Jev wal",
+    "gold": false
+   },
+   {
+    "id": "commit/119cb30f5a",
+    "label": "commit 119cb30: filter-then-rank-waves: moved from filter-then-rank/, which a parallel run (operator c on pages, a608c81",
+    "gold": true
+   },
+   {
+    "id": "meta/lab/results/filter-then-rank-waves/RESULT.md#12",
+    "label": "meta/lab/results/filter-then-rank-waves/RESULT.md \u203a What surprised us",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.3333333333333333,
+  "Q": 0.3333333333333333,
+  "LQ": 1.0,
+  "S": 0.3333333333333333
+ }
+}

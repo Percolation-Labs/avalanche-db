@@ -1,0 +1,415 @@
+{
+ "qid": "pr:824",
+ "set": "prs",
+ "question": "What work went into this, and why: Kappa round 6: not a novelty effect; the MuSiQue mechanism stays open?",
+ "gold": [
+  {
+   "id": "commit/4299ee7ed0",
+   "label": "commit 4299ee7: Kappa round 6: register the novelty test before computing",
+   "seed": false
+  },
+  {
+   "id": "commit/788ed0e8d6",
+   "label": "commit 788ed0e: Kappa round 6: not a novelty effect (MuSiQue rho +.021, top door's covered share unchanged); on BEAM K7 ",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/b2c1c468b4",
+   "label": "commit b2c1c46: Merge pull request #824 from Percolation-Labs/bill/kappa-novelty",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "meta/lab/results/kappa/RESULT.md#14",
+   "label": "meta/lab/results/kappa/RESULT.md \u203a Round 6: not a novelty effect either; on MuSiQue kappa's mechanism stays open (17 Nov",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "meta/lab/results/kappa/REGISTERED.md#7",
+   "label": "meta/lab/results/kappa/REGISTERED.md \u203a Round 6: is kappa's MuSiQue gain a novelty effect? (registered 17 Nov ~09:45Z, be",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/788ed0e8d6",
+   "label": "commit 788ed0e: Kappa round 6: not a novelty effect (MuSiQue rho +.021, top door's covered share unchanged); on BEAM K7 ",
+   "rank": 4,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "board/messages/M-20261117-091355-c050.md#1",
+   "label": "board/messages/M-20261117-091355-c050.md",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/4299ee7ed0",
+    "label": "commit 4299ee7: Kappa round 6: register the novelty test before computing",
+    "role": "gold"
+   },
+   {
+    "id": "commit/788ed0e8d6",
+    "label": "commit 788ed0e: Kappa round 6: not a novelty effect (MuSiQue rho +.021, top door's covered share unchanged); on BEAM K7 ",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/4299ee7ed0",
+    "b": "commit/788ed0e8d6",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "kappa round",
+      "width": 24
+     },
+     {
+      "kind": "term",
+      "key": "novelty",
+      "width": 65
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "commit/788ed0e8d6",
+   "gold": "commit/788ed0e8d6",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 1629,
+  "within_2_doors": 33294,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "board/messages/M-20261117-094224-9285.md#1",
+    "label": "board/messages/M-20261117-094224-9285.md",
+    "p": 0.013180219580046199,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/kappa/RESULT.md#13",
+    "label": "meta/lab/results/kappa/RESULT.md \u203a Where K7's MuSiQue gain sits ($0, `musique-where.txt`): not where the state names the",
+    "p": 0.004957925595856579,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/worlds/kappa_novelty.py#1",
+    "label": "meta/lab/worlds/kappa_novelty.py",
+    "p": 0.004505223319732829,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/kappa/novelty.txt#1",
+    "label": "meta/lab/results/kappa/novelty.txt",
+    "p": 0.0027855617388981087,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/reference-world/REGISTERED.md#8",
+    "label": "meta/lab/results/reference-world/REGISTERED.md \u203a Test 2: does the walk-so-far state's gain depend on bridges being named",
+    "p": 0.0027822548191743287,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261117-135136-69b5.md#1",
+    "label": "board/messages/M-20261117-135136-69b5.md",
+    "p": 0.0027116155096466887,
+    "gold": false
+   },
+   {
+    "id": "commit/4299ee7ed0",
+    "label": "commit 4299ee7: Kappa round 6: register the novelty test before computing",
+    "p": 0.002457738098758076,
+    "gold": true
+   },
+   {
+    "id": "commit/89f1f5fafe",
+    "label": "commit 89f1f5f: Merge pull request #825 from Percolation-Labs/bill/w125",
+    "p": 0.0021033233675775732,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/worlds/mq_kappa_where.py#1",
+    "label": "meta/lab/worlds/mq_kappa_where.py",
+    "p": 0.0018697224328055207,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/kappa/RESULT.md#12",
+    "label": "meta/lab/results/kappa/RESULT.md \u203a The MuSiQue contrast ($0, `musique-why.txt`): the explanation holds for BEAM only",
+    "p": 0.0018579268078500646,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261117-090943-2e67.md#1",
+    "label": "board/messages/M-20261117-090943-2e67.md",
+    "p": 0.0018388980562014446,
+    "gold": false
+   },
+   {
+    "id": "commit/2cf13b40f7",
+    "label": "commit 2cf13b4: Merge pull request #826 from Percolation-Labs/james/jev-bm5",
+    "p": 0.0017891461135648486,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/cornerstone/RESULT.md#12",
+    "label": "meta/lab/results/cornerstone/RESULT.md \u203a Audit: merged claims that rested on the worlds alone (17 Nov ~13:30Z)",
+    "p": 0.0016437507901135048,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/worlds/beam_kappa_why.py#1",
+    "label": "meta/lab/worlds/beam_kappa_why.py",
+    "p": 0.0015914133155030376,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/kappa/REGISTERED.md#6",
+    "label": "meta/lab/results/kappa/REGISTERED.md \u203a Round 5: kappa on BEAM, the second real dataset (registered 17 Nov ~09:30Z, befor",
+    "p": 0.001523822772265593,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/worlds/mq_kappa_why.py#2",
+    "label": "meta/lab/worlds/mq_kappa_why.py",
+    "p": 0.0015141261506229967,
+    "gold": false
+   },
+   {
+    "id": "commit/15ededf2c7",
+    "label": "commit 15ededf: Kappa round 5: on BEAM a walk-so-far state does not help (K2 -.003) and sentences hurt (K7 -.022 [-.040,",
+    "p": 0.0014843467583742717,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/worlds/beam_kappa_why.py#2",
+    "label": "meta/lab/worlds/beam_kappa_why.py",
+    "p": 0.0014618400097606765,
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-10-29-lead-information/describe/desc2-tgt.txt#3",
+    "label": "meta/spikes/2026-10-29-lead-information/describe/desc2-tgt.txt",
+    "p": 0.001402943357929468,
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-10-27-dream-walk-graphs/desc2-tgt.txt#3",
+    "label": "meta/spikes/2026-10-27-dream-walk-graphs/desc2-tgt.txt",
+    "p": 0.001396817011901942,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/b2c1c468b4",
+   "label": "commit b2c1c46: Merge pull request #824 from Percolation-Labs/bill/kappa-novelty",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/kappa/RESULT.md#14",
+   "label": "meta/lab/results/kappa/RESULT.md \u203a Round 6: not a novelty effect either; on MuSiQue kappa's mechanism stays open (17 Nov",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/kappa/REGISTERED.md#7",
+   "label": "meta/lab/results/kappa/REGISTERED.md \u203a Round 6: is kappa's MuSiQue gain a novelty effect? (registered 17 Nov ~09:45Z, be",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/788ed0e8d6",
+   "label": "commit 788ed0e: Kappa round 6: not a novelty effect (MuSiQue rho +.021, top door's covered share unchanged); on BEAM K7 ",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "board/messages/M-20261117-091355-c050.md#1",
+   "label": "board/messages/M-20261117-091355-c050.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/kappa/RESULT.md#11",
+   "label": "meta/lab/results/kappa/RESULT.md \u203a Postmortem",
+   "wave": 1,
+   "via": "term:jev towards",
+   "gold": false
+  },
+  {
+   "id": "commit/15ededf2c7",
+   "label": "commit 15ededf: Kappa round 5: on BEAM a walk-so-far state does not help (K2 -.003) and sentences hurt (K7 -.022 [-.040,",
+   "wave": 1,
+   "via": "term:jev towards",
+   "gold": false
+  },
+  {
+   "id": "commit/e21d8244d6",
+   "label": "commit e21d824: Kappa round 5 contrast: on MuSiQue K7 does not pull Jev towards read-like doors (rho .000) yet lifts the",
+   "wave": 1,
+   "via": "term:jev towards",
+   "gold": false
+  },
+  {
+   "id": "board/messages/M-20261117-090216-9d72.md#1",
+   "label": "board/messages/M-20261117-090216-9d72.md",
+   "wave": 1,
+   "via": "term:jev towards",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/worlds/beam_kappa_why.py#1",
+   "label": "meta/lab/worlds/beam_kappa_why.py",
+   "wave": 1,
+   "via": "term:jev towards",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "board/messages/M-20261117-094224-9285.md#1",
+    "label": "board/messages/M-20261117-094224-9285.md",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/kappa/RESULT.md#13",
+    "label": "meta/lab/results/kappa/RESULT.md \u203a Where K7's MuSiQue gain sits ($0, `musique-where.txt`): not where the state names the",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/worlds/kappa_novelty.py#1",
+    "label": "meta/lab/worlds/kappa_novelty.py",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/kappa/novelty.txt#1",
+    "label": "meta/lab/results/kappa/novelty.txt",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/reference-world/REGISTERED.md#8",
+    "label": "meta/lab/results/reference-world/REGISTERED.md \u203a Test 2: does the walk-so-far state's gain depend on bridges being named",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "board/messages/M-20261117-094224-9285.md#1",
+    "label": "board/messages/M-20261117-094224-9285.md",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/kappa/RESULT.md#13",
+    "label": "meta/lab/results/kappa/RESULT.md \u203a Where K7's MuSiQue gain sits ($0, `musique-where.txt`): not where the state names the",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/worlds/kappa_novelty.py#1",
+    "label": "meta/lab/worlds/kappa_novelty.py",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/kappa/RESULT.md#12",
+    "label": "meta/lab/results/kappa/RESULT.md \u203a The MuSiQue contrast ($0, `musique-why.txt`): the explanation holds for BEAM only",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/kappa/novelty.txt#1",
+    "label": "meta/lab/results/kappa/novelty.txt",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/4299ee7ed0",
+    "label": "commit 4299ee7: Kappa round 6: register the novelty test before computing",
+    "gold": true
+   },
+   {
+    "id": "meta/lab/results/kappa/novelty.txt#1",
+    "label": "meta/lab/results/kappa/novelty.txt",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261117-094224-9285.md#1",
+    "label": "board/messages/M-20261117-094224-9285.md",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/kappa/RESULT.md#13",
+    "label": "meta/lab/results/kappa/RESULT.md \u203a Where K7's MuSiQue gain sits ($0, `musique-where.txt`): not where the state names the",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/cornerstone/width-real.txt#1",
+    "label": "meta/lab/results/cornerstone/width-real.txt",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "meta/lab/results/kappa/RESULT.md#13",
+    "label": "meta/lab/results/kappa/RESULT.md \u203a Where K7's MuSiQue gain sits ($0, `musique-where.txt`): not where the state names the",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261117-094224-9285.md#1",
+    "label": "board/messages/M-20261117-094224-9285.md",
+    "gold": false
+   },
+   {
+    "id": "commit/4299ee7ed0",
+    "label": "commit 4299ee7: Kappa round 6: register the novelty test before computing",
+    "gold": true
+   },
+   {
+    "id": "meta/lab/results/kappa/novelty.txt#1",
+    "label": "meta/lab/results/kappa/novelty.txt",
+    "gold": false
+   },
+   {
+    "id": "commit/e21d8244d6",
+    "label": "commit e21d824: Kappa round 5 contrast: on MuSiQue K7 does not pull Jev towards read-like doors (rho .000) yet lifts the",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 1.0,
+  "S": 1.0
+ }
+}

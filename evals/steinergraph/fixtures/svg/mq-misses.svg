@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 442" font-family="system-ui, sans-serif" font-size="12">
+<style>.t{fill:#1d1d1f}.m{fill:#6e6e73}.e{stroke:#0a7d5a;stroke-width:2;fill:none}.k{fill:#0a7d5a;font-size:10px}</style>
+<rect width="1180" height="442" fill="#fff"/>
+<text x="20" y="28" font-size="15" font-weight="600" class="t">MuSiQue · misses: RW:2hop__35209_17335</text>
+<text x="20" y="50" class="m">When did the invader of the Archaemenid Empire in 334BC die?</text>
+<text x="40" y="78" font-weight="600" class="m">search’s seeds</text><text x="430" y="78" font-weight="600" class="m">connectors and walk reads</text><text x="820" y="78" font-weight="600" class="m">gold</text>
+<path class="e" d="M580,96 C700.0,96 700.0,96 820,96"/>
+<rect x="657.0" y="81.0" width="86.60000000000001" height="15" rx="3" fill="#fff" opacity=".9"/>
+<text class="k" x="660.0" y="92.0">“sphere” (20)</text>
+<path class="e" d="M580,96 C385.0,96 385.0,142 190,142"/>
+<rect x="342.0" y="104.0" width="80.4" height="15" rx="3" fill="#fff" opacity=".9"/>
+<text class="k" x="345.0" y="115.0">“vertex” (3)</text>
+<path class="e" d="M970,142 C970.0,142 970.0,96 970,96"/>
+<rect x="927.0" y="104.0" width="117.60000000000001" height="15" rx="3" fill="#fff" opacity=".9"/>
+<text class="k" x="930.0" y="115.0">“hellenistic” (25)</text>
+<rect x="430" y="81" width="340" height="28" rx="6" fill="#f2f2f4" stroke="#0a7d5a" stroke-width="2"/>
+<text x="438" y="100" class="t">Angle</text>
+<rect x="820" y="127" width="340" height="28" rx="6" fill="#f5c400" stroke="#0a7d5a" stroke-width="2"/>
+<text x="828" y="146" class="t">Iran</text>
+<rect x="820" y="81" width="340" height="28" rx="6" fill="#f5c400" stroke="#0a7d5a" stroke-width="2"/>
+<text x="828" y="100" class="t">Hellenistic period</text>
+<rect x="40" y="127" width="340" height="28" rx="6" fill="#dbe9ff" stroke="#0a7d5a" stroke-width="2"/>
+<text x="48" y="146" class="t">Dice</text>
+<rect x="40" y="173" width="340" height="28" rx="6" fill="#dbe9ff" stroke="#c7c7cc" stroke-width="1"/>
+<text x="48" y="192" class="t">Die Hard Trilogy 2: Viva Las Vegas</text>
+<rect x="40" y="81" width="340" height="28" rx="6" fill="#dbe9ff" stroke="#c7c7cc" stroke-width="1"/>
+<text x="48" y="100" class="t">And Then You Die</text>
+<rect x="40" y="219" width="340" height="28" rx="6" fill="#dbe9ff" stroke="#c7c7cc" stroke-width="1"/>
+<text x="48" y="238" class="t">Die Hippie, Die</text>
+<rect x="40" y="265" width="340" height="28" rx="6" fill="#dbe9ff" stroke="#c7c7cc" stroke-width="1"/>
+<text x="48" y="284" class="t">Orcs Must Die! 2</text>
+<rect x="430" y="173" width="340" height="28" rx="6" fill="#f2f2f4" stroke="#c7c7cc" stroke-width="1"/>
+<text x="438" y="192" class="t">Middle Ages</text>
+<text x="768" y="192" text-anchor="end" class="m" font-size="10">walk w1</text>
+<rect x="430" y="311" width="340" height="28" rx="6" fill="#f2f2f4" stroke="#c7c7cc" stroke-width="1"/>
+<text x="438" y="330" class="t">Spritzgebäck</text>
+<text x="768" y="330" text-anchor="end" class="m" font-size="10">walk w1</text>
+<rect x="430" y="219" width="340" height="28" rx="6" fill="#f2f2f4" stroke="#c7c7cc" stroke-width="1"/>
+<text x="438" y="238" class="t">Red</text>
+<text x="768" y="238" text-anchor="end" class="m" font-size="10">walk w1</text>
+<rect x="430" y="127" width="340" height="28" rx="6" fill="#f2f2f4" stroke="#c7c7cc" stroke-width="1"/>
+<text x="438" y="146" class="t">German chocolate cake</text>
+<text x="768" y="146" text-anchor="end" class="m" font-size="10">walk w1</text>
+<rect x="430" y="265" width="340" height="28" rx="6" fill="#f2f2f4" stroke="#c7c7cc" stroke-width="1"/>
+<text x="438" y="284" class="t">Sazerac</text>
+<text x="768" y="284" text-anchor="end" class="m" font-size="10">walk w1</text>
+<text x="20" y="408" class="m">Steiner cost 3 links; nearest seed 2 doors from gold; graph within 1 door of the seeds: 1,764 passages, within 2: 19,269</text>
+<text x="20" y="428" class="m">recall@5 beyond the seeds: search 0.00, U 0.00, Q 0.00, LQ 0.00. Yellow gold, blue seeds, green-edged nodes and links form the Steiner graph.</text>
+</svg>

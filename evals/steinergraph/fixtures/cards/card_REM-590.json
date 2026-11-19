@@ -1,0 +1,443 @@
+{
+ "qid": "card:REM-590",
+ "set": "cards",
+ "question": "What was done about this, and why: claims: generated assertions keep durable execution receipts?",
+ "gold": [
+  {
+   "id": "commit/13e9d5ac26",
+   "label": "commit 13e9d5a: claims: scoped readings, durable receipts and current aggregate state (REM-584, REM-590, REM-603)",
+   "seed": false
+  },
+  {
+   "id": "commit/2e06e3f838",
+   "label": "commit 2e06e3f: Merge tested core claim readings and execution receipts (REM-584, REM-590, REM-603)",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/56f13437f5",
+   "label": "commit 56f1343: board: file REM-590 claims: generated assertions keep durable execution receipts",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-590.md#1",
+   "label": "board/cards/REM-590.md",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "specs/claims/graph.md#42",
+   "label": "specs/claims/graph.md \u203a 10. Reading the graph",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "specs/research-platform/core-claims-contract.md#12",
+   "label": "specs/research-platform/core-claims-contract.md \u203a C7. Generated assertions have durable execution receipts",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "specs/research-platform/core-claims-contract.md#13",
+   "label": "specs/research-platform/core-claims-contract.md \u203a C7. Generated assertions have durable execution receipts",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/13e9d5ac26",
+    "label": "commit 13e9d5a: claims: scoped readings, durable receipts and current aggregate state (REM-584, REM-590, REM-603)",
+    "role": "gold"
+   },
+   {
+    "id": "commit/2e06e3f838",
+    "label": "commit 2e06e3f: Merge tested core claim readings and execution receipts (REM-584, REM-590, REM-603)",
+    "role": "gold"
+   },
+   {
+    "id": "specs/claims/graph.md#42",
+    "label": "specs/claims/graph.md \u203a 10. Reading the graph",
+    "role": "seed"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/13e9d5ac26",
+    "b": "commit/2e06e3f838",
+    "via": [
+     {
+      "kind": "term",
+      "key": "rem 603",
+      "width": 22
+     },
+     {
+      "kind": "term",
+      "key": "rem 590",
+      "width": 26
+     },
+     {
+      "kind": "term",
+      "key": "rem 584",
+      "width": 33
+     }
+    ]
+   },
+   {
+    "a": "commit/2e06e3f838",
+    "b": "specs/claims/graph.md#42",
+    "via": [
+     {
+      "kind": "term",
+      "key": "execution receipts",
+      "width": 12
+     },
+     {
+      "kind": "term",
+      "key": "rem 603",
+      "width": 22
+     },
+     {
+      "kind": "term",
+      "key": "rem 590",
+      "width": 26
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "specs/claims/graph.md#42",
+   "gold": "commit/2e06e3f838",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 1640,
+  "within_2_doors": 33467,
+  "gold_within_1": 2,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "board/cards/REM-590.md#2",
+    "label": "board/cards/REM-590.md \u203a Goal",
+    "p": 0.004370332750248503,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-590.md#4",
+    "label": "board/cards/REM-590.md \u203a Done when",
+    "p": 0.004002597227921326,
+    "gold": false
+   },
+   {
+    "id": "meta/probes/2026-09-19-core-claims-surface.md#2",
+    "label": "meta/probes/2026-09-19-core-claims-surface.md \u203a Findings and changes",
+    "p": 0.003346824144730222,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-590.md#8",
+    "label": "board/cards/REM-590.md \u203a Log",
+    "p": 0.0025901332877454617,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-603.md#7",
+    "label": "board/cards/REM-603.md \u203a Log",
+    "p": 0.0025648096915530756,
+    "gold": false
+   },
+   {
+    "id": "commit/12835b9d8a",
+    "label": "commit 12835b9: board: file REM-591 claims: followed questions expose an authorised change feed",
+    "p": 0.002474297178105156,
+    "gold": false
+   },
+   {
+    "id": "commit/4889b461a2",
+    "label": "commit 4889b46: board: file REM-589 claims: origin identity and dependence retain versioned evidence",
+    "p": 0.0024300386830340293,
+    "gold": false
+   },
+   {
+    "id": "specs/research-platform/core-trust-delivery.md#1",
+    "label": "specs/research-platform/core-trust-delivery.md \u203a Core trust delivery map",
+    "p": 0.0023071252984226682,
+    "gold": false
+   },
+   {
+    "id": "specs/research-platform/core-research-programme.md#4",
+    "label": "specs/research-platform/core-research-programme.md \u203a R1. Protocols and research decisions are durable data",
+    "p": 0.002099796772342711,
+    "gold": false
+   },
+   {
+    "id": "specs/claims/schema.sql#71",
+    "label": "specs/claims/schema.sql",
+    "p": 0.0015999924322096437,
+    "gold": false
+   },
+   {
+    "id": "specs/claims/schema.sql#1",
+    "label": "specs/claims/schema.sql",
+    "p": 0.001597876071567287,
+    "gold": false
+   },
+   {
+    "id": "commit/2e06e3f838",
+    "label": "commit 2e06e3f: Merge tested core claim readings and execution receipts (REM-584, REM-590, REM-603)",
+    "p": 0.00146628771394282,
+    "gold": true
+   },
+   {
+    "id": "output/trust-claims-tutorial-2026-09-19/build.py#14",
+    "label": "output/trust-claims-tutorial-2026-09-19/build.py",
+    "p": 0.001455178417062888,
+    "gold": false
+   },
+   {
+    "id": "output/trust-claims-tutorial-2026-09-19/build.py#11",
+    "label": "output/trust-claims-tutorial-2026-09-19/build.py",
+    "p": 0.0014113525687114538,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-591.md#1",
+    "label": "board/cards/REM-591.md",
+    "p": 0.0013497293661105167,
+    "gold": false
+   },
+   {
+    "id": "specs/claims/graph.md#41",
+    "label": "specs/claims/graph.md \u203a 10. Reading the graph",
+    "p": 0.0013484716462587502,
+    "gold": false
+   },
+   {
+    "id": "specs/claims/schema.sql#73",
+    "label": "specs/claims/schema.sql",
+    "p": 0.0013432210259449664,
+    "gold": false
+   },
+   {
+    "id": "meta/probes/2026-09-19-claims-aggregate-history.sql#2",
+    "label": "meta/probes/2026-09-19-claims-aggregate-history.sql",
+    "p": 0.001240274683953312,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-589.md#1",
+    "label": "board/cards/REM-589.md",
+    "p": 0.001198692789034999,
+    "gold": false
+   },
+   {
+    "id": "specs/research-platform/core-trust-delivery.md#2",
+    "label": "specs/research-platform/core-trust-delivery.md \u203a Core trust delivery map",
+    "p": 0.0011039629458883466,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/56f13437f5",
+   "label": "commit 56f1343: board: file REM-590 claims: generated assertions keep durable execution receipts",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-590.md#1",
+   "label": "board/cards/REM-590.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/claims/graph.md#42",
+   "label": "specs/claims/graph.md \u203a 10. Reading the graph",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/research-platform/core-claims-contract.md#12",
+   "label": "specs/research-platform/core-claims-contract.md \u203a C7. Generated assertions have durable execution receipts",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/research-platform/core-claims-contract.md#13",
+   "label": "specs/research-platform/core-claims-contract.md \u203a C7. Generated assertions have durable execution receipts",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-590.md#3",
+   "label": "board/cards/REM-590.md \u203a Evidence",
+   "wave": 1,
+   "via": "term:rem 590",
+   "gold": false
+  },
+  {
+   "id": "commit/06a0555c15",
+   "label": "commit 06a0555: board: REM-590 in-progress \u2192 done",
+   "wave": 1,
+   "via": "term:rem 590",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-590.md#6",
+   "label": "board/cards/REM-590.md \u203a Scope",
+   "wave": 1,
+   "via": "term:rem 590",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-590.md#5",
+   "label": "board/cards/REM-590.md \u203a Estimate \u2014 3 points",
+   "wave": 1,
+   "via": "term:rem 590",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-590.md#2",
+   "label": "board/cards/REM-590.md \u203a Goal",
+   "wave": 1,
+   "via": "term:rem 590",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "board/cards/REM-590.md#2",
+    "label": "board/cards/REM-590.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-590.md#4",
+    "label": "board/cards/REM-590.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "meta/probes/2026-09-19-core-claims-surface.md#2",
+    "label": "meta/probes/2026-09-19-core-claims-surface.md \u203a Findings and changes",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-590.md#8",
+    "label": "board/cards/REM-590.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-603.md#7",
+    "label": "board/cards/REM-603.md \u203a Log",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "board/cards/REM-590.md#2",
+    "label": "board/cards/REM-590.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "meta/probes/2026-09-19-core-claims-surface.md#2",
+    "label": "meta/probes/2026-09-19-core-claims-surface.md \u203a Findings and changes",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-590.md#4",
+    "label": "board/cards/REM-590.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-590.md#8",
+    "label": "board/cards/REM-590.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "specs/research-platform/core-research-programme.md#4",
+    "label": "specs/research-platform/core-research-programme.md \u203a R1. Protocols and research decisions are durable data",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/2e06e3f838",
+    "label": "commit 2e06e3f: Merge tested core claim readings and execution receipts (REM-584, REM-590, REM-603)",
+    "gold": true
+   },
+   {
+    "id": "board/cards/REM-590.md#2",
+    "label": "board/cards/REM-590.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "commit/13e9d5ac26",
+    "label": "commit 13e9d5a: claims: scoped readings, durable receipts and current aggregate state (REM-584, REM-590, REM-603)",
+    "gold": true
+   },
+   {
+    "id": "commit/06a0555c15",
+    "label": "commit 06a0555: board: REM-590 in-progress \u2192 done",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-590.md#4",
+    "label": "board/cards/REM-590.md \u203a Done when",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "board/cards/REM-590.md#2",
+    "label": "board/cards/REM-590.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "commit/13e9d5ac26",
+    "label": "commit 13e9d5a: claims: scoped readings, durable receipts and current aggregate state (REM-584, REM-590, REM-603)",
+    "gold": true
+   },
+   {
+    "id": "specs/research-platform/core-claims-contract.md#17",
+    "label": "specs/research-platform/core-claims-contract.md \u203a Worked tutorial",
+    "gold": false
+   },
+   {
+    "id": "meta/probes/2026-09-19-core-claims-surface.md#2",
+    "label": "meta/probes/2026-09-19-core-claims-surface.md \u203a Findings and changes",
+    "gold": false
+   },
+   {
+    "id": "commit/2e06e3f838",
+    "label": "commit 2e06e3f: Merge tested core claim readings and execution receipts (REM-584, REM-590, REM-603)",
+    "gold": true
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 1.0,
+  "S": 1.0
+ }
+}

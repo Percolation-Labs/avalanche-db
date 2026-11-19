@@ -1,0 +1,415 @@
+{
+ "qid": "pr:74",
+ "set": "prs",
+ "question": "What work went into this, and why: A probe that promised to run no step, and three process gaps?",
+ "gold": [
+  {
+   "id": "commit/23a7b7dbbc",
+   "label": "commit 23a7b7d: The hook that ran for nobody, the lock that was not a lock, one bump a month",
+   "seed": false
+  },
+  {
+   "id": "commit/9186b4527b",
+   "label": "commit 9186b45: A probe that promised to run no step ran what came after the semicolon",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/33971ac616",
+   "label": "commit 33971ac: Merge pull request #74 from Percolation-Labs/chore/process-gates",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/9186b4527b",
+   "label": "commit 9186b45: A probe that promised to run no step ran what came after the semicolon",
+   "rank": 2,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "meta/skills/dogfooding/SKILL.md#3",
+   "label": "meta/skills/dogfooding/SKILL.md \u203a Why this is not covered by the test suites",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/a3023a0394",
+   "label": "commit a3023a0: Two sessions fixed the same P0, and only the fourth reply said so",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "meta/postmortems/2026-09-08-the-comparison-i-made-last.md#4",
+   "label": "meta/postmortems/2026-09-08-the-comparison-i-made-last.md \u203a What the wasted work was actually for",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 2
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/23a7b7dbbc",
+    "label": "commit 23a7b7d: The hook that ran for nobody, the lock that was not a lock, one bump a month",
+    "role": "gold"
+   },
+   {
+    "id": "commit/9186b4527b",
+    "label": "commit 9186b45: A probe that promised to run no step ran what came after the semicolon",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/23a7b7dbbc",
+    "b": "commit/9186b4527b",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "session_01xbmmjq7evyjesaz3ipjxuy",
+      "width": 32
+     },
+     {
+      "kind": "term",
+      "key": "code session_01xbmmjq7evyjesaz3ipjxuy",
+      "width": 32
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "commit/9186b4527b",
+   "gold": "commit/9186b4527b",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 3061,
+  "within_2_doors": 33838,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "commit/23a7b7dbbc",
+    "label": "commit 23a7b7d: The hook that ran for nobody, the lock that was not a lock, one bump a month",
+    "p": 0.005656583518733187,
+    "gold": true
+   },
+   {
+    "id": "commit/5fd61638db",
+    "label": "commit 5fd6163: Walk the journeys rather than the mechanisms, and find four defects doing it",
+    "p": 0.0030704193912238845,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-12-true-when-it-was-measured.md#21",
+    "label": "meta/postmortems/2026-09-12-true-when-it-was-measured.md \u203a 7. What this needs",
+    "p": 0.0027330684536037587,
+    "gold": false
+   },
+   {
+    "id": "commit/158dc96119",
+    "label": "commit 158dc96: The hook row is closed, and the first fix for it failed the rule it satisfied",
+    "p": 0.0023075377394072135,
+    "gold": false
+   },
+   {
+    "id": "commit/78e2235ee9",
+    "label": "commit 78e2235: The resolver never did the thing its own header described",
+    "p": 0.0022913487045360783,
+    "gold": false
+   },
+   {
+    "id": "commit/4ddac70fe1",
+    "label": "commit 4ddac70: A postmortem for the arc, and the two ledger entries it earns",
+    "p": 0.0021787641905640837,
+    "gold": false
+   },
+   {
+    "id": "commit/1ece7cea8e",
+    "label": "commit 1ece7ce: Ask the third question: is the database running what the specs say?",
+    "p": 0.002172781130452041,
+    "gold": false
+   },
+   {
+    "id": "specs/workflow-engine/plan-graph.md#14",
+    "label": "specs/workflow-engine/plan-graph.md \u203a `plan_probe` runs the cheap half",
+    "p": 0.002069808919380444,
+    "gold": false
+   },
+   {
+    "id": "research-notes/algorithms/entropy-gated-resolution.md#6",
+    "label": "research-notes/algorithms/entropy-gated-resolution.md \u203a The step that was missing, added 2026-09-08",
+    "p": 0.0020351284868040287,
+    "gold": false
+   },
+   {
+    "id": "commit/9014505958",
+    "label": "commit 9014505: The application's own schema was missing from the application's own catalogue",
+    "p": 0.0017294544048329912,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-12-true-when-it-was-measured.md#8",
+    "label": "meta/postmortems/2026-09-12-true-when-it-was-measured.md \u203a 3. The checkout is the failure domain, and so is the backlog",
+    "p": 0.0016588143114178002,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-08-the-step-the-header-described.md#1",
+    "label": "meta/postmortems/2026-09-08-the-step-the-header-described.md \u203a The step the header described, and the file never did",
+    "p": 0.0016284766939357758,
+    "gold": false
+   },
+   {
+    "id": "commit/31a94ddd00",
+    "label": "commit 31a94dd: A gate that can write: the hook rebuilt the served database and a test committed to the branch (#88)",
+    "p": 0.001587221503758896,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-11-fixed-at-the-copy-that-failed.md#4",
+    "label": "meta/postmortems/2026-09-11-fixed-at-the-copy-that-failed.md \u203a 1. The pattern",
+    "p": 0.0015223044997979968,
+    "gold": false
+   },
+   {
+    "id": "commit/a8c382fbab",
+    "label": "commit a8c382f: `In Review` said the work was out of your hands, and it is not",
+    "p": 0.0014792682020900714,
+    "gold": false
+   },
+   {
+    "id": "commit/670dc6aa26",
+    "label": "commit 670dc6a: Merge pull request #82 from Percolation-Labs/fix/rem-92-check-finds-an-interpreter",
+    "p": 0.0014629838380243517,
+    "gold": false
+   },
+   {
+    "id": "commit/d1627bc22a",
+    "label": "commit d1627bc: Bump the actions group with 5 updates",
+    "p": 0.0014021625086558154,
+    "gold": false
+   },
+   {
+    "id": "scenarios/evals/README.md#4",
+    "label": "scenarios/evals/README.md \u203a Why this is not automated, and must not become automated",
+    "p": 0.0013977223168366026,
+    "gold": false
+   },
+   {
+    "id": "commit/9457c87572",
+    "label": "commit 9457c87: Merge pull request #84 from Percolation-Labs/docs/in-review-is-not-parked",
+    "p": 0.0013452682737725376,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1090.md#6",
+    "label": "board/cards/REM-1090.md \u203a Log",
+    "p": 0.0013081142821587022,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/33971ac616",
+   "label": "commit 33971ac: Merge pull request #74 from Percolation-Labs/chore/process-gates",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/9186b4527b",
+   "label": "commit 9186b45: A probe that promised to run no step ran what came after the semicolon",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "meta/skills/dogfooding/SKILL.md#3",
+   "label": "meta/skills/dogfooding/SKILL.md \u203a Why this is not covered by the test suites",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/a3023a0394",
+   "label": "commit a3023a0: Two sessions fixed the same P0, and only the fourth reply said so",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/postmortems/2026-09-08-the-comparison-i-made-last.md#4",
+   "label": "meta/postmortems/2026-09-08-the-comparison-i-made-last.md \u203a What the wasted work was actually for",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/a8159c13c5",
+   "label": "commit a8159c1: The lint read a scheduled agent step's name from a field that step does not have",
+   "wave": 1,
+   "via": "term:plan_probe",
+   "gold": false
+  },
+  {
+   "id": "specs/workflow-engine/plan-graph.md#17",
+   "label": "specs/workflow-engine/plan-graph.md \u203a `plan_probe` runs the cheap half",
+   "wave": 1,
+   "via": "term:plan_probe",
+   "gold": false
+  },
+  {
+   "id": "meta/postmortems/2026-09-12-true-when-it-was-measured.md#8",
+   "label": "meta/postmortems/2026-09-12-true-when-it-was-measured.md \u203a 3. The checkout is the failure domain, and so is the backlog",
+   "wave": 1,
+   "via": "term:plan_probe",
+   "gold": false
+  },
+  {
+   "id": "commit/ccf0e8423e",
+   "label": "commit ccf0e84: \"Nothing here executes a step\" now says what makes that true",
+   "wave": 1,
+   "via": "term:plan_probe",
+   "gold": false
+  },
+  {
+   "id": "specs/workflow-engine/plan-graph.md#16",
+   "label": "specs/workflow-engine/plan-graph.md \u203a `plan_probe` runs the cheap half",
+   "wave": 1,
+   "via": "term:plan_probe",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "commit/23a7b7dbbc",
+    "label": "commit 23a7b7d: The hook that ran for nobody, the lock that was not a lock, one bump a month",
+    "gold": true
+   },
+   {
+    "id": "commit/5fd61638db",
+    "label": "commit 5fd6163: Walk the journeys rather than the mechanisms, and find four defects doing it",
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-12-true-when-it-was-measured.md#21",
+    "label": "meta/postmortems/2026-09-12-true-when-it-was-measured.md \u203a 7. What this needs",
+    "gold": false
+   },
+   {
+    "id": "commit/158dc96119",
+    "label": "commit 158dc96: The hook row is closed, and the first fix for it failed the rule it satisfied",
+    "gold": false
+   },
+   {
+    "id": "commit/78e2235ee9",
+    "label": "commit 78e2235: The resolver never did the thing its own header described",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "commit/23a7b7dbbc",
+    "label": "commit 23a7b7d: The hook that ran for nobody, the lock that was not a lock, one bump a month",
+    "gold": true
+   },
+   {
+    "id": "meta/postmortems/2026-09-12-true-when-it-was-measured.md#8",
+    "label": "meta/postmortems/2026-09-12-true-when-it-was-measured.md \u203a 3. The checkout is the failure domain, and so is the backlog",
+    "gold": false
+   },
+   {
+    "id": "commit/158dc96119",
+    "label": "commit 158dc96: The hook row is closed, and the first fix for it failed the rule it satisfied",
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-12-true-when-it-was-measured.md#21",
+    "label": "meta/postmortems/2026-09-12-true-when-it-was-measured.md \u203a 7. What this needs",
+    "gold": false
+   },
+   {
+    "id": "commit/78e2235ee9",
+    "label": "commit 78e2235: The resolver never did the thing its own header described",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/9457c87572",
+    "label": "commit 9457c87: Merge pull request #84 from Percolation-Labs/docs/in-review-is-not-parked",
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-12-true-when-it-was-measured.md#8",
+    "label": "meta/postmortems/2026-09-12-true-when-it-was-measured.md \u203a 3. The checkout is the failure domain, and so is the backlog",
+    "gold": false
+   },
+   {
+    "id": "commit/670dc6aa26",
+    "label": "commit 670dc6a: Merge pull request #82 from Percolation-Labs/fix/rem-92-check-finds-an-interpreter",
+    "gold": false
+   },
+   {
+    "id": "commit/209c208390",
+    "label": "commit 209c208: Merge pull request #85 from Percolation-Labs/docs/probe-runs-no-step-mechanism",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261029-162158-2669.md#1",
+    "label": "board/messages/M-20261029-162158-2669.md",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "specs/workflow-engine/hired-steps.md#2",
+    "label": "specs/workflow-engine/hired-steps.md \u203a 1. The idea",
+    "gold": false
+   },
+   {
+    "id": "specs/workflow-engine/YAML.md#20",
+    "label": "specs/workflow-engine/YAML.md \u203a Matrix fan-out \u2014 the work to do is a query result",
+    "gold": false
+   },
+   {
+    "id": "specs/build-knit-dream/activity-memory.md#4",
+    "label": "specs/build-knit-dream/activity-memory.md \u203a 1. The loop uses only the tables that are there",
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-12-true-when-it-was-measured.md#8",
+    "label": "meta/postmortems/2026-09-12-true-when-it-was-measured.md \u203a 3. The checkout is the failure domain, and so is the backlog",
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-12-the-queue-is-the-product.md#1",
+    "label": "meta/postmortems/2026-09-12-the-queue-is-the-product.md \u203a Seven PRs in five hours, and the code was the cheap part",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 1.0,
+  "Q": 1.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

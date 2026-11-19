@@ -1,0 +1,417 @@
+{
+ "qid": "RW:2hop__136179_13529",
+ "set": "mq",
+ "question": "When was the player that Iglesia Maradoniana is named after signed by Barcelona?",
+ "gold": [
+  {
+   "id": "mq:1888b48951daf682",
+   "label": "FC Barcelona",
+   "seed": false
+  },
+  {
+   "id": "mq:5e6f9f0e4b66db62",
+   "label": "Iglesia Maradoniana",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:5e6f9f0e4b66db62",
+   "label": "Iglesia Maradoniana",
+   "rank": 1,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:9113fa09099d13ce",
+   "label": "UEFA Men's Player of the Year Award",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:38d9b36cc9ed496f",
+   "label": "Urgell (Barcelona Metro)",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:53cb23496bd4468c",
+   "label": "Canyelles (Barcelona Metro)",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "mq:c8e0cd9eefe6ca32",
+   "label": "Treaty of Barcelona (1493)",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 2
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:1888b48951daf682",
+    "label": "FC Barcelona",
+    "role": "gold"
+   },
+   {
+    "id": "mq:5e6f9f0e4b66db62",
+    "label": "Iglesia Maradoniana",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:1888b48951daf682",
+    "b": "mq:5e6f9f0e4b66db62",
+    "via": [
+     {
+      "kind": "term",
+      "key": "diego maradona",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "maradona",
+      "width": 7
+     },
+     {
+      "kind": "term",
+      "key": "diego",
+      "width": 82
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "mq:5e6f9f0e4b66db62",
+   "gold": "mq:5e6f9f0e4b66db62",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 775,
+  "within_2_doors": 20117,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "mq:df35a28054af08b5",
+    "label": "Universitat (Barcelona Metro)",
+    "p": 0.01095046092387878,
+    "gold": false
+   },
+   {
+    "id": "mq:e844708fbf99434d",
+    "label": "Palau G\u00fcell",
+    "p": 0.005393882787571614,
+    "gold": false
+   },
+   {
+    "id": "mq:f6c4933104c60a83",
+    "label": "Drassanes (Barcelona Metro)",
+    "p": 0.004242392201467613,
+    "gold": false
+   },
+   {
+    "id": "mq:c60231fdaccc5fbc",
+    "label": "Hostafrancs",
+    "p": 0.003843618696429207,
+    "gold": false
+   },
+   {
+    "id": "mq:1f2c88bb14e4d7be",
+    "label": "Presbyterianism",
+    "p": 0.002965903339442626,
+    "gold": false
+   },
+   {
+    "id": "mq:783834012896261e",
+    "label": "2010 FIFA World Cup",
+    "p": 0.002682935889627413,
+    "gold": false
+   },
+   {
+    "id": "mq:6de2e6a581d39551",
+    "label": "Zona Universit\u00e0ria station",
+    "p": 0.0022617908198482783,
+    "gold": false
+   },
+   {
+    "id": "mq:ee1cabf621631ab3",
+    "label": "List of UEFA Champions League hat-tricks",
+    "p": 0.0019375508628098905,
+    "gold": false
+   },
+   {
+    "id": "mq:c2ed6e0b215a4ba1",
+    "label": "Diego Sinagra",
+    "p": 0.0018741045646131123,
+    "gold": false
+   },
+   {
+    "id": "mq:42f9c44350a6dca8",
+    "label": "The Spirit of Notre Dame",
+    "p": 0.001857262668712529,
+    "gold": false
+   },
+   {
+    "id": "mq:fb5bb2c0a9cbccec",
+    "label": "List of Black-ish episodes",
+    "p": 0.0018418253462052793,
+    "gold": false
+   },
+   {
+    "id": "mq:a24eda9082307249",
+    "label": "List of Barcelona Metro stations",
+    "p": 0.001829100104251585,
+    "gold": false
+   },
+   {
+    "id": "mq:e106f85b945c2ac0",
+    "label": "Cristiano Ronaldo",
+    "p": 0.0016247331501183578,
+    "gold": false
+   },
+   {
+    "id": "mq:6b41b50e16141772",
+    "label": "FC Barcelona",
+    "p": 0.0015688839073131871,
+    "gold": false
+   },
+   {
+    "id": "mq:3027dfd420eaaf9c",
+    "label": "El Cl\u00e1sico",
+    "p": 0.001486027426921881,
+    "gold": false
+   },
+   {
+    "id": "mq:430da4437a1625cc",
+    "label": "El Cl\u00e1sico",
+    "p": 0.0014705371030529076,
+    "gold": false
+   },
+   {
+    "id": "mq:435e078a8a485913",
+    "label": "Catalan language",
+    "p": 0.0014363750456275078,
+    "gold": false
+   },
+   {
+    "id": "mq:0239153eb8eef343",
+    "label": "List of top Premier League goal scorers by season",
+    "p": 0.0014300380135501241,
+    "gold": false
+   },
+   {
+    "id": "mq:1c4244512ce8deb2",
+    "label": "Codos, Aragon",
+    "p": 0.0013333430717003744,
+    "gold": false
+   },
+   {
+    "id": "mq:51c6a94090b6e50a",
+    "label": "Codo, Aragon",
+    "p": 0.0013045603934386755,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:5e6f9f0e4b66db62",
+   "label": "Iglesia Maradoniana",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:9113fa09099d13ce",
+   "label": "UEFA Men's Player of the Year Award",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:38d9b36cc9ed496f",
+   "label": "Urgell (Barcelona Metro)",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:53cb23496bd4468c",
+   "label": "Canyelles (Barcelona Metro)",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:c8e0cd9eefe6ca32",
+   "label": "Treaty of Barcelona (1493)",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:14ad5590ee068525",
+   "label": "2008 Summer Olympics torch relay",
+   "wave": 1,
+   "via": "term:maradona",
+   "gold": false
+  },
+  {
+   "id": "mq:c2ed6e0b215a4ba1",
+   "label": "Diego Sinagra",
+   "wave": 1,
+   "via": "term:maradona",
+   "gold": false
+  },
+  {
+   "id": "mq:01367c25a976d904",
+   "label": "Argentina v England (1986 FIFA World Cup)",
+   "wave": 1,
+   "via": "term:maradona",
+   "gold": false
+  },
+  {
+   "id": "mq:1bcc05405923b878",
+   "label": "Argentina v England (1986 FIFA World Cup)",
+   "wave": 1,
+   "via": "term:maradona",
+   "gold": false
+  },
+  {
+   "id": "mq:1888b48951daf682",
+   "label": "FC Barcelona",
+   "wave": 1,
+   "via": "term:maradona",
+   "gold": true
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:df35a28054af08b5",
+    "label": "Universitat (Barcelona Metro)",
+    "gold": false
+   },
+   {
+    "id": "mq:e844708fbf99434d",
+    "label": "Palau G\u00fcell",
+    "gold": false
+   },
+   {
+    "id": "mq:f6c4933104c60a83",
+    "label": "Drassanes (Barcelona Metro)",
+    "gold": false
+   },
+   {
+    "id": "mq:c60231fdaccc5fbc",
+    "label": "Hostafrancs",
+    "gold": false
+   },
+   {
+    "id": "mq:1f2c88bb14e4d7be",
+    "label": "Presbyterianism",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:df35a28054af08b5",
+    "label": "Universitat (Barcelona Metro)",
+    "gold": false
+   },
+   {
+    "id": "mq:f6c4933104c60a83",
+    "label": "Drassanes (Barcelona Metro)",
+    "gold": false
+   },
+   {
+    "id": "mq:3027dfd420eaaf9c",
+    "label": "El Cl\u00e1sico",
+    "gold": false
+   },
+   {
+    "id": "mq:430da4437a1625cc",
+    "label": "El Cl\u00e1sico",
+    "gold": false
+   },
+   {
+    "id": "mq:6de2e6a581d39551",
+    "label": "Zona Universit\u00e0ria station",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:df35a28054af08b5",
+    "label": "Universitat (Barcelona Metro)",
+    "gold": false
+   },
+   {
+    "id": "mq:f6c4933104c60a83",
+    "label": "Drassanes (Barcelona Metro)",
+    "gold": false
+   },
+   {
+    "id": "mq:3027dfd420eaaf9c",
+    "label": "El Cl\u00e1sico",
+    "gold": false
+   },
+   {
+    "id": "mq:430da4437a1625cc",
+    "label": "El Cl\u00e1sico",
+    "gold": false
+   },
+   {
+    "id": "mq:6de2e6a581d39551",
+    "label": "Zona Universit\u00e0ria station",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:f6c4933104c60a83",
+    "label": "Drassanes (Barcelona Metro)",
+    "gold": false
+   },
+   {
+    "id": "mq:244aa3926b1c61ab",
+    "label": "Xavi",
+    "gold": false
+   },
+   {
+    "id": "mq:6de2e6a581d39551",
+    "label": "Zona Universit\u00e0ria station",
+    "gold": false
+   },
+   {
+    "id": "mq:df35a28054af08b5",
+    "label": "Universitat (Barcelona Metro)",
+    "gold": false
+   },
+   {
+    "id": "mq:430da4437a1625cc",
+    "label": "El Cl\u00e1sico",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

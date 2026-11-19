@@ -1,0 +1,430 @@
+{
+ "qid": "RW:3hop1__133292_40769_64047",
+ "set": "mq",
+ "question": "When did the RX 350 from The Hino Dutro creator's luxury division change body style?",
+ "gold": [
+  {
+   "id": "mq:2e2b0b093721a57a",
+   "label": "1973 oil crisis",
+   "seed": false
+  },
+  {
+   "id": "mq:38c424c593b28ae2",
+   "label": "Hino Dutro",
+   "seed": true
+  },
+  {
+   "id": "mq:7919472ea59ef28a",
+   "label": "Lexus RX",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:38c424c593b28ae2",
+   "label": "Hino Dutro",
+   "rank": 1,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:bec2c0cd399d5166",
+   "label": "Hideshi Hino's Theater of Horror",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:67e10d400fdd89e6",
+   "label": "Genesis Motor",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:4779450bf31d0758",
+   "label": "Acura RL",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:3e6571510518ac14",
+   "label": "Kawasaki MULE",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:2e2b0b093721a57a",
+    "label": "1973 oil crisis",
+    "role": "gold"
+   },
+   {
+    "id": "mq:38c424c593b28ae2",
+    "label": "Hino Dutro",
+    "role": "gold"
+   },
+   {
+    "id": "mq:7919472ea59ef28a",
+    "label": "Lexus RX",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:2e2b0b093721a57a",
+    "b": "mq:38c424c593b28ae2",
+    "via": [
+     {
+      "kind": "term",
+      "key": "toyota",
+      "width": 32
+     }
+    ]
+   },
+   {
+    "a": "mq:2e2b0b093721a57a",
+    "b": "mq:7919472ea59ef28a",
+    "via": [
+     {
+      "kind": "term",
+      "key": "lexus",
+      "width": 8
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   1,
+   2
+  ],
+  "entry": {
+   "seed": "mq:38c424c593b28ae2",
+   "gold": "mq:38c424c593b28ae2",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 1605,
+  "within_2_doors": 19448,
+  "gold_within_1": 2,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "mq:604e022d44a504f5",
+    "label": "Acura RLX",
+    "p": 0.004128908790347697,
+    "gold": false
+   },
+   {
+    "id": "mq:822789bb2105f5a2",
+    "label": "Acura RL",
+    "p": 0.0025940105436898404,
+    "gold": false
+   },
+   {
+    "id": "mq:0c1b5419181adaf6",
+    "label": "Brazilian National Anthem",
+    "p": 0.0023399836304511938,
+    "gold": false
+   },
+   {
+    "id": "mq:0a8bc36405d291ff",
+    "label": "In the Dark Half",
+    "p": 0.0021728094926716673,
+    "gold": false
+   },
+   {
+    "id": "mq:13f0bedc74b932bd",
+    "label": "Toyota Matrix",
+    "p": 0.0019581844916678978,
+    "gold": false
+   },
+   {
+    "id": "mq:fcdb428b5d779104",
+    "label": "Infiniti J30",
+    "p": 0.0019252164218321345,
+    "gold": false
+   },
+   {
+    "id": "mq:9cbea3805ac3dc04",
+    "label": "Acura Legend",
+    "p": 0.0019084058637920342,
+    "gold": false
+   },
+   {
+    "id": "mq:4d41ef62ccf3ed3b",
+    "label": "Lincoln Town Car",
+    "p": 0.0018036841709274613,
+    "gold": false
+   },
+   {
+    "id": "mq:d09f8f8014cbdcbc",
+    "label": "Infiniti G-series (Q40/Q60)",
+    "p": 0.0017909118161957291,
+    "gold": false
+   },
+   {
+    "id": "mq:194602402f6a38e8",
+    "label": "Kawasaki disease",
+    "p": 0.001769047710500042,
+    "gold": false
+   },
+   {
+    "id": "mq:bc6ba2f2dbec2d3c",
+    "label": "Pontiac Firebird",
+    "p": 0.0017507451850596208,
+    "gold": false
+   },
+   {
+    "id": "mq:a9ef041054a8bf35",
+    "label": "Scion (automobile)",
+    "p": 0.0017366279413349468,
+    "gold": false
+   },
+   {
+    "id": "mq:c34e3f7b8f66fe0b",
+    "label": "Chevrolet Astro",
+    "p": 0.0016606059042574201,
+    "gold": false
+   },
+   {
+    "id": "mq:a771362af5ce9bcc",
+    "label": "The Young and the Restless",
+    "p": 0.0016316083507753366,
+    "gold": false
+   },
+   {
+    "id": "mq:641c474e5d4d52e9",
+    "label": "Acura EL",
+    "p": 0.00149683817881141,
+    "gold": false
+   },
+   {
+    "id": "mq:1c86abf64d0533fb",
+    "label": "Maa Exchange",
+    "p": 0.0014835745833723696,
+    "gold": false
+   },
+   {
+    "id": "mq:3a4b81b7e03cf53d",
+    "label": "Hyderabad",
+    "p": 0.001384618787494065,
+    "gold": false
+   },
+   {
+    "id": "mq:98155e9240c5eb60",
+    "label": "Bristol Commercial Vehicles",
+    "p": 0.0013139532250760826,
+    "gold": false
+   },
+   {
+    "id": "mq:acccf8f0b227f7bc",
+    "label": "LeBron James",
+    "p": 0.0012956658194916736,
+    "gold": false
+   },
+   {
+    "id": "mq:b0e95466c2090cad",
+    "label": "LeBron James",
+    "p": 0.001292754378337537,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:38c424c593b28ae2",
+   "label": "Hino Dutro",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:bec2c0cd399d5166",
+   "label": "Hideshi Hino's Theater of Horror",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:67e10d400fdd89e6",
+   "label": "Genesis Motor",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:4779450bf31d0758",
+   "label": "Acura RL",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:3e6571510518ac14",
+   "label": "Kawasaki MULE",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:57417b6802ba4803",
+   "label": "Volkswagen Group",
+   "wave": 1,
+   "via": "term:toyota",
+   "gold": false
+  },
+  {
+   "id": "mq:4c807422c915e341",
+   "label": "Scion xB",
+   "wave": 1,
+   "via": "term:toyota",
+   "gold": false
+  },
+  {
+   "id": "mq:b8633eca19c2eb44",
+   "label": "Katsuaki Watanabe",
+   "wave": 1,
+   "via": "term:toyota",
+   "gold": false
+  },
+  {
+   "id": "mq:f91c981daf6fb33d",
+   "label": "Scion bbX",
+   "wave": 1,
+   "via": "term:toyota",
+   "gold": false
+  },
+  {
+   "id": "mq:ce16e40f086d9f42",
+   "label": "Toyota",
+   "wave": 1,
+   "via": "term:toyota",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:604e022d44a504f5",
+    "label": "Acura RLX",
+    "gold": false
+   },
+   {
+    "id": "mq:822789bb2105f5a2",
+    "label": "Acura RL",
+    "gold": false
+   },
+   {
+    "id": "mq:0c1b5419181adaf6",
+    "label": "Brazilian National Anthem",
+    "gold": false
+   },
+   {
+    "id": "mq:0a8bc36405d291ff",
+    "label": "In the Dark Half",
+    "gold": false
+   },
+   {
+    "id": "mq:13f0bedc74b932bd",
+    "label": "Toyota Matrix",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:604e022d44a504f5",
+    "label": "Acura RLX",
+    "gold": false
+   },
+   {
+    "id": "mq:bc6ba2f2dbec2d3c",
+    "label": "Pontiac Firebird",
+    "gold": false
+   },
+   {
+    "id": "mq:13f0bedc74b932bd",
+    "label": "Toyota Matrix",
+    "gold": false
+   },
+   {
+    "id": "mq:0c1b5419181adaf6",
+    "label": "Brazilian National Anthem",
+    "gold": false
+   },
+   {
+    "id": "mq:d09f8f8014cbdcbc",
+    "label": "Infiniti G-series (Q40/Q60)",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:d09f8f8014cbdcbc",
+    "label": "Infiniti G-series (Q40/Q60)",
+    "gold": false
+   },
+   {
+    "id": "mq:604e022d44a504f5",
+    "label": "Acura RLX",
+    "gold": false
+   },
+   {
+    "id": "mq:0cbbba4108948c8a",
+    "label": "Mercedes-Benz G-Class",
+    "gold": false
+   },
+   {
+    "id": "mq:e92983794b098175",
+    "label": "Mercedes-Benz G-Class",
+    "gold": false
+   },
+   {
+    "id": "mq:13f0bedc74b932bd",
+    "label": "Toyota Matrix",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:c03f5741fc315183",
+    "label": "Body Story",
+    "gold": false
+   },
+   {
+    "id": "mq:05cd8eaec0f6c281",
+    "label": "Nissan Fuga",
+    "gold": false
+   },
+   {
+    "id": "mq:bc6ba2f2dbec2d3c",
+    "label": "Pontiac Firebird",
+    "gold": false
+   },
+   {
+    "id": "mq:f1033757803e13e9",
+    "label": "Mandolin",
+    "gold": false
+   },
+   {
+    "id": "mq:b422e6ea09a80862",
+    "label": "Bristol 403",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

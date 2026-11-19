@@ -1,0 +1,383 @@
+{
+ "qid": "card:REM-779",
+ "set": "cards",
+ "question": "What was done about this, and why: authoring: make personal reviewers the entry to Drafter writing theory?",
+ "gold": [
+  {
+   "id": "commit/524117ca3e",
+   "label": "commit 524117c: Specify personal Drafter reviewers and MCP margin reviews (REM-779)",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/355244540d",
+   "label": "commit 3552445: board: file REM-779 authoring: make personal reviewers the entry to Drafter writing theory",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-779.md#1",
+   "label": "board/cards/REM-779.md",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/524117ca3e",
+   "label": "commit 524117c: Specify personal Drafter reviewers and MCP margin reviews (REM-779)",
+   "rank": 3,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "specs/percolate-application/drafter.md#33",
+   "label": "specs/percolate-application/drafter.md \u203a Reviewers make the theory approachable",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "board/cards/REM-781.md#1",
+   "label": "board/cards/REM-781.md",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/524117ca3e",
+    "label": "commit 524117c: Specify personal Drafter reviewers and MCP margin reviews (REM-779)",
+    "role": "gold"
+   }
+  ],
+  "links": [],
+  "cost": 0,
+  "detached_gold": [],
+  "gold_pair_doors": [],
+  "entry": {
+   "seed": "commit/524117ca3e",
+   "gold": "commit/524117ca3e",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 1111,
+  "within_2_doors": 32807,
+  "gold_within_1": 0,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "board/team/drafter-reviewers.md#2",
+    "label": "board/team/drafter-reviewers.md \u203a Log",
+    "p": 0.012473580426444765,
+    "gold": false
+   },
+   {
+    "id": "commit/919657ed13",
+    "label": "commit 919657e: board: file REM-781 authoring: reconcile the Drafter reviewer spec with the shipped typed model",
+    "p": 0.009357317564031804,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-780.md#1",
+    "label": "board/cards/REM-780.md",
+    "p": 0.007750126965260467,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-778.md#7",
+    "label": "board/cards/REM-778.md \u203a Log",
+    "p": 0.007386562990293397,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-781.md#3",
+    "label": "board/cards/REM-781.md \u203a Log",
+    "p": 0.006926383752711125,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-778.md#1",
+    "label": "board/cards/REM-778.md",
+    "p": 0.006871249377327743,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-779.md#3",
+    "label": "board/cards/REM-779.md \u203a Log",
+    "p": 0.006639059436853766,
+    "gold": false
+   },
+   {
+    "id": "commit/262d10a624",
+    "label": "commit 262d10a: board: drafter-reviewers takes REM-779",
+    "p": 0.006536610084896958,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/drafter.md#5",
+    "label": "specs/percolate-application/drafter.md \u203a Product commitments",
+    "p": 0.005928830032843449,
+    "gold": false
+   },
+   {
+    "id": "commit/32788f71c2",
+    "label": "commit 32788f7: board: REM-779 in-progress \u2192 done",
+    "p": 0.004999745293512549,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-779.md#2",
+    "label": "board/cards/REM-779.md \u203a Goal",
+    "p": 0.004811972436383114,
+    "gold": false
+   },
+   {
+    "id": "board/team/drafter-reviewers.md#1",
+    "label": "board/team/drafter-reviewers.md",
+    "p": 0.004439736758042428,
+    "gold": false
+   },
+   {
+    "id": "output/drafter-study/README.md#1",
+    "label": "output/drafter-study/README.md \u203a Drafter: three interactive page studies",
+    "p": 0.00427981250707438,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-780.md#3",
+    "label": "board/cards/REM-780.md \u203a Log",
+    "p": 0.004144360339121572,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-777.md#1",
+    "label": "board/cards/REM-777.md",
+    "p": 0.004099614205209616,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/drafter.md#1",
+    "label": "specs/percolate-application/drafter.md \u203a Drafter: a document with room to think",
+    "p": 0.003344192033038314,
+    "gold": false
+   },
+   {
+    "id": "commit/f70df1ed77",
+    "label": "commit f70df1e: board: drafter-reviewers takes REM-781",
+    "p": 0.0033406995281492036,
+    "gold": false
+   },
+   {
+    "id": "commit/94bfe8bccb",
+    "label": "commit 94bfe8b: Merge pull request #414 from Percolation-Labs/amartey/passes-and-stickies",
+    "p": 0.003240062118935471,
+    "gold": false
+   },
+   {
+    "id": "board/team/drafter-spec.md#2",
+    "label": "board/team/drafter-spec.md \u203a Log",
+    "p": 0.0032091736867313177,
+    "gold": false
+   },
+   {
+    "id": "commit/57486c92ac",
+    "label": "commit 57486c9: board: drafter-reviewers checks in, ended",
+    "p": 0.003196476179077839,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/355244540d",
+   "label": "commit 3552445: board: file REM-779 authoring: make personal reviewers the entry to Drafter writing theory",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-779.md#1",
+   "label": "board/cards/REM-779.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/524117ca3e",
+   "label": "commit 524117c: Specify personal Drafter reviewers and MCP margin reviews (REM-779)",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "specs/percolate-application/drafter.md#33",
+   "label": "specs/percolate-application/drafter.md \u203a Reviewers make the theory approachable",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-781.md#1",
+   "label": "board/cards/REM-781.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-779.md#2",
+   "label": "board/cards/REM-779.md \u203a Goal",
+   "wave": 1,
+   "via": "term:rem 779",
+   "gold": false
+  },
+  {
+   "id": "commit/32788f71c2",
+   "label": "commit 32788f7: board: REM-779 in-progress \u2192 done",
+   "wave": 1,
+   "via": "term:rem 779",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-780.md#1",
+   "label": "board/cards/REM-780.md",
+   "wave": 1,
+   "via": "term:rem 779",
+   "gold": false
+  },
+  {
+   "id": "commit/262d10a624",
+   "label": "commit 262d10a: board: drafter-reviewers takes REM-779",
+   "wave": 1,
+   "via": "term:rem 779",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-779.md#3",
+   "label": "board/cards/REM-779.md \u203a Log",
+   "wave": 1,
+   "via": "term:rem 779",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "board/team/drafter-reviewers.md#2",
+    "label": "board/team/drafter-reviewers.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "commit/919657ed13",
+    "label": "commit 919657e: board: file REM-781 authoring: reconcile the Drafter reviewer spec with the shipped typed model",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-780.md#1",
+    "label": "board/cards/REM-780.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-778.md#7",
+    "label": "board/cards/REM-778.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-781.md#3",
+    "label": "board/cards/REM-781.md \u203a Log",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "board/team/drafter-reviewers.md#2",
+    "label": "board/team/drafter-reviewers.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-780.md#1",
+    "label": "board/cards/REM-780.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-778.md#1",
+    "label": "board/cards/REM-778.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-779.md#3",
+    "label": "board/cards/REM-779.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/drafter.md#5",
+    "label": "specs/percolate-application/drafter.md \u203a Product commitments",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/262d10a624",
+    "label": "commit 262d10a: board: drafter-reviewers takes REM-779",
+    "gold": false
+   },
+   {
+    "id": "commit/55cdcdc5e2",
+    "label": "commit 55cdcdc: board: drafter-reviewers checks in, working",
+    "gold": false
+   },
+   {
+    "id": "commit/57486c92ac",
+    "label": "commit 57486c9: board: drafter-reviewers checks in, ended",
+    "gold": false
+   },
+   {
+    "id": "commit/acd96f3c12",
+    "label": "commit acd96f3: board: drafter-reviewers checks in, ended",
+    "gold": false
+   },
+   {
+    "id": "commit/e4887a7499",
+    "label": "commit e4887a7: board: drafter-reviewers checks in, working",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "board/cards/REM-780.md#1",
+    "label": "board/cards/REM-780.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-779.md#3",
+    "label": "board/cards/REM-779.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/team/drafter-reviewers.md#2",
+    "label": "board/team/drafter-reviewers.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-778.md#1",
+    "label": "board/cards/REM-778.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-777.md#1",
+    "label": "board/cards/REM-777.md",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": null,
+  "Q": null,
+  "LQ": null,
+  "S": null
+ }
+}

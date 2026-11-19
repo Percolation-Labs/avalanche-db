@@ -1,0 +1,416 @@
+{
+ "qid": "RW:2hop__442516_595885",
+ "set": "mq",
+ "question": "Which country has a body of water that was inspiration for the name of the Mara Region?",
+ "gold": [
+  {
+   "id": "mq:b665527def79407a",
+   "label": "Mara Triangle",
+   "seed": true
+  },
+  {
+   "id": "mq:c7d9b14df59dd4f9",
+   "label": "Kirumi Bridge",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:8338825f51d9b852",
+   "label": "Ann Mara",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:b665527def79407a",
+   "label": "Mara Triangle",
+   "rank": 2,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:712a97a6524b57ac",
+   "label": "Serengeti District",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:b5d6c9ee1d980528",
+   "label": "Hindus",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "mq:a28f0df23d72667d",
+   "label": "Nicaragua",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 2
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:b665527def79407a",
+    "label": "Mara Triangle",
+    "role": "gold"
+   },
+   {
+    "id": "mq:c7d9b14df59dd4f9",
+    "label": "Kirumi Bridge",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:b665527def79407a",
+    "b": "mq:c7d9b14df59dd4f9",
+    "via": [
+     {
+      "kind": "near",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "mara river",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "mara",
+      "width": 19
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "mq:b665527def79407a",
+   "gold": "mq:b665527def79407a",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 2581,
+  "within_2_doors": 18505,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "mq:c7d9b14df59dd4f9",
+    "label": "Kirumi Bridge",
+    "p": 0.0031841215539376317,
+    "gold": true
+   },
+   {
+    "id": "mq:607411b577f5a4fd",
+    "label": "India",
+    "p": 0.0021244114865454867,
+    "gold": false
+   },
+   {
+    "id": "mq:bc719d256688fba6",
+    "label": "A Ghost Story",
+    "p": 0.001989599269827555,
+    "gold": false
+   },
+   {
+    "id": "mq:fa940e54ace3df32",
+    "label": "Trans Mara District",
+    "p": 0.0019386700901050788,
+    "gold": false
+   },
+   {
+    "id": "mq:87aae0f31ec9b94b",
+    "label": "Nairobi",
+    "p": 0.0019285684554001274,
+    "gold": false
+   },
+   {
+    "id": "mq:37141b8f1ad06a06",
+    "label": "Mara Marini",
+    "p": 0.0019263730772011607,
+    "gold": false
+   },
+   {
+    "id": "mq:c1404bdb44a2c009",
+    "label": "Helen Boehm",
+    "p": 0.0017587208940328721,
+    "gold": false
+   },
+   {
+    "id": "mq:1e43646f91bdab78",
+    "label": "The Girl with the Dragon Tattoo (2011 film)",
+    "p": 0.0013645081117859953,
+    "gold": false
+   },
+   {
+    "id": "mq:302e3beb5be5b79c",
+    "label": "Sanskrit",
+    "p": 0.0010531681481948287,
+    "gold": false
+   },
+   {
+    "id": "mq:67496ff9ce2d477e",
+    "label": "Hunting",
+    "p": 0.0010374654463066412,
+    "gold": false
+   },
+   {
+    "id": "mq:55adf999fc1e3fcd",
+    "label": "Hunting",
+    "p": 0.001025245027713771,
+    "gold": false
+   },
+   {
+    "id": "mq:cba82458020a0d82",
+    "label": "Olive",
+    "p": 0.0010067551415308994,
+    "gold": false
+   },
+   {
+    "id": "mq:776cf9c7f961c6ff",
+    "label": "Oklahoma City",
+    "p": 0.0010034694554437865,
+    "gold": false
+   },
+   {
+    "id": "mq:1997cde696a24e5d",
+    "label": "Canyon, Texas",
+    "p": 0.0008771157484582454,
+    "gold": false
+   },
+   {
+    "id": "mq:92c301e99225f1ab",
+    "label": "Pike Place Fish Market",
+    "p": 0.0008740391228412084,
+    "gold": false
+   },
+   {
+    "id": "mq:e7c26df57a2c83bb",
+    "label": "Victor Newman",
+    "p": 0.0008500512673839729,
+    "gold": false
+   },
+   {
+    "id": "mq:e22a3d1be29c8393",
+    "label": "Madurai district",
+    "p": 0.0008365135691055341,
+    "gold": false
+   },
+   {
+    "id": "mq:224bbe844e876d21",
+    "label": "Maggie Horton",
+    "p": 0.0008270350560750702,
+    "gold": false
+   },
+   {
+    "id": "mq:41177bd8b0f78840",
+    "label": "Death Note (2017 film)",
+    "p": 0.0008134523477510001,
+    "gold": false
+   },
+   {
+    "id": "mq:d8e2202f46478061",
+    "label": "Tibet",
+    "p": 0.0008013349184364571,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:8338825f51d9b852",
+   "label": "Ann Mara",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:b665527def79407a",
+   "label": "Mara Triangle",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:712a97a6524b57ac",
+   "label": "Serengeti District",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:b5d6c9ee1d980528",
+   "label": "Hindus",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:a28f0df23d72667d",
+   "label": "Nicaragua",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:c7d9b14df59dd4f9",
+   "label": "Kirumi Bridge",
+   "wave": 1,
+   "via": "term:mara river",
+   "gold": true
+  },
+  {
+   "id": "mq:fa940e54ace3df32",
+   "label": "Trans Mara District",
+   "wave": 2,
+   "via": "near:mq:712a97a6524b57ac",
+   "gold": false
+  },
+  {
+   "id": "mq:37141b8f1ad06a06",
+   "label": "Mara Marini",
+   "wave": 2,
+   "via": "near:mq:712a97a6524b57ac",
+   "gold": false
+  },
+  {
+   "id": "mq:5477d6bf458b6642",
+   "label": "Indru Nee Nalai Naan",
+   "wave": 3,
+   "via": "term:mara",
+   "gold": false
+  },
+  {
+   "id": "mq:d67dfca600102c57",
+   "label": "Aguamarina",
+   "wave": 3,
+   "via": "term:mara",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:c7d9b14df59dd4f9",
+    "label": "Kirumi Bridge",
+    "gold": true
+   },
+   {
+    "id": "mq:607411b577f5a4fd",
+    "label": "India",
+    "gold": false
+   },
+   {
+    "id": "mq:bc719d256688fba6",
+    "label": "A Ghost Story",
+    "gold": false
+   },
+   {
+    "id": "mq:fa940e54ace3df32",
+    "label": "Trans Mara District",
+    "gold": false
+   },
+   {
+    "id": "mq:87aae0f31ec9b94b",
+    "label": "Nairobi",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:c7d9b14df59dd4f9",
+    "label": "Kirumi Bridge",
+    "gold": true
+   },
+   {
+    "id": "mq:bc719d256688fba6",
+    "label": "A Ghost Story",
+    "gold": false
+   },
+   {
+    "id": "mq:fa940e54ace3df32",
+    "label": "Trans Mara District",
+    "gold": false
+   },
+   {
+    "id": "mq:37141b8f1ad06a06",
+    "label": "Mara Marini",
+    "gold": false
+   },
+   {
+    "id": "mq:1e43646f91bdab78",
+    "label": "The Girl with the Dragon Tattoo (2011 film)",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:c7d9b14df59dd4f9",
+    "label": "Kirumi Bridge",
+    "gold": true
+   },
+   {
+    "id": "mq:bc719d256688fba6",
+    "label": "A Ghost Story",
+    "gold": false
+   },
+   {
+    "id": "mq:1e43646f91bdab78",
+    "label": "The Girl with the Dragon Tattoo (2011 film)",
+    "gold": false
+   },
+   {
+    "id": "mq:6339bd9cc8e47c77",
+    "label": "Miracle on 34th Street",
+    "gold": false
+   },
+   {
+    "id": "mq:38d1360e7e86beec",
+    "label": "Miracle on 34th Street",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:81457c3be84db0c0",
+    "label": "Lumaco",
+    "gold": false
+   },
+   {
+    "id": "mq:64696c7fc1ebc12a",
+    "label": "Elliott Bay",
+    "gold": false
+   },
+   {
+    "id": "mq:c7d9b14df59dd4f9",
+    "label": "Kirumi Bridge",
+    "gold": true
+   },
+   {
+    "id": "mq:c5cabcd5ac0c1b6a",
+    "label": "Philippine television drama",
+    "gold": false
+   },
+   {
+    "id": "mq:8ed2f07a1f6b6ae6",
+    "label": "Walker Pond",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 1.0,
+  "Q": 1.0,
+  "LQ": 1.0,
+  "S": 1.0
+ }
+}

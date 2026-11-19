@@ -1,0 +1,441 @@
+{
+ "qid": "card:REM-212",
+ "set": "cards",
+ "question": "What was done about this, and why: research: a comparison pins exact package revisions and says how their claims line up?",
+ "gold": [
+  {
+   "id": "commit/3c4efe5dec",
+   "label": "commit 3c4efe5: comparison-and-trust specifies finding work that disagrees with a claim (REM-211)",
+   "seed": false
+  },
+  {
+   "id": "commit/65b1e31340",
+   "label": "commit 65b1e31: comparison-and-trust: the comparison contract is built (REM-212)",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "board/cards/REM-212.md#1",
+   "label": "board/cards/REM-212.md",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-212.md#2",
+   "label": "board/cards/REM-212.md \u203a Goal",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-490.md#2",
+   "label": "board/cards/REM-490.md \u203a Goal",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "commit/bf51557514",
+   "label": "commit bf51557: board: file REM-490 native: a comparison opens on a phone, at the revisions it pins",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 3
+  },
+  {
+   "id": "specs/percolate-application/data-model.md#11",
+   "label": "specs/percolate-application/data-model.md \u203a Research comparisons",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "board/cards/REM-212.md#2",
+    "label": "board/cards/REM-212.md \u203a Goal",
+    "role": "seed"
+   },
+   {
+    "id": "commit/3c4efe5dec",
+    "label": "commit 3c4efe5: comparison-and-trust specifies finding work that disagrees with a claim (REM-211)",
+    "role": "gold"
+   },
+   {
+    "id": "commit/65b1e31340",
+    "label": "commit 65b1e31: comparison-and-trust: the comparison contract is built (REM-212)",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "board/cards/REM-212.md#2",
+    "b": "commit/3c4efe5dec",
+    "via": [
+     {
+      "kind": "term",
+      "key": "comparison document",
+      "width": 10
+     },
+     {
+      "kind": "term",
+      "key": "rem 212",
+      "width": 11
+     }
+    ]
+   },
+   {
+    "a": "commit/3c4efe5dec",
+    "b": "commit/65b1e31340",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "code session_016wcvbjgdvkgbqqwc3q4atn",
+      "width": 3
+     },
+     {
+      "kind": "term",
+      "key": "session_016wcvbjgdvkgbqqwc3q4atn",
+      "width": 3
+     },
+     {
+      "kind": "term",
+      "key": "rem 212",
+      "width": 11
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "board/cards/REM-212.md#2",
+   "gold": "commit/3c4efe5dec",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 428,
+  "within_2_doors": 29627,
+  "gold_within_1": 2,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "board/cards/REM-490.md#4",
+    "label": "board/cards/REM-490.md \u203a Done when",
+    "p": 0.01279312189752006,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-490.md#3",
+    "label": "board/cards/REM-490.md \u203a Evidence",
+    "p": 0.00978391702853352,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-490.md#1",
+    "label": "board/cards/REM-490.md",
+    "p": 0.007768900767635571,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-213.md#2",
+    "label": "board/cards/REM-213.md \u203a Goal",
+    "p": 0.006667911617387036,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/comparison-and-trust.md#22",
+    "label": "specs/percolate-application/comparison-and-trust.md \u203a First slice",
+    "p": 0.005421481865692023,
+    "gold": false
+   },
+   {
+    "id": "commit/74068e0465",
+    "label": "commit 74068e0: board: file REM-489 native: a person connects and disconnects their AI from a phone",
+    "p": 0.005146955762481544,
+    "gold": false
+   },
+   {
+    "id": "commit/239abe65da",
+    "label": "commit 239abe6: board: REM-382 in-progress \u2192 done",
+    "p": 0.00500718544806763,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-218.md#2",
+    "label": "board/cards/REM-218.md \u203a Goal",
+    "p": 0.004765191166829631,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-212.md#3",
+    "label": "board/cards/REM-212.md \u203a Evidence",
+    "p": 0.003608750870742928,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-296.md#3",
+    "label": "board/cards/REM-296.md \u203a Evidence",
+    "p": 0.003135817292697964,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-218.md#3",
+    "label": "board/cards/REM-218.md \u203a Evidence",
+    "p": 0.002935373866493107,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-490.md#7",
+    "label": "board/cards/REM-490.md \u203a Log",
+    "p": 0.0028086860646571836,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-218.md#1",
+    "label": "board/cards/REM-218.md",
+    "p": 0.002571788624231129,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-490.md#5",
+    "label": "board/cards/REM-490.md \u203a Estimate \u2014 5 points",
+    "p": 0.002366383365999553,
+    "gold": false
+   },
+   {
+    "id": "specs/research-platform/core-claims-contract.md#9",
+    "label": "specs/research-platform/core-claims-contract.md \u203a C4. Research contracts work without application imports",
+    "p": 0.002327071527334563,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/focus-canvas-contract.md#11",
+    "label": "specs/percolate-application/focus-canvas-contract.md \u203a API binding",
+    "p": 0.002320262000969026,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/comparison-and-trust.md#21",
+    "label": "specs/percolate-application/comparison-and-trust.md \u203a Where it runs",
+    "p": 0.002235773786074305,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-18-a-ui-test-that-signed-in-as-the-wrong-account.md#1",
+    "label": "meta/postmortems/2026-09-18-a-ui-test-that-signed-in-as-the-wrong-account.md \u203a A sign-in test that tapped the button und",
+    "p": 0.0019923888012916627,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-490.md#6",
+    "label": "board/cards/REM-490.md \u203a Scope",
+    "p": 0.0019374896267562048,
+    "gold": false
+   },
+   {
+    "id": "commit/5a10b86d58",
+    "label": "commit 5a10b86: A sign-in test that tapped the button underneath the one it meant",
+    "p": 0.0018892027351073968,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "board/cards/REM-212.md#1",
+   "label": "board/cards/REM-212.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-212.md#2",
+   "label": "board/cards/REM-212.md \u203a Goal",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-490.md#2",
+   "label": "board/cards/REM-490.md \u203a Goal",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/bf51557514",
+   "label": "commit bf51557: board: file REM-490 native: a comparison opens on a phone, at the revisions it pins",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/percolate-application/data-model.md#11",
+   "label": "specs/percolate-application/data-model.md \u203a Research comparisons",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-212.md#3",
+   "label": "board/cards/REM-212.md \u203a Evidence",
+   "wave": 1,
+   "via": "term:rem 212",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-280.md#6",
+   "label": "board/cards/REM-280.md \u203a Links",
+   "wave": 1,
+   "via": "term:rem 212",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-273.md#6",
+   "label": "board/cards/REM-273.md \u203a Links",
+   "wave": 1,
+   "via": "term:rem 212",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-212.md#4",
+   "label": "board/cards/REM-212.md \u203a Log",
+   "wave": 1,
+   "via": "term:rem 212",
+   "gold": false
+  },
+  {
+   "id": "commit/3c4efe5dec",
+   "label": "commit 3c4efe5: comparison-and-trust specifies finding work that disagrees with a claim (REM-211)",
+   "wave": 1,
+   "via": "term:rem 212",
+   "gold": true
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "board/cards/REM-490.md#4",
+    "label": "board/cards/REM-490.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-490.md#3",
+    "label": "board/cards/REM-490.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-490.md#1",
+    "label": "board/cards/REM-490.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-213.md#2",
+    "label": "board/cards/REM-213.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/comparison-and-trust.md#22",
+    "label": "specs/percolate-application/comparison-and-trust.md \u203a First slice",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "board/cards/REM-490.md#4",
+    "label": "board/cards/REM-490.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-490.md#1",
+    "label": "board/cards/REM-490.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-490.md#3",
+    "label": "board/cards/REM-490.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-213.md#2",
+    "label": "board/cards/REM-213.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/comparison-and-trust.md#22",
+    "label": "specs/percolate-application/comparison-and-trust.md \u203a First slice",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "board/cards/REM-490.md#1",
+    "label": "board/cards/REM-490.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-212.md#4",
+    "label": "board/cards/REM-212.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-490.md#4",
+    "label": "board/cards/REM-490.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "commit/1133eb8771",
+    "label": "commit 1133eb8: board: REM-490 in-progress \u2192 done",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-490.md#3",
+    "label": "board/cards/REM-490.md \u203a Evidence",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "board/cards/REM-490.md#4",
+    "label": "board/cards/REM-490.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-662.md#4",
+    "label": "board/cards/REM-662.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-490.md#1",
+    "label": "board/cards/REM-490.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-238.md#1",
+    "label": "board/cards/REM-238.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-434.md#4",
+    "label": "board/cards/REM-434.md \u203a Done when",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

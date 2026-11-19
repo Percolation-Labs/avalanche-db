@@ -1,0 +1,410 @@
+{
+ "qid": "pr:635",
+ "set": "prs",
+ "question": "What work went into this, and why: walklab Q2: describe any graph built to the spec, from the product's store -- BEAM 1M matches results/midb-p1 six of six?",
+ "gold": [
+  {
+   "id": "commit/37c8b71f7e",
+   "label": "commit 37c8b71: walklab Q2: describe any graph built to the spec, from the product's store -- BEAM 1M matches results/mi",
+   "seed": true
+  },
+  {
+   "id": "commit/af07c1ae66",
+   "label": "commit af07c1a: q2-describe: fixture-musique-200-spec reproduces results/midb-p1/musique-200-spec six of six",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/a982e627b2",
+   "label": "commit a982e62: Merge pull request #635 from Percolation-Labs/mike/midb-q2-describe",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/37c8b71f7e",
+   "label": "commit 37c8b71: walklab Q2: describe any graph built to the spec, from the product's store -- BEAM 1M matches results/mi",
+   "rank": 2,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "meta/lab/results/q2-describe/README.md#1",
+   "label": "meta/lab/results/q2-describe/README.md \u203a Quadrant 2: any graph built to the spec can be described (2 Nov, mike)",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/af07c1ae66",
+   "label": "commit af07c1a: q2-describe: fixture-musique-200-spec reproduces results/midb-p1/musique-200-spec six of six",
+   "rank": 4,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "meta/lab/results/q2-describe/README.md#2",
+   "label": "meta/lab/results/q2-describe/README.md \u203a Quadrant 2: any graph built to the spec can be described (2 Nov, mike)",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/37c8b71f7e",
+    "label": "commit 37c8b71: walklab Q2: describe any graph built to the spec, from the product's store -- BEAM 1M matches results/mi",
+    "role": "gold"
+   },
+   {
+    "id": "commit/af07c1ae66",
+    "label": "commit af07c1a: q2-describe: fixture-musique-200-spec reproduces results/midb-p1/musique-200-spec six of six",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/37c8b71f7e",
+    "b": "commit/af07c1ae66",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "results midb",
+      "width": 23
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "commit/37c8b71f7e",
+   "gold": "commit/37c8b71f7e",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 935,
+  "within_2_doors": 30896,
+  "gold_within_1": 0,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "meta/lab/examples/01_graph.py#5",
+    "label": "meta/lab/examples/01_graph.py",
+    "p": 0.005819057589267275,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/tests/test_store.py#1",
+    "label": "meta/lab/tests/test_store.py",
+    "p": 0.004802404267947807,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/walklab/store.py#1",
+    "label": "meta/lab/walklab/store.py",
+    "p": 0.0036921777228054024,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/walklab/store.py#2",
+    "label": "meta/lab/walklab/store.py",
+    "p": 0.003187353322719368,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-ranking-size-beam/RESULT.md#4",
+    "label": "meta/lab/results/jev-ranking-size-beam/RESULT.md \u203a Part 2: BEAM",
+    "p": 0.0030312983043011723,
+    "gold": false
+   },
+   {
+    "id": "commit/5b991dc578",
+    "label": "commit 5b991dc: board: bill messages sirsh",
+    "p": 0.002416324257335913,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/musique-200-spec/README.md#1",
+    "label": "meta/lab/results/musique-200-spec/README.md \u203a MuSiQue-200 on walk.sql's near: do the old results stand? (1 Nov, mike)",
+    "p": 0.002152428976223666,
+    "gold": false
+   },
+   {
+    "id": "commit/7aa70ea0e5",
+    "label": "commit 7aa70ea: Merge pull request #636 from Percolation-Labs/cory/dream-optimiser",
+    "p": 0.00214886979399873,
+    "gold": false
+   },
+   {
+    "id": "commit/771b17cb63",
+    "label": "commit 771b17c: walklab: commit the experiment scripts; E5 (no ordering signal beyond P) (#589)",
+    "p": 0.0021119180180001456,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1128.md#6",
+    "label": "board/cards/REM-1128.md \u203a Log",
+    "p": 0.00190598862303566,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261101-132616-2916.md#1",
+    "label": "board/messages/M-20261101-132616-2916.md",
+    "p": 0.0018078494800594625,
+    "gold": false
+   },
+   {
+    "id": "commit/24c58ee9be",
+    "label": "commit 24c58ee: MIDB quadrant 1: 01_graph.py's metrics give the textbook answers on 56 known-graph cases",
+    "p": 0.001543558180832384,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261101-131930-ccd6.md#1",
+    "label": "board/messages/M-20261101-131930-ccd6.md",
+    "p": 0.0014872084244241816,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261102-100232-8b98.md#1",
+    "label": "board/messages/M-20261102-100232-8b98.md",
+    "p": 0.001434694106979492,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261102-100228-3845.md#1",
+    "label": "board/messages/M-20261102-100228-3845.md",
+    "p": 0.001434694106979492,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261101-132620-bd95.md#1",
+    "label": "board/messages/M-20261101-132620-bd95.md",
+    "p": 0.0014104053146025437,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/examples/01_graph.py#16",
+    "label": "meta/lab/examples/01_graph.py",
+    "p": 0.0013588388873097379,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261030-233940-7890.md#1",
+    "label": "board/messages/M-20261030-233940-7890.md",
+    "p": 0.0013263587504935745,
+    "gold": false
+   },
+   {
+    "id": "commit/6e6a0fff5b",
+    "label": "commit 6e6a0ff: 01_graph.py describes any graph built to walk.sql: a bare aiq.walk_graph graph is accepted (questions op",
+    "p": 0.0012610050419657511,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261030-203159-d627.md#1",
+    "label": "board/messages/M-20261030-203159-d627.md",
+    "p": 0.0012411482082827629,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/a982e627b2",
+   "label": "commit a982e62: Merge pull request #635 from Percolation-Labs/mike/midb-q2-describe",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/37c8b71f7e",
+   "label": "commit 37c8b71: walklab Q2: describe any graph built to the spec, from the product's store -- BEAM 1M matches results/mi",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "meta/lab/results/q2-describe/README.md#1",
+   "label": "meta/lab/results/q2-describe/README.md \u203a Quadrant 2: any graph built to the spec can be described (2 Nov, mike)",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/af07c1ae66",
+   "label": "commit af07c1a: q2-describe: fixture-musique-200-spec reproduces results/midb-p1/musique-200-spec six of six",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "meta/lab/results/q2-describe/README.md#2",
+   "label": "meta/lab/results/q2-describe/README.md \u203a Quadrant 2: any graph built to the spec can be described (2 Nov, mike)",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/spikes/2026-10-29-lead-information/lab/copies.py#1",
+   "label": "meta/spikes/2026-10-29-lead-information/lab/copies.py",
+   "wave": 1,
+   "via": "term:walk_run_graph",
+   "gold": false
+  },
+  {
+   "id": "board/messages/M-20261029-092401-85b0.md#1",
+   "label": "board/messages/M-20261029-092401-85b0.md",
+   "wave": 1,
+   "via": "term:walk_run_graph",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/examples/01_graph.py#5",
+   "label": "meta/lab/examples/01_graph.py",
+   "wave": 1,
+   "via": "term:walk_run_graph",
+   "gold": false
+  },
+  {
+   "id": "meta/spikes/2026-10-28-buried-walk/README.md#21",
+   "label": "meta/spikes/2026-10-28-buried-walk/README.md \u203a 10. All three on the one test database (REM-1237; `db_nose.py`, `runs/db-",
+   "wave": 1,
+   "via": "term:walk_run_graph",
+   "gold": false
+  },
+  {
+   "id": "board/messages/M-20261029-174427-3f68.md#1",
+   "label": "board/messages/M-20261029-174427-3f68.md",
+   "wave": 1,
+   "via": "term:walk_run_graph",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "meta/lab/examples/01_graph.py#5",
+    "label": "meta/lab/examples/01_graph.py",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/tests/test_store.py#1",
+    "label": "meta/lab/tests/test_store.py",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/walklab/store.py#1",
+    "label": "meta/lab/walklab/store.py",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/walklab/store.py#2",
+    "label": "meta/lab/walklab/store.py",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-ranking-size-beam/RESULT.md#4",
+    "label": "meta/lab/results/jev-ranking-size-beam/RESULT.md \u203a Part 2: BEAM",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "meta/lab/examples/01_graph.py#5",
+    "label": "meta/lab/examples/01_graph.py",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/tests/test_store.py#1",
+    "label": "meta/lab/tests/test_store.py",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/walklab/store.py#1",
+    "label": "meta/lab/walklab/store.py",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/walklab/store.py#2",
+    "label": "meta/lab/walklab/store.py",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261101-132616-2916.md#1",
+    "label": "board/messages/M-20261101-132616-2916.md",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "meta/lab/tests/test_store.py#1",
+    "label": "meta/lab/tests/test_store.py",
+    "gold": false
+   },
+   {
+    "id": "commit/5b991dc578",
+    "label": "commit 5b991dc: board: bill messages sirsh",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/walklab/store.py#2",
+    "label": "meta/lab/walklab/store.py",
+    "gold": false
+   },
+   {
+    "id": "specs/world-model-ingestion/ingestion.sql#21",
+    "label": "specs/world-model-ingestion/ingestion.sql",
+    "gold": false
+   },
+   {
+    "id": "commit/7aa70ea0e5",
+    "label": "commit 7aa70ea: Merge pull request #636 from Percolation-Labs/cory/dream-optimiser",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "board/messages/M-20261101-132616-2916.md#1",
+    "label": "board/messages/M-20261101-132616-2916.md",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/operators-beam/RESULT.md#11",
+    "label": "meta/lab/results/operators-beam/RESULT.md \u203a Postmortem",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-k3-musique/RESULT.md#2",
+    "label": "meta/lab/results/jev-k3-musique/RESULT.md \u203a Registration (17 Nov 2026, committed before any live call)",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/walklab/store.py#1",
+    "label": "meta/lab/walklab/store.py",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/examples/01_graph.py#6",
+    "label": "meta/lab/examples/01_graph.py",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": null,
+  "Q": null,
+  "LQ": null,
+  "S": null
+ }
+}

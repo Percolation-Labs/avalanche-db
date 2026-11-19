@@ -1,0 +1,458 @@
+{
+ "qid": "card:REM-376",
+ "set": "cards",
+ "question": "What was done about this, and why: fix: the Library board route is back in the web router, so releases pass again?",
+ "gold": [
+  {
+   "id": "commit/b590efceca",
+   "label": "commit b590efc: Merge pull request #220 from Percolation-Labs/amartey/postmortem-stale-branch-revert",
+   "seed": false
+  },
+  {
+   "id": "commit/ed52d99cb4",
+   "label": "commit ed52d99: Postmortem: a merged branch reverted the Library board and the invitation account switch, and two produc",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/8b5e29cad7",
+   "label": "commit 8b5e29c: board: file REM-376 fix: the Library board route is back in the web router, so releases pass again",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-376.md#1",
+   "label": "board/cards/REM-376.md",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-376.md#2",
+   "label": "board/cards/REM-376.md \u203a Goal",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-783.md#3",
+   "label": "board/cards/REM-783.md \u203a Evidence",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "board/cards/REM-376.md#7",
+   "label": "board/cards/REM-376.md \u203a Log",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "board/cards/REM-376.md#7",
+    "label": "board/cards/REM-376.md \u203a Log",
+    "role": "seed"
+   },
+   {
+    "id": "commit/b590efceca",
+    "label": "commit b590efc: Merge pull request #220 from Percolation-Labs/amartey/postmortem-stale-branch-revert",
+    "role": "gold"
+   },
+   {
+    "id": "commit/ed52d99cb4",
+    "label": "commit ed52d99: Postmortem: a merged branch reverted the Library board and the invitation account switch, and two produc",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "board/cards/REM-376.md#7",
+    "b": "commit/ed52d99cb4",
+    "via": [
+     {
+      "kind": "term",
+      "key": "invitation account",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "account switch",
+      "width": 11
+     },
+     {
+      "kind": "term",
+      "key": "rem 376",
+      "width": 14
+     },
+     {
+      "kind": "term",
+      "key": "reverted",
+      "width": 73
+     },
+     {
+      "kind": "term",
+      "key": "library board",
+      "width": 97
+     }
+    ]
+   },
+   {
+    "a": "commit/b590efceca",
+    "b": "commit/ed52d99cb4",
+    "via": [
+     {
+      "kind": "term",
+      "key": "branch reverted",
+      "width": 4
+     },
+     {
+      "kind": "term",
+      "key": "merged branch",
+      "width": 8
+     },
+     {
+      "kind": "term",
+      "key": "rem 376",
+      "width": 14
+     },
+     {
+      "kind": "term",
+      "key": "reverted",
+      "width": 73
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "board/cards/REM-376.md#7",
+   "gold": "commit/ed52d99cb4",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 1286,
+  "within_2_doors": 33789,
+  "gold_within_1": 2,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "meta/postmortems/2026-09-15-a-stale-branch-merge-reverted-two-features.md#1",
+    "label": "meta/postmortems/2026-09-15-a-stale-branch-merge-reverted-two-features.md \u203a A merged branch reverted two finished featur",
+    "p": 0.007785566033859204,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-379.md#7",
+    "label": "board/cards/REM-379.md \u203a Log",
+    "p": 0.004701919692629303,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-614.md#1",
+    "label": "board/cards/REM-614.md",
+    "p": 0.003858083193381411,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-376.md#3",
+    "label": "board/cards/REM-376.md \u203a Evidence",
+    "p": 0.003845437764840667,
+    "gold": false
+   },
+   {
+    "id": "commit/eeb12ae84d",
+    "label": "commit eeb12ae: board: percolate-application-62 takes REM-376",
+    "p": 0.00363214923013092,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-345.md#8",
+    "label": "board/cards/REM-345.md \u203a Log",
+    "p": 0.003535687974653618,
+    "gold": false
+   },
+   {
+    "id": "commit/3587f1ac53",
+    "label": "commit 3587f1a: Merge pull request #219 from Percolation-Labs/amartey/site-policies-openai",
+    "p": 0.002506030914263106,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-782.md#3",
+    "label": "board/cards/REM-782.md \u203a Evidence",
+    "p": 0.0024142125281767057,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-376.md#4",
+    "label": "board/cards/REM-376.md \u203a Done when",
+    "p": 0.0019175871039096774,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-376.md#6",
+    "label": "board/cards/REM-376.md \u203a Links",
+    "p": 0.0018507590491766614,
+    "gold": false
+   },
+   {
+    "id": "commit/ed52d99cb4",
+    "label": "commit ed52d99: Postmortem: a merged branch reverted the Library board and the invitation account switch, and two produc",
+    "p": 0.0016050915939510668,
+    "gold": true
+   },
+   {
+    "id": "commit/b590efceca",
+    "label": "commit b590efc: Merge pull request #220 from Percolation-Labs/amartey/postmortem-stale-branch-revert",
+    "p": 0.0015661585731793811,
+    "gold": true
+   },
+   {
+    "id": "board/cards/REM-376.md#5",
+    "label": "board/cards/REM-376.md \u203a Scope",
+    "p": 0.0015473858164417574,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/drafter.md#14",
+    "label": "specs/percolate-application/drafter.md \u203a Begin with brews, claims and questions",
+    "p": 0.001430281554176468,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-782.md#5",
+    "label": "board/cards/REM-782.md \u203a Scope",
+    "p": 0.0012376698106029375,
+    "gold": false
+   },
+   {
+    "id": "commit/dd9e5567c5",
+    "label": "commit dd9e556: board: REM-376 in-progress \u2192 done",
+    "p": 0.001220280934527158,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-15-a-stale-branch-merge-reverted-two-features.md#2",
+    "label": "meta/postmortems/2026-09-15-a-stale-branch-merge-reverted-two-features.md \u203a 1. A commit carried an old copy of main.tsx",
+    "p": 0.001137522574975653,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-783.md#2",
+    "label": "board/cards/REM-783.md \u203a Goal",
+    "p": 0.001037140410074706,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-406.md#8",
+    "label": "board/cards/REM-406.md \u203a Log",
+    "p": 0.0010312523343554618,
+    "gold": false
+   },
+   {
+    "id": "specs/design/core-repository-move.md#17",
+    "label": "specs/design/core-repository-move.md \u203a 8.1 The rehearsal on get-percolate",
+    "p": 0.0009742593755801165,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/8b5e29cad7",
+   "label": "commit 8b5e29c: board: file REM-376 fix: the Library board route is back in the web router, so releases pass again",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-376.md#1",
+   "label": "board/cards/REM-376.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-376.md#2",
+   "label": "board/cards/REM-376.md \u203a Goal",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-783.md#3",
+   "label": "board/cards/REM-783.md \u203a Evidence",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-376.md#7",
+   "label": "board/cards/REM-376.md \u203a Log",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-376.md#3",
+   "label": "board/cards/REM-376.md \u203a Evidence",
+   "wave": 1,
+   "via": "term:test_web_routes",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-376.md#4",
+   "label": "board/cards/REM-376.md \u203a Done when",
+   "wave": 1,
+   "via": "term:test_web_routes",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-411.md#4",
+   "label": "board/cards/REM-411.md \u203a Done when",
+   "wave": 1,
+   "via": "term:test_web_routes",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-316.md#6",
+   "label": "board/cards/REM-316.md \u203a Log",
+   "wave": 1,
+   "via": "term:test_web_routes",
+   "gold": false
+  },
+  {
+   "id": "meta/postmortems/2026-09-15-a-stale-branch-merge-reverted-two-features.md#2",
+   "label": "meta/postmortems/2026-09-15-a-stale-branch-merge-reverted-two-features.md \u203a 1. A commit carried an old copy of main.tsx",
+   "wave": 1,
+   "via": "term:test_web_routes",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "meta/postmortems/2026-09-15-a-stale-branch-merge-reverted-two-features.md#1",
+    "label": "meta/postmortems/2026-09-15-a-stale-branch-merge-reverted-two-features.md \u203a A merged branch reverted two finished featur",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-379.md#7",
+    "label": "board/cards/REM-379.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-614.md#1",
+    "label": "board/cards/REM-614.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-376.md#3",
+    "label": "board/cards/REM-376.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "commit/eeb12ae84d",
+    "label": "commit eeb12ae: board: percolate-application-62 takes REM-376",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "meta/postmortems/2026-09-15-a-stale-branch-merge-reverted-two-features.md#1",
+    "label": "meta/postmortems/2026-09-15-a-stale-branch-merge-reverted-two-features.md \u203a A merged branch reverted two finished featur",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-376.md#3",
+    "label": "board/cards/REM-376.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-782.md#3",
+    "label": "board/cards/REM-782.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-614.md#1",
+    "label": "board/cards/REM-614.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-379.md#7",
+    "label": "board/cards/REM-379.md \u203a Log",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "board/cards/REM-376.md#4",
+    "label": "board/cards/REM-376.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "commit/c9d81f8d89",
+    "label": "commit c9d81f8: specs: the Library board is built on the web and over MCP, as one search and one upsert (REM-345)",
+    "gold": false
+   },
+   {
+    "id": "commit/dd9e5567c5",
+    "label": "commit dd9e556: board: REM-376 in-progress \u2192 done",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-782.md#5",
+    "label": "board/cards/REM-782.md \u203a Scope",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-361.md#1",
+    "label": "board/cards/REM-361.md",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "board/cards/REM-424.md#4",
+    "label": "board/cards/REM-424.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/spa-plan.md#4",
+    "label": "specs/percolate-application/spa-plan.md \u203a 2. Technology decision for the 2026 build",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-782.md#3",
+    "label": "board/cards/REM-782.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-424.md#3",
+    "label": "board/cards/REM-424.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-565.md#5",
+    "label": "board/cards/REM-565.md \u203a Log",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

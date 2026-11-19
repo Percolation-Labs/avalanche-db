@@ -1,0 +1,509 @@
+{
+ "qid": "card:REM-152",
+ "set": "cards",
+ "question": "What was done about this, and why: research: every claim, source and argument remains queryable from its revision?",
+ "gold": [
+  {
+   "id": "commit/77cc68df35",
+   "label": "commit 77cc68d: Merge pull request #214 from Percolation-Labs/amartey/rem-282-live-gates-in-database-gate",
+   "seed": false
+  },
+  {
+   "id": "commit/b3279b98ef",
+   "label": "commit b3279b9: The REM-151 and REM-152 live gates run in the database gate, not in a file nothing ran (REM-282)",
+   "seed": false
+  },
+  {
+   "id": "commit/cf83bfcc1b",
+   "label": "commit cf83bfc: Merge pull request #187 from Percolation-Labs/amartey/rem-152-projection-invariants",
+   "seed": false
+  },
+  {
+   "id": "commit/f277cf5d42",
+   "label": "commit f277cf5: A revision's claims, sources and argument stay queryable: atomic, rebuildable and searched as the caller",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "board/cards/REM-152.md#1",
+   "label": "board/cards/REM-152.md",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/f277cf5d42",
+   "label": "commit f277cf5: A revision's claims, sources and argument stay queryable: atomic, rebuildable and searched as the caller",
+   "rank": 2,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "specs/percolate-application/blog-dogfood.md#2",
+   "label": "specs/percolate-application/blog-dogfood.md \u203a A post is a publication view",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "specs/world-model-ingestion/baseline.md#13",
+   "label": "specs/world-model-ingestion/baseline.md \u203a 9.1 What this earns, and what it does not",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "specs/percolate-application/simple-journeys-study.md#3",
+   "label": "specs/percolate-application/simple-journeys-study.md \u203a Consolidation, not deletion",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 2
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/77cc68df35",
+    "label": "commit 77cc68d: Merge pull request #214 from Percolation-Labs/amartey/rem-282-live-gates-in-database-gate",
+    "role": "gold"
+   },
+   {
+    "id": "commit/b3279b98ef",
+    "label": "commit b3279b9: The REM-151 and REM-152 live gates run in the database gate, not in a file nothing ran (REM-282)",
+    "role": "gold"
+   },
+   {
+    "id": "commit/cf83bfcc1b",
+    "label": "commit cf83bfc: Merge pull request #187 from Percolation-Labs/amartey/rem-152-projection-invariants",
+    "role": "gold"
+   },
+   {
+    "id": "commit/f277cf5d42",
+    "label": "commit f277cf5: A revision's claims, sources and argument stay queryable: atomic, rebuildable and searched as the caller",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/77cc68df35",
+    "b": "commit/b3279b98ef",
+    "via": [
+     {
+      "kind": "term",
+      "key": "live gates",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "file nothing",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "ran rem",
+      "width": 7
+     },
+     {
+      "kind": "term",
+      "key": "gates run",
+      "width": 8
+     },
+     {
+      "kind": "term",
+      "key": "nothing ran",
+      "width": 11
+     }
+    ]
+   },
+   {
+    "a": "commit/b3279b98ef",
+    "b": "commit/f277cf5d42",
+    "via": [
+     {
+      "kind": "term",
+      "key": "rem 152",
+      "width": 21
+     },
+     {
+      "kind": "term",
+      "key": "code session_01tvdyw8dyy9kujvtrdbyrkd",
+      "width": 26
+     },
+     {
+      "kind": "term",
+      "key": "session_01tvdyw8dyy9kujvtrdbyrkd",
+      "width": 26
+     },
+     {
+      "kind": "term",
+      "key": "atomic",
+      "width": 81
+     }
+    ]
+   },
+   {
+    "a": "commit/cf83bfcc1b",
+    "b": "commit/f277cf5d42",
+    "via": [
+     {
+      "kind": "term",
+      "key": "stay queryable",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "argument stay",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "atomic rebuildable",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "queryable atomic",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "caller rem",
+      "width": 5
+     }
+    ]
+   }
+  ],
+  "cost": 3,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  "entry": {
+   "seed": "commit/f277cf5d42",
+   "gold": "commit/f277cf5d42",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 2383,
+  "within_2_doors": 33735,
+  "gold_within_1": 3,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "commit/b40294eb38",
+    "label": "commit b40294e: Run the residual frame against live sources; it earns the vocabulary, not the score",
+    "p": 0.008564577817902218,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-152.md#2",
+    "label": "board/cards/REM-152.md \u203a Goal",
+    "p": 0.005607247953210932,
+    "gold": false
+   },
+   {
+    "id": "commit/cf83bfcc1b",
+    "label": "commit cf83bfc: Merge pull request #187 from Percolation-Labs/amartey/rem-152-projection-invariants",
+    "p": 0.0031812273906952197,
+    "gold": true
+   },
+   {
+    "id": "specs/research-platform/schema.sql#9",
+    "label": "specs/research-platform/schema.sql",
+    "p": 0.0020638089606654832,
+    "gold": false
+   },
+   {
+    "id": "specs/world-model-ingestion/baseline.md#11",
+    "label": "specs/world-model-ingestion/baseline.md \u203a 9. The run \u2014 what the frame actually produced",
+    "p": 0.0016447537791034032,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/research-package.md#11",
+    "label": "specs/percolate-application/research-package.md \u203a 5. Compression and the UI binding",
+    "p": 0.0014987178945518435,
+    "gold": false
+   },
+   {
+    "id": "specs/research-platform/schema.sql#21",
+    "label": "specs/research-platform/schema.sql",
+    "p": 0.0014140896351525413,
+    "gold": false
+   },
+   {
+    "id": "specs/world-model-ingestion/baseline.md#12",
+    "label": "specs/world-model-ingestion/baseline.md \u203a 9. The run \u2014 what the frame actually produced",
+    "p": 0.0013762427454147089,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-661.md#7",
+    "label": "board/cards/REM-661.md \u203a Log",
+    "p": 0.0012293906904079371,
+    "gold": false
+   },
+   {
+    "id": "output/simple-journeys/README.md#3",
+    "label": "output/simple-journeys/README.md \u203a What the current app asks people to understand",
+    "p": 0.0012193229712615461,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1241.md#1",
+    "label": "board/cards/REM-1241.md",
+    "p": 0.0012086692131912985,
+    "gold": false
+   },
+   {
+    "id": "commit/40d0c4b9ae",
+    "label": "commit 40d0c4b: Adopt the slow-baseline / fast-signal frame, with one correction from experience",
+    "p": 0.001207983748240887,
+    "gold": false
+   },
+   {
+    "id": "specs/trace-field/brief.md#23",
+    "label": "specs/trace-field/brief.md \u203a 7. Failure modes, and why they are not in `failure-modes.md`",
+    "p": 0.0011645028246373675,
+    "gold": false
+   },
+   {
+    "id": "commit/031ee7b06e",
+    "label": "commit 031ee7b: board: file REM-1241 research: every essay carries the Percolate favicon",
+    "p": 0.0011339151329699266,
+    "gold": false
+   },
+   {
+    "id": "specs/research-platform/schema.sql#66",
+    "label": "specs/research-platform/schema.sql",
+    "p": 0.00109124028955633,
+    "gold": false
+   },
+   {
+    "id": "output/simple-journeys/README.md#4",
+    "label": "output/simple-journeys/README.md \u203a What the current app asks people to understand",
+    "p": 0.0010750480640860484,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/simple-journeys-study.md#4",
+    "label": "specs/percolate-application/simple-journeys-study.md \u203a Scope and proof",
+    "p": 0.0010637456775622065,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/simple-journeys-study.md#2",
+    "label": "specs/percolate-application/simple-journeys-study.md \u203a Proposed interaction",
+    "p": 0.0010449204405182525,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261020-072433-954d.md#1",
+    "label": "board/messages/M-20261020-072433-954d.md",
+    "p": 0.0010293553260109854,
+    "gold": false
+   },
+   {
+    "id": "research-notes/build-knit-dream-competitive-review-2026-09-09.md#2",
+    "label": "research-notes/build-knit-dream-competitive-review-2026-09-09.md \u203a Executive assessment",
+    "p": 0.0010028645906322057,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "board/cards/REM-152.md#1",
+   "label": "board/cards/REM-152.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/f277cf5d42",
+   "label": "commit f277cf5: A revision's claims, sources and argument stay queryable: atomic, rebuildable and searched as the caller",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "specs/percolate-application/blog-dogfood.md#2",
+   "label": "specs/percolate-application/blog-dogfood.md \u203a A post is a publication view",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/world-model-ingestion/baseline.md#13",
+   "label": "specs/world-model-ingestion/baseline.md \u203a 9.1 What this earns, and what it does not",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/percolate-application/simple-journeys-study.md#3",
+   "label": "specs/percolate-application/simple-journeys-study.md \u203a Consolidation, not deletion",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/research-platform/sequence.md#1",
+   "label": "specs/research-platform/sequence.md \u203a Research platform delivery gates",
+   "wave": 1,
+   "via": "term:rem 152",
+   "gold": false
+  },
+  {
+   "id": "commit/cf83bfcc1b",
+   "label": "commit cf83bfc: Merge pull request #187 from Percolation-Labs/amartey/rem-152-projection-invariants",
+   "wave": 1,
+   "via": "term:rem 152",
+   "gold": true
+  },
+  {
+   "id": "board/cards/REM-152.md#2",
+   "label": "board/cards/REM-152.md \u203a Goal",
+   "wave": 1,
+   "via": "term:rem 152",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-152.md#3",
+   "label": "board/cards/REM-152.md \u203a Evidence",
+   "wave": 1,
+   "via": "term:rem 152",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-282.md#6",
+   "label": "board/cards/REM-282.md \u203a Links",
+   "wave": 1,
+   "via": "term:rem 152",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "commit/b40294eb38",
+    "label": "commit b40294e: Run the residual frame against live sources; it earns the vocabulary, not the score",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-152.md#2",
+    "label": "board/cards/REM-152.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "commit/cf83bfcc1b",
+    "label": "commit cf83bfc: Merge pull request #187 from Percolation-Labs/amartey/rem-152-projection-invariants",
+    "gold": true
+   },
+   {
+    "id": "specs/research-platform/schema.sql#9",
+    "label": "specs/research-platform/schema.sql",
+    "gold": false
+   },
+   {
+    "id": "specs/world-model-ingestion/baseline.md#11",
+    "label": "specs/world-model-ingestion/baseline.md \u203a 9. The run \u2014 what the frame actually produced",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "commit/b40294eb38",
+    "label": "commit b40294e: Run the residual frame against live sources; it earns the vocabulary, not the score",
+    "gold": false
+   },
+   {
+    "id": "commit/cf83bfcc1b",
+    "label": "commit cf83bfc: Merge pull request #187 from Percolation-Labs/amartey/rem-152-projection-invariants",
+    "gold": true
+   },
+   {
+    "id": "board/cards/REM-152.md#2",
+    "label": "board/cards/REM-152.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "specs/research-platform/schema.sql#9",
+    "label": "specs/research-platform/schema.sql",
+    "gold": false
+   },
+   {
+    "id": "specs/research-platform/schema.sql#21",
+    "label": "specs/research-platform/schema.sql",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/cf83bfcc1b",
+    "label": "commit cf83bfc: Merge pull request #187 from Percolation-Labs/amartey/rem-152-projection-invariants",
+    "gold": true
+   },
+   {
+    "id": "board/cards/REM-152.md#4",
+    "label": "board/cards/REM-152.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-177.md#1",
+    "label": "board/cards/REM-177.md",
+    "gold": false
+   },
+   {
+    "id": "specs/design/percolate-positioning.md#4",
+    "label": "specs/design/percolate-positioning.md \u203a The line",
+    "gold": false
+   },
+   {
+    "id": "site/posts/build-knit-dream.md#6",
+    "label": "site/posts/build-knit-dream.md \u203a Dream",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "commit/cf83bfcc1b",
+    "label": "commit cf83bfc: Merge pull request #187 from Percolation-Labs/amartey/rem-152-projection-invariants",
+    "gold": true
+   },
+   {
+    "id": "research-notes/build-knit-dream-results-2026-09-10.md#11",
+    "label": "research-notes/build-knit-dream-results-2026-09-10.md \u203a What this proves, and what remains open",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/focus-canvas-contract.md#4",
+    "label": "specs/percolate-application/focus-canvas-contract.md \u203a The writing spectrum",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-473.md#3",
+    "label": "board/cards/REM-473.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/research-package.md#23",
+    "label": "specs/percolate-application/research-package.md \u203a 9. Acceptance and research checks",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.3333333333333333,
+  "Q": 0.3333333333333333,
+  "LQ": 0.3333333333333333,
+  "S": 0.3333333333333333
+ }
+}

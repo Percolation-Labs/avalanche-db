@@ -1,0 +1,489 @@
+{
+ "qid": "RW:4hop2__71753_261673_70784_79935",
+ "set": "mq",
+ "question": "When was the region that lies to the north of the where Israel is located and the location of Shamal created?",
+ "gold": [
+  {
+   "id": "mq:0fe55822b59283cb",
+   "label": "Israel",
+   "seed": false
+  },
+  {
+   "id": "mq:6421666ff3e70d66",
+   "label": "Geography of Saudi Arabia",
+   "seed": false
+  },
+  {
+   "id": "mq:a5cab0bf9acc5c9e",
+   "label": "Shamal (wind)",
+   "seed": true
+  },
+  {
+   "id": "mq:d8dd686764b34e20",
+   "label": "History of Saudi Arabia",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:e2f7fc3b2273283e",
+   "label": "Wollaston Peninsula",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "mq:a1c4606362020f29",
+   "label": "Marinus (crater)",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:a5cab0bf9acc5c9e",
+   "label": "Shamal (wind)",
+   "rank": 3,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:e01248dfaa3eac70",
+   "label": "Umm al Kilab",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:8acc4e73f4ec85b3",
+   "label": "Beaverdell",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:0fe55822b59283cb",
+    "label": "Israel",
+    "role": "gold"
+   },
+   {
+    "id": "mq:6421666ff3e70d66",
+    "label": "Geography of Saudi Arabia",
+    "role": "gold"
+   },
+   {
+    "id": "mq:a5cab0bf9acc5c9e",
+    "label": "Shamal (wind)",
+    "role": "gold"
+   },
+   {
+    "id": "mq:d8dd686764b34e20",
+    "label": "History of Saudi Arabia",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:0fe55822b59283cb",
+    "b": "mq:6421666ff3e70d66",
+    "via": [
+     {
+      "kind": "term",
+      "key": "red sea",
+      "width": 21
+     },
+     {
+      "kind": "term",
+      "key": "arab",
+      "width": 100
+     }
+    ]
+   },
+   {
+    "a": "mq:6421666ff3e70d66",
+    "b": "mq:a5cab0bf9acc5c9e",
+    "via": [
+     {
+      "kind": "term",
+      "key": "persian gulf",
+      "width": 25
+     },
+     {
+      "kind": "term",
+      "key": "saudi arabia",
+      "width": 33
+     },
+     {
+      "kind": "term",
+      "key": "saudi",
+      "width": 42
+     },
+     {
+      "kind": "term",
+      "key": "arabia",
+      "width": 47
+     },
+     {
+      "kind": "term",
+      "key": "persian",
+      "width": 66
+     }
+    ]
+   },
+   {
+    "a": "mq:6421666ff3e70d66",
+    "b": "mq:d8dd686764b34e20",
+    "via": [
+     {
+      "kind": "term",
+      "key": "saudi arabia",
+      "width": 33
+     },
+     {
+      "kind": "term",
+      "key": "saudi",
+      "width": 42
+     },
+     {
+      "kind": "term",
+      "key": "arabia",
+      "width": 47
+     }
+    ]
+   }
+  ],
+  "cost": 3,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   1,
+   2,
+   1,
+   1,
+   1
+  ],
+  "entry": {
+   "seed": "mq:a5cab0bf9acc5c9e",
+   "gold": "mq:a5cab0bf9acc5c9e",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 1782,
+  "within_2_doors": 19290,
+  "gold_within_1": 3,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "mq:74c30d5e6bf13724",
+    "label": "Granby River",
+    "p": 0.0034664671288466764,
+    "gold": false
+   },
+   {
+    "id": "mq:7835dc28fa1a02e4",
+    "label": "Grand Forks, British Columbia",
+    "p": 0.003350226705820487,
+    "gold": false
+   },
+   {
+    "id": "mq:6a993e092facfdbd",
+    "label": "Israel",
+    "p": 0.003102103534334909,
+    "gold": false
+   },
+   {
+    "id": "mq:20e3ec3d14d7ac66",
+    "label": "Hargrave River (Nunavut)",
+    "p": 0.0030037286667546977,
+    "gold": false
+   },
+   {
+    "id": "mq:d7521252d5393203",
+    "label": "Zubarah",
+    "p": 0.002920902303439921,
+    "gold": false
+   },
+   {
+    "id": "mq:6ae7e0bec9f2d875",
+    "label": "Vashakidze (crater)",
+    "p": 0.0025753740877104522,
+    "gold": false
+   },
+   {
+    "id": "mq:415b55d6f2c7326f",
+    "label": "Lambly Creek",
+    "p": 0.0025360407546004883,
+    "gold": false
+   },
+   {
+    "id": "mq:0cec1c99bcf1ebb7",
+    "label": "Namibia",
+    "p": 0.0019016955755965707,
+    "gold": false
+   },
+   {
+    "id": "mq:5c506c8b6b54db58",
+    "label": "Newport News, Virginia",
+    "p": 0.0018265235717867525,
+    "gold": false
+   },
+   {
+    "id": "mq:4d506c4cf87a2519",
+    "label": "Rivers Inlet, British Columbia",
+    "p": 0.001722464090668145,
+    "gold": false
+   },
+   {
+    "id": "mq:c33dd44f9d3a73d9",
+    "label": "Botanie Valley",
+    "p": 0.0016897634039163931,
+    "gold": false
+   },
+   {
+    "id": "mq:73a4e750e45eae31",
+    "label": "Washington Island (Michigan)",
+    "p": 0.0014725537411968998,
+    "gold": false
+   },
+   {
+    "id": "mq:b3577ceeeb6e43a5",
+    "label": "Murchison (crater)",
+    "p": 0.0013860290228352287,
+    "gold": false
+   },
+   {
+    "id": "mq:6ab4eb29a22fb68b",
+    "label": "Wiechert (crater)",
+    "p": 0.0013724455403404704,
+    "gold": false
+   },
+   {
+    "id": "mq:34e730f2aff5f18d",
+    "label": "Cape Bathurst",
+    "p": 0.0013251097629756136,
+    "gold": false
+   },
+   {
+    "id": "mq:febd202c2bb0a8a4",
+    "label": "Battle of Qurah and Umm al Maradim",
+    "p": 0.001274726955688249,
+    "gold": false
+   },
+   {
+    "id": "mq:6b0721cdbb293b65",
+    "label": "Yucat\u00e1n Peninsula",
+    "p": 0.0012591229124833926,
+    "gold": false
+   },
+   {
+    "id": "mq:5af3b1937370316d",
+    "label": "B\u00fcsching (crater)",
+    "p": 0.0012546636627771834,
+    "gold": false
+   },
+   {
+    "id": "mq:79dd429bb8aeb127",
+    "label": "Jidda Island",
+    "p": 0.0011898428397077658,
+    "gold": false
+   },
+   {
+    "id": "mq:bccb9846f379c45d",
+    "label": "Guillotine",
+    "p": 0.001185358974294917,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:e2f7fc3b2273283e",
+   "label": "Wollaston Peninsula",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:a1c4606362020f29",
+   "label": "Marinus (crater)",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:a5cab0bf9acc5c9e",
+   "label": "Shamal (wind)",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:e01248dfaa3eac70",
+   "label": "Umm al Kilab",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:8acc4e73f4ec85b3",
+   "label": "Beaverdell",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:da7aff651b219009",
+   "label": "Ghazi Kanaan",
+   "wave": 1,
+   "via": "term:syria",
+   "gold": false
+  },
+  {
+   "id": "mq:da3ff9502bee0754",
+   "label": "Religion in Syria",
+   "wave": 1,
+   "via": "term:syria",
+   "gold": false
+  },
+  {
+   "id": "mq:81eabed6feb13d17",
+   "label": "Kofi Annan",
+   "wave": 1,
+   "via": "term:syria",
+   "gold": false
+  },
+  {
+   "id": "mq:cf5a79484a98c175",
+   "label": "Gamal Abdel Nasser",
+   "wave": 1,
+   "via": "term:syria",
+   "gold": false
+  },
+  {
+   "id": "mq:990e8b4052549be1",
+   "label": "Abdullah Mahmoud al-Khalidi",
+   "wave": 1,
+   "via": "term:syria",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:74c30d5e6bf13724",
+    "label": "Granby River",
+    "gold": false
+   },
+   {
+    "id": "mq:7835dc28fa1a02e4",
+    "label": "Grand Forks, British Columbia",
+    "gold": false
+   },
+   {
+    "id": "mq:6a993e092facfdbd",
+    "label": "Israel",
+    "gold": false
+   },
+   {
+    "id": "mq:20e3ec3d14d7ac66",
+    "label": "Hargrave River (Nunavut)",
+    "gold": false
+   },
+   {
+    "id": "mq:d7521252d5393203",
+    "label": "Zubarah",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:d7521252d5393203",
+    "label": "Zubarah",
+    "gold": false
+   },
+   {
+    "id": "mq:6ab4eb29a22fb68b",
+    "label": "Wiechert (crater)",
+    "gold": false
+   },
+   {
+    "id": "mq:6ae7e0bec9f2d875",
+    "label": "Vashakidze (crater)",
+    "gold": false
+   },
+   {
+    "id": "mq:7835dc28fa1a02e4",
+    "label": "Grand Forks, British Columbia",
+    "gold": false
+   },
+   {
+    "id": "mq:6a993e092facfdbd",
+    "label": "Israel",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:d7521252d5393203",
+    "label": "Zubarah",
+    "gold": false
+   },
+   {
+    "id": "mq:6a993e092facfdbd",
+    "label": "Israel",
+    "gold": false
+   },
+   {
+    "id": "mq:6ae7e0bec9f2d875",
+    "label": "Vashakidze (crater)",
+    "gold": false
+   },
+   {
+    "id": "mq:7835dc28fa1a02e4",
+    "label": "Grand Forks, British Columbia",
+    "gold": false
+   },
+   {
+    "id": "mq:6ab4eb29a22fb68b",
+    "label": "Wiechert (crater)",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:d34c72ba3e2fc202",
+    "label": "Wariri",
+    "gold": false
+   },
+   {
+    "id": "mq:0a0838b08c8399c4",
+    "label": "Dobjoi",
+    "gold": false
+   },
+   {
+    "id": "mq:8761f2921dd599fd",
+    "label": "Minhla, Bago",
+    "gold": false
+   },
+   {
+    "id": "mq:a8cec075517ea96c",
+    "label": "Sobrado, A Pobra de Trives",
+    "gold": false
+   },
+   {
+    "id": "mq:d7521252d5393203",
+    "label": "Zubarah",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

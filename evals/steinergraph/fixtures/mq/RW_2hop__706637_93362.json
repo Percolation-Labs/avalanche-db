@@ -1,0 +1,407 @@
+{
+ "qid": "RW:2hop__706637_93362",
+ "set": "mq",
+ "question": "What is the movie starring Preity Zinta, Madhuri Dixit and the spouse of Kajol?",
+ "gold": [
+  {
+   "id": "mq:23d56bcbae734fee",
+   "label": "Yeh Raaste Hain Pyaar Ke",
+   "seed": true
+  },
+  {
+   "id": "mq:8438b5122e7f74af",
+   "label": "Anil Devgan",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:23d56bcbae734fee",
+   "label": "Yeh Raaste Hain Pyaar Ke",
+   "rank": 1,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:18097f05236e3e0b",
+   "label": "Pyar Ka Devta",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:19bc997c07c5433f",
+   "label": "Har Dil Jo Pyar Karega",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:53b902f459273353",
+   "label": "Femina Miss India 2018",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:412c6d99a9c462e6",
+   "label": "Mrityudand",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:23d56bcbae734fee",
+    "label": "Yeh Raaste Hain Pyaar Ke",
+    "role": "gold"
+   },
+   {
+    "id": "mq:8438b5122e7f74af",
+    "label": "Anil Devgan",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:23d56bcbae734fee",
+    "b": "mq:8438b5122e7f74af",
+    "via": [
+     {
+      "kind": "term",
+      "key": "ajay",
+      "width": 8
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "mq:23d56bcbae734fee",
+   "gold": "mq:23d56bcbae734fee",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 1770,
+  "within_2_doors": 19274,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "mq:dfb4e4dae2d72510",
+    "label": "Diya Aur Toofan (1995 film)",
+    "p": 0.005718626224622341,
+    "gold": false
+   },
+   {
+    "id": "mq:dfb77a9ffd122b6a",
+    "label": "Khoon Pasina",
+    "p": 0.005132908904438454,
+    "gold": false
+   },
+   {
+    "id": "mq:53e3651fb45bfdd3",
+    "label": "Rakhwale",
+    "p": 0.004129187648009367,
+    "gold": false
+   },
+   {
+    "id": "mq:e1152492ba317e9c",
+    "label": "Karwat",
+    "p": 0.004014420497691769,
+    "gold": false
+   },
+   {
+    "id": "mq:fcb0fa52afffb003",
+    "label": "Yeh Hai Jalwa",
+    "p": 0.0034976765206608433,
+    "gold": false
+   },
+   {
+    "id": "mq:4d7e549ee33f583e",
+    "label": "Dil Kya Kare",
+    "p": 0.002811577090627536,
+    "gold": false
+   },
+   {
+    "id": "mq:09a2d63c610a4003",
+    "label": "Chodhyam",
+    "p": 0.002677301911964768,
+    "gold": false
+   },
+   {
+    "id": "mq:2feeab90655d2bbd",
+    "label": "Dahyabhai Patel",
+    "p": 0.0025621420497001558,
+    "gold": false
+   },
+   {
+    "id": "mq:fc7834937fdc696e",
+    "label": "Jab Pyaar Kisise Hota Hai",
+    "p": 0.0020996240515169457,
+    "gold": false
+   },
+   {
+    "id": "mq:19adcb810ddfceda",
+    "label": "Mujhse Fraaandship Karoge",
+    "p": 0.0020944149559781466,
+    "gold": false
+   },
+   {
+    "id": "mq:83cff1731e644a70",
+    "label": "Gabbar Singh (character)",
+    "p": 0.002013877241223218,
+    "gold": false
+   },
+   {
+    "id": "mq:8d4206ac2c4b6314",
+    "label": "Vallabhbhai Patel",
+    "p": 0.0019540374641553635,
+    "gold": false
+   },
+   {
+    "id": "mq:78d7835ab4542983",
+    "label": "Kaun Banega Crorepati",
+    "p": 0.001938775632133344,
+    "gold": false
+   },
+   {
+    "id": "mq:50291bb6d239cb38",
+    "label": "Parched",
+    "p": 0.0019281221024105796,
+    "gold": false
+   },
+   {
+    "id": "mq:d75233e75d17701e",
+    "label": "Punjab and Haryana High Court",
+    "p": 0.001751972718209563,
+    "gold": false
+   },
+   {
+    "id": "mq:c5e92cfc58a9faed",
+    "label": "Nachavule",
+    "p": 0.0017068709972494769,
+    "gold": false
+   },
+   {
+    "id": "mq:9fff5be8f5a6daf8",
+    "label": "M.S. Dhoni: The Untold Story",
+    "p": 0.001686821282057788,
+    "gold": false
+   },
+   {
+    "id": "mq:3a469bb6d1f4af30",
+    "label": "National Film Award for Best Actress",
+    "p": 0.0015860322935320362,
+    "gold": false
+   },
+   {
+    "id": "mq:407a7a29d0172c54",
+    "label": "Love Kiya Aur Lag Gayi",
+    "p": 0.0014361705938582224,
+    "gold": false
+   },
+   {
+    "id": "mq:401bef97b7da911f",
+    "label": "National Film Award for Best Actress",
+    "p": 0.0014247676348492593,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:23d56bcbae734fee",
+   "label": "Yeh Raaste Hain Pyaar Ke",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:18097f05236e3e0b",
+   "label": "Pyar Ka Devta",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:19bc997c07c5433f",
+   "label": "Har Dil Jo Pyar Karega",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:53b902f459273353",
+   "label": "Femina Miss India 2018",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:412c6d99a9c462e6",
+   "label": "Mrityudand",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:611f495753c94fd5",
+   "label": "U Me Aur Hum",
+   "wave": 1,
+   "via": "term:ajay",
+   "gold": false
+  },
+  {
+   "id": "mq:8438b5122e7f74af",
+   "label": "Anil Devgan",
+   "wave": 1,
+   "via": "term:ajay",
+   "gold": true
+  },
+  {
+   "id": "mq:1f0173e30f543d9e",
+   "label": "USB",
+   "wave": 1,
+   "via": "term:ajay",
+   "gold": false
+  },
+  {
+   "id": "mq:50291bb6d239cb38",
+   "label": "Parched",
+   "wave": 1,
+   "via": "term:ajay",
+   "gold": false
+  },
+  {
+   "id": "mq:4d7e549ee33f583e",
+   "label": "Dil Kya Kare",
+   "wave": 1,
+   "via": "term:ajay",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:dfb4e4dae2d72510",
+    "label": "Diya Aur Toofan (1995 film)",
+    "gold": false
+   },
+   {
+    "id": "mq:dfb77a9ffd122b6a",
+    "label": "Khoon Pasina",
+    "gold": false
+   },
+   {
+    "id": "mq:53e3651fb45bfdd3",
+    "label": "Rakhwale",
+    "gold": false
+   },
+   {
+    "id": "mq:e1152492ba317e9c",
+    "label": "Karwat",
+    "gold": false
+   },
+   {
+    "id": "mq:fcb0fa52afffb003",
+    "label": "Yeh Hai Jalwa",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:dfb4e4dae2d72510",
+    "label": "Diya Aur Toofan (1995 film)",
+    "gold": false
+   },
+   {
+    "id": "mq:4d7e549ee33f583e",
+    "label": "Dil Kya Kare",
+    "gold": false
+   },
+   {
+    "id": "mq:19adcb810ddfceda",
+    "label": "Mujhse Fraaandship Karoge",
+    "gold": false
+   },
+   {
+    "id": "mq:dfb77a9ffd122b6a",
+    "label": "Khoon Pasina",
+    "gold": false
+   },
+   {
+    "id": "mq:407a7a29d0172c54",
+    "label": "Love Kiya Aur Lag Gayi",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:19adcb810ddfceda",
+    "label": "Mujhse Fraaandship Karoge",
+    "gold": false
+   },
+   {
+    "id": "mq:4d7e549ee33f583e",
+    "label": "Dil Kya Kare",
+    "gold": false
+   },
+   {
+    "id": "mq:dfb4e4dae2d72510",
+    "label": "Diya Aur Toofan (1995 film)",
+    "gold": false
+   },
+   {
+    "id": "mq:dfb77a9ffd122b6a",
+    "label": "Khoon Pasina",
+    "gold": false
+   },
+   {
+    "id": "mq:407a7a29d0172c54",
+    "label": "Love Kiya Aur Lag Gayi",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:19adcb810ddfceda",
+    "label": "Mujhse Fraaandship Karoge",
+    "gold": false
+   },
+   {
+    "id": "mq:407a7a29d0172c54",
+    "label": "Love Kiya Aur Lag Gayi",
+    "gold": false
+   },
+   {
+    "id": "mq:62bbb637420d002c",
+    "label": "The Singing Outlaw",
+    "gold": false
+   },
+   {
+    "id": "mq:019c198cf98bfa57",
+    "label": "For Hope",
+    "gold": false
+   },
+   {
+    "id": "mq:d2a89a6655a0e448",
+    "label": "On Golden Pond (2001 film)",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

@@ -1,0 +1,444 @@
+{
+ "qid": "RW:2hop__35209_17335",
+ "set": "mq",
+ "question": "When did the invader of the Archaemenid Empire in 334BC die?",
+ "gold": [
+  {
+   "id": "mq:885148c46f86e6fe",
+   "label": "Iran",
+   "seed": false
+  },
+  {
+   "id": "mq:8bcc834bb8dfc8b1",
+   "label": "Hellenistic period",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:59a46a77aad7837d",
+   "label": "Die Hard Trilogy 2: Viva Las Vegas",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "mq:a0e5dedc57fd69ef",
+   "label": "And Then You Die",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "mq:e9ecbb99a7c592c0",
+   "label": "Die Hippie, Die",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "mq:bd122d5268238ddc",
+   "label": "Dice",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "mq:02da249bc1e66034",
+   "label": "Orcs Must Die! 2",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 2
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:1b4389256de96b9e",
+    "label": "Angle",
+    "role": "connector"
+   },
+   {
+    "id": "mq:885148c46f86e6fe",
+    "label": "Iran",
+    "role": "gold"
+   },
+   {
+    "id": "mq:8bcc834bb8dfc8b1",
+    "label": "Hellenistic period",
+    "role": "gold"
+   },
+   {
+    "id": "mq:bd122d5268238ddc",
+    "label": "Dice",
+    "role": "seed"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:1b4389256de96b9e",
+    "b": "mq:8bcc834bb8dfc8b1",
+    "via": [
+     {
+      "kind": "term",
+      "key": "sphere",
+      "width": 20
+     }
+    ]
+   },
+   {
+    "a": "mq:1b4389256de96b9e",
+    "b": "mq:bd122d5268238ddc",
+    "via": [
+     {
+      "kind": "term",
+      "key": "vertex",
+      "width": 3
+     },
+     {
+      "kind": "term",
+      "key": "sides",
+      "width": 60
+     }
+    ]
+   },
+   {
+    "a": "mq:885148c46f86e6fe",
+    "b": "mq:8bcc834bb8dfc8b1",
+    "via": [
+     {
+      "kind": "term",
+      "key": "hellenistic",
+      "width": 25
+     }
+    ]
+   }
+  ],
+  "cost": 3,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "mq:bd122d5268238ddc",
+   "gold": "mq:8bcc834bb8dfc8b1",
+   "doors": 2
+  }
+ },
+ "potential": {
+  "within_1_door": 1764,
+  "within_2_doors": 19269,
+  "gold_within_1": 0,
+  "gold_within_2": 2,
+  "top_U": [
+   {
+    "id": "mq:17e984a8f2240a10",
+    "label": "Aurelio Macchi",
+    "p": 0.017637455001466254,
+    "gold": false
+   },
+   {
+    "id": "mq:25b7bf2718549058",
+    "label": "IPod",
+    "p": 0.004493831506523409,
+    "gold": false
+   },
+   {
+    "id": "mq:7d9ccbfa942508d9",
+    "label": "Buddhism",
+    "p": 0.004458008700557986,
+    "gold": false
+   },
+   {
+    "id": "mq:b21a03ad3db43f2c",
+    "label": "Hexic",
+    "p": 0.00293936497602333,
+    "gold": false
+   },
+   {
+    "id": "mq:442defebc7499c17",
+    "label": "Alex P. Keaton",
+    "p": 0.002766938882012892,
+    "gold": false
+   },
+   {
+    "id": "mq:d2d12a1c4adc06ef",
+    "label": "Treebeard",
+    "p": 0.0021477901146066515,
+    "gold": false
+   },
+   {
+    "id": "mq:034881065545526e",
+    "label": "Taming Strange",
+    "p": 0.0021427334423239344,
+    "gold": false
+   },
+   {
+    "id": "mq:b243df063c7d5eaa",
+    "label": "Steven Universe: Save the Light",
+    "p": 0.0016495339985030874,
+    "gold": false
+   },
+   {
+    "id": "mq:3110184d3add1520",
+    "label": "Mission San Luis Obispo de Tolosa",
+    "p": 0.0014298215377926335,
+    "gold": false
+   },
+   {
+    "id": "mq:964b946de6d12f9c",
+    "label": "North Pole",
+    "p": 0.0012784037840749458,
+    "gold": false
+   },
+   {
+    "id": "mq:0c309645052bc393",
+    "label": "Floridita",
+    "p": 0.0011852974453275254,
+    "gold": false
+   },
+   {
+    "id": "mq:6d154b9c6c525866",
+    "label": "Ternary computer",
+    "p": 0.0009978062997577492,
+    "gold": false
+   },
+   {
+    "id": "mq:0e66577d76db0dc8",
+    "label": "Chef (South Park)",
+    "p": 0.0009861215299734568,
+    "gold": false
+   },
+   {
+    "id": "mq:dd8d230735e364b2",
+    "label": "Cartoon Wars Part I",
+    "p": 0.0009739868490837115,
+    "gold": false
+   },
+   {
+    "id": "mq:0a0c7c7d870f425e",
+    "label": "Tears of the Sun",
+    "p": 0.0009709013422620047,
+    "gold": false
+   },
+   {
+    "id": "mq:36b82b72141a7919",
+    "label": "679 Pax",
+    "p": 0.0009513911597313585,
+    "gold": false
+   },
+   {
+    "id": "mq:24f1362d0a86f43f",
+    "label": "Standard 52-card deck",
+    "p": 0.0008963881117739247,
+    "gold": false
+   },
+   {
+    "id": "mq:43a09b1a8e1ace06",
+    "label": "Richard Feynman",
+    "p": 0.0008849119067771682,
+    "gold": false
+   },
+   {
+    "id": "mq:c1587124e7b74677",
+    "label": "Tintin and the Golden Fleece",
+    "p": 0.0008516421498110342,
+    "gold": false
+   },
+   {
+    "id": "mq:9581065890285294",
+    "label": "2018 NCAA Division I Men's Basketball Tournament",
+    "p": 0.000836451705743943,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:59a46a77aad7837d",
+   "label": "Die Hard Trilogy 2: Viva Las Vegas",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:a0e5dedc57fd69ef",
+   "label": "And Then You Die",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:e9ecbb99a7c592c0",
+   "label": "Die Hippie, Die",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:bd122d5268238ddc",
+   "label": "Dice",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:02da249bc1e66034",
+   "label": "Orcs Must Die! 2",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:4475fae5830c2473",
+   "label": "Middle Ages",
+   "wave": 1,
+   "via": "term:traditionally",
+   "gold": false
+  },
+  {
+   "id": "mq:4b738225df80c5ff",
+   "label": "Spritzgeb\u00e4ck",
+   "wave": 1,
+   "via": "term:traditionally",
+   "gold": false
+  },
+  {
+   "id": "mq:8d3408e84588c6d1",
+   "label": "Red",
+   "wave": 1,
+   "via": "term:traditionally",
+   "gold": false
+  },
+  {
+   "id": "mq:749e2ded7fcc787c",
+   "label": "German chocolate cake",
+   "wave": 1,
+   "via": "term:traditionally",
+   "gold": false
+  },
+  {
+   "id": "mq:57fddba75ef7f017",
+   "label": "Sazerac",
+   "wave": 1,
+   "via": "term:traditionally",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:17e984a8f2240a10",
+    "label": "Aurelio Macchi",
+    "gold": false
+   },
+   {
+    "id": "mq:25b7bf2718549058",
+    "label": "IPod",
+    "gold": false
+   },
+   {
+    "id": "mq:7d9ccbfa942508d9",
+    "label": "Buddhism",
+    "gold": false
+   },
+   {
+    "id": "mq:b21a03ad3db43f2c",
+    "label": "Hexic",
+    "gold": false
+   },
+   {
+    "id": "mq:442defebc7499c17",
+    "label": "Alex P. Keaton",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:17e984a8f2240a10",
+    "label": "Aurelio Macchi",
+    "gold": false
+   },
+   {
+    "id": "mq:0a0c7c7d870f425e",
+    "label": "Tears of the Sun",
+    "gold": false
+   },
+   {
+    "id": "mq:fb6df0c7967b4125",
+    "label": "A Good Day to Die Hard",
+    "gold": false
+   },
+   {
+    "id": "mq:944526e824cf5195",
+    "label": "British Empire",
+    "gold": false
+   },
+   {
+    "id": "mq:427dd825f1a6ebbd",
+    "label": "British Empire",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:427dd825f1a6ebbd",
+    "label": "British Empire",
+    "gold": false
+   },
+   {
+    "id": "mq:944526e824cf5195",
+    "label": "British Empire",
+    "gold": false
+   },
+   {
+    "id": "mq:17e984a8f2240a10",
+    "label": "Aurelio Macchi",
+    "gold": false
+   },
+   {
+    "id": "mq:0a0c7c7d870f425e",
+    "label": "Tears of the Sun",
+    "gold": false
+   },
+   {
+    "id": "mq:fb6df0c7967b4125",
+    "label": "A Good Day to Die Hard",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:a5dc370c0d2b3af6",
+    "label": "Weckt die Toten!",
+    "gold": false
+   },
+   {
+    "id": "mq:1b23dd7213d1f181",
+    "label": "Let Me Die a Woman",
+    "gold": false
+   },
+   {
+    "id": "mq:7ce822f11955a734",
+    "label": "Ahron Daum",
+    "gold": false
+   },
+   {
+    "id": "mq:da3182c9580161ee",
+    "label": "Hochschule f\u00fcr die Wissenschaft des Judentums",
+    "gold": false
+   },
+   {
+    "id": "mq:2be3e7b4a8f6d2b3",
+    "label": "Es war die Nacht der ersten Liebe",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

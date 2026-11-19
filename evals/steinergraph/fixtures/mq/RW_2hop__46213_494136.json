@@ -1,0 +1,417 @@
+{
+ "qid": "RW:2hop__46213_494136",
+ "set": "mq",
+ "question": "The actor who plays the father in I Can Only Imagine has a wife played by who in another film?",
+ "gold": [
+  {
+   "id": "mq:070694f04d48639b",
+   "label": "I Can Only Imagine (film)",
+   "seed": true
+  },
+  {
+   "id": "mq:968f26fe2a6cff80",
+   "label": "Flesh and Bone (film)",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:070694f04d48639b",
+   "label": "I Can Only Imagine (film)",
+   "rank": 1,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:25d14061963084ea",
+   "label": "I Can Only Imagine (film)",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:32b8a1e709fb2cd8",
+   "label": "Walter Huston",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "mq:2f7507cd6ed56f68",
+   "label": "Pollock (film)",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "mq:28be5fc16fa8faac",
+   "label": "Gustaf Skarsg\u00e5rd",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 2
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:070694f04d48639b",
+    "label": "I Can Only Imagine (film)",
+    "role": "gold"
+   },
+   {
+    "id": "mq:968f26fe2a6cff80",
+    "label": "Flesh and Bone (film)",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:070694f04d48639b",
+    "b": "mq:968f26fe2a6cff80",
+    "via": [
+     {
+      "kind": "term",
+      "key": "dennis quaid",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "quaid",
+      "width": 7
+     },
+     {
+      "kind": "term",
+      "key": "dennis",
+      "width": 38
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "mq:070694f04d48639b",
+   "gold": "mq:070694f04d48639b",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 1621,
+  "within_2_doors": 19371,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "mq:1158d4638c16898a",
+    "label": "Good Will Hunting",
+    "p": 0.003432576340928138,
+    "gold": false
+   },
+   {
+    "id": "mq:338e6e02032ee6b8",
+    "label": "I Can Only Imagine (MercyMe song)",
+    "p": 0.0033013556991052977,
+    "gold": false
+   },
+   {
+    "id": "mq:70b8523f11913af9",
+    "label": "I Can Only Imagine (MercyMe song)",
+    "p": 0.0032740199100717176,
+    "gold": false
+   },
+   {
+    "id": "mq:f50d4c5ab071f53c",
+    "label": "Young Frankenstein",
+    "p": 0.002965608110203015,
+    "gold": false
+   },
+   {
+    "id": "mq:9309985dff87da6e",
+    "label": "I Can Only Imagine (MercyMe song)",
+    "p": 0.002588274282137717,
+    "gold": false
+   },
+   {
+    "id": "mq:e71d73fdcef2de66",
+    "label": "I Can Only Imagine (MercyMe song)",
+    "p": 0.0025556011471862426,
+    "gold": false
+   },
+   {
+    "id": "mq:1a00db3311a520fc",
+    "label": "Humaya River",
+    "p": 0.002192322352310506,
+    "gold": false
+   },
+   {
+    "id": "mq:613931965a1da0e6",
+    "label": "I Can Only Imagine (MercyMe song)",
+    "p": 0.0021043161800373515,
+    "gold": false
+   },
+   {
+    "id": "mq:91f1237309c370d5",
+    "label": "Every Light in the House",
+    "p": 0.0018692125627961203,
+    "gold": false
+   },
+   {
+    "id": "mq:db3118bf2b51d933",
+    "label": "Something to Sing About (2000 film)",
+    "p": 0.001523393698210713,
+    "gold": false
+   },
+   {
+    "id": "mq:79556572d655b570",
+    "label": "Chiang Hsiao-wen",
+    "p": 0.0013146853640063206,
+    "gold": false
+   },
+   {
+    "id": "mq:3155da9034de4131",
+    "label": "Microcomputer",
+    "p": 0.0013131742570821289,
+    "gold": false
+   },
+   {
+    "id": "mq:0c5beffdeba4f09c",
+    "label": "Chiang Hsiao-wu",
+    "p": 0.001295930300775814,
+    "gold": false
+   },
+   {
+    "id": "mq:f9ac56940e432f7f",
+    "label": "Beat Girl",
+    "p": 0.0012430428568166517,
+    "gold": false
+   },
+   {
+    "id": "mq:c2135865b76c0b4b",
+    "label": "Loekman Hakim",
+    "p": 0.0012314988316653249,
+    "gold": false
+   },
+   {
+    "id": "mq:47bcd47b5feecde6",
+    "label": "Neverwinter Nights 2: Mysteries of Westgate",
+    "p": 0.0012041420238013839,
+    "gold": false
+   },
+   {
+    "id": "mq:aae33179a6b3f64f",
+    "label": "The Night of the Iguana",
+    "p": 0.0011852912680828148,
+    "gold": false
+   },
+   {
+    "id": "mq:2e66efb047c6b69a",
+    "label": "Turner Classic Movies",
+    "p": 0.0011345942650733652,
+    "gold": false
+   },
+   {
+    "id": "mq:d0cfaad046f7b068",
+    "label": "Scott Grimes",
+    "p": 0.0010826921126819847,
+    "gold": false
+   },
+   {
+    "id": "mq:54a722c3433e4033",
+    "label": "Scott Grimes",
+    "p": 0.001074888176152948,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:070694f04d48639b",
+   "label": "I Can Only Imagine (film)",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:25d14061963084ea",
+   "label": "I Can Only Imagine (film)",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:32b8a1e709fb2cd8",
+   "label": "Walter Huston",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:2f7507cd6ed56f68",
+   "label": "Pollock (film)",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:28be5fc16fa8faac",
+   "label": "Gustaf Skarsg\u00e5rd",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:bbb8a8559207e41b",
+   "label": "Great Balls of Fire! (film)",
+   "wave": 1,
+   "via": "term:dennis quaid",
+   "gold": false
+  },
+  {
+   "id": "mq:aea57a31f361f72f",
+   "label": "A Dog's Purpose (film)",
+   "wave": 1,
+   "via": "term:dennis quaid",
+   "gold": false
+  },
+  {
+   "id": "mq:968f26fe2a6cff80",
+   "label": "Flesh and Bone (film)",
+   "wave": 1,
+   "via": "term:dennis quaid",
+   "gold": true
+  },
+  {
+   "id": "mq:fbfd55684f270b49",
+   "label": "National Games of Pakistan",
+   "wave": 2,
+   "via": "term:quaid",
+   "gold": false
+  },
+  {
+   "id": "mq:a435c1a5dd759bfc",
+   "label": "Zohaib Khan",
+   "wave": 2,
+   "via": "term:quaid",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:1158d4638c16898a",
+    "label": "Good Will Hunting",
+    "gold": false
+   },
+   {
+    "id": "mq:338e6e02032ee6b8",
+    "label": "I Can Only Imagine (MercyMe song)",
+    "gold": false
+   },
+   {
+    "id": "mq:70b8523f11913af9",
+    "label": "I Can Only Imagine (MercyMe song)",
+    "gold": false
+   },
+   {
+    "id": "mq:f50d4c5ab071f53c",
+    "label": "Young Frankenstein",
+    "gold": false
+   },
+   {
+    "id": "mq:9309985dff87da6e",
+    "label": "I Can Only Imagine (MercyMe song)",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:e71d73fdcef2de66",
+    "label": "I Can Only Imagine (MercyMe song)",
+    "gold": false
+   },
+   {
+    "id": "mq:9309985dff87da6e",
+    "label": "I Can Only Imagine (MercyMe song)",
+    "gold": false
+   },
+   {
+    "id": "mq:338e6e02032ee6b8",
+    "label": "I Can Only Imagine (MercyMe song)",
+    "gold": false
+   },
+   {
+    "id": "mq:70b8523f11913af9",
+    "label": "I Can Only Imagine (MercyMe song)",
+    "gold": false
+   },
+   {
+    "id": "mq:613931965a1da0e6",
+    "label": "I Can Only Imagine (MercyMe song)",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:338e6e02032ee6b8",
+    "label": "I Can Only Imagine (MercyMe song)",
+    "gold": false
+   },
+   {
+    "id": "mq:70b8523f11913af9",
+    "label": "I Can Only Imagine (MercyMe song)",
+    "gold": false
+   },
+   {
+    "id": "mq:9309985dff87da6e",
+    "label": "I Can Only Imagine (MercyMe song)",
+    "gold": false
+   },
+   {
+    "id": "mq:e71d73fdcef2de66",
+    "label": "I Can Only Imagine (MercyMe song)",
+    "gold": false
+   },
+   {
+    "id": "mq:613931965a1da0e6",
+    "label": "I Can Only Imagine (MercyMe song)",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:613931965a1da0e6",
+    "label": "I Can Only Imagine (MercyMe song)",
+    "gold": false
+   },
+   {
+    "id": "mq:3a4c8501f11250d0",
+    "label": "Hanover",
+    "gold": false
+   },
+   {
+    "id": "mq:a7b603885b01590b",
+    "label": "To Kill a Mockingbird",
+    "gold": false
+   },
+   {
+    "id": "mq:66427b55a59a22e9",
+    "label": "\u00c0lex Brendem\u00fchl",
+    "gold": false
+   },
+   {
+    "id": "mq:763e948c1549925f",
+    "label": "Iain Davidson",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

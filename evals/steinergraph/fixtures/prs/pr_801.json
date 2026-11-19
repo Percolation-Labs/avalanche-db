@@ -1,0 +1,426 @@
+{
+ "qid": "pr:801",
+ "set": "prs",
+ "question": "What work went into this, and why: Kappa: a walk-so-far state lifts Jev +.134 on the worlds (names line alone +.082); on MuSiQue it must be compressed, and the names line gives +.019?",
+ "gold": [
+  {
+   "id": "commit/6b4ada8593",
+   "label": "commit 6b4ada8: Kappa: register four states (none, full found, names read, last opening sentences) before scoring",
+   "seed": false
+  },
+  {
+   "id": "commit/8b043e6511",
+   "label": "commit 8b043e6: Kappa: on the worlds the walk-so-far lifts Jev +.134 (full) / +.082 (names line); on MuSiQue full state ",
+   "seed": true
+  },
+  {
+   "id": "commit/9097b85d36",
+   "label": "commit 9097b85: Kappa worlds result (K1 +.134, K2 +.082, K3 +.038 ns) and the MuSiQue scorer, before the MuSiQue score",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/5b1eec3a72",
+   "label": "commit 5b1eec3: Merge pull request #801 from Percolation-Labs/bill/kappa",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/8b043e6511",
+   "label": "commit 8b043e6: Kappa: on the worlds the walk-so-far lifts Jev +.134 (full) / +.082 (names line); on MuSiQue full state ",
+   "rank": 2,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "meta/lab/results/kappa/RESULT.md#6",
+   "label": "meta/lab/results/kappa/RESULT.md \u203a Round 2: rarest-first names do not carry the bridge better (17 Nov, ~00:35Z)",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "meta/lab/results/kappa/REGISTERED.md#1",
+   "label": "meta/lab/results/kappa/REGISTERED.md \u203a Kappa: a compressed walk-so-far as Jev's state (registered 17 Nov ~00:10Z, before",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "meta/lab/results/kappa/RESULT.md#4",
+   "label": "meta/lab/results/kappa/RESULT.md \u203a Postmortem",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/6b4ada8593",
+    "label": "commit 6b4ada8: Kappa: register four states (none, full found, names read, last opening sentences) before scoring",
+    "role": "gold"
+   },
+   {
+    "id": "commit/8b043e6511",
+    "label": "commit 8b043e6: Kappa: on the worlds the walk-so-far lifts Jev +.134 (full) / +.082 (names line); on MuSiQue full state ",
+    "role": "gold"
+   },
+   {
+    "id": "commit/9097b85d36",
+    "label": "commit 9097b85: Kappa worlds result (K1 +.134, K2 +.082, K3 +.038 ns) and the MuSiQue scorer, before the MuSiQue score",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/6b4ada8593",
+    "b": "commit/9097b85d36",
+    "via": [
+     {
+      "kind": "beside"
+     }
+    ]
+   },
+   {
+    "a": "commit/8b043e6511",
+    "b": "commit/9097b85d36",
+    "via": [
+     {
+      "kind": "beside"
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   2,
+   1,
+   1
+  ],
+  "entry": {
+   "seed": "commit/8b043e6511",
+   "gold": "commit/8b043e6511",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 1543,
+  "within_2_doors": 33023,
+  "gold_within_1": 2,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "board/messages/M-20261117-001333-aa54.md#1",
+    "label": "board/messages/M-20261117-001333-aa54.md",
+    "p": 0.006586113109195066,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/kappa/RESULT.md#5",
+    "label": "meta/lab/results/kappa/RESULT.md \u203a Round 2: rarest-first names do not carry the bridge better (17 Nov, ~00:35Z)",
+    "p": 0.004367999077395462,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261116-202512-6df0.md#1",
+    "label": "board/messages/M-20261116-202512-6df0.md",
+    "p": 0.004285518957913471,
+    "gold": false
+   },
+   {
+    "id": "commit/9097b85d36",
+    "label": "commit 9097b85: Kappa worlds result (K1 +.134, K2 +.082, K3 +.038 ns) and the MuSiQue scorer, before the MuSiQue score",
+    "p": 0.0037276132808297157,
+    "gold": true
+   },
+   {
+    "id": "board/messages/M-20261117-000359-d3a7.md#1",
+    "label": "board/messages/M-20261117-000359-d3a7.md",
+    "p": 0.003268277982885597,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/kappa/REGISTERED.md#3",
+    "label": "meta/lab/results/kappa/REGISTERED.md \u203a Round 2: keep the bridging names (registered 17 Nov ~00:15Z, before scoring)",
+    "p": 0.002633793539282493,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261116-214238-37f1.md#2",
+    "label": "board/messages/M-20261116-214238-37f1.md",
+    "p": 0.002312848038568435,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/kappa/RESULT.md#7",
+    "label": "meta/lab/results/kappa/RESULT.md \u203a Round 3: kappa as relations works on both graphs (17 Nov, ~08:30Z)",
+    "p": 0.0021923773634865266,
+    "gold": false
+   },
+   {
+    "id": "commit/f87287643e",
+    "label": "commit f872876: board: james messages bill",
+    "p": 0.002155466139702161,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261117-081021-f27f.md#1",
+    "label": "board/messages/M-20261117-081021-f27f.md",
+    "p": 0.0020443475918758515,
+    "gold": false
+   },
+   {
+    "id": "commit/d7bd3004da",
+    "label": "commit d7bd300: board: bill acknowledges 1 message(s)",
+    "p": 0.002032743924050011,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261029-183934-b0b0.md#1",
+    "label": "board/messages/M-20261029-183934-b0b0.md",
+    "p": 0.0019539082045629264,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261029-183931-a546.md#1",
+    "label": "board/messages/M-20261029-183931-a546.md",
+    "p": 0.0019539082045629264,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261029-183938-4e87.md#1",
+    "label": "board/messages/M-20261029-183938-4e87.md",
+    "p": 0.0019539082045629264,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/kappa/REGISTERED.md#2",
+    "label": "meta/lab/results/kappa/REGISTERED.md \u203a Kappa: a compressed walk-so-far as Jev's state (registered 17 Nov ~00:10Z, before",
+    "p": 0.0019268795866489994,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261116-192549-f060.md#1",
+    "label": "board/messages/M-20261116-192549-f060.md",
+    "p": 0.001865383776378269,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1274.md#4",
+    "label": "board/cards/REM-1274.md \u203a Done when",
+    "p": 0.001708192960984909,
+    "gold": false
+   },
+   {
+    "id": "commit/a7418e3e17",
+    "label": "commit a7418e3: Merge pull request #802 from Percolation-Labs/bill/kappa-bridging",
+    "p": 0.0014528020753121435,
+    "gold": false
+   },
+   {
+    "id": "commit/6b4ada8593",
+    "label": "commit 6b4ada8: Kappa: register four states (none, full found, names read, last opening sentences) before scoring",
+    "p": 0.0014374095117288526,
+    "gold": true
+   },
+   {
+    "id": "meta/lab/results/jev-doors/RESULT.md#1",
+    "label": "meta/lab/results/jev-doors/RESULT.md \u203a Step 4, round 1: naming what lies behind a door lifts Jev from 64% to 70% of the ",
+    "p": 0.0013959214198423732,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/5b1eec3a72",
+   "label": "commit 5b1eec3: Merge pull request #801 from Percolation-Labs/bill/kappa",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/8b043e6511",
+   "label": "commit 8b043e6: Kappa: on the worlds the walk-so-far lifts Jev +.134 (full) / +.082 (names line); on MuSiQue full state ",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "meta/lab/results/kappa/RESULT.md#6",
+   "label": "meta/lab/results/kappa/RESULT.md \u203a Round 2: rarest-first names do not carry the bridge better (17 Nov, ~00:35Z)",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/kappa/REGISTERED.md#1",
+   "label": "meta/lab/results/kappa/REGISTERED.md \u203a Kappa: a compressed walk-so-far as Jev's state (registered 17 Nov ~00:10Z, before",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/kappa/RESULT.md#4",
+   "label": "meta/lab/results/kappa/RESULT.md \u203a Postmortem",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/kappa/RESULT.md#11",
+   "label": "meta/lab/results/kappa/RESULT.md \u203a Postmortem",
+   "wave": 1,
+   "via": "term:results kappa",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/kappa/round2.txt#2",
+   "label": "meta/lab/results/kappa/round2.txt",
+   "wave": 1,
+   "via": "term:results kappa",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/kappa/RESULT.md#2",
+   "label": "meta/lab/results/kappa/RESULT.md \u203a Worlds, held-out world 3 (232 pages)",
+   "wave": 1,
+   "via": "term:results kappa",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/kappa/RESULT.md#3",
+   "label": "meta/lab/results/kappa/RESULT.md \u203a MuSiQue HELD-OUT (286 pages)",
+   "wave": 1,
+   "via": "term:results kappa",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/kappa/beam-why.txt#1",
+   "label": "meta/lab/results/kappa/beam-why.txt",
+   "wave": 1,
+   "via": "term:results kappa",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "board/messages/M-20261117-001333-aa54.md#1",
+    "label": "board/messages/M-20261117-001333-aa54.md",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/kappa/RESULT.md#5",
+    "label": "meta/lab/results/kappa/RESULT.md \u203a Round 2: rarest-first names do not carry the bridge better (17 Nov, ~00:35Z)",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261116-202512-6df0.md#1",
+    "label": "board/messages/M-20261116-202512-6df0.md",
+    "gold": false
+   },
+   {
+    "id": "commit/9097b85d36",
+    "label": "commit 9097b85: Kappa worlds result (K1 +.134, K2 +.082, K3 +.038 ns) and the MuSiQue scorer, before the MuSiQue score",
+    "gold": true
+   },
+   {
+    "id": "board/messages/M-20261117-000359-d3a7.md#1",
+    "label": "board/messages/M-20261117-000359-d3a7.md",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "board/messages/M-20261117-001333-aa54.md#1",
+    "label": "board/messages/M-20261117-001333-aa54.md",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261117-000359-d3a7.md#1",
+    "label": "board/messages/M-20261117-000359-d3a7.md",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/kappa/RESULT.md#5",
+    "label": "meta/lab/results/kappa/RESULT.md \u203a Round 2: rarest-first names do not carry the bridge better (17 Nov, ~00:35Z)",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/kappa/REGISTERED.md#3",
+    "label": "meta/lab/results/kappa/REGISTERED.md \u203a Round 2: keep the bridging names (registered 17 Nov ~00:15Z, before scoring)",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/kappa/REGISTERED.md#2",
+    "label": "meta/lab/results/kappa/REGISTERED.md \u203a Kappa: a compressed walk-so-far as Jev's state (registered 17 Nov ~00:10Z, before",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/9097b85d36",
+    "label": "commit 9097b85: Kappa worlds result (K1 +.134, K2 +.082, K3 +.038 ns) and the MuSiQue scorer, before the MuSiQue score",
+    "gold": true
+   },
+   {
+    "id": "commit/6b4ada8593",
+    "label": "commit 6b4ada8: Kappa: register four states (none, full found, names read, last opening sentences) before scoring",
+    "gold": true
+   },
+   {
+    "id": "board/messages/M-20261117-001333-aa54.md#1",
+    "label": "board/messages/M-20261117-001333-aa54.md",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/kappa/RESULT.md#1",
+    "label": "meta/lab/results/kappa/RESULT.md \u203a Kappa: a compressed walk-so-far helps Jev on the worlds; on MuSiQue the gain is small",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/kappa/RESULT.md#5",
+    "label": "meta/lab/results/kappa/RESULT.md \u203a Round 2: rarest-first names do not carry the bridge better (17 Nov, ~00:35Z)",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "meta/lab/results/kappa/RESULT.md#1",
+    "label": "meta/lab/results/kappa/RESULT.md \u203a Kappa: a compressed walk-so-far helps Jev on the worlds; on MuSiQue the gain is small",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/kappa/REGISTERED.md#2",
+    "label": "meta/lab/results/kappa/REGISTERED.md \u203a Kappa: a compressed walk-so-far as Jev's state (registered 17 Nov ~00:10Z, before",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261117-000359-d3a7.md#1",
+    "label": "board/messages/M-20261117-000359-d3a7.md",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261117-001333-aa54.md#1",
+    "label": "board/messages/M-20261117-001333-aa54.md",
+    "gold": false
+   },
+   {
+    "id": "commit/213252bdc9",
+    "label": "commit 213252b: Kappa round 2: rarest-first and door-taken names do not beat the frequency-ordered names line (MuSiQue +",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.5,
+  "Q": 0.0,
+  "LQ": 1.0,
+  "S": 0.0
+ }
+}

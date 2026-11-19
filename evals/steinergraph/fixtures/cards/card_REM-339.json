@@ -1,0 +1,569 @@
+{
+ "qid": "card:REM-339",
+ "set": "cards",
+ "question": "What was done about this, and why: governance: what Percolate keeps, for how long and who may delete it is decided in one approved spec?",
+ "gold": [
+  {
+   "id": "commit/236595ade8",
+   "label": "commit 236595a: compliance drafts cite data-governance.md at its merge, ed1aa9b2 (REM-335)",
+   "seed": false
+  },
+  {
+   "id": "commit/68f696b09e",
+   "label": "commit 68f696b: compliance: draft the records a regulator asks for first (REM-335)",
+   "seed": false
+  },
+  {
+   "id": "commit/8adf4178c1",
+   "label": "commit 8adf417: specs: compliance \u00a73.4 retention is a proposal until the data governance spec (REM-339) is approved",
+   "seed": true
+  },
+  {
+   "id": "commit/9b683486b3",
+   "label": "commit 9b68348: data-governance: every store, a proposed period for each class, and who approves (REM-339)",
+   "seed": false
+  },
+  {
+   "id": "commit/e712b4d063",
+   "label": "commit e712b4d: Merge remote-tracking branch 'origin/main' into amartey/rem-339-governance",
+   "seed": false
+  },
+  {
+   "id": "commit/ed1aa9b211",
+   "label": "commit ed1aa9b: Merge pull request #321 from Percolation-Labs/amartey/rem-339-governance",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/a38de629e9",
+   "label": "commit a38de62: board: file REM-339 governance: what Percolate keeps, for how long and who may delete it is decided in o",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-339.md#1",
+   "label": "board/cards/REM-339.md",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-339.md#2",
+   "label": "board/cards/REM-339.md \u203a Goal",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "specs/percolate-application/data-governance.md#1",
+   "label": "specs/percolate-application/data-governance.md \u203a Data governance: what Percolate keeps, for how long, and who may delete",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/8adf4178c1",
+   "label": "commit 8adf417: specs: compliance \u00a73.4 retention is a proposal until the data governance spec (REM-339) is approved",
+   "rank": 5,
+   "gold": true,
+   "doors_to_gold": 0
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/236595ade8",
+    "label": "commit 236595a: compliance drafts cite data-governance.md at its merge, ed1aa9b2 (REM-335)",
+    "role": "gold"
+   },
+   {
+    "id": "commit/68f696b09e",
+    "label": "commit 68f696b: compliance: draft the records a regulator asks for first (REM-335)",
+    "role": "gold"
+   },
+   {
+    "id": "commit/8adf4178c1",
+    "label": "commit 8adf417: specs: compliance \u00a73.4 retention is a proposal until the data governance spec (REM-339) is approved",
+    "role": "gold"
+   },
+   {
+    "id": "commit/9b683486b3",
+    "label": "commit 9b68348: data-governance: every store, a proposed period for each class, and who approves (REM-339)",
+    "role": "gold"
+   },
+   {
+    "id": "commit/e712b4d063",
+    "label": "commit e712b4d: Merge remote-tracking branch 'origin/main' into amartey/rem-339-governance",
+    "role": "gold"
+   },
+   {
+    "id": "commit/ed1aa9b211",
+    "label": "commit ed1aa9b: Merge pull request #321 from Percolation-Labs/amartey/rem-339-governance",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/236595ade8",
+    "b": "commit/68f696b09e",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "rem 335",
+      "width": 30
+     },
+     {
+      "kind": "term",
+      "key": "rem 339",
+      "width": 52
+     },
+     {
+      "kind": "term",
+      "key": "data governance",
+      "width": 64
+     },
+     {
+      "kind": "term",
+      "key": "governance",
+      "width": 89
+     }
+    ]
+   },
+   {
+    "a": "commit/236595ade8",
+    "b": "commit/8adf4178c1",
+    "via": [
+     {
+      "kind": "term",
+      "key": "rem 339",
+      "width": 52
+     },
+     {
+      "kind": "term",
+      "key": "data governance",
+      "width": 64
+     },
+     {
+      "kind": "term",
+      "key": "governance",
+      "width": 89
+     }
+    ]
+   },
+   {
+    "a": "commit/68f696b09e",
+    "b": "commit/ed1aa9b211",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "rem 339",
+      "width": 52
+     },
+     {
+      "kind": "term",
+      "key": "data governance",
+      "width": 64
+     },
+     {
+      "kind": "term",
+      "key": "governance",
+      "width": 89
+     }
+    ]
+   },
+   {
+    "a": "commit/9b683486b3",
+    "b": "commit/e712b4d063",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "governance",
+      "width": 89
+     }
+    ]
+   },
+   {
+    "a": "commit/9b683486b3",
+    "b": "commit/ed1aa9b211",
+    "via": [
+     {
+      "kind": "term",
+      "key": "governance every",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "proposed period",
+      "width": 4
+     },
+     {
+      "kind": "term",
+      "key": "approver",
+      "width": 11
+     },
+     {
+      "kind": "term",
+      "key": "every store",
+      "width": 11
+     },
+     {
+      "kind": "term",
+      "key": "rem 339",
+      "width": 52
+     }
+    ]
+   }
+  ],
+  "cost": 5,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  "entry": {
+   "seed": "commit/8adf4178c1",
+   "gold": "commit/8adf4178c1",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 666,
+  "within_2_doors": 31661,
+  "gold_within_1": 5,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "board/cards/REM-339.md#6",
+    "label": "board/cards/REM-339.md \u203a Log",
+    "p": 0.007329742145316459,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-333.md#6",
+    "label": "board/cards/REM-333.md \u203a Log",
+    "p": 0.004186968801142618,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-339.md#3",
+    "label": "board/cards/REM-339.md \u203a Evidence",
+    "p": 0.004088635368887837,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-338.md#6",
+    "label": "board/cards/REM-338.md \u203a Log",
+    "p": 0.0036610272695908426,
+    "gold": false
+   },
+   {
+    "id": "commit/ce19e9cb05",
+    "label": "commit ce19e9c: board: percolate-application-16 takes REM-338",
+    "p": 0.0035320123005031464,
+    "gold": false
+   },
+   {
+    "id": "commit/9b683486b3",
+    "label": "commit 9b68348: data-governance: every store, a proposed period for each class, and who approves (REM-339)",
+    "p": 0.0034454811527369735,
+    "gold": true
+   },
+   {
+    "id": "specs/identity/spec.md#1",
+    "label": "specs/identity/spec.md \u203a Identity and nullability",
+    "p": 0.00340922789408425,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-339.md#4",
+    "label": "board/cards/REM-339.md \u203a Done when",
+    "p": 0.0022931906781188064,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/compliance.md#1",
+    "label": "specs/percolate-application/compliance.md \u203a Compliance: EU AI Act, GDPR and UK GDPR, and the platform rules",
+    "p": 0.0022100573403694753,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/compliance.md#19",
+    "label": "specs/percolate-application/compliance.md \u203a 6. Stages",
+    "p": 0.0022067881455777824,
+    "gold": false
+   },
+   {
+    "id": "commit/4c7e2fbfa3",
+    "label": "commit 4c7e2fb: board: note on REM-333",
+    "p": 0.002161135321793696,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/compliance.md#11",
+    "label": "specs/percolate-application/compliance.md \u203a 3.4 Retention",
+    "p": 0.001974804068134825,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/release-and-gitops.md#18",
+    "label": "specs/percolate-application/release-and-gitops.md \u203a Turning core on for the application",
+    "p": 0.001964594618692362,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/data-governance.md#2",
+    "label": "specs/percolate-application/data-governance.md \u203a 1. Rules every row follows",
+    "p": 0.0019402411228423328,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-340.md#2",
+    "label": "board/cards/REM-340.md \u203a Goal",
+    "p": 0.0019100512822550985,
+    "gold": false
+   },
+   {
+    "id": "commit/76430c032b",
+    "label": "commit 76430c0: specs: compliance names its holding card REM-327 and stage cards REM-328 to REM-335",
+    "p": 0.0018225086037944867,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-335.md#6",
+    "label": "board/cards/REM-335.md \u203a Log",
+    "p": 0.0018176448978590937,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/release-and-gitops.md#9",
+    "label": "specs/percolate-application/release-and-gitops.md \u203a Backups",
+    "p": 0.0017687979087518176,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-467.md#5",
+    "label": "board/cards/REM-467.md \u203a Scope",
+    "p": 0.0017536991548457212,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/navigation-and-account-flows.md#20",
+    "label": "specs/percolate-application/navigation-and-account-flows.md \u203a 10. Telling us something: bugs, requests and help",
+    "p": 0.0016858840792193415,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/a38de629e9",
+   "label": "commit a38de62: board: file REM-339 governance: what Percolate keeps, for how long and who may delete it is decided in o",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-339.md#1",
+   "label": "board/cards/REM-339.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-339.md#2",
+   "label": "board/cards/REM-339.md \u203a Goal",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/percolate-application/data-governance.md#1",
+   "label": "specs/percolate-application/data-governance.md \u203a Data governance: what Percolate keeps, for how long, and who may delete",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/8adf4178c1",
+   "label": "commit 8adf417: specs: compliance \u00a73.4 retention is a proposal until the data governance spec (REM-339) is approved",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "meta/compliance/lia.md#4",
+   "label": "meta/compliance/lia.md \u203a 3. Writer invitations and admission",
+   "wave": 1,
+   "via": "term:rem 339",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-339.md#5",
+   "label": "board/cards/REM-339.md \u203a Scope",
+   "wave": 1,
+   "via": "term:rem 339",
+   "gold": false
+  },
+  {
+   "id": "commit/260a0084e4",
+   "label": "commit 260a008: board: REM-339 in-progress \u2192 todo",
+   "wave": 1,
+   "via": "term:rem 339",
+   "gold": false
+  },
+  {
+   "id": "commit/ed1aa9b211",
+   "label": "commit ed1aa9b: Merge pull request #321 from Percolation-Labs/amartey/rem-339-governance",
+   "wave": 1,
+   "via": "term:rem 339",
+   "gold": true
+  },
+  {
+   "id": "commit/08a7a338ef",
+   "label": "commit 08a7a33: board: REM-339 todo \u2192 backlog",
+   "wave": 1,
+   "via": "term:rem 339",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "board/cards/REM-339.md#6",
+    "label": "board/cards/REM-339.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-333.md#6",
+    "label": "board/cards/REM-333.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-339.md#3",
+    "label": "board/cards/REM-339.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-338.md#6",
+    "label": "board/cards/REM-338.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "commit/ce19e9cb05",
+    "label": "commit ce19e9c: board: percolate-application-16 takes REM-338",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "board/cards/REM-339.md#6",
+    "label": "board/cards/REM-339.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-333.md#6",
+    "label": "board/cards/REM-333.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-338.md#6",
+    "label": "board/cards/REM-338.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "commit/9b683486b3",
+    "label": "commit 9b68348: data-governance: every store, a proposed period for each class, and who approves (REM-339)",
+    "gold": true
+   },
+   {
+    "id": "specs/percolate-application/compliance.md#11",
+    "label": "specs/percolate-application/compliance.md \u203a 3.4 Retention",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/236595ade8",
+    "label": "commit 236595a: compliance drafts cite data-governance.md at its merge, ed1aa9b2 (REM-335)",
+    "gold": true
+   },
+   {
+    "id": "meta/compliance/README.md#2",
+    "label": "meta/compliance/README.md \u203a Read at",
+    "gold": false
+   },
+   {
+    "id": "commit/ed1aa9b211",
+    "label": "commit ed1aa9b: Merge pull request #321 from Percolation-Labs/amartey/rem-339-governance",
+    "gold": true
+   },
+   {
+    "id": "commit/1a201f2839",
+    "label": "commit 1a201f2: Postmortem: Sirsh drops the figure guard and lens governance; the spec held a rule the owner does not",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-447.md#4",
+    "label": "board/cards/REM-447.md \u203a Done when",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "specs/percolate-application/data-governance.md#22",
+    "label": "specs/percolate-application/data-governance.md \u203a 6. What this changes elsewhere",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-447.md#4",
+    "label": "board/cards/REM-447.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-333.md#6",
+    "label": "board/cards/REM-333.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-339.md#6",
+    "label": "board/cards/REM-339.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1152.md#4",
+    "label": "board/cards/REM-1152.md \u203a Done when",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.2,
+  "LQ": 0.4,
+  "S": 0.0
+ }
+}

@@ -1,0 +1,462 @@
+{
+ "qid": "card:REM-1217",
+ "set": "cards",
+ "question": "What was done about this, and why: writing: fenced code blocks in long-form pieces are highlighted for their language?",
+ "gold": [
+  {
+   "id": "commit/26d14d2b33",
+   "label": "commit 26d14d2: authoring-and-publication: fenced code is highlighted for its language (REM-1217)",
+   "seed": true
+  },
+  {
+   "id": "commit/73e5fc071b",
+   "label": "commit 73e5fc0: Merge remote-tracking branch 'origin/main' into c8/rem-1217-spec",
+   "seed": false
+  },
+  {
+   "id": "commit/9c87026d77",
+   "label": "commit 9c87026: Merge pull request #562 from Percolation-Labs/c8/rem-1217-spec",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/04da9ea272",
+   "label": "commit 04da9ea: board: file REM-1217 writing: fenced code blocks in long-form pieces are highlighted for their language",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-1217.md#2",
+   "label": "board/cards/REM-1217.md \u203a Goal",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-1217.md#1",
+   "label": "board/cards/REM-1217.md",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/messages/M-20261027-164551-98b1.md#1",
+   "label": "board/messages/M-20261027-164551-98b1.md",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/26d14d2b33",
+   "label": "commit 26d14d2: authoring-and-publication: fenced code is highlighted for its language (REM-1217)",
+   "rank": 5,
+   "gold": true,
+   "doors_to_gold": 0
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/26d14d2b33",
+    "label": "commit 26d14d2: authoring-and-publication: fenced code is highlighted for its language (REM-1217)",
+    "role": "gold"
+   },
+   {
+    "id": "commit/73e5fc071b",
+    "label": "commit 73e5fc0: Merge remote-tracking branch 'origin/main' into c8/rem-1217-spec",
+    "role": "gold"
+   },
+   {
+    "id": "commit/9c87026d77",
+    "label": "commit 9c87026: Merge pull request #562 from Percolation-Labs/c8/rem-1217-spec",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/26d14d2b33",
+    "b": "commit/73e5fc071b",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "rem 1217",
+      "width": 38
+     },
+     {
+      "kind": "term",
+      "key": "1217",
+      "width": 38
+     }
+    ]
+   },
+   {
+    "a": "commit/26d14d2b33",
+    "b": "commit/9c87026d77",
+    "via": [
+     {
+      "kind": "near",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "publication fenced",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "language rem",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "fenced code",
+      "width": 16
+     },
+     {
+      "kind": "term",
+      "key": "highlighted",
+      "width": 20
+     },
+     {
+      "kind": "term",
+      "key": "fenced",
+      "width": 23
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   1,
+   1
+  ],
+  "entry": {
+   "seed": "commit/26d14d2b33",
+   "gold": "commit/26d14d2b33",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 483,
+  "within_2_doors": 30586,
+  "gold_within_1": 2,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "commit/9c87026d77",
+    "label": "commit 9c87026: Merge pull request #562 from Percolation-Labs/c8/rem-1217-spec",
+    "p": 0.014470048725529648,
+    "gold": true
+   },
+   {
+    "id": "board/cards/REM-1217.md#7",
+    "label": "board/cards/REM-1217.md \u203a Log",
+    "p": 0.007359639489122392,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261027-170025-1dfa.md#1",
+    "label": "board/messages/M-20261027-170025-1dfa.md",
+    "p": 0.006163231183547253,
+    "gold": false
+   },
+   {
+    "id": "commit/eeda516048",
+    "label": "commit eeda516: board: note on REM-1217",
+    "p": 0.005538865605743684,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1217.md#4",
+    "label": "board/cards/REM-1217.md \u203a Done when",
+    "p": 0.005497592303779166,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1217.md#3",
+    "label": "board/cards/REM-1217.md \u203a Evidence",
+    "p": 0.005256212252300258,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/authoring-and-publication.md#7",
+    "label": "specs/percolate-application/authoring-and-publication.md \u203a 3. A1 \u2014 Edit an owned research package in the browser",
+    "p": 0.005110204296808357,
+    "gold": false
+   },
+   {
+    "id": "commit/afb93edf84",
+    "label": "commit afb93ed: board: p8-subsystems-c8 takes REM-1217",
+    "p": 0.004411672367713693,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261027-170145-058a.md#1",
+    "label": "board/messages/M-20261027-170145-058a.md",
+    "p": 0.004278841469402757,
+    "gold": false
+   },
+   {
+    "id": "commit/73e5fc071b",
+    "label": "commit 73e5fc0: Merge remote-tracking branch 'origin/main' into c8/rem-1217-spec",
+    "p": 0.004252195841509535,
+    "gold": true
+   },
+   {
+    "id": "commit/349394108e",
+    "label": "commit 3493941: board: note on REM-1217",
+    "p": 0.004023904705756994,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261027-191353-6ba7.md#1",
+    "label": "board/messages/M-20261027-191353-6ba7.md",
+    "p": 0.0034928435074382974,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1223.md#2",
+    "label": "board/cards/REM-1223.md \u203a Goal",
+    "p": 0.0032559730122812074,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1030.md#2",
+    "label": "board/cards/REM-1030.md \u203a Goal",
+    "p": 0.0030120715200046702,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1217.md#5",
+    "label": "board/cards/REM-1217.md \u203a Scope",
+    "p": 0.002746936754191824,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/authoring-and-publication.md#6",
+    "label": "specs/percolate-application/authoring-and-publication.md \u203a 3. A1 \u2014 Edit an owned research package in the browser",
+    "p": 0.0027299653967572837,
+    "gold": false
+   },
+   {
+    "id": "commit/13069bad63",
+    "label": "commit 13069ba: board: tick REM-1217 box 3",
+    "p": 0.0027122818883541567,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1030.md#6",
+    "label": "board/cards/REM-1030.md \u203a Log",
+    "p": 0.0027066956084068543,
+    "gold": false
+   },
+   {
+    "id": "commit/82024d7587",
+    "label": "commit 82024d7: board: REM-1217 in-progress \u2192 todo",
+    "p": 0.002483258398399646,
+    "gold": false
+   },
+   {
+    "id": "commit/e1e590d473",
+    "label": "commit e1e590d: board: tick REM-1217 box 2",
+    "p": 0.00247985135809707,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/04da9ea272",
+   "label": "commit 04da9ea: board: file REM-1217 writing: fenced code blocks in long-form pieces are highlighted for their language",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-1217.md#2",
+   "label": "board/cards/REM-1217.md \u203a Goal",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-1217.md#1",
+   "label": "board/cards/REM-1217.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/messages/M-20261027-164551-98b1.md#1",
+   "label": "board/messages/M-20261027-164551-98b1.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/26d14d2b33",
+   "label": "commit 26d14d2: authoring-and-publication: fenced code is highlighted for its language (REM-1217)",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "board/cards/REM-1217.md#7",
+   "label": "board/cards/REM-1217.md \u203a Log",
+   "wave": 1,
+   "via": "term:rust sql",
+   "gold": false
+  },
+  {
+   "id": "board/messages/M-20261027-170145-058a.md#1",
+   "label": "board/messages/M-20261027-170145-058a.md",
+   "wave": 1,
+   "via": "term:rust sql",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-1217.md#3",
+   "label": "board/cards/REM-1217.md \u203a Evidence",
+   "wave": 1,
+   "via": "term:rust sql",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-1217.md#4",
+   "label": "board/cards/REM-1217.md \u203a Done when",
+   "wave": 1,
+   "via": "term:rust sql",
+   "gold": false
+  },
+  {
+   "id": "board/messages/M-20261027-170025-1dfa.md#1",
+   "label": "board/messages/M-20261027-170025-1dfa.md",
+   "wave": 1,
+   "via": "term:rust sql",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "commit/9c87026d77",
+    "label": "commit 9c87026: Merge pull request #562 from Percolation-Labs/c8/rem-1217-spec",
+    "gold": true
+   },
+   {
+    "id": "board/cards/REM-1217.md#7",
+    "label": "board/cards/REM-1217.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261027-170025-1dfa.md#1",
+    "label": "board/messages/M-20261027-170025-1dfa.md",
+    "gold": false
+   },
+   {
+    "id": "commit/eeda516048",
+    "label": "commit eeda516: board: note on REM-1217",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1217.md#4",
+    "label": "board/cards/REM-1217.md \u203a Done when",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "commit/9c87026d77",
+    "label": "commit 9c87026: Merge pull request #562 from Percolation-Labs/c8/rem-1217-spec",
+    "gold": true
+   },
+   {
+    "id": "board/cards/REM-1217.md#7",
+    "label": "board/cards/REM-1217.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261027-170025-1dfa.md#1",
+    "label": "board/messages/M-20261027-170025-1dfa.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1217.md#4",
+    "label": "board/cards/REM-1217.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/authoring-and-publication.md#7",
+    "label": "specs/percolate-application/authoring-and-publication.md \u203a 3. A1 \u2014 Edit an owned research package in the browser",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/9c87026d77",
+    "label": "commit 9c87026: Merge pull request #562 from Percolation-Labs/c8/rem-1217-spec",
+    "gold": true
+   },
+   {
+    "id": "board/cards/REM-1223.md#2",
+    "label": "board/cards/REM-1223.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "commit/fef2791f47",
+    "label": "commit fef2791: board: file REM-1223 brews: math and code blocks render as they do in long-form pieces",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1030.md#2",
+    "label": "board/cards/REM-1030.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261028-073510-bb60.md#1",
+    "label": "board/messages/M-20261028-073510-bb60.md",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "board/cards/REM-1223.md#2",
+    "label": "board/cards/REM-1223.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "commit/fef2791f47",
+    "label": "commit fef2791: board: file REM-1223 brews: math and code blocks render as they do in long-form pieces",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/authoring-and-publication.md#6",
+    "label": "specs/percolate-application/authoring-and-publication.md \u203a 3. A1 \u2014 Edit an owned research package in the browser",
+    "gold": false
+   },
+   {
+    "id": "commit/5c8f751f79",
+    "label": "commit 5c8f751: board: file REM-1030 writing: long-form drafts show LaTeX math and code blocks",
+    "gold": false
+   },
+   {
+    "id": "commit/9c87026d77",
+    "label": "commit 9c87026: Merge pull request #562 from Percolation-Labs/c8/rem-1217-spec",
+    "gold": true
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.5,
+  "Q": 0.5,
+  "LQ": 0.5,
+  "S": 0.5
+ }
+}

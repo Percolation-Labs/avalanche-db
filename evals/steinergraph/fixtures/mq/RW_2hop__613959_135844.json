@@ -1,0 +1,411 @@
+{
+ "qid": "RW:2hop__613959_135844",
+ "set": "mq",
+ "question": "Who is the city that AvtoVAZ's headquarters is located in named after?",
+ "gold": [
+  {
+   "id": "mq:11b5bff502bdc5bc",
+   "label": "Tolyatti",
+   "seed": false
+  },
+  {
+   "id": "mq:8cfb13e428ecce0a",
+   "label": "GM-AvtoVAZ",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:8cfb13e428ecce0a",
+   "label": "GM-AvtoVAZ",
+   "rank": 1,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:deaf1e7b36ad4cca",
+   "label": "Alamnagar",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "mq:157479f90ce32a19",
+   "label": "Corus Quay",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "mq:3730b6198e469aa7",
+   "label": "General Electric",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "mq:b02145f2ea4151dc",
+   "label": "Love Around",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 2
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:11b5bff502bdc5bc",
+    "label": "Tolyatti",
+    "role": "gold"
+   },
+   {
+    "id": "mq:8cfb13e428ecce0a",
+    "label": "GM-AvtoVAZ",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:11b5bff502bdc5bc",
+    "b": "mq:8cfb13e428ecce0a",
+    "via": [
+     {
+      "kind": "near",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "tolyatti",
+      "width": 4
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "mq:8cfb13e428ecce0a",
+   "gold": "mq:8cfb13e428ecce0a",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 2676,
+  "within_2_doors": 18410,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "mq:919b5bc4ae69ce5a",
+    "label": "Automeccanica",
+    "p": 0.0038106905014179695,
+    "gold": false
+   },
+   {
+    "id": "mq:ed42ea988e6d5f02",
+    "label": "Treaty of Allahabad",
+    "p": 0.0028418188487459193,
+    "gold": false
+   },
+   {
+    "id": "mq:9349618af20713fc",
+    "label": "CILQ-FM",
+    "p": 0.002095018804620062,
+    "gold": false
+   },
+   {
+    "id": "mq:0d48fcbade54a7c4",
+    "label": "Boston",
+    "p": 0.0017388714883488324,
+    "gold": false
+   },
+   {
+    "id": "mq:5b803e97e358f00c",
+    "label": "Khustigiri",
+    "p": 0.0014892389487950195,
+    "gold": false
+   },
+   {
+    "id": "mq:88105a63df5f38fa",
+    "label": "Haringhata (community development block)",
+    "p": 0.0014519744414417722,
+    "gold": false
+   },
+   {
+    "id": "mq:4ac30cd087fca9b2",
+    "label": "3M",
+    "p": 0.0013277346658378125,
+    "gold": false
+   },
+   {
+    "id": "mq:9a4a5d47b9e01622",
+    "label": "Rockefeller Center Christmas Tree",
+    "p": 0.0012471489385211824,
+    "gold": false
+   },
+   {
+    "id": "mq:276544730f22c6c2",
+    "label": "HMD Global",
+    "p": 0.0011401683839825406,
+    "gold": false
+   },
+   {
+    "id": "mq:7a572d4c7a8adbe8",
+    "label": "WHVW",
+    "p": 0.0010835827008169728,
+    "gold": false
+   },
+   {
+    "id": "mq:980146c903f5a0dc",
+    "label": "Len Turner",
+    "p": 0.0010578519564728604,
+    "gold": false
+   },
+   {
+    "id": "mq:1dcd6e5d8be62ba3",
+    "label": "Transcaucasian Socialist Federative Soviet Republic",
+    "p": 0.0010103973961130515,
+    "gold": false
+   },
+   {
+    "id": "mq:31ac5bc98c97cd15",
+    "label": "Deebing Heights, Queensland",
+    "p": 0.0010057984208033802,
+    "gold": false
+   },
+   {
+    "id": "mq:f96dd33b746e088a",
+    "label": "CFGQ-FM",
+    "p": 0.0009540922847030388,
+    "gold": false
+   },
+   {
+    "id": "mq:5abf16ce7ad2afa2",
+    "label": "Jirania",
+    "p": 0.0008625944887210842,
+    "gold": false
+   },
+   {
+    "id": "mq:8a554a7c99f93bf8",
+    "label": "CING-FM",
+    "p": 0.0008528572887314799,
+    "gold": false
+   },
+   {
+    "id": "mq:b4686371fae6cef0",
+    "label": "CFMK-FM",
+    "p": 0.0008123852212800894,
+    "gold": false
+   },
+   {
+    "id": "mq:11b5bff502bdc5bc",
+    "label": "Tolyatti",
+    "p": 0.0007960612073817337,
+    "gold": true
+   },
+   {
+    "id": "mq:dc4aaf6d2d7924f9",
+    "label": "Doug Manchester",
+    "p": 0.0007807507012143151,
+    "gold": false
+   },
+   {
+    "id": "mq:15a3fad3bd97a9dd",
+    "label": "Belarus",
+    "p": 0.0007639226998547532,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:8cfb13e428ecce0a",
+   "label": "GM-AvtoVAZ",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:deaf1e7b36ad4cca",
+   "label": "Alamnagar",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:157479f90ce32a19",
+   "label": "Corus Quay",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:3730b6198e469aa7",
+   "label": "General Electric",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:b02145f2ea4151dc",
+   "label": "Love Around",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:9c43334c8c1def06",
+   "label": "Lesnoye Sanatorium",
+   "wave": 1,
+   "via": "term:tolyatti",
+   "gold": false
+  },
+  {
+   "id": "mq:88fc1d6f04397f47",
+   "label": "Ravil Aryapov",
+   "wave": 1,
+   "via": "term:tolyatti",
+   "gold": false
+  },
+  {
+   "id": "mq:11b5bff502bdc5bc",
+   "label": "Tolyatti",
+   "wave": 1,
+   "via": "term:tolyatti",
+   "gold": true
+  },
+  {
+   "id": "mq:80646b8c2f7b19dc",
+   "label": "Chevrolet Colorado",
+   "wave": 2,
+   "via": "near:mq:8cfb13e428ecce0a",
+   "gold": false
+  },
+  {
+   "id": "mq:399577f07dc13fa6",
+   "label": "Aerotech Consumer Aerospace",
+   "wave": 2,
+   "via": "near:mq:8cfb13e428ecce0a",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:919b5bc4ae69ce5a",
+    "label": "Automeccanica",
+    "gold": false
+   },
+   {
+    "id": "mq:ed42ea988e6d5f02",
+    "label": "Treaty of Allahabad",
+    "gold": false
+   },
+   {
+    "id": "mq:9349618af20713fc",
+    "label": "CILQ-FM",
+    "gold": false
+   },
+   {
+    "id": "mq:0d48fcbade54a7c4",
+    "label": "Boston",
+    "gold": false
+   },
+   {
+    "id": "mq:5b803e97e358f00c",
+    "label": "Khustigiri",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:0d48fcbade54a7c4",
+    "label": "Boston",
+    "gold": false
+   },
+   {
+    "id": "mq:276544730f22c6c2",
+    "label": "HMD Global",
+    "gold": false
+   },
+   {
+    "id": "mq:399577f07dc13fa6",
+    "label": "Aerotech Consumer Aerospace",
+    "gold": false
+   },
+   {
+    "id": "mq:9349618af20713fc",
+    "label": "CILQ-FM",
+    "gold": false
+   },
+   {
+    "id": "mq:f555dd08d69c9f9e",
+    "label": "Dharwad",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:0d48fcbade54a7c4",
+    "label": "Boston",
+    "gold": false
+   },
+   {
+    "id": "mq:276544730f22c6c2",
+    "label": "HMD Global",
+    "gold": false
+   },
+   {
+    "id": "mq:9349618af20713fc",
+    "label": "CILQ-FM",
+    "gold": false
+   },
+   {
+    "id": "mq:4db19b8928c0be47",
+    "label": "Headquarters of the United Nations",
+    "gold": false
+   },
+   {
+    "id": "mq:5abf16ce7ad2afa2",
+    "label": "Jirania",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:3112221d04ee0db7",
+    "label": "North Carolina",
+    "gold": false
+   },
+   {
+    "id": "mq:f555dd08d69c9f9e",
+    "label": "Dharwad",
+    "gold": false
+   },
+   {
+    "id": "mq:a0dcf9458752305d",
+    "label": "Demang Lehman Stadium",
+    "gold": false
+   },
+   {
+    "id": "mq:d1b30cf86ccaf01e",
+    "label": "Plymouth",
+    "gold": false
+   },
+   {
+    "id": "mq:399577f07dc13fa6",
+    "label": "Aerotech Consumer Aerospace",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

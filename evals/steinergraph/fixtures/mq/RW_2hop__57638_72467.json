@@ -1,0 +1,453 @@
+{
+ "qid": "RW:2hop__57638_72467",
+ "set": "mq",
+ "question": "What team picked the highest point average holder in NBA history in the NBA draft?",
+ "gold": [
+  {
+   "id": "mq:559b4fd3532c01b7",
+   "label": "2007 NBA draft",
+   "seed": false
+  },
+  {
+   "id": "mq:a05dbc1e48550ad8",
+   "label": "List of National Basketball Association annual scoring leaders",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:de0cb436c762e274",
+   "label": "2009\u201310 Oklahoma City Thunder season",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:90179689480465c8",
+   "label": "Kobe Bryant",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:1242ffb730e2779b",
+   "label": "Stephen Curry",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:8d7bf92f34740606",
+   "label": "Stephen Curry",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:26c281e4bcea8e5b",
+   "label": "2017\u201318 NBA season",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:559b4fd3532c01b7",
+    "label": "2007 NBA draft",
+    "role": "gold"
+   },
+   {
+    "id": "mq:a05dbc1e48550ad8",
+    "label": "List of National Basketball Association annual scoring leaders",
+    "role": "gold"
+   },
+   {
+    "id": "mq:de0cb436c762e274",
+    "label": "2009\u201310 Oklahoma City Thunder season",
+    "role": "seed"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:559b4fd3532c01b7",
+    "b": "mq:a05dbc1e48550ad8",
+    "via": [
+     {
+      "kind": "term",
+      "key": "kevin durant",
+      "width": 4
+     },
+     {
+      "kind": "term",
+      "key": "durant",
+      "width": 6
+     },
+     {
+      "kind": "term",
+      "key": "rookie",
+      "width": 42
+     },
+     {
+      "kind": "term",
+      "key": "kevin",
+      "width": 88
+     }
+    ]
+   },
+   {
+    "a": "mq:a05dbc1e48550ad8",
+    "b": "mq:de0cb436c762e274",
+    "via": [
+     {
+      "kind": "term",
+      "key": "kevin durant",
+      "width": 4
+     },
+     {
+      "kind": "term",
+      "key": "durant",
+      "width": 6
+     },
+     {
+      "kind": "term",
+      "key": "scoring",
+      "width": 59
+     },
+     {
+      "kind": "term",
+      "key": "kevin",
+      "width": 88
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "mq:de0cb436c762e274",
+   "gold": "mq:a05dbc1e48550ad8",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 2524,
+  "within_2_doors": 18537,
+  "gold_within_1": 2,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "mq:e2dc360ce2d24dc0",
+    "label": "2017\u201318 NBA season",
+    "p": 0.021210935256306504,
+    "gold": false
+   },
+   {
+    "id": "mq:0cae7f1b5f0a7ca3",
+    "label": "Kevin Durant",
+    "p": 0.008092923288060383,
+    "gold": false
+   },
+   {
+    "id": "mq:acccf8f0b227f7bc",
+    "label": "LeBron James",
+    "p": 0.007396019015685175,
+    "gold": false
+   },
+   {
+    "id": "mq:b0e95466c2090cad",
+    "label": "LeBron James",
+    "p": 0.0073663159134956325,
+    "gold": false
+   },
+   {
+    "id": "mq:608f2041d902d140",
+    "label": "LeBron James",
+    "p": 0.007101549608548696,
+    "gold": false
+   },
+   {
+    "id": "mq:c02a61f0388fe1df",
+    "label": "Dwyane Wade",
+    "p": 0.0063729741110613615,
+    "gold": false
+   },
+   {
+    "id": "mq:143bc76c58967ca1",
+    "label": "Dwyane Wade",
+    "p": 0.006296712623936585,
+    "gold": false
+   },
+   {
+    "id": "mq:84ccee4683029e20",
+    "label": "Kobe Bryant",
+    "p": 0.0025660047961719597,
+    "gold": false
+   },
+   {
+    "id": "mq:93ab671480fcda22",
+    "label": "Dwyane Wade",
+    "p": 0.0021080823045616193,
+    "gold": false
+   },
+   {
+    "id": "mq:46ce67185a6b6171",
+    "label": "List of National Basketball Association annual scoring leaders",
+    "p": 0.0014253463830040081,
+    "gold": false
+   },
+   {
+    "id": "mq:d1bacbe27e955ff3",
+    "label": "LeBron James",
+    "p": 0.0013658810877189673,
+    "gold": false
+   },
+   {
+    "id": "mq:06a09942e474459e",
+    "label": "Buster Posey",
+    "p": 0.001357179265124689,
+    "gold": false
+   },
+   {
+    "id": "mq:e52d9c0e169ea283",
+    "label": "2017 NBA Finals",
+    "p": 0.0013135370704825437,
+    "gold": false
+   },
+   {
+    "id": "mq:349324d834fe8520",
+    "label": "Victor Oladipo",
+    "p": 0.00124984100807844,
+    "gold": false
+   },
+   {
+    "id": "mq:f04a841ee9f13dea",
+    "label": "LeBron James",
+    "p": 0.001227835006336227,
+    "gold": false
+   },
+   {
+    "id": "mq:8edcdac9cc172458",
+    "label": "Kobe Bryant",
+    "p": 0.0012028511064793247,
+    "gold": false
+   },
+   {
+    "id": "mq:89f53aaf559ef01d",
+    "label": "NBA Sportsmanship Award",
+    "p": 0.0011868107040955821,
+    "gold": false
+   },
+   {
+    "id": "mq:4da29af16ae7dda3",
+    "label": "Aroldis Chapman",
+    "p": 0.0011481868107437367,
+    "gold": false
+   },
+   {
+    "id": "mq:e68fc10f91e75a99",
+    "label": "2012\u201313 Houston Rockets season",
+    "p": 0.0011200931014638358,
+    "gold": false
+   },
+   {
+    "id": "mq:1cbc68222f8469c1",
+    "label": "Michael Jordan",
+    "p": 0.0010933043091914943,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:de0cb436c762e274",
+   "label": "2009\u201310 Oklahoma City Thunder season",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:90179689480465c8",
+   "label": "Kobe Bryant",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:1242ffb730e2779b",
+   "label": "Stephen Curry",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:8d7bf92f34740606",
+   "label": "Stephen Curry",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:26c281e4bcea8e5b",
+   "label": "2017\u201318 NBA season",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:850ed8631e26bd63",
+   "label": "Glory Johnson",
+   "wave": 1,
+   "via": "term:basketball association",
+   "gold": false
+  },
+  {
+   "id": "mq:016377d1d150ccf1",
+   "label": "National Basketball Association",
+   "wave": 1,
+   "via": "term:basketball association",
+   "gold": false
+  },
+  {
+   "id": "mq:a05dbc1e48550ad8",
+   "label": "List of National Basketball Association annual scoring leaders",
+   "wave": 1,
+   "via": "term:basketball association",
+   "gold": true
+  },
+  {
+   "id": "mq:ebe03b692c5ffee0",
+   "label": "Eligibility for the NBA draft",
+   "wave": 1,
+   "via": "term:basketball association",
+   "gold": false
+  },
+  {
+   "id": "mq:50d2b38bc6234870",
+   "label": "List of first overall WNBA draft picks",
+   "wave": 1,
+   "via": "term:basketball association",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:e2dc360ce2d24dc0",
+    "label": "2017\u201318 NBA season",
+    "gold": false
+   },
+   {
+    "id": "mq:0cae7f1b5f0a7ca3",
+    "label": "Kevin Durant",
+    "gold": false
+   },
+   {
+    "id": "mq:acccf8f0b227f7bc",
+    "label": "LeBron James",
+    "gold": false
+   },
+   {
+    "id": "mq:b0e95466c2090cad",
+    "label": "LeBron James",
+    "gold": false
+   },
+   {
+    "id": "mq:608f2041d902d140",
+    "label": "LeBron James",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:e2dc360ce2d24dc0",
+    "label": "2017\u201318 NBA season",
+    "gold": false
+   },
+   {
+    "id": "mq:acccf8f0b227f7bc",
+    "label": "LeBron James",
+    "gold": false
+   },
+   {
+    "id": "mq:b0e95466c2090cad",
+    "label": "LeBron James",
+    "gold": false
+   },
+   {
+    "id": "mq:608f2041d902d140",
+    "label": "LeBron James",
+    "gold": false
+   },
+   {
+    "id": "mq:c02a61f0388fe1df",
+    "label": "Dwyane Wade",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:acccf8f0b227f7bc",
+    "label": "LeBron James",
+    "gold": false
+   },
+   {
+    "id": "mq:b0e95466c2090cad",
+    "label": "LeBron James",
+    "gold": false
+   },
+   {
+    "id": "mq:608f2041d902d140",
+    "label": "LeBron James",
+    "gold": false
+   },
+   {
+    "id": "mq:c02a61f0388fe1df",
+    "label": "Dwyane Wade",
+    "gold": false
+   },
+   {
+    "id": "mq:e2dc360ce2d24dc0",
+    "label": "2017\u201318 NBA season",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:e2dc360ce2d24dc0",
+    "label": "2017\u201318 NBA season",
+    "gold": false
+   },
+   {
+    "id": "mq:ebe03b692c5ffee0",
+    "label": "Eligibility for the NBA draft",
+    "gold": false
+   },
+   {
+    "id": "mq:62d9eefcfc76b83f",
+    "label": "Pau Gasol",
+    "gold": false
+   },
+   {
+    "id": "mq:c02a61f0388fe1df",
+    "label": "Dwyane Wade",
+    "gold": false
+   },
+   {
+    "id": "mq:8568a1817052c837",
+    "label": "Yao Ming",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

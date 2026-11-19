@@ -1,0 +1,541 @@
+{
+ "qid": "card:REM-1140",
+ "set": "cards",
+ "question": "What was done about this, and why: release: a train that has not started by 10:15Z is noticed?",
+ "gold": [
+  {
+   "id": "commit/13d787243e",
+   "label": "commit 13d7872: Merge pull request #535 from Percolation-Labs/james/rem-1140-launchd-watch",
+   "seed": false
+  },
+  {
+   "id": "commit/423c7604f4",
+   "label": "commit 423c760: train-watch: run from launchd every 10 minutes, since GitHub's schedule fires hours late (REM-1140)",
+   "seed": false
+  },
+  {
+   "id": "commit/7606843cd1",
+   "label": "commit 7606843: train-watch: the conductor default is jack, the session's current name (REM-1140)",
+   "seed": false
+  },
+  {
+   "id": "commit/a3d4e34c8d",
+   "label": "commit a3d4e34: Merge pull request #528 from Percolation-Labs/amartey/rem-1140-train-watch",
+   "seed": true
+  },
+  {
+   "id": "commit/ff7bdc81c0",
+   "label": "commit ff7bdc8: release: a train that has not started by 10:20Z is noticed (REM-1140)",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/570e3d8077",
+   "label": "commit 570e3d8: board: file REM-1140 release: a train that has not started by 10:15Z is noticed",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/a3d4e34c8d",
+   "label": "commit a3d4e34: Merge pull request #528 from Percolation-Labs/amartey/rem-1140-train-watch",
+   "rank": 2,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "commit/ff7bdc81c0",
+   "label": "commit ff7bdc8: release: a train that has not started by 10:20Z is noticed (REM-1140)",
+   "rank": 3,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "board/cards/REM-1140.md#1",
+   "label": "board/cards/REM-1140.md",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-1140.md#2",
+   "label": "board/cards/REM-1140.md \u203a Goal",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/13d787243e",
+    "label": "commit 13d7872: Merge pull request #535 from Percolation-Labs/james/rem-1140-launchd-watch",
+    "role": "gold"
+   },
+   {
+    "id": "commit/423c7604f4",
+    "label": "commit 423c760: train-watch: run from launchd every 10 minutes, since GitHub's schedule fires hours late (REM-1140)",
+    "role": "gold"
+   },
+   {
+    "id": "commit/7606843cd1",
+    "label": "commit 7606843: train-watch: the conductor default is jack, the session's current name (REM-1140)",
+    "role": "gold"
+   },
+   {
+    "id": "commit/a3d4e34c8d",
+    "label": "commit a3d4e34: Merge pull request #528 from Percolation-Labs/amartey/rem-1140-train-watch",
+    "role": "gold"
+   },
+   {
+    "id": "commit/ff7bdc81c0",
+    "label": "commit ff7bdc8: release: a train that has not started by 10:20Z is noticed (REM-1140)",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/13d787243e",
+    "b": "commit/423c7604f4",
+    "via": [
+     {
+      "kind": "near",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "watch run",
+      "width": 3
+     },
+     {
+      "kind": "term",
+      "key": "launchd every",
+      "width": 3
+     },
+     {
+      "kind": "term",
+      "key": "1140",
+      "width": 43
+     },
+     {
+      "kind": "term",
+      "key": "rem 1140",
+      "width": 43
+     },
+     {
+      "kind": "term",
+      "key": "launchd",
+      "width": 48
+     }
+    ]
+   },
+   {
+    "a": "commit/423c7604f4",
+    "b": "commit/ff7bdc81c0",
+    "via": [
+     {
+      "kind": "term",
+      "key": "rem 1140",
+      "width": 43
+     },
+     {
+      "kind": "term",
+      "key": "1140",
+      "width": 43
+     },
+     {
+      "kind": "term",
+      "key": "due",
+      "width": 94
+     }
+    ]
+   },
+   {
+    "a": "commit/7606843cd1",
+    "b": "commit/ff7bdc81c0",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "rem 1140",
+      "width": 43
+     },
+     {
+      "kind": "term",
+      "key": "1140",
+      "width": 43
+     },
+     {
+      "kind": "term",
+      "key": "conductor",
+      "width": 99
+     }
+    ]
+   },
+   {
+    "a": "commit/a3d4e34c8d",
+    "b": "commit/ff7bdc81c0",
+    "via": [
+     {
+      "kind": "term",
+      "key": "noticed rem",
+      "width": 3
+     },
+     {
+      "kind": "term",
+      "key": "rem 1140",
+      "width": 43
+     },
+     {
+      "kind": "term",
+      "key": "1140",
+      "width": 43
+     },
+     {
+      "kind": "term",
+      "key": "noticed",
+      "width": 99
+     }
+    ]
+   }
+  ],
+  "cost": 4,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  "entry": {
+   "seed": "commit/a3d4e34c8d",
+   "gold": "commit/a3d4e34c8d",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 917,
+  "within_2_doors": 32895,
+  "gold_within_1": 3,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "commit/29a0ff72e9",
+    "label": "commit 29a0ff7: board: note on REM-1140",
+    "p": 0.00743552261787913,
+    "gold": false
+   },
+   {
+    "id": "commit/872d1f3341",
+    "label": "commit 872d1f3: board: sirsh messages REM-1140",
+    "p": 0.007380844807778925,
+    "gold": false
+   },
+   {
+    "id": "commit/c943cb6822",
+    "label": "commit c943cb6: board: note on REM-1140",
+    "p": 0.007283705661125855,
+    "gold": false
+   },
+   {
+    "id": "commit/f160a781a8",
+    "label": "commit f160a78: board: note on REM-1140",
+    "p": 0.007281458907992055,
+    "gold": false
+   },
+   {
+    "id": "commit/9ebaeb6c81",
+    "label": "commit 9ebaeb6: board: note on REM-1140",
+    "p": 0.00718927249740409,
+    "gold": false
+   },
+   {
+    "id": "dev/train-watch.sh#1",
+    "label": "dev/train-watch.sh",
+    "p": 0.0065343796055088756,
+    "gold": false
+   },
+   {
+    "id": ".github/workflows/train-watch.yml#1",
+    "label": ".github/workflows/train-watch.yml",
+    "p": 0.005164576018083683,
+    "gold": false
+   },
+   {
+    "id": "commit/f1f53105e6",
+    "label": "commit f1f5310: board: note on REM-1140",
+    "p": 0.005117175879540042,
+    "gold": false
+   },
+   {
+    "id": "commit/ddfb510050",
+    "label": "commit ddfb510: board: p8-subsystems-4b takes REM-1140",
+    "p": 0.004553364457903374,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1140.md#5",
+    "label": "board/cards/REM-1140.md \u203a Log",
+    "p": 0.003885627120665893,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261028-112336-8eb2.md#1",
+    "label": "board/messages/M-20261028-112336-8eb2.md",
+    "p": 0.003818103212151845,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261028-112319-dd1a.md#1",
+    "label": "board/messages/M-20261028-112319-dd1a.md",
+    "p": 0.003484299545583603,
+    "gold": false
+   },
+   {
+    "id": "dev/train-watch.sh#2",
+    "label": "dev/train-watch.sh",
+    "p": 0.003425018639115536,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1140.md#3",
+    "label": "board/cards/REM-1140.md \u203a Mechanism",
+    "p": 0.0032572513189966486,
+    "gold": false
+   },
+   {
+    "id": "commit/4eabb6b7d5",
+    "label": "commit 4eabb6b: board: REM-1106 backlog \u2192 done",
+    "p": 0.0027713192931031493,
+    "gold": false
+   },
+   {
+    "id": "commit/5d2fe4305c",
+    "label": "commit 5d2fe43: board: tick REM-1140 box 3",
+    "p": 0.0026764532048278353,
+    "gold": false
+   },
+   {
+    "id": "commit/b9d84a5d45",
+    "label": "commit b9d84a5: board: REM-1140 todo \u2192 done",
+    "p": 0.002262831504227761,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1140.md#4",
+    "label": "board/cards/REM-1140.md \u203a Done when",
+    "p": 0.002232445283819792,
+    "gold": false
+   },
+   {
+    "id": "commit/685947eceb",
+    "label": "commit 685947e: board: tick REM-1140 box 2",
+    "p": 0.0021568273860370496,
+    "gold": false
+   },
+   {
+    "id": "commit/4d853efcc9",
+    "label": "commit 4d853ef: board: note on REM-1123",
+    "p": 0.0020427388099045216,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/570e3d8077",
+   "label": "commit 570e3d8: board: file REM-1140 release: a train that has not started by 10:15Z is noticed",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/a3d4e34c8d",
+   "label": "commit a3d4e34: Merge pull request #528 from Percolation-Labs/amartey/rem-1140-train-watch",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "commit/ff7bdc81c0",
+   "label": "commit ff7bdc8: release: a train that has not started by 10:20Z is noticed (REM-1140)",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "board/cards/REM-1140.md#1",
+   "label": "board/cards/REM-1140.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-1140.md#2",
+   "label": "board/cards/REM-1140.md \u203a Goal",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/team/sally.md#4",
+   "label": "board/team/sally.md \u203a Log",
+   "wave": 1,
+   "via": "term:rem 1140",
+   "gold": false
+  },
+  {
+   "id": "commit/b9d84a5d45",
+   "label": "commit b9d84a5: board: REM-1140 todo \u2192 done",
+   "wave": 1,
+   "via": "term:rem 1140",
+   "gold": false
+  },
+  {
+   "id": "commit/e9dff5b223",
+   "label": "commit e9dff5b: board: REM-1140 in-progress \u2192 todo",
+   "wave": 1,
+   "via": "term:rem 1140",
+   "gold": false
+  },
+  {
+   "id": "commit/7606843cd1",
+   "label": "commit 7606843: train-watch: the conductor default is jack, the session's current name (REM-1140)",
+   "wave": 1,
+   "via": "term:rem 1140",
+   "gold": true
+  },
+  {
+   "id": "board/messages/M-20261028-112319-dd1a.md#1",
+   "label": "board/messages/M-20261028-112319-dd1a.md",
+   "wave": 1,
+   "via": "term:rem 1140",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "commit/29a0ff72e9",
+    "label": "commit 29a0ff7: board: note on REM-1140",
+    "gold": false
+   },
+   {
+    "id": "commit/872d1f3341",
+    "label": "commit 872d1f3: board: sirsh messages REM-1140",
+    "gold": false
+   },
+   {
+    "id": "commit/c943cb6822",
+    "label": "commit c943cb6: board: note on REM-1140",
+    "gold": false
+   },
+   {
+    "id": "commit/f160a781a8",
+    "label": "commit f160a78: board: note on REM-1140",
+    "gold": false
+   },
+   {
+    "id": "commit/9ebaeb6c81",
+    "label": "commit 9ebaeb6: board: note on REM-1140",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "dev/train-watch.sh#1",
+    "label": "dev/train-watch.sh",
+    "gold": false
+   },
+   {
+    "id": ".github/workflows/train-watch.yml#1",
+    "label": ".github/workflows/train-watch.yml",
+    "gold": false
+   },
+   {
+    "id": "dev/train-watch.sh#5",
+    "label": "dev/train-watch.sh",
+    "gold": false
+   },
+   {
+    "id": "dev/train-watch.sh#2",
+    "label": "dev/train-watch.sh",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261028-112336-8eb2.md#1",
+    "label": "board/messages/M-20261028-112336-8eb2.md",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/7606843cd1",
+    "label": "commit 7606843: train-watch: the conductor default is jack, the session's current name (REM-1140)",
+    "gold": true
+   },
+   {
+    "id": "board/cards/REM-1140.md#3",
+    "label": "board/cards/REM-1140.md \u203a Mechanism",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261028-112319-dd1a.md#1",
+    "label": "board/messages/M-20261028-112319-dd1a.md",
+    "gold": false
+   },
+   {
+    "id": "commit/b9d84a5d45",
+    "label": "commit b9d84a5: board: REM-1140 todo \u2192 done",
+    "gold": false
+   },
+   {
+    "id": ".github/workflows/train-watch.yml#1",
+    "label": ".github/workflows/train-watch.yml",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": ".github/workflows/train-watch.yml#1",
+    "label": ".github/workflows/train-watch.yml",
+    "gold": false
+   },
+   {
+    "id": "dev/train-watch.sh#5",
+    "label": "dev/train-watch.sh",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261030-102645-7b9e.md#1",
+    "label": "board/messages/M-20261030-102645-7b9e.md",
+    "gold": false
+   },
+   {
+    "id": "dev/train-watch.sh#4",
+    "label": "dev/train-watch.sh",
+    "gold": false
+   },
+   {
+    "id": "dev/train-watch.sh#1",
+    "label": "dev/train-watch.sh",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.3333333333333333,
+  "S": 0.0
+ }
+}

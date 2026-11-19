@@ -1,0 +1,421 @@
+{
+ "qid": "RW:2hop__632234_122868",
+ "set": "mq",
+ "question": "Where did the author of The National Dream go to university?",
+ "gold": [
+  {
+   "id": "mq:789de82a8f9b111b",
+   "label": "The National Dream (book)",
+   "seed": true
+  },
+  {
+   "id": "mq:b754b6dfb1e211b9",
+   "label": "Pierre Berton",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:789de82a8f9b111b",
+   "label": "The National Dream (book)",
+   "rank": 1,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:26731376a21e69d2",
+   "label": "Through the Looking-Glass",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:a8e43bc1f17d8965",
+   "label": "The Dream Life of Balso Snell",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:91a2d1de77056504",
+   "label": "Belinda Chang",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "mq:982f9fbfb228ed5f",
+   "label": "Emil Haraszti",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 2
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:789de82a8f9b111b",
+    "label": "The National Dream (book)",
+    "role": "gold"
+   },
+   {
+    "id": "mq:b754b6dfb1e211b9",
+    "label": "Pierre Berton",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:789de82a8f9b111b",
+    "b": "mq:b754b6dfb1e211b9",
+    "via": [
+     {
+      "kind": "near",
+      "width": 3
+     },
+     {
+      "kind": "term",
+      "key": "pierre berton",
+      "width": 4
+     },
+     {
+      "kind": "term",
+      "key": "berton",
+      "width": 4
+     },
+     {
+      "kind": "term",
+      "key": "pierre",
+      "width": 59
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "mq:789de82a8f9b111b",
+   "gold": "mq:789de82a8f9b111b",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 1791,
+  "within_2_doors": 19255,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "mq:b754b6dfb1e211b9",
+    "label": "Pierre Berton",
+    "p": 0.002393056034683833,
+    "gold": true
+   },
+   {
+    "id": "mq:74eef3893806f568",
+    "label": "The Secret World of Og",
+    "p": 0.0023233189801749416,
+    "gold": false
+   },
+   {
+    "id": "mq:60f211949a5a0e4f",
+    "label": "1967: The Last Good Year",
+    "p": 0.002309653214905344,
+    "gold": false
+   },
+   {
+    "id": "mq:2275ade56ed65020",
+    "label": "Philipp Schwartz",
+    "p": 0.0020895896199920085,
+    "gold": false
+   },
+   {
+    "id": "mq:75dee175fb45d788",
+    "label": "Rudolf Bonnet",
+    "p": 0.002035571068060489,
+    "gold": false
+   },
+   {
+    "id": "mq:eec19641484d901d",
+    "label": "Education",
+    "p": 0.0019890951535444373,
+    "gold": false
+   },
+   {
+    "id": "mq:f89a9eb5e21d6d62",
+    "label": "Iliad",
+    "p": 0.001965898587719337,
+    "gold": false
+   },
+   {
+    "id": "mq:6944432a02f10009",
+    "label": "Norman Corwin Presents",
+    "p": 0.001918179610626152,
+    "gold": false
+   },
+   {
+    "id": "mq:509f510c185b261c",
+    "label": "Jacob Berger",
+    "p": 0.0017592345930062677,
+    "gold": false
+   },
+   {
+    "id": "mq:b94d31e656d4573e",
+    "label": "Sedgwick Monument (West Point)",
+    "p": 0.0017345746476705934,
+    "gold": false
+   },
+   {
+    "id": "mq:89349f0b28db6f63",
+    "label": "Jeffrey Pfeffer",
+    "p": 0.0016670437178682683,
+    "gold": false
+   },
+   {
+    "id": "mq:8dc4ac9a054bade4",
+    "label": "Claudia Rankine",
+    "p": 0.0016476381644124744,
+    "gold": false
+   },
+   {
+    "id": "mq:d7e8b5e545d31647",
+    "label": "Yu Lihua",
+    "p": 0.0015882796094487022,
+    "gold": false
+   },
+   {
+    "id": "mq:c925d437b9b9ff78",
+    "label": "Kuo Chun-lin",
+    "p": 0.0013165468788452343,
+    "gold": false
+   },
+   {
+    "id": "mq:0c20cde388b7481e",
+    "label": "Cheng Ch'ing-wen",
+    "p": 0.0012628909231367448,
+    "gold": false
+   },
+   {
+    "id": "mq:2f5217dd7d5241b3",
+    "label": "Mount Bosworth",
+    "p": 0.001161889547127598,
+    "gold": false
+   },
+   {
+    "id": "mq:4027cf0de54b9780",
+    "label": "Beyonc\u00e9",
+    "p": 0.0011380543639393649,
+    "gold": false
+   },
+   {
+    "id": "mq:8e53390a2e3f68b3",
+    "label": "Matthieu Chedid",
+    "p": 0.0011253776602003376,
+    "gold": false
+   },
+   {
+    "id": "mq:a08ee35e4fb59814",
+    "label": "Emory Creek Provincial Park",
+    "p": 0.0011236496615806381,
+    "gold": false
+   },
+   {
+    "id": "mq:3a14f3156af99079",
+    "label": "Boom Boom (John Lee Hooker song)",
+    "p": 0.0011166178539182827,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:789de82a8f9b111b",
+   "label": "The National Dream (book)",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:26731376a21e69d2",
+   "label": "Through the Looking-Glass",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:a8e43bc1f17d8965",
+   "label": "The Dream Life of Balso Snell",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:91a2d1de77056504",
+   "label": "Belinda Chang",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:982f9fbfb228ed5f",
+   "label": "Emil Haraszti",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:74eef3893806f568",
+   "label": "The Secret World of Og",
+   "wave": 1,
+   "via": "term:berton",
+   "gold": false
+  },
+  {
+   "id": "mq:60f211949a5a0e4f",
+   "label": "1967: The Last Good Year",
+   "wave": 1,
+   "via": "term:berton",
+   "gold": false
+  },
+  {
+   "id": "mq:b754b6dfb1e211b9",
+   "label": "Pierre Berton",
+   "wave": 1,
+   "via": "term:berton",
+   "gold": true
+  },
+  {
+   "id": "mq:f1be73340ac550b5",
+   "label": "Gold Harbour, British Columbia",
+   "wave": 2,
+   "via": "term:british columbia",
+   "gold": false
+  },
+  {
+   "id": "mq:ccc027df0dbc7543",
+   "label": "Employment Standards Act of British Columbia",
+   "wave": 2,
+   "via": "term:british columbia",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:b754b6dfb1e211b9",
+    "label": "Pierre Berton",
+    "gold": true
+   },
+   {
+    "id": "mq:74eef3893806f568",
+    "label": "The Secret World of Og",
+    "gold": false
+   },
+   {
+    "id": "mq:60f211949a5a0e4f",
+    "label": "1967: The Last Good Year",
+    "gold": false
+   },
+   {
+    "id": "mq:2275ade56ed65020",
+    "label": "Philipp Schwartz",
+    "gold": false
+   },
+   {
+    "id": "mq:75dee175fb45d788",
+    "label": "Rudolf Bonnet",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:d7e8b5e545d31647",
+    "label": "Yu Lihua",
+    "gold": false
+   },
+   {
+    "id": "mq:d3ab84d9aa1f99bb",
+    "label": "Hector Bianciotti",
+    "gold": false
+   },
+   {
+    "id": "mq:60f211949a5a0e4f",
+    "label": "1967: The Last Good Year",
+    "gold": false
+   },
+   {
+    "id": "mq:f71bb5858bf84dd4",
+    "label": "Nearer, My God, to Thee",
+    "gold": false
+   },
+   {
+    "id": "mq:b754b6dfb1e211b9",
+    "label": "Pierre Berton",
+    "gold": true
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:c925d437b9b9ff78",
+    "label": "Kuo Chun-lin",
+    "gold": false
+   },
+   {
+    "id": "mq:d7e8b5e545d31647",
+    "label": "Yu Lihua",
+    "gold": false
+   },
+   {
+    "id": "mq:f71bb5858bf84dd4",
+    "label": "Nearer, My God, to Thee",
+    "gold": false
+   },
+   {
+    "id": "mq:60f211949a5a0e4f",
+    "label": "1967: The Last Good Year",
+    "gold": false
+   },
+   {
+    "id": "mq:d3ab84d9aa1f99bb",
+    "label": "Hector Bianciotti",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:932dc95c3a0a0e8d",
+    "label": "Afzal Ahmed Khan",
+    "gold": false
+   },
+   {
+    "id": "mq:7a2dd33da7396add",
+    "label": "Haig Bosmajian",
+    "gold": false
+   },
+   {
+    "id": "mq:19ac4052e7960741",
+    "label": "Hardwood Dreams",
+    "gold": false
+   },
+   {
+    "id": "mq:27342afc42d1652d",
+    "label": "National Pedagogic University (Mexico)",
+    "gold": false
+   },
+   {
+    "id": "mq:f8eb6905ac113b31",
+    "label": "Paranoid Dream of the Zodiac",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 1.0,
+  "Q": 1.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

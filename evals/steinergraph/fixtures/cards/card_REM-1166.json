@@ -1,0 +1,420 @@
+{
+ "qid": "card:REM-1166",
+ "set": "cards",
+ "question": "What was done about this, and why: orgs: let an organisation manage its own users, roles and policies?",
+ "gold": [
+  {
+   "id": "commit/12e0a80a7a",
+   "label": "commit 12e0a80: REM-1166: scoped the org/role/policy layer from percolate rbac",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/012a14ebab",
+   "label": "commit 012a14e: board: file REM-1166 orgs: let an organisation manage its own users, roles and policies",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-1166.md#1",
+   "label": "board/cards/REM-1166.md",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/messages/M-20261024-064011-0978.md#1",
+   "label": "board/messages/M-20261024-064011-0978.md",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/messages/M-20261025-125823-441b.md#1",
+   "label": "board/messages/M-20261025-125823-441b.md",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "scenarios/tour/tour.py#3",
+   "label": "scenarios/tour/tour.py",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 2
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "board/messages/M-20261024-064011-0978.md#1",
+    "label": "board/messages/M-20261024-064011-0978.md",
+    "role": "seed"
+   },
+   {
+    "id": "commit/12e0a80a7a",
+    "label": "commit 12e0a80: REM-1166: scoped the org/role/policy layer from percolate rbac",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "board/messages/M-20261024-064011-0978.md#1",
+    "b": "commit/12e0a80a7a",
+    "via": [
+     {
+      "kind": "term",
+      "key": "role policy",
+      "width": 4
+     },
+     {
+      "kind": "term",
+      "key": "policy layer",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "org role",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "rem 1166",
+      "width": 36
+     },
+     {
+      "kind": "term",
+      "key": "1166",
+      "width": 37
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [],
+  "entry": {
+   "seed": "board/messages/M-20261024-064011-0978.md#1",
+   "gold": "commit/12e0a80a7a",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 1003,
+  "within_2_doors": 32189,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "board/cards/REM-1166.md#2",
+    "label": "board/cards/REM-1166.md \u203a Goal",
+    "p": 0.010221233886977679,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1166.md#7",
+    "label": "board/cards/REM-1166.md \u203a Log",
+    "p": 0.007856103453821187,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261024-064142-2055.md#1",
+    "label": "board/messages/M-20261024-064142-2055.md",
+    "p": 0.007820226178407734,
+    "gold": false
+   },
+   {
+    "id": "commit/9d65542d62",
+    "label": "commit 9d65542: board: note on REM-1166",
+    "p": 0.004888432979813589,
+    "gold": false
+   },
+   {
+    "id": "commit/93548ae605",
+    "label": "commit 93548ae: board: note on REM-1166",
+    "p": 0.00488705625450137,
+    "gold": false
+   },
+   {
+    "id": "commit/1a0e4071be",
+    "label": "commit 1a0e407: board: note on REM-1166",
+    "p": 0.004684374706425059,
+    "gold": false
+   },
+   {
+    "id": "commit/c022267514",
+    "label": "commit c022267: board: note on REM-1166",
+    "p": 0.004661734971232179,
+    "gold": false
+   },
+   {
+    "id": "commit/76179f1ac5",
+    "label": "commit 76179f1: board: note on REM-1166",
+    "p": 0.004550554376782085,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1192.md#1",
+    "label": "board/cards/REM-1192.md",
+    "p": 0.003985640507637392,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261025-120409-f5c2.md#1",
+    "label": "board/messages/M-20261025-120409-f5c2.md",
+    "p": 0.003667942057297168,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1166.md#4",
+    "label": "board/cards/REM-1166.md \u203a Evidence",
+    "p": 0.003374376586986742,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1166.md#8",
+    "label": "board/cards/REM-1166.md \u203a Log",
+    "p": 0.003085385965840116,
+    "gold": false
+   },
+   {
+    "id": "commit/12e0a80a7a",
+    "label": "commit 12e0a80: REM-1166: scoped the org/role/policy layer from percolate rbac",
+    "p": 0.002803595593872729,
+    "gold": true
+   },
+   {
+    "id": "board/cards/REM-1166.md#6",
+    "label": "board/cards/REM-1166.md \u203a Done when",
+    "p": 0.0024885244394417722,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1166.md#5",
+    "label": "board/cards/REM-1166.md \u203a Evidence",
+    "p": 0.0024823356351685484,
+    "gold": false
+   },
+   {
+    "id": "commit/c2d5bb2cc4",
+    "label": "commit c2d5bb2: board: note on REM-1166",
+    "p": 0.0023700912996104818,
+    "gold": false
+   },
+   {
+    "id": "scenarios/tour/tour.py#30",
+    "label": "scenarios/tour/tour.py",
+    "p": 0.0023114459646988166,
+    "gold": false
+   },
+   {
+    "id": "commit/f68fcb26f2",
+    "label": "commit f68fcb2: board: sirsh messages james",
+    "p": 0.002234192946447907,
+    "gold": false
+   },
+   {
+    "id": "commit/39a7bddcde",
+    "label": "commit 39a7bdd: board: tick REM-1166 box 2",
+    "p": 0.0021456997910182644,
+    "gold": false
+   },
+   {
+    "id": "commit/07b84f9783",
+    "label": "commit 07b84f9: board: bill acknowledges 1 message(s)",
+    "p": 0.001889206638527641,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/012a14ebab",
+   "label": "commit 012a14e: board: file REM-1166 orgs: let an organisation manage its own users, roles and policies",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-1166.md#1",
+   "label": "board/cards/REM-1166.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/messages/M-20261024-064011-0978.md#1",
+   "label": "board/messages/M-20261024-064011-0978.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/messages/M-20261025-125823-441b.md#1",
+   "label": "board/messages/M-20261025-125823-441b.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "scenarios/tour/tour.py#3",
+   "label": "scenarios/tour/tour.py",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/postmortems/2026-09-04-user-rbac-review.md#11",
+   "label": "meta/postmortems/2026-09-04-user-rbac-review.md \u203a What is still open",
+   "wave": 1,
+   "via": "term:add_org_member",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-1082.md#7",
+   "label": "board/cards/REM-1082.md \u203a Log",
+   "wave": 1,
+   "via": "term:add_org_member",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-1192.md#5",
+   "label": "board/cards/REM-1192.md \u203a Log",
+   "wave": 1,
+   "via": "term:add_org_member",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-1192.md#2",
+   "label": "board/cards/REM-1192.md \u203a Goal",
+   "wave": 1,
+   "via": "term:add_org_member",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-1192.md#4",
+   "label": "board/cards/REM-1192.md \u203a Done when",
+   "wave": 1,
+   "via": "term:add_org_member",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "board/cards/REM-1166.md#2",
+    "label": "board/cards/REM-1166.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1166.md#7",
+    "label": "board/cards/REM-1166.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261024-064142-2055.md#1",
+    "label": "board/messages/M-20261024-064142-2055.md",
+    "gold": false
+   },
+   {
+    "id": "commit/9d65542d62",
+    "label": "commit 9d65542: board: note on REM-1166",
+    "gold": false
+   },
+   {
+    "id": "commit/93548ae605",
+    "label": "commit 93548ae: board: note on REM-1166",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "board/cards/REM-1166.md#2",
+    "label": "board/cards/REM-1166.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261024-064142-2055.md#1",
+    "label": "board/messages/M-20261024-064142-2055.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1166.md#4",
+    "label": "board/cards/REM-1166.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1166.md#7",
+    "label": "board/cards/REM-1166.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1166.md#5",
+    "label": "board/cards/REM-1166.md \u203a Evidence",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/8eddaff53b",
+    "label": "commit 8eddaff: board: REM-1166 in-progress \u2192 done",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1192.md#1",
+    "label": "board/cards/REM-1192.md",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261024-064142-2055.md#1",
+    "label": "board/messages/M-20261024-064142-2055.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1166.md#2",
+    "label": "board/cards/REM-1166.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "commit/12e0a80a7a",
+    "label": "commit 12e0a80: REM-1166: scoped the org/role/policy layer from percolate rbac",
+    "gold": true
+   }
+  ],
+  "S": [
+   {
+    "id": "specs/user-rbac/schema.sql#6",
+    "label": "specs/user-rbac/schema.sql",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1166.md#4",
+    "label": "board/cards/REM-1166.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "specs/user-rbac/schema.sql#73",
+    "label": "specs/user-rbac/schema.sql",
+    "gold": false
+   },
+   {
+    "id": "specs/user-rbac/spec.md#3",
+    "label": "specs/user-rbac/spec.md \u203a 2. What's pushed to Postgres (and how)",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261024-064142-2055.md#1",
+    "label": "board/messages/M-20261024-064142-2055.md",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 1.0,
+  "S": 0.0
+ }
+}

@@ -1,0 +1,446 @@
+{
+ "qid": "card:REM-146",
+ "set": "cards",
+ "question": "What was done about this, and why: agentic: a turn that takes minutes returns an answer, not a 502?",
+ "gold": [
+  {
+   "id": "commit/1438d3f6db",
+   "label": "commit 1438d3f: The release table did not know the published image denies an upload (#149)",
+   "seed": false
+  },
+  {
+   "id": "commit/48b942f9cf",
+   "label": "commit 48b942f: The harness had the answer in its hand and threw it away (#147)",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "board/cards/REM-146.md#1",
+   "label": "board/cards/REM-146.md",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "specs/agentic/schema.sql#28",
+   "label": "specs/agentic/schema.sql",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "specs/agentic/reference/runtime.py#7",
+   "label": "specs/agentic/reference/runtime.py",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "specs/agentic/reference/runtime.py#10",
+   "label": "specs/agentic/reference/runtime.py",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "board/cards/REM-141.md#1",
+   "label": "board/cards/REM-141.md",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 2
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "board/cards/REM-146.md#1",
+    "label": "board/cards/REM-146.md",
+    "role": "seed"
+   },
+   {
+    "id": "commit/1438d3f6db",
+    "label": "commit 1438d3f: The release table did not know the published image denies an upload (#149)",
+    "role": "gold"
+   },
+   {
+    "id": "commit/48b942f9cf",
+    "label": "commit 48b942f: The harness had the answer in its hand and threw it away (#147)",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "board/cards/REM-146.md#1",
+    "b": "commit/1438d3f6db",
+    "via": [
+     {
+      "kind": "term",
+      "key": "rem 146",
+      "width": 9
+     }
+    ]
+   },
+   {
+    "a": "commit/1438d3f6db",
+    "b": "commit/48b942f9cf",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "rem 146",
+      "width": 9
+     },
+     {
+      "kind": "term",
+      "key": "session_01s1pabrhajkqr7kqzbmgfac",
+      "width": 15
+     },
+     {
+      "kind": "term",
+      "key": "code session_01s1pabrhajkqr7kqzbmgfac",
+      "width": 15
+     },
+     {
+      "kind": "term",
+      "key": "third party",
+      "width": 60
+     },
+     {
+      "kind": "term",
+      "key": "0000",
+      "width": 78
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "board/cards/REM-146.md#1",
+   "gold": "commit/1438d3f6db",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 1112,
+  "within_2_doors": 31813,
+  "gold_within_1": 2,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "board/cards/REM-146.md#2",
+    "label": "board/cards/REM-146.md \u203a Goal",
+    "p": 0.007548482609986824,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-141.md#2",
+    "label": "board/cards/REM-141.md \u203a Goal",
+    "p": 0.004638852376142161,
+    "gold": false
+   },
+   {
+    "id": "specs/agentic/reference/runtime.py#9",
+    "label": "specs/agentic/reference/runtime.py",
+    "p": 0.0036240208893855066,
+    "gold": false
+   },
+   {
+    "id": "specs/agentic/brief.md#75",
+    "label": "specs/agentic/brief.md \u203a 11.3 Structural limits belong in the database",
+    "p": 0.0033095341231665558,
+    "gold": false
+   },
+   {
+    "id": "specs/agentic/schema.sql#29",
+    "label": "specs/agentic/schema.sql",
+    "p": 0.0027001813093575065,
+    "gold": false
+   },
+   {
+    "id": "specs/agentic/reference/runtime.py#6",
+    "label": "specs/agentic/reference/runtime.py",
+    "p": 0.0025769040583601952,
+    "gold": false
+   },
+   {
+    "id": "specs/agentic/schema.sql#27",
+    "label": "specs/agentic/schema.sql",
+    "p": 0.002410134240089296,
+    "gold": false
+   },
+   {
+    "id": "scenarios/tour/tour.py#21",
+    "label": "scenarios/tour/tour.py",
+    "p": 0.002261577350819174,
+    "gold": false
+   },
+   {
+    "id": "commit/3493dda085",
+    "label": "commit 3493dda: Two gates read the wrong thing: a sibling checkout, and a seeded agent CI cannot use (#135)",
+    "p": 0.0022598927203057824,
+    "gold": false
+   },
+   {
+    "id": "scenarios/tour/bakeoff.py#3",
+    "label": "scenarios/tour/bakeoff.py",
+    "p": 0.0020935681804394703,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-146.md#3",
+    "label": "board/cards/REM-146.md \u203a Evidence",
+    "p": 0.0018971107725529663,
+    "gold": false
+   },
+   {
+    "id": "specs/agentic/schema.sql#33",
+    "label": "specs/agentic/schema.sql",
+    "p": 0.0015607387375888534,
+    "gold": false
+   },
+   {
+    "id": "specs/agentic/schema.sql#18",
+    "label": "specs/agentic/schema.sql",
+    "p": 0.0014887674019523984,
+    "gold": false
+   },
+   {
+    "id": "specs/agentic/reference/runtime.py#5",
+    "label": "specs/agentic/reference/runtime.py",
+    "p": 0.0014654349410215379,
+    "gold": false
+   },
+   {
+    "id": "commit/48b942f9cf",
+    "label": "commit 48b942f: The harness had the answer in its hand and threw it away (#147)",
+    "p": 0.0014564407372298302,
+    "gold": true
+   },
+   {
+    "id": "scenarios/tour/tour.py#19",
+    "label": "scenarios/tour/tour.py",
+    "p": 0.0012446926261930518,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/README.md#50",
+    "label": "meta/postmortems/README.md \u203a A harness whose own breakage is shaped like its subject's",
+    "p": 0.0012254244987834329,
+    "gold": false
+   },
+   {
+    "id": "specs/agentic/schema.sql#30",
+    "label": "specs/agentic/schema.sql",
+    "p": 0.0012090677456500338,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-12-the-harness-failed-as-its-subject.md#7",
+    "label": "meta/postmortems/2026-09-12-the-harness-failed-as-its-subject.md \u203a 5. What is still open",
+    "p": 0.0011823339333322817,
+    "gold": false
+   },
+   {
+    "id": "specs/agentic/schema.sql#32",
+    "label": "specs/agentic/schema.sql",
+    "p": 0.0011648239769303135,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "board/cards/REM-146.md#1",
+   "label": "board/cards/REM-146.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/agentic/schema.sql#28",
+   "label": "specs/agentic/schema.sql",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/agentic/reference/runtime.py#7",
+   "label": "specs/agentic/reference/runtime.py",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/agentic/reference/runtime.py#10",
+   "label": "specs/agentic/reference/runtime.py",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-141.md#1",
+   "label": "board/cards/REM-141.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "scenarios/tour/tour.py#19",
+   "label": "scenarios/tour/tour.py",
+   "wave": 1,
+   "via": "term:rem 146",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-146.md#3",
+   "label": "board/cards/REM-146.md \u203a Evidence",
+   "wave": 1,
+   "via": "term:rem 146",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-146.md#2",
+   "label": "board/cards/REM-146.md \u203a Goal",
+   "wave": 1,
+   "via": "term:rem 146",
+   "gold": false
+  },
+  {
+   "id": "meta/postmortems/2026-09-12-the-harness-failed-as-its-subject.md#7",
+   "label": "meta/postmortems/2026-09-12-the-harness-failed-as-its-subject.md \u203a 5. What is still open",
+   "wave": 1,
+   "via": "term:rem 146",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-146.md#4",
+   "label": "board/cards/REM-146.md \u203a Log",
+   "wave": 1,
+   "via": "term:rem 146",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "board/cards/REM-146.md#2",
+    "label": "board/cards/REM-146.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-141.md#2",
+    "label": "board/cards/REM-141.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "specs/agentic/reference/runtime.py#9",
+    "label": "specs/agentic/reference/runtime.py",
+    "gold": false
+   },
+   {
+    "id": "specs/agentic/brief.md#75",
+    "label": "specs/agentic/brief.md \u203a 11.3 Structural limits belong in the database",
+    "gold": false
+   },
+   {
+    "id": "specs/agentic/schema.sql#29",
+    "label": "specs/agentic/schema.sql",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "board/cards/REM-141.md#2",
+    "label": "board/cards/REM-141.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "specs/agentic/reference/runtime.py#9",
+    "label": "specs/agentic/reference/runtime.py",
+    "gold": false
+   },
+   {
+    "id": "specs/agentic/brief.md#75",
+    "label": "specs/agentic/brief.md \u203a 11.3 Structural limits belong in the database",
+    "gold": false
+   },
+   {
+    "id": "specs/agentic/schema.sql#27",
+    "label": "specs/agentic/schema.sql",
+    "gold": false
+   },
+   {
+    "id": "specs/agentic/schema.sql#18",
+    "label": "specs/agentic/schema.sql",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "board/cards/REM-970.md#1",
+    "label": "board/cards/REM-970.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-136.md#1",
+    "label": "board/cards/REM-136.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-250.md#1",
+    "label": "board/cards/REM-250.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-971.md#1",
+    "label": "board/cards/REM-971.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-10.md#1",
+    "label": "board/cards/REM-10.md",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "board/cards/REM-144.md#5",
+    "label": "board/cards/REM-144.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1155.md#4",
+    "label": "board/cards/REM-1155.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "specs/agentic/brief.md#17",
+    "label": "specs/agentic/brief.md \u203a 5.0a What one process costs a database, which is not one connection",
+    "gold": false
+   },
+   {
+    "id": "commit/442e5cfc62",
+    "label": "commit 442e5cf: board: file REM-970 agentic: an agent's declared output is enforced at the turn",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-983.md#4",
+    "label": "board/cards/REM-983.md \u203a Done when",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

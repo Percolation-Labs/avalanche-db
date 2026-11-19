@@ -1,0 +1,405 @@
+{
+ "qid": "pr:800",
+ "set": "prs",
+ "question": "What work went into this, and why: Operators (a) and (b) on HotpotQA: no room for a walk; Jev not run ($0)?",
+ "gold": [
+  {
+   "id": "commit/3eb63a6a2b",
+   "label": "commit 3eb63a6: Operators (a) and (b) on HotpotQA: registration before scoring; --split-by-conv reads parity",
+   "seed": false
+  },
+  {
+   "id": "commit/8f92f841ee",
+   "label": "commit 8f92f84: Operators on HotpotQA: no room for a walk (oracle +.030 over search at 100 reads, CI from 0); Jev not ru",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/8f92f841ee",
+   "label": "commit 8f92f84: Operators on HotpotQA: no room for a walk (oracle +.030 over search at 100 reads, CI from 0); Jev not ru",
+   "rank": 1,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "commit/6dae6845e5",
+   "label": "commit 6dae684: Merge pull request #800 from Percolation-Labs/james/operators-hotpot",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "meta/lab/results/operators-hotpot/RESULT.md#1",
+   "label": "meta/lab/results/operators-hotpot/RESULT.md \u203a Operators (a) and (b) on HotpotQA: a second dataset and a different graph",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "meta/lab/results/gain-vs-room/RESULT.md#2",
+   "label": "meta/lab/results/gain-vs-room/RESULT.md \u203a Registration (committed before any scoring)",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "board/messages/M-20261116-235744-616a.md#1",
+   "label": "board/messages/M-20261116-235744-616a.md",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 2
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/3eb63a6a2b",
+    "label": "commit 3eb63a6: Operators (a) and (b) on HotpotQA: registration before scoring; --split-by-conv reads parity",
+    "role": "gold"
+   },
+   {
+    "id": "commit/8f92f841ee",
+    "label": "commit 8f92f84: Operators on HotpotQA: no room for a walk (oracle +.030 over search at 100 reads, CI from 0); Jev not ru",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/3eb63a6a2b",
+    "b": "commit/8f92f841ee",
+    "via": [
+     {
+      "kind": "beside"
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "commit/8f92f841ee",
+   "gold": "commit/8f92f841ee",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 993,
+  "within_2_doors": 29911,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "commit/3ab3faf82d",
+    "label": "commit 3ab3faf: Merge remote-tracking branch 'origin/main' into james/operators-hotpot",
+    "p": 0.009304740846453871,
+    "gold": false
+   },
+   {
+    "id": "commit/3eb63a6a2b",
+    "label": "commit 3eb63a6: Operators (a) and (b) on HotpotQA: registration before scoring; --split-by-conv reads parity",
+    "p": 0.007220305896399354,
+    "gold": true
+   },
+   {
+    "id": "meta/lab/results/operators-hotpot/RESULT.md#7",
+    "label": "meta/lab/results/operators-hotpot/RESULT.md \u203a Result",
+    "p": 0.004754414858637416,
+    "gold": false
+   },
+   {
+    "id": "commit/a9f40d4d8e",
+    "label": "commit a9f40d4: board: james messages bill",
+    "p": 0.004552315605863314,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261117-002346-a0a6.md#1",
+    "label": "board/messages/M-20261117-002346-a0a6.md",
+    "p": 0.004313549180631815,
+    "gold": false
+   },
+   {
+    "id": "commit/c28bbaafe5",
+    "label": "commit c28bbaa: board: james acknowledges 1 message(s)",
+    "p": 0.0042954437210523866,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/operators-hotpot/RESULT.md#2",
+    "label": "meta/lab/results/operators-hotpot/RESULT.md \u203a Why",
+    "p": 0.004015037033903616,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/operators-hotpot/RESULT.md#4",
+    "label": "meta/lab/results/operators-hotpot/RESULT.md \u203a Split and slice (fixed before scoring)",
+    "p": 0.003133783453486518,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/operators-beam/RESULT.md#4",
+    "label": "meta/lab/results/operators-beam/RESULT.md \u203a Split and slice (fixed before scoring)",
+    "p": 0.0028287148057990815,
+    "gold": false
+   },
+   {
+    "id": "commit/2496a2ef69",
+    "label": "commit 2496a2e: Merge pull request #803 from Percolation-Labs/james/operators-beam",
+    "p": 0.0024647239515635955,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/operators-hotpot/RESULT.md#6",
+    "label": "meta/lab/results/operators-hotpot/RESULT.md \u203a Predictions",
+    "p": 0.002457449641254028,
+    "gold": false
+   },
+   {
+    "id": "commit/b7aedd85cf",
+    "label": "commit b7aedd8: Merge remote-tracking branch 'origin/main' into james/operators-beam",
+    "p": 0.002429679674455143,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/operators-beam/RESULT.md#6",
+    "label": "meta/lab/results/operators-beam/RESULT.md \u203a Predictions",
+    "p": 0.002191564070070378,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/operators-hotpot/RESULT.md#9",
+    "label": "meta/lab/results/operators-hotpot/RESULT.md \u203a Postmortem",
+    "p": 0.0021046729257142172,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261029-133417-7508.md#1",
+    "label": "board/messages/M-20261029-133417-7508.md",
+    "p": 0.0020370210552764514,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/operators-hotpot/RESULT.md#8",
+    "label": "meta/lab/results/operators-hotpot/RESULT.md \u203a Result",
+    "p": 0.0020245100942913137,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261029-133421-e17a.md#1",
+    "label": "board/messages/M-20261029-133421-e17a.md",
+    "p": 0.001960319779836532,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261029-133425-0953.md#1",
+    "label": "board/messages/M-20261029-133425-0953.md",
+    "p": 0.001960319779836532,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/operators-hotpot/RESULT.md#10",
+    "label": "meta/lab/results/operators-hotpot/RESULT.md \u203a Postmortem",
+    "p": 0.0018394670273276506,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/operators-beam/RESULT.md#8",
+    "label": "meta/lab/results/operators-beam/RESULT.md \u203a Result",
+    "p": 0.0017412063840265223,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/8f92f841ee",
+   "label": "commit 8f92f84: Operators on HotpotQA: no room for a walk (oracle +.030 over search at 100 reads, CI from 0); Jev not ru",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "commit/6dae6845e5",
+   "label": "commit 6dae684: Merge pull request #800 from Percolation-Labs/james/operators-hotpot",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/operators-hotpot/RESULT.md#1",
+   "label": "meta/lab/results/operators-hotpot/RESULT.md \u203a Operators (a) and (b) on HotpotQA: a second dataset and a different graph",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/gain-vs-room/RESULT.md#2",
+   "label": "meta/lab/results/gain-vs-room/RESULT.md \u203a Registration (committed before any scoring)",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/messages/M-20261116-235744-616a.md#1",
+   "label": "board/messages/M-20261116-235744-616a.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/operators-hotpot/RESULT.md#7",
+   "label": "meta/lab/results/operators-hotpot/RESULT.md \u203a Result",
+   "wave": 1,
+   "via": "term:hotpotqa leaves",
+   "gold": false
+  },
+  {
+   "id": "applications/percolate-self-model/dreaming/design.md#3",
+   "label": "applications/percolate-self-model/dreaming/design.md \u203a 2. H and G",
+   "wave": 2,
+   "via": "term:different graph",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/jev-search-targets-200/RESULT.md#9",
+   "label": "meta/lab/results/jev-search-targets-200/RESULT.md \u203a Postmortem",
+   "wave": 2,
+   "via": "term:different graph",
+   "gold": false
+  },
+  {
+   "id": "board/messages/M-20261116-233729-71b5.md#1",
+   "label": "board/messages/M-20261116-233729-71b5.md",
+   "wave": 2,
+   "via": "term:different graph",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/operators-hotpot/RESULT.md#2",
+   "label": "meta/lab/results/operators-hotpot/RESULT.md \u203a Why",
+   "wave": 2,
+   "via": "term:different graph",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "commit/3ab3faf82d",
+    "label": "commit 3ab3faf: Merge remote-tracking branch 'origin/main' into james/operators-hotpot",
+    "gold": false
+   },
+   {
+    "id": "commit/3eb63a6a2b",
+    "label": "commit 3eb63a6: Operators (a) and (b) on HotpotQA: registration before scoring; --split-by-conv reads parity",
+    "gold": true
+   },
+   {
+    "id": "meta/lab/results/operators-hotpot/RESULT.md#7",
+    "label": "meta/lab/results/operators-hotpot/RESULT.md \u203a Result",
+    "gold": false
+   },
+   {
+    "id": "commit/a9f40d4d8e",
+    "label": "commit a9f40d4: board: james messages bill",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261117-002346-a0a6.md#1",
+    "label": "board/messages/M-20261117-002346-a0a6.md",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "board/messages/M-20261117-002346-a0a6.md#1",
+    "label": "board/messages/M-20261117-002346-a0a6.md",
+    "gold": false
+   },
+   {
+    "id": "commit/3eb63a6a2b",
+    "label": "commit 3eb63a6: Operators (a) and (b) on HotpotQA: registration before scoring; --split-by-conv reads parity",
+    "gold": true
+   },
+   {
+    "id": "meta/lab/results/operators-hotpot/RESULT.md#7",
+    "label": "meta/lab/results/operators-hotpot/RESULT.md \u203a Result",
+    "gold": false
+   },
+   {
+    "id": "commit/3ab3faf82d",
+    "label": "commit 3ab3faf: Merge remote-tracking branch 'origin/main' into james/operators-hotpot",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/operators-beam/RESULT.md#4",
+    "label": "meta/lab/results/operators-beam/RESULT.md \u203a Split and slice (fixed before scoring)",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/3eb63a6a2b",
+    "label": "commit 3eb63a6: Operators (a) and (b) on HotpotQA: registration before scoring; --split-by-conv reads parity",
+    "gold": true
+   },
+   {
+    "id": "meta/lab/results/operators-hotpot/RESULT.md#2",
+    "label": "meta/lab/results/operators-hotpot/RESULT.md \u203a Why",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/gain-vs-room/RESULT.md#1",
+    "label": "meta/lab/results/gain-vs-room/RESULT.md \u203a Gain against room",
+    "gold": false
+   },
+   {
+    "id": "commit/3ab3faf82d",
+    "label": "commit 3ab3faf: Merge remote-tracking branch 'origin/main' into james/operators-hotpot",
+    "gold": false
+   },
+   {
+    "id": "commit/2496a2ef69",
+    "label": "commit 2496a2e: Merge pull request #803 from Percolation-Labs/james/operators-beam",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "meta/lab/results/operators-hotpot/RESULT.md#9",
+    "label": "meta/lab/results/operators-hotpot/RESULT.md \u203a Postmortem",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/gain-vs-room/RESULT.md#5",
+    "label": "meta/lab/results/gain-vs-room/RESULT.md \u203a Result (17 Nov, after scoring; `score.py`, full tables in `score-result.md`)",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261117-002346-a0a6.md#1",
+    "label": "board/messages/M-20261117-002346-a0a6.md",
+    "gold": false
+   },
+   {
+    "id": "commit/b054fa205e",
+    "label": "commit b054fa2: Operators (a)/(b) on BEAM: room for a walk exists (oracle +.043), but no ranker uses it, Jev included ($",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/operators-hotpot/RESULT.md#7",
+    "label": "meta/lab/results/operators-hotpot/RESULT.md \u203a Result",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 1.0,
+  "Q": 1.0,
+  "LQ": 1.0,
+  "S": 0.0
+ }
+}

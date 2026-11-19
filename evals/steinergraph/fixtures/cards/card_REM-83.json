@@ -1,0 +1,627 @@
+{
+ "qid": "card:REM-83",
+ "set": "cards",
+ "question": "What was done about this, and why: packages: a channel a package declares is visible to the code that fills it?",
+ "gold": [
+  {
+   "id": "commit/139b4c725b",
+   "label": "commit 139b4c7: Merge remote-tracking branch 'origin/main' into fix/rem-83-package-channel-visible",
+   "seed": false
+  },
+  {
+   "id": "commit/1acc8f9ce2",
+   "label": "commit 1acc8f9: Three tickets that share one upgrade hop: the parser stamp, the rows a restore loses, and the upload it ",
+   "seed": false
+  },
+  {
+   "id": "commit/31360cd18e",
+   "label": "commit 31360cd: Merge pull request #61 from Percolation-Labs/fix/rem-83-package-channel-visible",
+   "seed": true
+  },
+  {
+   "id": "commit/9f6f5c3a13",
+   "label": "commit 9f6f5c3: Merge remote-tracking branch 'origin/main' into fix/rem-83-package-channel-visible",
+   "seed": true
+  },
+  {
+   "id": "commit/b39fb0b141",
+   "label": "commit b39fb0b: Merge remote-tracking branch 'origin/main' into fix/rem-83-package-channel-visible",
+   "seed": true
+  },
+  {
+   "id": "commit/d2157221da",
+   "label": "commit d215722: Merge remote-tracking branch 'origin/main' into fix/rem-83-package-channel-visible",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "board/cards/REM-83.md#1",
+   "label": "board/cards/REM-83.md",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/31360cd18e",
+   "label": "commit 31360cd: Merge pull request #61 from Percolation-Labs/fix/rem-83-package-channel-visible",
+   "rank": 2,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "commit/9f6f5c3a13",
+   "label": "commit 9f6f5c3: Merge remote-tracking branch 'origin/main' into fix/rem-83-package-channel-visible",
+   "rank": 3,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "commit/b39fb0b141",
+   "label": "commit b39fb0b: Merge remote-tracking branch 'origin/main' into fix/rem-83-package-channel-visible",
+   "rank": 4,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "commit/d2157221da",
+   "label": "commit d215722: Merge remote-tracking branch 'origin/main' into fix/rem-83-package-channel-visible",
+   "rank": 5,
+   "gold": true,
+   "doors_to_gold": 0
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/139b4c725b",
+    "label": "commit 139b4c7: Merge remote-tracking branch 'origin/main' into fix/rem-83-package-channel-visible",
+    "role": "gold"
+   },
+   {
+    "id": "commit/1acc8f9ce2",
+    "label": "commit 1acc8f9: Three tickets that share one upgrade hop: the parser stamp, the rows a restore loses, and the upload it ",
+    "role": "gold"
+   },
+   {
+    "id": "commit/31360cd18e",
+    "label": "commit 31360cd: Merge pull request #61 from Percolation-Labs/fix/rem-83-package-channel-visible",
+    "role": "gold"
+   },
+   {
+    "id": "commit/9f6f5c3a13",
+    "label": "commit 9f6f5c3: Merge remote-tracking branch 'origin/main' into fix/rem-83-package-channel-visible",
+    "role": "gold"
+   },
+   {
+    "id": "commit/b39fb0b141",
+    "label": "commit b39fb0b: Merge remote-tracking branch 'origin/main' into fix/rem-83-package-channel-visible",
+    "role": "gold"
+   },
+   {
+    "id": "commit/d2157221da",
+    "label": "commit d215722: Merge remote-tracking branch 'origin/main' into fix/rem-83-package-channel-visible",
+    "role": "gold"
+   },
+   {
+    "id": "commit/eb3be1bbc2",
+    "label": "commit eb3be1b: A package declared a channel that the code filling it could not see",
+    "role": "connector"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/139b4c725b",
+    "b": "commit/31360cd18e",
+    "via": [
+     {
+      "kind": "term",
+      "key": "package channel",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "channel visible",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "fix rem",
+      "width": 72
+     }
+    ]
+   },
+   {
+    "a": "commit/139b4c725b",
+    "b": "commit/b39fb0b141",
+    "via": [
+     {
+      "kind": "term",
+      "key": "channel visible",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "package channel",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "fix rem",
+      "width": 72
+     },
+     {
+      "kind": "term",
+      "key": "tracking branch",
+      "width": 84
+     },
+     {
+      "kind": "term",
+      "key": "branch origin",
+      "width": 84
+     }
+    ]
+   },
+   {
+    "a": "commit/139b4c725b",
+    "b": "commit/d2157221da",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "channel visible",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "package channel",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "fix rem",
+      "width": 72
+     },
+     {
+      "kind": "term",
+      "key": "tracking branch",
+      "width": 84
+     },
+     {
+      "kind": "term",
+      "key": "branch origin",
+      "width": 84
+     }
+    ]
+   },
+   {
+    "a": "commit/1acc8f9ce2",
+    "b": "commit/eb3be1bbc2",
+    "via": [
+     {
+      "kind": "term",
+      "key": "shared_org private",
+      "width": 7
+     },
+     {
+      "kind": "term",
+      "key": "shared_org",
+      "width": 7
+     },
+     {
+      "kind": "term",
+      "key": "database holding",
+      "width": 14
+     },
+     {
+      "kind": "term",
+      "key": "code session_01pakd8pby78bs7qljjk4b4j",
+      "width": 19
+     },
+     {
+      "kind": "term",
+      "key": "session_01pakd8pby78bs7qljjk4b4j",
+      "width": 19
+     }
+    ]
+   },
+   {
+    "a": "commit/31360cd18e",
+    "b": "commit/eb3be1bbc2",
+    "via": [
+     {
+      "kind": "term",
+      "key": "code filling",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "package declared",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "filling",
+      "width": 31
+     }
+    ]
+   },
+   {
+    "a": "commit/9f6f5c3a13",
+    "b": "commit/d2157221da",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "channel visible",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "package channel",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "fix rem",
+      "width": 72
+     },
+     {
+      "kind": "term",
+      "key": "tracking branch",
+      "width": 84
+     },
+     {
+      "kind": "term",
+      "key": "branch origin",
+      "width": 84
+     }
+    ]
+   }
+  ],
+  "cost": 6,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   2,
+   1,
+   1,
+   1,
+   1,
+   2,
+   2,
+   2,
+   2,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  "entry": {
+   "seed": "commit/31360cd18e",
+   "gold": "commit/31360cd18e",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 526,
+  "within_2_doors": 29097,
+  "gold_within_1": 2,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "commit/139b4c725b",
+    "label": "commit 139b4c7: Merge remote-tracking branch 'origin/main' into fix/rem-83-package-channel-visible",
+    "p": 0.012570198559632876,
+    "gold": true
+   },
+   {
+    "id": "commit/eb3be1bbc2",
+    "label": "commit eb3be1b: A package declared a channel that the code filling it could not see",
+    "p": 0.006169524397069104,
+    "gold": false
+   },
+   {
+    "id": "commit/41474e0bdb",
+    "label": "commit 41474e0: A load from zero registers every relation it writes, and CI runs one",
+    "p": 0.0032492882026112176,
+    "gold": false
+   },
+   {
+    "id": "commit/9954a07822",
+    "label": "commit 9954a07: Regenerate the extension SQL against main",
+    "p": 0.002802834029600975,
+    "gold": false
+   },
+   {
+    "id": "commit/281f00eb3b",
+    "label": "commit 281f00e: Merge pull request #68 from Percolation-Labs/fix/harbour-example-null-org",
+    "p": 0.002713702465016964,
+    "gold": false
+   },
+   {
+    "id": "commit/1b0e2a434d",
+    "label": "commit 1b0e2a4: Merge remote-tracking branch 'origin/main' into fix/rem-68-vocabulary-reaches-upgrades",
+    "p": 0.0023229987178629177,
+    "gold": false
+   },
+   {
+    "id": "commit/f533c0726b",
+    "label": "commit f533c07: Merge remote-tracking branch 'origin/main' into fix/rem-68-vocabulary-reaches-upgrades",
+    "p": 0.002319791325286702,
+    "gold": false
+   },
+   {
+    "id": "commit/24c9ec2a69",
+    "label": "commit 24c9ec2: Merge remote-tracking branch 'origin/main' into fix/harbour-example-null-org",
+    "p": 0.0022999791083155906,
+    "gold": false
+   },
+   {
+    "id": "commit/768814bc0f",
+    "label": "commit 768814b: Merge pull request #87 from Percolation-Labs/fix/pre-push-stale-base",
+    "p": 0.0022586621020400867,
+    "gold": false
+   },
+   {
+    "id": "commit/a1e13f4c83",
+    "label": "commit a1e13f4: Eleven more fixtures wrote the row nothing can read",
+    "p": 0.002241473306923379,
+    "gold": false
+   },
+   {
+    "id": "commit/357e05c46f",
+    "label": "commit 357e05c: Merge remote-tracking branch 'origin/main' into fix/rem-81-plan-status-reachable",
+    "p": 0.002168944310409751,
+    "gold": false
+   },
+   {
+    "id": "commit/3e0dbe007a",
+    "label": "commit 3e0dbe0: Merge remote-tracking branch 'origin/main' into fix/rem-68-vocabulary-reaches-upgrades",
+    "p": 0.0021560002929950648,
+    "gold": false
+   },
+   {
+    "id": "commit/0214f32d10",
+    "label": "commit 0214f32: Merge remote-tracking branch 'origin/main' into fix/rem-81-plan-status-reachable",
+    "p": 0.002117103906795664,
+    "gold": false
+   },
+   {
+    "id": "commit/239705ffe3",
+    "label": "commit 239705f: Merge remote-tracking branch 'origin/main' into fix/rem-81-plan-status-reachable",
+    "p": 0.0021170645082882757,
+    "gold": false
+   },
+   {
+    "id": "commit/394d538975",
+    "label": "commit 394d538: Merge remote-tracking branch 'origin/main' into fix/harbour-example-null-org",
+    "p": 0.0020856297611181202,
+    "gold": false
+   },
+   {
+    "id": "commit/ddef8bb7ee",
+    "label": "commit ddef8bb: Merge remote-tracking branch 'origin/main' into fix/rem-98-backup-carries-channels",
+    "p": 0.002085429307198964,
+    "gold": false
+   },
+   {
+    "id": "commit/b68caca26c",
+    "label": "commit b68caca: Merge remote-tracking branch 'origin/main' into fix/harbour-example-null-org",
+    "p": 0.0020795926802402217,
+    "gold": false
+   },
+   {
+    "id": "commit/8a1a912442",
+    "label": "commit 8a1a912: Merge remote-tracking branch 'origin/main' into fix/rem-68-vocabulary-reaches-upgrades",
+    "p": 0.002072361161053542,
+    "gold": false
+   },
+   {
+    "id": "commit/a9f5d2b25c",
+    "label": "commit a9f5d2b: Merge remote-tracking branch 'origin/main' into fix/rem-58-one-derived-id",
+    "p": 0.0020590048891891964,
+    "gold": false
+   },
+   {
+    "id": "commit/f9b35ec338",
+    "label": "commit f9b35ec: Merge remote-tracking branch 'origin/main' into fix/rem-81-plan-status-reachable",
+    "p": 0.0020507318176668306,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "board/cards/REM-83.md#1",
+   "label": "board/cards/REM-83.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/31360cd18e",
+   "label": "commit 31360cd: Merge pull request #61 from Percolation-Labs/fix/rem-83-package-channel-visible",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "commit/9f6f5c3a13",
+   "label": "commit 9f6f5c3: Merge remote-tracking branch 'origin/main' into fix/rem-83-package-channel-visible",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "commit/b39fb0b141",
+   "label": "commit b39fb0b: Merge remote-tracking branch 'origin/main' into fix/rem-83-package-channel-visible",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "commit/d2157221da",
+   "label": "commit d215722: Merge remote-tracking branch 'origin/main' into fix/rem-83-package-channel-visible",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "specs/world-model-ingestion/integration.sql#5",
+   "label": "specs/world-model-ingestion/integration.sql",
+   "wave": 1,
+   "via": "term:package declared",
+   "gold": false
+  },
+  {
+   "id": "commit/eb3be1bbc2",
+   "label": "commit eb3be1b: A package declared a channel that the code filling it could not see",
+   "wave": 1,
+   "via": "term:package declared",
+   "gold": false
+  },
+  {
+   "id": "commit/41474e0bdb",
+   "label": "commit 41474e0: A load from zero registers every relation it writes, and CI runs one",
+   "wave": 1,
+   "via": "term:package declared",
+   "gold": false
+  },
+  {
+   "id": "specs/packages/schema.sql#7",
+   "label": "specs/packages/schema.sql",
+   "wave": 1,
+   "via": "term:package declared",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-100.md#1",
+   "label": "board/cards/REM-100.md",
+   "wave": 2,
+   "via": "term:rem 83",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "commit/139b4c725b",
+    "label": "commit 139b4c7: Merge remote-tracking branch 'origin/main' into fix/rem-83-package-channel-visible",
+    "gold": true
+   },
+   {
+    "id": "commit/eb3be1bbc2",
+    "label": "commit eb3be1b: A package declared a channel that the code filling it could not see",
+    "gold": false
+   },
+   {
+    "id": "commit/41474e0bdb",
+    "label": "commit 41474e0: A load from zero registers every relation it writes, and CI runs one",
+    "gold": false
+   },
+   {
+    "id": "commit/9954a07822",
+    "label": "commit 9954a07: Regenerate the extension SQL against main",
+    "gold": false
+   },
+   {
+    "id": "commit/281f00eb3b",
+    "label": "commit 281f00e: Merge pull request #68 from Percolation-Labs/fix/harbour-example-null-org",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "commit/139b4c725b",
+    "label": "commit 139b4c7: Merge remote-tracking branch 'origin/main' into fix/rem-83-package-channel-visible",
+    "gold": true
+   },
+   {
+    "id": "commit/eb3be1bbc2",
+    "label": "commit eb3be1b: A package declared a channel that the code filling it could not see",
+    "gold": false
+   },
+   {
+    "id": "commit/41474e0bdb",
+    "label": "commit 41474e0: A load from zero registers every relation it writes, and CI runs one",
+    "gold": false
+   },
+   {
+    "id": "commit/a1e13f4c83",
+    "label": "commit a1e13f4: Eleven more fixtures wrote the row nothing can read",
+    "gold": false
+   },
+   {
+    "id": "specs/world-model-ingestion/integration.sql#5",
+    "label": "specs/world-model-ingestion/integration.sql",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/139b4c725b",
+    "label": "commit 139b4c7: Merge remote-tracking branch 'origin/main' into fix/rem-83-package-channel-visible",
+    "gold": true
+   },
+   {
+    "id": "commit/726c366c1a",
+    "label": "commit 726c366: Merge pull request #30 from Percolation-Labs/fix/rem-47-package-tenancy",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-83.md#2",
+    "label": "board/cards/REM-83.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "specs/packages/schema.sql#12",
+    "label": "specs/packages/schema.sql",
+    "gold": false
+   },
+   {
+    "id": "specs/packages/rows-not-schema.md#19",
+    "label": "specs/packages/rows-not-schema.md \u203a 7. Order",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "commit/139b4c725b",
+    "label": "commit 139b4c7: Merge remote-tracking branch 'origin/main' into fix/rem-83-package-channel-visible",
+    "gold": true
+   },
+   {
+    "id": "board/cards/REM-548.md#4",
+    "label": "board/cards/REM-548.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "specs/packages/schema.sql#5",
+    "label": "specs/packages/schema.sql",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1310.md#4",
+    "label": "board/cards/REM-1310.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-263.md#4",
+    "label": "board/cards/REM-263.md \u203a Done when",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.5,
+  "Q": 0.5,
+  "LQ": 0.5,
+  "S": 0.5
+ }
+}

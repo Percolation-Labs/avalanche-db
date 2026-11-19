@@ -1,0 +1,641 @@
+{
+ "qid": "card:REM-58",
+ "set": "cards",
+ "question": "What was done about this, and why: workflow: a run's derived ids and \"the current definition\" each resolve one way?",
+ "gold": [
+  {
+   "id": "commit/3547ae911f",
+   "label": "commit 3547ae9: Merge remote-tracking branch 'origin/main' into fix/rem-58-one-derived-id",
+   "seed": false
+  },
+  {
+   "id": "commit/6a18901477",
+   "label": "commit 6a18901: Merge remote-tracking branch 'origin/main' into fix/rem-58-one-derived-id",
+   "seed": false
+  },
+  {
+   "id": "commit/9bb61a3cbb",
+   "label": "commit 9bb61a3: Merge pull request #70 from Percolation-Labs/fix/rem-58-one-derived-id",
+   "seed": false
+  },
+  {
+   "id": "commit/a9f5d2b25c",
+   "label": "commit a9f5d2b: Merge remote-tracking branch 'origin/main' into fix/rem-58-one-derived-id",
+   "seed": false
+  },
+  {
+   "id": "commit/b568d2ff11",
+   "label": "commit b568d2f: Merge remote-tracking branch 'origin/main' into fix/rem-58-one-derived-id",
+   "seed": false
+  },
+  {
+   "id": "commit/be640251dd",
+   "label": "commit be64025: A workflow definition belonged to nobody, so starting one asked nothing (#107)",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "board/cards/REM-58.md#1",
+   "label": "board/cards/REM-58.md",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "specs/workflow-engine/YAML.md#15",
+   "label": "specs/workflow-engine/YAML.md \u203a Templates",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "board/cards/REM-40.md#1",
+   "label": "board/cards/REM-40.md",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "specs/workflow-engine/spec.md#57",
+   "label": "specs/workflow-engine/spec.md \u203a (b) Which org the run belongs to",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "specs/workflow-engine/README.md#7",
+   "label": "specs/workflow-engine/README.md \u203a Data flow \u2014 two resolvers, deliberately different",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 2
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/3547ae911f",
+    "label": "commit 3547ae9: Merge remote-tracking branch 'origin/main' into fix/rem-58-one-derived-id",
+    "role": "gold"
+   },
+   {
+    "id": "commit/6a18901477",
+    "label": "commit 6a18901: Merge remote-tracking branch 'origin/main' into fix/rem-58-one-derived-id",
+    "role": "gold"
+   },
+   {
+    "id": "commit/8efb89b258",
+    "label": "commit 8efb89b: A session id had two derivations and a retired workflow still ran",
+    "role": "connector"
+   },
+   {
+    "id": "commit/9bb61a3cbb",
+    "label": "commit 9bb61a3: Merge pull request #70 from Percolation-Labs/fix/rem-58-one-derived-id",
+    "role": "gold"
+   },
+   {
+    "id": "commit/a9f5d2b25c",
+    "label": "commit a9f5d2b: Merge remote-tracking branch 'origin/main' into fix/rem-58-one-derived-id",
+    "role": "gold"
+   },
+   {
+    "id": "commit/b568d2ff11",
+    "label": "commit b568d2f: Merge remote-tracking branch 'origin/main' into fix/rem-58-one-derived-id",
+    "role": "gold"
+   },
+   {
+    "id": "commit/be640251dd",
+    "label": "commit be64025: A workflow definition belonged to nobody, so starting one asked nothing (#107)",
+    "role": "gold"
+   },
+   {
+    "id": "specs/workflow-engine/spec.md#57",
+    "label": "specs/workflow-engine/spec.md \u203a (b) Which org the run belongs to",
+    "role": "seed"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/3547ae911f",
+    "b": "commit/6a18901477",
+    "via": [
+     {
+      "kind": "term",
+      "key": "fix rem",
+      "width": 72
+     },
+     {
+      "kind": "term",
+      "key": "tracking branch",
+      "width": 84
+     },
+     {
+      "kind": "term",
+      "key": "branch origin",
+      "width": 84
+     },
+     {
+      "kind": "term",
+      "key": "merge remote",
+      "width": 84
+     },
+     {
+      "kind": "term",
+      "key": "remote tracking",
+      "width": 87
+     }
+    ]
+   },
+   {
+    "a": "commit/3547ae911f",
+    "b": "commit/9bb61a3cbb",
+    "via": [
+     {
+      "kind": "term",
+      "key": "fix rem",
+      "width": 72
+     }
+    ]
+   },
+   {
+    "a": "commit/3547ae911f",
+    "b": "commit/a9f5d2b25c",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "fix rem",
+      "width": 72
+     },
+     {
+      "kind": "term",
+      "key": "tracking branch",
+      "width": 84
+     },
+     {
+      "kind": "term",
+      "key": "branch origin",
+      "width": 84
+     },
+     {
+      "kind": "term",
+      "key": "merge remote",
+      "width": 84
+     },
+     {
+      "kind": "term",
+      "key": "remote tracking",
+      "width": 87
+     }
+    ]
+   },
+   {
+    "a": "commit/6a18901477",
+    "b": "commit/8efb89b258",
+    "via": [
+     {
+      "kind": "beside"
+     }
+    ]
+   },
+   {
+    "a": "commit/8efb89b258",
+    "b": "commit/be640251dd",
+    "via": [
+     {
+      "kind": "term",
+      "key": "version desc",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "current_definition",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "definitions_api",
+      "width": 19
+     },
+     {
+      "kind": "term",
+      "key": "start_child_workflow",
+      "width": 21
+     },
+     {
+      "kind": "term",
+      "key": "schedule_workflow",
+      "width": 23
+     }
+    ]
+   },
+   {
+    "a": "commit/a9f5d2b25c",
+    "b": "commit/b568d2ff11",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "fix rem",
+      "width": 72
+     },
+     {
+      "kind": "term",
+      "key": "tracking branch",
+      "width": 84
+     },
+     {
+      "kind": "term",
+      "key": "branch origin",
+      "width": 84
+     },
+     {
+      "kind": "term",
+      "key": "merge remote",
+      "width": 84
+     },
+     {
+      "kind": "term",
+      "key": "remote tracking",
+      "width": 87
+     }
+    ]
+   },
+   {
+    "a": "commit/be640251dd",
+    "b": "specs/workflow-engine/spec.md#57",
+    "via": [
+     {
+      "kind": "term",
+      "key": "run org",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "five claims",
+      "width": 6
+     },
+     {
+      "kind": "term",
+      "key": "set_run_owner",
+      "width": 12
+     },
+     {
+      "kind": "term",
+      "key": "run belongs",
+      "width": 15
+     },
+     {
+      "kind": "term",
+      "key": "rem 42",
+      "width": 18
+     }
+    ]
+   }
+  ],
+  "cost": 7,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   1,
+   1,
+   1,
+   2,
+   1,
+   1,
+   1,
+   2,
+   1,
+   1,
+   2,
+   1,
+   2,
+   2
+  ],
+  "entry": {
+   "seed": "specs/workflow-engine/spec.md#57",
+   "gold": "commit/be640251dd",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 1663,
+  "within_2_doors": 32695,
+  "gold_within_1": 1,
+  "gold_within_2": 5,
+  "top_U": [
+   {
+    "id": "commit/f79c0b0e33",
+    "label": "commit f79c0b0: Who may start a workflow, decided rather than discovered",
+    "p": 0.006169784024471631,
+    "gold": false
+   },
+   {
+    "id": "commit/5fed31a8f0",
+    "label": "commit 5fed31a: A run of an org's workflow was not that org's run (#114)",
+    "p": 0.004879692004543489,
+    "gold": false
+   },
+   {
+    "id": "specs/workflow-engine/spec.md#54",
+    "label": "specs/workflow-engine/spec.md \u203a (a) Who may start one",
+    "p": 0.0046028928927711,
+    "gold": false
+   },
+   {
+    "id": "specs/workflow-engine/YAML.md#18",
+    "label": "specs/workflow-engine/YAML.md \u203a Every step nests its payload under `result`",
+    "p": 0.003954633148290227,
+    "gold": false
+   },
+   {
+    "id": "commit/8efb89b258",
+    "label": "commit 8efb89b: A session id had two derivations and a retired workflow still ran",
+    "p": 0.0036385646708020376,
+    "gold": false
+   },
+   {
+    "id": "commit/272a9f3b55",
+    "label": "commit 272a9f3: YAML workflows composing REST + P8QL -- so the worker needs no user code at all",
+    "p": 0.0036199889915892675,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-11-fixed-at-the-copy-that-failed.md#2",
+    "label": "meta/postmortems/2026-09-11-fixed-at-the-copy-that-failed.md \u203a 1. The pattern",
+    "p": 0.0033591209273500107,
+    "gold": false
+   },
+   {
+    "id": "specs/world-model-ingestion/reference/worker.py#4",
+    "label": "specs/world-model-ingestion/reference/worker.py",
+    "p": 0.0033347363213122425,
+    "gold": false
+   },
+   {
+    "id": "commit/be640251dd",
+    "label": "commit be64025: A workflow definition belonged to nobody, so starting one asked nothing (#107)",
+    "p": 0.0031956368911833176,
+    "gold": true
+   },
+   {
+    "id": "specs/world-model-ingestion/sources.md#52",
+    "label": "specs/world-model-ingestion/sources.md \u203a 15.3 The resolver interface",
+    "p": 0.002574431551291176,
+    "gold": false
+   },
+   {
+    "id": "specs/workflow-engine/integration-rbac.sql#19",
+    "label": "specs/workflow-engine/integration-rbac.sql",
+    "p": 0.002119113025338236,
+    "gold": false
+   },
+   {
+    "id": "specs/world-model-ingestion/lake.md#23",
+    "label": "specs/world-model-ingestion/lake.md \u203a 8. Not built, and open",
+    "p": 0.001780022068584161,
+    "gold": false
+   },
+   {
+    "id": "specs/workflow-engine/YAML.md#16",
+    "label": "specs/workflow-engine/YAML.md \u203a The run cannot see itself \u2014 unless you ask with `$`",
+    "p": 0.0017710691015253202,
+    "gold": false
+   },
+   {
+    "id": "specs/workflow-engine/YAML.md#14",
+    "label": "specs/workflow-engine/YAML.md \u203a `p8ql:` with plain SQL now executes too",
+    "p": 0.001720888575675644,
+    "gold": false
+   },
+   {
+    "id": "commit/7cf2c3bb8f",
+    "label": "commit 7cf2c3b: Generic http_call dispatcher -- the gap everything else was blocked on",
+    "p": 0.001655084154036853,
+    "gold": false
+   },
+   {
+    "id": "specs/workflow-engine/spec.md#40",
+    "label": "specs/workflow-engine/spec.md \u203a What running it changed",
+    "p": 0.0015152255085078982,
+    "gold": false
+   },
+   {
+    "id": "specs/workflow-engine/YAML.md#22",
+    "label": "specs/workflow-engine/YAML.md \u203a `{{item.*}}` is bound at expansion \u2014 and this section used to say the opposite",
+    "p": 0.001447830528747882,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-40.md#2",
+    "label": "board/cards/REM-40.md \u203a Log",
+    "p": 0.0013971545200063228,
+    "gold": false
+   },
+   {
+    "id": "commit/46feb2a216",
+    "label": "commit 46feb2a: Let a vector query be one step, and stop it embedding with the wrong model",
+    "p": 0.0012080949078349507,
+    "gold": false
+   },
+   {
+    "id": "commit/78cbf16a6b",
+    "label": "commit 78cbf16: Expand a definition along what it names, and find two of the fixtures wrong",
+    "p": 0.0011614976747258367,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "board/cards/REM-58.md#1",
+   "label": "board/cards/REM-58.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/workflow-engine/YAML.md#15",
+   "label": "specs/workflow-engine/YAML.md \u203a Templates",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-40.md#1",
+   "label": "board/cards/REM-40.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/workflow-engine/spec.md#57",
+   "label": "specs/workflow-engine/spec.md \u203a (b) Which org the run belongs to",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/workflow-engine/README.md#7",
+   "label": "specs/workflow-engine/README.md \u203a Data flow \u2014 two resolvers, deliberately different",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-171.md#15",
+   "label": "board/cards/REM-171.md \u203a 2026-09-14T13:43:34.699Z \u00b7 Amartey",
+   "wave": 1,
+   "via": "term:trg_set_run_owner",
+   "gold": false
+  },
+  {
+   "id": "commit/13cc1a2e3d",
+   "label": "commit 13cc1a2: Counting up produces a number that does not resolve; recall produces one that does (#117)",
+   "wave": 1,
+   "via": "term:trg_set_run_owner",
+   "gold": false
+  },
+  {
+   "id": "specs/workflow-engine/integration-rbac.sql#20",
+   "label": "specs/workflow-engine/integration-rbac.sql",
+   "wave": 1,
+   "via": "term:trg_set_run_owner",
+   "gold": false
+  },
+  {
+   "id": "specs/workflow-engine/integration-rbac.sql#19",
+   "label": "specs/workflow-engine/integration-rbac.sql",
+   "wave": 1,
+   "via": "term:trg_set_run_owner",
+   "gold": false
+  },
+  {
+   "id": "commit/5fed31a8f0",
+   "label": "commit 5fed31a: A run of an org's workflow was not that org's run (#114)",
+   "wave": 1,
+   "via": "term:trg_set_run_owner",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "commit/f79c0b0e33",
+    "label": "commit f79c0b0: Who may start a workflow, decided rather than discovered",
+    "gold": false
+   },
+   {
+    "id": "commit/5fed31a8f0",
+    "label": "commit 5fed31a: A run of an org's workflow was not that org's run (#114)",
+    "gold": false
+   },
+   {
+    "id": "specs/workflow-engine/spec.md#54",
+    "label": "specs/workflow-engine/spec.md \u203a (a) Who may start one",
+    "gold": false
+   },
+   {
+    "id": "specs/workflow-engine/YAML.md#18",
+    "label": "specs/workflow-engine/YAML.md \u203a Every step nests its payload under `result`",
+    "gold": false
+   },
+   {
+    "id": "commit/8efb89b258",
+    "label": "commit 8efb89b: A session id had two derivations and a retired workflow still ran",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "commit/f79c0b0e33",
+    "label": "commit f79c0b0: Who may start a workflow, decided rather than discovered",
+    "gold": false
+   },
+   {
+    "id": "commit/5fed31a8f0",
+    "label": "commit 5fed31a: A run of an org's workflow was not that org's run (#114)",
+    "gold": false
+   },
+   {
+    "id": "specs/world-model-ingestion/reference/worker.py#4",
+    "label": "specs/world-model-ingestion/reference/worker.py",
+    "gold": false
+   },
+   {
+    "id": "commit/be640251dd",
+    "label": "commit be64025: A workflow definition belonged to nobody, so starting one asked nothing (#107)",
+    "gold": true
+   },
+   {
+    "id": "commit/8efb89b258",
+    "label": "commit 8efb89b: A session id had two derivations and a retired workflow still ran",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "board/cards/REM-42.md#1",
+    "label": "board/cards/REM-42.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-974.md#5",
+    "label": "board/cards/REM-974.md \u203a Scope",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-967.md#5",
+    "label": "board/cards/REM-967.md \u203a Scope",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-972.md#5",
+    "label": "board/cards/REM-972.md \u203a Scope",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-40.md#2",
+    "label": "board/cards/REM-40.md \u203a Log",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "specs/world-model-ingestion/graph-index.md#18",
+    "label": "specs/world-model-ingestion/graph-index.md \u203a 3. Routing is declared, not sniffed",
+    "gold": false
+   },
+   {
+    "id": "specs/world-model-ingestion/ingestion.md#12",
+    "label": "specs/world-model-ingestion/ingestion.md \u203a Whose run a pull returns",
+    "gold": false
+   },
+   {
+    "id": "specs/world-model-ingestion/reference/worker.py#4",
+    "label": "specs/world-model-ingestion/reference/worker.py",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-589.md#4",
+    "label": "board/cards/REM-589.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-42.md#1",
+    "label": "board/cards/REM-42.md",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.16666666666666666,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

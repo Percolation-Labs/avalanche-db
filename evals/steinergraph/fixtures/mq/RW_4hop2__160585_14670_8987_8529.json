@@ -1,0 +1,480 @@
+{
+ "qid": "RW:4hop2__160585_14670_8987_8529",
+ "set": "mq",
+ "question": "A country's military branch, which in the US contains the Air Defense Artillery, was unprepared for the invasion of Hana Mandlikova's birth country. When was the word \"Slavs\" used in the national anthem of the unprepared country?",
+ "gold": [
+  {
+   "id": "mq:4b1d40a658d4a437",
+   "label": "Josip Broz Tito",
+   "seed": false
+  },
+  {
+   "id": "mq:7e57486f2058e1e7",
+   "label": "Slavs",
+   "seed": true
+  },
+  {
+   "id": "mq:8cc8af00fcb267df",
+   "label": "United States Army",
+   "seed": false
+  },
+  {
+   "id": "mq:b96a31354578b285",
+   "label": "Czechoslovakia",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:7891c5dd5735fd1c",
+   "label": "Korean War",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "mq:7e57486f2058e1e7",
+   "label": "Slavs",
+   "rank": 2,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:fb2e1ba6aa472fd4",
+   "label": "America (My Country, 'Tis of Thee)",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:f102ba9992fa9fec",
+   "label": "Portugal",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:8b694bcaa8d8b3c1",
+   "label": "In Plenty and In Time of Need",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:3b5d493a7c3cec4d",
+    "label": "Battle of Osijek",
+    "role": "connector"
+   },
+   {
+    "id": "mq:4b1d40a658d4a437",
+    "label": "Josip Broz Tito",
+    "role": "gold"
+   },
+   {
+    "id": "mq:7e57486f2058e1e7",
+    "label": "Slavs",
+    "role": "gold"
+   },
+   {
+    "id": "mq:8cc8af00fcb267df",
+    "label": "United States Army",
+    "role": "gold"
+   },
+   {
+    "id": "mq:b96a31354578b285",
+    "label": "Czechoslovakia",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:3b5d493a7c3cec4d",
+    "b": "mq:4b1d40a658d4a437",
+    "via": [
+     {
+      "kind": "term",
+      "key": "yugoslav",
+      "width": 17
+     }
+    ]
+   },
+   {
+    "a": "mq:3b5d493a7c3cec4d",
+    "b": "mq:8cc8af00fcb267df",
+    "via": [
+     {
+      "kind": "term",
+      "key": "artillery",
+      "width": 39
+     },
+     {
+      "kind": "term",
+      "key": "infantry",
+      "width": 46
+     }
+    ]
+   },
+   {
+    "a": "mq:4b1d40a658d4a437",
+    "b": "mq:7e57486f2058e1e7",
+    "via": [
+     {
+      "kind": "term",
+      "key": "yugoslavia",
+      "width": 35
+     }
+    ]
+   },
+   {
+    "a": "mq:4b1d40a658d4a437",
+    "b": "mq:b96a31354578b285",
+    "via": [
+     {
+      "kind": "term",
+      "key": "ivan",
+      "width": 15
+     },
+     {
+      "kind": "term",
+      "key": "czechoslovakia",
+      "width": 30
+     }
+    ]
+   }
+  ],
+  "cost": 4,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   2,
+   1,
+   2,
+   2,
+   2
+  ],
+  "entry": {
+   "seed": "mq:7e57486f2058e1e7",
+   "gold": "mq:7e57486f2058e1e7",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 2392,
+  "within_2_doors": 18685,
+  "gold_within_1": 2,
+  "gold_within_2": 1,
+  "top_U": [
+   {
+    "id": "mq:5bfca3591b59e235",
+    "label": "Forged from the Love of Liberty",
+    "p": 0.003096178293359122,
+    "gold": false
+   },
+   {
+    "id": "mq:f0a9739c59d2074b",
+    "label": "Jim Cornelison",
+    "p": 0.002984332408953475,
+    "gold": false
+   },
+   {
+    "id": "mq:24684dd65fc56433",
+    "label": "Korean War",
+    "p": 0.002207479324415027,
+    "gold": false
+   },
+   {
+    "id": "mq:5abe925f3b2488fc",
+    "label": "Czech Republic",
+    "p": 0.0013656645407868345,
+    "gold": false
+   },
+   {
+    "id": "mq:2edb5644ba8b78ed",
+    "label": "Estonia",
+    "p": 0.0013543750513760554,
+    "gold": false
+   },
+   {
+    "id": "mq:0700276dd90b7f30",
+    "label": "Fair Antigua, We Salute Thee",
+    "p": 0.0013538219859552288,
+    "gold": false
+   },
+   {
+    "id": "mq:b55834586179c7e3",
+    "label": "Philippine Navy",
+    "p": 0.0012608934298388424,
+    "gold": false
+   },
+   {
+    "id": "mq:45855b9725ff0fc3",
+    "label": "Robin (character)",
+    "p": 0.0012403011844860081,
+    "gold": false
+   },
+   {
+    "id": "mq:d0327ef9d6b0defe",
+    "label": "Crimean War",
+    "p": 0.001188007110161362,
+    "gold": false
+   },
+   {
+    "id": "mq:f62287f4234aadea",
+    "label": "Chicago Cubs",
+    "p": 0.00115517895187917,
+    "gold": false
+   },
+   {
+    "id": "mq:ff223dcb4a98849f",
+    "label": "Tarana-e-Pakistan",
+    "p": 0.0010677800023958786,
+    "gold": false
+   },
+   {
+    "id": "mq:aa79014a44cf5aa6",
+    "label": "United Nations Security Council Resolution 1264",
+    "p": 0.0009519321798031419,
+    "gold": false
+   },
+   {
+    "id": "mq:e5aa67a9cb3b7c99",
+    "label": "Yugoslavia at the Olympics",
+    "p": 0.0009412470766653671,
+    "gold": false
+   },
+   {
+    "id": "mq:faf7e4266e607842",
+    "label": "Chihuahua (state)",
+    "p": 0.0009273894445111722,
+    "gold": false
+   },
+   {
+    "id": "mq:e4c01621aea9d4fa",
+    "label": "Boris Tadi\u0107",
+    "p": 0.0009089952541272384,
+    "gold": false
+   },
+   {
+    "id": "mq:362ea49a1b5bd668",
+    "label": "Montenegro in the Eurovision Song Contest",
+    "p": 0.0009074346753037972,
+    "gold": false
+   },
+   {
+    "id": "mq:431645a1c05d22ff",
+    "label": "Carnival Road March",
+    "p": 0.0009044786380374446,
+    "gold": false
+   },
+   {
+    "id": "mq:9e78cbf0d3567ac1",
+    "label": "Naktong Vallis",
+    "p": 0.0008897261215766855,
+    "gold": false
+   },
+   {
+    "id": "mq:8e947a873374de7a",
+    "label": "Languages of the United States",
+    "p": 0.0008811472109578481,
+    "gold": false
+   },
+   {
+    "id": "mq:dcdc6582cc7acdb0",
+    "label": "Economy of Greece",
+    "p": 0.0008726128833836083,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:7891c5dd5735fd1c",
+   "label": "Korean War",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:7e57486f2058e1e7",
+   "label": "Slavs",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:fb2e1ba6aa472fd4",
+   "label": "America (My Country, 'Tis of Thee)",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:f102ba9992fa9fec",
+   "label": "Portugal",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:8b694bcaa8d8b3c1",
+   "label": "In Plenty and In Time of Need",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:3b75e847e8c0665d",
+   "label": "Bratislava",
+   "wave": 1,
+   "via": "term:slovak",
+   "gold": false
+  },
+  {
+   "id": "mq:bc7681d7463ff0a6",
+   "label": "Franti\u0161ek Hoholko",
+   "wave": 1,
+   "via": "term:slovak",
+   "gold": false
+  },
+  {
+   "id": "mq:2a641e59b296b92d",
+   "label": "Anna Lackov\u00e1-Zora",
+   "wave": 1,
+   "via": "term:slovak",
+   "gold": false
+  },
+  {
+   "id": "mq:cf9c887b51f7d2ef",
+   "label": "Gmina Ujso\u0142y",
+   "wave": 1,
+   "via": "term:slovak",
+   "gold": false
+  },
+  {
+   "id": "mq:63b3b72be130083c",
+   "label": "Kasia Adamik",
+   "wave": 1,
+   "via": "term:slovak",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:5bfca3591b59e235",
+    "label": "Forged from the Love of Liberty",
+    "gold": false
+   },
+   {
+    "id": "mq:f0a9739c59d2074b",
+    "label": "Jim Cornelison",
+    "gold": false
+   },
+   {
+    "id": "mq:24684dd65fc56433",
+    "label": "Korean War",
+    "gold": false
+   },
+   {
+    "id": "mq:5abe925f3b2488fc",
+    "label": "Czech Republic",
+    "gold": false
+   },
+   {
+    "id": "mq:2edb5644ba8b78ed",
+    "label": "Estonia",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:5bfca3591b59e235",
+    "label": "Forged from the Love of Liberty",
+    "gold": false
+   },
+   {
+    "id": "mq:f0a9739c59d2074b",
+    "label": "Jim Cornelison",
+    "gold": false
+   },
+   {
+    "id": "mq:ff223dcb4a98849f",
+    "label": "Tarana-e-Pakistan",
+    "gold": false
+   },
+   {
+    "id": "mq:0700276dd90b7f30",
+    "label": "Fair Antigua, We Salute Thee",
+    "gold": false
+   },
+   {
+    "id": "mq:b55834586179c7e3",
+    "label": "Philippine Navy",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:f0a9739c59d2074b",
+    "label": "Jim Cornelison",
+    "gold": false
+   },
+   {
+    "id": "mq:5bfca3591b59e235",
+    "label": "Forged from the Love of Liberty",
+    "gold": false
+   },
+   {
+    "id": "mq:b55834586179c7e3",
+    "label": "Philippine Navy",
+    "gold": false
+   },
+   {
+    "id": "mq:ff223dcb4a98849f",
+    "label": "Tarana-e-Pakistan",
+    "gold": false
+   },
+   {
+    "id": "mq:8e947a873374de7a",
+    "label": "Languages of the United States",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:7949a75a574a3eec",
+    "label": "Humanitarian civic assistance activities",
+    "gold": false
+   },
+   {
+    "id": "mq:291d8d0b777e5124",
+    "label": "Military history of the United States",
+    "gold": false
+   },
+   {
+    "id": "mq:1fe9e02316936775",
+    "label": "The Wreckers",
+    "gold": false
+   },
+   {
+    "id": "mq:b7e4a241ffae402e",
+    "label": "National Cadet Corps (India)",
+    "gold": false
+   },
+   {
+    "id": "mq:79e658948ed86d63",
+    "label": "Korean War",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

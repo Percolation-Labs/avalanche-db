@@ -1,0 +1,436 @@
+{
+ "qid": "pr:666",
+ "set": "prs",
+ "question": "What work went into this, and why: QASPER fixture built (fourth corpus): 888 questions, 9.2% of items buried past search's first 50?",
+ "gold": [
+  {
+   "id": "commit/9f58bc3659",
+   "label": "commit 9f58bc3: QASPER fixture built: 888 questions (432 DEV / 456 HELD-OUT), 1,463 required items, 9.2% buried past sea",
+   "seed": true
+  },
+  {
+   "id": "commit/a37bc95edc",
+   "label": "commit a37bc95: QASPER STATUS: state the expectation before any walk -- 9.2% buried past 50, so search may suffice; the ",
+   "seed": false
+  },
+  {
+   "id": "commit/e59608d07b",
+   "label": "commit e59608d: QASPER fixture, parked: prepare, embed (one thread) and build scripts; corpus loaded as qasper-dev on ja",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/f79d8a3487",
+   "label": "commit f79d8a3: Merge pull request #666 from Percolation-Labs/mike/qasper-fixture",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/9f58bc3659",
+   "label": "commit 9f58bc3: QASPER fixture built: 888 questions (432 DEV / 456 HELD-OUT), 1,463 required items, 9.2% buried past sea",
+   "rank": 2,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "meta/lab/results/q4-miss-census-qasper/RULE.md#1",
+   "label": "meta/lab/results/q4-miss-census-qasper/RULE.md \u203a The judged miss split on the fourth corpus, QASPER (registered before a",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "meta/lab/configs/qasper/STATUS.md#2",
+   "label": "meta/lab/configs/qasper/STATUS.md \u203a QASPER fixture: built 2 Nov 2026, ~17:45Z (mike, taking over sally's parked work, e5",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/messages/M-20261102-174057-3698.md#1",
+   "label": "board/messages/M-20261102-174057-3698.md",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/9f58bc3659",
+    "label": "commit 9f58bc3: QASPER fixture built: 888 questions (432 DEV / 456 HELD-OUT), 1,463 required items, 9.2% buried past sea",
+    "role": "gold"
+   },
+   {
+    "id": "commit/a37bc95edc",
+    "label": "commit a37bc95: QASPER STATUS: state the expectation before any walk -- 9.2% buried past 50, so search may suffice; the ",
+    "role": "gold"
+   },
+   {
+    "id": "commit/e59608d07b",
+    "label": "commit e59608d: QASPER fixture, parked: prepare, embed (one thread) and build scripts; corpus loaded as qasper-dev on ja",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/9f58bc3659",
+    "b": "commit/a37bc95edc",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "buried past",
+      "width": 10
+     }
+    ]
+   },
+   {
+    "a": "commit/9f58bc3659",
+    "b": "commit/e59608d07b",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "qasper fixture",
+      "width": 9
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   1,
+   2
+  ],
+  "entry": {
+   "seed": "commit/9f58bc3659",
+   "gold": "commit/9f58bc3659",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 1869,
+  "within_2_doors": 33551,
+  "gold_within_1": 2,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "meta/lab/configs/qasper/STATUS.md#1",
+    "label": "meta/lab/configs/qasper/STATUS.md \u203a QASPER fixture: built 2 Nov 2026, ~17:45Z (mike, taking over sally's parked work, e5",
+    "p": 0.012813174062401494,
+    "gold": false
+   },
+   {
+    "id": "commit/a37bc95edc",
+    "label": "commit a37bc95: QASPER STATUS: state the expectation before any walk -- 9.2% buried past 50, so search may suffice; the ",
+    "p": 0.0032282532987472955,
+    "gold": true
+   },
+   {
+    "id": "meta/lab/results/q4-miss-census-qasper/RULE.md#3",
+    "label": "meta/lab/results/q4-miss-census-qasper/RULE.md \u203a The judged miss split on the fourth corpus, QASPER (registered before a",
+    "p": 0.0027964195217840514,
+    "gold": false
+   },
+   {
+    "id": "commit/e59608d07b",
+    "label": "commit e59608d: QASPER fixture, parked: prepare, embed (one thread) and build scripts; corpus loaded as qasper-dev on ja",
+    "p": 0.002763881279713342,
+    "gold": true
+   },
+   {
+    "id": "meta/lab/README.md#18",
+    "label": "meta/lab/README.md \u203a Experiment E2: does judging wide leads target by target (walk.open_whole) use per-message recogniti",
+    "p": 0.0026648786775974893,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/configs/qasper/prepare.py#1",
+    "label": "meta/lab/configs/qasper/prepare.py",
+    "p": 0.0023617815115399197,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/configs/qasper/build.py#1",
+    "label": "meta/lab/configs/qasper/build.py",
+    "p": 0.0023257294286584997,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q2-conformance/README.md#3",
+    "label": "meta/lab/results/q2-conformance/README.md \u203a Result",
+    "p": 0.0022683069711040595,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-miss-census-qasper/RULE.md#2",
+    "label": "meta/lab/results/q4-miss-census-qasper/RULE.md \u203a The judged miss split on the fourth corpus, QASPER (registered before a",
+    "p": 0.002254581262100368,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-miss-census-qasper/result.txt#1",
+    "label": "meta/lab/results/q4-miss-census-qasper/result.txt",
+    "p": 0.0021535519821489543,
+    "gold": false
+   },
+   {
+    "id": "commit/3970224b53",
+    "label": "commit 3970224: board: bill acknowledges 1 message(s)",
+    "p": 0.002078260213604496,
+    "gold": false
+   },
+   {
+    "id": "specs/design/articles/langgraph-captures-v36/03-b-86ee51e60c.txt#1",
+    "label": "specs/design/articles/langgraph-captures-v36/03-b-86ee51e60c.txt",
+    "p": 0.0020085958104424204,
+    "gold": false
+   },
+   {
+    "id": "specs/design/articles/langgraph-captures-v34/03-b-86ee51e60c.txt#1",
+    "label": "specs/design/articles/langgraph-captures-v34/03-b-86ee51e60c.txt",
+    "p": 0.0020008835541405787,
+    "gold": false
+   },
+   {
+    "id": "specs/design/articles/langgraph-captures-v30/03-b-86ee51e60c.txt#1",
+    "label": "specs/design/articles/langgraph-captures-v30/03-b-86ee51e60c.txt",
+    "p": 0.0020008835541405787,
+    "gold": false
+   },
+   {
+    "id": "commit/fccbe00ee6",
+    "label": "commit fccbe00: walklab q4: register the judged miss split on QASPER (10 drawn from 97 questions with an item past searc",
+    "p": 0.0018234954218064798,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/walklab/fixture.py#3",
+    "label": "meta/lab/walklab/fixture.py",
+    "p": 0.0017465502732686457,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261030-083208-ba44.md#1",
+    "label": "board/messages/M-20261030-083208-ba44.md",
+    "p": 0.0017151824135319264,
+    "gold": false
+   },
+   {
+    "id": "commit/d48454e2f2",
+    "label": "commit d48454e: board: bill messages sirsh",
+    "p": 0.0016304865374654517,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261102-140647-0035.md#1",
+    "label": "board/messages/M-20261102-140647-0035.md",
+    "p": 0.0014705133370469517,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-miss-census-qasper/result.txt#3",
+    "label": "meta/lab/results/q4-miss-census-qasper/result.txt",
+    "p": 0.0014470704926665059,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/f79d8a3487",
+   "label": "commit f79d8a3: Merge pull request #666 from Percolation-Labs/mike/qasper-fixture",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/9f58bc3659",
+   "label": "commit 9f58bc3: QASPER fixture built: 888 questions (432 DEV / 456 HELD-OUT), 1,463 required items, 9.2% buried past sea",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "meta/lab/results/q4-miss-census-qasper/RULE.md#1",
+   "label": "meta/lab/results/q4-miss-census-qasper/RULE.md \u203a The judged miss split on the fourth corpus, QASPER (registered before a",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/configs/qasper/STATUS.md#2",
+   "label": "meta/lab/configs/qasper/STATUS.md \u203a QASPER fixture: built 2 Nov 2026, ~17:45Z (mike, taking over sally's parked work, e5",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/messages/M-20261102-174057-3698.md#1",
+   "label": "board/messages/M-20261102-174057-3698.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/configs/qasper/build.py#1",
+   "label": "meta/lab/configs/qasper/build.py",
+   "wave": 1,
+   "via": "term:nlp practitioners",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/q4-miss-census-qasper/result.txt#1",
+   "label": "meta/lab/results/q4-miss-census-qasper/result.txt",
+   "wave": 1,
+   "via": "term:nlp practitioners",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/configs/qasper/STATUS.md#1",
+   "label": "meta/lab/configs/qasper/STATUS.md \u203a QASPER fixture: built 2 Nov 2026, ~17:45Z (mike, taking over sally's parked work, e5",
+   "wave": 1,
+   "via": "term:nlp practitioners",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/configs/qasper/prepare.py#1",
+   "label": "meta/lab/configs/qasper/prepare.py",
+   "wave": 1,
+   "via": "term:nlp practitioners",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/configs/qasper/build.py#5",
+   "label": "meta/lab/configs/qasper/build.py",
+   "wave": 1,
+   "via": "term:nlp practitioners",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "meta/lab/configs/qasper/STATUS.md#1",
+    "label": "meta/lab/configs/qasper/STATUS.md \u203a QASPER fixture: built 2 Nov 2026, ~17:45Z (mike, taking over sally's parked work, e5",
+    "gold": false
+   },
+   {
+    "id": "commit/a37bc95edc",
+    "label": "commit a37bc95: QASPER STATUS: state the expectation before any walk -- 9.2% buried past 50, so search may suffice; the ",
+    "gold": true
+   },
+   {
+    "id": "meta/lab/results/q4-miss-census-qasper/RULE.md#3",
+    "label": "meta/lab/results/q4-miss-census-qasper/RULE.md \u203a The judged miss split on the fourth corpus, QASPER (registered before a",
+    "gold": false
+   },
+   {
+    "id": "commit/e59608d07b",
+    "label": "commit e59608d: QASPER fixture, parked: prepare, embed (one thread) and build scripts; corpus loaded as qasper-dev on ja",
+    "gold": true
+   },
+   {
+    "id": "meta/lab/README.md#18",
+    "label": "meta/lab/README.md \u203a Experiment E2: does judging wide leads target by target (walk.open_whole) use per-message recogniti",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "meta/lab/configs/qasper/STATUS.md#1",
+    "label": "meta/lab/configs/qasper/STATUS.md \u203a QASPER fixture: built 2 Nov 2026, ~17:45Z (mike, taking over sally's parked work, e5",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-miss-census-qasper/RULE.md#3",
+    "label": "meta/lab/results/q4-miss-census-qasper/RULE.md \u203a The judged miss split on the fourth corpus, QASPER (registered before a",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-miss-census-qasper/result.txt#1",
+    "label": "meta/lab/results/q4-miss-census-qasper/result.txt",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/configs/qasper/build.py#1",
+    "label": "meta/lab/configs/qasper/build.py",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/configs/qasper/prepare.py#1",
+    "label": "meta/lab/configs/qasper/prepare.py",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/a37bc95edc",
+    "label": "commit a37bc95: QASPER STATUS: state the expectation before any walk -- 9.2% buried past 50, so search may suffice; the ",
+    "gold": true
+   },
+   {
+    "id": "commit/e59608d07b",
+    "label": "commit e59608d: QASPER fixture, parked: prepare, embed (one thread) and build scripts; corpus loaded as qasper-dev on ja",
+    "gold": true
+   },
+   {
+    "id": "commit/fccbe00ee6",
+    "label": "commit fccbe00: walklab q4: register the judged miss split on QASPER (10 drawn from 97 questions with an item past searc",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/configs/qasper/STATUS.md#1",
+    "label": "meta/lab/configs/qasper/STATUS.md \u203a QASPER fixture: built 2 Nov 2026, ~17:45Z (mike, taking over sally's parked work, e5",
+    "gold": false
+   },
+   {
+    "id": "commit/3970224b53",
+    "label": "commit 3970224: board: bill acknowledges 1 message(s)",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "meta/lab/results/q4-miss-census-qasper/result.txt#1",
+    "label": "meta/lab/results/q4-miss-census-qasper/result.txt",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/configs/qasper/STATUS.md#1",
+    "label": "meta/lab/configs/qasper/STATUS.md \u203a QASPER fixture: built 2 Nov 2026, ~17:45Z (mike, taking over sally's parked work, e5",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-miss-census-qasper/RULE.md#3",
+    "label": "meta/lab/results/q4-miss-census-qasper/RULE.md \u203a The judged miss split on the fourth corpus, QASPER (registered before a",
+    "gold": false
+   },
+   {
+    "id": "commit/a37bc95edc",
+    "label": "commit a37bc95: QASPER STATUS: state the expectation before any walk -- 9.2% buried past 50, so search may suffice; the ",
+    "gold": true
+   },
+   {
+    "id": "board/messages/M-20261102-195133-1f7c.md#1",
+    "label": "board/messages/M-20261102-195133-1f7c.md",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 1.0,
+  "Q": 0.0,
+  "LQ": 1.0,
+  "S": 0.5
+ }
+}

@@ -1,0 +1,438 @@
+{
+ "qid": "RW:2hop__123145_80420",
+ "set": "mq",
+ "question": "Who was the first African American student to attend Stewart Patridge's university?",
+ "gold": [
+  {
+   "id": "mq:f79cba8dd084a57a",
+   "label": "Stewart Patridge",
+   "seed": true
+  },
+  {
+   "id": "mq:ffb4ee24e09c009e",
+   "label": "James Meredith",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:f79cba8dd084a57a",
+   "label": "Stewart Patridge",
+   "rank": 1,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:c6bda7c324986a42",
+   "label": "Robert Robinson Taylor",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:f3e968ea6ccf1309",
+   "label": "Elo\u00edsa D\u00edaz",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "mq:ffb4ee24e09c009e",
+   "label": "James Meredith",
+   "rank": 4,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:f80b346a94e7bc7d",
+   "label": "James Meredith",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:8775e059beeea28a",
+    "label": "Doug Williams (quarterback)",
+    "role": "connector"
+   },
+   {
+    "id": "mq:f79cba8dd084a57a",
+    "label": "Stewart Patridge",
+    "role": "gold"
+   },
+   {
+    "id": "mq:ffb4ee24e09c009e",
+    "label": "James Meredith",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:8775e059beeea28a",
+    "b": "mq:f79cba8dd084a57a",
+    "via": [
+     {
+      "kind": "term",
+      "key": "football quarterback",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "quarterback",
+      "width": 20
+     },
+     {
+      "kind": "term",
+      "key": "former american",
+      "width": 34
+     }
+    ]
+   },
+   {
+    "a": "mq:8775e059beeea28a",
+    "b": "mq:ffb4ee24e09c009e",
+    "via": [
+     {
+      "kind": "term",
+      "key": "first african",
+      "width": 25
+     },
+     {
+      "kind": "term",
+      "key": "african american",
+      "width": 85
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   2
+  ],
+  "entry": {
+   "seed": "mq:f79cba8dd084a57a",
+   "gold": "mq:f79cba8dd084a57a",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 2057,
+  "within_2_doors": 19013,
+  "gold_within_1": 0,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "mq:216e77544edf18fe",
+    "label": "Rebecca Lee Crumpler",
+    "p": 0.0024170094012413205,
+    "gold": false
+   },
+   {
+    "id": "mq:6ca05349e5de8538",
+    "label": "Swayze Field",
+    "p": 0.002280416508147311,
+    "gold": false
+   },
+   {
+    "id": "mq:3c0d77af928f3692",
+    "label": "Brigham Young University",
+    "p": 0.0022461282099035073,
+    "gold": false
+   },
+   {
+    "id": "mq:509f2ad901edb6c9",
+    "label": "The Choice (2016 film)",
+    "p": 0.0020425831804440917,
+    "gold": false
+   },
+   {
+    "id": "mq:222f840ccb255e31",
+    "label": "Portugal",
+    "p": 0.0018287364287910939,
+    "gold": false
+   },
+   {
+    "id": "mq:8775e059beeea28a",
+    "label": "Doug Williams (quarterback)",
+    "p": 0.0015047060645723477,
+    "gold": false
+   },
+   {
+    "id": "mq:25775115b92d964a",
+    "label": "Doug Williams (quarterback)",
+    "p": 0.001462803397922578,
+    "gold": false
+   },
+   {
+    "id": "mq:cc8b9c399c7ae580",
+    "label": "Will Smith",
+    "p": 0.0012790706158450527,
+    "gold": false
+   },
+   {
+    "id": "mq:9cc4c58654eca487",
+    "label": "Friedrich Hayek",
+    "p": 0.0011445742124309307,
+    "gold": false
+   },
+   {
+    "id": "mq:b4860a9429e5c1aa",
+    "label": "Storming of the Bastille",
+    "p": 0.0010638582088444647,
+    "gold": false
+   },
+   {
+    "id": "mq:2c13a4164f63cb01",
+    "label": "Storming of the Bastille",
+    "p": 0.0010530407491846198,
+    "gold": false
+   },
+   {
+    "id": "mq:38d1360e7e86beec",
+    "label": "Miracle on 34th Street",
+    "p": 0.0009852550096880078,
+    "gold": false
+   },
+   {
+    "id": "mq:131a6a4c4e941108",
+    "label": "Multiracial Americans",
+    "p": 0.000980380431300426,
+    "gold": false
+   },
+   {
+    "id": "mq:b08c0a4950403d10",
+    "label": "Bobelle Sconiers Harrell",
+    "p": 0.0009726983327465428,
+    "gold": false
+   },
+   {
+    "id": "mq:e5b09983eafe588f",
+    "label": "Edwin Lutyens",
+    "p": 0.0009078818187552477,
+    "gold": false
+   },
+   {
+    "id": "mq:1063619a22370465",
+    "label": "Will Burtin",
+    "p": 0.000895004784101965,
+    "gold": false
+   },
+   {
+    "id": "mq:5c284d764ee53972",
+    "label": "Franco-Prussian War",
+    "p": 0.0008884037462638132,
+    "gold": false
+   },
+   {
+    "id": "mq:86de9d2d825a4346",
+    "label": "Patrick Mahomes",
+    "p": 0.0007801032944369867,
+    "gold": false
+   },
+   {
+    "id": "mq:618f86595f649f15",
+    "label": "Mitchell Trubisky",
+    "p": 0.0007586657377512111,
+    "gold": false
+   },
+   {
+    "id": "mq:5d74e42b07aeb0d7",
+    "label": "Chihuahua (state)",
+    "p": 0.0007311799656513,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:f79cba8dd084a57a",
+   "label": "Stewart Patridge",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:c6bda7c324986a42",
+   "label": "Robert Robinson Taylor",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:f3e968ea6ccf1309",
+   "label": "Elo\u00edsa D\u00edaz",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:ffb4ee24e09c009e",
+   "label": "James Meredith",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:f80b346a94e7bc7d",
+   "label": "James Meredith",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:e4554c9506bbcfa8",
+   "label": "University of Notre Dame",
+   "wave": 1,
+   "via": "term:additionally",
+   "gold": false
+  },
+  {
+   "id": "mq:188b927cb7de21f0",
+   "label": "Sugar cubes",
+   "wave": 1,
+   "via": "term:additionally",
+   "gold": false
+  },
+  {
+   "id": "mq:f3a3d8bce2e9d1d6",
+   "label": "Glock",
+   "wave": 1,
+   "via": "term:additionally",
+   "gold": false
+  },
+  {
+   "id": "mq:c0548d707d5c840c",
+   "label": "Greece",
+   "wave": 1,
+   "via": "term:additionally",
+   "gold": false
+  },
+  {
+   "id": "mq:12c95b2f688768dd",
+   "label": "CBC Television",
+   "wave": 1,
+   "via": "term:additionally",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:216e77544edf18fe",
+    "label": "Rebecca Lee Crumpler",
+    "gold": false
+   },
+   {
+    "id": "mq:6ca05349e5de8538",
+    "label": "Swayze Field",
+    "gold": false
+   },
+   {
+    "id": "mq:3c0d77af928f3692",
+    "label": "Brigham Young University",
+    "gold": false
+   },
+   {
+    "id": "mq:509f2ad901edb6c9",
+    "label": "The Choice (2016 film)",
+    "gold": false
+   },
+   {
+    "id": "mq:222f840ccb255e31",
+    "label": "Portugal",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:216e77544edf18fe",
+    "label": "Rebecca Lee Crumpler",
+    "gold": false
+   },
+   {
+    "id": "mq:222f840ccb255e31",
+    "label": "Portugal",
+    "gold": false
+   },
+   {
+    "id": "mq:8775e059beeea28a",
+    "label": "Doug Williams (quarterback)",
+    "gold": false
+   },
+   {
+    "id": "mq:25775115b92d964a",
+    "label": "Doug Williams (quarterback)",
+    "gold": false
+   },
+   {
+    "id": "mq:8bab97e895a2f637",
+    "label": "First Pan-African Conference",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:216e77544edf18fe",
+    "label": "Rebecca Lee Crumpler",
+    "gold": false
+   },
+   {
+    "id": "mq:222f840ccb255e31",
+    "label": "Portugal",
+    "gold": false
+   },
+   {
+    "id": "mq:8bab97e895a2f637",
+    "label": "First Pan-African Conference",
+    "gold": false
+   },
+   {
+    "id": "mq:9fcd05b1daa531dd",
+    "label": "First Pan-African Conference",
+    "gold": false
+   },
+   {
+    "id": "mq:8775e059beeea28a",
+    "label": "Doug Williams (quarterback)",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:7b931bfdc9457cf7",
+    "label": "Affirmative action in the United States",
+    "gold": false
+   },
+   {
+    "id": "mq:02ed7a64e58887ee",
+    "label": "Winona Cargile Alexander",
+    "gold": false
+   },
+   {
+    "id": "mq:892a80a1f7ba332f",
+    "label": "Barney Stinson",
+    "gold": false
+   },
+   {
+    "id": "mq:11aaa6778fb2de52",
+    "label": "Karl Popper",
+    "gold": false
+   },
+   {
+    "id": "mq:e8f55d8c0aa7ddbb",
+    "label": "Kayla Bashore Smedley",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": null,
+  "Q": null,
+  "LQ": null,
+  "S": null
+ }
+}

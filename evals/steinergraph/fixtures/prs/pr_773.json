@@ -1,0 +1,460 @@
+{
+ "qid": "pr:773",
+ "set": "prs",
+ "question": "What work went into this, and why: batchlog-rescore: deciders as rankers from the batch log; the walk vs search under budget top-k?",
+ "gold": [
+  {
+   "id": "commit/4c83f94d01",
+   "label": "commit 4c83f94: batchlog-rescore: name the door-opening loop the P7 postmortem rests on",
+   "seed": false
+  },
+  {
+   "id": "commit/79f4ad5966",
+   "label": "commit 79f4ad5: batchlog-rescore: Jev is the only ranker above the floors (MRR .26/.31 vs search .13/.14), only on docum",
+   "seed": false
+  },
+  {
+   "id": "commit/8492185998",
+   "label": "commit 8492185: batchlog-rescore: registration before scoring (deciders as rankers from the batch log; walk vs search at",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/8492185998",
+   "label": "commit 8492185: batchlog-rescore: registration before scoring (deciders as rankers from the batch log; walk vs search at",
+   "rank": 1,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "commit/14923f24e9",
+   "label": "commit 14923f2: Merge pull request #773 from Percolation-Labs/james/batchlog-rescore",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "meta/lab/results/batchlog-rescore/RESULT.md#1",
+   "label": "meta/lab/results/batchlog-rescore/RESULT.md \u203a Deciders as rankers from the batch log, and the walk against search at an ",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "meta/lab/results/batchlog-rescore/RESULT.md#6",
+   "label": "meta/lab/results/batchlog-rescore/RESULT.md \u203a Result",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "meta/lab/results/batchlog-rescore/RESULT.md#10",
+   "label": "meta/lab/results/batchlog-rescore/RESULT.md \u203a Experiment 2: the walk under budget top-k against search at an equal numbe",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/4c83f94d01",
+    "label": "commit 4c83f94: batchlog-rescore: name the door-opening loop the P7 postmortem rests on",
+    "role": "gold"
+   },
+   {
+    "id": "commit/79f4ad5966",
+    "label": "commit 79f4ad5: batchlog-rescore: Jev is the only ranker above the floors (MRR .26/.31 vs search .13/.14), only on docum",
+    "role": "gold"
+   },
+   {
+    "id": "commit/8492185998",
+    "label": "commit 8492185: batchlog-rescore: registration before scoring (deciders as rankers from the batch log; walk vs search at",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/4c83f94d01",
+    "b": "commit/79f4ad5966",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "near",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "batchlog rescore",
+      "width": 45
+     },
+     {
+      "kind": "term",
+      "key": "batchlog",
+      "width": 45
+     },
+     {
+      "kind": "term",
+      "key": "rescore",
+      "width": 62
+     }
+    ]
+   },
+   {
+    "a": "commit/79f4ad5966",
+    "b": "commit/8492185998",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "batchlog rescore",
+      "width": 45
+     },
+     {
+      "kind": "term",
+      "key": "batchlog",
+      "width": 45
+     },
+     {
+      "kind": "term",
+      "key": "rescore",
+      "width": 62
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   1,
+   1
+  ],
+  "entry": {
+   "seed": "commit/8492185998",
+   "gold": "commit/8492185998",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 652,
+  "within_2_doors": 27801,
+  "gold_within_1": 2,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "meta/lab/results/batchlog-rescore/RESULT.md#9",
+    "label": "meta/lab/results/batchlog-rescore/RESULT.md \u203a Experiment 2: the walk under budget top-k against search at an equal numbe",
+    "p": 0.007031866800219216,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/batchlog-rescore/drive.py#5",
+    "label": "meta/lab/results/batchlog-rescore/drive.py",
+    "p": 0.004612348075769403,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/batchlog-rescore/RESULT.md#11",
+    "label": "meta/lab/results/batchlog-rescore/RESULT.md \u203a Postmortem",
+    "p": 0.004491438561083594,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261116-080958-d0bc.md#1",
+    "label": "board/messages/M-20261116-080958-d0bc.md",
+    "p": 0.004293053066737635,
+    "gold": false
+   },
+   {
+    "id": "commit/79f4ad5966",
+    "label": "commit 79f4ad5: batchlog-rescore: Jev is the only ranker above the floors (MRR .26/.31 vs search .13/.14), only on docum",
+    "p": 0.003992749956456541,
+    "gold": true
+   },
+   {
+    "id": "meta/lab/results/batchlog-rescore/RESULT.md#5",
+    "label": "meta/lab/results/batchlog-rescore/RESULT.md \u203a Experiment 2: the walk under budget top-k against search at an equal numbe",
+    "p": 0.00390921922298936,
+    "gold": false
+   },
+   {
+    "id": "commit/4c83f94d01",
+    "label": "commit 4c83f94: batchlog-rescore: name the door-opening loop the P7 postmortem rests on",
+    "p": 0.003798751297965108,
+    "gold": true
+   },
+   {
+    "id": "meta/lab/results/batchlog-rescore/score.py#6",
+    "label": "meta/lab/results/batchlog-rescore/score.py",
+    "p": 0.0037964737879245805,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/batchlog-rescore/RESULT.md#14",
+    "label": "meta/lab/results/batchlog-rescore/RESULT.md \u203a Files",
+    "p": 0.0036339930048674496,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/batchlog-rescore/RESULT.md#7",
+    "label": "meta/lab/results/batchlog-rescore/RESULT.md \u203a Experiment 1: rankers (MRR, 95% CI over questions)",
+    "p": 0.0033678825329090823,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261116-091211-7bed.md#1",
+    "label": "board/messages/M-20261116-091211-7bed.md",
+    "p": 0.0032454661649349474,
+    "gold": false
+   },
+   {
+    "id": "commit/be9de87de3",
+    "label": "commit be9de87: board: james runs pid 98972 on Sirshs-MacBook-Air: batchlog-rescore: 50 v0 Jev replays + 750 top-k walks",
+    "p": 0.0031733280570744376,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/batchlog-rescore/score.py#5",
+    "label": "meta/lab/results/batchlog-rescore/score.py",
+    "p": 0.0031421216019594197,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/batchlog-rescore/RESULT.md#2",
+    "label": "meta/lab/results/batchlog-rescore/RESULT.md \u203a Registration (committed before any scoring)",
+    "p": 0.003009254533520363,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/batchlog-rescore/score.py#3",
+    "label": "meta/lab/results/batchlog-rescore/score.py",
+    "p": 0.002791577148889402,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/batchlog-rescore/score-result.txt#5",
+    "label": "meta/lab/results/batchlog-rescore/score-result.txt",
+    "p": 0.002661466198549035,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/batchlog-rescore/score-result.txt#6",
+    "label": "meta/lab/results/batchlog-rescore/score-result.txt",
+    "p": 0.0026546563524941233,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/batchlog-rescore/score.py#4",
+    "label": "meta/lab/results/batchlog-rescore/score.py",
+    "p": 0.002626542302943224,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/batchlog-rescore/drive.py#1",
+    "label": "meta/lab/results/batchlog-rescore/drive.py",
+    "p": 0.0025930658368424897,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/batchlog-rescore/score-result.txt#10",
+    "label": "meta/lab/results/batchlog-rescore/score-result.txt",
+    "p": 0.0025573114284295085,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/8492185998",
+   "label": "commit 8492185: batchlog-rescore: registration before scoring (deciders as rankers from the batch log; walk vs search at",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "commit/14923f24e9",
+   "label": "commit 14923f2: Merge pull request #773 from Percolation-Labs/james/batchlog-rescore",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/batchlog-rescore/RESULT.md#1",
+   "label": "meta/lab/results/batchlog-rescore/RESULT.md \u203a Deciders as rankers from the batch log, and the walk against search at an ",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/batchlog-rescore/RESULT.md#6",
+   "label": "meta/lab/results/batchlog-rescore/RESULT.md \u203a Result",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/batchlog-rescore/RESULT.md#10",
+   "label": "meta/lab/results/batchlog-rescore/RESULT.md \u203a Experiment 2: the walk under budget top-k against search at an equal numbe",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/messages/M-20261116-215507-2616.md#1",
+   "label": "board/messages/M-20261116-215507-2616.md",
+   "wave": 1,
+   "via": "term:batch log",
+   "gold": false
+  },
+  {
+   "id": "board/messages/M-20261115-210452-bce0.md#2",
+   "label": "board/messages/M-20261115-210452-bce0.md",
+   "wave": 1,
+   "via": "term:batch log",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/filter-then-rank-waves/RESULT.md#8",
+   "label": "meta/lab/results/filter-then-rank-waves/RESULT.md \u203a Experiment 1: rankers on the recorded batch log (50 recorded Jev wal",
+   "wave": 1,
+   "via": "term:batch log",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/batchlog-rescore/RESULT.md#14",
+   "label": "meta/lab/results/batchlog-rescore/RESULT.md \u203a Files",
+   "wave": 1,
+   "via": "term:batch log",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/filter-then-rank-waves/score1.py#3",
+   "label": "meta/lab/results/filter-then-rank-waves/score1.py",
+   "wave": 1,
+   "via": "term:batch log",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "meta/lab/results/batchlog-rescore/RESULT.md#9",
+    "label": "meta/lab/results/batchlog-rescore/RESULT.md \u203a Experiment 2: the walk under budget top-k against search at an equal numbe",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/batchlog-rescore/drive.py#5",
+    "label": "meta/lab/results/batchlog-rescore/drive.py",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/batchlog-rescore/RESULT.md#11",
+    "label": "meta/lab/results/batchlog-rescore/RESULT.md \u203a Postmortem",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261116-080958-d0bc.md#1",
+    "label": "board/messages/M-20261116-080958-d0bc.md",
+    "gold": false
+   },
+   {
+    "id": "commit/79f4ad5966",
+    "label": "commit 79f4ad5: batchlog-rescore: Jev is the only ranker above the floors (MRR .26/.31 vs search .13/.14), only on docum",
+    "gold": true
+   }
+  ],
+  "Q": [
+   {
+    "id": "meta/lab/results/batchlog-rescore/RESULT.md#9",
+    "label": "meta/lab/results/batchlog-rescore/RESULT.md \u203a Experiment 2: the walk under budget top-k against search at an equal numbe",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/batchlog-rescore/RESULT.md#14",
+    "label": "meta/lab/results/batchlog-rescore/RESULT.md \u203a Files",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261116-091211-7bed.md#1",
+    "label": "board/messages/M-20261116-091211-7bed.md",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/batchlog-rescore/RESULT.md#5",
+    "label": "meta/lab/results/batchlog-rescore/RESULT.md \u203a Experiment 2: the walk under budget top-k against search at an equal numbe",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/batchlog-rescore/RESULT.md#7",
+    "label": "meta/lab/results/batchlog-rescore/RESULT.md \u203a Experiment 1: rankers (MRR, 95% CI over questions)",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "meta/lab/results/batchlog-rescore/RESULT.md#9",
+    "label": "meta/lab/results/batchlog-rescore/RESULT.md \u203a Experiment 2: the walk under budget top-k against search at an equal numbe",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/batchlog-rescore/drive.py#5",
+    "label": "meta/lab/results/batchlog-rescore/drive.py",
+    "gold": false
+   },
+   {
+    "id": "commit/79f4ad5966",
+    "label": "commit 79f4ad5: batchlog-rescore: Jev is the only ranker above the floors (MRR .26/.31 vs search .13/.14), only on docum",
+    "gold": true
+   },
+   {
+    "id": "commit/4c83f94d01",
+    "label": "commit 4c83f94: batchlog-rescore: name the door-opening loop the P7 postmortem rests on",
+    "gold": true
+   },
+   {
+    "id": "meta/lab/results/batchlog-rescore/score.py#6",
+    "label": "meta/lab/results/batchlog-rescore/score.py",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "meta/lab/results/batchlog-rescore/RESULT.md#14",
+    "label": "meta/lab/results/batchlog-rescore/RESULT.md \u203a Files",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/batchlog-rescore/score-result.txt#1",
+    "label": "meta/lab/results/batchlog-rescore/score-result.txt",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261116-091211-7bed.md#1",
+    "label": "board/messages/M-20261116-091211-7bed.md",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/batchlog-rescore/drive.py#1",
+    "label": "meta/lab/results/batchlog-rescore/drive.py",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/batchlog-rescore/RESULT.md#5",
+    "label": "meta/lab/results/batchlog-rescore/RESULT.md \u203a Experiment 2: the walk under budget top-k against search at an equal numbe",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.5,
+  "Q": 0.0,
+  "LQ": 1.0,
+  "S": 0.0
+ }
+}

@@ -1,0 +1,417 @@
+{
+ "qid": "RW:2hop__556426_9237",
+ "set": "mq",
+ "question": "When did the first mosque open where Air Marshall Islands is headquartered?",
+ "gold": [
+  {
+   "id": "mq:884749e830cb3896",
+   "label": "Marshall Islands",
+   "seed": true
+  },
+  {
+   "id": "mq:9a79486bdbf5eaeb",
+   "label": "Air Marshall Islands",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:9a79486bdbf5eaeb",
+   "label": "Air Marshall Islands",
+   "rank": 1,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:884749e830cb3896",
+   "label": "Marshall Islands",
+   "rank": 2,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:b66d6fe5bc8e562d",
+   "label": "Al-Masjid an-Nabawi",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:fd102635634fab1a",
+   "label": "Marshall Islands",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:f0afa925055e2dab",
+   "label": "Marshall Islands",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:884749e830cb3896",
+    "label": "Marshall Islands",
+    "role": "gold"
+   },
+   {
+    "id": "mq:9a79486bdbf5eaeb",
+    "label": "Air Marshall Islands",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:884749e830cb3896",
+    "b": "mq:9a79486bdbf5eaeb",
+    "via": [
+     {
+      "kind": "term",
+      "key": "majuro",
+      "width": 9
+     },
+     {
+      "kind": "term",
+      "key": "marshall islands",
+      "width": 26
+     },
+     {
+      "kind": "term",
+      "key": "marshall",
+      "width": 94
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "mq:884749e830cb3896",
+   "gold": "mq:884749e830cb3896",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 2312,
+  "within_2_doors": 18761,
+  "gold_within_1": 0,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "mq:46f281aa4b45b7b5",
+    "label": "Freeflight International Airport",
+    "p": 0.004179109467290407,
+    "gold": false
+   },
+   {
+    "id": "mq:0d9107fe2dcd95d9",
+    "label": "Marshall Islands International Airport",
+    "p": 0.004099423939974324,
+    "gold": false
+   },
+   {
+    "id": "mq:3c3cd2ea94fabe93",
+    "label": "Marshall Islands",
+    "p": 0.0033310798119300616,
+    "gold": false
+   },
+   {
+    "id": "mq:ec91dd0e33450587",
+    "label": "Saudi Arabia",
+    "p": 0.002579929790967179,
+    "gold": false
+   },
+   {
+    "id": "mq:f7cae8737a3ef1fc",
+    "label": "Johannine Comma",
+    "p": 0.0022225137098603525,
+    "gold": false
+   },
+   {
+    "id": "mq:85d126c24fa1f03c",
+    "label": "Ajeltake",
+    "p": 0.001913961022307944,
+    "gold": false
+   },
+   {
+    "id": "mq:0d818c0eedd6b49c",
+    "label": "List of airports in Nigeria",
+    "p": 0.0019014667114606403,
+    "gold": false
+   },
+   {
+    "id": "mq:6f167bc65521298f",
+    "label": "Marshall Islands",
+    "p": 0.0017439161890040475,
+    "gold": false
+   },
+   {
+    "id": "mq:fc617455d3d43a71",
+    "label": "Alaminos Airport",
+    "p": 0.0016747730100938683,
+    "gold": false
+   },
+   {
+    "id": "mq:6a70a48920326d04",
+    "label": "John von Neumann",
+    "p": 0.0015791109212691984,
+    "gold": false
+   },
+   {
+    "id": "mq:126913658e9cf224",
+    "label": "Marshall Islands",
+    "p": 0.0014638603891468896,
+    "gold": false
+   },
+   {
+    "id": "mq:29d0f6985acf7c4c",
+    "label": "Paris",
+    "p": 0.0013949437368469624,
+    "gold": false
+   },
+   {
+    "id": "mq:f7aad2899d56f29f",
+    "label": "Short Scion",
+    "p": 0.0013679696391764719,
+    "gold": false
+   },
+   {
+    "id": "mq:4668328e3971087e",
+    "label": "Eurolot",
+    "p": 0.001341173490543797,
+    "gold": false
+   },
+   {
+    "id": "mq:ee63df908f0219b8",
+    "label": "London",
+    "p": 0.0013232316477517,
+    "gold": false
+   },
+   {
+    "id": "mq:3073d2de0ad2e98e",
+    "label": "List of Oceanian countries by GDP (nominal)",
+    "p": 0.0013131505500060688,
+    "gold": false
+   },
+   {
+    "id": "mq:b0732d8b62db23ce",
+    "label": "Marshall Islands\u2013Federated States of Micronesia Maritime Boundary Treaty",
+    "p": 0.0012761033538500838,
+    "gold": false
+   },
+   {
+    "id": "mq:d13b7ac4bf35de7b",
+    "label": "Mokil Atoll",
+    "p": 0.0011947304944204841,
+    "gold": false
+   },
+   {
+    "id": "mq:8afb74ec4d8ada7e",
+    "label": "Bikini Atoll Airport",
+    "p": 0.001189561516610153,
+    "gold": false
+   },
+   {
+    "id": "mq:56cac385b5e02751",
+    "label": "Jaluit Airport",
+    "p": 0.0011344901554704897,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:9a79486bdbf5eaeb",
+   "label": "Air Marshall Islands",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:884749e830cb3896",
+   "label": "Marshall Islands",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:b66d6fe5bc8e562d",
+   "label": "Al-Masjid an-Nabawi",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:fd102635634fab1a",
+   "label": "Marshall Islands",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:f0afa925055e2dab",
+   "label": "Marshall Islands",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:dcbf7260e6cb7a47",
+   "label": "Marshall Islands",
+   "wave": 1,
+   "via": "term:marshall islands",
+   "gold": false
+  },
+  {
+   "id": "mq:a42b14c0aa988006",
+   "label": "Marshall Islands",
+   "wave": 1,
+   "via": "term:marshall islands",
+   "gold": false
+  },
+  {
+   "id": "mq:78b33395817b0462",
+   "label": "Timeline of nuclear weapons development",
+   "wave": 1,
+   "via": "term:marshall islands",
+   "gold": false
+  },
+  {
+   "id": "mq:6f167bc65521298f",
+   "label": "Marshall Islands",
+   "wave": 1,
+   "via": "term:marshall islands",
+   "gold": false
+  },
+  {
+   "id": "mq:7b910225aa63afb1",
+   "label": "Marshall Islands",
+   "wave": 1,
+   "via": "term:marshall islands",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:46f281aa4b45b7b5",
+    "label": "Freeflight International Airport",
+    "gold": false
+   },
+   {
+    "id": "mq:0d9107fe2dcd95d9",
+    "label": "Marshall Islands International Airport",
+    "gold": false
+   },
+   {
+    "id": "mq:3c3cd2ea94fabe93",
+    "label": "Marshall Islands",
+    "gold": false
+   },
+   {
+    "id": "mq:ec91dd0e33450587",
+    "label": "Saudi Arabia",
+    "gold": false
+   },
+   {
+    "id": "mq:f7cae8737a3ef1fc",
+    "label": "Johannine Comma",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:0d9107fe2dcd95d9",
+    "label": "Marshall Islands International Airport",
+    "gold": false
+   },
+   {
+    "id": "mq:3c3cd2ea94fabe93",
+    "label": "Marshall Islands",
+    "gold": false
+   },
+   {
+    "id": "mq:46f281aa4b45b7b5",
+    "label": "Freeflight International Airport",
+    "gold": false
+   },
+   {
+    "id": "mq:85d126c24fa1f03c",
+    "label": "Ajeltake",
+    "gold": false
+   },
+   {
+    "id": "mq:d20d6b1dec4c6966",
+    "label": "Marshall Islands",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:3c3cd2ea94fabe93",
+    "label": "Marshall Islands",
+    "gold": false
+   },
+   {
+    "id": "mq:0d9107fe2dcd95d9",
+    "label": "Marshall Islands International Airport",
+    "gold": false
+   },
+   {
+    "id": "mq:126913658e9cf224",
+    "label": "Marshall Islands",
+    "gold": false
+   },
+   {
+    "id": "mq:46f281aa4b45b7b5",
+    "label": "Freeflight International Airport",
+    "gold": false
+   },
+   {
+    "id": "mq:d20d6b1dec4c6966",
+    "label": "Marshall Islands",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:dcbf7260e6cb7a47",
+    "label": "Marshall Islands",
+    "gold": false
+   },
+   {
+    "id": "mq:a42b14c0aa988006",
+    "label": "Marshall Islands",
+    "gold": false
+   },
+   {
+    "id": "mq:3c3cd2ea94fabe93",
+    "label": "Marshall Islands",
+    "gold": false
+   },
+   {
+    "id": "mq:d946de215cf3b49e",
+    "label": "Marshall Islands",
+    "gold": false
+   },
+   {
+    "id": "mq:a1f5bae1af578145",
+    "label": "Island Airlines",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": null,
+  "Q": null,
+  "LQ": null,
+  "S": null
+ }
+}

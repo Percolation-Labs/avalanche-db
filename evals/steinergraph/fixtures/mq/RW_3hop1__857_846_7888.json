@@ -1,0 +1,454 @@
+{
+ "qid": "RW:3hop1__857_846_7888",
+ "set": "mq",
+ "question": "What are three natural attractions in the city where the Yongle emperor greeted the person to whom the edict was addressed?",
+ "gold": [
+  {
+   "id": "mq:6bd6fca0c8bcc65c",
+   "label": "Sino-Tibetan relations during the Ming dynasty",
+   "seed": true
+  },
+  {
+   "id": "mq:71a0089843686c23",
+   "label": "Sino-Tibetan relations during the Ming dynasty",
+   "seed": false
+  },
+  {
+   "id": "mq:9589460699411160",
+   "label": "Nanjing",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:6bd6fca0c8bcc65c",
+   "label": "Sino-Tibetan relations during the Ming dynasty",
+   "rank": 1,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:42c4c1b7cd87520d",
+   "label": "Sino-Tibetan relations during the Ming dynasty",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:d3079c12e943ce0e",
+   "label": "Sino-Tibetan relations during the Ming dynasty",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:5526104998ece72d",
+   "label": "Nanjing",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:bb8c63f78a244535",
+   "label": "Sino-Tibetan relations during the Ming dynasty",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:6bd6fca0c8bcc65c",
+    "label": "Sino-Tibetan relations during the Ming dynasty",
+    "role": "gold"
+   },
+   {
+    "id": "mq:71a0089843686c23",
+    "label": "Sino-Tibetan relations during the Ming dynasty",
+    "role": "gold"
+   },
+   {
+    "id": "mq:9589460699411160",
+    "label": "Nanjing",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:6bd6fca0c8bcc65c",
+    "b": "mq:71a0089843686c23",
+    "via": [
+     {
+      "kind": "near",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "karmapa",
+      "width": 10
+     },
+     {
+      "kind": "term",
+      "key": "ming court",
+      "width": 12
+     },
+     {
+      "kind": "term",
+      "key": "sino tibetan",
+      "width": 23
+     },
+     {
+      "kind": "term",
+      "key": "tibetan relations",
+      "width": 23
+     },
+     {
+      "kind": "term",
+      "key": "tibetan",
+      "width": 32
+     }
+    ]
+   },
+   {
+    "a": "mq:6bd6fca0c8bcc65c",
+    "b": "mq:9589460699411160",
+    "via": [
+     {
+      "kind": "term",
+      "key": "relics",
+      "width": 3
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   1,
+   1
+  ],
+  "entry": {
+   "seed": "mq:6bd6fca0c8bcc65c",
+   "gold": "mq:6bd6fca0c8bcc65c",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 2711,
+  "within_2_doors": 18374,
+  "gold_within_1": 2,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "mq:71a0089843686c23",
+    "label": "Sino-Tibetan relations during the Ming dynasty",
+    "p": 0.006514636743814552,
+    "gold": true
+   },
+   {
+    "id": "mq:62999da1b0cae298",
+    "label": "Sino-Tibetan relations during the Ming dynasty",
+    "p": 0.005687944346222521,
+    "gold": false
+   },
+   {
+    "id": "mq:d1c413f234981fce",
+    "label": "Sino-Tibetan relations during the Ming dynasty",
+    "p": 0.0038285615791133335,
+    "gold": false
+   },
+   {
+    "id": "mq:667d98157e06e74b",
+    "label": "Sino-Tibetan relations during the Ming dynasty",
+    "p": 0.003315819538681965,
+    "gold": false
+   },
+   {
+    "id": "mq:f7ecd46db4cd2c1e",
+    "label": "Sino-Tibetan relations during the Ming dynasty",
+    "p": 0.003196852556972597,
+    "gold": false
+   },
+   {
+    "id": "mq:62c8568fe1d885ba",
+    "label": "Sino-Tibetan relations during the Ming dynasty",
+    "p": 0.0030249115069525727,
+    "gold": false
+   },
+   {
+    "id": "mq:5a739ae2bc7970db",
+    "label": "Sino-Tibetan relations during the Ming dynasty",
+    "p": 0.0030015416084965174,
+    "gold": false
+   },
+   {
+    "id": "mq:3632ab117e401968",
+    "label": "Sino-Tibetan relations during the Ming dynasty",
+    "p": 0.0028375109549563394,
+    "gold": false
+   },
+   {
+    "id": "mq:7b1991b7739e3bf9",
+    "label": "Sino-Tibetan relations during the Ming dynasty",
+    "p": 0.002728380214033825,
+    "gold": false
+   },
+   {
+    "id": "mq:946ca84bb6d90efa",
+    "label": "Nanjing",
+    "p": 0.0026038894640146746,
+    "gold": false
+   },
+   {
+    "id": "mq:065581b3fc5b2c7a",
+    "label": "Sino-Tibetan relations during the Ming dynasty",
+    "p": 0.00228427501437549,
+    "gold": false
+   },
+   {
+    "id": "mq:3f6f7146b48d3934",
+    "label": "Sino-Tibetan relations during the Ming dynasty",
+    "p": 0.002247883042129659,
+    "gold": false
+   },
+   {
+    "id": "mq:42a7ebb9e1ce3c6f",
+    "label": "Nanjing",
+    "p": 0.0019447321035374015,
+    "gold": false
+   },
+   {
+    "id": "mq:bc93381137592efb",
+    "label": "Sino-Tibetan relations during the Ming dynasty",
+    "p": 0.0017934672843062517,
+    "gold": false
+   },
+   {
+    "id": "mq:7195372abb4d32c2",
+    "label": "Sino-Tibetan relations during the Ming dynasty",
+    "p": 0.0017853612119720773,
+    "gold": false
+   },
+   {
+    "id": "mq:1aa22b3a3e75842e",
+    "label": "Sino-Tibetan relations during the Ming dynasty",
+    "p": 0.001693765918420035,
+    "gold": false
+   },
+   {
+    "id": "mq:5ce56e6f2354697e",
+    "label": "Sino-Tibetan relations during the Ming dynasty",
+    "p": 0.0016711687219853407,
+    "gold": false
+   },
+   {
+    "id": "mq:9d5fbbb0122e12a6",
+    "label": "Zheng He",
+    "p": 0.0015679315486526544,
+    "gold": false
+   },
+   {
+    "id": "mq:f510daf7c2b9f4d3",
+    "label": "Sino-Tibetan relations during the Ming dynasty",
+    "p": 0.0014974187576327878,
+    "gold": false
+   },
+   {
+    "id": "mq:a81d3e9a2c52f31a",
+    "label": "Sino-Tibetan relations during the Ming dynasty",
+    "p": 0.0014729107268749517,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:6bd6fca0c8bcc65c",
+   "label": "Sino-Tibetan relations during the Ming dynasty",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:42c4c1b7cd87520d",
+   "label": "Sino-Tibetan relations during the Ming dynasty",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:d3079c12e943ce0e",
+   "label": "Sino-Tibetan relations during the Ming dynasty",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:5526104998ece72d",
+   "label": "Nanjing",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:bb8c63f78a244535",
+   "label": "Sino-Tibetan relations during the Ming dynasty",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:62c8568fe1d885ba",
+   "label": "Sino-Tibetan relations during the Ming dynasty",
+   "wave": 1,
+   "via": "term:deshin shekpa",
+   "gold": false
+  },
+  {
+   "id": "mq:71a0089843686c23",
+   "label": "Sino-Tibetan relations during the Ming dynasty",
+   "wave": 1,
+   "via": "term:deshin shekpa",
+   "gold": true
+  },
+  {
+   "id": "mq:62999da1b0cae298",
+   "label": "Sino-Tibetan relations during the Ming dynasty",
+   "wave": 1,
+   "via": "term:deshin shekpa",
+   "gold": false
+  },
+  {
+   "id": "mq:a6e4afff418239e6",
+   "label": "Nanjing",
+   "wave": 2,
+   "via": "term:linggu",
+   "gold": false
+  },
+  {
+   "id": "mq:5e5cf66f8d580fb0",
+   "label": "Nanjing",
+   "wave": 3,
+   "via": "term:include nanjing",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:71a0089843686c23",
+    "label": "Sino-Tibetan relations during the Ming dynasty",
+    "gold": true
+   },
+   {
+    "id": "mq:62999da1b0cae298",
+    "label": "Sino-Tibetan relations during the Ming dynasty",
+    "gold": false
+   },
+   {
+    "id": "mq:d1c413f234981fce",
+    "label": "Sino-Tibetan relations during the Ming dynasty",
+    "gold": false
+   },
+   {
+    "id": "mq:667d98157e06e74b",
+    "label": "Sino-Tibetan relations during the Ming dynasty",
+    "gold": false
+   },
+   {
+    "id": "mq:f7ecd46db4cd2c1e",
+    "label": "Sino-Tibetan relations during the Ming dynasty",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:71a0089843686c23",
+    "label": "Sino-Tibetan relations during the Ming dynasty",
+    "gold": true
+   },
+   {
+    "id": "mq:62999da1b0cae298",
+    "label": "Sino-Tibetan relations during the Ming dynasty",
+    "gold": false
+   },
+   {
+    "id": "mq:5a739ae2bc7970db",
+    "label": "Sino-Tibetan relations during the Ming dynasty",
+    "gold": false
+   },
+   {
+    "id": "mq:667d98157e06e74b",
+    "label": "Sino-Tibetan relations during the Ming dynasty",
+    "gold": false
+   },
+   {
+    "id": "mq:d1c413f234981fce",
+    "label": "Sino-Tibetan relations during the Ming dynasty",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:71a0089843686c23",
+    "label": "Sino-Tibetan relations during the Ming dynasty",
+    "gold": true
+   },
+   {
+    "id": "mq:62999da1b0cae298",
+    "label": "Sino-Tibetan relations during the Ming dynasty",
+    "gold": false
+   },
+   {
+    "id": "mq:d1c413f234981fce",
+    "label": "Sino-Tibetan relations during the Ming dynasty",
+    "gold": false
+   },
+   {
+    "id": "mq:5a739ae2bc7970db",
+    "label": "Sino-Tibetan relations during the Ming dynasty",
+    "gold": false
+   },
+   {
+    "id": "mq:667d98157e06e74b",
+    "label": "Sino-Tibetan relations during the Ming dynasty",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:71a0089843686c23",
+    "label": "Sino-Tibetan relations during the Ming dynasty",
+    "gold": true
+   },
+   {
+    "id": "mq:5a739ae2bc7970db",
+    "label": "Sino-Tibetan relations during the Ming dynasty",
+    "gold": false
+   },
+   {
+    "id": "mq:bc93381137592efb",
+    "label": "Sino-Tibetan relations during the Ming dynasty",
+    "gold": false
+   },
+   {
+    "id": "mq:de2d8732dab61ec5",
+    "label": "Athanasius of Alexandria",
+    "gold": false
+   },
+   {
+    "id": "mq:667d98157e06e74b",
+    "label": "Sino-Tibetan relations during the Ming dynasty",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.5,
+  "Q": 0.5,
+  "LQ": 0.5,
+  "S": 0.5
+ }
+}

@@ -1,0 +1,454 @@
+{
+ "qid": "card:REM-613",
+ "set": "cards",
+ "question": "What was done about this, and why: design: simplify reading and make AI setup a guided flow?",
+ "gold": [
+  {
+   "id": "commit/6e11664c29",
+   "label": "commit 6e11664: Define quieter features, board filters and staged AI setup (REM-613)",
+   "seed": false
+  },
+  {
+   "id": "commit/7fbb171c1e",
+   "label": "commit 7fbb171: Merge pull request #311 from Percolation-Labs/codex/rem-613-interface-contract",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/064fc464a4",
+   "label": "commit 064fc46: board: file REM-613 design: simplify reading and make AI setup a guided flow",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-613.md#1",
+   "label": "board/cards/REM-613.md",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-613.md#2",
+   "label": "board/cards/REM-613.md \u203a Goal",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/9e09180c60",
+   "label": "commit 9e09180: design: simplify essay work into ideate write and edit",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "board/cards/REM-739.md#1",
+   "label": "board/cards/REM-739.md",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 2
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "board/cards/REM-613.md#2",
+    "label": "board/cards/REM-613.md \u203a Goal",
+    "role": "seed"
+   },
+   {
+    "id": "board/cards/REM-613.md#5",
+    "label": "board/cards/REM-613.md \u203a Log",
+    "role": "connector"
+   },
+   {
+    "id": "commit/6e11664c29",
+    "label": "commit 6e11664: Define quieter features, board filters and staged AI setup (REM-613)",
+    "role": "gold"
+   },
+   {
+    "id": "commit/7fbb171c1e",
+    "label": "commit 7fbb171: Merge pull request #311 from Percolation-Labs/codex/rem-613-interface-contract",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "board/cards/REM-613.md#2",
+    "b": "commit/6e11664c29",
+    "via": [
+     {
+      "kind": "term",
+      "key": "board filters",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "rem 613",
+      "width": 14
+     }
+    ]
+   },
+   {
+    "a": "board/cards/REM-613.md#5",
+    "b": "commit/6e11664c29",
+    "via": [
+     {
+      "kind": "term",
+      "key": "board filters",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "rem 613",
+      "width": 14
+     }
+    ]
+   },
+   {
+    "a": "board/cards/REM-613.md#5",
+    "b": "commit/7fbb171c1e",
+    "via": [
+     {
+      "kind": "term",
+      "key": "polish",
+      "width": 44
+     },
+     {
+      "kind": "term",
+      "key": "codex rem",
+      "width": 55
+     }
+    ]
+   }
+  ],
+  "cost": 3,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   2
+  ],
+  "entry": {
+   "seed": "board/cards/REM-613.md#2",
+   "gold": "commit/6e11664c29",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 446,
+  "within_2_doors": 27436,
+  "gold_within_1": 2,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "commit/8f01d73932",
+    "label": "commit 8f01d73: board: simplify-journeys checks in, working",
+    "p": 0.014095048160447501,
+    "gold": false
+   },
+   {
+    "id": "commit/fa76969256",
+    "label": "commit fa76969: board: simplify-journeys checks in, ended",
+    "p": 0.012078594606061758,
+    "gold": false
+   },
+   {
+    "id": "commit/5fc9138ce6",
+    "label": "commit 5fc9138: board: simplify-journeys takes REM-739",
+    "p": 0.01122882381928145,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-739.md#3",
+    "label": "board/cards/REM-739.md \u203a Log",
+    "p": 0.008779979296230263,
+    "gold": false
+   },
+   {
+    "id": "commit/594d4cc191",
+    "label": "commit 594d4cc: docs: simplify renderer configuration wording",
+    "p": 0.007539492577829201,
+    "gold": false
+   },
+   {
+    "id": "commit/e70afd84bc",
+    "label": "commit e70afd8: docs: simplify discovery browsing language",
+    "p": 0.006259961755784569,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/simple-journeys-study.md#1",
+    "label": "specs/percolate-application/simple-journeys-study.md \u203a A single essay workspace",
+    "p": 0.005717924196159767,
+    "gold": false
+   },
+   {
+    "id": "board/team/simplify-journeys.md#2",
+    "label": "board/team/simplify-journeys.md \u203a Log",
+    "p": 0.005585675715596241,
+    "gold": false
+   },
+   {
+    "id": "board/team/simplify-journeys.md#1",
+    "label": "board/team/simplify-journeys.md",
+    "p": 0.005362684379751989,
+    "gold": false
+   },
+   {
+    "id": "commit/dda88e26d0",
+    "label": "commit dda88e2: board: REM-739 in-progress \u2192 done",
+    "p": 0.004251937777987518,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/full-flow-design-study.md#1",
+    "label": "specs/percolate-application/full-flow-design-study.md \u203a Feed, page, canvas",
+    "p": 0.003670097250673063,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-613.md#3",
+    "label": "board/cards/REM-613.md \u203a Done when",
+    "p": 0.003571716201604227,
+    "gold": false
+   },
+   {
+    "id": "commit/9c63cfe5c2",
+    "label": "commit 9c63cfe: board: file REM-739 design: one workspace for ideating, writing and editing",
+    "p": 0.0034466901031496074,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-613.md#5",
+    "label": "board/cards/REM-613.md \u203a Log",
+    "p": 0.00337528328148968,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-739.md#2",
+    "label": "board/cards/REM-739.md \u203a Goal",
+    "p": 0.0031607635979534515,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/focus-canvas-study.md#6",
+    "label": "specs/percolate-application/focus-canvas-study.md \u203a Simplified essay journeys",
+    "p": 0.002964448074196051,
+    "gold": false
+   },
+   {
+    "id": "commit/820a5b7d29",
+    "label": "commit 820a5b7: board: p8-subsystems-a6 checks in, ended",
+    "p": 0.0028841511246275693,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/drafter.md#38",
+    "label": "specs/percolate-application/drafter.md \u203a Ask for a document review",
+    "p": 0.0027761992437514843,
+    "gold": false
+   },
+   {
+    "id": "output/simple-journeys/README.md#1",
+    "label": "output/simple-journeys/README.md \u203a One essay, three ways to work",
+    "p": 0.0026460809775586576,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-740.md#1",
+    "label": "board/cards/REM-740.md",
+    "p": 0.0024819274127770943,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/064fc464a4",
+   "label": "commit 064fc46: board: file REM-613 design: simplify reading and make AI setup a guided flow",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-613.md#1",
+   "label": "board/cards/REM-613.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-613.md#2",
+   "label": "board/cards/REM-613.md \u203a Goal",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/9e09180c60",
+   "label": "commit 9e09180: design: simplify essay work into ideate write and edit",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-739.md#1",
+   "label": "board/cards/REM-739.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-623.md#3",
+   "label": "board/cards/REM-623.md \u203a Evidence",
+   "wave": 1,
+   "via": "term:rem 613",
+   "gold": false
+  },
+  {
+   "id": "commit/aa1e859c5b",
+   "label": "commit aa1e859: board: REM-613 in-progress \u2192 done",
+   "wave": 1,
+   "via": "term:rem 613",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-613.md#3",
+   "label": "board/cards/REM-613.md \u203a Done when",
+   "wave": 1,
+   "via": "term:rem 613",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-613.md#4",
+   "label": "board/cards/REM-613.md \u203a Scope",
+   "wave": 1,
+   "via": "term:rem 613",
+   "gold": false
+  },
+  {
+   "id": "commit/6e11664c29",
+   "label": "commit 6e11664: Define quieter features, board filters and staged AI setup (REM-613)",
+   "wave": 1,
+   "via": "term:rem 613",
+   "gold": true
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "commit/8f01d73932",
+    "label": "commit 8f01d73: board: simplify-journeys checks in, working",
+    "gold": false
+   },
+   {
+    "id": "commit/fa76969256",
+    "label": "commit fa76969: board: simplify-journeys checks in, ended",
+    "gold": false
+   },
+   {
+    "id": "commit/5fc9138ce6",
+    "label": "commit 5fc9138: board: simplify-journeys takes REM-739",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-739.md#3",
+    "label": "board/cards/REM-739.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "commit/594d4cc191",
+    "label": "commit 594d4cc: docs: simplify renderer configuration wording",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "commit/8f01d73932",
+    "label": "commit 8f01d73: board: simplify-journeys checks in, working",
+    "gold": false
+   },
+   {
+    "id": "commit/fa76969256",
+    "label": "commit fa76969: board: simplify-journeys checks in, ended",
+    "gold": false
+   },
+   {
+    "id": "commit/5fc9138ce6",
+    "label": "commit 5fc9138: board: simplify-journeys takes REM-739",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-739.md#3",
+    "label": "board/cards/REM-739.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "commit/594d4cc191",
+    "label": "commit 594d4cc: docs: simplify renderer configuration wording",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/8f01d73932",
+    "label": "commit 8f01d73: board: simplify-journeys checks in, working",
+    "gold": false
+   },
+   {
+    "id": "commit/5fc9138ce6",
+    "label": "commit 5fc9138: board: simplify-journeys takes REM-739",
+    "gold": false
+   },
+   {
+    "id": "commit/594d4cc191",
+    "label": "commit 594d4cc: docs: simplify renderer configuration wording",
+    "gold": false
+   },
+   {
+    "id": "commit/fa76969256",
+    "label": "commit fa76969: board: simplify-journeys checks in, ended",
+    "gold": false
+   },
+   {
+    "id": "commit/e70afd84bc",
+    "label": "commit e70afd8: docs: simplify discovery browsing language",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "specs/percolate-application/full-flow-design-study.md#1",
+    "label": "specs/percolate-application/full-flow-design-study.md \u203a Feed, page, canvas",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-740.md#3",
+    "label": "board/cards/REM-740.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-613.md#3",
+    "label": "board/cards/REM-613.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-739.md#3",
+    "label": "board/cards/REM-739.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-740.md#1",
+    "label": "board/cards/REM-740.md",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

@@ -1,0 +1,431 @@
+{
+ "qid": "RW:2hop__31124_31093",
+ "set": "mq",
+ "question": "What nationality was the notable subjective idealist?",
+ "gold": [
+  {
+   "id": "mq:1e47cdcdec0ecc54",
+   "label": "Idealism",
+   "seed": true
+  },
+  {
+   "id": "mq:949a0621ae3aa0d0",
+   "label": "Empiricism",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:a969d0060891241e",
+   "label": "Charlie Chuck",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "mq:d046bc92b8a4ba60",
+   "label": "Jean Delville",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:1e47cdcdec0ecc54",
+   "label": "Idealism",
+   "rank": 3,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:d00eeb843f42f3b7",
+   "label": "Sino-Indonesian Dual Nationality Treaty",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "mq:26fb34bf4b06db16",
+   "label": "Malwida von Meysenbug",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 2
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:1e47cdcdec0ecc54",
+    "label": "Idealism",
+    "role": "gold"
+   },
+   {
+    "id": "mq:949a0621ae3aa0d0",
+    "label": "Empiricism",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:1e47cdcdec0ecc54",
+    "b": "mq:949a0621ae3aa0d0",
+    "via": [
+     {
+      "kind": "near",
+      "width": 4
+     },
+     {
+      "kind": "term",
+      "key": "subjective",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "idealism",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "george berkeley",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "berkeley",
+      "width": 32
+     },
+     {
+      "kind": "term",
+      "key": "immediately",
+      "width": 93
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "mq:1e47cdcdec0ecc54",
+   "gold": "mq:1e47cdcdec0ecc54",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 3792,
+  "within_2_doors": 17293,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "mq:46548716476d4c00",
+    "label": "Karl Jaspers Prize",
+    "p": 0.00186093263930289,
+    "gold": false
+   },
+   {
+    "id": "mq:9f88b90276abe0ae",
+    "label": "Peter Pan",
+    "p": 0.001640306717007827,
+    "gold": false
+   },
+   {
+    "id": "mq:40dd2830b17d3e2e",
+    "label": "2018 French Grand Prix",
+    "p": 0.0014559489048824885,
+    "gold": false
+   },
+   {
+    "id": "mq:0922b6b2d875ed52",
+    "label": "Karl Maron",
+    "p": 0.0013617591170052381,
+    "gold": false
+   },
+   {
+    "id": "mq:5e1c92a8e5658a20",
+    "label": "Henry Winterfeld",
+    "p": 0.0013277092212624867,
+    "gold": false
+   },
+   {
+    "id": "mq:31849110d5fae7a6",
+    "label": "Peter Dyneley",
+    "p": 0.0011361090264642919,
+    "gold": false
+   },
+   {
+    "id": "mq:401784081b5c4b85",
+    "label": "Frankenstein",
+    "p": 0.001104500700179513,
+    "gold": false
+   },
+   {
+    "id": "mq:f3a3f4b9b5afee10",
+    "label": "Frankenstein",
+    "p": 0.0011033385323728823,
+    "gold": false
+   },
+   {
+    "id": "mq:d8f14962478847ec",
+    "label": "Pierre Teilhard de Chardin",
+    "p": 0.0010799061399636314,
+    "gold": false
+   },
+   {
+    "id": "mq:91fd04bb6ffd1a12",
+    "label": "Dutch language",
+    "p": 0.0010762918331936472,
+    "gold": false
+   },
+   {
+    "id": "mq:3ea9cb3cc90e7b9b",
+    "label": "Germans",
+    "p": 0.0010727234807075868,
+    "gold": false
+   },
+   {
+    "id": "mq:5038f6e437fb0826",
+    "label": "Wei Lihuang",
+    "p": 0.0010530404510228398,
+    "gold": false
+   },
+   {
+    "id": "mq:9495f75b62cdff8b",
+    "label": "Idealism",
+    "p": 0.001021787101258343,
+    "gold": false
+   },
+   {
+    "id": "mq:bc91f7f572d0becf",
+    "label": "Treaty of Guadalupe Hidalgo",
+    "p": 0.001020875810839292,
+    "gold": false
+   },
+   {
+    "id": "mq:8bab97e895a2f637",
+    "label": "First Pan-African Conference",
+    "p": 0.000982642104638256,
+    "gold": false
+   },
+   {
+    "id": "mq:9fcd05b1daa531dd",
+    "label": "First Pan-African Conference",
+    "p": 0.0009826296271401057,
+    "gold": false
+   },
+   {
+    "id": "mq:8289556f1c10c567",
+    "label": "Wagner Manufacturing Company",
+    "p": 0.0009035500363581118,
+    "gold": false
+   },
+   {
+    "id": "mq:4054af99deaf07c7",
+    "label": "Helen French (architect)",
+    "p": 0.0008743753898123946,
+    "gold": false
+   },
+   {
+    "id": "mq:f53aa07087caa546",
+    "label": "History of science",
+    "p": 0.0008518035815377473,
+    "gold": false
+   },
+   {
+    "id": "mq:2274af990dd90cec",
+    "label": "2008 Sichuan earthquake",
+    "p": 0.0008310666462232666,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:a969d0060891241e",
+   "label": "Charlie Chuck",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:d046bc92b8a4ba60",
+   "label": "Jean Delville",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:1e47cdcdec0ecc54",
+   "label": "Idealism",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:d00eeb843f42f3b7",
+   "label": "Sino-Indonesian Dual Nationality Treaty",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:26fb34bf4b06db16",
+   "label": "Malwida von Meysenbug",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:41d176daaa94ba7c",
+   "label": "A Treatise Concerning the Principles of Human Knowledge",
+   "wave": 1,
+   "via": "term:george berkeley",
+   "gold": false
+  },
+  {
+   "id": "mq:9495f75b62cdff8b",
+   "label": "Idealism",
+   "wave": 1,
+   "via": "term:george berkeley",
+   "gold": false
+  },
+  {
+   "id": "mq:949a0621ae3aa0d0",
+   "label": "Empiricism",
+   "wave": 1,
+   "via": "term:george berkeley",
+   "gold": true
+  },
+  {
+   "id": "mq:47d6ce5871e328b5",
+   "label": "United Kingdom",
+   "wave": 1,
+   "via": "term:george berkeley",
+   "gold": false
+  },
+  {
+   "id": "mq:8eff4923c2a63361",
+   "label": "Emotion",
+   "wave": 2,
+   "via": "term:subjective",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:46548716476d4c00",
+    "label": "Karl Jaspers Prize",
+    "gold": false
+   },
+   {
+    "id": "mq:9f88b90276abe0ae",
+    "label": "Peter Pan",
+    "gold": false
+   },
+   {
+    "id": "mq:40dd2830b17d3e2e",
+    "label": "2018 French Grand Prix",
+    "gold": false
+   },
+   {
+    "id": "mq:0922b6b2d875ed52",
+    "label": "Karl Maron",
+    "gold": false
+   },
+   {
+    "id": "mq:5e1c92a8e5658a20",
+    "label": "Henry Winterfeld",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:d8f14962478847ec",
+    "label": "Pierre Teilhard de Chardin",
+    "gold": false
+   },
+   {
+    "id": "mq:828409b2b4af1aaf",
+    "label": "John Alexander Smith",
+    "gold": false
+   },
+   {
+    "id": "mq:9495f75b62cdff8b",
+    "label": "Idealism",
+    "gold": false
+   },
+   {
+    "id": "mq:9f88b90276abe0ae",
+    "label": "Peter Pan",
+    "gold": false
+   },
+   {
+    "id": "mq:949a0621ae3aa0d0",
+    "label": "Empiricism",
+    "gold": true
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:d8f14962478847ec",
+    "label": "Pierre Teilhard de Chardin",
+    "gold": false
+   },
+   {
+    "id": "mq:9495f75b62cdff8b",
+    "label": "Idealism",
+    "gold": false
+   },
+   {
+    "id": "mq:828409b2b4af1aaf",
+    "label": "John Alexander Smith",
+    "gold": false
+   },
+   {
+    "id": "mq:acccf8f0b227f7bc",
+    "label": "LeBron James",
+    "gold": false
+   },
+   {
+    "id": "mq:b0e95466c2090cad",
+    "label": "LeBron James",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:828409b2b4af1aaf",
+    "label": "John Alexander Smith",
+    "gold": false
+   },
+   {
+    "id": "mq:d8f14962478847ec",
+    "label": "Pierre Teilhard de Chardin",
+    "gold": false
+   },
+   {
+    "id": "mq:de72b955b33c9740",
+    "label": "Mexican passport",
+    "gold": false
+   },
+   {
+    "id": "mq:151060f9fdab0b53",
+    "label": "Adriana Caselotti",
+    "gold": false
+   },
+   {
+    "id": "mq:a7c6dc20b39cfc54",
+    "label": "A. P. J. Abdul Kalam",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 1.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

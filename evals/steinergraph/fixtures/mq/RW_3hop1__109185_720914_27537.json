@@ -1,0 +1,430 @@
+{
+ "qid": "RW:3hop1__109185_720914_27537",
+ "set": "mq",
+ "question": "Why did Roncalli leave the city where the creator of La Schiavona died?",
+ "gold": [
+  {
+   "id": "mq:1f1ef3b26127ee47",
+   "label": "La Schiavona",
+   "seed": true
+  },
+  {
+   "id": "mq:b5509bc978d54554",
+   "label": "The Martyrdom of Saint Lawrence (Titian)",
+   "seed": false
+  },
+  {
+   "id": "mq:da86bc73e96d2254",
+   "label": "Pope John XXIII",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:1f1ef3b26127ee47",
+   "label": "La Schiavona",
+   "rank": 1,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:b9d5ffd1c628055d",
+   "label": "Pope John XXIII",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:dad6557387b609f4",
+   "label": "Roncalli High School (Indiana)",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:e97c9ce9546e7e32",
+   "label": "The Man from U.N.C.L.E.",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "mq:843a200265236010",
+   "label": "Pope John XXIII",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:1f1ef3b26127ee47",
+    "label": "La Schiavona",
+    "role": "gold"
+   },
+   {
+    "id": "mq:b5509bc978d54554",
+    "label": "The Martyrdom of Saint Lawrence (Titian)",
+    "role": "gold"
+   },
+   {
+    "id": "mq:da86bc73e96d2254",
+    "label": "Pope John XXIII",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:1f1ef3b26127ee47",
+    "b": "mq:b5509bc978d54554",
+    "via": [
+     {
+      "kind": "term",
+      "key": "titian",
+      "width": 21
+     }
+    ]
+   },
+   {
+    "a": "mq:b5509bc978d54554",
+    "b": "mq:da86bc73e96d2254",
+    "via": [
+     {
+      "kind": "term",
+      "key": "venice",
+      "width": 54
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   2,
+   1
+  ],
+  "entry": {
+   "seed": "mq:1f1ef3b26127ee47",
+   "gold": "mq:1f1ef3b26127ee47",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 2110,
+  "within_2_doors": 18960,
+  "gold_within_1": 2,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "mq:1b52ae41a3460daa",
+    "label": "Pope John XXIII",
+    "p": 0.006003871614900051,
+    "gold": false
+   },
+   {
+    "id": "mq:a09b012fcdf4334b",
+    "label": "La Bella",
+    "p": 0.005515958053966401,
+    "gold": false
+   },
+   {
+    "id": "mq:39390d5df6a29327",
+    "label": "WRNJ",
+    "p": 0.00448987695534595,
+    "gold": false
+   },
+   {
+    "id": "mq:9e81436f4623f01e",
+    "label": "Pope John XXIII",
+    "p": 0.0035469343028644543,
+    "gold": false
+   },
+   {
+    "id": "mq:da86bc73e96d2254",
+    "label": "Pope John XXIII",
+    "p": 0.003416570570558281,
+    "gold": true
+   },
+   {
+    "id": "mq:520eb59b1c5e96d0",
+    "label": "Pope John XXIII",
+    "p": 0.0026559614544238615,
+    "gold": false
+   },
+   {
+    "id": "mq:32dafaf0fbdb1d5d",
+    "label": "Pope John XXIII",
+    "p": 0.0026261361160097242,
+    "gold": false
+   },
+   {
+    "id": "mq:ebc026d9d72f61f8",
+    "label": "Portrait of Pietro Aretino",
+    "p": 0.0023814773560022645,
+    "gold": false
+   },
+   {
+    "id": "mq:5ef91d8e71affdd7",
+    "label": "Portrait of a Young Englishman",
+    "p": 0.0020191249096532934,
+    "gold": false
+   },
+   {
+    "id": "mq:7bd202eb4c1c5e18",
+    "label": "Portrait of Ippolito de' Medici",
+    "p": 0.001888428556811916,
+    "gold": false
+   },
+   {
+    "id": "mq:a439b5967faf1e41",
+    "label": "Pope Paul VI",
+    "p": 0.001832633227930107,
+    "gold": false
+   },
+   {
+    "id": "mq:200bd278592b8be8",
+    "label": "Portrait of Lavinia Vecellio",
+    "p": 0.0014770464500847018,
+    "gold": false
+   },
+   {
+    "id": "mq:43a6b50ac9f80717",
+    "label": "Almost Made Ya",
+    "p": 0.0012288696707091998,
+    "gold": false
+   },
+   {
+    "id": "mq:495d79ce085ba5a0",
+    "label": "Black people",
+    "p": 0.0011678890716810449,
+    "gold": false
+   },
+   {
+    "id": "mq:44f24f2cc798501a",
+    "label": "Self-portrait with Sir Endymion Porter",
+    "p": 0.0010823408114632941,
+    "gold": false
+   },
+   {
+    "id": "mq:5a40ef57a66f8d39",
+    "label": "Canonization of Pope John XXIII and Pope John Paul II",
+    "p": 0.0010816026425032575,
+    "gold": false
+   },
+   {
+    "id": "mq:0d954eb474eb60ef",
+    "label": "Pope Paul VI",
+    "p": 0.0010267861437330387,
+    "gold": false
+   },
+   {
+    "id": "mq:4eccda4bdade6615",
+    "label": "Pope John XXIII",
+    "p": 0.0010205066068028276,
+    "gold": false
+   },
+   {
+    "id": "mq:a74427e6e1ae1eff",
+    "label": "German reunification",
+    "p": 0.000990434266436467,
+    "gold": false
+   },
+   {
+    "id": "mq:24bb8e38c6ee05e1",
+    "label": "Pacem in terris",
+    "p": 0.0009811451793570534,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:1f1ef3b26127ee47",
+   "label": "La Schiavona",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:b9d5ffd1c628055d",
+   "label": "Pope John XXIII",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:dad6557387b609f4",
+   "label": "Roncalli High School (Indiana)",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:e97c9ce9546e7e32",
+   "label": "The Man from U.N.C.L.E.",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:843a200265236010",
+   "label": "Pope John XXIII",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:9e81436f4623f01e",
+   "label": "Pope John XXIII",
+   "wave": 1,
+   "via": "term:venice",
+   "gold": false
+  },
+  {
+   "id": "mq:ae0203c21d9345de",
+   "label": "Nicol\u00f2 Sagredo",
+   "wave": 1,
+   "via": "term:venice",
+   "gold": false
+  },
+  {
+   "id": "mq:85162a546e898348",
+   "label": "Niccol\u00f2 Semitecolo",
+   "wave": 1,
+   "via": "term:venice",
+   "gold": false
+  },
+  {
+   "id": "mq:35b4a2985fa130d6",
+   "label": "Mysterious Skin",
+   "wave": 1,
+   "via": "term:venice",
+   "gold": false
+  },
+  {
+   "id": "mq:da86bc73e96d2254",
+   "label": "Pope John XXIII",
+   "wave": 1,
+   "via": "term:venice",
+   "gold": true
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:1b52ae41a3460daa",
+    "label": "Pope John XXIII",
+    "gold": false
+   },
+   {
+    "id": "mq:a09b012fcdf4334b",
+    "label": "La Bella",
+    "gold": false
+   },
+   {
+    "id": "mq:39390d5df6a29327",
+    "label": "WRNJ",
+    "gold": false
+   },
+   {
+    "id": "mq:9e81436f4623f01e",
+    "label": "Pope John XXIII",
+    "gold": false
+   },
+   {
+    "id": "mq:da86bc73e96d2254",
+    "label": "Pope John XXIII",
+    "gold": true
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:1b52ae41a3460daa",
+    "label": "Pope John XXIII",
+    "gold": false
+   },
+   {
+    "id": "mq:9e81436f4623f01e",
+    "label": "Pope John XXIII",
+    "gold": false
+   },
+   {
+    "id": "mq:da86bc73e96d2254",
+    "label": "Pope John XXIII",
+    "gold": true
+   },
+   {
+    "id": "mq:32dafaf0fbdb1d5d",
+    "label": "Pope John XXIII",
+    "gold": false
+   },
+   {
+    "id": "mq:a439b5967faf1e41",
+    "label": "Pope Paul VI",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:1b52ae41a3460daa",
+    "label": "Pope John XXIII",
+    "gold": false
+   },
+   {
+    "id": "mq:9e81436f4623f01e",
+    "label": "Pope John XXIII",
+    "gold": false
+   },
+   {
+    "id": "mq:da86bc73e96d2254",
+    "label": "Pope John XXIII",
+    "gold": true
+   },
+   {
+    "id": "mq:32dafaf0fbdb1d5d",
+    "label": "Pope John XXIII",
+    "gold": false
+   },
+   {
+    "id": "mq:a439b5967faf1e41",
+    "label": "Pope Paul VI",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:32dafaf0fbdb1d5d",
+    "label": "Pope John XXIII",
+    "gold": false
+   },
+   {
+    "id": "mq:9e81436f4623f01e",
+    "label": "Pope John XXIII",
+    "gold": false
+   },
+   {
+    "id": "mq:1b52ae41a3460daa",
+    "label": "Pope John XXIII",
+    "gold": false
+   },
+   {
+    "id": "mq:da86bc73e96d2254",
+    "label": "Pope John XXIII",
+    "gold": true
+   },
+   {
+    "id": "mq:1cd01646b2a33187",
+    "label": "The Muppets Celebrate Jim Henson",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.5,
+  "Q": 0.5,
+  "LQ": 0.5,
+  "S": 0.5
+ }
+}

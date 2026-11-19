@@ -1,0 +1,422 @@
+{
+ "qid": "card:REM-363",
+ "set": "cards",
+ "question": "What was done about this, and why: mcp: an agent does everything in Percolate with one search and one upsert per concept?",
+ "gold": [
+  {
+   "id": "commit/6a080b9ebc",
+   "label": "commit 6a080b9: Merge pull request #299 from Percolation-Labs/amartey/rem-363-nine-tools",
+   "seed": true
+  },
+  {
+   "id": "commit/930bc586bf",
+   "label": "commit 930bc58: specs: an agent works in Percolate with nine tools, one search and one upsert per concept (REM-363)",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/13b142db08",
+   "label": "commit 13b142d: board: file REM-363 mcp: an agent does everything in Percolate with one search and one upsert per concep",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-363.md#1",
+   "label": "board/cards/REM-363.md",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/930bc586bf",
+   "label": "commit 930bc58: specs: an agent works in Percolate with nine tools, one search and one upsert per concept (REM-363)",
+   "rank": 3,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "board/cards/REM-363.md#2",
+   "label": "board/cards/REM-363.md \u203a Goal",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/6a080b9ebc",
+   "label": "commit 6a080b9: Merge pull request #299 from Percolation-Labs/amartey/rem-363-nine-tools",
+   "rank": 5,
+   "gold": true,
+   "doors_to_gold": 0
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/6a080b9ebc",
+    "label": "commit 6a080b9: Merge pull request #299 from Percolation-Labs/amartey/rem-363-nine-tools",
+    "role": "gold"
+   },
+   {
+    "id": "commit/930bc586bf",
+    "label": "commit 930bc58: specs: an agent works in Percolate with nine tools, one search and one upsert per concept (REM-363)",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/6a080b9ebc",
+    "b": "commit/930bc586bf",
+    "via": [
+     {
+      "kind": "term",
+      "key": "concept rem",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "nine tools",
+      "width": 6
+     },
+     {
+      "kind": "term",
+      "key": "rem 363",
+      "width": 45
+     },
+     {
+      "kind": "term",
+      "key": "upsert",
+      "width": 88
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "commit/6a080b9ebc",
+   "gold": "commit/6a080b9ebc",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 297,
+  "within_2_doors": 27402,
+  "gold_within_1": 0,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "board/cards/REM-550.md#4",
+    "label": "board/cards/REM-550.md \u203a Agents and provenance",
+    "p": 0.006644488595780467,
+    "gold": false
+   },
+   {
+    "id": "commit/b97074f7de",
+    "label": "commit b97074f: board: p8-subsystems-cb takes REM-594",
+    "p": 0.006232542690610221,
+    "gold": false
+   },
+   {
+    "id": "commit/4a13c86170",
+    "label": "commit 4a13c86: board: note on REM-363",
+    "p": 0.005804410506800326,
+    "gold": false
+   },
+   {
+    "id": "commit/4cdd8c334f",
+    "label": "commit 4cdd8c3: board: percolate-application-69 takes REM-345",
+    "p": 0.004968269524609694,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-363.md#3",
+    "label": "board/cards/REM-363.md \u203a Evidence",
+    "p": 0.004532290353209769,
+    "gold": false
+   },
+   {
+    "id": "commit/33f1afd460",
+    "label": "commit 33f1afd: board: edit REM-603 title",
+    "p": 0.003231732033387055,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/agents-and-workflows.md#17",
+    "label": "specs/percolate-application/agents-and-workflows.md \u203a MCP adapter",
+    "p": 0.003006207043575291,
+    "gold": false
+   },
+   {
+    "id": "meta/status/2026-09-19-release-roll-call.md#3",
+    "label": "meta/status/2026-09-19-release-roll-call.md \u203a In flight",
+    "p": 0.002937816217601541,
+    "gold": false
+   },
+   {
+    "id": "board/team/p8-subsystems-cc.md#2",
+    "label": "board/team/p8-subsystems-cc.md \u203a Log",
+    "p": 0.0026100876180908763,
+    "gold": false
+   },
+   {
+    "id": "commit/58c80a0eb4",
+    "label": "commit 58c80a0: board: codex-reading-room takes REM-602",
+    "p": 0.002431928015975689,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/connecting-claude-and-chatgpt.md#13",
+    "label": "specs/percolate-application/connecting-claude-and-chatgpt.md \u203a Verification log",
+    "p": 0.0024249177402337857,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1103.md#1",
+    "label": "board/cards/REM-1103.md",
+    "p": 0.0023955453721229546,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-363.md#10",
+    "label": "board/cards/REM-363.md \u203a Log",
+    "p": 0.0023644891429940576,
+    "gold": false
+   },
+   {
+    "id": "commit/d61405ff58",
+    "label": "commit d61405f: board: file REM-1103 search: a query with nothing near it says nothing matched instead of returning the ",
+    "p": 0.0023135259746996564,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-166.md#9",
+    "label": "board/cards/REM-166.md \u203a 2026-09-13T21:16:23.313Z \u00b7 Amartey",
+    "p": 0.002178949679705567,
+    "gold": false
+   },
+   {
+    "id": "meta/skills/spec-driven-development/references/tool-surface.md#3",
+    "label": "meta/skills/spec-driven-development/references/tool-surface.md \u203a `query` is the pattern to copy",
+    "p": 0.0021692856086494385,
+    "gold": false
+   },
+   {
+    "id": "meta/skills/spec-driven-development/SKILL.md#13",
+    "label": "meta/skills/spec-driven-development/SKILL.md \u203a 5. Bloat avoidance is a constraint, not a preference",
+    "p": 0.0021621601962166803,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-363.md#8",
+    "label": "board/cards/REM-363.md \u203a Log",
+    "p": 0.002050373439857694,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261029-123407-8ae8.md#1",
+    "label": "board/messages/M-20261029-123407-8ae8.md",
+    "p": 0.001970269394182949,
+    "gold": false
+   },
+   {
+    "id": "meta/status/2026-09-19-release-roll-call.md#4",
+    "label": "meta/status/2026-09-19-release-roll-call.md \u203a Sessions",
+    "p": 0.0018535606861494708,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/13b142db08",
+   "label": "commit 13b142d: board: file REM-363 mcp: an agent does everything in Percolate with one search and one upsert per concep",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-363.md#1",
+   "label": "board/cards/REM-363.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/930bc586bf",
+   "label": "commit 930bc58: specs: an agent works in Percolate with nine tools, one search and one upsert per concept (REM-363)",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "board/cards/REM-363.md#2",
+   "label": "board/cards/REM-363.md \u203a Goal",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/6a080b9ebc",
+   "label": "commit 6a080b9: Merge pull request #299 from Percolation-Labs/amartey/rem-363-nine-tools",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "board/cards/REM-403.md#7",
+   "label": "board/cards/REM-403.md \u203a Log",
+   "wave": 1,
+   "via": "term:rem 363",
+   "gold": false
+  },
+  {
+   "id": "commit/1057a1eb02",
+   "label": "commit 1057a1e: board: REM-363 canceled \u2192 todo",
+   "wave": 1,
+   "via": "term:rem 363",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-1032.md#5",
+   "label": "board/cards/REM-1032.md \u203a Scope",
+   "wave": 1,
+   "via": "term:rem 363",
+   "gold": false
+  },
+  {
+   "id": "commit/8b4b69c8d1",
+   "label": "commit 8b4b69c: board: REM-363 backlog \u2192 canceled",
+   "wave": 1,
+   "via": "term:rem 363",
+   "gold": false
+  },
+  {
+   "id": "commit/157fa3249e",
+   "label": "commit 157fa32: board: REM-363 in-progress \u2192 done",
+   "wave": 1,
+   "via": "term:rem 363",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "board/cards/REM-550.md#4",
+    "label": "board/cards/REM-550.md \u203a Agents and provenance",
+    "gold": false
+   },
+   {
+    "id": "commit/b97074f7de",
+    "label": "commit b97074f: board: p8-subsystems-cb takes REM-594",
+    "gold": false
+   },
+   {
+    "id": "commit/4a13c86170",
+    "label": "commit 4a13c86: board: note on REM-363",
+    "gold": false
+   },
+   {
+    "id": "commit/4cdd8c334f",
+    "label": "commit 4cdd8c3: board: percolate-application-69 takes REM-345",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-363.md#3",
+    "label": "board/cards/REM-363.md \u203a Evidence",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "board/cards/REM-550.md#4",
+    "label": "board/cards/REM-550.md \u203a Agents and provenance",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/agents-and-workflows.md#17",
+    "label": "specs/percolate-application/agents-and-workflows.md \u203a MCP adapter",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-353.md#7",
+    "label": "board/cards/REM-353.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-363.md#3",
+    "label": "board/cards/REM-363.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/product-feedback.md#4",
+    "label": "specs/percolate-application/product-feedback.md \u203a Surfaces",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "board/cards/REM-320.md#6",
+    "label": "board/cards/REM-320.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "commit/c9d81f8d89",
+    "label": "commit c9d81f8: specs: the Library board is built on the web and over MCP, as one search and one upsert (REM-345)",
+    "gold": false
+   },
+   {
+    "id": "commit/157fa3249e",
+    "label": "commit 157fa32: board: REM-363 in-progress \u2192 done",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1032.md#3",
+    "label": "board/cards/REM-1032.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-363.md#4",
+    "label": "board/cards/REM-363.md \u203a Done when",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "board/cards/REM-550.md#4",
+    "label": "board/cards/REM-550.md \u203a Agents and provenance",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/product-feedback.md#4",
+    "label": "specs/percolate-application/product-feedback.md \u203a Surfaces",
+    "gold": false
+   },
+   {
+    "id": "commit/c9d81f8d89",
+    "label": "commit c9d81f8: specs: the Library board is built on the web and over MCP, as one search and one upsert (REM-345)",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-320.md#6",
+    "label": "board/cards/REM-320.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-363.md#4",
+    "label": "board/cards/REM-363.md \u203a Done when",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": null,
+  "Q": null,
+  "LQ": null,
+  "S": null
+ }
+}

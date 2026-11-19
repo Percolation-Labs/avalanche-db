@@ -1,0 +1,426 @@
+{
+ "qid": "RW:2hop__42747_83837",
+ "set": "mq",
+ "question": "Who sings Home Alone Tonight with the singer of Light It Up?",
+ "gold": [
+  {
+   "id": "mq:4602f74f005e746e",
+   "label": "Light It Up (Luke Bryan song)",
+   "seed": false
+  },
+  {
+   "id": "mq:4d09ad1f6a1c6b68",
+   "label": "Home Alone Tonight",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:4d09ad1f6a1c6b68",
+   "label": "Home Alone Tonight",
+   "rank": 1,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:96f4827605514ae7",
+   "label": "Take Me Home Tonight (song)",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:ff86a87c804546a1",
+   "label": "Light Sings",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "mq:49e500b730d46e7d",
+   "label": "Ernest Tubb Sings Hank Williams",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "mq:60ccfc263d2b6c4d",
+   "label": "If You Leave Me Tonight I'll Cry",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:4602f74f005e746e",
+    "label": "Light It Up (Luke Bryan song)",
+    "role": "gold"
+   },
+   {
+    "id": "mq:4d09ad1f6a1c6b68",
+    "label": "Home Alone Tonight",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:4602f74f005e746e",
+    "b": "mq:4d09ad1f6a1c6b68",
+    "via": [
+     {
+      "kind": "near",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "artist luke",
+      "width": 8
+     },
+     {
+      "kind": "term",
+      "key": "luke bryan",
+      "width": 11
+     },
+     {
+      "kind": "term",
+      "key": "bryan",
+      "width": 38
+     },
+     {
+      "kind": "term",
+      "key": "luke",
+      "width": 48
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "mq:4d09ad1f6a1c6b68",
+   "gold": "mq:4d09ad1f6a1c6b68",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 1271,
+  "within_2_doors": 19637,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "mq:ffcc7aee50b30cfb",
+    "label": "Take Me Home Tonight (song)",
+    "p": 0.007939417658249489,
+    "gold": false
+   },
+   {
+    "id": "mq:c2b71446ab1694d7",
+    "label": "Some Enchanted Evening",
+    "p": 0.002442261600101389,
+    "gold": false
+   },
+   {
+    "id": "mq:51a1caaf24a155eb",
+    "label": "Kofi Annan",
+    "p": 0.00207646154045717,
+    "gold": false
+   },
+   {
+    "id": "mq:edee714f51021a49",
+    "label": "Little Green (song)",
+    "p": 0.0020568312736618096,
+    "gold": false
+   },
+   {
+    "id": "mq:b89958d32648e97d",
+    "label": "Jason Deere",
+    "p": 0.0016511995689507375,
+    "gold": false
+   },
+   {
+    "id": "mq:b33038efecf9b44a",
+    "label": "Cel\u00e2l Bayar",
+    "p": 0.0015694652856782323,
+    "gold": false
+   },
+   {
+    "id": "mq:95d052ab6fa8d8b6",
+    "label": "The King of Rock and Roll",
+    "p": 0.001468276041203959,
+    "gold": false
+   },
+   {
+    "id": "mq:6717e81d65bd53e6",
+    "label": "I'm So Lonesome I Could Cry",
+    "p": 0.0014027501274015356,
+    "gold": false
+   },
+   {
+    "id": "mq:1dadcbc9aa29127d",
+    "label": "All Things in Time",
+    "p": 0.0013874979881797617,
+    "gold": false
+   },
+   {
+    "id": "mq:3935b48db4fa230a",
+    "label": "Eddie Harris Sings the Blues",
+    "p": 0.001352602791736641,
+    "gold": false
+   },
+   {
+    "id": "mq:703f15eb0d0de0f3",
+    "label": "Greatest Hits: The Sound of Money",
+    "p": 0.0013341243460935244,
+    "gold": false
+   },
+   {
+    "id": "mq:cace91ad55f3aba6",
+    "label": "Your Cheatin' Heart (film)",
+    "p": 0.0012978437862046059,
+    "gold": false
+   },
+   {
+    "id": "mq:2142dfaecd489b54",
+    "label": "I Wish Tonight Would Never End",
+    "p": 0.0012619347152742196,
+    "gold": false
+   },
+   {
+    "id": "mq:891bd5b49318ff7c",
+    "label": "I Write the Songs",
+    "p": 0.0012506604397658598,
+    "gold": false
+   },
+   {
+    "id": "mq:86abc940c8f98240",
+    "label": "Think I'm in Love (Eddie Money song)",
+    "p": 0.0012495627989275132,
+    "gold": false
+   },
+   {
+    "id": "mq:23422f3a2151b6c4",
+    "label": "Tonight Live with Steve Vizard",
+    "p": 0.0012441012528098773,
+    "gold": false
+   },
+   {
+    "id": "mq:364bc0c7ca546f45",
+    "label": "La Good Life",
+    "p": 0.0010293956760886705,
+    "gold": false
+   },
+   {
+    "id": "mq:511b208ec1601ecd",
+    "label": "Sonny & Cher",
+    "p": 0.0009926992810127728,
+    "gold": false
+   },
+   {
+    "id": "mq:377d6d5eadfb7e35",
+    "label": "Ernest Saves Christmas",
+    "p": 0.0009371186637963175,
+    "gold": false
+   },
+   {
+    "id": "mq:1b73bd6aca4d3f98",
+    "label": "Et tu, Brute?",
+    "p": 0.0009346916090127542,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:4d09ad1f6a1c6b68",
+   "label": "Home Alone Tonight",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:96f4827605514ae7",
+   "label": "Take Me Home Tonight (song)",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:ff86a87c804546a1",
+   "label": "Light Sings",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:49e500b730d46e7d",
+   "label": "Ernest Tubb Sings Hank Williams",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:60ccfc263d2b6c4d",
+   "label": "If You Leave Me Tonight I'll Cry",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:b4101442d5fab789",
+   "label": "American Idol (season 16)",
+   "wave": 1,
+   "via": "term:luke bryan",
+   "gold": false
+  },
+  {
+   "id": "mq:4602f74f005e746e",
+   "label": "Light It Up (Luke Bryan song)",
+   "wave": 1,
+   "via": "term:luke bryan",
+   "gold": true
+  },
+  {
+   "id": "mq:c6a13265bea75941",
+   "label": "Rain Is a Good Thing",
+   "wave": 1,
+   "via": "term:luke bryan",
+   "gold": false
+  },
+  {
+   "id": "mq:b1e9d7d165a138c1",
+   "label": "Country Girl (Shake It for Me)",
+   "wave": 1,
+   "via": "term:luke bryan",
+   "gold": false
+  },
+  {
+   "id": "mq:2b464053ef1f0541",
+   "label": "Someone Else Calling You Baby",
+   "wave": 1,
+   "via": "term:luke bryan",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:ffcc7aee50b30cfb",
+    "label": "Take Me Home Tonight (song)",
+    "gold": false
+   },
+   {
+    "id": "mq:c2b71446ab1694d7",
+    "label": "Some Enchanted Evening",
+    "gold": false
+   },
+   {
+    "id": "mq:51a1caaf24a155eb",
+    "label": "Kofi Annan",
+    "gold": false
+   },
+   {
+    "id": "mq:edee714f51021a49",
+    "label": "Little Green (song)",
+    "gold": false
+   },
+   {
+    "id": "mq:b89958d32648e97d",
+    "label": "Jason Deere",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:ffcc7aee50b30cfb",
+    "label": "Take Me Home Tonight (song)",
+    "gold": false
+   },
+   {
+    "id": "mq:b7a99de1ab40a641",
+    "label": "I'll Cry If I Want To",
+    "gold": false
+   },
+   {
+    "id": "mq:8d98e2d2f4afed3d",
+    "label": "I'll Cry If I Want To",
+    "gold": false
+   },
+   {
+    "id": "mq:2142dfaecd489b54",
+    "label": "I Wish Tonight Would Never End",
+    "gold": false
+   },
+   {
+    "id": "mq:3935b48db4fa230a",
+    "label": "Eddie Harris Sings the Blues",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:ffcc7aee50b30cfb",
+    "label": "Take Me Home Tonight (song)",
+    "gold": false
+   },
+   {
+    "id": "mq:b7a99de1ab40a641",
+    "label": "I'll Cry If I Want To",
+    "gold": false
+   },
+   {
+    "id": "mq:8d98e2d2f4afed3d",
+    "label": "I'll Cry If I Want To",
+    "gold": false
+   },
+   {
+    "id": "mq:a2334e83ade62bfd",
+    "label": "Death of a Clown",
+    "gold": false
+   },
+   {
+    "id": "mq:4dcb8ead72b712a5",
+    "label": "Death of a Clown",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:ffcc7aee50b30cfb",
+    "label": "Take Me Home Tonight (song)",
+    "gold": false
+   },
+   {
+    "id": "mq:f8af45a79c7e5d97",
+    "label": "Don't Let Me Be Lonely Tonight",
+    "gold": false
+   },
+   {
+    "id": "mq:f0a9739c59d2074b",
+    "label": "Jim Cornelison",
+    "gold": false
+   },
+   {
+    "id": "mq:4149d26dc653d850",
+    "label": "Daniel Stern (actor)",
+    "gold": false
+   },
+   {
+    "id": "mq:1b3af31938b3254e",
+    "label": "Wherever You Are Tonight",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

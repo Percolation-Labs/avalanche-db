@@ -1,0 +1,470 @@
+{
+ "qid": "RW:3hop2__607269_223623_162182",
+ "set": "mq",
+ "question": "In what region of the country containing H\u1ea1 H\u00f2a is John Phan's birthplace found?",
+ "gold": [
+  {
+   "id": "mq:601bcfec0687922d",
+   "label": "H\u1ea1 H\u00f2a District",
+   "seed": true
+  },
+  {
+   "id": "mq:832be2e09f953757",
+   "label": "South Central Coast",
+   "seed": false
+  },
+  {
+   "id": "mq:bd575183a7d3d7d6",
+   "label": "John Phan",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:601bcfec0687922d",
+   "label": "H\u1ea1 H\u00f2a District",
+   "rank": 1,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:bd575183a7d3d7d6",
+   "label": "John Phan",
+   "rank": 2,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:2ff1e1986f07b0f6",
+   "label": "John Trumbull Birthplace",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "mq:1ed4b2493b5e3b06",
+   "label": "Tourism in Nepal",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "mq:38046a896aeb59ca",
+   "label": "Mueang Phan",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:2b2603ee96ac484c",
+    "label": "Th\u1edbi B\u00ecnh District",
+    "role": "connector"
+   },
+   {
+    "id": "mq:601bcfec0687922d",
+    "label": "H\u1ea1 H\u00f2a District",
+    "role": "gold"
+   },
+   {
+    "id": "mq:832be2e09f953757",
+    "label": "South Central Coast",
+    "role": "gold"
+   },
+   {
+    "id": "mq:bd575183a7d3d7d6",
+    "label": "John Phan",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:2b2603ee96ac484c",
+    "b": "mq:601bcfec0687922d",
+    "via": [
+     {
+      "kind": "term",
+      "key": "district covers",
+      "width": 9
+     },
+     {
+      "kind": "term",
+      "key": "capital lies",
+      "width": 10
+     },
+     {
+      "kind": "term",
+      "key": "district capital",
+      "width": 14
+     },
+     {
+      "kind": "term",
+      "key": "rural district",
+      "width": 33
+     },
+     {
+      "kind": "term",
+      "key": "km\u00b2",
+      "width": 61
+     }
+    ]
+   },
+   {
+    "a": "mq:2b2603ee96ac484c",
+    "b": "mq:832be2e09f953757",
+    "via": [
+     {
+      "kind": "near",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "b\u00ecnh",
+      "width": 6
+     }
+    ]
+   },
+   {
+    "a": "mq:832be2e09f953757",
+    "b": "mq:bd575183a7d3d7d6",
+    "via": [
+     {
+      "kind": "term",
+      "key": "vietnamese",
+      "width": 40
+     }
+    ]
+   }
+  ],
+  "cost": 3,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   2,
+   2,
+   1
+  ],
+  "entry": {
+   "seed": "mq:601bcfec0687922d",
+   "gold": "mq:601bcfec0687922d",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 1566,
+  "within_2_doors": 19496,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "mq:a5df5b7ed170265b",
+    "label": "Muang Kham, Chiang Rai",
+    "p": 0.005673719888411067,
+    "gold": false
+   },
+   {
+    "id": "mq:b33cd45b9f2cd2a6",
+    "label": "Mae Yao",
+    "p": 0.004574076196640484,
+    "gold": false
+   },
+   {
+    "id": "mq:59e707526d43a454",
+    "label": "Nang Lae",
+    "p": 0.004546492834180492,
+    "gold": false
+   },
+   {
+    "id": "mq:3ba6e0a71e70dd6c",
+    "label": "Mount C\u1ea9n",
+    "p": 0.0037945218431269735,
+    "gold": false
+   },
+   {
+    "id": "mq:b50b22c863367321",
+    "label": "Mount Voi",
+    "p": 0.0037376159536580285,
+    "gold": false
+   },
+   {
+    "id": "mq:fe267a1c3c3c9d58",
+    "label": "L\u00e2m Thao District",
+    "p": 0.0037126729860183436,
+    "gold": false
+   },
+   {
+    "id": "mq:66988ee27d1771a9",
+    "label": "San Sali",
+    "p": 0.003684663846792857,
+    "gold": false
+   },
+   {
+    "id": "mq:c9c3c2ff3ccbac64",
+    "label": "San Phi Suea",
+    "p": 0.0034029771244915145,
+    "gold": false
+   },
+   {
+    "id": "mq:845e13f8922dae8a",
+    "label": "Ph\u00fa Kh\u00ea",
+    "p": 0.0029395806823071784,
+    "gold": false
+   },
+   {
+    "id": "mq:b3007c89dc8bc6f4",
+    "label": "Pong Noi",
+    "p": 0.002905601226459906,
+    "gold": false
+   },
+   {
+    "id": "mq:d90833b27e95a552",
+    "label": "Vi\u1ec7t Y\u00ean District",
+    "p": 0.0026701625396864594,
+    "gold": false
+   },
+   {
+    "id": "mq:beee1b261f552152",
+    "label": "Jamie Gold",
+    "p": 0.002542813140462641,
+    "gold": false
+   },
+   {
+    "id": "mq:b2a2742976c40d73",
+    "label": "Piang Luang",
+    "p": 0.0024614178727278575,
+    "gold": false
+   },
+   {
+    "id": "mq:d3b4caf481ea720d",
+    "label": "An Ph\u00fa District",
+    "p": 0.002361550270911955,
+    "gold": false
+   },
+   {
+    "id": "mq:7b01925e99cc5cce",
+    "label": "Zone 5 Military Museum, Danang",
+    "p": 0.0022507951718324206,
+    "gold": false
+   },
+   {
+    "id": "mq:1face12b0349c721",
+    "label": "Tha Wang Phrao",
+    "p": 0.0021298132589952024,
+    "gold": false
+   },
+   {
+    "id": "mq:52cddc0b5884b12a",
+    "label": "\u0110\u1ee9c Hu\u1ec7 District",
+    "p": 0.0020178053348990765,
+    "gold": false
+   },
+   {
+    "id": "mq:e1e466d45c372f27",
+    "label": "Ban Pae",
+    "p": 0.0018827201658954387,
+    "gold": false
+   },
+   {
+    "id": "mq:d739c7d4d7aa1d59",
+    "label": "Ph\u00f9 Y\u00ean District",
+    "p": 0.0018746888927559328,
+    "gold": false
+   },
+   {
+    "id": "mq:737149f5d9753221",
+    "label": "Choeng Doi",
+    "p": 0.0017475334924833697,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:601bcfec0687922d",
+   "label": "H\u1ea1 H\u00f2a District",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:bd575183a7d3d7d6",
+   "label": "John Phan",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:2ff1e1986f07b0f6",
+   "label": "John Trumbull Birthplace",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:1ed4b2493b5e3b06",
+   "label": "Tourism in Nepal",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:38046a896aeb59ca",
+   "label": "Mueang Phan",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:7b01925e99cc5cce",
+   "label": "Zone 5 Military Museum, Danang",
+   "wave": 1,
+   "via": "term:nang vietnam",
+   "gold": false
+  },
+  {
+   "id": "mq:832be2e09f953757",
+   "label": "South Central Coast",
+   "wave": 2,
+   "via": "near:mq:7b01925e99cc5cce",
+   "gold": true
+  },
+  {
+   "id": "mq:efe08811fd00839b",
+   "label": "Hainan Island incident",
+   "wave": 3,
+   "via": "term:paracel",
+   "gold": false
+  },
+  {
+   "id": "mq:f1559d716bf01f28",
+   "label": "Hokkien",
+   "wave": 4,
+   "via": "term:nang",
+   "gold": false
+  },
+  {
+   "id": "mq:59e707526d43a454",
+   "label": "Nang Lae",
+   "wave": 4,
+   "via": "term:nang",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:a5df5b7ed170265b",
+    "label": "Muang Kham, Chiang Rai",
+    "gold": false
+   },
+   {
+    "id": "mq:b33cd45b9f2cd2a6",
+    "label": "Mae Yao",
+    "gold": false
+   },
+   {
+    "id": "mq:59e707526d43a454",
+    "label": "Nang Lae",
+    "gold": false
+   },
+   {
+    "id": "mq:3ba6e0a71e70dd6c",
+    "label": "Mount C\u1ea9n",
+    "gold": false
+   },
+   {
+    "id": "mq:b50b22c863367321",
+    "label": "Mount Voi",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:a5df5b7ed170265b",
+    "label": "Muang Kham, Chiang Rai",
+    "gold": false
+   },
+   {
+    "id": "mq:1dd4de71873fb0b2",
+    "label": "L\u00e2m \u0110\u1ed3ng Province",
+    "gold": false
+   },
+   {
+    "id": "mq:be0d05d95cd60318",
+    "label": "Khong District, Laos",
+    "gold": false
+   },
+   {
+    "id": "mq:e125b67a0f72b7d1",
+    "label": "Khong Island",
+    "gold": false
+   },
+   {
+    "id": "mq:d90833b27e95a552",
+    "label": "Vi\u1ec7t Y\u00ean District",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:a5df5b7ed170265b",
+    "label": "Muang Kham, Chiang Rai",
+    "gold": false
+   },
+   {
+    "id": "mq:1dd4de71873fb0b2",
+    "label": "L\u00e2m \u0110\u1ed3ng Province",
+    "gold": false
+   },
+   {
+    "id": "mq:2e27343387e58852",
+    "label": "Kh\u00e1nh H\u00f2a Province",
+    "gold": false
+   },
+   {
+    "id": "mq:d90833b27e95a552",
+    "label": "Vi\u1ec7t Y\u00ean District",
+    "gold": false
+   },
+   {
+    "id": "mq:e125b67a0f72b7d1",
+    "label": "Khong Island",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:d90833b27e95a552",
+    "label": "Vi\u1ec7t Y\u00ean District",
+    "gold": false
+   },
+   {
+    "id": "mq:52cddc0b5884b12a",
+    "label": "\u0110\u1ee9c Hu\u1ec7 District",
+    "gold": false
+   },
+   {
+    "id": "mq:fb38bd9a4a45c2ad",
+    "label": "Phan Huy Qu\u00e1t",
+    "gold": false
+   },
+   {
+    "id": "mq:1dd4de71873fb0b2",
+    "label": "L\u00e2m \u0110\u1ed3ng Province",
+    "gold": false
+   },
+   {
+    "id": "mq:2e27343387e58852",
+    "label": "Kh\u00e1nh H\u00f2a Province",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

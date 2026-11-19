@@ -1,0 +1,440 @@
+{
+ "qid": "RW:3hop1__351696_42197_18397",
+ "set": "mq",
+ "question": "Where did the person who argued that the country where Ural Oblast is located had become an imperialist power declare he would intervene in the Korean conflict?",
+ "gold": [
+  {
+   "id": "mq:4aec4bfb579ba905",
+   "label": "Imperialism",
+   "seed": true
+  },
+  {
+   "id": "mq:92d6c665c7279c38",
+   "label": "Korean War",
+   "seed": false
+  },
+  {
+   "id": "mq:b41bc6b51bbeee57",
+   "label": "Ural Oblast",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:b41bc6b51bbeee57",
+   "label": "Ural Oblast",
+   "rank": 1,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:3da486651de4eb06",
+   "label": "Chelyabinsk",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:4aec4bfb579ba905",
+   "label": "Imperialism",
+   "rank": 3,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:26e6ea804052c889",
+   "label": "Imperialism",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:0083e4ae049147f5",
+   "label": "Napoleon",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:4aec4bfb579ba905",
+    "label": "Imperialism",
+    "role": "gold"
+   },
+   {
+    "id": "mq:92d6c665c7279c38",
+    "label": "Korean War",
+    "role": "gold"
+   },
+   {
+    "id": "mq:b41bc6b51bbeee57",
+    "label": "Ural Oblast",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:4aec4bfb579ba905",
+    "b": "mq:92d6c665c7279c38",
+    "via": [
+     {
+      "kind": "term",
+      "key": "mao zedong",
+      "width": 6
+     },
+     {
+      "kind": "term",
+      "key": "zedong",
+      "width": 6
+     },
+     {
+      "kind": "term",
+      "key": "mao",
+      "width": 14
+     }
+    ]
+   },
+   {
+    "a": "mq:4aec4bfb579ba905",
+    "b": "mq:b41bc6b51bbeee57",
+    "via": [
+     {
+      "kind": "term",
+      "key": "ussr",
+      "width": 59
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   1,
+   2
+  ],
+  "entry": {
+   "seed": "mq:4aec4bfb579ba905",
+   "gold": "mq:4aec4bfb579ba905",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 3975,
+  "within_2_doors": 17113,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "mq:43b40186ab1fbc6b",
+    "label": "Ural State Academy of Architecture and Arts",
+    "p": 0.004331289502526671,
+    "gold": false
+   },
+   {
+    "id": "mq:3b5d8df79636bf78",
+    "label": "Fyodor Panayev",
+    "p": 0.0027863640493879806,
+    "gold": false
+   },
+   {
+    "id": "mq:1c090918f6b27101",
+    "label": "Beryozovsky District, Khanty-Mansi Autonomous Okrug",
+    "p": 0.0025753684747563564,
+    "gold": false
+   },
+   {
+    "id": "mq:393e2775e8307609",
+    "label": "Krasnovishersky District",
+    "p": 0.0022534374587106637,
+    "gold": false
+   },
+   {
+    "id": "mq:b0e8ae4ba20d49ae",
+    "label": "Ural Rakhimov",
+    "p": 0.002160375586509422,
+    "gold": false
+   },
+   {
+    "id": "mq:d8e86945e5e3ebd8",
+    "label": "Dissolution of the Soviet Union",
+    "p": 0.002100477969698179,
+    "gold": false
+   },
+   {
+    "id": "mq:b3c0727bf4337e4a",
+    "label": "1971 January 31 Surgut Aeroflot Antonov An-12 crash",
+    "p": 0.0018728589651570218,
+    "gold": false
+   },
+   {
+    "id": "mq:3d09af2831bbf35f",
+    "label": "2018 FIFA World Cup",
+    "p": 0.0018701678340914132,
+    "gold": false
+   },
+   {
+    "id": "mq:c1e2570bb3537fb7",
+    "label": "2018 FIFA World Cup",
+    "p": 0.0018696851940847375,
+    "gold": false
+   },
+   {
+    "id": "mq:929bc17918c5e680",
+    "label": "Batetsky (rural locality)",
+    "p": 0.0018222579967639605,
+    "gold": false
+   },
+   {
+    "id": "mq:54db40016cbe0b2d",
+    "label": "Yaroslavl",
+    "p": 0.0017511739180185724,
+    "gold": false
+   },
+   {
+    "id": "mq:133e839dd2171d7b",
+    "label": "Bolshaya Lyampa",
+    "p": 0.0015915117964215195,
+    "gold": false
+   },
+   {
+    "id": "mq:e180ee41bfdedacf",
+    "label": "Germany",
+    "p": 0.0015108912863947377,
+    "gold": false
+   },
+   {
+    "id": "mq:de868024cb4e261c",
+    "label": "Yulia Lipnitskaya",
+    "p": 0.0014498618546674392,
+    "gold": false
+   },
+   {
+    "id": "mq:697b74fea93238c4",
+    "label": "Cherdynsky District",
+    "p": 0.001261852736909747,
+    "gold": false
+   },
+   {
+    "id": "mq:f5552816f9022427",
+    "label": "Pitkyaranta",
+    "p": 0.0012523150985762539,
+    "gold": false
+   },
+   {
+    "id": "mq:4a59d51abff71c8a",
+    "label": "Nyuksensky District",
+    "p": 0.000950193681550489,
+    "gold": false
+   },
+   {
+    "id": "mq:ee1b370205ef1772",
+    "label": "Kochyovsky District",
+    "p": 0.0009403111476613509,
+    "gold": false
+   },
+   {
+    "id": "mq:b5308ff5f10cd045",
+    "label": "Utva River (Perm Krai)",
+    "p": 0.0008802486511765874,
+    "gold": false
+   },
+   {
+    "id": "mq:f35c3f2eb9d987d1",
+    "label": "Kazakhstan",
+    "p": 0.0008437693203289906,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:b41bc6b51bbeee57",
+   "label": "Ural Oblast",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:3da486651de4eb06",
+   "label": "Chelyabinsk",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:4aec4bfb579ba905",
+   "label": "Imperialism",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:26e6ea804052c889",
+   "label": "Imperialism",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:0083e4ae049147f5",
+   "label": "Napoleon",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:19f057422e7a8912",
+   "label": "United States in the Korean War",
+   "wave": 1,
+   "via": "term:stalin",
+   "gold": false
+  },
+  {
+   "id": "mq:9b1913ea0aeba131",
+   "label": "Russian Soviet Federative Socialist Republic",
+   "wave": 1,
+   "via": "term:stalin",
+   "gold": false
+  },
+  {
+   "id": "mq:094ecf96665382ec",
+   "label": "Russian Soviet Federative Socialist Republic",
+   "wave": 1,
+   "via": "term:stalin",
+   "gold": false
+  },
+  {
+   "id": "mq:d64066543119aad0",
+   "label": "Vladimir Rapoport",
+   "wave": 1,
+   "via": "term:stalin",
+   "gold": false
+  },
+  {
+   "id": "mq:ceac41b191d9c264",
+   "label": "Zhdanov Doctrine",
+   "wave": 1,
+   "via": "term:stalin",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:43b40186ab1fbc6b",
+    "label": "Ural State Academy of Architecture and Arts",
+    "gold": false
+   },
+   {
+    "id": "mq:3b5d8df79636bf78",
+    "label": "Fyodor Panayev",
+    "gold": false
+   },
+   {
+    "id": "mq:1c090918f6b27101",
+    "label": "Beryozovsky District, Khanty-Mansi Autonomous Okrug",
+    "gold": false
+   },
+   {
+    "id": "mq:393e2775e8307609",
+    "label": "Krasnovishersky District",
+    "gold": false
+   },
+   {
+    "id": "mq:b0e8ae4ba20d49ae",
+    "label": "Ural Rakhimov",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:43b40186ab1fbc6b",
+    "label": "Ural State Academy of Architecture and Arts",
+    "gold": false
+   },
+   {
+    "id": "mq:1c090918f6b27101",
+    "label": "Beryozovsky District, Khanty-Mansi Autonomous Okrug",
+    "gold": false
+   },
+   {
+    "id": "mq:c1e2570bb3537fb7",
+    "label": "2018 FIFA World Cup",
+    "gold": false
+   },
+   {
+    "id": "mq:3d09af2831bbf35f",
+    "label": "2018 FIFA World Cup",
+    "gold": false
+   },
+   {
+    "id": "mq:b0e8ae4ba20d49ae",
+    "label": "Ural Rakhimov",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:1c090918f6b27101",
+    "label": "Beryozovsky District, Khanty-Mansi Autonomous Okrug",
+    "gold": false
+   },
+   {
+    "id": "mq:43b40186ab1fbc6b",
+    "label": "Ural State Academy of Architecture and Arts",
+    "gold": false
+   },
+   {
+    "id": "mq:c1e2570bb3537fb7",
+    "label": "2018 FIFA World Cup",
+    "gold": false
+   },
+   {
+    "id": "mq:3d09af2831bbf35f",
+    "label": "2018 FIFA World Cup",
+    "gold": false
+   },
+   {
+    "id": "mq:393e2775e8307609",
+    "label": "Krasnovishersky District",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:784650baa7e94c46",
+    "label": "Rostov",
+    "gold": false
+   },
+   {
+    "id": "mq:4c3541d91b089741",
+    "label": "Cuban War of Independence",
+    "gold": false
+   },
+   {
+    "id": "mq:c790b09568607641",
+    "label": "Soviet Union in the Korean War",
+    "gold": false
+   },
+   {
+    "id": "mq:946a4c19ea4cfc8a",
+    "label": "Korean War",
+    "gold": false
+   },
+   {
+    "id": "mq:aa84bfeafde6b5fc",
+    "label": "Ulyanovsk Oblast",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

@@ -1,0 +1,421 @@
+{
+ "qid": "pr:576",
+ "set": "prs",
+ "question": "What work went into this, and why: Follow percolate-core 0.2.16 and extension 0.2.35; board messages are records, not pins?",
+ "gold": [
+  {
+   "id": "commit/24501dc75c",
+   "label": "commit 24501dc: Follow percolate-core 0.2.16 and extension 0.2.35 (train, out-of-train by Sirsh)",
+   "seed": false
+  },
+  {
+   "id": "commit/97fb6b2972",
+   "label": "commit 97fb6b2: references: board/messages are records, not pins",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/d3dfb126af",
+   "label": "commit d3dfb12: Merge pull request #576 from Percolation-Labs/james/follow-0.2.35",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "dev/train.sh#13",
+   "label": "dev/train.sh",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/e51903df80",
+   "label": "commit e51903d: percolate-core 0.2.5: the pins and versions.toml follow it",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/83ec1399f9",
+   "label": "commit 83ec139: percolate-core 0.2.4: the pins and versions.toml follow it",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/e49bb4e1d0",
+   "label": "commit e49bb4e: p8 follows core 0.2.20 and extension 0.2.41 (train follow leg)",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/24501dc75c",
+    "label": "commit 24501dc: Follow percolate-core 0.2.16 and extension 0.2.35 (train, out-of-train by Sirsh)",
+    "role": "gold"
+   },
+   {
+    "id": "commit/97fb6b2972",
+    "label": "commit 97fb6b2: references: board/messages are records, not pins",
+    "role": "gold"
+   },
+   {
+    "id": "commit/d3dfb126af",
+    "label": "commit d3dfb12: Merge pull request #576 from Percolation-Labs/james/follow-0.2.35",
+    "role": "seed"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/24501dc75c",
+    "b": "commit/97fb6b2972",
+    "via": [
+     {
+      "kind": "beside"
+     }
+    ]
+   },
+   {
+    "a": "commit/24501dc75c",
+    "b": "commit/d3dfb126af",
+    "via": [
+     {
+      "kind": "term",
+      "key": "follow percolate",
+      "width": 8
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "commit/d3dfb126af",
+   "gold": "commit/24501dc75c",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 792,
+  "within_2_doors": 32556,
+  "gold_within_1": 1,
+  "gold_within_2": 1,
+  "top_U": [
+   {
+    "id": "commit/0d73643801",
+    "label": "commit 0d73643: Merge pull request #725 from Percolation-Labs/bill/follow-0.2.41",
+    "p": 0.008685705724889421,
+    "gold": false
+   },
+   {
+    "id": "commit/794fa21b0a",
+    "label": "commit 794fa21: board: james acknowledges 1 message(s)",
+    "p": 0.0050532416244256145,
+    "gold": false
+   },
+   {
+    "id": "commit/5df4e041e9",
+    "label": "commit 5df4e04: board: james messages all",
+    "p": 0.005053231565652684,
+    "gold": false
+   },
+   {
+    "id": "commit/3b444fffb5",
+    "label": "commit 3b444ff: extension 0.2.22: opened after v0.2.21",
+    "p": 0.004889151550933142,
+    "gold": false
+   },
+   {
+    "id": "output/simple-journeys/README.md#6",
+    "label": "output/simple-journeys/README.md \u203a What to validate with people",
+    "p": 0.0035733001820431186,
+    "gold": false
+   },
+   {
+    "id": "commit/b7204e7b54",
+    "label": "commit b7204e7: versions: follow percolate-core 0.2.8",
+    "p": 0.0035202566947162154,
+    "gold": false
+   },
+   {
+    "id": "commit/fc6ab75c55",
+    "label": "commit fc6ab75: follow percolate-core 0.2.3 (REM-658) (#337)",
+    "p": 0.0034039479298519693,
+    "gold": false
+   },
+   {
+    "id": "dev/references.sh#3",
+    "label": "dev/references.sh",
+    "p": 0.0033366092171146795,
+    "gold": false
+   },
+   {
+    "id": "specs/workflow-engine/hired-steps.md#11",
+    "label": "specs/workflow-engine/hired-steps.md \u203a 7. Relation to the judgement queue",
+    "p": 0.0030509234020030013,
+    "gold": false
+   },
+   {
+    "id": "dev/docker-compose.yml#2",
+    "label": "dev/docker-compose.yml",
+    "p": 0.0029772741561011474,
+    "gold": false
+   },
+   {
+    "id": "commit/3493dda085",
+    "label": "commit 3493dda: Two gates read the wrong thing: a sibling checkout, and a seeded agent CI cannot use (#135)",
+    "p": 0.002893736272828654,
+    "gold": false
+   },
+   {
+    "id": "commit/422151040d",
+    "label": "commit 4221510: board: bill acknowledges 1 message(s)",
+    "p": 0.002867155163856617,
+    "gold": false
+   },
+   {
+    "id": "commit/d0b40cf447",
+    "label": "commit d0b40cf: board: james acknowledges 1 message(s)",
+    "p": 0.0028087822934844218,
+    "gold": false
+   },
+   {
+    "id": "commit/9c9488e8f4",
+    "label": "commit 9c9488e: board: bill acknowledges 1 message(s)",
+    "p": 0.002808758923524094,
+    "gold": false
+   },
+   {
+    "id": "commit/84bbbbaddb",
+    "label": "commit 84bbbba: follow the 2026-10-21 train: extension 0.2.29, core 0.2.9",
+    "p": 0.0024201014864942065,
+    "gold": false
+   },
+   {
+    "id": "commit/79fa96fbee",
+    "label": "commit 79fa96f: percolate-core 0.2.0 is published, so every pin and versions.toml follow it",
+    "p": 0.0021933120262813345,
+    "gold": false
+   },
+   {
+    "id": "commit/8b2c936e7c",
+    "label": "commit 8b2c936: extension 0.2.21: opened after v0.2.20",
+    "p": 0.0021858410604095645,
+    "gold": false
+   },
+   {
+    "id": "commit/24501dc75c",
+    "label": "commit 24501dc: Follow percolate-core 0.2.16 and extension 0.2.35 (train, out-of-train by Sirsh)",
+    "p": 0.00215811040884507,
+    "gold": true
+   },
+   {
+    "id": "commit/7f491a9d33",
+    "label": "commit 7f491a9: Follow core 0.2.18 and extension 0.2.38 (train 2026-11-06)",
+    "p": 0.0019774451708202394,
+    "gold": false
+   },
+   {
+    "id": "dev/references.sh#2",
+    "label": "dev/references.sh",
+    "p": 0.0019417287419026988,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/d3dfb126af",
+   "label": "commit d3dfb12: Merge pull request #576 from Percolation-Labs/james/follow-0.2.35",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "dev/train.sh#13",
+   "label": "dev/train.sh",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/e51903df80",
+   "label": "commit e51903d: percolate-core 0.2.5: the pins and versions.toml follow it",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/83ec1399f9",
+   "label": "commit 83ec139: percolate-core 0.2.4: the pins and versions.toml follow it",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/e49bb4e1d0",
+   "label": "commit e49bb4e: p8 follows core 0.2.20 and extension 0.2.41 (train follow leg)",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "dev/a-sweep-moves-pins-not-records.py#4",
+   "label": "dev/a-sweep-moves-pins-not-records.py",
+   "wave": 1,
+   "via": "term:sweep moves",
+   "gold": false
+  },
+  {
+   "id": "commit/75ed71fa68",
+   "label": "commit 75ed71f: Merge remote-tracking branch 'origin/main' into bill/stack-questions-evidence",
+   "wave": 1,
+   "via": "term:sweep moves",
+   "gold": false
+  },
+  {
+   "id": "commit/50c63a2acd",
+   "label": "commit 50c63a2: Merge pull request #342 from Percolation-Labs/amartey/rem-664-pins-not-records",
+   "wave": 1,
+   "via": "term:sweep moves",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-664.md#2",
+   "label": "board/cards/REM-664.md \u203a Goal",
+   "wave": 1,
+   "via": "term:sweep moves",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-664.md#1",
+   "label": "board/cards/REM-664.md",
+   "wave": 1,
+   "via": "term:sweep moves",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "commit/0d73643801",
+    "label": "commit 0d73643: Merge pull request #725 from Percolation-Labs/bill/follow-0.2.41",
+    "gold": false
+   },
+   {
+    "id": "commit/794fa21b0a",
+    "label": "commit 794fa21: board: james acknowledges 1 message(s)",
+    "gold": false
+   },
+   {
+    "id": "commit/5df4e041e9",
+    "label": "commit 5df4e04: board: james messages all",
+    "gold": false
+   },
+   {
+    "id": "commit/3b444fffb5",
+    "label": "commit 3b444ff: extension 0.2.22: opened after v0.2.21",
+    "gold": false
+   },
+   {
+    "id": "output/simple-journeys/README.md#6",
+    "label": "output/simple-journeys/README.md \u203a What to validate with people",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "commit/0d73643801",
+    "label": "commit 0d73643: Merge pull request #725 from Percolation-Labs/bill/follow-0.2.41",
+    "gold": false
+   },
+   {
+    "id": "dev/references.sh#3",
+    "label": "dev/references.sh",
+    "gold": false
+   },
+   {
+    "id": "commit/b7204e7b54",
+    "label": "commit b7204e7: versions: follow percolate-core 0.2.8",
+    "gold": false
+   },
+   {
+    "id": "commit/fc6ab75c55",
+    "label": "commit fc6ab75: follow percolate-core 0.2.3 (REM-658) (#337)",
+    "gold": false
+   },
+   {
+    "id": "commit/24501dc75c",
+    "label": "commit 24501dc: Follow percolate-core 0.2.16 and extension 0.2.35 (train, out-of-train by Sirsh)",
+    "gold": true
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/0d73643801",
+    "label": "commit 0d73643: Merge pull request #725 from Percolation-Labs/bill/follow-0.2.41",
+    "gold": false
+   },
+   {
+    "id": "commit/037cb0f065",
+    "label": "commit 037cb0f: Merge pull request #370 from Percolation-Labs/percolate-core-0.2.5",
+    "gold": false
+   },
+   {
+    "id": "commit/3b444fffb5",
+    "label": "commit 3b444ff: extension 0.2.22: opened after v0.2.21",
+    "gold": false
+   },
+   {
+    "id": "commit/b44bdf7c86",
+    "label": "commit b44bdf7: Merge pull request #368 from Percolation-Labs/percolate-core-0.2.4",
+    "gold": false
+   },
+   {
+    "id": "commit/84bbbbaddb",
+    "label": "commit 84bbbba: follow the 2026-10-21 train: extension 0.2.29, core 0.2.9",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "commit/97fb6b2972",
+    "label": "commit 97fb6b2: references: board/messages are records, not pins",
+    "gold": true
+   },
+   {
+    "id": "board/messages/M-20261108-010600-49d1.md#1",
+    "label": "board/messages/M-20261108-010600-49d1.md",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261029-184645-7a0c.md#1",
+    "label": "board/messages/M-20261029-184645-7a0c.md",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261029-184652-b6df.md#1",
+    "label": "board/messages/M-20261029-184652-b6df.md",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261029-184648-a9bf.md#1",
+    "label": "board/messages/M-20261029-184648-a9bf.md",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.5,
+  "LQ": 0.0,
+  "S": 0.5
+ }
+}

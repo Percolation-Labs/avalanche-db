@@ -1,0 +1,482 @@
+{
+ "qid": "RW:3hop2__87184_36497_76291",
+ "set": "mq",
+ "question": "When did the party that controls the House of Representatives right now, take control of the political body that the President calls on to support his USAF appointments?",
+ "gold": [
+  {
+   "id": "mq:0c3875782c5c338d",
+   "label": "114th United States Congress",
+   "seed": false
+  },
+  {
+   "id": "mq:450dafb44a30356f",
+   "label": "United States Air Force",
+   "seed": false
+  },
+  {
+   "id": "mq:e3de0ee582ca38ce",
+   "label": "2014 United States Senate elections",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:2c8c6eb30f870f37",
+   "label": "Party for the Netherlands",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "mq:7396b63081b53343",
+   "label": "Party leaders of the United States Senate",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:ebc444437e031f03",
+   "label": "2002 United States House of Representatives elections",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:da095720e5ba403a",
+   "label": "Speaker of the United States House of Representatives",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:bacbc905a3fc2483",
+   "label": "Speaker of the United States House of Representatives",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:0c3875782c5c338d",
+    "label": "114th United States Congress",
+    "role": "gold"
+   },
+   {
+    "id": "mq:450dafb44a30356f",
+    "label": "United States Air Force",
+    "role": "gold"
+   },
+   {
+    "id": "mq:7396b63081b53343",
+    "label": "Party leaders of the United States Senate",
+    "role": "seed"
+   },
+   {
+    "id": "mq:db981c281dd7009d",
+    "label": "Military budget of the United States",
+    "role": "connector"
+   },
+   {
+    "id": "mq:e3de0ee582ca38ce",
+    "label": "2014 United States Senate elections",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:0c3875782c5c338d",
+    "b": "mq:7396b63081b53343",
+    "via": [
+     {
+      "kind": "term",
+      "key": "states senate",
+      "width": 23
+     }
+    ]
+   },
+   {
+    "a": "mq:0c3875782c5c338d",
+    "b": "mq:db981c281dd7009d",
+    "via": [
+     {
+      "kind": "term",
+      "key": "states federal",
+      "width": 22
+     }
+    ]
+   },
+   {
+    "a": "mq:0c3875782c5c338d",
+    "b": "mq:e3de0ee582ca38ce",
+    "via": [
+     {
+      "kind": "term",
+      "key": "states senate",
+      "width": 23
+     },
+     {
+      "kind": "term",
+      "key": "republicans",
+      "width": 37
+     },
+     {
+      "kind": "term",
+      "key": "seats",
+      "width": 81
+     }
+    ]
+   },
+   {
+    "a": "mq:450dafb44a30356f",
+    "b": "mq:db981c281dd7009d",
+    "via": [
+     {
+      "kind": "term",
+      "key": "uniformed",
+      "width": 3
+     },
+     {
+      "kind": "term",
+      "key": "civilian",
+      "width": 69
+     },
+     {
+      "kind": "term",
+      "key": "air force",
+      "width": 89
+     }
+    ]
+   }
+  ],
+  "cost": 4,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   2,
+   1,
+   2
+  ],
+  "entry": {
+   "seed": "mq:7396b63081b53343",
+   "gold": "mq:0c3875782c5c338d",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 2491,
+  "within_2_doors": 18569,
+  "gold_within_1": 2,
+  "gold_within_2": 1,
+  "top_U": [
+   {
+    "id": "mq:f2a60931baaaf042",
+    "label": "2010 United States House of Representatives elections",
+    "p": 0.003461923792906604,
+    "gold": false
+   },
+   {
+    "id": "mq:cd9d3e67161c7ade",
+    "label": "President pro tempore of the United States Senate",
+    "p": 0.0025789896533747196,
+    "gold": false
+   },
+   {
+    "id": "mq:d09f8f8014cbdcbc",
+    "label": "Infiniti G-series (Q40/Q60)",
+    "p": 0.0018920217451728282,
+    "gold": false
+   },
+   {
+    "id": "mq:facc76280e25168d",
+    "label": "Oldest people",
+    "p": 0.001870741355132243,
+    "gold": false
+   },
+   {
+    "id": "mq:e12d03667b3df13e",
+    "label": "Rune Fredh",
+    "p": 0.001800114707376146,
+    "gold": false
+   },
+   {
+    "id": "mq:7f62ce334b888749",
+    "label": "Texas House of Representatives",
+    "p": 0.001660163252275054,
+    "gold": false
+   },
+   {
+    "id": "mq:5c736c6f8edbc3c4",
+    "label": "2017 Speaker of the United States House of Representatives election",
+    "p": 0.001478587721334461,
+    "gold": false
+   },
+   {
+    "id": "mq:e0cb042bfd92b652",
+    "label": "Montana",
+    "p": 0.0014288344038110212,
+    "gold": false
+   },
+   {
+    "id": "mq:fb1f51dec7ae1c0f",
+    "label": "North Carolina",
+    "p": 0.001425655556449215,
+    "gold": false
+   },
+   {
+    "id": "mq:970681b324ddeb1e",
+    "label": "Party leaders of the United States House of Representatives",
+    "p": 0.0013988494938110632,
+    "gold": false
+   },
+   {
+    "id": "mq:cb457ac6abccb08b",
+    "label": "Presidential Succession Act",
+    "p": 0.0011801355793224755,
+    "gold": false
+   },
+   {
+    "id": "mq:66588c2492b3c9e1",
+    "label": "2008 United States Senate elections",
+    "p": 0.0011551441109691513,
+    "gold": false
+   },
+   {
+    "id": "mq:585e50415d014fc1",
+    "label": "Moroccan Communist Party",
+    "p": 0.0011408675313553467,
+    "gold": false
+   },
+   {
+    "id": "mq:5d1474f7afbce213",
+    "label": "New Deal",
+    "p": 0.0011302058580067345,
+    "gold": false
+   },
+   {
+    "id": "mq:1c35378a9d840203",
+    "label": "Lodewijk Asscher",
+    "p": 0.001093705505569334,
+    "gold": false
+   },
+   {
+    "id": "mq:f9e19ff9964ed9d2",
+    "label": "Speaker of the United States House of Representatives",
+    "p": 0.0010786003708122837,
+    "gold": false
+   },
+   {
+    "id": "mq:a439b5967faf1e41",
+    "label": "Pope Paul VI",
+    "p": 0.001056620285414634,
+    "gold": false
+   },
+   {
+    "id": "mq:4005d5e8ecd8befa",
+    "label": "UNO-96 Alliance",
+    "p": 0.0010502390767179299,
+    "gold": false
+   },
+   {
+    "id": "mq:3220791c59e80357",
+    "label": "Islamic Iran Solidarity Party",
+    "p": 0.0010384817108789848,
+    "gold": false
+   },
+   {
+    "id": "mq:486c5f3e97f14e11",
+    "label": "Green",
+    "p": 0.0009924077498892115,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:2c8c6eb30f870f37",
+   "label": "Party for the Netherlands",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:7396b63081b53343",
+   "label": "Party leaders of the United States Senate",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:ebc444437e031f03",
+   "label": "2002 United States House of Representatives elections",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:da095720e5ba403a",
+   "label": "Speaker of the United States House of Representatives",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:bacbc905a3fc2483",
+   "label": "Speaker of the United States House of Representatives",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:b2eaa9f1ccd1804b",
+   "label": "2018 Wisconsin gubernatorial election",
+   "wave": 1,
+   "via": "term:states senate",
+   "gold": false
+  },
+  {
+   "id": "mq:8096abfa1b5b00e9",
+   "label": "Nuclear option",
+   "wave": 1,
+   "via": "term:states senate",
+   "gold": false
+  },
+  {
+   "id": "mq:9cf3c9eecf3280fb",
+   "label": "Party leaders of the United States Senate",
+   "wave": 1,
+   "via": "term:states senate",
+   "gold": false
+  },
+  {
+   "id": "mq:31030e3ff52b4592",
+   "label": "2018 United States Senate elections",
+   "wave": 1,
+   "via": "term:states senate",
+   "gold": false
+  },
+  {
+   "id": "mq:e3de0ee582ca38ce",
+   "label": "2014 United States Senate elections",
+   "wave": 1,
+   "via": "term:states senate",
+   "gold": true
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:f2a60931baaaf042",
+    "label": "2010 United States House of Representatives elections",
+    "gold": false
+   },
+   {
+    "id": "mq:cd9d3e67161c7ade",
+    "label": "President pro tempore of the United States Senate",
+    "gold": false
+   },
+   {
+    "id": "mq:d09f8f8014cbdcbc",
+    "label": "Infiniti G-series (Q40/Q60)",
+    "gold": false
+   },
+   {
+    "id": "mq:facc76280e25168d",
+    "label": "Oldest people",
+    "gold": false
+   },
+   {
+    "id": "mq:e12d03667b3df13e",
+    "label": "Rune Fredh",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:f2a60931baaaf042",
+    "label": "2010 United States House of Representatives elections",
+    "gold": false
+   },
+   {
+    "id": "mq:970681b324ddeb1e",
+    "label": "Party leaders of the United States House of Representatives",
+    "gold": false
+   },
+   {
+    "id": "mq:cd9d3e67161c7ade",
+    "label": "President pro tempore of the United States Senate",
+    "gold": false
+   },
+   {
+    "id": "mq:5c736c6f8edbc3c4",
+    "label": "2017 Speaker of the United States House of Representatives election",
+    "gold": false
+   },
+   {
+    "id": "mq:8b4dfbbcad60a21c",
+    "label": "Compromise of 1877",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:f2a60931baaaf042",
+    "label": "2010 United States House of Representatives elections",
+    "gold": false
+   },
+   {
+    "id": "mq:8b4dfbbcad60a21c",
+    "label": "Compromise of 1877",
+    "gold": false
+   },
+   {
+    "id": "mq:d4aecde4c5bd7774",
+    "label": "Compromise of 1877",
+    "gold": false
+   },
+   {
+    "id": "mq:f413451f717f36a8",
+    "label": "Compromise of 1877",
+    "gold": false
+   },
+   {
+    "id": "mq:970681b324ddeb1e",
+    "label": "Party leaders of the United States House of Representatives",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:276e86dd88f88f02",
+    "label": "Majority leader",
+    "gold": false
+   },
+   {
+    "id": "mq:7939161d886da97e",
+    "label": "Reformed Political Party",
+    "gold": false
+   },
+   {
+    "id": "mq:321627616e6d6ea9",
+    "label": "Party leaders of the United States House of Representatives",
+    "gold": false
+   },
+   {
+    "id": "mq:1fa083e5adc5547b",
+    "label": "Party leaders of the United States House of Representatives",
+    "gold": false
+   },
+   {
+    "id": "mq:f2a60931baaaf042",
+    "label": "2010 United States House of Representatives elections",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

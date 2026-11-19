@@ -1,0 +1,419 @@
+{
+ "qid": "pr:673",
+ "set": "prs",
+ "question": "What work went into this, and why: walklab: per-target judging in the top-k shape recovers QASPER's cap-cut items (5.42, 5.44)?",
+ "gold": [
+  {
+   "id": "commit/04e32dfbe6",
+   "label": "commit 04e32df: walklab q3: register the per-target top-3 loss check on 5 MuSiQue walks and repo b1 (baseline: cory's P-",
+   "seed": false
+  },
+  {
+   "id": "commit/6ca044aa89",
+   "label": "commit 6ca044a: walklab q3: per-target judging in the top-k shape on QASPER -- recovers all 3 cap-cut items, loses nothi",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/6ca044aa89",
+   "label": "commit 6ca044a: walklab q3: per-target judging in the top-k shape on QASPER -- recovers all 3 cap-cut items, loses nothi",
+   "rank": 1,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "commit/777eebc3be",
+   "label": "commit 777eebc: Merge pull request #673 from Percolation-Labs/mike/qasper-census",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "meta/lab/results/q4-miss-census-qasper/result.txt#6",
+   "label": "meta/lab/results/q4-miss-census-qasper/result.txt",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/6233cd7e2b",
+   "label": "commit 6233cd7: walklab q3: register per-target judging of wide leads ('one:', open_whole 10) on QASPER's 2 cap-cut walk",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/0f678d89f1",
+   "label": "commit 0f678d8: walklab q3: terms landing on QASPER's 17 -- loses nothing (41 vs 40) but recovers none of the 3 cap-cut ",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/04e32dfbe6",
+    "label": "commit 04e32df: walklab q3: register the per-target top-3 loss check on 5 MuSiQue walks and repo b1 (baseline: cory's P-",
+    "role": "gold"
+   },
+   {
+    "id": "commit/5714e8c016",
+    "label": "commit 5714e8c: Merge remote-tracking branch 'origin/main' into mike/qasper-census",
+    "role": "connector"
+   },
+   {
+    "id": "commit/6ca044aa89",
+    "label": "commit 6ca044a: walklab q3: per-target judging in the top-k shape on QASPER -- recovers all 3 cap-cut items, loses nothi",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/04e32dfbe6",
+    "b": "commit/5714e8c016",
+    "via": [
+     {
+      "kind": "beside"
+     }
+    ]
+   },
+   {
+    "a": "commit/5714e8c016",
+    "b": "commit/6ca044aa89",
+    "via": [
+     {
+      "kind": "beside"
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   2
+  ],
+  "entry": {
+   "seed": "commit/6ca044aa89",
+   "gold": "commit/6ca044aa89",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 425,
+  "within_2_doors": 27431,
+  "gold_within_1": 0,
+  "gold_within_2": 1,
+  "top_U": [
+   {
+    "id": "meta/lab/results/q4-miss-census-qasper/result.txt#5",
+    "label": "meta/lab/results/q4-miss-census-qasper/result.txt",
+    "p": 0.007992066596026831,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-miss-census-qasper/ONEK-RULE.md#2",
+    "label": "meta/lab/results/q4-miss-census-qasper/ONEK-RULE.md \u203a Per-target judging in the top-k shape: each wide lead opens its to",
+    "p": 0.0067886048880206355,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261102-195133-1f7c.md#1",
+    "label": "board/messages/M-20261102-195133-1f7c.md",
+    "p": 0.0053814543551384715,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-miss-census-qasper/ONE-RULE.md#2",
+    "label": "meta/lab/results/q4-miss-census-qasper/ONE-RULE.md \u203a Judging a wide lead's targets one by one ('one:') instead of cappin",
+    "p": 0.005208044245453733,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-miss-census-qasper/ONEK-RULE.md#1",
+    "label": "meta/lab/results/q4-miss-census-qasper/ONEK-RULE.md \u203a Per-target judging in the top-k shape: each wide lead opens its to",
+    "p": 0.005147100842181569,
+    "gold": false
+   },
+   {
+    "id": "specs/decision-walks/README.md#26",
+    "label": "specs/decision-walks/README.md \u203a Travel: a relative gate for a low-calibrated judge (proposed for walk.sql)",
+    "p": 0.004057070010242113,
+    "gold": false
+   },
+   {
+    "id": "commit/78845cc5cd",
+    "label": "commit 78845cc: walklab q3: register per-target judging in the top-k shape (one_topk 3) on QASPER's 5 walks; engine fiel",
+    "p": 0.0037352225023203336,
+    "gold": false
+   },
+   {
+    "id": "commit/c37175737c",
+    "label": "commit c371757: walklab q3: 'one:' on QASPER's cap-cut walks -- 0 of 3 recovered, nothing lost, 16 extra requests (283 t",
+    "p": 0.00353707909383522,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-miss-census-qasper/LAND-RULE.md#2",
+    "label": "meta/lab/results/q4-miss-census-qasper/LAND-RULE.md \u203a Which targets a capped lead lands: by the target's rare terms, not",
+    "p": 0.0034680470329634676,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-miss-census-qasper/result.txt#7",
+    "label": "meta/lab/results/q4-miss-census-qasper/result.txt",
+    "p": 0.003159587944999489,
+    "gold": false
+   },
+   {
+    "id": "commit/5714e8c016",
+    "label": "commit 5714e8c: Merge remote-tracking branch 'origin/main' into mike/qasper-census",
+    "p": 0.0031061133709129347,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-miss-census-qasper/result.txt#4",
+    "label": "meta/lab/results/q4-miss-census-qasper/result.txt",
+    "p": 0.0030762362210408046,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261029-220135-6b04.md#1",
+    "label": "board/messages/M-20261029-220135-6b04.md",
+    "p": 0.002829602450320638,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-onek-loss/result.txt#1",
+    "label": "meta/lab/results/q4-onek-loss/result.txt",
+    "p": 0.0026749273587495085,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-miss-census-qasper/ONE-RULE.md#1",
+    "label": "meta/lab/results/q4-miss-census-qasper/ONE-RULE.md \u203a Judging a wide lead's targets one by one ('one:') instead of cappin",
+    "p": 0.0024983513400675976,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/decision-model-research/notes/non_llm_joint_scorers.md#29",
+    "label": "meta/lab/results/decision-model-research/notes/non_llm_joint_scorers.md \u203a Ranked shortlist to test",
+    "p": 0.0023159877541222757,
+    "gold": false
+   },
+   {
+    "id": "commit/87aa7919f6",
+    "label": "commit 87aa791: Merge pull request #672 from Percolation-Labs/james/qasper-walker",
+    "p": 0.0022846938920634127,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-switch-cost/RULE.md#1",
+    "label": "meta/lab/results/q4-switch-cost/RULE.md \u203a The cost of the full bounded rule on the repository's hardest walk, b1 (regist",
+    "p": 0.002261107250470551,
+    "gold": false
+   },
+   {
+    "id": "commit/82d95af67f",
+    "label": "commit 82d95af: Merge pull request #670 from Percolation-Labs/mike/qasper-census",
+    "p": 0.0022370308067663825,
+    "gold": false
+   },
+   {
+    "id": "commit/95038b28b1",
+    "label": "commit 95038b2: board: train-watch messages sirsh",
+    "p": 0.0021460152485874547,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/6ca044aa89",
+   "label": "commit 6ca044a: walklab q3: per-target judging in the top-k shape on QASPER -- recovers all 3 cap-cut items, loses nothi",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "commit/777eebc3be",
+   "label": "commit 777eebc: Merge pull request #673 from Percolation-Labs/mike/qasper-census",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/q4-miss-census-qasper/result.txt#6",
+   "label": "meta/lab/results/q4-miss-census-qasper/result.txt",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/6233cd7e2b",
+   "label": "commit 6233cd7: walklab q3: register per-target judging of wide leads ('one:', open_whole 10) on QASPER's 2 cap-cut walk",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/0f678d89f1",
+   "label": "commit 0f678d8: walklab q3: terms landing on QASPER's 17 -- loses nothing (41 vs 40) but recovers none of the 3 cap-cut ",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/q4-miss-census-qasper/result.txt#3",
+   "label": "meta/lab/results/q4-miss-census-qasper/result.txt",
+   "wave": 1,
+   "via": "term:census qasper",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/q4-miss-census-qasper/ONEK-RULE.md#2",
+   "label": "meta/lab/results/q4-miss-census-qasper/ONEK-RULE.md \u203a Per-target judging in the top-k shape: each wide lead opens its to",
+   "wave": 1,
+   "via": "term:census qasper",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/q4-miss-census-qasper/LAND-RULE.md#2",
+   "label": "meta/lab/results/q4-miss-census-qasper/LAND-RULE.md \u203a Which targets a capped lead lands: by the target's rare terms, not",
+   "wave": 1,
+   "via": "term:census qasper",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/q4-miss-census-qasper/result.txt#7",
+   "label": "meta/lab/results/q4-miss-census-qasper/result.txt",
+   "wave": 1,
+   "via": "term:census qasper",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/q4-miss-census-qasper/result.txt#5",
+   "label": "meta/lab/results/q4-miss-census-qasper/result.txt",
+   "wave": 1,
+   "via": "term:census qasper",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "meta/lab/results/q4-miss-census-qasper/result.txt#5",
+    "label": "meta/lab/results/q4-miss-census-qasper/result.txt",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-miss-census-qasper/ONEK-RULE.md#2",
+    "label": "meta/lab/results/q4-miss-census-qasper/ONEK-RULE.md \u203a Per-target judging in the top-k shape: each wide lead opens its to",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261102-195133-1f7c.md#1",
+    "label": "board/messages/M-20261102-195133-1f7c.md",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-miss-census-qasper/ONE-RULE.md#2",
+    "label": "meta/lab/results/q4-miss-census-qasper/ONE-RULE.md \u203a Judging a wide lead's targets one by one ('one:') instead of cappin",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-miss-census-qasper/ONEK-RULE.md#1",
+    "label": "meta/lab/results/q4-miss-census-qasper/ONEK-RULE.md \u203a Per-target judging in the top-k shape: each wide lead opens its to",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "meta/lab/results/q4-miss-census-qasper/ONEK-RULE.md#2",
+    "label": "meta/lab/results/q4-miss-census-qasper/ONEK-RULE.md \u203a Per-target judging in the top-k shape: each wide lead opens its to",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-miss-census-qasper/result.txt#5",
+    "label": "meta/lab/results/q4-miss-census-qasper/result.txt",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-miss-census-qasper/ONEK-RULE.md#1",
+    "label": "meta/lab/results/q4-miss-census-qasper/ONEK-RULE.md \u203a Per-target judging in the top-k shape: each wide lead opens its to",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-miss-census-qasper/ONE-RULE.md#2",
+    "label": "meta/lab/results/q4-miss-census-qasper/ONE-RULE.md \u203a Judging a wide lead's targets one by one ('one:') instead of cappin",
+    "gold": false
+   },
+   {
+    "id": "specs/decision-walks/README.md#26",
+    "label": "specs/decision-walks/README.md \u203a Travel: a relative gate for a low-calibrated judge (proposed for walk.sql)",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/78845cc5cd",
+    "label": "commit 78845cc: walklab q3: register per-target judging in the top-k shape (one_topk 3) on QASPER's 5 walks; engine fiel",
+    "gold": false
+   },
+   {
+    "id": "commit/c37175737c",
+    "label": "commit c371757: walklab q3: 'one:' on QASPER's cap-cut walks -- 0 of 3 recovered, nothing lost, 16 extra requests (283 t",
+    "gold": false
+   },
+   {
+    "id": "commit/48eecefaf2",
+    "label": "commit 48eecef: walklab q3: register a cap on leads' share of a wave's reads (lead_share .5) on top of P-first, on BEAM'",
+    "gold": false
+   },
+   {
+    "id": "commit/67e8dcd353",
+    "label": "commit 67e8dcd: walklab q4: QASPER main draw at 14 -- 35/40 against search's 18, 17 of 22 items past rank 100, 10 of 14 ",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261102-195133-1f7c.md#1",
+    "label": "board/messages/M-20261102-195133-1f7c.md",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "commit/78845cc5cd",
+    "label": "commit 78845cc: walklab q3: register per-target judging in the top-k shape (one_topk 3) on QASPER's 5 walks; engine fiel",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-miss-census-qasper/ONEK-RULE.md#1",
+    "label": "meta/lab/results/q4-miss-census-qasper/ONEK-RULE.md \u203a Per-target judging in the top-k shape: each wide lead opens its to",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-miss-census-qasper/ONEK-RULE.md#2",
+    "label": "meta/lab/results/q4-miss-census-qasper/ONEK-RULE.md \u203a Per-target judging in the top-k shape: each wide lead opens its to",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-miss-census-qasper/ONE-RULE.md#1",
+    "label": "meta/lab/results/q4-miss-census-qasper/ONE-RULE.md \u203a Judging a wide lead's targets one by one ('one:') instead of cappin",
+    "gold": false
+   },
+   {
+    "id": "commit/c37175737c",
+    "label": "commit c371757: walklab q3: 'one:' on QASPER's cap-cut walks -- 0 of 3 recovered, nothing lost, 16 extra requests (283 t",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

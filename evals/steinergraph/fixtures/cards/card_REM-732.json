@@ -1,0 +1,383 @@
+{
+ "qid": "card:REM-732",
+ "set": "cards",
+ "question": "What was done about this, and why: canvas: source references open their evidence?",
+ "gold": [
+  {
+   "id": "commit/2a06e22200",
+   "label": "commit 2a06e22: docs(canvas): make bare evidence references navigable (REM-732)",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/6915a43fd8",
+   "label": "commit 6915a43: board: file REM-732 canvas: source references open their evidence",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-732.md#1",
+   "label": "board/cards/REM-732.md",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/team/canvas-source-links.md#2",
+   "label": "board/team/canvas-source-links.md \u203a Log",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/2a06e22200",
+   "label": "commit 2a06e22: docs(canvas): make bare evidence references navigable (REM-732)",
+   "rank": 4,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "board/cards/REM-732.md#4",
+   "label": "board/cards/REM-732.md \u203a Done when",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/2a06e22200",
+    "label": "commit 2a06e22: docs(canvas): make bare evidence references navigable (REM-732)",
+    "role": "gold"
+   }
+  ],
+  "links": [],
+  "cost": 0,
+  "detached_gold": [],
+  "gold_pair_doors": [],
+  "entry": {
+   "seed": "commit/2a06e22200",
+   "gold": "commit/2a06e22200",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 915,
+  "within_2_doors": 33450,
+  "gold_within_1": 0,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "board/cards/REM-732.md#8",
+    "label": "board/cards/REM-732.md \u203a Log",
+    "p": 0.009003733907655435,
+    "gold": false
+   },
+   {
+    "id": "board/team/canvas-source-links.md#1",
+    "label": "board/team/canvas-source-links.md",
+    "p": 0.008618937310589462,
+    "gold": false
+   },
+   {
+    "id": "commit/a3639557b7",
+    "label": "commit a363955: board: canvas-source-links takes REM-732",
+    "p": 0.008549392104860394,
+    "gold": false
+   },
+   {
+    "id": "commit/d4b0c3ee74",
+    "label": "commit d4b0c3e: board: canvas-source-links checks in, working",
+    "p": 0.006224443155111548,
+    "gold": false
+   },
+   {
+    "id": "commit/ebb49468ee",
+    "label": "commit ebb4946: board: canvas-source-links checks in, working",
+    "p": 0.005572477027855376,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-732.md#2",
+    "label": "board/cards/REM-732.md \u203a Goal",
+    "p": 0.004796495749759671,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/focus-canvas-contract.md#7",
+    "label": "specs/percolate-application/focus-canvas-contract.md \u203a Views and movement",
+    "p": 0.004399305114088534,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-713.md#1",
+    "label": "board/cards/REM-713.md",
+    "p": 0.003869540501880064,
+    "gold": false
+   },
+   {
+    "id": "commit/3ce315be3a",
+    "label": "commit 3ce315b: board: canvas-source-links checks in, ended",
+    "p": 0.0038126448920412443,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261030-191351-2651.md#1",
+    "label": "board/messages/M-20261030-191351-2651.md",
+    "p": 0.00311599176842237,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261030-191346-45b0.md#1",
+    "label": "board/messages/M-20261030-191346-45b0.md",
+    "p": 0.00311599176842237,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-732.md#6",
+    "label": "board/cards/REM-732.md \u203a Scope",
+    "p": 0.0027539519637200176,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-732.md#3",
+    "label": "board/cards/REM-732.md \u203a Evidence",
+    "p": 0.0024066095913492657,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-732.md#5",
+    "label": "board/cards/REM-732.md \u203a Estimate",
+    "p": 0.0022034029677144356,
+    "gold": false
+   },
+   {
+    "id": "specs/build-knit-dream/reachability.md#20",
+    "label": "specs/build-knit-dream/reachability.md \u203a 9.2 Separate query authoring from decision execution",
+    "p": 0.0021440934072368056,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/research-package.md#3",
+    "label": "specs/percolate-application/research-package.md \u203a 1. What we have decided, and why",
+    "p": 0.0021411936847034723,
+    "gold": false
+   },
+   {
+    "id": "commit/b5bd3dbc72",
+    "label": "commit b5bd3db: board: REM-732 in-progress \u2192 done",
+    "p": 0.0020312866121398807,
+    "gold": false
+   },
+   {
+    "id": "output/full-flow/HANDOFF.md#7",
+    "label": "output/full-flow/HANDOFF.md \u203a Layouts and connected flow",
+    "p": 0.0017221777976326842,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-724.md#4",
+    "label": "board/cards/REM-724.md \u203a Log",
+    "p": 0.0016824556397439727,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-732.md#7",
+    "label": "board/cards/REM-732.md \u203a Links",
+    "p": 0.0016138226717894988,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/6915a43fd8",
+   "label": "commit 6915a43: board: file REM-732 canvas: source references open their evidence",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-732.md#1",
+   "label": "board/cards/REM-732.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/team/canvas-source-links.md#2",
+   "label": "board/team/canvas-source-links.md \u203a Log",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/2a06e22200",
+   "label": "commit 2a06e22: docs(canvas): make bare evidence references navigable (REM-732)",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "board/cards/REM-732.md#4",
+   "label": "board/cards/REM-732.md \u203a Done when",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-732.md#3",
+   "label": "board/cards/REM-732.md \u203a Evidence",
+   "wave": 1,
+   "via": "term:rem 732",
+   "gold": false
+  },
+  {
+   "id": "board/team/canvas-source-links.md#1",
+   "label": "board/team/canvas-source-links.md",
+   "wave": 1,
+   "via": "term:rem 732",
+   "gold": false
+  },
+  {
+   "id": "commit/b5bd3dbc72",
+   "label": "commit b5bd3db: board: REM-732 in-progress \u2192 done",
+   "wave": 1,
+   "via": "term:rem 732",
+   "gold": false
+  },
+  {
+   "id": "commit/a3639557b7",
+   "label": "commit a363955: board: canvas-source-links takes REM-732",
+   "wave": 1,
+   "via": "term:rem 732",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-732.md#5",
+   "label": "board/cards/REM-732.md \u203a Estimate",
+   "wave": 1,
+   "via": "term:rem 732",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "board/cards/REM-732.md#8",
+    "label": "board/cards/REM-732.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/team/canvas-source-links.md#1",
+    "label": "board/team/canvas-source-links.md",
+    "gold": false
+   },
+   {
+    "id": "commit/a3639557b7",
+    "label": "commit a363955: board: canvas-source-links takes REM-732",
+    "gold": false
+   },
+   {
+    "id": "commit/d4b0c3ee74",
+    "label": "commit d4b0c3e: board: canvas-source-links checks in, working",
+    "gold": false
+   },
+   {
+    "id": "commit/ebb49468ee",
+    "label": "commit ebb4946: board: canvas-source-links checks in, working",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "board/cards/REM-732.md#8",
+    "label": "board/cards/REM-732.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/team/canvas-source-links.md#1",
+    "label": "board/team/canvas-source-links.md",
+    "gold": false
+   },
+   {
+    "id": "commit/a3639557b7",
+    "label": "commit a363955: board: canvas-source-links takes REM-732",
+    "gold": false
+   },
+   {
+    "id": "commit/ebb49468ee",
+    "label": "commit ebb4946: board: canvas-source-links checks in, working",
+    "gold": false
+   },
+   {
+    "id": "commit/d4b0c3ee74",
+    "label": "commit d4b0c3e: board: canvas-source-links checks in, working",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/a3639557b7",
+    "label": "commit a363955: board: canvas-source-links takes REM-732",
+    "gold": false
+   },
+   {
+    "id": "commit/ebb49468ee",
+    "label": "commit ebb4946: board: canvas-source-links checks in, working",
+    "gold": false
+   },
+   {
+    "id": "commit/d4b0c3ee74",
+    "label": "commit d4b0c3e: board: canvas-source-links checks in, working",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-732.md#3",
+    "label": "board/cards/REM-732.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "commit/3ce315be3a",
+    "label": "commit 3ce315b: board: canvas-source-links checks in, ended",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "board/cards/REM-728.md#3",
+    "label": "board/cards/REM-728.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-732.md#8",
+    "label": "board/cards/REM-732.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/team/canvas-source-links.md#1",
+    "label": "board/team/canvas-source-links.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-723.md#1",
+    "label": "board/cards/REM-723.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-938.md#4",
+    "label": "board/cards/REM-938.md \u203a Evidence",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": null,
+  "Q": null,
+  "LQ": null,
+  "S": null
+ }
+}

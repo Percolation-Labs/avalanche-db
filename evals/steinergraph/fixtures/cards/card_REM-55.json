@@ -1,0 +1,438 @@
+{
+ "qid": "card:REM-55",
+ "set": "cards",
+ "question": "What was done about this, and why: install: every way of standing up a database runs one bootstrap and waits for one ready signal?",
+ "gold": [
+  {
+   "id": "commit/f63f7997dd",
+   "label": "commit f63f799: Merge pull request #27 from Percolation-Labs/fix/rem-55-one-bootstrap",
+   "seed": true
+  },
+  {
+   "id": "commit/fe409f341a",
+   "label": "commit fe409f3: The superuser install step was written out ten times, and a fix to one kept missing the rest",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/f63f7997dd",
+   "label": "commit f63f799: Merge pull request #27 from Percolation-Labs/fix/rem-55-one-bootstrap",
+   "rank": 1,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "board/cards/REM-55.md#1",
+   "label": "board/cards/REM-55.md",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/b184ee39a4",
+   "label": "commit b184ee3: suite started in one database and pointed cron at another",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "INSTALL.md#3",
+   "label": "INSTALL.md \u203a An existing Postgres 19",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "scenarios/evals/J3-the-second-year.md#4",
+   "label": "scenarios/evals/J3-the-second-year.md \u203a bootstrap as the install guide says, load the sample, then do Act 1's work",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 2
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "board/cards/REM-55.md#1",
+    "label": "board/cards/REM-55.md",
+    "role": "seed"
+   },
+   {
+    "id": "commit/f63f7997dd",
+    "label": "commit f63f799: Merge pull request #27 from Percolation-Labs/fix/rem-55-one-bootstrap",
+    "role": "gold"
+   },
+   {
+    "id": "commit/fe409f341a",
+    "label": "commit fe409f3: The superuser install step was written out ten times, and a fix to one kept missing the rest",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "board/cards/REM-55.md#1",
+    "b": "commit/f63f7997dd",
+    "via": [
+     {
+      "kind": "term",
+      "key": "ready signal",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "every way",
+      "width": 7
+     },
+     {
+      "kind": "term",
+      "key": "database runs",
+      "width": 10
+     }
+    ]
+   },
+   {
+    "a": "board/cards/REM-55.md#1",
+    "b": "commit/fe409f341a",
+    "via": [
+     {
+      "kind": "term",
+      "key": "rem 55",
+      "width": 4
+     },
+     {
+      "kind": "term",
+      "key": "first start",
+      "width": 12
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   2
+  ],
+  "entry": {
+   "seed": "commit/f63f7997dd",
+   "gold": "commit/f63f7997dd",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 2045,
+  "within_2_doors": 33514,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "meta/postmortems/2026-09-11-fixed-at-the-copy-that-failed.md#1",
+    "label": "meta/postmortems/2026-09-11-fixed-at-the-copy-that-failed.md \u203a Fixed at the copy that failed",
+    "p": 0.002962362401389457,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-117.md#1",
+    "label": "board/cards/REM-117.md",
+    "p": 0.0028451416663591677,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-116.md#1",
+    "label": "board/cards/REM-116.md",
+    "p": 0.0028053612715081147,
+    "gold": false
+   },
+   {
+    "id": "dev/ci-database.sh#5",
+    "label": "dev/ci-database.sh",
+    "p": 0.0027795611815665056,
+    "gold": false
+   },
+   {
+    "id": "k8s/kind/manifests/postgres.yaml#2",
+    "label": "k8s/kind/manifests/postgres.yaml",
+    "p": 0.0023684158611933983,
+    "gold": false
+   },
+   {
+    "id": "dev/docker-compose.yml#5",
+    "label": "dev/docker-compose.yml",
+    "p": 0.0018510315405561814,
+    "gold": false
+   },
+   {
+    "id": "commit/b09471694e",
+    "label": "commit b094716: The compose healthchecks passed on the socket while the first-start install was still running",
+    "p": 0.001821559655832662,
+    "gold": false
+   },
+   {
+    "id": "commit/fe409f341a",
+    "label": "commit fe409f3: The superuser install step was written out ten times, and a fix to one kept missing the rest",
+    "p": 0.0016189032787520296,
+    "gold": true
+   },
+   {
+    "id": "scenarios/evals/J3-the-second-year.md#5",
+    "label": "scenarios/evals/J3-the-second-year.md \u203a The cast",
+    "p": 0.0014203264797824195,
+    "gold": false
+   },
+   {
+    "id": "specs/user-rbac/roles.sql#4",
+    "label": "specs/user-rbac/roles.sql",
+    "p": 0.0014015959934147312,
+    "gold": false
+   },
+   {
+    "id": "scenarios/evals/J3-the-second-year.md#3",
+    "label": "scenarios/evals/J3-the-second-year.md \u203a 1. the PREVIOUS release, from the published image -- not from this tree",
+    "p": 0.0013297520881649775,
+    "gold": false
+   },
+   {
+    "id": "specs/research-platform/README.md#2",
+    "label": "specs/research-platform/README.md \u203a Evidence checked before ticketing",
+    "p": 0.0012671395956688398,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-55.md#2",
+    "label": "board/cards/REM-55.md \u203a Log",
+    "p": 0.0012431581440383714,
+    "gold": false
+   },
+   {
+    "id": "dev/docker-compose.yml#4",
+    "label": "dev/docker-compose.yml",
+    "p": 0.0012079974348377842,
+    "gold": false
+   },
+   {
+    "id": "dev/README.md#8",
+    "label": "dev/README.md \u203a Why this directory exists",
+    "p": 0.0012074972518196722,
+    "gold": false
+   },
+   {
+    "id": "commit/81477b81d2",
+    "label": "commit 81477b8: Agreement is not correctness, and the release ran two gates out of ten (#109)",
+    "p": 0.0011526149166313263,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-118.md#1",
+    "label": "board/cards/REM-118.md",
+    "p": 0.001113049970749084,
+    "gold": false
+   },
+   {
+    "id": "commit/afc6fe9aa6",
+    "label": "commit afc6fe9: A package's storage could add what the core refuses, and its rows projected as public",
+    "p": 0.0010660766597204757,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-71.md#3",
+    "label": "board/cards/REM-71.md \u203a Evidence",
+    "p": 0.0010638200799573101,
+    "gold": false
+   },
+   {
+    "id": "commit/726c366c1a",
+    "label": "commit 726c366: Merge pull request #30 from Percolation-Labs/fix/rem-47-package-tenancy",
+    "p": 0.0010075560443910483,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/f63f7997dd",
+   "label": "commit f63f799: Merge pull request #27 from Percolation-Labs/fix/rem-55-one-bootstrap",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "board/cards/REM-55.md#1",
+   "label": "board/cards/REM-55.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/b184ee39a4",
+   "label": "commit b184ee3: suite started in one database and pointed cron at another",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "INSTALL.md#3",
+   "label": "INSTALL.md \u203a An existing Postgres 19",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "scenarios/evals/J3-the-second-year.md#4",
+   "label": "scenarios/evals/J3-the-second-year.md \u203a bootstrap as the install guide says, load the sample, then do Act 1's work",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "dev/scale/kind/stack.yaml#1",
+   "label": "dev/scale/kind/stack.yaml",
+   "wave": 1,
+   "via": "term:pg_isready",
+   "gold": false
+  },
+  {
+   "id": "meta/postmortems/2026-09-11-fixed-at-the-copy-that-failed.md#10",
+   "label": "meta/postmortems/2026-09-11-fixed-at-the-copy-that-failed.md \u203a 6. What generalises",
+   "wave": 1,
+   "via": "term:pg_isready",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-287.md#10",
+   "label": "board/cards/REM-287.md \u203a Log",
+   "wave": 1,
+   "via": "term:pg_isready",
+   "gold": false
+  },
+  {
+   "id": "k8s/kind/sql/20-demo-setup.sql#3",
+   "label": "k8s/kind/sql/20-demo-setup.sql",
+   "wave": 1,
+   "via": "term:pg_isready",
+   "gold": false
+  },
+  {
+   "id": "commit/b09471694e",
+   "label": "commit b094716: The compose healthchecks passed on the socket while the first-start install was still running",
+   "wave": 1,
+   "via": "term:pg_isready",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "meta/postmortems/2026-09-11-fixed-at-the-copy-that-failed.md#1",
+    "label": "meta/postmortems/2026-09-11-fixed-at-the-copy-that-failed.md \u203a Fixed at the copy that failed",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-117.md#1",
+    "label": "board/cards/REM-117.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-116.md#1",
+    "label": "board/cards/REM-116.md",
+    "gold": false
+   },
+   {
+    "id": "dev/ci-database.sh#5",
+    "label": "dev/ci-database.sh",
+    "gold": false
+   },
+   {
+    "id": "k8s/kind/manifests/postgres.yaml#2",
+    "label": "k8s/kind/manifests/postgres.yaml",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "dev/ci-database.sh#5",
+    "label": "dev/ci-database.sh",
+    "gold": false
+   },
+   {
+    "id": "dev/docker-compose.yml#5",
+    "label": "dev/docker-compose.yml",
+    "gold": false
+   },
+   {
+    "id": "commit/fe409f341a",
+    "label": "commit fe409f3: The superuser install step was written out ten times, and a fix to one kept missing the rest",
+    "gold": true
+   },
+   {
+    "id": "commit/b09471694e",
+    "label": "commit b094716: The compose healthchecks passed on the socket while the first-start install was still running",
+    "gold": false
+   },
+   {
+    "id": "k8s/kind/manifests/postgres.yaml#2",
+    "label": "k8s/kind/manifests/postgres.yaml",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/deffb31ea0",
+    "label": "commit deffb31: Merge pull request #78 from Percolation-Labs/fix/rem-62-view-owner",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-982.md#4",
+    "label": "board/cards/REM-982.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "commit/73c746bf9f",
+    "label": "commit 73c746b: Merge pull request #45 from Percolation-Labs/fix/rem-70-one-agent-translation",
+    "gold": false
+   },
+   {
+    "id": "commit/77b0dc1603",
+    "label": "commit 77b0dc1: Merge pull request #46 from Percolation-Labs/fix/ci-database-preflight-before-container",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-982.md#6",
+    "label": "board/cards/REM-982.md \u203a Log",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "board/cards/REM-993.md#4",
+    "label": "board/cards/REM-993.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "commit/da21227876",
+    "label": "commit da21227: A deleted chunk kept its vectors, a failed parse stayed pending, and the install refusal came too late t",
+    "gold": false
+   },
+   {
+    "id": "commit/fe409f341a",
+    "label": "commit fe409f3: The superuser install step was written out ten times, and a fix to one kept missing the rest",
+    "gold": true
+   },
+   {
+    "id": "scenarios/evals/J3-the-second-year.md#7",
+    "label": "scenarios/evals/J3-the-second-year.md \u203a Act 1 \u2014 A month of ordinary use, at the previous release",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/release-and-gitops.md#18",
+    "label": "specs/percolate-application/release-and-gitops.md \u203a Turning core on for the application",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 1.0,
+  "LQ": 0.0,
+  "S": 1.0
+ }
+}

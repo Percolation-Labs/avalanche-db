@@ -1,0 +1,476 @@
+{
+ "qid": "pr:642",
+ "set": "prs",
+ "question": "What work went into this, and why: Generalisation part 2: use edges are not doors on the judge side (null, with postmortem)?",
+ "gold": [
+  {
+   "id": "commit/3457946634",
+   "label": "commit 3457946: Generalisation part 2 registered: the judge-side test on the 7 cross-question use edges",
+   "seed": true
+  },
+  {
+   "id": "commit/c78841ce88",
+   "label": "commit c78841c: Generalisation part 2: the 7-case judge script, with the moot-case amendment registered before any call",
+   "seed": true
+  },
+  {
+   "id": "commit/db62b6152c",
+   "label": "commit db62b61: RESULT: the edge scored below the walk in 8 of 10 rows, not 9 (recount)",
+   "seed": false
+  },
+  {
+   "id": "commit/f94b464604",
+   "label": "commit f94b464: Generalisation part 2 result: no use edge is a door; the evidence sentence scores below the walk's lead ",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/76000fab26",
+   "label": "commit 76000fa: Merge pull request #642 from Percolation-Labs/sally/legibility-7",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/3457946634",
+   "label": "commit 3457946: Generalisation part 2 registered: the judge-side test on the 7 cross-question use edges",
+   "rank": 2,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "commit/c78841ce88",
+   "label": "commit c78841c: Generalisation part 2: the 7-case judge script, with the moot-case amendment registered before any call",
+   "rank": 3,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "meta/lab/results/generalise/RESULT.md#4",
+   "label": "meta/lab/results/generalise/RESULT.md \u203a What would test generalisation",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/b5101c436f",
+   "label": "commit b5101c4: Use-driven edges change no question's graph: cory's 600 restate the term index (generalisation, register",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/3457946634",
+    "label": "commit 3457946: Generalisation part 2 registered: the judge-side test on the 7 cross-question use edges",
+    "role": "gold"
+   },
+   {
+    "id": "commit/c78841ce88",
+    "label": "commit c78841c: Generalisation part 2: the 7-case judge script, with the moot-case amendment registered before any call",
+    "role": "gold"
+   },
+   {
+    "id": "commit/db62b6152c",
+    "label": "commit db62b61: RESULT: the edge scored below the walk in 8 of 10 rows, not 9 (recount)",
+    "role": "gold"
+   },
+   {
+    "id": "commit/f94b464604",
+    "label": "commit f94b464: Generalisation part 2 result: no use edge is a door; the evidence sentence scores below the walk's lead ",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/3457946634",
+    "b": "commit/c78841ce88",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "near",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "generalisation part",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "generalisation",
+      "width": 42
+     }
+    ]
+   },
+   {
+    "a": "commit/c78841ce88",
+    "b": "commit/f94b464604",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "near",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "generalisation part",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "generalisation",
+      "width": 42
+     }
+    ]
+   },
+   {
+    "a": "commit/db62b6152c",
+    "b": "commit/f94b464604",
+    "via": [
+     {
+      "kind": "beside"
+     }
+    ]
+   }
+  ],
+  "cost": 3,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   2,
+   1,
+   2,
+   1,
+   1
+  ],
+  "entry": {
+   "seed": "commit/3457946634",
+   "gold": "commit/3457946634",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 883,
+  "within_2_doors": 31276,
+  "gold_within_1": 1,
+  "gold_within_2": 1,
+  "top_U": [
+   {
+    "id": "commit/f94b464604",
+    "label": "commit f94b464: Generalisation part 2 result: no use edge is a door; the evidence sentence scores below the walk's lead ",
+    "p": 0.010459659694132917,
+    "gold": true
+   },
+   {
+    "id": "meta/lab/configs/structure/legibility.py#1",
+    "label": "meta/lab/configs/structure/legibility.py",
+    "p": 0.006377983932449888,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261102-115514-6973.md#1",
+    "label": "board/messages/M-20261102-115514-6973.md",
+    "p": 0.006227323651477729,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/generalise/REGISTRATION.md#4",
+    "label": "meta/lab/results/generalise/REGISTRATION.md \u203a Part 2: the judge-side test on the 7 (registered 2 Nov 12:05Z, before any ",
+    "p": 0.0035864597694608515,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/generalise/RESULT.md#5",
+    "label": "meta/lab/results/generalise/RESULT.md \u203a Part 2 result: the judge reads the edge's sentence as a weaker lead (2 Nov)",
+    "p": 0.0035118573491633607,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/generalise/legibility-7.md#2",
+    "label": "meta/lab/results/generalise/legibility-7.md",
+    "p": 0.0034063595602433785,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/generalise/legibility-7.md#1",
+    "label": "meta/lab/results/generalise/legibility-7.md",
+    "p": 0.003383738035926603,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/generalise/REGISTRATION.md#3",
+    "label": "meta/lab/results/generalise/REGISTRATION.md \u203a Part 2: the judge-side test on the 7 (registered 2 Nov 12:05Z, before any ",
+    "p": 0.0033623781891212994,
+    "gold": false
+   },
+   {
+    "id": "commit/95f335fb07",
+    "label": "commit 95f335f: Merge pull request #632 from Percolation-Labs/sally/structure-budget",
+    "p": 0.003229855159739706,
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-10-23-wikispeedia/walker/walker.py#1",
+    "label": "meta/spikes/2026-10-23-wikispeedia/walker/walker.py",
+    "p": 0.003056671746338265,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/ranking-eval/RESULT.md#6",
+    "label": "meta/lab/results/ranking-eval/RESULT.md \u203a One worked page",
+    "p": 0.0029753105586662804,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261102-115436-5377.md#1",
+    "label": "board/messages/M-20261102-115436-5377.md",
+    "p": 0.0028580288321918036,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261102-115432-1fab.md#1",
+    "label": "board/messages/M-20261102-115432-1fab.md",
+    "p": 0.0028495427304916633,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/generalise/REGISTRATION.md#2",
+    "label": "meta/lab/results/generalise/REGISTRATION.md \u203a Do use-driven edges generalise? Registration",
+    "p": 0.002609163561652065,
+    "gold": false
+   },
+   {
+    "id": "commit/5552463286",
+    "label": "commit 5552463: board: bill messages sirsh",
+    "p": 0.0025261358389302045,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/configs/structure/legibility.py#3",
+    "label": "meta/lab/configs/structure/legibility.py",
+    "p": 0.0022956418183738723,
+    "gold": false
+   },
+   {
+    "id": "commit/17ed7c1a77",
+    "label": "commit 17ed7c1: board: sally messages mike",
+    "p": 0.0021055463464758075,
+    "gold": false
+   },
+   {
+    "id": "commit/970ff56c5a",
+    "label": "commit 970ff56: board: codex-agent-evidence acknowledges 1 message(s)",
+    "p": 0.002004397953833001,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/generalise/RESULT.md#1",
+    "label": "meta/lab/results/generalise/RESULT.md \u203a Do use-driven edges generalise? Result: no change to the graph, for any question",
+    "p": 0.0019752971562073075,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/configs/structure/legibility.py#2",
+    "label": "meta/lab/configs/structure/legibility.py",
+    "p": 0.0018159504397246373,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/76000fab26",
+   "label": "commit 76000fa: Merge pull request #642 from Percolation-Labs/sally/legibility-7",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/3457946634",
+   "label": "commit 3457946: Generalisation part 2 registered: the judge-side test on the 7 cross-question use edges",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "commit/c78841ce88",
+   "label": "commit c78841c: Generalisation part 2: the 7-case judge script, with the moot-case amendment registered before any call",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "meta/lab/results/generalise/RESULT.md#4",
+   "label": "meta/lab/results/generalise/RESULT.md \u203a What would test generalisation",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/b5101c436f",
+   "label": "commit b5101c4: Use-driven edges change no question's graph: cory's 600 restate the term index (generalisation, register",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/generalise/cory-use-edges-016e60bee.md#38",
+   "label": "meta/lab/results/generalise/cory-use-edges-016e60bee.md",
+   "wave": 1,
+   "via": "term:results generalise",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/generalise/REGISTRATION.md#4",
+   "label": "meta/lab/results/generalise/REGISTRATION.md \u203a Part 2: the judge-side test on the 7 (registered 2 Nov 12:05Z, before any ",
+   "wave": 1,
+   "via": "term:results generalise",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/generalise/legibility-7.md#2",
+   "label": "meta/lab/results/generalise/legibility-7.md",
+   "wave": 1,
+   "via": "term:results generalise",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/generalise/RESULT.md#6",
+   "label": "meta/lab/results/generalise/RESULT.md \u203a Part 2 result: the judge reads the edge's sentence as a weaker lead (2 Nov)",
+   "wave": 1,
+   "via": "term:results generalise",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/generalise/cory-use-edges-016e60bee.md#40",
+   "label": "meta/lab/results/generalise/cory-use-edges-016e60bee.md",
+   "wave": 1,
+   "via": "term:results generalise",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "commit/f94b464604",
+    "label": "commit f94b464: Generalisation part 2 result: no use edge is a door; the evidence sentence scores below the walk's lead ",
+    "gold": true
+   },
+   {
+    "id": "meta/lab/configs/structure/legibility.py#1",
+    "label": "meta/lab/configs/structure/legibility.py",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261102-115514-6973.md#1",
+    "label": "board/messages/M-20261102-115514-6973.md",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/generalise/REGISTRATION.md#4",
+    "label": "meta/lab/results/generalise/REGISTRATION.md \u203a Part 2: the judge-side test on the 7 (registered 2 Nov 12:05Z, before any ",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/generalise/RESULT.md#5",
+    "label": "meta/lab/results/generalise/RESULT.md \u203a Part 2 result: the judge reads the edge's sentence as a weaker lead (2 Nov)",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "commit/f94b464604",
+    "label": "commit f94b464: Generalisation part 2 result: no use edge is a door; the evidence sentence scores below the walk's lead ",
+    "gold": true
+   },
+   {
+    "id": "board/messages/M-20261102-115514-6973.md#1",
+    "label": "board/messages/M-20261102-115514-6973.md",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/generalise/REGISTRATION.md#3",
+    "label": "meta/lab/results/generalise/REGISTRATION.md \u203a Part 2: the judge-side test on the 7 (registered 2 Nov 12:05Z, before any ",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/configs/structure/legibility.py#1",
+    "label": "meta/lab/configs/structure/legibility.py",
+    "gold": false
+   },
+   {
+    "id": "commit/95f335fb07",
+    "label": "commit 95f335f: Merge pull request #632 from Percolation-Labs/sally/structure-budget",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/f94b464604",
+    "label": "commit f94b464: Generalisation part 2 result: no use edge is a door; the evidence sentence scores below the walk's lead ",
+    "gold": true
+   },
+   {
+    "id": "commit/95f335fb07",
+    "label": "commit 95f335f: Merge pull request #632 from Percolation-Labs/sally/structure-budget",
+    "gold": false
+   },
+   {
+    "id": "commit/77cf215be2",
+    "label": "commit 77cf215: MIDB dreaming metric: required judge AUC, after fixed-AUC controls failed on MuSiQue",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261102-115514-6973.md#1",
+    "label": "board/messages/M-20261102-115514-6973.md",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/generalise/REGISTRATION.md#2",
+    "label": "meta/lab/results/generalise/REGISTRATION.md \u203a Do use-driven edges generalise? Registration",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "commit/95f335fb07",
+    "label": "commit 95f335f: Merge pull request #632 from Percolation-Labs/sally/structure-budget",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-dream/result.txt#4",
+    "label": "meta/lab/results/q4-dream/result.txt",
+    "gold": false
+   },
+   {
+    "id": "commit/f94b464604",
+    "label": "commit f94b464: Generalisation part 2 result: no use edge is a door; the evidence sentence scores below the walk's lead ",
+    "gold": true
+   },
+   {
+    "id": "meta/lab/results/generalise/REGISTRATION.md#3",
+    "label": "meta/lab/results/generalise/REGISTRATION.md \u203a Part 2: the judge-side test on the 7 (registered 2 Nov 12:05Z, before any ",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-legibility/RULE.md#1",
+    "label": "meta/lab/results/q4-legibility/RULE.md \u203a Does a dreamed relation name raise the judge's P on true doors and not on false",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.5,
+  "Q": 0.5,
+  "LQ": 0.5,
+  "S": 0.5
+ }
+}

@@ -1,0 +1,405 @@
+{
+ "qid": "pr:183",
+ "set": "prs",
+ "question": "What work went into this, and why: percolate-core 0.1.12 is the pin the tree follows (#182)?",
+ "gold": [
+  {
+   "id": "commit/52bc1d562e",
+   "label": "commit 52bc1d5: The architecture note keeps the core version it actually inspected, in words (#182)",
+   "seed": false
+  },
+  {
+   "id": "commit/c3a7d578c6",
+   "label": "commit c3a7d57: Bump percolate-core pin to 0.1.12",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "board/cards/REM-658.md#3",
+   "label": "board/cards/REM-658.md \u203a Evidence",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/c3a7d578c6",
+   "label": "commit c3a7d57: Bump percolate-core pin to 0.1.12",
+   "rank": 2,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "commit/5956687acf",
+   "label": "commit 5956687: Merge pull request #183 from Percolation-Labs/claude/issue-182-20260914-0808",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "commit/b7204e7b54",
+   "label": "commit b7204e7: versions: follow percolate-core 0.2.8",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/83ec1399f9",
+   "label": "commit 83ec139: percolate-core 0.2.4: the pins and versions.toml follow it",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/52bc1d562e",
+    "label": "commit 52bc1d5: The architecture note keeps the core version it actually inspected, in words (#182)",
+    "role": "gold"
+   },
+   {
+    "id": "commit/c3a7d578c6",
+    "label": "commit c3a7d57: Bump percolate-core pin to 0.1.12",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/52bc1d562e",
+    "b": "commit/c3a7d578c6",
+    "via": [
+     {
+      "kind": "beside"
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "commit/c3a7d578c6",
+   "gold": "commit/c3a7d578c6",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 570,
+  "within_2_doors": 31022,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "dev/docker-compose.yml#2",
+    "label": "dev/docker-compose.yml",
+    "p": 0.009602786112462992,
+    "gold": false
+   },
+   {
+    "id": "commit/1fe701e7bd",
+    "label": "commit 1fe701e: Merge pull request #181 from Percolation-Labs/amartey/rem-219-spec-shared-origin",
+    "p": 0.00429330820673465,
+    "gold": false
+   },
+   {
+    "id": "commit/c0324c452b",
+    "label": "commit c0324c4: A version bump keeps the pgrx toolchain cache, and parser-tests frees disk before using it (REM-235)",
+    "p": 0.003825657726534383,
+    "gold": false
+   },
+   {
+    "id": "versions.toml#1",
+    "label": "versions.toml",
+    "p": 0.0036252361097766175,
+    "gold": false
+   },
+   {
+    "id": "commit/e51903df80",
+    "label": "commit e51903d: percolate-core 0.2.5: the pins and versions.toml follow it",
+    "p": 0.0035289952752478185,
+    "gold": false
+   },
+   {
+    "id": "commit/9be1dd5c77",
+    "label": "commit 9be1dd5: Merge pull request #185 from Percolation-Labs/amartey/rem-235-toolchain-disk",
+    "p": 0.0033638587819430853,
+    "gold": false
+   },
+   {
+    "id": "commit/fc6ab75c55",
+    "label": "commit fc6ab75: follow percolate-core 0.2.3 (REM-658) (#337)",
+    "p": 0.0028749156438809685,
+    "gold": false
+   },
+   {
+    "id": "specs/workflow-engine/hired-steps.md#11",
+    "label": "specs/workflow-engine/hired-steps.md \u203a 7. Relation to the judgement queue",
+    "p": 0.0027844831727623924,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261027-115703-1b2d.md#1",
+    "label": "board/messages/M-20261027-115703-1b2d.md",
+    "p": 0.002286342110770289,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-540.md#3",
+    "label": "board/cards/REM-540.md \u203a Evidence",
+    "p": 0.0020797173099204314,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-658.md#4",
+    "label": "board/cards/REM-658.md \u203a Done when",
+    "p": 0.0020344019658583515,
+    "gold": false
+   },
+   {
+    "id": "commit/dd98f0ffcc",
+    "label": "commit dd98f0f: board: p8-subsystems-cb messages sirsh",
+    "p": 0.0019930942398552437,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-658.md#6",
+    "label": "board/cards/REM-658.md \u203a Log",
+    "p": 0.001945691278547322,
+    "gold": false
+   },
+   {
+    "id": "commit/3493dda085",
+    "label": "commit 3493dda: Two gates read the wrong thing: a sibling checkout, and a seeded agent CI cannot use (#135)",
+    "p": 0.001945460580329657,
+    "gold": false
+   },
+   {
+    "id": "dev/references.sh#5",
+    "label": "dev/references.sh",
+    "p": 0.0019004935843695925,
+    "gold": false
+   },
+   {
+    "id": "dev/docker-compose.yml#7",
+    "label": "dev/docker-compose.yml",
+    "p": 0.001788898019138003,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-867.md#5",
+    "label": "board/cards/REM-867.md \u203a Log",
+    "p": 0.0016831851516386392,
+    "gold": false
+   },
+   {
+    "id": "commit/81477b81d2",
+    "label": "commit 81477b8: Agreement is not correctness, and the release ran two gates out of ten (#109)",
+    "p": 0.0016682961243398755,
+    "gold": false
+   },
+   {
+    "id": "commit/c8581591c5",
+    "label": "commit c858159: Merge pull request #506 from Percolation-Labs/bob/core-pin-027",
+    "p": 0.0016447143595139967,
+    "gold": false
+   },
+   {
+    "id": "dev/references.sh#2",
+    "label": "dev/references.sh",
+    "p": 0.001630155069136101,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "board/cards/REM-658.md#3",
+   "label": "board/cards/REM-658.md \u203a Evidence",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/c3a7d578c6",
+   "label": "commit c3a7d57: Bump percolate-core pin to 0.1.12",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "commit/5956687acf",
+   "label": "commit 5956687: Merge pull request #183 from Percolation-Labs/claude/issue-182-20260914-0808",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/b7204e7b54",
+   "label": "commit b7204e7: versions: follow percolate-core 0.2.8",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/83ec1399f9",
+   "label": "commit 83ec139: percolate-core 0.2.4: the pins and versions.toml follow it",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "dev/docker-compose.yml#2",
+   "label": "dev/docker-compose.yml",
+   "wave": 1,
+   "via": "term:every literal",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-664.md#2",
+   "label": "board/cards/REM-664.md \u203a Goal",
+   "wave": 1,
+   "via": "term:every literal",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-658.md#6",
+   "label": "board/cards/REM-658.md \u203a Log",
+   "wave": 1,
+   "via": "term:every literal",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-658.md#5",
+   "label": "board/cards/REM-658.md \u203a Log",
+   "wave": 1,
+   "via": "term:every literal",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-655.md#24",
+   "label": "board/cards/REM-655.md \u203a Log",
+   "wave": 1,
+   "via": "term:every literal",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "dev/docker-compose.yml#2",
+    "label": "dev/docker-compose.yml",
+    "gold": false
+   },
+   {
+    "id": "commit/1fe701e7bd",
+    "label": "commit 1fe701e: Merge pull request #181 from Percolation-Labs/amartey/rem-219-spec-shared-origin",
+    "gold": false
+   },
+   {
+    "id": "commit/c0324c452b",
+    "label": "commit c0324c4: A version bump keeps the pgrx toolchain cache, and parser-tests frees disk before using it (REM-235)",
+    "gold": false
+   },
+   {
+    "id": "versions.toml#1",
+    "label": "versions.toml",
+    "gold": false
+   },
+   {
+    "id": "commit/e51903df80",
+    "label": "commit e51903d: percolate-core 0.2.5: the pins and versions.toml follow it",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "dev/docker-compose.yml#2",
+    "label": "dev/docker-compose.yml",
+    "gold": false
+   },
+   {
+    "id": "commit/fc6ab75c55",
+    "label": "commit fc6ab75: follow percolate-core 0.2.3 (REM-658) (#337)",
+    "gold": false
+   },
+   {
+    "id": "versions.toml#1",
+    "label": "versions.toml",
+    "gold": false
+   },
+   {
+    "id": "commit/e51903df80",
+    "label": "commit e51903d: percolate-core 0.2.5: the pins and versions.toml follow it",
+    "gold": false
+   },
+   {
+    "id": "dev/references.sh#2",
+    "label": "dev/references.sh",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "dev/docker-compose.yml#2",
+    "label": "dev/docker-compose.yml",
+    "gold": false
+   },
+   {
+    "id": "commit/e51903df80",
+    "label": "commit e51903d: percolate-core 0.2.5: the pins and versions.toml follow it",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-658.md#4",
+    "label": "board/cards/REM-658.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261027-115703-1b2d.md#1",
+    "label": "board/messages/M-20261027-115703-1b2d.md",
+    "gold": false
+   },
+   {
+    "id": "commit/52bc1d562e",
+    "label": "commit 52bc1d5: The architecture note keeps the core version it actually inspected, in words (#182)",
+    "gold": true
+   }
+  ],
+  "S": [
+   {
+    "id": "dev/ci-database.sh#3",
+    "label": "dev/ci-database.sh",
+    "gold": false
+   },
+   {
+    "id": "commit/067ac1be7d",
+    "label": "commit 067ac1b: references.sh: a board card's target version is not a core pin",
+    "gold": false
+   },
+   {
+    "id": "commit/e0bdbf7792",
+    "label": "commit e0bdbf7: references.sh: a board card's target version is not a core pin",
+    "gold": false
+   },
+   {
+    "id": "commit/e49bb4e1d0",
+    "label": "commit e49bb4e: p8 follows core 0.2.20 and extension 0.2.41 (train follow leg)",
+    "gold": false
+   },
+   {
+    "id": "dev/references.sh#2",
+    "label": "dev/references.sh",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 1.0,
+  "S": 0.0
+ }
+}

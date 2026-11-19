@@ -1,0 +1,410 @@
+{
+ "qid": "card:REM-71",
+ "set": "cards",
+ "question": "What was done about this, and why: review: one copy of each rule, no hard-coded tunables, no query doing work it does not need, across the parser, extension SQL and percolate-core?",
+ "gold": [
+  {
+   "id": "commit/9a87941f19",
+   "label": "commit 9a87941: Three measured findings from REM-71, and the one the convergence gate caught (#104)",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "board/cards/REM-71.md#1",
+   "label": "board/cards/REM-71.md",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-71.md#3",
+   "label": "board/cards/REM-71.md \u203a Evidence",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/c4ff897d4d",
+   "label": "commit c4ff897: The query parser is core: move it into the repo and make it a required extension",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "board/cards/REM-266.md#6",
+   "label": "board/cards/REM-266.md \u203a Log",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "PACKAGING.md#30",
+   "label": "PACKAGING.md \u203a The order a release runs in, across three repositories",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 2
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "board/cards/REM-71.md#3",
+    "label": "board/cards/REM-71.md \u203a Evidence",
+    "role": "seed"
+   },
+   {
+    "id": "commit/9a87941f19",
+    "label": "commit 9a87941: Three measured findings from REM-71, and the one the convergence gate caught (#104)",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "board/cards/REM-71.md#3",
+    "b": "commit/9a87941f19",
+    "via": [
+     {
+      "kind": "term",
+      "key": "carved",
+      "width": 19
+     },
+     {
+      "kind": "term",
+      "key": "seq scan",
+      "width": 19
+     },
+     {
+      "kind": "term",
+      "key": "rem 71",
+      "width": 24
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [],
+  "entry": {
+   "seed": "board/cards/REM-71.md#3",
+   "gold": "commit/9a87941f19",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 3629,
+  "within_2_doors": 33809,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "board/cards/REM-71.md#2",
+    "label": "board/cards/REM-71.md \u203a Goal",
+    "p": 0.003261243891081452,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-116.md#1",
+    "label": "board/cards/REM-116.md",
+    "p": 0.003141436091399861,
+    "gold": false
+   },
+   {
+    "id": "scenarios/round-4.md#13",
+    "label": "scenarios/round-4.md \u203a Still open",
+    "p": 0.002361748460859006,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-270.md#3",
+    "label": "board/cards/REM-270.md \u203a Log",
+    "p": 0.0011857395004324963,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-71.md#4",
+    "label": "board/cards/REM-71.md \u203a Done when",
+    "p": 0.0011237514490789891,
+    "gold": false
+   },
+   {
+    "id": "commit/1f6397b8b6",
+    "label": "commit 1f6397b: Add INSTALL.md and a working install.sh; make the parser extension honestly optional",
+    "p": 0.0011036000334938385,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-117.md#1",
+    "label": "board/cards/REM-117.md",
+    "p": 0.0010636914328339005,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-118.md#1",
+    "label": "board/cards/REM-118.md",
+    "p": 0.0009837271444860373,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-04-resource-scoping.md#12",
+    "label": "meta/postmortems/2026-09-04-resource-scoping.md \u203a 9. What I would tell the next person",
+    "p": 0.0009221515455192539,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-556.md#1",
+    "label": "board/cards/REM-556.md",
+    "p": 0.0007665358625105285,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-261.md#8",
+    "label": "board/cards/REM-261.md \u203a Log",
+    "p": 0.0007643325039010745,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-123.md#1",
+    "label": "board/cards/REM-123.md",
+    "p": 0.0007514823527970826,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-71.md#10",
+    "label": "board/cards/REM-71.md \u203a 2026-09-12T12:09:18.990Z \u00b7 Percolation Labs",
+    "p": 0.0007434732523113835,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-93.md#1",
+    "label": "board/cards/REM-93.md",
+    "p": 0.0007195887440673356,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-97.md#1",
+    "label": "board/cards/REM-97.md",
+    "p": 0.0007141242835151175,
+    "gold": false
+   },
+   {
+    "id": "commit/37ed4cd487",
+    "label": "commit 37ed4cd: rows, not schema: the rule, and a gate that reads specs/ (REM-655) (#335)",
+    "p": 0.0007108896059382742,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-71.md#16",
+    "label": "board/cards/REM-71.md \u203a 2026-09-12T14:30:56.116Z \u00b7 Percolation Labs",
+    "p": 0.0007011964166307795,
+    "gold": false
+   },
+   {
+    "id": "commit/9a87941f19",
+    "label": "commit 9a87941: Three measured findings from REM-71, and the one the convergence gate caught (#104)",
+    "p": 0.0006828109056785412,
+    "gold": true
+   },
+   {
+    "id": "commit/1f1a055332",
+    "label": "commit 1f1a055: Revoke the PUBLIC default, and stop a lint from naming a table that is not there yet",
+    "p": 0.0006807110643873545,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1096.md#6",
+    "label": "board/cards/REM-1096.md \u203a Log",
+    "p": 0.0006632362398913632,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "board/cards/REM-71.md#1",
+   "label": "board/cards/REM-71.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-71.md#3",
+   "label": "board/cards/REM-71.md \u203a Evidence",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/c4ff897d4d",
+   "label": "commit c4ff897: The query parser is core: move it into the repo and make it a required extension",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-266.md#6",
+   "label": "board/cards/REM-266.md \u203a Log",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "PACKAGING.md#30",
+   "label": "PACKAGING.md \u203a The order a release runs in, across three repositories",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-71.md#11",
+   "label": "board/cards/REM-71.md \u203a 2026-09-12T12:09:18.990Z \u00b7 Percolation Labs",
+   "wave": 1,
+   "via": "term:rem 71",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-71.md#13",
+   "label": "board/cards/REM-71.md \u203a 2026-09-12T12:46:32.833Z \u00b7 Percolation Labs",
+   "wave": 1,
+   "via": "term:rem 71",
+   "gold": false
+  },
+  {
+   "id": "commit/6757cf6437",
+   "label": "commit 6757cf6: board: REM-71 backlog \u2192 canceled",
+   "wave": 1,
+   "via": "term:rem 71",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-71.md#2",
+   "label": "board/cards/REM-71.md \u203a Goal",
+   "wave": 1,
+   "via": "term:rem 71",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-71.md#8",
+   "label": "board/cards/REM-71.md \u203a 2026-09-12T08:14:17.724Z \u00b7 Percolation Labs",
+   "wave": 1,
+   "via": "term:rem 71",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "board/cards/REM-71.md#2",
+    "label": "board/cards/REM-71.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-116.md#1",
+    "label": "board/cards/REM-116.md",
+    "gold": false
+   },
+   {
+    "id": "scenarios/round-4.md#13",
+    "label": "scenarios/round-4.md \u203a Still open",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-270.md#3",
+    "label": "board/cards/REM-270.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-71.md#4",
+    "label": "board/cards/REM-71.md \u203a Done when",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "board/cards/REM-71.md#2",
+    "label": "board/cards/REM-71.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-116.md#1",
+    "label": "board/cards/REM-116.md",
+    "gold": false
+   },
+   {
+    "id": "scenarios/round-4.md#13",
+    "label": "scenarios/round-4.md \u203a Still open",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-270.md#3",
+    "label": "board/cards/REM-270.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "commit/1f6397b8b6",
+    "label": "commit 1f6397b: Add INSTALL.md and a working install.sh; make the parser extension honestly optional",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "board/messages/M-20261029-221044-3b52.md#1",
+    "label": "board/messages/M-20261029-221044-3b52.md",
+    "gold": false
+   },
+   {
+    "id": "commit/4c040cb47e",
+    "label": "commit 4c040cb: Merge: track generated extension SQL with a staleness check",
+    "gold": false
+   },
+   {
+    "id": "commit/fe790fd6cc",
+    "label": "commit fe790fd: Merge: Python services moved to percolate-core",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261029-215710-3def.md#1",
+    "label": "board/messages/M-20261029-215710-3def.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-266.md#3",
+    "label": "board/cards/REM-266.md \u203a Evidence",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "specs/world-model-ingestion/sources.md#22",
+    "label": "specs/world-model-ingestion/sources.md \u203a 9. The parser registry",
+    "gold": false
+   },
+   {
+    "id": "research-notes/layering.md#1",
+    "label": "research-notes/layering.md \u203a Where each thing belongs: extension, metadata, core, or worker",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261106-110433-3e67.md#1",
+    "label": "board/messages/M-20261106-110433-3e67.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-269.md#7",
+    "label": "board/cards/REM-269.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "commit/2612de7737",
+    "label": "commit 2612de7: Layering: extension, declarative metadata, core, worker",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

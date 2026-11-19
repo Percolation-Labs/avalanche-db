@@ -1,0 +1,383 @@
+{
+ "qid": "card:REM-1015",
+ "set": "cards",
+ "question": "What was done about this, and why: gates: a push refuses while the shared hooksPath is absolute?",
+ "gold": [
+  {
+   "id": "commit/c78b719eb8",
+   "label": "commit c78b719: gates: a push refuses while the shared hooksPath is absolute, and names the writer (REM-1015) (#508)",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/024efef972",
+   "label": "commit 024efef: board: file REM-1015 gates: a push refuses while the shared hooksPath is absolute",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/c78b719eb8",
+   "label": "commit c78b719: gates: a push refuses while the shared hooksPath is absolute, and names the writer (REM-1015) (#508)",
+   "rank": 2,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "board/cards/REM-1015.md#1",
+   "label": "board/cards/REM-1015.md",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-1015.md#4",
+   "label": "board/cards/REM-1015.md \u203a Done when",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-803.md#5",
+   "label": "board/cards/REM-803.md \u203a Log",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/c78b719eb8",
+    "label": "commit c78b719: gates: a push refuses while the shared hooksPath is absolute, and names the writer (REM-1015) (#508)",
+    "role": "gold"
+   }
+  ],
+  "links": [],
+  "cost": 0,
+  "detached_gold": [],
+  "gold_pair_doors": [],
+  "entry": {
+   "seed": "commit/c78b719eb8",
+   "gold": "commit/c78b719eb8",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 1181,
+  "within_2_doors": 34101,
+  "gold_within_1": 0,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "board/cards/REM-1015.md#6",
+    "label": "board/cards/REM-1015.md \u203a Log",
+    "p": 0.012604993534384122,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1015.md#2",
+    "label": "board/cards/REM-1015.md \u203a Goal",
+    "p": 0.005113478370855883,
+    "gold": false
+   },
+   {
+    "id": "dev/check.sh#7",
+    "label": "dev/check.sh",
+    "p": 0.004512380201669895,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261020-080036-a689.md#1",
+    "label": "board/messages/M-20261020-080036-a689.md",
+    "p": 0.004365118821873315,
+    "gold": false
+   },
+   {
+    "id": "commit/9a0fcbb73c",
+    "label": "commit 9a0fcbb: board: REM-1015 in-progress \u2192 done",
+    "p": 0.003929014476783212,
+    "gold": false
+   },
+   {
+    "id": "commit/8b5c1cd4bd",
+    "label": "commit 8b5c1cd: board: note on REM-1015",
+    "p": 0.0038654150525157084,
+    "gold": false
+   },
+   {
+    "id": "commit/4f653c2de1",
+    "label": "commit 4f653c2: board: note on REM-1015",
+    "p": 0.003813882169829899,
+    "gold": false
+   },
+   {
+    "id": "dev/check.sh#8",
+    "label": "dev/check.sh",
+    "p": 0.003806866626362676,
+    "gold": false
+   },
+   {
+    "id": "commit/65930efd0e",
+    "label": "commit 65930ef: board: note on REM-1015",
+    "p": 0.0037903145793096466,
+    "gold": false
+   },
+   {
+    "id": "commit/e30f90c4e1",
+    "label": "commit e30f90c: board: note on REM-1015",
+    "p": 0.0037374016617122206,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-10-19-core-shipped-in-a-day.md#7",
+    "label": "meta/postmortems/2026-10-19-core-shipped-in-a-day.md \u203a What recurs, and the gate for each",
+    "p": 0.0024813854378782285,
+    "gold": false
+   },
+   {
+    "id": "commit/be98e8adf0",
+    "label": "commit be98e8a: board: every call warns when the shared core.hooksPath is absolute, naming the fix (REM-810)",
+    "p": 0.0024667478823691873,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1015.md#3",
+    "label": "board/cards/REM-1015.md \u203a Evidence",
+    "p": 0.0024447569105084193,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1015.md#5",
+    "label": "board/cards/REM-1015.md \u203a Scope",
+    "p": 0.002318074789134073,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261020-092154-5c37.md#1",
+    "label": "board/messages/M-20261020-092154-5c37.md",
+    "p": 0.002105609753909772,
+    "gold": false
+   },
+   {
+    "id": "commit/ef7adc80a9",
+    "label": "commit ef7adc8: board: file REM-1016 workflow: a template key no input supplies is a compile warning",
+    "p": 0.002103739901169573,
+    "gold": false
+   },
+   {
+    "id": "board/board.py#7",
+    "label": "board/board.py",
+    "p": 0.0019996834645603276,
+    "gold": false
+   },
+   {
+    "id": "commit/e51c6d376e",
+    "label": "commit e51c6d3: board: file REM-1014 ci: a fresh install from the published compose runs the tour",
+    "p": 0.001991163958473223,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261020-091444-44f9.md#1",
+    "label": "board/messages/M-20261020-091444-44f9.md",
+    "p": 0.001963472152856774,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-803.md#1",
+    "label": "board/cards/REM-803.md",
+    "p": 0.001956052075149735,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/024efef972",
+   "label": "commit 024efef: board: file REM-1015 gates: a push refuses while the shared hooksPath is absolute",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/c78b719eb8",
+   "label": "commit c78b719: gates: a push refuses while the shared hooksPath is absolute, and names the writer (REM-1015) (#508)",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "board/cards/REM-1015.md#1",
+   "label": "board/cards/REM-1015.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-1015.md#4",
+   "label": "board/cards/REM-1015.md \u203a Done when",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-803.md#5",
+   "label": "board/cards/REM-803.md \u203a Log",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/4f653c2de1",
+   "label": "commit 4f653c2: board: note on REM-1015",
+   "wave": 1,
+   "via": "term:1015",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-1015.md#5",
+   "label": "board/cards/REM-1015.md \u203a Scope",
+   "wave": 1,
+   "via": "term:1015",
+   "gold": false
+  },
+  {
+   "id": "commit/b6b06d4dee",
+   "label": "commit b6b06d4: board: REM-1015 in-progress \u2192 todo",
+   "wave": 1,
+   "via": "term:1015",
+   "gold": false
+  },
+  {
+   "id": "commit/9a0fcbb73c",
+   "label": "commit 9a0fcbb: board: REM-1015 in-progress \u2192 done",
+   "wave": 1,
+   "via": "term:1015",
+   "gold": false
+  },
+  {
+   "id": "commit/52d625a68e",
+   "label": "commit 52d625a: board: edit REM-1015 labels severity",
+   "wave": 1,
+   "via": "term:1015",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "board/cards/REM-1015.md#6",
+    "label": "board/cards/REM-1015.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1015.md#2",
+    "label": "board/cards/REM-1015.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "dev/check.sh#7",
+    "label": "dev/check.sh",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261020-080036-a689.md#1",
+    "label": "board/messages/M-20261020-080036-a689.md",
+    "gold": false
+   },
+   {
+    "id": "commit/9a0fcbb73c",
+    "label": "commit 9a0fcbb: board: REM-1015 in-progress \u2192 done",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "board/cards/REM-1015.md#6",
+    "label": "board/cards/REM-1015.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1015.md#2",
+    "label": "board/cards/REM-1015.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261020-080036-a689.md#1",
+    "label": "board/messages/M-20261020-080036-a689.md",
+    "gold": false
+   },
+   {
+    "id": "dev/check.sh#8",
+    "label": "dev/check.sh",
+    "gold": false
+   },
+   {
+    "id": "commit/be98e8adf0",
+    "label": "commit be98e8a: board: every call warns when the shared core.hooksPath is absolute, naming the fix (REM-810)",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/da4d3730a6",
+    "label": "commit da4d373: board: file REM-810 gates: the board warns when the shared hooksPath turns absolute",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-810.md#2",
+    "label": "board/cards/REM-810.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1015.md#2",
+    "label": "board/cards/REM-1015.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-810.md#1",
+    "label": "board/cards/REM-810.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-810.md#4",
+    "label": "board/cards/REM-810.md \u203a Done when",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "commit/da4d3730a6",
+    "label": "commit da4d373: board: file REM-810 gates: the board warns when the shared hooksPath turns absolute",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1015.md#2",
+    "label": "board/cards/REM-1015.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1015.md#6",
+    "label": "board/cards/REM-1015.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261020-080036-a689.md#1",
+    "label": "board/messages/M-20261020-080036-a689.md",
+    "gold": false
+   },
+   {
+    "id": "dev/check.sh#8",
+    "label": "dev/check.sh",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": null,
+  "Q": null,
+  "LQ": null,
+  "S": null
+ }
+}

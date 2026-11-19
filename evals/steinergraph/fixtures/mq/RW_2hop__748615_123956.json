@@ -1,0 +1,411 @@
+{
+ "qid": "RW:2hop__748615_123956",
+ "set": "mq",
+ "question": "On what date did Battle of the birth place of Marzuki Alie end?",
+ "gold": [
+  {
+   "id": "mq:453049afce7f9959",
+   "label": "Battle of Palembang",
+   "seed": false
+  },
+  {
+   "id": "mq:8fd95af31ff765d8",
+   "label": "Marzuki Alie",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:8fd95af31ff765d8",
+   "label": "Marzuki Alie",
+   "rank": 1,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:80a5d530c6b5c055",
+   "label": "Peter Fliesteden",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "mq:364d9525d93ecd8a",
+   "label": "Battle of Manila Bay",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "mq:ac31d6b5e8704cdb",
+   "label": "Battle of Savenay",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "mq:78755792455f8d55",
+   "label": "Battle of Brihuega",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 2
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:453049afce7f9959",
+    "label": "Battle of Palembang",
+    "role": "gold"
+   },
+   {
+    "id": "mq:8fd95af31ff765d8",
+    "label": "Marzuki Alie",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:453049afce7f9959",
+    "b": "mq:8fd95af31ff765d8",
+    "via": [
+     {
+      "kind": "near",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "palembang",
+      "width": 5
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "mq:8fd95af31ff765d8",
+   "gold": "mq:8fd95af31ff765d8",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 1499,
+  "within_2_doors": 19533,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "mq:17866d9115df51b8",
+    "label": "Indonesia\u2013Timor Leste Commission of Truth and Friendship",
+    "p": 0.00812919648330448,
+    "gold": false
+   },
+   {
+    "id": "mq:0db46ff92e34033f",
+    "label": "Edmund Burke",
+    "p": 0.004174122982522748,
+    "gold": false
+   },
+   {
+    "id": "mq:9bc7880ae24af298",
+    "label": "Consett railway station",
+    "p": 0.0026483027185747617,
+    "gold": false
+   },
+   {
+    "id": "mq:5beccee435419f01",
+    "label": "Battle of Ligny",
+    "p": 0.0022041498609894107,
+    "gold": false
+   },
+   {
+    "id": "mq:a471af33d5625729",
+    "label": "Joseph Severn",
+    "p": 0.0021938936826000036,
+    "gold": false
+   },
+   {
+    "id": "mq:02bdcdac64cb23d6",
+    "label": "Henry Havelock",
+    "p": 0.002076556371748709,
+    "gold": false
+   },
+   {
+    "id": "mq:06dec85315cdcacb",
+    "label": "Muhammad Shobran",
+    "p": 0.002060625012435814,
+    "gold": false
+   },
+   {
+    "id": "mq:95775c6ec648f9c9",
+    "label": "Napoleon",
+    "p": 0.0018822687975621837,
+    "gold": false
+   },
+   {
+    "id": "mq:f0c5d839368bfe3a",
+    "label": "Toyopet Master",
+    "p": 0.001711568937934252,
+    "gold": false
+   },
+   {
+    "id": "mq:c0d6d08bd3c7e8c2",
+    "label": "Brunei",
+    "p": 0.0017115164157855095,
+    "gold": false
+   },
+   {
+    "id": "mq:c59b14e62f183ea4",
+    "label": "Chief Election Commissioner of Pakistan",
+    "p": 0.001688722920694745,
+    "gold": false
+   },
+   {
+    "id": "mq:2ff2ba39737d7113",
+    "label": "Rhine",
+    "p": 0.0015781749617529881,
+    "gold": false
+   },
+   {
+    "id": "mq:704f675d5de1eeee",
+    "label": "Denny Januar Ali",
+    "p": 0.0015738041976457906,
+    "gold": false
+   },
+   {
+    "id": "mq:9335cbdbfd65ab99",
+    "label": "Henri-Nompar de Caumont, duc de La Force",
+    "p": 0.001522124052953137,
+    "gold": false
+   },
+   {
+    "id": "mq:0d96ded84c3985f8",
+    "label": "Andronikos V Palaiologos",
+    "p": 0.0015106661724297737,
+    "gold": false
+   },
+   {
+    "id": "mq:a36e614ac3ad53e5",
+    "label": "Maureen Payne",
+    "p": 0.0014770926585503557,
+    "gold": false
+   },
+   {
+    "id": "mq:ba277968b6a327d4",
+    "label": "Guadalcanal campaign",
+    "p": 0.0014501640638424692,
+    "gold": false
+   },
+   {
+    "id": "mq:642f79d2bdbf31ab",
+    "label": "Battle of Porto Praya",
+    "p": 0.001326881173428669,
+    "gold": false
+   },
+   {
+    "id": "mq:9901dd9336516c23",
+    "label": "Rhein-Lahn-Kreis",
+    "p": 0.00124298388696329,
+    "gold": false
+   },
+   {
+    "id": "mq:453049afce7f9959",
+    "label": "Battle of Palembang",
+    "p": 0.0012040957796489375,
+    "gold": true
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:8fd95af31ff765d8",
+   "label": "Marzuki Alie",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:80a5d530c6b5c055",
+   "label": "Peter Fliesteden",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:364d9525d93ecd8a",
+   "label": "Battle of Manila Bay",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:ac31d6b5e8704cdb",
+   "label": "Battle of Savenay",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:78755792455f8d55",
+   "label": "Battle of Brihuega",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:06dec85315cdcacb",
+   "label": "Muhammad Shobran",
+   "wave": 1,
+   "via": "term:palembang",
+   "gold": false
+  },
+  {
+   "id": "mq:704f675d5de1eeee",
+   "label": "Denny Januar Ali",
+   "wave": 1,
+   "via": "term:palembang",
+   "gold": false
+  },
+  {
+   "id": "mq:cb586ac99c68595b",
+   "label": "Choo Hoey",
+   "wave": 1,
+   "via": "term:palembang",
+   "gold": false
+  },
+  {
+   "id": "mq:453049afce7f9959",
+   "label": "Battle of Palembang",
+   "wave": 1,
+   "via": "term:palembang",
+   "gold": true
+  },
+  {
+   "id": "mq:17866d9115df51b8",
+   "label": "Indonesia\u2013Timor Leste Commission of Truth and Friendship",
+   "wave": 2,
+   "via": "near:mq:8fd95af31ff765d8",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:17866d9115df51b8",
+    "label": "Indonesia\u2013Timor Leste Commission of Truth and Friendship",
+    "gold": false
+   },
+   {
+    "id": "mq:0db46ff92e34033f",
+    "label": "Edmund Burke",
+    "gold": false
+   },
+   {
+    "id": "mq:9bc7880ae24af298",
+    "label": "Consett railway station",
+    "gold": false
+   },
+   {
+    "id": "mq:5beccee435419f01",
+    "label": "Battle of Ligny",
+    "gold": false
+   },
+   {
+    "id": "mq:a471af33d5625729",
+    "label": "Joseph Severn",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:453049afce7f9959",
+    "label": "Battle of Palembang",
+    "gold": true
+   },
+   {
+    "id": "mq:5beccee435419f01",
+    "label": "Battle of Ligny",
+    "gold": false
+   },
+   {
+    "id": "mq:a36e614ac3ad53e5",
+    "label": "Maureen Payne",
+    "gold": false
+   },
+   {
+    "id": "mq:0d96ded84c3985f8",
+    "label": "Andronikos V Palaiologos",
+    "gold": false
+   },
+   {
+    "id": "mq:08b016742ade3375",
+    "label": "Battle of Waterloo",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:453049afce7f9959",
+    "label": "Battle of Palembang",
+    "gold": true
+   },
+   {
+    "id": "mq:5beccee435419f01",
+    "label": "Battle of Ligny",
+    "gold": false
+   },
+   {
+    "id": "mq:7b09d76ac21e8a3e",
+    "label": "Battle of Verdun",
+    "gold": false
+   },
+   {
+    "id": "mq:0d96ded84c3985f8",
+    "label": "Andronikos V Palaiologos",
+    "gold": false
+   },
+   {
+    "id": "mq:08b016742ade3375",
+    "label": "Battle of Waterloo",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:5f823b4d2f2b4c9d",
+    "label": "Giovanni Cifolelli",
+    "gold": false
+   },
+   {
+    "id": "mq:cc34586945bf27bc",
+    "label": "Battle of New Orleans",
+    "gold": false
+   },
+   {
+    "id": "mq:9bad8646c7a06067",
+    "label": "Battle of Baguio (1945)",
+    "gold": false
+   },
+   {
+    "id": "mq:9cd12484033b4b18",
+    "label": "Yang Meng",
+    "gold": false
+   },
+   {
+    "id": "mq:9b9da6654da88cbb",
+    "label": "Battle of Aspromonte",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 1.0,
+  "LQ": 1.0,
+  "S": 0.0
+ }
+}

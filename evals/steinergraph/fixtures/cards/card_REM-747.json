@@ -1,0 +1,427 @@
+{
+ "qid": "card:REM-747",
+ "set": "cards",
+ "question": "What was done about this, and why: coalescing: a stance says whether it answers what ought to be or what is, and contradictions are read from the source?",
+ "gold": [
+  {
+   "id": "commit/3222f78d8b",
+   "label": "commit 3222f78: Merge pull request #393 from Percolation-Labs/amartey/rem-747-modality",
+   "seed": false
+  },
+  {
+   "id": "commit/cacfb64de6",
+   "label": "commit cacfb64: coalescing: a question's modality decides its stance bar, contradictions come from source text, and the ",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/a3c956ec7d",
+   "label": "commit a3c956e: board: file REM-747 coalescing: a stance says whether it answers what ought to be or what is, and contra",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-747.md#1",
+   "label": "board/cards/REM-747.md",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/cacfb64de6",
+   "label": "commit cacfb64: coalescing: a question's modality decides its stance bar, contradictions come from source text, and the ",
+   "rank": 3,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "board/cards/REM-747.md#2",
+   "label": "board/cards/REM-747.md \u203a Goal",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-747.md#4",
+   "label": "board/cards/REM-747.md \u203a Done when",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/3222f78d8b",
+    "label": "commit 3222f78: Merge pull request #393 from Percolation-Labs/amartey/rem-747-modality",
+    "role": "gold"
+   },
+   {
+    "id": "commit/cacfb64de6",
+    "label": "commit cacfb64: coalescing: a question's modality decides its stance bar, contradictions come from source text, and the ",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/3222f78d8b",
+    "b": "commit/cacfb64de6",
+    "via": [
+     {
+      "kind": "term",
+      "key": "modality decides",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "stance bar",
+      "width": 3
+     },
+     {
+      "kind": "term",
+      "key": "rem 747",
+      "width": 16
+     },
+     {
+      "kind": "term",
+      "key": "source text",
+      "width": 42
+     },
+     {
+      "kind": "term",
+      "key": "contradictions",
+      "width": 61
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "commit/cacfb64de6",
+   "gold": "commit/cacfb64de6",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 834,
+  "within_2_doors": 32287,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "commit/3222f78d8b",
+    "label": "commit 3222f78: Merge pull request #393 from Percolation-Labs/amartey/rem-747-modality",
+    "p": 0.007679560748969287,
+    "gold": true
+   },
+   {
+    "id": "board/cards/REM-747.md#5",
+    "label": "board/cards/REM-747.md \u203a Log",
+    "p": 0.007193425832654988,
+    "gold": false
+   },
+   {
+    "id": "specs/build-knit-dream/coalescing.md#22",
+    "label": "specs/build-knit-dream/coalescing.md \u203a 5.8 Contradictions are read from the source, at low altitude",
+    "p": 0.0057661394313011285,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-757.md#1",
+    "label": "board/cards/REM-757.md",
+    "p": 0.00389253896394531,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-757.md#3",
+    "label": "board/cards/REM-757.md \u203a The settings",
+    "p": 0.0038664795705229877,
+    "gold": false
+   },
+   {
+    "id": "specs/build-knit-dream/coalescing.md#18",
+    "label": "specs/build-knit-dream/coalescing.md \u203a 5.5 Rules that hold at every stage",
+    "p": 0.003785940630582964,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-747.md#3",
+    "label": "board/cards/REM-747.md \u203a Evidence",
+    "p": 0.003668892351677435,
+    "gold": false
+   },
+   {
+    "id": "commit/b6b5f810cf",
+    "label": "commit b6b5f81: board: p8-subsystems-94 takes REM-747",
+    "p": 0.0030701691538118844,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-10-07-the-questions-graph-pivots.md#4",
+    "label": "meta/postmortems/2026-10-07-the-questions-graph-pivots.md \u203a The pivots",
+    "p": 0.0028474355106947818,
+    "gold": false
+   },
+   {
+    "id": "research-notes/coalescing/question-interface-paper-2026-10-07/paper.md#21",
+    "label": "research-notes/coalescing/question-interface-paper-2026-10-07/paper.md \u203a The distinctions the graph must retain",
+    "p": 0.002834397952228566,
+    "gold": false
+   },
+   {
+    "id": "specs/build-knit-dream/coalescing.md#31",
+    "label": "specs/build-knit-dream/coalescing.md \u203a 10. What surprised us",
+    "p": 0.0027442679838681336,
+    "gold": false
+   },
+   {
+    "id": "commit/bb6615fb8e",
+    "label": "commit bb6615f: board: note on REM-746",
+    "p": 0.0024753590845654878,
+    "gold": false
+   },
+   {
+    "id": "commit/efbcf9dcde",
+    "label": "commit efbcf9d: board: file REM-748 access: the capability table says what a caller meets, not only the static rule",
+    "p": 0.002341162884389994,
+    "gold": false
+   },
+   {
+    "id": "research-notes/coalescing/question-interface-paper-2026-10-07/evidence.md#6",
+    "label": "research-notes/coalescing/question-interface-paper-2026-10-07/evidence.md \u203a Repository evidence",
+    "p": 0.0020571373373499107,
+    "gold": false
+   },
+   {
+    "id": "commit/7766138572",
+    "label": "commit 7766138: coalescing-runs: production has the question functions; load with the import and run the questions job",
+    "p": 0.0018141126251909243,
+    "gold": false
+   },
+   {
+    "id": "commit/d11e3a9751",
+    "label": "commit d11e3a9: board: REM-747 in-progress \u2192 done",
+    "p": 0.001715711714001007,
+    "gold": false
+   },
+   {
+    "id": "research-notes/coalescing/harness/RESULTS.md#7",
+    "label": "research-notes/coalescing/harness/RESULTS.md \u203a Next",
+    "p": 0.0015856406164537643,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-10-07-the-questions-graph-pivots.md#1",
+    "label": "meta/postmortems/2026-10-07-the-questions-graph-pivots.md",
+    "p": 0.0015636991755653296,
+    "gold": false
+   },
+   {
+    "id": "research-notes/coalescing/question-interface-paper-2026-10-07/evidence.md#11",
+    "label": "research-notes/coalescing/question-interface-paper-2026-10-07/evidence.md \u203a Metric audit",
+    "p": 0.001425659700112298,
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-self-model/product.md#33",
+    "label": "applications/percolate-self-model/product.md \u203a Against \u00a78",
+    "p": 0.0013080134936578499,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/a3c956ec7d",
+   "label": "commit a3c956e: board: file REM-747 coalescing: a stance says whether it answers what ought to be or what is, and contra",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-747.md#1",
+   "label": "board/cards/REM-747.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/cacfb64de6",
+   "label": "commit cacfb64: coalescing: a question's modality decides its stance bar, contradictions come from source text, and the ",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "board/cards/REM-747.md#2",
+   "label": "board/cards/REM-747.md \u203a Goal",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-747.md#4",
+   "label": "board/cards/REM-747.md \u203a Done when",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/build-knit-dream/coalescing.md#22",
+   "label": "specs/build-knit-dream/coalescing.md \u203a 5.8 Contradictions are read from the source, at low altitude",
+   "wave": 1,
+   "via": "term:rem 747",
+   "gold": false
+  },
+  {
+   "id": "commit/d11e3a9751",
+   "label": "commit d11e3a9: board: REM-747 in-progress \u2192 done",
+   "wave": 1,
+   "via": "term:rem 747",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-747.md#3",
+   "label": "board/cards/REM-747.md \u203a Evidence",
+   "wave": 1,
+   "via": "term:rem 747",
+   "gold": false
+  },
+  {
+   "id": "commit/3222f78d8b",
+   "label": "commit 3222f78: Merge pull request #393 from Percolation-Labs/amartey/rem-747-modality",
+   "wave": 1,
+   "via": "term:rem 747",
+   "gold": true
+  },
+  {
+   "id": "board/cards/REM-747.md#5",
+   "label": "board/cards/REM-747.md \u203a Log",
+   "wave": 1,
+   "via": "term:rem 747",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "commit/3222f78d8b",
+    "label": "commit 3222f78: Merge pull request #393 from Percolation-Labs/amartey/rem-747-modality",
+    "gold": true
+   },
+   {
+    "id": "board/cards/REM-747.md#5",
+    "label": "board/cards/REM-747.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "specs/build-knit-dream/coalescing.md#22",
+    "label": "specs/build-knit-dream/coalescing.md \u203a 5.8 Contradictions are read from the source, at low altitude",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-757.md#1",
+    "label": "board/cards/REM-757.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-757.md#3",
+    "label": "board/cards/REM-757.md \u203a The settings",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "commit/3222f78d8b",
+    "label": "commit 3222f78: Merge pull request #393 from Percolation-Labs/amartey/rem-747-modality",
+    "gold": true
+   },
+   {
+    "id": "specs/build-knit-dream/coalescing.md#22",
+    "label": "specs/build-knit-dream/coalescing.md \u203a 5.8 Contradictions are read from the source, at low altitude",
+    "gold": false
+   },
+   {
+    "id": "specs/build-knit-dream/coalescing.md#18",
+    "label": "specs/build-knit-dream/coalescing.md \u203a 5.5 Rules that hold at every stage",
+    "gold": false
+   },
+   {
+    "id": "research-notes/coalescing/question-interface-paper-2026-10-07/paper.md#21",
+    "label": "research-notes/coalescing/question-interface-paper-2026-10-07/paper.md \u203a The distinctions the graph must retain",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-747.md#5",
+    "label": "board/cards/REM-747.md \u203a Log",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/3222f78d8b",
+    "label": "commit 3222f78: Merge pull request #393 from Percolation-Labs/amartey/rem-747-modality",
+    "gold": true
+   },
+   {
+    "id": "board/cards/REM-747.md#5",
+    "label": "board/cards/REM-747.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "commit/d11e3a9751",
+    "label": "commit d11e3a9: board: REM-747 in-progress \u2192 done",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261116-215107-35dd.md#1",
+    "label": "board/messages/M-20261116-215107-35dd.md",
+    "gold": false
+   },
+   {
+    "id": "commit/082155b2e1",
+    "label": "commit 082155b: board: file REM-463 ops: a check says whether production is serving, and a release is not done until it ",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "commit/3222f78d8b",
+    "label": "commit 3222f78: Merge pull request #393 from Percolation-Labs/amartey/rem-747-modality",
+    "gold": true
+   },
+   {
+    "id": "research-notes/coalescing/question-interface-paper-2026-10-07/paper.md#21",
+    "label": "research-notes/coalescing/question-interface-paper-2026-10-07/paper.md \u203a The distinctions the graph must retain",
+    "gold": false
+   },
+   {
+    "id": "specs/build-knit-dream/coalescing.md#15",
+    "label": "specs/build-knit-dream/coalescing.md \u203a 5.4 The join: Jev assigns every claim and gives its stance",
+    "gold": false
+   },
+   {
+    "id": "specs/build-knit-dream/coalescing.md#10",
+    "label": "specs/build-knit-dream/coalescing.md \u203a 4. The graph",
+    "gold": false
+   },
+   {
+    "id": "research-notes/coalescing/question-interface-paper-2026-10-07/evidence.md#8",
+    "label": "research-notes/coalescing/question-interface-paper-2026-10-07/evidence.md \u203a Differences that affect the argument",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 1.0,
+  "Q": 1.0,
+  "LQ": 1.0,
+  "S": 1.0
+ }
+}

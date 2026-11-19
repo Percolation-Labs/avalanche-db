@@ -1,0 +1,405 @@
+{
+ "qid": "pr:413",
+ "set": "prs",
+ "question": "What work went into this, and why: Record the structural editing built on the one editor?",
+ "gold": [
+  {
+   "id": "commit/2836821197",
+   "label": "commit 2836821: Semantic editing and Drafter record the structure built on the one editor",
+   "seed": true
+  },
+  {
+   "id": "commit/e95eba34c2",
+   "label": "commit e95eba3: Drafter's status names the slices built on the one editor",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/bcf7490c67",
+   "label": "commit bcf7490: Merge pull request #413 from Percolation-Labs/amartey/one-editor-structure",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "commit/2836821197",
+   "label": "commit 2836821: Semantic editing and Drafter record the structure built on the one editor",
+   "rank": 2,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "specs/percolate-application/drafter.md#1",
+   "label": "specs/percolate-application/drafter.md \u203a Drafter: a document with room to think",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "specs/percolate-application/semantic-editing-workspace.md#1",
+   "label": "specs/percolate-application/semantic-editing-workspace.md \u203a Semantic editing: marks in the reader, work in chat",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "specs/percolate-application/semantic-editing-workspace.md#4",
+   "label": "specs/percolate-application/semantic-editing-workspace.md \u203a 2. What exists, and what this adds",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 2
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/2836821197",
+    "label": "commit 2836821: Semantic editing and Drafter record the structure built on the one editor",
+    "role": "gold"
+   },
+   {
+    "id": "commit/e95eba34c2",
+    "label": "commit e95eba3: Drafter's status names the slices built on the one editor",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/2836821197",
+    "b": "commit/e95eba34c2",
+    "via": [
+     {
+      "kind": "beside"
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "commit/2836821197",
+   "gold": "commit/2836821197",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 2038,
+  "within_2_doors": 34092,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "commit/9529ad63d7",
+    "label": "commit 9529ad6: board: drafter-spec checks in, ended",
+    "p": 0.02449397892250903,
+    "gold": false
+   },
+   {
+    "id": "commit/d6c1d40264",
+    "label": "commit d6c1d40: Specify Drafter structural editing and writing lineage (REM-777)",
+    "p": 0.01614137228176682,
+    "gold": false
+   },
+   {
+    "id": "commit/e95eba34c2",
+    "label": "commit e95eba3: Drafter's status names the slices built on the one editor",
+    "p": 0.015560159383063711,
+    "gold": true
+   },
+   {
+    "id": "commit/355244540d",
+    "label": "commit 3552445: board: file REM-779 authoring: make personal reviewers the entry to Drafter writing theory",
+    "p": 0.008624350468938134,
+    "gold": false
+   },
+   {
+    "id": "commit/fec372f2c9",
+    "label": "commit fec372f: board: drafter-spec checks in, working",
+    "p": 0.004369723704049213,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-779.md#1",
+    "label": "board/cards/REM-779.md",
+    "p": 0.004115407978327812,
+    "gold": false
+   },
+   {
+    "id": "output/drafter-study/README.md#1",
+    "label": "output/drafter-study/README.md \u203a Drafter: three interactive page studies",
+    "p": 0.0040729428589284505,
+    "gold": false
+   },
+   {
+    "id": "commit/bdf3eb3178",
+    "label": "commit bdf3eb3: board: drafter-spec checks in, ended",
+    "p": 0.003206835994151433,
+    "gold": false
+   },
+   {
+    "id": "commit/04964a7f6d",
+    "label": "commit 04964a7: board: drafter-spec checks in, working",
+    "p": 0.003142319244291828,
+    "gold": false
+   },
+   {
+    "id": "commit/f577859052",
+    "label": "commit f577859: board: drafter-spec takes REM-777",
+    "p": 0.0026281711336328542,
+    "gold": false
+   },
+   {
+    "id": "board/team/drafter-reviewers.md#2",
+    "label": "board/team/drafter-reviewers.md \u203a Log",
+    "p": 0.0024798392694344255,
+    "gold": false
+   },
+   {
+    "id": "commit/363b1572ce",
+    "label": "commit 363b157: board: drafter-spec takes REM-778",
+    "p": 0.002433540902144246,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-778.md#7",
+    "label": "board/cards/REM-778.md \u203a Log",
+    "p": 0.0023868362326234524,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-777.md#2",
+    "label": "board/cards/REM-777.md \u203a Goal",
+    "p": 0.0023567930897477776,
+    "gold": false
+   },
+   {
+    "id": "board/team/drafter-spec.md#2",
+    "label": "board/team/drafter-spec.md \u203a Log",
+    "p": 0.0022967763476707385,
+    "gold": false
+   },
+   {
+    "id": "commit/edf422d455",
+    "label": "commit edf422d: board: file REM-778 authoring: specify Drafter branding, sharing and rich editing parity",
+    "p": 0.002291988667504685,
+    "gold": false
+   },
+   {
+    "id": "commit/219d5334a8",
+    "label": "commit 219d533: board: claims-inbox-spec checks in, ended",
+    "p": 0.002152338641729064,
+    "gold": false
+   },
+   {
+    "id": "commit/bd78e31128",
+    "label": "commit bd78e31: board: claims-inbox-spec checks in, working",
+    "p": 0.002150745603682148,
+    "gold": false
+   },
+   {
+    "id": "commit/262d10a624",
+    "label": "commit 262d10a: board: drafter-reviewers takes REM-779",
+    "p": 0.0020129249375137217,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-778.md#1",
+    "label": "board/cards/REM-778.md",
+    "p": 0.0019983795694502537,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/bcf7490c67",
+   "label": "commit bcf7490: Merge pull request #413 from Percolation-Labs/amartey/one-editor-structure",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/2836821197",
+   "label": "commit 2836821: Semantic editing and Drafter record the structure built on the one editor",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "specs/percolate-application/drafter.md#1",
+   "label": "specs/percolate-application/drafter.md \u203a Drafter: a document with room to think",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/percolate-application/semantic-editing-workspace.md#1",
+   "label": "specs/percolate-application/semantic-editing-workspace.md \u203a Semantic editing: marks in the reader, work in chat",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/percolate-application/semantic-editing-workspace.md#4",
+   "label": "specs/percolate-application/semantic-editing-workspace.md \u203a 2. What exists, and what this adds",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/2bb9106c7f",
+   "label": "commit 2bb9106: authoring spec \u00a73: where in-place editing happens (REM-450)",
+   "wave": 1,
+   "via": "term:place editing",
+   "gold": false
+  },
+  {
+   "id": "specs/percolate-application/semantic-editing-workspace.md#18",
+   "label": "specs/percolate-application/semantic-editing-workspace.md \u203a One small marking interaction",
+   "wave": 1,
+   "via": "term:place editing",
+   "gold": false
+  },
+  {
+   "id": "specs/percolate-application/writer-onboarding.md#6",
+   "label": "specs/percolate-application/writer-onboarding.md \u203a 4. Connecting each app",
+   "wave": 2,
+   "via": "term:menu",
+   "gold": false
+  },
+  {
+   "id": "commit/4ce106fa8d",
+   "label": "commit 4ce106f: Merge pull request #411 from Percolation-Labs/amartey/one-editor-spec",
+   "wave": 2,
+   "via": "term:menu",
+   "gold": false
+  },
+  {
+   "id": "commit/dad3b885ad",
+   "label": "commit dad3b88: One browser editor, and a selection menu that grades, sticks and comments",
+   "wave": 2,
+   "via": "term:menu",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "commit/9529ad63d7",
+    "label": "commit 9529ad6: board: drafter-spec checks in, ended",
+    "gold": false
+   },
+   {
+    "id": "commit/d6c1d40264",
+    "label": "commit d6c1d40: Specify Drafter structural editing and writing lineage (REM-777)",
+    "gold": false
+   },
+   {
+    "id": "commit/e95eba34c2",
+    "label": "commit e95eba3: Drafter's status names the slices built on the one editor",
+    "gold": true
+   },
+   {
+    "id": "commit/355244540d",
+    "label": "commit 3552445: board: file REM-779 authoring: make personal reviewers the entry to Drafter writing theory",
+    "gold": false
+   },
+   {
+    "id": "commit/fec372f2c9",
+    "label": "commit fec372f: board: drafter-spec checks in, working",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "commit/e95eba34c2",
+    "label": "commit e95eba3: Drafter's status names the slices built on the one editor",
+    "gold": true
+   },
+   {
+    "id": "commit/d6c1d40264",
+    "label": "commit d6c1d40: Specify Drafter structural editing and writing lineage (REM-777)",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-777.md#2",
+    "label": "board/cards/REM-777.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/semantic-editing-workspace.md#2",
+    "label": "specs/percolate-application/semantic-editing-workspace.md \u203a Semantic editing: marks in the reader, work in chat",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/authoring-and-publication.md#7",
+    "label": "specs/percolate-application/authoring-and-publication.md \u203a 3. A1 \u2014 Edit an owned research package in the browser",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/e95eba34c2",
+    "label": "commit e95eba3: Drafter's status names the slices built on the one editor",
+    "gold": true
+   },
+   {
+    "id": "commit/d6c1d40264",
+    "label": "commit d6c1d40: Specify Drafter structural editing and writing lineage (REM-777)",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/semantic-editing-workspace.md#2",
+    "label": "specs/percolate-application/semantic-editing-workspace.md \u203a Semantic editing: marks in the reader, work in chat",
+    "gold": false
+   },
+   {
+    "id": "commit/2bb9106c7f",
+    "label": "commit 2bb9106: authoring spec \u00a73: where in-place editing happens (REM-450)",
+    "gold": false
+   },
+   {
+    "id": "output/full-flow/README.md#3",
+    "label": "output/full-flow/README.md \u203a Use in Figma",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "commit/d6c1d40264",
+    "label": "commit d6c1d40: Specify Drafter structural editing and writing lineage (REM-777)",
+    "gold": false
+   },
+   {
+    "id": "commit/514e78b6ce",
+    "label": "commit 514e78b: board: file REM-777 authoring: design a quiet structural editor with a recoverable writing journey",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/semantic-editing-workspace.md#2",
+    "label": "specs/percolate-application/semantic-editing-workspace.md \u203a Semantic editing: marks in the reader, work in chat",
+    "gold": false
+   },
+   {
+    "id": "board/team/drafter-spec.md#2",
+    "label": "board/team/drafter-spec.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/authoring-and-publication.md#10",
+    "label": "specs/percolate-application/authoring-and-publication.md \u203a 3. A1 \u2014 Edit an owned research package in the browser",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 1.0,
+  "Q": 1.0,
+  "LQ": 1.0,
+  "S": 0.0
+ }
+}

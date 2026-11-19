@@ -1,0 +1,383 @@
+{
+ "qid": "card:REM-561",
+ "set": "cards",
+ "question": "What was done about this, and why: postmortems: every ledger class has a gate or a stated reason it has none?",
+ "gold": [
+  {
+   "id": "commit/a1dc7bfae7",
+   "label": "commit a1dc7bf: postmortems: every ledger class has a gate or a stated reason it has none (REM-561)",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/28996b030d",
+   "label": "commit 28996b0: board: file REM-561 postmortems: every ledger class has a gate or a stated reason it has none",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-561.md#1",
+   "label": "board/cards/REM-561.md",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/a1dc7bfae7",
+   "label": "commit a1dc7bf: postmortems: every ledger class has a gate or a stated reason it has none (REM-561)",
+   "rank": 3,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "board/cards/REM-561.md#5",
+   "label": "board/cards/REM-561.md \u203a Log",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "meta/postmortems/README.md#3",
+   "label": "meta/postmortems/README.md \u203a What these keep saying",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/a1dc7bfae7",
+    "label": "commit a1dc7bf: postmortems: every ledger class has a gate or a stated reason it has none (REM-561)",
+    "role": "gold"
+   }
+  ],
+  "links": [],
+  "cost": 0,
+  "detached_gold": [],
+  "gold_pair_doors": [],
+  "entry": {
+   "seed": "commit/a1dc7bfae7",
+   "gold": "commit/a1dc7bfae7",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 1039,
+  "within_2_doors": 32420,
+  "gold_within_1": 0,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "meta/postmortems/README.md#23",
+    "label": "meta/postmortems/README.md \u203a An org_id naming no org, fixed once",
+    "p": 0.0040193839287623835,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-561.md#2",
+    "label": "board/cards/REM-561.md \u203a Goal",
+    "p": 0.003959418600427019,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-561.md#4",
+    "label": "board/cards/REM-561.md \u203a Done when",
+    "p": 0.003933501465101037,
+    "gold": false
+   },
+   {
+    "id": "research-notes/fastembed-local-embedding-2026-09-20.md#15",
+    "label": "research-notes/fastembed-local-embedding-2026-09-20.md \u203a Measured on p8-arm, and recall against a hosted model, 20 Octob",
+    "p": 0.003228290878031536,
+    "gold": false
+   },
+   {
+    "id": "commit/46eb29af88",
+    "label": "commit 46eb29a: board: file REM-562 specs: status prose matches the code, and RELEASE-0.1.md is retired",
+    "p": 0.003045075177321763,
+    "gold": false
+   },
+   {
+    "id": "commit/db8e815267",
+    "label": "commit db8e815: board: file REM-560 ci: claude.yml runs on the self-hosted runner only for trusted authors",
+    "p": 0.0030238168964563106,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-552.md#5",
+    "label": "board/cards/REM-552.md \u203a Log",
+    "p": 0.0029119954739648323,
+    "gold": false
+   },
+   {
+    "id": "commit/17547b9115",
+    "label": "commit 17547b9: The ledger that decides which gate to build next was wrong about itself, three times out of four (#124)",
+    "p": 0.0029091494723341767,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-551.md#5",
+    "label": "board/cards/REM-551.md \u203a Log",
+    "p": 0.0025992947653462294,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-561.md#3",
+    "label": "board/cards/REM-561.md \u203a Evidence",
+    "p": 0.0023897913909043454,
+    "gold": false
+   },
+   {
+    "id": "dev/ledger-gates.py#4",
+    "label": "dev/ledger-gates.py",
+    "p": 0.00235175816306744,
+    "gold": false
+   },
+   {
+    "id": "dev/ledger-gates.py#2",
+    "label": "dev/ledger-gates.py",
+    "p": 0.0019379124769271297,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-12-described-three-lines-up.md#32",
+    "label": "meta/postmortems/2026-09-12-described-three-lines-up.md \u203a 9. What is being done",
+    "p": 0.0018531752140546604,
+    "gold": false
+   },
+   {
+    "id": "commit/bd285bc5ca",
+    "label": "commit bd285bc: board: REM-561 in-progress \u2192 done",
+    "p": 0.0018032736951692258,
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-10-20-lme-seeded-taxonomy/in_percolate/jev_stage.py#2",
+    "label": "meta/spikes/2026-10-20-lme-seeded-taxonomy/in_percolate/jev_stage.py",
+    "p": 0.0017730866690423874,
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-10-20-lme-seeded-taxonomy/in_percolate/beam_tags.py#2",
+    "label": "meta/spikes/2026-10-20-lme-seeded-taxonomy/in_percolate/beam_tags.py",
+    "p": 0.0017657589623714578,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261103-113807-6edf.md#1",
+    "label": "board/messages/M-20261103-113807-6edf.md",
+    "p": 0.0016305163709103014,
+    "gold": false
+   },
+   {
+    "id": "dev/ledger-gates.py#1",
+    "label": "dev/ledger-gates.py",
+    "p": 0.0015596936107990088,
+    "gold": false
+   },
+   {
+    "id": "commit/04ef827019",
+    "label": "commit 04ef827: board: p8-subsystems-47 takes REM-561",
+    "p": 0.0012573565258318547,
+    "gold": false
+   },
+   {
+    "id": "dev/scale/graph/README.md#5",
+    "label": "dev/scale/graph/README.md \u203a The probes, and what each one is asking",
+    "p": 0.0011386429036539586,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/28996b030d",
+   "label": "commit 28996b0: board: file REM-561 postmortems: every ledger class has a gate or a stated reason it has none",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-561.md#1",
+   "label": "board/cards/REM-561.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/a1dc7bfae7",
+   "label": "commit a1dc7bf: postmortems: every ledger class has a gate or a stated reason it has none (REM-561)",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "board/cards/REM-561.md#5",
+   "label": "board/cards/REM-561.md \u203a Log",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/postmortems/README.md#3",
+   "label": "meta/postmortems/README.md \u203a What these keep saying",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-552.md#5",
+   "label": "board/cards/REM-552.md \u203a Log",
+   "wave": 1,
+   "via": "term:rem 561",
+   "gold": false
+  },
+  {
+   "id": "commit/bd285bc5ca",
+   "label": "commit bd285bc: board: REM-561 in-progress \u2192 done",
+   "wave": 1,
+   "via": "term:rem 561",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-561.md#3",
+   "label": "board/cards/REM-561.md \u203a Evidence",
+   "wave": 1,
+   "via": "term:rem 561",
+   "gold": false
+  },
+  {
+   "id": "commit/04ef827019",
+   "label": "commit 04ef827: board: p8-subsystems-47 takes REM-561",
+   "wave": 1,
+   "via": "term:rem 561",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-561.md#2",
+   "label": "board/cards/REM-561.md \u203a Goal",
+   "wave": 1,
+   "via": "term:rem 561",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "meta/postmortems/README.md#23",
+    "label": "meta/postmortems/README.md \u203a An org_id naming no org, fixed once",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-561.md#2",
+    "label": "board/cards/REM-561.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-561.md#4",
+    "label": "board/cards/REM-561.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "research-notes/fastembed-local-embedding-2026-09-20.md#15",
+    "label": "research-notes/fastembed-local-embedding-2026-09-20.md \u203a Measured on p8-arm, and recall against a hosted model, 20 Octob",
+    "gold": false
+   },
+   {
+    "id": "commit/46eb29af88",
+    "label": "commit 46eb29a: board: file REM-562 specs: status prose matches the code, and RELEASE-0.1.md is retired",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "board/cards/REM-552.md#5",
+    "label": "board/cards/REM-552.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "commit/17547b9115",
+    "label": "commit 17547b9: The ledger that decides which gate to build next was wrong about itself, three times out of four (#124)",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-551.md#5",
+    "label": "board/cards/REM-551.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-561.md#4",
+    "label": "board/cards/REM-561.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "dev/ledger-gates.py#1",
+    "label": "dev/ledger-gates.py",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "board/cards/REM-561.md#2",
+    "label": "board/cards/REM-561.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-561.md#4",
+    "label": "board/cards/REM-561.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "commit/bd285bc5ca",
+    "label": "commit bd285bc: board: REM-561 in-progress \u2192 done",
+    "gold": false
+   },
+   {
+    "id": "dev/ledger-gates.py#5",
+    "label": "dev/ledger-gates.py",
+    "gold": false
+   },
+   {
+    "id": "dev/ledger-gates.py#4",
+    "label": "dev/ledger-gates.py",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "meta/postmortems/2026-09-12-described-three-lines-up.md#32",
+    "label": "meta/postmortems/2026-09-12-described-three-lines-up.md \u203a 9. What is being done",
+    "gold": false
+   },
+   {
+    "id": "dev/ledger-gates.py#5",
+    "label": "dev/ledger-gates.py",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-552.md#5",
+    "label": "board/cards/REM-552.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-639.md#4",
+    "label": "board/cards/REM-639.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/README.md#35",
+    "label": "meta/postmortems/README.md \u203a A status nobody can maintain, on the section that decides what to build next",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": null,
+  "Q": null,
+  "LQ": null,
+  "S": null
+ }
+}

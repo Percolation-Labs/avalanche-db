@@ -1,0 +1,568 @@
+{
+ "qid": "RW:4hop1__88342_75218_128008_54974",
+ "set": "mq",
+ "question": "What is the longest home run hit in the league where the team with the most games in the series after which the MLB MVP is awarded plays?",
+ "gold": [
+  {
+   "id": "mq:12ef516969969e27",
+   "label": "New York Yankees",
+   "seed": false
+  },
+  {
+   "id": "mq:1ec66a7fb5a68003",
+   "label": "Home run",
+   "seed": true
+  },
+  {
+   "id": "mq:308a923f01209902",
+   "label": "World Series",
+   "seed": false
+  },
+  {
+   "id": "mq:6164185c9873d9b3",
+   "label": "New York Yankees",
+   "seed": false
+  },
+  {
+   "id": "mq:823be9f0a54383c5",
+   "label": "Major League Baseball Most Valuable Player Award",
+   "seed": false
+  },
+  {
+   "id": "mq:86f077b794a4d7f2",
+   "label": "World Series",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:2580deb0a04fbb2c",
+   "label": "List of Major League Baseball single-game grand slam leaders",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:016377d1d150ccf1",
+   "label": "National Basketball Association",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:1ec66a7fb5a68003",
+   "label": "Home run",
+   "rank": 3,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:7f92dac9aa2c0c42",
+   "label": "Super League",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "mq:a884cb6e3c4ac840",
+   "label": "Major League Baseball schedule",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:12ef516969969e27",
+    "label": "New York Yankees",
+    "role": "gold"
+   },
+   {
+    "id": "mq:1ec66a7fb5a68003",
+    "label": "Home run",
+    "role": "gold"
+   },
+   {
+    "id": "mq:308a923f01209902",
+    "label": "World Series",
+    "role": "gold"
+   },
+   {
+    "id": "mq:6164185c9873d9b3",
+    "label": "New York Yankees",
+    "role": "gold"
+   },
+   {
+    "id": "mq:823be9f0a54383c5",
+    "label": "Major League Baseball Most Valuable Player Award",
+    "role": "gold"
+   },
+   {
+    "id": "mq:86f077b794a4d7f2",
+    "label": "World Series",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:12ef516969969e27",
+    "b": "mq:1ec66a7fb5a68003",
+    "via": [
+     {
+      "kind": "term",
+      "key": "professional baseball",
+      "width": 51
+     }
+    ]
+   },
+   {
+    "a": "mq:12ef516969969e27",
+    "b": "mq:308a923f01209902",
+    "via": [
+     {
+      "kind": "term",
+      "key": "york yankees",
+      "width": 41
+     },
+     {
+      "kind": "term",
+      "key": "american league",
+      "width": 44
+     },
+     {
+      "kind": "term",
+      "key": "yankees",
+      "width": 46
+     },
+     {
+      "kind": "term",
+      "key": "national league",
+      "width": 57
+     }
+    ]
+   },
+   {
+    "a": "mq:12ef516969969e27",
+    "b": "mq:6164185c9873d9b3",
+    "via": [
+     {
+      "kind": "near",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "frank farrell",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "devery",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "devery purchased",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "modern baltimore",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "clubs based",
+      "width": 2
+     }
+    ]
+   },
+   {
+    "a": "mq:308a923f01209902",
+    "b": "mq:823be9f0a54383c5",
+    "via": [
+     {
+      "kind": "term",
+      "key": "world series",
+      "width": 83
+     }
+    ]
+   },
+   {
+    "a": "mq:308a923f01209902",
+    "b": "mq:86f077b794a4d7f2",
+    "via": [
+     {
+      "kind": "near",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "philadelphia kansas",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "york san",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "city oakland",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "brooklyn los",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "oakland athletics",
+      "width": 8
+     }
+    ]
+   }
+  ],
+  "cost": 5,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   1,
+   1,
+   2,
+   1,
+   2,
+   1,
+   2,
+   2,
+   1,
+   1,
+   1,
+   2,
+   1,
+   1
+  ],
+  "entry": {
+   "seed": "mq:1ec66a7fb5a68003",
+   "gold": "mq:1ec66a7fb5a68003",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 2804,
+  "within_2_doors": 18269,
+  "gold_within_1": 5,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "mq:a628e41add9fd7de",
+    "label": "Fernando Tat\u00eds",
+    "p": 0.006539425383263228,
+    "gold": false
+   },
+   {
+    "id": "mq:7584491dc20f66e6",
+    "label": "Super League",
+    "p": 0.0064054445786194064,
+    "gold": false
+   },
+   {
+    "id": "mq:221629e707e3eddc",
+    "label": "List of Major League Baseball single-game hits leaders",
+    "p": 0.0021423031635670444,
+    "gold": false
+   },
+   {
+    "id": "mq:c3c05bd5ec05c707",
+    "label": "Detroit Tigers",
+    "p": 0.0015602717048216856,
+    "gold": false
+   },
+   {
+    "id": "mq:94b00f9316c1dd97",
+    "label": "Gambia women's national football team",
+    "p": 0.0013361362095996687,
+    "gold": false
+   },
+   {
+    "id": "mq:8ebcd78602be4ae6",
+    "label": "List of Major League Baseball all-time leaders in home runs by pitchers",
+    "p": 0.00129900251648486,
+    "gold": false
+   },
+   {
+    "id": "mq:2189a8129e9fc22c",
+    "label": "Chicago Cubs",
+    "p": 0.0012388100039490485,
+    "gold": false
+   },
+   {
+    "id": "mq:7e1fef08c31e4b37",
+    "label": "List of Major League Baseball career home run leaders",
+    "p": 0.0012292769578790862,
+    "gold": false
+   },
+   {
+    "id": "mq:1697c9747e1c7538",
+    "label": "List of Major League Baseball career home run leaders",
+    "p": 0.0012292769578790862,
+    "gold": false
+   },
+   {
+    "id": "mq:62a17b61e53d4bb1",
+    "label": "USB",
+    "p": 0.001225311698814061,
+    "gold": false
+   },
+   {
+    "id": "mq:81cccf38a5185e52",
+    "label": "List of Major League Baseball single-game home run leaders",
+    "p": 0.001203373789018704,
+    "gold": false
+   },
+   {
+    "id": "mq:4e2d5e78fa81e9a2",
+    "label": "Barry Bonds",
+    "p": 0.0010830181781315289,
+    "gold": false
+   },
+   {
+    "id": "mq:3bf439dcba7ca155",
+    "label": "Yankee Stadium",
+    "p": 0.0010724271457544733,
+    "gold": false
+   },
+   {
+    "id": "mq:18c463797163d64b",
+    "label": "2016 Wimbledon Championships",
+    "p": 0.0010347586955142096,
+    "gold": false
+   },
+   {
+    "id": "mq:061a61a81a6d5e78",
+    "label": "List of Major League Baseball career strikeouts by batters leaders",
+    "p": 0.0009383058501417807,
+    "gold": false
+   },
+   {
+    "id": "mq:fcf69e752a4f15d2",
+    "label": "The Bronx",
+    "p": 0.0009243511466824393,
+    "gold": false
+   },
+   {
+    "id": "mq:105eed014313f0ca",
+    "label": "Houston Astros",
+    "p": 0.0009089388949313328,
+    "gold": false
+   },
+   {
+    "id": "mq:845d472fa8323414",
+    "label": "Houston Astros",
+    "p": 0.0008894414553552032,
+    "gold": false
+   },
+   {
+    "id": "mq:c306facfc1ef8c94",
+    "label": "Prison Break",
+    "p": 0.0008481608659392777,
+    "gold": false
+   },
+   {
+    "id": "mq:1c090aaaaea886fb",
+    "label": "50 home run club",
+    "p": 0.0008278122370785306,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:2580deb0a04fbb2c",
+   "label": "List of Major League Baseball single-game grand slam leaders",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:016377d1d150ccf1",
+   "label": "National Basketball Association",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:1ec66a7fb5a68003",
+   "label": "Home run",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:7f92dac9aa2c0c42",
+   "label": "Super League",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:a884cb6e3c4ac840",
+   "label": "Major League Baseball schedule",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:9ab1cf8b202bcf4e",
+   "label": "Municipal Stadium (Kansas City, Missouri)",
+   "wave": 1,
+   "via": "term:home run",
+   "gold": false
+  },
+  {
+   "id": "mq:e1f6a703a01c360d",
+   "label": "Instant replay in Major League Baseball",
+   "wave": 1,
+   "via": "term:home run",
+   "gold": false
+  },
+  {
+   "id": "mq:a0e2e24e66ff77ec",
+   "label": "List of milestone home runs by Barry Bonds",
+   "wave": 1,
+   "via": "term:home run",
+   "gold": false
+  },
+  {
+   "id": "mq:81cccf38a5185e52",
+   "label": "List of Major League Baseball single-game home run leaders",
+   "wave": 1,
+   "via": "term:home run",
+   "gold": false
+  },
+  {
+   "id": "mq:1c090aaaaea886fb",
+   "label": "50 home run club",
+   "wave": 1,
+   "via": "term:home run",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:a628e41add9fd7de",
+    "label": "Fernando Tat\u00eds",
+    "gold": false
+   },
+   {
+    "id": "mq:7584491dc20f66e6",
+    "label": "Super League",
+    "gold": false
+   },
+   {
+    "id": "mq:221629e707e3eddc",
+    "label": "List of Major League Baseball single-game hits leaders",
+    "gold": false
+   },
+   {
+    "id": "mq:c3c05bd5ec05c707",
+    "label": "Detroit Tigers",
+    "gold": false
+   },
+   {
+    "id": "mq:94b00f9316c1dd97",
+    "label": "Gambia women's national football team",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:7584491dc20f66e6",
+    "label": "Super League",
+    "gold": false
+   },
+   {
+    "id": "mq:a628e41add9fd7de",
+    "label": "Fernando Tat\u00eds",
+    "gold": false
+   },
+   {
+    "id": "mq:1697c9747e1c7538",
+    "label": "List of Major League Baseball career home run leaders",
+    "gold": false
+   },
+   {
+    "id": "mq:7e1fef08c31e4b37",
+    "label": "List of Major League Baseball career home run leaders",
+    "gold": false
+   },
+   {
+    "id": "mq:3373791119b9d8cd",
+    "label": "Roberto Clemente",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:7584491dc20f66e6",
+    "label": "Super League",
+    "gold": false
+   },
+   {
+    "id": "mq:a628e41add9fd7de",
+    "label": "Fernando Tat\u00eds",
+    "gold": false
+   },
+   {
+    "id": "mq:3373791119b9d8cd",
+    "label": "Roberto Clemente",
+    "gold": false
+   },
+   {
+    "id": "mq:1b0ab3eefd04a068",
+    "label": "Roberto Clemente",
+    "gold": false
+   },
+   {
+    "id": "mq:acccf8f0b227f7bc",
+    "label": "LeBron James",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:de6d2df7568ba746",
+    "label": "List of Major League Baseball longest winning streaks",
+    "gold": false
+   },
+   {
+    "id": "mq:ed366f62b423b5a5",
+    "label": "Oscar Taveras",
+    "gold": false
+   },
+   {
+    "id": "mq:3a4c8501f11250d0",
+    "label": "Hanover",
+    "gold": false
+   },
+   {
+    "id": "mq:e20d638f37ca6723",
+    "label": "Chicago Cubs",
+    "gold": false
+   },
+   {
+    "id": "mq:264615a38d5c30da",
+    "label": "John Wehner",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

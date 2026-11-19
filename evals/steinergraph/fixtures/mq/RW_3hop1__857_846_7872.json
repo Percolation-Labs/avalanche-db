@@ -1,0 +1,454 @@
+{
+ "qid": "RW:3hop1__857_846_7872",
+ "set": "mq",
+ "question": "What is the name of the football club from the city where the Yongle emperor greeted the person to whom the edict was addressed?",
+ "gold": [
+  {
+   "id": "mq:6bd6fca0c8bcc65c",
+   "label": "Sino-Tibetan relations during the Ming dynasty",
+   "seed": true
+  },
+  {
+   "id": "mq:71a0089843686c23",
+   "label": "Sino-Tibetan relations during the Ming dynasty",
+   "seed": false
+  },
+  {
+   "id": "mq:7e4fd3305844e83f",
+   "label": "Nanjing",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:6bd6fca0c8bcc65c",
+   "label": "Sino-Tibetan relations during the Ming dynasty",
+   "rank": 1,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:42c4c1b7cd87520d",
+   "label": "Sino-Tibetan relations during the Ming dynasty",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:d3079c12e943ce0e",
+   "label": "Sino-Tibetan relations during the Ming dynasty",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:2e34be1d6b85ae4c",
+   "label": "Juventud Alianza",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "mq:5f81e10273dd8eba",
+   "label": "NK Interblock",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:6bd6fca0c8bcc65c",
+    "label": "Sino-Tibetan relations during the Ming dynasty",
+    "role": "gold"
+   },
+   {
+    "id": "mq:71a0089843686c23",
+    "label": "Sino-Tibetan relations during the Ming dynasty",
+    "role": "gold"
+   },
+   {
+    "id": "mq:7e4fd3305844e83f",
+    "label": "Nanjing",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:6bd6fca0c8bcc65c",
+    "b": "mq:71a0089843686c23",
+    "via": [
+     {
+      "kind": "near",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "karmapa",
+      "width": 10
+     },
+     {
+      "kind": "term",
+      "key": "ming court",
+      "width": 12
+     },
+     {
+      "kind": "term",
+      "key": "sino tibetan",
+      "width": 23
+     },
+     {
+      "kind": "term",
+      "key": "tibetan relations",
+      "width": 23
+     },
+     {
+      "kind": "term",
+      "key": "tibetan",
+      "width": 32
+     }
+    ]
+   },
+   {
+    "a": "mq:71a0089843686c23",
+    "b": "mq:7e4fd3305844e83f",
+    "via": [
+     {
+      "kind": "term",
+      "key": "nanjing",
+      "width": 52
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   2,
+   1
+  ],
+  "entry": {
+   "seed": "mq:6bd6fca0c8bcc65c",
+   "gold": "mq:6bd6fca0c8bcc65c",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 2351,
+  "within_2_doors": 18729,
+  "gold_within_1": 2,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "mq:71a0089843686c23",
+    "label": "Sino-Tibetan relations during the Ming dynasty",
+    "p": 0.005514541310763338,
+    "gold": true
+   },
+   {
+    "id": "mq:62999da1b0cae298",
+    "label": "Sino-Tibetan relations during the Ming dynasty",
+    "p": 0.004644148804560955,
+    "gold": false
+   },
+   {
+    "id": "mq:d1c413f234981fce",
+    "label": "Sino-Tibetan relations during the Ming dynasty",
+    "p": 0.002638588598727129,
+    "gold": false
+   },
+   {
+    "id": "mq:62c8568fe1d885ba",
+    "label": "Sino-Tibetan relations during the Ming dynasty",
+    "p": 0.0026239157984073603,
+    "gold": false
+   },
+   {
+    "id": "mq:7b1991b7739e3bf9",
+    "label": "Sino-Tibetan relations during the Ming dynasty",
+    "p": 0.0023255685251933195,
+    "gold": false
+   },
+   {
+    "id": "mq:667d98157e06e74b",
+    "label": "Sino-Tibetan relations during the Ming dynasty",
+    "p": 0.002309970886528012,
+    "gold": false
+   },
+   {
+    "id": "mq:5a739ae2bc7970db",
+    "label": "Sino-Tibetan relations during the Ming dynasty",
+    "p": 0.0022406080550536845,
+    "gold": false
+   },
+   {
+    "id": "mq:3632ab117e401968",
+    "label": "Sino-Tibetan relations during the Ming dynasty",
+    "p": 0.0019995229541196883,
+    "gold": false
+   },
+   {
+    "id": "mq:6afcb125e4fac08f",
+    "label": "List of UEFA club competition winners",
+    "p": 0.0019929986109808607,
+    "gold": false
+   },
+   {
+    "id": "mq:ed2d3ae31ff55e58",
+    "label": "List of UEFA club competition winners",
+    "p": 0.0019929414044520797,
+    "gold": false
+   },
+   {
+    "id": "mq:858b2e1a54604664",
+    "label": "Josep Dom\u00e8nech i Estap\u00e0",
+    "p": 0.0017875030813713632,
+    "gold": false
+   },
+   {
+    "id": "mq:ac1e0c5c67e71790",
+    "label": "FC Barcelona",
+    "p": 0.0017340913391773135,
+    "gold": false
+   },
+   {
+    "id": "mq:3f6f7146b48d3934",
+    "label": "Sino-Tibetan relations during the Ming dynasty",
+    "p": 0.001728293436270653,
+    "gold": false
+   },
+   {
+    "id": "mq:42a7ebb9e1ce3c6f",
+    "label": "Nanjing",
+    "p": 0.0017240858814523397,
+    "gold": false
+   },
+   {
+    "id": "mq:a06526d3c7c7f7fb",
+    "label": "Juan Jos\u00e9 Barros",
+    "p": 0.0015059100624247284,
+    "gold": false
+   },
+   {
+    "id": "mq:7195372abb4d32c2",
+    "label": "Sino-Tibetan relations during the Ming dynasty",
+    "p": 0.0014174995084370297,
+    "gold": false
+   },
+   {
+    "id": "mq:f7ecd46db4cd2c1e",
+    "label": "Sino-Tibetan relations during the Ming dynasty",
+    "p": 0.0014137285867186176,
+    "gold": false
+   },
+   {
+    "id": "mq:020990590bbc6bec",
+    "label": "Santa Monica, California",
+    "p": 0.0013229412325423294,
+    "gold": false
+   },
+   {
+    "id": "mq:065581b3fc5b2c7a",
+    "label": "Sino-Tibetan relations during the Ming dynasty",
+    "p": 0.0012387356414903675,
+    "gold": false
+   },
+   {
+    "id": "mq:bc93381137592efb",
+    "label": "Sino-Tibetan relations during the Ming dynasty",
+    "p": 0.0011167952404058214,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:6bd6fca0c8bcc65c",
+   "label": "Sino-Tibetan relations during the Ming dynasty",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:42c4c1b7cd87520d",
+   "label": "Sino-Tibetan relations during the Ming dynasty",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:d3079c12e943ce0e",
+   "label": "Sino-Tibetan relations during the Ming dynasty",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:2e34be1d6b85ae4c",
+   "label": "Juventud Alianza",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:5f81e10273dd8eba",
+   "label": "NK Interblock",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:62c8568fe1d885ba",
+   "label": "Sino-Tibetan relations during the Ming dynasty",
+   "wave": 1,
+   "via": "term:deshin shekpa",
+   "gold": false
+  },
+  {
+   "id": "mq:71a0089843686c23",
+   "label": "Sino-Tibetan relations during the Ming dynasty",
+   "wave": 1,
+   "via": "term:deshin shekpa",
+   "gold": true
+  },
+  {
+   "id": "mq:62999da1b0cae298",
+   "label": "Sino-Tibetan relations during the Ming dynasty",
+   "wave": 1,
+   "via": "term:deshin shekpa",
+   "gold": false
+  },
+  {
+   "id": "mq:7b1991b7739e3bf9",
+   "label": "Sino-Tibetan relations during the Ming dynasty",
+   "wave": 2,
+   "via": "term:karmapa",
+   "gold": false
+  },
+  {
+   "id": "mq:5a739ae2bc7970db",
+   "label": "Sino-Tibetan relations during the Ming dynasty",
+   "wave": 2,
+   "via": "term:karmapa",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:71a0089843686c23",
+    "label": "Sino-Tibetan relations during the Ming dynasty",
+    "gold": true
+   },
+   {
+    "id": "mq:62999da1b0cae298",
+    "label": "Sino-Tibetan relations during the Ming dynasty",
+    "gold": false
+   },
+   {
+    "id": "mq:d1c413f234981fce",
+    "label": "Sino-Tibetan relations during the Ming dynasty",
+    "gold": false
+   },
+   {
+    "id": "mq:62c8568fe1d885ba",
+    "label": "Sino-Tibetan relations during the Ming dynasty",
+    "gold": false
+   },
+   {
+    "id": "mq:7b1991b7739e3bf9",
+    "label": "Sino-Tibetan relations during the Ming dynasty",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:71a0089843686c23",
+    "label": "Sino-Tibetan relations during the Ming dynasty",
+    "gold": true
+   },
+   {
+    "id": "mq:62999da1b0cae298",
+    "label": "Sino-Tibetan relations during the Ming dynasty",
+    "gold": false
+   },
+   {
+    "id": "mq:667d98157e06e74b",
+    "label": "Sino-Tibetan relations during the Ming dynasty",
+    "gold": false
+   },
+   {
+    "id": "mq:d1c413f234981fce",
+    "label": "Sino-Tibetan relations during the Ming dynasty",
+    "gold": false
+   },
+   {
+    "id": "mq:5a739ae2bc7970db",
+    "label": "Sino-Tibetan relations during the Ming dynasty",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:71a0089843686c23",
+    "label": "Sino-Tibetan relations during the Ming dynasty",
+    "gold": true
+   },
+   {
+    "id": "mq:62999da1b0cae298",
+    "label": "Sino-Tibetan relations during the Ming dynasty",
+    "gold": false
+   },
+   {
+    "id": "mq:d1c413f234981fce",
+    "label": "Sino-Tibetan relations during the Ming dynasty",
+    "gold": false
+   },
+   {
+    "id": "mq:5a739ae2bc7970db",
+    "label": "Sino-Tibetan relations during the Ming dynasty",
+    "gold": false
+   },
+   {
+    "id": "mq:667d98157e06e74b",
+    "label": "Sino-Tibetan relations during the Ming dynasty",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:fffc670ac775e142",
+    "label": "FK Mandalskameratene",
+    "gold": false
+   },
+   {
+    "id": "mq:5526104998ece72d",
+    "label": "Nanjing",
+    "gold": false
+   },
+   {
+    "id": "mq:fac1b4f64795dec0",
+    "label": "Melbourne Football Club",
+    "gold": false
+   },
+   {
+    "id": "mq:bb8c63f78a244535",
+    "label": "Sino-Tibetan relations during the Ming dynasty",
+    "gold": false
+   },
+   {
+    "id": "mq:cadce26ef729ae15",
+    "label": "Empress Wang (Yang Pu)",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.5,
+  "Q": 0.5,
+  "LQ": 0.5,
+  "S": 0.0
+ }
+}

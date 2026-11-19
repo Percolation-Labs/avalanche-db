@@ -1,0 +1,426 @@
+{
+ "qid": "RW:2hop__64372_83289",
+ "set": "mq",
+ "question": "Who is the guy in the One Last Time music video by the singer of a new version of Somewhere Over the Rainbow?",
+ "gold": [
+  {
+   "id": "mq:2219652468008ab0",
+   "label": "One Last Time (Ariana Grande song)",
+   "seed": true
+  },
+  {
+   "id": "mq:3ddf60bc50c1505e",
+   "label": "Over the Rainbow",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:3ddf60bc50c1505e",
+   "label": "Over the Rainbow",
+   "rank": 1,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:2219652468008ab0",
+   "label": "One Last Time (Ariana Grande song)",
+   "rank": 2,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:e9dff8374ea5e56f",
+   "label": "Since You Been Gone",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:b7d13e3e285ba6aa",
+   "label": "You're Still the One",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:c0d6876a7d0dd471",
+   "label": "One Last Time (Ariana Grande song)",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:2219652468008ab0",
+    "label": "One Last Time (Ariana Grande song)",
+    "role": "gold"
+   },
+   {
+    "id": "mq:3ddf60bc50c1505e",
+    "label": "Over the Rainbow",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:2219652468008ab0",
+    "b": "mq:3ddf60bc50c1505e",
+    "via": [
+     {
+      "kind": "near",
+      "width": 4
+     },
+     {
+      "kind": "term",
+      "key": "grande released",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "ariana grande",
+      "width": 7
+     },
+     {
+      "kind": "term",
+      "key": "ariana",
+      "width": 8
+     },
+     {
+      "kind": "term",
+      "key": "grande",
+      "width": 36
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "mq:2219652468008ab0",
+   "gold": "mq:2219652468008ab0",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 2488,
+  "within_2_doors": 18570,
+  "gold_within_1": 0,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "mq:f1b1bcc4f0beaac6",
+    "label": "No Tears Left to Cry",
+    "p": 0.004643723808325657,
+    "gold": false
+   },
+   {
+    "id": "mq:d50ad12aa7960ddc",
+    "label": "Pound the Alarm",
+    "p": 0.002891162471467005,
+    "gold": false
+   },
+   {
+    "id": "mq:35acde7486b988a1",
+    "label": "No Tears Left to Cry",
+    "p": 0.0017536030260503145,
+    "gold": false
+   },
+   {
+    "id": "mq:8f4e0248c16937bd",
+    "label": "What Makes You Beautiful",
+    "p": 0.0017359545207904972,
+    "gold": false
+   },
+   {
+    "id": "mq:d47687963fc87c6a",
+    "label": "She's a Rainbow",
+    "p": 0.001662556444071749,
+    "gold": false
+   },
+   {
+    "id": "mq:7fc2bca1b18ce197",
+    "label": "Humble and Kind",
+    "p": 0.0015386096151097422,
+    "gold": false
+   },
+   {
+    "id": "mq:b73a698c63d80f23",
+    "label": "The Listening Sessions",
+    "p": 0.0014454604715626854,
+    "gold": false
+   },
+   {
+    "id": "mq:fa81528d3756e6e2",
+    "label": "Baby I",
+    "p": 0.0013896900903364565,
+    "gold": false
+   },
+   {
+    "id": "mq:c30f435553ac17ed",
+    "label": "Just One Last Time",
+    "p": 0.00135232904542242,
+    "gold": false
+   },
+   {
+    "id": "mq:01547169a585d3eb",
+    "label": "Zing voor me",
+    "p": 0.0013375807663461646,
+    "gold": false
+   },
+   {
+    "id": "mq:0f6e4192d5851936",
+    "label": "A Dog's Purpose (film)",
+    "p": 0.0012365824973521525,
+    "gold": false
+   },
+   {
+    "id": "mq:04a186b5a8dd18cd",
+    "label": "I Want You to Want Me",
+    "p": 0.0010571142385420729,
+    "gold": false
+   },
+   {
+    "id": "mq:551724632045dfb9",
+    "label": "Beyonc\u00e9",
+    "p": 0.0010032660701358735,
+    "gold": false
+   },
+   {
+    "id": "mq:dfe8a985f80f6063",
+    "label": "No Rain",
+    "p": 0.0009751200619299773,
+    "gold": false
+   },
+   {
+    "id": "mq:021572f8aa3ce91c",
+    "label": "Jagged",
+    "p": 0.000968637634680226,
+    "gold": false
+   },
+   {
+    "id": "mq:e656075bec752d87",
+    "label": "Winnipeg's Most",
+    "p": 0.0009308769091864826,
+    "gold": false
+   },
+   {
+    "id": "mq:6abee5b5b761dc8e",
+    "label": "Rainbow Six (novel)",
+    "p": 0.0008884476830011139,
+    "gold": false
+   },
+   {
+    "id": "mq:dfaa1bb6742e0c0d",
+    "label": "New International Version",
+    "p": 0.0008752123237560871,
+    "gold": false
+   },
+   {
+    "id": "mq:0e3e1ea00cf7e652",
+    "label": "I Think I Love You",
+    "p": 0.0008697845253130063,
+    "gold": false
+   },
+   {
+    "id": "mq:6b4e407c31d3f869",
+    "label": "The Rainbow Fairies",
+    "p": 0.0008179940075537719,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:3ddf60bc50c1505e",
+   "label": "Over the Rainbow",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:2219652468008ab0",
+   "label": "One Last Time (Ariana Grande song)",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:e9dff8374ea5e56f",
+   "label": "Since You Been Gone",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:b7d13e3e285ba6aa",
+   "label": "You're Still the One",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:c0d6876a7d0dd471",
+   "label": "One Last Time (Ariana Grande song)",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:9414adc57117d59c",
+   "label": "Stayin' Alive",
+   "wave": 1,
+   "via": "term:music video",
+   "gold": false
+  },
+  {
+   "id": "mq:36c2a7c736c7a873",
+   "label": "Fall (Serena Ryder song)",
+   "wave": 1,
+   "via": "term:music video",
+   "gold": false
+  },
+  {
+   "id": "mq:1254ff1473a4cd03",
+   "label": "Heartbeat (Nina Sky song)",
+   "wave": 1,
+   "via": "term:music video",
+   "gold": false
+  },
+  {
+   "id": "mq:bd38a36890f08390",
+   "label": "Shut Up and Dance (Walk the Moon song)",
+   "wave": 1,
+   "via": "term:music video",
+   "gold": false
+  },
+  {
+   "id": "mq:768141c5a9695248",
+   "label": "You Don't Know My Name",
+   "wave": 1,
+   "via": "term:music video",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:f1b1bcc4f0beaac6",
+    "label": "No Tears Left to Cry",
+    "gold": false
+   },
+   {
+    "id": "mq:d50ad12aa7960ddc",
+    "label": "Pound the Alarm",
+    "gold": false
+   },
+   {
+    "id": "mq:35acde7486b988a1",
+    "label": "No Tears Left to Cry",
+    "gold": false
+   },
+   {
+    "id": "mq:8f4e0248c16937bd",
+    "label": "What Makes You Beautiful",
+    "gold": false
+   },
+   {
+    "id": "mq:d47687963fc87c6a",
+    "label": "She's a Rainbow",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:f1b1bcc4f0beaac6",
+    "label": "No Tears Left to Cry",
+    "gold": false
+   },
+   {
+    "id": "mq:8f4e0248c16937bd",
+    "label": "What Makes You Beautiful",
+    "gold": false
+   },
+   {
+    "id": "mq:d47687963fc87c6a",
+    "label": "She's a Rainbow",
+    "gold": false
+   },
+   {
+    "id": "mq:6abee5b5b761dc8e",
+    "label": "Rainbow Six (novel)",
+    "gold": false
+   },
+   {
+    "id": "mq:de3e64f97f924e9f",
+    "label": "...Baby One More Time (song)",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:f1b1bcc4f0beaac6",
+    "label": "No Tears Left to Cry",
+    "gold": false
+   },
+   {
+    "id": "mq:8f4e0248c16937bd",
+    "label": "What Makes You Beautiful",
+    "gold": false
+   },
+   {
+    "id": "mq:de3e64f97f924e9f",
+    "label": "...Baby One More Time (song)",
+    "gold": false
+   },
+   {
+    "id": "mq:7e5c5020ee456d88",
+    "label": "...Baby One More Time (song)",
+    "gold": false
+   },
+   {
+    "id": "mq:d47687963fc87c6a",
+    "label": "She's a Rainbow",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:87dbad0113f05387",
+    "label": "Moana (soundtrack)",
+    "gold": false
+   },
+   {
+    "id": "mq:776a8d627a8bf8f6",
+    "label": "Moana (soundtrack)",
+    "gold": false
+   },
+   {
+    "id": "mq:6abee5b5b761dc8e",
+    "label": "Rainbow Six (novel)",
+    "gold": false
+   },
+   {
+    "id": "mq:7e5c5020ee456d88",
+    "label": "...Baby One More Time (song)",
+    "gold": false
+   },
+   {
+    "id": "mq:de3e64f97f924e9f",
+    "label": "...Baby One More Time (song)",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": null,
+  "Q": null,
+  "LQ": null,
+  "S": null
+ }
+}

@@ -1,0 +1,383 @@
+{
+ "qid": "card:REM-9",
+ "set": "cards",
+ "question": "What was done about this, and why: trace-field: prove the queue behaves the way the autoscaler and the docs assume?",
+ "gold": [
+  {
+   "id": "commit/c73c8a8f2e",
+   "label": "commit c73c8a8: Three properties the docs rely on: two hold, one does not",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "board/cards/REM-9.md#1",
+   "label": "board/cards/REM-9.md",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/c73c8a8f2e",
+   "label": "commit c73c8a8: Three properties the docs rely on: two hold, one does not",
+   "rank": 2,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "specs/trace-field/brief.md#16",
+   "label": "specs/trace-field/brief.md \u203a 4.3 Reinforcement, from a log the engine already keeps",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "specs/trace-field/sequence.md#2",
+   "label": "specs/trace-field/sequence.md \u203a Phase 0 \u2014 assert the reading before building on it",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "specs/trace-field/schema.sql#8",
+   "label": "specs/trace-field/schema.sql",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/c73c8a8f2e",
+    "label": "commit c73c8a8: Three properties the docs rely on: two hold, one does not",
+    "role": "gold"
+   }
+  ],
+  "links": [],
+  "cost": 0,
+  "detached_gold": [],
+  "gold_pair_doors": [],
+  "entry": {
+   "seed": "commit/c73c8a8f2e",
+   "gold": "commit/c73c8a8f2e",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 2531,
+  "within_2_doors": 33721,
+  "gold_within_1": 0,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "specs/trace-field/schema.sql#14",
+    "label": "specs/trace-field/schema.sql",
+    "p": 0.0028520786331362276,
+    "gold": false
+   },
+   {
+    "id": "specs/trace-field/ontology.md#1",
+    "label": "specs/trace-field/ontology.md \u203a Stigmergic orchestration \u2014 minimum ontology",
+    "p": 0.0023430677110927644,
+    "gold": false
+   },
+   {
+    "id": "specs/trace-field/schema.sql#9",
+    "label": "specs/trace-field/schema.sql",
+    "p": 0.002302487693437136,
+    "gold": false
+   },
+   {
+    "id": "specs/trace-field/brief.md#23",
+    "label": "specs/trace-field/brief.md \u203a 7. Failure modes, and why they are not in `failure-modes.md`",
+    "p": 0.0021566506283047194,
+    "gold": false
+   },
+   {
+    "id": "specs/trace-field/brief.md#6",
+    "label": "specs/trace-field/brief.md \u203a 2. What the engine already does",
+    "p": 0.0021198773146823436,
+    "gold": false
+   },
+   {
+    "id": "commit/c52cd84db0",
+    "label": "commit c52cd84: queue_depth excludes a backing-off task on purpose, and the spec said otherwise",
+    "p": 0.0020048600037030026,
+    "gold": false
+   },
+   {
+    "id": "specs/trace-field/schema.sql#10",
+    "label": "specs/trace-field/schema.sql",
+    "p": 0.0019449061593270192,
+    "gold": false
+   },
+   {
+    "id": "commit/2fc4b03540",
+    "label": "commit 2fc4b03: Read the workflow engine stigmergically, and write down what it already does",
+    "p": 0.001678722440733778,
+    "gold": false
+   },
+   {
+    "id": "specs/trace-field/schema.sql#7",
+    "label": "specs/trace-field/schema.sql",
+    "p": 0.0016172025484032255,
+    "gold": false
+   },
+   {
+    "id": "commit/5fbab53c60",
+    "label": "commit 5fbab53: Fix saga reporting rollback complete before any compensation ran",
+    "p": 0.001469203742560074,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-9.md#2",
+    "label": "board/cards/REM-9.md \u203a Log",
+    "p": 0.0014682701318001698,
+    "gold": false
+   },
+   {
+    "id": "specs/workflow-engine/roadmap.md#14",
+    "label": "specs/workflow-engine/roadmap.md \u203a 5. Stigmergic primitives \u2014 the deposit side this engine does not have",
+    "p": 0.0014327881091040237,
+    "gold": false
+   },
+   {
+    "id": "specs/trace-field/sequence.md#3",
+    "label": "specs/trace-field/sequence.md \u203a Phase 1 \u2014 give `priority` a depositor",
+    "p": 0.0013431120578780646,
+    "gold": false
+   },
+   {
+    "id": "scenarios/round-3.md#9",
+    "label": "scenarios/round-3.md \u203a Confirmed working (recorded so they aren't re-litigated)",
+    "p": 0.0012800984321347712,
+    "gold": false
+   },
+   {
+    "id": "commit/ab17cb7ae3",
+    "label": "commit ab17cb7: Dreaming needs an objective, and the null test says which ones have none",
+    "p": 0.0012634291273753966,
+    "gold": false
+   },
+   {
+    "id": "specs/trace-field/brief.md#15",
+    "label": "specs/trace-field/brief.md \u203a 4.2 Gradient activation \u2014 `timer`'s sibling",
+    "p": 0.001253487252784454,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261024-110457-dc1b.md#1",
+    "label": "board/messages/M-20261024-110457-dc1b.md",
+    "p": 0.0012290428639300402,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-06-getting-started-walked-cold.md#2",
+    "label": "meta/postmortems/2026-09-06-getting-started-walked-cold.md \u203a Why it took four rounds to see one bug",
+    "p": 0.001220106070595314,
+    "gold": false
+   },
+   {
+    "id": "specs/trace-field/brief.md#17",
+    "label": "specs/trace-field/brief.md \u203a 4.4 Human anchors \u2014 the one new relation",
+    "p": 0.0011753224502407543,
+    "gold": false
+   },
+   {
+    "id": "specs/ai-query-layer/graph-identity.md#1",
+    "label": "specs/ai-query-layer/graph-identity.md \u203a Global graph identity \u2014 write-time nodes, authored edges, PGQ overlay",
+    "p": 0.0011583637077412679,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "board/cards/REM-9.md#1",
+   "label": "board/cards/REM-9.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/c73c8a8f2e",
+   "label": "commit c73c8a8: Three properties the docs rely on: two hold, one does not",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "specs/trace-field/brief.md#16",
+   "label": "specs/trace-field/brief.md \u203a 4.3 Reinforcement, from a log the engine already keeps",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/trace-field/sequence.md#2",
+   "label": "specs/trace-field/sequence.md \u203a Phase 0 \u2014 assert the reading before building on it",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/trace-field/schema.sql#8",
+   "label": "specs/trace-field/schema.sql",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/c52cd84db0",
+   "label": "commit c52cd84: queue_depth excludes a backing-off task on purpose, and the spec said otherwise",
+   "wave": 1,
+   "via": "term:run_after ahead",
+   "gold": false
+  },
+  {
+   "id": "specs/trace-field/brief.md#5",
+   "label": "specs/trace-field/brief.md \u203a 2. What the engine already does",
+   "wave": 2,
+   "via": "term:backing_off",
+   "gold": false
+  },
+  {
+   "id": "specs/trace-field/brief.md#6",
+   "label": "specs/trace-field/brief.md \u203a 2. What the engine already does",
+   "wave": 2,
+   "via": "term:backing_off",
+   "gold": false
+  },
+  {
+   "id": "commit/1c3e44f5be",
+   "label": "commit 1c3e44f: Merge pull request #94 from Percolation-Labs/fix/rem-119-queue-depth-pending",
+   "wave": 3,
+   "via": "term:queue_depth excludes",
+   "gold": false
+  },
+  {
+   "id": "specs/trace-field/brief.md#20",
+   "label": "specs/trace-field/brief.md \u203a 5. Invariants",
+   "wave": 4,
+   "via": "term:skip locked",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "specs/trace-field/schema.sql#14",
+    "label": "specs/trace-field/schema.sql",
+    "gold": false
+   },
+   {
+    "id": "specs/trace-field/ontology.md#1",
+    "label": "specs/trace-field/ontology.md \u203a Stigmergic orchestration \u2014 minimum ontology",
+    "gold": false
+   },
+   {
+    "id": "specs/trace-field/schema.sql#9",
+    "label": "specs/trace-field/schema.sql",
+    "gold": false
+   },
+   {
+    "id": "specs/trace-field/brief.md#23",
+    "label": "specs/trace-field/brief.md \u203a 7. Failure modes, and why they are not in `failure-modes.md`",
+    "gold": false
+   },
+   {
+    "id": "specs/trace-field/brief.md#6",
+    "label": "specs/trace-field/brief.md \u203a 2. What the engine already does",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "specs/trace-field/brief.md#6",
+    "label": "specs/trace-field/brief.md \u203a 2. What the engine already does",
+    "gold": false
+   },
+   {
+    "id": "commit/c52cd84db0",
+    "label": "commit c52cd84: queue_depth excludes a backing-off task on purpose, and the spec said otherwise",
+    "gold": false
+   },
+   {
+    "id": "specs/trace-field/schema.sql#14",
+    "label": "specs/trace-field/schema.sql",
+    "gold": false
+   },
+   {
+    "id": "specs/trace-field/ontology.md#1",
+    "label": "specs/trace-field/ontology.md \u203a Stigmergic orchestration \u2014 minimum ontology",
+    "gold": false
+   },
+   {
+    "id": "specs/workflow-engine/roadmap.md#14",
+    "label": "specs/workflow-engine/roadmap.md \u203a 5. Stigmergic primitives \u2014 the deposit side this engine does not have",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "specs/trace-field/brief.md#12",
+    "label": "specs/trace-field/brief.md \u203a 4. What to add, cheapest first",
+    "gold": false
+   },
+   {
+    "id": "specs/trace-field/brief.md#28",
+    "label": "specs/trace-field/brief.md \u203a 10. Open questions",
+    "gold": false
+   },
+   {
+    "id": "specs/trace-field/brief.md#14",
+    "label": "specs/trace-field/brief.md \u203a 4.1 Give `priority` a depositor \u2014 and settle it, do not compute it",
+    "gold": false
+   },
+   {
+    "id": "specs/trace-field/brief.md#26",
+    "label": "specs/trace-field/brief.md \u203a 9. Positioning",
+    "gold": false
+   },
+   {
+    "id": "specs/trace-field/brief.md#7",
+    "label": "specs/trace-field/brief.md \u203a 3. Where it is not stigmergic, and what that costs",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "specs/trace-field/brief.md#6",
+    "label": "specs/trace-field/brief.md \u203a 2. What the engine already does",
+    "gold": false
+   },
+   {
+    "id": "specs/workflow-engine/README.md#4",
+    "label": "specs/workflow-engine/README.md \u203a Compilation \u2014 what it compiles to",
+    "gold": false
+   },
+   {
+    "id": "specs/trace-field/ontology.md#3",
+    "label": "specs/trace-field/ontology.md \u203a The loop, and where it is broken today",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1321.md#2",
+    "label": "board/cards/REM-1321.md",
+    "gold": false
+   },
+   {
+    "id": "specs/trace-field/brief.md#10",
+    "label": "specs/trace-field/brief.md \u203a 3.3 Nothing reinforces",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": null,
+  "Q": null,
+  "LQ": null,
+  "S": null
+ }
+}

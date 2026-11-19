@@ -1,0 +1,440 @@
+{
+ "qid": "RW:3hop2__132957_595371_40768",
+ "set": "mq",
+ "question": "When did the maker of the Acura Legend, the manufacturer of the Scion xB, and Nissan, open US assembly plants?",
+ "gold": [
+  {
+   "id": "mq:2e2b0b093721a57a",
+   "label": "1973 oil crisis",
+   "seed": true
+  },
+  {
+   "id": "mq:4c807422c915e341",
+   "label": "Scion xB",
+   "seed": false
+  },
+  {
+   "id": "mq:9cbea3805ac3dc04",
+   "label": "Acura Legend",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:2e2b0b093721a57a",
+   "label": "1973 oil crisis",
+   "rank": 1,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:4779450bf31d0758",
+   "label": "Acura RL",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:9cbea3805ac3dc04",
+   "label": "Acura Legend",
+   "rank": 3,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:822789bb2105f5a2",
+   "label": "Acura RL",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:3ac80a4d4288acdc",
+   "label": "IPod",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:2e2b0b093721a57a",
+    "label": "1973 oil crisis",
+    "role": "gold"
+   },
+   {
+    "id": "mq:4c807422c915e341",
+    "label": "Scion xB",
+    "role": "gold"
+   },
+   {
+    "id": "mq:9cbea3805ac3dc04",
+    "label": "Acura Legend",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:2e2b0b093721a57a",
+    "b": "mq:4c807422c915e341",
+    "via": [
+     {
+      "kind": "term",
+      "key": "toyota",
+      "width": 32
+     }
+    ]
+   },
+   {
+    "a": "mq:2e2b0b093721a57a",
+    "b": "mq:9cbea3805ac3dc04",
+    "via": [
+     {
+      "kind": "term",
+      "key": "acura",
+      "width": 12
+     },
+     {
+      "kind": "term",
+      "key": "honda",
+      "width": 22
+     },
+     {
+      "kind": "term",
+      "key": "luxury",
+      "width": 42
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   1,
+   1
+  ],
+  "entry": {
+   "seed": "mq:2e2b0b093721a57a",
+   "gold": "mq:2e2b0b093721a57a",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 1964,
+  "within_2_doors": 19117,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "mq:604e022d44a504f5",
+    "label": "Acura RLX",
+    "p": 0.007559620113457472,
+    "gold": false
+   },
+   {
+    "id": "mq:fcdb428b5d779104",
+    "label": "Infiniti J30",
+    "p": 0.0038309815480558683,
+    "gold": false
+   },
+   {
+    "id": "mq:837d491b094af92c",
+    "label": "1973 oil crisis",
+    "p": 0.0035427879504988063,
+    "gold": false
+   },
+   {
+    "id": "mq:b557cdbdead41d89",
+    "label": "Acura ZDX",
+    "p": 0.0034342314853853953,
+    "gold": false
+   },
+   {
+    "id": "mq:18ce99a4875a0687",
+    "label": "Infiniti Q45",
+    "p": 0.0031392687107188763,
+    "gold": false
+   },
+   {
+    "id": "mq:720b784793d2226c",
+    "label": "Honda Civic",
+    "p": 0.002857136856406033,
+    "gold": false
+   },
+   {
+    "id": "mq:930932e1b90406cb",
+    "label": "Infiniti Q50",
+    "p": 0.0024139886478252537,
+    "gold": false
+   },
+   {
+    "id": "mq:76e13fff168e2501",
+    "label": "Acura RDX",
+    "p": 0.0023592955496584793,
+    "gold": false
+   },
+   {
+    "id": "mq:93f8f43015cf4c7d",
+    "label": "Chevrolet Malibu",
+    "p": 0.002334996004313655,
+    "gold": false
+   },
+   {
+    "id": "mq:13f0bedc74b932bd",
+    "label": "Toyota Matrix",
+    "p": 0.0022175105604645825,
+    "gold": false
+   },
+   {
+    "id": "mq:6281d835bca35b9d",
+    "label": "Ford Crown Victoria",
+    "p": 0.0020977439020192744,
+    "gold": false
+   },
+   {
+    "id": "mq:d09f8f8014cbdcbc",
+    "label": "Infiniti G-series (Q40/Q60)",
+    "p": 0.0019671333762707995,
+    "gold": false
+   },
+   {
+    "id": "mq:ee11e8162e5e0067",
+    "label": "Acura MDX",
+    "p": 0.001906388225174214,
+    "gold": false
+   },
+   {
+    "id": "mq:641c474e5d4d52e9",
+    "label": "Acura EL",
+    "p": 0.0018941142791077405,
+    "gold": false
+   },
+   {
+    "id": "mq:05cd8eaec0f6c281",
+    "label": "Nissan Fuga",
+    "p": 0.0017901305579322946,
+    "gold": false
+   },
+   {
+    "id": "mq:e92983794b098175",
+    "label": "Mercedes-Benz G-Class",
+    "p": 0.001778735691980897,
+    "gold": false
+   },
+   {
+    "id": "mq:0cbbba4108948c8a",
+    "label": "Mercedes-Benz G-Class",
+    "p": 0.0017787037830752656,
+    "gold": false
+   },
+   {
+    "id": "mq:4d41ef62ccf3ed3b",
+    "label": "Lincoln Town Car",
+    "p": 0.0016471767132231934,
+    "gold": false
+   },
+   {
+    "id": "mq:051cfe94e280e62e",
+    "label": "Datsun Type 12",
+    "p": 0.0016179768796113984,
+    "gold": false
+   },
+   {
+    "id": "mq:59e11501e1a090b7",
+    "label": "MacBook Air",
+    "p": 0.0013709571844931006,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:2e2b0b093721a57a",
+   "label": "1973 oil crisis",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:4779450bf31d0758",
+   "label": "Acura RL",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:9cbea3805ac3dc04",
+   "label": "Acura Legend",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:822789bb2105f5a2",
+   "label": "Acura RL",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:3ac80a4d4288acdc",
+   "label": "IPod",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:57417b6802ba4803",
+   "label": "Volkswagen Group",
+   "wave": 1,
+   "via": "term:toyota",
+   "gold": false
+  },
+  {
+   "id": "mq:4c807422c915e341",
+   "label": "Scion xB",
+   "wave": 1,
+   "via": "term:toyota",
+   "gold": true
+  },
+  {
+   "id": "mq:b8633eca19c2eb44",
+   "label": "Katsuaki Watanabe",
+   "wave": 1,
+   "via": "term:toyota",
+   "gold": false
+  },
+  {
+   "id": "mq:f91c981daf6fb33d",
+   "label": "Scion bbX",
+   "wave": 1,
+   "via": "term:toyota",
+   "gold": false
+  },
+  {
+   "id": "mq:ce16e40f086d9f42",
+   "label": "Toyota",
+   "wave": 1,
+   "via": "term:toyota",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:604e022d44a504f5",
+    "label": "Acura RLX",
+    "gold": false
+   },
+   {
+    "id": "mq:fcdb428b5d779104",
+    "label": "Infiniti J30",
+    "gold": false
+   },
+   {
+    "id": "mq:837d491b094af92c",
+    "label": "1973 oil crisis",
+    "gold": false
+   },
+   {
+    "id": "mq:b557cdbdead41d89",
+    "label": "Acura ZDX",
+    "gold": false
+   },
+   {
+    "id": "mq:18ce99a4875a0687",
+    "label": "Infiniti Q45",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:604e022d44a504f5",
+    "label": "Acura RLX",
+    "gold": false
+   },
+   {
+    "id": "mq:fcdb428b5d779104",
+    "label": "Infiniti J30",
+    "gold": false
+   },
+   {
+    "id": "mq:d09f8f8014cbdcbc",
+    "label": "Infiniti G-series (Q40/Q60)",
+    "gold": false
+   },
+   {
+    "id": "mq:76e13fff168e2501",
+    "label": "Acura RDX",
+    "gold": false
+   },
+   {
+    "id": "mq:b557cdbdead41d89",
+    "label": "Acura ZDX",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:604e022d44a504f5",
+    "label": "Acura RLX",
+    "gold": false
+   },
+   {
+    "id": "mq:fcdb428b5d779104",
+    "label": "Infiniti J30",
+    "gold": false
+   },
+   {
+    "id": "mq:d09f8f8014cbdcbc",
+    "label": "Infiniti G-series (Q40/Q60)",
+    "gold": false
+   },
+   {
+    "id": "mq:76e13fff168e2501",
+    "label": "Acura RDX",
+    "gold": false
+   },
+   {
+    "id": "mq:60b0a785af7c33d0",
+    "label": "Nissan Rogue",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:a628b6458071ab59",
+    "label": "Scion xD",
+    "gold": false
+   },
+   {
+    "id": "mq:604e022d44a504f5",
+    "label": "Acura RLX",
+    "gold": false
+   },
+   {
+    "id": "mq:fcdb428b5d779104",
+    "label": "Infiniti J30",
+    "gold": false
+   },
+   {
+    "id": "mq:1c90362a075614c1",
+    "label": "Nissan Stadium",
+    "gold": false
+   },
+   {
+    "id": "mq:60b0a785af7c33d0",
+    "label": "Nissan Rogue",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

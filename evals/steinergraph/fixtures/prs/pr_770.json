@@ -1,0 +1,426 @@
+{
+ "qid": "pr:770",
+ "set": "prs",
+ "question": "What work went into this, and why: ranking-eval: deciders judged as rankers per page (Jev beats overlap on both splits)?",
+ "gold": [
+  {
+   "id": "commit/29c599fe8a",
+   "label": "commit 29c599f: ranking-eval: deciders judged as rankers per page; Jev beats overlap on both splits, blind doors change ",
+   "seed": true
+  },
+  {
+   "id": "commit/62729144d0",
+   "label": "commit 6272914: ranking-eval: amend the unit to 10-lead pages for compute, before any amber or GLiDE metric",
+   "seed": false
+  },
+  {
+   "id": "commit/f62f6937fc",
+   "label": "commit f62f693: ranking-eval: register deciders judged as rankers per page, before any metric",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/29c599fe8a",
+   "label": "commit 29c599f: ranking-eval: deciders judged as rankers per page; Jev beats overlap on both splits, blind doors change ",
+   "rank": 1,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "commit/6eade5bf04",
+   "label": "commit 6eade5b: Merge pull request #770 from Percolation-Labs/bill/ranking-eval",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/f62f6937fc",
+   "label": "commit f62f693: ranking-eval: register deciders judged as rankers per page, before any metric",
+   "rank": 3,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "meta/lab/results/ranking-eval/RESULT.md#1",
+   "label": "meta/lab/results/ranking-eval/RESULT.md \u203a Deciders as rankers over each page: Jev ranks best, amber is second, GLiDE is ",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "meta/lab/results/ranking-eval/REGISTERED.md#1",
+   "label": "meta/lab/results/ranking-eval/REGISTERED.md \u203a Deciders judged as rankers over each page, not through the gate (registere",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/29c599fe8a",
+    "label": "commit 29c599f: ranking-eval: deciders judged as rankers per page; Jev beats overlap on both splits, blind doors change ",
+    "role": "gold"
+   },
+   {
+    "id": "commit/62729144d0",
+    "label": "commit 6272914: ranking-eval: amend the unit to 10-lead pages for compute, before any amber or GLiDE metric",
+    "role": "gold"
+   },
+   {
+    "id": "commit/f62f6937fc",
+    "label": "commit f62f693: ranking-eval: register deciders judged as rankers per page, before any metric",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/29c599fe8a",
+    "b": "commit/62729144d0",
+    "via": [
+     {
+      "kind": "beside"
+     }
+    ]
+   },
+   {
+    "a": "commit/62729144d0",
+    "b": "commit/f62f6937fc",
+    "via": [
+     {
+      "kind": "beside"
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   1,
+   1
+  ],
+  "entry": {
+   "seed": "commit/29c599fe8a",
+   "gold": "commit/29c599fe8a",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 648,
+  "within_2_doors": 29441,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "commit/62729144d0",
+    "label": "commit 6272914: ranking-eval: amend the unit to 10-lead pages for compute, before any amber or GLiDE metric",
+    "p": 0.014036559225970306,
+    "gold": true
+   },
+   {
+    "id": "commit/510a8f90f9",
+    "label": "commit 510a8f9: board: bill acknowledges 1 message(s)",
+    "p": 0.010757273846791149,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261116-085306-d9cf.md#1",
+    "label": "board/messages/M-20261116-085306-d9cf.md",
+    "p": 0.005827532071511955,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/ranking-eval/REGISTERED.md#2",
+    "label": "meta/lab/results/ranking-eval/REGISTERED.md \u203a Pages",
+    "p": 0.004782698910194727,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261116-085045-cc34.md#1",
+    "label": "board/messages/M-20261116-085045-cc34.md",
+    "p": 0.004646096786165965,
+    "gold": false
+   },
+   {
+    "id": "commit/ad702e93da",
+    "label": "commit ad702e9: board: james acknowledges 1 message(s)",
+    "p": 0.003987854872259294,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/ranking-eval/REGISTERED.md#6",
+    "label": "meta/lab/results/ranking-eval/REGISTERED.md \u203a Predictions",
+    "p": 0.003774014537312389,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/ranking-eval/RESULT.md#7",
+    "label": "meta/lab/results/ranking-eval/RESULT.md \u203a What this does not show",
+    "p": 0.0035627496497022243,
+    "gold": false
+   },
+   {
+    "id": "commit/80fcc6dea0",
+    "label": "commit 80fcc6d: board: bill messages sirsh",
+    "p": 0.0035444319345432954,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/ranking-eval/REGISTERED.md#7",
+    "label": "meta/lab/results/ranking-eval/REGISTERED.md \u203a Amendment, 22:20Z, before any amber or GLiDE metric",
+    "p": 0.003523303462598753,
+    "gold": false
+   },
+   {
+    "id": "commit/e4801d1bd8",
+    "label": "commit e4801d1: board: bill messages sirsh",
+    "p": 0.0031415849373214993,
+    "gold": false
+   },
+   {
+    "id": "commit/0801e603c3",
+    "label": "commit 0801e60: Merge pull request #771 from Percolation-Labs/bill/worlds",
+    "p": 0.0029861058150416615,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-ranking-size-beam/RESULT.md#11",
+    "label": "meta/lab/results/jev-ranking-size-beam/RESULT.md \u203a Postmortem",
+    "p": 0.00276213904670594,
+    "gold": false
+   },
+   {
+    "id": "commit/3a4b5b3ad0",
+    "label": "commit 3a4b5b3: board: james messages bill",
+    "p": 0.002216090642114546,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-415.md#3",
+    "label": "board/cards/REM-415.md \u203a Evidence",
+    "p": 0.0020461858479676413,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-ranking-size-beam/RESULT.md#6",
+    "label": "meta/lab/results/jev-ranking-size-beam/RESULT.md \u203a Predictions",
+    "p": 0.0019572759134790685,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/batchlog-rescore/RESULT.md#4",
+    "label": "meta/lab/results/batchlog-rescore/RESULT.md \u203a Experiment 1: every decider as a ranker over the recorded batches",
+    "p": 0.0019224262189811458,
+    "gold": false
+   },
+   {
+    "id": "commit/7a87f201bf",
+    "label": "commit 7a87f20: jev-ranking-size-beam: page-size drop is shared with search, not pure dilution; Jev beats overlap on BEA",
+    "p": 0.0018985407718513138,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/ranking-eval/RESULT.md#2",
+    "label": "meta/lab/results/ranking-eval/RESULT.md \u203a Headline: md5 door, 10-lead pages, all deciders on identical pages and text",
+    "p": 0.0018326774206923915,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/e11-standin-gate/registered.md#1",
+    "label": "meta/lab/results/e11-standin-gate/registered.md \u203a Stage C, next lever, on a stand-in: does a stronger per-target gate re",
+    "p": 0.0017083802864075199,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/29c599fe8a",
+   "label": "commit 29c599f: ranking-eval: deciders judged as rankers per page; Jev beats overlap on both splits, blind doors change ",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "commit/6eade5bf04",
+   "label": "commit 6eade5b: Merge pull request #770 from Percolation-Labs/bill/ranking-eval",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/f62f6937fc",
+   "label": "commit f62f693: ranking-eval: register deciders judged as rankers per page, before any metric",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "meta/lab/results/ranking-eval/RESULT.md#1",
+   "label": "meta/lab/results/ranking-eval/RESULT.md \u203a Deciders as rankers over each page: Jev ranks best, amber is second, GLiDE is ",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/ranking-eval/REGISTERED.md#1",
+   "label": "meta/lab/results/ranking-eval/REGISTERED.md \u203a Deciders judged as rankers over each page, not through the gate (registere",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/ranking-eval/REGISTERED.md#4",
+   "label": "meta/lab/results/ranking-eval/REGISTERED.md \u203a Deciders",
+   "wave": 1,
+   "via": "term:eval registered",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/ranking-eval/REGISTERED.md#3",
+   "label": "meta/lab/results/ranking-eval/REGISTERED.md \u203a Doors",
+   "wave": 1,
+   "via": "term:eval registered",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/ranking-eval/REGISTERED.md#2",
+   "label": "meta/lab/results/ranking-eval/REGISTERED.md \u203a Pages",
+   "wave": 1,
+   "via": "term:eval registered",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/ranking-eval/REGISTERED.md#7",
+   "label": "meta/lab/results/ranking-eval/REGISTERED.md \u203a Amendment, 22:20Z, before any amber or GLiDE metric",
+   "wave": 1,
+   "via": "term:eval registered",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/ranking-eval/REGISTERED.md#5",
+   "label": "meta/lab/results/ranking-eval/REGISTERED.md \u203a Metrics, per page",
+   "wave": 1,
+   "via": "term:eval registered",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "commit/62729144d0",
+    "label": "commit 6272914: ranking-eval: amend the unit to 10-lead pages for compute, before any amber or GLiDE metric",
+    "gold": true
+   },
+   {
+    "id": "commit/510a8f90f9",
+    "label": "commit 510a8f9: board: bill acknowledges 1 message(s)",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261116-085306-d9cf.md#1",
+    "label": "board/messages/M-20261116-085306-d9cf.md",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/ranking-eval/REGISTERED.md#2",
+    "label": "meta/lab/results/ranking-eval/REGISTERED.md \u203a Pages",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261116-085045-cc34.md#1",
+    "label": "board/messages/M-20261116-085045-cc34.md",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "commit/62729144d0",
+    "label": "commit 6272914: ranking-eval: amend the unit to 10-lead pages for compute, before any amber or GLiDE metric",
+    "gold": true
+   },
+   {
+    "id": "board/messages/M-20261116-085045-cc34.md#1",
+    "label": "board/messages/M-20261116-085045-cc34.md",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/ranking-eval/REGISTERED.md#6",
+    "label": "meta/lab/results/ranking-eval/REGISTERED.md \u203a Predictions",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/ranking-eval/REGISTERED.md#2",
+    "label": "meta/lab/results/ranking-eval/REGISTERED.md \u203a Pages",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/ranking-eval/RESULT.md#7",
+    "label": "meta/lab/results/ranking-eval/RESULT.md \u203a What this does not show",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/62729144d0",
+    "label": "commit 6272914: ranking-eval: amend the unit to 10-lead pages for compute, before any amber or GLiDE metric",
+    "gold": true
+   },
+   {
+    "id": "meta/lab/results/ranking-eval/RESULT.md#2",
+    "label": "meta/lab/results/ranking-eval/RESULT.md \u203a Headline: md5 door, 10-lead pages, all deciders on identical pages and text",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261116-085306-d9cf.md#1",
+    "label": "board/messages/M-20261116-085306-d9cf.md",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/ranking-eval/RESULT.md#5",
+    "label": "meta/lab/results/ranking-eval/RESULT.md \u203a Question-blind doors",
+    "gold": false
+   },
+   {
+    "id": "commit/510a8f90f9",
+    "label": "commit 510a8f9: board: bill acknowledges 1 message(s)",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "meta/lab/results/ranking-eval/REGISTERED.md#6",
+    "label": "meta/lab/results/ranking-eval/REGISTERED.md \u203a Predictions",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/ranking-eval/REGISTERED.md#4",
+    "label": "meta/lab/results/ranking-eval/REGISTERED.md \u203a Deciders",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/ranking-eval/RESULT.md#2",
+    "label": "meta/lab/results/ranking-eval/RESULT.md \u203a Headline: md5 door, 10-lead pages, all deciders on identical pages and text",
+    "gold": false
+   },
+   {
+    "id": "commit/7a87f201bf",
+    "label": "commit 7a87f20: jev-ranking-size-beam: page-size drop is shared with search, not pure dilution; Jev beats overlap on BEA",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/ranking-eval/pages10-score-result.txt#31",
+    "label": "meta/lab/results/ranking-eval/pages10-score-result.txt",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 1.0,
+  "Q": 1.0,
+  "LQ": 1.0,
+  "S": 0.0
+ }
+}

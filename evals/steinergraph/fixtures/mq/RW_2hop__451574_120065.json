@@ -1,0 +1,407 @@
+{
+ "qid": "RW:2hop__451574_120065",
+ "set": "mq",
+ "question": "What year did Ludwig Friedrich Otto Baumgarten-Crusius's birthplace end?",
+ "gold": [
+  {
+   "id": "mq:6d2c1c816972c37b",
+   "label": "Ludwig Friedrich Otto Baumgarten-Crusius",
+   "seed": true
+  },
+  {
+   "id": "mq:6eb94525b4c00294",
+   "label": "Merseburg",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:6d2c1c816972c37b",
+   "label": "Ludwig Friedrich Otto Baumgarten-Crusius",
+   "rank": 1,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:7d063ccbae8ff110",
+   "label": "Otto von Gerlach",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:6f427d3e1a20f8f9",
+   "label": "Otto Ludwig (writer)",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:57562b4acaf41833",
+   "label": "Otto Friedrich Ferdinand von G\u00f6rschen",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:8a222055d54d7b96",
+   "label": "Otto of Bavaria",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:6d2c1c816972c37b",
+    "label": "Ludwig Friedrich Otto Baumgarten-Crusius",
+    "role": "gold"
+   },
+   {
+    "id": "mq:6eb94525b4c00294",
+    "label": "Merseburg",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:6d2c1c816972c37b",
+    "b": "mq:6eb94525b4c00294",
+    "via": [
+     {
+      "kind": "term",
+      "key": "merseburg",
+      "width": 5
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "mq:6d2c1c816972c37b",
+   "gold": "mq:6d2c1c816972c37b",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 1565,
+  "within_2_doors": 19447,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "mq:94f7edded2776594",
+    "label": "Albert Eichhorn",
+    "p": 0.00256630112722715,
+    "gold": false
+   },
+   {
+    "id": "mq:718e0d7754366517",
+    "label": "Katharine Smith Salisbury",
+    "p": 0.002320375067057618,
+    "gold": false
+   },
+   {
+    "id": "mq:820799ece83b2d95",
+    "label": "Luciano Comella",
+    "p": 0.0021286337601540586,
+    "gold": false
+   },
+   {
+    "id": "mq:f2443f532547cde6",
+    "label": "Hans-Joachim Merker",
+    "p": 0.002120356000557482,
+    "gold": false
+   },
+   {
+    "id": "mq:d3ad0ab88f7997e5",
+    "label": "Friedrich Ferdinand, Hereditary Prince of Schleswig-Holstein",
+    "p": 0.0017182805549822654,
+    "gold": false
+   },
+   {
+    "id": "mq:9d0db039c302013c",
+    "label": "Cool Hand Luke",
+    "p": 0.00169357589390982,
+    "gold": false
+   },
+   {
+    "id": "mq:a7f6bbf7f6154097",
+    "label": "Hydrogen",
+    "p": 0.0016658330287273816,
+    "gold": false
+   },
+   {
+    "id": "mq:69b4f339ccfbd599",
+    "label": "Peter Baden-Powell, 2nd Baron Baden-Powell",
+    "p": 0.0014613175162341253,
+    "gold": false
+   },
+   {
+    "id": "mq:63b8494f6ded03e4",
+    "label": "Mike Dow",
+    "p": 0.0014272164944730888,
+    "gold": false
+   },
+   {
+    "id": "mq:90e70a6c7f876c98",
+    "label": "Nintendo Entertainment System",
+    "p": 0.0013618993357175295,
+    "gold": false
+   },
+   {
+    "id": "mq:d71cb466239eeda9",
+    "label": "Albert Einstein",
+    "p": 0.001310281654732334,
+    "gold": false
+   },
+   {
+    "id": "mq:9850226eea3ad08f",
+    "label": "Esztergom Basilica",
+    "p": 0.0013102784664323183,
+    "gold": false
+   },
+   {
+    "id": "mq:1e47cdcdec0ecc54",
+    "label": "Idealism",
+    "p": 0.0012418322587671806,
+    "gold": false
+   },
+   {
+    "id": "mq:0e42399f732db116",
+    "label": "Therese Huber",
+    "p": 0.0011749828003906966,
+    "gold": false
+   },
+   {
+    "id": "mq:944c3d49b6739955",
+    "label": "Vicente Manansala",
+    "p": 0.0010956541374931709,
+    "gold": false
+   },
+   {
+    "id": "mq:64aada63823873db",
+    "label": "Gustav Albrecht, 5th Prince of Sayn-Wittgenstein-Berleburg",
+    "p": 0.00109052387260089,
+    "gold": false
+   },
+   {
+    "id": "mq:ec3050973a967c57",
+    "label": "Albert Gottfried Dietrich",
+    "p": 0.00103726358992498,
+    "gold": false
+   },
+   {
+    "id": "mq:25d1752101bd65f8",
+    "label": "Gerd Ludwig",
+    "p": 0.0009409457073951988,
+    "gold": false
+   },
+   {
+    "id": "mq:209310b2a8c66ead",
+    "label": "Suermondt-Ludwig-Museum",
+    "p": 0.0009107604526676397,
+    "gold": false
+   },
+   {
+    "id": "mq:51d3b95d06aa8e90",
+    "label": "Sophia Maria Westenholz",
+    "p": 0.0008671104546806858,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:6d2c1c816972c37b",
+   "label": "Ludwig Friedrich Otto Baumgarten-Crusius",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:7d063ccbae8ff110",
+   "label": "Otto von Gerlach",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:6f427d3e1a20f8f9",
+   "label": "Otto Ludwig (writer)",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:57562b4acaf41833",
+   "label": "Otto Friedrich Ferdinand von G\u00f6rschen",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:8a222055d54d7b96",
+   "label": "Otto of Bavaria",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:fddac07751fb511d",
+   "label": "Charles Frederick II, Duke of W\u00fcrttemberg-Oels",
+   "wave": 1,
+   "via": "term:merseburg",
+   "gold": false
+  },
+  {
+   "id": "mq:6eb94525b4c00294",
+   "label": "Merseburg",
+   "wave": 1,
+   "via": "term:merseburg",
+   "gold": true
+  },
+  {
+   "id": "mq:f2443f532547cde6",
+   "label": "Hans-Joachim Merker",
+   "wave": 1,
+   "via": "term:merseburg",
+   "gold": false
+  },
+  {
+   "id": "mq:9879ee02e9002869",
+   "label": "German Revolution of 1918\u201319",
+   "wave": 1,
+   "via": "term:merseburg",
+   "gold": false
+  },
+  {
+   "id": "mq:d22b15ce8c891b44",
+   "label": "Villa Wartholz",
+   "wave": 2,
+   "via": "near:mq:6d2c1c816972c37b",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:94f7edded2776594",
+    "label": "Albert Eichhorn",
+    "gold": false
+   },
+   {
+    "id": "mq:718e0d7754366517",
+    "label": "Katharine Smith Salisbury",
+    "gold": false
+   },
+   {
+    "id": "mq:820799ece83b2d95",
+    "label": "Luciano Comella",
+    "gold": false
+   },
+   {
+    "id": "mq:f2443f532547cde6",
+    "label": "Hans-Joachim Merker",
+    "gold": false
+   },
+   {
+    "id": "mq:d3ad0ab88f7997e5",
+    "label": "Friedrich Ferdinand, Hereditary Prince of Schleswig-Holstein",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:f2443f532547cde6",
+    "label": "Hans-Joachim Merker",
+    "gold": false
+   },
+   {
+    "id": "mq:ec3050973a967c57",
+    "label": "Albert Gottfried Dietrich",
+    "gold": false
+   },
+   {
+    "id": "mq:64aada63823873db",
+    "label": "Gustav Albrecht, 5th Prince of Sayn-Wittgenstein-Berleburg",
+    "gold": false
+   },
+   {
+    "id": "mq:94f7edded2776594",
+    "label": "Albert Eichhorn",
+    "gold": false
+   },
+   {
+    "id": "mq:7395d25891ebf40b",
+    "label": "Just Got Started Lovin' You",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:f2443f532547cde6",
+    "label": "Hans-Joachim Merker",
+    "gold": false
+   },
+   {
+    "id": "mq:94f7edded2776594",
+    "label": "Albert Eichhorn",
+    "gold": false
+   },
+   {
+    "id": "mq:ec3050973a967c57",
+    "label": "Albert Gottfried Dietrich",
+    "gold": false
+   },
+   {
+    "id": "mq:202a2164d54306c8",
+    "label": "Friedrich Hayek",
+    "gold": false
+   },
+   {
+    "id": "mq:64aada63823873db",
+    "label": "Gustav Albrecht, 5th Prince of Sayn-Wittgenstein-Berleburg",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:5046d72bb05bbfa3",
+    "label": "Prince Friedrich of Hesse and by Rhine",
+    "gold": false
+   },
+   {
+    "id": "mq:41a6226fd732607f",
+    "label": "Karl Ludwig Philipp Zeyher",
+    "gold": false
+   },
+   {
+    "id": "mq:7395d25891ebf40b",
+    "label": "Just Got Started Lovin' You",
+    "gold": false
+   },
+   {
+    "id": "mq:0b46b70d3067ae6b",
+    "label": "Just Got Started Lovin' You",
+    "gold": false
+   },
+   {
+    "id": "mq:ec3050973a967c57",
+    "label": "Albert Gottfried Dietrich",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

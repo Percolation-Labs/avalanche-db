@@ -1,0 +1,383 @@
+{
+ "qid": "card:REM-946",
+ "set": "cards",
+ "question": "What was done about this, and why: shitsville: measure a Rust rendering quality spike on the existing town?",
+ "gold": [
+  {
+   "id": "commit/bdd5bc7cc3",
+   "label": "commit bdd5bc7: Record measured Shitsville Rust rendering spike (REM-946)",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/9acb978285",
+   "label": "commit 9acb978: board: file REM-946 shitsville: measure a Rust rendering quality spike on the existing town",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-946.md#1",
+   "label": "board/cards/REM-946.md",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-946.md#2",
+   "label": "board/cards/REM-946.md \u203a Goal",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/bdd5bc7cc3",
+   "label": "commit bdd5bc7: Record measured Shitsville Rust rendering spike (REM-946)",
+   "rank": 4,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "applications/shitsville/product.md#10",
+   "label": "applications/shitsville/product.md \u203a 6. Worlds, legibility and engines",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/bdd5bc7cc3",
+    "label": "commit bdd5bc7: Record measured Shitsville Rust rendering spike (REM-946)",
+    "role": "gold"
+   }
+  ],
+  "links": [],
+  "cost": 0,
+  "detached_gold": [],
+  "gold_pair_doors": [],
+  "entry": {
+   "seed": "commit/bdd5bc7cc3",
+   "gold": "commit/bdd5bc7cc3",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 1128,
+  "within_2_doors": 33056,
+  "gold_within_1": 0,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "board/cards/REM-946.md#4",
+    "label": "board/cards/REM-946.md \u203a Log",
+    "p": 0.013831002931624361,
+    "gold": false
+   },
+   {
+    "id": "board/team/codex-shitville.md#4",
+    "label": "board/team/codex-shitville.md \u203a Log",
+    "p": 0.012861591066580167,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-917.md#8",
+    "label": "board/cards/REM-917.md \u203a Log",
+    "p": 0.010560941569629794,
+    "gold": false
+   },
+   {
+    "id": "board/team/codex-shitville.md#1",
+    "label": "board/team/codex-shitville.md",
+    "p": 0.009459708516966508,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-901.md#8",
+    "label": "board/cards/REM-901.md \u203a Log",
+    "p": 0.006568299703369939,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-946.md#3",
+    "label": "board/cards/REM-946.md \u203a Scope",
+    "p": 0.005967136511028489,
+    "gold": false
+   },
+   {
+    "id": "commit/3ce89e9466",
+    "label": "commit 3ce89e9: board: codex-shitville takes REM-946",
+    "p": 0.005074987329575058,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-917.md#6",
+    "label": "board/cards/REM-917.md \u203a Scope",
+    "p": 0.004970653179736956,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-917.md#2",
+    "label": "board/cards/REM-917.md \u203a Goal",
+    "p": 0.004712008686348606,
+    "gold": false
+   },
+   {
+    "id": "commit/cddb28eb3a",
+    "label": "commit cddb28e: board: note on REM-917",
+    "p": 0.004163602951017997,
+    "gold": false
+   },
+   {
+    "id": "commit/57c5b809df",
+    "label": "commit 57c5b80: board: codex-shitville checks in, working",
+    "p": 0.0035005844562504065,
+    "gold": false
+   },
+   {
+    "id": "commit/c9ba178f4e",
+    "label": "commit c9ba178: board: codex-shitville checks in, ended",
+    "p": 0.003216047778708786,
+    "gold": false
+   },
+   {
+    "id": "commit/de32e8016f",
+    "label": "commit de32e80: board: REM-946 in-progress \u2192 done",
+    "p": 0.002875888958254661,
+    "gold": false
+   },
+   {
+    "id": "demo/podcast-v3/publish.py#2",
+    "label": "demo/podcast-v3/publish.py",
+    "p": 0.0026373450882141267,
+    "gold": false
+   },
+   {
+    "id": "specs/world-model-ingestion/brief.md#14",
+    "label": "specs/world-model-ingestion/brief.md \u203a 4. The event/entity graph (from `percolate-spec-v1.0.md` \u00a78, \u00a716)",
+    "p": 0.002561768551676273,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261028-212421-47f7.md#1",
+    "label": "board/messages/M-20261028-212421-47f7.md",
+    "p": 0.002486603033507964,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-917.md#1",
+    "label": "board/cards/REM-917.md",
+    "p": 0.0024821221220212397,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-629.md#7",
+    "label": "board/cards/REM-629.md \u203a Log",
+    "p": 0.0023641477285044335,
+    "gold": false
+   },
+   {
+    "id": "commit/fb3e9c13f5",
+    "label": "commit fb3e9c1: Merge pull request #532 from Percolation-Labs/amartey/rem-1141-wikispeedia",
+    "p": 0.0021857234197996686,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-472.md#4",
+    "label": "board/cards/REM-472.md \u203a Done when",
+    "p": 0.0021236721691323098,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/9acb978285",
+   "label": "commit 9acb978: board: file REM-946 shitsville: measure a Rust rendering quality spike on the existing town",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-946.md#1",
+   "label": "board/cards/REM-946.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-946.md#2",
+   "label": "board/cards/REM-946.md \u203a Goal",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/bdd5bc7cc3",
+   "label": "commit bdd5bc7: Record measured Shitsville Rust rendering spike (REM-946)",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "applications/shitsville/product.md#10",
+   "label": "applications/shitsville/product.md \u203a 6. Worlds, legibility and engines",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-917.md#8",
+   "label": "board/cards/REM-917.md \u203a Log",
+   "wave": 1,
+   "via": "term:rem 946",
+   "gold": false
+  },
+  {
+   "id": "commit/de32e8016f",
+   "label": "commit de32e80: board: REM-946 in-progress \u2192 done",
+   "wave": 1,
+   "via": "term:rem 946",
+   "gold": false
+  },
+  {
+   "id": "commit/3ce89e9466",
+   "label": "commit 3ce89e9: board: codex-shitville takes REM-946",
+   "wave": 1,
+   "via": "term:rem 946",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-946.md#3",
+   "label": "board/cards/REM-946.md \u203a Scope",
+   "wave": 1,
+   "via": "term:rem 946",
+   "gold": false
+  },
+  {
+   "id": "board/team/codex-shitville.md#1",
+   "label": "board/team/codex-shitville.md",
+   "wave": 1,
+   "via": "term:rem 946",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "board/cards/REM-946.md#4",
+    "label": "board/cards/REM-946.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/team/codex-shitville.md#4",
+    "label": "board/team/codex-shitville.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-917.md#8",
+    "label": "board/cards/REM-917.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/team/codex-shitville.md#1",
+    "label": "board/team/codex-shitville.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-901.md#8",
+    "label": "board/cards/REM-901.md \u203a Log",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "board/cards/REM-946.md#4",
+    "label": "board/cards/REM-946.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/team/codex-shitville.md#4",
+    "label": "board/team/codex-shitville.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-901.md#8",
+    "label": "board/cards/REM-901.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-917.md#8",
+    "label": "board/cards/REM-917.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/team/codex-shitville.md#1",
+    "label": "board/team/codex-shitville.md",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "board/cards/REM-917.md#2",
+    "label": "board/cards/REM-917.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "commit/de32e8016f",
+    "label": "commit de32e80: board: REM-946 in-progress \u2192 done",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-917.md#6",
+    "label": "board/cards/REM-917.md \u203a Scope",
+    "gold": false
+   },
+   {
+    "id": "commit/564073c30d",
+    "label": "commit 564073c: board: file REM-917 shitsville: a Rust renderer delivers one full-quality Shitsville scene from shared s",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-917.md#7",
+    "label": "board/cards/REM-917.md \u203a Links",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "board/cards/REM-917.md#6",
+    "label": "board/cards/REM-917.md \u203a Scope",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-917.md#2",
+    "label": "board/cards/REM-917.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-946.md#4",
+    "label": "board/cards/REM-946.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "applications/shitsville/product.md#2",
+    "label": "applications/shitsville/product.md \u203a 1. Sources and decisions",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-901.md#8",
+    "label": "board/cards/REM-901.md \u203a Log",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": null,
+  "Q": null,
+  "LQ": null,
+  "S": null
+ }
+}

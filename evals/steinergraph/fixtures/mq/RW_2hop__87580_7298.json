@@ -1,0 +1,443 @@
+{
+ "qid": "RW:2hop__87580_7298",
+ "set": "mq",
+ "question": "Along with the person who played Andy's brother in The Office, what notable pop artist started his career in adult contemporary radio?",
+ "gold": [
+  {
+   "id": "mq:77d7dd56aed88155",
+   "label": "Garden Party (The Office)",
+   "seed": false
+  },
+  {
+   "id": "mq:7b6d7c13507067b6",
+   "label": "Adult contemporary music",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:cfb8e19ca3a8783f",
+   "label": "Adult contemporary music",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:d98ed0ea9ef8fc7d",
+   "label": "Adult contemporary music",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:ccfd5950f5949fa5",
+   "label": "Adult contemporary music",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:338e6e02032ee6b8",
+   "label": "I Can Only Imagine (MercyMe song)",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:70b8523f11913af9",
+   "label": "I Can Only Imagine (MercyMe song)",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:77d7dd56aed88155",
+    "label": "Garden Party (The Office)",
+    "role": "gold"
+   },
+   {
+    "id": "mq:7b6d7c13507067b6",
+    "label": "Adult contemporary music",
+    "role": "gold"
+   },
+   {
+    "id": "mq:d98ed0ea9ef8fc7d",
+    "label": "Adult contemporary music",
+    "role": "seed"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:77d7dd56aed88155",
+    "b": "mq:7b6d7c13507067b6",
+    "via": [
+     {
+      "kind": "term",
+      "key": "josh groban",
+      "width": 7
+     },
+     {
+      "kind": "term",
+      "key": "groban",
+      "width": 7
+     },
+     {
+      "kind": "term",
+      "key": "josh",
+      "width": 67
+     }
+    ]
+   },
+   {
+    "a": "mq:7b6d7c13507067b6",
+    "b": "mq:d98ed0ea9ef8fc7d",
+    "via": [
+     {
+      "kind": "term",
+      "key": "contemporary music",
+      "width": 21
+     },
+     {
+      "kind": "term",
+      "key": "soft",
+      "width": 33
+     },
+     {
+      "kind": "term",
+      "key": "adult contemporary",
+      "width": 48
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "mq:d98ed0ea9ef8fc7d",
+   "gold": "mq:7b6d7c13507067b6",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 2330,
+  "within_2_doors": 18729,
+  "gold_within_1": 2,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "mq:070694f04d48639b",
+    "label": "I Can Only Imagine (film)",
+    "p": 0.0030039957533988383,
+    "gold": false
+   },
+   {
+    "id": "mq:25d14061963084ea",
+    "label": "I Can Only Imagine (film)",
+    "p": 0.0030039957533988383,
+    "gold": false
+   },
+   {
+    "id": "mq:9309985dff87da6e",
+    "label": "I Can Only Imagine (MercyMe song)",
+    "p": 0.002073418628255728,
+    "gold": false
+   },
+   {
+    "id": "mq:e71d73fdcef2de66",
+    "label": "I Can Only Imagine (MercyMe song)",
+    "p": 0.00204621482352129,
+    "gold": false
+   },
+   {
+    "id": "mq:891bd5b49318ff7c",
+    "label": "I Write the Songs",
+    "p": 0.001793092479867711,
+    "gold": false
+   },
+   {
+    "id": "mq:613931965a1da0e6",
+    "label": "I Can Only Imagine (MercyMe song)",
+    "p": 0.0017103954207698321,
+    "gold": false
+   },
+   {
+    "id": "mq:59967acbcf257238",
+    "label": "Jive Records",
+    "p": 0.0014839557998072945,
+    "gold": false
+   },
+   {
+    "id": "mq:0fac33f144795e99",
+    "label": "Danny Williams (singer)",
+    "p": 0.0013677514887977988,
+    "gold": false
+   },
+   {
+    "id": "mq:baf76ab2ed00db2e",
+    "label": "Adult contemporary music",
+    "p": 0.0012629501060525694,
+    "gold": false
+   },
+   {
+    "id": "mq:94e6613b3008c440",
+    "label": "Big Money Hustlas",
+    "p": 0.0011499149674375824,
+    "gold": false
+   },
+   {
+    "id": "mq:bd070baace6b344b",
+    "label": "Barry Manilow discography",
+    "p": 0.0011031729826632137,
+    "gold": false
+   },
+   {
+    "id": "mq:13926de6a8719336",
+    "label": "Mandate of Heaven",
+    "p": 0.0010053488567050616,
+    "gold": false
+   },
+   {
+    "id": "mq:a1c5303e7a6729d9",
+    "label": "First Light (Freddie Hubbard album)",
+    "p": 0.0009957532697832778,
+    "gold": false
+   },
+   {
+    "id": "mq:ead31bb074b972c2",
+    "label": "KMJQ",
+    "p": 0.0009786816144982734,
+    "gold": false
+   },
+   {
+    "id": "mq:04f69d51467d835f",
+    "label": "Brigham Young University",
+    "p": 0.0009594509397082698,
+    "gold": false
+   },
+   {
+    "id": "mq:686592b68ef0a5f3",
+    "label": "Four Strong Winds",
+    "p": 0.0009557005316818243,
+    "gold": false
+   },
+   {
+    "id": "mq:c9afa2fee8563a6f",
+    "label": "Adult contemporary music",
+    "p": 0.0009389033584851092,
+    "gold": false
+   },
+   {
+    "id": "mq:c4d0f78f89869351",
+    "label": "Chris Sarandon",
+    "p": 0.0009096849387998843,
+    "gold": false
+   },
+   {
+    "id": "mq:0a18a48fd461fb1a",
+    "label": "Elevating Entertainment Motion Pictures",
+    "p": 0.0009077214433831737,
+    "gold": false
+   },
+   {
+    "id": "mq:0cfd0bc56bc97235",
+    "label": "Second Utrecht Civil War",
+    "p": 0.0009035977058547542,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:cfb8e19ca3a8783f",
+   "label": "Adult contemporary music",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:d98ed0ea9ef8fc7d",
+   "label": "Adult contemporary music",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:ccfd5950f5949fa5",
+   "label": "Adult contemporary music",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:338e6e02032ee6b8",
+   "label": "I Can Only Imagine (MercyMe song)",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:70b8523f11913af9",
+   "label": "I Can Only Imagine (MercyMe song)",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:891bd5b49318ff7c",
+   "label": "I Write the Songs",
+   "wave": 1,
+   "via": "term:manilow",
+   "gold": false
+  },
+  {
+   "id": "mq:bd070baace6b344b",
+   "label": "Barry Manilow discography",
+   "wave": 1,
+   "via": "term:manilow",
+   "gold": false
+  },
+  {
+   "id": "mq:cf1a6448bcbb5eb1",
+   "label": "John Cowsill",
+   "wave": 2,
+   "via": "term:bruce johnston",
+   "gold": false
+  },
+  {
+   "id": "mq:93cb6ce524398b14",
+   "label": "I Write the Songs",
+   "wave": 2,
+   "via": "term:bruce johnston",
+   "gold": false
+  },
+  {
+   "id": "mq:07d39c8a23f367d2",
+   "label": "WYYU",
+   "wave": 3,
+   "via": "term:adult contemporary",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:070694f04d48639b",
+    "label": "I Can Only Imagine (film)",
+    "gold": false
+   },
+   {
+    "id": "mq:25d14061963084ea",
+    "label": "I Can Only Imagine (film)",
+    "gold": false
+   },
+   {
+    "id": "mq:9309985dff87da6e",
+    "label": "I Can Only Imagine (MercyMe song)",
+    "gold": false
+   },
+   {
+    "id": "mq:e71d73fdcef2de66",
+    "label": "I Can Only Imagine (MercyMe song)",
+    "gold": false
+   },
+   {
+    "id": "mq:891bd5b49318ff7c",
+    "label": "I Write the Songs",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:c9afa2fee8563a6f",
+    "label": "Adult contemporary music",
+    "gold": false
+   },
+   {
+    "id": "mq:ead31bb074b972c2",
+    "label": "KMJQ",
+    "gold": false
+   },
+   {
+    "id": "mq:baf76ab2ed00db2e",
+    "label": "Adult contemporary music",
+    "gold": false
+   },
+   {
+    "id": "mq:891bd5b49318ff7c",
+    "label": "I Write the Songs",
+    "gold": false
+   },
+   {
+    "id": "mq:5bd434c51eab061a",
+    "label": "WMEZ",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:baf76ab2ed00db2e",
+    "label": "Adult contemporary music",
+    "gold": false
+   },
+   {
+    "id": "mq:c9afa2fee8563a6f",
+    "label": "Adult contemporary music",
+    "gold": false
+   },
+   {
+    "id": "mq:ead31bb074b972c2",
+    "label": "KMJQ",
+    "gold": false
+   },
+   {
+    "id": "mq:dfcce326b66e8fec",
+    "label": "WJPZ-FM",
+    "gold": false
+   },
+   {
+    "id": "mq:891bd5b49318ff7c",
+    "label": "I Write the Songs",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:1b8f9995609b925d",
+    "label": "CKSY-FM",
+    "gold": false
+   },
+   {
+    "id": "mq:ff86a87c804546a1",
+    "label": "Light Sings",
+    "gold": false
+   },
+   {
+    "id": "mq:b9bb6cdec89e5685",
+    "label": "WEBZ",
+    "gold": false
+   },
+   {
+    "id": "mq:02582bd667c47b23",
+    "label": "WFMK",
+    "gold": false
+   },
+   {
+    "id": "mq:39390d5df6a29327",
+    "label": "WRNJ",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

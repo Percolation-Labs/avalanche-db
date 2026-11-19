@@ -1,0 +1,410 @@
+{
+ "qid": "card:REM-174",
+ "set": "cards",
+ "question": "What was done about this, and why: rbac: plans and usage limits apply once to a person and all their agents?",
+ "gold": [
+  {
+   "id": "commit/e81044760e",
+   "label": "commit e810447: Build the research platform in core: one access decision, plans and usage, research revisions, engagemen",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "board/cards/REM-174.md#1",
+   "label": "board/cards/REM-174.md",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "board/cards/REM-174.md#10",
+   "label": "board/cards/REM-174.md \u203a Log",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "commit/1ffcf9e6c3",
+   "label": "commit 1ffcf9e: board: file REM-1164 schema: an owner's run limits are rbac plans and limits, not workflow.run_policies",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "board/cards/REM-1164.md#2",
+   "label": "board/cards/REM-1164.md \u203a Goal",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "specs/user-rbac/spec.md#37",
+   "label": "specs/user-rbac/spec.md \u203a Plans, limits and scope aliases",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/e81044760e",
+    "label": "commit e810447: Build the research platform in core: one access decision, plans and usage, research revisions, engagemen",
+    "role": "gold"
+   },
+   {
+    "id": "specs/user-rbac/spec.md#37",
+    "label": "specs/user-rbac/spec.md \u203a Plans, limits and scope aliases",
+    "role": "seed"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/e81044760e",
+    "b": "specs/user-rbac/spec.md#37",
+    "via": [
+     {
+      "kind": "term",
+      "key": "model tokens",
+      "width": 9
+     },
+     {
+      "kind": "term",
+      "key": "default plan",
+      "width": 11
+     },
+     {
+      "kind": "term",
+      "key": "unlimited",
+      "width": 24
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [],
+  "entry": {
+   "seed": "specs/user-rbac/spec.md#37",
+   "gold": "commit/e81044760e",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 966,
+  "within_2_doors": 32356,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "board/cards/REM-1164.md#1",
+    "label": "board/cards/REM-1164.md",
+    "p": 0.009824993579672541,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261023-163127-b447.md#1",
+    "label": "board/messages/M-20261023-163127-b447.md",
+    "p": 0.005335905436836482,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261023-164724-6ee2.md#1",
+    "label": "board/messages/M-20261023-164724-6ee2.md",
+    "p": 0.005200543219663876,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261023-164941-0026.md#1",
+    "label": "board/messages/M-20261023-164941-0026.md",
+    "p": 0.004257163552190332,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-174.md#2",
+    "label": "board/cards/REM-174.md \u203a Goal",
+    "p": 0.004241322388550574,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1164.md#5",
+    "label": "board/cards/REM-1164.md \u203a Log",
+    "p": 0.00421838598108078,
+    "gold": false
+   },
+   {
+    "id": "research-notes/h-to-g/brief-trial/PROTOCOL.md#2",
+    "label": "research-notes/h-to-g/brief-trial/PROTOCOL.md \u203a Compared paths",
+    "p": 0.0039047665312847515,
+    "gold": false
+   },
+   {
+    "id": "board/team/sally.md#3",
+    "label": "board/team/sally.md \u203a Log",
+    "p": 0.003873916453181981,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261023-164451-8b7b.md#1",
+    "label": "board/messages/M-20261023-164451-8b7b.md",
+    "p": 0.003417650284929297,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261023-164458-4f8c.md#1",
+    "label": "board/messages/M-20261023-164458-4f8c.md",
+    "p": 0.003372308716013136,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261023-164455-560a.md#1",
+    "label": "board/messages/M-20261023-164455-560a.md",
+    "p": 0.0033141016749342893,
+    "gold": false
+   },
+   {
+    "id": "commit/9600777800",
+    "label": "commit 9600777: board: REM-1164 in-progress \u2192 canceled",
+    "p": 0.003260008510132425,
+    "gold": false
+   },
+   {
+    "id": "commit/6a410c0626",
+    "label": "commit 6a410c0: board: note on REM-1164",
+    "p": 0.003229585091144672,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-174.md#9",
+    "label": "board/cards/REM-174.md \u203a 2026-09-14T08:07:11.102Z \u00b7 Amartey",
+    "p": 0.003222942323948079,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261023-164249-a2f2.md#1",
+    "label": "board/messages/M-20261023-164249-a2f2.md",
+    "p": 0.0031023439773667392,
+    "gold": false
+   },
+   {
+    "id": "commit/3068074b6f",
+    "label": "commit 3068074: board: sally takes REM-1164",
+    "p": 0.0030592654628222504,
+    "gold": false
+   },
+   {
+    "id": "commit/c7dac16ce3",
+    "label": "commit c7dac16: board: james messages sally",
+    "p": 0.002706080867317561,
+    "gold": false
+   },
+   {
+    "id": "specs/user-rbac/schema.sql#85",
+    "label": "specs/user-rbac/schema.sql",
+    "p": 0.0026684021092606143,
+    "gold": false
+   },
+   {
+    "id": "specs/user-rbac/schema.sql#94",
+    "label": "specs/user-rbac/schema.sql",
+    "p": 0.002521631395761364,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1164.md#3",
+    "label": "board/cards/REM-1164.md \u203a Evidence",
+    "p": 0.00248241594809289,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "board/cards/REM-174.md#1",
+   "label": "board/cards/REM-174.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-174.md#10",
+   "label": "board/cards/REM-174.md \u203a Log",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/1ffcf9e6c3",
+   "label": "commit 1ffcf9e: board: file REM-1164 schema: an owner's run limits are rbac plans and limits, not workflow.run_policies",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-1164.md#2",
+   "label": "board/cards/REM-1164.md \u203a Goal",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/user-rbac/spec.md#37",
+   "label": "specs/user-rbac/spec.md \u203a Plans, limits and scope aliases",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-504.md#5",
+   "label": "board/cards/REM-504.md \u203a Scope",
+   "wave": 1,
+   "via": "term:rem 174",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-174.md#6",
+   "label": "board/cards/REM-174.md \u203a Links",
+   "wave": 1,
+   "via": "term:rem 174",
+   "gold": false
+  },
+  {
+   "id": "commit/bce0a39bfa",
+   "label": "commit bce0a39: board: REM-174 backlog \u2192 canceled",
+   "wave": 1,
+   "via": "term:rem 174",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-174.md#2",
+   "label": "board/cards/REM-174.md \u203a Goal",
+   "wave": 1,
+   "via": "term:rem 174",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-189.md#1",
+   "label": "board/cards/REM-189.md",
+   "wave": 1,
+   "via": "term:rem 174",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "board/cards/REM-1164.md#1",
+    "label": "board/cards/REM-1164.md",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261023-163127-b447.md#1",
+    "label": "board/messages/M-20261023-163127-b447.md",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261023-164724-6ee2.md#1",
+    "label": "board/messages/M-20261023-164724-6ee2.md",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261023-164941-0026.md#1",
+    "label": "board/messages/M-20261023-164941-0026.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-174.md#2",
+    "label": "board/cards/REM-174.md \u203a Goal",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "board/cards/REM-1164.md#1",
+    "label": "board/cards/REM-1164.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1164.md#5",
+    "label": "board/cards/REM-1164.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261023-164941-0026.md#1",
+    "label": "board/messages/M-20261023-164941-0026.md",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261023-164724-6ee2.md#1",
+    "label": "board/messages/M-20261023-164724-6ee2.md",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261023-163127-b447.md#1",
+    "label": "board/messages/M-20261023-163127-b447.md",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "board/cards/REM-1164.md#1",
+    "label": "board/cards/REM-1164.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-174.md#2",
+    "label": "board/cards/REM-174.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "specs/user-rbac/spec.md#38",
+    "label": "specs/user-rbac/spec.md \u203a Plans, limits and scope aliases",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261023-164724-6ee2.md#1",
+    "label": "board/messages/M-20261023-164724-6ee2.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-171.md#1",
+    "label": "board/cards/REM-171.md",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "commit/04047f3a8b",
+    "label": "commit 04047f3: board: file REM-346 library: a person's fleet of agents plans around their board, and offers links betwe",
+    "gold": false
+   },
+   {
+    "id": "specs/research-platform/architecture.md#8",
+    "label": "specs/research-platform/architecture.md \u203a 3. Plans and usage",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/invitations-by-reputation.md#6",
+    "label": "specs/percolate-application/invitations-by-reputation.md \u203a 3.2 Events",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-220.md#4",
+    "label": "board/cards/REM-220.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-174.md#2",
+    "label": "board/cards/REM-174.md \u203a Goal",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

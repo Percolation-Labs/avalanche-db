@@ -1,0 +1,440 @@
+{
+ "qid": "RW:3hop1__622145_42197_18397",
+ "set": "mq",
+ "question": "Where did the arguer that Boris Lagutin's country of citizenship had become an imperialist power declare he would intervene in the Korean conflict?",
+ "gold": [
+  {
+   "id": "mq:4aec4bfb579ba905",
+   "label": "Imperialism",
+   "seed": true
+  },
+  {
+   "id": "mq:92d6c665c7279c38",
+   "label": "Korean War",
+   "seed": false
+  },
+  {
+   "id": "mq:f01959680676c59c",
+   "label": "Boris Lagutin",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:f01959680676c59c",
+   "label": "Boris Lagutin",
+   "rank": 1,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:26e6ea804052c889",
+   "label": "Imperialism",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:4c3541d91b089741",
+   "label": "Cuban War of Independence",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:4aec4bfb579ba905",
+   "label": "Imperialism",
+   "rank": 4,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:c790b09568607641",
+   "label": "Soviet Union in the Korean War",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:4aec4bfb579ba905",
+    "label": "Imperialism",
+    "role": "gold"
+   },
+   {
+    "id": "mq:92d6c665c7279c38",
+    "label": "Korean War",
+    "role": "gold"
+   },
+   {
+    "id": "mq:f01959680676c59c",
+    "label": "Boris Lagutin",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:4aec4bfb579ba905",
+    "b": "mq:92d6c665c7279c38",
+    "via": [
+     {
+      "kind": "term",
+      "key": "mao zedong",
+      "width": 6
+     },
+     {
+      "kind": "term",
+      "key": "zedong",
+      "width": 6
+     },
+     {
+      "kind": "term",
+      "key": "mao",
+      "width": 14
+     }
+    ]
+   },
+   {
+    "a": "mq:4aec4bfb579ba905",
+    "b": "mq:f01959680676c59c",
+    "via": [
+     {
+      "kind": "term",
+      "key": "ussr",
+      "width": 59
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   1,
+   2
+  ],
+  "entry": {
+   "seed": "mq:4aec4bfb579ba905",
+   "gold": "mq:4aec4bfb579ba905",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 4024,
+  "within_2_doors": 17061,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "mq:21ae3007acd23b1a",
+    "label": "Modern history",
+    "p": 0.002236898053038372,
+    "gold": false
+   },
+   {
+    "id": "mq:29215ad2381e63b3",
+    "label": "Yalu River",
+    "p": 0.001891785241294227,
+    "gold": false
+   },
+   {
+    "id": "mq:4bdf4409455ebd12",
+    "label": "Korean War",
+    "p": 0.0016588886225907006,
+    "gold": false
+   },
+   {
+    "id": "mq:8fad9ab6c72299f3",
+    "label": "Korean War",
+    "p": 0.0016547213361081386,
+    "gold": false
+   },
+   {
+    "id": "mq:bc7681d7463ff0a6",
+    "label": "Franti\u0161ek Hoholko",
+    "p": 0.001648713026669472,
+    "gold": false
+   },
+   {
+    "id": "mq:5dce05a063b67c11",
+    "label": "Great power",
+    "p": 0.0014631356347095607,
+    "gold": false
+   },
+   {
+    "id": "mq:b0007052f5e32a47",
+    "label": "Lyall Stuart Scott",
+    "p": 0.001434805698559153,
+    "gold": false
+   },
+   {
+    "id": "mq:65d7e863a3fd8e97",
+    "label": "Korean War",
+    "p": 0.0010370706853053652,
+    "gold": false
+   },
+   {
+    "id": "mq:ece839cca540ee99",
+    "label": "Pacific War",
+    "p": 0.0010337955579095674,
+    "gold": false
+   },
+   {
+    "id": "mq:a17d5e324dfdd1b7",
+    "label": "Korean War",
+    "p": 0.000979514170483164,
+    "gold": false
+   },
+   {
+    "id": "mq:bca5bbb47e488a67",
+    "label": "Decolonization of the Americas",
+    "p": 0.0009447101422689321,
+    "gold": false
+   },
+   {
+    "id": "mq:8e66f5253559aff9",
+    "label": "Kansas State Wildcats men's basketball",
+    "p": 0.0009436202491638553,
+    "gold": false
+   },
+   {
+    "id": "mq:19b2911ae7b314de",
+    "label": "List of IIHF World Championship medalists",
+    "p": 0.0009216799825362867,
+    "gold": false
+   },
+   {
+    "id": "mq:e1ee3f7715c7101f",
+    "label": "Oscar Swahn",
+    "p": 0.0009105367417862062,
+    "gold": false
+   },
+   {
+    "id": "mq:f967bb6df4cb9e88",
+    "label": "History of the United States Army",
+    "p": 0.0009101788374509482,
+    "gold": false
+   },
+   {
+    "id": "mq:b1b6fc46a26c1924",
+    "label": "Lin Chih-chieh",
+    "p": 0.0008661494619749513,
+    "gold": false
+   },
+   {
+    "id": "mq:6ea0d1c21172b899",
+    "label": "Dmitri N. Smirnov (footballer)",
+    "p": 0.0008603007894443857,
+    "gold": false
+   },
+   {
+    "id": "mq:5ae0cdcabcb35ed5",
+    "label": "Tony Morgan",
+    "p": 0.0008222065774014481,
+    "gold": false
+   },
+   {
+    "id": "mq:440cc4f5c02415cf",
+    "label": "Mikoyan MiG-31",
+    "p": 0.0007946999805982345,
+    "gold": false
+   },
+   {
+    "id": "mq:c6deb4b49718514a",
+    "label": "Cultural Revolution",
+    "p": 0.000786264983178364,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:f01959680676c59c",
+   "label": "Boris Lagutin",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:26e6ea804052c889",
+   "label": "Imperialism",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:4c3541d91b089741",
+   "label": "Cuban War of Independence",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:4aec4bfb579ba905",
+   "label": "Imperialism",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:c790b09568607641",
+   "label": "Soviet Union in the Korean War",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:440cc4f5c02415cf",
+   "label": "Mikoyan MiG-31",
+   "wave": 1,
+   "via": "term:mig",
+   "gold": false
+  },
+  {
+   "id": "mq:5b04f7e5f79ddbdd",
+   "label": "L\u00e5nga n\u00e4tter",
+   "wave": 1,
+   "via": "term:mig",
+   "gold": false
+  },
+  {
+   "id": "mq:8dfb49c28177febf",
+   "label": "Gamal Abdel Nasser",
+   "wave": 1,
+   "via": "term:mig",
+   "gold": false
+  },
+  {
+   "id": "mq:29215ad2381e63b3",
+   "label": "Yalu River",
+   "wave": 1,
+   "via": "term:mig",
+   "gold": false
+  },
+  {
+   "id": "mq:8fad9ab6c72299f3",
+   "label": "Korean War",
+   "wave": 1,
+   "via": "term:mig",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:21ae3007acd23b1a",
+    "label": "Modern history",
+    "gold": false
+   },
+   {
+    "id": "mq:29215ad2381e63b3",
+    "label": "Yalu River",
+    "gold": false
+   },
+   {
+    "id": "mq:4bdf4409455ebd12",
+    "label": "Korean War",
+    "gold": false
+   },
+   {
+    "id": "mq:8fad9ab6c72299f3",
+    "label": "Korean War",
+    "gold": false
+   },
+   {
+    "id": "mq:bc7681d7463ff0a6",
+    "label": "Franti\u0161ek Hoholko",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:4bdf4409455ebd12",
+    "label": "Korean War",
+    "gold": false
+   },
+   {
+    "id": "mq:29215ad2381e63b3",
+    "label": "Yalu River",
+    "gold": false
+   },
+   {
+    "id": "mq:65d7e863a3fd8e97",
+    "label": "Korean War",
+    "gold": false
+   },
+   {
+    "id": "mq:5b18e2428752406d",
+    "label": "Arnold Schwarzenegger",
+    "gold": false
+   },
+   {
+    "id": "mq:946a4c19ea4cfc8a",
+    "label": "Korean War",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:4bdf4409455ebd12",
+    "label": "Korean War",
+    "gold": false
+   },
+   {
+    "id": "mq:29215ad2381e63b3",
+    "label": "Yalu River",
+    "gold": false
+   },
+   {
+    "id": "mq:65d7e863a3fd8e97",
+    "label": "Korean War",
+    "gold": false
+   },
+   {
+    "id": "mq:5b18e2428752406d",
+    "label": "Arnold Schwarzenegger",
+    "gold": false
+   },
+   {
+    "id": "mq:78e8b7439ffd080d",
+    "label": "Powers of the United States Congress",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:946a4c19ea4cfc8a",
+    "label": "Korean War",
+    "gold": false
+   },
+   {
+    "id": "mq:53378bd44d954411",
+    "label": "Shark sanctuary",
+    "gold": false
+   },
+   {
+    "id": "mq:78e8b7439ffd080d",
+    "label": "Powers of the United States Congress",
+    "gold": false
+   },
+   {
+    "id": "mq:5ba4a7e4d04a340e",
+    "label": "Liberia",
+    "gold": false
+   },
+   {
+    "id": "mq:53b5ea9fd3de93c8",
+    "label": "Myanmar",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

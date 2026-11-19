@@ -1,0 +1,436 @@
+{
+ "qid": "pr:637",
+ "set": "prs",
+ "question": "What work went into this, and why: decision-walks: edges from use -- the struggle signal, and a cheap bridge finder over the lexical index (Q4)?",
+ "gold": [
+  {
+   "id": "commit/a721ef2d80",
+   "label": "commit a721ef2: q4-bridges: cory's v3 in SQL is identical on 196 of 196 and costs 20.6 ms of SQL an edge; v4's embedding",
+   "seed": false
+  },
+  {
+   "id": "commit/b0d5b66b31",
+   "label": "commit b0d5b66: walklab Q4: cory's edges-from-use rule v3 in SQL -- identical on 196 of 196 questions, 20.6 ms of SQL pe",
+   "seed": false
+  },
+  {
+   "id": "commit/dd4d0f6d26",
+   "label": "commit dd4d0f6: decision-walks: edges from use -- the struggle signal, and a cheap bridge finder over the lexical index ",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/32f25ffa50",
+   "label": "commit 32f25ff: Merge pull request #637 from Percolation-Labs/mike/q4-edges-from-use",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/dd4d0f6d26",
+   "label": "commit dd4d0f6: decision-walks: edges from use -- the struggle signal, and a cheap bridge finder over the lexical index ",
+   "rank": 2,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "specs/decision-walks/README.md#22",
+   "label": "specs/decision-walks/README.md \u203a Edges from use: the signal and the cheap bridge finder",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "specs/decision-walks/README.md#23",
+   "label": "specs/decision-walks/README.md \u203a Edges from use: the signal and the cheap bridge finder",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "specs/decision-walks/bridges.sql#1",
+   "label": "specs/decision-walks/bridges.sql",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/a721ef2d80",
+    "label": "commit a721ef2: q4-bridges: cory's v3 in SQL is identical on 196 of 196 and costs 20.6 ms of SQL an edge; v4's embedding",
+    "role": "gold"
+   },
+   {
+    "id": "commit/b0d5b66b31",
+    "label": "commit b0d5b66: walklab Q4: cory's edges-from-use rule v3 in SQL -- identical on 196 of 196 questions, 20.6 ms of SQL pe",
+    "role": "gold"
+   },
+   {
+    "id": "commit/dd4d0f6d26",
+    "label": "commit dd4d0f6: decision-walks: edges from use -- the struggle signal, and a cheap bridge finder over the lexical index ",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/a721ef2d80",
+    "b": "commit/b0d5b66b31",
+    "via": [
+     {
+      "kind": "beside"
+     }
+    ]
+   },
+   {
+    "a": "commit/b0d5b66b31",
+    "b": "commit/dd4d0f6d26",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "edge counts",
+      "width": 10
+     },
+     {
+      "kind": "term",
+      "key": "cheap process",
+      "width": 12
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   2,
+   1
+  ],
+  "entry": {
+   "seed": "commit/dd4d0f6d26",
+   "gold": "commit/dd4d0f6d26",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 1362,
+  "within_2_doors": 32737,
+  "gold_within_1": 1,
+  "gold_within_2": 1,
+  "top_U": [
+   {
+    "id": "specs/decision-walks/bridges_test.sql#1",
+    "label": "specs/decision-walks/bridges_test.sql",
+    "p": 0.005600896339560367,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-bridges/README.md#2",
+    "label": "meta/lab/results/q4-bridges/README.md \u203a Quadrant 4: can a cheap process find the bridges cory's walks missed? (2 Nov, mi",
+    "p": 0.005563105404334534,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-bridges/README.md#1",
+    "label": "meta/lab/results/q4-bridges/README.md \u203a Quadrant 4: can a cheap process find the bridges cory's walks missed? (2 Nov, mi",
+    "p": 0.004998073813454717,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/states/mike-measure-a721ef2d8.txt#1",
+    "label": "meta/lab/results/states/mike-measure-a721ef2d8.txt",
+    "p": 0.0033710525847423975,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-bridges/measure.txt#1",
+    "label": "meta/lab/results/q4-bridges/measure.txt",
+    "p": 0.0033326140036424117,
+    "gold": false
+   },
+   {
+    "id": "specs/decision-walks/bridges_test.sql#2",
+    "label": "specs/decision-walks/bridges_test.sql",
+    "p": 0.002595967632437976,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261102-113018-8d2a.md#1",
+    "label": "board/messages/M-20261102-113018-8d2a.md",
+    "p": 0.0018893303003138292,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-use-loop/README.md#2",
+    "label": "meta/lab/results/q4-use-loop/README.md \u203a Edges from use, end to end, stage 1: flat (2 Nov, mike)",
+    "p": 0.0018842082602319522,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/q4/use_loop.py#1",
+    "label": "meta/lab/q4/use_loop.py",
+    "p": 0.001763007139116938,
+    "gold": false
+   },
+   {
+    "id": "commit/9d56e9c5f2",
+    "label": "commit 9d56e9c: board: bill messages sirsh",
+    "p": 0.001762681371254415,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/states/mike-measure-a721ef2d8.txt#2",
+    "label": "meta/lab/results/states/mike-measure-a721ef2d8.txt",
+    "p": 0.0017227350813502798,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-bridges/measure.txt#2",
+    "label": "meta/lab/results/q4-bridges/measure.txt",
+    "p": 0.0016842265927863016,
+    "gold": false
+   },
+   {
+    "id": "commit/2d89fd1c33",
+    "label": "commit 2d89fd1: Merge pull request #644 from Percolation-Labs/mike/q2-gate-census",
+    "p": 0.0016618953367482582,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-bridges/measure.sql#1",
+    "label": "meta/lab/results/q4-bridges/measure.sql",
+    "p": 0.001470866468210577,
+    "gold": false
+   },
+   {
+    "id": "specs/decision-walks/bridges.sql#2",
+    "label": "specs/decision-walks/bridges.sql",
+    "p": 0.0014136658109457506,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-bridges/README.md#3",
+    "label": "meta/lab/results/q4-bridges/README.md \u203a Quadrant 4: can a cheap process find the bridges cory's walks missed? (2 Nov, mi",
+    "p": 0.0012836049495179873,
+    "gold": false
+   },
+   {
+    "id": "specs/ai-query-layer/graph-algorithms.md#20",
+    "label": "specs/ai-query-layer/graph-algorithms.md \u203a 4.5 A fused vector-and-graph proximity index \u2014 **RESEARCH, not built**",
+    "p": 0.001210011721298704,
+    "gold": false
+   },
+   {
+    "id": "commit/b0d5b66b31",
+    "label": "commit b0d5b66: walklab Q4: cory's edges-from-use rule v3 in SQL -- identical on 196 of 196 questions, 20.6 ms of SQL pe",
+    "p": 0.0010754704413015019,
+    "gold": true
+   },
+   {
+    "id": "site/posts/build-knit-dream.md#2",
+    "label": "site/posts/build-knit-dream.md \u203a Build",
+    "p": 0.0010345201190412523,
+    "gold": false
+   },
+   {
+    "id": "commit/c4364b9e0d",
+    "label": "commit c4364b9: walklab dreaming: register create (stated relation, mike's finder), prune and hub, learned from DEV EDGE",
+    "p": 0.000960899858419322,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/32f25ffa50",
+   "label": "commit 32f25ff: Merge pull request #637 from Percolation-Labs/mike/q4-edges-from-use",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/dd4d0f6d26",
+   "label": "commit dd4d0f6: decision-walks: edges from use -- the struggle signal, and a cheap bridge finder over the lexical index ",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "specs/decision-walks/README.md#22",
+   "label": "specs/decision-walks/README.md \u203a Edges from use: the signal and the cheap bridge finder",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/decision-walks/README.md#23",
+   "label": "specs/decision-walks/README.md \u203a Edges from use: the signal and the cheap bridge finder",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/decision-walks/bridges.sql#1",
+   "label": "specs/decision-walks/bridges.sql",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/q4-bridges/README.md#3",
+   "label": "meta/lab/results/q4-bridges/README.md \u203a Quadrant 4: can a cheap process find the bridges cory's walks missed? (2 Nov, mi",
+   "wave": 1,
+   "via": "term:bridges_test",
+   "gold": false
+  },
+  {
+   "id": "specs/decision-walks/bridges_test.sql#2",
+   "label": "specs/decision-walks/bridges_test.sql",
+   "wave": 1,
+   "via": "term:bridges_test",
+   "gold": false
+  },
+  {
+   "id": "specs/decision-walks/bridges_test.sql#1",
+   "label": "specs/decision-walks/bridges_test.sql",
+   "wave": 1,
+   "via": "term:bridges_test",
+   "gold": false
+  },
+  {
+   "id": "board/messages/M-20261101-172809-d434.md#1",
+   "label": "board/messages/M-20261101-172809-d434.md",
+   "wave": 2,
+   "via": "term:relation edge",
+   "gold": false
+  },
+  {
+   "id": "commit/29ba1330ad",
+   "label": "commit 29ba133: walklab q4: relation-edge inputs (12 leads, 31 shuffled target paragraphs), fixed before the reader star",
+   "wave": 2,
+   "via": "term:relation edge",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "specs/decision-walks/bridges_test.sql#1",
+    "label": "specs/decision-walks/bridges_test.sql",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-bridges/README.md#2",
+    "label": "meta/lab/results/q4-bridges/README.md \u203a Quadrant 4: can a cheap process find the bridges cory's walks missed? (2 Nov, mi",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-bridges/README.md#1",
+    "label": "meta/lab/results/q4-bridges/README.md \u203a Quadrant 4: can a cheap process find the bridges cory's walks missed? (2 Nov, mi",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/states/mike-measure-a721ef2d8.txt#1",
+    "label": "meta/lab/results/states/mike-measure-a721ef2d8.txt",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-bridges/measure.txt#1",
+    "label": "meta/lab/results/q4-bridges/measure.txt",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "meta/lab/results/q4-bridges/README.md#2",
+    "label": "meta/lab/results/q4-bridges/README.md \u203a Quadrant 4: can a cheap process find the bridges cory's walks missed? (2 Nov, mi",
+    "gold": false
+   },
+   {
+    "id": "specs/decision-walks/bridges_test.sql#1",
+    "label": "specs/decision-walks/bridges_test.sql",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-bridges/README.md#1",
+    "label": "meta/lab/results/q4-bridges/README.md \u203a Quadrant 4: can a cheap process find the bridges cory's walks missed? (2 Nov, mi",
+    "gold": false
+   },
+   {
+    "id": "specs/decision-walks/bridges_test.sql#2",
+    "label": "specs/decision-walks/bridges_test.sql",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-use-loop/README.md#2",
+    "label": "meta/lab/results/q4-use-loop/README.md \u203a Edges from use, end to end, stage 1: flat (2 Nov, mike)",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/9d56e9c5f2",
+    "label": "commit 9d56e9c: board: bill messages sirsh",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-343.md#2",
+    "label": "board/cards/REM-343.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-bridges/README.md#2",
+    "label": "meta/lab/results/q4-bridges/README.md \u203a Quadrant 4: can a cheap process find the bridges cory's walks missed? (2 Nov, mi",
+    "gold": false
+   },
+   {
+    "id": "specs/decision-walks/README.md#21",
+    "label": "specs/decision-walks/README.md \u203a Dreaming: an optimiser over G",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261102-115506-5e7e.md#1",
+    "label": "board/messages/M-20261102-115506-5e7e.md",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "meta/lab/results/q4-bridges/README.md#2",
+    "label": "meta/lab/results/q4-bridges/README.md \u203a Quadrant 4: can a cheap process find the bridges cory's walks missed? (2 Nov, mi",
+    "gold": false
+   },
+   {
+    "id": "specs/decision-walks/bridges_test.sql#1",
+    "label": "specs/decision-walks/bridges_test.sql",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261101-115607-5fe2.md#1",
+    "label": "board/messages/M-20261101-115607-5fe2.md",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/states/README.md#6",
+    "label": "meta/lab/results/states/README.md \u203a The attribute kind, tested blind (2 Nov; REGISTRATION-attribute.md, committed before",
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-10-17-iterative-query/forage/EDGES.md#7",
+    "label": "meta/spikes/2026-10-17-iterative-query/forage/EDGES.md \u203a Result (18 Oct): weak signal; E2 fails, so step 4 does not run",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

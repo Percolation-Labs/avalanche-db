@@ -1,0 +1,505 @@
+{
+ "qid": "pr:639",
+ "set": "prs",
+ "question": "What work went into this, and why: walklab q4: miss census -- 99% of misses have the edge; half show the answer, half hide it?",
+ "gold": [
+  {
+   "id": "commit/0385662480",
+   "label": "commit 0385662: walklab q4: register the description fix for 5.20's hidden misses (centred window on the lead's term, ra",
+   "seed": false
+  },
+  {
+   "id": "commit/3d8a990a42",
+   "label": "commit 3d8a990: walklab q4: miss census -- 139 of 140 missing items in the search arm's 109 MuSiQue-200 misses are one e",
+   "seed": true
+  },
+  {
+   "id": "commit/57131f3442",
+   "label": "commit 57131f3: walklab q4: shown-or-hidden census -- of 139 misses with an existing edge, 47% had the answer on a raise",
+   "seed": true
+  },
+  {
+   "id": "commit/8ef503ce1f",
+   "label": "commit 8ef503c: walklab q4: register the shown-or-hidden census over 5.19's 139 adjacent misses (S shown, H-cut, H-behin",
+   "seed": false
+  },
+  {
+   "id": "commit/c1d0d8fb44",
+   "label": "commit c1d0d8f: walklab q4: register the miss census (bins A use-edge, B edge exists, C one end unread, D other) over th",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/f2dfd8bc1e",
+   "label": "commit f2dfd8b: Merge pull request #639 from Percolation-Labs/cory/dream-optimiser",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "commit/57131f3442",
+   "label": "commit 57131f3: walklab q4: shown-or-hidden census -- of 139 misses with an existing edge, 47% had the answer on a raise",
+   "rank": 2,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "meta/lab/results/q4-miss-census/shown-result.txt#3",
+   "label": "meta/lab/results/q4-miss-census/shown-result.txt",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/c1d0d8fb44",
+   "label": "commit c1d0d8f: walklab q4: register the miss census (bins A use-edge, B edge exists, C one end unread, D other) over th",
+   "rank": 4,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "commit/3d8a990a42",
+   "label": "commit 3d8a990: walklab q4: miss census -- 139 of 140 missing items in the search arm's 109 MuSiQue-200 misses are one e",
+   "rank": 5,
+   "gold": true,
+   "doors_to_gold": 0
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/00d335c7a2",
+    "label": "commit 00d335c: Merge remote-tracking branch 'origin/main' into cory/dream-optimiser",
+    "role": "connector"
+   },
+   {
+    "id": "commit/0385662480",
+    "label": "commit 0385662: walklab q4: register the description fix for 5.20's hidden misses (centred window on the lead's term, ra",
+    "role": "gold"
+   },
+   {
+    "id": "commit/3d8a990a42",
+    "label": "commit 3d8a990: walklab q4: miss census -- 139 of 140 missing items in the search arm's 109 MuSiQue-200 misses are one e",
+    "role": "gold"
+   },
+   {
+    "id": "commit/57131f3442",
+    "label": "commit 57131f3: walklab q4: shown-or-hidden census -- of 139 misses with an existing edge, 47% had the answer on a raise",
+    "role": "gold"
+   },
+   {
+    "id": "commit/8ef503ce1f",
+    "label": "commit 8ef503c: walklab q4: register the shown-or-hidden census over 5.19's 139 adjacent misses (S shown, H-cut, H-behin",
+    "role": "gold"
+   },
+   {
+    "id": "commit/c1d0d8fb44",
+    "label": "commit c1d0d8f: walklab q4: register the miss census (bins A use-edge, B edge exists, C one end unread, D other) over th",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/00d335c7a2",
+    "b": "commit/3d8a990a42",
+    "via": [
+     {
+      "kind": "beside"
+     }
+    ]
+   },
+   {
+    "a": "commit/00d335c7a2",
+    "b": "commit/8ef503ce1f",
+    "via": [
+     {
+      "kind": "beside"
+     }
+    ]
+   },
+   {
+    "a": "commit/0385662480",
+    "b": "commit/57131f3442",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "rare terms",
+      "width": 84
+     }
+    ]
+   },
+   {
+    "a": "commit/3d8a990a42",
+    "b": "commit/c1d0d8fb44",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "search arm",
+      "width": 19
+     },
+     {
+      "kind": "term",
+      "key": "musique 200",
+      "width": 48
+     }
+    ]
+   },
+   {
+    "a": "commit/57131f3442",
+    "b": "commit/8ef503ce1f",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "hidden census",
+      "width": 3
+     }
+    ]
+   }
+  ],
+  "cost": 5,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   2,
+   1,
+   2,
+   2,
+   2,
+   2,
+   1,
+   1,
+   2,
+   2
+  ],
+  "entry": {
+   "seed": "commit/3d8a990a42",
+   "gold": "commit/3d8a990a42",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 694,
+  "within_2_doors": 30363,
+  "gold_within_1": 2,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "commit/00d335c7a2",
+    "label": "commit 00d335c: Merge remote-tracking branch 'origin/main' into cory/dream-optimiser",
+    "p": 0.005044806277012632,
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-10-20-lme-seeded-taxonomy/in_percolate/beam_waves.py#7",
+    "label": "meta/spikes/2026-10-20-lme-seeded-taxonomy/in_percolate/beam_waves.py",
+    "p": 0.004034772684851473,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-miss-census/SHOWN-RULE.md#2",
+    "label": "meta/lab/results/q4-miss-census/SHOWN-RULE.md \u203a Miss census, one level down: is the evidence shown on the lead, or hidde",
+    "p": 0.0038116581072140483,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-miss-census/FIX-RULE.md#1",
+    "label": "meta/lab/results/q4-miss-census/FIX-RULE.md \u203a The description fix for 5.20's hidden misses: a window centred on the lead",
+    "p": 0.003796462112548586,
+    "gold": false
+   },
+   {
+    "id": "commit/e0e93c3b8f",
+    "label": "commit e0e93c3: Merge pull request #640 from Percolation-Labs/cory/dream-optimiser",
+    "p": 0.0036212445357143687,
+    "gold": false
+   },
+   {
+    "id": "commit/8ec645a613",
+    "label": "commit 8ec645a: Merge pull request #638 from Percolation-Labs/cory/dream-optimiser",
+    "p": 0.003277341728957409,
+    "gold": false
+   },
+   {
+    "id": "commit/8ef503ce1f",
+    "label": "commit 8ef503c: walklab q4: register the shown-or-hidden census over 5.19's 139 adjacent misses (S shown, H-cut, H-behin",
+    "p": 0.003236489010814843,
+    "gold": true
+   },
+   {
+    "id": "commit/03824f4665",
+    "label": "commit 03824f4: Merge pull request #641 from Percolation-Labs/cory/dream-optimiser",
+    "p": 0.0031193710223253257,
+    "gold": false
+   },
+   {
+    "id": "commit/9482d89a5d",
+    "label": "commit 9482d89: board: sirsh messages bill",
+    "p": 0.0031084843139037766,
+    "gold": false
+   },
+   {
+    "id": "commit/19b57e571b",
+    "label": "commit 19b57e5: board: bill acknowledges 1 message(s)",
+    "p": 0.003087197098109558,
+    "gold": false
+   },
+   {
+    "id": "commit/210033f833",
+    "label": "commit 210033f: Merge pull request #643 from Percolation-Labs/cory/dream-optimiser",
+    "p": 0.0030085682569889393,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-miss-census/shown-result.txt#2",
+    "label": "meta/lab/results/q4-miss-census/shown-result.txt",
+    "p": 0.0029326100024007883,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/q4/shown_census.py#1",
+    "label": "meta/lab/q4/shown_census.py",
+    "p": 0.002461498449329817,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-miss-census-floor/ORDER-RULE.md#2",
+    "label": "meta/lab/results/q4-miss-census-floor/ORDER-RULE.md \u203a Travel order inside the open set: P-first against per_target (regi",
+    "p": 0.00206989068997261,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-lead-share/RULE.md#2",
+    "label": "meta/lab/results/q4-lead-share/RULE.md \u203a A cap on the reads leads may take, on top of P-first order (registered before a",
+    "p": 0.0020461788949480966,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-miss-census/result.txt#1",
+    "label": "meta/lab/results/q4-miss-census/result.txt",
+    "p": 0.002035879685476562,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261102-120411-fe4c.md#1",
+    "label": "board/messages/M-20261102-120411-fe4c.md",
+    "p": 0.001993101648948003,
+    "gold": false
+   },
+   {
+    "id": "commit/398da7d195",
+    "label": "commit 398da7d: Merge pull request #633 from Percolation-Labs/cory/dream-optimiser",
+    "p": 0.001926078611449154,
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-10-20-lme-seeded-taxonomy/seeds/v1/INSTRUCTIONS-r2.md#2",
+    "label": "meta/spikes/2026-10-20-lme-seeded-taxonomy/seeds/v1/INSTRUCTIONS-r2.md",
+    "p": 0.0019208779382459764,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-miss-census/shown-result.txt#1",
+    "label": "meta/lab/results/q4-miss-census/shown-result.txt",
+    "p": 0.0019087024100682205,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/f2dfd8bc1e",
+   "label": "commit f2dfd8b: Merge pull request #639 from Percolation-Labs/cory/dream-optimiser",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/57131f3442",
+   "label": "commit 57131f3: walklab q4: shown-or-hidden census -- of 139 misses with an existing edge, 47% had the answer on a raise",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "meta/lab/results/q4-miss-census/shown-result.txt#3",
+   "label": "meta/lab/results/q4-miss-census/shown-result.txt",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/c1d0d8fb44",
+   "label": "commit c1d0d8f: walklab q4: register the miss census (bins A use-edge, B edge exists, C one end unread, D other) over th",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "commit/3d8a990a42",
+   "label": "commit 3d8a990: walklab q4: miss census -- 139 of 140 missing items in the search arm's 109 MuSiQue-200 misses are one e",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "meta/lab/results/q4-miss-census/shown-result.txt#2",
+   "label": "meta/lab/results/q4-miss-census/shown-result.txt",
+   "wave": 1,
+   "via": "term:census shown",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/q4-miss-census/SHOWN-RULE.md#2",
+   "label": "meta/lab/results/q4-miss-census/SHOWN-RULE.md \u203a Miss census, one level down: is the evidence shown on the lead, or hidde",
+   "wave": 1,
+   "via": "term:census shown",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/q4-miss-census/SHOWN-RULE.md#1",
+   "label": "meta/lab/results/q4-miss-census/SHOWN-RULE.md \u203a Miss census, one level down: is the evidence shown on the lead, or hidde",
+   "wave": 1,
+   "via": "term:census shown",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/q4-miss-census/shown-result.txt#1",
+   "label": "meta/lab/results/q4-miss-census/shown-result.txt",
+   "wave": 1,
+   "via": "term:census shown",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/q4/fix_build.py#1",
+   "label": "meta/lab/q4/fix_build.py",
+   "wave": 1,
+   "via": "term:census shown",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "commit/00d335c7a2",
+    "label": "commit 00d335c: Merge remote-tracking branch 'origin/main' into cory/dream-optimiser",
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-10-20-lme-seeded-taxonomy/in_percolate/beam_waves.py#7",
+    "label": "meta/spikes/2026-10-20-lme-seeded-taxonomy/in_percolate/beam_waves.py",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-miss-census/SHOWN-RULE.md#2",
+    "label": "meta/lab/results/q4-miss-census/SHOWN-RULE.md \u203a Miss census, one level down: is the evidence shown on the lead, or hidde",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-miss-census/FIX-RULE.md#1",
+    "label": "meta/lab/results/q4-miss-census/FIX-RULE.md \u203a The description fix for 5.20's hidden misses: a window centred on the lead",
+    "gold": false
+   },
+   {
+    "id": "commit/e0e93c3b8f",
+    "label": "commit e0e93c3: Merge pull request #640 from Percolation-Labs/cory/dream-optimiser",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "meta/lab/results/q4-miss-census/shown-result.txt#2",
+    "label": "meta/lab/results/q4-miss-census/shown-result.txt",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-miss-census/FIX-RULE.md#1",
+    "label": "meta/lab/results/q4-miss-census/FIX-RULE.md \u203a The description fix for 5.20's hidden misses: a window centred on the lead",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-miss-census/SHOWN-RULE.md#2",
+    "label": "meta/lab/results/q4-miss-census/SHOWN-RULE.md \u203a Miss census, one level down: is the evidence shown on the lead, or hidde",
+    "gold": false
+   },
+   {
+    "id": "commit/210033f833",
+    "label": "commit 210033f: Merge pull request #643 from Percolation-Labs/cory/dream-optimiser",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-miss-census/shown-result.txt#1",
+    "label": "meta/lab/results/q4-miss-census/shown-result.txt",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/8ef503ce1f",
+    "label": "commit 8ef503c: walklab q4: register the shown-or-hidden census over 5.19's 139 adjacent misses (S shown, H-cut, H-behin",
+    "gold": true
+   },
+   {
+    "id": "commit/40e51be3cd",
+    "label": "commit 40e51be: walklab q4: edges from use v5 (BM25 best pair) -- seen cases rise (All That Echoes 28->1, wrestling 66->",
+    "gold": false
+   },
+   {
+    "id": "commit/210033f833",
+    "label": "commit 210033f: Merge pull request #643 from Percolation-Labs/cory/dream-optimiser",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-miss-census/shown-result.txt#2",
+    "label": "meta/lab/results/q4-miss-census/shown-result.txt",
+    "gold": false
+   },
+   {
+    "id": "commit/19b57e571b",
+    "label": "commit 19b57e5: board: bill acknowledges 1 message(s)",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "meta/lab/results/q4-miss-census/fix-result.txt#1",
+    "label": "meta/lab/results/q4-miss-census/fix-result.txt",
+    "gold": false
+   },
+   {
+    "id": "commit/146c24567c",
+    "label": "commit 146c245: walklab: QASPER's misses by stage (0 of 9 have no lead), and the miss census as the gate before a remedy",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/casebook/CASEBOOK.md#5",
+    "label": "meta/lab/results/casebook/CASEBOOK.md \u203a Every miss",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-miss-census-floor/result.txt#4",
+    "label": "meta/lab/results/q4-miss-census-floor/result.txt",
+    "gold": false
+   },
+   {
+    "id": "commit/8c0eedae96",
+    "label": "commit 8c0eeda: walklab q4: the description fix -- rare terms show the hidden answer for 30% vs 8% (centred window 27%),",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.5,
+  "S": 0.0
+ }
+}

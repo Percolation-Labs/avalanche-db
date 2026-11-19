@@ -1,0 +1,417 @@
+{
+ "qid": "RW:2hop__10122_18974",
+ "set": "mq",
+ "question": "Who led the military expedition to where now Min dialects are spoken on border with Zhejiang?",
+ "gold": [
+  {
+   "id": "mq:c6f5acc47d5189c2",
+   "label": "Zhejiang",
+   "seed": true
+  },
+  {
+   "id": "mq:f8065f63c716f45d",
+   "label": "Hokkien",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:c6f5acc47d5189c2",
+   "label": "Zhejiang",
+   "rank": 1,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:e15774a90d1db176",
+   "label": "Hokkien",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:f8065f63c716f45d",
+   "label": "Hokkien",
+   "rank": 3,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:a1f571c05048d7dc",
+   "label": "Dialect",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:9f8995c212b5a488",
+   "label": "Siege of Germanicia",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:c6f5acc47d5189c2",
+    "label": "Zhejiang",
+    "role": "gold"
+   },
+   {
+    "id": "mq:f8065f63c716f45d",
+    "label": "Hokkien",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:c6f5acc47d5189c2",
+    "b": "mq:f8065f63c716f45d",
+    "via": [
+     {
+      "kind": "term",
+      "key": "fujian",
+      "width": 13
+     },
+     {
+      "kind": "term",
+      "key": "dialect",
+      "width": 60
+     },
+     {
+      "kind": "term",
+      "key": "spoken",
+      "width": 87
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "mq:c6f5acc47d5189c2",
+   "gold": "mq:c6f5acc47d5189c2",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 2091,
+  "within_2_doors": 18982,
+  "gold_within_1": 0,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "mq:9dd8c3715eea1745",
+    "label": "Siege of Jerusalem (636\u2013637)",
+    "p": 0.003931010782539058,
+    "gold": false
+   },
+   {
+    "id": "mq:9cda47df15f4cb9b",
+    "label": "Huang (surname)",
+    "p": 0.0027156576124214874,
+    "gold": false
+   },
+   {
+    "id": "mq:5aad82b73ab58df1",
+    "label": "Empress Dowager Huang",
+    "p": 0.002384929386924738,
+    "gold": false
+   },
+   {
+    "id": "mq:a1c4d6d467bb928f",
+    "label": "Madagascar",
+    "p": 0.0018108463584158027,
+    "gold": false
+   },
+   {
+    "id": "mq:f1559d716bf01f28",
+    "label": "Hokkien",
+    "p": 0.0017125700744074854,
+    "gold": false
+   },
+   {
+    "id": "mq:77ba1a180be4625e",
+    "label": "Hokkien",
+    "p": 0.001536660295175121,
+    "gold": false
+   },
+   {
+    "id": "mq:9f298ef82fc30633",
+    "label": "Tang dynasty",
+    "p": 0.0014464315698727546,
+    "gold": false
+   },
+   {
+    "id": "mq:4f354f5de325c5f3",
+    "label": "Hokkien",
+    "p": 0.0014286274547519074,
+    "gold": false
+   },
+   {
+    "id": "mq:86275187db8e6826",
+    "label": "Kinyarwanda",
+    "p": 0.0013487717761259158,
+    "gold": false
+   },
+   {
+    "id": "mq:b7b3c541baf149ec",
+    "label": "Detroit",
+    "p": 0.0012487478709435065,
+    "gold": false
+   },
+   {
+    "id": "mq:bee51355d3d9e09d",
+    "label": "Zhejiang",
+    "p": 0.0012287241745468764,
+    "gold": false
+   },
+   {
+    "id": "mq:7160abee97c5beae",
+    "label": "Quzhou Airport",
+    "p": 0.0011305321851320632,
+    "gold": false
+   },
+   {
+    "id": "mq:544285a798fe060e",
+    "label": "Canton of Z\u00fcrich",
+    "p": 0.0010736418458290927,
+    "gold": false
+   },
+   {
+    "id": "mq:353c74c02e4b64f7",
+    "label": "Jinjiang, Fujian",
+    "p": 0.0010605503673574933,
+    "gold": false
+   },
+   {
+    "id": "mq:17084325a3315710",
+    "label": "Middle Ages",
+    "p": 0.0010445308958738333,
+    "gold": false
+   },
+   {
+    "id": "mq:7ea7df8869838a6a",
+    "label": "Nanjing",
+    "p": 0.001006751006153138,
+    "gold": false
+   },
+   {
+    "id": "mq:e8198c25685903e4",
+    "label": "Taishanese people",
+    "p": 0.0010057001325512749,
+    "gold": false
+   },
+   {
+    "id": "mq:ccec58605b6148ed",
+    "label": "Catalan language",
+    "p": 0.0009909367754281854,
+    "gold": false
+   },
+   {
+    "id": "mq:a23fc8d569e7fae4",
+    "label": "AFL Grand Final",
+    "p": 0.0009779679942343799,
+    "gold": false
+   },
+   {
+    "id": "mq:6c0d53cc1969fc0e",
+    "label": "Zhejiang",
+    "p": 0.0009649929120604648,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:c6f5acc47d5189c2",
+   "label": "Zhejiang",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:e15774a90d1db176",
+   "label": "Hokkien",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:f8065f63c716f45d",
+   "label": "Hokkien",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:a1f571c05048d7dc",
+   "label": "Dialect",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:9f8995c212b5a488",
+   "label": "Siege of Germanicia",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:f1559d716bf01f28",
+   "label": "Hokkien",
+   "wave": 1,
+   "via": "term:hokkien",
+   "gold": false
+  },
+  {
+   "id": "mq:32fd65cddce374bb",
+   "label": "Hokkien",
+   "wave": 1,
+   "via": "term:hokkien",
+   "gold": false
+  },
+  {
+   "id": "mq:ee8d0db804378e8e",
+   "label": "Hokkien",
+   "wave": 1,
+   "via": "term:hokkien",
+   "gold": false
+  },
+  {
+   "id": "mq:4f354f5de325c5f3",
+   "label": "Hokkien",
+   "wave": 1,
+   "via": "term:hokkien",
+   "gold": false
+  },
+  {
+   "id": "mq:45f0000a13ff1722",
+   "label": "Hokkien",
+   "wave": 1,
+   "via": "term:hokkien",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:9dd8c3715eea1745",
+    "label": "Siege of Jerusalem (636\u2013637)",
+    "gold": false
+   },
+   {
+    "id": "mq:9cda47df15f4cb9b",
+    "label": "Huang (surname)",
+    "gold": false
+   },
+   {
+    "id": "mq:5aad82b73ab58df1",
+    "label": "Empress Dowager Huang",
+    "gold": false
+   },
+   {
+    "id": "mq:a1c4d6d467bb928f",
+    "label": "Madagascar",
+    "gold": false
+   },
+   {
+    "id": "mq:f1559d716bf01f28",
+    "label": "Hokkien",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:5aad82b73ab58df1",
+    "label": "Empress Dowager Huang",
+    "gold": false
+   },
+   {
+    "id": "mq:86275187db8e6826",
+    "label": "Kinyarwanda",
+    "gold": false
+   },
+   {
+    "id": "mq:9dd8c3715eea1745",
+    "label": "Siege of Jerusalem (636\u2013637)",
+    "gold": false
+   },
+   {
+    "id": "mq:a1c4d6d467bb928f",
+    "label": "Madagascar",
+    "gold": false
+   },
+   {
+    "id": "mq:bee51355d3d9e09d",
+    "label": "Zhejiang",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:a1c4d6d467bb928f",
+    "label": "Madagascar",
+    "gold": false
+   },
+   {
+    "id": "mq:9dd8c3715eea1745",
+    "label": "Siege of Jerusalem (636\u2013637)",
+    "gold": false
+   },
+   {
+    "id": "mq:5aad82b73ab58df1",
+    "label": "Empress Dowager Huang",
+    "gold": false
+   },
+   {
+    "id": "mq:86275187db8e6826",
+    "label": "Kinyarwanda",
+    "gold": false
+   },
+   {
+    "id": "mq:bee51355d3d9e09d",
+    "label": "Zhejiang",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:527eb298da7d2c9a",
+    "label": "Old English",
+    "gold": false
+   },
+   {
+    "id": "mq:91df68fc9707912e",
+    "label": "Dialect",
+    "gold": false
+   },
+   {
+    "id": "mq:f68eeb7dd3b2262c",
+    "label": "Somalis",
+    "gold": false
+   },
+   {
+    "id": "mq:fa41c0dbad03187b",
+    "label": "Military history of Indonesia",
+    "gold": false
+   },
+   {
+    "id": "mq:d0c4f5ad53d19119",
+    "label": "Russian language",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": null,
+  "Q": null,
+  "LQ": null,
+  "S": null
+ }
+}

@@ -1,0 +1,481 @@
+{
+ "qid": "card:REM-430",
+ "set": "cards",
+ "question": "What was done about this, and why: evidence: one document is one study, however two packages word its origin?",
+ "gold": [
+  {
+   "id": "commit/42da6e7da4",
+   "label": "commit 42da6e7: Merge pull request #230 from Percolation-Labs/amartey/rem-431-spec-canonical",
+   "seed": false
+  },
+  {
+   "id": "commit/9a15b289fb",
+   "label": "commit 9a15b28: specs: the shared-origin row describes what REM-430 shipped",
+   "seed": false
+  },
+  {
+   "id": "commit/cb3d36083e",
+   "label": "commit cb3d360: claims: an origin is an entity, and independent evidence is counted from it (REM-477)",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/9669eb54bb",
+   "label": "commit 9669eb5: board: file REM-430 evidence: one document is one study, however two packages word its origin",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-430.md#2",
+   "label": "board/cards/REM-430.md \u203a Goal",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-430.md#1",
+   "label": "board/cards/REM-430.md",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-430.md#5",
+   "label": "board/cards/REM-430.md \u203a Done when",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "specs/claims/schema.sql#33",
+   "label": "specs/claims/schema.sql",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/42da6e7da4",
+    "label": "commit 42da6e7: Merge pull request #230 from Percolation-Labs/amartey/rem-431-spec-canonical",
+    "role": "gold"
+   },
+   {
+    "id": "commit/9a15b289fb",
+    "label": "commit 9a15b28: specs: the shared-origin row describes what REM-430 shipped",
+    "role": "gold"
+   },
+   {
+    "id": "commit/cb3d36083e",
+    "label": "commit cb3d360: claims: an origin is an entity, and independent evidence is counted from it (REM-477)",
+    "role": "gold"
+   },
+   {
+    "id": "specs/claims/schema.sql#33",
+    "label": "specs/claims/schema.sql",
+    "role": "seed"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/42da6e7da4",
+    "b": "commit/9a15b289fb",
+    "via": [
+     {
+      "kind": "term",
+      "key": "origin row",
+      "width": 4
+     },
+     {
+      "kind": "term",
+      "key": "row describes",
+      "width": 4
+     },
+     {
+      "kind": "term",
+      "key": "rem 430",
+      "width": 22
+     },
+     {
+      "kind": "term",
+      "key": "shared origin",
+      "width": 29
+     }
+    ]
+   },
+   {
+    "a": "commit/42da6e7da4",
+    "b": "commit/cb3d36083e",
+    "via": [
+     {
+      "kind": "term",
+      "key": "rem 430",
+      "width": 22
+     }
+    ]
+   },
+   {
+    "a": "commit/cb3d36083e",
+    "b": "specs/claims/schema.sql#33",
+    "via": [
+     {
+      "kind": "term",
+      "key": "study two",
+      "width": 3
+     },
+     {
+      "kind": "term",
+      "key": "occurrence cites",
+      "width": 4
+     },
+     {
+      "kind": "term",
+      "key": "source naming",
+      "width": 4
+     },
+     {
+      "kind": "term",
+      "key": "origin text",
+      "width": 12
+     },
+     {
+      "kind": "term",
+      "key": "origin_links",
+      "width": 19
+     }
+    ]
+   }
+  ],
+  "cost": 3,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   1,
+   1
+  ],
+  "entry": {
+   "seed": "specs/claims/schema.sql#33",
+   "gold": "commit/cb3d36083e",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 1515,
+  "within_2_doors": 33018,
+  "gold_within_1": 3,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "specs/percolate-application/comparison-and-trust.md#18",
+    "label": "specs/percolate-application/comparison-and-trust.md \u203a Discovery, cheapest and most structured first",
+    "p": 0.013785965876043966,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-430.md#3",
+    "label": "board/cards/REM-430.md \u203a Evidence",
+    "p": 0.006321371767262365,
+    "gold": false
+   },
+   {
+    "id": "commit/9103f4f984",
+    "label": "commit 9103f4f: board: scratch-2026-09-16-29daf2-f5 takes REM-430",
+    "p": 0.0038790645633853755,
+    "gold": false
+   },
+   {
+    "id": "specs/claims/graph.md#8",
+    "label": "specs/claims/graph.md \u203a 3. The model",
+    "p": 0.0036199065518883393,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-219.md#2",
+    "label": "board/cards/REM-219.md \u203a Goal",
+    "p": 0.0034589796873929868,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-758.md#1",
+    "label": "board/cards/REM-758.md",
+    "p": 0.0030778282273542542,
+    "gold": false
+   },
+   {
+    "id": "commit/3f187fc54c",
+    "label": "commit 3f187fc: board: scratch-2026-09-16-29daf2-f5 takes REM-429",
+    "p": 0.00307410073988184,
+    "gold": false
+   },
+   {
+    "id": "commit/cb3d36083e",
+    "label": "commit cb3d360: claims: an origin is an entity, and independent evidence is counted from it (REM-477)",
+    "p": 0.00254579962664304,
+    "gold": true
+   },
+   {
+    "id": "board/cards/REM-430.md#4",
+    "label": "board/cards/REM-430.md \u203a Spec",
+    "p": 0.0021198286961287747,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261108-121532-da0e.md#1",
+    "label": "board/messages/M-20261108-121532-da0e.md",
+    "p": 0.0019533041764835937,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-476.md#5",
+    "label": "board/cards/REM-476.md \u203a Scope",
+    "p": 0.0019144028070141798,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-219.md#1",
+    "label": "board/cards/REM-219.md",
+    "p": 0.0018426104233485777,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-430.md#6",
+    "label": "board/cards/REM-430.md \u203a Scope",
+    "p": 0.0017742956890219863,
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-ui/README.md#12",
+    "label": "applications/percolate-ui/README.md \u203a API feeds, incremental progress and packages",
+    "p": 0.001471327693203026,
+    "gold": false
+   },
+   {
+    "id": "commit/9a15b289fb",
+    "label": "commit 9a15b28: specs: the shared-origin row describes what REM-430 shipped",
+    "p": 0.001341591502472107,
+    "gold": true
+   },
+   {
+    "id": "board/cards/REM-477.md#3",
+    "label": "board/cards/REM-477.md \u203a Done when",
+    "p": 0.0012180517593490556,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-477.md#2",
+    "label": "board/cards/REM-477.md \u203a Goal",
+    "p": 0.0011732959508840403,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-430.md#8",
+    "label": "board/cards/REM-430.md \u203a Log",
+    "p": 0.0011714197749708526,
+    "gold": false
+   },
+   {
+    "id": "commit/42da6e7da4",
+    "label": "commit 42da6e7: Merge pull request #230 from Percolation-Labs/amartey/rem-431-spec-canonical",
+    "p": 0.001131208151411513,
+    "gold": true
+   },
+   {
+    "id": "specs/claims/graph.md#55",
+    "label": "specs/claims/graph.md \u203a 15. Build sequence",
+    "p": 0.0011194061541221624,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/9669eb54bb",
+   "label": "commit 9669eb5: board: file REM-430 evidence: one document is one study, however two packages word its origin",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-430.md#2",
+   "label": "board/cards/REM-430.md \u203a Goal",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-430.md#1",
+   "label": "board/cards/REM-430.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-430.md#5",
+   "label": "board/cards/REM-430.md \u203a Done when",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/claims/schema.sql#33",
+   "label": "specs/claims/schema.sql",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/claims/graph.md#9",
+   "label": "specs/claims/graph.md \u203a 3. The model",
+   "wave": 1,
+   "via": "term:origin text",
+   "gold": false
+  },
+  {
+   "id": "specs/research-platform/schema.sql#7",
+   "label": "specs/research-platform/schema.sql",
+   "wave": 1,
+   "via": "term:origin text",
+   "gold": false
+  },
+  {
+   "id": "applications/percolate-self-model/schema.sql#4",
+   "label": "applications/percolate-self-model/schema.sql",
+   "wave": 1,
+   "via": "term:origin text",
+   "gold": false
+  },
+  {
+   "id": "specs/claims/graph.md#8",
+   "label": "specs/claims/graph.md \u203a 3. The model",
+   "wave": 1,
+   "via": "term:origin text",
+   "gold": false
+  },
+  {
+   "id": "packages/percolate-dev/storage.sql#5",
+   "label": "packages/percolate-dev/storage.sql",
+   "wave": 1,
+   "via": "term:origin text",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "specs/percolate-application/comparison-and-trust.md#18",
+    "label": "specs/percolate-application/comparison-and-trust.md \u203a Discovery, cheapest and most structured first",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-430.md#3",
+    "label": "board/cards/REM-430.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "commit/9103f4f984",
+    "label": "commit 9103f4f: board: scratch-2026-09-16-29daf2-f5 takes REM-430",
+    "gold": false
+   },
+   {
+    "id": "specs/claims/graph.md#8",
+    "label": "specs/claims/graph.md \u203a 3. The model",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-219.md#2",
+    "label": "board/cards/REM-219.md \u203a Goal",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "specs/percolate-application/comparison-and-trust.md#18",
+    "label": "specs/percolate-application/comparison-and-trust.md \u203a Discovery, cheapest and most structured first",
+    "gold": false
+   },
+   {
+    "id": "specs/claims/graph.md#8",
+    "label": "specs/claims/graph.md \u203a 3. The model",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-430.md#3",
+    "label": "board/cards/REM-430.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "commit/cb3d36083e",
+    "label": "commit cb3d360: claims: an origin is an entity, and independent evidence is counted from it (REM-477)",
+    "gold": true
+   },
+   {
+    "id": "board/cards/REM-219.md#2",
+    "label": "board/cards/REM-219.md \u203a Goal",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/0ae1fc8eb0",
+    "label": "commit 0ae1fc8: board: REM-430 in-progress \u2192 done",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-219.md#2",
+    "label": "board/cards/REM-219.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-213.md#1",
+    "label": "board/cards/REM-213.md",
+    "gold": false
+   },
+   {
+    "id": "commit/42da6e7da4",
+    "label": "commit 42da6e7: Merge pull request #230 from Percolation-Labs/amartey/rem-431-spec-canonical",
+    "gold": true
+   },
+   {
+    "id": "board/cards/REM-219.md#1",
+    "label": "board/cards/REM-219.md",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "specs/percolate-application/comparison-and-trust.md#18",
+    "label": "specs/percolate-application/comparison-and-trust.md \u203a Discovery, cheapest and most structured first",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-219.md#2",
+    "label": "board/cards/REM-219.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-668.md#6",
+    "label": "board/cards/REM-668.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "specs/claims/graph.md#8",
+    "label": "specs/claims/graph.md \u203a 3. The model",
+    "gold": false
+   },
+   {
+    "id": "commit/a22513533c",
+    "label": "commit a225135: claims: measure where the graph keys a document for a study (REM-668)",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.3333333333333333,
+  "LQ": 0.3333333333333333,
+  "S": 0.0
+ }
+}

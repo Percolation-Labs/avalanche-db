@@ -1,0 +1,412 @@
+{
+ "qid": "RW:2hop__96137_62765",
+ "set": "mq",
+ "question": "Who did the cast member of The Woman in the Window play in the Ten Commendments?",
+ "gold": [
+  {
+   "id": "mq:7b861332fe07d8f1",
+   "label": "The Woman in the Window",
+   "seed": true
+  },
+  {
+   "id": "mq:bf182291197ff0d5",
+   "label": "The Ten Commandments (1956 film)",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:f48f61b623d6a117",
+   "label": "Woman with a Lute",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:7b861332fe07d8f1",
+   "label": "The Woman in the Window",
+   "rank": 2,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:f69a0c97a76bf930",
+   "label": "Deepwater Horizon (film)",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:0ec66d44b6393133",
+   "label": "13 Hours: The Secret Soldiers of Benghazi",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "mq:cab4f4b39f9d32f8",
+   "label": "Cry Me a River (Justin Timberlake song)",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:7b861332fe07d8f1",
+    "label": "The Woman in the Window",
+    "role": "gold"
+   },
+   {
+    "id": "mq:bf182291197ff0d5",
+    "label": "The Ten Commandments (1956 film)",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:7b861332fe07d8f1",
+    "b": "mq:bf182291197ff0d5",
+    "via": [
+     {
+      "kind": "term",
+      "key": "robinson",
+      "width": 66
+     },
+     {
+      "kind": "term",
+      "key": "becomes",
+      "width": 84
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "mq:7b861332fe07d8f1",
+   "gold": "mq:7b861332fe07d8f1",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 3249,
+  "within_2_doors": 17830,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "mq:225d9fbf392ec57f",
+    "label": "The Allegory of Faith",
+    "p": 0.007149018120791791,
+    "gold": false
+   },
+   {
+    "id": "mq:8ee5954ff5080359",
+    "label": "Freddie Stroma",
+    "p": 0.0025959633874109837,
+    "gold": false
+   },
+   {
+    "id": "mq:94c55a271042a929",
+    "label": "List of Rebelde characters",
+    "p": 0.0018592895785454933,
+    "gold": false
+   },
+   {
+    "id": "mq:2008f948b1543bf5",
+    "label": "Classical music",
+    "p": 0.0017564185388499398,
+    "gold": false
+   },
+   {
+    "id": "mq:dc302885d00290b0",
+    "label": "Red",
+    "p": 0.001490020972922787,
+    "gold": false
+   },
+   {
+    "id": "mq:1d51119ccfd5d418",
+    "label": "Paris",
+    "p": 0.001387242055419717,
+    "gold": false
+   },
+   {
+    "id": "mq:c05b2185527a3ce7",
+    "label": "Erdmuthe Maria Theresia of Dietrichstein",
+    "p": 0.001373820812918409,
+    "gold": false
+   },
+   {
+    "id": "mq:67015914b656d1a2",
+    "label": "The Tiger of Eschnapur (1959 film)",
+    "p": 0.001274865538787215,
+    "gold": false
+   },
+   {
+    "id": "mq:08064ca329995137",
+    "label": "The Negotiation",
+    "p": 0.0012644578400674855,
+    "gold": false
+   },
+   {
+    "id": "mq:1fc87e5802458d3a",
+    "label": "Places in the Heart",
+    "p": 0.001210687855075273,
+    "gold": false
+   },
+   {
+    "id": "mq:a43f73e45b765002",
+    "label": "Tiber Oil Field",
+    "p": 0.0011857092156051991,
+    "gold": false
+   },
+   {
+    "id": "mq:c352966cc4e41a51",
+    "label": "Louise Sophie of Hanau-Lichtenberg",
+    "p": 0.0010365485334293525,
+    "gold": false
+   },
+   {
+    "id": "mq:12669461cebf463d",
+    "label": "Abraham Maslow",
+    "p": 0.000984822428546322,
+    "gold": false
+   },
+   {
+    "id": "mq:7a5f02f786d6cd03",
+    "label": "Affirmative action in the United States",
+    "p": 0.000974065179654553,
+    "gold": false
+   },
+   {
+    "id": "mq:62499337580ebe46",
+    "label": "Mary, mother of Jesus",
+    "p": 0.0009206529665717379,
+    "gold": false
+   },
+   {
+    "id": "mq:ae7ac18c293ba875",
+    "label": "The Lone Ranger (2013 film)",
+    "p": 0.0008579730957971698,
+    "gold": false
+   },
+   {
+    "id": "mq:604b3b1b80ebfea1",
+    "label": "Iron Man 3",
+    "p": 0.0008394125254944517,
+    "gold": false
+   },
+   {
+    "id": "mq:fed6e6a91efca238",
+    "label": "X Window System",
+    "p": 0.0008137364266105708,
+    "gold": false
+   },
+   {
+    "id": "mq:d0c7f9310bb55a3b",
+    "label": "Isabella of France",
+    "p": 0.0007880505407035908,
+    "gold": false
+   },
+   {
+    "id": "mq:1ef0874691aeda2f",
+    "label": "Eriq Ebouaney",
+    "p": 0.0007652580824739714,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:f48f61b623d6a117",
+   "label": "Woman with a Lute",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:7b861332fe07d8f1",
+   "label": "The Woman in the Window",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:f69a0c97a76bf930",
+   "label": "Deepwater Horizon (film)",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:0ec66d44b6393133",
+   "label": "13 Hours: The Secret Soldiers of Benghazi",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:cab4f4b39f9d32f8",
+   "label": "Cry Me a River (Justin Timberlake song)",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:5b03b43aa44fc957",
+   "label": "Father of the Bride (1950 film)",
+   "wave": 1,
+   "via": "term:joan bennett",
+   "gold": false
+  },
+  {
+   "id": "mq:a04e82bbe58af556",
+   "label": "13 Hours by Air",
+   "wave": 1,
+   "via": "term:joan bennett",
+   "gold": false
+  },
+  {
+   "id": "mq:1b957085ec20a690",
+   "label": "The House Across the Bay",
+   "wave": 1,
+   "via": "term:joan bennett",
+   "gold": false
+  },
+  {
+   "id": "mq:ae7ac18c293ba875",
+   "label": "The Lone Ranger (2013 film)",
+   "wave": 2,
+   "via": "term:badge",
+   "gold": false
+  },
+  {
+   "id": "mq:28a8e9bc19dbd816",
+   "label": "Identity (social science)",
+   "wave": 2,
+   "via": "term:badge",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:225d9fbf392ec57f",
+    "label": "The Allegory of Faith",
+    "gold": false
+   },
+   {
+    "id": "mq:8ee5954ff5080359",
+    "label": "Freddie Stroma",
+    "gold": false
+   },
+   {
+    "id": "mq:94c55a271042a929",
+    "label": "List of Rebelde characters",
+    "gold": false
+   },
+   {
+    "id": "mq:2008f948b1543bf5",
+    "label": "Classical music",
+    "gold": false
+   },
+   {
+    "id": "mq:dc302885d00290b0",
+    "label": "Red",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:e3630f93af574dc9",
+    "label": "San Andreas (film)",
+    "gold": false
+   },
+   {
+    "id": "mq:fed6e6a91efca238",
+    "label": "X Window System",
+    "gold": false
+   },
+   {
+    "id": "mq:d9339439204389e1",
+    "label": "Rain on the Window",
+    "gold": false
+   },
+   {
+    "id": "mq:6232f479eaf08969",
+    "label": "Femme nue couch\u00e9e",
+    "gold": false
+   },
+   {
+    "id": "mq:c7a8a901467698eb",
+    "label": "Ventanarosa",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:e3630f93af574dc9",
+    "label": "San Andreas (film)",
+    "gold": false
+   },
+   {
+    "id": "mq:fd409daaf2719745",
+    "label": "Girlfriends' Guide to Divorce",
+    "gold": false
+   },
+   {
+    "id": "mq:fed6e6a91efca238",
+    "label": "X Window System",
+    "gold": false
+   },
+   {
+    "id": "mq:78e5bc2c62d9cfbf",
+    "label": "Ex on the Beach (British TV series)",
+    "gold": false
+   },
+   {
+    "id": "mq:4e8bdd3b06d2ec17",
+    "label": "Ex on the Beach (British series 7)",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:7a84fb96f2b6ef56",
+    "label": "Wonder Woman (2017 film)",
+    "gold": false
+   },
+   {
+    "id": "mq:7d8c860776c0e149",
+    "label": "Christopher Masterson",
+    "gold": false
+   },
+   {
+    "id": "mq:d881708e67701d37",
+    "label": "Spectre (2015 film)",
+    "gold": false
+   },
+   {
+    "id": "mq:43c5a91dd89f7858",
+    "label": "Chapman Stick",
+    "gold": false
+   },
+   {
+    "id": "mq:09356977560d3131",
+    "label": "Saturday Night Live (season 5)",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

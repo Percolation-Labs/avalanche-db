@@ -1,0 +1,412 @@
+{
+ "qid": "RW:2hop__30905_213732",
+ "set": "mq",
+ "question": "Who is the child of the person who sponsored the resolution to reopen trade with Vietnam, along with Kerry?",
+ "gold": [
+  {
+   "id": "mq:6da42ec7172f8c06",
+   "label": "Dirty Sexy Politics",
+   "seed": false
+  },
+  {
+   "id": "mq:e458d4e7eaf69497",
+   "label": "John Kerry",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:e458d4e7eaf69497",
+   "label": "John Kerry",
+   "rank": 1,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:81fe4e7438cc2a3f",
+   "label": "John Kerry",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:3fdf0bbb78e334dc",
+   "label": "John Kerry",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:a5b8137edb5354ba",
+   "label": "John Kerry",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:b145674c9cdead5d",
+   "label": "John Kerry",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:6da42ec7172f8c06",
+    "label": "Dirty Sexy Politics",
+    "role": "gold"
+   },
+   {
+    "id": "mq:e458d4e7eaf69497",
+    "label": "John Kerry",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:6da42ec7172f8c06",
+    "b": "mq:e458d4e7eaf69497",
+    "via": [
+     {
+      "kind": "term",
+      "key": "john mccain",
+      "width": 8
+     },
+     {
+      "kind": "term",
+      "key": "mccain",
+      "width": 8
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "mq:e458d4e7eaf69497",
+   "gold": "mq:e458d4e7eaf69497",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 3881,
+  "within_2_doors": 17203,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "mq:4f292e91fb999e26",
+    "label": "John Kerry",
+    "p": 0.0018380661519352638,
+    "gold": false
+   },
+   {
+    "id": "mq:8a4fb6465c343cc3",
+    "label": "John Kerry",
+    "p": 0.0016911905208075496,
+    "gold": false
+   },
+   {
+    "id": "mq:331d97882c1f5727",
+    "label": "John Kerry",
+    "p": 0.0015996376404624933,
+    "gold": false
+   },
+   {
+    "id": "mq:ea038032431905c9",
+    "label": "John Kerry",
+    "p": 0.0010862878155702012,
+    "gold": false
+   },
+   {
+    "id": "mq:3ef9d1ae83e54d6e",
+    "label": "Missing in Action (film)",
+    "p": 0.0010773962888881907,
+    "gold": false
+   },
+   {
+    "id": "mq:50f9aa0a6c0ade8b",
+    "label": "John Kerry",
+    "p": 0.0010719457148053472,
+    "gold": false
+   },
+   {
+    "id": "mq:2f5de3db9f21a824",
+    "label": "North American Free Trade Agreement",
+    "p": 0.0009899704541718548,
+    "gold": false
+   },
+   {
+    "id": "mq:fe3ceb8c820c3faf",
+    "label": "St Senans (Kerry) GAA",
+    "p": 0.0009857767680454602,
+    "gold": false
+   },
+   {
+    "id": "mq:c55f3e4b9bf8f98a",
+    "label": "Derrynane GAA",
+    "p": 0.0009061611982227542,
+    "gold": false
+   },
+   {
+    "id": "mq:8692cc8eef31690d",
+    "label": "John Kerry",
+    "p": 0.0008939711110423666,
+    "gold": false
+   },
+   {
+    "id": "mq:e2cc1641a76ba783",
+    "label": "Nigerian Navy",
+    "p": 0.0008645972085566677,
+    "gold": false
+   },
+   {
+    "id": "mq:708b4fd726135ccc",
+    "label": "Listry GAA",
+    "p": 0.000820799242323051,
+    "gold": false
+   },
+   {
+    "id": "mq:45cc5e37da2c8e97",
+    "label": "The Fox and the Hound",
+    "p": 0.0008206261001368721,
+    "gold": false
+   },
+   {
+    "id": "mq:8e6416fdf5974734",
+    "label": "William Weer",
+    "p": 0.0008094512809057332,
+    "gold": false
+   },
+   {
+    "id": "mq:7b9a448346655265",
+    "label": "Party leaders of the United States Senate",
+    "p": 0.0007610579174610648,
+    "gold": false
+   },
+   {
+    "id": "mq:8fbc8044dc392ea3",
+    "label": "Roe v. Wade",
+    "p": 0.0006961444537262196,
+    "gold": false
+   },
+   {
+    "id": "mq:af9f1be365c1d8aa",
+    "label": "Jeffrey Peterson",
+    "p": 0.0006765198517931654,
+    "gold": false
+   },
+   {
+    "id": "mq:1ee7529a0ddd2326",
+    "label": "Warrior-class ironclad",
+    "p": 0.0006647003454362036,
+    "gold": false
+   },
+   {
+    "id": "mq:b6a2b30cfb2b5b62",
+    "label": "NAFTA's effect on United States employment",
+    "p": 0.0006340583661832572,
+    "gold": false
+   },
+   {
+    "id": "mq:6461fe3b6613f973",
+    "label": "Father (1990 film)",
+    "p": 0.0006252663426979979,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:e458d4e7eaf69497",
+   "label": "John Kerry",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:81fe4e7438cc2a3f",
+   "label": "John Kerry",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:3fdf0bbb78e334dc",
+   "label": "John Kerry",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:a5b8137edb5354ba",
+   "label": "John Kerry",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:b145674c9cdead5d",
+   "label": "John Kerry",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:c8585221bb9f0a38",
+   "label": "Alaska",
+   "wave": 1,
+   "via": "term:john mccain",
+   "gold": false
+  },
+  {
+   "id": "mq:6da42ec7172f8c06",
+   "label": "Dirty Sexy Politics",
+   "wave": 1,
+   "via": "term:john mccain",
+   "gold": true
+  },
+  {
+   "id": "mq:db982c16161f8929",
+   "label": "The Code of Conduct and the Vietnam Prisoners of War",
+   "wave": 1,
+   "via": "term:john mccain",
+   "gold": false
+  },
+  {
+   "id": "mq:b366b6cdcb1c282c",
+   "label": "2008 United States presidential election",
+   "wave": 1,
+   "via": "term:john mccain",
+   "gold": false
+  },
+  {
+   "id": "mq:67ee6972548ac64e",
+   "label": "Barack Obama",
+   "wave": 1,
+   "via": "term:john mccain",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:4f292e91fb999e26",
+    "label": "John Kerry",
+    "gold": false
+   },
+   {
+    "id": "mq:8a4fb6465c343cc3",
+    "label": "John Kerry",
+    "gold": false
+   },
+   {
+    "id": "mq:331d97882c1f5727",
+    "label": "John Kerry",
+    "gold": false
+   },
+   {
+    "id": "mq:ea038032431905c9",
+    "label": "John Kerry",
+    "gold": false
+   },
+   {
+    "id": "mq:3ef9d1ae83e54d6e",
+    "label": "Missing in Action (film)",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:fe3ceb8c820c3faf",
+    "label": "St Senans (Kerry) GAA",
+    "gold": false
+   },
+   {
+    "id": "mq:c55f3e4b9bf8f98a",
+    "label": "Derrynane GAA",
+    "gold": false
+   },
+   {
+    "id": "mq:4f292e91fb999e26",
+    "label": "John Kerry",
+    "gold": false
+   },
+   {
+    "id": "mq:708b4fd726135ccc",
+    "label": "Listry GAA",
+    "gold": false
+   },
+   {
+    "id": "mq:8a4fb6465c343cc3",
+    "label": "John Kerry",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:4f292e91fb999e26",
+    "label": "John Kerry",
+    "gold": false
+   },
+   {
+    "id": "mq:8a4fb6465c343cc3",
+    "label": "John Kerry",
+    "gold": false
+   },
+   {
+    "id": "mq:331d97882c1f5727",
+    "label": "John Kerry",
+    "gold": false
+   },
+   {
+    "id": "mq:fe3ceb8c820c3faf",
+    "label": "St Senans (Kerry) GAA",
+    "gold": false
+   },
+   {
+    "id": "mq:c55f3e4b9bf8f98a",
+    "label": "Derrynane GAA",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:477f76cad5d478e5",
+    "label": "2004 United States presidential election",
+    "gold": false
+   },
+   {
+    "id": "mq:8a4fb6465c343cc3",
+    "label": "John Kerry",
+    "gold": false
+   },
+   {
+    "id": "mq:4b5e6b1b5364c575",
+    "label": "Stack's Mountains",
+    "gold": false
+   },
+   {
+    "id": "mq:50c97ae64d3b7200",
+    "label": "Videotelephony",
+    "gold": false
+   },
+   {
+    "id": "mq:1a8613ea7ff1fbd2",
+    "label": "APEC Vietnam 2006",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

@@ -1,0 +1,415 @@
+{
+ "qid": "pr:813",
+ "set": "prs",
+ "question": "What work went into this, and why: Kappa as relations: capped opening sentences of reads lift Jev +.046 on MuSiQue, +.170 on the worlds?",
+ "gold": [
+  {
+   "id": "commit/607afeca19",
+   "label": "commit 607afec: Kappa round 3: register K6 (opening sentences of reads, door-taken first, capped to fit Jev) before scor",
+   "seed": true
+  },
+  {
+   "id": "commit/c0f0d4c76d",
+   "label": "commit c0f0d4c: Kappa round 3: opening sentences of reads, capped, lift Jev +.046 [+.014,+.080] on MuSiQue and +.170 on ",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/c0f0d4c76d",
+   "label": "commit c0f0d4c: Kappa round 3: opening sentences of reads, capped, lift Jev +.046 [+.014,+.080] on MuSiQue and +.170 on ",
+   "rank": 1,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "commit/fbe7787369",
+   "label": "commit fbe7787: Merge pull request #813 from Percolation-Labs/bill/kappa-relations",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "meta/lab/results/kappa/RESULT.md#7",
+   "label": "meta/lab/results/kappa/RESULT.md \u203a Round 3: kappa as relations works on both graphs (17 Nov, ~08:30Z)",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "meta/lab/results/kappa/REGISTERED.md#4",
+   "label": "meta/lab/results/kappa/REGISTERED.md \u203a Round 3: kappa as relations (registered 17 Nov ~08:10Z, before scoring)",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "commit/607afeca19",
+   "label": "commit 607afec: Kappa round 3: register K6 (opening sentences of reads, door-taken first, capped to fit Jev) before scor",
+   "rank": 5,
+   "gold": true,
+   "doors_to_gold": 0
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/607afeca19",
+    "label": "commit 607afec: Kappa round 3: register K6 (opening sentences of reads, door-taken first, capped to fit Jev) before scor",
+    "role": "gold"
+   },
+   {
+    "id": "commit/c0f0d4c76d",
+    "label": "commit c0f0d4c: Kappa round 3: opening sentences of reads, capped, lift Jev +.046 [+.014,+.080] on MuSiQue and +.170 on ",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/607afeca19",
+    "b": "commit/c0f0d4c76d",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "kappa round",
+      "width": 24
+     },
+     {
+      "kind": "term",
+      "key": "opening sentences",
+      "width": 36
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "commit/607afeca19",
+   "gold": "commit/607afeca19",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 456,
+  "within_2_doors": 28618,
+  "gold_within_1": 0,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "board/messages/M-20261117-001333-aa54.md#1",
+    "label": "board/messages/M-20261117-001333-aa54.md",
+    "p": 0.007746802727747393,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/reference-world/REGISTERED.md#9",
+    "label": "meta/lab/results/reference-world/REGISTERED.md \u203a Test 2: does the walk-so-far state's gain depend on bridges being named",
+    "p": 0.007363617562632898,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/worlds/mq_kappa.py#1",
+    "label": "meta/lab/worlds/mq_kappa.py",
+    "p": 0.006766664826793728,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261117-081021-f27f.md#1",
+    "label": "board/messages/M-20261117-081021-f27f.md",
+    "p": 0.004675753236166717,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261117-081428-d90e.md#1",
+    "label": "board/messages/M-20261117-081428-d90e.md",
+    "p": 0.004638755781007852,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/worlds/kappa_state.py#1",
+    "label": "meta/lab/worlds/kappa_state.py",
+    "p": 0.004559992718927629,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/worlds/beam_kappa.py#1",
+    "label": "meta/lab/worlds/beam_kappa.py",
+    "p": 0.00387363047815557,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/kappa/RESULT.md#9",
+    "label": "meta/lab/results/kappa/RESULT.md \u203a Round 4: the ordering is not the gain; the sentences are (17 Nov, ~08:50Z)",
+    "p": 0.0038273765070969304,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/kappa/RESULT.md#5",
+    "label": "meta/lab/results/kappa/RESULT.md \u203a Round 2: rarest-first names do not carry the bridge better (17 Nov, ~00:35Z)",
+    "p": 0.003550559937919199,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/kappa/REGISTERED.md#5",
+    "label": "meta/lab/results/kappa/REGISTERED.md \u203a Round 4: does door-taken-first ordering matter? (registered 17 Nov ~08:35Z, befor",
+    "p": 0.0028267889164664177,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261117-081833-3aae.md#1",
+    "label": "board/messages/M-20261117-081833-3aae.md",
+    "p": 0.002645288011586424,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/kappa/RESULT.md#6",
+    "label": "meta/lab/results/kappa/RESULT.md \u203a Round 2: rarest-first names do not carry the bridge better (17 Nov, ~00:35Z)",
+    "p": 0.002644692571966968,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261117-000359-d3a7.md#1",
+    "label": "board/messages/M-20261117-000359-d3a7.md",
+    "p": 0.002495111321706258,
+    "gold": false
+   },
+   {
+    "id": "commit/6adb5a221b",
+    "label": "commit 6adb5a2: Kappa round 4: register K7 (K6 without door-first ordering) before scoring",
+    "p": 0.0024946258268653205,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261117-080547-bcd6.md#1",
+    "label": "board/messages/M-20261117-080547-bcd6.md",
+    "p": 0.002328800795533568,
+    "gold": false
+   },
+   {
+    "id": "commit/e90ecede06",
+    "label": "commit e90eced: board: bill messages sirsh",
+    "p": 0.002252544138793654,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/kappa/REGISTERED.md#3",
+    "label": "meta/lab/results/kappa/REGISTERED.md \u203a Round 2: keep the bridging names (registered 17 Nov ~00:15Z, before scoring)",
+    "p": 0.0021923706030164136,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/kappa/RESULT.md#8",
+    "label": "meta/lab/results/kappa/RESULT.md \u203a Postmortem",
+    "p": 0.0021361954661093586,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/cornerstone/RESULT.md#12",
+    "label": "meta/lab/results/cornerstone/RESULT.md \u203a Audit: merged claims that rested on the worlds alone (17 Nov ~13:30Z)",
+    "p": 0.002002037332480077,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261116-204500-99a8.md#1",
+    "label": "board/messages/M-20261116-204500-99a8.md",
+    "p": 0.001908574016256663,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/c0f0d4c76d",
+   "label": "commit c0f0d4c: Kappa round 3: opening sentences of reads, capped, lift Jev +.046 [+.014,+.080] on MuSiQue and +.170 on ",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "commit/fbe7787369",
+   "label": "commit fbe7787: Merge pull request #813 from Percolation-Labs/bill/kappa-relations",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/kappa/RESULT.md#7",
+   "label": "meta/lab/results/kappa/RESULT.md \u203a Round 3: kappa as relations works on both graphs (17 Nov, ~08:30Z)",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/kappa/REGISTERED.md#4",
+   "label": "meta/lab/results/kappa/REGISTERED.md \u203a Round 3: kappa as relations (registered 17 Nov ~08:10Z, before scoring)",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/607afeca19",
+   "label": "commit 607afec: Kappa round 3: register K6 (opening sentences of reads, door-taken first, capped to fit Jev) before scor",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "meta/lab/results/jev-doors/RESULT.md#4",
+   "label": "meta/lab/results/jev-doors/RESULT.md \u203a Postmortem",
+   "wave": 1,
+   "via": "term:opening sentences",
+   "gold": false
+  },
+  {
+   "id": "commit/2d9f6ee303",
+   "label": "commit 2d9f6ee: Merge pull request #814 from Percolation-Labs/bill/kappa-order",
+   "wave": 1,
+   "via": "term:opening sentences",
+   "gold": false
+  },
+  {
+   "id": "commit/6b4ada8593",
+   "label": "commit 6b4ada8: Kappa: register four states (none, full found, names read, last opening sentences) before scoring",
+   "wave": 1,
+   "via": "term:opening sentences",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/jev-doors/WRITEUP.md#4",
+   "label": "meta/lab/results/jev-doors/WRITEUP.md \u203a Method",
+   "wave": 1,
+   "via": "term:opening sentences",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/kappa/RESULT.md#2",
+   "label": "meta/lab/results/kappa/RESULT.md \u203a Worlds, held-out world 3 (232 pages)",
+   "wave": 1,
+   "via": "term:opening sentences",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "board/messages/M-20261117-001333-aa54.md#1",
+    "label": "board/messages/M-20261117-001333-aa54.md",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/reference-world/REGISTERED.md#9",
+    "label": "meta/lab/results/reference-world/REGISTERED.md \u203a Test 2: does the walk-so-far state's gain depend on bridges being named",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/worlds/mq_kappa.py#1",
+    "label": "meta/lab/worlds/mq_kappa.py",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261117-081021-f27f.md#1",
+    "label": "board/messages/M-20261117-081021-f27f.md",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261117-081428-d90e.md#1",
+    "label": "board/messages/M-20261117-081428-d90e.md",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "board/messages/M-20261117-001333-aa54.md#1",
+    "label": "board/messages/M-20261117-001333-aa54.md",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/worlds/mq_kappa.py#1",
+    "label": "meta/lab/worlds/mq_kappa.py",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/reference-world/REGISTERED.md#9",
+    "label": "meta/lab/results/reference-world/REGISTERED.md \u203a Test 2: does the walk-so-far state's gain depend on bridges being named",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261117-081021-f27f.md#1",
+    "label": "board/messages/M-20261117-081021-f27f.md",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/worlds/kappa_state.py#1",
+    "label": "meta/lab/worlds/kappa_state.py",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "board/messages/M-20261117-001333-aa54.md#1",
+    "label": "board/messages/M-20261117-001333-aa54.md",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/kappa/REGISTERED.md#5",
+    "label": "meta/lab/results/kappa/REGISTERED.md \u203a Round 4: does door-taken-first ordering matter? (registered 17 Nov ~08:35Z, befor",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261117-081428-d90e.md#1",
+    "label": "board/messages/M-20261117-081428-d90e.md",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/reference-world/REGISTERED.md#9",
+    "label": "meta/lab/results/reference-world/REGISTERED.md \u203a Test 2: does the walk-so-far state's gain depend on bridges being named",
+    "gold": false
+   },
+   {
+    "id": "commit/6adb5a221b",
+    "label": "commit 6adb5a2: Kappa round 4: register K7 (K6 without door-first ordering) before scoring",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "board/messages/M-20261117-001333-aa54.md#1",
+    "label": "board/messages/M-20261117-001333-aa54.md",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/kappa/RESULT.md#6",
+    "label": "meta/lab/results/kappa/RESULT.md \u203a Round 2: rarest-first names do not carry the bridge better (17 Nov, ~00:35Z)",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261117-081021-f27f.md#1",
+    "label": "board/messages/M-20261117-081021-f27f.md",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/worlds/beam_kappa.py#1",
+    "label": "meta/lab/worlds/beam_kappa.py",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/kappa/RESULT.md#9",
+    "label": "meta/lab/results/kappa/RESULT.md \u203a Round 4: the ordering is not the gain; the sentences are (17 Nov, ~08:50Z)",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": null,
+  "Q": null,
+  "LQ": null,
+  "S": null
+ }
+}

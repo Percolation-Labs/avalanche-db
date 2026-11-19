@@ -1,0 +1,433 @@
+{
+ "qid": "card:REM-584",
+ "set": "cards",
+ "question": "What was done about this, and why: claims: current and historical readings apply one assertion-state rule?",
+ "gold": [
+  {
+   "id": "commit/13e9d5ac26",
+   "label": "commit 13e9d5a: claims: scoped readings, durable receipts and current aggregate state (REM-584, REM-590, REM-603)",
+   "seed": false
+  },
+  {
+   "id": "commit/2e06e3f838",
+   "label": "commit 2e06e3f: Merge tested core claim readings and execution receipts (REM-584, REM-590, REM-603)",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/17a4e4278f",
+   "label": "commit 17a4e42: board: file REM-584 claims: current and historical readings apply one assertion-state rule",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-584.md#1",
+   "label": "board/cards/REM-584.md",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "specs/research-platform/core-claims-contract.md#4",
+   "label": "specs/research-platform/core-claims-contract.md \u203a C1. Consistent current, pinned and historical readings",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "specs/research-platform/core-claims-contract.md#5",
+   "label": "specs/research-platform/core-claims-contract.md \u203a C1. Consistent current, pinned and historical readings",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "specs/research-platform/core-claims-contract.md#3",
+   "label": "specs/research-platform/core-claims-contract.md \u203a C1. Consistent current, pinned and historical readings",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/13e9d5ac26",
+    "label": "commit 13e9d5a: claims: scoped readings, durable receipts and current aggregate state (REM-584, REM-590, REM-603)",
+    "role": "gold"
+   },
+   {
+    "id": "commit/17a4e4278f",
+    "label": "commit 17a4e42: board: file REM-584 claims: current and historical readings apply one assertion-state rule",
+    "role": "seed"
+   },
+   {
+    "id": "commit/2e06e3f838",
+    "label": "commit 2e06e3f: Merge tested core claim readings and execution receipts (REM-584, REM-590, REM-603)",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/13e9d5ac26",
+    "b": "commit/17a4e4278f",
+    "via": [
+     {
+      "kind": "term",
+      "key": "rem 584",
+      "width": 33
+     }
+    ]
+   },
+   {
+    "a": "commit/13e9d5ac26",
+    "b": "commit/2e06e3f838",
+    "via": [
+     {
+      "kind": "term",
+      "key": "rem 603",
+      "width": 22
+     },
+     {
+      "kind": "term",
+      "key": "rem 590",
+      "width": 26
+     },
+     {
+      "kind": "term",
+      "key": "rem 584",
+      "width": 33
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "commit/17a4e4278f",
+   "gold": "commit/13e9d5ac26",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 2260,
+  "within_2_doors": 33963,
+  "gold_within_1": 2,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "specs/claims/graph.md#41",
+    "label": "specs/claims/graph.md \u203a 10. Reading the graph",
+    "p": 0.00466587176198704,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-584.md#8",
+    "label": "board/cards/REM-584.md \u203a Log",
+    "p": 0.003935610849522233,
+    "gold": false
+   },
+   {
+    "id": "output/trust-claims-tutorial-2026-09-19/build.py#9",
+    "label": "output/trust-claims-tutorial-2026-09-19/build.py",
+    "p": 0.0034011671514394405,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-584.md#2",
+    "label": "board/cards/REM-584.md \u203a Goal",
+    "p": 0.0032070502993009147,
+    "gold": false
+   },
+   {
+    "id": "output/trust-claims-tutorial-2026-09-19/build.py#15",
+    "label": "output/trust-claims-tutorial-2026-09-19/build.py",
+    "p": 0.0028147978943776487,
+    "gold": false
+   },
+   {
+    "id": "commit/980dd63872",
+    "label": "commit 980dd63: board: file REM-585 claims: graph reads bound their work and report incomplete answers",
+    "p": 0.002489658826647616,
+    "gold": false
+   },
+   {
+    "id": "commit/523bef3c9f",
+    "label": "commit 523bef3: Specify core claims contracts and bounded research programme",
+    "p": 0.0023845593256275077,
+    "gold": false
+   },
+   {
+    "id": "output/trust-claims-tutorial-2026-09-19/build.py#11",
+    "label": "output/trust-claims-tutorial-2026-09-19/build.py",
+    "p": 0.002332896077678421,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-19-claim-pages-outgrew-the-core-fixture.md#2",
+    "label": "meta/postmortems/2026-09-19-claim-pages-outgrew-the-core-fixture.md \u203a Claim pages outgrew the core fixture",
+    "p": 0.0023028710331205546,
+    "gold": false
+   },
+   {
+    "id": "output/trust-claims-tutorial-2026-09-19/lab.sql#7",
+    "label": "output/trust-claims-tutorial-2026-09-19/lab.sql",
+    "p": 0.0022944423074663725,
+    "gold": false
+   },
+   {
+    "id": "meta/probes/2026-09-19-core-claims-surface.md#4",
+    "label": "meta/probes/2026-09-19-core-claims-surface.md \u203a Reproduction and verification",
+    "p": 0.0022748906208315033,
+    "gold": false
+   },
+   {
+    "id": "specs/tables/schema.md#13",
+    "label": "specs/tables/schema.md \u203a 6. Hub decisions and core authority/signals",
+    "p": 0.0019372022484270373,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-603.md#2",
+    "label": "board/cards/REM-603.md \u203a Goal",
+    "p": 0.0019030516767223457,
+    "gold": false
+   },
+   {
+    "id": "specs/workflow-engine/pools.md#17",
+    "label": "specs/workflow-engine/pools.md \u203a 4.2 The loop",
+    "p": 0.0018818021106613472,
+    "gold": false
+   },
+   {
+    "id": "output/trust-claims-tutorial-2026-09-19/build.py#5",
+    "label": "output/trust-claims-tutorial-2026-09-19/build.py",
+    "p": 0.001872354321738967,
+    "gold": false
+   },
+   {
+    "id": "meta/probes/2026-09-19-core-claims-surface.md#2",
+    "label": "meta/probes/2026-09-19-core-claims-surface.md \u203a Findings and changes",
+    "p": 0.0018691682878099265,
+    "gold": false
+   },
+   {
+    "id": "commit/665d453f40",
+    "label": "commit 665d453: walklab MuSiQue: register the found test -- re-ask 5 bridges and 2 controls with the earlier hop's read ",
+    "p": 0.0018448492534308193,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-603.md#7",
+    "label": "board/cards/REM-603.md \u203a Log",
+    "p": 0.0016979041279114487,
+    "gold": false
+   },
+   {
+    "id": "specs/claims/graph.md#42",
+    "label": "specs/claims/graph.md \u203a 10. Reading the graph",
+    "p": 0.0013978349055825258,
+    "gold": false
+   },
+   {
+    "id": "specs/research-platform/core-trust-delivery.md#1",
+    "label": "specs/research-platform/core-trust-delivery.md \u203a Core trust delivery map",
+    "p": 0.0013457567247175816,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/17a4e4278f",
+   "label": "commit 17a4e42: board: file REM-584 claims: current and historical readings apply one assertion-state rule",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-584.md#1",
+   "label": "board/cards/REM-584.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/research-platform/core-claims-contract.md#4",
+   "label": "specs/research-platform/core-claims-contract.md \u203a C1. Consistent current, pinned and historical readings",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/research-platform/core-claims-contract.md#5",
+   "label": "specs/research-platform/core-claims-contract.md \u203a C1. Consistent current, pinned and historical readings",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/research-platform/core-claims-contract.md#3",
+   "label": "specs/research-platform/core-claims-contract.md \u203a C1. Consistent current, pinned and historical readings",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-584.md#7",
+   "label": "board/cards/REM-584.md \u203a Links",
+   "wave": 1,
+   "via": "term:rem 584",
+   "gold": false
+  },
+  {
+   "id": "commit/9b01e43d95",
+   "label": "commit 9b01e43: board: REM-584 in-progress \u2192 done",
+   "wave": 1,
+   "via": "term:rem 584",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-584.md#2",
+   "label": "board/cards/REM-584.md \u203a Goal",
+   "wave": 1,
+   "via": "term:rem 584",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-584.md#4",
+   "label": "board/cards/REM-584.md \u203a Done when",
+   "wave": 1,
+   "via": "term:rem 584",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-584.md#5",
+   "label": "board/cards/REM-584.md \u203a Estimate \u2014 5 points",
+   "wave": 1,
+   "via": "term:rem 584",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "specs/claims/graph.md#41",
+    "label": "specs/claims/graph.md \u203a 10. Reading the graph",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-584.md#8",
+    "label": "board/cards/REM-584.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "output/trust-claims-tutorial-2026-09-19/build.py#9",
+    "label": "output/trust-claims-tutorial-2026-09-19/build.py",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-584.md#2",
+    "label": "board/cards/REM-584.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "output/trust-claims-tutorial-2026-09-19/build.py#15",
+    "label": "output/trust-claims-tutorial-2026-09-19/build.py",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "specs/claims/graph.md#41",
+    "label": "specs/claims/graph.md \u203a 10. Reading the graph",
+    "gold": false
+   },
+   {
+    "id": "output/trust-claims-tutorial-2026-09-19/build.py#9",
+    "label": "output/trust-claims-tutorial-2026-09-19/build.py",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-584.md#8",
+    "label": "board/cards/REM-584.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "meta/probes/2026-09-19-core-claims-surface.md#2",
+    "label": "meta/probes/2026-09-19-core-claims-surface.md \u203a Findings and changes",
+    "gold": false
+   },
+   {
+    "id": "output/trust-claims-tutorial-2026-09-19/build.py#15",
+    "label": "output/trust-claims-tutorial-2026-09-19/build.py",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "board/cards/REM-611.md#3",
+    "label": "board/cards/REM-611.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "commit/13e9d5ac26",
+    "label": "commit 13e9d5a: claims: scoped readings, durable receipts and current aggregate state (REM-584, REM-590, REM-603)",
+    "gold": true
+   },
+   {
+    "id": "board/cards/REM-584.md#2",
+    "label": "board/cards/REM-584.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "commit/9b01e43d95",
+    "label": "commit 9b01e43: board: REM-584 in-progress \u2192 done",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-584.md#4",
+    "label": "board/cards/REM-584.md \u203a Done when",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "commit/13e9d5ac26",
+    "label": "commit 13e9d5a: claims: scoped readings, durable receipts and current aggregate state (REM-584, REM-590, REM-603)",
+    "gold": true
+   },
+   {
+    "id": "specs/claims/graph.md#41",
+    "label": "specs/claims/graph.md \u203a 10. Reading the graph",
+    "gold": false
+   },
+   {
+    "id": "output/trust-claims-tutorial-2026-09-19/build.py#9",
+    "label": "output/trust-claims-tutorial-2026-09-19/build.py",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-584.md#8",
+    "label": "board/cards/REM-584.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-611.md#3",
+    "label": "board/cards/REM-611.md \u203a Evidence",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.5,
+  "S": 0.5
+ }
+}

@@ -1,0 +1,505 @@
+{
+ "qid": "pr:653",
+ "set": "prs",
+ "question": "What work went into this, and why: walklab q4: judged miss split under the new walk rule (top 3 + .5 floor, cap 10)?",
+ "gold": [
+  {
+   "id": "commit/281cb1c7f6",
+   "label": "commit 281cb1c: walklab q4: floor census amended to 20 walks before the second 10 run (seeded draw floor-census-2)",
+   "seed": false
+  },
+  {
+   "id": "commit/374451d44b",
+   "label": "commit 374451d: walklab q4: judged miss split under the new walk rule (top 3 + .5 floor, cap 10) on 10 fresh walks -- ju",
+   "seed": true
+  },
+  {
+   "id": "commit/39aad0df70",
+   "label": "commit 39aad0d: walklab: BEAM 1M triangulation prep notes, parked on Sirsh's 14:05Z steer (fixture conformant, settings ",
+   "seed": false
+  },
+  {
+   "id": "commit/430cdc3082",
+   "label": "commit 430cdc3: walklab q4: floor-census walk records gzipped (13.6 MB -> about 4 MB)",
+   "seed": false
+  },
+  {
+   "id": "commit/fb7d79ca3b",
+   "label": "commit fb7d79c: walklab q3: Settings.floor (top-k plus every lead at P >= floor); register the judged miss split under t",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/374451d44b",
+   "label": "commit 374451d: walklab q4: judged miss split under the new walk rule (top 3 + .5 floor, cap 10) on 10 fresh walks -- ju",
+   "rank": 1,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "commit/fb7d79ca3b",
+   "label": "commit fb7d79c: walklab q3: Settings.floor (top-k plus every lead at P >= floor); register the judged miss split under t",
+   "rank": 2,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "commit/4c7ae2aa15",
+   "label": "commit 4c7ae2a: Merge pull request #653 from Percolation-Labs/cory/q3-topk",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "meta/lab/results/q4-miss-census-topk/FLOOR-RULE.md#1",
+   "label": "meta/lab/results/q4-miss-census-topk/FLOOR-RULE.md \u203a The miss split on judged walks under the new walk rule: top 3 plus ",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "meta/lab/results/q4-miss-census-topk/FLOOR-RULE.md#3",
+   "label": "meta/lab/results/q4-miss-census-topk/FLOOR-RULE.md \u203a The miss split on judged walks under the new walk rule: top 3 plus ",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/281cb1c7f6",
+    "label": "commit 281cb1c: walklab q4: floor census amended to 20 walks before the second 10 run (seeded draw floor-census-2)",
+    "role": "gold"
+   },
+   {
+    "id": "commit/374451d44b",
+    "label": "commit 374451d: walklab q4: judged miss split under the new walk rule (top 3 + .5 floor, cap 10) on 10 fresh walks -- ju",
+    "role": "gold"
+   },
+   {
+    "id": "commit/39aad0df70",
+    "label": "commit 39aad0d: walklab: BEAM 1M triangulation prep notes, parked on Sirsh's 14:05Z steer (fixture conformant, settings ",
+    "role": "gold"
+   },
+   {
+    "id": "commit/430cdc3082",
+    "label": "commit 430cdc3: walklab q4: floor-census walk records gzipped (13.6 MB -> about 4 MB)",
+    "role": "gold"
+   },
+   {
+    "id": "commit/8dc6bb0dd6",
+    "label": "commit 8dc6bb0: Merge remote-tracking branch 'origin/main' into cory/q3-topk",
+    "role": "connector"
+   },
+   {
+    "id": "commit/fb7d79ca3b",
+    "label": "commit fb7d79c: walklab q3: Settings.floor (top-k plus every lead at P >= floor); register the judged miss split under t",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/281cb1c7f6",
+    "b": "commit/430cdc3082",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "floor census",
+      "width": 5
+     }
+    ]
+   },
+   {
+    "a": "commit/374451d44b",
+    "b": "commit/430cdc3082",
+    "via": [
+     {
+      "kind": "beside"
+     }
+    ]
+   },
+   {
+    "a": "commit/374451d44b",
+    "b": "commit/fb7d79ca3b",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "judged miss",
+      "width": 23
+     },
+     {
+      "kind": "term",
+      "key": "miss split",
+      "width": 34
+     },
+     {
+      "kind": "term",
+      "key": "walk rule",
+      "width": 42
+     }
+    ]
+   },
+   {
+    "a": "commit/39aad0df70",
+    "b": "commit/8dc6bb0dd6",
+    "via": [
+     {
+      "kind": "beside"
+     }
+    ]
+   },
+   {
+    "a": "commit/8dc6bb0dd6",
+    "b": "commit/fb7d79ca3b",
+    "via": [
+     {
+      "kind": "beside"
+     }
+    ]
+   }
+  ],
+  "cost": 5,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   2,
+   2,
+   1,
+   2,
+   2,
+   1,
+   1,
+   2,
+   2,
+   2
+  ],
+  "entry": {
+   "seed": "commit/374451d44b",
+   "gold": "commit/374451d44b",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 1122,
+  "within_2_doors": 31465,
+  "gold_within_1": 2,
+  "gold_within_2": 1,
+  "top_U": [
+   {
+    "id": "meta/lab/results/q4-miss-census-topk/FLOOR-RULE.md#2",
+    "label": "meta/lab/results/q4-miss-census-topk/FLOOR-RULE.md \u203a The miss split on judged walks under the new walk rule: top 3 plus ",
+    "p": 0.006750767656892562,
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-self-model/dreaming/reduce/challenge/challenge.py#8",
+    "label": "applications/percolate-self-model/dreaming/reduce/challenge/challenge.py",
+    "p": 0.003503435306481347,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-miss-census-beam/result.txt#1",
+    "label": "meta/lab/results/q4-miss-census-beam/result.txt",
+    "p": 0.003194513289966548,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-miss-census-floor/result.txt#1",
+    "label": "meta/lab/results/q4-miss-census-floor/result.txt",
+    "p": 0.002961289965862411,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-miss-census-beam/RULE.md#1",
+    "label": "meta/lab/results/q4-miss-census-beam/RULE.md \u203a The judged miss split on the third corpus, BEAM 1M (registered before any",
+    "p": 0.0029179011536606303,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-miss-census-repo/result.txt#1",
+    "label": "meta/lab/results/q4-miss-census-repo/result.txt",
+    "p": 0.0028904971125378446,
+    "gold": false
+   },
+   {
+    "id": "commit/8cfa23a1bc",
+    "label": "commit 8cfa23a: board: bill messages sirsh",
+    "p": 0.002659989118281541,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261102-143421-ab12.md#1",
+    "label": "board/messages/M-20261102-143421-ab12.md",
+    "p": 0.0026268570702644932,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-miss-census-repo/RULE.md#1",
+    "label": "meta/lab/results/q4-miss-census-repo/RULE.md \u203a The judged miss split on the second corpus, this repository's history (re",
+    "p": 0.0025190283155497204,
+    "gold": false
+   },
+   {
+    "id": "commit/50d0070f2a",
+    "label": "commit 50d0070: board: sirsh messages bill",
+    "p": 0.0024919198214782717,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-miss-census-repo/RULE.md#2",
+    "label": "meta/lab/results/q4-miss-census-repo/RULE.md \u203a The judged miss split on the second corpus, this repository's history (re",
+    "p": 0.0023607678570908637,
+    "gold": false
+   },
+   {
+    "id": "commit/194c09a0e3",
+    "label": "commit 194c09a: walklab q4: judged miss split at 20 walks -- judge completes 9; 17 misses all adjacent, none opened (J 0",
+    "p": 0.002085942846545734,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-miss-census-floor/result.txt#3",
+    "label": "meta/lab/results/q4-miss-census-floor/result.txt",
+    "p": 0.0020205099369918662,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-miss-census-beam/RULE.md#2",
+    "label": "meta/lab/results/q4-miss-census-beam/RULE.md \u203a The judged miss split on the third corpus, BEAM 1M (registered before any",
+    "p": 0.001978758794929358,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-miss-census-qasper/RULE.md#1",
+    "label": "meta/lab/results/q4-miss-census-qasper/RULE.md \u203a The judged miss split on the fourth corpus, QASPER (registered before a",
+    "p": 0.0019270470116648233,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-miss-census-beam/RULE.md#3",
+    "label": "meta/lab/results/q4-miss-census-beam/RULE.md \u203a The judged miss split on the third corpus, BEAM 1M (registered before any",
+    "p": 0.001722549058552228,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/walklab/engine.py#2",
+    "label": "meta/lab/walklab/engine.py",
+    "p": 0.0017124581349695774,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-miss-census-qasper/RULE.md#2",
+    "label": "meta/lab/results/q4-miss-census-qasper/RULE.md \u203a The judged miss split on the fourth corpus, QASPER (registered before a",
+    "p": 0.001693166049615142,
+    "gold": false
+   },
+   {
+    "id": "commit/d2ac37c619",
+    "label": "commit d2ac37c: walklab q4: register the judged miss split on the repo corpus (8 judge-free misses, same rule and bins, ",
+    "p": 0.0016908126395988288,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-miss-census/JUDGED-RULE.md#2",
+    "label": "meta/lab/results/q4-miss-census/JUDGED-RULE.md \u203a The miss census on judged walks (registered before any judged walk is r",
+    "p": 0.001677238592850608,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/374451d44b",
+   "label": "commit 374451d: walklab q4: judged miss split under the new walk rule (top 3 + .5 floor, cap 10) on 10 fresh walks -- ju",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "commit/fb7d79ca3b",
+   "label": "commit fb7d79c: walklab q3: Settings.floor (top-k plus every lead at P >= floor); register the judged miss split under t",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "commit/4c7ae2aa15",
+   "label": "commit 4c7ae2a: Merge pull request #653 from Percolation-Labs/cory/q3-topk",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/q4-miss-census-topk/FLOOR-RULE.md#1",
+   "label": "meta/lab/results/q4-miss-census-topk/FLOOR-RULE.md \u203a The miss split on judged walks under the new walk rule: top 3 plus ",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/q4-miss-census-topk/FLOOR-RULE.md#3",
+   "label": "meta/lab/results/q4-miss-census-topk/FLOOR-RULE.md \u203a The miss split on judged walks under the new walk rule: top 3 plus ",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/q4-miss-census-topk/FLOOR-RULE.md#2",
+   "label": "meta/lab/results/q4-miss-census-topk/FLOOR-RULE.md \u203a The miss split on judged walks under the new walk rule: top 3 plus ",
+   "wave": 1,
+   "via": "term:census topk",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/q4-miss-census-topk/CAP-RULE.md#2",
+   "label": "meta/lab/results/q4-miss-census-topk/CAP-RULE.md \u203a Top-3 with a cap on a travelled lead's reads (registered before any c",
+   "wave": 1,
+   "via": "term:census topk",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/q4-miss-census-topk/cap-result.txt#3",
+   "label": "meta/lab/results/q4-miss-census-topk/cap-result.txt",
+   "wave": 1,
+   "via": "term:census topk",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/q4-miss-census-topk/result.txt#3",
+   "label": "meta/lab/results/q4-miss-census-topk/result.txt",
+   "wave": 1,
+   "via": "term:census topk",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/q4-miss-census-topk-RULE.md#2",
+   "label": "meta/lab/results/q4-miss-census-topk-RULE.md \u203a Judged walks with \"travel the round's top 3\" in place of the .5 gate (reg",
+   "wave": 1,
+   "via": "term:census topk",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "meta/lab/results/q4-miss-census-topk/FLOOR-RULE.md#2",
+    "label": "meta/lab/results/q4-miss-census-topk/FLOOR-RULE.md \u203a The miss split on judged walks under the new walk rule: top 3 plus ",
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-self-model/dreaming/reduce/challenge/challenge.py#8",
+    "label": "applications/percolate-self-model/dreaming/reduce/challenge/challenge.py",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-miss-census-beam/result.txt#1",
+    "label": "meta/lab/results/q4-miss-census-beam/result.txt",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-miss-census-floor/result.txt#1",
+    "label": "meta/lab/results/q4-miss-census-floor/result.txt",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-miss-census-beam/RULE.md#1",
+    "label": "meta/lab/results/q4-miss-census-beam/RULE.md \u203a The judged miss split on the third corpus, BEAM 1M (registered before any",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "meta/lab/results/q4-miss-census-topk/FLOOR-RULE.md#2",
+    "label": "meta/lab/results/q4-miss-census-topk/FLOOR-RULE.md \u203a The miss split on judged walks under the new walk rule: top 3 plus ",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-miss-census-beam/RULE.md#1",
+    "label": "meta/lab/results/q4-miss-census-beam/RULE.md \u203a The judged miss split on the third corpus, BEAM 1M (registered before any",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-miss-census-floor/result.txt#1",
+    "label": "meta/lab/results/q4-miss-census-floor/result.txt",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-miss-census-beam/result.txt#1",
+    "label": "meta/lab/results/q4-miss-census-beam/result.txt",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-miss-census-repo/RULE.md#1",
+    "label": "meta/lab/results/q4-miss-census-repo/RULE.md \u203a The judged miss split on the second corpus, this repository's history (re",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/430cdc3082",
+    "label": "commit 430cdc3: walklab q4: floor-census walk records gzipped (13.6 MB -> about 4 MB)",
+    "gold": true
+   },
+   {
+    "id": "applications/percolate-self-model/dreaming/reduce/challenge/challenge.py#8",
+    "label": "applications/percolate-self-model/dreaming/reduce/challenge/challenge.py",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-miss-census-topk/FLOOR-RULE.md#2",
+    "label": "meta/lab/results/q4-miss-census-topk/FLOOR-RULE.md \u203a The miss split on judged walks under the new walk rule: top 3 plus ",
+    "gold": false
+   },
+   {
+    "id": "commit/50d0070f2a",
+    "label": "commit 50d0070: board: sirsh messages bill",
+    "gold": false
+   },
+   {
+    "id": "commit/8cfa23a1bc",
+    "label": "commit 8cfa23a: board: bill messages sirsh",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "meta/lab/results/q4-miss-census-floor/result.txt#1",
+    "label": "meta/lab/results/q4-miss-census-floor/result.txt",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-miss-census-beam/result.txt#1",
+    "label": "meta/lab/results/q4-miss-census-beam/result.txt",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-miss-census-topk/FLOOR-RULE.md#2",
+    "label": "meta/lab/results/q4-miss-census-topk/FLOOR-RULE.md \u203a The miss split on judged walks under the new walk rule: top 3 plus ",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-miss-census-beam/RULE.md#1",
+    "label": "meta/lab/results/q4-miss-census-beam/RULE.md \u203a The judged miss split on the third corpus, BEAM 1M (registered before any",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-miss-census-repo/RULE.md#1",
+    "label": "meta/lab/results/q4-miss-census-repo/RULE.md \u203a The judged miss split on the second corpus, this repository's history (re",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.3333333333333333,
+  "S": 0.0
+ }
+}

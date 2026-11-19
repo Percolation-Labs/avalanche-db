@@ -1,0 +1,400 @@
+{
+ "qid": "card:REM-149",
+ "set": "cards",
+ "question": "What was done about this, and why: docs: two published cookbook and recipe examples stopped running, and nobody could see it behind the sample failure?",
+ "gold": [
+  {
+   "id": "commit/7f7cf94f21",
+   "label": "commit 7f7cf94: The harness class had four instances and all four were the tour (#159)",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "board/cards/REM-149.md#1",
+   "label": "board/cards/REM-149.md",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "research-notes/h-to-g/jev-review-2026-09-26.md#5",
+   "label": "research-notes/h-to-g/jev-review-2026-09-26.md \u203a The closest existing example",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "meta/postmortems/2026-09-04-docs-examples-nobody-ran.md#7",
+   "label": "meta/postmortems/2026-09-04-docs-examples-nobody-ran.md \u203a The sequel, 0.1.4: the same harness said no rows about rows",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "meta/postmortems/2026-09-04-docs-examples-nobody-ran.md#5",
+   "label": "meta/postmortems/2026-09-04-docs-examples-nobody-ran.md \u203a Two more, both the same shape, both caught by someone else run",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "meta/postmortems/2026-09-04-docs-examples-nobody-ran.md#1",
+   "label": "meta/postmortems/2026-09-04-docs-examples-nobody-ran.md \u203a The documentation's examples ran nowhere, and the harness that",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 2
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "board/cards/REM-149.md#1",
+    "label": "board/cards/REM-149.md",
+    "role": "seed"
+   },
+   {
+    "id": "commit/7f7cf94f21",
+    "label": "commit 7f7cf94: The harness class had four instances and all four were the tour (#159)",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "board/cards/REM-149.md#1",
+    "b": "commit/7f7cf94f21",
+    "via": [
+     {
+      "kind": "term",
+      "key": "rem 149",
+      "width": 6
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [],
+  "entry": {
+   "seed": "board/cards/REM-149.md#1",
+   "gold": "commit/7f7cf94f21",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 2286,
+  "within_2_doors": 33619,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "board/cards/REM-149.md#2",
+    "label": "board/cards/REM-149.md \u203a Goal",
+    "p": 0.004650411274839002,
+    "gold": false
+   },
+   {
+    "id": "dev/ledger-gates.py#2",
+    "label": "dev/ledger-gates.py",
+    "p": 0.0036012936543475915,
+    "gold": false
+   },
+   {
+    "id": "commit/666c45b707",
+    "label": "commit 666c45b: Merge pull request #101 from Percolation-Labs/docs/two-notes-i-owe",
+    "p": 0.003431640791179516,
+    "gold": false
+   },
+   {
+    "id": "research-notes/essay-graph/corpus/chesnevar-et-al-2006-argument-interchange-format/notes.md#5",
+    "label": "research-notes/essay-graph/corpus/chesnevar-et-al-2006-argument-interchange-format/notes.md \u203a For an essay graph",
+    "p": 0.0029595150270022583,
+    "gold": false
+   },
+   {
+    "id": "commit/7802d430bf",
+    "label": "commit 7802d43: Postmortem: the docs examples ran nowhere, and the gate that fixed it first lied",
+    "p": 0.002932858017051196,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-04-docs-examples-nobody-ran.md#6",
+    "label": "meta/postmortems/2026-09-04-docs-examples-nobody-ran.md \u203a What would have prevented each",
+    "p": 0.0028713709961832212,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-04-resource-scoping.md#9",
+    "label": "meta/postmortems/2026-09-04-resource-scoping.md \u203a 6. Test fixtures that asserted tenancy without a tenant",
+    "p": 0.0026512976389783003,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-04-docs-examples-nobody-ran.md#9",
+    "label": "meta/postmortems/2026-09-04-docs-examples-nobody-ran.md \u203a The sequel, 0.1.4: the same harness said no rows about rows",
+    "p": 0.0025670968661252887,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-04-docs-examples-nobody-ran.md#8",
+    "label": "meta/postmortems/2026-09-04-docs-examples-nobody-ran.md \u203a The sequel, 0.1.4: the same harness said no rows about rows",
+    "p": 0.0025344575883000137,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-04-docs-examples-nobody-ran.md#4",
+    "label": "meta/postmortems/2026-09-04-docs-examples-nobody-ran.md \u203a Two more, both the same shape, both caught by someone else run",
+    "p": 0.0023129413639745825,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-04-docs-examples-nobody-ran.md#2",
+    "label": "meta/postmortems/2026-09-04-docs-examples-nobody-ran.md \u203a The expensive part: a check that could not distinguish pass fr",
+    "p": 0.0015845903671890503,
+    "gold": false
+   },
+   {
+    "id": "commit/fe409f341a",
+    "label": "commit fe409f3: The superuser install step was written out ten times, and a fix to one kept missing the rest",
+    "p": 0.0015398761462110091,
+    "gold": false
+   },
+   {
+    "id": "board/team/codex-onboarding.md#2",
+    "label": "board/team/codex-onboarding.md \u203a Log",
+    "p": 0.001535640813952924,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-149.md#3",
+    "label": "board/cards/REM-149.md \u203a Evidence",
+    "p": 0.0015151108361761989,
+    "gold": false
+   },
+   {
+    "id": "commit/7f7cf94f21",
+    "label": "commit 7f7cf94: The harness class had four instances and all four were the tour (#159)",
+    "p": 0.0013418834100035772,
+    "gold": true
+   },
+   {
+    "id": "meta/postmortems/README.md#9",
+    "label": "meta/postmortems/README.md \u203a Verified in a world where the defect could not appear",
+    "p": 0.0013412020739663566,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-12-true-when-it-was-measured.md#18",
+    "label": "meta/postmortems/2026-09-12-true-when-it-was-measured.md \u203a 6. Trend or one-off, against the ledger",
+    "p": 0.0013160614405832677,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/README.md#52",
+    "label": "meta/postmortems/README.md \u203a A harness whose own breakage is shaped like its subject's",
+    "p": 0.001136810507233512,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-149.md#4",
+    "label": "board/cards/REM-149.md \u203a Log",
+    "p": 0.0009981885015178363,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-04-docs-examples-nobody-ran.md#3",
+    "label": "meta/postmortems/2026-09-04-docs-examples-nobody-ran.md \u203a The expensive part: a check that could not distinguish pass fr",
+    "p": 0.0009836382242662703,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "board/cards/REM-149.md#1",
+   "label": "board/cards/REM-149.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "research-notes/h-to-g/jev-review-2026-09-26.md#5",
+   "label": "research-notes/h-to-g/jev-review-2026-09-26.md \u203a The closest existing example",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/postmortems/2026-09-04-docs-examples-nobody-ran.md#7",
+   "label": "meta/postmortems/2026-09-04-docs-examples-nobody-ran.md \u203a The sequel, 0.1.4: the same harness said no rows about rows",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/postmortems/2026-09-04-docs-examples-nobody-ran.md#5",
+   "label": "meta/postmortems/2026-09-04-docs-examples-nobody-ran.md \u203a Two more, both the same shape, both caught by someone else run",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/postmortems/2026-09-04-docs-examples-nobody-ran.md#1",
+   "label": "meta/postmortems/2026-09-04-docs-examples-nobody-ran.md \u203a The documentation's examples ran nowhere, and the harness that",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/7f7cf94f21",
+   "label": "commit 7f7cf94: The harness class had four instances and all four were the tour (#159)",
+   "wave": 1,
+   "via": "term:rem 149",
+   "gold": true
+  },
+  {
+   "id": "board/cards/REM-149.md#3",
+   "label": "board/cards/REM-149.md \u203a Evidence",
+   "wave": 1,
+   "via": "term:rem 149",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-149.md#2",
+   "label": "board/cards/REM-149.md \u203a Goal",
+   "wave": 1,
+   "via": "term:rem 149",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-149.md#4",
+   "label": "board/cards/REM-149.md \u203a Log",
+   "wave": 1,
+   "via": "term:rem 149",
+   "gold": false
+  },
+  {
+   "id": "meta/postmortems/README.md#52",
+   "label": "meta/postmortems/README.md \u203a A harness whose own breakage is shaped like its subject's",
+   "wave": 1,
+   "via": "term:rem 149",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "board/cards/REM-149.md#2",
+    "label": "board/cards/REM-149.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "dev/ledger-gates.py#2",
+    "label": "dev/ledger-gates.py",
+    "gold": false
+   },
+   {
+    "id": "commit/666c45b707",
+    "label": "commit 666c45b: Merge pull request #101 from Percolation-Labs/docs/two-notes-i-owe",
+    "gold": false
+   },
+   {
+    "id": "research-notes/essay-graph/corpus/chesnevar-et-al-2006-argument-interchange-format/notes.md#5",
+    "label": "research-notes/essay-graph/corpus/chesnevar-et-al-2006-argument-interchange-format/notes.md \u203a For an essay graph",
+    "gold": false
+   },
+   {
+    "id": "commit/7802d430bf",
+    "label": "commit 7802d43: Postmortem: the docs examples ran nowhere, and the gate that fixed it first lied",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "commit/7802d430bf",
+    "label": "commit 7802d43: Postmortem: the docs examples ran nowhere, and the gate that fixed it first lied",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-149.md#2",
+    "label": "board/cards/REM-149.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-04-docs-examples-nobody-ran.md#8",
+    "label": "meta/postmortems/2026-09-04-docs-examples-nobody-ran.md \u203a The sequel, 0.1.4: the same harness said no rows about rows",
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-04-docs-examples-nobody-ran.md#9",
+    "label": "meta/postmortems/2026-09-04-docs-examples-nobody-ran.md \u203a The sequel, 0.1.4: the same harness said no rows about rows",
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-04-docs-examples-nobody-ran.md#6",
+    "label": "meta/postmortems/2026-09-04-docs-examples-nobody-ran.md \u203a What would have prevented each",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "meta/postmortems/2026-09-04-docs-examples-nobody-ran.md#9",
+    "label": "meta/postmortems/2026-09-04-docs-examples-nobody-ran.md \u203a The sequel, 0.1.4: the same harness said no rows about rows",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1014.md#3",
+    "label": "board/cards/REM-1014.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-149.md#2",
+    "label": "board/cards/REM-149.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-149.md#4",
+    "label": "board/cards/REM-149.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-04-docs-examples-nobody-ran.md#3",
+    "label": "meta/postmortems/2026-09-04-docs-examples-nobody-ran.md \u203a The expensive part: a check that could not distinguish pass fr",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "board/cards/REM-1203.md#4",
+    "label": "board/cards/REM-1203.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "commit/7e3cc3409f",
+    "label": "commit 7e3cc34: The tenancy example showed both tenants the same row, and passed",
+    "gold": false
+   },
+   {
+    "id": "dev/ci-database.sh#4",
+    "label": "dev/ci-database.sh",
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-self-model/dreaming/equivalence/LAYA.md#5",
+    "label": "applications/percolate-self-model/dreaming/equivalence/LAYA.md \u203a The holdout is clean for this judge, and that is the on",
+    "gold": false
+   },
+   {
+    "id": "specs/world-model-ingestion/schema.sql#24",
+    "label": "specs/world-model-ingestion/schema.sql",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

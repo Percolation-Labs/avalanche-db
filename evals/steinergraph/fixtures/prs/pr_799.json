@@ -1,0 +1,410 @@
+{
+ "qid": "pr:799",
+ "set": "prs",
+ "question": "What work went into this, and why: Operator (c) round 4: even the exact relation filter (upper bound) adds nothing for Jev; it helps only word overlap?",
+ "gold": [
+  {
+   "id": "commit/0b884d25a9",
+   "label": "commit 0b884d2: Operator (c) round 4: the worlds' exact relation filter (upper bound) helps overlap (+.015-.023) and the",
+   "seed": true
+  },
+  {
+   "id": "commit/9afafd49af",
+   "label": "commit 9afafd4: Operator (c) round 4: register the worlds' relation attribute (an upper bound) before scoring; slice kee",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/0b884d25a9",
+   "label": "commit 0b884d2: Operator (c) round 4: the worlds' exact relation filter (upper bound) helps overlap (+.015-.023) and the",
+   "rank": 1,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "commit/d5cd38fb51",
+   "label": "commit d5cd38f: Merge pull request #799 from Percolation-Labs/bill/worlds-relation-attr",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "meta/lab/results/filter-then-rank/RESULT.md#8",
+   "label": "meta/lab/results/filter-then-rank/RESULT.md \u203a Round 4: the worlds' relation attribute, at its upper bound, adds nothing ",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "meta/lab/results/filter-then-rank/REGISTERED.md#5",
+   "label": "meta/lab/results/filter-then-rank/REGISTERED.md \u203a Round 4: the worlds' relation attribute, an upper bound (registered 17",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "meta/lab/results/filter-then-rank/REGISTERED.md#6",
+   "label": "meta/lab/results/filter-then-rank/REGISTERED.md \u203a Round 4: the worlds' relation attribute, an upper bound (registered 17",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/0b884d25a9",
+    "label": "commit 0b884d2: Operator (c) round 4: the worlds' exact relation filter (upper bound) helps overlap (+.015-.023) and the",
+    "role": "gold"
+   },
+   {
+    "id": "commit/9afafd49af",
+    "label": "commit 9afafd4: Operator (c) round 4: register the worlds' relation attribute (an upper bound) before scoring; slice kee",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/0b884d25a9",
+    "b": "commit/9afafd49af",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "upper bound",
+      "width": 54
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "commit/0b884d25a9",
+   "gold": "commit/0b884d25a9",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 1351,
+  "within_2_doors": 31770,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "board/messages/M-20261116-235231-bb07.md#1",
+    "label": "board/messages/M-20261116-235231-bb07.md",
+    "p": 0.008230525417908894,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/filter-then-rank/RESULT.md#5",
+    "label": "meta/lab/results/filter-then-rank/RESULT.md \u203a Round 2: typing the door's own edge is selective, and it hurts Jev (16 Nov",
+    "p": 0.004208712339968289,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261117-000508-cc1b.md#1",
+    "label": "board/messages/M-20261117-000508-cc1b.md",
+    "p": 0.004135160772318347,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/filter-then-rank/RESULT.md#9",
+    "label": "meta/lab/results/filter-then-rank/RESULT.md \u203a Operator (c), what four rounds show",
+    "p": 0.003927170614293204,
+    "gold": false
+   },
+   {
+    "id": "commit/9afafd49af",
+    "label": "commit 9afafd4: Operator (c) round 4: register the worlds' relation attribute (an upper bound) before scoring; slice kee",
+    "p": 0.0036213140716533647,
+    "gold": true
+   },
+   {
+    "id": "board/messages/M-20261116-230712-731c.md#1",
+    "label": "board/messages/M-20261116-230712-731c.md",
+    "p": 0.003264122946158605,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/filter-then-rank/RESULT.md#6",
+    "label": "meta/lab/results/filter-then-rank/RESULT.md \u203a Round 3: filtering on the type carries information, and still hurts Jev (1",
+    "p": 0.0029605554803146823,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/filter-then-rank/RESULT.md#2",
+    "label": "meta/lab/results/filter-then-rank/RESULT.md \u203a Round 1: \"any target mentions the type\" filters nothing (16 Nov, ~22:40Z)",
+    "p": 0.0029279142168991247,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/filter-then-rank/REGISTERED.md#4",
+    "label": "meta/lab/results/filter-then-rank/REGISTERED.md \u203a Round 3: filter on the type, not the label (registered 16 Nov ~23:05Z,",
+    "p": 0.0026693872507714137,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/filter-then-rank/REGISTERED.md#3",
+    "label": "meta/lab/results/filter-then-rank/REGISTERED.md \u203a Round 2 (registered 16 Nov ~22:45Z, before scoring)",
+    "p": 0.002511713387041765,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/filter-then-rank/REGISTERED.md#2",
+    "label": "meta/lab/results/filter-then-rank/REGISTERED.md \u203a Filter-then-rank on a data-derived attribute (operator c), against pla",
+    "p": 0.0024044940953975875,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261116-223009-ddd6.md#1",
+    "label": "board/messages/M-20261116-223009-ddd6.md",
+    "p": 0.0023499090987734064,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/filter-then-rank/RESULT.md#4",
+    "label": "meta/lab/results/filter-then-rank/RESULT.md \u203a Round 2: typing the door's own edge is selective, and it hurts Jev (16 Nov",
+    "p": 0.0022663344542079088,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/worlds/wr_filter.py#1",
+    "label": "meta/lab/worlds/wr_filter.py",
+    "p": 0.002155909634471485,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/filter-then-rank/round4.txt#1",
+    "label": "meta/lab/results/filter-then-rank/round4.txt",
+    "p": 0.0020240440616995023,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/worlds/wr_filter.py#2",
+    "label": "meta/lab/worlds/wr_filter.py",
+    "p": 0.002019303335813528,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/filter-then-rank/RESULT.md#7",
+    "label": "meta/lab/results/filter-then-rank/RESULT.md \u203a What operator (c) has shown, across three rounds",
+    "p": 0.0019624928814986216,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/worlds/ftr_labels.py#3",
+    "label": "meta/lab/worlds/ftr_labels.py",
+    "p": 0.0017672140830106082,
+    "gold": false
+   },
+   {
+    "id": "commit/6d2548973e",
+    "label": "commit 6d25489: board: james messages sirsh",
+    "p": 0.0016936505805753208,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-switch-cost/result.txt#1",
+    "label": "meta/lab/results/q4-switch-cost/result.txt",
+    "p": 0.0016225778516761066,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/0b884d25a9",
+   "label": "commit 0b884d2: Operator (c) round 4: the worlds' exact relation filter (upper bound) helps overlap (+.015-.023) and the",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "commit/d5cd38fb51",
+   "label": "commit d5cd38f: Merge pull request #799 from Percolation-Labs/bill/worlds-relation-attr",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/filter-then-rank/RESULT.md#8",
+   "label": "meta/lab/results/filter-then-rank/RESULT.md \u203a Round 4: the worlds' relation attribute, at its upper bound, adds nothing ",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/filter-then-rank/REGISTERED.md#5",
+   "label": "meta/lab/results/filter-then-rank/REGISTERED.md \u203a Round 4: the worlds' relation attribute, an upper bound (registered 17",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/filter-then-rank/REGISTERED.md#6",
+   "label": "meta/lab/results/filter-then-rank/REGISTERED.md \u203a Round 4: the worlds' relation attribute, an upper bound (registered 17",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/messages/M-20261116-235231-bb07.md#1",
+   "label": "board/messages/M-20261116-235231-bb07.md",
+   "wave": 1,
+   "via": "term:related entities",
+   "gold": false
+  },
+  {
+   "id": "board/messages/M-20261117-000508-cc1b.md#1",
+   "label": "board/messages/M-20261117-000508-cc1b.md",
+   "wave": 2,
+   "via": "term:worlds relation",
+   "gold": false
+  },
+  {
+   "id": "commit/9afafd49af",
+   "label": "commit 9afafd4: Operator (c) round 4: register the worlds' relation attribute (an upper bound) before scoring; slice kee",
+   "wave": 2,
+   "via": "term:worlds relation",
+   "gold": true
+  },
+  {
+   "id": "meta/lab/results/filter-then-rank/RESULT.md#7",
+   "label": "meta/lab/results/filter-then-rank/RESULT.md \u203a What operator (c) has shown, across three rounds",
+   "wave": 2,
+   "via": "term:worlds relation",
+   "gold": false
+  },
+  {
+   "id": "board/messages/M-20261116-230712-731c.md#1",
+   "label": "board/messages/M-20261116-230712-731c.md",
+   "wave": 2,
+   "via": "term:worlds relation",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "board/messages/M-20261116-235231-bb07.md#1",
+    "label": "board/messages/M-20261116-235231-bb07.md",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/filter-then-rank/RESULT.md#5",
+    "label": "meta/lab/results/filter-then-rank/RESULT.md \u203a Round 2: typing the door's own edge is selective, and it hurts Jev (16 Nov",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261117-000508-cc1b.md#1",
+    "label": "board/messages/M-20261117-000508-cc1b.md",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/filter-then-rank/RESULT.md#9",
+    "label": "meta/lab/results/filter-then-rank/RESULT.md \u203a Operator (c), what four rounds show",
+    "gold": false
+   },
+   {
+    "id": "commit/9afafd49af",
+    "label": "commit 9afafd4: Operator (c) round 4: register the worlds' relation attribute (an upper bound) before scoring; slice kee",
+    "gold": true
+   }
+  ],
+  "Q": [
+   {
+    "id": "board/messages/M-20261116-235231-bb07.md#1",
+    "label": "board/messages/M-20261116-235231-bb07.md",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/filter-then-rank/RESULT.md#9",
+    "label": "meta/lab/results/filter-then-rank/RESULT.md \u203a Operator (c), what four rounds show",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/filter-then-rank/RESULT.md#5",
+    "label": "meta/lab/results/filter-then-rank/RESULT.md \u203a Round 2: typing the door's own edge is selective, and it hurts Jev (16 Nov",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261116-230712-731c.md#1",
+    "label": "board/messages/M-20261116-230712-731c.md",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/filter-then-rank/RESULT.md#6",
+    "label": "meta/lab/results/filter-then-rank/RESULT.md \u203a Round 3: filtering on the type carries information, and still hurts Jev (1",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/9afafd49af",
+    "label": "commit 9afafd4: Operator (c) round 4: register the worlds' relation attribute (an upper bound) before scoring; slice kee",
+    "gold": true
+   },
+   {
+    "id": "meta/lab/results/filter-then-rank/RESULT.md#9",
+    "label": "meta/lab/results/filter-then-rank/RESULT.md \u203a Operator (c), what four rounds show",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261116-235231-bb07.md#1",
+    "label": "board/messages/M-20261116-235231-bb07.md",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-bm5/RESULT.md#8",
+    "label": "meta/lab/results/jev-bm5/RESULT.md \u203a Postmortem",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261117-000508-cc1b.md#1",
+    "label": "board/messages/M-20261117-000508-cc1b.md",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "board/messages/M-20261116-235231-bb07.md#1",
+    "label": "board/messages/M-20261116-235231-bb07.md",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/filter-then-rank/RESULT.md#9",
+    "label": "meta/lab/results/filter-then-rank/RESULT.md \u203a Operator (c), what four rounds show",
+    "gold": false
+   },
+   {
+    "id": "commit/9afafd49af",
+    "label": "commit 9afafd4: Operator (c) round 4: register the worlds' relation attribute (an upper bound) before scoring; slice kee",
+    "gold": true
+   },
+   {
+    "id": "meta/lab/results/typed-edges/DESIGN.md#6",
+    "label": "meta/lab/results/typed-edges/DESIGN.md \u203a What this means for (c)",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/filter-then-rank/RESULT.md#7",
+    "label": "meta/lab/results/filter-then-rank/RESULT.md \u203a What operator (c) has shown, across three rounds",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 1.0,
+  "Q": 0.0,
+  "LQ": 1.0,
+  "S": 1.0
+ }
+}

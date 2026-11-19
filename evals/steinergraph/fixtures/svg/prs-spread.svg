@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 396" font-family="system-ui, sans-serif" font-size="12">
+<style>.t{fill:#1d1d1f}.m{fill:#6e6e73}.e{stroke:#0a7d5a;stroke-width:2;fill:none}.k{fill:#0a7d5a;font-size:10px}</style>
+<rect width="1180" height="396" fill="#fff"/>
+<text x="20" y="28" font-size="15" font-weight="600" class="t">PR titles · spread: pr:746</text>
+<text x="20" y="50" class="m">What work went into this, and why: Postmortem: why the walk beat search in October and not this week?</text>
+<text x="40" y="78" font-weight="600" class="m">search’s seeds</text><text x="430" y="78" font-weight="600" class="m">connectors and walk reads</text><text x="820" y="78" font-weight="600" class="m">gold</text>
+<path class="e" d="M190,96 C505.0,96 505.0,188 820,188"/>
+<rect x="462.0" y="127.0" width="30.8" height="15" rx="3" fill="#fff" opacity=".9"/>
+<text class="k" x="465.0" y="138.0">Near</text>
+<path class="e" d="M970,96 C970.0,96 970.0,188 970,188"/>
+<rect x="927.0" y="127.0" width="43.2" height="15" rx="3" fill="#fff" opacity=".9"/>
+<text class="k" x="930.0" y="138.0">Beside</text>
+<path class="e" d="M970,96 C970.0,96 970.0,280 970,280"/>
+<rect x="927.0" y="173.0" width="43.2" height="15" rx="3" fill="#fff" opacity=".9"/>
+<text class="k" x="930.0" y="184.0">Beside</text>
+<path class="e" d="M970,142 C970.0,142 970.0,188 970,188"/>
+<rect x="927.0" y="150.0" width="43.2" height="15" rx="3" fill="#fff" opacity=".9"/>
+<text class="k" x="930.0" y="161.0">Beside</text>
+<path class="e" d="M970,234 C970.0,234 970.0,280 970,280"/>
+<rect x="927.0" y="242.0" width="43.2" height="15" rx="3" fill="#fff" opacity=".9"/>
+<text class="k" x="930.0" y="253.0">Beside</text>
+<rect x="40" y="81" width="340" height="28" rx="6" fill="#dbe9ff" stroke="#0a7d5a" stroke-width="2"/>
+<text x="48" y="100" class="t">board/messages/M-20261115-090446-da2d.md</text>
+<rect x="820" y="81" width="340" height="28" rx="6" fill="#f5c400" stroke="#0a7d5a" stroke-width="2"/>
+<text x="828" y="100" class="t">commit 1d7f3d0: Postmortem: the edge select…</text>
+<rect x="820" y="127" width="340" height="28" rx="6" fill="#f5c400" stroke="#0a7d5a" stroke-width="2"/>
+<text x="828" y="146" class="t">commit 9805f3d: Postmortem: james&#x27;s spot-ch…</text>
+<rect x="820" y="173" width="340" height="28" rx="6" fill="#f5c400" stroke="#0a7d5a" stroke-width="2"/>
+<text x="828" y="192" class="t">commit d4d55bb: Postmortem: third gain roun…</text>
+<rect x="820" y="219" width="340" height="28" rx="6" fill="#f5c400" stroke="#0a7d5a" stroke-width="2"/>
+<text x="828" y="238" class="t">commit edd39ff: Postmortem: the published M…</text>
+<text x="1158" y="238" text-anchor="end" class="m" font-size="10">LQ top 5</text>
+<rect x="820" y="265" width="340" height="28" rx="6" fill="#f5c400" stroke="#0a7d5a" stroke-width="2"/>
+<text x="828" y="284" class="t">commit f9055e0: Postmortem: drop the regene…</text>
+<rect x="40" y="127" width="340" height="28" rx="6" fill="#dbe9ff" stroke="#c7c7cc" stroke-width="1"/>
+<text x="48" y="146" class="t">commit f69e9d3: Merge pull request #746 fro…</text>
+<rect x="40" y="173" width="340" height="28" rx="6" fill="#dbe9ff" stroke="#c7c7cc" stroke-width="1"/>
+<text x="48" y="192" class="t">meta/lab/results/walk-vs-search/POSTMORTEM.…</text>
+<rect x="40" y="219" width="340" height="28" rx="6" fill="#dbe9ff" stroke="#c7c7cc" stroke-width="1"/>
+<text x="48" y="238" class="t">meta/lab/results/walk-vs-search/POSTMORTEM.…</text>
+<rect x="40" y="265" width="340" height="28" rx="6" fill="#dbe9ff" stroke="#c7c7cc" stroke-width="1"/>
+<text x="48" y="284" class="t">meta/spikes/2026-10-17-iterative-query/resu…</text>
+<rect x="430" y="81" width="340" height="28" rx="6" fill="#f2f2f4" stroke="#c7c7cc" stroke-width="1"/>
+<text x="438" y="100" class="t">board/messages/M-20261115-090808-4ec7.md</text>
+<text x="768" y="100" text-anchor="end" class="m" font-size="10">walk w1</text>
+<rect x="430" y="173" width="340" height="28" rx="6" fill="#f2f2f4" stroke="#c7c7cc" stroke-width="1"/>
+<text x="438" y="192" class="t">meta/lab/results/walk-vs-search/POSTMORTEM.…</text>
+<text x="768" y="192" text-anchor="end" class="m" font-size="10">walk w1</text>
+<rect x="430" y="219" width="340" height="28" rx="6" fill="#f2f2f4" stroke="#c7c7cc" stroke-width="1"/>
+<text x="438" y="238" class="t">meta/lab/results/walk-vs-search/POSTMORTEM.…</text>
+<text x="768" y="238" text-anchor="end" class="m" font-size="10">walk w1</text>
+<rect x="430" y="127" width="340" height="28" rx="6" fill="#f2f2f4" stroke="#c7c7cc" stroke-width="1"/>
+<text x="438" y="146" class="t">commit 639fbaf: Merge james/midb-musique-ju…</text>
+<text x="768" y="146" text-anchor="end" class="m" font-size="10">walk w1</text>
+<rect x="430" y="265" width="340" height="28" rx="6" fill="#f2f2f4" stroke="#c7c7cc" stroke-width="1"/>
+<text x="438" y="284" class="t">meta/lab/results/walk-vs-search/POSTMORTEM.…</text>
+<text x="768" y="284" text-anchor="end" class="m" font-size="10">walk w1</text>
+<text x="20" y="362" class="m">Steiner cost 5 links; nearest seed 1 doors from gold; graph within 1 door of the seeds: 1,562 passages, within 2: 32,344</text>
+<text x="20" y="382" class="m">recall@5 beyond the seeds: search 0.00, U 0.00, Q 0.00, LQ 0.20. Yellow gold, blue seeds, green-edged nodes and links form the Steiner graph.</text>
+</svg>

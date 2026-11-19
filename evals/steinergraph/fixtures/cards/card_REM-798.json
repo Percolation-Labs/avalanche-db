@@ -1,0 +1,431 @@
+{
+ "qid": "card:REM-798",
+ "set": "cards",
+ "question": "What was done about this, and why: critics hold together and combine: scoped tensions only inside a critic, belief conflicts chosen by the writer?",
+ "gold": [
+  {
+   "id": "commit/4d1fed221f",
+   "label": "commit 4d1fed2: lens library page: the critic-combination section (REM-798) (#427)",
+   "seed": false
+  },
+  {
+   "id": "commit/b8faa7972a",
+   "label": "commit b8faa79: Lens library research, convergence stopping rule, and critic coherence audit (REM-797, REM-798) (#426)",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/396cf3bc63",
+   "label": "commit 396cf3b: board: file REM-798 critics hold together and combine: scoped tensions only inside a critic, belief conf",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-798.md#1",
+   "label": "board/cards/REM-798.md",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-798.md#2",
+   "label": "board/cards/REM-798.md \u203a Goal",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "specs/percolate-application/drafter.md#51",
+   "label": "specs/percolate-application/drafter.md \u203a A critic holds together, and critics combine (REM-798)",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-798.md#6",
+   "label": "board/cards/REM-798.md \u203a Log",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/396cf3bc63",
+    "label": "commit 396cf3b: board: file REM-798 critics hold together and combine: scoped tensions only inside a critic, belief conf",
+    "role": "seed"
+   },
+   {
+    "id": "commit/4d1fed221f",
+    "label": "commit 4d1fed2: lens library page: the critic-combination section (REM-798) (#427)",
+    "role": "gold"
+   },
+   {
+    "id": "commit/b8faa7972a",
+    "label": "commit b8faa79: Lens library research, convergence stopping rule, and critic coherence audit (REM-797, REM-798) (#426)",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/396cf3bc63",
+    "b": "commit/b8faa7972a",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "rem 798",
+      "width": 22
+     },
+     {
+      "kind": "term",
+      "key": "combine",
+      "width": 72
+     }
+    ]
+   },
+   {
+    "a": "commit/4d1fed221f",
+    "b": "commit/b8faa7972a",
+    "via": [
+     {
+      "kind": "term",
+      "key": "rem 798",
+      "width": 22
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "commit/396cf3bc63",
+   "gold": "commit/b8faa7972a",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 1273,
+  "within_2_doors": 34156,
+  "gold_within_1": 2,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "specs/percolate-application/drafter.md#50",
+    "label": "specs/percolate-application/drafter.md \u203a A critic holds together, and critics combine (REM-798)",
+    "p": 0.00930568357160932,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-798.md#3",
+    "label": "board/cards/REM-798.md \u203a Evidence",
+    "p": 0.00913438930478072,
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-10-10-lens-library/combine/audit.py#1",
+    "label": "meta/spikes/2026-10-10-lens-library/combine/audit.py",
+    "p": 0.005973253403695642,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/drafter.md#52",
+    "label": "specs/percolate-application/drafter.md \u203a A critic holds together, and critics combine (REM-798)",
+    "p": 0.005802944009663495,
+    "gold": false
+   },
+   {
+    "id": "commit/b8faa7972a",
+    "label": "commit b8faa79: Lens library research, convergence stopping rule, and critic coherence audit (REM-797, REM-798) (#426)",
+    "p": 0.003708673170837013,
+    "gold": true
+   },
+   {
+    "id": "board/cards/REM-798.md#5",
+    "label": "board/cards/REM-798.md \u203a Scope",
+    "p": 0.0034177259444879452,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/drafter.md#43",
+    "label": "specs/percolate-application/drafter.md \u203a A reviewer is a lens (REM-794)",
+    "p": 0.0028994957317079123,
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-10-10-lens-library/combine/audit.py#4",
+    "label": "meta/spikes/2026-10-10-lens-library/combine/audit.py",
+    "p": 0.0028872011021505626,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/drafter.md#53",
+    "label": "specs/percolate-application/drafter.md \u203a A critic holds together, and critics combine (REM-798)",
+    "p": 0.002709312563803618,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/drafter.md#54",
+    "label": "specs/percolate-application/drafter.md \u203a A critic holds together, and critics combine (REM-798)",
+    "p": 0.002456149235158753,
+    "gold": false
+   },
+   {
+    "id": "specs/build-knit-dream/coalescing.md#21",
+    "label": "specs/build-knit-dream/coalescing.md \u203a 5.7 Reading the result",
+    "p": 0.002357203007416725,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/drafter.md#55",
+    "label": "specs/percolate-application/drafter.md \u203a A critic holds together, and critics combine (REM-798)",
+    "p": 0.0021130845190185984,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/drafter.md#56",
+    "label": "specs/percolate-application/drafter.md \u203a A critic holds together, and critics combine (REM-798)",
+    "p": 0.0018457643620868951,
+    "gold": false
+   },
+   {
+    "id": "output/claims-atlas/app.js#7",
+    "label": "output/claims-atlas/app.js",
+    "p": 0.0018331831535932667,
+    "gold": false
+   },
+   {
+    "id": "commit/5bcafdd1e4",
+    "label": "commit 5bcafdd: board: p8-subsystems-0e takes REM-797",
+    "p": 0.0018059327535107285,
+    "gold": false
+   },
+   {
+    "id": "research-notes/essay-graph/corpus/strunk-1918-elements-of-style/text.txt#20",
+    "label": "research-notes/essay-graph/corpus/strunk-1918-elements-of-style/text.txt",
+    "p": 0.001762523988423919,
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-10-10-lens-library/combine/audit.py#2",
+    "label": "meta/spikes/2026-10-10-lens-library/combine/audit.py",
+    "p": 0.001750491516602,
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-10-10-lens-library/notes/close_reading_and_craft_lenses.txt#4",
+    "label": "meta/spikes/2026-10-10-lens-library/notes/close_reading_and_craft_lenses.txt",
+    "p": 0.0016620584947221642,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/CLAUDE-USE.md#3",
+    "label": "meta/lab/CLAUDE-USE.md \u203a Where Claude is, and what it does",
+    "p": 0.0015479565266738788,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-798.md#4",
+    "label": "board/cards/REM-798.md \u203a Done when",
+    "p": 0.001269813158609663,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/396cf3bc63",
+   "label": "commit 396cf3b: board: file REM-798 critics hold together and combine: scoped tensions only inside a critic, belief conf",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-798.md#1",
+   "label": "board/cards/REM-798.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-798.md#2",
+   "label": "board/cards/REM-798.md \u203a Goal",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/percolate-application/drafter.md#51",
+   "label": "specs/percolate-application/drafter.md \u203a A critic holds together, and critics combine (REM-798)",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-798.md#6",
+   "label": "board/cards/REM-798.md \u203a Log",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/percolate-application/drafter.md#50",
+   "label": "specs/percolate-application/drafter.md \u203a A critic holds together, and critics combine (REM-798)",
+   "wave": 1,
+   "via": "term:critic holds",
+   "gold": false
+  },
+  {
+   "id": "specs/percolate-application/drafter.md#55",
+   "label": "specs/percolate-application/drafter.md \u203a A critic holds together, and critics combine (REM-798)",
+   "wave": 1,
+   "via": "term:critic holds",
+   "gold": false
+  },
+  {
+   "id": "commit/b8faa7972a",
+   "label": "commit b8faa79: Lens library research, convergence stopping rule, and critic coherence audit (REM-797, REM-798) (#426)",
+   "wave": 1,
+   "via": "term:critic holds",
+   "gold": true
+  },
+  {
+   "id": "specs/percolate-application/drafter.md#56",
+   "label": "specs/percolate-application/drafter.md \u203a A critic holds together, and critics combine (REM-798)",
+   "wave": 1,
+   "via": "term:critic holds",
+   "gold": false
+  },
+  {
+   "id": "specs/percolate-application/drafter.md#52",
+   "label": "specs/percolate-application/drafter.md \u203a A critic holds together, and critics combine (REM-798)",
+   "wave": 1,
+   "via": "term:critic holds",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "specs/percolate-application/drafter.md#50",
+    "label": "specs/percolate-application/drafter.md \u203a A critic holds together, and critics combine (REM-798)",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-798.md#3",
+    "label": "board/cards/REM-798.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-10-10-lens-library/combine/audit.py#1",
+    "label": "meta/spikes/2026-10-10-lens-library/combine/audit.py",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/drafter.md#52",
+    "label": "specs/percolate-application/drafter.md \u203a A critic holds together, and critics combine (REM-798)",
+    "gold": false
+   },
+   {
+    "id": "commit/b8faa7972a",
+    "label": "commit b8faa79: Lens library research, convergence stopping rule, and critic coherence audit (REM-797, REM-798) (#426)",
+    "gold": true
+   }
+  ],
+  "Q": [
+   {
+    "id": "specs/percolate-application/drafter.md#50",
+    "label": "specs/percolate-application/drafter.md \u203a A critic holds together, and critics combine (REM-798)",
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-10-10-lens-library/combine/audit.py#1",
+    "label": "meta/spikes/2026-10-10-lens-library/combine/audit.py",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-798.md#3",
+    "label": "board/cards/REM-798.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/drafter.md#52",
+    "label": "specs/percolate-application/drafter.md \u203a A critic holds together, and critics combine (REM-798)",
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-10-10-lens-library/combine/audit.py#4",
+    "label": "meta/spikes/2026-10-10-lens-library/combine/audit.py",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "board/cards/REM-798.md#3",
+    "label": "board/cards/REM-798.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "commit/b8faa7972a",
+    "label": "commit b8faa79: Lens library research, convergence stopping rule, and critic coherence audit (REM-797, REM-798) (#426)",
+    "gold": true
+   },
+   {
+    "id": "specs/percolate-application/drafter.md#56",
+    "label": "specs/percolate-application/drafter.md \u203a A critic holds together, and critics combine (REM-798)",
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-10-10-lens-library/combine/audit.py#4",
+    "label": "meta/spikes/2026-10-10-lens-library/combine/audit.py",
+    "gold": false
+   },
+   {
+    "id": "commit/60cac45374",
+    "label": "commit 60cac45: board: REM-798 backlog \u2192 done",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "board/cards/REM-798.md#3",
+    "label": "board/cards/REM-798.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/drafter.md#50",
+    "label": "specs/percolate-application/drafter.md \u203a A critic holds together, and critics combine (REM-798)",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/drafter.md#52",
+    "label": "specs/percolate-application/drafter.md \u203a A critic holds together, and critics combine (REM-798)",
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-10-10-lens-library/combine/audit.py#1",
+    "label": "meta/spikes/2026-10-10-lens-library/combine/audit.py",
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-10-10-lens-library/combine/audit.py#4",
+    "label": "meta/spikes/2026-10-10-lens-library/combine/audit.py",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.5,
+  "Q": 0.0,
+  "LQ": 0.5,
+  "S": 0.0
+ }
+}

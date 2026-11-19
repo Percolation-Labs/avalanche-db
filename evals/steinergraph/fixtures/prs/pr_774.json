@@ -1,0 +1,446 @@
+{
+ "qid": "pr:774",
+ "set": "prs",
+ "question": "What work went into this, and why: Door read order: capping reads per opened door helps no decider; A1 stays?",
+ "gold": [
+  {
+   "id": "commit/6d20bb50a8",
+   "label": "commit 6d20bb5: door-read-order: registration before scoring, and the driver with extra walk settings",
+   "seed": false
+  },
+  {
+   "id": "commit/74f8783f7a",
+   "label": "commit 74f8783: door-read-order: cite avalanche-db's spec as another repo's path, not this tree's",
+   "seed": false
+  },
+  {
+   "id": "commit/ae83659657",
+   "label": "commit ae83659: door-read-order: capping reads per opened door helps no decider and erases the Oracle's gain; A1 stays",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/ae83659657",
+   "label": "commit ae83659: door-read-order: capping reads per opened door helps no decider and erases the Oracle's gain; A1 stays",
+   "rank": 1,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "commit/9a3b9ac322",
+   "label": "commit 9a3b9ac: Merge pull request #774 from Percolation-Labs/james/door-read-order",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/messages/M-20261116-105449-66d1.md#1",
+   "label": "board/messages/M-20261116-105449-66d1.md",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "meta/lab/results/target-rank/RESULT.md#1",
+   "label": "meta/lab/results/target-rank/RESULT.md \u203a The decider orders a door's targets (16 Nov, james)",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "meta/lab/results/door-read-order/RESULT.md#4",
+   "label": "meta/lab/results/door-read-order/RESULT.md \u203a Result",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/6d20bb50a8",
+    "label": "commit 6d20bb5: door-read-order: registration before scoring, and the driver with extra walk settings",
+    "role": "gold"
+   },
+   {
+    "id": "commit/74f8783f7a",
+    "label": "commit 74f8783: door-read-order: cite avalanche-db's spec as another repo's path, not this tree's",
+    "role": "gold"
+   },
+   {
+    "id": "commit/ae83659657",
+    "label": "commit ae83659: door-read-order: capping reads per opened door helps no decider and erases the Oracle's gain; A1 stays",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/6d20bb50a8",
+    "b": "commit/ae83659657",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "read order",
+      "width": 82
+     },
+     {
+      "kind": "term",
+      "key": "door read",
+      "width": 95
+     }
+    ]
+   },
+   {
+    "a": "commit/74f8783f7a",
+    "b": "commit/ae83659657",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "read order",
+      "width": 82
+     },
+     {
+      "kind": "term",
+      "key": "door read",
+      "width": 95
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   1,
+   1
+  ],
+  "entry": {
+   "seed": "commit/ae83659657",
+   "gold": "commit/ae83659657",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 848,
+  "within_2_doors": 30144,
+  "gold_within_1": 2,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "meta/lab/results/door-read-order/RESULT.md#5",
+    "label": "meta/lab/results/door-read-order/RESULT.md \u203a Postmortem",
+    "p": 0.0054989879347598246,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/door-read-order/RESULT.md#1",
+    "label": "meta/lab/results/door-read-order/RESULT.md \u203a Reads inside an opened door, as a walk setting (16 Nov, james)",
+    "p": 0.002840623567613386,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/door-read-order/RESULT.md#2",
+    "label": "meta/lab/results/door-read-order/RESULT.md \u203a Registration (committed before any scoring)",
+    "p": 0.002551105644440247,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/target-rank/RESULT.md#2",
+    "label": "meta/lab/results/target-rank/RESULT.md \u203a Registration (committed before any scoring)",
+    "p": 0.002516936968601002,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/door-read-order/RESULT.md#3",
+    "label": "meta/lab/results/door-read-order/RESULT.md \u203a Registration (committed before any scoring)",
+    "p": 0.0024940225784291234,
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-self-model/dreaming/fixtures/narrative/capping-the-retries.md#1",
+    "label": "applications/percolate-self-model/dreaming/fixtures/narrative/capping-the-retries.md \u203a Capping the retries",
+    "p": 0.0020366170327452407,
+    "gold": false
+   },
+   {
+    "id": "commit/2dcae8a487",
+    "label": "commit 2dcae8a: walklab q4: capping the relation edge at 2 per lead closes all 4 CUT bridges (0/4, -.066); every hop lin",
+    "p": 0.0020121950515900092,
+    "gold": false
+   },
+   {
+    "id": "commit/6d20bb50a8",
+    "label": "commit 6d20bb5: door-read-order: registration before scoring, and the driver with extra walk settings",
+    "p": 0.0019346927656144215,
+    "gold": true
+   },
+   {
+    "id": "commit/74f8783f7a",
+    "label": "commit 74f8783: door-read-order: cite avalanche-db's spec as another repo's path, not this tree's",
+    "p": 0.0018734981528729165,
+    "gold": true
+   },
+   {
+    "id": "meta/lab/results/door-budget-guard/RESULT.md#7",
+    "label": "meta/lab/results/door-budget-guard/RESULT.md \u203a Result (17 Nov 2026)",
+    "p": 0.0017138591381047484,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/dream-metric/OBSERVABLES.md#6",
+    "label": "meta/lab/results/dream-metric/OBSERVABLES.md \u203a Postmortems: why each failing observable fails",
+    "p": 0.0017025799564867176,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261115-201816-ab76.md#1",
+    "label": "board/messages/M-20261115-201816-ab76.md",
+    "p": 0.0016709521332880849,
+    "gold": false
+   },
+   {
+    "id": "commit/1d79b86150",
+    "label": "commit 1d79b86: board: james ends pid 84420 on Sirshs-MacBook-Air",
+    "p": 0.0015924180627176856,
+    "gold": false
+   },
+   {
+    "id": "commit/66a41b7e7c",
+    "label": "commit 66a41b7: board: james runs pid 84420 on Sirshs-MacBook-Air: jev-topk-stage0 probe walk, live Jev, cap $0.20 this ",
+    "p": 0.0015109647084862279,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-centred/result.txt#3",
+    "label": "meta/lab/results/q4-centred/result.txt",
+    "p": 0.0014748122079136906,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-832.md#1",
+    "label": "board/cards/REM-832.md",
+    "p": 0.0012704579341171617,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/batchlog-rescore/RESULT.md#11",
+    "label": "meta/lab/results/batchlog-rescore/RESULT.md \u203a Postmortem",
+    "p": 0.0012507544897520043,
+    "gold": false
+   },
+   {
+    "id": "commit/b165412170",
+    "label": "commit b165412: board: file REM-832 writing: echoing a save receipt never erases the piece",
+    "p": 0.001241875889531232,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/target-rank/RESULT.md#6",
+    "label": "meta/lab/results/target-rank/RESULT.md \u203a Postmortem",
+    "p": 0.00123714753224398,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/batchlog-rescore/RESULT.md#9",
+    "label": "meta/lab/results/batchlog-rescore/RESULT.md \u203a Experiment 2: the walk under budget top-k against search at an equal numbe",
+    "p": 0.0011722696038177528,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/ae83659657",
+   "label": "commit ae83659: door-read-order: capping reads per opened door helps no decider and erases the Oracle's gain; A1 stays",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "commit/9a3b9ac322",
+   "label": "commit 9a3b9ac: Merge pull request #774 from Percolation-Labs/james/door-read-order",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/messages/M-20261116-105449-66d1.md#1",
+   "label": "board/messages/M-20261116-105449-66d1.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/target-rank/RESULT.md#1",
+   "label": "meta/lab/results/target-rank/RESULT.md \u203a The decider orders a door's targets (16 Nov, james)",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/door-read-order/RESULT.md#4",
+   "label": "meta/lab/results/door-read-order/RESULT.md \u203a Result",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/messages/M-20261117-081021-f27f.md#1",
+   "label": "board/messages/M-20261117-081021-f27f.md",
+   "wave": 1,
+   "via": "term:capped door",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/door-read-order/RESULT.md#5",
+   "label": "meta/lab/results/door-read-order/RESULT.md \u203a Postmortem",
+   "wave": 1,
+   "via": "term:capped door",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/target-rank/RESULT.md#6",
+   "label": "meta/lab/results/target-rank/RESULT.md \u203a Postmortem",
+   "wave": 1,
+   "via": "term:capped door",
+   "gold": false
+  },
+  {
+   "id": "board/messages/M-20261029-115321-eb51.md#1",
+   "label": "board/messages/M-20261029-115321-eb51.md",
+   "wave": 2,
+   "via": "term:oracle opens",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/gain-vs-room/RESULT.md#6",
+   "label": "meta/lab/results/gain-vs-room/RESULT.md \u203a Postmortem",
+   "wave": 2,
+   "via": "term:oracle opens",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "meta/lab/results/door-read-order/RESULT.md#5",
+    "label": "meta/lab/results/door-read-order/RESULT.md \u203a Postmortem",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/door-read-order/RESULT.md#1",
+    "label": "meta/lab/results/door-read-order/RESULT.md \u203a Reads inside an opened door, as a walk setting (16 Nov, james)",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/door-read-order/RESULT.md#2",
+    "label": "meta/lab/results/door-read-order/RESULT.md \u203a Registration (committed before any scoring)",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/target-rank/RESULT.md#2",
+    "label": "meta/lab/results/target-rank/RESULT.md \u203a Registration (committed before any scoring)",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/door-read-order/RESULT.md#3",
+    "label": "meta/lab/results/door-read-order/RESULT.md \u203a Registration (committed before any scoring)",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "meta/lab/results/door-read-order/RESULT.md#5",
+    "label": "meta/lab/results/door-read-order/RESULT.md \u203a Postmortem",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/door-read-order/RESULT.md#1",
+    "label": "meta/lab/results/door-read-order/RESULT.md \u203a Reads inside an opened door, as a walk setting (16 Nov, james)",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/target-rank/RESULT.md#2",
+    "label": "meta/lab/results/target-rank/RESULT.md \u203a Registration (committed before any scoring)",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/door-read-order/RESULT.md#2",
+    "label": "meta/lab/results/door-read-order/RESULT.md \u203a Registration (committed before any scoring)",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/door-read-order/RESULT.md#3",
+    "label": "meta/lab/results/door-read-order/RESULT.md \u203a Registration (committed before any scoring)",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/197080fd0f",
+    "label": "commit 197080f: target-rank: registration, the decider orders a door's targets (before any scoring)",
+    "gold": false
+   },
+   {
+    "id": "commit/74f8783f7a",
+    "label": "commit 74f8783: door-read-order: cite avalanche-db's spec as another repo's path, not this tree's",
+    "gold": true
+   },
+   {
+    "id": "commit/6d20bb50a8",
+    "label": "commit 6d20bb5: door-read-order: registration before scoring, and the driver with extra walk settings",
+    "gold": true
+   },
+   {
+    "id": "meta/lab/results/door-read-order/RESULT.md#5",
+    "label": "meta/lab/results/door-read-order/RESULT.md \u203a Postmortem",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/door-read-order/RESULT.md#3",
+    "label": "meta/lab/results/door-read-order/RESULT.md \u203a Registration (committed before any scoring)",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "meta/lab/results/door-read-order/RESULT.md#5",
+    "label": "meta/lab/results/door-read-order/RESULT.md \u203a Postmortem",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/door-pick-diagnostic/RESULT.md#3",
+    "label": "meta/lab/results/door-pick-diagnostic/RESULT.md \u203a Registration (17 Nov 2026, written before anything was scored)",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/batchlog-rescore/RESULT.md#13",
+    "label": "meta/lab/results/batchlog-rescore/RESULT.md \u203a Next tests",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/batchlog-rescore/RESULT.md#11",
+    "label": "meta/lab/results/batchlog-rescore/RESULT.md \u203a Postmortem",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/door-read-order/RESULT.md#1",
+    "label": "meta/lab/results/door-read-order/RESULT.md \u203a Reads inside an opened door, as a walk setting (16 Nov, james)",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 1.0,
+  "S": 0.0
+ }
+}

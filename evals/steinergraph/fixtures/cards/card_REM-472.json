@@ -1,0 +1,400 @@
+{
+ "qid": "card:REM-472",
+ "set": "cards",
+ "question": "What was done about this, and why: claims: the claims graph lives in core, and the application's claims are entities in it?",
+ "gold": [
+  {
+   "id": "commit/61d944efa8",
+   "label": "commit 61d944e: claims/graph.md \u00a717: the cards, REM-472 to REM-484, with their order",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/33637aa860",
+   "label": "commit 33637aa: board: file REM-472 claims: the claims graph lives in core, and the application's claims are entities in",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-472.md#1",
+   "label": "board/cards/REM-472.md",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-472.md#2",
+   "label": "board/cards/REM-472.md \u203a Goal",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "specs/percolate-application/research-runs.md#5",
+   "label": "specs/percolate-application/research-runs.md \u203a 3. The model",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 3
+  },
+  {
+   "id": "board/cards/REM-472.md#3",
+   "label": "board/cards/REM-472.md \u203a Evidence",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/33637aa860",
+    "label": "commit 33637aa: board: file REM-472 claims: the claims graph lives in core, and the application's claims are entities in",
+    "role": "seed"
+   },
+   {
+    "id": "commit/61d944efa8",
+    "label": "commit 61d944e: claims/graph.md \u00a717: the cards, REM-472 to REM-484, with their order",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/33637aa860",
+    "b": "commit/61d944efa8",
+    "via": [
+     {
+      "kind": "term",
+      "key": "rem 472",
+      "width": 41
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [],
+  "entry": {
+   "seed": "commit/33637aa860",
+   "gold": "commit/61d944efa8",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 531,
+  "within_2_doors": 29456,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "commit/e4f1b9e628",
+    "label": "commit e4f1b9e: claims: the claims graph, specified for core with the application as its second tenant (REM-434)",
+    "p": 0.008380266848077272,
+    "gold": false
+   },
+   {
+    "id": "commit/36f402cc74",
+    "label": "commit 36f402c: board: file REM-473 claims: every occurrence expresses a claim with a minted identity, carried across re",
+    "p": 0.006214484571182289,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-434.md#2",
+    "label": "board/cards/REM-434.md \u203a Goal",
+    "p": 0.004098014694776797,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-473.md#2",
+    "label": "board/cards/REM-473.md \u203a Goal",
+    "p": 0.003918586518362796,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-434.md#9",
+    "label": "board/cards/REM-434.md \u203a Log",
+    "p": 0.0037682223396006847,
+    "gold": false
+   },
+   {
+    "id": "specs/claims/graph.md#15",
+    "label": "specs/claims/graph.md \u203a Across revisions of one work",
+    "p": 0.003027752738109062,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-472.md#4",
+    "label": "board/cards/REM-472.md \u203a Done when",
+    "p": 0.0027162620513051542,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/research-runs.md#6",
+    "label": "specs/percolate-application/research-runs.md \u203a 4. Taking, leases and delivering",
+    "p": 0.0026280758097760927,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/configs/structure/resistance.py#2",
+    "label": "meta/lab/configs/structure/resistance.py",
+    "p": 0.0024484674764132974,
+    "gold": false
+   },
+   {
+    "id": "specs/tables/README.md#4",
+    "label": "specs/tables/README.md \u203a Evidence checked",
+    "p": 0.002438621189362364,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-473.md#1",
+    "label": "board/cards/REM-473.md",
+    "p": 0.0022391484940328076,
+    "gold": false
+   },
+   {
+    "id": "meta/skills/coding-manager/SKILL.md#2",
+    "label": "meta/skills/coding-manager/SKILL.md \u203a Percolate as a coding manager",
+    "p": 0.0020438131772696857,
+    "gold": false
+   },
+   {
+    "id": "specs/claims/graph.md#1",
+    "label": "specs/claims/graph.md \u203a The claims graph",
+    "p": 0.0019288248415964499,
+    "gold": false
+   },
+   {
+    "id": "commit/0a179da65a",
+    "label": "commit 0a179da: Probe the plan instead of only reading it, and say what each step returns",
+    "p": 0.0016759733942634412,
+    "gold": false
+   },
+   {
+    "id": "specs/claims/graph.md#58",
+    "label": "specs/claims/graph.md \u203a 17. Cards",
+    "p": 0.0016058810274881662,
+    "gold": false
+   },
+   {
+    "id": "specs/workflow-engine/plan-graph.md#16",
+    "label": "specs/workflow-engine/plan-graph.md \u203a `plan_probe` runs the cheap half",
+    "p": 0.0014302818524375537,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/research-runs.md#16",
+    "label": "specs/percolate-application/research-runs.md \u203a 12. Questions for Sirsh",
+    "p": 0.0014185714992984984,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-435.md#8",
+    "label": "board/cards/REM-435.md \u203a Log",
+    "p": 0.0013957618121748995,
+    "gold": false
+   },
+   {
+    "id": "commit/423dcb24cd",
+    "label": "commit 423dcb2: claims: every occurrence expresses a claim with a minted identity, carried across revisions (REM-473)",
+    "p": 0.0013903638850184888,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/research-runs.md#4",
+    "label": "specs/percolate-application/research-runs.md \u203a 3. The model",
+    "p": 0.001371552965262292,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/33637aa860",
+   "label": "commit 33637aa: board: file REM-472 claims: the claims graph lives in core, and the application's claims are entities in",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-472.md#1",
+   "label": "board/cards/REM-472.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-472.md#2",
+   "label": "board/cards/REM-472.md \u203a Goal",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/percolate-application/research-runs.md#5",
+   "label": "specs/percolate-application/research-runs.md \u203a 3. The model",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-472.md#3",
+   "label": "board/cards/REM-472.md \u203a Evidence",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/q4-dream/vocab-2.txt#3",
+   "label": "meta/lab/results/q4-dream/vocab-2.txt",
+   "wave": 1,
+   "via": "term:claim identity",
+   "gold": false
+  },
+  {
+   "id": "specs/percolate-application/semantic-editing-workspace.md#31",
+   "label": "specs/percolate-application/semantic-editing-workspace.md \u203a 9. MCP and execution boundary",
+   "wave": 1,
+   "via": "term:claim identity",
+   "gold": false
+  },
+  {
+   "id": "applications/percolate-self-model/dreaming/reduce/README.md#1",
+   "label": "applications/percolate-self-model/dreaming/reduce/README.md \u203a Claim reduction: what was measured, and why the code is go",
+   "wave": 1,
+   "via": "term:claim identity",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/q4-dream/vocab-3.txt#1",
+   "label": "meta/lab/results/q4-dream/vocab-3.txt",
+   "wave": 1,
+   "via": "term:claim identity",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-472.md#4",
+   "label": "board/cards/REM-472.md \u203a Done when",
+   "wave": 1,
+   "via": "term:claim identity",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "commit/e4f1b9e628",
+    "label": "commit e4f1b9e: claims: the claims graph, specified for core with the application as its second tenant (REM-434)",
+    "gold": false
+   },
+   {
+    "id": "commit/36f402cc74",
+    "label": "commit 36f402c: board: file REM-473 claims: every occurrence expresses a claim with a minted identity, carried across re",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-434.md#2",
+    "label": "board/cards/REM-434.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-473.md#2",
+    "label": "board/cards/REM-473.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-434.md#9",
+    "label": "board/cards/REM-434.md \u203a Log",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "commit/e4f1b9e628",
+    "label": "commit e4f1b9e: claims: the claims graph, specified for core with the application as its second tenant (REM-434)",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-434.md#9",
+    "label": "board/cards/REM-434.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "specs/claims/graph.md#1",
+    "label": "specs/claims/graph.md \u203a The claims graph",
+    "gold": false
+   },
+   {
+    "id": "specs/claims/graph.md#15",
+    "label": "specs/claims/graph.md \u203a Across revisions of one work",
+    "gold": false
+   },
+   {
+    "id": "specs/tables/README.md#4",
+    "label": "specs/tables/README.md \u203a Evidence checked",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/61d944efa8",
+    "label": "commit 61d944e: claims/graph.md \u00a717: the cards, REM-472 to REM-484, with their order",
+    "gold": true
+   },
+   {
+    "id": "board/cards/REM-432.md#1",
+    "label": "board/cards/REM-432.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-477.md#1",
+    "label": "board/cards/REM-477.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-480.md#1",
+    "label": "board/cards/REM-480.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-476.md#1",
+    "label": "board/cards/REM-476.md",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "commit/e4f1b9e628",
+    "label": "commit e4f1b9e: claims: the claims graph, specified for core with the application as its second tenant (REM-434)",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-637.md#7",
+    "label": "board/cards/REM-637.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-20-rebuilt-what-core-owned.md#3",
+    "label": "meta/postmortems/2026-09-20-rebuilt-what-core-owned.md \u203a Why, three times",
+    "gold": false
+   },
+   {
+    "id": "commit/9ebe50337b",
+    "label": "commit 9ebe503: research: correct what this tree called core, because none of it is (REM-648)",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-476.md#2",
+    "label": "board/cards/REM-476.md \u203a Goal",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 1.0,
+  "S": 0.0
+ }
+}

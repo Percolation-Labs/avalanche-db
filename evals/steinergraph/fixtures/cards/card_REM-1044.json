@@ -1,0 +1,415 @@
+{
+ "qid": "card:REM-1044",
+ "set": "cards",
+ "question": "What was done about this, and why: plumbing: routine and Codex cloud limits are checked before the plan rests on them?",
+ "gold": [
+  {
+   "id": "commit/c2bbafc728",
+   "label": "commit c2bbafc: train: a read leg checks production as a fresh reader and files a card per failure (REM-1049)",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/f363d220d9",
+   "label": "commit f363d22: board: file REM-1044 plumbing: routine and Codex cloud limits are checked before the plan rests on them",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-1044.md#2",
+   "label": "board/cards/REM-1044.md \u203a Goal",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-1044.md#1",
+   "label": "board/cards/REM-1044.md",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-1044.md#4",
+   "label": "board/cards/REM-1044.md \u203a Done when",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "specs/design/leading-the-agents.md#10",
+   "label": "specs/design/leading-the-agents.md \u203a 7. Research basis",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/c2bbafc728",
+    "label": "commit c2bbafc: train: a read leg checks production as a fresh reader and files a card per failure (REM-1049)",
+    "role": "gold"
+   },
+   {
+    "id": "commit/f363d220d9",
+    "label": "commit f363d22: board: file REM-1044 plumbing: routine and Codex cloud limits are checked before the plan rests on them",
+    "role": "seed"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/c2bbafc728",
+    "b": "commit/f363d220d9",
+    "via": [
+     {
+      "kind": "term",
+      "key": "rem 1044",
+      "width": 15
+     },
+     {
+      "kind": "term",
+      "key": "1044",
+      "width": 19
+     },
+     {
+      "kind": "term",
+      "key": "cloud",
+      "width": 60
+     },
+     {
+      "kind": "term",
+      "key": "routine",
+      "width": 81
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [],
+  "entry": {
+   "seed": "commit/f363d220d9",
+   "gold": "commit/c2bbafc728",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 1059,
+  "within_2_doors": 33422,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "board/cards/REM-1044.md#3",
+    "label": "board/cards/REM-1044.md \u203a Evidence",
+    "p": 0.008908891459546781,
+    "gold": false
+   },
+   {
+    "id": "specs/design/leading-the-agents.md#4",
+    "label": "specs/design/leading-the-agents.md \u203a 3. Layer 1: plumbing with Claude and GPT only",
+    "p": 0.005826853728866488,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1044.md#5",
+    "label": "board/cards/REM-1044.md \u203a Scope",
+    "p": 0.005763440445474495,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1044.md#6",
+    "label": "board/cards/REM-1044.md \u203a Log",
+    "p": 0.0055992338813251556,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1043.md#6",
+    "label": "board/cards/REM-1043.md \u203a Log",
+    "p": 0.0047511012622019405,
+    "gold": false
+   },
+   {
+    "id": "commit/06b8c37d19",
+    "label": "commit 06b8c37: board: edit REM-1044 labels severity",
+    "p": 0.0043625336584113324,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1048.md#1",
+    "label": "board/cards/REM-1048.md",
+    "p": 0.004343048871454452,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1046.md#1",
+    "label": "board/cards/REM-1046.md",
+    "p": 0.003809225221383912,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1047.md#1",
+    "label": "board/cards/REM-1047.md",
+    "p": 0.0035472189357356877,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1049.md#2",
+    "label": "board/cards/REM-1049.md \u203a Goal",
+    "p": 0.0031215858198641562,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1049.md#6",
+    "label": "board/cards/REM-1049.md \u203a Log",
+    "p": 0.002917742741123736,
+    "gold": false
+   },
+   {
+    "id": "commit/39f5c5bcaf",
+    "label": "commit 39f5c5b: board: file REM-1043 agents: Sirsh leads the agent loop through Percolate, layer by layer",
+    "p": 0.0027041753100159127,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1043.md#1",
+    "label": "board/cards/REM-1043.md",
+    "p": 0.002639575748629181,
+    "gold": false
+   },
+   {
+    "id": "specs/design/leading-the-agents.md#6",
+    "label": "specs/design/leading-the-agents.md \u203a 3.2 Getting the most from what we already pay for",
+    "p": 0.002625315423747796,
+    "gold": false
+   },
+   {
+    "id": "commit/c2bbafc728",
+    "label": "commit c2bbafc: train: a read leg checks production as a fresh reader and files a card per failure (REM-1049)",
+    "p": 0.0026003061270092813,
+    "gold": true
+   },
+   {
+    "id": "board/cards/REM-1124.md#2",
+    "label": "board/cards/REM-1124.md \u203a Goal",
+    "p": 0.0022653106381950233,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1048.md#5",
+    "label": "board/cards/REM-1048.md \u203a Scope",
+    "p": 0.00224739360450091,
+    "gold": false
+   },
+   {
+    "id": "board/team/sally.md#2",
+    "label": "board/team/sally.md \u203a Log",
+    "p": 0.0019980461915372963,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-922.md#3",
+    "label": "board/cards/REM-922.md \u203a Evidence",
+    "p": 0.0019473306028704523,
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-insight-marketplace/spec.md#13",
+    "label": "applications/percolate-insight-marketplace/spec.md \u203a 5.1 The Admission Rule: Trigger-Type, Not Topic",
+    "p": 0.0019036374407108891,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/f363d220d9",
+   "label": "commit f363d22: board: file REM-1044 plumbing: routine and Codex cloud limits are checked before the plan rests on them",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-1044.md#2",
+   "label": "board/cards/REM-1044.md \u203a Goal",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-1044.md#1",
+   "label": "board/cards/REM-1044.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-1044.md#4",
+   "label": "board/cards/REM-1044.md \u203a Done when",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/design/leading-the-agents.md#10",
+   "label": "specs/design/leading-the-agents.md \u203a 7. Research basis",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/musique-travelled/RESULT.md#1",
+   "label": "meta/lab/results/musique-travelled/RESULT.md \u203a Round-2 doors only from travelled reads: result (bill, 14 Nov 2026)",
+   "wave": 1,
+   "via": "term:1044",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-1044.md#6",
+   "label": "board/cards/REM-1044.md \u203a Log",
+   "wave": 1,
+   "via": "term:1044",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-1046.md#1",
+   "label": "board/cards/REM-1046.md",
+   "wave": 1,
+   "via": "term:1044",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-1047.md#1",
+   "label": "board/cards/REM-1047.md",
+   "wave": 1,
+   "via": "term:1044",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-1044.md#5",
+   "label": "board/cards/REM-1044.md \u203a Scope",
+   "wave": 1,
+   "via": "term:1044",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "board/cards/REM-1044.md#3",
+    "label": "board/cards/REM-1044.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "specs/design/leading-the-agents.md#4",
+    "label": "specs/design/leading-the-agents.md \u203a 3. Layer 1: plumbing with Claude and GPT only",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1044.md#5",
+    "label": "board/cards/REM-1044.md \u203a Scope",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1044.md#6",
+    "label": "board/cards/REM-1044.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1043.md#6",
+    "label": "board/cards/REM-1043.md \u203a Log",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "board/cards/REM-1044.md#3",
+    "label": "board/cards/REM-1044.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "specs/design/leading-the-agents.md#4",
+    "label": "specs/design/leading-the-agents.md \u203a 3. Layer 1: plumbing with Claude and GPT only",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1048.md#1",
+    "label": "board/cards/REM-1048.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1049.md#6",
+    "label": "board/cards/REM-1049.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1043.md#6",
+    "label": "board/cards/REM-1043.md \u203a Log",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "board/cards/REM-1044.md#3",
+    "label": "board/cards/REM-1044.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "commit/24a4ae9351",
+    "label": "commit 24a4ae9: board: file REM-1046 plumbing: a steer nobody is there to read starts a routine",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1046.md#1",
+    "label": "board/cards/REM-1046.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1046.md#2",
+    "label": "board/cards/REM-1046.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "commit/5003a0f3ff",
+    "label": "commit 5003a0f: board: file REM-1048 plumbing: an unwatched task runs in its own cloud sandbox and hands back a draft PR",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "board/cards/REM-1044.md#3",
+    "label": "board/cards/REM-1044.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "specs/design/leading-the-agents.md#4",
+    "label": "specs/design/leading-the-agents.md \u203a 3. Layer 1: plumbing with Claude and GPT only",
+    "gold": false
+   },
+   {
+    "id": "commit/24a4ae9351",
+    "label": "commit 24a4ae9: board: file REM-1046 plumbing: a steer nobody is there to read starts a routine",
+    "gold": false
+   },
+   {
+    "id": "commit/5003a0f3ff",
+    "label": "commit 5003a0f: board: file REM-1048 plumbing: an unwatched task runs in its own cloud sandbox and hands back a draft PR",
+    "gold": false
+   },
+   {
+    "id": "specs/design/leading-the-agents.md#9",
+    "label": "specs/design/leading-the-agents.md \u203a 6. Order of work",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

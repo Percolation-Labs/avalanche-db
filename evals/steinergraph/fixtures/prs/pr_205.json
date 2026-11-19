@@ -1,0 +1,446 @@
+{
+ "qid": "pr:205",
+ "set": "prs",
+ "question": "What work went into this, and why: Postmortem: the cost of motion on 14 September (releases, grouped PRs, permission waits)?",
+ "gold": [
+  {
+   "id": "commit/047039f908",
+   "label": "commit 047039f: Postmortem: the cost of motion on 14 September, written by three sessions",
+   "seed": true
+  },
+  {
+   "id": "commit/1f215d74b7",
+   "label": "commit 1f215d7: Postmortem: the self-modification wait is a floor, at least 80 minutes (per -ad)",
+   "seed": false
+  },
+  {
+   "id": "commit/40b8555759",
+   "label": "commit 40b8555: Postmortem \u00a75: why the extension changed five times in 25 hours, and a ledger row per version",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/81f0640395",
+   "label": "commit 81f0640: Merge pull request #205 from Percolation-Labs/amartey/postmortem-cost-of-motion",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/047039f908",
+   "label": "commit 047039f: Postmortem: the cost of motion on 14 September, written by three sessions",
+   "rank": 2,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "meta/postmortems/2026-09-14-the-cost-of-motion.md#1",
+   "label": "meta/postmortems/2026-09-14-the-cost-of-motion.md \u203a The cost of motion: releases, PRs and refusals on 14 September",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/089789e8cc",
+   "label": "commit 089789e: The extension ledger records 0.2.5 in production, and the cost-of-motion postmortem names what the chain",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/c401bd2dc5",
+   "label": "commit c401bd2: postmortem: a day of releases nobody read (2026-09-16)",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 2
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/047039f908",
+    "label": "commit 047039f: Postmortem: the cost of motion on 14 September, written by three sessions",
+    "role": "gold"
+   },
+   {
+    "id": "commit/1f215d74b7",
+    "label": "commit 1f215d7: Postmortem: the self-modification wait is a floor, at least 80 minutes (per -ad)",
+    "role": "gold"
+   },
+   {
+    "id": "commit/40b8555759",
+    "label": "commit 40b8555: Postmortem \u00a75: why the extension changed five times in 25 hours, and a ledger row per version",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/047039f908",
+    "b": "commit/1f215d74b7",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "code session_01weg5nosqq2fsqtldwynurw",
+      "width": 13
+     },
+     {
+      "kind": "term",
+      "key": "session_01weg5nosqq2fsqtldwynurw",
+      "width": 13
+     }
+    ]
+   },
+   {
+    "a": "commit/1f215d74b7",
+    "b": "commit/40b8555759",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "code session_01weg5nosqq2fsqtldwynurw",
+      "width": 13
+     },
+     {
+      "kind": "term",
+      "key": "session_01weg5nosqq2fsqtldwynurw",
+      "width": 13
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   1,
+   1
+  ],
+  "entry": {
+   "seed": "commit/047039f908",
+   "gold": "commit/047039f908",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 1276,
+  "within_2_doors": 34101,
+  "gold_within_1": 2,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "meta/postmortems/2026-09-16-a-day-of-releases-nobody-read.md#6",
+    "label": "meta/postmortems/2026-09-16-a-day-of-releases-nobody-read.md \u203a The cause under all four",
+    "p": 0.006451043939486284,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/release-and-gitops.md#13",
+    "label": "specs/percolate-application/release-and-gitops.md \u203a Releasing the application",
+    "p": 0.005837956221356114,
+    "gold": false
+   },
+   {
+    "id": "commit/41f020b284",
+    "label": "commit 41f020b: Merge pull request #206 from Percolation-Labs/amartey/rule-5-operate-without-asking",
+    "p": 0.003055838754678865,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-16-a-day-of-releases-nobody-read.md#1",
+    "label": "meta/postmortems/2026-09-16-a-day-of-releases-nobody-read.md \u203a A day of releases nobody read",
+    "p": 0.0030530911709305826,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-14-the-cost-of-motion.md#15",
+    "label": "meta/postmortems/2026-09-14-the-cost-of-motion.md \u203a 7. What a production chain still needs a person, or a workaround, fo",
+    "p": 0.0029446245118654063,
+    "gold": false
+   },
+   {
+    "id": "commit/38fc2c8fda",
+    "label": "commit 38fc2c8: board: percolate-application-ad takes REM-258",
+    "p": 0.0029164946867726925,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-14-the-cost-of-motion.md#2",
+    "label": "meta/postmortems/2026-09-14-the-cost-of-motion.md \u203a 1. Refusals cost more than releases did",
+    "p": 0.002450927403601182,
+    "gold": false
+   },
+   {
+    "id": "commit/ad4fb2cb29",
+    "label": "commit ad4fb2c: The diagnosis was the expensive half (#137)",
+    "p": 0.002304301809516858,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-14-the-cost-of-motion.md#16",
+    "label": "meta/postmortems/2026-09-14-the-cost-of-motion.md \u203a 7. What a production chain still needs a person, or a workaround, fo",
+    "p": 0.0019878100663870656,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-16-a-day-of-releases-nobody-read.md#4",
+    "label": "meta/postmortems/2026-09-16-a-day-of-releases-nobody-read.md \u203a 3. The check covering the reading surface asserted nothin",
+    "p": 0.0017687102467969732,
+    "gold": false
+   },
+   {
+    "id": "commit/1f215d74b7",
+    "label": "commit 1f215d7: Postmortem: the self-modification wait is a floor, at least 80 minutes (per -ad)",
+    "p": 0.0017427607434799671,
+    "gold": true
+   },
+   {
+    "id": "meta/postmortems/2026-09-14-the-cost-of-motion.md#4",
+    "label": "meta/postmortems/2026-09-14-the-cost-of-motion.md \u203a 1. Refusals cost more than releases did",
+    "p": 0.001560940640654943,
+    "gold": false
+   },
+   {
+    "id": "commit/72374b3816",
+    "label": "commit 72374b3: board: percolate-application-ad takes REM-288",
+    "p": 0.0012819883362447347,
+    "gold": false
+   },
+   {
+    "id": "commit/eecea3d6a3",
+    "label": "commit eecea3d: Merge pull request #208 from Percolation-Labs/amartey/rem-261-extension-ledger-0.2.5",
+    "p": 0.0012001683622510405,
+    "gold": false
+   },
+   {
+    "id": "commit/7661b5d702",
+    "label": "commit 7661b5d: board: file REM-272 api: middleware refusals keep the v1 error contract and request ID",
+    "p": 0.001152459380801682,
+    "gold": false
+   },
+   {
+    "id": "commit/c0fdc90675",
+    "label": "commit c0fdc90: board: file REM-428 gates: every card in a public collection is followed to the reading it names",
+    "p": 0.001151217678608511,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-14-the-cost-of-motion.md#3",
+    "label": "meta/postmortems/2026-09-14-the-cost-of-motion.md \u203a 1. Refusals cost more than releases did",
+    "p": 0.0011427893629946443,
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-10-29-lead-information/rejudge/README.md#5",
+    "label": "meta/spikes/2026-10-29-lead-information/rejudge/README.md \u203a Why: the postmortem",
+    "p": 0.0010638516073062498,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-261.md#9",
+    "label": "board/cards/REM-261.md \u203a Log",
+    "p": 0.0010253977710185313,
+    "gold": false
+   },
+   {
+    "id": "commit/85f2c06612",
+    "label": "commit 85f2c06: The pin moves to 0.1.9, and the pairing becomes a row rather than a footnote (#131)",
+    "p": 0.0010163552948730603,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/81f0640395",
+   "label": "commit 81f0640: Merge pull request #205 from Percolation-Labs/amartey/postmortem-cost-of-motion",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/047039f908",
+   "label": "commit 047039f: Postmortem: the cost of motion on 14 September, written by three sessions",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "meta/postmortems/2026-09-14-the-cost-of-motion.md#1",
+   "label": "meta/postmortems/2026-09-14-the-cost-of-motion.md \u203a The cost of motion: releases, PRs and refusals on 14 September",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/089789e8cc",
+   "label": "commit 089789e: The extension ledger records 0.2.5 in production, and the cost-of-motion postmortem names what the chain",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/c401bd2dc5",
+   "label": "commit c401bd2: postmortem: a day of releases nobody read (2026-09-16)",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/postmortems/2026-09-14-the-cost-of-motion.md#2",
+   "label": "meta/postmortems/2026-09-14-the-cost-of-motion.md \u203a 1. Refusals cost more than releases did",
+   "wave": 1,
+   "via": "term:refusals cost",
+   "gold": false
+  },
+  {
+   "id": "meta/postmortems/2026-09-14-the-cost-of-motion.md#3",
+   "label": "meta/postmortems/2026-09-14-the-cost-of-motion.md \u203a 1. Refusals cost more than releases did",
+   "wave": 1,
+   "via": "term:refusals cost",
+   "gold": false
+  },
+  {
+   "id": "meta/postmortems/2026-09-14-the-cost-of-motion.md#4",
+   "label": "meta/postmortems/2026-09-14-the-cost-of-motion.md \u203a 1. Refusals cost more than releases did",
+   "wave": 1,
+   "via": "term:refusals cost",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-291.md#4",
+   "label": "board/cards/REM-291.md \u203a Done when",
+   "wave": 2,
+   "via": "term:release steps",
+   "gold": false
+  },
+  {
+   "id": "commit/5c90affd3e",
+   "label": "commit 5c90aff: Merge pull request #201 from Percolation-Labs/amartey/rem-259-routine-release-steps",
+   "wave": 2,
+   "via": "term:release steps",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "meta/postmortems/2026-09-16-a-day-of-releases-nobody-read.md#6",
+    "label": "meta/postmortems/2026-09-16-a-day-of-releases-nobody-read.md \u203a The cause under all four",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/release-and-gitops.md#13",
+    "label": "specs/percolate-application/release-and-gitops.md \u203a Releasing the application",
+    "gold": false
+   },
+   {
+    "id": "commit/41f020b284",
+    "label": "commit 41f020b: Merge pull request #206 from Percolation-Labs/amartey/rule-5-operate-without-asking",
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-16-a-day-of-releases-nobody-read.md#1",
+    "label": "meta/postmortems/2026-09-16-a-day-of-releases-nobody-read.md \u203a A day of releases nobody read",
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-14-the-cost-of-motion.md#15",
+    "label": "meta/postmortems/2026-09-14-the-cost-of-motion.md \u203a 7. What a production chain still needs a person, or a workaround, fo",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "meta/postmortems/2026-09-16-a-day-of-releases-nobody-read.md#1",
+    "label": "meta/postmortems/2026-09-16-a-day-of-releases-nobody-read.md \u203a A day of releases nobody read",
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-14-the-cost-of-motion.md#15",
+    "label": "meta/postmortems/2026-09-14-the-cost-of-motion.md \u203a 7. What a production chain still needs a person, or a workaround, fo",
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-14-the-cost-of-motion.md#2",
+    "label": "meta/postmortems/2026-09-14-the-cost-of-motion.md \u203a 1. Refusals cost more than releases did",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/release-and-gitops.md#13",
+    "label": "specs/percolate-application/release-and-gitops.md \u203a Releasing the application",
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-16-a-day-of-releases-nobody-read.md#6",
+    "label": "meta/postmortems/2026-09-16-a-day-of-releases-nobody-read.md \u203a The cause under all four",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/eecea3d6a3",
+    "label": "commit eecea3d: Merge pull request #208 from Percolation-Labs/amartey/rem-261-extension-ledger-0.2.5",
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-14-the-cost-of-motion.md#16",
+    "label": "meta/postmortems/2026-09-14-the-cost-of-motion.md \u203a 7. What a production chain still needs a person, or a workaround, fo",
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-16-a-day-of-releases-nobody-read.md#1",
+    "label": "meta/postmortems/2026-09-16-a-day-of-releases-nobody-read.md \u203a A day of releases nobody read",
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-16-a-day-of-releases-nobody-read.md#6",
+    "label": "meta/postmortems/2026-09-16-a-day-of-releases-nobody-read.md \u203a The cause under all four",
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-14-the-cost-of-motion.md#2",
+    "label": "meta/postmortems/2026-09-14-the-cost-of-motion.md \u203a 1. Refusals cost more than releases did",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "meta/postmortems/2026-09-14-the-cost-of-motion.md#7",
+    "label": "meta/postmortems/2026-09-14-the-cost-of-motion.md \u203a 3. PRs that could have been one",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-292.md#6",
+    "label": "board/cards/REM-292.md \u203a Links",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-288.md#6",
+    "label": "board/cards/REM-288.md \u203a Links",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-287.md#6",
+    "label": "board/cards/REM-287.md \u203a Links",
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-14-the-cost-of-motion.md#5",
+    "label": "meta/postmortems/2026-09-14-the-cost-of-motion.md \u203a 2. Releases: one chain avoided, one workflow still runs on every PR",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

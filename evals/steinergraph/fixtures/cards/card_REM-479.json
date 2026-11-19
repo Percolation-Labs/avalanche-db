@@ -1,0 +1,427 @@
+{
+ "qid": "card:REM-479",
+ "set": "cards",
+ "question": "What was done about this, and why: claims: comparisons are comparative assertions in core, not documents in the application?",
+ "gold": [
+  {
+   "id": "commit/06bc71644e",
+   "label": "commit 06bc716: claims: a reworded claim is answered by its writer, same claim or new (REM-483, core half)",
+   "seed": false
+  },
+  {
+   "id": "commit/31f74346c6",
+   "label": "commit 31f7434: claims: comparative labels are assertions, and core enforces the stance rules (REM-479, core half)",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/480237a99d",
+   "label": "commit 480237a: board: file REM-479 claims: comparisons are comparative assertions in core, not documents in the applica",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-479.md#1",
+   "label": "board/cards/REM-479.md",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/31f74346c6",
+   "label": "commit 31f7434: claims: comparative labels are assertions, and core enforces the stance rules (REM-479, core half)",
+   "rank": 3,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "board/cards/REM-479.md#6",
+   "label": "board/cards/REM-479.md \u203a Log",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "specs/claims/graph.md#57",
+   "label": "specs/claims/graph.md \u203a 16. Dogfooding",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/06bc71644e",
+    "label": "commit 06bc716: claims: a reworded claim is answered by its writer, same claim or new (REM-483, core half)",
+    "role": "gold"
+   },
+   {
+    "id": "commit/31f74346c6",
+    "label": "commit 31f7434: claims: comparative labels are assertions, and core enforces the stance rules (REM-479, core half)",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/06bc71644e",
+    "b": "commit/31f74346c6",
+    "via": [
+     {
+      "kind": "term",
+      "key": "p8ci dev",
+      "width": 14
+     },
+     {
+      "kind": "term",
+      "key": "gates dev",
+      "width": 14
+     },
+     {
+      "kind": "term",
+      "key": "application half",
+      "width": 15
+     },
+     {
+      "kind": "term",
+      "key": "core half",
+      "width": 23
+     },
+     {
+      "kind": "term",
+      "key": "p8ci",
+      "width": 25
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "commit/31f74346c6",
+   "gold": "commit/31f74346c6",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 2610,
+  "within_2_doors": 34560,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "board/cards/REM-479.md#2",
+    "label": "board/cards/REM-479.md \u203a Goal",
+    "p": 0.006440791002640648,
+    "gold": false
+   },
+   {
+    "id": "specs/claims/graph.md#32",
+    "label": "specs/claims/graph.md \u203a 6. Relations: one vocabulary, with declared meaning",
+    "p": 0.005862106580321214,
+    "gold": false
+   },
+   {
+    "id": "specs/claims/graph.md#55",
+    "label": "specs/claims/graph.md \u203a 15. Build sequence",
+    "p": 0.005246348755385413,
+    "gold": false
+   },
+   {
+    "id": "commit/5ce73ce692",
+    "label": "commit 5ce73ce: board: file REM-478 claims: two claims in different packages are the same only by a confirmed assertion,",
+    "p": 0.0028631120827965362,
+    "gold": false
+   },
+   {
+    "id": "commit/67b6c06bee",
+    "label": "commit 67b6c06: board: file REM-480 claims: a claim can be resolved against an outcome, and the resolution is kept",
+    "p": 0.0027241981234585374,
+    "gold": false
+   },
+   {
+    "id": "specs/claims/schema.sql#12",
+    "label": "specs/claims/schema.sql",
+    "p": 0.002135646867044903,
+    "gold": false
+   },
+   {
+    "id": "specs/claims/graph.md#58",
+    "label": "specs/claims/graph.md \u203a 17. Cards",
+    "p": 0.0018510543623506555,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-432.md#9",
+    "label": "board/cards/REM-432.md \u203a Log",
+    "p": 0.0017017756802286288,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-479.md#3",
+    "label": "board/cards/REM-479.md \u203a Done when",
+    "p": 0.0016158595748856257,
+    "gold": false
+   },
+   {
+    "id": "specs/claims/schema.sql#18",
+    "label": "specs/claims/schema.sql",
+    "p": 0.001546870863448236,
+    "gold": false
+   },
+   {
+    "id": "specs/claims/schema.sql#15",
+    "label": "specs/claims/schema.sql",
+    "p": 0.0015371777396995102,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-474.md#6",
+    "label": "board/cards/REM-474.md \u203a Log",
+    "p": 0.0015356959520514823,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-435.md#8",
+    "label": "board/cards/REM-435.md \u203a Log",
+    "p": 0.001516608515044632,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-484.md#2",
+    "label": "board/cards/REM-484.md \u203a Goal",
+    "p": 0.001444086043877306,
+    "gold": false
+   },
+   {
+    "id": "commit/b28bccc7ec",
+    "label": "commit b28bccc: claims: relations are assertions in one vocabulary, made in a transaction and never updated (REM-474)",
+    "p": 0.0012476745918639474,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/comparison-and-trust.md#20",
+    "label": "specs/percolate-application/comparison-and-trust.md \u203a The comparison document",
+    "p": 0.0012302997122685957,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-479.md#4",
+    "label": "board/cards/REM-479.md \u203a Estimate \u2014 5 points",
+    "p": 0.0012209624545478995,
+    "gold": false
+   },
+   {
+    "id": "specs/claims/schema.sql#11",
+    "label": "specs/claims/schema.sql",
+    "p": 0.0011865006819359314,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-483.md#6",
+    "label": "board/cards/REM-483.md \u203a Log",
+    "p": 0.0011457595039452326,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/concept-navigation.md#4",
+    "label": "specs/percolate-application/concept-navigation.md \u203a 3. Moves",
+    "p": 0.001129117288358427,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/480237a99d",
+   "label": "commit 480237a: board: file REM-479 claims: comparisons are comparative assertions in core, not documents in the applica",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-479.md#1",
+   "label": "board/cards/REM-479.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/31f74346c6",
+   "label": "commit 31f7434: claims: comparative labels are assertions, and core enforces the stance rules (REM-479, core half)",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "board/cards/REM-479.md#6",
+   "label": "board/cards/REM-479.md \u203a Log",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/claims/graph.md#57",
+   "label": "specs/claims/graph.md \u203a 16. Dogfooding",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/research-platform/core-trust-delivery.md#3",
+   "label": "specs/research-platform/core-trust-delivery.md \u203a Existing work and boundaries",
+   "wave": 1,
+   "via": "term:rem 479",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-479.md#4",
+   "label": "board/cards/REM-479.md \u203a Estimate \u2014 5 points",
+   "wave": 1,
+   "via": "term:rem 479",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-479.md#3",
+   "label": "board/cards/REM-479.md \u203a Done when",
+   "wave": 1,
+   "via": "term:rem 479",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-479.md#2",
+   "label": "board/cards/REM-479.md \u203a Goal",
+   "wave": 1,
+   "via": "term:rem 479",
+   "gold": false
+  },
+  {
+   "id": "commit/6c95203b1c",
+   "label": "commit 6c95203: board: REM-479 in-progress \u2192 done",
+   "wave": 1,
+   "via": "term:rem 479",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "board/cards/REM-479.md#2",
+    "label": "board/cards/REM-479.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "specs/claims/graph.md#32",
+    "label": "specs/claims/graph.md \u203a 6. Relations: one vocabulary, with declared meaning",
+    "gold": false
+   },
+   {
+    "id": "specs/claims/graph.md#55",
+    "label": "specs/claims/graph.md \u203a 15. Build sequence",
+    "gold": false
+   },
+   {
+    "id": "commit/5ce73ce692",
+    "label": "commit 5ce73ce: board: file REM-478 claims: two claims in different packages are the same only by a confirmed assertion,",
+    "gold": false
+   },
+   {
+    "id": "commit/67b6c06bee",
+    "label": "commit 67b6c06: board: file REM-480 claims: a claim can be resolved against an outcome, and the resolution is kept",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "specs/claims/graph.md#32",
+    "label": "specs/claims/graph.md \u203a 6. Relations: one vocabulary, with declared meaning",
+    "gold": false
+   },
+   {
+    "id": "specs/claims/graph.md#55",
+    "label": "specs/claims/graph.md \u203a 15. Build sequence",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-479.md#2",
+    "label": "board/cards/REM-479.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-479.md#3",
+    "label": "board/cards/REM-479.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "specs/claims/schema.sql#12",
+    "label": "specs/claims/schema.sql",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "board/cards/REM-479.md#2",
+    "label": "board/cards/REM-479.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-479.md#5",
+    "label": "board/cards/REM-479.md \u203a Scope",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-479.md#3",
+    "label": "board/cards/REM-479.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "commit/6c95203b1c",
+    "label": "commit 6c95203: board: REM-479 in-progress \u2192 done",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-479.md#4",
+    "label": "board/cards/REM-479.md \u203a Estimate \u2014 5 points",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "specs/claims/graph.md#55",
+    "label": "specs/claims/graph.md \u203a 15. Build sequence",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/claim-change-inbox.md#22",
+    "label": "specs/percolate-application/claim-change-inbox.md \u203a The mapping, exercised",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-479.md#3",
+    "label": "board/cards/REM-479.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "specs/claims/graph.md#32",
+    "label": "specs/claims/graph.md \u203a 6. Relations: one vocabulary, with declared meaning",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-590.md#1",
+    "label": "board/cards/REM-590.md",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

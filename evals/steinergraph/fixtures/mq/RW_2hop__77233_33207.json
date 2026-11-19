@@ -1,0 +1,407 @@
+{
+ "qid": "RW:2hop__77233_33207",
+ "set": "mq",
+ "question": "How did did the people fare during the reign of the abolisher of sati partha in India?",
+ "gold": [
+  {
+   "id": "mq:cc0d8674489c797b",
+   "label": "Sati (practice)",
+   "seed": true
+  },
+  {
+   "id": "mq:e010561c7f654f87",
+   "label": "Modern history",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:cc0d8674489c797b",
+   "label": "Sati (practice)",
+   "rank": 1,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:982f1d051e249d97",
+   "label": "Kurza, India",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:316530d2be6d11aa",
+   "label": "Sati (film)",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:aec7eafe34527522",
+   "label": "Bengal Sati Regulation, 1829",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:c6136e47977de78b",
+   "label": "Indian National Congress",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:cc0d8674489c797b",
+    "label": "Sati (practice)",
+    "role": "gold"
+   },
+   {
+    "id": "mq:e010561c7f654f87",
+    "label": "Modern history",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:cc0d8674489c797b",
+    "b": "mq:e010561c7f654f87",
+    "via": [
+     {
+      "kind": "term",
+      "key": "queen victoria",
+      "width": 44
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "mq:cc0d8674489c797b",
+   "gold": "mq:cc0d8674489c797b",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 2795,
+  "within_2_doors": 18281,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "mq:3a469bb6d1f4af30",
+    "label": "National Film Award for Best Actress",
+    "p": 0.0040440303659150375,
+    "gold": false
+   },
+   {
+    "id": "mq:401bef97b7da911f",
+    "label": "National Film Award for Best Actress",
+    "p": 0.003928538563503583,
+    "gold": false
+   },
+   {
+    "id": "mq:3f19fc35ae6a4231",
+    "label": "Apur Panchali",
+    "p": 0.0018818310485512993,
+    "gold": false
+   },
+   {
+    "id": "mq:c7cda9a710c5dca6",
+    "label": "Kalpana Lajmi",
+    "p": 0.0016919198158452965,
+    "gold": false
+   },
+   {
+    "id": "mq:a8b6d51693a3de6e",
+    "label": "Boston",
+    "p": 0.0016464214257558122,
+    "gold": false
+   },
+   {
+    "id": "mq:52edc08fdbf07b6d",
+    "label": "Suresh Ganapat Wagmare",
+    "p": 0.0013849526738013596,
+    "gold": false
+   },
+   {
+    "id": "mq:2befe144916cbaa4",
+    "label": "Dergajen",
+    "p": 0.0013623419504499093,
+    "gold": false
+   },
+   {
+    "id": "mq:ce165ddfcdf9b427",
+    "label": "UC Davis School of Veterinary Medicine",
+    "p": 0.0013574864697237063,
+    "gold": false
+   },
+   {
+    "id": "mq:ee732f77c87a7e32",
+    "label": "Princess Henrietta of Nassau-Weilburg",
+    "p": 0.0013540695629973968,
+    "gold": false
+   },
+   {
+    "id": "mq:d665b037764bcc3a",
+    "label": "Estonia",
+    "p": 0.0013238219813395552,
+    "gold": false
+   },
+   {
+    "id": "mq:9fff5be8f5a6daf8",
+    "label": "M.S. Dhoni: The Untold Story",
+    "p": 0.0011099341044908636,
+    "gold": false
+   },
+   {
+    "id": "mq:8b045c8dc840b23f",
+    "label": "Bhanwar Singh Dangawas",
+    "p": 0.0010898403639312043,
+    "gold": false
+   },
+   {
+    "id": "mq:eb65b7bd94aa5355",
+    "label": "Katherine of England",
+    "p": 0.0010878831649934096,
+    "gold": false
+   },
+   {
+    "id": "mq:0820e0345950c0cd",
+    "label": "Parsuram Majhi",
+    "p": 0.0010595517967200263,
+    "gold": false
+   },
+   {
+    "id": "mq:ad88345fbc0c8787",
+    "label": "Dilipkumar Gandhi",
+    "p": 0.0010565203903808,
+    "gold": false
+   },
+   {
+    "id": "mq:ccb78927eee38c96",
+    "label": "Leader of the Opposition (India)",
+    "p": 0.0010497847796660054,
+    "gold": false
+   },
+   {
+    "id": "mq:ef891309049de70e",
+    "label": "Chhatar Singh Darbar",
+    "p": 0.0009976555353872034,
+    "gold": false
+   },
+   {
+    "id": "mq:31b2f642842fe035",
+    "label": "Indian Rebellion of 1857",
+    "p": 0.0009810281397620224,
+    "gold": false
+   },
+   {
+    "id": "mq:991c7f4dd451b0b1",
+    "label": "List of members of the 16th Lok Sabha",
+    "p": 0.0008306979140865096,
+    "gold": false
+   },
+   {
+    "id": "mq:bc009ea835c27cac",
+    "label": "David Bailie",
+    "p": 0.0008161392495120301,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:cc0d8674489c797b",
+   "label": "Sati (practice)",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:982f1d051e249d97",
+   "label": "Kurza, India",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:316530d2be6d11aa",
+   "label": "Sati (film)",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:aec7eafe34527522",
+   "label": "Bengal Sati Regulation, 1829",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:c6136e47977de78b",
+   "label": "Indian National Congress",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:70e81ab2fb87f306",
+   "label": "British Empire",
+   "wave": 1,
+   "via": "term:british east",
+   "gold": false
+  },
+  {
+   "id": "mq:a0ebf57a57855bed",
+   "label": "Suetonius Grant Heatly",
+   "wave": 1,
+   "via": "term:british east",
+   "gold": false
+  },
+  {
+   "id": "mq:f5edbdb5593dfeae",
+   "label": "Second Anglo-Maratha War",
+   "wave": 1,
+   "via": "term:british east",
+   "gold": false
+  },
+  {
+   "id": "mq:d7ea0ced70cb936a",
+   "label": "Cotton",
+   "wave": 1,
+   "via": "term:british east",
+   "gold": false
+  },
+  {
+   "id": "mq:8b0f8918c86b6af8",
+   "label": "Imperialism",
+   "wave": 1,
+   "via": "term:british east",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:3a469bb6d1f4af30",
+    "label": "National Film Award for Best Actress",
+    "gold": false
+   },
+   {
+    "id": "mq:401bef97b7da911f",
+    "label": "National Film Award for Best Actress",
+    "gold": false
+   },
+   {
+    "id": "mq:3f19fc35ae6a4231",
+    "label": "Apur Panchali",
+    "gold": false
+   },
+   {
+    "id": "mq:c7cda9a710c5dca6",
+    "label": "Kalpana Lajmi",
+    "gold": false
+   },
+   {
+    "id": "mq:a8b6d51693a3de6e",
+    "label": "Boston",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:31b2f642842fe035",
+    "label": "Indian Rebellion of 1857",
+    "gold": false
+   },
+   {
+    "id": "mq:625a3cf58da617f4",
+    "label": "A. P. J. Abdul Kalam",
+    "gold": false
+   },
+   {
+    "id": "mq:bf7d82b9fe1b3bed",
+    "label": "Partition of India",
+    "gold": false
+   },
+   {
+    "id": "mq:ed2b79078209ea2e",
+    "label": "Partition of India",
+    "gold": false
+   },
+   {
+    "id": "mq:52edc08fdbf07b6d",
+    "label": "Suresh Ganapat Wagmare",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:31b2f642842fe035",
+    "label": "Indian Rebellion of 1857",
+    "gold": false
+   },
+   {
+    "id": "mq:31b14657f5eb9459",
+    "label": "Indian Rebellion of 1857",
+    "gold": false
+   },
+   {
+    "id": "mq:625a3cf58da617f4",
+    "label": "A. P. J. Abdul Kalam",
+    "gold": false
+   },
+   {
+    "id": "mq:bf7d82b9fe1b3bed",
+    "label": "Partition of India",
+    "gold": false
+   },
+   {
+    "id": "mq:ed2b79078209ea2e",
+    "label": "Partition of India",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:6aa7a4fc1c6d2540",
+    "label": "History of India",
+    "gold": false
+   },
+   {
+    "id": "mq:2de575fce6d2db90",
+    "label": "Thomas Roe",
+    "gold": false
+   },
+   {
+    "id": "mq:eef60d72aba64fe4",
+    "label": "Rajendra Chola I",
+    "gold": false
+   },
+   {
+    "id": "mq:fa9ad7d406ad9581",
+    "label": "Politics of India",
+    "gold": false
+   },
+   {
+    "id": "mq:5274430c52f89287",
+    "label": "2011 Census of India",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

@@ -1,0 +1,405 @@
+{
+ "qid": "card:REM-394",
+ "set": "cards",
+ "question": "What was done about this, and why: account: an invitation names its sender by the name they chose, which a sign-in never overwrites?",
+ "gold": [
+  {
+   "id": "commit/8b3ab6a55e",
+   "label": "commit 8b3ab6a: specs: the chosen name lives in hub_app until core has it (REM-394)",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/6e0f2c09cd",
+   "label": "commit 6e0f2c0: board: file REM-394 account: an invitation names its sender by the name they chose, which a sign-in neve",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-394.md#1",
+   "label": "board/cards/REM-394.md",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-394.md#2",
+   "label": "board/cards/REM-394.md \u203a Goal",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/0e8dd83caf",
+   "label": "commit 0e8dd83: specs: writers invite writers by reputation, and an invitation names its sender by the name they chose",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "specs/percolate-application/invitations-by-reputation.md#3",
+   "label": "specs/percolate-application/invitations-by-reputation.md \u203a 2. A name the person chooses",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "board/cards/REM-394.md#1",
+    "label": "board/cards/REM-394.md",
+    "role": "seed"
+   },
+   {
+    "id": "commit/8b3ab6a55e",
+    "label": "commit 8b3ab6a: specs: the chosen name lives in hub_app until core has it (REM-394)",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "board/cards/REM-394.md#1",
+    "b": "commit/8b3ab6a55e",
+    "via": [
+     {
+      "kind": "term",
+      "key": "chosen name",
+      "width": 16
+     },
+     {
+      "kind": "term",
+      "key": "rem 394",
+      "width": 22
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [],
+  "entry": {
+   "seed": "board/cards/REM-394.md#1",
+   "gold": "commit/8b3ab6a55e",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 552,
+  "within_2_doors": 31195,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "specs/percolate-application/invitations-by-reputation.md#1",
+    "label": "specs/percolate-application/invitations-by-reputation.md \u203a Writers invite writers, by reputation",
+    "p": 0.007304567654891921,
+    "gold": false
+   },
+   {
+    "id": "commit/496aad8e2e",
+    "label": "commit 496aad8: board: file REM-393 writers: every writer invites as many people as their reputation allows, and sees ho",
+    "p": 0.004632165104149669,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-394.md#4",
+    "label": "board/cards/REM-394.md \u203a Done when",
+    "p": 0.004080133856159024,
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-self-model/dreaming/fixtures/narrative_v2/day09-2-mei.md#1",
+    "label": "applications/percolate-self-model/dreaming/fixtures/narrative_v2/day09-2-mei.md \u203a Day 9 \u2014 the email sender",
+    "p": 0.0039120610336439085,
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-self-model/dreaming/fixtures/narrative_v2/day18-2-mei.md#1",
+    "label": "applications/percolate-self-model/dreaming/fixtures/narrative_v2/day18-2-mei.md \u203a Day 18 \u2014 the email sender",
+    "p": 0.00390810197563898,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/invitations-by-reputation.md#2",
+    "label": "specs/percolate-application/invitations-by-reputation.md \u203a 1. Why the email said \"amartey\"",
+    "p": 0.0038666261955584225,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1023.md#4",
+    "label": "board/cards/REM-1023.md \u203a Done when",
+    "p": 0.003864641139497329,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-394.md#3",
+    "label": "board/cards/REM-394.md \u203a Evidence",
+    "p": 0.0032219931805802854,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-394.md#8",
+    "label": "board/cards/REM-394.md \u203a Log",
+    "p": 0.003167432659278862,
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-self-model/dreaming/fixtures/narrative_v2/day08-4-mei.md#1",
+    "label": "applications/percolate-self-model/dreaming/fixtures/narrative_v2/day08-4-mei.md \u203a Day 8 \u2014 the email sender",
+    "p": 0.00312454996580211,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-394.md#9",
+    "label": "board/cards/REM-394.md \u203a Log",
+    "p": 0.0029697339341751483,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/writer-onboarding.md#3",
+    "label": "specs/percolate-application/writer-onboarding.md \u203a 2. What must stay true",
+    "p": 0.002373132793461768,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/README.md#4",
+    "label": "specs/percolate-application/README.md \u203a Read in this order",
+    "p": 0.0023440278103196675,
+    "gold": false
+   },
+   {
+    "id": "commit/120e5ba784",
+    "label": "commit 120e5ba: board: file REM-395 guides: only a signed-in caller reads the research guides",
+    "p": 0.0022463640453526793,
+    "gold": false
+   },
+   {
+    "id": "commit/ba17b3261e",
+    "label": "commit ba17b32: board: REM-392 in-progress \u2192 done",
+    "p": 0.002229618777586855,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-389.md#8",
+    "label": "board/cards/REM-389.md \u203a Log",
+    "p": 0.0020933492783820574,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/invitations-by-reputation.md#9",
+    "label": "specs/percolate-application/invitations-by-reputation.md \u203a 5. Where it lives",
+    "p": 0.0019674595211252406,
+    "gold": false
+   },
+   {
+    "id": "specs/research-platform/people-and-reputation.md#1",
+    "label": "specs/research-platform/people-and-reputation.md \u203a People, names and reputation in core",
+    "p": 0.001926644348149275,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-326.md#7",
+    "label": "board/cards/REM-326.md \u203a Log",
+    "p": 0.0018441513685553677,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/writer-onboarding.md#4",
+    "label": "specs/percolate-application/writer-onboarding.md \u203a 3. How it works now",
+    "p": 0.0018231927598357396,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/6e0f2c09cd",
+   "label": "commit 6e0f2c0: board: file REM-394 account: an invitation names its sender by the name they chose, which a sign-in neve",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-394.md#1",
+   "label": "board/cards/REM-394.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-394.md#2",
+   "label": "board/cards/REM-394.md \u203a Goal",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/0e8dd83caf",
+   "label": "commit 0e8dd83: specs: writers invite writers by reputation, and an invitation names its sender by the name they chose",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/percolate-application/invitations-by-reputation.md#3",
+   "label": "specs/percolate-application/invitations-by-reputation.md \u203a 2. A name the person chooses",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-394.md#8",
+   "label": "board/cards/REM-394.md \u203a Log",
+   "wave": 1,
+   "via": "term:rem 394",
+   "gold": false
+  },
+  {
+   "id": "commit/ada02be1c2",
+   "label": "commit ada02be: board: REM-394 in-progress \u2192 done",
+   "wave": 1,
+   "via": "term:rem 394",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-394.md#6",
+   "label": "board/cards/REM-394.md \u203a Scope",
+   "wave": 1,
+   "via": "term:rem 394",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-394.md#3",
+   "label": "board/cards/REM-394.md \u203a Evidence",
+   "wave": 1,
+   "via": "term:rem 394",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-401.md#7",
+   "label": "board/cards/REM-401.md \u203a Links",
+   "wave": 1,
+   "via": "term:rem 394",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "specs/percolate-application/invitations-by-reputation.md#1",
+    "label": "specs/percolate-application/invitations-by-reputation.md \u203a Writers invite writers, by reputation",
+    "gold": false
+   },
+   {
+    "id": "commit/496aad8e2e",
+    "label": "commit 496aad8: board: file REM-393 writers: every writer invites as many people as their reputation allows, and sees ho",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-394.md#4",
+    "label": "board/cards/REM-394.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-self-model/dreaming/fixtures/narrative_v2/day09-2-mei.md#1",
+    "label": "applications/percolate-self-model/dreaming/fixtures/narrative_v2/day09-2-mei.md \u203a Day 9 \u2014 the email sender",
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-self-model/dreaming/fixtures/narrative_v2/day18-2-mei.md#1",
+    "label": "applications/percolate-self-model/dreaming/fixtures/narrative_v2/day18-2-mei.md \u203a Day 18 \u2014 the email sender",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "specs/percolate-application/invitations-by-reputation.md#1",
+    "label": "specs/percolate-application/invitations-by-reputation.md \u203a Writers invite writers, by reputation",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-394.md#4",
+    "label": "board/cards/REM-394.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/invitations-by-reputation.md#2",
+    "label": "specs/percolate-application/invitations-by-reputation.md \u203a 1. Why the email said \"amartey\"",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-394.md#9",
+    "label": "board/cards/REM-394.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1023.md#4",
+    "label": "board/cards/REM-1023.md \u203a Done when",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "board/cards/REM-394.md#4",
+    "label": "board/cards/REM-394.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-self-model/dreaming/fixtures/narrative_v2/day18-2-mei.md#1",
+    "label": "applications/percolate-self-model/dreaming/fixtures/narrative_v2/day18-2-mei.md \u203a Day 18 \u2014 the email sender",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1023.md#4",
+    "label": "board/cards/REM-1023.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-self-model/dreaming/fixtures/narrative_v2/day09-2-mei.md#1",
+    "label": "applications/percolate-self-model/dreaming/fixtures/narrative_v2/day09-2-mei.md \u203a Day 9 \u2014 the email sender",
+    "gold": false
+   },
+   {
+    "id": "commit/4a94e71131",
+    "label": "commit 4a94e71: board: file REM-1023 feedback: a sender edits or cancels their own report",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "board/cards/REM-394.md#4",
+    "label": "board/cards/REM-394.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/invitations-by-reputation.md#1",
+    "label": "specs/percolate-application/invitations-by-reputation.md \u203a Writers invite writers, by reputation",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-370.md#7",
+    "label": "board/cards/REM-370.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-326.md#4",
+    "label": "board/cards/REM-326.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/data-model.md#6",
+    "label": "specs/percolate-application/data-model.md \u203a People and sign-in",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

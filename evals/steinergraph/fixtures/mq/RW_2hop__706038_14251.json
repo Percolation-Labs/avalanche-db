@@ -1,0 +1,412 @@
+{
+ "qid": "RW:2hop__706038_14251",
+ "set": "mq",
+ "question": "What line by a cast member of Birds of Feather is believed to have started the archie nickname?",
+ "gold": [
+  {
+   "id": "mq:455feaaad3eb4e5e",
+   "label": "Anti-aircraft warfare",
+   "seed": false
+  },
+  {
+   "id": "mq:aeae47e1b167d772",
+   "label": "Birds of a Feather (1936 film)",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:3887b0dc07eb762c",
+   "label": "List of NFL nicknames",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:aeae47e1b167d772",
+   "label": "Birds of a Feather (1936 film)",
+   "rank": 2,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:6b0d4a81b879854c",
+   "label": "Charlie Quirke",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:e99bbec6522de55c",
+   "label": "Bird",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:1e0b1bf7e289917c",
+   "label": "Bentvueghels",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:455feaaad3eb4e5e",
+    "label": "Anti-aircraft warfare",
+    "role": "gold"
+   },
+   {
+    "id": "mq:aeae47e1b167d772",
+    "label": "Birds of a Feather (1936 film)",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:455feaaad3eb4e5e",
+    "b": "mq:aeae47e1b167d772",
+    "via": [
+     {
+      "kind": "term",
+      "key": "robey",
+      "width": 4
+     },
+     {
+      "kind": "term",
+      "key": "george robey",
+      "width": 4
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "mq:aeae47e1b167d772",
+   "gold": "mq:aeae47e1b167d772",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 1284,
+  "within_2_doors": 19703,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "mq:9326de01465bbfea",
+    "label": "Lesley Joseph",
+    "p": 0.003639223524092713,
+    "gold": false
+   },
+   {
+    "id": "mq:a4d686e0c23196e3",
+    "label": "The Sitwells",
+    "p": 0.003492696296758679,
+    "gold": false
+   },
+   {
+    "id": "mq:97f1726f5e312132",
+    "label": "2018 Wimbledon Championships",
+    "p": 0.0028824381571543396,
+    "gold": false
+   },
+   {
+    "id": "mq:cda194c017f1e235",
+    "label": "For the Love of Ada",
+    "p": 0.002649577017829656,
+    "gold": false
+   },
+   {
+    "id": "mq:0af0510f3b6d45b8",
+    "label": "High Feather",
+    "p": 0.002447950702627656,
+    "gold": false
+   },
+   {
+    "id": "mq:605af1079fad9162",
+    "label": "Guardians of the Galaxy (film)",
+    "p": 0.002315479596395709,
+    "gold": false
+   },
+   {
+    "id": "mq:deaf67f2c11c6af2",
+    "label": "We'll Think of Something",
+    "p": 0.0019617775908080818,
+    "gold": false
+   },
+   {
+    "id": "mq:1c816513cd0b1396",
+    "label": "2017 College Football Playoff National Championship",
+    "p": 0.0019150999422650956,
+    "gold": false
+   },
+   {
+    "id": "mq:f843af5486092802",
+    "label": "No Escape (1936 film)",
+    "p": 0.0017583071878616986,
+    "gold": false
+   },
+   {
+    "id": "mq:6bece271e1ccda49",
+    "label": "Southern Roses",
+    "p": 0.0016660590412718719,
+    "gold": false
+   },
+   {
+    "id": "mq:d98249c912d0e008",
+    "label": "List of Miami Dolphins broadcasters",
+    "p": 0.001158827023620795,
+    "gold": false
+   },
+   {
+    "id": "mq:8af003d1f84234e7",
+    "label": "2018 NFL season",
+    "p": 0.001145661060168717,
+    "gold": false
+   },
+   {
+    "id": "mq:5f6d6adf6eb247a4",
+    "label": "Aldosterone",
+    "p": 0.0011272737243589732,
+    "gold": false
+   },
+   {
+    "id": "mq:6af6e81f863b2b33",
+    "label": "The Everglades: River of Grass",
+    "p": 0.0011240984646439215,
+    "gold": false
+   },
+   {
+    "id": "mq:4993cc9eaa9c79f7",
+    "label": "Atlanta Falcons",
+    "p": 0.0011240514389916146,
+    "gold": false
+   },
+   {
+    "id": "mq:ac5257c99ab70924",
+    "label": "Doing His Bit",
+    "p": 0.0010506435128242826,
+    "gold": false
+   },
+   {
+    "id": "mq:bafc219e201b401e",
+    "label": "Jerome Smith (American football)",
+    "p": 0.0010190674606648381,
+    "gold": false
+   },
+   {
+    "id": "mq:455feaaad3eb4e5e",
+    "label": "Anti-aircraft warfare",
+    "p": 0.0010154035842861963,
+    "gold": true
+   },
+   {
+    "id": "mq:0fe20f13261b9d86",
+    "label": "Geluwe",
+    "p": 0.0009731133296769959,
+    "gold": false
+   },
+   {
+    "id": "mq:64c4d989beb8b72f",
+    "label": "2017 US Open (tennis)",
+    "p": 0.0009674417458300863,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:3887b0dc07eb762c",
+   "label": "List of NFL nicknames",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:aeae47e1b167d772",
+   "label": "Birds of a Feather (1936 film)",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:6b0d4a81b879854c",
+   "label": "Charlie Quirke",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:e99bbec6522de55c",
+   "label": "Bird",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:1e0b1bf7e289917c",
+   "label": "Bentvueghels",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:197ec189ad4436a1",
+   "label": "All in the Family",
+   "wave": 1,
+   "via": "term:rents",
+   "gold": false
+  },
+  {
+   "id": "mq:c9120a81cd6c2803",
+   "label": "Middle Ages",
+   "wave": 1,
+   "via": "term:rents",
+   "gold": false
+  },
+  {
+   "id": "mq:1c078974f874608b",
+   "label": "Bunker Soldiers",
+   "wave": 2,
+   "via": "term:bunker",
+   "gold": false
+  },
+  {
+   "id": "mq:e332b3a948eec8a2",
+   "label": "Battle of Bunker Hill",
+   "wave": 2,
+   "via": "term:bunker",
+   "gold": false
+  },
+  {
+   "id": "mq:22d26f751b6c7b45",
+   "label": "The Rain (TV series)",
+   "wave": 2,
+   "via": "term:bunker",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:9326de01465bbfea",
+    "label": "Lesley Joseph",
+    "gold": false
+   },
+   {
+    "id": "mq:a4d686e0c23196e3",
+    "label": "The Sitwells",
+    "gold": false
+   },
+   {
+    "id": "mq:97f1726f5e312132",
+    "label": "2018 Wimbledon Championships",
+    "gold": false
+   },
+   {
+    "id": "mq:cda194c017f1e235",
+    "label": "For the Love of Ada",
+    "gold": false
+   },
+   {
+    "id": "mq:0af0510f3b6d45b8",
+    "label": "High Feather",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:9326de01465bbfea",
+    "label": "Lesley Joseph",
+    "gold": false
+   },
+   {
+    "id": "mq:0af0510f3b6d45b8",
+    "label": "High Feather",
+    "gold": false
+   },
+   {
+    "id": "mq:deaf67f2c11c6af2",
+    "label": "We'll Think of Something",
+    "gold": false
+   },
+   {
+    "id": "mq:455feaaad3eb4e5e",
+    "label": "Anti-aircraft warfare",
+    "gold": true
+   },
+   {
+    "id": "mq:1c816513cd0b1396",
+    "label": "2017 College Football Playoff National Championship",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:9326de01465bbfea",
+    "label": "Lesley Joseph",
+    "gold": false
+   },
+   {
+    "id": "mq:0af0510f3b6d45b8",
+    "label": "High Feather",
+    "gold": false
+   },
+   {
+    "id": "mq:deaf67f2c11c6af2",
+    "label": "We'll Think of Something",
+    "gold": false
+   },
+   {
+    "id": "mq:455feaaad3eb4e5e",
+    "label": "Anti-aircraft warfare",
+    "gold": true
+   },
+   {
+    "id": "mq:1c816513cd0b1396",
+    "label": "2017 College Football Playoff National Championship",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:deaf67f2c11c6af2",
+    "label": "We'll Think of Something",
+    "gold": false
+   },
+   {
+    "id": "mq:cd3ca7d2c06ead87",
+    "label": "Basketball Wives LA",
+    "gold": false
+   },
+   {
+    "id": "mq:71ce275c593f6136",
+    "label": "Sabrina the Teenage Witch (1996 TV series)",
+    "gold": false
+   },
+   {
+    "id": "mq:6b3f239563c4431f",
+    "label": "KJ Apa",
+    "gold": false
+   },
+   {
+    "id": "mq:4bb25cf0351c8397",
+    "label": "Hero High",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 1.0,
+  "LQ": 1.0,
+  "S": 0.0
+ }
+}

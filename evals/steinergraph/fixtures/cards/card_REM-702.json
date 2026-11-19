@@ -1,0 +1,453 @@
+{
+ "qid": "card:REM-702",
+ "set": "cards",
+ "question": "What was done about this, and why: board: the person runs their whole board from chat?",
+ "gold": [
+  {
+   "id": "commit/85f49958b7",
+   "label": "commit 85f4995: Agent parity is for the research flow; social acts stay human-only (REM-701)",
+   "seed": false
+  },
+  {
+   "id": "commit/beeab263ff",
+   "label": "commit beeab26: agent-parity and agent-onboarding record REM-705: tool text, display name, proposals routes",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/7209944c12",
+   "label": "commit 7209944: board: file REM-702 board: the person runs their whole board from chat",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-702.md#1",
+   "label": "board/cards/REM-702.md",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-704.md#4",
+   "label": "board/cards/REM-704.md \u203a Done when",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "board/cards/REM-702.md#4",
+   "label": "board/cards/REM-702.md \u203a Done when",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/3f4f30c40a",
+   "label": "commit 3f4f30c: board: file REM-622 claims: a connected agent records the reworded-claim answer the person gave in chat",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 2
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "board/cards/REM-702.md#1",
+    "label": "board/cards/REM-702.md",
+    "role": "seed"
+   },
+   {
+    "id": "commit/85f49958b7",
+    "label": "commit 85f4995: Agent parity is for the research flow; social acts stay human-only (REM-701)",
+    "role": "gold"
+   },
+   {
+    "id": "commit/beeab263ff",
+    "label": "commit beeab26: agent-parity and agent-onboarding record REM-705: tool text, display name, proposals routes",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "board/cards/REM-702.md#1",
+    "b": "commit/85f49958b7",
+    "via": [
+     {
+      "kind": "term",
+      "key": "rem 702",
+      "width": 14
+     },
+     {
+      "kind": "term",
+      "key": "rem 701",
+      "width": 31
+     },
+     {
+      "kind": "term",
+      "key": "agent parity",
+      "width": 42
+     }
+    ]
+   },
+   {
+    "a": "commit/85f49958b7",
+    "b": "commit/beeab263ff",
+    "via": [
+     {
+      "kind": "term",
+      "key": "rem 702",
+      "width": 14
+     },
+     {
+      "kind": "term",
+      "key": "rem 705",
+      "width": 23
+     },
+     {
+      "kind": "term",
+      "key": "agent parity",
+      "width": 42
+     },
+     {
+      "kind": "term",
+      "key": "consent",
+      "width": 63
+     },
+     {
+      "kind": "term",
+      "key": "social",
+      "width": 77
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "board/cards/REM-702.md#1",
+   "gold": "commit/85f49958b7",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 515,
+  "within_2_doors": 30972,
+  "gold_within_1": 2,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "specs/percolate-application/agent-parity.md#7",
+    "label": "specs/percolate-application/agent-parity.md \u203a Slices",
+    "p": 0.007873789135575224,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-702.md#2",
+    "label": "board/cards/REM-702.md \u203a Goal",
+    "p": 0.007124202945117029,
+    "gold": false
+   },
+   {
+    "id": "commit/2b79283144",
+    "label": "commit 2b79283: board: file REM-701 agents: nothing in Percolate requires the website",
+    "p": 0.003853078627058215,
+    "gold": false
+   },
+   {
+    "id": "commit/51062469d1",
+    "label": "commit 5106246: board: file REM-703 comparisons: confirm a label from chat on the owner's word",
+    "p": 0.0038158301359445344,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/agent-parity.md#4",
+    "label": "specs/percolate-application/agent-parity.md \u203a Audit",
+    "p": 0.003765251614993204,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-701.md#8",
+    "label": "board/cards/REM-701.md \u203a Log",
+    "p": 0.0033049495992854114,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-383.md#7",
+    "label": "board/cards/REM-383.md \u203a Log",
+    "p": 0.002964292253272943,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-702.md#3",
+    "label": "board/cards/REM-702.md \u203a Evidence",
+    "p": 0.0029087394122906288,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-705.md#6",
+    "label": "board/cards/REM-705.md \u203a Log",
+    "p": 0.0028848291238314327,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-702.md#5",
+    "label": "board/cards/REM-702.md \u203a Scope",
+    "p": 0.0028199712508734324,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-383.md#1",
+    "label": "board/cards/REM-383.md",
+    "p": 0.0027544373531308668,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-622.md#1",
+    "label": "board/cards/REM-622.md",
+    "p": 0.002591754673368072,
+    "gold": false
+   },
+   {
+    "id": "commit/eebc64b18c",
+    "label": "commit eebc64b: claims: an agent records the rewording answer its person gave, on a private draft (REM-622)",
+    "p": 0.002574016852782474,
+    "gold": false
+   },
+   {
+    "id": "commit/8e91afaa07",
+    "label": "commit 8e91afa: board: file REM-383 header and board: Profile in the avatar menu, and a whole board card opens it",
+    "p": 0.0023949810746516868,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-661.md#11",
+    "label": "board/cards/REM-661.md \u203a Log",
+    "p": 0.002173989371719318,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-742.md#2",
+    "label": "board/cards/REM-742.md \u203a Goal",
+    "p": 0.0021428884058342047,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-18-a-squash-rewound-two-cards.md#6",
+    "label": "meta/postmortems/2026-09-18-a-squash-rewound-two-cards.md \u203a 3. The graph view's first fit was lost, and only a recording",
+    "p": 0.0020892083312656603,
+    "gold": false
+   },
+   {
+    "id": "commit/85f49958b7",
+    "label": "commit 85f4995: Agent parity is for the research flow; social acts stay human-only (REM-701)",
+    "p": 0.002069987795366884,
+    "gold": true
+   },
+   {
+    "id": "specs/percolate-application/agent-parity.md#2",
+    "label": "specs/percolate-application/agent-parity.md \u203a The rule",
+    "p": 0.0019439463171761432,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-704.md#3",
+    "label": "board/cards/REM-704.md \u203a Evidence",
+    "p": 0.0019389984957047203,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/7209944c12",
+   "label": "commit 7209944: board: file REM-702 board: the person runs their whole board from chat",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-702.md#1",
+   "label": "board/cards/REM-702.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-704.md#4",
+   "label": "board/cards/REM-704.md \u203a Done when",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-702.md#4",
+   "label": "board/cards/REM-702.md \u203a Done when",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/3f4f30c40a",
+   "label": "commit 3f4f30c: board: file REM-622 claims: a connected agent records the reworded-claim answer the person gave in chat",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-705.md#6",
+   "label": "board/cards/REM-705.md \u203a Log",
+   "wave": 1,
+   "via": "term:rem 702",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-702.md#6",
+   "label": "board/cards/REM-702.md \u203a Log",
+   "wave": 1,
+   "via": "term:rem 702",
+   "gold": false
+  },
+  {
+   "id": "commit/00b045a516",
+   "label": "commit 00b045a: board: edit REM-702 labels severity",
+   "wave": 1,
+   "via": "term:rem 702",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-702.md#2",
+   "label": "board/cards/REM-702.md \u203a Goal",
+   "wave": 1,
+   "via": "term:rem 702",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-702.md#5",
+   "label": "board/cards/REM-702.md \u203a Scope",
+   "wave": 1,
+   "via": "term:rem 702",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "specs/percolate-application/agent-parity.md#7",
+    "label": "specs/percolate-application/agent-parity.md \u203a Slices",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-702.md#2",
+    "label": "board/cards/REM-702.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "commit/2b79283144",
+    "label": "commit 2b79283: board: file REM-701 agents: nothing in Percolate requires the website",
+    "gold": false
+   },
+   {
+    "id": "commit/51062469d1",
+    "label": "commit 5106246: board: file REM-703 comparisons: confirm a label from chat on the owner's word",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/agent-parity.md#4",
+    "label": "specs/percolate-application/agent-parity.md \u203a Audit",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "specs/percolate-application/agent-parity.md#7",
+    "label": "specs/percolate-application/agent-parity.md \u203a Slices",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-701.md#8",
+    "label": "board/cards/REM-701.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-702.md#2",
+    "label": "board/cards/REM-702.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-622.md#1",
+    "label": "board/cards/REM-622.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-705.md#6",
+    "label": "board/cards/REM-705.md \u203a Log",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/51062469d1",
+    "label": "commit 5106246: board: file REM-703 comparisons: confirm a label from chat on the owner's word",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-622.md#1",
+    "label": "board/cards/REM-622.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-702.md#2",
+    "label": "board/cards/REM-702.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "commit/00b045a516",
+    "label": "commit 00b045a: board: edit REM-702 labels severity",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-703.md#1",
+    "label": "board/cards/REM-703.md",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "board/cards/REM-701.md#4",
+    "label": "board/cards/REM-701.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/agent-onboarding.md#6",
+    "label": "specs/percolate-application/agent-onboarding.md \u203a What the AI does with them",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-622.md#1",
+    "label": "board/cards/REM-622.md",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/readers-board.md#6",
+    "label": "specs/percolate-application/readers-board.md \u203a 3. Agent work and human acts",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-96.md#2",
+    "label": "board/cards/REM-96.md \u203a Goal",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

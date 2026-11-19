@@ -1,0 +1,446 @@
+{
+ "qid": "RW:3hop2__57238_1926_54362",
+ "set": "mq",
+ "question": "Who burned down the city where Keeping Up with the Joneses is set, during the war marking the first time that the number of black people living in NYC declined?",
+ "gold": [
+  {
+   "id": "mq:c5076a3c526b9cd4",
+   "label": "Keeping Up with the Joneses (film)",
+   "seed": false
+  },
+  {
+   "id": "mq:d34e3df49d3a8b65",
+   "label": "New York City",
+   "seed": true
+  },
+  {
+   "id": "mq:ddd180ff94ff89e7",
+   "label": "Atlanta in the American Civil War",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:d34e3df49d3a8b65",
+   "label": "New York City",
+   "rank": 1,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:7b44b41d2e17c72b",
+   "label": "Confederate States Secretary of State",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:69d162dbd53bf32a",
+   "label": "Palermo",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:78a68f00986458d7",
+   "label": "American Revolutionary War",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "mq:d58419bd8140a58e",
+   "label": "Black people",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:0ca911a34c6bbd7f",
+    "label": "Black people",
+    "role": "connector"
+   },
+   {
+    "id": "mq:c5076a3c526b9cd4",
+    "label": "Keeping Up with the Joneses (film)",
+    "role": "gold"
+   },
+   {
+    "id": "mq:d34e3df49d3a8b65",
+    "label": "New York City",
+    "role": "gold"
+   },
+   {
+    "id": "mq:ddd180ff94ff89e7",
+    "label": "Atlanta in the American Civil War",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:0ca911a34c6bbd7f",
+    "b": "mq:d34e3df49d3a8b65",
+    "via": [
+     {
+      "kind": "term",
+      "key": "blacks",
+      "width": 26
+     }
+    ]
+   },
+   {
+    "a": "mq:0ca911a34c6bbd7f",
+    "b": "mq:ddd180ff94ff89e7",
+    "via": [
+     {
+      "kind": "term",
+      "key": "feared",
+      "width": 15
+     }
+    ]
+   },
+   {
+    "a": "mq:c5076a3c526b9cd4",
+    "b": "mq:ddd180ff94ff89e7",
+    "via": [
+     {
+      "kind": "term",
+      "key": "atlanta",
+      "width": 69
+     }
+    ]
+   }
+  ],
+  "cost": 3,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   2,
+   1,
+   2
+  ],
+  "entry": {
+   "seed": "mq:d34e3df49d3a8b65",
+   "gold": "mq:d34e3df49d3a8b65",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 2115,
+  "within_2_doors": 18953,
+  "gold_within_1": 1,
+  "gold_within_2": 1,
+  "top_U": [
+   {
+    "id": "mq:d1dc8e8c57c7f91c",
+    "label": "Infant mortality",
+    "p": 0.002543069503905041,
+    "gold": false
+   },
+   {
+    "id": "mq:6fa7899e0396bbc8",
+    "label": "Josip Broz Tito",
+    "p": 0.00243381150295673,
+    "gold": false
+   },
+   {
+    "id": "mq:dc85f0a8bcc935d2",
+    "label": "Indian independence movement",
+    "p": 0.0017833796209288733,
+    "gold": false
+   },
+   {
+    "id": "mq:60d670957b6678d5",
+    "label": "Queen Victoria",
+    "p": 0.0014975520055244627,
+    "gold": false
+   },
+   {
+    "id": "mq:038b9cd68b967ebe",
+    "label": "Detroit",
+    "p": 0.0013487756938452581,
+    "gold": false
+   },
+   {
+    "id": "mq:84b4f67c0d0f3288",
+    "label": "Effects of Hurricane Katrina in New Orleans",
+    "p": 0.0011970842566758316,
+    "gold": false
+   },
+   {
+    "id": "mq:b46d7587ecd212ce",
+    "label": "North Carolina",
+    "p": 0.0011380991166318702,
+    "gold": false
+   },
+   {
+    "id": "mq:556c9b8fa70facac",
+    "label": "Tyler Island",
+    "p": 0.0011167569792907106,
+    "gold": false
+   },
+   {
+    "id": "mq:615d1e49ee93bfe1",
+    "label": "Houston",
+    "p": 0.0010932154053576925,
+    "gold": false
+   },
+   {
+    "id": "mq:3b75a0598196daf8",
+    "label": "Tropical Storm Allison",
+    "p": 0.000982417110390879,
+    "gold": false
+   },
+   {
+    "id": "mq:de84b5f9a07f91d1",
+    "label": "Treaty of Paris (1783)",
+    "p": 0.0009498103033241989,
+    "gold": false
+   },
+   {
+    "id": "mq:841863a4a8404aea",
+    "label": "American Revolutionary War",
+    "p": 0.0009197209843042135,
+    "gold": false
+   },
+   {
+    "id": "mq:64b9287990443f08",
+    "label": "President of the Confederate States of America",
+    "p": 0.000906756069631705,
+    "gold": false
+   },
+   {
+    "id": "mq:12bae42bfd66065b",
+    "label": "American Airlines Flight 11",
+    "p": 0.0008984599737494375,
+    "gold": false
+   },
+   {
+    "id": "mq:93968a784d01ef8f",
+    "label": "2018 FIFA World Cup",
+    "p": 0.0008075815663948409,
+    "gold": false
+   },
+   {
+    "id": "mq:e4f49fa50bf42983",
+    "label": "Thanks for Sharing",
+    "p": 0.0008064782108096955,
+    "gold": false
+   },
+   {
+    "id": "mq:dcb09fa93961323e",
+    "label": "Robert Munford III",
+    "p": 0.0008064420516578817,
+    "gold": false
+   },
+   {
+    "id": "mq:c89faa0661c9ef7c",
+    "label": "Capital punishment in the United States",
+    "p": 0.0007906253536668424,
+    "gold": false
+   },
+   {
+    "id": "mq:b5663de3b96c6b46",
+    "label": "Guinea-Bissau",
+    "p": 0.000784229989319835,
+    "gold": false
+   },
+   {
+    "id": "mq:3d83b8fa555d4239",
+    "label": "Fabiana da Silva Sim\u00f5es",
+    "p": 0.0007817276500491197,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:d34e3df49d3a8b65",
+   "label": "New York City",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:7b44b41d2e17c72b",
+   "label": "Confederate States Secretary of State",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:69d162dbd53bf32a",
+   "label": "Palermo",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:78a68f00986458d7",
+   "label": "American Revolutionary War",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:d58419bd8140a58e",
+   "label": "Black people",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:70523f30c1a796b7",
+   "label": "American Civil War",
+   "wave": 1,
+   "via": "term:1865",
+   "gold": false
+  },
+  {
+   "id": "mq:4d7229f4b7c11579",
+   "label": "Secchi disk",
+   "wave": 1,
+   "via": "term:1865",
+   "gold": false
+  },
+  {
+   "id": "mq:f5c3209a18053e63",
+   "label": "Lyman Duff",
+   "wave": 1,
+   "via": "term:1865",
+   "gold": false
+  },
+  {
+   "id": "mq:5586b36b0b917f06",
+   "label": "Melesio Morales",
+   "wave": 1,
+   "via": "term:1865",
+   "gold": false
+  },
+  {
+   "id": "mq:28e5b57664061e9e",
+   "label": "Walnut Spring",
+   "wave": 1,
+   "via": "term:1865",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:d1dc8e8c57c7f91c",
+    "label": "Infant mortality",
+    "gold": false
+   },
+   {
+    "id": "mq:6fa7899e0396bbc8",
+    "label": "Josip Broz Tito",
+    "gold": false
+   },
+   {
+    "id": "mq:dc85f0a8bcc935d2",
+    "label": "Indian independence movement",
+    "gold": false
+   },
+   {
+    "id": "mq:60d670957b6678d5",
+    "label": "Queen Victoria",
+    "gold": false
+   },
+   {
+    "id": "mq:038b9cd68b967ebe",
+    "label": "Detroit",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:038b9cd68b967ebe",
+    "label": "Detroit",
+    "gold": false
+   },
+   {
+    "id": "mq:d1dc8e8c57c7f91c",
+    "label": "Infant mortality",
+    "gold": false
+   },
+   {
+    "id": "mq:615d1e49ee93bfe1",
+    "label": "Houston",
+    "gold": false
+   },
+   {
+    "id": "mq:af4d56b55b55f903",
+    "label": "Black people",
+    "gold": false
+   },
+   {
+    "id": "mq:eb779a37bbeba03d",
+    "label": "Detroit",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:038b9cd68b967ebe",
+    "label": "Detroit",
+    "gold": false
+   },
+   {
+    "id": "mq:d1dc8e8c57c7f91c",
+    "label": "Infant mortality",
+    "gold": false
+   },
+   {
+    "id": "mq:af4d56b55b55f903",
+    "label": "Black people",
+    "gold": false
+   },
+   {
+    "id": "mq:f4aabd416d3a9c11",
+    "label": "Detroit",
+    "gold": false
+   },
+   {
+    "id": "mq:615d1e49ee93bfe1",
+    "label": "Houston",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:aa31c5f0afeda882",
+    "label": "New York City",
+    "gold": false
+   },
+   {
+    "id": "mq:18da3ff2fa7ada99",
+    "label": "Franco-Prussian War",
+    "gold": false
+   },
+   {
+    "id": "mq:d4d2e2e3902630e7",
+    "label": "Black Monday (1987)",
+    "gold": false
+   },
+   {
+    "id": "mq:f08279391cd67616",
+    "label": "Black Cobain",
+    "gold": false
+   },
+   {
+    "id": "mq:3b41e0e7eed9d4ac",
+    "label": "Black people",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

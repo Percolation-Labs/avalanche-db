@@ -1,0 +1,449 @@
+{
+ "qid": "RW:2hop__135822_46621",
+ "set": "mq",
+ "question": "When was the star to which Solgr\u00e4nd is named after discovered to be the center of the solar system?",
+ "gold": [
+  {
+   "id": "mq:089e89eb49c548b1",
+   "label": "Solgr\u00e4nd",
+   "seed": false
+  },
+  {
+   "id": "mq:df5d44989c280861",
+   "label": "Heliocentrism",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:f2f9bd6d2de98b36",
+   "label": "Valles Marineris",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:0a4376ed9715f24f",
+   "label": "Charles T. Kowal",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:448701619b92eae4",
+   "label": "Sun",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:627cdd6d4a3e734f",
+   "label": "Mercury (planet)",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:6732fb5adc868ed9",
+   "label": "History of the Goddard Space Flight Center",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:089e89eb49c548b1",
+    "label": "Solgr\u00e4nd",
+    "role": "gold"
+   },
+   {
+    "id": "mq:1fab670b4738de8e",
+    "label": "Hellenistic period",
+    "role": "connector"
+   },
+   {
+    "id": "mq:627cdd6d4a3e734f",
+    "label": "Mercury (planet)",
+    "role": "seed"
+   },
+   {
+    "id": "mq:df5d44989c280861",
+    "label": "Heliocentrism",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:089e89eb49c548b1",
+    "b": "mq:1fab670b4738de8e",
+    "via": [
+     {
+      "kind": "term",
+      "key": "parallel",
+      "width": 52
+     }
+    ]
+   },
+   {
+    "a": "mq:1fab670b4738de8e",
+    "b": "mq:df5d44989c280861",
+    "via": [
+     {
+      "kind": "term",
+      "key": "hellenistic",
+      "width": 25
+     }
+    ]
+   },
+   {
+    "a": "mq:627cdd6d4a3e734f",
+    "b": "mq:df5d44989c280861",
+    "via": [
+     {
+      "kind": "term",
+      "key": "planets",
+      "width": 30
+     },
+     {
+      "kind": "term",
+      "key": "solar system",
+      "width": 35
+     },
+     {
+      "kind": "term",
+      "key": "solar",
+      "width": 83
+     }
+    ]
+   }
+  ],
+  "cost": 3,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   2
+  ],
+  "entry": {
+   "seed": "mq:627cdd6d4a3e734f",
+   "gold": "mq:df5d44989c280861",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 1837,
+  "within_2_doors": 19225,
+  "gold_within_1": 1,
+  "gold_within_2": 1,
+  "top_U": [
+   {
+    "id": "mq:481203a50220924a",
+    "label": "Olympus Mons",
+    "p": 0.003123414947291201,
+    "gold": false
+   },
+   {
+    "id": "mq:53c4dbeb8decac50",
+    "label": "Pavonis Mons",
+    "p": 0.002426140211518493,
+    "gold": false
+   },
+   {
+    "id": "mq:023698f9ca19732b",
+    "label": "TDRS-6",
+    "p": 0.0023868095502431654,
+    "gold": false
+   },
+   {
+    "id": "mq:f5c7953bd674ac10",
+    "label": "Saturn",
+    "p": 0.0018908743833272958,
+    "gold": false
+   },
+   {
+    "id": "mq:ef25350ad7a51fde",
+    "label": "Olympus Mons",
+    "p": 0.001673762900321399,
+    "gold": false
+   },
+   {
+    "id": "mq:d97bf869db2b019d",
+    "label": "Deuteronilus Mensae",
+    "p": 0.0016577798379799724,
+    "gold": false
+   },
+   {
+    "id": "mq:3e95df37d30d9af2",
+    "label": "Neptune",
+    "p": 0.00163460770526518,
+    "gold": false
+   },
+   {
+    "id": "mq:16722dbf3406870e",
+    "label": "Arsia Mons",
+    "p": 0.0016273331628642268,
+    "gold": false
+   },
+   {
+    "id": "mq:5d6e2ed85c056589",
+    "label": "Ceraunius Fossae",
+    "p": 0.001531300233430228,
+    "gold": false
+   },
+   {
+    "id": "mq:39ee29f2d7182dc7",
+    "label": "Ngunguru River",
+    "p": 0.0014786827487393202,
+    "gold": false
+   },
+   {
+    "id": "mq:e40eaa34cb20ebe7",
+    "label": "Jupiter",
+    "p": 0.0014762310135678755,
+    "gold": false
+   },
+   {
+    "id": "mq:32ca9cd44cb4471f",
+    "label": "Voyager 2",
+    "p": 0.0014542924179444462,
+    "gold": false
+   },
+   {
+    "id": "mq:72bd9bcf763772ea",
+    "label": "Religion in ancient Rome",
+    "p": 0.0014357854203984925,
+    "gold": false
+   },
+   {
+    "id": "mq:c4df408791e6ba73",
+    "label": "Galactic Center",
+    "p": 0.0014353262329206019,
+    "gold": false
+   },
+   {
+    "id": "mq:b27b044e6a8a224e",
+    "label": "Neptune",
+    "p": 0.001413509141935062,
+    "gold": false
+   },
+   {
+    "id": "mq:858b2e1a54604664",
+    "label": "Josep Dom\u00e8nech i Estap\u00e0",
+    "p": 0.0012521571045733468,
+    "gold": false
+   },
+   {
+    "id": "mq:83edc796f29c97b3",
+    "label": "Mexico City",
+    "p": 0.001206034891061502,
+    "gold": false
+   },
+   {
+    "id": "mq:3a1051fdda84b59d",
+    "label": "Nucleosynthesis",
+    "p": 0.001188148972760854,
+    "gold": false
+   },
+   {
+    "id": "mq:443437f9fb35c945",
+    "label": "Venus",
+    "p": 0.0011600509710362396,
+    "gold": false
+   },
+   {
+    "id": "mq:d7f0fa538237aee8",
+    "label": "Moons of Jupiter",
+    "p": 0.0011065806530061555,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:f2f9bd6d2de98b36",
+   "label": "Valles Marineris",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:0a4376ed9715f24f",
+   "label": "Charles T. Kowal",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:448701619b92eae4",
+   "label": "Sun",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:627cdd6d4a3e734f",
+   "label": "Mercury (planet)",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:6732fb5adc868ed9",
+   "label": "History of the Goddard Space Flight Center",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:df5d44989c280861",
+   "label": "Heliocentrism",
+   "wave": 1,
+   "via": "term:planets",
+   "gold": true
+  },
+  {
+   "id": "mq:fdfc4f87bebf7f10",
+   "label": "Lava",
+   "wave": 1,
+   "via": "term:planets",
+   "gold": false
+  },
+  {
+   "id": "mq:77bb7012d3dafea0",
+   "label": "Robert Weber (astronomer)",
+   "wave": 1,
+   "via": "term:planets",
+   "gold": false
+  },
+  {
+   "id": "mq:3a1a9a4a2ee906d6",
+   "label": "Natural satellite",
+   "wave": 1,
+   "via": "term:planets",
+   "gold": false
+  },
+  {
+   "id": "mq:74dc505d4a7ec23d",
+   "label": "WASP-12",
+   "wave": 1,
+   "via": "term:planets",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:481203a50220924a",
+    "label": "Olympus Mons",
+    "gold": false
+   },
+   {
+    "id": "mq:53c4dbeb8decac50",
+    "label": "Pavonis Mons",
+    "gold": false
+   },
+   {
+    "id": "mq:023698f9ca19732b",
+    "label": "TDRS-6",
+    "gold": false
+   },
+   {
+    "id": "mq:f5c7953bd674ac10",
+    "label": "Saturn",
+    "gold": false
+   },
+   {
+    "id": "mq:ef25350ad7a51fde",
+    "label": "Olympus Mons",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:481203a50220924a",
+    "label": "Olympus Mons",
+    "gold": false
+   },
+   {
+    "id": "mq:ef25350ad7a51fde",
+    "label": "Olympus Mons",
+    "gold": false
+   },
+   {
+    "id": "mq:3e95df37d30d9af2",
+    "label": "Neptune",
+    "gold": false
+   },
+   {
+    "id": "mq:e40eaa34cb20ebe7",
+    "label": "Jupiter",
+    "gold": false
+   },
+   {
+    "id": "mq:ad96c6b9aaa13142",
+    "label": "Nebular hypothesis",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:481203a50220924a",
+    "label": "Olympus Mons",
+    "gold": false
+   },
+   {
+    "id": "mq:ef25350ad7a51fde",
+    "label": "Olympus Mons",
+    "gold": false
+   },
+   {
+    "id": "mq:e40eaa34cb20ebe7",
+    "label": "Jupiter",
+    "gold": false
+   },
+   {
+    "id": "mq:3e95df37d30d9af2",
+    "label": "Neptune",
+    "gold": false
+   },
+   {
+    "id": "mq:32ca9cd44cb4471f",
+    "label": "Voyager 2",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:6bf53230c6d00a73",
+    "label": "NGC 210",
+    "gold": false
+   },
+   {
+    "id": "mq:74dc505d4a7ec23d",
+    "label": "WASP-12",
+    "gold": false
+   },
+   {
+    "id": "mq:ef25350ad7a51fde",
+    "label": "Olympus Mons",
+    "gold": false
+   },
+   {
+    "id": "mq:2c05a30176e9c8e8",
+    "label": "GD 40",
+    "gold": false
+   },
+   {
+    "id": "mq:ccef90ea7a5260b1",
+    "label": "Kepler-452b",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

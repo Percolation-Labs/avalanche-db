@@ -1,0 +1,473 @@
+{
+ "qid": "RW:4hop1__161810_583746_457883_650651",
+ "set": "mq",
+ "question": "Country A has an embassy from the country that contains the bay where the city of General Santos is located. What network created country A's version of The Biggest Loser?",
+ "gold": [
+  {
+   "id": "mq:1baaa6b8166f8952",
+   "label": "Sarangani Bay",
+   "seed": true
+  },
+  {
+   "id": "mq:846b3c027ed2d821",
+   "label": "Embassy of the Philippines, Bandar Seri Begawan",
+   "seed": true
+  },
+  {
+   "id": "mq:ce728a0b5448ccd0",
+   "label": "The Biggest Loser Brunei: Lose It All",
+   "seed": true
+  },
+  {
+   "id": "mq:d0d225725c70bb62",
+   "label": "South Cotabato",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:1baaa6b8166f8952",
+   "label": "Sarangani Bay",
+   "rank": 1,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:ce728a0b5448ccd0",
+   "label": "The Biggest Loser Brunei: Lose It All",
+   "rank": 2,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:d0d225725c70bb62",
+   "label": "South Cotabato",
+   "rank": 3,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:d28b8e80e6b1c984",
+   "label": "Commonwealth Elementary School",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:846b3c027ed2d821",
+   "label": "Embassy of the Philippines, Bandar Seri Begawan",
+   "rank": 5,
+   "gold": true,
+   "doors_to_gold": 0
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:1baaa6b8166f8952",
+    "label": "Sarangani Bay",
+    "role": "gold"
+   },
+   {
+    "id": "mq:846b3c027ed2d821",
+    "label": "Embassy of the Philippines, Bandar Seri Begawan",
+    "role": "gold"
+   },
+   {
+    "id": "mq:ce728a0b5448ccd0",
+    "label": "The Biggest Loser Brunei: Lose It All",
+    "role": "gold"
+   },
+   {
+    "id": "mq:d0d225725c70bb62",
+    "label": "South Cotabato",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:1baaa6b8166f8952",
+    "b": "mq:846b3c027ed2d821",
+    "via": [
+     {
+      "kind": "term",
+      "key": "philippines",
+      "width": 84
+     }
+    ]
+   },
+   {
+    "a": "mq:1baaa6b8166f8952",
+    "b": "mq:d0d225725c70bb62",
+    "via": [
+     {
+      "kind": "near",
+      "width": 1
+     },
+     {
+      "kind": "term",
+      "key": "general santos",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "sarangani bay",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "sarangani",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "santos",
+      "width": 10
+     }
+    ]
+   },
+   {
+    "a": "mq:846b3c027ed2d821",
+    "b": "mq:ce728a0b5448ccd0",
+    "via": [
+     {
+      "kind": "term",
+      "key": "brunei",
+      "width": 14
+     }
+    ]
+   }
+  ],
+  "cost": 3,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   2,
+   1,
+   1,
+   2,
+   2
+  ],
+  "entry": {
+   "seed": "mq:1baaa6b8166f8952",
+   "gold": "mq:1baaa6b8166f8952",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 1560,
+  "within_2_doors": 19508,
+  "gold_within_1": 0,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "mq:cc849b76f9224fe2",
+    "label": "Notre Dame-Siena College of Polomolok",
+    "p": 0.006992574437889691,
+    "gold": false
+   },
+   {
+    "id": "mq:26230ae114f75295",
+    "label": "Hassanal Bolkiah",
+    "p": 0.0068270518939294806,
+    "gold": false
+   },
+   {
+    "id": "mq:76d1c1d80981e878",
+    "label": "RPG Metanoia",
+    "p": 0.002684877811041375,
+    "gold": false
+   },
+   {
+    "id": "mq:4b2c285a4c0c7e33",
+    "label": "Southeast Asia",
+    "p": 0.002149969844453708,
+    "gold": false
+   },
+   {
+    "id": "mq:82de7ff85f191a50",
+    "label": "Store Lungeg\u00e5rdsvannet",
+    "p": 0.001907953775826467,
+    "gold": false
+   },
+   {
+    "id": "mq:944c3d49b6739955",
+    "label": "Vicente Manansala",
+    "p": 0.0018709777924774357,
+    "gold": false
+   },
+   {
+    "id": "mq:9bf77dbc9dbf05c5",
+    "label": "HOSA (organization)",
+    "p": 0.0017834807468620698,
+    "gold": false
+   },
+   {
+    "id": "mq:7286190719581032",
+    "label": "The Biggest Loser (season 1)",
+    "p": 0.0017178834139354446,
+    "gold": false
+   },
+   {
+    "id": "mq:024168e6f74a5533",
+    "label": "Kelupis",
+    "p": 0.0014982670896446734,
+    "gold": false
+   },
+   {
+    "id": "mq:724367865f49e494",
+    "label": "The Biggest Loser (season 5)",
+    "p": 0.001487802480930437,
+    "gold": false
+   },
+   {
+    "id": "mq:a4dea372c55054c4",
+    "label": "John Roberts",
+    "p": 0.001309546365372047,
+    "gold": false
+   },
+   {
+    "id": "mq:48eb25abaed11d2f",
+    "label": "Santos Benavides",
+    "p": 0.0012226652430581957,
+    "gold": false
+   },
+   {
+    "id": "mq:a244142925d544d5",
+    "label": "Princess Alexia of the Netherlands",
+    "p": 0.0011489560038680537,
+    "gold": false
+   },
+   {
+    "id": "mq:db96c3c151047007",
+    "label": "The Biggest Loser (season 2)",
+    "p": 0.0011298164035699622,
+    "gold": false
+   },
+   {
+    "id": "mq:620ef75424f5ac31",
+    "label": "Jude the Apostle",
+    "p": 0.0010906299764229038,
+    "gold": false
+   },
+   {
+    "id": "mq:f641db2b5414c8b1",
+    "label": "Eastern Shores (North Miami Beach)",
+    "p": 0.0009240477170102233,
+    "gold": false
+   },
+   {
+    "id": "mq:d53a554e7944fd7f",
+    "label": "Jack London",
+    "p": 0.0008675109593873386,
+    "gold": false
+   },
+   {
+    "id": "mq:ede48d491674880e",
+    "label": "Embassy of Canada in Moscow",
+    "p": 0.0008346288636456122,
+    "gold": false
+   },
+   {
+    "id": "mq:73fb21618dde8641",
+    "label": "New York City",
+    "p": 0.0007786718707831298,
+    "gold": false
+   },
+   {
+    "id": "mq:c0eda754029cfc7a",
+    "label": "New York City",
+    "p": 0.0007669320711915544,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:1baaa6b8166f8952",
+   "label": "Sarangani Bay",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:ce728a0b5448ccd0",
+   "label": "The Biggest Loser Brunei: Lose It All",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:d0d225725c70bb62",
+   "label": "South Cotabato",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:d28b8e80e6b1c984",
+   "label": "Commonwealth Elementary School",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:846b3c027ed2d821",
+   "label": "Embassy of the Philippines, Bandar Seri Begawan",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:f13da3eb774f5f7f",
+   "label": "Lumapas, Brunei-Muara",
+   "wave": 1,
+   "via": "near:mq:ce728a0b5448ccd0",
+   "gold": false
+  },
+  {
+   "id": "mq:724367865f49e494",
+   "label": "The Biggest Loser (season 5)",
+   "wave": 1,
+   "via": "near:mq:ce728a0b5448ccd0",
+   "gold": false
+  },
+  {
+   "id": "mq:db96c3c151047007",
+   "label": "The Biggest Loser (season 2)",
+   "wave": 1,
+   "via": "near:mq:ce728a0b5448ccd0",
+   "gold": false
+  },
+  {
+   "id": "mq:7286190719581032",
+   "label": "The Biggest Loser (season 1)",
+   "wave": 1,
+   "via": "near:mq:ce728a0b5448ccd0",
+   "gold": false
+  },
+  {
+   "id": "mq:c0d6d08bd3c7e8c2",
+   "label": "Brunei",
+   "wave": 1,
+   "via": "near:mq:ce728a0b5448ccd0",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:cc849b76f9224fe2",
+    "label": "Notre Dame-Siena College of Polomolok",
+    "gold": false
+   },
+   {
+    "id": "mq:26230ae114f75295",
+    "label": "Hassanal Bolkiah",
+    "gold": false
+   },
+   {
+    "id": "mq:76d1c1d80981e878",
+    "label": "RPG Metanoia",
+    "gold": false
+   },
+   {
+    "id": "mq:4b2c285a4c0c7e33",
+    "label": "Southeast Asia",
+    "gold": false
+   },
+   {
+    "id": "mq:82de7ff85f191a50",
+    "label": "Store Lungeg\u00e5rdsvannet",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:7286190719581032",
+    "label": "The Biggest Loser (season 1)",
+    "gold": false
+   },
+   {
+    "id": "mq:db96c3c151047007",
+    "label": "The Biggest Loser (season 2)",
+    "gold": false
+   },
+   {
+    "id": "mq:724367865f49e494",
+    "label": "The Biggest Loser (season 5)",
+    "gold": false
+   },
+   {
+    "id": "mq:e3aa75020dd80a67",
+    "label": "The Biggest Loser (season 16)",
+    "gold": false
+   },
+   {
+    "id": "mq:82de7ff85f191a50",
+    "label": "Store Lungeg\u00e5rdsvannet",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:7286190719581032",
+    "label": "The Biggest Loser (season 1)",
+    "gold": false
+   },
+   {
+    "id": "mq:db96c3c151047007",
+    "label": "The Biggest Loser (season 2)",
+    "gold": false
+   },
+   {
+    "id": "mq:724367865f49e494",
+    "label": "The Biggest Loser (season 5)",
+    "gold": false
+   },
+   {
+    "id": "mq:e3aa75020dd80a67",
+    "label": "The Biggest Loser (season 16)",
+    "gold": false
+   },
+   {
+    "id": "mq:76d1c1d80981e878",
+    "label": "RPG Metanoia",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:39f531f62becc3af",
+    "label": "Sunset Ridge Country Club",
+    "gold": false
+   },
+   {
+    "id": "mq:724367865f49e494",
+    "label": "The Biggest Loser (season 5)",
+    "gold": false
+   },
+   {
+    "id": "mq:db96c3c151047007",
+    "label": "The Biggest Loser (season 2)",
+    "gold": false
+   },
+   {
+    "id": "mq:7286190719581032",
+    "label": "The Biggest Loser (season 1)",
+    "gold": false
+   },
+   {
+    "id": "mq:1cac907080f086d2",
+    "label": "Ali Vincent",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": null,
+  "Q": null,
+  "LQ": null,
+  "S": null
+ }
+}

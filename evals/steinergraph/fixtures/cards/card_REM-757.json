@@ -1,0 +1,431 @@
+{
+ "qid": "card:REM-757",
+ "set": "cards",
+ "question": "What was done about this, and why: coalescing: every pipeline setting is measured or derived, not chosen by hand?",
+ "gold": [
+  {
+   "id": "commit/5939e1d7b7",
+   "label": "commit 5939e1d: coalescing: the calibration gate and the research notes point to REM-757",
+   "seed": false
+  },
+  {
+   "id": "commit/cdb1f690f8",
+   "label": "commit cdb1f69: Merge pull request #403 from Percolation-Labs/amartey/coalescing-rem757",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/f3f3b5bcfa",
+   "label": "commit f3f3b5b: board: file REM-757 coalescing: every pipeline setting is measured or derived, not chosen by hand",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-757.md#2",
+   "label": "board/cards/REM-757.md \u203a Goal",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-757.md#1",
+   "label": "board/cards/REM-757.md",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "specs/build-knit-dream/coalescing.md#26",
+   "label": "specs/build-knit-dream/coalescing.md \u203a 6.2 Gates, each able to fail alone",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-757.md#4",
+   "label": "board/cards/REM-757.md \u203a Done when",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/5939e1d7b7",
+    "label": "commit 5939e1d: coalescing: the calibration gate and the research notes point to REM-757",
+    "role": "gold"
+   },
+   {
+    "id": "commit/cdb1f690f8",
+    "label": "commit cdb1f69: Merge pull request #403 from Percolation-Labs/amartey/coalescing-rem757",
+    "role": "gold"
+   },
+   {
+    "id": "commit/f3f3b5bcfa",
+    "label": "commit f3f3b5b: board: file REM-757 coalescing: every pipeline setting is measured or derived, not chosen by hand",
+    "role": "seed"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/5939e1d7b7",
+    "b": "commit/cdb1f690f8",
+    "via": [
+     {
+      "kind": "term",
+      "key": "calibration gate",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "rem 757",
+      "width": 18
+     }
+    ]
+   },
+   {
+    "a": "commit/5939e1d7b7",
+    "b": "commit/f3f3b5bcfa",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "rem 757",
+      "width": 18
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "commit/f3f3b5bcfa",
+   "gold": "commit/5939e1d7b7",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 963,
+  "within_2_doors": 32570,
+  "gold_within_1": 2,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "meta/lab/results/decision-model-research/notes/live_scan_sep_nov_2026.md#15",
+    "label": "meta/lab/results/decision-model-research/notes/live_scan_sep_nov_2026.md \u203a Cited Findings",
+    "p": 0.0069676183661639265,
+    "gold": false
+   },
+   {
+    "id": "research-notes/coalescing/harness/RESULTS.md#7",
+    "label": "research-notes/coalescing/harness/RESULTS.md \u203a Next",
+    "p": 0.006594695607152924,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-757.md#3",
+    "label": "board/cards/REM-757.md \u203a The settings",
+    "p": 0.006330159510985426,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-747.md#1",
+    "label": "board/cards/REM-747.md",
+    "p": 0.005977603212459643,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-757.md#5",
+    "label": "board/cards/REM-757.md \u203a Log",
+    "p": 0.005955769287176413,
+    "gold": false
+   },
+   {
+    "id": "commit/cdb1f690f8",
+    "label": "commit cdb1f69: Merge pull request #403 from Percolation-Labs/amartey/coalescing-rem757",
+    "p": 0.0046753439093093355,
+    "gold": true
+   },
+   {
+    "id": "commit/5939e1d7b7",
+    "label": "commit 5939e1d: coalescing: the calibration gate and the research notes point to REM-757",
+    "p": 0.004252316985899582,
+    "gold": true
+   },
+   {
+    "id": "commit/0b327f144c",
+    "label": "commit 0b327f1: Merge pull request #402 from Percolation-Labs/amartey/coalescing-hubs",
+    "p": 0.0038895234836880273,
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-10-17-iterative-query/dream/round3.py#1",
+    "label": "meta/spikes/2026-10-17-iterative-query/dream/round3.py",
+    "p": 0.002554137137518133,
+    "gold": false
+   },
+   {
+    "id": "commit/8ad49fe284",
+    "label": "commit 8ad49fe: Merge pull request #400 from Percolation-Labs/amartey/coalescing-surprises",
+    "p": 0.002528771893660567,
+    "gold": false
+   },
+   {
+    "id": "board/team/biological-graphs-research.md#2",
+    "label": "board/team/biological-graphs-research.md \u203a Log",
+    "p": 0.0022381559671395893,
+    "gold": false
+   },
+   {
+    "id": "commit/c6eb8b376c",
+    "label": "commit c6eb8b3: Merge pull request #401 from Percolation-Labs/amartey/coalescing-calibration",
+    "p": 0.0019501270794845637,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-10-07-the-questions-graph-pivots.md#2",
+    "label": "meta/postmortems/2026-10-07-the-questions-graph-pivots.md \u203a The questions graph, built by changing course seven times",
+    "p": 0.0017723387584094544,
+    "gold": false
+   },
+   {
+    "id": "board/team/biological-graphs-research.md#1",
+    "label": "board/team/biological-graphs-research.md",
+    "p": 0.0017563162048952208,
+    "gold": false
+   },
+   {
+    "id": "commit/2389d4cf84",
+    "label": "commit 2389d4c: coalescing: the surprises as research notes, and calibration kept current as a gate and a to-do",
+    "p": 0.0017551481630604967,
+    "gold": false
+   },
+   {
+    "id": "specs/build-knit-dream/coalescing.md#15",
+    "label": "specs/build-knit-dream/coalescing.md \u203a 5.4 The join: Jev assigns every claim and gives its stance",
+    "p": 0.0017346693402853328,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-10-07-the-questions-graph-pivots.md#1",
+    "label": "meta/postmortems/2026-10-07-the-questions-graph-pivots.md",
+    "p": 0.0016766467022848038,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-10-07-the-questions-graph-pivots.md#8",
+    "label": "meta/postmortems/2026-10-07-the-questions-graph-pivots.md \u203a Habits worth keeping",
+    "p": 0.0016689102304397086,
+    "gold": false
+   },
+   {
+    "id": "research-notes/coalescing/harness/RESULTS.md#4",
+    "label": "research-notes/coalescing/harness/RESULTS.md \u203a What the runs establish",
+    "p": 0.001649679438163451,
+    "gold": false
+   },
+   {
+    "id": "commit/3208c3e1bc",
+    "label": "commit 3208c3e: coalescing: hubs that keep a crowded question small, proposed (\u00a75.9)",
+    "p": 0.0015669164612302268,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/f3f3b5bcfa",
+   "label": "commit f3f3b5b: board: file REM-757 coalescing: every pipeline setting is measured or derived, not chosen by hand",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-757.md#2",
+   "label": "board/cards/REM-757.md \u203a Goal",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-757.md#1",
+   "label": "board/cards/REM-757.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/build-knit-dream/coalescing.md#26",
+   "label": "specs/build-knit-dream/coalescing.md \u203a 6.2 Gates, each able to fail alone",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-757.md#4",
+   "label": "board/cards/REM-757.md \u203a Done when",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-757.md#5",
+   "label": "board/cards/REM-757.md \u203a Log",
+   "wave": 1,
+   "via": "next:board/cards/REM-757.md#4",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-757.md#3",
+   "label": "board/cards/REM-757.md \u203a The settings",
+   "wave": 1,
+   "via": "next:board/cards/REM-757.md#4",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/jev-ranking-saved-pages/RESULT.md#8",
+   "label": "meta/lab/results/jev-ranking-saved-pages/RESULT.md \u203a Postmortem",
+   "wave": 2,
+   "via": "term:jev version",
+   "gold": false
+  },
+  {
+   "id": "research-notes/coalescing/harness/RESULTS.md#7",
+   "label": "research-notes/coalescing/harness/RESULTS.md \u203a Next",
+   "wave": 2,
+   "via": "term:jev version",
+   "gold": false
+  },
+  {
+   "id": "board/messages/M-20261029-205716-2f80.md#2",
+   "label": "board/messages/M-20261029-205716-2f80.md",
+   "wave": 3,
+   "via": "term:top pick",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "meta/lab/results/decision-model-research/notes/live_scan_sep_nov_2026.md#15",
+    "label": "meta/lab/results/decision-model-research/notes/live_scan_sep_nov_2026.md \u203a Cited Findings",
+    "gold": false
+   },
+   {
+    "id": "research-notes/coalescing/harness/RESULTS.md#7",
+    "label": "research-notes/coalescing/harness/RESULTS.md \u203a Next",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-757.md#3",
+    "label": "board/cards/REM-757.md \u203a The settings",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-747.md#1",
+    "label": "board/cards/REM-747.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-757.md#5",
+    "label": "board/cards/REM-757.md \u203a Log",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "research-notes/coalescing/harness/RESULTS.md#7",
+    "label": "research-notes/coalescing/harness/RESULTS.md \u203a Next",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-757.md#3",
+    "label": "board/cards/REM-757.md \u203a The settings",
+    "gold": false
+   },
+   {
+    "id": "specs/build-knit-dream/coalescing.md#15",
+    "label": "specs/build-knit-dream/coalescing.md \u203a 5.4 The join: Jev assigns every claim and gives its stance",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-747.md#1",
+    "label": "board/cards/REM-747.md",
+    "gold": false
+   },
+   {
+    "id": "research-notes/coalescing/harness/RESULTS.md#4",
+    "label": "research-notes/coalescing/harness/RESULTS.md \u203a What the runs establish",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/5939e1d7b7",
+    "label": "commit 5939e1d: coalescing: the calibration gate and the research notes point to REM-757",
+    "gold": true
+   },
+   {
+    "id": "commit/cdb1f690f8",
+    "label": "commit cdb1f69: Merge pull request #403 from Percolation-Labs/amartey/coalescing-rem757",
+    "gold": true
+   },
+   {
+    "id": "commit/2389d4cf84",
+    "label": "commit 2389d4c: coalescing: the surprises as research notes, and calibration kept current as a gate and a to-do",
+    "gold": false
+   },
+   {
+    "id": "commit/8ad49fe284",
+    "label": "commit 8ad49fe: Merge pull request #400 from Percolation-Labs/amartey/coalescing-surprises",
+    "gold": false
+   },
+   {
+    "id": "commit/c6eb8b376c",
+    "label": "commit c6eb8b3: Merge pull request #401 from Percolation-Labs/amartey/coalescing-calibration",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "research-notes/coalescing/harness/RESULTS.md#7",
+    "label": "research-notes/coalescing/harness/RESULTS.md \u203a Next",
+    "gold": false
+   },
+   {
+    "id": "specs/build-knit-dream/coalescing.md#15",
+    "label": "specs/build-knit-dream/coalescing.md \u203a 5.4 The join: Jev assigns every claim and gives its stance",
+    "gold": false
+   },
+   {
+    "id": "meta/skills/coalescing-runs/SKILL.md#2",
+    "label": "meta/skills/coalescing-runs/SKILL.md \u203a Coalescing runs, by hand",
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-10-07-the-questions-graph-pivots.md#2",
+    "label": "meta/postmortems/2026-10-07-the-questions-graph-pivots.md \u203a The questions graph, built by changing course seven times",
+    "gold": false
+   },
+   {
+    "id": "specs/build-knit-dream/coalescing.md#11",
+    "label": "specs/build-knit-dream/coalescing.md \u203a 5. The algorithm, as measured",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 1.0,
+  "S": 0.0
+ }
+}

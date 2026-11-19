@@ -1,0 +1,407 @@
+{
+ "qid": "RW:2hop__161151_42352",
+ "set": "mq",
+ "question": "How many people were in the British colonies where bison antiquus could be found?",
+ "gold": [
+  {
+   "id": "mq:75356f1218a84b9a",
+   "label": "Bison antiquus",
+   "seed": true
+  },
+  {
+   "id": "mq:8174715888879957",
+   "label": "French and Indian War",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:75356f1218a84b9a",
+   "label": "Bison antiquus",
+   "rank": 1,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:e4d6ff539f0b582b",
+   "label": "Bison antiquus",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:680a40de6cb15e60",
+   "label": "Chihuahua (state)",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:5146099b9b96bffe",
+   "label": "Stamp Act 1765",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:944526e824cf5195",
+   "label": "British Empire",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:75356f1218a84b9a",
+    "label": "Bison antiquus",
+    "role": "gold"
+   },
+   {
+    "id": "mq:8174715888879957",
+    "label": "French and Indian War",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:75356f1218a84b9a",
+    "b": "mq:8174715888879957",
+    "via": [
+     {
+      "kind": "term",
+      "key": "north american",
+      "width": 83
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "mq:75356f1218a84b9a",
+   "gold": "mq:75356f1218a84b9a",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 2809,
+  "within_2_doors": 18271,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "mq:427dd825f1a6ebbd",
+    "label": "British Empire",
+    "p": 0.013832146716492738,
+    "gold": false
+   },
+   {
+    "id": "mq:bf4e87d9b59811cd",
+    "label": "Pharaoh Dome",
+    "p": 0.0014070980158464239,
+    "gold": false
+   },
+   {
+    "id": "mq:48421f63691cdeea",
+    "label": "Longest NCAA Division I football winning streaks",
+    "p": 0.0014055241543030031,
+    "gold": false
+   },
+   {
+    "id": "mq:c3a11175a93bc8b0",
+    "label": "Ross Douglas",
+    "p": 0.0014014641435368012,
+    "gold": false
+   },
+   {
+    "id": "mq:982cb9ee8b541c86",
+    "label": "Pleistocene",
+    "p": 0.0013316864459459593,
+    "gold": false
+   },
+   {
+    "id": "mq:ba65750c0c0642d1",
+    "label": "San Miguel de Allende",
+    "p": 0.001203523636620016,
+    "gold": false
+   },
+   {
+    "id": "mq:fdc7c3ebd15fe27e",
+    "label": "San Miguel de Allende",
+    "p": 0.0012035108158350912,
+    "gold": false
+   },
+   {
+    "id": "mq:256d342510853db7",
+    "label": "History of San Antonio",
+    "p": 0.0011864876254846137,
+    "gold": false
+   },
+   {
+    "id": "mq:7babf68e521bd378",
+    "label": "Repsol-YPF tower",
+    "p": 0.0011427649139595908,
+    "gold": false
+   },
+   {
+    "id": "mq:7d9839da3a86fa9d",
+    "label": "Thirteen Colonies",
+    "p": 0.0010124863215087558,
+    "gold": false
+   },
+   {
+    "id": "mq:67dc160de760f09c",
+    "label": "Thirteen Colonies",
+    "p": 0.0009954314247376944,
+    "gold": false
+   },
+   {
+    "id": "mq:0de1528d0fbbc234",
+    "label": "Cats in ancient Egypt",
+    "p": 0.0009133920734453064,
+    "gold": false
+   },
+   {
+    "id": "mq:775a95568b1fd9f0",
+    "label": "Friedrich Hayek",
+    "p": 0.0009102023210888203,
+    "gold": false
+   },
+   {
+    "id": "mq:24f1362d0a86f43f",
+    "label": "Standard 52-card deck",
+    "p": 0.0009091505102045935,
+    "gold": false
+   },
+   {
+    "id": "mq:265ae0ecc9df897f",
+    "label": "Race (human categorization)",
+    "p": 0.0009015696724433361,
+    "gold": false
+   },
+   {
+    "id": "mq:a2dd048e8e904a41",
+    "label": "Hunting",
+    "p": 0.0008776535585509575,
+    "gold": false
+   },
+   {
+    "id": "mq:7722a5034582c8a2",
+    "label": "Asphalt",
+    "p": 0.0008767993903509474,
+    "gold": false
+   },
+   {
+    "id": "mq:024c437b42b1edd6",
+    "label": "Old English",
+    "p": 0.0008602956987426025,
+    "gold": false
+   },
+   {
+    "id": "mq:fa072cd5ef95845c",
+    "label": "Phonograph record",
+    "p": 0.0008327856702798577,
+    "gold": false
+   },
+   {
+    "id": "mq:cfd241d953898f27",
+    "label": "Bridge of the Gods (land bridge)",
+    "p": 0.0008170186178275059,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:75356f1218a84b9a",
+   "label": "Bison antiquus",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:e4d6ff539f0b582b",
+   "label": "Bison antiquus",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:680a40de6cb15e60",
+   "label": "Chihuahua (state)",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:5146099b9b96bffe",
+   "label": "Stamp Act 1765",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:944526e824cf5195",
+   "label": "British Empire",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:c963294840c58e3c",
+   "label": "NATO",
+   "wave": 1,
+   "via": "term:north american",
+   "gold": false
+  },
+  {
+   "id": "mq:b6de9fb87c8fc83c",
+   "label": "Area codes 715 and 534",
+   "wave": 1,
+   "via": "term:north american",
+   "gold": false
+  },
+  {
+   "id": "mq:e1f6a703a01c360d",
+   "label": "Instant replay in Major League Baseball",
+   "wave": 1,
+   "via": "term:north american",
+   "gold": false
+  },
+  {
+   "id": "mq:64b5659dd03c5151",
+   "label": "List of North American dinosaurs",
+   "wave": 1,
+   "via": "term:north american",
+   "gold": false
+  },
+  {
+   "id": "mq:d4f8a233e05f5746",
+   "label": "London broil",
+   "wave": 1,
+   "via": "term:north american",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:427dd825f1a6ebbd",
+    "label": "British Empire",
+    "gold": false
+   },
+   {
+    "id": "mq:bf4e87d9b59811cd",
+    "label": "Pharaoh Dome",
+    "gold": false
+   },
+   {
+    "id": "mq:48421f63691cdeea",
+    "label": "Longest NCAA Division I football winning streaks",
+    "gold": false
+   },
+   {
+    "id": "mq:c3a11175a93bc8b0",
+    "label": "Ross Douglas",
+    "gold": false
+   },
+   {
+    "id": "mq:982cb9ee8b541c86",
+    "label": "Pleistocene",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:427dd825f1a6ebbd",
+    "label": "British Empire",
+    "gold": false
+   },
+   {
+    "id": "mq:c3a11175a93bc8b0",
+    "label": "Ross Douglas",
+    "gold": false
+   },
+   {
+    "id": "mq:67dc160de760f09c",
+    "label": "Thirteen Colonies",
+    "gold": false
+   },
+   {
+    "id": "mq:7d9839da3a86fa9d",
+    "label": "Thirteen Colonies",
+    "gold": false
+   },
+   {
+    "id": "mq:48421f63691cdeea",
+    "label": "Longest NCAA Division I football winning streaks",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:427dd825f1a6ebbd",
+    "label": "British Empire",
+    "gold": false
+   },
+   {
+    "id": "mq:67dc160de760f09c",
+    "label": "Thirteen Colonies",
+    "gold": false
+   },
+   {
+    "id": "mq:7d9839da3a86fa9d",
+    "label": "Thirteen Colonies",
+    "gold": false
+   },
+   {
+    "id": "mq:c3a11175a93bc8b0",
+    "label": "Ross Douglas",
+    "gold": false
+   },
+   {
+    "id": "mq:265ae0ecc9df897f",
+    "label": "Race (human categorization)",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:29b38b77201c7517",
+    "label": "History of the United States",
+    "gold": false
+   },
+   {
+    "id": "mq:24b789627593eb51",
+    "label": "British Empire",
+    "gold": false
+   },
+   {
+    "id": "mq:50398b21719e1814",
+    "label": "History of the Canadian dollar",
+    "gold": false
+   },
+   {
+    "id": "mq:2096ae99247a2198",
+    "label": "Petition to the King",
+    "gold": false
+   },
+   {
+    "id": "mq:c3a11175a93bc8b0",
+    "label": "Ross Douglas",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

@@ -1,0 +1,446 @@
+{
+ "qid": "card:REM-673",
+ "set": "cards",
+ "question": "What was done about this, and why: research: test temporal attention against ordinary state maintenance?",
+ "gold": [
+  {
+   "id": "commit/b3c7e4a313",
+   "label": "commit b3c7e4a: research: freeze a temporal attention mechanism test (REM-673)",
+   "seed": false
+  },
+  {
+   "id": "commit/c98d38e610",
+   "label": "commit c98d38e: research: implement frozen temporal attention comparison (REM-673)",
+   "seed": false
+  },
+  {
+   "id": "commit/ff7f039bc7",
+   "label": "commit ff7f039: research: temporal attention passes with no advantage over ordinary maintenance (REM-673)",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/e8c404c18a",
+   "label": "commit e8c404c: board: file REM-673 research: test temporal attention against ordinary state maintenance",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-673.md#1",
+   "label": "board/cards/REM-673.md",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/ff7f039bc7",
+   "label": "commit ff7f039: research: temporal attention passes with no advantage over ordinary maintenance (REM-673)",
+   "rank": 3,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "board/cards/REM-673.md#3",
+   "label": "board/cards/REM-673.md \u203a Log",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/team/temporal-attention.md#1",
+   "label": "board/team/temporal-attention.md",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/b3c7e4a313",
+    "label": "commit b3c7e4a: research: freeze a temporal attention mechanism test (REM-673)",
+    "role": "gold"
+   },
+   {
+    "id": "commit/c98d38e610",
+    "label": "commit c98d38e: research: implement frozen temporal attention comparison (REM-673)",
+    "role": "gold"
+   },
+   {
+    "id": "commit/ff7f039bc7",
+    "label": "commit ff7f039: research: temporal attention passes with no advantage over ordinary maintenance (REM-673)",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/b3c7e4a313",
+    "b": "commit/c98d38e610",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "rem 673",
+      "width": 14
+     },
+     {
+      "kind": "term",
+      "key": "temporal attention",
+      "width": 39
+     }
+    ]
+   },
+   {
+    "a": "commit/c98d38e610",
+    "b": "commit/ff7f039bc7",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "rem 673",
+      "width": 14
+     },
+     {
+      "kind": "term",
+      "key": "temporal attention",
+      "width": 39
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   1,
+   1
+  ],
+  "entry": {
+   "seed": "commit/ff7f039bc7",
+   "gold": "commit/ff7f039bc7",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 905,
+  "within_2_doors": 32560,
+  "gold_within_1": 2,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "board/team/temporal-attention.md#2",
+    "label": "board/team/temporal-attention.md \u203a Log",
+    "p": 0.021044671447274878,
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-self-model/dreaming/SPEC.md#10",
+    "label": "applications/percolate-self-model/dreaming/SPEC.md \u203a Evaluation and contribution gates",
+    "p": 0.005108537715808981,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-673.md#2",
+    "label": "board/cards/REM-673.md \u203a Goal",
+    "p": 0.004841988771773862,
+    "gold": false
+   },
+   {
+    "id": "commit/c98d38e610",
+    "label": "commit c98d38e: research: implement frozen temporal attention comparison (REM-673)",
+    "p": 0.0046824515420027316,
+    "gold": true
+   },
+   {
+    "id": "commit/313d4181c6",
+    "label": "commit 313d418: board: temporal-attention takes REM-673",
+    "p": 0.004624557622640531,
+    "gold": false
+   },
+   {
+    "id": "research-notes/temporal-attention/README.md#3",
+    "label": "research-notes/temporal-attention/README.md \u203a Result",
+    "p": 0.004465773387447638,
+    "gold": false
+   },
+   {
+    "id": "commit/b3c7e4a313",
+    "label": "commit b3c7e4a: research: freeze a temporal attention mechanism test (REM-673)",
+    "p": 0.003885069141021621,
+    "gold": true
+   },
+   {
+    "id": "research-notes/temporal-attention/README.md#1",
+    "label": "research-notes/temporal-attention/README.md \u203a Temporal attention has a simple, sound core",
+    "p": 0.003200365749543882,
+    "gold": false
+   },
+   {
+    "id": "research-notes/temporal-attention/README.md#8",
+    "label": "research-notes/temporal-attention/README.md \u203a Decision",
+    "p": 0.002963389839422868,
+    "gold": false
+   },
+   {
+    "id": "commit/7b5028ceff",
+    "label": "commit 7b5028c: research: preserve measured protocol through an editorial correction",
+    "p": 0.0029031529923417873,
+    "gold": false
+   },
+   {
+    "id": "research-notes/temporal-attention/README.md#7",
+    "label": "research-notes/temporal-attention/README.md \u203a What it costs",
+    "p": 0.002856219001278224,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261029-194658-5192.md#1",
+    "label": "board/messages/M-20261029-194658-5192.md",
+    "p": 0.002633796984720347,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261029-195258-27cc.md#1",
+    "label": "board/messages/M-20261029-195258-27cc.md",
+    "p": 0.002561504914436124,
+    "gold": false
+   },
+   {
+    "id": "commit/35d0377e3c",
+    "label": "commit 35d0377: board: temporal-attention checks in, working",
+    "p": 0.002439922095437909,
+    "gold": false
+   },
+   {
+    "id": "research-notes/temporal-attention/PROTOCOL.md#1",
+    "label": "research-notes/temporal-attention/PROTOCOL.md \u203a Temporal attention: answer changes, v1",
+    "p": 0.002256612524704653,
+    "gold": false
+   },
+   {
+    "id": "commit/ef93269d5c",
+    "label": "commit ef93269: board: temporal-attention checks in, ended",
+    "p": 0.0022396255355636276,
+    "gold": false
+   },
+   {
+    "id": "research-notes/temporal-attention/PROTOCOL.md#6",
+    "label": "research-notes/temporal-attention/PROTOCOL.md \u203a Measurements and decision",
+    "p": 0.0021815770740670347,
+    "gold": false
+   },
+   {
+    "id": "specs/research-platform/core-research-programme.md#7",
+    "label": "specs/research-platform/core-research-programme.md \u203a R2. Measure claims under changing evidence",
+    "p": 0.0021174914535887768,
+    "gold": false
+   },
+   {
+    "id": "research-notes/build-knit-dream-briefing-v0-2026-09-10.md#6",
+    "label": "research-notes/build-knit-dream-briefing-v0-2026-09-10.md \u203a What this does, and does not, establish",
+    "p": 0.002079919274991644,
+    "gold": false
+   },
+   {
+    "id": "commit/f561ef36fe",
+    "label": "commit f561ef3: board: REM-673 in-progress \u2192 done",
+    "p": 0.0020689731711877883,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/e8c404c18a",
+   "label": "commit e8c404c: board: file REM-673 research: test temporal attention against ordinary state maintenance",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-673.md#1",
+   "label": "board/cards/REM-673.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/ff7f039bc7",
+   "label": "commit ff7f039: research: temporal attention passes with no advantage over ordinary maintenance (REM-673)",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "board/cards/REM-673.md#3",
+   "label": "board/cards/REM-673.md \u203a Log",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/team/temporal-attention.md#1",
+   "label": "board/team/temporal-attention.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "research-notes/temporal-attention/README.md#4",
+   "label": "research-notes/temporal-attention/README.md \u203a Result",
+   "wave": 1,
+   "via": "term:attention readme",
+   "gold": false
+  },
+  {
+   "id": "research-notes/temporal-attention/README.md#9",
+   "label": "research-notes/temporal-attention/README.md \u203a Reproduce",
+   "wave": 1,
+   "via": "term:attention readme",
+   "gold": false
+  },
+  {
+   "id": "research-notes/temporal-attention/README.md#5",
+   "label": "research-notes/temporal-attention/README.md \u203a Why this is not a topic-specific trick",
+   "wave": 1,
+   "via": "term:attention readme",
+   "gold": false
+  },
+  {
+   "id": "research-notes/temporal-attention/README.md#7",
+   "label": "research-notes/temporal-attention/README.md \u203a What it costs",
+   "wave": 1,
+   "via": "term:attention readme",
+   "gold": false
+  },
+  {
+   "id": "research-notes/temporal-attention/README.md#8",
+   "label": "research-notes/temporal-attention/README.md \u203a Decision",
+   "wave": 1,
+   "via": "term:attention readme",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "board/team/temporal-attention.md#2",
+    "label": "board/team/temporal-attention.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-self-model/dreaming/SPEC.md#10",
+    "label": "applications/percolate-self-model/dreaming/SPEC.md \u203a Evaluation and contribution gates",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-673.md#2",
+    "label": "board/cards/REM-673.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "commit/c98d38e610",
+    "label": "commit c98d38e: research: implement frozen temporal attention comparison (REM-673)",
+    "gold": true
+   },
+   {
+    "id": "commit/313d4181c6",
+    "label": "commit 313d418: board: temporal-attention takes REM-673",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "board/team/temporal-attention.md#2",
+    "label": "board/team/temporal-attention.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-self-model/dreaming/SPEC.md#10",
+    "label": "applications/percolate-self-model/dreaming/SPEC.md \u203a Evaluation and contribution gates",
+    "gold": false
+   },
+   {
+    "id": "research-notes/temporal-attention/README.md#3",
+    "label": "research-notes/temporal-attention/README.md \u203a Result",
+    "gold": false
+   },
+   {
+    "id": "research-notes/temporal-attention/README.md#1",
+    "label": "research-notes/temporal-attention/README.md \u203a Temporal attention has a simple, sound core",
+    "gold": false
+   },
+   {
+    "id": "research-notes/temporal-attention/README.md#8",
+    "label": "research-notes/temporal-attention/README.md \u203a Decision",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/c98d38e610",
+    "label": "commit c98d38e: research: implement frozen temporal attention comparison (REM-673)",
+    "gold": true
+   },
+   {
+    "id": "commit/313d4181c6",
+    "label": "commit 313d418: board: temporal-attention takes REM-673",
+    "gold": false
+   },
+   {
+    "id": "commit/b3c7e4a313",
+    "label": "commit b3c7e4a: research: freeze a temporal attention mechanism test (REM-673)",
+    "gold": true
+   },
+   {
+    "id": "commit/35d0377e3c",
+    "label": "commit 35d0377: board: temporal-attention checks in, working",
+    "gold": false
+   },
+   {
+    "id": "commit/ef93269d5c",
+    "label": "commit ef93269: board: temporal-attention checks in, ended",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "board/team/temporal-attention.md#2",
+    "label": "board/team/temporal-attention.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "commit/b3c7e4a313",
+    "label": "commit b3c7e4a: research: freeze a temporal attention mechanism test (REM-673)",
+    "gold": true
+   },
+   {
+    "id": "applications/percolate-self-model/dreaming/SPEC.md#10",
+    "label": "applications/percolate-self-model/dreaming/SPEC.md \u203a Evaluation and contribution gates",
+    "gold": false
+   },
+   {
+    "id": "research-notes/temporal-attention/README.md#8",
+    "label": "research-notes/temporal-attention/README.md \u203a Decision",
+    "gold": false
+   },
+   {
+    "id": "research-notes/temporal-attention/README.md#1",
+    "label": "research-notes/temporal-attention/README.md \u203a Temporal attention has a simple, sound core",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.5,
+  "Q": 0.0,
+  "LQ": 1.0,
+  "S": 0.5
+ }
+}

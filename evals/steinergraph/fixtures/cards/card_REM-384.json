@@ -1,0 +1,400 @@
+{
+ "qid": "card:REM-384",
+ "set": "cards",
+ "question": "What was done about this, and why: connect: ChatGPT's card leads with the desktop app's plugin install, which it wrongly said did not exist?",
+ "gold": [
+  {
+   "id": "commit/99ed78a519",
+   "label": "commit 99ed78a: specs: inviting a writer to a first draft has one spec, the only place its intent is stated (REM-386)",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/3912f065a5",
+   "label": "commit 3912f06: board: file REM-384 connect: ChatGPT's card leads with the desktop app's plugin install, which it wrongl",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-384.md#1",
+   "label": "board/cards/REM-384.md",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-384.md#2",
+   "label": "board/cards/REM-384.md \u203a Goal",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-384.md#7",
+   "label": "board/cards/REM-384.md \u203a Log",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-379.md#7",
+   "label": "board/cards/REM-379.md \u203a Log",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 2
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/3912f065a5",
+    "label": "commit 3912f06: board: file REM-384 connect: ChatGPT's card leads with the desktop app's plugin install, which it wrongl",
+    "role": "seed"
+   },
+   {
+    "id": "commit/99ed78a519",
+    "label": "commit 99ed78a: specs: inviting a writer to a first draft has one spec, the only place its intent is stated (REM-386)",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/3912f065a5",
+    "b": "commit/99ed78a519",
+    "via": [
+     {
+      "kind": "term",
+      "key": "rem 384",
+      "width": 18
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [],
+  "entry": {
+   "seed": "commit/3912f065a5",
+   "gold": "commit/99ed78a519",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 1471,
+  "within_2_doors": 34069,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "specs/percolate-application/writer-onboarding.md#6",
+    "label": "specs/percolate-application/writer-onboarding.md \u203a 4. Connecting each app",
+    "p": 0.006540356800807418,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-384.md#3",
+    "label": "board/cards/REM-384.md \u203a Evidence",
+    "p": 0.006515372220186515,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-381.md#7",
+    "label": "board/cards/REM-381.md \u203a Log",
+    "p": 0.005324212876745338,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-380.md#2",
+    "label": "board/cards/REM-380.md \u203a Goal",
+    "p": 0.004498571042331799,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-385.md#7",
+    "label": "board/cards/REM-385.md \u203a Log",
+    "p": 0.004291795136135096,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-381.md#4",
+    "label": "board/cards/REM-381.md \u203a Done when",
+    "p": 0.0037090023077651457,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-380.md#7",
+    "label": "board/cards/REM-380.md \u203a Log",
+    "p": 0.003321523667749711,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/writer-onboarding.md#9",
+    "label": "specs/percolate-application/writer-onboarding.md \u203a 6. What went wrong while it was built",
+    "p": 0.0032012634314985797,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-384.md#4",
+    "label": "board/cards/REM-384.md \u203a Done when",
+    "p": 0.003113881330721206,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-379.md#2",
+    "label": "board/cards/REM-379.md \u203a Goal",
+    "p": 0.0029362929249851957,
+    "gold": false
+   },
+   {
+    "id": "commit/261fa54bd9",
+    "label": "commit 261fa54: board: percolate-application-62 takes REM-384",
+    "p": 0.0029308525544882976,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/connecting-claude-and-chatgpt.md#2",
+    "label": "specs/percolate-application/connecting-claude-and-chatgpt.md \u203a One act, in every app",
+    "p": 0.0028775716384427555,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-379.md#3",
+    "label": "board/cards/REM-379.md \u203a Evidence",
+    "p": 0.002818474729320811,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-461.md#7",
+    "label": "board/cards/REM-461.md \u203a Log",
+    "p": 0.0026912134322744966,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/writer-onboarding.md#4",
+    "label": "specs/percolate-application/writer-onboarding.md \u203a 3. How it works now",
+    "p": 0.0026527287976904736,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261030-191857-1f47.md#1",
+    "label": "board/messages/M-20261030-191857-1f47.md",
+    "p": 0.0026400312241072507,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-384.md#5",
+    "label": "board/cards/REM-384.md \u203a Scope",
+    "p": 0.002538195123583838,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-379.md#1",
+    "label": "board/cards/REM-379.md",
+    "p": 0.0024753561467907724,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-359.md#6",
+    "label": "board/cards/REM-359.md \u203a Log",
+    "p": 0.0023507616338086196,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-342.md#4",
+    "label": "board/cards/REM-342.md \u203a Done when",
+    "p": 0.0022507949787560623,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/3912f065a5",
+   "label": "commit 3912f06: board: file REM-384 connect: ChatGPT's card leads with the desktop app's plugin install, which it wrongl",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-384.md#1",
+   "label": "board/cards/REM-384.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-384.md#2",
+   "label": "board/cards/REM-384.md \u203a Goal",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-384.md#7",
+   "label": "board/cards/REM-384.md \u203a Log",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-379.md#7",
+   "label": "board/cards/REM-379.md \u203a Log",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/percolate-application/writer-onboarding.md#9",
+   "label": "specs/percolate-application/writer-onboarding.md \u203a 6. What went wrong while it was built",
+   "wave": 1,
+   "via": "term:rem 384",
+   "gold": false
+  },
+  {
+   "id": "commit/00e7dfc763",
+   "label": "commit 00e7dfc: board: REM-384 in-progress \u2192 done",
+   "wave": 1,
+   "via": "term:rem 384",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-385.md#6",
+   "label": "board/cards/REM-385.md \u203a Links",
+   "wave": 1,
+   "via": "term:rem 384",
+   "gold": false
+  },
+  {
+   "id": "commit/261fa54bd9",
+   "label": "commit 261fa54: board: percolate-application-62 takes REM-384",
+   "wave": 1,
+   "via": "term:rem 384",
+   "gold": false
+  },
+  {
+   "id": "specs/percolate-application/writer-onboarding.md#1",
+   "label": "specs/percolate-application/writer-onboarding.md \u203a Inviting a writer to a first draft",
+   "wave": 1,
+   "via": "term:rem 384",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "specs/percolate-application/writer-onboarding.md#6",
+    "label": "specs/percolate-application/writer-onboarding.md \u203a 4. Connecting each app",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-384.md#3",
+    "label": "board/cards/REM-384.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-381.md#7",
+    "label": "board/cards/REM-381.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-380.md#2",
+    "label": "board/cards/REM-380.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-385.md#7",
+    "label": "board/cards/REM-385.md \u203a Log",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "specs/percolate-application/writer-onboarding.md#6",
+    "label": "specs/percolate-application/writer-onboarding.md \u203a 4. Connecting each app",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-384.md#3",
+    "label": "board/cards/REM-384.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-381.md#7",
+    "label": "board/cards/REM-381.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-379.md#3",
+    "label": "board/cards/REM-379.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-380.md#7",
+    "label": "board/cards/REM-380.md \u203a Log",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "board/cards/REM-384.md#4",
+    "label": "board/cards/REM-384.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-380.md#1",
+    "label": "board/cards/REM-380.md",
+    "gold": false
+   },
+   {
+    "id": "commit/bbb5eb0e10",
+    "label": "commit bbb5eb0: board: file REM-380 connect: the plugin steps promise only what was tested, and ChatGPT is not offered a",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-380.md#2",
+    "label": "board/cards/REM-380.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-379.md#1",
+    "label": "board/cards/REM-379.md",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "board/cards/REM-379.md#3",
+    "label": "board/cards/REM-379.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/writer-onboarding.md#6",
+    "label": "specs/percolate-application/writer-onboarding.md \u203a 4. Connecting each app",
+    "gold": false
+   },
+   {
+    "id": "commit/bbb5eb0e10",
+    "label": "commit bbb5eb0: board: file REM-380 connect: the plugin steps promise only what was tested, and ChatGPT is not offered a",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/writer-onboarding.md#9",
+    "label": "specs/percolate-application/writer-onboarding.md \u203a 6. What went wrong while it was built",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/writer-onboarding.md#10",
+    "label": "specs/percolate-application/writer-onboarding.md \u203a 7. Not done",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

@@ -1,0 +1,407 @@
+{
+ "qid": "RW:2hop__780652_93362",
+ "set": "mq",
+ "question": "What film features Anil Devgan's sibling?",
+ "gold": [
+  {
+   "id": "mq:23d56bcbae734fee",
+   "label": "Yeh Raaste Hain Pyaar Ke",
+   "seed": false
+  },
+  {
+   "id": "mq:8438b5122e7f74af",
+   "label": "Anil Devgan",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:8438b5122e7f74af",
+   "label": "Anil Devgan",
+   "rank": 1,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:611f495753c94fd5",
+   "label": "U Me Aur Hum",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:a3fcd512a54cb860",
+   "label": "Aagadu",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:4d7e549ee33f583e",
+   "label": "Dil Kya Kare",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:2abeb7df74c4fd17",
+   "label": "Pandaga Chesko",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:23d56bcbae734fee",
+    "label": "Yeh Raaste Hain Pyaar Ke",
+    "role": "gold"
+   },
+   {
+    "id": "mq:8438b5122e7f74af",
+    "label": "Anil Devgan",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:23d56bcbae734fee",
+    "b": "mq:8438b5122e7f74af",
+    "via": [
+     {
+      "kind": "term",
+      "key": "ajay",
+      "width": 8
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "mq:8438b5122e7f74af",
+   "gold": "mq:8438b5122e7f74af",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 913,
+  "within_2_doors": 19964,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "mq:50291bb6d239cb38",
+    "label": "Parched",
+    "p": 0.009301456641308348,
+    "gold": false
+   },
+   {
+    "id": "mq:d75233e75d17701e",
+    "label": "Punjab and Haryana High Court",
+    "p": 0.005525145987527575,
+    "gold": false
+   },
+   {
+    "id": "mq:23d56bcbae734fee",
+    "label": "Yeh Raaste Hain Pyaar Ke",
+    "p": 0.004003116355272302,
+    "gold": true
+   },
+   {
+    "id": "mq:9fff5be8f5a6daf8",
+    "label": "M.S. Dhoni: The Untold Story",
+    "p": 0.0029117733133709484,
+    "gold": false
+   },
+   {
+    "id": "mq:53e3651fb45bfdd3",
+    "label": "Rakhwale",
+    "p": 0.0025793262797950936,
+    "gold": false
+   },
+   {
+    "id": "mq:cb5b3335292e1de4",
+    "label": "Guru Randhawa",
+    "p": 0.002281532506690421,
+    "gold": false
+   },
+   {
+    "id": "mq:299ae387259fa48b",
+    "label": "Mohsin Khan (actor)",
+    "p": 0.0022084533410697796,
+    "gold": false
+   },
+   {
+    "id": "mq:47d202571fe9fc73",
+    "label": "Dilwale Dulhania Le Jayenge",
+    "p": 0.0021357981753013294,
+    "gold": false
+   },
+   {
+    "id": "mq:075c41bca790631d",
+    "label": "Injakkadan Mathai & Sons",
+    "p": 0.0020656503057273974,
+    "gold": false
+   },
+   {
+    "id": "mq:52f209f56211b607",
+    "label": "Chandee",
+    "p": 0.002027349332870327,
+    "gold": false
+   },
+   {
+    "id": "mq:17fb8c97d1763cc1",
+    "label": "Seven Seconds (TV series)",
+    "p": 0.0019417931234251566,
+    "gold": false
+   },
+   {
+    "id": "mq:0d0e577b2de52abf",
+    "label": "Ashoka Chakra (military decoration)",
+    "p": 0.0019348248285254398,
+    "gold": false
+   },
+   {
+    "id": "mq:b78ed498452b6511",
+    "label": "Woh Lamhe",
+    "p": 0.0018757027850336261,
+    "gold": false
+   },
+   {
+    "id": "mq:225e9c3a5567e2a5",
+    "label": "Aarakshan",
+    "p": 0.0018360958322324965,
+    "gold": false
+   },
+   {
+    "id": "mq:412c6d99a9c462e6",
+    "label": "Mrityudand",
+    "p": 0.0018190112218621946,
+    "gold": false
+   },
+   {
+    "id": "mq:c62bdce5a3a1cca3",
+    "label": "Ek Kunwari Ek Kunwara",
+    "p": 0.0017532165576507434,
+    "gold": false
+   },
+   {
+    "id": "mq:e6ca92b8fc26ff3a",
+    "label": "Nalla",
+    "p": 0.0017462616957384604,
+    "gold": false
+   },
+   {
+    "id": "mq:19bc997c07c5433f",
+    "label": "Har Dil Jo Pyar Karega",
+    "p": 0.0017328621982715157,
+    "gold": false
+   },
+   {
+    "id": "mq:3a469bb6d1f4af30",
+    "label": "National Film Award for Best Actress",
+    "p": 0.0015956102087956515,
+    "gold": false
+   },
+   {
+    "id": "mq:401bef97b7da911f",
+    "label": "National Film Award for Best Actress",
+    "p": 0.0015246064075663034,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:8438b5122e7f74af",
+   "label": "Anil Devgan",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:611f495753c94fd5",
+   "label": "U Me Aur Hum",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:a3fcd512a54cb860",
+   "label": "Aagadu",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:4d7e549ee33f583e",
+   "label": "Dil Kya Kare",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:2abeb7df74c4fd17",
+   "label": "Pandaga Chesko",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:23d56bcbae734fee",
+   "label": "Yeh Raaste Hain Pyaar Ke",
+   "wave": 1,
+   "via": "term:ajay devgn",
+   "gold": true
+  },
+  {
+   "id": "mq:50291bb6d239cb38",
+   "label": "Parched",
+   "wave": 1,
+   "via": "term:ajay devgn",
+   "gold": false
+  },
+  {
+   "id": "mq:30728262521cc5e9",
+   "label": "All I Want Is You (U2 song)",
+   "wave": 2,
+   "via": "near:mq:611f495753c94fd5",
+   "gold": false
+  },
+  {
+   "id": "mq:53e3651fb45bfdd3",
+   "label": "Rakhwale",
+   "wave": 2,
+   "via": "near:mq:611f495753c94fd5",
+   "gold": false
+  },
+  {
+   "id": "mq:1f0173e30f543d9e",
+   "label": "USB",
+   "wave": 3,
+   "via": "term:ajay",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:50291bb6d239cb38",
+    "label": "Parched",
+    "gold": false
+   },
+   {
+    "id": "mq:d75233e75d17701e",
+    "label": "Punjab and Haryana High Court",
+    "gold": false
+   },
+   {
+    "id": "mq:23d56bcbae734fee",
+    "label": "Yeh Raaste Hain Pyaar Ke",
+    "gold": true
+   },
+   {
+    "id": "mq:9fff5be8f5a6daf8",
+    "label": "M.S. Dhoni: The Untold Story",
+    "gold": false
+   },
+   {
+    "id": "mq:53e3651fb45bfdd3",
+    "label": "Rakhwale",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:50291bb6d239cb38",
+    "label": "Parched",
+    "gold": false
+   },
+   {
+    "id": "mq:53e3651fb45bfdd3",
+    "label": "Rakhwale",
+    "gold": false
+   },
+   {
+    "id": "mq:075c41bca790631d",
+    "label": "Injakkadan Mathai & Sons",
+    "gold": false
+   },
+   {
+    "id": "mq:e1152492ba317e9c",
+    "label": "Karwat",
+    "gold": false
+   },
+   {
+    "id": "mq:4572e7cc5abfd739",
+    "label": "Anil B. Divan",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:50291bb6d239cb38",
+    "label": "Parched",
+    "gold": false
+   },
+   {
+    "id": "mq:3a469bb6d1f4af30",
+    "label": "National Film Award for Best Actress",
+    "gold": false
+   },
+   {
+    "id": "mq:401bef97b7da911f",
+    "label": "National Film Award for Best Actress",
+    "gold": false
+   },
+   {
+    "id": "mq:d75233e75d17701e",
+    "label": "Punjab and Haryana High Court",
+    "gold": false
+   },
+   {
+    "id": "mq:53e3651fb45bfdd3",
+    "label": "Rakhwale",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:53e3651fb45bfdd3",
+    "label": "Rakhwale",
+    "gold": false
+   },
+   {
+    "id": "mq:50291bb6d239cb38",
+    "label": "Parched",
+    "gold": false
+   },
+   {
+    "id": "mq:3414f92723353110",
+    "label": "Jai Jawan Jai Makan",
+    "gold": false
+   },
+   {
+    "id": "mq:e1152492ba317e9c",
+    "label": "Karwat",
+    "gold": false
+   },
+   {
+    "id": "mq:daea5c4dffc6c928",
+    "label": "Daughters of Pharmacist Kim",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 1.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

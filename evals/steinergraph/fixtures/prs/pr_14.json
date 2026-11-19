@@ -1,0 +1,508 @@
+{
+ "qid": "pr:14",
+ "set": "prs",
+ "question": "What work went into this, and why: Agent skills: prompt fragments as rows, expanded lazily per turn?",
+ "gold": [
+  {
+   "id": "commit/417c194051",
+   "label": "commit 417c194: attach_skill: adding a fragment to an agent is one statement",
+   "seed": false
+  },
+  {
+   "id": "commit/48b6b627c2",
+   "label": "commit 48b6b62: Ship the sample as skills, and fix a guard that had been skipping a sample",
+   "seed": false
+  },
+  {
+   "id": "commit/5a0e38f06d",
+   "label": "commit 5a0e38f: Run the two blocked eval arms; the index line reverses a default",
+   "seed": false
+  },
+  {
+   "id": "commit/ddefdb07db",
+   "label": "commit ddefdb0: Agent skills: prompt fragments as rows, expanded lazily per turn",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/17239d24d1",
+   "label": "commit 17239d2: Merge pull request #14 from percolating-sirsh/agent-skills",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/ddefdb07db",
+   "label": "commit ddefdb0: Agent skills: prompt fragments as rows, expanded lazily per turn",
+   "rank": 2,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "specs/agentic/reference/skills_eval.py#9",
+   "label": "specs/agentic/reference/skills_eval.py",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "specs/agentic/reference/skills.py#1",
+   "label": "specs/agentic/reference/skills.py",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "specs/agentic/reference/skills.py#9",
+   "label": "specs/agentic/reference/skills.py",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/417c194051",
+    "label": "commit 417c194: attach_skill: adding a fragment to an agent is one statement",
+    "role": "gold"
+   },
+   {
+    "id": "commit/48b6b627c2",
+    "label": "commit 48b6b62: Ship the sample as skills, and fix a guard that had been skipping a sample",
+    "role": "gold"
+   },
+   {
+    "id": "commit/5a0e38f06d",
+    "label": "commit 5a0e38f: Run the two blocked eval arms; the index line reverses a default",
+    "role": "gold"
+   },
+   {
+    "id": "commit/ddefdb07db",
+    "label": "commit ddefdb0: Agent skills: prompt fragments as rows, expanded lazily per turn",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/417c194051",
+    "b": "commit/48b6b627c2",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "capabilities round",
+      "width": 3
+     },
+     {
+      "kind": "term",
+      "key": "regenerated extension",
+      "width": 8
+     },
+     {
+      "kind": "term",
+      "key": "session_01kf7dupw1ibonwdgspbykwg",
+      "width": 10
+     },
+     {
+      "kind": "term",
+      "key": "code session_01kf7dupw1ibonwdgspbykwg",
+      "width": 10
+     },
+     {
+      "kind": "term",
+      "key": "surface complete",
+      "width": 11
+     }
+    ]
+   },
+   {
+    "a": "commit/417c194051",
+    "b": "commit/5a0e38f06d",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "session_01kf7dupw1ibonwdgspbykwg",
+      "width": 10
+     },
+     {
+      "kind": "term",
+      "key": "code session_01kf7dupw1ibonwdgspbykwg",
+      "width": 10
+     }
+    ]
+   },
+   {
+    "a": "commit/5a0e38f06d",
+    "b": "commit/ddefdb07db",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "semantic matching",
+      "width": 4
+     },
+     {
+      "kind": "term",
+      "key": "behaviour probe",
+      "width": 8
+     },
+     {
+      "kind": "term",
+      "key": "session_01kf7dupw1ibonwdgspbykwg",
+      "width": 10
+     },
+     {
+      "kind": "term",
+      "key": "code session_01kf7dupw1ibonwdgspbykwg",
+      "width": 10
+     },
+     {
+      "kind": "term",
+      "key": "fragments",
+      "width": 79
+     }
+    ]
+   }
+  ],
+  "cost": 3,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  "entry": {
+   "seed": "commit/ddefdb07db",
+   "gold": "commit/ddefdb07db",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 1920,
+  "within_2_doors": 33200,
+  "gold_within_1": 3,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "specs/agentic/reference/skills_toolset.py#4",
+    "label": "specs/agentic/reference/skills_toolset.py",
+    "p": 0.006116851607116588,
+    "gold": false
+   },
+   {
+    "id": "specs/agentic/reference/skills_eval.py#10",
+    "label": "specs/agentic/reference/skills_eval.py",
+    "p": 0.005363314543067321,
+    "gold": false
+   },
+   {
+    "id": "specs/agentic/reference/README.md#17",
+    "label": "specs/agentic/reference/README.md \u203a Skills: prompt expansion, and what measuring it changed",
+    "p": 0.0034586158875511944,
+    "gold": false
+   },
+   {
+    "id": "specs/agentic/reference/skills.py#10",
+    "label": "specs/agentic/reference/skills.py",
+    "p": 0.0031906302462748315,
+    "gold": false
+   },
+   {
+    "id": "specs/agentic/reference/skills.py#13",
+    "label": "specs/agentic/reference/skills.py",
+    "p": 0.00307721107883757,
+    "gold": false
+   },
+   {
+    "id": "specs/agentic/reference/README.md#20",
+    "label": "specs/agentic/reference/README.md \u203a What it found",
+    "p": 0.002866706534852038,
+    "gold": false
+   },
+   {
+    "id": "specs/agentic/reference/skills_toolset.py#5",
+    "label": "specs/agentic/reference/skills_toolset.py",
+    "p": 0.0026703980487447596,
+    "gold": false
+   },
+   {
+    "id": "specs/agentic/reference/percolate.yaml#8",
+    "label": "specs/agentic/reference/percolate.yaml",
+    "p": 0.0023632143919327443,
+    "gold": false
+   },
+   {
+    "id": "specs/agentic/reference/skills.py#12",
+    "label": "specs/agentic/reference/skills.py",
+    "p": 0.0022929969318823125,
+    "gold": false
+   },
+   {
+    "id": "specs/agentic/reference/skills_eval.py#8",
+    "label": "specs/agentic/reference/skills_eval.py",
+    "p": 0.0021647646632509004,
+    "gold": false
+   },
+   {
+    "id": "specs/agentic/reference/skills_toolset.py#2",
+    "label": "specs/agentic/reference/skills_toolset.py",
+    "p": 0.0019188361188592854,
+    "gold": false
+   },
+   {
+    "id": "commit/516edc69ff",
+    "label": "commit 516edc6: Merge pull request #12 from percolating-sirsh/portable-pgvector",
+    "p": 0.001871644865560138,
+    "gold": false
+   },
+   {
+    "id": "specs/agentic/plugins.md#18",
+    "label": "specs/agentic/plugins.md \u203a 5.3 Sticky expansion \u2014 settled, and the reason it is not optional",
+    "p": 0.0018329433978242714,
+    "gold": false
+   },
+   {
+    "id": "specs/agentic/reference/skills_eval.py#14",
+    "label": "specs/agentic/reference/skills_eval.py",
+    "p": 0.001734720120011089,
+    "gold": false
+   },
+   {
+    "id": "specs/agentic/reference/skills.yaml#15",
+    "label": "specs/agentic/reference/skills.yaml",
+    "p": 0.001725729724962511,
+    "gold": false
+   },
+   {
+    "id": "specs/agentic/plugins.md#10",
+    "label": "specs/agentic/plugins.md \u203a 5. How a skill reaches the model: expansion is the primitive",
+    "p": 0.001654297397832182,
+    "gold": false
+   },
+   {
+    "id": "specs/agentic/reference/skills.yaml#1",
+    "label": "specs/agentic/reference/skills.yaml",
+    "p": 0.0015617973029683494,
+    "gold": false
+   },
+   {
+    "id": "commit/4529eeaff6",
+    "label": "commit 4529eea: dev/reload.sh: the inner loop, which builds nothing",
+    "p": 0.0015257715225127134,
+    "gold": false
+   },
+   {
+    "id": "specs/agentic/reference/skills.py#11",
+    "label": "specs/agentic/reference/skills.py",
+    "p": 0.0014833263811613905,
+    "gold": false
+   },
+   {
+    "id": "specs/agentic/reference/skills_eval.py#11",
+    "label": "specs/agentic/reference/skills_eval.py",
+    "p": 0.0013916416205051257,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/17239d24d1",
+   "label": "commit 17239d2: Merge pull request #14 from percolating-sirsh/agent-skills",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/ddefdb07db",
+   "label": "commit ddefdb0: Agent skills: prompt fragments as rows, expanded lazily per turn",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "specs/agentic/reference/skills_eval.py#9",
+   "label": "specs/agentic/reference/skills_eval.py",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/agentic/reference/skills.py#1",
+   "label": "specs/agentic/reference/skills.py",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/agentic/reference/skills.py#9",
+   "label": "specs/agentic/reference/skills.py",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/agentic/reference/README.md#17",
+   "label": "specs/agentic/reference/README.md \u203a Skills: prompt expansion, and what measuring it changed",
+   "wave": 1,
+   "via": "term:skills prompt",
+   "gold": false
+  },
+  {
+   "id": "specs/agentic/schema.sql#70",
+   "label": "specs/agentic/schema.sql",
+   "wave": 2,
+   "via": "term:context_policy",
+   "gold": false
+  },
+  {
+   "id": "specs/agentic/plugins.md#13",
+   "label": "specs/agentic/plugins.md \u203a 5.1a `always`: the subset that is unconditional",
+   "wave": 2,
+   "via": "term:context_policy",
+   "gold": false
+  },
+  {
+   "id": "commit/8c800614ba",
+   "label": "commit 8c80061: Attachment is a surface, not an expansion: make agents.skills lazy",
+   "wave": 2,
+   "via": "term:context_policy",
+   "gold": false
+  },
+  {
+   "id": "specs/agentic/reference/percolate.yaml#8",
+   "label": "specs/agentic/reference/percolate.yaml",
+   "wave": 2,
+   "via": "term:context_policy",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "specs/agentic/reference/skills_toolset.py#4",
+    "label": "specs/agentic/reference/skills_toolset.py",
+    "gold": false
+   },
+   {
+    "id": "specs/agentic/reference/skills_eval.py#10",
+    "label": "specs/agentic/reference/skills_eval.py",
+    "gold": false
+   },
+   {
+    "id": "specs/agentic/reference/README.md#17",
+    "label": "specs/agentic/reference/README.md \u203a Skills: prompt expansion, and what measuring it changed",
+    "gold": false
+   },
+   {
+    "id": "specs/agentic/reference/skills.py#10",
+    "label": "specs/agentic/reference/skills.py",
+    "gold": false
+   },
+   {
+    "id": "specs/agentic/reference/skills.py#13",
+    "label": "specs/agentic/reference/skills.py",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "specs/agentic/reference/skills_toolset.py#4",
+    "label": "specs/agentic/reference/skills_toolset.py",
+    "gold": false
+   },
+   {
+    "id": "specs/agentic/reference/skills.py#10",
+    "label": "specs/agentic/reference/skills.py",
+    "gold": false
+   },
+   {
+    "id": "specs/agentic/reference/README.md#20",
+    "label": "specs/agentic/reference/README.md \u203a What it found",
+    "gold": false
+   },
+   {
+    "id": "specs/agentic/reference/README.md#17",
+    "label": "specs/agentic/reference/README.md \u203a Skills: prompt expansion, and what measuring it changed",
+    "gold": false
+   },
+   {
+    "id": "specs/agentic/reference/skills.py#11",
+    "label": "specs/agentic/reference/skills.py",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "specs/agentic/reference/README.md#17",
+    "label": "specs/agentic/reference/README.md \u203a Skills: prompt expansion, and what measuring it changed",
+    "gold": false
+   },
+   {
+    "id": "specs/agentic/plugins.md#10",
+    "label": "specs/agentic/plugins.md \u203a 5. How a skill reaches the model: expansion is the primitive",
+    "gold": false
+   },
+   {
+    "id": "specs/agentic/reference/skills_toolset.py#4",
+    "label": "specs/agentic/reference/skills_toolset.py",
+    "gold": false
+   },
+   {
+    "id": "specs/agentic/reference/skills.py#10",
+    "label": "specs/agentic/reference/skills.py",
+    "gold": false
+   },
+   {
+    "id": "specs/agentic/reference/skills.py#12",
+    "label": "specs/agentic/reference/skills.py",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "specs/agentic/reference/skills.py#10",
+    "label": "specs/agentic/reference/skills.py",
+    "gold": false
+   },
+   {
+    "id": "specs/agentic/reference/README.md#17",
+    "label": "specs/agentic/reference/README.md \u203a Skills: prompt expansion, and what measuring it changed",
+    "gold": false
+   },
+   {
+    "id": "specs/agentic/reference/skills.py#12",
+    "label": "specs/agentic/reference/skills.py",
+    "gold": false
+   },
+   {
+    "id": "specs/agentic/plugins.md#40",
+    "label": "specs/agentic/plugins.md \u203a 11.5 Sticky expansion: the churn is real, and so is its price",
+    "gold": false
+   },
+   {
+    "id": "commit/8c800614ba",
+    "label": "commit 8c80061: Attachment is a surface, not an expansion: make agents.skills lazy",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

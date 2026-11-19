@@ -1,0 +1,500 @@
+{
+ "qid": "RW:4hop1__343844_17130_70784_79935",
+ "set": "mq",
+ "question": "When was the region immediately north of the region where Urim's country is located and the Persian Gulf created?",
+ "gold": [
+  {
+   "id": "mq:5b56be54717d03f5",
+   "label": "Israel",
+   "seed": false
+  },
+  {
+   "id": "mq:6421666ff3e70d66",
+   "label": "Geography of Saudi Arabia",
+   "seed": true
+  },
+  {
+   "id": "mq:696ad239205f641a",
+   "label": "Joe Flexer",
+   "seed": false
+  },
+  {
+   "id": "mq:d8dd686764b34e20",
+   "label": "History of Saudi Arabia",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:c09fa7a016bd0baa",
+   "label": "Ur",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:243c393810fa6f28",
+   "label": "Arabian Sea",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:6421666ff3e70d66",
+   "label": "Geography of Saudi Arabia",
+   "rank": 3,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:e2f7fc3b2273283e",
+   "label": "Wollaston Peninsula",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "mq:b5be102c3021dffa",
+   "label": "North Gosford, New South Wales",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 2
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:5b56be54717d03f5",
+    "label": "Israel",
+    "role": "gold"
+   },
+   {
+    "id": "mq:6421666ff3e70d66",
+    "label": "Geography of Saudi Arabia",
+    "role": "gold"
+   },
+   {
+    "id": "mq:696ad239205f641a",
+    "label": "Joe Flexer",
+    "role": "gold"
+   },
+   {
+    "id": "mq:ac1f82eeb037af93",
+    "label": "Israel",
+    "role": "connector"
+   },
+   {
+    "id": "mq:d8dd686764b34e20",
+    "label": "History of Saudi Arabia",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:5b56be54717d03f5",
+    "b": "mq:6421666ff3e70d66",
+    "via": [
+     {
+      "kind": "term",
+      "key": "red sea",
+      "width": 21
+     }
+    ]
+   },
+   {
+    "a": "mq:5b56be54717d03f5",
+    "b": "mq:ac1f82eeb037af93",
+    "via": [
+     {
+      "kind": "term",
+      "key": "aviv",
+      "width": 9
+     },
+     {
+      "kind": "term",
+      "key": "tel aviv",
+      "width": 9
+     },
+     {
+      "kind": "term",
+      "key": "tel",
+      "width": 10
+     },
+     {
+      "kind": "term",
+      "key": "jordan",
+      "width": 63
+     },
+     {
+      "kind": "term",
+      "key": "mediterranean",
+      "width": 69
+     }
+    ]
+   },
+   {
+    "a": "mq:6421666ff3e70d66",
+    "b": "mq:d8dd686764b34e20",
+    "via": [
+     {
+      "kind": "term",
+      "key": "saudi arabia",
+      "width": 33
+     },
+     {
+      "kind": "term",
+      "key": "saudi",
+      "width": 42
+     },
+     {
+      "kind": "term",
+      "key": "arabia",
+      "width": 47
+     }
+    ]
+   },
+   {
+    "a": "mq:696ad239205f641a",
+    "b": "mq:ac1f82eeb037af93",
+    "via": [
+     {
+      "kind": "term",
+      "key": "kibbutz",
+      "width": 3
+     }
+    ]
+   }
+  ],
+  "cost": 4,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   2,
+   2,
+   2,
+   1,
+   2
+  ],
+  "entry": {
+   "seed": "mq:6421666ff3e70d66",
+   "gold": "mq:6421666ff3e70d66",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 2613,
+  "within_2_doors": 18474,
+  "gold_within_1": 2,
+  "gold_within_2": 1,
+  "top_U": [
+   {
+    "id": "mq:1b8a486541e998f2",
+    "label": "Separate Lies",
+    "p": 0.003282666836518815,
+    "gold": false
+   },
+   {
+    "id": "mq:20e3ec3d14d7ac66",
+    "label": "Hargrave River (Nunavut)",
+    "p": 0.0030322319219234137,
+    "gold": false
+   },
+   {
+    "id": "mq:e310a6d5990bf57a",
+    "label": "Sumer",
+    "p": 0.0028826814091727163,
+    "gold": false
+   },
+   {
+    "id": "mq:e0f52e2f450eb72e",
+    "label": "Red Sea",
+    "p": 0.0024009475672824923,
+    "gold": false
+   },
+   {
+    "id": "mq:796ba14a7d3911ed",
+    "label": "Akkadian Empire",
+    "p": 0.0017142488701080484,
+    "gold": false
+   },
+   {
+    "id": "mq:cb8221e37b92ab90",
+    "label": "East Stone Gap, Virginia",
+    "p": 0.0016708458145606598,
+    "gold": false
+   },
+   {
+    "id": "mq:73a4e750e45eae31",
+    "label": "Washington Island (Michigan)",
+    "p": 0.0014374172669358739,
+    "gold": false
+   },
+   {
+    "id": "mq:34e730f2aff5f18d",
+    "label": "Cape Bathurst",
+    "p": 0.001326975406130263,
+    "gold": false
+   },
+   {
+    "id": "mq:54822a5674a3d723",
+    "label": "Jordan",
+    "p": 0.0013231829948802073,
+    "gold": false
+   },
+   {
+    "id": "mq:6b0721cdbb293b65",
+    "label": "Yucat\u00e1n Peninsula",
+    "p": 0.0013110279375673317,
+    "gold": false
+   },
+   {
+    "id": "mq:c9304a5f81c38b8e",
+    "label": "Parthian Empire",
+    "p": 0.0012876293755965968,
+    "gold": false
+   },
+   {
+    "id": "mq:c8ea4482fc607256",
+    "label": "Suez Canal",
+    "p": 0.00125543101219104,
+    "gold": false
+   },
+   {
+    "id": "mq:1f1a38018cb82413",
+    "label": "Qaruh Island",
+    "p": 0.001149210942856217,
+    "gold": false
+   },
+   {
+    "id": "mq:50077b9af50e4355",
+    "label": "Kingdom of Aksum",
+    "p": 0.0011046341223852915,
+    "gold": false
+   },
+   {
+    "id": "mq:30828ad30bbc15b0",
+    "label": "Godfrey Baring",
+    "p": 0.001101913080989807,
+    "gold": false
+   },
+   {
+    "id": "mq:9265af2460de5615",
+    "label": "Tom Baring",
+    "p": 0.001073214004380706,
+    "gold": false
+   },
+   {
+    "id": "mq:d2dd617cdd5e5ae5",
+    "label": "Armenia",
+    "p": 0.0010632403584973275,
+    "gold": false
+   },
+   {
+    "id": "mq:bdafbcf7af85ba5c",
+    "label": "History of rail transport in India",
+    "p": 0.0010392812589331585,
+    "gold": false
+   },
+   {
+    "id": "mq:6ca09faaa7680943",
+    "label": "East India Company",
+    "p": 0.0008338258715433776,
+    "gold": false
+   },
+   {
+    "id": "mq:76988f439345670f",
+    "label": "Near East",
+    "p": 0.000702063308310587,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:c09fa7a016bd0baa",
+   "label": "Ur",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:243c393810fa6f28",
+   "label": "Arabian Sea",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:6421666ff3e70d66",
+   "label": "Geography of Saudi Arabia",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:e2f7fc3b2273283e",
+   "label": "Wollaston Peninsula",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:b5be102c3021dffa",
+   "label": "North Gosford, New South Wales",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:e310a6d5990bf57a",
+   "label": "Sumer",
+   "wave": 1,
+   "via": "term:mesopotamia",
+   "gold": false
+  },
+  {
+   "id": "mq:3d9fe579501bef30",
+   "label": "Middle East",
+   "wave": 1,
+   "via": "term:mesopotamia",
+   "gold": false
+  },
+  {
+   "id": "mq:b1913c7459a9090f",
+   "label": "Carnival",
+   "wave": 1,
+   "via": "term:mesopotamia",
+   "gold": false
+  },
+  {
+   "id": "mq:3244dc3a450af36a",
+   "label": "Sittas",
+   "wave": 1,
+   "via": "term:mesopotamia",
+   "gold": false
+  },
+  {
+   "id": "mq:5c7c68e63357c084",
+   "label": "Near East",
+   "wave": 1,
+   "via": "term:mesopotamia",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:1b8a486541e998f2",
+    "label": "Separate Lies",
+    "gold": false
+   },
+   {
+    "id": "mq:20e3ec3d14d7ac66",
+    "label": "Hargrave River (Nunavut)",
+    "gold": false
+   },
+   {
+    "id": "mq:e310a6d5990bf57a",
+    "label": "Sumer",
+    "gold": false
+   },
+   {
+    "id": "mq:e0f52e2f450eb72e",
+    "label": "Red Sea",
+    "gold": false
+   },
+   {
+    "id": "mq:796ba14a7d3911ed",
+    "label": "Akkadian Empire",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:e0f52e2f450eb72e",
+    "label": "Red Sea",
+    "gold": false
+   },
+   {
+    "id": "mq:20e3ec3d14d7ac66",
+    "label": "Hargrave River (Nunavut)",
+    "gold": false
+   },
+   {
+    "id": "mq:6b0721cdbb293b65",
+    "label": "Yucat\u00e1n Peninsula",
+    "gold": false
+   },
+   {
+    "id": "mq:e96c80dc23d460eb",
+    "label": "Iran",
+    "gold": false
+   },
+   {
+    "id": "mq:8aa1997b1110efe6",
+    "label": "Dubai",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:e96c80dc23d460eb",
+    "label": "Iran",
+    "gold": false
+   },
+   {
+    "id": "mq:e0f52e2f450eb72e",
+    "label": "Red Sea",
+    "gold": false
+   },
+   {
+    "id": "mq:20e3ec3d14d7ac66",
+    "label": "Hargrave River (Nunavut)",
+    "gold": false
+   },
+   {
+    "id": "mq:6b0721cdbb293b65",
+    "label": "Yucat\u00e1n Peninsula",
+    "gold": false
+   },
+   {
+    "id": "mq:8aa1997b1110efe6",
+    "label": "Dubai",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:f29183680b819919",
+    "label": "Ouluj\u00e4rvi",
+    "gold": false
+   },
+   {
+    "id": "mq:b4c0df7d79b6eab7",
+    "label": "Geography of Iran",
+    "gold": false
+   },
+   {
+    "id": "mq:bef6afe37e37ebc1",
+    "label": "Hertfordshire",
+    "gold": false
+   },
+   {
+    "id": "mq:afee3466b44813f7",
+    "label": "Sabkhat Ghuzayyil",
+    "gold": false
+   },
+   {
+    "id": "mq:59ad282dfdbe3842",
+    "label": "Iran",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

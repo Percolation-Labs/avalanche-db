@@ -1,0 +1,383 @@
+{
+ "qid": "card:REM-580",
+ "set": "cards",
+ "question": "What was done about this, and why: research: an upgrade leaves a withdrawn work withdrawn?",
+ "gold": [
+  {
+   "id": "commit/87c16dc639",
+   "label": "commit 87c16dc: The exposures carry-over cannot re-expose a withdrawn work (REM-580)",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/a5a4997c1b",
+   "label": "commit a5a4997: board: file REM-580 research: an upgrade leaves a withdrawn work withdrawn",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-580.md#4",
+   "label": "board/cards/REM-580.md \u203a Done when",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-580.md#1",
+   "label": "board/cards/REM-580.md",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/87c16dc639",
+   "label": "commit 87c16dc: The exposures carry-over cannot re-expose a withdrawn work (REM-580)",
+   "rank": 4,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "specs/tables/schema.md#8",
+   "label": "specs/tables/schema.md \u203a 3. Immutable records and deterministic projections",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/87c16dc639",
+    "label": "commit 87c16dc: The exposures carry-over cannot re-expose a withdrawn work (REM-580)",
+    "role": "gold"
+   }
+  ],
+  "links": [],
+  "cost": 0,
+  "detached_gold": [],
+  "gold_pair_doors": [],
+  "entry": {
+   "seed": "commit/87c16dc639",
+   "gold": "commit/87c16dc639",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 944,
+  "within_2_doors": 32659,
+  "gold_within_1": 0,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "board/cards/REM-580.md#5",
+    "label": "board/cards/REM-580.md \u203a Log",
+    "p": 0.016541775454884743,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-580.md#2",
+    "label": "board/cards/REM-580.md \u203a Goal",
+    "p": 0.011919539254303498,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-552.md#5",
+    "label": "board/cards/REM-552.md \u203a Log",
+    "p": 0.008610106786292353,
+    "gold": false
+   },
+   {
+    "id": "commit/eeb7289d80",
+    "label": "commit eeb7289: An upgrade leaves an operator's denied rights denied (REM-552)",
+    "p": 0.005693570821091551,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-552.md#1",
+    "label": "board/cards/REM-552.md",
+    "p": 0.0048055843127187015,
+    "gold": false
+   },
+   {
+    "id": "commit/3c71504731",
+    "label": "commit 3c71504: board: file REM-552 rbac: an upgrade leaves an operator's denied rights denied",
+    "p": 0.004621959818429229,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-580.md#3",
+    "label": "board/cards/REM-580.md \u203a Evidence",
+    "p": 0.00458547824665144,
+    "gold": false
+   },
+   {
+    "id": "commit/00e798a17e",
+    "label": "commit 00e798a: Trust history cannot be rewritten, and reads as of a date (REM-464, core 0.2.11)",
+    "p": 0.004155640204199727,
+    "gold": false
+   },
+   {
+    "id": "commit/25bda9b35e",
+    "label": "commit 25bda9b: board: note on REM-559",
+    "p": 0.0038516447005296026,
+    "gold": false
+   },
+   {
+    "id": "commit/460877e99f",
+    "label": "commit 460877e: Merge pull request #286 from Percolation-Labs/amartey/rem-513-bootstrap-is-operator",
+    "p": 0.0037699708391082816,
+    "gold": false
+   },
+   {
+    "id": "commit/90b0c179fc",
+    "label": "commit 90b0c17: board: REM-580 in-progress \u2192 canceled",
+    "p": 0.0027988421770219975,
+    "gold": false
+   },
+   {
+    "id": "commit/c382d8934a",
+    "label": "commit c382d89: board: p8-subsystems-47 takes REM-580",
+    "p": 0.0026863626186296253,
+    "gold": false
+   },
+   {
+    "id": "specs/user-rbac/schema.sql#13",
+    "label": "specs/user-rbac/schema.sql",
+    "p": 0.0015509643828598811,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-551.md#5",
+    "label": "board/cards/REM-551.md \u203a Log",
+    "p": 0.001481196463140493,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/README.md#18",
+    "label": "meta/postmortems/README.md \u203a A defect that exists only in the DATA of an upgraded database",
+    "p": 0.0014647798138045763,
+    "gold": false
+   },
+   {
+    "id": "commit/37ed4cd487",
+    "label": "commit 37ed4cd: rows, not schema: the rule, and a gate that reads specs/ (REM-655) (#335)",
+    "p": 0.0013745085559207983,
+    "gold": false
+   },
+   {
+    "id": "specs/tables/schema.md#7",
+    "label": "specs/tables/schema.md \u203a 3. Immutable records and deterministic projections",
+    "p": 0.0012269685064384588,
+    "gold": false
+   },
+   {
+    "id": "specs/research-platform/schema.sql#14",
+    "label": "specs/research-platform/schema.sql",
+    "p": 0.0011681293297926428,
+    "gold": false
+   },
+   {
+    "id": "specs/research-platform/schema.sql#64",
+    "label": "specs/research-platform/schema.sql",
+    "p": 0.0010301150517147972,
+    "gold": false
+   },
+   {
+    "id": "commit/0fb184776a",
+    "label": "commit 0fb1847: board: REM-567 in-progress \u2192 done",
+    "p": 0.0010146898682958504,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/a5a4997c1b",
+   "label": "commit a5a4997: board: file REM-580 research: an upgrade leaves a withdrawn work withdrawn",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-580.md#4",
+   "label": "board/cards/REM-580.md \u203a Done when",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-580.md#1",
+   "label": "board/cards/REM-580.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/87c16dc639",
+   "label": "commit 87c16dc: The exposures carry-over cannot re-expose a withdrawn work (REM-580)",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "specs/tables/schema.md#8",
+   "label": "specs/tables/schema.md \u203a 3. Immutable records and deterministic projections",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/c382d8934a",
+   "label": "commit c382d89: board: p8-subsystems-47 takes REM-580",
+   "wave": 1,
+   "via": "term:rem 580",
+   "gold": false
+  },
+  {
+   "id": "commit/90b0c179fc",
+   "label": "commit 90b0c17: board: REM-580 in-progress \u2192 canceled",
+   "wave": 1,
+   "via": "term:rem 580",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-580.md#3",
+   "label": "board/cards/REM-580.md \u203a Evidence",
+   "wave": 1,
+   "via": "term:rem 580",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-580.md#2",
+   "label": "board/cards/REM-580.md \u203a Goal",
+   "wave": 1,
+   "via": "term:rem 580",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-580.md#5",
+   "label": "board/cards/REM-580.md \u203a Log",
+   "wave": 1,
+   "via": "term:rem 580",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "board/cards/REM-580.md#5",
+    "label": "board/cards/REM-580.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-580.md#2",
+    "label": "board/cards/REM-580.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-552.md#5",
+    "label": "board/cards/REM-552.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "commit/eeb7289d80",
+    "label": "commit eeb7289: An upgrade leaves an operator's denied rights denied (REM-552)",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-552.md#1",
+    "label": "board/cards/REM-552.md",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "board/cards/REM-580.md#5",
+    "label": "board/cards/REM-580.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-580.md#2",
+    "label": "board/cards/REM-580.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-552.md#5",
+    "label": "board/cards/REM-552.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "commit/00e798a17e",
+    "label": "commit 00e798a: Trust history cannot be rewritten, and reads as of a date (REM-464, core 0.2.11)",
+    "gold": false
+   },
+   {
+    "id": "commit/eeb7289d80",
+    "label": "commit eeb7289: An upgrade leaves an operator's denied rights denied (REM-552)",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/3c71504731",
+    "label": "commit 3c71504: board: file REM-552 rbac: an upgrade leaves an operator's denied rights denied",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-580.md#2",
+    "label": "board/cards/REM-580.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-552.md#1",
+    "label": "board/cards/REM-552.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-580.md#3",
+    "label": "board/cards/REM-580.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-580.md#5",
+    "label": "board/cards/REM-580.md \u203a Log",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "board/messages/M-20261105-131514-61fb.md#1",
+    "label": "board/messages/M-20261105-131514-61fb.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1013.md#2",
+    "label": "board/cards/REM-1013.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-606.md#4",
+    "label": "board/cards/REM-606.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-332.md#2",
+    "label": "board/cards/REM-332.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-205.md#4",
+    "label": "board/cards/REM-205.md \u203a Done when",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": null,
+  "Q": null,
+  "LQ": null,
+  "S": null
+ }
+}

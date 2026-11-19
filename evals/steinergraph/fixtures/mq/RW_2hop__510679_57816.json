@@ -1,0 +1,417 @@
+{
+ "qid": "RW:2hop__510679_57816",
+ "set": "mq",
+ "question": "What is the U.S. News ranking of the law school at Abraham Lavender's employer?",
+ "gold": [
+  {
+   "id": "mq:e4024172d151e30a",
+   "label": "Abraham Lavender",
+   "seed": true
+  },
+  {
+   "id": "mq:ecdf78c0823bdf68",
+   "label": "Florida International University College of Law",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:e4024172d151e30a",
+   "label": "Abraham Lavender",
+   "rank": 1,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:3e41ebf4f5c56ac4",
+   "label": "Brigham Young University",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:ecdf78c0823bdf68",
+   "label": "Florida International University College of Law",
+   "rank": 3,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:111a1649e31f9f22",
+   "label": "University of Kansas",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:9b2c32d2a060b0f4",
+   "label": "Washington University in St. Louis",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:e4024172d151e30a",
+    "label": "Abraham Lavender",
+    "role": "gold"
+   },
+   {
+    "id": "mq:ecdf78c0823bdf68",
+    "label": "Florida International University College of Law",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:e4024172d151e30a",
+    "b": "mq:ecdf78c0823bdf68",
+    "via": [
+     {
+      "kind": "term",
+      "key": "fiu",
+      "width": 3
+     },
+     {
+      "kind": "term",
+      "key": "florida international",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "international university",
+      "width": 6
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "mq:e4024172d151e30a",
+   "gold": "mq:e4024172d151e30a",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 2135,
+  "within_2_doors": 18936,
+  "gold_within_1": 0,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "mq:25d3b211694ec604",
+    "label": "Bruce Nissen",
+    "p": 0.005109448868764555,
+    "gold": false
+   },
+   {
+    "id": "mq:3c0d77af928f3692",
+    "label": "Brigham Young University",
+    "p": 0.003036794182019952,
+    "gold": false
+   },
+   {
+    "id": "mq:00a34dad9de44a6c",
+    "label": "Yale Law & Policy Review",
+    "p": 0.002506109743483254,
+    "gold": false
+   },
+   {
+    "id": "mq:d01535ed2f4d7b3f",
+    "label": "Stan Allen",
+    "p": 0.0024071443818116612,
+    "gold": false
+   },
+   {
+    "id": "mq:ce165ddfcdf9b427",
+    "label": "UC Davis School of Veterinary Medicine",
+    "p": 0.0023635412235388713,
+    "gold": false
+   },
+   {
+    "id": "mq:1117bbdd78e7addc",
+    "label": "List of United States public university campuses by enrollment",
+    "p": 0.0020572651677690473,
+    "gold": false
+   },
+   {
+    "id": "mq:e5ea5090319a8380",
+    "label": "Manchester United F.C.",
+    "p": 0.0019918340596780295,
+    "gold": false
+   },
+   {
+    "id": "mq:c9132c7365655911",
+    "label": "Harvard University",
+    "p": 0.0018234589733440419,
+    "gold": false
+   },
+   {
+    "id": "mq:c0f4bc2fef3fdaef",
+    "label": "Carlos Alvarez (professor)",
+    "p": 0.0017448910525109797,
+    "gold": false
+   },
+   {
+    "id": "mq:b5ce5583f5c9dfb1",
+    "label": "Emmanuel Christian Seminary",
+    "p": 0.0017039923423384238,
+    "gold": false
+   },
+   {
+    "id": "mq:a305d671b6f2bb11",
+    "label": "University of Kansas",
+    "p": 0.001612306442822864,
+    "gold": false
+   },
+   {
+    "id": "mq:341f9dcae9693dd9",
+    "label": "Houston",
+    "p": 0.0015771960203930493,
+    "gold": false
+   },
+   {
+    "id": "mq:bca5bbb47e488a67",
+    "label": "Decolonization of the Americas",
+    "p": 0.001488613893098316,
+    "gold": false
+   },
+   {
+    "id": "mq:e4554c9506bbcfa8",
+    "label": "University of Notre Dame",
+    "p": 0.0014713253233704917,
+    "gold": false
+   },
+   {
+    "id": "mq:f0c5afa23e77597d",
+    "label": "Opatowiec",
+    "p": 0.0014396493048255427,
+    "gold": false
+   },
+   {
+    "id": "mq:00390068f096d73f",
+    "label": "Peter Conrad (sociologist)",
+    "p": 0.0014344237517969142,
+    "gold": false
+   },
+   {
+    "id": "mq:8c1acf61d7965e91",
+    "label": "Crypto-Christianity",
+    "p": 0.001427111578031815,
+    "gold": false
+   },
+   {
+    "id": "mq:6d94c3d928e0a01d",
+    "label": "Washington University in St. Louis",
+    "p": 0.0013844272779030362,
+    "gold": false
+   },
+   {
+    "id": "mq:26af6a94660ba257",
+    "label": "University of Kansas",
+    "p": 0.0012988919963949767,
+    "gold": false
+   },
+   {
+    "id": "mq:e23872e44be12888",
+    "label": "Herbert Henry Dow High School",
+    "p": 0.0012622387302289437,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:e4024172d151e30a",
+   "label": "Abraham Lavender",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:3e41ebf4f5c56ac4",
+   "label": "Brigham Young University",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:ecdf78c0823bdf68",
+   "label": "Florida International University College of Law",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:111a1649e31f9f22",
+   "label": "University of Kansas",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:9b2c32d2a060b0f4",
+   "label": "Washington University in St. Louis",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:12669461cebf463d",
+   "label": "Abraham Maslow",
+   "wave": 1,
+   "via": "term:international university",
+   "gold": false
+  },
+  {
+   "id": "mq:c0f4bc2fef3fdaef",
+   "label": "Carlos Alvarez (professor)",
+   "wave": 1,
+   "via": "term:international university",
+   "gold": false
+  },
+  {
+   "id": "mq:25d3b211694ec604",
+   "label": "Bruce Nissen",
+   "wave": 1,
+   "via": "term:international university",
+   "gold": false
+  },
+  {
+   "id": "mq:1117bbdd78e7addc",
+   "label": "List of United States public university campuses by enrollment",
+   "wave": 1,
+   "via": "term:international university",
+   "gold": false
+  },
+  {
+   "id": "mq:d2cb71994f5ca30e",
+   "label": "Spanish language in the United States",
+   "wave": 2,
+   "via": "term:universities",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:25d3b211694ec604",
+    "label": "Bruce Nissen",
+    "gold": false
+   },
+   {
+    "id": "mq:3c0d77af928f3692",
+    "label": "Brigham Young University",
+    "gold": false
+   },
+   {
+    "id": "mq:00a34dad9de44a6c",
+    "label": "Yale Law & Policy Review",
+    "gold": false
+   },
+   {
+    "id": "mq:d01535ed2f4d7b3f",
+    "label": "Stan Allen",
+    "gold": false
+   },
+   {
+    "id": "mq:ce165ddfcdf9b427",
+    "label": "UC Davis School of Veterinary Medicine",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:3c0d77af928f3692",
+    "label": "Brigham Young University",
+    "gold": false
+   },
+   {
+    "id": "mq:c9132c7365655911",
+    "label": "Harvard University",
+    "gold": false
+   },
+   {
+    "id": "mq:ce165ddfcdf9b427",
+    "label": "UC Davis School of Veterinary Medicine",
+    "gold": false
+   },
+   {
+    "id": "mq:6d94c3d928e0a01d",
+    "label": "Washington University in St. Louis",
+    "gold": false
+   },
+   {
+    "id": "mq:00a34dad9de44a6c",
+    "label": "Yale Law & Policy Review",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:3c0d77af928f3692",
+    "label": "Brigham Young University",
+    "gold": false
+   },
+   {
+    "id": "mq:c9132c7365655911",
+    "label": "Harvard University",
+    "gold": false
+   },
+   {
+    "id": "mq:6d94c3d928e0a01d",
+    "label": "Washington University in St. Louis",
+    "gold": false
+   },
+   {
+    "id": "mq:ce165ddfcdf9b427",
+    "label": "UC Davis School of Veterinary Medicine",
+    "gold": false
+   },
+   {
+    "id": "mq:7a5f02f786d6cd03",
+    "label": "Affirmative action in the United States",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:5333aee4433d13f6",
+    "label": "Perkins Brailler",
+    "gold": false
+   },
+   {
+    "id": "mq:f90a3f8af276344f",
+    "label": "The Long Lavender Look",
+    "gold": false
+   },
+   {
+    "id": "mq:9e522eaa2e98215b",
+    "label": "SGH Warsaw School of Economics",
+    "gold": false
+   },
+   {
+    "id": "mq:44999bc7f7af0aee",
+    "label": "Medical College of Georgia",
+    "gold": false
+   },
+   {
+    "id": "mq:ca8ff4c910d7291f",
+    "label": "Albany Law Review",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": null,
+  "Q": null,
+  "LQ": null,
+  "S": null
+ }
+}

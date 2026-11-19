@@ -1,0 +1,410 @@
+{
+ "qid": "pr:559",
+ "set": "prs",
+ "question": "What work went into this, and why: The card guard compares what a push adds, so main can go green?",
+ "gold": [
+  {
+   "id": "commit/08adf5bad2",
+   "label": "commit 08adf5b: The card guard compares what a push adds, not the batch's base",
+   "seed": true
+  },
+  {
+   "id": "commit/bec7d6ff9c",
+   "label": "commit bec7d6f: The card guard's base: a commit without the CI-skip token, so the PR runs",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/08adf5bad2",
+   "label": "commit 08adf5b: The card guard compares what a push adds, not the batch's base",
+   "rank": 1,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "commit/e2d673df01",
+   "label": "commit e2d673d: Merge pull request #559 from Percolation-Labs/amartey/board-guard-push-base",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/messages/M-20261027-115619-c5f2.md#1",
+   "label": "board/messages/M-20261027-115619-c5f2.md",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/messages/M-20261027-173239-9eff.md#1",
+   "label": "board/messages/M-20261027-173239-9eff.md",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/f178fe91d0",
+   "label": "commit f178fe9: guard and banned.py read a batched main run correctly, so main can go green again",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/08adf5bad2",
+    "label": "commit 08adf5b: The card guard compares what a push adds, not the batch's base",
+    "role": "gold"
+   },
+   {
+    "id": "commit/bec7d6ff9c",
+    "label": "commit bec7d6f: The card guard's base: a commit without the CI-skip token, so the PR runs",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/08adf5bad2",
+    "b": "commit/bec7d6ff9c",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "card guard",
+      "width": 7
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "commit/08adf5bad2",
+   "gold": "commit/08adf5bad2",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 656,
+  "within_2_doors": 31869,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "commit/8699c7895c",
+    "label": "commit 8699c78: Merge remote-tracking branch 'origin/main' into amartey/board-guard-push-base",
+    "p": 0.011072968643927041,
+    "gold": false
+   },
+   {
+    "id": "dev/check.sh#6",
+    "label": "dev/check.sh",
+    "p": 0.009227822812361586,
+    "gold": false
+   },
+   {
+    "id": ".github/workflows/check.yml#6",
+    "label": ".github/workflows/check.yml",
+    "p": 0.006617041274066259,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261027-080855-2c20.md#1",
+    "label": "board/messages/M-20261027-080855-2c20.md",
+    "p": 0.005475252778685368,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261026-120832-adb8.md#1",
+    "label": "board/messages/M-20261026-120832-adb8.md",
+    "p": 0.004732896927403036,
+    "gold": false
+   },
+   {
+    "id": "commit/bec7d6ff9c",
+    "label": "commit bec7d6f: The card guard's base: a commit without the CI-skip token, so the PR runs",
+    "p": 0.00395216934037746,
+    "gold": true
+   },
+   {
+    "id": "board/board.py#59",
+    "label": "board/board.py",
+    "p": 0.003835073520314178,
+    "gold": false
+   },
+   {
+    "id": "commit/c9f871a667",
+    "label": "commit c9f871a: REM-1172: detail and done-when from the Avalanche DB spec",
+    "p": 0.002974328419891762,
+    "gold": false
+   },
+   {
+    "id": "meta/skills/docs-writing/banned.py#5",
+    "label": "meta/skills/docs-writing/banned.py",
+    "p": 0.002814746000714203,
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-09-30-jev-decisions/robustness.py#4",
+    "label": "meta/spikes/2026-09-30-jev-decisions/robustness.py",
+    "p": 0.0027527803820665384,
+    "gold": false
+   },
+   {
+    "id": "board/board.py#58",
+    "label": "board/board.py",
+    "p": 0.0022472492213839908,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261027-115110-46bb.md#1",
+    "label": "board/messages/M-20261027-115110-46bb.md",
+    "p": 0.002201812761077264,
+    "gold": false
+   },
+   {
+    "id": "commit/f965cb2d97",
+    "label": "commit f965cb2: board: file REM-1218 guides: ten \"Great X\" exemplar guides, 50 curated examples each",
+    "p": 0.0021683632657535992,
+    "gold": false
+   },
+   {
+    "id": "commit/1b3cca9c99",
+    "label": "commit 1b3cca9: board: james messages sirsh",
+    "p": 0.0021068882018716547,
+    "gold": false
+   },
+   {
+    "id": "commit/d1643bb437",
+    "label": "commit d1643bb: equivalence: judge all 276 claim pairs independently of the reducer (REM-633)",
+    "p": 0.0019492858749065873,
+    "gold": false
+   },
+   {
+    "id": "meta/skills/coalescing-runs/SKILL.md#5",
+    "label": "meta/skills/coalescing-runs/SKILL.md \u203a Run A: refresh the opinions map",
+    "p": 0.0019449942834838087,
+    "gold": false
+   },
+   {
+    "id": "commit/93e2e8cfa5",
+    "label": "commit 93e2e8c: Merge pull request #315 from Percolation-Labs/main-batch-gates",
+    "p": 0.0018133207705556494,
+    "gold": false
+   },
+   {
+    "id": ".github/workflows/check.yml#2",
+    "label": ".github/workflows/check.yml",
+    "p": 0.0016033016819708824,
+    "gold": false
+   },
+   {
+    "id": "commit/40722568da",
+    "label": "commit 4072256: Merge pull request #323 from Percolation-Labs/amartey/board-skill-feedback-triage",
+    "p": 0.0014909030772831855,
+    "gold": false
+   },
+   {
+    "id": "commit/20680cd70e",
+    "label": "commit 20680cd: Merge pull request #536 from Percolation-Labs/amartey/board-inbox-unread-first",
+    "p": 0.0014785641993210875,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/08adf5bad2",
+   "label": "commit 08adf5b: The card guard compares what a push adds, not the batch's base",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "commit/e2d673df01",
+   "label": "commit e2d673d: Merge pull request #559 from Percolation-Labs/amartey/board-guard-push-base",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/messages/M-20261027-115619-c5f2.md#1",
+   "label": "board/messages/M-20261027-115619-c5f2.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/messages/M-20261027-173239-9eff.md#1",
+   "label": "board/messages/M-20261027-173239-9eff.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/f178fe91d0",
+   "label": "commit f178fe9: guard and banned.py read a batched main run correctly, so main can go green again",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": ".github/workflows/check.yml#4",
+   "label": ".github/workflows/check.yml",
+   "wave": 1,
+   "via": "term:last green",
+   "gold": false
+  },
+  {
+   "id": "board/messages/M-20261027-115700-c893.md#1",
+   "label": "board/messages/M-20261027-115700-c893.md",
+   "wave": 1,
+   "via": "term:last green",
+   "gold": false
+  },
+  {
+   "id": "commit/a405edcd8c",
+   "label": "commit a405edc: Merge pull request #284 from Percolation-Labs/amartey/batch-main-ci",
+   "wave": 1,
+   "via": "term:last green",
+   "gold": false
+  },
+  {
+   "id": "board/messages/M-20261027-075957-d3c6.md#1",
+   "label": "board/messages/M-20261027-075957-d3c6.md",
+   "wave": 1,
+   "via": "term:last green",
+   "gold": false
+  },
+  {
+   "id": "board/messages/M-20261026-120832-adb8.md#1",
+   "label": "board/messages/M-20261026-120832-adb8.md",
+   "wave": 1,
+   "via": "term:last green",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "commit/8699c7895c",
+    "label": "commit 8699c78: Merge remote-tracking branch 'origin/main' into amartey/board-guard-push-base",
+    "gold": false
+   },
+   {
+    "id": "dev/check.sh#6",
+    "label": "dev/check.sh",
+    "gold": false
+   },
+   {
+    "id": ".github/workflows/check.yml#6",
+    "label": ".github/workflows/check.yml",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261027-080855-2c20.md#1",
+    "label": "board/messages/M-20261027-080855-2c20.md",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261026-120832-adb8.md#1",
+    "label": "board/messages/M-20261026-120832-adb8.md",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "dev/check.sh#6",
+    "label": "dev/check.sh",
+    "gold": false
+   },
+   {
+    "id": "commit/8699c7895c",
+    "label": "commit 8699c78: Merge remote-tracking branch 'origin/main' into amartey/board-guard-push-base",
+    "gold": false
+   },
+   {
+    "id": ".github/workflows/check.yml#6",
+    "label": ".github/workflows/check.yml",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261027-080855-2c20.md#1",
+    "label": "board/messages/M-20261027-080855-2c20.md",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261026-120832-adb8.md#1",
+    "label": "board/messages/M-20261026-120832-adb8.md",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/8699c7895c",
+    "label": "commit 8699c78: Merge remote-tracking branch 'origin/main' into amartey/board-guard-push-base",
+    "gold": false
+   },
+   {
+    "id": "commit/bec7d6ff9c",
+    "label": "commit bec7d6f: The card guard's base: a commit without the CI-skip token, so the PR runs",
+    "gold": true
+   },
+   {
+    "id": "commit/93e2e8cfa5",
+    "label": "commit 93e2e8c: Merge pull request #315 from Percolation-Labs/main-batch-gates",
+    "gold": false
+   },
+   {
+    "id": "commit/ee65385fc3",
+    "label": "commit ee65385: board: p8-subsystems-ab checks in, idle",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261027-115110-46bb.md#1",
+    "label": "board/messages/M-20261027-115110-46bb.md",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "dev/check.sh#6",
+    "label": "dev/check.sh",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261027-080855-2c20.md#1",
+    "label": "board/messages/M-20261027-080855-2c20.md",
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-06-the-release-ran-fewer-gates-than-a-push.md#1",
+    "label": "meta/postmortems/2026-09-06-the-release-ran-fewer-gates-than-a-push.md \u203a The release ran fewer gates than a push",
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-18-a-squash-rewound-two-cards.md#3",
+    "label": "meta/postmortems/2026-09-18-a-squash-rewound-two-cards.md \u203a 1. `reset --soft` onto a freshly fetched main kept the old c",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261027-115110-46bb.md#1",
+    "label": "board/messages/M-20261027-115110-46bb.md",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 1.0,
+  "S": 0.0
+ }
+}

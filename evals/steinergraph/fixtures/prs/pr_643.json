@@ -1,0 +1,426 @@
+{
+ "qid": "pr:643",
+ "set": "prs",
+ "question": "What work went into this, and why: walklab q4: miss census on judged walks -- the .5 gate, not the budget?",
+ "gold": [
+  {
+   "id": "commit/1ff725ed70",
+   "label": "commit 1ff725e: walklab q4: judged walk records gzipped (11 MB -> 3.9 MB); the census reads .gz, output identical",
+   "seed": false
+  },
+  {
+   "id": "commit/d0ce9db05c",
+   "label": "commit d0ce9db: walklab q4: judged-walk census on mike's 7 cached base walks -- judge completes 2; 5 misses all adjacent",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/ada7adcd3e",
+   "label": "commit ada7adc: walklab q4: register the miss census on judged walks (bins J budget, S, H, U, C, D), before any judged w",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/210033f833",
+   "label": "commit 210033f: Merge pull request #643 from Percolation-Labs/cory/dream-optimiser",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "meta/lab/results/casebook/CASEBOOK.md#14",
+   "label": "meta/lab/results/casebook/CASEBOOK.md \u203a Every miss",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "commit/f8a304e49a",
+   "label": "commit f8a304e: Merge pull request #664 from Percolation-Labs/mike/beam-census",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "meta/lab/results/casebook/CASEBOOK.md#13",
+   "label": "meta/lab/results/casebook/CASEBOOK.md \u203a Every miss",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 2
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/1ff725ed70",
+    "label": "commit 1ff725e: walklab q4: judged walk records gzipped (11 MB -> 3.9 MB); the census reads .gz, output identical",
+    "role": "gold"
+   },
+   {
+    "id": "commit/ada7adcd3e",
+    "label": "commit ada7adc: walklab q4: register the miss census on judged walks (bins J budget, S, H, U, C, D), before any judged w",
+    "role": "seed"
+   },
+   {
+    "id": "commit/d0ce9db05c",
+    "label": "commit d0ce9db: walklab q4: judged-walk census on mike's 7 cached base walks -- judge completes 2; 5 misses all adjacent",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/1ff725ed70",
+    "b": "commit/ada7adcd3e",
+    "via": [
+     {
+      "kind": "term",
+      "key": "judged walk",
+      "width": 80
+     }
+    ]
+   },
+   {
+    "a": "commit/1ff725ed70",
+    "b": "commit/d0ce9db05c",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "judged walk",
+      "width": 80
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "commit/ada7adcd3e",
+   "gold": "commit/1ff725ed70",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 827,
+  "within_2_doors": 30427,
+  "gold_within_1": 2,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "meta/lab/results/casebook/CASEBOOK.md#15",
+    "label": "meta/lab/results/casebook/CASEBOOK.md \u203a Every miss",
+    "p": 0.011008581580586378,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/casebook/CASEBOOK.md#16",
+    "label": "meta/lab/results/casebook/CASEBOOK.md \u203a Every miss",
+    "p": 0.008299581833524326,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-miss-census-floor/ORDER-RULE.md#2",
+    "label": "meta/lab/results/q4-miss-census-floor/ORDER-RULE.md \u203a Travel order inside the open set: P-first against per_target (regi",
+    "p": 0.004916512894112454,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/casebook/CASEBOOK.md#12",
+    "label": "meta/lab/results/casebook/CASEBOOK.md \u203a Every miss",
+    "p": 0.00432336245047761,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/casebook/CASEBOOK.md#17",
+    "label": "meta/lab/results/casebook/CASEBOOK.md \u203a Every miss",
+    "p": 0.0038702475422515525,
+    "gold": false
+   },
+   {
+    "id": "commit/717e773d27",
+    "label": "commit 717e773: board: sally messages mike",
+    "p": 0.003044414933360808,
+    "gold": false
+   },
+   {
+    "id": "commit/abbc9b9c84",
+    "label": "commit abbc9b9: board: james messages sirsh",
+    "p": 0.0029920212806105735,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-miss-census-beam/RULE.md#1",
+    "label": "meta/lab/results/q4-miss-census-beam/RULE.md \u203a The judged miss split on the third corpus, BEAM 1M (registered before any",
+    "p": 0.002686585239680273,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/casebook/CASEBOOK.md#5",
+    "label": "meta/lab/results/casebook/CASEBOOK.md \u203a Every miss",
+    "p": 0.002625563246376218,
+    "gold": false
+   },
+   {
+    "id": "commit/8ec645a613",
+    "label": "commit 8ec645a: Merge pull request #638 from Percolation-Labs/cory/dream-optimiser",
+    "p": 0.002543873136084189,
+    "gold": false
+   },
+   {
+    "id": "commit/03824f4665",
+    "label": "commit 03824f4: Merge pull request #641 from Percolation-Labs/cory/dream-optimiser",
+    "p": 0.002480795094268425,
+    "gold": false
+   },
+   {
+    "id": "commit/e0e93c3b8f",
+    "label": "commit e0e93c3: Merge pull request #640 from Percolation-Labs/cory/dream-optimiser",
+    "p": 0.0024742894580051977,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261031-111507-71b2.md#1",
+    "label": "board/messages/M-20261031-111507-71b2.md",
+    "p": 0.0024477268321517697,
+    "gold": false
+   },
+   {
+    "id": "commit/f2dfd8bc1e",
+    "label": "commit f2dfd8b: Merge pull request #639 from Percolation-Labs/cory/dream-optimiser",
+    "p": 0.0023836019494527373,
+    "gold": false
+   },
+   {
+    "id": "commit/86b6333f9d",
+    "label": "commit 86b6333: walklab q4: decider rounds -- in 8 of 10 frozen rounds the judge ranks the answer lead top 3; 2 outranke",
+    "p": 0.0023820951900147412,
+    "gold": false
+   },
+   {
+    "id": "commit/d27396004d",
+    "label": "commit d273960: board: cory acknowledges 1 message(s)",
+    "p": 0.0023120391953328294,
+    "gold": false
+   },
+   {
+    "id": "commit/216ed92fe7",
+    "label": "commit 216ed92: walklab q4: judged census cases amended before any walk -- mike's 8 (cached) plus 12 seeded, separate ca",
+    "p": 0.00225071788215336,
+    "gold": false
+   },
+   {
+    "id": "commit/00d335c7a2",
+    "label": "commit 00d335c: Merge remote-tracking branch 'origin/main' into cory/dream-optimiser",
+    "p": 0.0021076310531108903,
+    "gold": false
+   },
+   {
+    "id": "commit/964cf4c3c8",
+    "label": "commit 964cf4c: board: codex-agent-evidence messages all",
+    "p": 0.00204839629152507,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/casebook/CASEBOOK.md#4",
+    "label": "meta/lab/results/casebook/CASEBOOK.md \u203a Every miss",
+    "p": 0.0020025225049093574,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/ada7adcd3e",
+   "label": "commit ada7adc: walklab q4: register the miss census on judged walks (bins J budget, S, H, U, C, D), before any judged w",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/210033f833",
+   "label": "commit 210033f: Merge pull request #643 from Percolation-Labs/cory/dream-optimiser",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/casebook/CASEBOOK.md#14",
+   "label": "meta/lab/results/casebook/CASEBOOK.md \u203a Every miss",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/f8a304e49a",
+   "label": "commit f8a304e: Merge pull request #664 from Percolation-Labs/mike/beam-census",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/casebook/CASEBOOK.md#13",
+   "label": "meta/lab/results/casebook/CASEBOOK.md \u203a Every miss",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/dream-tail/RULE.md#3",
+   "label": "meta/lab/results/dream-tail/RULE.md \u203a Dreaming to lift the floor: create (with a stated relation), prune and hub, learne",
+   "wave": 1,
+   "via": "term:census beam",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/q4-miss-census-beam/RULE.md#3",
+   "label": "meta/lab/results/q4-miss-census-beam/RULE.md \u203a The judged miss split on the third corpus, BEAM 1M (registered before any",
+   "wave": 1,
+   "via": "term:census beam",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/q4-miss-census-beam/result.txt#4",
+   "label": "meta/lab/results/q4-miss-census-beam/result.txt",
+   "wave": 1,
+   "via": "term:census beam",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/q4-miss-census-beam/result.txt#3",
+   "label": "meta/lab/results/q4-miss-census-beam/result.txt",
+   "wave": 1,
+   "via": "term:census beam",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/q4-miss-census-beam/result.txt#6",
+   "label": "meta/lab/results/q4-miss-census-beam/result.txt",
+   "wave": 1,
+   "via": "term:census beam",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "meta/lab/results/casebook/CASEBOOK.md#15",
+    "label": "meta/lab/results/casebook/CASEBOOK.md \u203a Every miss",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/casebook/CASEBOOK.md#16",
+    "label": "meta/lab/results/casebook/CASEBOOK.md \u203a Every miss",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-miss-census-floor/ORDER-RULE.md#2",
+    "label": "meta/lab/results/q4-miss-census-floor/ORDER-RULE.md \u203a Travel order inside the open set: P-first against per_target (regi",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/casebook/CASEBOOK.md#12",
+    "label": "meta/lab/results/casebook/CASEBOOK.md \u203a Every miss",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/casebook/CASEBOOK.md#17",
+    "label": "meta/lab/results/casebook/CASEBOOK.md \u203a Every miss",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "meta/lab/results/casebook/CASEBOOK.md#15",
+    "label": "meta/lab/results/casebook/CASEBOOK.md \u203a Every miss",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/casebook/CASEBOOK.md#16",
+    "label": "meta/lab/results/casebook/CASEBOOK.md \u203a Every miss",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/casebook/CASEBOOK.md#12",
+    "label": "meta/lab/results/casebook/CASEBOOK.md \u203a Every miss",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/casebook/CASEBOOK.md#17",
+    "label": "meta/lab/results/casebook/CASEBOOK.md \u203a Every miss",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/casebook/CASEBOOK.md#5",
+    "label": "meta/lab/results/casebook/CASEBOOK.md \u203a Every miss",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/216ed92fe7",
+    "label": "commit 216ed92: walklab q4: judged census cases amended before any walk -- mike's 8 (cached) plus 12 seeded, separate ca",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/casebook/CASEBOOK.md#15",
+    "label": "meta/lab/results/casebook/CASEBOOK.md \u203a Every miss",
+    "gold": false
+   },
+   {
+    "id": "commit/f2dfd8bc1e",
+    "label": "commit f2dfd8b: Merge pull request #639 from Percolation-Labs/cory/dream-optimiser",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/casebook/CASEBOOK.md#16",
+    "label": "meta/lab/results/casebook/CASEBOOK.md \u203a Every miss",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/casebook/CASEBOOK.md#12",
+    "label": "meta/lab/results/casebook/CASEBOOK.md \u203a Every miss",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "commit/d0ce9db05c",
+    "label": "commit d0ce9db: walklab q4: judged-walk census on mike's 7 cached base walks -- judge completes 2; 5 misses all adjacent",
+    "gold": true
+   },
+   {
+    "id": "meta/lab/results/q4-miss-census/JUDGED-RULE.md#1",
+    "label": "meta/lab/results/q4-miss-census/JUDGED-RULE.md \u203a The miss census on judged walks (registered before any judged walk is r",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/casebook/CASEBOOK.md#12",
+    "label": "meta/lab/results/casebook/CASEBOOK.md \u203a Every miss",
+    "gold": false
+   },
+   {
+    "id": "commit/146c24567c",
+    "label": "commit 146c245: walklab: QASPER's misses by stage (0 of 9 have no lead), and the miss census as the gate before a remedy",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-miss-census/judged-result.txt#1",
+    "label": "meta/lab/results/q4-miss-census/judged-result.txt",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.5
+ }
+}

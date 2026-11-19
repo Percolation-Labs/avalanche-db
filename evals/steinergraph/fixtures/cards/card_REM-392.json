@@ -1,0 +1,453 @@
+{
+ "qid": "card:REM-392",
+ "set": "cards",
+ "question": "What was done about this, and why: home: the blog phone keeps one height for any title length, as checked on production?",
+ "gold": [
+  {
+   "id": "commit/8a632e627b",
+   "label": "commit 8a632e6: Postmortem: a merge script closed REM-385 and REM-362 over a failed production check (REM-392)",
+   "seed": false
+  },
+  {
+   "id": "commit/fea4c73c90",
+   "label": "commit fea4c73: Merge pull request #226 from Percolation-Labs/amartey/rem-392-postmortem",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/e2c16f5ad4",
+   "label": "commit e2c16f5: board: file REM-392 home: the blog phone keeps one height for any title length, as checked on production",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-392.md#1",
+   "label": "board/cards/REM-392.md",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-392.md#2",
+   "label": "board/cards/REM-392.md \u203a Goal",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-392.md#7",
+   "label": "board/cards/REM-392.md \u203a Log",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "meta/postmortems/2026-09-15-a-merge-script-closed-cards-over-a-failed-check.md#3",
+   "label": "meta/postmortems/2026-09-15-a-merge-script-closed-cards-over-a-failed-check.md \u203a 2. The local gate passed on readings th",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/8a632e627b",
+    "label": "commit 8a632e6: Postmortem: a merge script closed REM-385 and REM-362 over a failed production check (REM-392)",
+    "role": "gold"
+   },
+   {
+    "id": "commit/fea4c73c90",
+    "label": "commit fea4c73: Merge pull request #226 from Percolation-Labs/amartey/rem-392-postmortem",
+    "role": "gold"
+   },
+   {
+    "id": "meta/postmortems/2026-09-15-a-merge-script-closed-cards-over-a-failed-check.md#3",
+    "label": "meta/postmortems/2026-09-15-a-merge-script-closed-cards-over-a-failed-check.md \u203a 2. The local gate passed on readings th",
+    "role": "seed"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/8a632e627b",
+    "b": "commit/fea4c73c90",
+    "via": [
+     {
+      "kind": "term",
+      "key": "failed production",
+      "width": 3
+     },
+     {
+      "kind": "term",
+      "key": "script closed",
+      "width": 6
+     },
+     {
+      "kind": "term",
+      "key": "merge script",
+      "width": 7
+     },
+     {
+      "kind": "term",
+      "key": "check rem",
+      "width": 11
+     },
+     {
+      "kind": "term",
+      "key": "rem 392",
+      "width": 20
+     }
+    ]
+   },
+   {
+    "a": "commit/8a632e627b",
+    "b": "meta/postmortems/2026-09-15-a-merge-script-closed-cards-over-a-failed-check.md#3",
+    "via": [
+     {
+      "kind": "term",
+      "key": "script closed",
+      "width": 6
+     },
+     {
+      "kind": "term",
+      "key": "merge script",
+      "width": 7
+     },
+     {
+      "kind": "term",
+      "key": "rem 392",
+      "width": 20
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "meta/postmortems/2026-09-15-a-merge-script-closed-cards-over-a-failed-check.md#3",
+   "gold": "commit/8a632e627b",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 1733,
+  "within_2_doors": 34388,
+  "gold_within_1": 2,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "board/cards/REM-385.md#8",
+    "label": "board/cards/REM-385.md \u203a Log",
+    "p": 0.007405934551680049,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-392.md#3",
+    "label": "board/cards/REM-392.md \u203a Evidence",
+    "p": 0.006738533917145535,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-15-a-merge-script-closed-cards-over-a-failed-check.md#1",
+    "label": "meta/postmortems/2026-09-15-a-merge-script-closed-cards-over-a-failed-check.md \u203a A merge script closed two cards over a ",
+    "p": 0.005658270273924434,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-15-a-merge-script-closed-cards-over-a-failed-check.md#2",
+    "label": "meta/postmortems/2026-09-15-a-merge-script-closed-cards-over-a-failed-check.md \u203a 1. The stop condition tested one failur",
+    "p": 0.004231254633873952,
+    "gold": false
+   },
+   {
+    "id": "commit/16c3b52f34",
+    "label": "commit 16c3b52: board: percolate-application-62 takes REM-392",
+    "p": 0.0038607688705253568,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-392.md#4",
+    "label": "board/cards/REM-392.md \u203a Done when",
+    "p": 0.003778015985781362,
+    "gold": false
+   },
+   {
+    "id": "output/claims-atlas/README.md#2",
+    "label": "output/claims-atlas/README.md \u203a Try these paths",
+    "p": 0.003377296840803992,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-385.md#7",
+    "label": "board/cards/REM-385.md \u203a Log",
+    "p": 0.0033731426004289782,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-392.md#5",
+    "label": "board/cards/REM-392.md \u203a Scope",
+    "p": 0.0028462555217378433,
+    "gold": false
+   },
+   {
+    "id": "commit/48921e2d5b",
+    "label": "commit 48921e2: board: note on REM-362",
+    "p": 0.0028053403908632796,
+    "gold": false
+   },
+   {
+    "id": "commit/8a632e627b",
+    "label": "commit 8a632e6: Postmortem: a merge script closed REM-385 and REM-362 over a failed production check (REM-392)",
+    "p": 0.0026513732584546646,
+    "gold": true
+   },
+   {
+    "id": "commit/fea4c73c90",
+    "label": "commit fea4c73: Merge pull request #226 from Percolation-Labs/amartey/rem-392-postmortem",
+    "p": 0.0026332433104001443,
+    "gold": true
+   },
+   {
+    "id": "board/cards/REM-347.md#1",
+    "label": "board/cards/REM-347.md",
+    "p": 0.0023768814224322354,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-405.md#1",
+    "label": "board/cards/REM-405.md",
+    "p": 0.0022845663314742517,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-424.md#3",
+    "label": "board/cards/REM-424.md \u203a Evidence",
+    "p": 0.002231415115207498,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-392.md#8",
+    "label": "board/cards/REM-392.md \u203a Log",
+    "p": 0.002190278426073886,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/reader-study/materials.md#16",
+    "label": "specs/percolate-application/reader-study/materials.md \u203a C-M \u00b7 misleading-polished variant",
+    "p": 0.0020945735132781394,
+    "gold": false
+   },
+   {
+    "id": "specs/world-model-ingestion/graph.sql#5",
+    "label": "specs/world-model-ingestion/graph.sql",
+    "p": 0.0019542621218167945,
+    "gold": false
+   },
+   {
+    "id": "commit/0842b4d41c",
+    "label": "commit 0842b4d: board: note on REM-392",
+    "p": 0.0015735124023862007,
+    "gold": false
+   },
+   {
+    "id": "commit/618c8644b0",
+    "label": "commit 618c864: board: note on REM-392",
+    "p": 0.0015595126087363134,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/e2c16f5ad4",
+   "label": "commit e2c16f5: board: file REM-392 home: the blog phone keeps one height for any title length, as checked on production",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-392.md#1",
+   "label": "board/cards/REM-392.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-392.md#2",
+   "label": "board/cards/REM-392.md \u203a Goal",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-392.md#7",
+   "label": "board/cards/REM-392.md \u203a Log",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/postmortems/2026-09-15-a-merge-script-closed-cards-over-a-failed-check.md#3",
+   "label": "meta/postmortems/2026-09-15-a-merge-script-closed-cards-over-a-failed-check.md \u203a 2. The local gate passed on readings th",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-424.md#3",
+   "label": "board/cards/REM-424.md \u203a Evidence",
+   "wave": 1,
+   "via": "term:rem 392",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-392.md#3",
+   "label": "board/cards/REM-392.md \u203a Evidence",
+   "wave": 1,
+   "via": "term:rem 392",
+   "gold": false
+  },
+  {
+   "id": "commit/fea4c73c90",
+   "label": "commit fea4c73: Merge pull request #226 from Percolation-Labs/amartey/rem-392-postmortem",
+   "wave": 1,
+   "via": "term:rem 392",
+   "gold": true
+  },
+  {
+   "id": "commit/ba17b3261e",
+   "label": "commit ba17b32: board: REM-392 in-progress \u2192 done",
+   "wave": 1,
+   "via": "term:rem 392",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-392.md#5",
+   "label": "board/cards/REM-392.md \u203a Scope",
+   "wave": 1,
+   "via": "term:rem 392",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "board/cards/REM-385.md#8",
+    "label": "board/cards/REM-385.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-392.md#3",
+    "label": "board/cards/REM-392.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-15-a-merge-script-closed-cards-over-a-failed-check.md#1",
+    "label": "meta/postmortems/2026-09-15-a-merge-script-closed-cards-over-a-failed-check.md \u203a A merge script closed two cards over a ",
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-15-a-merge-script-closed-cards-over-a-failed-check.md#2",
+    "label": "meta/postmortems/2026-09-15-a-merge-script-closed-cards-over-a-failed-check.md \u203a 1. The stop condition tested one failur",
+    "gold": false
+   },
+   {
+    "id": "commit/16c3b52f34",
+    "label": "commit 16c3b52: board: percolate-application-62 takes REM-392",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "board/cards/REM-385.md#8",
+    "label": "board/cards/REM-385.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-392.md#3",
+    "label": "board/cards/REM-392.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-15-a-merge-script-closed-cards-over-a-failed-check.md#1",
+    "label": "meta/postmortems/2026-09-15-a-merge-script-closed-cards-over-a-failed-check.md \u203a A merge script closed two cards over a ",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-392.md#4",
+    "label": "board/cards/REM-392.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-385.md#7",
+    "label": "board/cards/REM-385.md \u203a Log",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "board/cards/REM-392.md#8",
+    "label": "board/cards/REM-392.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-392.md#5",
+    "label": "board/cards/REM-392.md \u203a Scope",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-392.md#4",
+    "label": "board/cards/REM-392.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "commit/79e7a87bbb",
+    "label": "commit 79e7a87: board: file REM-424 web: the blog phone preview is deleted, or a route shows it again",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-424.md#1",
+    "label": "board/cards/REM-424.md",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "board/cards/REM-392.md#8",
+    "label": "board/cards/REM-392.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-392.md#4",
+    "label": "board/cards/REM-392.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-15-a-merge-script-closed-cards-over-a-failed-check.md#1",
+    "label": "meta/postmortems/2026-09-15-a-merge-script-closed-cards-over-a-failed-check.md \u203a A merge script closed two cards over a ",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-392.md#3",
+    "label": "board/cards/REM-392.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-385.md#8",
+    "label": "board/cards/REM-385.md \u203a Log",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

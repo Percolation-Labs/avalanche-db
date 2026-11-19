@@ -1,0 +1,438 @@
+{
+ "qid": "card:REM-53",
+ "set": "cards",
+ "question": "What was done about this, and why: ingest: an exhausted or refused provider account fails once, the same way on every path?",
+ "gold": [
+  {
+   "id": "commit/9d1701568e",
+   "label": "commit 9d17015: An account with no credit looked like a rate limit, and nothing here could produce one",
+   "seed": false
+  },
+  {
+   "id": "commit/b4f49e5928",
+   "label": "commit b4f49e5: Merge pull request #32 from Percolation-Labs/fix/rem-53-provider-failures-spec",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "board/cards/REM-53.md#1",
+   "label": "board/cards/REM-53.md",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-987.md#6",
+   "label": "board/cards/REM-987.md \u203a Log",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-987.md#2",
+   "label": "board/cards/REM-987.md \u203a Goal",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "board/cards/REM-628.md#4",
+   "label": "board/cards/REM-628.md \u203a Done when",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "board/messages/M-20261028-150302-d628.md#1",
+   "label": "board/messages/M-20261028-150302-d628.md",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 2
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "board/cards/REM-53.md#1",
+    "label": "board/cards/REM-53.md",
+    "role": "seed"
+   },
+   {
+    "id": "commit/9d1701568e",
+    "label": "commit 9d17015: An account with no credit looked like a rate limit, and nothing here could produce one",
+    "role": "gold"
+   },
+   {
+    "id": "commit/b4f49e5928",
+    "label": "commit b4f49e5: Merge pull request #32 from Percolation-Labs/fix/rem-53-provider-failures-spec",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "board/cards/REM-53.md#1",
+    "b": "commit/9d1701568e",
+    "via": [
+     {
+      "kind": "term",
+      "key": "rem 53",
+      "width": 11
+     }
+    ]
+   },
+   {
+    "a": "commit/9d1701568e",
+    "b": "commit/b4f49e5928",
+    "via": [
+     {
+      "kind": "term",
+      "key": "credit looked",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "rem 53",
+      "width": 11
+     },
+     {
+      "kind": "term",
+      "key": "looked like",
+      "width": 55
+     },
+     {
+      "kind": "term",
+      "key": "rate limit",
+      "width": 65
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "board/cards/REM-53.md#1",
+   "gold": "commit/9d1701568e",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 1478,
+  "within_2_doors": 33728,
+  "gold_within_1": 2,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "board/cards/REM-628.md#9",
+    "label": "board/cards/REM-628.md \u203a Log",
+    "p": 0.005782078264549313,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-987.md#1",
+    "label": "board/cards/REM-987.md",
+    "p": 0.004350095877666919,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-628.md#8",
+    "label": "board/cards/REM-628.md \u203a Log",
+    "p": 0.0038387078917267383,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-987.md#3",
+    "label": "board/cards/REM-987.md \u203a Evidence",
+    "p": 0.002325399985044326,
+    "gold": false
+   },
+   {
+    "id": "specs/workflow-engine/roadmap.md#7",
+    "label": "specs/workflow-engine/roadmap.md \u203a 2. Map-reduce \u2014 the reduce half is a convention, not a step",
+    "p": 0.0020674998950461305,
+    "gold": false
+   },
+   {
+    "id": "research-notes/fastembed-local-embedding-2026-09-20.md#8",
+    "label": "research-notes/fastembed-local-embedding-2026-09-20.md \u203a Two designs",
+    "p": 0.001866829989699523,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-987.md#5",
+    "label": "board/cards/REM-987.md \u203a Scope",
+    "p": 0.0016935886859447923,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-49.md#1",
+    "label": "board/cards/REM-49.md",
+    "p": 0.0016494746177136595,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-628.md#12",
+    "label": "board/cards/REM-628.md \u203a Log",
+    "p": 0.0016427450110125914,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-11-fixed-at-the-copy-that-failed.md#2",
+    "label": "meta/postmortems/2026-09-11-fixed-at-the-copy-that-failed.md \u203a 1. The pattern",
+    "p": 0.001617313724218719,
+    "gold": false
+   },
+   {
+    "id": "specs/world-model-ingestion/sources.md#52",
+    "label": "specs/world-model-ingestion/sources.md \u203a 15.3 The resolver interface",
+    "p": 0.0016074041795176711,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-53.md#2",
+    "label": "board/cards/REM-53.md \u203a Log",
+    "p": 0.0014831159798070362,
+    "gold": false
+   },
+   {
+    "id": "commit/4e96b043eb",
+    "label": "commit 4e96b04: board: file REM-1225 walk: a walk that lost Jev verdicts ends failed, not succeeded",
+    "p": 0.0014426777796582692,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-522.md#5",
+    "label": "board/cards/REM-522.md \u203a Log",
+    "p": 0.0013722233382525107,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/kappa/musique-K1.txt#1",
+    "label": "meta/lab/results/kappa/musique-K1.txt",
+    "p": 0.001363169216947504,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/tests/test_store.py#1",
+    "label": "meta/lab/tests/test_store.py",
+    "p": 0.0013172399221617133,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/agents-and-workflows.md#14",
+    "label": "specs/percolate-application/agents-and-workflows.md \u203a Proposed REST surface",
+    "p": 0.0012913363881526807,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1022.md#1",
+    "label": "board/cards/REM-1022.md",
+    "p": 0.0012777639880856022,
+    "gold": false
+   },
+   {
+    "id": "specs/workflow-engine/failure-modes.md#12",
+    "label": "specs/workflow-engine/failure-modes.md \u203a 2. Ordinary reality, treated as an outage",
+    "p": 0.0012728025423944466,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1225.md#5",
+    "label": "board/cards/REM-1225.md \u203a Scope",
+    "p": 0.0012579314754565445,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "board/cards/REM-53.md#1",
+   "label": "board/cards/REM-53.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-987.md#6",
+   "label": "board/cards/REM-987.md \u203a Log",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-987.md#2",
+   "label": "board/cards/REM-987.md \u203a Goal",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-628.md#4",
+   "label": "board/cards/REM-628.md \u203a Done when",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/messages/M-20261028-150302-d628.md#1",
+   "label": "board/messages/M-20261028-150302-d628.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-987.md#4",
+   "label": "board/cards/REM-987.md \u203a Done when",
+   "wave": 1,
+   "via": "term:rem 987",
+   "gold": false
+  },
+  {
+   "id": "commit/a8fed30e94",
+   "label": "commit a8fed30: board: REM-987 in-progress \u2192 done",
+   "wave": 1,
+   "via": "term:rem 987",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-987.md#5",
+   "label": "board/cards/REM-987.md \u203a Scope",
+   "wave": 1,
+   "via": "term:rem 987",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-987.md#1",
+   "label": "board/cards/REM-987.md",
+   "wave": 1,
+   "via": "term:rem 987",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-1091.md#3",
+   "label": "board/cards/REM-1091.md \u203a Evidence",
+   "wave": 1,
+   "via": "term:rem 987",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "board/cards/REM-628.md#9",
+    "label": "board/cards/REM-628.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-987.md#1",
+    "label": "board/cards/REM-987.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-628.md#8",
+    "label": "board/cards/REM-628.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-987.md#3",
+    "label": "board/cards/REM-987.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "specs/workflow-engine/roadmap.md#7",
+    "label": "specs/workflow-engine/roadmap.md \u203a 2. Map-reduce \u2014 the reduce half is a convention, not a step",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "board/cards/REM-628.md#9",
+    "label": "board/cards/REM-628.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-987.md#1",
+    "label": "board/cards/REM-987.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-628.md#8",
+    "label": "board/cards/REM-628.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-11-fixed-at-the-copy-that-failed.md#2",
+    "label": "meta/postmortems/2026-09-11-fixed-at-the-copy-that-failed.md \u203a 1. The pattern",
+    "gold": false
+   },
+   {
+    "id": "specs/workflow-engine/roadmap.md#7",
+    "label": "specs/workflow-engine/roadmap.md \u203a 2. Map-reduce \u2014 the reduce half is a convention, not a step",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "board/cards/REM-987.md#4",
+    "label": "board/cards/REM-987.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "commit/ec984f6320",
+    "label": "commit ec984f6: board: REM-1225 in-progress \u2192 done",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-53.md#2",
+    "label": "board/cards/REM-53.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "commit/ec19ad47a9",
+    "label": "commit ec19ad4: board: file REM-987 workflow: a refused model key fails the step once and says so",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-987.md#1",
+    "label": "board/cards/REM-987.md",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "board/cards/REM-987.md#4",
+    "label": "board/cards/REM-987.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/invitations-by-reputation.md#3",
+    "label": "specs/percolate-application/invitations-by-reputation.md \u203a 2. A name the person chooses",
+    "gold": false
+   },
+   {
+    "id": "commit/2e679e373c",
+    "label": "commit 2e679e3: A bound the engine cannot honour was rounded, not refused",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1100.md#4",
+    "label": "board/cards/REM-1100.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-394.md#2",
+    "label": "board/cards/REM-394.md \u203a Goal",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

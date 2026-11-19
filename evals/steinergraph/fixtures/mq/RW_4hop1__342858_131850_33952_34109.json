@@ -1,0 +1,487 @@
+{
+ "qid": "RW:4hop1__342858_131850_33952_34109",
+ "set": "mq",
+ "question": "What is the PBS station in the second largest city in the state where Yuma's Library District is located?",
+ "gold": [
+  {
+   "id": "mq:59c3a0628712dbff",
+   "label": "Yuma, Colorado",
+   "seed": false
+  },
+  {
+   "id": "mq:5c05a372e4ad380f",
+   "label": "Tucson, Arizona",
+   "seed": false
+  },
+  {
+   "id": "mq:b48ca5ae228e6149",
+   "label": "Yuma County Library District",
+   "seed": true
+  },
+  {
+   "id": "mq:c73c69fde47d0bda",
+   "label": "Tucson, Arizona",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:b48ca5ae228e6149",
+   "label": "Yuma County Library District",
+   "rank": 1,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:68b8eb6b072007ba",
+   "label": "Sochi railway station",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:dd694ace1dfd8e89",
+   "label": "Vancouver Community Library",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:3b4edc7e08ffbbe9",
+   "label": "Oklahoma City",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:9e8b83c51c3a9cd7",
+   "label": "Lorain City School District",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 2
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:59c3a0628712dbff",
+    "label": "Yuma, Colorado",
+    "role": "gold"
+   },
+   {
+    "id": "mq:5c05a372e4ad380f",
+    "label": "Tucson, Arizona",
+    "role": "gold"
+   },
+   {
+    "id": "mq:b48ca5ae228e6149",
+    "label": "Yuma County Library District",
+    "role": "gold"
+   },
+   {
+    "id": "mq:c73c69fde47d0bda",
+    "label": "Tucson, Arizona",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:59c3a0628712dbff",
+    "b": "mq:b48ca5ae228e6149",
+    "via": [
+     {
+      "kind": "near",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "yuma county",
+      "width": 3
+     },
+     {
+      "kind": "term",
+      "key": "yuma",
+      "width": 6
+     }
+    ]
+   },
+   {
+    "a": "mq:5c05a372e4ad380f",
+    "b": "mq:b48ca5ae228e6149",
+    "via": [
+     {
+      "kind": "term",
+      "key": "arizona",
+      "width": 100
+     }
+    ]
+   },
+   {
+    "a": "mq:5c05a372e4ad380f",
+    "b": "mq:c73c69fde47d0bda",
+    "via": [
+     {
+      "kind": "near",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "tucson metro",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "metro area",
+      "width": 8
+     },
+     {
+      "kind": "term",
+      "key": "tucson arizona",
+      "width": 17
+     },
+     {
+      "kind": "term",
+      "key": "tucson",
+      "width": 19
+     },
+     {
+      "kind": "term",
+      "key": "metro",
+      "width": 64
+     }
+    ]
+   }
+  ],
+  "cost": 3,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   2,
+   1,
+   2,
+   1,
+   1,
+   1
+  ],
+  "entry": {
+   "seed": "mq:b48ca5ae228e6149",
+   "gold": "mq:b48ca5ae228e6149",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 1720,
+  "within_2_doors": 19346,
+  "gold_within_1": 3,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "mq:973d006d41c19ef2",
+    "label": "Kent Free Library",
+    "p": 0.004634652765647176,
+    "gold": false
+   },
+   {
+    "id": "mq:f7c6918d61205d7f",
+    "label": "Slavyansky District",
+    "p": 0.004548144359518729,
+    "gold": false
+   },
+   {
+    "id": "mq:cdb35ee323a26862",
+    "label": "Salem County Vocational Technical Schools",
+    "p": 0.003184666614388072,
+    "gold": false
+   },
+   {
+    "id": "mq:7cbb582b55dfd5d7",
+    "label": "Ashkenazi Jews",
+    "p": 0.0027245027457632365,
+    "gold": false
+   },
+   {
+    "id": "mq:a16b414b8cd4d2f9",
+    "label": "Fort Vancouver High School",
+    "p": 0.0018987628265216712,
+    "gold": false
+   },
+   {
+    "id": "mq:10ba4e7aff1159ed",
+    "label": "James Weldon Johnson Community Library",
+    "p": 0.0018653914344085108,
+    "gold": false
+   },
+   {
+    "id": "mq:b0b5953404041351",
+    "label": "Yekaterina Fesenko",
+    "p": 0.001829255039818874,
+    "gold": false
+   },
+   {
+    "id": "mq:4ef9f98c2b13ecba",
+    "label": "Central Library (Kansas City, Missouri)",
+    "p": 0.0017689158860300438,
+    "gold": false
+   },
+   {
+    "id": "mq:edbe69c910403371",
+    "label": "University of Notre Dame",
+    "p": 0.0016143508809496005,
+    "gold": false
+   },
+   {
+    "id": "mq:bf1ef13d655e1380",
+    "label": "Sandy High School",
+    "p": 0.0016119696694268453,
+    "gold": false
+   },
+   {
+    "id": "mq:8c37fde62dbb5bb6",
+    "label": "Boston",
+    "p": 0.0015861672517830862,
+    "gold": false
+   },
+   {
+    "id": "mq:7362685b7e743ded",
+    "label": "Boston",
+    "p": 0.0015791706108865648,
+    "gold": false
+   },
+   {
+    "id": "mq:18be8c6b930e661a",
+    "label": "Eswatini",
+    "p": 0.0015403655898309386,
+    "gold": false
+   },
+   {
+    "id": "mq:a63fed2b93ca7c8e",
+    "label": "Shortgrass Library System",
+    "p": 0.001532557767669947,
+    "gold": false
+   },
+   {
+    "id": "mq:0d78c46282db5c9b",
+    "label": "Vancouver Courier",
+    "p": 0.0015061017928041497,
+    "gold": false
+   },
+   {
+    "id": "mq:654497d25f95e684",
+    "label": "Erwin Speckter",
+    "p": 0.0014875566222486343,
+    "gold": false
+   },
+   {
+    "id": "mq:4af7317483d4433e",
+    "label": "Tokyo",
+    "p": 0.001381486719809627,
+    "gold": false
+   },
+   {
+    "id": "mq:91549293003ac798",
+    "label": "New York City",
+    "p": 0.0013761575393163143,
+    "gold": false
+   },
+   {
+    "id": "mq:cef2826925d1afcc",
+    "label": "Winston-Salem State University",
+    "p": 0.0012821476362846812,
+    "gold": false
+   },
+   {
+    "id": "mq:2da5160412f7a742",
+    "label": "Miramar, Tamaulipas",
+    "p": 0.0011401454638694576,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:b48ca5ae228e6149",
+   "label": "Yuma County Library District",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:68b8eb6b072007ba",
+   "label": "Sochi railway station",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:dd694ace1dfd8e89",
+   "label": "Vancouver Community Library",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:3b4edc7e08ffbbe9",
+   "label": "Oklahoma City",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:9e8b83c51c3a9cd7",
+   "label": "Lorain City School District",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:5c05a372e4ad380f",
+   "label": "Tucson, Arizona",
+   "wave": 1,
+   "via": "term:second largest",
+   "gold": true
+  },
+  {
+   "id": "mq:be833f65bc924b78",
+   "label": "Economy of the United States",
+   "wave": 1,
+   "via": "term:second largest",
+   "gold": false
+  },
+  {
+   "id": "mq:a7043a3982a4269e",
+   "label": "Karakum Desert",
+   "wave": 1,
+   "via": "term:second largest",
+   "gold": false
+  },
+  {
+   "id": "mq:95489318e1ff1537",
+   "label": "Richard Fink",
+   "wave": 1,
+   "via": "term:second largest",
+   "gold": false
+  },
+  {
+   "id": "mq:3328a9ff5b575ae9",
+   "label": "Wheatland, California",
+   "wave": 1,
+   "via": "term:second largest",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:973d006d41c19ef2",
+    "label": "Kent Free Library",
+    "gold": false
+   },
+   {
+    "id": "mq:f7c6918d61205d7f",
+    "label": "Slavyansky District",
+    "gold": false
+   },
+   {
+    "id": "mq:cdb35ee323a26862",
+    "label": "Salem County Vocational Technical Schools",
+    "gold": false
+   },
+   {
+    "id": "mq:7cbb582b55dfd5d7",
+    "label": "Ashkenazi Jews",
+    "gold": false
+   },
+   {
+    "id": "mq:a16b414b8cd4d2f9",
+    "label": "Fort Vancouver High School",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:973d006d41c19ef2",
+    "label": "Kent Free Library",
+    "gold": false
+   },
+   {
+    "id": "mq:f7c6918d61205d7f",
+    "label": "Slavyansky District",
+    "gold": false
+   },
+   {
+    "id": "mq:4ef9f98c2b13ecba",
+    "label": "Central Library (Kansas City, Missouri)",
+    "gold": false
+   },
+   {
+    "id": "mq:10ba4e7aff1159ed",
+    "label": "James Weldon Johnson Community Library",
+    "gold": false
+   },
+   {
+    "id": "mq:91549293003ac798",
+    "label": "New York City",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:973d006d41c19ef2",
+    "label": "Kent Free Library",
+    "gold": false
+   },
+   {
+    "id": "mq:f7c6918d61205d7f",
+    "label": "Slavyansky District",
+    "gold": false
+   },
+   {
+    "id": "mq:4ef9f98c2b13ecba",
+    "label": "Central Library (Kansas City, Missouri)",
+    "gold": false
+   },
+   {
+    "id": "mq:91549293003ac798",
+    "label": "New York City",
+    "gold": false
+   },
+   {
+    "id": "mq:a7929b09675dfdc0",
+    "label": "Wichita City Carnegie Library Building",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:559e9126320adbfe",
+    "label": "New York City",
+    "gold": false
+   },
+   {
+    "id": "mq:2d679521caf79813",
+    "label": "Siaogang District",
+    "gold": false
+   },
+   {
+    "id": "mq:4ef9f98c2b13ecba",
+    "label": "Central Library (Kansas City, Missouri)",
+    "gold": false
+   },
+   {
+    "id": "mq:884259a9d2c9095b",
+    "label": "Peggy Littleton",
+    "gold": false
+   },
+   {
+    "id": "mq:7d8a7dc0befac9ae",
+    "label": "Kranj railway station",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

@@ -1,0 +1,400 @@
+{
+ "qid": "card:REM-621",
+ "set": "cards",
+ "question": "What was done about this, and why: reading: posting in a discussion empties the entry form?",
+ "gold": [
+  {
+   "id": "commit/80ada7a055",
+   "label": "commit 80ada7a: board skill: server feedback becomes cards, read in full and marked triaged",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/3b4232506c",
+   "label": "commit 3b42325: board: file REM-621 reading: posting in a discussion empties the entry form",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-621.md#1",
+   "label": "board/cards/REM-621.md",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-621.md#2",
+   "label": "board/cards/REM-621.md \u203a Goal",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-621.md#3",
+   "label": "board/cards/REM-621.md \u203a Evidence",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-621.md#5",
+   "label": "board/cards/REM-621.md \u203a Log",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/3b4232506c",
+    "label": "commit 3b42325: board: file REM-621 reading: posting in a discussion empties the entry form",
+    "role": "seed"
+   },
+   {
+    "id": "commit/80ada7a055",
+    "label": "commit 80ada7a: board skill: server feedback becomes cards, read in full and marked triaged",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/3b4232506c",
+    "b": "commit/80ada7a055",
+    "via": [
+     {
+      "kind": "term",
+      "key": "rem 621",
+      "width": 11
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [],
+  "entry": {
+   "seed": "commit/3b4232506c",
+   "gold": "commit/80ada7a055",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 733,
+  "within_2_doors": 32663,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "board/cards/REM-621.md#4",
+    "label": "board/cards/REM-621.md \u203a Done when",
+    "p": 0.01131546708280337,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-832.md#5",
+    "label": "board/cards/REM-832.md \u203a Log",
+    "p": 0.0033050796037992014,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-832.md#4",
+    "label": "board/cards/REM-832.md \u203a Done when",
+    "p": 0.003129398810397095,
+    "gold": false
+   },
+   {
+    "id": "board/team/p8-subsystems-93.md#2",
+    "label": "board/team/p8-subsystems-93.md \u203a Log",
+    "p": 0.0028808124650634777,
+    "gold": false
+   },
+   {
+    "id": "commit/80ada7a055",
+    "label": "commit 80ada7a: board skill: server feedback becomes cards, read in full and marked triaged",
+    "p": 0.0028533624611604045,
+    "gold": true
+   },
+   {
+    "id": "commit/8ef610e00b",
+    "label": "commit 8ef610e: board: p8-subsystems-93 takes REM-621",
+    "p": 0.00280394987821108,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-869.md#2",
+    "label": "board/cards/REM-869.md \u203a Goal",
+    "p": 0.0027106663827260536,
+    "gold": false
+   },
+   {
+    "id": "commit/2bdadfae3a",
+    "label": "commit 2bdadfa: board: REM-621 in-progress \u2192 done",
+    "p": 0.002676026185299061,
+    "gold": false
+   },
+   {
+    "id": "commit/d4d09e8d53",
+    "label": "commit d4d09e8: board: note on REM-621",
+    "p": 0.002662557412747281,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-832.md#2",
+    "label": "board/cards/REM-832.md \u203a Goal",
+    "p": 0.0026415853497765976,
+    "gold": false
+   },
+   {
+    "id": "commit/8392757906",
+    "label": "commit 8392757: board: REM-576 in-progress \u2192 backlog",
+    "p": 0.002639187198209409,
+    "gold": false
+   },
+   {
+    "id": "commit/3f4f30c40a",
+    "label": "commit 3f4f30c: board: file REM-622 claims: a connected agent records the reworded-claim answer the person gave in chat",
+    "p": 0.0026202532570898684,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-626.md#4",
+    "label": "board/cards/REM-626.md \u203a Done when",
+    "p": 0.0025358436040443305,
+    "gold": false
+   },
+   {
+    "id": "research-notes/object-store-2026-10-19/README.md#2",
+    "label": "research-notes/object-store-2026-10-19/README.md \u203a A stranger's install",
+    "p": 0.0024647600735072735,
+    "gold": false
+   },
+   {
+    "id": "research-notes/essay-graph/corpus/schopenhauer-1851-on-style/text.txt#20",
+    "label": "research-notes/essay-graph/corpus/schopenhauer-1851-on-style/text.txt",
+    "p": 0.0023788075677656628,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-626.md#5",
+    "label": "board/cards/REM-626.md \u203a Log",
+    "p": 0.0020705399540739276,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-578.md#7",
+    "label": "board/cards/REM-578.md \u203a Log",
+    "p": 0.0014027802859823276,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-297.md#7",
+    "label": "board/cards/REM-297.md \u203a Log",
+    "p": 0.001390760619698755,
+    "gold": false
+   },
+   {
+    "id": "commit/5826421938",
+    "label": "commit 5826421: 302 sources fetched, and connectors registered as rows over PostgREST",
+    "p": 0.0009455860931376127,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1004.md#6",
+    "label": "board/cards/REM-1004.md \u203a Log",
+    "p": 0.0008977254517462085,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/3b4232506c",
+   "label": "commit 3b42325: board: file REM-621 reading: posting in a discussion empties the entry form",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-621.md#1",
+   "label": "board/cards/REM-621.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-621.md#2",
+   "label": "board/cards/REM-621.md \u203a Goal",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-621.md#3",
+   "label": "board/cards/REM-621.md \u203a Evidence",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-621.md#5",
+   "label": "board/cards/REM-621.md \u203a Log",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "output/drafter-study/reviewers.js#5",
+   "label": "output/drafter-study/reviewers.js",
+   "wave": 1,
+   "via": "term:textarea",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-621.md#4",
+   "label": "board/cards/REM-621.md \u203a Done when",
+   "wave": 1,
+   "via": "term:textarea",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-35.md#1",
+   "label": "board/cards/REM-35.md",
+   "wave": 1,
+   "via": "term:textarea",
+   "gold": false
+  },
+  {
+   "id": "output/focus-canvas/lens/app.js#4",
+   "label": "output/focus-canvas/lens/app.js",
+   "wave": 1,
+   "via": "term:textarea",
+   "gold": false
+  },
+  {
+   "id": "output/focus-canvas/orbit/app.js#3",
+   "label": "output/focus-canvas/orbit/app.js",
+   "wave": 1,
+   "via": "term:textarea",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "board/cards/REM-621.md#4",
+    "label": "board/cards/REM-621.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-832.md#5",
+    "label": "board/cards/REM-832.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-832.md#4",
+    "label": "board/cards/REM-832.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "board/team/p8-subsystems-93.md#2",
+    "label": "board/team/p8-subsystems-93.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "commit/80ada7a055",
+    "label": "commit 80ada7a: board skill: server feedback becomes cards, read in full and marked triaged",
+    "gold": true
+   }
+  ],
+  "Q": [
+   {
+    "id": "board/cards/REM-621.md#4",
+    "label": "board/cards/REM-621.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-832.md#5",
+    "label": "board/cards/REM-832.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-832.md#4",
+    "label": "board/cards/REM-832.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-869.md#2",
+    "label": "board/cards/REM-869.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-832.md#2",
+    "label": "board/cards/REM-832.md \u203a Goal",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/026b54285c",
+    "label": "commit 026b542: journeys: Discussion is an expander after the reading, not a tab (REM-524)",
+    "gold": false
+   },
+   {
+    "id": "commit/ba3d80c520",
+    "label": "commit ba3d80c: REM-507: the discussion test sets ids as the superuser; authenticated may not call set_config",
+    "gold": false
+   },
+   {
+    "id": "commit/201823d772",
+    "label": "commit 201823d: board: file REM-510 native: the Discussion tab returns to iOS and Android, with threads and replies",
+    "gold": false
+   },
+   {
+    "id": "commit/2bdadfae3a",
+    "label": "commit 2bdadfa: board: REM-621 in-progress \u2192 done",
+    "gold": false
+   },
+   {
+    "id": "commit/ed88810fe2",
+    "label": "commit ed88810: Merge pull request #262 from Percolation-Labs/amartey/rem-524-spec",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "board/cards/REM-524.md#1",
+    "label": "board/cards/REM-524.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-524.md#4",
+    "label": "board/cards/REM-524.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "commit/35f7b4ea4a",
+    "label": "commit 35f7b4e: board: file REM-524 reading: Discussion sits at the bottom of the reading, and four tabs tile on a phone",
+    "gold": false
+   },
+   {
+    "id": "commit/026b54285c",
+    "label": "commit 026b542: journeys: Discussion is an expander after the reading, not a tab (REM-524)",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-510.md#7",
+    "label": "board/cards/REM-510.md \u203a Log",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 1.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

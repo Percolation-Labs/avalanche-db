@@ -1,0 +1,430 @@
+{
+ "qid": "RW:3hop1__220023_503371_21711",
+ "set": "mq",
+ "question": "When was the Palau de la Generalitat constructed in the city where Martin from the region where Trasobares is located died?",
+ "gold": [
+  {
+   "id": "mq:41373c09e746ca2e",
+   "label": "Trasobares",
+   "seed": true
+  },
+  {
+   "id": "mq:5f0706bc4175cfb4",
+   "label": "Gothic architecture",
+   "seed": true
+  },
+  {
+   "id": "mq:e984f43ed95865a8",
+   "label": "Martin of Aragon",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:41373c09e746ca2e",
+   "label": "Trasobares",
+   "rank": 1,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:5f0706bc4175cfb4",
+   "label": "Gothic architecture",
+   "rank": 2,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:a24eda9082307249",
+   "label": "List of Barcelona Metro stations",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:e844708fbf99434d",
+   "label": "Palau G\u00fcell",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:a377f6a06e8504bf",
+   "label": "Palau Track and Field Team",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:41373c09e746ca2e",
+    "label": "Trasobares",
+    "role": "gold"
+   },
+   {
+    "id": "mq:5f0706bc4175cfb4",
+    "label": "Gothic architecture",
+    "role": "gold"
+   },
+   {
+    "id": "mq:e984f43ed95865a8",
+    "label": "Martin of Aragon",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:41373c09e746ca2e",
+    "b": "mq:5f0706bc4175cfb4",
+    "via": [
+     {
+      "kind": "term",
+      "key": "aragon",
+      "width": 34
+     }
+    ]
+   },
+   {
+    "a": "mq:41373c09e746ca2e",
+    "b": "mq:e984f43ed95865a8",
+    "via": [
+     {
+      "kind": "term",
+      "key": "aragon",
+      "width": 34
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   1,
+   1
+  ],
+  "entry": {
+   "seed": "mq:41373c09e746ca2e",
+   "gold": "mq:41373c09e746ca2e",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 1482,
+  "within_2_doors": 19577,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "mq:8ebf962b26420a28",
+    "label": "Palau Tiger Team",
+    "p": 0.010332695515330642,
+    "gold": false
+   },
+   {
+    "id": "mq:8644d324d9aaa179",
+    "label": "Bodegas G\u00fcell",
+    "p": 0.004076863062816885,
+    "gold": false
+   },
+   {
+    "id": "mq:1c4244512ce8deb2",
+    "label": "Codos, Aragon",
+    "p": 0.0031655188660809374,
+    "gold": false
+   },
+   {
+    "id": "mq:1c091e9bbec82de2",
+    "label": "Urri\u00e9s",
+    "p": 0.003124949846637851,
+    "gold": false
+   },
+   {
+    "id": "mq:447806e8621f753f",
+    "label": "Perdiguera",
+    "p": 0.0031228155353161795,
+    "gold": false
+   },
+   {
+    "id": "mq:6cc09ae33f2cbce6",
+    "label": "Malanquilla",
+    "p": 0.0030578058332435417,
+    "gold": false
+   },
+   {
+    "id": "mq:51c6a94090b6e50a",
+    "label": "Codo, Aragon",
+    "p": 0.0030077310556138395,
+    "gold": false
+   },
+   {
+    "id": "mq:79094756d32f41e0",
+    "label": "Bermillo de Sayago",
+    "p": 0.002453349189400413,
+    "gold": false
+   },
+   {
+    "id": "mq:f6c4933104c60a83",
+    "label": "Drassanes (Barcelona Metro)",
+    "p": 0.002426141626883307,
+    "gold": false
+   },
+   {
+    "id": "mq:1c5e624bda757037",
+    "label": "Bordalba",
+    "p": 0.0022437769663845304,
+    "gold": false
+   },
+   {
+    "id": "mq:42a94936e269da32",
+    "label": "Valencia",
+    "p": 0.00207255025598593,
+    "gold": false
+   },
+   {
+    "id": "mq:4e2c0d03ac333a6a",
+    "label": "Mianos",
+    "p": 0.0020493584353070402,
+    "gold": false
+   },
+   {
+    "id": "mq:8e811ae5dce148e5",
+    "label": "Bijuesca",
+    "p": 0.0019816422561459994,
+    "gold": false
+   },
+   {
+    "id": "mq:6d7d3cefbb1c5d86",
+    "label": "Pedrola",
+    "p": 0.0019816422561459994,
+    "gold": false
+   },
+   {
+    "id": "mq:4d82ac1231ddc5a7",
+    "label": "Sisam\u00f3n",
+    "p": 0.0019816422561459994,
+    "gold": false
+   },
+   {
+    "id": "mq:3d33d9f6f679b0c1",
+    "label": "Layana",
+    "p": 0.0019816422561459994,
+    "gold": false
+   },
+   {
+    "id": "mq:2da10fa77c169dce",
+    "label": "Berdejo",
+    "p": 0.0019816422561459994,
+    "gold": false
+   },
+   {
+    "id": "mq:fee1f3adb7ed4062",
+    "label": "Navard\u00fan",
+    "p": 0.0019816422561459994,
+    "gold": false
+   },
+   {
+    "id": "mq:f6586aab3219303a",
+    "label": "Jaul\u00edn",
+    "p": 0.0019816422561459994,
+    "gold": false
+   },
+   {
+    "id": "mq:c7b49899a8b2ac14",
+    "label": "Castiliscar",
+    "p": 0.0019816422561459994,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:41373c09e746ca2e",
+   "label": "Trasobares",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:5f0706bc4175cfb4",
+   "label": "Gothic architecture",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:a24eda9082307249",
+   "label": "List of Barcelona Metro stations",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:e844708fbf99434d",
+   "label": "Palau G\u00fcell",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:a377f6a06e8504bf",
+   "label": "Palau Track and Field Team",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:4436771c1a665917",
+   "label": "Pasqual Maragall Foundation",
+   "wave": 1,
+   "via": "term:catalunya",
+   "gold": false
+  },
+  {
+   "id": "mq:719305414ce64191",
+   "label": "Glumpers",
+   "wave": 1,
+   "via": "term:catalunya",
+   "gold": false
+  },
+  {
+   "id": "mq:4d89344e00e59d27",
+   "label": "FC Barcelona",
+   "wave": 1,
+   "via": "term:catalunya",
+   "gold": false
+  },
+  {
+   "id": "mq:41f1392a8481310d",
+   "label": "Lionel Messi",
+   "wave": 1,
+   "via": "term:catalunya",
+   "gold": false
+  },
+  {
+   "id": "mq:aaa5178ce6bc8273",
+   "label": "Pedro Madue\u00f1o",
+   "wave": 1,
+   "via": "term:catalunya",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:8ebf962b26420a28",
+    "label": "Palau Tiger Team",
+    "gold": false
+   },
+   {
+    "id": "mq:8644d324d9aaa179",
+    "label": "Bodegas G\u00fcell",
+    "gold": false
+   },
+   {
+    "id": "mq:1c4244512ce8deb2",
+    "label": "Codos, Aragon",
+    "gold": false
+   },
+   {
+    "id": "mq:1c091e9bbec82de2",
+    "label": "Urri\u00e9s",
+    "gold": false
+   },
+   {
+    "id": "mq:447806e8621f753f",
+    "label": "Perdiguera",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:8ebf962b26420a28",
+    "label": "Palau Tiger Team",
+    "gold": false
+   },
+   {
+    "id": "mq:42a94936e269da32",
+    "label": "Valencia",
+    "gold": false
+   },
+   {
+    "id": "mq:62dda67100b11654",
+    "label": "Valencia",
+    "gold": false
+   },
+   {
+    "id": "mq:4436771c1a665917",
+    "label": "Pasqual Maragall Foundation",
+    "gold": false
+   },
+   {
+    "id": "mq:fc8214637862114d",
+    "label": "Museu d'Art Jaume Morera",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:8ebf962b26420a28",
+    "label": "Palau Tiger Team",
+    "gold": false
+   },
+   {
+    "id": "mq:42a94936e269da32",
+    "label": "Valencia",
+    "gold": false
+   },
+   {
+    "id": "mq:62dda67100b11654",
+    "label": "Valencia",
+    "gold": false
+   },
+   {
+    "id": "mq:6106634762a5178f",
+    "label": "Valencia",
+    "gold": false
+   },
+   {
+    "id": "mq:7f9032d2607b7ecd",
+    "label": "History of the New York City Subway",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:8ebf962b26420a28",
+    "label": "Palau Tiger Team",
+    "gold": false
+   },
+   {
+    "id": "mq:618fd40f0376d0d9",
+    "label": "Mouloud",
+    "gold": false
+   },
+   {
+    "id": "mq:e6a61dfaf0670649",
+    "label": "Richmond, Virginia",
+    "gold": false
+   },
+   {
+    "id": "mq:1624d773516799a5",
+    "label": "Dominican Republic",
+    "gold": false
+   },
+   {
+    "id": "mq:47c934de8c345c73",
+    "label": "Shizuoka Prefecture",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

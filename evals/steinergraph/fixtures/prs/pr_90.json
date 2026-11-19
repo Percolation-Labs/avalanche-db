@@ -1,0 +1,616 @@
+{
+ "qid": "pr:90",
+ "set": "prs",
+ "question": "What work went into this, and why: Six one-sitting rows from the backlog triage, in one branch?",
+ "gold": [
+  {
+   "id": "commit/2d7b44a75f",
+   "label": "commit 2d7b44a: surface.sql reported the first red surface and stopped",
+   "seed": false
+  },
+  {
+   "id": "commit/33e3ef7c66",
+   "label": "commit 33e3ef7: A summary of untrusted content was replayed with system authority",
+   "seed": false
+  },
+  {
+   "id": "commit/54e2910710",
+   "label": "commit 54e2910: A backup contained the rows and could not put them back",
+   "seed": false
+  },
+  {
+   "id": "commit/6a13e2fdba",
+   "label": "commit 6a13e2f: Eight merge conflicts in files nobody reads, and a real one hiding in them",
+   "seed": false
+  },
+  {
+   "id": "commit/9ee7ec64cd",
+   "label": "commit 9ee7ec6: Regenerate after merging main, and record what the merge driver does not do",
+   "seed": false
+  },
+  {
+   "id": "commit/c73c8a8f2e",
+   "label": "commit c73c8a8: Three properties the docs rely on: two hold, one does not",
+   "seed": false
+  },
+  {
+   "id": "commit/f79c0b0e33",
+   "label": "commit f79c0b0: Who may start a workflow, decided rather than discovered",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/12bc3e7a80",
+   "label": "commit 12bc3e7: Merge pull request #90 from Percolation-Labs/fix/one-sitting-backlog",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "commit/d8bd562b22",
+   "label": "commit d8bd562: A row nobody can estimate does not belong in Todo",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/771fe23094",
+   "label": "commit 771fe23: Merge remote-tracking branch 'origin/main' into fix/one-sitting-backlog",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/bf7121c581",
+   "label": "commit bf7121c: Todo meant \"hands off\", which is the opposite of what a shared board needs (#95)",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/71d488b296",
+   "label": "commit 71d488b: The shared tier stopped being a null org_id and six journeys went quiet",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/2d7b44a75f",
+    "label": "commit 2d7b44a: surface.sql reported the first red surface and stopped",
+    "role": "gold"
+   },
+   {
+    "id": "commit/33e3ef7c66",
+    "label": "commit 33e3ef7: A summary of untrusted content was replayed with system authority",
+    "role": "gold"
+   },
+   {
+    "id": "commit/54e2910710",
+    "label": "commit 54e2910: A backup contained the rows and could not put them back",
+    "role": "gold"
+   },
+   {
+    "id": "commit/6a13e2fdba",
+    "label": "commit 6a13e2f: Eight merge conflicts in files nobody reads, and a real one hiding in them",
+    "role": "gold"
+   },
+   {
+    "id": "commit/771fe23094",
+    "label": "commit 771fe23: Merge remote-tracking branch 'origin/main' into fix/one-sitting-backlog",
+    "role": "seed"
+   },
+   {
+    "id": "commit/9ee7ec64cd",
+    "label": "commit 9ee7ec6: Regenerate after merging main, and record what the merge driver does not do",
+    "role": "gold"
+   },
+   {
+    "id": "commit/c73c8a8f2e",
+    "label": "commit c73c8a8: Three properties the docs rely on: two hold, one does not",
+    "role": "gold"
+   },
+   {
+    "id": "commit/f79c0b0e33",
+    "label": "commit f79c0b0: Who may start a workflow, decided rather than discovered",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/2d7b44a75f",
+    "b": "commit/54e2910710",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "session_01xbmmjq7evyjesaz3ipjxuy",
+      "width": 32
+     },
+     {
+      "kind": "term",
+      "key": "code session_01xbmmjq7evyjesaz3ipjxuy",
+      "width": 32
+     },
+     {
+      "kind": "term",
+      "key": "tests run",
+      "width": 66
+     }
+    ]
+   },
+   {
+    "a": "commit/2d7b44a75f",
+    "b": "commit/6a13e2fdba",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "session_01xbmmjq7evyjesaz3ipjxuy",
+      "width": 32
+     },
+     {
+      "kind": "term",
+      "key": "code session_01xbmmjq7evyjesaz3ipjxuy",
+      "width": 32
+     }
+    ]
+   },
+   {
+    "a": "commit/33e3ef7c66",
+    "b": "commit/771fe23094",
+    "via": [
+     {
+      "kind": "beside"
+     }
+    ]
+   },
+   {
+    "a": "commit/33e3ef7c66",
+    "b": "commit/f79c0b0e33",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "session_01xbmmjq7evyjesaz3ipjxuy",
+      "width": 32
+     },
+     {
+      "kind": "term",
+      "key": "code session_01xbmmjq7evyjesaz3ipjxuy",
+      "width": 32
+     }
+    ]
+   },
+   {
+    "a": "commit/6a13e2fdba",
+    "b": "commit/9ee7ec64cd",
+    "via": [
+     {
+      "kind": "term",
+      "key": "rem 105",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "generated files",
+      "width": 8
+     },
+     {
+      "kind": "term",
+      "key": "merge driver",
+      "width": 13
+     },
+     {
+      "kind": "term",
+      "key": "session_01xbmmjq7evyjesaz3ipjxuy",
+      "width": 32
+     },
+     {
+      "kind": "term",
+      "key": "code session_01xbmmjq7evyjesaz3ipjxuy",
+      "width": 32
+     }
+    ]
+   },
+   {
+    "a": "commit/6a13e2fdba",
+    "b": "commit/c73c8a8f2e",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "session_01xbmmjq7evyjesaz3ipjxuy",
+      "width": 32
+     },
+     {
+      "kind": "term",
+      "key": "code session_01xbmmjq7evyjesaz3ipjxuy",
+      "width": 32
+     }
+    ]
+   },
+   {
+    "a": "commit/c73c8a8f2e",
+    "b": "commit/f79c0b0e33",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "database dev",
+      "width": 13
+     },
+     {
+      "kind": "term",
+      "key": "session_01xbmmjq7evyjesaz3ipjxuy",
+      "width": 32
+     },
+     {
+      "kind": "term",
+      "key": "code session_01xbmmjq7evyjesaz3ipjxuy",
+      "width": 32
+     }
+    ]
+   }
+  ],
+  "cost": 7,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  "entry": {
+   "seed": "commit/771fe23094",
+   "gold": "commit/33e3ef7c66",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 2014,
+  "within_2_doors": 33857,
+  "gold_within_1": 7,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "commit/33e3ef7c66",
+    "label": "commit 33e3ef7: A summary of untrusted content was replayed with system authority",
+    "p": 0.0030264856975901386,
+    "gold": true
+   },
+   {
+    "id": "commit/9ee7ec64cd",
+    "label": "commit 9ee7ec6: Regenerate after merging main, and record what the merge driver does not do",
+    "p": 0.002692774077401918,
+    "gold": true
+   },
+   {
+    "id": "commit/a55197c44d",
+    "label": "commit a55197c: Merge pull request #86 from Percolation-Labs/docs/team-postmortem-2026-09-12",
+    "p": 0.0023686222106810277,
+    "gold": false
+   },
+   {
+    "id": "commit/c52cd84db0",
+    "label": "commit c52cd84: queue_depth excludes a backing-off task on purpose, and the spec said otherwise",
+    "p": 0.0023502286924844745,
+    "gold": false
+   },
+   {
+    "id": "commit/69646e92e5",
+    "label": "commit 69646e9: Merge pull request #91 from Percolation-Labs/docs/linear-estimates",
+    "p": 0.002295880646745269,
+    "gold": false
+   },
+   {
+    "id": "commit/44984e9722",
+    "label": "commit 44984e9: The contract gate read an application's tables as the extension's",
+    "p": 0.0018106645608534672,
+    "gold": false
+   },
+   {
+    "id": "commit/1c5673ddaa",
+    "label": "commit 1c5673d: Merge pull request #64 from Percolation-Labs/fix/rem-81-plan-status-reachable",
+    "p": 0.0012748476860788365,
+    "gold": false
+   },
+   {
+    "id": "commit/6dd80104ed",
+    "label": "commit 6dd8010: Ten eval scenarios described a schema that had moved on without them",
+    "p": 0.0009196865009643098,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261101-132505-c3c7.md#1",
+    "label": "board/messages/M-20261101-132505-c3c7.md",
+    "p": 0.0009074454098531945,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261101-132513-54ed.md#1",
+    "label": "board/messages/M-20261101-132513-54ed.md",
+    "p": 0.0008991466243306996,
+    "gold": false
+   },
+   {
+    "id": "commit/31a94ddd00",
+    "label": "commit 31a94dd: A gate that can write: the hook rebuilt the served database and a test committed to the branch (#88)",
+    "p": 0.000883074007921511,
+    "gold": false
+   },
+   {
+    "id": "commit/d1caf56857",
+    "label": "commit d1caf56: register_fetched wrote a resource its own caller could not read",
+    "p": 0.0008478735013693648,
+    "gold": false
+   },
+   {
+    "id": "meta/skills/challenge-the-process/SKILL.md#6",
+    "label": "meta/skills/challenge-the-process/SKILL.md \u203a 1. Act on what you find",
+    "p": 0.000825945838892477,
+    "gold": false
+   },
+   {
+    "id": "commit/706a6d00f0",
+    "label": "commit 706a6d0: Merge remote-tracking branch 'origin/main' into docs/team-postmortem-2026-09-12",
+    "p": 0.0008147251757350765,
+    "gold": false
+   },
+   {
+    "id": "commit/db68420154",
+    "label": "commit db68420: Merge remote-tracking branch 'origin/main' into docs/team-postmortem-2026-09-12",
+    "p": 0.0008144879555012546,
+    "gold": false
+   },
+   {
+    "id": "research-notes/coalescing/harness/RESULTS.md#4",
+    "label": "research-notes/coalescing/harness/RESULTS.md \u203a What the runs establish",
+    "p": 0.0008122806224729593,
+    "gold": false
+   },
+   {
+    "id": "commit/24c9ec2a69",
+    "label": "commit 24c9ec2: Merge remote-tracking branch 'origin/main' into fix/harbour-example-null-org",
+    "p": 0.000785814280050158,
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-10-20-lme-seeded-taxonomy/iteration/README.md#5",
+    "label": "meta/spikes/2026-10-20-lme-seeded-taxonomy/iteration/README.md \u203a What changed in the process",
+    "p": 0.0007790271665299761,
+    "gold": false
+   },
+   {
+    "id": "commit/d2157221da",
+    "label": "commit d215722: Merge remote-tracking branch 'origin/main' into fix/rem-83-package-channel-visible",
+    "p": 0.0007768291262223771,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261105-131335-b579.md#1",
+    "label": "board/messages/M-20261105-131335-b579.md",
+    "p": 0.0007643053391268288,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/12bc3e7a80",
+   "label": "commit 12bc3e7: Merge pull request #90 from Percolation-Labs/fix/one-sitting-backlog",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/d8bd562b22",
+   "label": "commit d8bd562: A row nobody can estimate does not belong in Todo",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/771fe23094",
+   "label": "commit 771fe23: Merge remote-tracking branch 'origin/main' into fix/one-sitting-backlog",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/bf7121c581",
+   "label": "commit bf7121c: Todo meant \"hands off\", which is the opposite of what a shared board needs (#95)",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/71d488b296",
+   "label": "commit 71d488b: The shared tier stopped being a null org_id and six journeys went quiet",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/packages/schema.sql#3",
+   "label": "specs/packages/schema.sql",
+   "wave": 1,
+   "via": "term:adopt_shared_org",
+   "gold": false
+  },
+  {
+   "id": "specs/identity/spec.md#8",
+   "label": "specs/identity/spec.md \u203a What the sentinel is",
+   "wave": 1,
+   "via": "term:adopt_shared_org",
+   "gold": false
+  },
+  {
+   "id": "specs/ai-query-layer/integration-rbac.sql#3",
+   "label": "specs/ai-query-layer/integration-rbac.sql",
+   "wave": 1,
+   "via": "term:adopt_shared_org",
+   "gold": false
+  },
+  {
+   "id": "specs/user-rbac/spec.md#7",
+   "label": "specs/user-rbac/spec.md \u203a 2b. Scope \u2014 who may see a row, as distinct from what a role may do",
+   "wave": 1,
+   "via": "term:adopt_shared_org",
+   "gold": false
+  },
+  {
+   "id": "specs/identity/spec.md#17",
+   "label": "specs/identity/spec.md \u203a What step 4 actually cost, since the estimate above was a guess",
+   "wave": 1,
+   "via": "term:adopt_shared_org",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "commit/33e3ef7c66",
+    "label": "commit 33e3ef7: A summary of untrusted content was replayed with system authority",
+    "gold": true
+   },
+   {
+    "id": "commit/9ee7ec64cd",
+    "label": "commit 9ee7ec6: Regenerate after merging main, and record what the merge driver does not do",
+    "gold": true
+   },
+   {
+    "id": "commit/a55197c44d",
+    "label": "commit a55197c: Merge pull request #86 from Percolation-Labs/docs/team-postmortem-2026-09-12",
+    "gold": false
+   },
+   {
+    "id": "commit/c52cd84db0",
+    "label": "commit c52cd84: queue_depth excludes a backing-off task on purpose, and the spec said otherwise",
+    "gold": false
+   },
+   {
+    "id": "commit/69646e92e5",
+    "label": "commit 69646e9: Merge pull request #91 from Percolation-Labs/docs/linear-estimates",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "commit/44984e9722",
+    "label": "commit 44984e9: The contract gate read an application's tables as the extension's",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-107.md#1",
+    "label": "board/cards/REM-107.md",
+    "gold": false
+   },
+   {
+    "id": "commit/a8c382fbab",
+    "label": "commit a8c382f: `In Review` said the work was out of your hands, and it is not",
+    "gold": false
+   },
+   {
+    "id": "commit/1c5673ddaa",
+    "label": "commit 1c5673d: Merge pull request #64 from Percolation-Labs/fix/rem-81-plan-status-reachable",
+    "gold": false
+   },
+   {
+    "id": "commit/31a94ddd00",
+    "label": "commit 31a94dd: A gate that can write: the hook rebuilt the served database and a test committed to the branch (#88)",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "board/cards/REM-107.md#1",
+    "label": "board/cards/REM-107.md",
+    "gold": false
+   },
+   {
+    "id": "commit/44984e9722",
+    "label": "commit 44984e9: The contract gate read an application's tables as the extension's",
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-12-the-queue-is-the-product.md#12",
+    "label": "meta/postmortems/2026-09-12-the-queue-is-the-product.md \u203a 5. One branch per session at a time",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-107.md#2",
+    "label": "board/cards/REM-107.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261028-072227-0f47.md#1",
+    "label": "board/messages/M-20261028-072227-0f47.md",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "specs/design/articles/langgraph-captures-v6/22-s7-start-triage-show.txt#1",
+    "label": "specs/design/articles/langgraph-captures-v6/22-s7-start-triage-show.txt",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-63.md#9",
+    "label": "board/cards/REM-63.md \u203a 2026-09-12T13:53:59.567Z \u00b7 Percolation Labs",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-71.md#18",
+    "label": "board/cards/REM-71.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "specs/design/articles/langgraph-captures-v7/21-s7-start-triage.txt#1",
+    "label": "specs/design/articles/langgraph-captures-v7/21-s7-start-triage.txt",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-171.md#13",
+    "label": "board/cards/REM-171.md \u203a 2026-09-14T08:07:06.862Z \u00b7 Amartey",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.2857142857142857,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

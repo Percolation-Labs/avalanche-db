@@ -1,0 +1,474 @@
+{
+ "qid": "card:REM-86",
+ "set": "cards",
+ "question": "What was done about this, and why: ci: a red gate on main means this commit broke something, not that the parser is behind?",
+ "gold": [
+  {
+   "id": "commit/891e02919f",
+   "label": "commit 891e029: Main's red gate now says which red it is, and expires the excuse itself (#55)",
+   "seed": false
+  },
+  {
+   "id": "commit/eb3be1bbc2",
+   "label": "commit eb3be1b: A package declared a channel that the code filling it could not see",
+   "seed": false
+  },
+  {
+   "id": "commit/f8f64f26ba",
+   "label": "commit f8f64f2: The agent-turn gate forgave a core deferral with no version, and any error naming a credential",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "board/cards/REM-86.md#1",
+   "label": "board/cards/REM-86.md",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "meta/postmortems/README.md#42",
+   "label": "meta/postmortems/README.md \u203a A green gate run has a timestamp, and main moved",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/159972dd24",
+   "label": "commit 159972d: Merge pull request #39 from Percolation-Labs/docs/parser-lag-message",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-139.md#1",
+   "label": "board/cards/REM-139.md",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/9aaf2960b6",
+   "label": "commit 9aaf296: the jobs column lists the jobs that exist, not the workflow (REM-663) (#341)",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 2
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "board/cards/REM-86.md#1",
+    "label": "board/cards/REM-86.md",
+    "role": "seed"
+   },
+   {
+    "id": "commit/891e02919f",
+    "label": "commit 891e029: Main's red gate now says which red it is, and expires the excuse itself (#55)",
+    "role": "gold"
+   },
+   {
+    "id": "commit/eb3be1bbc2",
+    "label": "commit eb3be1b: A package declared a channel that the code filling it could not see",
+    "role": "gold"
+   },
+   {
+    "id": "commit/f8f64f26ba",
+    "label": "commit f8f64f2: The agent-turn gate forgave a core deferral with no version, and any error naming a credential",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "board/cards/REM-86.md#1",
+    "b": "commit/891e02919f",
+    "via": [
+     {
+      "kind": "term",
+      "key": "image rebuilt",
+      "width": 3
+     },
+     {
+      "kind": "term",
+      "key": "main included",
+      "width": 3
+     },
+     {
+      "kind": "term",
+      "key": "rem 86",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "red gate",
+      "width": 13
+     }
+    ]
+   },
+   {
+    "a": "commit/891e02919f",
+    "b": "commit/eb3be1bbc2",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "rem 86",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "full suite",
+      "width": 57
+     }
+    ]
+   },
+   {
+    "a": "commit/891e02919f",
+    "b": "commit/f8f64f26ba",
+    "via": [
+     {
+      "kind": "term",
+      "key": "rem 86",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "deferral",
+      "width": 27
+     }
+    ]
+   }
+  ],
+  "cost": 3,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   1,
+   1
+  ],
+  "entry": {
+   "seed": "board/cards/REM-86.md#1",
+   "gold": "commit/891e02919f",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 1445,
+  "within_2_doors": 33220,
+  "gold_within_1": 3,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "dev/runner/queue.sh#2",
+    "label": "dev/runner/queue.sh",
+    "p": 0.010831335955792717,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-139.md#2",
+    "label": "board/cards/REM-139.md \u203a Goal",
+    "p": 0.007150362275109361,
+    "gold": false
+   },
+   {
+    "id": "commit/07f3216139",
+    "label": "commit 07f3216: Merge pull request #37 from Percolation-Labs/docs/parser-release-note",
+    "p": 0.004678334793340296,
+    "gold": false
+   },
+   {
+    "id": "dev/runner/queue.sh#1",
+    "label": "dev/runner/queue.sh",
+    "p": 0.0032867194090424913,
+    "gold": false
+   },
+   {
+    "id": "commit/f808da6b26",
+    "label": "commit f808da6: Both halves said 0.2.0, and one of them was a day behind (#133)",
+    "p": 0.003093704829759057,
+    "gold": false
+   },
+   {
+    "id": "meta/skills/deployment/SKILL.md#4",
+    "label": "meta/skills/deployment/SKILL.md \u203a 2. Ephemeral staging is where gates actually get checked",
+    "p": 0.0025508399406317783,
+    "gold": false
+   },
+   {
+    "id": "commit/891e02919f",
+    "label": "commit 891e029: Main's red gate now says which red it is, and expires the excuse itself (#55)",
+    "p": 0.0023440054599287254,
+    "gold": true
+   },
+   {
+    "id": "commit/bb398a9717",
+    "label": "commit bb398a9: One home for the parser-lag note, and the reasoning behind it",
+    "p": 0.0022325657349136848,
+    "gold": false
+   },
+   {
+    "id": "commit/31a94ddd00",
+    "label": "commit 31a94dd: A gate that can write: the hook rebuilt the served database and a test committed to the branch (#88)",
+    "p": 0.002169167010567782,
+    "gold": false
+   },
+   {
+    "id": "commit/788a499e8d",
+    "label": "commit 788a499: The same fact in both forms, on one afternoon: two derivations missed it, one gate run found it (#120)",
+    "p": 0.0020766714519533814,
+    "gold": false
+   },
+   {
+    "id": "commit/62a8c6ca44",
+    "label": "commit 62a8c6c: The lag claim is now measured in both directions",
+    "p": 0.0019104403234047299,
+    "gold": false
+   },
+   {
+    "id": "commit/e96659eb73",
+    "label": "commit e96659e: Merge pull request #41 from Percolation-Labs/docs/rem-78-fast-path-precondition",
+    "p": 0.0017870716770792305,
+    "gold": false
+   },
+   {
+    "id": "commit/47c7fab8de",
+    "label": "commit 47c7fab: the CI queue tells a run that is working from one that is waiting (REM-663) (#340)",
+    "p": 0.001519194268961944,
+    "gold": false
+   },
+   {
+    "id": "commit/b4f49e5928",
+    "label": "commit b4f49e5: Merge pull request #32 from Percolation-Labs/fix/rem-53-provider-failures-spec",
+    "p": 0.0015106767669220997,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-12-a-gate-that-can-write.md#16",
+    "label": "meta/postmortems/2026-09-12-a-gate-that-can-write.md \u203a 6. Not verified",
+    "p": 0.0014172965855762645,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-86.md#2",
+    "label": "board/cards/REM-86.md \u203a Log",
+    "p": 0.0014134128268977007,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-12-the-queue-is-the-product.md#2",
+    "label": "meta/postmortems/2026-09-12-the-queue-is-the-product.md \u203a What the day actually looked like, measured",
+    "p": 0.001402714679003423,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-12-true-when-it-was-measured.md#15",
+    "label": "meta/postmortems/2026-09-12-true-when-it-was-measured.md \u203a 5. What each session got wrong, in its own words",
+    "p": 0.0013801029269581574,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-139.md#3",
+    "label": "board/cards/REM-139.md \u203a Evidence",
+    "p": 0.001283997526129675,
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-10-20-lme-seeded-taxonomy/formulation/render_incremental.py#2",
+    "label": "meta/spikes/2026-10-20-lme-seeded-taxonomy/formulation/render_incremental.py",
+    "p": 0.001197243576464847,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "board/cards/REM-86.md#1",
+   "label": "board/cards/REM-86.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/postmortems/README.md#42",
+   "label": "meta/postmortems/README.md \u203a A green gate run has a timestamp, and main moved",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/159972dd24",
+   "label": "commit 159972d: Merge pull request #39 from Percolation-Labs/docs/parser-lag-message",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-139.md#1",
+   "label": "board/cards/REM-139.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/9aaf2960b6",
+   "label": "commit 9aaf296: the jobs column lists the jobs that exist, not the workflow (REM-663) (#341)",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-86.md#2",
+   "label": "board/cards/REM-86.md \u203a Log",
+   "wave": 1,
+   "via": "term:rem 86",
+   "gold": false
+  },
+  {
+   "id": "commit/891e02919f",
+   "label": "commit 891e029: Main's red gate now says which red it is, and expires the excuse itself (#55)",
+   "wave": 1,
+   "via": "term:rem 86",
+   "gold": true
+  },
+  {
+   "id": "commit/f8f64f26ba",
+   "label": "commit f8f64f2: The agent-turn gate forgave a core deferral with no version, and any error naming a credential",
+   "wave": 1,
+   "via": "term:rem 86",
+   "gold": true
+  },
+  {
+   "id": "commit/eb3be1bbc2",
+   "label": "commit eb3be1b: A package declared a channel that the code filling it could not see",
+   "wave": 1,
+   "via": "term:rem 86",
+   "gold": true
+  },
+  {
+   "id": "commit/31a94ddd00",
+   "label": "commit 31a94dd: A gate that can write: the hook rebuilt the served database and a test committed to the branch (#88)",
+   "wave": 2,
+   "via": "term:parser lag",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "dev/runner/queue.sh#2",
+    "label": "dev/runner/queue.sh",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-139.md#2",
+    "label": "board/cards/REM-139.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "commit/07f3216139",
+    "label": "commit 07f3216: Merge pull request #37 from Percolation-Labs/docs/parser-release-note",
+    "gold": false
+   },
+   {
+    "id": "dev/runner/queue.sh#1",
+    "label": "dev/runner/queue.sh",
+    "gold": false
+   },
+   {
+    "id": "commit/f808da6b26",
+    "label": "commit f808da6: Both halves said 0.2.0, and one of them was a day behind (#133)",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "dev/runner/queue.sh#2",
+    "label": "dev/runner/queue.sh",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-139.md#2",
+    "label": "board/cards/REM-139.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "commit/f808da6b26",
+    "label": "commit f808da6: Both halves said 0.2.0, and one of them was a day behind (#133)",
+    "gold": false
+   },
+   {
+    "id": "commit/891e02919f",
+    "label": "commit 891e029: Main's red gate now says which red it is, and expires the excuse itself (#55)",
+    "gold": true
+   },
+   {
+    "id": "commit/07f3216139",
+    "label": "commit 07f3216: Merge pull request #37 from Percolation-Labs/docs/parser-release-note",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "board/cards/REM-139.md#2",
+    "label": "board/cards/REM-139.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "commit/3796bd8a39",
+    "label": "commit 3796bd8: Merge pull request #52 from Percolation-Labs/docs/release-flow-and-the-lag-window",
+    "gold": false
+   },
+   {
+    "id": "commit/9df7312483",
+    "label": "commit 9df7312: board: REM-663 in-progress \u2192 done",
+    "gold": false
+   },
+   {
+    "id": "commit/9fb372358c",
+    "label": "commit 9fb3723: Merge pull request #40 from Percolation-Labs/fix/one-home-for-the-parser-lag-note",
+    "gold": false
+   },
+   {
+    "id": "commit/07f3216139",
+    "label": "commit 07f3216: Merge pull request #37 from Percolation-Labs/docs/parser-release-note",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "commit/5287377afb",
+    "label": "commit 5287377: A red gate reported a defect that was not there, and it was acted on",
+    "gold": false
+   },
+   {
+    "id": "commit/e8ca4dd09c",
+    "label": "commit e8ca4dd: Main's one red gate now says why it is red",
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-12-the-queue-is-the-product.md#4",
+    "label": "meta/postmortems/2026-09-12-the-queue-is-the-product.md \u203a The costs, separated, because the fixes differ",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-139.md#2",
+    "label": "board/cards/REM-139.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "commit/6aabfe714c",
+    "label": "commit 6aabfe7: Seven PRs in five hours, and the code was the cheap part (#138)",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.3333333333333333,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

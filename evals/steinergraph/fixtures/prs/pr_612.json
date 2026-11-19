@@ -1,0 +1,415 @@
+{
+ "qid": "pr:612",
+ "set": "prs",
+ "question": "What work went into this, and why: walklab Q4 (2.17): what predicts Jev's low P on MuSiQue's true bridges?",
+ "gold": [
+  {
+   "id": "commit/a0fec25730",
+   "label": "commit a0fec25: walklab Q4 (2.17): width and whether the bridge is quoted predict Jev's low P on MuSiQue's true bridges;",
+   "seed": true
+  },
+  {
+   "id": "commit/a6404b3386",
+   "label": "commit a6404b3: walklab: register Q4 (ledger 2.17) -- which lead features predict Jev's low P on MuSiQue's true bridges,",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/32771fa275",
+   "label": "commit 32771fa: Merge pull request #612 from Percolation-Labs/sally/q4-bridge-p",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 3
+  },
+  {
+   "id": "commit/a0fec25730",
+   "label": "commit a0fec25: walklab Q4 (2.17): width and whether the bridge is quoted predict Jev's low P on MuSiQue's true bridges;",
+   "rank": 2,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "commit/a6404b3386",
+   "label": "commit a6404b3: walklab: register Q4 (ledger 2.17) -- which lead features predict Jev's low P on MuSiQue's true bridges,",
+   "rank": 3,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "board/messages/M-20261101-112150-f053.md#1",
+   "label": "board/messages/M-20261101-112150-f053.md",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "commit/2c6e12ecc6",
+   "label": "commit 2c6e12e: walklab q4: an is-a edge per named entity opens none of 7 MuSiQue bridges (0/7 rose, -.06); bridges need",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 2
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/a0fec25730",
+    "label": "commit a0fec25: walklab Q4 (2.17): width and whether the bridge is quoted predict Jev's low P on MuSiQue's true bridges;",
+    "role": "gold"
+   },
+   {
+    "id": "commit/a6404b3386",
+    "label": "commit a6404b3: walklab: register Q4 (ledger 2.17) -- which lead features predict Jev's low P on MuSiQue's true bridges,",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/a0fec25730",
+    "b": "commit/a6404b3386",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "predict jev",
+      "width": 4
+     },
+     {
+      "kind": "term",
+      "key": "predict",
+      "width": 80
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "commit/a0fec25730",
+   "gold": "commit/a0fec25730",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 356,
+  "within_2_doors": 26516,
+  "gold_within_1": 0,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "commit/285f63a606",
+    "label": "commit 285f63a: board: bill messages james",
+    "p": 0.010807504503298627,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261101-112215-a757.md#1",
+    "label": "board/messages/M-20261101-112215-a757.md",
+    "p": 0.009798041126800276,
+    "gold": false
+   },
+   {
+    "id": "commit/4d1e374ad1",
+    "label": "commit 4d1e374: board: bill messages mike",
+    "p": 0.009765937791503572,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/configs/musique/q4/analyse.py#1",
+    "label": "meta/lab/configs/musique/q4/analyse.py",
+    "p": 0.009298273121113853,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261117-094224-9285.md#1",
+    "label": "board/messages/M-20261117-094224-9285.md",
+    "p": 0.00614612539400326,
+    "gold": false
+   },
+   {
+    "id": "commit/da1dfa34e5",
+    "label": "commit da1dfa3: board: bill messages sally",
+    "p": 0.00600589977557178,
+    "gold": false
+   },
+   {
+    "id": "commit/4c5d772fb1",
+    "label": "commit 4c5d772: board: sally acknowledges 1 message(s)",
+    "p": 0.005332791632221484,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261101-112145-9485.md#1",
+    "label": "board/messages/M-20261101-112145-9485.md",
+    "p": 0.004972161538873573,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/configs/musique/q4/REGISTRATION.md#1",
+    "label": "meta/lab/configs/musique/q4/REGISTRATION.md \u203a Q4 (ledger 2.17): why Jev under-scores MuSiQue's true bridges",
+    "p": 0.004902007899986176,
+    "gold": false
+   },
+   {
+    "id": "commit/767d4e3867",
+    "label": "commit 767d4e3: board: bill messages sirsh",
+    "p": 0.004730784278838041,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-typing/result.txt#1",
+    "label": "meta/lab/results/q4-typing/result.txt",
+    "p": 0.004693904682331225,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261031-004225-9d13.md#1",
+    "label": "board/messages/M-20261031-004225-9d13.md",
+    "p": 0.00385739689518813,
+    "gold": false
+   },
+   {
+    "id": "commit/36fdbbfcc2",
+    "label": "commit 36fdbbf: board: bill acknowledges 1 message(s)",
+    "p": 0.0033364441213485285,
+    "gold": false
+   },
+   {
+    "id": "commit/e7e50f1632",
+    "label": "commit e7e50f1: walklab: register Q8 (ledger 2.18) -- narrow what a lead shows: judge each target alone, or split wide l",
+    "p": 0.0028245376989807515,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-relation-edge/result.txt#2",
+    "label": "meta/lab/results/q4-relation-edge/result.txt",
+    "p": 0.002483384927903776,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-typing/result.txt#2",
+    "label": "meta/lab/results/q4-typing/result.txt",
+    "p": 0.0023708634686673167,
+    "gold": false
+   },
+   {
+    "id": "commit/af8ff38d15",
+    "label": "commit af8ff38: walklab q4: the typing reader's descriptions (53 of 63 entities)",
+    "p": 0.0020969877671720492,
+    "gold": false
+   },
+   {
+    "id": "commit/d4adaa3328",
+    "label": "commit d4adaa3: board: mike acknowledges 1 message(s)",
+    "p": 0.001979507524208359,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261101-172325-6d44.md#1",
+    "label": "board/messages/M-20261101-172325-6d44.md",
+    "p": 0.0019342332980514256,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261101-172329-b575.md#1",
+    "label": "board/messages/M-20261101-172329-b575.md",
+    "p": 0.0019228159365151552,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/32771fa275",
+   "label": "commit 32771fa: Merge pull request #612 from Percolation-Labs/sally/q4-bridge-p",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/a0fec25730",
+   "label": "commit a0fec25: walklab Q4 (2.17): width and whether the bridge is quoted predict Jev's low P on MuSiQue's true bridges;",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "commit/a6404b3386",
+   "label": "commit a6404b3: walklab: register Q4 (ledger 2.17) -- which lead features predict Jev's low P on MuSiQue's true bridges,",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "board/messages/M-20261101-112150-f053.md#1",
+   "label": "board/messages/M-20261101-112150-f053.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/2c6e12ecc6",
+   "label": "commit 2c6e12e: walklab q4: an is-a edge per named entity opens none of 7 MuSiQue bridges (0/7 rose, -.06); bridges need",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/messages/M-20261031-120631-44ba.md#1",
+   "label": "board/messages/M-20261031-120631-44ba.md",
+   "wave": 1,
+   "via": "term:wording arm",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/q4-bridge-p/RESULT.md#5",
+   "label": "meta/lab/results/q4-bridge-p/RESULT.md \u203a What it tells the wording arm",
+   "wave": 1,
+   "via": "term:wording arm",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/configs/musique/q4/REGISTRATION.md#6",
+   "label": "meta/lab/configs/musique/q4/REGISTRATION.md \u203a What it decides for the wording arm",
+   "wave": 1,
+   "via": "term:wording arm",
+   "gold": false
+  },
+  {
+   "id": "commit/1ef2f50ac5",
+   "label": "commit 1ef2f50: walklab: 1.18 stopped part-way -- Jev's account ran out of credit (HTTP 402) after 41 walks; the wording",
+   "wave": 1,
+   "via": "term:wording arm",
+   "gold": false
+  },
+  {
+   "id": "board/messages/M-20261101-113717-78a2.md#1",
+   "label": "board/messages/M-20261101-113717-78a2.md",
+   "wave": 1,
+   "via": "term:wording arm",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "commit/285f63a606",
+    "label": "commit 285f63a: board: bill messages james",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261101-112215-a757.md#1",
+    "label": "board/messages/M-20261101-112215-a757.md",
+    "gold": false
+   },
+   {
+    "id": "commit/4d1e374ad1",
+    "label": "commit 4d1e374: board: bill messages mike",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/configs/musique/q4/analyse.py#1",
+    "label": "meta/lab/configs/musique/q4/analyse.py",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261117-094224-9285.md#1",
+    "label": "board/messages/M-20261117-094224-9285.md",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "board/messages/M-20261101-112215-a757.md#1",
+    "label": "board/messages/M-20261101-112215-a757.md",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/configs/musique/q4/REGISTRATION.md#1",
+    "label": "meta/lab/configs/musique/q4/REGISTRATION.md \u203a Q4 (ledger 2.17): why Jev under-scores MuSiQue's true bridges",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/configs/musique/q4/analyse.py#1",
+    "label": "meta/lab/configs/musique/q4/analyse.py",
+    "gold": false
+   },
+   {
+    "id": "commit/b34580e400",
+    "label": "commit b34580e: Merge pull request #616 from Percolation-Labs/sally/judge-decisions",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261101-112145-9485.md#1",
+    "label": "board/messages/M-20261101-112145-9485.md",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "meta/lab/configs/musique/q4/REGISTRATION.md#1",
+    "label": "meta/lab/configs/musique/q4/REGISTRATION.md \u203a Q4 (ledger 2.17): why Jev under-scores MuSiQue's true bridges",
+    "gold": false
+   },
+   {
+    "id": "commit/af8ff38d15",
+    "label": "commit af8ff38: walklab q4: the typing reader's descriptions (53 of 63 entities)",
+    "gold": false
+   },
+   {
+    "id": "commit/285f63a606",
+    "label": "commit 285f63a: board: bill messages james",
+    "gold": false
+   },
+   {
+    "id": "commit/4d1e374ad1",
+    "label": "commit 4d1e374: board: bill messages mike",
+    "gold": false
+   },
+   {
+    "id": "commit/583f1e4214",
+    "label": "commit 583f1e4: walklab q4: typing test inputs (7 misses, 5 replayed OFF controls, 63 entities to type), fixed before ty",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "commit/467b4dcace",
+    "label": "commit 467b4dc: walklab: hub arm on MuSiQue (provisional) -- 12/13 hub-only bridges travellable, walks unchanged; item k",
+    "gold": false
+   },
+   {
+    "id": "commit/665d453f40",
+    "label": "commit 665d453: walklab MuSiQue: register the found test -- re-ask 5 bridges and 2 controls with the earlier hop's read ",
+    "gold": false
+   },
+   {
+    "id": "commit/66c26f3360",
+    "label": "commit 66c26f3: walklab: a real judge on MuSiQue -- Jev half closes the gap (.44 -> .64 of .96 @100, held-out), $2.88 fo",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261101-122615-945e.md#1",
+    "label": "board/messages/M-20261101-122615-945e.md",
+    "gold": false
+   },
+   {
+    "id": "commit/2374388035",
+    "label": "commit 2374388: walklab MuSiQue: telling the judge the chain so far flips 2 of 4 bridges (one fix seen twice), lifts Twi",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": null,
+  "Q": null,
+  "LQ": null,
+  "S": null
+ }
+}

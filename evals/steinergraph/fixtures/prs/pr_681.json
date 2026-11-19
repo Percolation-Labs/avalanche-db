@@ -1,0 +1,424 @@
+{
+ "qid": "pr:681",
+ "set": "prs",
+ "question": "What work went into this, and why: The two-stage judge in the bound: r2 transfers, conditioned on the first pass, and a rho30 gate?",
+ "gold": [
+  {
+   "id": "commit/755ed74e2f",
+   "label": "commit 755ed74: Two-stage judge in the bound, first pass: gain = P(in top 30) x (1 - rho30) x (r2 - r1); helps judgement",
+   "seed": true
+  },
+  {
+   "id": "commit/fe6637d75c",
+   "label": "commit fe6637d: Two-stage refit on (a)/(b)/(c): r2 transfers (.25-.29); conditioned on the first pass the direction is r",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/16fe2fa3c6",
+   "label": "commit 16fe2fa: Merge pull request #681 from Percolation-Labs/sally/twostage-bound",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/fe6637d75c",
+   "label": "commit fe6637d: Two-stage refit on (a)/(b)/(c): r2 transfers (.25-.29); conditioned on the first pass the direction is r",
+   "rank": 2,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "commit/755ed74e2f",
+   "label": "commit 755ed74: Two-stage judge in the bound, first pass: gain = P(in top 30) x (1 - rho30) x (r2 - r1); helps judgement",
+   "rank": 3,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "board/messages/M-20261103-080429-3ba4.md#1",
+   "label": "board/messages/M-20261103-080429-3ba4.md",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "meta/lab/results/dream-metric/TWOSTAGE.md#4",
+   "label": "meta/lab/results/dream-metric/TWOSTAGE.md \u203a Refit on (a), (b) and (c) (cory 5.47, PR #679; mike's BEAM, dd89d6240)",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/755ed74e2f",
+    "label": "commit 755ed74: Two-stage judge in the bound, first pass: gain = P(in top 30) x (1 - rho30) x (r2 - r1); helps judgement",
+    "role": "gold"
+   },
+   {
+    "id": "commit/fe6637d75c",
+    "label": "commit fe6637d: Two-stage refit on (a)/(b)/(c): r2 transfers (.25-.29); conditioned on the first pass the direction is r",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/755ed74e2f",
+    "b": "commit/fe6637d75c",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "near",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "rho30",
+      "width": 8
+     },
+     {
+      "kind": "term",
+      "key": "two stage",
+      "width": 74
+     },
+     {
+      "kind": "term",
+      "key": "first pass",
+      "width": 96
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "commit/755ed74e2f",
+   "gold": "commit/755ed74e2f",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 586,
+  "within_2_doors": 30857,
+  "gold_within_1": 0,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "board/messages/M-20261102-221051-6920.md#1",
+    "label": "board/messages/M-20261102-221051-6920.md",
+    "p": 0.010008794158380055,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/dream-metric/TWOSTAGE.md#2",
+    "label": "meta/lab/results/dream-metric/TWOSTAGE.md \u203a The two-stage judge in the bound: a listwise second stage at the top of the ",
+    "p": 0.007862302946991846,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261102-222604-7774.md#1",
+    "label": "board/messages/M-20261102-222604-7774.md",
+    "p": 0.007726064369614691,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/configs/structure/twostage.py#1",
+    "label": "meta/lab/configs/structure/twostage.py",
+    "p": 0.005850178548850523,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/dream-metric/TWOSTAGE.md#5",
+    "label": "meta/lab/results/dream-metric/TWOSTAGE.md \u203a Refit on (a), (b) and (c) (cory 5.47, PR #679; mike's BEAM, dd89d6240)",
+    "p": 0.005381925656606388,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/dream-metric/TWOSTAGE.md#1",
+    "label": "meta/lab/results/dream-metric/TWOSTAGE.md \u203a The two-stage judge in the bound: a listwise second stage at the top of the ",
+    "p": 0.005265051411417921,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/configs/structure/twostage.py#3",
+    "label": "meta/lab/configs/structure/twostage.py",
+    "p": 0.004914981599872914,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/configs/structure/twostage.py#4",
+    "label": "meta/lab/configs/structure/twostage.py",
+    "p": 0.004672757514012258,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/dream-metric/twostage/predict-a-v2.txt#1",
+    "label": "meta/lab/results/dream-metric/twostage/predict-a-v2.txt",
+    "p": 0.004476005270725192,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/dream-metric/twostage/gate.txt#1",
+    "label": "meta/lab/results/dream-metric/twostage/gate.txt",
+    "p": 0.004229048551724636,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/dream-metric/TWOSTAGE.md#3",
+    "label": "meta/lab/results/dream-metric/TWOSTAGE.md \u203a The two-stage judge in the bound: a listwise second stage at the top of the ",
+    "p": 0.004114173941726451,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/dream-metric/twostage/refit-abc.txt#1",
+    "label": "meta/lab/results/dream-metric/twostage/refit-abc.txt",
+    "p": 0.0035800099775566445,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261103-080630-0702.md#1",
+    "label": "board/messages/M-20261103-080630-0702.md",
+    "p": 0.003160534001110876,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261103-080627-a73c.md#1",
+    "label": "board/messages/M-20261103-080627-a73c.md",
+    "p": 0.003160534001110876,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261103-080623-e2ca.md#1",
+    "label": "board/messages/M-20261103-080623-e2ca.md",
+    "p": 0.003160534001110876,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/dream-metric/TWOSTAGE.md#6",
+    "label": "meta/lab/results/dream-metric/TWOSTAGE.md \u203a Refit on (a), (b) and (c) (cory 5.47, PR #679; mike's BEAM, dd89d6240)",
+    "p": 0.0029391948816511024,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-listwise-rep/result.txt#1",
+    "label": "meta/lab/results/q4-listwise-rep/result.txt",
+    "p": 0.002155180173090201,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/configs/structure/signposted_top.py#2",
+    "label": "meta/lab/configs/structure/signposted_top.py",
+    "p": 0.0020930785508874623,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/configs/structure/twostage.py#5",
+    "label": "meta/lab/configs/structure/twostage.py",
+    "p": 0.0018694747814759886,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261102-204302-3eab.md#1",
+    "label": "board/messages/M-20261102-204302-3eab.md",
+    "p": 0.0018641746073310074,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/16fe2fa3c6",
+   "label": "commit 16fe2fa: Merge pull request #681 from Percolation-Labs/sally/twostage-bound",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/fe6637d75c",
+   "label": "commit fe6637d: Two-stage refit on (a)/(b)/(c): r2 transfers (.25-.29); conditioned on the first pass the direction is r",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "commit/755ed74e2f",
+   "label": "commit 755ed74: Two-stage judge in the bound, first pass: gain = P(in top 30) x (1 - rho30) x (r2 - r1); helps judgement",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "board/messages/M-20261103-080429-3ba4.md#1",
+   "label": "board/messages/M-20261103-080429-3ba4.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/dream-metric/TWOSTAGE.md#4",
+   "label": "meta/lab/results/dream-metric/TWOSTAGE.md \u203a Refit on (a), (b) and (c) (cory 5.47, PR #679; mike's BEAM, dd89d6240)",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/dream-metric/TWOSTAGE.md#1",
+   "label": "meta/lab/results/dream-metric/TWOSTAGE.md \u203a The two-stage judge in the bound: a listwise second stage at the top of the ",
+   "wave": 1,
+   "via": "term:metric twostage",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/dream-metric/twostage/gate.txt#1",
+   "label": "meta/lab/results/dream-metric/twostage/gate.txt",
+   "wave": 1,
+   "via": "term:metric twostage",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/dream-metric/twostage/refit-abc.txt#1",
+   "label": "meta/lab/results/dream-metric/twostage/refit-abc.txt",
+   "wave": 1,
+   "via": "term:metric twostage",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/dream-metric/TWOSTAGE.md#3",
+   "label": "meta/lab/results/dream-metric/TWOSTAGE.md \u203a The two-stage judge in the bound: a listwise second stage at the top of the ",
+   "wave": 1,
+   "via": "term:metric twostage",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/dream-metric/twostage/predict-a.txt#1",
+   "label": "meta/lab/results/dream-metric/twostage/predict-a.txt",
+   "wave": 1,
+   "via": "term:metric twostage",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "board/messages/M-20261102-221051-6920.md#1",
+    "label": "board/messages/M-20261102-221051-6920.md",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/dream-metric/TWOSTAGE.md#2",
+    "label": "meta/lab/results/dream-metric/TWOSTAGE.md \u203a The two-stage judge in the bound: a listwise second stage at the top of the ",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261102-222604-7774.md#1",
+    "label": "board/messages/M-20261102-222604-7774.md",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/configs/structure/twostage.py#1",
+    "label": "meta/lab/configs/structure/twostage.py",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/dream-metric/TWOSTAGE.md#5",
+    "label": "meta/lab/results/dream-metric/TWOSTAGE.md \u203a Refit on (a), (b) and (c) (cory 5.47, PR #679; mike's BEAM, dd89d6240)",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "board/messages/M-20261102-222604-7774.md#1",
+    "label": "board/messages/M-20261102-222604-7774.md",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261102-221051-6920.md#1",
+    "label": "board/messages/M-20261102-221051-6920.md",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/dream-metric/TWOSTAGE.md#1",
+    "label": "meta/lab/results/dream-metric/TWOSTAGE.md \u203a The two-stage judge in the bound: a listwise second stage at the top of the ",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/dream-metric/TWOSTAGE.md#2",
+    "label": "meta/lab/results/dream-metric/TWOSTAGE.md \u203a The two-stage judge in the bound: a listwise second stage at the top of the ",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/configs/structure/twostage.py#1",
+    "label": "meta/lab/configs/structure/twostage.py",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "board/messages/M-20261102-222604-7774.md#1",
+    "label": "board/messages/M-20261102-222604-7774.md",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261102-221051-6920.md#1",
+    "label": "board/messages/M-20261102-221051-6920.md",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/dream-metric/twostage/refit-abc.txt#1",
+    "label": "meta/lab/results/dream-metric/twostage/refit-abc.txt",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/dream-metric/twostage/gate.txt#1",
+    "label": "meta/lab/results/dream-metric/twostage/gate.txt",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/dream-metric/twostage/predict-a-v2.txt#1",
+    "label": "meta/lab/results/dream-metric/twostage/predict-a-v2.txt",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "board/messages/M-20261102-222604-7774.md#1",
+    "label": "board/messages/M-20261102-222604-7774.md",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/dream-metric/TWOSTAGE.md#1",
+    "label": "meta/lab/results/dream-metric/TWOSTAGE.md \u203a The two-stage judge in the bound: a listwise second stage at the top of the ",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/configs/structure/twostage.py#1",
+    "label": "meta/lab/configs/structure/twostage.py",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/dream-metric/TWOSTAGE.md#3",
+    "label": "meta/lab/results/dream-metric/TWOSTAGE.md \u203a The two-stage judge in the bound: a listwise second stage at the top of the ",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-combo/RULE.md#1",
+    "label": "meta/lab/results/q4-combo/RULE.md \u203a Two-stage judge plus walk-time ranked rare terms: does feeding the listwise pass bet",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": null,
+  "Q": null,
+  "LQ": null,
+  "S": null
+ }
+}

@@ -1,0 +1,405 @@
+{
+ "qid": "pr:744",
+ "set": "prs",
+ "question": "What work went into this, and why: Audit: what the walk adds beyond search at the same budget?",
+ "gold": [
+  {
+   "id": "commit/6e6c5348a7",
+   "label": "commit 6e6c534: Audit: what the walk adds beyond search at the same budget; nothing on MuSiQue, nothing for the plain wo",
+   "seed": true
+  },
+  {
+   "id": "commit/c269b400b1",
+   "label": "commit c269b40: Audit: world-lab shares against search, and round 1 differs across arms (james's spot-check)",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/6e6c5348a7",
+   "label": "commit 6e6c534: Audit: what the walk adds beyond search at the same budget; nothing on MuSiQue, nothing for the plain wo",
+   "rank": 1,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "commit/f13dc08714",
+   "label": "commit f13dc08: Merge pull request #744 from Percolation-Labs/bill/audit-walk-vs-search",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "meta/lab/results/walk-vs-search/AUDIT.md#1",
+   "label": "meta/lab/results/walk-vs-search/AUDIT.md \u203a What the walk adds beyond search: an audit of bill's results (14 Nov 2026)",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/messages/M-20261115-082221-60c4.md#1",
+   "label": "board/messages/M-20261115-082221-60c4.md",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/messages/M-20261114-214308-9cc4.md#1",
+   "label": "board/messages/M-20261114-214308-9cc4.md",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/6e6c5348a7",
+    "label": "commit 6e6c534: Audit: what the walk adds beyond search at the same budget; nothing on MuSiQue, nothing for the plain wo",
+    "role": "gold"
+   },
+   {
+    "id": "commit/c269b400b1",
+    "label": "commit c269b40: Audit: world-lab shares against search, and round 1 differs across arms (james's spot-check)",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/6e6c5348a7",
+    "b": "commit/c269b400b1",
+    "via": [
+     {
+      "kind": "beside"
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "commit/6e6c5348a7",
+   "gold": "commit/6e6c5348a7",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 1478,
+  "within_2_doors": 32994,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "board/messages/M-20261114-215628-e7cc.md#1",
+    "label": "board/messages/M-20261114-215628-e7cc.md",
+    "p": 0.010485044833262997,
+    "gold": false
+   },
+   {
+    "id": "commit/39a6c76da3",
+    "label": "commit 39a6c76: board: bill acknowledges 1 message(s)",
+    "p": 0.005379350495905891,
+    "gold": false
+   },
+   {
+    "id": "commit/60274416fc",
+    "label": "commit 6027441: board: james messages sirsh",
+    "p": 0.004001093121356134,
+    "gold": false
+   },
+   {
+    "id": "commit/6505f26130",
+    "label": "commit 6505f26: Merge pull request #745 from Percolation-Labs/bill/reranker-input",
+    "p": 0.0036838532621408433,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/walk-vs-search/AUDIT.md#2",
+    "label": "meta/lab/results/walk-vs-search/AUDIT.md \u203a What the walk adds beyond search: an audit of bill's results (14 Nov 2026)",
+    "p": 0.0036316596218516593,
+    "gold": false
+   },
+   {
+    "id": "commit/c269b400b1",
+    "label": "commit c269b40: Audit: world-lab shares against search, and round 1 differs across arms (james's spot-check)",
+    "p": 0.002858449973985064,
+    "gold": true
+   },
+   {
+    "id": "meta/lab/results/walk-vs-search/audit.py#1",
+    "label": "meta/lab/results/walk-vs-search/audit.py",
+    "p": 0.0027039409659227586,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261114-214238-02fd.md#1",
+    "label": "board/messages/M-20261114-214238-02fd.md",
+    "p": 0.002271771274732579,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261114-215242-757a.md#1",
+    "label": "board/messages/M-20261114-215242-757a.md",
+    "p": 0.0022019658476790287,
+    "gold": false
+   },
+   {
+    "id": "commit/34119f8b07",
+    "label": "commit 34119f8: board: james acknowledges 1 message(s)",
+    "p": 0.0019945345338135715,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-lead-share/result.txt#2",
+    "label": "meta/lab/results/q4-lead-share/result.txt",
+    "p": 0.0018076072982309468,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261101-131130-1b76.md#1",
+    "label": "board/messages/M-20261101-131130-1b76.md",
+    "p": 0.0017020750190754135,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/world-lab/heldout/HELDOUT.md#1",
+    "label": "meta/lab/results/world-lab/heldout/HELDOUT.md \u203a Held-out worlds: the findings result, registered before it is run (bill,",
+    "p": 0.00163258340789673,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/walklab/engine.py#2",
+    "label": "meta/lab/walklab/engine.py",
+    "p": 0.0015547680002297565,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261115-225031-3c6f.md#1",
+    "label": "board/messages/M-20261115-225031-3c6f.md",
+    "p": 0.0015511232761118844,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/topk-open/run.py#1",
+    "label": "meta/lab/results/topk-open/run.py",
+    "p": 0.0015134373248552023,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261104-191815-d5ba.md#1",
+    "label": "board/messages/M-20261104-191815-d5ba.md",
+    "p": 0.0014895681042606421,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/walk-vs-search/POSTMORTEM.md#1",
+    "label": "meta/lab/results/walk-vs-search/POSTMORTEM.md \u203a Why the walk beat search in October and not this week: a postmortem (bil",
+    "p": 0.0014402904790299187,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/musique-travelled/RESULT.md#2",
+    "label": "meta/lab/results/musique-travelled/RESULT.md \u203a Round-2 doors only from travelled reads: result (bill, 14 Nov 2026)",
+    "p": 0.0013056808864216841,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/musique-round2/NOTE.md#2",
+    "label": "meta/lab/results/musique-round2/NOTE.md \u203a Round 2 on real text: a haystack, not lost context (bill, 14 Nov 2026; directi",
+    "p": 0.0012813798856346806,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/6e6c5348a7",
+   "label": "commit 6e6c534: Audit: what the walk adds beyond search at the same budget; nothing on MuSiQue, nothing for the plain wo",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "commit/f13dc08714",
+   "label": "commit f13dc08: Merge pull request #744 from Percolation-Labs/bill/audit-walk-vs-search",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/walk-vs-search/AUDIT.md#1",
+   "label": "meta/lab/results/walk-vs-search/AUDIT.md \u203a What the walk adds beyond search: an audit of bill's results (14 Nov 2026)",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/messages/M-20261115-082221-60c4.md#1",
+   "label": "board/messages/M-20261115-082221-60c4.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/messages/M-20261114-214308-9cc4.md#1",
+   "label": "board/messages/M-20261114-214308-9cc4.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/24b70a0690",
+   "label": "commit 24b70a0: World lab: held-out worlds and a registered test of the findings result, before any walk",
+   "wave": 1,
+   "via": "term:lab held",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/walk-vs-search/audit.py#2",
+   "label": "meta/lab/results/walk-vs-search/audit.py",
+   "wave": 1,
+   "via": "term:lab held",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-1172.md#7",
+   "label": "board/cards/REM-1172.md \u203a Log",
+   "wave": 1,
+   "via": "term:lab held",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/walk-vs-search/audit.py#1",
+   "label": "meta/lab/results/walk-vs-search/audit.py",
+   "wave": 1,
+   "via": "term:lab held",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/walk-vs-search/audit.txt#1",
+   "label": "meta/lab/results/walk-vs-search/audit.txt",
+   "wave": 1,
+   "via": "term:lab held",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "board/messages/M-20261114-215628-e7cc.md#1",
+    "label": "board/messages/M-20261114-215628-e7cc.md",
+    "gold": false
+   },
+   {
+    "id": "commit/39a6c76da3",
+    "label": "commit 39a6c76: board: bill acknowledges 1 message(s)",
+    "gold": false
+   },
+   {
+    "id": "commit/60274416fc",
+    "label": "commit 6027441: board: james messages sirsh",
+    "gold": false
+   },
+   {
+    "id": "commit/6505f26130",
+    "label": "commit 6505f26: Merge pull request #745 from Percolation-Labs/bill/reranker-input",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/walk-vs-search/AUDIT.md#2",
+    "label": "meta/lab/results/walk-vs-search/AUDIT.md \u203a What the walk adds beyond search: an audit of bill's results (14 Nov 2026)",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "board/messages/M-20261114-215628-e7cc.md#1",
+    "label": "board/messages/M-20261114-215628-e7cc.md",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/walk-vs-search/AUDIT.md#2",
+    "label": "meta/lab/results/walk-vs-search/AUDIT.md \u203a What the walk adds beyond search: an audit of bill's results (14 Nov 2026)",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/walk-vs-search/audit.py#1",
+    "label": "meta/lab/results/walk-vs-search/audit.py",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/musique-share-topk/RESULT.md#2",
+    "label": "meta/lab/results/musique-share-topk/RESULT.md \u203a Each round travels the same share of its doors: result (bill, 14 Nov 202",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/musique-round2/NOTE.md#2",
+    "label": "meta/lab/results/musique-round2/NOTE.md \u203a Round 2 on real text: a haystack, not lost context (bill, 14 Nov 2026; directi",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "board/messages/M-20261114-215628-e7cc.md#1",
+    "label": "board/messages/M-20261114-215628-e7cc.md",
+    "gold": false
+   },
+   {
+    "id": "commit/c269b400b1",
+    "label": "commit c269b40: Audit: world-lab shares against search, and round 1 differs across arms (james's spot-check)",
+    "gold": true
+   },
+   {
+    "id": "board/messages/M-20261023-070219-dab9.md#1",
+    "label": "board/messages/M-20261023-070219-dab9.md",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/q4-lead-share/result.txt#2",
+    "label": "meta/lab/results/q4-lead-share/result.txt",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1297.md#5",
+    "label": "board/cards/REM-1297.md \u203a Log",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "meta/lab/results/walk-vs-search/audit.py#1",
+    "label": "meta/lab/results/walk-vs-search/audit.py",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/musique-share-topk/RESULT.md#2",
+    "label": "meta/lab/results/musique-share-topk/RESULT.md \u203a Each round travels the same share of its doors: result (bill, 14 Nov 202",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/musique-round2/NOTE.md#2",
+    "label": "meta/lab/results/musique-round2/NOTE.md \u203a Round 2 on real text: a haystack, not lost context (bill, 14 Nov 2026; directi",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261114-214238-02fd.md#1",
+    "label": "board/messages/M-20261114-214238-02fd.md",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/walk-vs-search/AUDIT.md#2",
+    "label": "meta/lab/results/walk-vs-search/AUDIT.md \u203a What the walk adds beyond search: an audit of bill's results (14 Nov 2026)",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 1.0,
+  "S": 0.0
+ }
+}

@@ -1,0 +1,466 @@
+{
+ "qid": "RW:3hop1__742780_567566_84283",
+ "set": "mq",
+ "question": "Who owns the record label where the singer of All Right records?",
+ "gold": [
+  {
+   "id": "mq:08b2610feb1873e2",
+   "label": "Back of My Mind",
+   "seed": false
+  },
+  {
+   "id": "mq:b8f7c1231efb0ca5",
+   "label": "All Right",
+   "seed": false
+  },
+  {
+   "id": "mq:d9f976bd5b1a8053",
+   "label": "Warner Records",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:649a08379e46a321",
+   "label": "Cargo Records (UK)",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:ca71e65436e86e9d",
+   "label": "The Right Stuff Records",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:e83e49d88d5b737c",
+   "label": "Mona Bone Jakon",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:a54417415a5deffe",
+   "label": "Swag It Out",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:a141117cb8e0cf1c",
+   "label": "Asian Man Records",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 2
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:08b2610feb1873e2",
+    "label": "Back of My Mind",
+    "role": "gold"
+   },
+   {
+    "id": "mq:649a08379e46a321",
+    "label": "Cargo Records (UK)",
+    "role": "seed"
+   },
+   {
+    "id": "mq:b8f7c1231efb0ca5",
+    "label": "All Right",
+    "role": "gold"
+   },
+   {
+    "id": "mq:d9f976bd5b1a8053",
+    "label": "Warner Records",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:08b2610feb1873e2",
+    "b": "mq:b8f7c1231efb0ca5",
+    "via": [
+     {
+      "kind": "term",
+      "key": "another page",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "christopher cross",
+      "width": 6
+     },
+     {
+      "kind": "term",
+      "key": "page",
+      "width": 45
+     }
+    ]
+   },
+   {
+    "a": "mq:08b2610feb1873e2",
+    "b": "mq:d9f976bd5b1a8053",
+    "via": [
+     {
+      "kind": "term",
+      "key": "warner bros",
+      "width": 56
+     },
+     {
+      "kind": "term",
+      "key": "bros",
+      "width": 68
+     },
+     {
+      "kind": "term",
+      "key": "warner",
+      "width": 93
+     }
+    ]
+   },
+   {
+    "a": "mq:649a08379e46a321",
+    "b": "mq:d9f976bd5b1a8053",
+    "via": [
+     {
+      "kind": "term",
+      "key": "distributor",
+      "width": 20
+     }
+    ]
+   }
+  ],
+  "cost": 3,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   1,
+   2
+  ],
+  "entry": {
+   "seed": "mq:649a08379e46a321",
+   "gold": "mq:d9f976bd5b1a8053",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 1126,
+  "within_2_doors": 19756,
+  "gold_within_1": 2,
+  "gold_within_2": 1,
+  "top_U": [
+   {
+    "id": "mq:3e6a00542a1f1e9c",
+    "label": "Post-punk",
+    "p": 0.005350079911409679,
+    "gold": false
+   },
+   {
+    "id": "mq:4a52569bc81ed03f",
+    "label": "Zendaya (album)",
+    "p": 0.002577708340491941,
+    "gold": false
+   },
+   {
+    "id": "mq:8b414856f7b21082",
+    "label": "Tigers Jaw",
+    "p": 0.0025701604945440825,
+    "gold": false
+   },
+   {
+    "id": "mq:dcb497070f757290",
+    "label": "The Bruce Lee Band",
+    "p": 0.0024034250261202113,
+    "gold": false
+   },
+   {
+    "id": "mq:a9fc28448cf0c44e",
+    "label": "Rosetta Pebble",
+    "p": 0.0020606139571724903,
+    "gold": false
+   },
+   {
+    "id": "mq:63f443b5dcf2f7e1",
+    "label": "Atomic Playboys",
+    "p": 0.0020148534937215103,
+    "gold": false
+   },
+   {
+    "id": "mq:13960ac045ae5cae",
+    "label": "Chumak (company)",
+    "p": 0.0019241837243133258,
+    "gold": false
+   },
+   {
+    "id": "mq:ec215e75ee112f77",
+    "label": "You'll Be in My Heart",
+    "p": 0.001884219507797729,
+    "gold": false
+   },
+   {
+    "id": "mq:c1032258199b8130",
+    "label": "Equator Records (Canada)",
+    "p": 0.0015546555860002369,
+    "gold": false
+   },
+   {
+    "id": "mq:b5c57ce31efb39e5",
+    "label": "Sonic Youth Recordings",
+    "p": 0.0014423990659610969,
+    "gold": false
+   },
+   {
+    "id": "mq:6e5c73d61c5d5fe8",
+    "label": "Bone Thugs-n-Harmony",
+    "p": 0.001434659425848503,
+    "gold": false
+   },
+   {
+    "id": "mq:12b37018dddda498",
+    "label": "Super Nintendo Entertainment System",
+    "p": 0.0013482774795894445,
+    "gold": false
+   },
+   {
+    "id": "mq:6a1372975aaa45e1",
+    "label": "List of First Ladies of the United States",
+    "p": 0.0013482278957550737,
+    "gold": false
+   },
+   {
+    "id": "mq:80750e5ba80e996e",
+    "label": "Teach Me How to Dougie",
+    "p": 0.0013267561603476157,
+    "gold": false
+   },
+   {
+    "id": "mq:1dcc3bd3b0b3dd8b",
+    "label": "Sleaszy Rider Records",
+    "p": 0.0010958932570922996,
+    "gold": false
+   },
+   {
+    "id": "mq:89152b490c737c5a",
+    "label": "Sulaiman Mohammed Nazif",
+    "p": 0.0010070964335625373,
+    "gold": false
+   },
+   {
+    "id": "mq:6342cf8cf0557c44",
+    "label": "Break-up of the Beatles",
+    "p": 0.0009893329720047004,
+    "gold": false
+   },
+   {
+    "id": "mq:656b8b13ef2c6778",
+    "label": "The Mavericks",
+    "p": 0.0009695203495956196,
+    "gold": false
+   },
+   {
+    "id": "mq:85be959aac1d7c06",
+    "label": "To Kill a Mockingbird (film)",
+    "p": 0.0009523148949544229,
+    "gold": false
+   },
+   {
+    "id": "mq:4fd18875038458ad",
+    "label": "To Kill a Mockingbird",
+    "p": 0.0009469736650078892,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:649a08379e46a321",
+   "label": "Cargo Records (UK)",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:ca71e65436e86e9d",
+   "label": "The Right Stuff Records",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:e83e49d88d5b737c",
+   "label": "Mona Bone Jakon",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:a54417415a5deffe",
+   "label": "Swag It Out",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:a141117cb8e0cf1c",
+   "label": "Asian Man Records",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:c3f0bfd14ea26a17",
+   "label": "Spider-Man: Homecoming",
+   "wave": 1,
+   "via": "term:zendaya",
+   "gold": false
+  },
+  {
+   "id": "mq:4a52569bc81ed03f",
+   "label": "Zendaya (album)",
+   "wave": 1,
+   "via": "term:zendaya",
+   "gold": false
+  },
+  {
+   "id": "mq:4284d44932ebdda0",
+   "label": "Spider-Man: Homecoming",
+   "wave": 1,
+   "via": "term:zendaya",
+   "gold": false
+  },
+  {
+   "id": "mq:551724632045dfb9",
+   "label": "Beyonc\u00e9",
+   "wave": 1,
+   "via": "term:zendaya",
+   "gold": false
+  },
+  {
+   "id": "mq:7e83df5ddfed1f76",
+   "label": "Spider-Man: Homecoming",
+   "wave": 1,
+   "via": "term:zendaya",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:3e6a00542a1f1e9c",
+    "label": "Post-punk",
+    "gold": false
+   },
+   {
+    "id": "mq:4a52569bc81ed03f",
+    "label": "Zendaya (album)",
+    "gold": false
+   },
+   {
+    "id": "mq:8b414856f7b21082",
+    "label": "Tigers Jaw",
+    "gold": false
+   },
+   {
+    "id": "mq:dcb497070f757290",
+    "label": "The Bruce Lee Band",
+    "gold": false
+   },
+   {
+    "id": "mq:a9fc28448cf0c44e",
+    "label": "Rosetta Pebble",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:3e6a00542a1f1e9c",
+    "label": "Post-punk",
+    "gold": false
+   },
+   {
+    "id": "mq:e884a8e9e61a0246",
+    "label": "Sony Music",
+    "gold": false
+   },
+   {
+    "id": "mq:c1032258199b8130",
+    "label": "Equator Records (Canada)",
+    "gold": false
+   },
+   {
+    "id": "mq:1dcc3bd3b0b3dd8b",
+    "label": "Sleaszy Rider Records",
+    "gold": false
+   },
+   {
+    "id": "mq:8b414856f7b21082",
+    "label": "Tigers Jaw",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:e884a8e9e61a0246",
+    "label": "Sony Music",
+    "gold": false
+   },
+   {
+    "id": "mq:3e6a00542a1f1e9c",
+    "label": "Post-punk",
+    "gold": false
+   },
+   {
+    "id": "mq:c1032258199b8130",
+    "label": "Equator Records (Canada)",
+    "gold": false
+   },
+   {
+    "id": "mq:4a52569bc81ed03f",
+    "label": "Zendaya (album)",
+    "gold": false
+   },
+   {
+    "id": "mq:8b414856f7b21082",
+    "label": "Tigers Jaw",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:e41ad5917b5d0e46",
+    "label": "EmArcy Records",
+    "gold": false
+   },
+   {
+    "id": "mq:b241a5da40c5e398",
+    "label": "Gameface",
+    "gold": false
+   },
+   {
+    "id": "mq:d1ef28ff26f0a59e",
+    "label": "Ace Fu Records",
+    "gold": false
+   },
+   {
+    "id": "mq:1dcc3bd3b0b3dd8b",
+    "label": "Sleaszy Rider Records",
+    "gold": false
+   },
+   {
+    "id": "mq:c6916ab8f78bfb0c",
+    "label": "Ellahy Amen Records",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

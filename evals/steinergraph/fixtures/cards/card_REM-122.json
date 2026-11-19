@@ -1,0 +1,420 @@
+{
+ "qid": "card:REM-122",
+ "set": "cards",
+ "question": "What was done about this, and why: backup: a table that ships rows and takes them carries only the deployment's into a dump?",
+ "gold": [
+  {
+   "id": "commit/1acc8f9ce2",
+   "label": "commit 1acc8f9: Three tickets that share one upgrade hop: the parser stamp, the rows a restore loses, and the upload it ",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "board/cards/REM-122.md#1",
+   "label": "board/cards/REM-122.md",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "specs/README.md#21",
+   "label": "specs/README.md \u203a Ground rules",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-122.md#2",
+   "label": "board/cards/REM-122.md \u203a Goal",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "specs/build-knit-dream/corpus-durability.md#4",
+   "label": "specs/build-knit-dream/corpus-durability.md \u203a Layer 1: the database and its objects",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "board/cards/REM-98.md#1",
+   "label": "board/cards/REM-98.md",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "board/cards/REM-122.md#2",
+    "label": "board/cards/REM-122.md \u203a Goal",
+    "role": "seed"
+   },
+   {
+    "id": "commit/1acc8f9ce2",
+    "label": "commit 1acc8f9: Three tickets that share one upgrade hop: the parser stamp, the rows a restore loses, and the upload it ",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "board/cards/REM-122.md#2",
+    "b": "commit/1acc8f9ce2",
+    "via": [
+     {
+      "kind": "term",
+      "key": "dump carries",
+      "width": 4
+     },
+     {
+      "kind": "term",
+      "key": "rem 122",
+      "width": 7
+     },
+     {
+      "kind": "term",
+      "key": "tables hold",
+      "width": 9
+     },
+     {
+      "kind": "term",
+      "key": "shipped rows",
+      "width": 10
+     },
+     {
+      "kind": "term",
+      "key": "deployment rows",
+      "width": 10
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [],
+  "entry": {
+   "seed": "board/cards/REM-122.md#2",
+   "gold": "commit/1acc8f9ce2",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 1347,
+  "within_2_doors": 32777,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "commit/4486e2fb2f",
+    "label": "commit 4486e2f: Every backup this collection has ever taken was empty",
+    "p": 0.005243662655635607,
+    "gold": false
+   },
+   {
+    "id": "commit/1acc8f9ce2",
+    "label": "commit 1acc8f9: Three tickets that share one upgrade hop: the parser stamp, the rows a restore loses, and the upload it ",
+    "p": 0.0040735733194610015,
+    "gold": true
+   },
+   {
+    "id": "meta/skills/challenge-the-process/SKILL.md#30",
+    "label": "meta/skills/challenge-the-process/SKILL.md \u203a Adding a table? Two registrations, and one of them is not optional",
+    "p": 0.0036613931516693704,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-104.md#1",
+    "label": "board/cards/REM-104.md",
+    "p": 0.003008171444717382,
+    "gold": false
+   },
+   {
+    "id": "commit/191f211bc9",
+    "label": "commit 191f211: Write the registration down as a claim with a check attached",
+    "p": 0.0028762789591695735,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-98.md#2",
+    "label": "board/cards/REM-98.md \u203a Log",
+    "p": 0.0025918494351222783,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-12-described-three-lines-up.md#9",
+    "label": "meta/postmortems/2026-09-12-described-three-lines-up.md \u203a The control, which is the strongest evidence in this file",
+    "p": 0.002581496902718449,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-12-described-three-lines-up.md#7",
+    "label": "meta/postmortems/2026-09-12-described-three-lines-up.md \u203a 2. Eighty lines up \u2014 and then the description was wrong",
+    "p": 0.002531199357954734,
+    "gold": false
+   },
+   {
+    "id": "meta/skills/challenge-the-process/SKILL.md#31",
+    "label": "meta/skills/challenge-the-process/SKILL.md \u203a Adding a table? Two registrations, and one of them is not optional",
+    "p": 0.0023557064059568315,
+    "gold": false
+   },
+   {
+    "id": "commit/788a499e8d",
+    "label": "commit 788a499: The same fact in both forms, on one afternoon: two derivations missed it, one gate run found it (#120)",
+    "p": 0.0018950563725405858,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-87.md#1",
+    "label": "board/cards/REM-87.md",
+    "p": 0.0018541833483218368,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-97.md#2",
+    "label": "board/cards/REM-97.md \u203a Goal",
+    "p": 0.0018501756917803237,
+    "gold": false
+   },
+   {
+    "id": "commit/7d2fbbb817",
+    "label": "commit 7d2fbbb: The restore gate counted the duplicate keys and did not say they lose rows",
+    "p": 0.0018177122595178458,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-100.md#1",
+    "label": "board/cards/REM-100.md",
+    "p": 0.0018058220048158078,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-86.md#1",
+    "label": "board/cards/REM-86.md",
+    "p": 0.0017968797113003586,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-122.md#3",
+    "label": "board/cards/REM-122.md \u203a Log",
+    "p": 0.001794057874620676,
+    "gold": false
+   },
+   {
+    "id": "commit/37ed4cd487",
+    "label": "commit 37ed4cd: rows, not schema: the rule, and a gate that reads specs/ (REM-655) (#335)",
+    "p": 0.0017124617952246962,
+    "gold": false
+   },
+   {
+    "id": "specs/user-rbac/schema.sql#94",
+    "label": "specs/user-rbac/schema.sql",
+    "p": 0.001363074600214469,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-63.md#8",
+    "label": "board/cards/REM-63.md \u203a 2026-09-12T13:53:59.567Z \u00b7 Percolation Labs",
+    "p": 0.00110489287886673,
+    "gold": false
+   },
+   {
+    "id": "specs/README.md#22",
+    "label": "specs/README.md \u203a Ground rules",
+    "p": 0.0010961329483480781,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "board/cards/REM-122.md#1",
+   "label": "board/cards/REM-122.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/README.md#21",
+   "label": "specs/README.md \u203a Ground rules",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-122.md#2",
+   "label": "board/cards/REM-122.md \u203a Goal",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/build-knit-dream/corpus-durability.md#4",
+   "label": "specs/build-knit-dream/corpus-durability.md \u203a Layer 1: the database and its objects",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-98.md#1",
+   "label": "board/cards/REM-98.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/b1dd7c49f7",
+   "label": "commit b1dd7c4: A corrected vocabulary row reached fresh installs and nowhere else",
+   "wave": 1,
+   "via": "term:extconfig",
+   "gold": false
+  },
+  {
+   "id": "meta/postmortems/2026-09-04-contract-froze-a-test-fixture.md#6",
+   "label": "meta/postmortems/2026-09-04-contract-froze-a-test-fixture.md \u203a 4. The fix, and why it is in the catalog",
+   "wave": 1,
+   "via": "term:extconfig",
+   "gold": false
+  },
+  {
+   "id": "meta/postmortems/2026-09-04-contract-froze-a-test-fixture.md#1",
+   "label": "meta/postmortems/2026-09-04-contract-froze-a-test-fixture.md \u203a The published contract froze a test fixture",
+   "wave": 1,
+   "via": "term:extconfig",
+   "gold": false
+  },
+  {
+   "id": "commit/44984e9722",
+   "label": "commit 44984e9: The contract gate read an application's tables as the extension's",
+   "wave": 1,
+   "via": "term:extconfig",
+   "gold": false
+  },
+  {
+   "id": "meta/skills/challenge-the-process/SKILL.md#30",
+   "label": "meta/skills/challenge-the-process/SKILL.md \u203a Adding a table? Two registrations, and one of them is not optional",
+   "wave": 1,
+   "via": "term:extconfig",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "commit/4486e2fb2f",
+    "label": "commit 4486e2f: Every backup this collection has ever taken was empty",
+    "gold": false
+   },
+   {
+    "id": "commit/1acc8f9ce2",
+    "label": "commit 1acc8f9: Three tickets that share one upgrade hop: the parser stamp, the rows a restore loses, and the upload it ",
+    "gold": true
+   },
+   {
+    "id": "meta/skills/challenge-the-process/SKILL.md#30",
+    "label": "meta/skills/challenge-the-process/SKILL.md \u203a Adding a table? Two registrations, and one of them is not optional",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-104.md#1",
+    "label": "board/cards/REM-104.md",
+    "gold": false
+   },
+   {
+    "id": "commit/191f211bc9",
+    "label": "commit 191f211: Write the registration down as a claim with a check attached",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "commit/4486e2fb2f",
+    "label": "commit 4486e2f: Every backup this collection has ever taken was empty",
+    "gold": false
+   },
+   {
+    "id": "meta/skills/challenge-the-process/SKILL.md#30",
+    "label": "meta/skills/challenge-the-process/SKILL.md \u203a Adding a table? Two registrations, and one of them is not optional",
+    "gold": false
+   },
+   {
+    "id": "commit/1acc8f9ce2",
+    "label": "commit 1acc8f9: Three tickets that share one upgrade hop: the parser stamp, the rows a restore loses, and the upload it ",
+    "gold": true
+   },
+   {
+    "id": "commit/191f211bc9",
+    "label": "commit 191f211: Write the registration down as a claim with a check attached",
+    "gold": false
+   },
+   {
+    "id": "meta/skills/challenge-the-process/SKILL.md#31",
+    "label": "meta/skills/challenge-the-process/SKILL.md \u203a Adding a table? Two registrations, and one of them is not optional",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "board/cards/REM-104.md#1",
+    "label": "board/cards/REM-104.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-122.md#3",
+    "label": "board/cards/REM-122.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "meta/skills/challenge-the-process/SKILL.md#30",
+    "label": "meta/skills/challenge-the-process/SKILL.md \u203a Adding a table? Two registrations, and one of them is not optional",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-124.md#1",
+    "label": "board/cards/REM-124.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-137.md#1",
+    "label": "board/cards/REM-137.md",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "board/cards/REM-292.md#4",
+    "label": "board/cards/REM-292.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "meta/skills/challenge-the-process/SKILL.md#30",
+    "label": "meta/skills/challenge-the-process/SKILL.md \u203a Adding a table? Two registrations, and one of them is not optional",
+    "gold": false
+   },
+   {
+    "id": "commit/4486e2fb2f",
+    "label": "commit 4486e2f: Every backup this collection has ever taken was empty",
+    "gold": false
+   },
+   {
+    "id": "commit/06d5ea069c",
+    "label": "commit 06d5ea0: A backup carried every resource and none of the channels they point at",
+    "gold": false
+   },
+   {
+    "id": "meta/skills/challenge-the-process/SKILL.md#31",
+    "label": "meta/skills/challenge-the-process/SKILL.md \u203a Adding a table? Two registrations, and one of them is not optional",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 1.0,
+  "Q": 1.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

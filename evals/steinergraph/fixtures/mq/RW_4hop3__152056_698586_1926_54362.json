@@ -1,0 +1,474 @@
+{
+ "qid": "RW:4hop3__152056_698586_1926_54362",
+ "set": "mq",
+ "question": "Who burned down the death city of the artist responsible for Dunn Dunn in the war after which the first time black people declined in living in NYC?",
+ "gold": [
+  {
+   "id": "mq:4f5a1ab5a5874f09",
+   "label": "Dunn Dunn",
+   "seed": true
+  },
+  {
+   "id": "mq:6266b9de2c0706c4",
+   "label": "Shawty Lo discography",
+   "seed": false
+  },
+  {
+   "id": "mq:d34e3df49d3a8b65",
+   "label": "New York City",
+   "seed": true
+  },
+  {
+   "id": "mq:ddd180ff94ff89e7",
+   "label": "Atlanta in the American Civil War",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:ebf5457f99424b3e",
+   "label": "Dunn Center, North Dakota",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:4f5a1ab5a5874f09",
+   "label": "Dunn Dunn",
+   "rank": 2,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:92a3eb4a9e3ee311",
+   "label": "If You See Him/If You See Her",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:d488fadd7605aa42",
+   "label": "Love Someone Like Me",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:d34e3df49d3a8b65",
+   "label": "New York City",
+   "rank": 5,
+   "gold": true,
+   "doors_to_gold": 0
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:0ca911a34c6bbd7f",
+    "label": "Black people",
+    "role": "connector"
+   },
+   {
+    "id": "mq:4f5a1ab5a5874f09",
+    "label": "Dunn Dunn",
+    "role": "gold"
+   },
+   {
+    "id": "mq:6266b9de2c0706c4",
+    "label": "Shawty Lo discography",
+    "role": "gold"
+   },
+   {
+    "id": "mq:d34e3df49d3a8b65",
+    "label": "New York City",
+    "role": "gold"
+   },
+   {
+    "id": "mq:ddd180ff94ff89e7",
+    "label": "Atlanta in the American Civil War",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:0ca911a34c6bbd7f",
+    "b": "mq:d34e3df49d3a8b65",
+    "via": [
+     {
+      "kind": "term",
+      "key": "blacks",
+      "width": 26
+     }
+    ]
+   },
+   {
+    "a": "mq:0ca911a34c6bbd7f",
+    "b": "mq:ddd180ff94ff89e7",
+    "via": [
+     {
+      "kind": "term",
+      "key": "feared",
+      "width": 15
+     }
+    ]
+   },
+   {
+    "a": "mq:4f5a1ab5a5874f09",
+    "b": "mq:6266b9de2c0706c4",
+    "via": [
+     {
+      "kind": "near",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "shawty",
+      "width": 2
+     }
+    ]
+   },
+   {
+    "a": "mq:6266b9de2c0706c4",
+    "b": "mq:ddd180ff94ff89e7",
+    "via": [
+     {
+      "kind": "term",
+      "key": "atlanta",
+      "width": 69
+     }
+    ]
+   }
+  ],
+  "cost": 4,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   2,
+   2,
+   2,
+   1,
+   2
+  ],
+  "entry": {
+   "seed": "mq:4f5a1ab5a5874f09",
+   "gold": "mq:4f5a1ab5a5874f09",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 1696,
+  "within_2_doors": 19353,
+  "gold_within_1": 1,
+  "gold_within_2": 1,
+  "top_U": [
+   {
+    "id": "mq:937cc97ed8430cd0",
+    "label": "Only When I Love",
+    "p": 0.006424765692818171,
+    "gold": false
+   },
+   {
+    "id": "mq:6266b9de2c0706c4",
+    "label": "Shawty Lo discography",
+    "p": 0.0033377751157245487,
+    "gold": true
+   },
+   {
+    "id": "mq:ce8bc7fe5b6fd5d8",
+    "label": "You're Gonna Miss Me When I'm Gone",
+    "p": 0.0027383437123287974,
+    "gold": false
+   },
+   {
+    "id": "mq:d1dc8e8c57c7f91c",
+    "label": "Infant mortality",
+    "p": 0.002417745947312766,
+    "gold": false
+   },
+   {
+    "id": "mq:28796ae8568713d1",
+    "label": "My Next Broken Heart",
+    "p": 0.0023667865319854458,
+    "gold": false
+   },
+   {
+    "id": "mq:9c326b3dcedfe762",
+    "label": "That Ain't No Way to Go",
+    "p": 0.002091311481580436,
+    "gold": false
+   },
+   {
+    "id": "mq:d717489b54b75d7a",
+    "label": "Parker F. Dunn",
+    "p": 0.002081468355591432,
+    "gold": false
+   },
+   {
+    "id": "mq:daced02bd1622dc7",
+    "label": "Velma Dunn",
+    "p": 0.0020543853189633043,
+    "gold": false
+   },
+   {
+    "id": "mq:bf2e9d8b48c1bd1d",
+    "label": "Someone like You (Adele song)",
+    "p": 0.001777256025266061,
+    "gold": false
+   },
+   {
+    "id": "mq:5754fb373c5516d8",
+    "label": "Rusk, Dunn County, Wisconsin",
+    "p": 0.0016982390432772464,
+    "gold": false
+   },
+   {
+    "id": "mq:4252b8904b054dc9",
+    "label": "Menomonie (town), Wisconsin",
+    "p": 0.001648545716678496,
+    "gold": false
+   },
+   {
+    "id": "mq:4f3e443b68298da7",
+    "label": "Gerold C. Dunn",
+    "p": 0.0016128466767657025,
+    "gold": false
+   },
+   {
+    "id": "mq:c839b73c59209254",
+    "label": "Weston, Dunn County, Wisconsin",
+    "p": 0.001569701417793705,
+    "gold": false
+   },
+   {
+    "id": "mq:038b9cd68b967ebe",
+    "label": "Detroit",
+    "p": 0.0011560860146049574,
+    "gold": false
+   },
+   {
+    "id": "mq:c0a81fdf02b0d67f",
+    "label": "Let's Don't Call It a Night",
+    "p": 0.0010870194053905953,
+    "gold": false
+   },
+   {
+    "id": "mq:01cbfa38e32607af",
+    "label": "You Can't Take the Honky Tonk Out of the Girl",
+    "p": 0.0010815435462007508,
+    "gold": false
+   },
+   {
+    "id": "mq:a943c2c29d60c7b1",
+    "label": "BNA Records",
+    "p": 0.0010739159935792167,
+    "gold": false
+   },
+   {
+    "id": "mq:615d1e49ee93bfe1",
+    "label": "Houston",
+    "p": 0.0010430796651523838,
+    "gold": false
+   },
+   {
+    "id": "mq:985a4d52acb565ed",
+    "label": "Stephen Dunn (sound engineer)",
+    "p": 0.0010247974945665399,
+    "gold": false
+   },
+   {
+    "id": "mq:d27f09f3cfee5676",
+    "label": "Does He Love You",
+    "p": 0.0009630225374165669,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:ebf5457f99424b3e",
+   "label": "Dunn Center, North Dakota",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:4f5a1ab5a5874f09",
+   "label": "Dunn Dunn",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:92a3eb4a9e3ee311",
+   "label": "If You See Him/If You See Her",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:d488fadd7605aa42",
+   "label": "Love Someone Like Me",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:d34e3df49d3a8b65",
+   "label": "New York City",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:1e8564b605ae124a",
+   "label": "Bob Franceschini",
+   "wave": 1,
+   "via": "term:nashville",
+   "gold": false
+  },
+  {
+   "id": "mq:ce96efbeeed4421f",
+   "label": "Cumberland River",
+   "wave": 1,
+   "via": "term:nashville",
+   "gold": false
+  },
+  {
+   "id": "mq:5acd4b8004535b82",
+   "label": "E. Thomas Wood",
+   "wave": 1,
+   "via": "term:nashville",
+   "gold": false
+  },
+  {
+   "id": "mq:a22f0cdd4511a448",
+   "label": "WNQM",
+   "wave": 1,
+   "via": "term:nashville",
+   "gold": false
+  },
+  {
+   "id": "mq:7dbfb4fae94eeffd",
+   "label": "MCA Records",
+   "wave": 1,
+   "via": "term:nashville",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:937cc97ed8430cd0",
+    "label": "Only When I Love",
+    "gold": false
+   },
+   {
+    "id": "mq:6266b9de2c0706c4",
+    "label": "Shawty Lo discography",
+    "gold": true
+   },
+   {
+    "id": "mq:ce8bc7fe5b6fd5d8",
+    "label": "You're Gonna Miss Me When I'm Gone",
+    "gold": false
+   },
+   {
+    "id": "mq:d1dc8e8c57c7f91c",
+    "label": "Infant mortality",
+    "gold": false
+   },
+   {
+    "id": "mq:28796ae8568713d1",
+    "label": "My Next Broken Heart",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:937cc97ed8430cd0",
+    "label": "Only When I Love",
+    "gold": false
+   },
+   {
+    "id": "mq:ce8bc7fe5b6fd5d8",
+    "label": "You're Gonna Miss Me When I'm Gone",
+    "gold": false
+   },
+   {
+    "id": "mq:28796ae8568713d1",
+    "label": "My Next Broken Heart",
+    "gold": false
+   },
+   {
+    "id": "mq:9c326b3dcedfe762",
+    "label": "That Ain't No Way to Go",
+    "gold": false
+   },
+   {
+    "id": "mq:d717489b54b75d7a",
+    "label": "Parker F. Dunn",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:937cc97ed8430cd0",
+    "label": "Only When I Love",
+    "gold": false
+   },
+   {
+    "id": "mq:ce8bc7fe5b6fd5d8",
+    "label": "You're Gonna Miss Me When I'm Gone",
+    "gold": false
+   },
+   {
+    "id": "mq:28796ae8568713d1",
+    "label": "My Next Broken Heart",
+    "gold": false
+   },
+   {
+    "id": "mq:9c326b3dcedfe762",
+    "label": "That Ain't No Way to Go",
+    "gold": false
+   },
+   {
+    "id": "mq:d717489b54b75d7a",
+    "label": "Parker F. Dunn",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:d717489b54b75d7a",
+    "label": "Parker F. Dunn",
+    "gold": false
+   },
+   {
+    "id": "mq:937cc97ed8430cd0",
+    "label": "Only When I Love",
+    "gold": false
+   },
+   {
+    "id": "mq:daced02bd1622dc7",
+    "label": "Velma Dunn",
+    "gold": false
+   },
+   {
+    "id": "mq:4f3e443b68298da7",
+    "label": "Gerold C. Dunn",
+    "gold": false
+   },
+   {
+    "id": "mq:985a4d52acb565ed",
+    "label": "Stephen Dunn (sound engineer)",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.5,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

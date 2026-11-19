@@ -1,0 +1,427 @@
+{
+ "qid": "card:REM-307",
+ "set": "cards",
+ "question": "What was done about this, and why: engagement: a person reads every work they saved, marked readable or not?",
+ "gold": [
+  {
+   "id": "commit/214bf2dc82",
+   "label": "commit 214bf2d: Merge pull request #213 from Percolation-Labs/amartey/rem-307-my-saves",
+   "seed": false
+  },
+  {
+   "id": "commit/4978192bd2",
+   "label": "commit 4978192: A person reads every work they saved, marked readable or not (REM-307)",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/35c44a400c",
+   "label": "commit 35c44a4: board: file REM-307 engagement: a person reads every work they saved, marked readable or not",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/4978192bd2",
+   "label": "commit 4978192: A person reads every work they saved, marked readable or not (REM-307)",
+   "rank": 2,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "board/cards/REM-307.md#2",
+   "label": "board/cards/REM-307.md \u203a Goal",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-307.md#1",
+   "label": "board/cards/REM-307.md",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "specs/research-platform/schema.sql#49",
+   "label": "specs/research-platform/schema.sql",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/214bf2dc82",
+    "label": "commit 214bf2d: Merge pull request #213 from Percolation-Labs/amartey/rem-307-my-saves",
+    "role": "gold"
+   },
+   {
+    "id": "commit/4978192bd2",
+    "label": "commit 4978192: A person reads every work they saved, marked readable or not (REM-307)",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/214bf2dc82",
+    "b": "commit/4978192bd2",
+    "via": [
+     {
+      "kind": "term",
+      "key": "saved marked",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "marked readable",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "every work",
+      "width": 14
+     },
+     {
+      "kind": "term",
+      "key": "person reads",
+      "width": 15
+     },
+     {
+      "kind": "term",
+      "key": "rem 307",
+      "width": 19
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "commit/4978192bd2",
+   "gold": "commit/4978192bd2",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 670,
+  "within_2_doors": 29592,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "commit/214bf2dc82",
+    "label": "commit 214bf2d: Merge pull request #213 from Percolation-Labs/amartey/rem-307-my-saves",
+    "p": 0.0091465701775886,
+    "gold": true
+   },
+   {
+    "id": "board/cards/REM-307.md#4",
+    "label": "board/cards/REM-307.md \u203a Done when",
+    "p": 0.00884022774096548,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-307.md#7",
+    "label": "board/cards/REM-307.md \u203a Log",
+    "p": 0.007268354666350103,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-307.md#3",
+    "label": "board/cards/REM-307.md \u203a Evidence",
+    "p": 0.005947895288115122,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-157.md#10",
+    "label": "board/cards/REM-157.md \u203a Log",
+    "p": 0.005642962165691121,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-321.md#3",
+    "label": "board/cards/REM-321.md \u203a Evidence",
+    "p": 0.005506475847547,
+    "gold": false
+   },
+   {
+    "id": "output/full-flow/prototype.js#7",
+    "label": "output/full-flow/prototype.js",
+    "p": 0.0027772950049793845,
+    "gold": false
+   },
+   {
+    "id": "commit/79fa3ad537",
+    "label": "commit 79fa3ad: board: percolate-application-37 takes REM-306",
+    "p": 0.002365358607446394,
+    "gold": false
+   },
+   {
+    "id": "commit/daeef6b33c",
+    "label": "commit daeef6b: board: percolate-application-ad takes REM-293",
+    "p": 0.0023080392011798293,
+    "gold": false
+   },
+   {
+    "id": "commit/bb2ab1ba3e",
+    "label": "commit bb2ab1b: research: works_access asks about the caller once per query, not once per row (REM-528)",
+    "p": 0.0022020336341239347,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-157.md#12",
+    "label": "board/cards/REM-157.md \u203a Log",
+    "p": 0.002115011751737111,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-157.md#11",
+    "label": "board/cards/REM-157.md \u203a Log",
+    "p": 0.0020961019264680593,
+    "gold": false
+   },
+   {
+    "id": "commit/36f9d43494",
+    "label": "commit 36f9d43: Merge pull request #273 from Percolation-Labs/amartey/rem-528-policy-once",
+    "p": 0.0015666153213035863,
+    "gold": false
+   },
+   {
+    "id": "specs/research-platform/schema.sql#50",
+    "label": "specs/research-platform/schema.sql",
+    "p": 0.0014962771535280053,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-321.md#2",
+    "label": "board/cards/REM-321.md \u203a Goal",
+    "p": 0.0014955797337502374,
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-10-10-lens-library/notes/close_reading_and_craft_lenses.txt#18",
+    "label": "meta/spikes/2026-10-10-lens-library/notes/close_reading_and_craft_lenses.txt",
+    "p": 0.0014673543069003002,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-307.md#6",
+    "label": "board/cards/REM-307.md \u203a Links",
+    "p": 0.00143600768791673,
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-10-17-iterative-query/forage/PREREAD.md#1",
+    "label": "meta/spikes/2026-10-17-iterative-query/forage/PREREAD.md \u203a A judge that decides before the read (rule fixed before any g",
+    "p": 0.0014316159785942538,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-157.md#1",
+    "label": "board/cards/REM-157.md",
+    "p": 0.0014290302499654958,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-353.md#3",
+    "label": "board/cards/REM-353.md \u203a Evidence",
+    "p": 0.001406813959626922,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/35c44a400c",
+   "label": "commit 35c44a4: board: file REM-307 engagement: a person reads every work they saved, marked readable or not",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/4978192bd2",
+   "label": "commit 4978192: A person reads every work they saved, marked readable or not (REM-307)",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "board/cards/REM-307.md#2",
+   "label": "board/cards/REM-307.md \u203a Goal",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-307.md#1",
+   "label": "board/cards/REM-307.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/research-platform/schema.sql#49",
+   "label": "specs/research-platform/schema.sql",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-321.md#6",
+   "label": "board/cards/REM-321.md \u203a Links",
+   "wave": 1,
+   "via": "term:rem 307",
+   "gold": false
+  },
+  {
+   "id": "commit/fb2ecb59c4",
+   "label": "commit fb2ecb5: board: REM-307 in-progress \u2192 done",
+   "wave": 1,
+   "via": "term:rem 307",
+   "gold": false
+  },
+  {
+   "id": "commit/214bf2dc82",
+   "label": "commit 214bf2d: Merge pull request #213 from Percolation-Labs/amartey/rem-307-my-saves",
+   "wave": 1,
+   "via": "term:rem 307",
+   "gold": true
+  },
+  {
+   "id": "board/cards/REM-307.md#8",
+   "label": "board/cards/REM-307.md \u203a Log",
+   "wave": 1,
+   "via": "term:rem 307",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-307.md#5",
+   "label": "board/cards/REM-307.md \u203a Scope",
+   "wave": 1,
+   "via": "term:rem 307",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "commit/214bf2dc82",
+    "label": "commit 214bf2d: Merge pull request #213 from Percolation-Labs/amartey/rem-307-my-saves",
+    "gold": true
+   },
+   {
+    "id": "board/cards/REM-307.md#4",
+    "label": "board/cards/REM-307.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-307.md#7",
+    "label": "board/cards/REM-307.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-307.md#3",
+    "label": "board/cards/REM-307.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-157.md#10",
+    "label": "board/cards/REM-157.md \u203a Log",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "board/cards/REM-307.md#4",
+    "label": "board/cards/REM-307.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "commit/214bf2dc82",
+    "label": "commit 214bf2d: Merge pull request #213 from Percolation-Labs/amartey/rem-307-my-saves",
+    "gold": true
+   },
+   {
+    "id": "board/cards/REM-307.md#7",
+    "label": "board/cards/REM-307.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-157.md#10",
+    "label": "board/cards/REM-157.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-307.md#3",
+    "label": "board/cards/REM-307.md \u203a Evidence",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/214bf2dc82",
+    "label": "commit 214bf2d: Merge pull request #213 from Percolation-Labs/amartey/rem-307-my-saves",
+    "gold": true
+   },
+   {
+    "id": "commit/fb2ecb59c4",
+    "label": "commit fb2ecb5: board: REM-307 in-progress \u2192 done",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-321.md#3",
+    "label": "board/cards/REM-321.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-307.md#3",
+    "label": "board/cards/REM-307.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-307.md#4",
+    "label": "board/cards/REM-307.md \u203a Done when",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "commit/214bf2dc82",
+    "label": "commit 214bf2d: Merge pull request #213 from Percolation-Labs/amartey/rem-307-my-saves",
+    "gold": true
+   },
+   {
+    "id": "board/cards/REM-157.md#10",
+    "label": "board/cards/REM-157.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-307.md#4",
+    "label": "board/cards/REM-307.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-307.md#7",
+    "label": "board/cards/REM-307.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "specs/research-platform/schema.sql#44",
+    "label": "specs/research-platform/schema.sql",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 1.0,
+  "Q": 1.0,
+  "LQ": 1.0,
+  "S": 1.0
+ }
+}

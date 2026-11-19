@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 442" font-family="system-ui, sans-serif" font-size="12">
+<style>.t{fill:#1d1d1f}.m{fill:#6e6e73}.e{stroke:#0a7d5a;stroke-width:2;fill:none}.k{fill:#0a7d5a;font-size:10px}</style>
+<rect width="1180" height="442" fill="#fff"/>
+<text x="20" y="28" font-size="15" font-weight="600" class="t">PR titles · misses: pr:581</text>
+<text x="20" y="50" class="m">What work went into this, and why: meta/spikes: part three&#x27;s outputs and durability run on 0.2.35?</text>
+<text x="40" y="78" font-weight="600" class="m">search’s seeds</text><text x="430" y="78" font-weight="600" class="m">connectors and walk reads</text><text x="820" y="78" font-weight="600" class="m">gold</text>
+<path class="e" d="M190,96 C310.0,96 310.0,96 430,96"/>
+<rect x="267.0" y="81.0" width="105.2" height="15" rx="3" fill="#fff" opacity=".9"/>
+<text class="k" x="270.0" y="92.0">“env beside” (4)</text>
+<path class="e" d="M970,96 C970.0,96 970.0,188 970,188"/>
+<rect x="927.0" y="127.0" width="43.2" height="15" rx="3" fill="#fff" opacity=".9"/>
+<text class="k" x="930.0" y="138.0">Beside</text>
+<path class="e" d="M970,142 C970.0,142 970.0,188 970,188"/>
+<rect x="927.0" y="150.0" width="43.2" height="15" rx="3" fill="#fff" opacity=".9"/>
+<text class="k" x="930.0" y="161.0">Beside</text>
+<path class="e" d="M970,142 C775.0,142 775.0,96 580,96"/>
+<rect x="732.0" y="104.0" width="30.8" height="15" rx="3" fill="#fff" opacity=".9"/>
+<text class="k" x="735.0" y="115.0">Near</text>
+<rect x="40" y="81" width="340" height="28" rx="6" fill="#dbe9ff" stroke="#0a7d5a" stroke-width="2"/>
+<text x="48" y="100" class="t">board/messages/M-20261029-233009-3a4a.md</text>
+<rect x="820" y="81" width="340" height="28" rx="6" fill="#f5c400" stroke="#0a7d5a" stroke-width="2"/>
+<text x="828" y="100" class="t">commit 643eeb6: Part three&#x27;s outputs as 0.2…</text>
+<rect x="820" y="127" width="340" height="28" rx="6" fill="#f5c400" stroke="#0a7d5a" stroke-width="2"/>
+<text x="828" y="146" class="t">commit e256235: Part three&#x27;s durability on …</text>
+<rect x="820" y="173" width="340" height="28" rx="6" fill="#f5c400" stroke="#0a7d5a" stroke-width="2"/>
+<text x="828" y="192" class="t">commit e5494a9: part-three captures: name p…</text>
+<rect x="430" y="81" width="340" height="28" rx="6" fill="#f2f2f4" stroke="#0a7d5a" stroke-width="2"/>
+<text x="438" y="100" class="t">meta/spikes/2026-10-29-part-three-check/dur…</text>
+<rect x="40" y="127" width="340" height="28" rx="6" fill="#dbe9ff" stroke="#c7c7cc" stroke-width="1"/>
+<text x="48" y="146" class="t">commit ed03f82: Merge pull request #581 fro…</text>
+<rect x="40" y="173" width="340" height="28" rx="6" fill="#dbe9ff" stroke="#c7c7cc" stroke-width="1"/>
+<text x="48" y="192" class="t">meta/spikes/2026-10-27-dream-walk-graphs/du…</text>
+<rect x="40" y="219" width="340" height="28" rx="6" fill="#dbe9ff" stroke="#c7c7cc" stroke-width="1"/>
+<text x="48" y="238" class="t">meta/spikes/2026-10-29-part-three-check/dur…</text>
+<rect x="40" y="265" width="340" height="28" rx="6" fill="#dbe9ff" stroke="#c7c7cc" stroke-width="1"/>
+<text x="48" y="284" class="t">meta/spikes/2026-10-29-part-three-figures/R…</text>
+<rect x="430" y="173" width="340" height="28" rx="6" fill="#f2f2f4" stroke="#c7c7cc" stroke-width="1"/>
+<text x="438" y="192" class="t">board/messages/M-20261029-231833-2369.md</text>
+<text x="768" y="192" text-anchor="end" class="m" font-size="10">walk w1</text>
+<rect x="430" y="219" width="340" height="28" rx="6" fill="#f2f2f4" stroke="#c7c7cc" stroke-width="1"/>
+<text x="438" y="238" class="t">board/messages/M-20261029-231837-2dc4.md</text>
+<text x="768" y="238" text-anchor="end" class="m" font-size="10">walk w1</text>
+<rect x="430" y="265" width="340" height="28" rx="6" fill="#f2f2f4" stroke="#c7c7cc" stroke-width="1"/>
+<text x="438" y="284" class="t">board/messages/M-20261029-232920-7feb.md</text>
+<text x="768" y="284" text-anchor="end" class="m" font-size="10">walk w1</text>
+<rect x="430" y="311" width="340" height="28" rx="6" fill="#f2f2f4" stroke="#c7c7cc" stroke-width="1"/>
+<text x="438" y="330" class="t">board/messages/M-20261029-232924-5dd1.md</text>
+<text x="768" y="330" text-anchor="end" class="m" font-size="10">walk w1</text>
+<rect x="430" y="127" width="340" height="28" rx="6" fill="#f2f2f4" stroke="#c7c7cc" stroke-width="1"/>
+<text x="438" y="146" class="t">board/messages/M-20261029-230814-b244.md</text>
+<text x="768" y="146" text-anchor="end" class="m" font-size="10">walk w1</text>
+<text x="20" y="408" class="m">Steiner cost 4 links; nearest seed 2 doors from gold; graph within 1 door of the seeds: 1,948 passages, within 2: 33,676</text>
+<text x="20" y="428" class="m">recall@5 beyond the seeds: search 0.33, U 0.00, Q 0.00, LQ 0.00. Yellow gold, blue seeds, green-edged nodes and links form the Steiner graph.</text>
+</svg>

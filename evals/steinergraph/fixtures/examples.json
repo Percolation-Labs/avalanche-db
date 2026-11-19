@@ -1,0 +1,330 @@
+{
+ "rules": {
+  "lands": "the seeds land on S: most seeds that are gold, with gold left beyond the seeds (\u22652 gold); ties to the smallest Steiner cost",
+  "misses": "the seeds miss S: nearest seed \u22652 doors from any gold (\u22652 gold); ties to the smallest Steiner cost",
+  "compact": "a compact S: \u22653 gold, none detached, the lowest Steiner cost per gold",
+  "spread": "a spread S: \u22653 gold, the largest gold-to-gold distance in doors; ties to the largest cost",
+  "learned-wins": "PR titles only: the largest LQ \u2212 Q recall@5; ties to the smallest Steiner cost"
+ },
+ "examples": [
+  {
+   "name": "cards-lands",
+   "set": "cards",
+   "rule": "the seeds land on S: most seeds that are gold, with gold left beyond the seeds (\u22652 gold); ties to the smallest Steiner cost",
+   "qid": "card:REM-83",
+   "fixture": "cards/card_REM-83.json",
+   "svg": "svg/cards-lands.svg",
+   "summary": {
+    "qid": "card:REM-83",
+    "file": "card_REM-83.json",
+    "n_gold": 6,
+    "seeds_on_gold": 4,
+    "nearest_seed_doors": 0,
+    "steiner_cost": 6,
+    "steiner_nodes": 7,
+    "detached": 0,
+    "max_gold_pair_doors": 2,
+    "recall5": {
+     "U": 0.5,
+     "Q": 0.5,
+     "LQ": 0.5,
+     "S": 0.5
+    },
+    "walk_recall": 0.0
+   }
+  },
+  {
+   "name": "cards-misses",
+   "set": "cards",
+   "rule": "the seeds miss S: nearest seed \u22652 doors from any gold (\u22652 gold); ties to the smallest Steiner cost",
+   "qid": null,
+   "note": "no test question meets the rule"
+  },
+  {
+   "name": "cards-compact",
+   "set": "cards",
+   "rule": "a compact S: \u22653 gold, none detached, the lowest Steiner cost per gold",
+   "qid": "card:REM-1217",
+   "fixture": "cards/card_REM-1217.json",
+   "svg": "svg/cards-compact.svg",
+   "summary": {
+    "qid": "card:REM-1217",
+    "file": "card_REM-1217.json",
+    "n_gold": 3,
+    "seeds_on_gold": 1,
+    "nearest_seed_doors": 0,
+    "steiner_cost": 2,
+    "steiner_nodes": 3,
+    "detached": 0,
+    "max_gold_pair_doors": 1,
+    "recall5": {
+     "U": 0.5,
+     "Q": 0.5,
+     "LQ": 0.5,
+     "S": 0.5
+    },
+    "walk_recall": 0.0
+   }
+  },
+  {
+   "name": "cards-spread",
+   "set": "cards",
+   "rule": "a spread S: \u22653 gold, the largest gold-to-gold distance in doors; ties to the largest cost",
+   "qid": "card:REM-58",
+   "fixture": "cards/card_REM-58.json",
+   "svg": "svg/cards-spread.svg",
+   "summary": {
+    "qid": "card:REM-58",
+    "file": "card_REM-58.json",
+    "n_gold": 6,
+    "seeds_on_gold": 0,
+    "nearest_seed_doors": 1,
+    "steiner_cost": 7,
+    "steiner_nodes": 8,
+    "detached": 0,
+    "max_gold_pair_doors": 2,
+    "recall5": {
+     "U": 0.0,
+     "Q": 0.16666666666666666,
+     "LQ": 0.0,
+     "S": 0.0
+    },
+    "walk_recall": 0.0
+   }
+  },
+  {
+   "name": "prs-lands",
+   "set": "prs",
+   "rule": "the seeds land on S: most seeds that are gold, with gold left beyond the seeds (\u22652 gold); ties to the smallest Steiner cost",
+   "qid": "pr:632",
+   "fixture": "prs/pr_632.json",
+   "svg": "svg/prs-lands.svg",
+   "summary": {
+    "qid": "pr:632",
+    "file": "pr_632.json",
+    "n_gold": 5,
+    "seeds_on_gold": 3,
+    "nearest_seed_doors": 0,
+    "steiner_cost": 4,
+    "steiner_nodes": 5,
+    "detached": 0,
+    "max_gold_pair_doors": 2,
+    "recall5": {
+     "U": 0.0,
+     "Q": 0.0,
+     "LQ": 0.5,
+     "S": 0.0
+    },
+    "walk_recall": 0.0
+   }
+  },
+  {
+   "name": "prs-misses",
+   "set": "prs",
+   "rule": "the seeds miss S: nearest seed \u22652 doors from any gold (\u22652 gold); ties to the smallest Steiner cost",
+   "qid": "pr:581",
+   "fixture": "prs/pr_581.json",
+   "svg": "svg/prs-misses.svg",
+   "summary": {
+    "qid": "pr:581",
+    "file": "pr_581.json",
+    "n_gold": 3,
+    "seeds_on_gold": 0,
+    "nearest_seed_doors": 2,
+    "steiner_cost": 4,
+    "steiner_nodes": 5,
+    "detached": 0,
+    "max_gold_pair_doors": 2,
+    "recall5": {
+     "U": 0.0,
+     "Q": 0.0,
+     "LQ": 0.0,
+     "S": 0.3333333333333333
+    },
+    "walk_recall": 0.0
+   }
+  },
+  {
+   "name": "prs-compact",
+   "set": "prs",
+   "rule": "a compact S: \u22653 gold, none detached, the lowest Steiner cost per gold",
+   "qid": "pr:205",
+   "fixture": "prs/pr_205.json",
+   "svg": "svg/prs-compact.svg",
+   "summary": {
+    "qid": "pr:205",
+    "file": "pr_205.json",
+    "n_gold": 3,
+    "seeds_on_gold": 1,
+    "nearest_seed_doors": 0,
+    "steiner_cost": 2,
+    "steiner_nodes": 3,
+    "detached": 0,
+    "max_gold_pair_doors": 1,
+    "recall5": {
+     "U": 0.0,
+     "Q": 0.0,
+     "LQ": 0.0,
+     "S": 0.0
+    },
+    "walk_recall": 0.0
+   }
+  },
+  {
+   "name": "prs-spread",
+   "set": "prs",
+   "rule": "a spread S: \u22653 gold, the largest gold-to-gold distance in doors; ties to the largest cost",
+   "qid": "pr:746",
+   "fixture": "prs/pr_746.json",
+   "svg": "svg/prs-spread.svg",
+   "summary": {
+    "qid": "pr:746",
+    "file": "pr_746.json",
+    "n_gold": 5,
+    "seeds_on_gold": 0,
+    "nearest_seed_doors": 1,
+    "steiner_cost": 5,
+    "steiner_nodes": 6,
+    "detached": 0,
+    "max_gold_pair_doors": 3,
+    "recall5": {
+     "U": 0.0,
+     "Q": 0.0,
+     "LQ": 0.2,
+     "S": 0.0
+    },
+    "walk_recall": 0.0
+   }
+  },
+  {
+   "name": "prs-learned-wins",
+   "set": "prs",
+   "rule": "PR titles only: the largest LQ \u2212 Q recall@5; ties to the smallest Steiner cost",
+   "qid": "pr:183",
+   "fixture": "prs/pr_183.json",
+   "svg": "svg/prs-learned-wins.svg",
+   "summary": {
+    "qid": "pr:183",
+    "file": "pr_183.json",
+    "n_gold": 2,
+    "seeds_on_gold": 1,
+    "nearest_seed_doors": 0,
+    "steiner_cost": 1,
+    "steiner_nodes": 2,
+    "detached": 0,
+    "max_gold_pair_doors": 1,
+    "recall5": {
+     "U": 0.0,
+     "Q": 0.0,
+     "LQ": 1.0,
+     "S": 0.0
+    },
+    "walk_recall": 0.0
+   }
+  },
+  {
+   "name": "mq-lands",
+   "set": "mq",
+   "rule": "the seeds land on S: most seeds that are gold, with gold left beyond the seeds (\u22652 gold); ties to the smallest Steiner cost",
+   "qid": "RW:3hop1__102461_24918_24991",
+   "fixture": "mq/RW_3hop1__102461_24918_24991.json",
+   "svg": "svg/mq-lands.svg",
+   "summary": {
+    "qid": "RW:3hop1__102461_24918_24991",
+    "file": "RW_3hop1__102461_24918_24991.json",
+    "n_gold": 3,
+    "seeds_on_gold": 2,
+    "nearest_seed_doors": 0,
+    "steiner_cost": 2,
+    "steiner_nodes": 3,
+    "detached": 0,
+    "max_gold_pair_doors": 2,
+    "recall5": {
+     "U": 0.0,
+     "Q": 0.0,
+     "LQ": 0.0,
+     "S": 0.0
+    },
+    "walk_recall": 0.0
+   }
+  },
+  {
+   "name": "mq-misses",
+   "set": "mq",
+   "rule": "the seeds miss S: nearest seed \u22652 doors from any gold (\u22652 gold); ties to the smallest Steiner cost",
+   "qid": "RW:2hop__35209_17335",
+   "fixture": "mq/RW_2hop__35209_17335.json",
+   "svg": "svg/mq-misses.svg",
+   "summary": {
+    "qid": "RW:2hop__35209_17335",
+    "file": "RW_2hop__35209_17335.json",
+    "n_gold": 2,
+    "seeds_on_gold": 0,
+    "nearest_seed_doors": 2,
+    "steiner_cost": 3,
+    "steiner_nodes": 4,
+    "detached": 0,
+    "max_gold_pair_doors": 1,
+    "recall5": {
+     "U": 0.0,
+     "Q": 0.0,
+     "LQ": 0.0,
+     "S": 0.0
+    },
+    "walk_recall": 0.0
+   }
+  },
+  {
+   "name": "mq-compact",
+   "set": "mq",
+   "rule": "a compact S: \u22653 gold, none detached, the lowest Steiner cost per gold",
+   "qid": "RW:3hop1__102461_24918_24991",
+   "fixture": "mq/RW_3hop1__102461_24918_24991.json",
+   "svg": "svg/mq-compact.svg",
+   "summary": {
+    "qid": "RW:3hop1__102461_24918_24991",
+    "file": "RW_3hop1__102461_24918_24991.json",
+    "n_gold": 3,
+    "seeds_on_gold": 2,
+    "nearest_seed_doors": 0,
+    "steiner_cost": 2,
+    "steiner_nodes": 3,
+    "detached": 0,
+    "max_gold_pair_doors": 2,
+    "recall5": {
+     "U": 0.0,
+     "Q": 0.0,
+     "LQ": 0.0,
+     "S": 0.0
+    },
+    "walk_recall": 0.0
+   }
+  },
+  {
+   "name": "mq-spread",
+   "set": "mq",
+   "rule": "a spread S: \u22653 gold, the largest gold-to-gold distance in doors; ties to the largest cost",
+   "qid": "RW:4hop1__58323_375563_161848_20546",
+   "fixture": "mq/RW_4hop1__58323_375563_161848_20546.json",
+   "svg": "svg/mq-spread.svg",
+   "summary": {
+    "qid": "RW:4hop1__58323_375563_161848_20546",
+    "file": "RW_4hop1__58323_375563_161848_20546.json",
+    "n_gold": 4,
+    "seeds_on_gold": 0,
+    "nearest_seed_doors": 1,
+    "steiner_cost": 6,
+    "steiner_nodes": 7,
+    "detached": 0,
+    "max_gold_pair_doors": 3,
+    "recall5": {
+     "U": 0.25,
+     "Q": 0.25,
+     "LQ": 0.25,
+     "S": 0.25
+    },
+    "walk_recall": 0.5
+   }
+  }
+ ]
+}

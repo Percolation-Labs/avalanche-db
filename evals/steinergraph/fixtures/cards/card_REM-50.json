@@ -1,0 +1,405 @@
+{
+ "qid": "card:REM-50",
+ "set": "cards",
+ "question": "What was done about this, and why: extension: a database at any released version upgrades to 0.2.0?",
+ "gold": [
+  {
+   "id": "commit/cff8674647",
+   "label": "commit cff8674: Any signed-in user could become any other by rewriting their own claims",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "board/cards/REM-50.md#1",
+   "label": "board/cards/REM-50.md",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "meta/skills/board/SKILL.md#12",
+   "label": "meta/skills/board/SKILL.md \u203a Releases ride the train",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "meta/probes/2026-09-19-application-core-compatibility.md#6",
+   "label": "meta/probes/2026-09-19-application-core-compatibility.md \u203a Final verification",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/aa73e24c41",
+   "label": "commit aa73e24: An installed percolate_parser moves to the next version in place (REM-192), extension 0.2.4",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/de347148f8",
+   "label": "commit de34714: Merge pull request #184 from Percolation-Labs/amartey/rem-192-parser-upgrades",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "board/cards/REM-50.md#1",
+    "label": "board/cards/REM-50.md",
+    "role": "seed"
+   },
+   {
+    "id": "commit/cff8674647",
+    "label": "commit cff8674: Any signed-in user could become any other by rewriting their own claims",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "board/cards/REM-50.md#1",
+    "b": "commit/cff8674647",
+    "via": [
+     {
+      "kind": "term",
+      "key": "rem 50",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "upgrades",
+      "width": 72
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [],
+  "entry": {
+   "seed": "board/cards/REM-50.md#1",
+   "gold": "commit/cff8674647",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 2067,
+  "within_2_doors": 34353,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "PACKAGING.md#10",
+    "label": "PACKAGING.md \u203a Deployment: one image, three entrypoints",
+    "p": 0.008590055383830227,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-254.md#7",
+    "label": "board/cards/REM-254.md \u203a Log",
+    "p": 0.0037860181732310896,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-192.md#1",
+    "label": "board/cards/REM-192.md",
+    "p": 0.003510509061138498,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-606.md#8",
+    "label": "board/cards/REM-606.md \u203a Log",
+    "p": 0.0026422154012728906,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261020-092446-d444.md#1",
+    "label": "board/messages/M-20261020-092446-d444.md",
+    "p": 0.002549781096033517,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261020-095044-1259.md#1",
+    "label": "board/messages/M-20261020-095044-1259.md",
+    "p": 0.0024396274758631065,
+    "gold": false
+   },
+   {
+    "id": "meta/probes/2026-09-19-core-claims-surface.md#4",
+    "label": "meta/probes/2026-09-19-core-claims-surface.md \u203a Reproduction and verification",
+    "p": 0.00231438200294043,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1042.md#4",
+    "label": "board/cards/REM-1042.md \u203a Done when",
+    "p": 0.0021441663959169245,
+    "gold": false
+   },
+   {
+    "id": "commit/9be1dd5c77",
+    "label": "commit 9be1dd5: Merge pull request #185 from Percolation-Labs/amartey/rem-235-toolchain-disk",
+    "p": 0.0020418817320056667,
+    "gold": false
+   },
+   {
+    "id": "PACKAGING.md#11",
+    "label": "PACKAGING.md \u203a Deployment: one image, three entrypoints",
+    "p": 0.00195818299885005,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-50.md#2",
+    "label": "board/cards/REM-50.md \u203a Log",
+    "p": 0.001863958012700756,
+    "gold": false
+   },
+   {
+    "id": "commit/7586c76749",
+    "label": "commit 7586c76: A research revision proves its lineage, provenance and format, and concurrent identical writes make one ",
+    "p": 0.0018241134932277816,
+    "gold": false
+   },
+   {
+    "id": "commit/e8ca4dd09c",
+    "label": "commit e8ca4dd: Main's one red gate now says why it is red",
+    "p": 0.0016182184387353831,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-192.md#2",
+    "label": "board/cards/REM-192.md \u203a Goal",
+    "p": 0.0015582027361633458,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1266.md#6",
+    "label": "board/cards/REM-1266.md \u203a Log",
+    "p": 0.0015019519312170064,
+    "gold": false
+   },
+   {
+    "id": "k8s/kind/up.sh#6",
+    "label": "k8s/kind/up.sh",
+    "p": 0.0014539271510271342,
+    "gold": false
+   },
+   {
+    "id": "meta/probes/2026-09-19-application-core-compatibility.md#2",
+    "label": "meta/probes/2026-09-19-application-core-compatibility.md \u203a Initial result and repair",
+    "p": 0.0013769521677822261,
+    "gold": false
+   },
+   {
+    "id": "commit/2c28508d78",
+    "label": "commit 2c28508: Nobody could have upgraded to 0.1.3, and the check that says so had been skipped",
+    "p": 0.0013602317864875029,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-605.md#2",
+    "label": "board/cards/REM-605.md \u203a Log",
+    "p": 0.00130198672857657,
+    "gold": false
+   },
+   {
+    "id": "commit/972b280c44",
+    "label": "commit 972b280: Merge pull request #186 from Percolation-Labs/amartey/rem-151-revision-contract",
+    "p": 0.0012840745491151117,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "board/cards/REM-50.md#1",
+   "label": "board/cards/REM-50.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/skills/board/SKILL.md#12",
+   "label": "meta/skills/board/SKILL.md \u203a Releases ride the train",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/probes/2026-09-19-application-core-compatibility.md#6",
+   "label": "meta/probes/2026-09-19-application-core-compatibility.md \u203a Final verification",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/aa73e24c41",
+   "label": "commit aa73e24: An installed percolate_parser moves to the next version in place (REM-192), extension 0.2.4",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/de347148f8",
+   "label": "commit de34714: Merge pull request #184 from Percolation-Labs/amartey/rem-192-parser-upgrades",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/0de7332b81",
+   "label": "commit 0de7332: The bump deleted the old script and left the path that still pointed at it",
+   "wave": 1,
+   "via": "term:alter extension",
+   "gold": false
+  },
+  {
+   "id": "meta/postmortems/2026-09-08-the-pin-that-moved-nothing.md#4",
+   "label": "meta/postmortems/2026-09-08-the-pin-that-moved-nothing.md \u203a 3. What was done",
+   "wave": 1,
+   "via": "term:alter extension",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-655.md#39",
+   "label": "board/cards/REM-655.md \u203a Log",
+   "wave": 1,
+   "via": "term:alter extension",
+   "gold": false
+  },
+  {
+   "id": "board/messages/M-20261026-120832-adb8.md#1",
+   "label": "board/messages/M-20261026-120832-adb8.md",
+   "wave": 1,
+   "via": "term:alter extension",
+   "gold": false
+  },
+  {
+   "id": "scenarios/evals/J3-the-second-year.md#8",
+   "label": "scenarios/evals/J3-the-second-year.md \u203a Act 2 \u2014 `alter extension percolate update`",
+   "wave": 1,
+   "via": "term:alter extension",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "PACKAGING.md#10",
+    "label": "PACKAGING.md \u203a Deployment: one image, three entrypoints",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-254.md#7",
+    "label": "board/cards/REM-254.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-192.md#1",
+    "label": "board/cards/REM-192.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-606.md#8",
+    "label": "board/cards/REM-606.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261020-092446-d444.md#1",
+    "label": "board/messages/M-20261020-092446-d444.md",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "PACKAGING.md#10",
+    "label": "PACKAGING.md \u203a Deployment: one image, three entrypoints",
+    "gold": false
+   },
+   {
+    "id": "meta/probes/2026-09-19-core-claims-surface.md#4",
+    "label": "meta/probes/2026-09-19-core-claims-surface.md \u203a Reproduction and verification",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-606.md#8",
+    "label": "board/cards/REM-606.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "PACKAGING.md#11",
+    "label": "PACKAGING.md \u203a Deployment: one image, three entrypoints",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-254.md#7",
+    "label": "board/cards/REM-254.md \u203a Log",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/075fc21671",
+    "label": "commit 075fc21: Preserve development database upgrades and reconcile concurrent access work",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-192.md#1",
+    "label": "board/cards/REM-192.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-873.md#5",
+    "label": "board/cards/REM-873.md \u203a Scope",
+    "gold": false
+   },
+   {
+    "id": "commit/1b0e2a434d",
+    "label": "commit 1b0e2a4: Merge remote-tracking branch 'origin/main' into fix/rem-68-vocabulary-reaches-upgrades",
+    "gold": false
+   },
+   {
+    "id": "commit/3e0dbe007a",
+    "label": "commit 3e0dbe0: Merge remote-tracking branch 'origin/main' into fix/rem-68-vocabulary-reaches-upgrades",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "board/messages/M-20261108-151241-7e87.md#1",
+    "label": "board/messages/M-20261108-151241-7e87.md",
+    "gold": false
+   },
+   {
+    "id": "PACKAGING.md#10",
+    "label": "PACKAGING.md \u203a Deployment: one image, three entrypoints",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-979.md#4",
+    "label": "board/cards/REM-979.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "PACKAGING.md#9",
+    "label": "PACKAGING.md \u203a Deployment: one image, three entrypoints",
+    "gold": false
+   },
+   {
+    "id": "dev/ci-database.sh#7",
+    "label": "dev/ci-database.sh",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

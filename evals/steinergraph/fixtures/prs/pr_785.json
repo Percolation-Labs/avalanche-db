@@ -1,0 +1,415 @@
+{
+ "qid": "pr:785",
+ "set": "prs",
+ "question": "What work went into this, and why: Jev doors + search targets on new questions: +.11 over search on new HELD-OUT, half #780's ($0.94)?",
+ "gold": [
+  {
+   "id": "commit/86c0679a4a",
+   "label": "commit 86c0679: Jev doors + search targets on 158 new questions: +.11 over search at 100 reads on new HELD-OUT, half #78",
+   "seed": true
+  },
+  {
+   "id": "commit/b313a6a83d",
+   "label": "commit b313a6a: Jev doors + search targets on fixture-musique-200's new questions: registration, before any live call",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/86c0679a4a",
+   "label": "commit 86c0679: Jev doors + search targets on 158 new questions: +.11 over search at 100 reads on new HELD-OUT, half #78",
+   "rank": 1,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "commit/8204d3c6d9",
+   "label": "commit 8204d3c: Merge pull request #785 from Percolation-Labs/james/jev-search-targets-200",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "meta/lab/results/jev-search-targets-200/RESULT.md#6",
+   "label": "meta/lab/results/jev-search-targets-200/RESULT.md \u203a Result",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/66389e3658",
+   "label": "commit 66389e3: Jev doors + search-order targets: HELD-OUT +.21 over search and +.15 over Jev A1 at 100 reads ($0.93)",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "meta/lab/results/jev-search-targets-200/RESULT.md#1",
+   "label": "meta/lab/results/jev-search-targets-200/RESULT.md \u203a Jev's doors, search's targets, on new questions (16 Nov, james)",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/86c0679a4a",
+    "label": "commit 86c0679: Jev doors + search targets on 158 new questions: +.11 over search at 100 reads on new HELD-OUT, half #78",
+    "role": "gold"
+   },
+   {
+    "id": "commit/b313a6a83d",
+    "label": "commit b313a6a: Jev doors + search targets on fixture-musique-200's new questions: registration, before any live call",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/86c0679a4a",
+    "b": "commit/b313a6a83d",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "doors search",
+      "width": 21
+     },
+     {
+      "kind": "term",
+      "key": "search targets",
+      "width": 56
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "commit/86c0679a4a",
+   "gold": "commit/86c0679a4a",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 370,
+  "within_2_doors": 23692,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "commit/d43367514d",
+    "label": "commit d433675: Jev doors + search-order targets, live to 200 reads: registration, before any live call (cap $0.98, 42 q",
+    "p": 0.010012396659831009,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-search-targets-200/RESULT.md#2",
+    "label": "meta/lab/results/jev-search-targets-200/RESULT.md \u203a 780 (`jev-search-targets/`) found that with Jev ranking the doors an",
+    "p": 0.009635851681061233,
+    "gold": false
+   },
+   {
+    "id": "commit/b313a6a83d",
+    "label": "commit b313a6a: Jev doors + search targets on fixture-musique-200's new questions: registration, before any live call",
+    "p": 0.00918588561484662,
+    "gold": true
+   },
+   {
+    "id": "meta/lab/results/jev-search-targets-200/RESULT.md#5",
+    "label": "meta/lab/results/jev-search-targets-200/RESULT.md \u203a Step 2, live: Jev doors + search-order targets, on the 40 sampled qu",
+    "p": 0.006779425029403857,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-search-targets/drive.py#1",
+    "label": "meta/lab/results/jev-search-targets/drive.py",
+    "p": 0.005199274752941698,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-search-targets-200/drive.py#1",
+    "label": "meta/lab/results/jev-search-targets-200/drive.py",
+    "p": 0.005189851051040535,
+    "gold": false
+   },
+   {
+    "id": "commit/115973fe07",
+    "label": "commit 115973f: Merge pull request #780 from Percolation-Labs/james/jev-search-targets",
+    "p": 0.004977781458317636,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-search-targets/RESULT.md#4",
+    "label": "meta/lab/results/jev-search-targets/RESULT.md \u203a Result",
+    "p": 0.004768635727768077,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261116-203345-8b84.md#1",
+    "label": "board/messages/M-20261116-203345-8b84.md",
+    "p": 0.004745501819161283,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-search-targets/score.py#1",
+    "label": "meta/lab/results/jev-search-targets/score.py",
+    "p": 0.004352973949878194,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-search-targets-200/score.py#2",
+    "label": "meta/lab/results/jev-search-targets-200/score.py",
+    "p": 0.003195550157772109,
+    "gold": false
+   },
+   {
+    "id": "commit/ec651c8dd1",
+    "label": "commit ec651c8: board: james messages sirsh",
+    "p": 0.003118909162697631,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-search-targets/RESULT.md#1",
+    "label": "meta/lab/results/jev-search-targets/RESULT.md \u203a Jev's doors, search's targets, live to 200 reads (16 Nov, james)",
+    "p": 0.0029683237253471926,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-search-targets-200/RESULT.md#7",
+    "label": "meta/lab/results/jev-search-targets-200/RESULT.md \u203a 780's +.205, and so is the room: the oracle's own gain over search o",
+    "p": 0.002915875386624319,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261116-192836-080c.md#1",
+    "label": "board/messages/M-20261116-192836-080c.md",
+    "p": 0.0027962747199431564,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261116-182343-6d50.md#1",
+    "label": "board/messages/M-20261116-182343-6d50.md",
+    "p": 0.0027636052420964897,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-search-targets-200/score-result.txt#2",
+    "label": "meta/lab/results/jev-search-targets-200/score-result.txt",
+    "p": 0.0027122354485974703,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261116-193557-2db5.md#1",
+    "label": "board/messages/M-20261116-193557-2db5.md",
+    "p": 0.002607359044660602,
+    "gold": false
+   },
+   {
+    "id": "commit/7bb969273e",
+    "label": "commit 7bb9692: board: board-watch messages all",
+    "p": 0.00253980868501068,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-search-targets-200/RESULT.md#9",
+    "label": "meta/lab/results/jev-search-targets-200/RESULT.md \u203a Postmortem",
+    "p": 0.002461456417031718,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/86c0679a4a",
+   "label": "commit 86c0679: Jev doors + search targets on 158 new questions: +.11 over search at 100 reads on new HELD-OUT, half #78",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "commit/8204d3c6d9",
+   "label": "commit 8204d3c: Merge pull request #785 from Percolation-Labs/james/jev-search-targets-200",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/jev-search-targets-200/RESULT.md#6",
+   "label": "meta/lab/results/jev-search-targets-200/RESULT.md \u203a Result",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/66389e3658",
+   "label": "commit 66389e3: Jev doors + search-order targets: HELD-OUT +.21 over search and +.15 over Jev A1 at 100 reads ($0.93)",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/jev-search-targets-200/RESULT.md#1",
+   "label": "meta/lab/results/jev-search-targets-200/RESULT.md \u203a Jev's doors, search's targets, on new questions (16 Nov, james)",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/jev-search-targets/drive.py#4",
+   "label": "meta/lab/results/jev-search-targets/drive.py",
+   "wave": 1,
+   "via": "term:jev search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/ranking-eval/pages10-score-result.txt#4",
+   "label": "meta/lab/results/ranking-eval/pages10-score-result.txt",
+   "wave": 1,
+   "via": "term:jev search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/ranking-eval/pages10-score-result.txt#18",
+   "label": "meta/lab/results/ranking-eval/pages10-score-result.txt",
+   "wave": 1,
+   "via": "term:jev search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/jev-search-targets/RESULT.md#1",
+   "label": "meta/lab/results/jev-search-targets/RESULT.md \u203a Jev's doors, search's targets, live to 200 reads (16 Nov, james)",
+   "wave": 1,
+   "via": "term:jev search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/jev-search-targets/drive.py#6",
+   "label": "meta/lab/results/jev-search-targets/drive.py",
+   "wave": 1,
+   "via": "term:jev search",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "commit/d43367514d",
+    "label": "commit d433675: Jev doors + search-order targets, live to 200 reads: registration, before any live call (cap $0.98, 42 q",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-search-targets-200/RESULT.md#2",
+    "label": "meta/lab/results/jev-search-targets-200/RESULT.md \u203a 780 (`jev-search-targets/`) found that with Jev ranking the doors an",
+    "gold": false
+   },
+   {
+    "id": "commit/b313a6a83d",
+    "label": "commit b313a6a: Jev doors + search targets on fixture-musique-200's new questions: registration, before any live call",
+    "gold": true
+   },
+   {
+    "id": "meta/lab/results/jev-search-targets-200/RESULT.md#5",
+    "label": "meta/lab/results/jev-search-targets-200/RESULT.md \u203a Step 2, live: Jev doors + search-order targets, on the 40 sampled qu",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-search-targets/drive.py#1",
+    "label": "meta/lab/results/jev-search-targets/drive.py",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "meta/lab/results/jev-search-targets-200/RESULT.md#2",
+    "label": "meta/lab/results/jev-search-targets-200/RESULT.md \u203a 780 (`jev-search-targets/`) found that with Jev ranking the doors an",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-search-targets-200/RESULT.md#5",
+    "label": "meta/lab/results/jev-search-targets-200/RESULT.md \u203a Step 2, live: Jev doors + search-order targets, on the 40 sampled qu",
+    "gold": false
+   },
+   {
+    "id": "commit/d43367514d",
+    "label": "commit d433675: Jev doors + search-order targets, live to 200 reads: registration, before any live call (cap $0.98, 42 q",
+    "gold": false
+   },
+   {
+    "id": "commit/b313a6a83d",
+    "label": "commit b313a6a: Jev doors + search targets on fixture-musique-200's new questions: registration, before any live call",
+    "gold": true
+   },
+   {
+    "id": "board/messages/M-20261116-203345-8b84.md#1",
+    "label": "board/messages/M-20261116-203345-8b84.md",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/b313a6a83d",
+    "label": "commit b313a6a: Jev doors + search targets on fixture-musique-200's new questions: registration, before any live call",
+    "gold": true
+   },
+   {
+    "id": "meta/lab/results/jev-search-targets-200/RESULT.md#2",
+    "label": "meta/lab/results/jev-search-targets-200/RESULT.md \u203a 780 (`jev-search-targets/`) found that with Jev ranking the doors an",
+    "gold": false
+   },
+   {
+    "id": "commit/d43367514d",
+    "label": "commit d433675: Jev doors + search-order targets, live to 200 reads: registration, before any live call (cap $0.98, 42 q",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-search-targets-200/RESULT.md#7",
+    "label": "meta/lab/results/jev-search-targets-200/RESULT.md \u203a 780's +.205, and so is the room: the oracle's own gain over search o",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-search-targets/RESULT.md#4",
+    "label": "meta/lab/results/jev-search-targets/RESULT.md \u203a Result",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "meta/lab/results/jev-search-targets-200/RESULT.md#8",
+    "label": "meta/lab/results/jev-search-targets-200/RESULT.md \u203a 780's HELD-OUT), so there is less for any walk to win. Search-order ",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-search-targets-200/RESULT.md#2",
+    "label": "meta/lab/results/jev-search-targets-200/RESULT.md \u203a 780 (`jev-search-targets/`) found that with Jev ranking the doors an",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-search-targets-200/RESULT.md#4",
+    "label": "meta/lab/results/jev-search-targets-200/RESULT.md \u203a Step 1, $0: the setup check, on all 158 new questions",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/target-rank/RESULT.md#5",
+    "label": "meta/lab/results/target-rank/RESULT.md \u203a Result",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261116-203345-8b84.md#1",
+    "label": "board/messages/M-20261116-203345-8b84.md",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 1.0,
+  "Q": 1.0,
+  "LQ": 1.0,
+  "S": 0.0
+ }
+}

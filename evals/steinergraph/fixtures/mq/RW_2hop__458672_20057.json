@@ -1,0 +1,412 @@
+{
+ "qid": "RW:2hop__458672_20057",
+ "set": "mq",
+ "question": "Who started the foundation that developed the Free Software Directory?",
+ "gold": [
+  {
+   "id": "mq:63dd4c096c909b42",
+   "label": "Intellectual property",
+   "seed": false
+  },
+  {
+   "id": "mq:d54f3717754f84ec",
+   "label": "Free Software Directory",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:d54f3717754f84ec",
+   "label": "Free Software Directory",
+   "rank": 1,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:cbc28cd620100b4f",
+   "label": "Jonas \u00d6berg",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:2d7e790e964f803d",
+   "label": "Richard Stallman",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:7ac856a97fca6f87",
+   "label": "The Free Software Definition",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:afcd248bc6597acc",
+   "label": "Robert J. Chassell",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:63dd4c096c909b42",
+    "label": "Intellectual property",
+    "role": "gold"
+   },
+   {
+    "id": "mq:d54f3717754f84ec",
+    "label": "Free Software Directory",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:63dd4c096c909b42",
+    "b": "mq:d54f3717754f84ec",
+    "via": [
+     {
+      "kind": "term",
+      "key": "software foundation",
+      "width": 11
+     },
+     {
+      "kind": "term",
+      "key": "free software",
+      "width": 33
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "mq:d54f3717754f84ec",
+   "gold": "mq:d54f3717754f84ec",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 1916,
+  "within_2_doors": 19133,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "mq:531db05340e6eeb1",
+    "label": "GNU/Linux naming controversy",
+    "p": 0.005944809235267632,
+    "gold": false
+   },
+   {
+    "id": "mq:4952f4ac2b57750e",
+    "label": "GNU Free Documentation License",
+    "p": 0.005299529803260034,
+    "gold": false
+   },
+   {
+    "id": "mq:a71dceb9140c5033",
+    "label": "GNU Manifesto",
+    "p": 0.003680998031739674,
+    "gold": false
+   },
+   {
+    "id": "mq:c4fa65bd50d4bfb2",
+    "label": "GNU IceCat",
+    "p": 0.00276260013056297,
+    "gold": false
+   },
+   {
+    "id": "mq:306d3bdcd214a560",
+    "label": "David Daube",
+    "p": 0.002270631788660484,
+    "gold": false
+   },
+   {
+    "id": "mq:63dd4c096c909b42",
+    "label": "Intellectual property",
+    "p": 0.0021537563099985457,
+    "gold": true
+   },
+   {
+    "id": "mq:4db2ddd4aed0aa5c",
+    "label": "Burt Henry Covered Bridge",
+    "p": 0.0020144142358495764,
+    "gold": false
+   },
+   {
+    "id": "mq:6078b9e8bca9e6ba",
+    "label": "PyQt",
+    "p": 0.0017391293613081792,
+    "gold": false
+   },
+   {
+    "id": "mq:f88210f024a3bd5a",
+    "label": "Bob Shad",
+    "p": 0.0016136186910410725,
+    "gold": false
+   },
+   {
+    "id": "mq:bb1939bf6e202775",
+    "label": "Preterm birth",
+    "p": 0.0016119842838104095,
+    "gold": false
+   },
+   {
+    "id": "mq:dce5bae94e0ea39d",
+    "label": "Texinfo",
+    "p": 0.0015415063821172359,
+    "gold": false
+   },
+   {
+    "id": "mq:93d29f06c7d945c5",
+    "label": "Sodipodi",
+    "p": 0.0015101928216720631,
+    "gold": false
+   },
+   {
+    "id": "mq:1359712705951613",
+    "label": "XWiki",
+    "p": 0.0014246543441603363,
+    "gold": false
+   },
+   {
+    "id": "mq:b96245e11573863a",
+    "label": "GNOME",
+    "p": 0.0014244902629485952,
+    "gold": false
+   },
+   {
+    "id": "mq:e631e71149247d38",
+    "label": "K9Copy",
+    "p": 0.0013819606303832695,
+    "gold": false
+   },
+   {
+    "id": "mq:1b35e1a393ebc901",
+    "label": "PlayStation 3",
+    "p": 0.0013558297462554958,
+    "gold": false
+   },
+   {
+    "id": "mq:fd5bf07353fa0da5",
+    "label": "Unix shell",
+    "p": 0.0012835925376482428,
+    "gold": false
+   },
+   {
+    "id": "mq:9fbeeea3a410d65a",
+    "label": "FontForge",
+    "p": 0.0012418741479655203,
+    "gold": false
+   },
+   {
+    "id": "mq:95681b3624400e64",
+    "label": "GNU Paint",
+    "p": 0.0012384157001521907,
+    "gold": false
+   },
+   {
+    "id": "mq:362bdd3b669b8186",
+    "label": "GNU arch",
+    "p": 0.001207351917241853,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:d54f3717754f84ec",
+   "label": "Free Software Directory",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:cbc28cd620100b4f",
+   "label": "Jonas \u00d6berg",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:2d7e790e964f803d",
+   "label": "Richard Stallman",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:7ac856a97fca6f87",
+   "label": "The Free Software Definition",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:afcd248bc6597acc",
+   "label": "Robert J. Chassell",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:3bd000609c2863bc",
+   "label": "Apache Shale",
+   "wave": 1,
+   "via": "term:software foundation",
+   "gold": false
+  },
+  {
+   "id": "mq:63dd4c096c909b42",
+   "label": "Intellectual property",
+   "wave": 1,
+   "via": "term:software foundation",
+   "gold": true
+  },
+  {
+   "id": "mq:dc5510e1b56844f7",
+   "label": "Defective by Design",
+   "wave": 1,
+   "via": "term:software foundation",
+   "gold": false
+  },
+  {
+   "id": "mq:f2a34e7c1c3cee4f",
+   "label": "Jython",
+   "wave": 1,
+   "via": "term:software foundation",
+   "gold": false
+  },
+  {
+   "id": "mq:4952f4ac2b57750e",
+   "label": "GNU Free Documentation License",
+   "wave": 1,
+   "via": "term:software foundation",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:531db05340e6eeb1",
+    "label": "GNU/Linux naming controversy",
+    "gold": false
+   },
+   {
+    "id": "mq:4952f4ac2b57750e",
+    "label": "GNU Free Documentation License",
+    "gold": false
+   },
+   {
+    "id": "mq:a71dceb9140c5033",
+    "label": "GNU Manifesto",
+    "gold": false
+   },
+   {
+    "id": "mq:c4fa65bd50d4bfb2",
+    "label": "GNU IceCat",
+    "gold": false
+   },
+   {
+    "id": "mq:306d3bdcd214a560",
+    "label": "David Daube",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:531db05340e6eeb1",
+    "label": "GNU/Linux naming controversy",
+    "gold": false
+   },
+   {
+    "id": "mq:4952f4ac2b57750e",
+    "label": "GNU Free Documentation License",
+    "gold": false
+   },
+   {
+    "id": "mq:a71dceb9140c5033",
+    "label": "GNU Manifesto",
+    "gold": false
+   },
+   {
+    "id": "mq:b96245e11573863a",
+    "label": "GNOME",
+    "gold": false
+   },
+   {
+    "id": "mq:6078b9e8bca9e6ba",
+    "label": "PyQt",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:531db05340e6eeb1",
+    "label": "GNU/Linux naming controversy",
+    "gold": false
+   },
+   {
+    "id": "mq:4952f4ac2b57750e",
+    "label": "GNU Free Documentation License",
+    "gold": false
+   },
+   {
+    "id": "mq:a71dceb9140c5033",
+    "label": "GNU Manifesto",
+    "gold": false
+   },
+   {
+    "id": "mq:b96245e11573863a",
+    "label": "GNOME",
+    "gold": false
+   },
+   {
+    "id": "mq:6078b9e8bca9e6ba",
+    "label": "PyQt",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:4510aa6349eb756a",
+    "label": "EtherApe",
+    "gold": false
+   },
+   {
+    "id": "mq:93d29f06c7d945c5",
+    "label": "Sodipodi",
+    "gold": false
+   },
+   {
+    "id": "mq:b96245e11573863a",
+    "label": "GNOME",
+    "gold": false
+   },
+   {
+    "id": "mq:531db05340e6eeb1",
+    "label": "GNU/Linux naming controversy",
+    "gold": false
+   },
+   {
+    "id": "mq:088e473a1e94c798",
+    "label": "Free Software Movement of India",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

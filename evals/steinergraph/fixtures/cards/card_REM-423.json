@@ -1,0 +1,601 @@
+{
+ "qid": "card:REM-423",
+ "set": "cards",
+ "question": "What was done about this, and why: publication: a correction published by an agent reaches readers?",
+ "gold": [
+  {
+   "id": "commit/00e798a17e",
+   "label": "commit 00e798a: Trust history cannot be rewritten, and reads as of a date (REM-464, core 0.2.11)",
+   "seed": false
+  },
+  {
+   "id": "commit/537cbb0916",
+   "label": "commit 537cbb0: Move both extensions to 0.2.10 with the script that owns the version (REM-423)",
+   "seed": false
+  },
+  {
+   "id": "commit/54b8eb04e6",
+   "label": "commit 54b8eb0: The construction is checked on a diff, not a corpus (REM-438 follow-up)",
+   "seed": false
+  },
+  {
+   "id": "commit/6444a96c4b",
+   "label": "commit 6444a96: Merge pull request #233 from Percolation-Labs/amartey/rem-423-version-coherent",
+   "seed": false
+  },
+  {
+   "id": "commit/679b82f4ed",
+   "label": "commit 679b82f: Merge pull request #232 from Percolation-Labs/amartey/rem-423-move-exposure",
+   "seed": false
+  },
+  {
+   "id": "commit/6da4489c97",
+   "label": "commit 6da4489: A publication's pin moves under the grant that set it (REM-423, core 0.2.10)",
+   "seed": false
+  },
+  {
+   "id": "commit/e19bd38bff",
+   "label": "commit e19bd38: CI: a run on main is never cancelled by the next push",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/a13eca548b",
+   "label": "commit a13eca5: board: file REM-423 publication: a correction published by an agent reaches readers",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-423.md#1",
+   "label": "board/cards/REM-423.md",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-423.md#2",
+   "label": "board/cards/REM-423.md \u203a Goal",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-187.md#4",
+   "label": "board/cards/REM-187.md \u203a Done when",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "board/cards/REM-446.md#4",
+   "label": "board/cards/REM-446.md \u203a Done when",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 2
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/00e798a17e",
+    "label": "commit 00e798a: Trust history cannot be rewritten, and reads as of a date (REM-464, core 0.2.11)",
+    "role": "gold"
+   },
+   {
+    "id": "commit/537cbb0916",
+    "label": "commit 537cbb0: Move both extensions to 0.2.10 with the script that owns the version (REM-423)",
+    "role": "gold"
+   },
+   {
+    "id": "commit/54b8eb04e6",
+    "label": "commit 54b8eb0: The construction is checked on a diff, not a corpus (REM-438 follow-up)",
+    "role": "gold"
+   },
+   {
+    "id": "commit/6444a96c4b",
+    "label": "commit 6444a96: Merge pull request #233 from Percolation-Labs/amartey/rem-423-version-coherent",
+    "role": "gold"
+   },
+   {
+    "id": "commit/679b82f4ed",
+    "label": "commit 679b82f: Merge pull request #232 from Percolation-Labs/amartey/rem-423-move-exposure",
+    "role": "gold"
+   },
+   {
+    "id": "commit/6da4489c97",
+    "label": "commit 6da4489: A publication's pin moves under the grant that set it (REM-423, core 0.2.10)",
+    "role": "gold"
+   },
+   {
+    "id": "commit/a13eca548b",
+    "label": "commit a13eca5: board: file REM-423 publication: a correction published by an agent reaches readers",
+    "role": "seed"
+   },
+   {
+    "id": "commit/e19bd38bff",
+    "label": "commit e19bd38: CI: a run on main is never cancelled by the next push",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/00e798a17e",
+    "b": "commit/6da4489c97",
+    "via": [
+     {
+      "kind": "term",
+      "key": "move_publication_exposure",
+      "width": 8
+     },
+     {
+      "kind": "term",
+      "key": "rem 423",
+      "width": 22
+     },
+     {
+      "kind": "term",
+      "key": "tests run",
+      "width": 66
+     }
+    ]
+   },
+   {
+    "a": "commit/00e798a17e",
+    "b": "commit/a13eca548b",
+    "via": [
+     {
+      "kind": "term",
+      "key": "rem 423",
+      "width": 22
+     }
+    ]
+   },
+   {
+    "a": "commit/00e798a17e",
+    "b": "commit/e19bd38bff",
+    "via": [
+     {
+      "kind": "term",
+      "key": "move_publication_exposure",
+      "width": 8
+     },
+     {
+      "kind": "term",
+      "key": "rem 423",
+      "width": 22
+     },
+     {
+      "kind": "term",
+      "key": "undeclared",
+      "width": 39
+     },
+     {
+      "kind": "term",
+      "key": "database job",
+      "width": 87
+     }
+    ]
+   },
+   {
+    "a": "commit/537cbb0916",
+    "b": "commit/6444a96c4b",
+    "via": [
+     {
+      "kind": "term",
+      "key": "version rem",
+      "width": 4
+     },
+     {
+      "kind": "term",
+      "key": "rem 423",
+      "width": 22
+     },
+     {
+      "kind": "term",
+      "key": "extensions",
+      "width": 98
+     }
+    ]
+   },
+   {
+    "a": "commit/537cbb0916",
+    "b": "commit/6da4489c97",
+    "via": [
+     {
+      "kind": "term",
+      "key": "move_publication_exposure",
+      "width": 8
+     },
+     {
+      "kind": "term",
+      "key": "rem 423",
+      "width": 22
+     },
+     {
+      "kind": "term",
+      "key": "gate dev",
+      "width": 32
+     }
+    ]
+   },
+   {
+    "a": "commit/54b8eb04e6",
+    "b": "commit/6444a96c4b",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "rem 423",
+      "width": 22
+     }
+    ]
+   },
+   {
+    "a": "commit/679b82f4ed",
+    "b": "commit/6da4489c97",
+    "via": [
+     {
+      "kind": "term",
+      "key": "pin moves",
+      "width": 7
+     },
+     {
+      "kind": "term",
+      "key": "rem 423",
+      "width": 22
+     }
+    ]
+   }
+  ],
+  "cost": 7,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  "entry": {
+   "seed": "commit/a13eca548b",
+   "gold": "commit/00e798a17e",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 1026,
+  "within_2_doors": 32961,
+  "gold_within_1": 7,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "board/cards/REM-421.md#6",
+    "label": "board/cards/REM-421.md \u203a Log",
+    "p": 0.006224297975479327,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-423.md#3",
+    "label": "board/cards/REM-423.md \u203a Evidence",
+    "p": 0.0037194459837673263,
+    "gold": false
+   },
+   {
+    "id": "commit/79e7a87bbb",
+    "label": "commit 79e7a87: board: file REM-424 web: the blog phone preview is deleted, or a route shows it again",
+    "p": 0.0035647701201492513,
+    "gold": false
+   },
+   {
+    "id": "commit/aa8a53a86d",
+    "label": "commit aa8a53a: board: scratch-2026-09-16-29daf2-f5 takes REM-421",
+    "p": 0.003546964265777277,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/authoring-and-publication.md#18",
+    "label": "specs/percolate-application/authoring-and-publication.md \u203a 7. A5 \u2014 Prove the full browser and agent authoring path on co",
+    "p": 0.003159272556551568,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-871.md#6",
+    "label": "board/cards/REM-871.md \u203a Log",
+    "p": 0.0030226356630990276,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-320.md#1",
+    "label": "board/cards/REM-320.md",
+    "p": 0.0026800729661118276,
+    "gold": false
+   },
+   {
+    "id": "commit/d213aacb69",
+    "label": "commit d213aac: board: file REM-320 mcp: an agent reaches all of Percolate through the fewest tools",
+    "p": 0.002554440940918973,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-871.md#1",
+    "label": "board/cards/REM-871.md",
+    "p": 0.00247580194204101,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-08-the-pin-that-moved-nothing.md#2",
+    "label": "meta/postmortems/2026-09-08-the-pin-that-moved-nothing.md \u203a 1. What happened",
+    "p": 0.0024146479321443363,
+    "gold": false
+   },
+   {
+    "id": "specs/agentic/declarations.md#1",
+    "label": "specs/agentic/declarations.md \u203a Declarations \u2014 tools an agent uses to say what it is doing",
+    "p": 0.002380812666394287,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-322.md#7",
+    "label": "board/cards/REM-322.md \u203a Log",
+    "p": 0.0022312409917633353,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1127.md#1",
+    "label": "board/cards/REM-1127.md",
+    "p": 0.0022298692852154452,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/experience.md#18",
+    "label": "specs/percolate-application/experience.md \u203a Quality checks",
+    "p": 0.002223195723735783,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1139.md#1",
+    "label": "board/cards/REM-1139.md",
+    "p": 0.0021871501020399734,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1305.md#2",
+    "label": "board/cards/REM-1305.md \u203a Log",
+    "p": 0.002124078561236974,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-446.md#2",
+    "label": "board/cards/REM-446.md \u203a Goal",
+    "p": 0.002076530624088882,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1324.md#2",
+    "label": "board/cards/REM-1324.md \u203a Log",
+    "p": 0.002064660091997475,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-19-a-known-red-pin-blocked-the-design-release.md#4",
+    "label": "meta/postmortems/2026-09-19-a-known-red-pin-blocked-the-design-release.md \u203a Fix and gate",
+    "p": 0.0020426051397112576,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-428.md#2",
+    "label": "board/cards/REM-428.md \u203a Goal",
+    "p": 0.0020351942767434165,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/a13eca548b",
+   "label": "commit a13eca5: board: file REM-423 publication: a correction published by an agent reaches readers",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-423.md#1",
+   "label": "board/cards/REM-423.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-423.md#2",
+   "label": "board/cards/REM-423.md \u203a Goal",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-187.md#4",
+   "label": "board/cards/REM-187.md \u203a Done when",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-446.md#4",
+   "label": "board/cards/REM-446.md \u203a Done when",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-439.md#6",
+   "label": "board/cards/REM-439.md \u203a Links",
+   "wave": 1,
+   "via": "term:rem 423",
+   "gold": false
+  },
+  {
+   "id": "commit/679b82f4ed",
+   "label": "commit 679b82f: Merge pull request #232 from Percolation-Labs/amartey/rem-423-move-exposure",
+   "wave": 1,
+   "via": "term:rem 423",
+   "gold": true
+  },
+  {
+   "id": "commit/6444a96c4b",
+   "label": "commit 6444a96: Merge pull request #233 from Percolation-Labs/amartey/rem-423-version-coherent",
+   "wave": 1,
+   "via": "term:rem 423",
+   "gold": true
+  },
+  {
+   "id": "commit/c2b395edbf",
+   "label": "commit c2b395e: board: REM-423 todo \u2192 done",
+   "wave": 1,
+   "via": "term:rem 423",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-423.md#4",
+   "label": "board/cards/REM-423.md \u203a Done when",
+   "wave": 1,
+   "via": "term:rem 423",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "board/cards/REM-421.md#6",
+    "label": "board/cards/REM-421.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-423.md#3",
+    "label": "board/cards/REM-423.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "commit/79e7a87bbb",
+    "label": "commit 79e7a87: board: file REM-424 web: the blog phone preview is deleted, or a route shows it again",
+    "gold": false
+   },
+   {
+    "id": "commit/aa8a53a86d",
+    "label": "commit aa8a53a: board: scratch-2026-09-16-29daf2-f5 takes REM-421",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/authoring-and-publication.md#18",
+    "label": "specs/percolate-application/authoring-and-publication.md \u203a 7. A5 \u2014 Prove the full browser and agent authoring path on co",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "board/cards/REM-421.md#6",
+    "label": "board/cards/REM-421.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/authoring-and-publication.md#18",
+    "label": "specs/percolate-application/authoring-and-publication.md \u203a 7. A5 \u2014 Prove the full browser and agent authoring path on co",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/authoring-and-publication.md#19",
+    "label": "specs/percolate-application/authoring-and-publication.md \u203a 7. A5 \u2014 Prove the full browser and agent authoring path on co",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1324.md#2",
+    "label": "board/cards/REM-1324.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-423.md#3",
+    "label": "board/cards/REM-423.md \u203a Evidence",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/d213aacb69",
+    "label": "commit d213aac: board: file REM-320 mcp: an agent reaches all of Percolate through the fewest tools",
+    "gold": false
+   },
+   {
+    "id": "commit/679b82f4ed",
+    "label": "commit 679b82f: Merge pull request #232 from Percolation-Labs/amartey/rem-423-move-exposure",
+    "gold": true
+   },
+   {
+    "id": "board/cards/REM-428.md#2",
+    "label": "board/cards/REM-428.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "commit/c2b395edbf",
+    "label": "commit c2b395e: board: REM-423 todo \u2192 done",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-320.md#1",
+    "label": "board/cards/REM-320.md",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "board/cards/REM-670.md#3",
+    "label": "board/cards/REM-670.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-301.md#2",
+    "label": "board/cards/REM-301.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-301.md#1",
+    "label": "board/cards/REM-301.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-421.md#6",
+    "label": "board/cards/REM-421.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/agent-onboarding.md#5",
+    "label": "specs/percolate-application/agent-onboarding.md \u203a Two stages",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.14285714285714285,
+  "S": 0.0
+ }
+}

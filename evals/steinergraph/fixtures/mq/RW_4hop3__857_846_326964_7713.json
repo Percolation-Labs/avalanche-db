@@ -1,0 +1,482 @@
+{
+ "qid": "RW:4hop3__857_846_326964_7713",
+ "set": "mq",
+ "question": "How long had the city where the Yongle emperor greeted the person to whom the edict was addressed been the capitol of Yaxing Coach's headquarters location?",
+ "gold": [
+  {
+   "id": "mq:6bd6fca0c8bcc65c",
+   "label": "Sino-Tibetan relations during the Ming dynasty",
+   "seed": true
+  },
+  {
+   "id": "mq:71a0089843686c23",
+   "label": "Sino-Tibetan relations during the Ming dynasty",
+   "seed": false
+  },
+  {
+   "id": "mq:ac35e864b56ffaf3",
+   "label": "Nanjing",
+   "seed": false
+  },
+  {
+   "id": "mq:eeb0f63c60039f66",
+   "label": "Yaxing Coach",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:eeb0f63c60039f66",
+   "label": "Yaxing Coach",
+   "rank": 1,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:6bd6fca0c8bcc65c",
+   "label": "Sino-Tibetan relations during the Ming dynasty",
+   "rank": 2,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:42c4c1b7cd87520d",
+   "label": "Sino-Tibetan relations during the Ming dynasty",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:d3079c12e943ce0e",
+   "label": "Sino-Tibetan relations during the Ming dynasty",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:5526104998ece72d",
+   "label": "Nanjing",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:6bd6fca0c8bcc65c",
+    "label": "Sino-Tibetan relations during the Ming dynasty",
+    "role": "gold"
+   },
+   {
+    "id": "mq:71a0089843686c23",
+    "label": "Sino-Tibetan relations during the Ming dynasty",
+    "role": "gold"
+   },
+   {
+    "id": "mq:ac35e864b56ffaf3",
+    "label": "Nanjing",
+    "role": "gold"
+   },
+   {
+    "id": "mq:eeb0f63c60039f66",
+    "label": "Yaxing Coach",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:6bd6fca0c8bcc65c",
+    "b": "mq:71a0089843686c23",
+    "via": [
+     {
+      "kind": "near",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "karmapa",
+      "width": 10
+     },
+     {
+      "kind": "term",
+      "key": "ming court",
+      "width": 12
+     },
+     {
+      "kind": "term",
+      "key": "sino tibetan",
+      "width": 23
+     },
+     {
+      "kind": "term",
+      "key": "tibetan relations",
+      "width": 23
+     },
+     {
+      "kind": "term",
+      "key": "tibetan",
+      "width": 32
+     }
+    ]
+   },
+   {
+    "a": "mq:71a0089843686c23",
+    "b": "mq:ac35e864b56ffaf3",
+    "via": [
+     {
+      "kind": "term",
+      "key": "nanjing",
+      "width": 52
+     }
+    ]
+   },
+   {
+    "a": "mq:ac35e864b56ffaf3",
+    "b": "mq:eeb0f63c60039f66",
+    "via": [
+     {
+      "kind": "near",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "yangzhou",
+      "width": 5
+     }
+    ]
+   }
+  ],
+  "cost": 3,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   2,
+   2,
+   1,
+   2,
+   1
+  ],
+  "entry": {
+   "seed": "mq:6bd6fca0c8bcc65c",
+   "gold": "mq:6bd6fca0c8bcc65c",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 2502,
+  "within_2_doors": 18582,
+  "gold_within_1": 2,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "mq:71a0089843686c23",
+    "label": "Sino-Tibetan relations during the Ming dynasty",
+    "p": 0.005946600929391557,
+    "gold": true
+   },
+   {
+    "id": "mq:62999da1b0cae298",
+    "label": "Sino-Tibetan relations during the Ming dynasty",
+    "p": 0.005034694231480659,
+    "gold": false
+   },
+   {
+    "id": "mq:d1c413f234981fce",
+    "label": "Sino-Tibetan relations during the Ming dynasty",
+    "p": 0.0030733353271955636,
+    "gold": false
+   },
+   {
+    "id": "mq:62c8568fe1d885ba",
+    "label": "Sino-Tibetan relations during the Ming dynasty",
+    "p": 0.002768940430468124,
+    "gold": false
+   },
+   {
+    "id": "mq:667d98157e06e74b",
+    "label": "Sino-Tibetan relations during the Ming dynasty",
+    "p": 0.0026702784497477402,
+    "gold": false
+   },
+   {
+    "id": "mq:5a739ae2bc7970db",
+    "label": "Sino-Tibetan relations during the Ming dynasty",
+    "p": 0.002589017962458725,
+    "gold": false
+   },
+   {
+    "id": "mq:946ca84bb6d90efa",
+    "label": "Nanjing",
+    "p": 0.0025722575379974366,
+    "gold": false
+   },
+   {
+    "id": "mq:3632ab117e401968",
+    "label": "Sino-Tibetan relations during the Ming dynasty",
+    "p": 0.002563533320885876,
+    "gold": false
+   },
+   {
+    "id": "mq:7b1991b7739e3bf9",
+    "label": "Sino-Tibetan relations during the Ming dynasty",
+    "p": 0.0024685425070246443,
+    "gold": false
+   },
+   {
+    "id": "mq:9cd12484033b4b18",
+    "label": "Yang Meng",
+    "p": 0.0022170295571300918,
+    "gold": false
+   },
+   {
+    "id": "mq:f678029f6c8a4f65",
+    "label": "Guangling District",
+    "p": 0.0021766726166705815,
+    "gold": false
+   },
+   {
+    "id": "mq:c0f2672ab76d88bb",
+    "label": "Beaver Motorcoach Corporation",
+    "p": 0.0020522014429435577,
+    "gold": false
+   },
+   {
+    "id": "mq:42a7ebb9e1ce3c6f",
+    "label": "Nanjing",
+    "p": 0.0019073465351523765,
+    "gold": false
+   },
+   {
+    "id": "mq:3f6f7146b48d3934",
+    "label": "Sino-Tibetan relations during the Ming dynasty",
+    "p": 0.0018397932278846946,
+    "gold": false
+   },
+   {
+    "id": "mq:f7ecd46db4cd2c1e",
+    "label": "Sino-Tibetan relations during the Ming dynasty",
+    "p": 0.0015532313630069326,
+    "gold": false
+   },
+   {
+    "id": "mq:7195372abb4d32c2",
+    "label": "Sino-Tibetan relations during the Ming dynasty",
+    "p": 0.001545525494488378,
+    "gold": false
+   },
+   {
+    "id": "mq:bc93381137592efb",
+    "label": "Sino-Tibetan relations during the Ming dynasty",
+    "p": 0.0014225007501681352,
+    "gold": false
+   },
+   {
+    "id": "mq:bb8c63f78a244535",
+    "label": "Sino-Tibetan relations during the Ming dynasty",
+    "p": 0.0014071220885503311,
+    "gold": false
+   },
+   {
+    "id": "mq:065581b3fc5b2c7a",
+    "label": "Sino-Tibetan relations during the Ming dynasty",
+    "p": 0.0013546673855057178,
+    "gold": false
+   },
+   {
+    "id": "mq:020990590bbc6bec",
+    "label": "Santa Monica, California",
+    "p": 0.0013382260228566826,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:eeb0f63c60039f66",
+   "label": "Yaxing Coach",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:6bd6fca0c8bcc65c",
+   "label": "Sino-Tibetan relations during the Ming dynasty",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:42c4c1b7cd87520d",
+   "label": "Sino-Tibetan relations during the Ming dynasty",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:d3079c12e943ce0e",
+   "label": "Sino-Tibetan relations during the Ming dynasty",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:5526104998ece72d",
+   "label": "Nanjing",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:f678029f6c8a4f65",
+   "label": "Guangling District",
+   "wave": 1,
+   "via": "term:yangzhou jiangsu",
+   "gold": false
+  },
+  {
+   "id": "mq:9cd12484033b4b18",
+   "label": "Yang Meng",
+   "wave": 1,
+   "via": "term:yangzhou jiangsu",
+   "gold": false
+  },
+  {
+   "id": "mq:d1c413f234981fce",
+   "label": "Sino-Tibetan relations during the Ming dynasty",
+   "wave": 2,
+   "via": "term:ming court",
+   "gold": false
+  },
+  {
+   "id": "mq:62c8568fe1d885ba",
+   "label": "Sino-Tibetan relations during the Ming dynasty",
+   "wave": 2,
+   "via": "term:ming court",
+   "gold": false
+  },
+  {
+   "id": "mq:bc93381137592efb",
+   "label": "Sino-Tibetan relations during the Ming dynasty",
+   "wave": 2,
+   "via": "term:ming court",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:71a0089843686c23",
+    "label": "Sino-Tibetan relations during the Ming dynasty",
+    "gold": true
+   },
+   {
+    "id": "mq:62999da1b0cae298",
+    "label": "Sino-Tibetan relations during the Ming dynasty",
+    "gold": false
+   },
+   {
+    "id": "mq:d1c413f234981fce",
+    "label": "Sino-Tibetan relations during the Ming dynasty",
+    "gold": false
+   },
+   {
+    "id": "mq:62c8568fe1d885ba",
+    "label": "Sino-Tibetan relations during the Ming dynasty",
+    "gold": false
+   },
+   {
+    "id": "mq:667d98157e06e74b",
+    "label": "Sino-Tibetan relations during the Ming dynasty",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:71a0089843686c23",
+    "label": "Sino-Tibetan relations during the Ming dynasty",
+    "gold": true
+   },
+   {
+    "id": "mq:62999da1b0cae298",
+    "label": "Sino-Tibetan relations during the Ming dynasty",
+    "gold": false
+   },
+   {
+    "id": "mq:667d98157e06e74b",
+    "label": "Sino-Tibetan relations during the Ming dynasty",
+    "gold": false
+   },
+   {
+    "id": "mq:d1c413f234981fce",
+    "label": "Sino-Tibetan relations during the Ming dynasty",
+    "gold": false
+   },
+   {
+    "id": "mq:5a739ae2bc7970db",
+    "label": "Sino-Tibetan relations during the Ming dynasty",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:71a0089843686c23",
+    "label": "Sino-Tibetan relations during the Ming dynasty",
+    "gold": true
+   },
+   {
+    "id": "mq:62999da1b0cae298",
+    "label": "Sino-Tibetan relations during the Ming dynasty",
+    "gold": false
+   },
+   {
+    "id": "mq:d1c413f234981fce",
+    "label": "Sino-Tibetan relations during the Ming dynasty",
+    "gold": false
+   },
+   {
+    "id": "mq:5a739ae2bc7970db",
+    "label": "Sino-Tibetan relations during the Ming dynasty",
+    "gold": false
+   },
+   {
+    "id": "mq:667d98157e06e74b",
+    "label": "Sino-Tibetan relations during the Ming dynasty",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:bb8c63f78a244535",
+    "label": "Sino-Tibetan relations during the Ming dynasty",
+    "gold": false
+   },
+   {
+    "id": "mq:fdbb2d1c803d319a",
+    "label": "Dave Pietramala",
+    "gold": false
+   },
+   {
+    "id": "mq:67357f36c7ebc179",
+    "label": "Headquarters of the United Nations",
+    "gold": false
+   },
+   {
+    "id": "mq:71a0089843686c23",
+    "label": "Sino-Tibetan relations during the Ming dynasty",
+    "gold": true
+   },
+   {
+    "id": "mq:bc93381137592efb",
+    "label": "Sino-Tibetan relations during the Ming dynasty",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.5,
+  "Q": 0.5,
+  "LQ": 0.5,
+  "S": 0.5
+ }
+}

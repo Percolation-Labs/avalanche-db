@@ -1,0 +1,422 @@
+{
+ "qid": "RW:2hop__167577_31122",
+ "set": "mq",
+ "question": "What century did the author of A Treatise Concerning the Principles of Human Knowledge live in?",
+ "gold": [
+  {
+   "id": "mq:41d176daaa94ba7c",
+   "label": "A Treatise Concerning the Principles of Human Knowledge",
+   "seed": true
+  },
+  {
+   "id": "mq:9495f75b62cdff8b",
+   "label": "Idealism",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:41d176daaa94ba7c",
+   "label": "A Treatise Concerning the Principles of Human Knowledge",
+   "rank": 1,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:949a0621ae3aa0d0",
+   "label": "Empiricism",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:33fe6a25b4c50012",
+   "label": "Karl Popper",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:c053f78a83d3dfba",
+   "label": "Dezallier d'Argenville",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:c1808ec728b375bb",
+   "label": "European Union law",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:41d176daaa94ba7c",
+    "label": "A Treatise Concerning the Principles of Human Knowledge",
+    "role": "gold"
+   },
+   {
+    "id": "mq:9495f75b62cdff8b",
+    "label": "Idealism",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:41d176daaa94ba7c",
+    "b": "mq:9495f75b62cdff8b",
+    "via": [
+     {
+      "kind": "term",
+      "key": "george berkeley",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "mental",
+      "width": 23
+     },
+     {
+      "kind": "term",
+      "key": "berkeley",
+      "width": 32
+     },
+     {
+      "kind": "term",
+      "key": "mind",
+      "width": 54
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "mq:41d176daaa94ba7c",
+   "gold": "mq:41d176daaa94ba7c",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 4041,
+  "within_2_doors": 17046,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "mq:a4578231edcdbb9e",
+    "label": "European Union law",
+    "p": 0.001670928115261359,
+    "gold": false
+   },
+   {
+    "id": "mq:1e47cdcdec0ecc54",
+    "label": "Idealism",
+    "p": 0.0011363105893580246,
+    "gold": false
+   },
+   {
+    "id": "mq:47d6ce5871e328b5",
+    "label": "United Kingdom",
+    "p": 0.001076859416894003,
+    "gold": false
+   },
+   {
+    "id": "mq:bea403b0c3970871",
+    "label": "Tabula rasa",
+    "p": 0.0010699669530418103,
+    "gold": false
+   },
+   {
+    "id": "mq:f3b0894c51c01d6e",
+    "label": "Article One of the United States Constitution",
+    "p": 0.0010348848805833177,
+    "gold": false
+   },
+   {
+    "id": "mq:9495f75b62cdff8b",
+    "label": "Idealism",
+    "p": 0.0010103066295269623,
+    "gold": true
+   },
+   {
+    "id": "mq:6bc05306a110cd6f",
+    "label": "Belgium",
+    "p": 0.0009208102052619989,
+    "gold": false
+   },
+   {
+    "id": "mq:430a93bb14a0820b",
+    "label": "Idealism",
+    "p": 0.0008919958423049807,
+    "gold": false
+   },
+   {
+    "id": "mq:9f70f6b4067f8495",
+    "label": "Quadragesimo anno",
+    "p": 0.0008722313199031548,
+    "gold": false
+   },
+   {
+    "id": "mq:14ad5590ee068525",
+    "label": "2008 Summer Olympics torch relay",
+    "p": 0.0008183968148265884,
+    "gold": false
+   },
+   {
+    "id": "mq:5c0ba50ccfbb34a4",
+    "label": "Fundamental rights in India",
+    "p": 0.0008025730769707332,
+    "gold": false
+   },
+   {
+    "id": "mq:93e157ca999d801a",
+    "label": "Fundamental rights in India",
+    "p": 0.0008008704256722134,
+    "gold": false
+   },
+   {
+    "id": "mq:d574ce05a3a9f9ef",
+    "label": "Fundamental rights in India",
+    "p": 0.000796248835245515,
+    "gold": false
+   },
+   {
+    "id": "mq:fa07c417add39c44",
+    "label": "Ministry of Education, Science and Technology (Nepal)",
+    "p": 0.0007666597258103515,
+    "gold": false
+   },
+   {
+    "id": "mq:df6d9c22daac662d",
+    "label": "Smartphone",
+    "p": 0.0007489832068967033,
+    "gold": false
+   },
+   {
+    "id": "mq:70d1a70478081bb6",
+    "label": "Empiricism",
+    "p": 0.0007457274760851962,
+    "gold": false
+   },
+   {
+    "id": "mq:cb21f938a8beee50",
+    "label": "Criticism of Christianity",
+    "p": 0.0007242190756590787,
+    "gold": false
+   },
+   {
+    "id": "mq:a7ce64f92145caf1",
+    "label": "European Union law",
+    "p": 0.0007086315037812251,
+    "gold": false
+   },
+   {
+    "id": "mq:2d63bb7023163e7f",
+    "label": "European Union law",
+    "p": 0.0007004405485427291,
+    "gold": false
+   },
+   {
+    "id": "mq:9a0c111ef48f8623",
+    "label": "Economic inequality",
+    "p": 0.0006835296039427245,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:41d176daaa94ba7c",
+   "label": "A Treatise Concerning the Principles of Human Knowledge",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:949a0621ae3aa0d0",
+   "label": "Empiricism",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:33fe6a25b4c50012",
+   "label": "Karl Popper",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:c053f78a83d3dfba",
+   "label": "Dezallier d'Argenville",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:c1808ec728b375bb",
+   "label": "European Union law",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:9495f75b62cdff8b",
+   "label": "Idealism",
+   "wave": 1,
+   "via": "term:george berkeley",
+   "gold": true
+  },
+  {
+   "id": "mq:1e47cdcdec0ecc54",
+   "label": "Idealism",
+   "wave": 1,
+   "via": "term:george berkeley",
+   "gold": false
+  },
+  {
+   "id": "mq:47d6ce5871e328b5",
+   "label": "United Kingdom",
+   "wave": 1,
+   "via": "term:george berkeley",
+   "gold": false
+  },
+  {
+   "id": "mq:8eff4923c2a63361",
+   "label": "Emotion",
+   "wave": 2,
+   "via": "term:subjective",
+   "gold": false
+  },
+  {
+   "id": "mq:d678acc16af6773c",
+   "label": "Yale University",
+   "wave": 2,
+   "via": "term:subjective",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:a4578231edcdbb9e",
+    "label": "European Union law",
+    "gold": false
+   },
+   {
+    "id": "mq:1e47cdcdec0ecc54",
+    "label": "Idealism",
+    "gold": false
+   },
+   {
+    "id": "mq:47d6ce5871e328b5",
+    "label": "United Kingdom",
+    "gold": false
+   },
+   {
+    "id": "mq:bea403b0c3970871",
+    "label": "Tabula rasa",
+    "gold": false
+   },
+   {
+    "id": "mq:f3b0894c51c01d6e",
+    "label": "Article One of the United States Constitution",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:bea403b0c3970871",
+    "label": "Tabula rasa",
+    "gold": false
+   },
+   {
+    "id": "mq:70d1a70478081bb6",
+    "label": "Empiricism",
+    "gold": false
+   },
+   {
+    "id": "mq:a528adbd93309344",
+    "label": "Fundamental Rights, Directive Principles and Fundamental Duties of India",
+    "gold": false
+   },
+   {
+    "id": "mq:9f70f6b4067f8495",
+    "label": "Quadragesimo anno",
+    "gold": false
+   },
+   {
+    "id": "mq:35f77052623d8e0f",
+    "label": "Human Action",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:bea403b0c3970871",
+    "label": "Tabula rasa",
+    "gold": false
+   },
+   {
+    "id": "mq:70d1a70478081bb6",
+    "label": "Empiricism",
+    "gold": false
+   },
+   {
+    "id": "mq:389840704707ca66",
+    "label": "Culture",
+    "gold": false
+   },
+   {
+    "id": "mq:9f70f6b4067f8495",
+    "label": "Quadragesimo anno",
+    "gold": false
+   },
+   {
+    "id": "mq:2e245f259d391a75",
+    "label": "Quran",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:066e2760463956f8",
+    "label": "Roberto Valturio",
+    "gold": false
+   },
+   {
+    "id": "mq:c68887e89064956d",
+    "label": "Hindu philosophy",
+    "gold": false
+   },
+   {
+    "id": "mq:1d34ad061edd381b",
+    "label": "Novum Organum",
+    "gold": false
+   },
+   {
+    "id": "mq:29426cb9b4bc2ec4",
+    "label": "Architecture",
+    "gold": false
+   },
+   {
+    "id": "mq:bea403b0c3970871",
+    "label": "Tabula rasa",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

@@ -1,0 +1,417 @@
+{
+ "qid": "RW:2hop__66843_494136",
+ "set": "mq",
+ "question": "Who is the spouse of the actor portraying Jerry Lee Lewis in Great Balls of Fire?",
+ "gold": [
+  {
+   "id": "mq:968f26fe2a6cff80",
+   "label": "Flesh and Bone (film)",
+   "seed": false
+  },
+  {
+   "id": "mq:bbb8a8559207e41b",
+   "label": "Great Balls of Fire! (film)",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:bbb8a8559207e41b",
+   "label": "Great Balls of Fire! (film)",
+   "rank": 1,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:13c8c71a8e048a13",
+   "label": "It'll Be Me (Jerry Lee Lewis song)",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:14219f367af625e0",
+   "label": "Mean Old Man",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:a45c00bbc6ee3548",
+   "label": "Jerry O'Connell",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:72297cf3404dd953",
+   "label": "The Bellboy",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:968f26fe2a6cff80",
+    "label": "Flesh and Bone (film)",
+    "role": "gold"
+   },
+   {
+    "id": "mq:bbb8a8559207e41b",
+    "label": "Great Balls of Fire! (film)",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:968f26fe2a6cff80",
+    "b": "mq:bbb8a8559207e41b",
+    "via": [
+     {
+      "kind": "term",
+      "key": "dennis quaid",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "quaid",
+      "width": 7
+     },
+     {
+      "kind": "term",
+      "key": "dennis",
+      "width": 38
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "mq:bbb8a8559207e41b",
+   "gold": "mq:bbb8a8559207e41b",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 1488,
+  "within_2_doors": 19557,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "mq:cc3e0a3d6bcb420e",
+    "label": "Rock and Roll Hall of Fame",
+    "p": 0.0026002204669013473,
+    "gold": false
+   },
+   {
+    "id": "mq:11c21c2f39dd5f14",
+    "label": "Just Dropped In (To See What Condition My Condition Was In)",
+    "p": 0.002532962728331604,
+    "gold": false
+   },
+   {
+    "id": "mq:58839644fc090ac6",
+    "label": "American Bandstand",
+    "p": 0.0025262171194406166,
+    "gold": false
+   },
+   {
+    "id": "mq:dcd4fcec7011fe7f",
+    "label": "King & Maxwell",
+    "p": 0.0024770565800918192,
+    "gold": false
+   },
+   {
+    "id": "mq:905b92ed8f8fba04",
+    "label": "The Nutty Professor (1996 film)",
+    "p": 0.002179544349471273,
+    "gold": false
+   },
+   {
+    "id": "mq:78e5dcb7fd21128f",
+    "label": "Psycho (1960 film)",
+    "p": 0.0021137908009631304,
+    "gold": false
+   },
+   {
+    "id": "mq:025919c3d8b5d4bc",
+    "label": "The Disorderly Orderly",
+    "p": 0.0017778374697453143,
+    "gold": false
+   },
+   {
+    "id": "mq:b1e0b1a8f9e6cc1a",
+    "label": "It's Only Money",
+    "p": 0.0017724270982951967,
+    "gold": false
+   },
+   {
+    "id": "mq:7f17849fdd50d596",
+    "label": "Rome",
+    "p": 0.001767723992661377,
+    "gold": false
+   },
+   {
+    "id": "mq:e812442bbe7ae0c5",
+    "label": "Statue of Pope Clement X",
+    "p": 0.0016709988870809687,
+    "gold": false
+   },
+   {
+    "id": "mq:8cc42d3deff75c74",
+    "label": "Pope Clement VII",
+    "p": 0.0015979674062659818,
+    "gold": false
+   },
+   {
+    "id": "mq:d4342dbff4953392",
+    "label": "The Ladies Man",
+    "p": 0.0015110126380780446,
+    "gold": false
+   },
+   {
+    "id": "mq:76a6ff70c97cac6e",
+    "label": "Sam's Place",
+    "p": 0.0014475562981160826,
+    "gold": false
+   },
+   {
+    "id": "mq:3f3e50b6048758b4",
+    "label": "Candace Cameron Bure",
+    "p": 0.0014473277460461387,
+    "gold": false
+   },
+   {
+    "id": "mq:f8ed514659402c57",
+    "label": "Johnny Kidd & the Pirates",
+    "p": 0.0014306501351094294,
+    "gold": false
+   },
+   {
+    "id": "mq:9312d4259ec50737",
+    "label": "Jack P. Shepherd",
+    "p": 0.0013600171965004076,
+    "gold": false
+   },
+   {
+    "id": "mq:87bc8daf6a35c6dd",
+    "label": "Derek Jeter",
+    "p": 0.0012846859049342467,
+    "gold": false
+   },
+   {
+    "id": "mq:d93631c51a5adff2",
+    "label": "Blue Suede Shoes",
+    "p": 0.0011998412648746267,
+    "gold": false
+   },
+   {
+    "id": "mq:b0c85b7377a1c33e",
+    "label": "Getting Gertie's Garter",
+    "p": 0.001191881623322679,
+    "gold": false
+   },
+   {
+    "id": "mq:b4cd73304651a1fa",
+    "label": "Money in the Bank (2018)",
+    "p": 0.0011361247874461307,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:bbb8a8559207e41b",
+   "label": "Great Balls of Fire! (film)",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:13c8c71a8e048a13",
+   "label": "It'll Be Me (Jerry Lee Lewis song)",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:14219f367af625e0",
+   "label": "Mean Old Man",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:a45c00bbc6ee3548",
+   "label": "Jerry O'Connell",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:72297cf3404dd953",
+   "label": "The Bellboy",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:968f26fe2a6cff80",
+   "label": "Flesh and Bone (film)",
+   "wave": 1,
+   "via": "term:dennis",
+   "gold": true
+  },
+  {
+   "id": "mq:aea57a31f361f72f",
+   "label": "A Dog's Purpose (film)",
+   "wave": 1,
+   "via": "term:dennis",
+   "gold": false
+  },
+  {
+   "id": "mq:482221d99e0da3d5",
+   "label": "Dennis (CDP), Massachusetts",
+   "wave": 1,
+   "via": "term:dennis",
+   "gold": false
+  },
+  {
+   "id": "mq:eb779a37bbeba03d",
+   "label": "Detroit",
+   "wave": 1,
+   "via": "term:dennis",
+   "gold": false
+  },
+  {
+   "id": "mq:54a0ca236f62cac2",
+   "label": "Dennis Poore",
+   "wave": 1,
+   "via": "term:dennis",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:cc3e0a3d6bcb420e",
+    "label": "Rock and Roll Hall of Fame",
+    "gold": false
+   },
+   {
+    "id": "mq:11c21c2f39dd5f14",
+    "label": "Just Dropped In (To See What Condition My Condition Was In)",
+    "gold": false
+   },
+   {
+    "id": "mq:58839644fc090ac6",
+    "label": "American Bandstand",
+    "gold": false
+   },
+   {
+    "id": "mq:dcd4fcec7011fe7f",
+    "label": "King & Maxwell",
+    "gold": false
+   },
+   {
+    "id": "mq:905b92ed8f8fba04",
+    "label": "The Nutty Professor (1996 film)",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:11c21c2f39dd5f14",
+    "label": "Just Dropped In (To See What Condition My Condition Was In)",
+    "gold": false
+   },
+   {
+    "id": "mq:cc3e0a3d6bcb420e",
+    "label": "Rock and Roll Hall of Fame",
+    "gold": false
+   },
+   {
+    "id": "mq:58839644fc090ac6",
+    "label": "American Bandstand",
+    "gold": false
+   },
+   {
+    "id": "mq:b1e0b1a8f9e6cc1a",
+    "label": "It's Only Money",
+    "gold": false
+   },
+   {
+    "id": "mq:025919c3d8b5d4bc",
+    "label": "The Disorderly Orderly",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:cc3e0a3d6bcb420e",
+    "label": "Rock and Roll Hall of Fame",
+    "gold": false
+   },
+   {
+    "id": "mq:11c21c2f39dd5f14",
+    "label": "Just Dropped In (To See What Condition My Condition Was In)",
+    "gold": false
+   },
+   {
+    "id": "mq:58839644fc090ac6",
+    "label": "American Bandstand",
+    "gold": false
+   },
+   {
+    "id": "mq:905b92ed8f8fba04",
+    "label": "The Nutty Professor (1996 film)",
+    "gold": false
+   },
+   {
+    "id": "mq:b1e0b1a8f9e6cc1a",
+    "label": "It's Only Money",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:11c21c2f39dd5f14",
+    "label": "Just Dropped In (To See What Condition My Condition Was In)",
+    "gold": false
+   },
+   {
+    "id": "mq:cc3e0a3d6bcb420e",
+    "label": "Rock and Roll Hall of Fame",
+    "gold": false
+   },
+   {
+    "id": "mq:2f7507cd6ed56f68",
+    "label": "Pollock (film)",
+    "gold": false
+   },
+   {
+    "id": "mq:33ca6061fb4a2134",
+    "label": "List of Cricket World Cup records",
+    "gold": false
+   },
+   {
+    "id": "mq:d4342dbff4953392",
+    "label": "The Ladies Man",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

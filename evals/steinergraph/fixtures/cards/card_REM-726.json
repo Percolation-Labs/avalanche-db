@@ -1,0 +1,400 @@
+{
+ "qid": "card:REM-726",
+ "set": "cards",
+ "question": "What was done about this, and why: canvas: keep unfinished critiques and return to the visible thought?",
+ "gold": [
+  {
+   "id": "commit/c25069f2f4",
+   "label": "commit c25069f: Specify canvas continuity after the live tour (REM-726)",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/6c08ad2f1a",
+   "label": "commit 6c08ad2: board: file REM-726 canvas: keep unfinished critiques and return to the visible thought",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-726.md#1",
+   "label": "board/cards/REM-726.md",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "meta/postmortems/2026-09-29-canvas-transitions-lost-context.md#1",
+   "label": "meta/postmortems/2026-09-29-canvas-transitions-lost-context.md",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-717.md#3",
+   "label": "board/cards/REM-717.md \u203a Evidence",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "specs/percolate-application/focus-canvas-contract.md#9",
+   "label": "specs/percolate-application/focus-canvas-contract.md \u203a Views and movement",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 2
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/6c08ad2f1a",
+    "label": "commit 6c08ad2: board: file REM-726 canvas: keep unfinished critiques and return to the visible thought",
+    "role": "seed"
+   },
+   {
+    "id": "commit/c25069f2f4",
+    "label": "commit c25069f: Specify canvas continuity after the live tour (REM-726)",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/6c08ad2f1a",
+    "b": "commit/c25069f2f4",
+    "via": [
+     {
+      "kind": "term",
+      "key": "rem 726",
+      "width": 11
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [],
+  "entry": {
+   "seed": "commit/6c08ad2f1a",
+   "gold": "commit/c25069f2f4",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 1013,
+  "within_2_doors": 33538,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "board/cards/REM-726.md#2",
+    "label": "board/cards/REM-726.md \u203a Log",
+    "p": 0.005128100283153716,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-29-canvas-transitions-lost-context.md#2",
+    "label": "meta/postmortems/2026-09-29-canvas-transitions-lost-context.md \u203a What failed",
+    "p": 0.004800853807543191,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/focus-canvas-study.md#10",
+    "label": "specs/percolate-application/focus-canvas-study.md \u203a Experimental app entry and user journeys",
+    "p": 0.004710067476812747,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-717.md#2",
+    "label": "board/cards/REM-717.md \u203a Goal",
+    "p": 0.002954116706642307,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-29-canvas-transitions-lost-context.md#3",
+    "label": "meta/postmortems/2026-09-29-canvas-transitions-lost-context.md \u203a What changes the outcome",
+    "p": 0.002841651620130706,
+    "gold": false
+   },
+   {
+    "id": "board/team/focus-canvas.md#3",
+    "label": "board/team/focus-canvas.md \u203a Log",
+    "p": 0.0027378105002768788,
+    "gold": false
+   },
+   {
+    "id": "commit/aecabe4b23",
+    "label": "commit aecabe4: board: /root takes REM-726",
+    "p": 0.002632008600986465,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/drafter.md#93",
+    "label": "specs/percolate-application/drafter.md \u203a 12. Evidence and implementation handoff",
+    "p": 0.0025459244008527843,
+    "gold": false
+   },
+   {
+    "id": "output/focus-canvas/orbit/app.js#3",
+    "label": "output/focus-canvas/orbit/app.js",
+    "p": 0.0024780976031553285,
+    "gold": false
+   },
+   {
+    "id": "commit/176fe170de",
+    "label": "commit 176fe17: board: file REM-717 canvas: build Lens and Orbit over real drafts and critiques",
+    "p": 0.0022307590284488202,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-724.md#4",
+    "label": "board/cards/REM-724.md \u203a Log",
+    "p": 0.0021717946356074967,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/navigation-and-account-flows.md#9",
+    "label": "specs/percolate-application/navigation-and-account-flows.md \u203a 4. Marketplace and Library",
+    "p": 0.002152904417734554,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/focus-canvas-contract.md#8",
+    "label": "specs/percolate-application/focus-canvas-contract.md \u203a Views and movement",
+    "p": 0.0021098300728090067,
+    "gold": false
+   },
+   {
+    "id": "commit/ea0da2da08",
+    "label": "commit ea0da2d: canvas: preserve fisheye design and use a real article for review (REM-719)",
+    "p": 0.0018460236610257272,
+    "gold": false
+   },
+   {
+    "id": "commit/bb3e1753fd",
+    "label": "commit bb3e175: board: focus-canvas checks in, ended",
+    "p": 0.00184277460037113,
+    "gold": false
+   },
+   {
+    "id": "commit/06bbfc2d7c",
+    "label": "commit 06bbfc2: spec: bind Lens and Orbit to draft revisions and critiques (REM-717)",
+    "p": 0.0017705511327000241,
+    "gold": false
+   },
+   {
+    "id": "output/full-flow/HANDOFF.md#5",
+    "label": "output/full-flow/HANDOFF.md \u203a Navigation and the hard limit",
+    "p": 0.001756794157753917,
+    "gold": false
+   },
+   {
+    "id": "output/full-flow/README.md#2",
+    "label": "output/full-flow/README.md \u203a Suggested walkthrough",
+    "p": 0.001708774410665676,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/focus-canvas-contract.md#10",
+    "label": "specs/percolate-application/focus-canvas-contract.md \u203a References through time",
+    "p": 0.0016860206338731938,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-717.md#4",
+    "label": "board/cards/REM-717.md \u203a Done when",
+    "p": 0.0015672097800671471,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/6c08ad2f1a",
+   "label": "commit 6c08ad2: board: file REM-726 canvas: keep unfinished critiques and return to the visible thought",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-726.md#1",
+   "label": "board/cards/REM-726.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/postmortems/2026-09-29-canvas-transitions-lost-context.md#1",
+   "label": "meta/postmortems/2026-09-29-canvas-transitions-lost-context.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-717.md#3",
+   "label": "board/cards/REM-717.md \u203a Evidence",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/percolate-application/focus-canvas-contract.md#9",
+   "label": "specs/percolate-application/focus-canvas-contract.md \u203a Views and movement",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/aecabe4b23",
+   "label": "commit aecabe4: board: /root takes REM-726",
+   "wave": 1,
+   "via": "term:rem 726",
+   "gold": false
+  },
+  {
+   "id": "commit/c25069f2f4",
+   "label": "commit c25069f: Specify canvas continuity after the live tour (REM-726)",
+   "wave": 1,
+   "via": "term:rem 726",
+   "gold": true
+  },
+  {
+   "id": "commit/31c2a4e982",
+   "label": "commit 31c2a4e: board: REM-726 in-progress \u2192 done",
+   "wave": 1,
+   "via": "term:rem 726",
+   "gold": false
+  },
+  {
+   "id": "commit/4e13cb5960",
+   "label": "commit 4e13cb5: board: note on REM-726",
+   "wave": 1,
+   "via": "term:rem 726",
+   "gold": false
+  },
+  {
+   "id": "meta/postmortems/2026-09-29-canvas-transitions-lost-context.md#3",
+   "label": "meta/postmortems/2026-09-29-canvas-transitions-lost-context.md \u203a What changes the outcome",
+   "wave": 1,
+   "via": "term:rem 726",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "board/cards/REM-726.md#2",
+    "label": "board/cards/REM-726.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-29-canvas-transitions-lost-context.md#2",
+    "label": "meta/postmortems/2026-09-29-canvas-transitions-lost-context.md \u203a What failed",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/focus-canvas-study.md#10",
+    "label": "specs/percolate-application/focus-canvas-study.md \u203a Experimental app entry and user journeys",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-717.md#2",
+    "label": "board/cards/REM-717.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-29-canvas-transitions-lost-context.md#3",
+    "label": "meta/postmortems/2026-09-29-canvas-transitions-lost-context.md \u203a What changes the outcome",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "board/cards/REM-726.md#2",
+    "label": "board/cards/REM-726.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-29-canvas-transitions-lost-context.md#2",
+    "label": "meta/postmortems/2026-09-29-canvas-transitions-lost-context.md \u203a What failed",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-724.md#4",
+    "label": "board/cards/REM-724.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/team/focus-canvas.md#3",
+    "label": "board/team/focus-canvas.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "commit/176fe170de",
+    "label": "commit 176fe17: board: file REM-717 canvas: build Lens and Orbit over real drafts and critiques",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/176fe170de",
+    "label": "commit 176fe17: board: file REM-717 canvas: build Lens and Orbit over real drafts and critiques",
+    "gold": false
+   },
+   {
+    "id": "commit/06bbfc2d7c",
+    "label": "commit 06bbfc2: spec: bind Lens and Orbit to draft revisions and critiques (REM-717)",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-717.md#1",
+    "label": "board/cards/REM-717.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-732.md#2",
+    "label": "board/cards/REM-732.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-717.md#7",
+    "label": "board/cards/REM-717.md \u203a Links",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "board/cards/REM-724.md#3",
+    "label": "board/cards/REM-724.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "commit/176fe170de",
+    "label": "commit 176fe17: board: file REM-717 canvas: build Lens and Orbit over real drafts and critiques",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-717.md#1",
+    "label": "board/cards/REM-717.md",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/focus-canvas-study.md#5",
+    "label": "specs/percolate-application/focus-canvas-study.md \u203a Review questions",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-732.md#2",
+    "label": "board/cards/REM-732.md \u203a Goal",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

@@ -1,0 +1,523 @@
+{
+ "qid": "card:REM-500",
+ "set": "cards",
+ "question": "What was done about this, and why: scale: every function a caller can reach in the research platform is measured at three decades, and none grows with the table?",
+ "gold": [
+  {
+   "id": "commit/22a6f942fc",
+   "label": "commit 22a6f94: REM-507: discussions in core \u2014 threads, stances, resource targets, engagement:discuss",
+   "seed": false
+  },
+  {
+   "id": "commit/675d8d8c90",
+   "label": "commit 675d8d8: claims/graph.md \u00a75: a part is keyed with its occurrence, and resolution candidates come from an index (R",
+   "seed": false
+  },
+  {
+   "id": "commit/b91c4da8b8",
+   "label": "commit b91c4da: REM-500: the research platform measured at two sizes; eleven calls followed a table, nine now hold",
+   "seed": false
+  },
+  {
+   "id": "commit/ead7e578d6",
+   "label": "commit ead7e57: REM-500: the research platform's scale fixes ship in 0.2.11: twelve indexes, a paged listing, an index-f",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/5401973422",
+   "label": "commit 5401973: board: file REM-500 scale: every function a caller can reach in the research platform is measured at thr",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-500.md#1",
+   "label": "board/cards/REM-500.md",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "specs/research-platform/scale.md#1",
+   "label": "specs/research-platform/scale.md \u203a Scale: the research platform, measured",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-500.md#6",
+   "label": "board/cards/REM-500.md \u203a Log",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-500.md#4",
+   "label": "board/cards/REM-500.md \u203a Done when",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "board/cards/REM-500.md#6",
+    "label": "board/cards/REM-500.md \u203a Log",
+    "role": "seed"
+   },
+   {
+    "id": "commit/22a6f942fc",
+    "label": "commit 22a6f94: REM-507: discussions in core \u2014 threads, stances, resource targets, engagement:discuss",
+    "role": "gold"
+   },
+   {
+    "id": "commit/675d8d8c90",
+    "label": "commit 675d8d8: claims/graph.md \u00a75: a part is keyed with its occurrence, and resolution candidates come from an index (R",
+    "role": "gold"
+   },
+   {
+    "id": "commit/b91c4da8b8",
+    "label": "commit b91c4da: REM-500: the research platform measured at two sizes; eleven calls followed a table, nine now hold",
+    "role": "gold"
+   },
+   {
+    "id": "commit/ead7e578d6",
+    "label": "commit ead7e57: REM-500: the research platform's scale fixes ship in 0.2.11: twelve indexes, a paged listing, an index-f",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "board/cards/REM-500.md#6",
+    "b": "commit/b91c4da8b8",
+    "via": [
+     {
+      "kind": "near",
+      "width": 4
+     },
+     {
+      "kind": "term",
+      "key": "eleven calls",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "term search",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "calls grew",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "retiring list_packages",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "comments sources",
+      "width": 3
+     }
+    ]
+   },
+   {
+    "a": "commit/22a6f942fc",
+    "b": "commit/675d8d8c90",
+    "via": [
+     {
+      "kind": "term",
+      "key": "rem 500",
+      "width": 28
+     }
+    ]
+   },
+   {
+    "a": "commit/675d8d8c90",
+    "b": "commit/b91c4da8b8",
+    "via": [
+     {
+      "kind": "term",
+      "key": "rem 500",
+      "width": 28
+     },
+     {
+      "kind": "term",
+      "key": "lookups",
+      "width": 36
+     }
+    ]
+   },
+   {
+    "a": "commit/b91c4da8b8",
+    "b": "commit/ead7e578d6",
+    "via": [
+     {
+      "kind": "near",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "keyset page",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "first readability",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "index first",
+      "width": 6
+     },
+     {
+      "kind": "term",
+      "key": "leakproof",
+      "width": 9
+     },
+     {
+      "kind": "term",
+      "key": "scale research",
+      "width": 12
+     }
+    ]
+   }
+  ],
+  "cost": 4,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  "entry": {
+   "seed": "board/cards/REM-500.md#6",
+   "gold": "commit/b91c4da8b8",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 1064,
+  "within_2_doors": 32867,
+  "gold_within_1": 4,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "commit/b91c4da8b8",
+    "label": "commit b91c4da: REM-500: the research platform measured at two sizes; eleven calls followed a table, nine now hold",
+    "p": 0.0068075648214816105,
+    "gold": true
+   },
+   {
+    "id": "board/cards/REM-473.md#6",
+    "label": "board/cards/REM-473.md \u203a Log",
+    "p": 0.004762506510442927,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-500.md#2",
+    "label": "board/cards/REM-500.md \u203a Goal",
+    "p": 0.004022103376169467,
+    "gold": false
+   },
+   {
+    "id": "commit/742dcd3c22",
+    "label": "commit 742dcd3: board: p8-subsystems-31 takes REM-500",
+    "p": 0.0036163928245442796,
+    "gold": false
+   },
+   {
+    "id": "commit/59a1671ac8",
+    "label": "commit 59a1671: board: percolate-application-70 takes REM-435",
+    "p": 0.0030401536008435055,
+    "gold": false
+   },
+   {
+    "id": "specs/claims/graph.md#30",
+    "label": "specs/claims/graph.md \u203a Parts: an occurrence can say more than one thing",
+    "p": 0.002392579951376512,
+    "gold": false
+   },
+   {
+    "id": "site/posts/to-vibe-or-not-to-vibe.md#21",
+    "label": "site/posts/to-vibe-or-not-to-vibe.md \u203a Compilers, in the right order",
+    "p": 0.002313339721958639,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261117-000359-d3a7.md#1",
+    "label": "board/messages/M-20261117-000359-d3a7.md",
+    "p": 0.002312461230502453,
+    "gold": false
+   },
+   {
+    "id": "research-notes/essay-graph/corpus/kellogg-2008-training-writing-skills/notes.md#2",
+    "label": "research-notes/essay-graph/corpus/kellogg-2008-training-writing-skills/notes.md \u203a Summary",
+    "p": 0.0022381238471605534,
+    "gold": false
+   },
+   {
+    "id": "commit/ead7e578d6",
+    "label": "commit ead7e57: REM-500: the research platform's scale fixes ship in 0.2.11: twelve indexes, a paged listing, an index-f",
+    "p": 0.0021581110427538303,
+    "gold": true
+   },
+   {
+    "id": "specs/research-platform/scale.md#2",
+    "label": "specs/research-platform/scale.md \u203a The environment",
+    "p": 0.002139197803972627,
+    "gold": false
+   },
+   {
+    "id": "specs/research-platform/scale.md#7",
+    "label": "specs/research-platform/scale.md \u203a 3. Still open",
+    "p": 0.0021356933497677843,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-500.md#5",
+    "label": "board/cards/REM-500.md \u203a Scope",
+    "p": 0.0021024610131363504,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-522.md#2",
+    "label": "board/cards/REM-522.md \u203a Goal",
+    "p": 0.0020811290924442664,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-500.md#3",
+    "label": "board/cards/REM-500.md \u203a Evidence",
+    "p": 0.001943990754984666,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-522.md#1",
+    "label": "board/cards/REM-522.md",
+    "p": 0.0018636670481091428,
+    "gold": false
+   },
+   {
+    "id": "specs/research-platform/core-claims-contract.md#10",
+    "label": "specs/research-platform/core-claims-contract.md \u203a C5. Listings paginate through every layer",
+    "p": 0.0017391618000351708,
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-10-20-lme-seeded-taxonomy/iteration/README.md#5",
+    "label": "meta/spikes/2026-10-20-lme-seeded-taxonomy/iteration/README.md \u203a What changed in the process",
+    "p": 0.0016622231396542615,
+    "gold": false
+   },
+   {
+    "id": "specs/research-platform/scale.md#3",
+    "label": "specs/research-platform/scale.md \u203a 1. How \"holds at billions\" is decided",
+    "p": 0.0016295334431527266,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-488.md#2",
+    "label": "board/cards/REM-488.md \u203a Goal",
+    "p": 0.0016294294550134114,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/5401973422",
+   "label": "commit 5401973: board: file REM-500 scale: every function a caller can reach in the research platform is measured at thr",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-500.md#1",
+   "label": "board/cards/REM-500.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/research-platform/scale.md#1",
+   "label": "specs/research-platform/scale.md \u203a Scale: the research platform, measured",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-500.md#6",
+   "label": "board/cards/REM-500.md \u203a Log",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-500.md#4",
+   "label": "board/cards/REM-500.md \u203a Done when",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/research-platform/schema.sql#45",
+   "label": "specs/research-platform/schema.sql",
+   "wave": 1,
+   "via": "term:revision_signals",
+   "gold": false
+  },
+  {
+   "id": "commit/b91c4da8b8",
+   "label": "commit b91c4da: REM-500: the research platform measured at two sizes; eleven calls followed a table, nine now hold",
+   "wave": 1,
+   "via": "term:revision_signals",
+   "gold": true
+  },
+  {
+   "id": "specs/research-platform/scale.md#5",
+   "label": "specs/research-platform/scale.md \u203a The causes",
+   "wave": 1,
+   "via": "term:revision_signals",
+   "gold": false
+  },
+  {
+   "id": "specs/research-platform/scale.md#4",
+   "label": "specs/research-platform/scale.md \u203a 2. What failed, and what fixed it",
+   "wave": 1,
+   "via": "term:revision_signals",
+   "gold": false
+  },
+  {
+   "id": "specs/research-platform/schema.sql#57",
+   "label": "specs/research-platform/schema.sql",
+   "wave": 1,
+   "via": "term:revision_signals",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "commit/b91c4da8b8",
+    "label": "commit b91c4da: REM-500: the research platform measured at two sizes; eleven calls followed a table, nine now hold",
+    "gold": true
+   },
+   {
+    "id": "board/cards/REM-473.md#6",
+    "label": "board/cards/REM-473.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-500.md#2",
+    "label": "board/cards/REM-500.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "commit/742dcd3c22",
+    "label": "commit 742dcd3: board: p8-subsystems-31 takes REM-500",
+    "gold": false
+   },
+   {
+    "id": "commit/59a1671ac8",
+    "label": "commit 59a1671: board: percolate-application-70 takes REM-435",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "commit/b91c4da8b8",
+    "label": "commit b91c4da: REM-500: the research platform measured at two sizes; eleven calls followed a table, nine now hold",
+    "gold": true
+   },
+   {
+    "id": "specs/research-platform/scale.md#7",
+    "label": "specs/research-platform/scale.md \u203a 3. Still open",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-473.md#6",
+    "label": "board/cards/REM-473.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-500.md#2",
+    "label": "board/cards/REM-500.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "commit/ead7e578d6",
+    "label": "commit ead7e57: REM-500: the research platform's scale fixes ship in 0.2.11: twelve indexes, a paged listing, an index-f",
+    "gold": true
+   }
+  ],
+  "LQ": [
+   {
+    "id": "board/cards/REM-500.md#5",
+    "label": "board/cards/REM-500.md \u203a Scope",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-522.md#1",
+    "label": "board/cards/REM-522.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-522.md#4",
+    "label": "board/cards/REM-522.md \u203a Scope",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-522.md#3",
+    "label": "board/cards/REM-522.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-521.md#4",
+    "label": "board/cards/REM-521.md \u203a Scope",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "specs/research-platform/scale.md#8",
+    "label": "specs/research-platform/scale.md \u203a 4. What is not measured",
+    "gold": false
+   },
+   {
+    "id": "commit/b91c4da8b8",
+    "label": "commit b91c4da: REM-500: the research platform measured at two sizes; eleven calls followed a table, nine now hold",
+    "gold": true
+   },
+   {
+    "id": "board/cards/REM-522.md#1",
+    "label": "board/cards/REM-522.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-521.md#3",
+    "label": "board/cards/REM-521.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "specs/research-platform/scale.md#6",
+    "label": "specs/research-platform/scale.md \u203a The causes",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.25,
+  "Q": 0.5,
+  "LQ": 0.0,
+  "S": 0.25
+ }
+}

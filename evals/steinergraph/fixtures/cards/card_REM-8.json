@@ -1,0 +1,405 @@
+{
+ "qid": "card:REM-8",
+ "set": "cards",
+ "question": "What was done about this, and why: agentic: an agent can hand part of a job to another agent, and you can see who did what?",
+ "gold": [
+  {
+   "id": "commit/d30b1f392e",
+   "label": "commit d30b1f3: Land the Linear skill and the postmortem that produced it",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "board/cards/REM-8.md#1",
+   "label": "board/cards/REM-8.md",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-988.md#2",
+   "label": "board/cards/REM-988.md \u203a Goal",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "site/posts/underlying-the-workflow.md#6",
+   "label": "site/posts/underlying-the-workflow.md \u203a The files were always part of it",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "specs/agentic/schema.sql#75",
+   "label": "specs/agentic/schema.sql",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "specs/percolate-application/readers-board.md#5",
+   "label": "specs/percolate-application/readers-board.md \u203a 3. Agent work and human acts",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 2
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "board/cards/REM-8.md#1",
+    "label": "board/cards/REM-8.md",
+    "role": "seed"
+   },
+   {
+    "id": "commit/d30b1f392e",
+    "label": "commit d30b1f3: Land the Linear skill and the postmortem that produced it",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "board/cards/REM-8.md#1",
+    "b": "commit/d30b1f392e",
+    "via": [
+     {
+      "kind": "term",
+      "key": "rem 8",
+      "width": 7
+     },
+     {
+      "kind": "term",
+      "key": "agentic sequence",
+      "width": 17
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [],
+  "entry": {
+   "seed": "board/cards/REM-8.md#1",
+   "gold": "commit/d30b1f392e",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 2570,
+  "within_2_doors": 33509,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "board/cards/REM-988.md#4",
+    "label": "board/cards/REM-988.md \u203a Done when",
+    "p": 0.0025005827145715967,
+    "gold": false
+   },
+   {
+    "id": "specs/agentic/sequence.md#6",
+    "label": "specs/agentic/sequence.md \u203a What is closed",
+    "p": 0.0022535754824902646,
+    "gold": false
+   },
+   {
+    "id": "specs/agentic/schema.sql#77",
+    "label": "specs/agentic/schema.sql",
+    "p": 0.0021850409362037335,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-8.md#2",
+    "label": "board/cards/REM-8.md \u203a Log",
+    "p": 0.0019685842927096254,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261020-080046-fe11.md#1",
+    "label": "board/messages/M-20261020-080046-fe11.md",
+    "p": 0.001505749778712918,
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-ui/artifacts/workflow-new-agent-manifest.yaml#2",
+    "label": "applications/percolate-ui/artifacts/workflow-new-agent-manifest.yaml",
+    "p": 0.0014546689950786934,
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-ui/artifacts/workflow-composition-manifest.yaml#2",
+    "label": "applications/percolate-ui/artifacts/workflow-composition-manifest.yaml",
+    "p": 0.001454146697940568,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1067.md#2",
+    "label": "board/cards/REM-1067.md \u203a Goal",
+    "p": 0.0014487691627570686,
+    "gold": false
+   },
+   {
+    "id": "commit/6f0af03469",
+    "label": "commit 6f0af03: readers-board spec: sits on the claims graph; agent work under a bulk grant, human acts never (REM-485)",
+    "p": 0.001383796690193711,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-988.md#1",
+    "label": "board/cards/REM-988.md",
+    "p": 0.0013121687420551986,
+    "gold": false
+   },
+   {
+    "id": "specs/agentic/sequence.md#5",
+    "label": "specs/agentic/sequence.md \u203a What is closed",
+    "p": 0.0013024954958896137,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-988.md#3",
+    "label": "board/cards/REM-988.md \u203a Evidence",
+    "p": 0.0012404418869604234,
+    "gold": false
+   },
+   {
+    "id": "specs/agentic/schema.sql#70",
+    "label": "specs/agentic/schema.sql",
+    "p": 0.0012145458407541547,
+    "gold": false
+   },
+   {
+    "id": "commit/a3b93afe53",
+    "label": "commit a3b93af: Expand the entities in place, and add the view a person actually reads",
+    "p": 0.0011857822949580066,
+    "gold": false
+   },
+   {
+    "id": "specs/agentic/sequence.md#2",
+    "label": "specs/agentic/sequence.md \u203a Agentic \u2014 build & test sequence",
+    "p": 0.0011582750760065316,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-04-issues-filed-for-shipped-work.md#2",
+    "label": "meta/postmortems/2026-09-04-issues-filed-for-shipped-work.md \u203a Why",
+    "p": 0.0011544859292104913,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/readers-board.md#11",
+    "label": "specs/percolate-application/readers-board.md \u203a 6. What the role-play and the core split changed",
+    "p": 0.0010483171818556952,
+    "gold": false
+   },
+   {
+    "id": "meta/skills/docs-writing/SKILL.md#6",
+    "label": "meta/skills/docs-writing/SKILL.md \u203a What to do instead",
+    "p": 0.0010278144572819043,
+    "gold": false
+   },
+   {
+    "id": "commit/d30b1f392e",
+    "label": "commit d30b1f3: Land the Linear skill and the postmortem that produced it",
+    "p": 0.0008908465905264534,
+    "gold": true
+   },
+   {
+    "id": "specs/agentic/schema.sql#76",
+    "label": "specs/agentic/schema.sql",
+    "p": 0.0008849255863760031,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "board/cards/REM-8.md#1",
+   "label": "board/cards/REM-8.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-988.md#2",
+   "label": "board/cards/REM-988.md \u203a Goal",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "site/posts/underlying-the-workflow.md#6",
+   "label": "site/posts/underlying-the-workflow.md \u203a The files were always part of it",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/agentic/schema.sql#75",
+   "label": "specs/agentic/schema.sql",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/percolate-application/readers-board.md#5",
+   "label": "specs/percolate-application/readers-board.md \u203a 3. Agent work and human acts",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-988.md#6",
+   "label": "board/cards/REM-988.md \u203a Log",
+   "wave": 1,
+   "via": "term:invoke agent",
+   "gold": false
+  },
+  {
+   "id": "specs/design/articles/langgraph-captures-v30/18-b-e4da0a1e5e.txt#1",
+   "label": "specs/design/articles/langgraph-captures-v30/18-b-e4da0a1e5e.txt",
+   "wave": 1,
+   "via": "term:invoke agent",
+   "gold": false
+  },
+  {
+   "id": "specs/design/articles/langgraph-captures-v36/18-b-e4da0a1e5e.txt#1",
+   "label": "specs/design/articles/langgraph-captures-v36/18-b-e4da0a1e5e.txt",
+   "wave": 1,
+   "via": "term:invoke agent",
+   "gold": false
+  },
+  {
+   "id": "specs/design/articles/langgraph-captures-v34/18-b-e4da0a1e5e.txt#1",
+   "label": "specs/design/articles/langgraph-captures-v34/18-b-e4da0a1e5e.txt",
+   "wave": 1,
+   "via": "term:invoke agent",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-971.md#6",
+   "label": "board/cards/REM-971.md \u203a Log",
+   "wave": 1,
+   "via": "term:invoke agent",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "board/cards/REM-988.md#4",
+    "label": "board/cards/REM-988.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "specs/agentic/sequence.md#6",
+    "label": "specs/agentic/sequence.md \u203a What is closed",
+    "gold": false
+   },
+   {
+    "id": "specs/agentic/schema.sql#77",
+    "label": "specs/agentic/schema.sql",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-8.md#2",
+    "label": "board/cards/REM-8.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261020-080046-fe11.md#1",
+    "label": "board/messages/M-20261020-080046-fe11.md",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "specs/agentic/schema.sql#77",
+    "label": "specs/agentic/schema.sql",
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-ui/artifacts/workflow-new-agent-manifest.yaml#2",
+    "label": "applications/percolate-ui/artifacts/workflow-new-agent-manifest.yaml",
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-ui/artifacts/workflow-composition-manifest.yaml#2",
+    "label": "applications/percolate-ui/artifacts/workflow-composition-manifest.yaml",
+    "gold": false
+   },
+   {
+    "id": "specs/agentic/schema.sql#70",
+    "label": "specs/agentic/schema.sql",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-988.md#4",
+    "label": "board/cards/REM-988.md \u203a Done when",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "specs/percolate-application/readers-board.md#6",
+    "label": "specs/percolate-application/readers-board.md \u203a 3. Agent work and human acts",
+    "gold": false
+   },
+   {
+    "id": "commit/e6b9dd821d",
+    "label": "commit e6b9dd8: board: file REM-985 rbac: an owner grants one agent to another person",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-988.md#5",
+    "label": "board/cards/REM-988.md \u203a Scope",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-988.md#1",
+    "label": "board/cards/REM-988.md",
+    "gold": false
+   },
+   {
+    "id": "specs/agentic/sequence.md#6",
+    "label": "specs/agentic/sequence.md \u203a What is closed",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "board/cards/REM-1055.md#7",
+    "label": "board/cards/REM-1055.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/semantic-editing-acceptance.md#14",
+    "label": "specs/percolate-application/semantic-editing-acceptance.md \u203a A7b. Writer \u2192 Agent \u2192 Percolate: the same without the websi",
+    "gold": false
+   },
+   {
+    "id": "specs/world-model-ingestion/reference/extract/workflows.md#3",
+    "label": "specs/world-model-ingestion/reference/extract/workflows.md \u203a 2. Fan out one contract over many sources",
+    "gold": false
+   },
+   {
+    "id": "specs/agentic/schema.sql#27",
+    "label": "specs/agentic/schema.sql",
+    "gold": false
+   },
+   {
+    "id": "specs/agentic/plugins.md#30",
+    "label": "specs/agentic/plugins.md \u203a 9. The plugin",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

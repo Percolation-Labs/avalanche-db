@@ -1,0 +1,464 @@
+{
+ "qid": "RW:4hop3__507819_88460_30152_20999",
+ "set": "mq",
+ "question": "How were the same people who the Somali Muslim Ajuran Empire declared independence from expelled from the natural boundary between Thailand and the country where Route 3 is found?",
+ "gold": [
+  {
+   "id": "mq:1f45fcacd3de61d2",
+   "label": "Geography of Myanmar",
+   "seed": false
+  },
+  {
+   "id": "mq:45d774023fb4d3f5",
+   "label": "Route 3 (Laos)",
+   "seed": false
+  },
+  {
+   "id": "mq:7f37f7dcd8b45bc2",
+   "label": "Myanmar",
+   "seed": false
+  },
+  {
+   "id": "mq:e968d54c60a47174",
+   "label": "Ottoman Empire",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:e968d54c60a47174",
+   "label": "Ottoman Empire",
+   "rank": 1,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:b72fdd0f193c3690",
+   "label": "Somalis",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:a76727e92cf90128",
+   "label": "Islam by country",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "mq:3f632d350fd1fb44",
+   "label": "Patani United Liberation Organisation",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:4a82dd59e76a7252",
+   "label": "Ottoman Empire",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:1f45fcacd3de61d2",
+    "label": "Geography of Myanmar",
+    "role": "gold"
+   },
+   {
+    "id": "mq:45d774023fb4d3f5",
+    "label": "Route 3 (Laos)",
+    "role": "gold"
+   },
+   {
+    "id": "mq:7f37f7dcd8b45bc2",
+    "label": "Myanmar",
+    "role": "gold"
+   },
+   {
+    "id": "mq:e968d54c60a47174",
+    "label": "Ottoman Empire",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:1f45fcacd3de61d2",
+    "b": "mq:45d774023fb4d3f5",
+    "via": [
+     {
+      "kind": "term",
+      "key": "laos",
+      "width": 41
+     },
+     {
+      "kind": "term",
+      "key": "southeast asia",
+      "width": 54
+     },
+     {
+      "kind": "term",
+      "key": "thailand",
+      "width": 72
+     }
+    ]
+   },
+   {
+    "a": "mq:1f45fcacd3de61d2",
+    "b": "mq:7f37f7dcd8b45bc2",
+    "via": [
+     {
+      "kind": "term",
+      "key": "myanmar",
+      "width": 45
+     }
+    ]
+   },
+   {
+    "a": "mq:1f45fcacd3de61d2",
+    "b": "mq:e968d54c60a47174",
+    "via": [
+     {
+      "kind": "term",
+      "key": "indian ocean",
+      "width": 29
+     }
+    ]
+   }
+  ],
+  "cost": 3,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   1,
+   1,
+   2,
+   1,
+   1
+  ],
+  "entry": {
+   "seed": "mq:e968d54c60a47174",
+   "gold": "mq:e968d54c60a47174",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 2651,
+  "within_2_doors": 18432,
+  "gold_within_1": 3,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "mq:f61376f83f90cf6c",
+    "label": "Pulo, Cabuyao",
+    "p": 0.004028035897977495,
+    "gold": false
+   },
+   {
+    "id": "mq:a56b9595bc998767",
+    "label": "Cyprus",
+    "p": 0.0021104294328052812,
+    "gold": false
+   },
+   {
+    "id": "mq:e894cc7ebda6c499",
+    "label": "Somalis",
+    "p": 0.002106353617840861,
+    "gold": false
+   },
+   {
+    "id": "mq:9fff5be8f5a6daf8",
+    "label": "M.S. Dhoni: The Untold Story",
+    "p": 0.0021020093395977156,
+    "gold": false
+   },
+   {
+    "id": "mq:8fd1c14452f2ff5b",
+    "label": "Ogaden War",
+    "p": 0.0017650298316664698,
+    "gold": false
+   },
+   {
+    "id": "mq:9300440a8678ecbc",
+    "label": "Ottoman Empire",
+    "p": 0.0016262533061326143,
+    "gold": false
+   },
+   {
+    "id": "mq:0a358beb9caf65ea",
+    "label": "Somalis",
+    "p": 0.0016124824068338719,
+    "gold": false
+   },
+   {
+    "id": "mq:50b541f053b3b7fe",
+    "label": "London",
+    "p": 0.0013868178042984842,
+    "gold": false
+   },
+   {
+    "id": "mq:3b1d75a85d412ad1",
+    "label": "Spice trade",
+    "p": 0.0012497365749947525,
+    "gold": false
+   },
+   {
+    "id": "mq:ceb8308bc49bfa09",
+    "label": "Somalis",
+    "p": 0.0012256244312271276,
+    "gold": false
+   },
+   {
+    "id": "mq:0ac91f88889138cb",
+    "label": "Somalis",
+    "p": 0.0011399452006141968,
+    "gold": false
+   },
+   {
+    "id": "mq:14ad5590ee068525",
+    "label": "2008 Summer Olympics torch relay",
+    "p": 0.0011022588666109976,
+    "gold": false
+   },
+   {
+    "id": "mq:529e8b3a5a6c44b9",
+    "label": "Delhi",
+    "p": 0.0010321300437921136,
+    "gold": false
+   },
+   {
+    "id": "mq:81507464b4e99524",
+    "label": "Lists of countries by mineral production",
+    "p": 0.0010138162309105115,
+    "gold": false
+   },
+   {
+    "id": "mq:890ba51eceef1486",
+    "label": "Salama Moussa",
+    "p": 0.0009906980150634853,
+    "gold": false
+   },
+   {
+    "id": "mq:2ba5d3097cb05146",
+    "label": "Somalis",
+    "p": 0.0009307585651076317,
+    "gold": false
+   },
+   {
+    "id": "mq:fdc7c3ebd15fe27e",
+    "label": "San Miguel de Allende",
+    "p": 0.0008772789631065093,
+    "gold": false
+   },
+   {
+    "id": "mq:44c9ef6076108cb9",
+    "label": "Qing dynasty",
+    "p": 0.0008414989446205838,
+    "gold": false
+   },
+   {
+    "id": "mq:d628d73f53aea4aa",
+    "label": "Ottoman Empire",
+    "p": 0.0008188707598814515,
+    "gold": false
+   },
+   {
+    "id": "mq:66e5a7e5b743dece",
+    "label": "Nanjing",
+    "p": 0.0007880823878522812,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:e968d54c60a47174",
+   "label": "Ottoman Empire",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:b72fdd0f193c3690",
+   "label": "Somalis",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:a76727e92cf90128",
+   "label": "Islam by country",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:3f632d350fd1fb44",
+   "label": "Patani United Liberation Organisation",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:4a82dd59e76a7252",
+   "label": "Ottoman Empire",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:024168e6f74a5533",
+   "label": "Kelupis",
+   "wave": 1,
+   "via": "term:malay",
+   "gold": false
+  },
+  {
+   "id": "mq:b48da6c4b8369d3c",
+   "label": "States and federal territories of Malaysia",
+   "wave": 1,
+   "via": "term:malay",
+   "gold": false
+  },
+  {
+   "id": "mq:7d2e2b63f0c90663",
+   "label": "Penang betta",
+   "wave": 1,
+   "via": "term:malay",
+   "gold": false
+  },
+  {
+   "id": "mq:45f84f6e9ce4431c",
+   "label": "Bukit Kiara Muslim Cemetery",
+   "wave": 1,
+   "via": "term:malay",
+   "gold": false
+  },
+  {
+   "id": "mq:4d01f6fdf3bebb98",
+   "label": "Kuala Lumpur International Airport",
+   "wave": 1,
+   "via": "term:malay",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:f61376f83f90cf6c",
+    "label": "Pulo, Cabuyao",
+    "gold": false
+   },
+   {
+    "id": "mq:a56b9595bc998767",
+    "label": "Cyprus",
+    "gold": false
+   },
+   {
+    "id": "mq:e894cc7ebda6c499",
+    "label": "Somalis",
+    "gold": false
+   },
+   {
+    "id": "mq:9fff5be8f5a6daf8",
+    "label": "M.S. Dhoni: The Untold Story",
+    "gold": false
+   },
+   {
+    "id": "mq:8fd1c14452f2ff5b",
+    "label": "Ogaden War",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:e894cc7ebda6c499",
+    "label": "Somalis",
+    "gold": false
+   },
+   {
+    "id": "mq:0a358beb9caf65ea",
+    "label": "Somalis",
+    "gold": false
+   },
+   {
+    "id": "mq:0ac91f88889138cb",
+    "label": "Somalis",
+    "gold": false
+   },
+   {
+    "id": "mq:2ba5d3097cb05146",
+    "label": "Somalis",
+    "gold": false
+   },
+   {
+    "id": "mq:4b97594a7779e7ce",
+    "label": "Somalis",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:0a358beb9caf65ea",
+    "label": "Somalis",
+    "gold": false
+   },
+   {
+    "id": "mq:e894cc7ebda6c499",
+    "label": "Somalis",
+    "gold": false
+   },
+   {
+    "id": "mq:fdc7c3ebd15fe27e",
+    "label": "San Miguel de Allende",
+    "gold": false
+   },
+   {
+    "id": "mq:0ac91f88889138cb",
+    "label": "Somalis",
+    "gold": false
+   },
+   {
+    "id": "mq:ceb8308bc49bfa09",
+    "label": "Somalis",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:f27163e74e7a69eb",
+    "label": "Somalis",
+    "gold": false
+   },
+   {
+    "id": "mq:eaa2ae2de9f38650",
+    "label": "Thailand",
+    "gold": false
+   },
+   {
+    "id": "mq:bcc5404a18e61346",
+    "label": "Estonia",
+    "gold": false
+   },
+   {
+    "id": "mq:36eac5d43c5ac2ef",
+    "label": "Thailand",
+    "gold": false
+   },
+   {
+    "id": "mq:0ac91f88889138cb",
+    "label": "Somalis",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

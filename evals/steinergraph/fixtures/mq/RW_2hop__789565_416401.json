@@ -1,0 +1,431 @@
+{
+ "qid": "RW:2hop__789565_416401",
+ "set": "mq",
+ "question": "Who is the child of Empress Dowager Huang's child?",
+ "gold": [
+  {
+   "id": "mq:5aad82b73ab58df1",
+   "label": "Empress Dowager Huang",
+   "seed": true
+  },
+  {
+   "id": "mq:7f6e7c0fc8a9339b",
+   "label": "Lady Li (Wang Jipeng)",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:5aad82b73ab58df1",
+   "label": "Empress Dowager Huang",
+   "rank": 1,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:c4ee7968cd93ea93",
+   "label": "Han dynasty",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:a994570524171c5c",
+   "label": "Empress Dowager Gou",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:f0cade90394b68eb",
+   "label": "Empress Dowager Wang (Rui)",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:adbf86fc1208dcc0",
+   "label": "Empress Dowager Xu",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:5aad82b73ab58df1",
+    "label": "Empress Dowager Huang",
+    "role": "gold"
+   },
+   {
+    "id": "mq:7f6e7c0fc8a9339b",
+    "label": "Lady Li (Wang Jipeng)",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:5aad82b73ab58df1",
+    "b": "mq:7f6e7c0fc8a9339b",
+    "via": [
+     {
+      "kind": "near",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "yanjun",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "wang yanjun",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "wang lin",
+      "width": 3
+     },
+     {
+      "kind": "term",
+      "key": "min",
+      "width": 25
+     },
+     {
+      "kind": "term",
+      "key": "lin",
+      "width": 25
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "mq:5aad82b73ab58df1",
+   "gold": "mq:5aad82b73ab58df1",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 1777,
+  "within_2_doors": 19280,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "mq:5bb251f21ae1b9c6",
+    "label": "Empress Gou",
+    "p": 0.008456221515321523,
+    "gold": false
+   },
+   {
+    "id": "mq:cadce26ef729ae15",
+    "label": "Empress Wang (Yang Pu)",
+    "p": 0.006975216011692161,
+    "gold": false
+   },
+   {
+    "id": "mq:dd32fcb3d650b8f5",
+    "label": "Jin Feishan",
+    "p": 0.005910842464771435,
+    "gold": false
+   },
+   {
+    "id": "mq:56995ad9fac0675d",
+    "label": "Empress Qiang",
+    "p": 0.004822144139212598,
+    "gold": false
+   },
+   {
+    "id": "mq:84a3fa9e89a388e7",
+    "label": "Empress He (Tang dynasty)",
+    "p": 0.003902963156842385,
+    "gold": false
+   },
+   {
+    "id": "mq:9cd12484033b4b18",
+    "label": "Yang Meng",
+    "p": 0.0038441752082363258,
+    "gold": false
+   },
+   {
+    "id": "mq:9f298ef82fc30633",
+    "label": "Tang dynasty",
+    "p": 0.0034730293704650543,
+    "gold": false
+   },
+   {
+    "id": "mq:75bf664e84659826",
+    "label": "Wang Yacheng",
+    "p": 0.0034173255994531413,
+    "gold": false
+   },
+   {
+    "id": "mq:b69acd67250d8bdf",
+    "label": "Consort Chen Farong",
+    "p": 0.0033780044446546104,
+    "gold": false
+   },
+   {
+    "id": "mq:7f6e7c0fc8a9339b",
+    "label": "Lady Li (Wang Jipeng)",
+    "p": 0.0027875990454280233,
+    "gold": true
+   },
+   {
+    "id": "mq:3f7c7500097c0c94",
+    "label": "Princess Pei",
+    "p": 0.002769956814566647,
+    "gold": false
+   },
+   {
+    "id": "mq:f3ef7b0eaf23d124",
+    "label": "Liu Yin (Southern Han)",
+    "p": 0.0026729840811981253,
+    "gold": false
+   },
+   {
+    "id": "mq:80235a666f64a012",
+    "label": "Wang Yuanji",
+    "p": 0.002589478453186149,
+    "gold": false
+   },
+   {
+    "id": "mq:f8065f63c716f45d",
+    "label": "Hokkien",
+    "p": 0.002230597451328436,
+    "gold": false
+   },
+   {
+    "id": "mq:20ea96d7e89864ee",
+    "label": "Liu Shouguang",
+    "p": 0.0022288179731441006,
+    "gold": false
+   },
+   {
+    "id": "mq:ed88791820a73e58",
+    "label": "Empress Xiang",
+    "p": 0.0022282432926697326,
+    "gold": false
+   },
+   {
+    "id": "mq:cbe382c8b3a5beb0",
+    "label": "Consort Yujiul\u00fc",
+    "p": 0.0021742781168501116,
+    "gold": false
+   },
+   {
+    "id": "mq:90657679904f1591",
+    "label": "Wang Zongbi",
+    "p": 0.002051823722356355,
+    "gold": false
+   },
+   {
+    "id": "mq:5e5cf66f8d580fb0",
+    "label": "Nanjing",
+    "p": 0.0019654978323476358,
+    "gold": false
+   },
+   {
+    "id": "mq:08f21e7917e1da64",
+    "label": "Consort Dowager Zhao",
+    "p": 0.0018172038456067186,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:5aad82b73ab58df1",
+   "label": "Empress Dowager Huang",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:c4ee7968cd93ea93",
+   "label": "Han dynasty",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:a994570524171c5c",
+   "label": "Empress Dowager Gou",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:f0cade90394b68eb",
+   "label": "Empress Dowager Wang (Rui)",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:adbf86fc1208dcc0",
+   "label": "Empress Dowager Xu",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:7f6e7c0fc8a9339b",
+   "label": "Lady Li (Wang Jipeng)",
+   "wave": 1,
+   "via": "term:wang yanjun",
+   "gold": true
+  },
+  {
+   "id": "mq:70c8c309c7c14702",
+   "label": "Wang Lin (badminton)",
+   "wave": 2,
+   "via": "term:wang lin",
+   "gold": false
+  },
+  {
+   "id": "mq:75bf664e84659826",
+   "label": "Wang Yacheng",
+   "wave": 3,
+   "via": "near:mq:5aad82b73ab58df1",
+   "gold": false
+  },
+  {
+   "id": "mq:cadce26ef729ae15",
+   "label": "Empress Wang (Yang Pu)",
+   "wave": 3,
+   "via": "near:mq:5aad82b73ab58df1",
+   "gold": false
+  },
+  {
+   "id": "mq:80235a666f64a012",
+   "label": "Wang Yuanji",
+   "wave": 4,
+   "via": "near:mq:adbf86fc1208dcc0",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:5bb251f21ae1b9c6",
+    "label": "Empress Gou",
+    "gold": false
+   },
+   {
+    "id": "mq:cadce26ef729ae15",
+    "label": "Empress Wang (Yang Pu)",
+    "gold": false
+   },
+   {
+    "id": "mq:dd32fcb3d650b8f5",
+    "label": "Jin Feishan",
+    "gold": false
+   },
+   {
+    "id": "mq:56995ad9fac0675d",
+    "label": "Empress Qiang",
+    "gold": false
+   },
+   {
+    "id": "mq:84a3fa9e89a388e7",
+    "label": "Empress He (Tang dynasty)",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:5bb251f21ae1b9c6",
+    "label": "Empress Gou",
+    "gold": false
+   },
+   {
+    "id": "mq:b69acd67250d8bdf",
+    "label": "Consort Chen Farong",
+    "gold": false
+   },
+   {
+    "id": "mq:9f298ef82fc30633",
+    "label": "Tang dynasty",
+    "gold": false
+   },
+   {
+    "id": "mq:cadce26ef729ae15",
+    "label": "Empress Wang (Yang Pu)",
+    "gold": false
+   },
+   {
+    "id": "mq:56995ad9fac0675d",
+    "label": "Empress Qiang",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:9f298ef82fc30633",
+    "label": "Tang dynasty",
+    "gold": false
+   },
+   {
+    "id": "mq:b69acd67250d8bdf",
+    "label": "Consort Chen Farong",
+    "gold": false
+   },
+   {
+    "id": "mq:5bb251f21ae1b9c6",
+    "label": "Empress Gou",
+    "gold": false
+   },
+   {
+    "id": "mq:cadce26ef729ae15",
+    "label": "Empress Wang (Yang Pu)",
+    "gold": false
+   },
+   {
+    "id": "mq:84a3fa9e89a388e7",
+    "label": "Empress He (Tang dynasty)",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:59f70aa7d32e24e7",
+    "label": "Fakhr-un-Nissa",
+    "gold": false
+   },
+   {
+    "id": "mq:cbe382c8b3a5beb0",
+    "label": "Consort Yujiul\u00fc",
+    "gold": false
+   },
+   {
+    "id": "mq:48250a9110bc5a11",
+    "label": "The Last Empress (novel)",
+    "gold": false
+   },
+   {
+    "id": "mq:80235a666f64a012",
+    "label": "Wang Yuanji",
+    "gold": false
+   },
+   {
+    "id": "mq:9f298ef82fc30633",
+    "label": "Tang dynasty",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

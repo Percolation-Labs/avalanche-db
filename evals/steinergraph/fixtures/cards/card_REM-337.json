@@ -1,0 +1,433 @@
+{
+ "qid": "card:REM-337",
+ "set": "cards",
+ "question": "What was done about this, and why: deploy: the app mounts no data volume and a release rolls out without taking the site down?",
+ "gold": [
+  {
+   "id": "commit/9b683486b3",
+   "label": "commit 9b68348: data-governance: every store, a proposed period for each class, and who approves (REM-339)",
+   "seed": false
+  },
+  {
+   "id": "commit/d78f510f4e",
+   "label": "commit d78f510: specs: compliance \u00a75 points the retired SQLite volume at REM-337 and REM-338",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/05015fae05",
+   "label": "commit 05015fa: board: file REM-337 deploy: the app mounts no data volume and a release rolls out without taking the sit",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-337.md#1",
+   "label": "board/cards/REM-337.md",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-337.md#2",
+   "label": "board/cards/REM-337.md \u203a Goal",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-338.md#1",
+   "label": "board/cards/REM-338.md",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-337.md#6",
+   "label": "board/cards/REM-337.md \u203a Log",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "board/cards/REM-338.md#1",
+    "label": "board/cards/REM-338.md",
+    "role": "seed"
+   },
+   {
+    "id": "commit/9b683486b3",
+    "label": "commit 9b68348: data-governance: every store, a proposed period for each class, and who approves (REM-339)",
+    "role": "gold"
+   },
+   {
+    "id": "commit/d78f510f4e",
+    "label": "commit d78f510: specs: compliance \u00a75 points the retired SQLite volume at REM-337 and REM-338",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "board/cards/REM-338.md#1",
+    "b": "commit/d78f510f4e",
+    "via": [
+     {
+      "kind": "term",
+      "key": "sqlite volume",
+      "width": 9
+     },
+     {
+      "kind": "term",
+      "key": "rem 338",
+      "width": 22
+     }
+    ]
+   },
+   {
+    "a": "commit/9b683486b3",
+    "b": "commit/d78f510f4e",
+    "via": [
+     {
+      "kind": "term",
+      "key": "rem 338",
+      "width": 22
+     },
+     {
+      "kind": "term",
+      "key": "rem 337",
+      "width": 25
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "board/cards/REM-338.md#1",
+   "gold": "commit/d78f510f4e",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 1098,
+  "within_2_doors": 33056,
+  "gold_within_1": 2,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "commit/5b18d6d435",
+    "label": "commit 5b18d6d: board: file REM-338 decide: delete the old SQLite volume percolate-application-data once nothing mounts ",
+    "p": 0.010483080039582243,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-338.md#2",
+    "label": "board/cards/REM-338.md \u203a Goal",
+    "p": 0.008705178670372142,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-338.md#6",
+    "label": "board/cards/REM-338.md \u203a Log",
+    "p": 0.008225822937449659,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-295.md#3",
+    "label": "board/cards/REM-295.md \u203a Evidence",
+    "p": 0.0071112980899902785,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/release-and-gitops.md#13",
+    "label": "specs/percolate-application/release-and-gitops.md \u203a Releasing the application",
+    "p": 0.004066610086020586,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-295.md#7",
+    "label": "board/cards/REM-295.md \u203a Log",
+    "p": 0.0038635803795290867,
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-ui/APP.md#1",
+    "label": "applications/percolate-ui/APP.md \u203a The app moved into percolate-core",
+    "p": 0.0036672005112775062,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/spa-plan.md#4",
+    "label": "specs/percolate-application/spa-plan.md \u203a 2. Technology decision for the 2026 build",
+    "p": 0.0033190612546953884,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-333.md#6",
+    "label": "board/cards/REM-333.md \u203a Log",
+    "p": 0.003241496620753607,
+    "gold": false
+   },
+   {
+    "id": "commit/ff2fe1a394",
+    "label": "commit ff2fe1a: Runner work directories are bind mounts, because checkout's auth does not follow symlinks",
+    "p": 0.0029768310997046596,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-337.md#3",
+    "label": "board/cards/REM-337.md \u203a Evidence",
+    "p": 0.002895690056241276,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/release-and-gitops.md#18",
+    "label": "specs/percolate-application/release-and-gitops.md \u203a Turning core on for the application",
+    "p": 0.0028154825966282657,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-336.md#9",
+    "label": "board/cards/REM-336.md \u203a Log",
+    "p": 0.0026296672427658656,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-558.md#5",
+    "label": "board/cards/REM-558.md \u203a Log",
+    "p": 0.002615930597796533,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-337.md#4",
+    "label": "board/cards/REM-337.md \u203a Done when",
+    "p": 0.0024022236121249256,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-939.md#2",
+    "label": "board/cards/REM-939.md \u203a Goal",
+    "p": 0.002361450251074988,
+    "gold": false
+   },
+   {
+    "id": "commit/a6b3502f47",
+    "label": "commit a6b3502: board: file REM-336 hub: the app runs only on core, with the SQLite preview store and its fallbacks dele",
+    "p": 0.001993585398898873,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-336.md#7",
+    "label": "board/cards/REM-336.md \u203a Log",
+    "p": 0.0018126186815732768,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/compliance.md#2",
+    "label": "specs/percolate-application/compliance.md \u203a 1. What Percolate is, for this purpose",
+    "p": 0.0017503069965699011,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-295.md#4",
+    "label": "board/cards/REM-295.md \u203a Done when",
+    "p": 0.0013925738611831027,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/05015fae05",
+   "label": "commit 05015fa: board: file REM-337 deploy: the app mounts no data volume and a release rolls out without taking the sit",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-337.md#1",
+   "label": "board/cards/REM-337.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-337.md#2",
+   "label": "board/cards/REM-337.md \u203a Goal",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-338.md#1",
+   "label": "board/cards/REM-338.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-337.md#6",
+   "label": "board/cards/REM-337.md \u203a Log",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/34512294e1",
+   "label": "commit 3451229: board: percolate-application-ad takes REM-337",
+   "wave": 1,
+   "via": "term:rem 337",
+   "gold": false
+  },
+  {
+   "id": "commit/ff149ad8f5",
+   "label": "commit ff149ad: board: REM-337 in-progress \u2192 done",
+   "wave": 1,
+   "via": "term:rem 337",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-337.md#5",
+   "label": "board/cards/REM-337.md \u203a Scope",
+   "wave": 1,
+   "via": "term:rem 337",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-337.md#3",
+   "label": "board/cards/REM-337.md \u203a Evidence",
+   "wave": 1,
+   "via": "term:rem 337",
+   "gold": false
+  },
+  {
+   "id": "commit/ebacc168ad",
+   "label": "commit ebacc16: board: note on REM-337",
+   "wave": 1,
+   "via": "term:rem 337",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "commit/5b18d6d435",
+    "label": "commit 5b18d6d: board: file REM-338 decide: delete the old SQLite volume percolate-application-data once nothing mounts ",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-338.md#2",
+    "label": "board/cards/REM-338.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-338.md#6",
+    "label": "board/cards/REM-338.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-295.md#3",
+    "label": "board/cards/REM-295.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/release-and-gitops.md#13",
+    "label": "specs/percolate-application/release-and-gitops.md \u203a Releasing the application",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "commit/5b18d6d435",
+    "label": "commit 5b18d6d: board: file REM-338 decide: delete the old SQLite volume percolate-application-data once nothing mounts ",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-338.md#6",
+    "label": "board/cards/REM-338.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-295.md#3",
+    "label": "board/cards/REM-295.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-338.md#2",
+    "label": "board/cards/REM-338.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-295.md#7",
+    "label": "board/cards/REM-295.md \u203a Log",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/5b18d6d435",
+    "label": "commit 5b18d6d: board: file REM-338 decide: delete the old SQLite volume percolate-application-data once nothing mounts ",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-338.md#2",
+    "label": "board/cards/REM-338.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "commit/f0f96ca3a0",
+    "label": "commit f0f96ca: board: file REM-295 hub: Postgres is the app's only store, with no SQLite, preview fallback or data volu",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-295.md#1",
+    "label": "board/cards/REM-295.md",
+    "gold": false
+   },
+   {
+    "id": "commit/408fd7cf62",
+    "label": "commit 408fd7c: board: file REM-538 dev: a disposable database takes its data volume with it when it is removed",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "commit/5b18d6d435",
+    "label": "commit 5b18d6d: board: file REM-338 decide: delete the old SQLite volume percolate-application-data once nothing mounts ",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-295.md#3",
+    "label": "board/cards/REM-295.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-338.md#2",
+    "label": "board/cards/REM-338.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-295.md#7",
+    "label": "board/cards/REM-295.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1263.md#4",
+    "label": "board/cards/REM-1263.md \u203a Done when",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

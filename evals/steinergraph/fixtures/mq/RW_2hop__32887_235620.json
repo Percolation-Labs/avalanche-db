@@ -1,0 +1,412 @@
+{
+ "qid": "RW:2hop__32887_235620",
+ "set": "mq",
+ "question": "Who fathered Emperor Ai of the Chinese dynasty with the oldest remaining wooden buildings?",
+ "gold": [
+  {
+   "id": "mq:42ff38d5177ffc40",
+   "label": "Han dynasty",
+   "seed": true
+  },
+  {
+   "id": "mq:84a3fa9e89a388e7",
+   "label": "Empress He (Tang dynasty)",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:42ff38d5177ffc40",
+   "label": "Han dynasty",
+   "rank": 1,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:ed88791820a73e58",
+   "label": "Empress Xiang",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:c872b663070f6f7d",
+   "label": "History of medicine",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:14f12f7f7e615cd5",
+   "label": "Northern Qi",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "mq:cb781d745f82a722",
+   "label": "Latter Deposed Emperor of Liu Song",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:42ff38d5177ffc40",
+    "label": "Han dynasty",
+    "role": "gold"
+   },
+   {
+    "id": "mq:84a3fa9e89a388e7",
+    "label": "Empress He (Tang dynasty)",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:42ff38d5177ffc40",
+    "b": "mq:84a3fa9e89a388e7",
+    "via": [
+     {
+      "kind": "term",
+      "key": "tang dynasty",
+      "width": 19
+     },
+     {
+      "kind": "term",
+      "key": "tang",
+      "width": 38
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "mq:42ff38d5177ffc40",
+   "gold": "mq:42ff38d5177ffc40",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 2258,
+  "within_2_doors": 18811,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "mq:5aad82b73ab58df1",
+    "label": "Empress Dowager Huang",
+    "p": 0.005577880518860983,
+    "gold": false
+   },
+   {
+    "id": "mq:b69acd67250d8bdf",
+    "label": "Consort Chen Farong",
+    "p": 0.005031130448845181,
+    "gold": false
+   },
+   {
+    "id": "mq:9f298ef82fc30633",
+    "label": "Tang dynasty",
+    "p": 0.004350531630198391,
+    "gold": false
+   },
+   {
+    "id": "mq:242cca1e20cdf85b",
+    "label": "Hokkien",
+    "p": 0.004232149461801121,
+    "gold": false
+   },
+   {
+    "id": "mq:4d57f509899b8d3a",
+    "label": "Han dynasty",
+    "p": 0.003244877342778564,
+    "gold": false
+   },
+   {
+    "id": "mq:13fe5b184c2b17e3",
+    "label": "Liu Ju",
+    "p": 0.0026906700177450706,
+    "gold": false
+   },
+   {
+    "id": "mq:59f70aa7d32e24e7",
+    "label": "Fakhr-un-Nissa",
+    "p": 0.002223360978106604,
+    "gold": false
+   },
+   {
+    "id": "mq:8e7c1eef504b81a5",
+    "label": "Nanjing",
+    "p": 0.0021179240125471155,
+    "gold": false
+   },
+   {
+    "id": "mq:f3ef7b0eaf23d124",
+    "label": "Liu Yin (Southern Han)",
+    "p": 0.0019340700245817583,
+    "gold": false
+   },
+   {
+    "id": "mq:a3ed34009cbd2465",
+    "label": "Modern history",
+    "p": 0.0019239286266399872,
+    "gold": false
+   },
+   {
+    "id": "mq:2c047df7c1531358",
+    "label": "Yuan Can",
+    "p": 0.001741228205854539,
+    "gold": false
+   },
+   {
+    "id": "mq:c4547a7282943b7a",
+    "label": "Song dynasty",
+    "p": 0.0017342580872294585,
+    "gold": false
+   },
+   {
+    "id": "mq:adbf86fc1208dcc0",
+    "label": "Empress Dowager Xu",
+    "p": 0.0016965387674276234,
+    "gold": false
+   },
+   {
+    "id": "mq:5e5cf66f8d580fb0",
+    "label": "Nanjing",
+    "p": 0.0016802544386296102,
+    "gold": false
+   },
+   {
+    "id": "mq:7de2b644e889ff64",
+    "label": "Han dynasty",
+    "p": 0.0016636371293622455,
+    "gold": false
+   },
+   {
+    "id": "mq:84a3fa9e89a388e7",
+    "label": "Empress He (Tang dynasty)",
+    "p": 0.001493889188553814,
+    "gold": true
+   },
+   {
+    "id": "mq:cadce26ef729ae15",
+    "label": "Empress Wang (Yang Pu)",
+    "p": 0.0014875308901568607,
+    "gold": false
+   },
+   {
+    "id": "mq:f8065f63c716f45d",
+    "label": "Hokkien",
+    "p": 0.00147689935097066,
+    "gold": false
+   },
+   {
+    "id": "mq:e44ceeb86664dcab",
+    "label": "History of Beijing",
+    "p": 0.001427644129093523,
+    "gold": false
+   },
+   {
+    "id": "mq:d7225638414dafe7",
+    "label": "Valencia",
+    "p": 0.0013106205009129534,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:42ff38d5177ffc40",
+   "label": "Han dynasty",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:ed88791820a73e58",
+   "label": "Empress Xiang",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:c872b663070f6f7d",
+   "label": "History of medicine",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:14f12f7f7e615cd5",
+   "label": "Northern Qi",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:cb781d745f82a722",
+   "label": "Latter Deposed Emperor of Liu Song",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:21d89cb921b6f6f6",
+   "label": "History of books",
+   "wave": 1,
+   "via": "term:tang dynasty",
+   "gold": false
+  },
+  {
+   "id": "mq:621334bb12913235",
+   "label": "Printing press",
+   "wave": 1,
+   "via": "term:tang dynasty",
+   "gold": false
+  },
+  {
+   "id": "mq:12b7755b1eb22a50",
+   "label": "Changji",
+   "wave": 1,
+   "via": "term:tang dynasty",
+   "gold": false
+  },
+  {
+   "id": "mq:f0cade90394b68eb",
+   "label": "Empress Dowager Wang (Rui)",
+   "wave": 1,
+   "via": "term:tang dynasty",
+   "gold": false
+  },
+  {
+   "id": "mq:e9809a1f930f3e76",
+   "label": "House of Harmony and Vengeance",
+   "wave": 1,
+   "via": "term:tang dynasty",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:5aad82b73ab58df1",
+    "label": "Empress Dowager Huang",
+    "gold": false
+   },
+   {
+    "id": "mq:b69acd67250d8bdf",
+    "label": "Consort Chen Farong",
+    "gold": false
+   },
+   {
+    "id": "mq:9f298ef82fc30633",
+    "label": "Tang dynasty",
+    "gold": false
+   },
+   {
+    "id": "mq:242cca1e20cdf85b",
+    "label": "Hokkien",
+    "gold": false
+   },
+   {
+    "id": "mq:4d57f509899b8d3a",
+    "label": "Han dynasty",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:9f298ef82fc30633",
+    "label": "Tang dynasty",
+    "gold": false
+   },
+   {
+    "id": "mq:5aad82b73ab58df1",
+    "label": "Empress Dowager Huang",
+    "gold": false
+   },
+   {
+    "id": "mq:7de2b644e889ff64",
+    "label": "Han dynasty",
+    "gold": false
+   },
+   {
+    "id": "mq:84a3fa9e89a388e7",
+    "label": "Empress He (Tang dynasty)",
+    "gold": true
+   },
+   {
+    "id": "mq:f3ef7b0eaf23d124",
+    "label": "Liu Yin (Southern Han)",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:9f298ef82fc30633",
+    "label": "Tang dynasty",
+    "gold": false
+   },
+   {
+    "id": "mq:c4547a7282943b7a",
+    "label": "Song dynasty",
+    "gold": false
+   },
+   {
+    "id": "mq:7de2b644e889ff64",
+    "label": "Han dynasty",
+    "gold": false
+   },
+   {
+    "id": "mq:a3ed34009cbd2465",
+    "label": "Modern history",
+    "gold": false
+   },
+   {
+    "id": "mq:5aad82b73ab58df1",
+    "label": "Empress Dowager Huang",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:04ec9c0b6067847a",
+    "label": "Qin Shi Huang",
+    "gold": false
+   },
+   {
+    "id": "mq:a3ed34009cbd2465",
+    "label": "Modern history",
+    "gold": false
+   },
+   {
+    "id": "mq:3632ab117e401968",
+    "label": "Sino-Tibetan relations during the Ming dynasty",
+    "gold": false
+   },
+   {
+    "id": "mq:84a3fa9e89a388e7",
+    "label": "Empress He (Tang dynasty)",
+    "gold": true
+   },
+   {
+    "id": "mq:8e849fc12a5fe0ec",
+    "label": "Lejonstr\u00f6msbron",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 1.0,
+  "LQ": 0.0,
+  "S": 1.0
+ }
+}

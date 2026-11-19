@@ -1,0 +1,436 @@
+{
+ "qid": "pr:784",
+ "set": "prs",
+ "question": "What work went into this, and why: D1 on MuSiQue: +.044 over today's door, below D3 (+.058); D3 stays the best door?",
+ "gold": [
+  {
+   "id": "commit/2315d1f208",
+   "label": "commit 2315d1f: D1 on MuSiQue: +.044 over today's door, below D3's +.058; titles and opening sentences carry the hidden-",
+   "seed": false
+  },
+  {
+   "id": "commit/9919288815",
+   "label": "commit 9919288: D1 on MuSiQue: register before scoring",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/a33add5163",
+   "label": "commit a33add5: Merge pull request #784 from Percolation-Labs/bill/jev-d1-musique",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "commit/07a7bdf6f2",
+   "label": "commit 07a7bdf: Round 3: D6 (D3 + today's first snippet) is the best door: MuSiQue +.063, documented loss removed; level",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "meta/lab/results/jev-doors/RESULT.md#10",
+   "label": "meta/lab/results/jev-doors/RESULT.md \u203a Round 3: D6, D3 with today's first snippet kept, is the best door on both graphs ",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "board/messages/M-20261116-202512-6df0.md#1",
+   "label": "board/messages/M-20261116-202512-6df0.md",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "meta/lab/results/jev-doors/RESULT.md#9",
+   "label": "meta/lab/results/jev-doors/RESULT.md \u203a Round 3: D6, D3 with today's first snippet kept, is the best door on both graphs ",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/2315d1f208",
+    "label": "commit 2315d1f: D1 on MuSiQue: +.044 over today's door, below D3's +.058; titles and opening sentences carry the hidden-",
+    "role": "gold"
+   },
+   {
+    "id": "commit/9919288815",
+    "label": "commit 9919288: D1 on MuSiQue: register before scoring",
+    "role": "gold"
+   },
+   {
+    "id": "meta/lab/results/jev-doors/RESULT.md#9",
+    "label": "meta/lab/results/jev-doors/RESULT.md \u203a Round 3: D6, D3 with today's first snippet kept, is the best door on both graphs ",
+    "role": "seed"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/2315d1f208",
+    "b": "commit/9919288815",
+    "via": [
+     {
+      "kind": "beside"
+     }
+    ]
+   },
+   {
+    "a": "commit/2315d1f208",
+    "b": "meta/lab/results/jev-doors/RESULT.md#9",
+    "via": [
+     {
+      "kind": "term",
+      "key": "sentences carry",
+      "width": 4
+     },
+     {
+      "kind": "term",
+      "key": "page gain",
+      "width": 4
+     },
+     {
+      "kind": "term",
+      "key": "hidden page",
+      "width": 7
+     },
+     {
+      "kind": "term",
+      "key": "opening sentences",
+      "width": 36
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "meta/lab/results/jev-doors/RESULT.md#9",
+   "gold": "commit/2315d1f208",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 833,
+  "within_2_doors": 30522,
+  "gold_within_1": 1,
+  "gold_within_2": 1,
+  "top_U": [
+   {
+    "id": "commit/83a6b2474f",
+    "label": "commit 83a6b24: Merge pull request #786 from Percolation-Labs/bill/jev-d6",
+    "p": 0.015848729584887207,
+    "gold": false
+   },
+   {
+    "id": "commit/9d13812335",
+    "label": "commit 9d13812: Round 3: register D6 (D3 + today's first snippet) before scoring",
+    "p": 0.008689892843599552,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261116-203359-d158.md#1",
+    "label": "board/messages/M-20261116-203359-d158.md",
+    "p": 0.006010149096260916,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-doors/MUSIQUE.md#7",
+    "label": "meta/lab/results/jev-doors/MUSIQUE.md \u203a D1 result (~21:00Z)",
+    "p": 0.005075490663335889,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-doors/MUSIQUE.md#8",
+    "label": "meta/lab/results/jev-doors/MUSIQUE.md \u203a D1 result (~21:00Z)",
+    "p": 0.0047582112215118644,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-doors/MUSIQUE.md#11",
+    "label": "meta/lab/results/jev-doors/MUSIQUE.md \u203a Where the experiment stands",
+    "p": 0.003890665456827866,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-doors/REGISTERED.md#4",
+    "label": "meta/lab/results/jev-doors/REGISTERED.md \u203a Round 3: D6 (registered 16 Nov ~21:05Z, before scoring)",
+    "p": 0.003820008610588642,
+    "gold": false
+   },
+   {
+    "id": "commit/5f35d41666",
+    "label": "commit 5f35d41: board: bill messages sirsh",
+    "p": 0.003635216110188429,
+    "gold": false
+   },
+   {
+    "id": "commit/7bb969273e",
+    "label": "commit 7bb9692: board: board-watch messages all",
+    "p": 0.003508289515212845,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/two-hop-door/musique.txt#1",
+    "label": "meta/lab/results/two-hop-door/musique.txt",
+    "p": 0.0031877582275680705,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261116-213501-e7c6.md#1",
+    "label": "board/messages/M-20261116-213501-e7c6.md",
+    "p": 0.0026187133924716805,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/worlds/mq_doors.py#3",
+    "label": "meta/lab/worlds/mq_doors.py",
+    "p": 0.0025776125935927496,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261116-204500-99a8.md#1",
+    "label": "board/messages/M-20261116-204500-99a8.md",
+    "p": 0.002372317138149183,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/worlds/doors.py#2",
+    "label": "meta/lab/worlds/doors.py",
+    "p": 0.0022858138518167554,
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-10-28-graded-set/README.md#3",
+    "label": "meta/spikes/2026-10-28-graded-set/README.md \u203a The six axes, and the level rule",
+    "p": 0.0019245143540185462,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/configs/structure/observables.py#1",
+    "label": "meta/lab/configs/structure/observables.py",
+    "p": 0.0018632411538781449,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-doors/HOTPOT.md#1",
+    "label": "meta/lab/results/jev-doors/HOTPOT.md \u203a D6 on a second real dataset: HotpotQA (registered 16 Nov ~23:45Z, before any Hotp",
+    "p": 0.0018526451879672312,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/gain-vs-room/RESULT.md#6",
+    "label": "meta/lab/results/gain-vs-room/RESULT.md \u203a Postmortem",
+    "p": 0.001827181651305816,
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-10-28-graded-set/measure.py#5",
+    "label": "meta/spikes/2026-10-28-graded-set/measure.py",
+    "p": 0.001821757537756186,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-doors/MUSIQUE.md#5",
+    "label": "meta/lab/results/jev-doors/MUSIQUE.md \u203a Next",
+    "p": 0.0018206088958137518,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/a33add5163",
+   "label": "commit a33add5: Merge pull request #784 from Percolation-Labs/bill/jev-d1-musique",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/07a7bdf6f2",
+   "label": "commit 07a7bdf: Round 3: D6 (D3 + today's first snippet) is the best door: MuSiQue +.063, documented loss removed; level",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/jev-doors/RESULT.md#10",
+   "label": "meta/lab/results/jev-doors/RESULT.md \u203a Round 3: D6, D3 with today's first snippet kept, is the best door on both graphs ",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/messages/M-20261116-202512-6df0.md#1",
+   "label": "board/messages/M-20261116-202512-6df0.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/jev-doors/RESULT.md#9",
+   "label": "meta/lab/results/jev-doors/RESULT.md \u203a Round 3: D6, D3 with today's first snippet kept, is the best door on both graphs ",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/jev-doors/MUSIQUE.md#4",
+   "label": "meta/lab/results/jev-doors/MUSIQUE.md \u203a Postmortem",
+   "wave": 1,
+   "via": "term:hidden page",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/jev-doors/MUSIQUE.md#5",
+   "label": "meta/lab/results/jev-doors/MUSIQUE.md \u203a Next",
+   "wave": 1,
+   "via": "term:hidden page",
+   "gold": false
+  },
+  {
+   "id": "commit/2315d1f208",
+   "label": "commit 2315d1f: D1 on MuSiQue: +.044 over today's door, below D3's +.058; titles and opening sentences carry the hidden-",
+   "wave": 1,
+   "via": "term:hidden page",
+   "gold": true
+  },
+  {
+   "id": "meta/lab/results/jev-doors/REGISTERED.md#4",
+   "label": "meta/lab/results/jev-doors/REGISTERED.md \u203a Round 3: D6 (registered 16 Nov ~21:05Z, before scoring)",
+   "wave": 1,
+   "via": "term:hidden page",
+   "gold": false
+  },
+  {
+   "id": "board/messages/M-20261115-184632-db5a.md#1",
+   "label": "board/messages/M-20261115-184632-db5a.md",
+   "wave": 1,
+   "via": "term:hidden page",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "commit/83a6b2474f",
+    "label": "commit 83a6b24: Merge pull request #786 from Percolation-Labs/bill/jev-d6",
+    "gold": false
+   },
+   {
+    "id": "commit/9d13812335",
+    "label": "commit 9d13812: Round 3: register D6 (D3 + today's first snippet) before scoring",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261116-203359-d158.md#1",
+    "label": "board/messages/M-20261116-203359-d158.md",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-doors/MUSIQUE.md#7",
+    "label": "meta/lab/results/jev-doors/MUSIQUE.md \u203a D1 result (~21:00Z)",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-doors/MUSIQUE.md#8",
+    "label": "meta/lab/results/jev-doors/MUSIQUE.md \u203a D1 result (~21:00Z)",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "commit/83a6b2474f",
+    "label": "commit 83a6b24: Merge pull request #786 from Percolation-Labs/bill/jev-d6",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-doors/MUSIQUE.md#8",
+    "label": "meta/lab/results/jev-doors/MUSIQUE.md \u203a D1 result (~21:00Z)",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261116-203359-d158.md#1",
+    "label": "board/messages/M-20261116-203359-d158.md",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-doors/MUSIQUE.md#7",
+    "label": "meta/lab/results/jev-doors/MUSIQUE.md \u203a D1 result (~21:00Z)",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-doors/MUSIQUE.md#11",
+    "label": "meta/lab/results/jev-doors/MUSIQUE.md \u203a Where the experiment stands",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/9d13812335",
+    "label": "commit 9d13812: Round 3: register D6 (D3 + today's first snippet) before scoring",
+    "gold": false
+   },
+   {
+    "id": "commit/83a6b2474f",
+    "label": "commit 83a6b24: Merge pull request #786 from Percolation-Labs/bill/jev-d6",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-doors/MUSIQUE.md#8",
+    "label": "meta/lab/results/jev-doors/MUSIQUE.md \u203a D1 result (~21:00Z)",
+    "gold": false
+   },
+   {
+    "id": "commit/2315d1f208",
+    "label": "commit 2315d1f: D1 on MuSiQue: +.044 over today's door, below D3's +.058; titles and opening sentences carry the hidden-",
+    "gold": true
+   },
+   {
+    "id": "board/messages/M-20261116-203359-d158.md#1",
+    "label": "board/messages/M-20261116-203359-d158.md",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "meta/lab/results/jev-doors/RESULT.md#11",
+    "label": "meta/lab/results/jev-doors/RESULT.md \u203a Round 4: re-tuning Jev's prompt on D6 does not pass (16 Nov, ~21:50Z)",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-doors/MUSIQUE.md#8",
+    "label": "meta/lab/results/jev-doors/MUSIQUE.md \u203a D1 result (~21:00Z)",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-doors/MUSIQUE.md#11",
+    "label": "meta/lab/results/jev-doors/MUSIQUE.md \u203a Where the experiment stands",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261116-193617-4ae4.md#1",
+    "label": "board/messages/M-20261116-193617-4ae4.md",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/jev-doors/RESULT.md#6",
+    "label": "meta/lab/results/jev-doors/RESULT.md \u203a Round 2: relations and specific names do not beat D3 (16 Nov, ~19:45Z)",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.5,
+  "S": 0.0
+ }
+}

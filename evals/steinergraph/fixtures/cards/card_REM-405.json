@@ -1,0 +1,400 @@
+{
+ "qid": "card:REM-405",
+ "set": "cards",
+ "question": "What was done about this, and why: home: one frame, wording in one file, and a second theme by token swap?",
+ "gold": [
+  {
+   "id": "commit/174eeae4c1",
+   "label": "commit 174eeae: experience: the homepage is one frame, live as release-2026-09-16-0628 (REM-405)",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/fbc333ea15",
+   "label": "commit fbc333e: board: file REM-405 home: one frame, wording in one file, and a second theme by token swap",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-405.md#1",
+   "label": "board/cards/REM-405.md",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-405.md#2",
+   "label": "board/cards/REM-405.md \u203a Goal",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-405.md#6",
+   "label": "board/cards/REM-405.md \u203a Log",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-405.md#4",
+   "label": "board/cards/REM-405.md \u203a Done when",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/174eeae4c1",
+    "label": "commit 174eeae: experience: the homepage is one frame, live as release-2026-09-16-0628 (REM-405)",
+    "role": "gold"
+   },
+   {
+    "id": "commit/fbc333ea15",
+    "label": "commit fbc333e: board: file REM-405 home: one frame, wording in one file, and a second theme by token swap",
+    "role": "seed"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/174eeae4c1",
+    "b": "commit/fbc333ea15",
+    "via": [
+     {
+      "kind": "term",
+      "key": "rem 405",
+      "width": 28
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [],
+  "entry": {
+   "seed": "commit/fbc333ea15",
+   "gold": "commit/174eeae4c1",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 2010,
+  "within_2_doors": 34246,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "board/cards/REM-405.md#7",
+    "label": "board/cards/REM-405.md \u203a Log",
+    "p": 0.009283724442926808,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-666.md#3",
+    "label": "board/cards/REM-666.md \u203a Evidence",
+    "p": 0.005360779274707192,
+    "gold": false
+   },
+   {
+    "id": "commit/4fd5ce5f09",
+    "label": "commit 4fd5ce5: board: p8-subsystems-3b takes REM-405",
+    "p": 0.004224755133800912,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-405.md#3",
+    "label": "board/cards/REM-405.md \u203a Evidence",
+    "p": 0.0037950386310721474,
+    "gold": false
+   },
+   {
+    "id": "commit/942b72c201",
+    "label": "commit 942b72c: board: note on REM-404",
+    "p": 0.0036677569774009235,
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-self-model/dreaming/reduce/weekly/judge.py#1",
+    "label": "applications/percolate-self-model/dreaming/reduce/weekly/judge.py",
+    "p": 0.002716395069612177,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-347.md#1",
+    "label": "board/cards/REM-347.md",
+    "p": 0.002617016222383113,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/experience.md#2",
+    "label": "specs/percolate-application/experience.md \u203a The promise on the homepage",
+    "p": 0.0023501317870329927,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-392.md#1",
+    "label": "board/cards/REM-392.md",
+    "p": 0.0022269222027075327,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-405.md#5",
+    "label": "board/cards/REM-405.md \u203a Scope",
+    "p": 0.0017988977008732544,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-718.md#2",
+    "label": "board/cards/REM-718.md \u203a Goal",
+    "p": 0.0015288972506270785,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-120.md#2",
+    "label": "board/cards/REM-120.md \u203a Goal",
+    "p": 0.0015270591181095001,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261026-070403-1da4.md#1",
+    "label": "board/messages/M-20261026-070403-1da4.md",
+    "p": 0.0013756752064711766,
+    "gold": false
+   },
+   {
+    "id": "specs/identity/declarations.sql#2",
+    "label": "specs/identity/declarations.sql",
+    "p": 0.0013304072516661359,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-666.md#7",
+    "label": "board/cards/REM-666.md \u203a Log",
+    "p": 0.0011192164144298738,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-525.md#3",
+    "label": "board/cards/REM-525.md \u203a Evidence",
+    "p": 0.0010839919468788983,
+    "gold": false
+   },
+   {
+    "id": "commit/563e938ccd",
+    "label": "commit 563e938: board: REM-404 in-progress \u2192 done",
+    "p": 0.001082473639843151,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-16-three-browser-checks-nobody-ran.md#2",
+    "label": "meta/postmortems/2026-09-16-three-browser-checks-nobody-ran.md \u203a 1. `check-browser.cjs` could not get past sign-in",
+    "p": 0.0010794435965570763,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-16-a-day-of-releases-nobody-read.md#4",
+    "label": "meta/postmortems/2026-09-16-a-day-of-releases-nobody-read.md \u203a 3. The check covering the reading surface asserted nothin",
+    "p": 0.0010495115283799504,
+    "gold": false
+   },
+   {
+    "id": "commit/174eeae4c1",
+    "label": "commit 174eeae: experience: the homepage is one frame, live as release-2026-09-16-0628 (REM-405)",
+    "p": 0.0010068252223286644,
+    "gold": true
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/fbc333ea15",
+   "label": "commit fbc333e: board: file REM-405 home: one frame, wording in one file, and a second theme by token swap",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-405.md#1",
+   "label": "board/cards/REM-405.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-405.md#2",
+   "label": "board/cards/REM-405.md \u203a Goal",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-405.md#6",
+   "label": "board/cards/REM-405.md \u203a Log",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-405.md#4",
+   "label": "board/cards/REM-405.md \u203a Done when",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-405.md#7",
+   "label": "board/cards/REM-405.md \u203a Log",
+   "wave": 1,
+   "via": "next:board/cards/REM-405.md#6",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-405.md#5",
+   "label": "board/cards/REM-405.md \u203a Scope",
+   "wave": 1,
+   "via": "next:board/cards/REM-405.md#6",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-471.md#6",
+   "label": "board/cards/REM-471.md \u203a Links",
+   "wave": 2,
+   "via": "term:rem 405",
+   "gold": false
+  },
+  {
+   "id": "commit/174eeae4c1",
+   "label": "commit 174eeae: experience: the homepage is one frame, live as release-2026-09-16-0628 (REM-405)",
+   "wave": 2,
+   "via": "term:rem 405",
+   "gold": true
+  },
+  {
+   "id": "commit/63f8ec9ab9",
+   "label": "commit 63f8ec9: board: REM-405 in-progress \u2192 done",
+   "wave": 2,
+   "via": "term:rem 405",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "board/cards/REM-405.md#7",
+    "label": "board/cards/REM-405.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-666.md#3",
+    "label": "board/cards/REM-666.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "commit/4fd5ce5f09",
+    "label": "commit 4fd5ce5: board: p8-subsystems-3b takes REM-405",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-405.md#3",
+    "label": "board/cards/REM-405.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "commit/942b72c201",
+    "label": "commit 942b72c: board: note on REM-404",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "board/cards/REM-405.md#7",
+    "label": "board/cards/REM-405.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-405.md#3",
+    "label": "board/cards/REM-405.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-666.md#3",
+    "label": "board/cards/REM-666.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/experience.md#2",
+    "label": "specs/percolate-application/experience.md \u203a The promise on the homepage",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-666.md#7",
+    "label": "board/cards/REM-666.md \u203a Log",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/63f8ec9ab9",
+    "label": "commit 63f8ec9: board: REM-405 in-progress \u2192 done",
+    "gold": false
+   },
+   {
+    "id": "commit/174eeae4c1",
+    "label": "commit 174eeae: experience: the homepage is one frame, live as release-2026-09-16-0628 (REM-405)",
+    "gold": true
+   },
+   {
+    "id": "board/cards/REM-405.md#5",
+    "label": "board/cards/REM-405.md \u203a Scope",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-405.md#3",
+    "label": "board/cards/REM-405.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "commit/4fd5ce5f09",
+    "label": "commit 4fd5ce5: board: p8-subsystems-3b takes REM-405",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "board/cards/REM-405.md#3",
+    "label": "board/cards/REM-405.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-405.md#7",
+    "label": "board/cards/REM-405.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/experience.md#2",
+    "label": "specs/percolate-application/experience.md \u203a The promise on the homepage",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-666.md#4",
+    "label": "board/cards/REM-666.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-666.md#3",
+    "label": "board/cards/REM-666.md \u203a Evidence",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 1.0,
+  "S": 0.0
+ }
+}

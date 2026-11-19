@@ -1,0 +1,450 @@
+{
+ "qid": "RW:3hop1__390489_502967_84283",
+ "set": "mq",
+ "question": "Who is the owner of the record label of the performer of Flamenco a Go-Go?",
+ "gold": [
+  {
+   "id": "mq:30a885b1514e3d81",
+   "label": "Flamenco a Go-Go",
+   "seed": true
+  },
+  {
+   "id": "mq:63f443b5dcf2f7e1",
+   "label": "Atomic Playboys",
+   "seed": false
+  },
+  {
+   "id": "mq:d9f976bd5b1a8053",
+   "label": "Warner Records",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:5f644acb307f3319",
+   "label": "Larry Norman",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "mq:f8460d1f85da2f94",
+   "label": "Al Bell",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "mq:02222a2ef8fb2b2d",
+   "label": "Tittsworth",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "mq:f88210f024a3bd5a",
+   "label": "Bob Shad",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "mq:30a885b1514e3d81",
+   "label": "Flamenco a Go-Go",
+   "rank": 5,
+   "gold": true,
+   "doors_to_gold": 0
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:30a885b1514e3d81",
+    "label": "Flamenco a Go-Go",
+    "role": "gold"
+   },
+   {
+    "id": "mq:63f443b5dcf2f7e1",
+    "label": "Atomic Playboys",
+    "role": "gold"
+   },
+   {
+    "id": "mq:d9f976bd5b1a8053",
+    "label": "Warner Records",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:30a885b1514e3d81",
+    "b": "mq:63f443b5dcf2f7e1",
+    "via": [
+     {
+      "kind": "term",
+      "key": "steve stevens",
+      "width": 3
+     },
+     {
+      "kind": "term",
+      "key": "stevens",
+      "width": 31
+     },
+     {
+      "kind": "term",
+      "key": "guitarist",
+      "width": 74
+     }
+    ]
+   },
+   {
+    "a": "mq:63f443b5dcf2f7e1",
+    "b": "mq:d9f976bd5b1a8053",
+    "via": [
+     {
+      "kind": "term",
+      "key": "warner bros",
+      "width": 56
+     },
+     {
+      "kind": "term",
+      "key": "bros",
+      "width": 68
+     },
+     {
+      "kind": "term",
+      "key": "warner",
+      "width": 93
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   2,
+   1
+  ],
+  "entry": {
+   "seed": "mq:30a885b1514e3d81",
+   "gold": "mq:30a885b1514e3d81",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 1326,
+  "within_2_doors": 19664,
+  "gold_within_1": 1,
+  "gold_within_2": 1,
+  "top_U": [
+   {
+    "id": "mq:85e121c4f02f544f",
+    "label": "University of Memphis",
+    "p": 0.0036171961972033795,
+    "gold": false
+   },
+   {
+    "id": "mq:f71324f0cbd26863",
+    "label": "Beyonc\u00e9",
+    "p": 0.0025237229541161445,
+    "gold": false
+   },
+   {
+    "id": "mq:c22d33640f9de9d4",
+    "label": "Grand Falls Plaza, Missouri",
+    "p": 0.0021572816312418136,
+    "gold": false
+   },
+   {
+    "id": "mq:79570a8e8d4a9e49",
+    "label": "Krush Groove",
+    "p": 0.0019172549057765607,
+    "gold": false
+   },
+   {
+    "id": "mq:7fc0d83c2cc882f1",
+    "label": "Norman Langen",
+    "p": 0.0018080883346375462,
+    "gold": false
+   },
+   {
+    "id": "mq:6188c52c9dbd89cc",
+    "label": "Steve Bell (soccer)",
+    "p": 0.0017484565477937316,
+    "gold": false
+   },
+   {
+    "id": "mq:73e9485d4df4e0ec",
+    "label": "John Bell (Scottish actor)",
+    "p": 0.0017302677690549874,
+    "gold": false
+   },
+   {
+    "id": "mq:a55b1261421c4419",
+    "label": "List of The Young and the Restless cast members",
+    "p": 0.0017231816199296255,
+    "gold": false
+   },
+   {
+    "id": "mq:a05dbc1e48550ad8",
+    "label": "List of National Basketball Association annual scoring leaders",
+    "p": 0.0016738215728726862,
+    "gold": false
+   },
+   {
+    "id": "mq:afcd248bc6597acc",
+    "label": "Robert J. Chassell",
+    "p": 0.0016415766169865127,
+    "gold": false
+   },
+   {
+    "id": "mq:7e95f8a12a2aae49",
+    "label": "Heirs to the Dare",
+    "p": 0.0016185326838216336,
+    "gold": false
+   },
+   {
+    "id": "mq:2b29a3e6c96d0bb8",
+    "label": "Top Gun Anthem",
+    "p": 0.0014689531215433965,
+    "gold": false
+   },
+   {
+    "id": "mq:5ce29220d5470037",
+    "label": "Aretha Franklin",
+    "p": 0.001452198212230957,
+    "gold": false
+   },
+   {
+    "id": "mq:426b92fa811b68a9",
+    "label": "Graeme Goodall",
+    "p": 0.001450289206018574,
+    "gold": false
+   },
+   {
+    "id": "mq:b7a99de1ab40a641",
+    "label": "I'll Cry If I Want To",
+    "p": 0.0012947590029186399,
+    "gold": false
+   },
+   {
+    "id": "mq:8d98e2d2f4afed3d",
+    "label": "I'll Cry If I Want To",
+    "p": 0.0012940280089280708,
+    "gold": false
+   },
+   {
+    "id": "mq:63f443b5dcf2f7e1",
+    "label": "Atomic Playboys",
+    "p": 0.0011410052149692187,
+    "gold": true
+   },
+   {
+    "id": "mq:faa94e5db694ceca",
+    "label": "The Three Stooges (2012 film)",
+    "p": 0.0011089831794371774,
+    "gold": false
+   },
+   {
+    "id": "mq:124f02be1abb33fa",
+    "label": "The Invitations",
+    "p": 0.001039612322834112,
+    "gold": false
+   },
+   {
+    "id": "mq:6a0e37536c30be2c",
+    "label": "Boston",
+    "p": 0.0009220408219886742,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:5f644acb307f3319",
+   "label": "Larry Norman",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:f8460d1f85da2f94",
+   "label": "Al Bell",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:02222a2ef8fb2b2d",
+   "label": "Tittsworth",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:f88210f024a3bd5a",
+   "label": "Bob Shad",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:30a885b1514e3d81",
+   "label": "Flamenco a Go-Go",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:63f443b5dcf2f7e1",
+   "label": "Atomic Playboys",
+   "wave": 1,
+   "via": "term:steve stevens",
+   "gold": true
+  },
+  {
+   "id": "mq:2b29a3e6c96d0bb8",
+   "label": "Top Gun Anthem",
+   "wave": 1,
+   "via": "term:steve stevens",
+   "gold": false
+  },
+  {
+   "id": "mq:35a2f6cfed3a9899",
+   "label": "Angel (Sarah McLachlan song)",
+   "wave": 2,
+   "via": "term:warner bros",
+   "gold": false
+  },
+  {
+   "id": "mq:c122f1d7abdc07d7",
+   "label": "Sooner or Later (Larry Graham song)",
+   "wave": 2,
+   "via": "term:warner bros",
+   "gold": false
+  },
+  {
+   "id": "mq:6c30d495384c4f82",
+   "label": "Terry Dexter (album)",
+   "wave": 2,
+   "via": "term:warner bros",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:85e121c4f02f544f",
+    "label": "University of Memphis",
+    "gold": false
+   },
+   {
+    "id": "mq:f71324f0cbd26863",
+    "label": "Beyonc\u00e9",
+    "gold": false
+   },
+   {
+    "id": "mq:c22d33640f9de9d4",
+    "label": "Grand Falls Plaza, Missouri",
+    "gold": false
+   },
+   {
+    "id": "mq:79570a8e8d4a9e49",
+    "label": "Krush Groove",
+    "gold": false
+   },
+   {
+    "id": "mq:7fc0d83c2cc882f1",
+    "label": "Norman Langen",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:426b92fa811b68a9",
+    "label": "Graeme Goodall",
+    "gold": false
+   },
+   {
+    "id": "mq:5ce29220d5470037",
+    "label": "Aretha Franklin",
+    "gold": false
+   },
+   {
+    "id": "mq:79570a8e8d4a9e49",
+    "label": "Krush Groove",
+    "gold": false
+   },
+   {
+    "id": "mq:e884a8e9e61a0246",
+    "label": "Sony Music",
+    "gold": false
+   },
+   {
+    "id": "mq:e85c44bcd0b0efaa",
+    "label": "Lee Evans (producer)",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:5ce29220d5470037",
+    "label": "Aretha Franklin",
+    "gold": false
+   },
+   {
+    "id": "mq:e884a8e9e61a0246",
+    "label": "Sony Music",
+    "gold": false
+   },
+   {
+    "id": "mq:426b92fa811b68a9",
+    "label": "Graeme Goodall",
+    "gold": false
+   },
+   {
+    "id": "mq:79570a8e8d4a9e49",
+    "label": "Krush Groove",
+    "gold": false
+   },
+   {
+    "id": "mq:f71324f0cbd26863",
+    "label": "Beyonc\u00e9",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:426b92fa811b68a9",
+    "label": "Graeme Goodall",
+    "gold": false
+   },
+   {
+    "id": "mq:e884a8e9e61a0246",
+    "label": "Sony Music",
+    "gold": false
+   },
+   {
+    "id": "mq:5ce29220d5470037",
+    "label": "Aretha Franklin",
+    "gold": false
+   },
+   {
+    "id": "mq:0219f5319f4e6955",
+    "label": "Soleilmoon Recordings",
+    "gold": false
+   },
+   {
+    "id": "mq:a141117cb8e0cf1c",
+    "label": "Asian Man Records",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

@@ -1,0 +1,483 @@
+{
+ "qid": "RW:4hop3__813358_24325_125104_10557",
+ "set": "mq",
+ "question": "The carnival in the town where Jean Mathonet died is rooted in a European culture. In Rotrude's father's era, the language of that culture was later known by what name?",
+ "gold": [
+  {
+   "id": "mq:34f930c7dc562e75",
+   "label": "Carnival",
+   "seed": false
+  },
+  {
+   "id": "mq:3c5774b9a09806e3",
+   "label": "Middle Ages",
+   "seed": false
+  },
+  {
+   "id": "mq:987f2a2203782507",
+   "label": "Rotrude",
+   "seed": false
+  },
+  {
+   "id": "mq:c6b5be9584e03295",
+   "label": "Jean Mathonet",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:fb798668a7f0f953",
+   "label": "Germans",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:02673f36f3972f46",
+   "label": "History of Mexico",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "mq:c6b5be9584e03295",
+   "label": "Jean Mathonet",
+   "rank": 3,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:ff48b8921eaf95eb",
+   "label": "Glenda Goss",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "mq:678b38f646b2ae4b",
+   "label": "Culture",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 2
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:34f930c7dc562e75",
+    "label": "Carnival",
+    "role": "gold"
+   },
+   {
+    "id": "mq:3c5774b9a09806e3",
+    "label": "Middle Ages",
+    "role": "gold"
+   },
+   {
+    "id": "mq:6c9b6ac9806859b6",
+    "label": "Carnival Splendor",
+    "role": "connector"
+   },
+   {
+    "id": "mq:987f2a2203782507",
+    "label": "Rotrude",
+    "role": "gold"
+   },
+   {
+    "id": "mq:c6b5be9584e03295",
+    "label": "Jean Mathonet",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:34f930c7dc562e75",
+    "b": "mq:6c9b6ac9806859b6",
+    "via": [
+     {
+      "kind": "near",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "carnival",
+      "width": 17
+     }
+    ]
+   },
+   {
+    "a": "mq:34f930c7dc562e75",
+    "b": "mq:c6b5be9584e03295",
+    "via": [
+     {
+      "kind": "near",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "malmedy",
+      "width": 3
+     }
+    ]
+   },
+   {
+    "a": "mq:3c5774b9a09806e3",
+    "b": "mq:6c9b6ac9806859b6",
+    "via": [
+     {
+      "kind": "term",
+      "key": "modified",
+      "width": 26
+     }
+    ]
+   },
+   {
+    "a": "mq:3c5774b9a09806e3",
+    "b": "mq:987f2a2203782507",
+    "via": [
+     {
+      "kind": "term",
+      "key": "charlemagne",
+      "width": 18
+     },
+     {
+      "kind": "term",
+      "key": "sometimes referred",
+      "width": 32
+     }
+    ]
+   }
+  ],
+  "cost": 4,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   2,
+   2,
+   1,
+   1,
+   2,
+   2
+  ],
+  "entry": {
+   "seed": "mq:c6b5be9584e03295",
+   "gold": "mq:c6b5be9584e03295",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 2547,
+  "within_2_doors": 18521,
+  "gold_within_1": 2,
+  "gold_within_2": 1,
+  "top_U": [
+   {
+    "id": "mq:7e5755560f7f4641",
+    "label": "Alen Halilovi\u0107",
+    "p": 0.002478893608143869,
+    "gold": false
+   },
+   {
+    "id": "mq:1b67c0243c21673e",
+    "label": "Peter Altenberg",
+    "p": 0.0021549178320325033,
+    "gold": false
+   },
+   {
+    "id": "mq:85ed115e051bf5af",
+    "label": "Fernand Nisot",
+    "p": 0.002072220875257614,
+    "gold": false
+   },
+   {
+    "id": "mq:be2774b85f03664c",
+    "label": "Richard Wallace (rugby union)",
+    "p": 0.001752419097563699,
+    "gold": false
+   },
+   {
+    "id": "mq:9779494f03acec18",
+    "label": "Ivan Svit\u00e1k",
+    "p": 0.0017218285233074988,
+    "gold": false
+   },
+   {
+    "id": "mq:8575d162b2c066ac",
+    "label": "Spanish conquest of the Aztec Empire",
+    "p": 0.0016487444129819975,
+    "gold": false
+   },
+   {
+    "id": "mq:dea51d1d2e684a6f",
+    "label": "Slavs",
+    "p": 0.0015164226921417403,
+    "gold": false
+   },
+   {
+    "id": "mq:ac068f4b3b62ba0e",
+    "label": "James F. Brooks",
+    "p": 0.0014874337823858265,
+    "gold": false
+   },
+   {
+    "id": "mq:bea403b0c3970871",
+    "label": "Tabula rasa",
+    "p": 0.0014792719284623126,
+    "gold": false
+   },
+   {
+    "id": "mq:af9086e1586ee9e7",
+    "label": "Mississippi Joe Callicott",
+    "p": 0.0014358545545308677,
+    "gold": false
+   },
+   {
+    "id": "mq:be81b592c5c451da",
+    "label": "History of Mexico",
+    "p": 0.0014104527962526027,
+    "gold": false
+   },
+   {
+    "id": "mq:268637349fc819ae",
+    "label": "Guido Maus",
+    "p": 0.0012372890459221213,
+    "gold": false
+   },
+   {
+    "id": "mq:34f930c7dc562e75",
+    "label": "Carnival",
+    "p": 0.0012171804782184336,
+    "gold": true
+   },
+   {
+    "id": "mq:27dbeb202979c7d2",
+    "label": "Slavs",
+    "p": 0.001217171956914549,
+    "gold": false
+   },
+   {
+    "id": "mq:b9a187c6f9341f14",
+    "label": "The Social Contract",
+    "p": 0.0012155664352325804,
+    "gold": false
+   },
+   {
+    "id": "mq:a94e7c470887ac85",
+    "label": "History of Mexico City",
+    "p": 0.001193217999105164,
+    "gold": false
+   },
+   {
+    "id": "mq:890ba51eceef1486",
+    "label": "Salama Moussa",
+    "p": 0.0011036210797842204,
+    "gold": false
+   },
+   {
+    "id": "mq:259ca12a9ac0da4b",
+    "label": "Sandy Goss",
+    "p": 0.001053268916022308,
+    "gold": false
+   },
+   {
+    "id": "mq:f599d57a4336d40e",
+    "label": "Spanish language in the United States",
+    "p": 0.001042191107926088,
+    "gold": false
+   },
+   {
+    "id": "mq:ca2eef577e0d896d",
+    "label": "Mexico",
+    "p": 0.0010406596240526977,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:fb798668a7f0f953",
+   "label": "Germans",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:02673f36f3972f46",
+   "label": "History of Mexico",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:c6b5be9584e03295",
+   "label": "Jean Mathonet",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:ff48b8921eaf95eb",
+   "label": "Glenda Goss",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:678b38f646b2ae4b",
+   "label": "Culture",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:34f930c7dc562e75",
+   "label": "Carnival",
+   "wave": 1,
+   "via": "term:malmedy",
+   "gold": true
+  },
+  {
+   "id": "mq:268637349fc819ae",
+   "label": "Guido Maus",
+   "wave": 1,
+   "via": "term:malmedy",
+   "gold": false
+  },
+  {
+   "id": "mq:c4193e17243c72f1",
+   "label": "Gaston de Gerlache",
+   "wave": 2,
+   "via": "near:mq:c6b5be9584e03295",
+   "gold": false
+  },
+  {
+   "id": "mq:93fd21bc5221b81e",
+   "label": "Joseph Cogels",
+   "wave": 2,
+   "via": "near:mq:c6b5be9584e03295",
+   "gold": false
+  },
+  {
+   "id": "mq:85ed115e051bf5af",
+   "label": "Fernand Nisot",
+   "wave": 2,
+   "via": "near:mq:c6b5be9584e03295",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:7e5755560f7f4641",
+    "label": "Alen Halilovi\u0107",
+    "gold": false
+   },
+   {
+    "id": "mq:1b67c0243c21673e",
+    "label": "Peter Altenberg",
+    "gold": false
+   },
+   {
+    "id": "mq:85ed115e051bf5af",
+    "label": "Fernand Nisot",
+    "gold": false
+   },
+   {
+    "id": "mq:be2774b85f03664c",
+    "label": "Richard Wallace (rugby union)",
+    "gold": false
+   },
+   {
+    "id": "mq:9779494f03acec18",
+    "label": "Ivan Svit\u00e1k",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:34f930c7dc562e75",
+    "label": "Carnival",
+    "gold": true
+   },
+   {
+    "id": "mq:dea51d1d2e684a6f",
+    "label": "Slavs",
+    "gold": false
+   },
+   {
+    "id": "mq:890ba51eceef1486",
+    "label": "Salama Moussa",
+    "gold": false
+   },
+   {
+    "id": "mq:535e691a0b49c512",
+    "label": "Oklahoma",
+    "gold": false
+   },
+   {
+    "id": "mq:5aad82b73ab58df1",
+    "label": "Empress Dowager Huang",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:34f930c7dc562e75",
+    "label": "Carnival",
+    "gold": true
+   },
+   {
+    "id": "mq:dea51d1d2e684a6f",
+    "label": "Slavs",
+    "gold": false
+   },
+   {
+    "id": "mq:890ba51eceef1486",
+    "label": "Salama Moussa",
+    "gold": false
+   },
+   {
+    "id": "mq:27dbeb202979c7d2",
+    "label": "Slavs",
+    "gold": false
+   },
+   {
+    "id": "mq:2ae1d30b68bfe70b",
+    "label": "Culture",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:af175c69399ab09f",
+    "label": "Portugal",
+    "gold": false
+   },
+   {
+    "id": "mq:83f58266ae118bbc",
+    "label": "Remojadas",
+    "gold": false
+   },
+   {
+    "id": "mq:91a2d1de77056504",
+    "label": "Belinda Chang",
+    "gold": false
+   },
+   {
+    "id": "mq:774647f056aa0adb",
+    "label": "Douglas Fairbairn",
+    "gold": false
+   },
+   {
+    "id": "mq:aa8c7655d6d10e34",
+    "label": "Lebanese Heritage Museum",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.3333333333333333,
+  "LQ": 0.3333333333333333,
+  "S": 0.0
+ }
+}

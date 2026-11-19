@@ -1,0 +1,410 @@
+{
+ "qid": "pr:656",
+ "set": "prs",
+ "question": "What work went into this, and why: walker claim (2): theory, synthetic ensemble, check against judged walks?",
+ "gold": [
+  {
+   "id": "commit/0f3da7a4d9",
+   "label": "commit 0f3da7a: walker claim: registration before computing (bill)",
+   "seed": false
+  },
+  {
+   "id": "commit/d995a00e60",
+   "label": "commit d995a00: walker claim: theory in sally's notation, synthetic ensemble on MuSiQue-200, check against 20 judged wal",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/d995a00e60",
+   "label": "commit d995a00: walker claim: theory in sally's notation, synthetic ensemble on MuSiQue-200, check against 20 judged wal",
+   "rank": 1,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "commit/02e4c61346",
+   "label": "commit 02e4c61: Merge pull request #656 from Percolation-Labs/bill/walker-claim",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "meta/lab/results/walker-claim/THEORY.md#2",
+   "label": "meta/lab/results/walker-claim/THEORY.md \u203a 1. Round sizes grow geometrically",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/messages/M-20261102-150825-97e4.md#1",
+   "label": "board/messages/M-20261102-150825-97e4.md",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "meta/lab/results/walker-claim/REGISTRATION.md#2",
+   "label": "meta/lab/results/walker-claim/REGISTRATION.md \u203a What is computed, in order",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/0f3da7a4d9",
+    "label": "commit 0f3da7a: walker claim: registration before computing (bill)",
+    "role": "gold"
+   },
+   {
+    "id": "commit/d995a00e60",
+    "label": "commit d995a00: walker claim: theory in sally's notation, synthetic ensemble on MuSiQue-200, check against 20 judged wal",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/0f3da7a4d9",
+    "b": "commit/d995a00e60",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "walker claim",
+      "width": 57
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "commit/d995a00e60",
+   "gold": "commit/d995a00e60",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 1894,
+  "within_2_doors": 33081,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "meta/lab/results/walker-claim/THEORY.md#3",
+    "label": "meta/lab/results/walker-claim/THEORY.md \u203a 2. The per-step odds fall with depth, so a fixed decider has a critical depth",
+    "p": 0.004751454707476711,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/walker-claim/RESULT.md#3",
+    "label": "meta/lab/results/walker-claim/RESULT.md \u203a Check against cory's 20 recorded judged walks (5.29 batches, pseudo judge, top",
+    "p": 0.004065778618917778,
+    "gold": false
+   },
+   {
+    "id": "commit/b5ba1b3a4e",
+    "label": "commit b5ba1b3: board: sirsh messages james",
+    "p": 0.0032035605719856067,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/walker-claim/THEORY.md#1",
+    "label": "meta/lab/results/walker-claim/THEORY.md \u203a Core claim (2), the walker claim (bill, 2 Nov; Sirsh 15:07Z)",
+    "p": 0.0030780985903104234,
+    "gold": false
+   },
+   {
+    "id": "commit/85e02ed94e",
+    "label": "commit 85e02ed: board: bill messages sirsh",
+    "p": 0.003026177297219843,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261101-133745-d9c4.md#1",
+    "label": "board/messages/M-20261101-133745-d9c4.md",
+    "p": 0.002624631648063493,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/walker-claim/REGISTRATION.md#1",
+    "label": "meta/lab/results/walker-claim/REGISTRATION.md \u203a The walker claim: registration (bill, 2 Nov 2026, before anything is com",
+    "p": 0.0025910680054412444,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/walker-claim/THEORY.md#5",
+    "label": "meta/lab/results/walker-claim/THEORY.md \u203a 4. The claim, stated",
+    "p": 0.002468033452844177,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/walker-claim/RESULT.md#2",
+    "label": "meta/lab/results/walker-claim/RESULT.md \u203a Ensemble (registered draw: 20 MuSiQue-200 questions, seed 1507; top 3, cap 10,",
+    "p": 0.0024077768424916545,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261025-075332-3a8d.md#1",
+    "label": "board/messages/M-20261025-075332-3a8d.md",
+    "p": 0.0023489306245577835,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/configs/structure/signposted_top.py#1",
+    "label": "meta/lab/configs/structure/signposted_top.py",
+    "p": 0.0022654678969712123,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261102-150717-3a62.md#1",
+    "label": "board/messages/M-20261102-150717-3a62.md",
+    "p": 0.002198973870788224,
+    "gold": false
+   },
+   {
+    "id": "commit/0f3da7a4d9",
+    "label": "commit 0f3da7a: walker claim: registration before computing (bill)",
+    "p": 0.002174492844906667,
+    "gold": true
+   },
+   {
+    "id": "meta/lab/results/walker-claim/THEORY.md#4",
+    "label": "meta/lab/results/walker-claim/THEORY.md \u203a 3. What rescues the walker is redundancy, and the walk is a branching process ",
+    "p": 0.0019797696575227204,
+    "gold": false
+   },
+   {
+    "id": "commit/af56c2d5cf",
+    "label": "commit af56c2d: board: james acknowledges 1 message(s)",
+    "p": 0.0017726881003377922,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261115-225031-3c6f.md#1",
+    "label": "board/messages/M-20261115-225031-3c6f.md",
+    "p": 0.0017575728382751607,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261101-140054-fdfd.md#1",
+    "label": "board/messages/M-20261101-140054-fdfd.md",
+    "p": 0.0017531843329515317,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261101-140047-f146.md#1",
+    "label": "board/messages/M-20261101-140047-f146.md",
+    "p": 0.0017531843329515317,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261101-140041-dcbc.md#1",
+    "label": "board/messages/M-20261101-140041-dcbc.md",
+    "p": 0.0017531843329515317,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/walker-claim/walker.py#1",
+    "label": "meta/lab/results/walker-claim/walker.py",
+    "p": 0.0017249359074689437,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/d995a00e60",
+   "label": "commit d995a00: walker claim: theory in sally's notation, synthetic ensemble on MuSiQue-200, check against 20 judged wal",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "commit/02e4c61346",
+   "label": "commit 02e4c61: Merge pull request #656 from Percolation-Labs/bill/walker-claim",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/walker-claim/THEORY.md#2",
+   "label": "meta/lab/results/walker-claim/THEORY.md \u203a 1. Round sizes grow geometrically",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/messages/M-20261102-150825-97e4.md#1",
+   "label": "board/messages/M-20261102-150825-97e4.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/walker-claim/REGISTRATION.md#2",
+   "label": "meta/lab/results/walker-claim/REGISTRATION.md \u203a What is computed, in order",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/walker-claim/THEORY.md#4",
+   "label": "meta/lab/results/walker-claim/THEORY.md \u203a 3. What rescues the walker is redundancy, and the walk is a branching process ",
+   "wave": 1,
+   "via": "term:claim theory",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/walker-claim/THEORY.md#3",
+   "label": "meta/lab/results/walker-claim/THEORY.md \u203a 2. The per-step odds fall with depth, so a fixed decider has a critical depth",
+   "wave": 1,
+   "via": "term:claim theory",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/walker-claim/THEORY.md#1",
+   "label": "meta/lab/results/walker-claim/THEORY.md \u203a Core claim (2), the walker claim (bill, 2 Nov; Sirsh 15:07Z)",
+   "wave": 1,
+   "via": "term:claim theory",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/walker-claim/THEORY.md#5",
+   "label": "meta/lab/results/walker-claim/THEORY.md \u203a 4. The claim, stated",
+   "wave": 1,
+   "via": "term:claim theory",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/walker-claim/walker.py#1",
+   "label": "meta/lab/results/walker-claim/walker.py",
+   "wave": 1,
+   "via": "term:claim theory",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "meta/lab/results/walker-claim/THEORY.md#3",
+    "label": "meta/lab/results/walker-claim/THEORY.md \u203a 2. The per-step odds fall with depth, so a fixed decider has a critical depth",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/walker-claim/RESULT.md#3",
+    "label": "meta/lab/results/walker-claim/RESULT.md \u203a Check against cory's 20 recorded judged walks (5.29 batches, pseudo judge, top",
+    "gold": false
+   },
+   {
+    "id": "commit/b5ba1b3a4e",
+    "label": "commit b5ba1b3: board: sirsh messages james",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/walker-claim/THEORY.md#1",
+    "label": "meta/lab/results/walker-claim/THEORY.md \u203a Core claim (2), the walker claim (bill, 2 Nov; Sirsh 15:07Z)",
+    "gold": false
+   },
+   {
+    "id": "commit/85e02ed94e",
+    "label": "commit 85e02ed: board: bill messages sirsh",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "meta/lab/results/walker-claim/RESULT.md#3",
+    "label": "meta/lab/results/walker-claim/RESULT.md \u203a Check against cory's 20 recorded judged walks (5.29 batches, pseudo judge, top",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/walker-claim/RESULT.md#2",
+    "label": "meta/lab/results/walker-claim/RESULT.md \u203a Ensemble (registered draw: 20 MuSiQue-200 questions, seed 1507; top 3, cap 10,",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/walker-claim/walker.py#1",
+    "label": "meta/lab/results/walker-claim/walker.py",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261102-150717-3a62.md#1",
+    "label": "board/messages/M-20261102-150717-3a62.md",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/walker-claim/REGISTRATION.md#1",
+    "label": "meta/lab/results/walker-claim/REGISTRATION.md \u203a The walker claim: registration (bill, 2 Nov 2026, before anything is com",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/0f3da7a4d9",
+    "label": "commit 0f3da7a: walker claim: registration before computing (bill)",
+    "gold": true
+   },
+   {
+    "id": "board/messages/M-20261025-075332-3a8d.md#1",
+    "label": "board/messages/M-20261025-075332-3a8d.md",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/walker-claim/RESULT.md#2",
+    "label": "meta/lab/results/walker-claim/RESULT.md \u203a Ensemble (registered draw: 20 MuSiQue-200 questions, seed 1507; top 3, cap 10,",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/walker-claim/THEORY.md#3",
+    "label": "meta/lab/results/walker-claim/THEORY.md \u203a 2. The per-step odds fall with depth, so a fixed decider has a critical depth",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261101-133745-d9c4.md#1",
+    "label": "board/messages/M-20261101-133745-d9c4.md",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "meta/lab/results/walker-claim/RESULT.md#2",
+    "label": "meta/lab/results/walker-claim/RESULT.md \u203a Ensemble (registered draw: 20 MuSiQue-200 questions, seed 1507; top 3, cap 10,",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/walker-claim/walker.py#1",
+    "label": "meta/lab/results/walker-claim/walker.py",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261025-075332-3a8d.md#1",
+    "label": "board/messages/M-20261025-075332-3a8d.md",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261102-151750-46c7.md#1",
+    "label": "board/messages/M-20261102-151750-46c7.md",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/walker-claim/RESULT.md#1",
+    "label": "meta/lab/results/walker-claim/RESULT.md \u203a The walker claim: result (bill, 2 Nov 2026, $0, no model calls)",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 1.0,
+  "S": 0.0
+ }
+}

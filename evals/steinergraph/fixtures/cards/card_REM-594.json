@@ -1,0 +1,424 @@
+{
+ "qid": "card:REM-594",
+ "set": "cards",
+ "question": "What was done about this, and why: research: protocols and results retain an immutable programme history?",
+ "gold": [
+  {
+   "id": "commit/294c4743d0",
+   "label": "commit 294c474: A research programme's protocols, runs and decisions are data in core (REM-594)",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/65e6c97275",
+   "label": "commit 65e6c97: board: file REM-594 research: protocols and results retain an immutable programme history",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-594.md#1",
+   "label": "board/cards/REM-594.md",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "specs/research-platform/core-research-programme.md#4",
+   "label": "specs/research-platform/core-research-programme.md \u203a R1. Protocols and research decisions are durable data",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "specs/research-platform/core-research-programme.md#12",
+   "label": "specs/research-platform/core-research-programme.md \u203a Programme boundaries",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "specs/research-platform/core-research-programme.md#5",
+   "label": "specs/research-platform/core-research-programme.md \u203a R1. Protocols and research decisions are durable data",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/294c4743d0",
+    "label": "commit 294c474: A research programme's protocols, runs and decisions are data in core (REM-594)",
+    "role": "gold"
+   },
+   {
+    "id": "specs/research-platform/core-research-programme.md#5",
+    "label": "specs/research-platform/core-research-programme.md \u203a R1. Protocols and research decisions are durable data",
+    "role": "seed"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/294c4743d0",
+    "b": "specs/research-platform/core-research-programme.md#5",
+    "via": [
+     {
+      "kind": "near",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "run_review needs",
+      "width": 2
+     },
+     {
+      "kind": "term",
+      "key": "complete record",
+      "width": 3
+     },
+     {
+      "kind": "term",
+      "key": "programme_export",
+      "width": 4
+     },
+     {
+      "kind": "term",
+      "key": "cited revision",
+      "width": 4
+     },
+     {
+      "kind": "term",
+      "key": "protocol_freezes programme_runs",
+      "width": 5
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [],
+  "entry": {
+   "seed": "specs/research-platform/core-research-programme.md#5",
+   "gold": "commit/294c4743d0",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 1894,
+  "within_2_doors": 34038,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "commit/294c4743d0",
+    "label": "commit 294c474: A research programme's protocols, runs and decisions are data in core (REM-594)",
+    "p": 0.0057907762302566905,
+    "gold": true
+   },
+   {
+    "id": "specs/research-platform/programme.sql#1",
+    "label": "specs/research-platform/programme.sql",
+    "p": 0.004218046094142566,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-594.md#2",
+    "label": "board/cards/REM-594.md \u203a Goal",
+    "p": 0.0041953103005260345,
+    "gold": false
+   },
+   {
+    "id": "specs/research-platform/programme.sql#2",
+    "label": "specs/research-platform/programme.sql",
+    "p": 0.0036269514266175926,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-594.md#8",
+    "label": "board/cards/REM-594.md \u203a Log",
+    "p": 0.00292545022746083,
+    "gold": false
+   },
+   {
+    "id": "specs/percolate-application/drafter.md#91",
+    "label": "specs/percolate-application/drafter.md \u203a 11. Acceptance and evaluation",
+    "p": 0.002921833209742249,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-573.md#4",
+    "label": "board/cards/REM-573.md \u203a Done when",
+    "p": 0.0028728419604429315,
+    "gold": false
+   },
+   {
+    "id": "commit/5e8a598bc9",
+    "label": "commit 5e8a598: board: file REM-593 research: two independent clients replay claims with the marketplace absent",
+    "p": 0.002807949010857628,
+    "gold": false
+   },
+   {
+    "id": "specs/research-platform/programme.sql#15",
+    "label": "specs/research-platform/programme.sql",
+    "p": 0.002805600541245122,
+    "gold": false
+   },
+   {
+    "id": "specs/research-platform/programme.sql#14",
+    "label": "specs/research-platform/programme.sql",
+    "p": 0.0026457175779811513,
+    "gold": false
+   },
+   {
+    "id": "commit/494fdef883",
+    "label": "commit 494fdef: board: file REM-595 research: measure the full cost of claims under changing evidence",
+    "p": 0.0025968729516405286,
+    "gold": false
+   },
+   {
+    "id": "specs/research-platform/programme.sql#5",
+    "label": "specs/research-platform/programme.sql",
+    "p": 0.002302331030423986,
+    "gold": false
+   },
+   {
+    "id": "specs/research-platform/core-research-programme.md#1",
+    "label": "specs/research-platform/core-research-programme.md \u203a A standalone claims proof and bounded core research programme",
+    "p": 0.0022753571046656546,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-655.md#13",
+    "label": "board/cards/REM-655.md \u203a Log",
+    "p": 0.0021407063185577206,
+    "gold": false
+   },
+   {
+    "id": "specs/research-platform/core-research-programme.md#11",
+    "label": "specs/research-platform/core-research-programme.md \u203a R4. Evaluate whether the next check is useful",
+    "p": 0.0020166476376129315,
+    "gold": false
+   },
+   {
+    "id": "specs/research-platform/programme.sql#6",
+    "label": "specs/research-platform/programme.sql",
+    "p": 0.0019042988418252655,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-655.md#25",
+    "label": "board/cards/REM-655.md \u203a Log",
+    "p": 0.0017152517244040028,
+    "gold": false
+   },
+   {
+    "id": "specs/research-platform/core-trust-delivery.md#1",
+    "label": "specs/research-platform/core-trust-delivery.md \u203a Core trust delivery map",
+    "p": 0.0016735273092794904,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-456.md#4",
+    "label": "board/cards/REM-456.md \u203a Two deliverables",
+    "p": 0.0016726703196722668,
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-self-model/dreaming/external/README.md#3",
+    "label": "applications/percolate-self-model/dreaming/external/README.md \u203a Why there are two protocols",
+    "p": 0.0016706178831681917,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/65e6c97275",
+   "label": "commit 65e6c97: board: file REM-594 research: protocols and results retain an immutable programme history",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-594.md#1",
+   "label": "board/cards/REM-594.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/research-platform/core-research-programme.md#4",
+   "label": "specs/research-platform/core-research-programme.md \u203a R1. Protocols and research decisions are durable data",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/research-platform/core-research-programme.md#12",
+   "label": "specs/research-platform/core-research-programme.md \u203a Programme boundaries",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/research-platform/core-research-programme.md#5",
+   "label": "specs/research-platform/core-research-programme.md \u203a R1. Protocols and research decisions are durable data",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/research-platform/programme.sql#14",
+   "label": "specs/research-platform/programme.sql",
+   "wave": 1,
+   "via": "term:complete record",
+   "gold": false
+  },
+  {
+   "id": "commit/294c4743d0",
+   "label": "commit 294c474: A research programme's protocols, runs and decisions are data in core (REM-594)",
+   "wave": 1,
+   "via": "term:complete record",
+   "gold": true
+  },
+  {
+   "id": "commit/9401a950b2",
+   "label": "commit 9401a95: board: REM-594 in-progress \u2192 done",
+   "wave": 2,
+   "via": "term:rem 594",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-594.md#2",
+   "label": "board/cards/REM-594.md \u203a Goal",
+   "wave": 2,
+   "via": "term:rem 594",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-594.md#8",
+   "label": "board/cards/REM-594.md \u203a Log",
+   "wave": 2,
+   "via": "term:rem 594",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "commit/294c4743d0",
+    "label": "commit 294c474: A research programme's protocols, runs and decisions are data in core (REM-594)",
+    "gold": true
+   },
+   {
+    "id": "specs/research-platform/programme.sql#1",
+    "label": "specs/research-platform/programme.sql",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-594.md#2",
+    "label": "board/cards/REM-594.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "specs/research-platform/programme.sql#2",
+    "label": "specs/research-platform/programme.sql",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-594.md#8",
+    "label": "board/cards/REM-594.md \u203a Log",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "commit/294c4743d0",
+    "label": "commit 294c474: A research programme's protocols, runs and decisions are data in core (REM-594)",
+    "gold": true
+   },
+   {
+    "id": "specs/research-platform/programme.sql#2",
+    "label": "specs/research-platform/programme.sql",
+    "gold": false
+   },
+   {
+    "id": "specs/research-platform/programme.sql#1",
+    "label": "specs/research-platform/programme.sql",
+    "gold": false
+   },
+   {
+    "id": "specs/research-platform/programme.sql#14",
+    "label": "specs/research-platform/programme.sql",
+    "gold": false
+   },
+   {
+    "id": "specs/research-platform/programme.sql#5",
+    "label": "specs/research-platform/programme.sql",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "board/cards/REM-594.md#7",
+    "label": "board/cards/REM-594.md \u203a Links",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-595.md#7",
+    "label": "board/cards/REM-595.md \u203a Links",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-597.md#7",
+    "label": "board/cards/REM-597.md \u203a Links",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-593.md#7",
+    "label": "board/cards/REM-593.md \u203a Links",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-596.md#7",
+    "label": "board/cards/REM-596.md \u203a Links",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "commit/294c4743d0",
+    "label": "commit 294c474: A research programme's protocols, runs and decisions are data in core (REM-594)",
+    "gold": true
+   },
+   {
+    "id": "specs/research-platform/programme.sql#2",
+    "label": "specs/research-platform/programme.sql",
+    "gold": false
+   },
+   {
+    "id": "specs/research-platform/programme.sql#14",
+    "label": "specs/research-platform/programme.sql",
+    "gold": false
+   },
+   {
+    "id": "specs/research-platform/programme.sql#8",
+    "label": "specs/research-platform/programme.sql",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-681.md#6",
+    "label": "board/cards/REM-681.md \u203a Scope",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 1.0,
+  "Q": 1.0,
+  "LQ": 0.0,
+  "S": 1.0
+ }
+}

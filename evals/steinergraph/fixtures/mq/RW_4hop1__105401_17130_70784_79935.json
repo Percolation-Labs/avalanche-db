@@ -1,0 +1,515 @@
+{
+ "qid": "RW:4hop1__105401_17130_70784_79935",
+ "set": "mq",
+ "question": "When was the region that lies to the north of the region where Strangers No More took place and the Persian Gulf created?",
+ "gold": [
+  {
+   "id": "mq:5b56be54717d03f5",
+   "label": "Israel",
+   "seed": false
+  },
+  {
+   "id": "mq:6421666ff3e70d66",
+   "label": "Geography of Saudi Arabia",
+   "seed": false
+  },
+  {
+   "id": "mq:7a7ee0dd25a47908",
+   "label": "Strangers No More",
+   "seed": false
+  },
+  {
+   "id": "mq:d8dd686764b34e20",
+   "label": "History of Saudi Arabia",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:243c393810fa6f28",
+   "label": "Arabian Sea",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:e2f7fc3b2273283e",
+   "label": "Wollaston Peninsula",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "mq:59ad282dfdbe3842",
+   "label": "Iran",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:79dd429bb8aeb127",
+   "label": "Jidda Island",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:6b0721cdbb293b65",
+   "label": "Yucat\u00e1n Peninsula",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:243c393810fa6f28",
+    "label": "Arabian Sea",
+    "role": "seed"
+   },
+   {
+    "id": "mq:5b56be54717d03f5",
+    "label": "Israel",
+    "role": "gold"
+   },
+   {
+    "id": "mq:6421666ff3e70d66",
+    "label": "Geography of Saudi Arabia",
+    "role": "gold"
+   },
+   {
+    "id": "mq:7a7ee0dd25a47908",
+    "label": "Strangers No More",
+    "role": "gold"
+   },
+   {
+    "id": "mq:d8dd686764b34e20",
+    "label": "History of Saudi Arabia",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:243c393810fa6f28",
+    "b": "mq:6421666ff3e70d66",
+    "via": [
+     {
+      "kind": "term",
+      "key": "oman",
+      "width": 11
+     },
+     {
+      "kind": "term",
+      "key": "arabian peninsula",
+      "width": 15
+     },
+     {
+      "kind": "term",
+      "key": "red sea",
+      "width": 21
+     },
+     {
+      "kind": "term",
+      "key": "persian gulf",
+      "width": 25
+     },
+     {
+      "kind": "term",
+      "key": "arabian",
+      "width": 33
+     }
+    ]
+   },
+   {
+    "a": "mq:5b56be54717d03f5",
+    "b": "mq:6421666ff3e70d66",
+    "via": [
+     {
+      "kind": "term",
+      "key": "red sea",
+      "width": 21
+     }
+    ]
+   },
+   {
+    "a": "mq:5b56be54717d03f5",
+    "b": "mq:7a7ee0dd25a47908",
+    "via": [
+     {
+      "kind": "term",
+      "key": "tel aviv",
+      "width": 9
+     },
+     {
+      "kind": "term",
+      "key": "aviv",
+      "width": 9
+     },
+     {
+      "kind": "term",
+      "key": "tel",
+      "width": 10
+     },
+     {
+      "kind": "term",
+      "key": "diverse",
+      "width": 48
+     }
+    ]
+   },
+   {
+    "a": "mq:6421666ff3e70d66",
+    "b": "mq:d8dd686764b34e20",
+    "via": [
+     {
+      "kind": "term",
+      "key": "saudi arabia",
+      "width": 33
+     },
+     {
+      "kind": "term",
+      "key": "saudi",
+      "width": 42
+     },
+     {
+      "kind": "term",
+      "key": "arabia",
+      "width": 47
+     }
+    ]
+   }
+  ],
+  "cost": 4,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   1,
+   2,
+   2,
+   1,
+   2
+  ],
+  "entry": {
+   "seed": "mq:243c393810fa6f28",
+   "gold": "mq:6421666ff3e70d66",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 1662,
+  "within_2_doors": 19400,
+  "gold_within_1": 2,
+  "gold_within_2": 2,
+  "top_U": [
+   {
+    "id": "mq:20e3ec3d14d7ac66",
+    "label": "Hargrave River (Nunavut)",
+    "p": 0.0031958974093506637,
+    "gold": false
+   },
+   {
+    "id": "mq:a94e7c470887ac85",
+    "label": "History of Mexico City",
+    "p": 0.0025825901983165685,
+    "gold": false
+   },
+   {
+    "id": "mq:e0f52e2f450eb72e",
+    "label": "Red Sea",
+    "p": 0.0024173844529686113,
+    "gold": false
+   },
+   {
+    "id": "mq:e96c80dc23d460eb",
+    "label": "Iran",
+    "p": 0.002283657112528929,
+    "gold": false
+   },
+   {
+    "id": "mq:bd70ac7ac0ef488f",
+    "label": "Indigenous peoples of the Americas",
+    "p": 0.002025212892939872,
+    "gold": false
+   },
+   {
+    "id": "mq:c9c971f6300c0ba4",
+    "label": "Gulf of Mexico",
+    "p": 0.0019427686803043958,
+    "gold": false
+   },
+   {
+    "id": "mq:8aa1997b1110efe6",
+    "label": "Dubai",
+    "p": 0.0019280364560264082,
+    "gold": false
+   },
+   {
+    "id": "mq:3237b5df056c576c",
+    "label": "Gulf of Mexico",
+    "p": 0.0018019127341994915,
+    "gold": false
+   },
+   {
+    "id": "mq:73a4e750e45eae31",
+    "label": "Washington Island (Michigan)",
+    "p": 0.0017876474627047992,
+    "gold": false
+   },
+   {
+    "id": "mq:febd202c2bb0a8a4",
+    "label": "Battle of Qurah and Umm al Maradim",
+    "p": 0.0015809198326341674,
+    "gold": false
+   },
+   {
+    "id": "mq:c8ea4482fc607256",
+    "label": "Suez Canal",
+    "p": 0.0014350700104005497,
+    "gold": false
+   },
+   {
+    "id": "mq:34e730f2aff5f18d",
+    "label": "Cape Bathurst",
+    "p": 0.0013889336018341563,
+    "gold": false
+   },
+   {
+    "id": "mq:76988f439345670f",
+    "label": "Near East",
+    "p": 0.0013238292758273587,
+    "gold": false
+   },
+   {
+    "id": "mq:f35c3f2eb9d987d1",
+    "label": "Kazakhstan",
+    "p": 0.0013228889172838725,
+    "gold": false
+   },
+   {
+    "id": "mq:d7521252d5393203",
+    "label": "Zubarah",
+    "p": 0.0013152848013411544,
+    "gold": false
+   },
+   {
+    "id": "mq:b4c0df7d79b6eab7",
+    "label": "Geography of Iran",
+    "p": 0.0012601750261769806,
+    "gold": false
+   },
+   {
+    "id": "mq:e01248dfaa3eac70",
+    "label": "Umm al Kilab",
+    "p": 0.0012552089613016382,
+    "gold": false
+   },
+   {
+    "id": "mq:2f4ea55a7f0f38c8",
+    "label": "Umm Ubays",
+    "p": 0.0012538564924801986,
+    "gold": false
+   },
+   {
+    "id": "mq:30828ad30bbc15b0",
+    "label": "Godfrey Baring",
+    "p": 0.001150125542215105,
+    "gold": false
+   },
+   {
+    "id": "mq:13014a9915fb9bb8",
+    "label": "Rock Island (Nunavut)",
+    "p": 0.0011461352751826347,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:243c393810fa6f28",
+   "label": "Arabian Sea",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:e2f7fc3b2273283e",
+   "label": "Wollaston Peninsula",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:59ad282dfdbe3842",
+   "label": "Iran",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:79dd429bb8aeb127",
+   "label": "Jidda Island",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:6b0721cdbb293b65",
+   "label": "Yucat\u00e1n Peninsula",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:b95bbf15db052c69",
+   "label": "Golestan Province",
+   "wave": 1,
+   "via": "term:caspian",
+   "gold": false
+  },
+  {
+   "id": "mq:b4c0df7d79b6eab7",
+   "label": "Geography of Iran",
+   "wave": 1,
+   "via": "term:caspian",
+   "gold": false
+  },
+  {
+   "id": "mq:7cbb582b55dfd5d7",
+   "label": "Ashkenazi Jews",
+   "wave": 1,
+   "via": "term:caspian",
+   "gold": false
+  },
+  {
+   "id": "mq:e96c80dc23d460eb",
+   "label": "Iran",
+   "wave": 1,
+   "via": "term:caspian",
+   "gold": false
+  },
+  {
+   "id": "mq:f35c3f2eb9d987d1",
+   "label": "Kazakhstan",
+   "wave": 1,
+   "via": "term:caspian",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:20e3ec3d14d7ac66",
+    "label": "Hargrave River (Nunavut)",
+    "gold": false
+   },
+   {
+    "id": "mq:a94e7c470887ac85",
+    "label": "History of Mexico City",
+    "gold": false
+   },
+   {
+    "id": "mq:e0f52e2f450eb72e",
+    "label": "Red Sea",
+    "gold": false
+   },
+   {
+    "id": "mq:e96c80dc23d460eb",
+    "label": "Iran",
+    "gold": false
+   },
+   {
+    "id": "mq:bd70ac7ac0ef488f",
+    "label": "Indigenous peoples of the Americas",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:20e3ec3d14d7ac66",
+    "label": "Hargrave River (Nunavut)",
+    "gold": false
+   },
+   {
+    "id": "mq:e96c80dc23d460eb",
+    "label": "Iran",
+    "gold": false
+   },
+   {
+    "id": "mq:e0f52e2f450eb72e",
+    "label": "Red Sea",
+    "gold": false
+   },
+   {
+    "id": "mq:c9c971f6300c0ba4",
+    "label": "Gulf of Mexico",
+    "gold": false
+   },
+   {
+    "id": "mq:6421666ff3e70d66",
+    "label": "Geography of Saudi Arabia",
+    "gold": true
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:c9c971f6300c0ba4",
+    "label": "Gulf of Mexico",
+    "gold": false
+   },
+   {
+    "id": "mq:3237b5df056c576c",
+    "label": "Gulf of Mexico",
+    "gold": false
+   },
+   {
+    "id": "mq:6421666ff3e70d66",
+    "label": "Geography of Saudi Arabia",
+    "gold": true
+   },
+   {
+    "id": "mq:e96c80dc23d460eb",
+    "label": "Iran",
+    "gold": false
+   },
+   {
+    "id": "mq:20e3ec3d14d7ac66",
+    "label": "Hargrave River (Nunavut)",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:bb854e3d4b02888e",
+    "label": "Brinov\u0161\u010dica",
+    "gold": false
+   },
+   {
+    "id": "mq:0a0838b08c8399c4",
+    "label": "Dobjoi",
+    "gold": false
+   },
+   {
+    "id": "mq:f1abd4a45fbbf85a",
+    "label": "La Planche",
+    "gold": false
+   },
+   {
+    "id": "mq:432affbfe3153bdb",
+    "label": "Andra\u017e nad Polzelo",
+    "gold": false
+   },
+   {
+    "id": "mq:a8cec075517ea96c",
+    "label": "Sobrado, A Pobra de Trives",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.25,
+  "LQ": 0.25,
+  "S": 0.0
+ }
+}

@@ -1,0 +1,405 @@
+{
+ "qid": "pr:549",
+ "set": "prs",
+ "question": "What work went into this, and why: train: two refusals from the 26 Oct train (mirror worktree, own release check)?",
+ "gold": [
+  {
+   "id": "commit/2000ca4f5c",
+   "label": "commit 2000ca4: train: a failed release run on a main's head does not make it red",
+   "seed": false
+  },
+  {
+   "id": "commit/bea712f4fc",
+   "label": "commit bea712f: train: the mirror leg removes its worktree once the branch is pushed",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/470ca03916",
+   "label": "commit 470ca03: Merge pull request #549 from Percolation-Labs/9a/mirror-leg-removes-worktree",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/bea712f4fc",
+   "label": "commit bea712f: train: the mirror leg removes its worktree once the branch is pushed",
+   "rank": 2,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "commit/0b10aa3a85",
+   "label": "commit 0b10aa3: train: the mirror leg stops before it would erase a hand edit in percolate's core/ (REM-1153)",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "dev/train.sh#7",
+   "label": "dev/train.sh",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "dev/train.sh#1",
+   "label": "dev/train.sh",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 2
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/2000ca4f5c",
+    "label": "commit 2000ca4: train: a failed release run on a main's head does not make it red",
+    "role": "gold"
+   },
+   {
+    "id": "commit/bea712f4fc",
+    "label": "commit bea712f: train: the mirror leg removes its worktree once the branch is pushed",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/2000ca4f5c",
+    "b": "commit/bea712f4fc",
+    "via": [
+     {
+      "kind": "beside"
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "commit/bea712f4fc",
+   "gold": "commit/bea712f4fc",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 2010,
+  "within_2_doors": 34147,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "dev/tests/train-mirror-drift.sh#1",
+    "label": "dev/tests/train-mirror-drift.sh",
+    "p": 0.007702487018093382,
+    "gold": false
+   },
+   {
+    "id": "commit/216b6926e2",
+    "label": "commit 216b692: Merge remote-tracking branch 'origin/main' into 9a/mirror-leg-removes-worktree",
+    "p": 0.007591732742004994,
+    "gold": false
+   },
+   {
+    "id": "dev/train.sh#6",
+    "label": "dev/train.sh",
+    "p": 0.00560787236877962,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1153.md#2",
+    "label": "board/cards/REM-1153.md \u203a Log",
+    "p": 0.004779524642660189,
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-self-model/dreaming/fixtures/planted/checkout-froze-on-a-friday.md#1",
+    "label": "applications/percolate-self-model/dreaming/fixtures/planted/checkout-froze-on-a-friday.md \u203a Checkout froze on a friday",
+    "p": 0.004396056112468033,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261023-135006-1f67.md#1",
+    "label": "board/messages/M-20261023-135006-1f67.md",
+    "p": 0.004309875429370259,
+    "gold": false
+   },
+   {
+    "id": "dev/tests/train-mirror-drift.sh#2",
+    "label": "dev/tests/train-mirror-drift.sh",
+    "p": 0.003924791345218284,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1153.md#1",
+    "label": "board/cards/REM-1153.md",
+    "p": 0.003630810849265966,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-11-06-the-empty-package-was-a-reasonable-probe.md#3",
+    "label": "meta/postmortems/2026-11-06-the-empty-package-was-a-reasonable-probe.md",
+    "p": 0.0034794015942206835,
+    "gold": false
+   },
+   {
+    "id": "commit/2000ca4f5c",
+    "label": "commit 2000ca4: train: a failed release run on a main's head does not make it red",
+    "p": 0.0029822868852797738,
+    "gold": true
+   },
+   {
+    "id": "applications/percolate-self-model/dreaming/fixtures/plant.py#2",
+    "label": "applications/percolate-self-model/dreaming/fixtures/plant.py",
+    "p": 0.002590634962370751,
+    "gold": false
+   },
+   {
+    "id": "dev/train.sh#12",
+    "label": "dev/train.sh",
+    "p": 0.002570816974295925,
+    "gold": false
+   },
+   {
+    "id": "dev/check.sh#4",
+    "label": "dev/check.sh",
+    "p": 0.002388618898055444,
+    "gold": false
+   },
+   {
+    "id": "commit/42a7dabb14",
+    "label": "commit 42a7dab: board: sirsh messages bill",
+    "p": 0.0021962742081677025,
+    "gold": false
+   },
+   {
+    "id": "commit/8122a91243",
+    "label": "commit 8122a91: board: p8-subsystems-9a acknowledges 1 message(s)",
+    "p": 0.0021280521600501087,
+    "gold": false
+   },
+   {
+    "id": "dev/train.sh#2",
+    "label": "dev/train.sh",
+    "p": 0.0020415847832332165,
+    "gold": false
+   },
+   {
+    "id": "commit/cf57aa8778",
+    "label": "commit cf57aa8: Merge pull request #540 from Percolation-Labs/amartey/rem-1153-mirror-drift",
+    "p": 0.0017968075913236715,
+    "gold": false
+   },
+   {
+    "id": "commit/363fd54a97",
+    "label": "commit 363fd54: board: p8-subsystems-9a messages all",
+    "p": 0.0017612238673256776,
+    "gold": false
+   },
+   {
+    "id": "dev/tests/train-mirror-drift.sh#3",
+    "label": "dev/tests/train-mirror-drift.sh",
+    "p": 0.001705061861641262,
+    "gold": false
+   },
+   {
+    "id": "dev/train.sh#8",
+    "label": "dev/train.sh",
+    "p": 0.0013111770634925142,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/470ca03916",
+   "label": "commit 470ca03: Merge pull request #549 from Percolation-Labs/9a/mirror-leg-removes-worktree",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/bea712f4fc",
+   "label": "commit bea712f: train: the mirror leg removes its worktree once the branch is pushed",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "commit/0b10aa3a85",
+   "label": "commit 0b10aa3: train: the mirror leg stops before it would erase a hand edit in percolate's core/ (REM-1153)",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "dev/train.sh#7",
+   "label": "dev/train.sh",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "dev/train.sh#1",
+   "label": "dev/train.sh",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "dev/tests/train-mirror-drift.sh#1",
+   "label": "dev/tests/train-mirror-drift.sh",
+   "wave": 1,
+   "via": "term:mirror percolate",
+   "gold": false
+  },
+  {
+   "id": "dev/tests/train-mirror-drift.sh#3",
+   "label": "dev/tests/train-mirror-drift.sh",
+   "wave": 1,
+   "via": "term:mirror percolate",
+   "gold": false
+  },
+  {
+   "id": "board/messages/M-20261029-103215-1203.md#1",
+   "label": "board/messages/M-20261029-103215-1203.md",
+   "wave": 1,
+   "via": "term:mirror percolate",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-1153.md#2",
+   "label": "board/cards/REM-1153.md \u203a Log",
+   "wave": 1,
+   "via": "term:mirror percolate",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-1290.md#3",
+   "label": "board/cards/REM-1290.md \u203a Evidence",
+   "wave": 1,
+   "via": "term:mirror percolate",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "dev/tests/train-mirror-drift.sh#1",
+    "label": "dev/tests/train-mirror-drift.sh",
+    "gold": false
+   },
+   {
+    "id": "commit/216b6926e2",
+    "label": "commit 216b692: Merge remote-tracking branch 'origin/main' into 9a/mirror-leg-removes-worktree",
+    "gold": false
+   },
+   {
+    "id": "dev/train.sh#6",
+    "label": "dev/train.sh",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1153.md#2",
+    "label": "board/cards/REM-1153.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-self-model/dreaming/fixtures/planted/checkout-froze-on-a-friday.md#1",
+    "label": "applications/percolate-self-model/dreaming/fixtures/planted/checkout-froze-on-a-friday.md \u203a Checkout froze on a friday",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "board/cards/REM-1153.md#2",
+    "label": "board/cards/REM-1153.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "dev/tests/train-mirror-drift.sh#1",
+    "label": "dev/tests/train-mirror-drift.sh",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1153.md#1",
+    "label": "board/cards/REM-1153.md",
+    "gold": false
+   },
+   {
+    "id": "commit/216b6926e2",
+    "label": "commit 216b692: Merge remote-tracking branch 'origin/main' into 9a/mirror-leg-removes-worktree",
+    "gold": false
+   },
+   {
+    "id": "dev/train.sh#6",
+    "label": "dev/train.sh",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/216b6926e2",
+    "label": "commit 216b692: Merge remote-tracking branch 'origin/main' into 9a/mirror-leg-removes-worktree",
+    "gold": false
+   },
+   {
+    "id": "commit/2000ca4f5c",
+    "label": "commit 2000ca4: train: a failed release run on a main's head does not make it red",
+    "gold": true
+   },
+   {
+    "id": "dev/tests/train-mirror-drift.sh#1",
+    "label": "dev/tests/train-mirror-drift.sh",
+    "gold": false
+   },
+   {
+    "id": "commit/aed68047d2",
+    "label": "commit aed6804: board: james acknowledges 1 message(s)",
+    "gold": false
+   },
+   {
+    "id": "dev/tests/train-mirror-drift.sh#3",
+    "label": "dev/tests/train-mirror-drift.sh",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "board/cards/REM-1153.md#1",
+    "label": "board/cards/REM-1153.md",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-1153.md#2",
+    "label": "board/cards/REM-1153.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261027-075957-d3c6.md#1",
+    "label": "board/messages/M-20261027-075957-d3c6.md",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261023-135006-1f67.md#1",
+    "label": "board/messages/M-20261023-135006-1f67.md",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261029-103249-20ac.md#1",
+    "label": "board/messages/M-20261029-103249-20ac.md",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 1.0,
+  "S": 0.0
+ }
+}

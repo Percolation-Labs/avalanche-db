@@ -1,0 +1,427 @@
+{
+ "qid": "RW:2hop__388523_75487",
+ "set": "mq",
+ "question": "Who is the federal leader of the party that James Rajotte is a member of?",
+ "gold": [
+  {
+   "id": "mq:66970d63e6986084",
+   "label": "2017 Conservative Party of Canada leadership election",
+   "seed": true
+  },
+  {
+   "id": "mq:ee915cfda92503fe",
+   "label": "James Rajotte",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:ee915cfda92503fe",
+   "label": "James Rajotte",
+   "rank": 1,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:84184bd5d3389af8",
+   "label": "Inky Mark",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:b2db756855439ea7",
+   "label": "Party leaders of the United States House of Representatives",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:7a974febe9828058",
+   "label": "Audrey McLaughlin",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:66970d63e6986084",
+   "label": "2017 Conservative Party of Canada leadership election",
+   "rank": 5,
+   "gold": true,
+   "doors_to_gold": 0
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:66970d63e6986084",
+    "label": "2017 Conservative Party of Canada leadership election",
+    "role": "gold"
+   },
+   {
+    "id": "mq:ee915cfda92503fe",
+    "label": "James Rajotte",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:66970d63e6986084",
+    "b": "mq:ee915cfda92503fe",
+    "via": [
+     {
+      "kind": "term",
+      "key": "federal elections",
+      "width": 3
+     },
+     {
+      "kind": "term",
+      "key": "canadian alliance",
+      "width": 4
+     },
+     {
+      "kind": "term",
+      "key": "progressive conservative",
+      "width": 11
+     },
+     {
+      "kind": "term",
+      "key": "federal election",
+      "width": 15
+     },
+     {
+      "kind": "term",
+      "key": "caucus",
+      "width": 18
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "mq:66970d63e6986084",
+   "gold": "mq:66970d63e6986084",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 2977,
+  "within_2_doors": 18101,
+  "gold_within_1": 0,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "mq:e10ab9f0620eb440",
+    "label": "Leon Benoit",
+    "p": 0.002232929739770322,
+    "gold": false
+   },
+   {
+    "id": "mq:626ffaed6e85aa18",
+    "label": "St. John's, Newfoundland and Labrador",
+    "p": 0.0020813530783612404,
+    "gold": false
+   },
+   {
+    "id": "mq:f2f86a02fca17288",
+    "label": "Leader of the Official Opposition (Canada)",
+    "p": 0.002025977631808256,
+    "gold": false
+   },
+   {
+    "id": "mq:4a3d7ebe3815d8bd",
+    "label": "Ken Epp",
+    "p": 0.001985939682557865,
+    "gold": false
+   },
+   {
+    "id": "mq:c761e90e4df05d38",
+    "label": "House of Commons of Canada",
+    "p": 0.0019197632035979936,
+    "gold": false
+   },
+   {
+    "id": "mq:77581d1df7efba8e",
+    "label": "Angela Merkel",
+    "p": 0.0017152234831029497,
+    "gold": false
+   },
+   {
+    "id": "mq:b33b2b940671a98b",
+    "label": "Nanny McPhee and the Big Bang",
+    "p": 0.0013498043945355507,
+    "gold": false
+   },
+   {
+    "id": "mq:076ff2858931f606",
+    "label": "Pierre-Hugues Boisvenu",
+    "p": 0.0013184510576089133,
+    "gold": false
+   },
+   {
+    "id": "mq:2d89034ad0299ad7",
+    "label": "Stuart Henry (politician)",
+    "p": 0.0011740788257620705,
+    "gold": false
+   },
+   {
+    "id": "mq:8692cc8eef31690d",
+    "label": "John Kerry",
+    "p": 0.0011288358128375051,
+    "gold": false
+   },
+   {
+    "id": "mq:4248e7df3b479bbf",
+    "label": "Bloc Qu\u00e9b\u00e9cois",
+    "p": 0.001010654635885185,
+    "gold": false
+   },
+   {
+    "id": "mq:e185875cd12414ce",
+    "label": "Conservative Party (UK)",
+    "p": 0.0009995944221223758,
+    "gold": false
+   },
+   {
+    "id": "mq:5eed5d3313617457",
+    "label": "Confederation of Regions Party of Canada",
+    "p": 0.0009632596121812131,
+    "gold": false
+   },
+   {
+    "id": "mq:3acf4e093d0760c4",
+    "label": "Time Remembered: John McLaughlin Plays Bill Evans",
+    "p": 0.0009398276282204156,
+    "gold": false
+   },
+   {
+    "id": "mq:486c5f3e97f14e11",
+    "label": "Green",
+    "p": 0.000910712805916784,
+    "gold": false
+   },
+   {
+    "id": "mq:43703406e1a3cd2e",
+    "label": "Jake Epp",
+    "p": 0.0008741823692259975,
+    "gold": false
+   },
+   {
+    "id": "mq:9e2bbb24edced283",
+    "label": "David Bjornson",
+    "p": 0.0008083726185726425,
+    "gold": false
+   },
+   {
+    "id": "mq:437e2c19ad8df85c",
+    "label": "John Lynch-Staunton",
+    "p": 0.0008026571715594648,
+    "gold": false
+   },
+   {
+    "id": "mq:55c55ff26909b61a",
+    "label": "Military history of South Africa during World War II",
+    "p": 0.0007738610322085812,
+    "gold": false
+   },
+   {
+    "id": "mq:01d4cf9ff34a59ae",
+    "label": "Watch Mr. Wizard",
+    "p": 0.0007215462722662598,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:ee915cfda92503fe",
+   "label": "James Rajotte",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:84184bd5d3389af8",
+   "label": "Inky Mark",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:b2db756855439ea7",
+   "label": "Party leaders of the United States House of Representatives",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:7a974febe9828058",
+   "label": "Audrey McLaughlin",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:66970d63e6986084",
+   "label": "2017 Conservative Party of Canada leadership election",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:f2f86a02fca17288",
+   "label": "Leader of the Official Opposition (Canada)",
+   "wave": 1,
+   "via": "term:andrew scheer",
+   "gold": false
+  },
+  {
+   "id": "mq:c761e90e4df05d38",
+   "label": "House of Commons of Canada",
+   "wave": 1,
+   "via": "term:andrew scheer",
+   "gold": false
+  },
+  {
+   "id": "mq:5b0088ae6a3df766",
+   "label": "Scarecrow (Oz)",
+   "wave": 2,
+   "via": "term:scheer",
+   "gold": false
+  },
+  {
+   "id": "mq:32a9e71d1201d36d",
+   "label": "Friedrich Hayek",
+   "wave": 3,
+   "via": "term:conservative party",
+   "gold": false
+  },
+  {
+   "id": "mq:4b92ef5152b2901f",
+   "label": "Erna Solberg",
+   "wave": 3,
+   "via": "term:conservative party",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:e10ab9f0620eb440",
+    "label": "Leon Benoit",
+    "gold": false
+   },
+   {
+    "id": "mq:626ffaed6e85aa18",
+    "label": "St. John's, Newfoundland and Labrador",
+    "gold": false
+   },
+   {
+    "id": "mq:f2f86a02fca17288",
+    "label": "Leader of the Official Opposition (Canada)",
+    "gold": false
+   },
+   {
+    "id": "mq:4a3d7ebe3815d8bd",
+    "label": "Ken Epp",
+    "gold": false
+   },
+   {
+    "id": "mq:c761e90e4df05d38",
+    "label": "House of Commons of Canada",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:c761e90e4df05d38",
+    "label": "House of Commons of Canada",
+    "gold": false
+   },
+   {
+    "id": "mq:f2f86a02fca17288",
+    "label": "Leader of the Official Opposition (Canada)",
+    "gold": false
+   },
+   {
+    "id": "mq:e10ab9f0620eb440",
+    "label": "Leon Benoit",
+    "gold": false
+   },
+   {
+    "id": "mq:4a3d7ebe3815d8bd",
+    "label": "Ken Epp",
+    "gold": false
+   },
+   {
+    "id": "mq:77581d1df7efba8e",
+    "label": "Angela Merkel",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:c761e90e4df05d38",
+    "label": "House of Commons of Canada",
+    "gold": false
+   },
+   {
+    "id": "mq:77581d1df7efba8e",
+    "label": "Angela Merkel",
+    "gold": false
+   },
+   {
+    "id": "mq:e185875cd12414ce",
+    "label": "Conservative Party (UK)",
+    "gold": false
+   },
+   {
+    "id": "mq:e10ab9f0620eb440",
+    "label": "Leon Benoit",
+    "gold": false
+   },
+   {
+    "id": "mq:2bf2bf2464936fc9",
+    "label": "Germany",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:cde68fc73ee19c65",
+    "label": "Sigmar Gabriel",
+    "gold": false
+   },
+   {
+    "id": "mq:f692b57329be07f1",
+    "label": "Cesare Procaccini",
+    "gold": false
+   },
+   {
+    "id": "mq:c15805e05d9e2fda",
+    "label": "People's Democratic Movement (Turks and Caicos Islands)",
+    "gold": false
+   },
+   {
+    "id": "mq:11b07ac17fc7f6a4",
+    "label": "Franck Biancheri",
+    "gold": false
+   },
+   {
+    "id": "mq:345b39857c301f77",
+    "label": "Liberal Party of Australia",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": null,
+  "Q": null,
+  "LQ": null,
+  "S": null
+ }
+}

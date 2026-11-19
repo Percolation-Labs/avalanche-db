@@ -1,0 +1,424 @@
+{
+ "qid": "card:REM-608",
+ "set": "cards",
+ "question": "What was done about this, and why: claims: a named person can be granted research:resolve?",
+ "gold": [
+  {
+   "id": "commit/1f1976641e",
+   "label": "commit 1f19766: graph.md \u00a712: who holds research:resolve, as operated (REM-608)",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/722799a3da",
+   "label": "commit 722799a: board: file REM-608 claims: a named person can be granted research:resolve",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-608.md#1",
+   "label": "board/cards/REM-608.md",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-480.md#6",
+   "label": "board/cards/REM-480.md \u203a Log",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-608.md#2",
+   "label": "board/cards/REM-608.md \u203a Goal",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "specs/claims/graph.md#47",
+   "label": "specs/claims/graph.md \u203a 12. Closure",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/1f1976641e",
+    "label": "commit 1f19766: graph.md \u00a712: who holds research:resolve, as operated (REM-608)",
+    "role": "gold"
+   },
+   {
+    "id": "specs/claims/graph.md#47",
+    "label": "specs/claims/graph.md \u203a 12. Closure",
+    "role": "seed"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/1f1976641e",
+    "b": "specs/claims/graph.md#47",
+    "via": [
+     {
+      "kind": "near",
+      "width": 1
+     },
+     {
+      "kind": "term",
+      "key": "resolver role",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "operated",
+      "width": 9
+     },
+     {
+      "kind": "term",
+      "key": "sirsh decided",
+      "width": 12
+     },
+     {
+      "kind": "term",
+      "key": "rem 608",
+      "width": 13
+     },
+     {
+      "kind": "term",
+      "key": "amartey gmail",
+      "width": 18
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [],
+  "entry": {
+   "seed": "specs/claims/graph.md#47",
+   "gold": "commit/1f1976641e",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 1161,
+  "within_2_doors": 33156,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "board/cards/REM-608.md#5",
+    "label": "board/cards/REM-608.md \u203a Log",
+    "p": 0.010416509314397233,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-608.md#3",
+    "label": "board/cards/REM-608.md \u203a Decision",
+    "p": 0.007826399171981234,
+    "gold": false
+   },
+   {
+    "id": "commit/1f1976641e",
+    "label": "commit 1f19766: graph.md \u00a712: who holds research:resolve, as operated (REM-608)",
+    "p": 0.0066135009073404576,
+    "gold": true
+   },
+   {
+    "id": "meta/status/2026-09-19-release-roll-call.md#7",
+    "label": "meta/status/2026-09-19-release-roll-call.md \u203a Corrections",
+    "p": 0.005143007555741331,
+    "gold": false
+   },
+   {
+    "id": "commit/50dde35a46",
+    "label": "commit 50dde35: board: p8-subsystems-47 takes REM-608",
+    "p": 0.0047940110031434655,
+    "gold": false
+   },
+   {
+    "id": "specs/claims/schema.sql#41",
+    "label": "specs/claims/schema.sql",
+    "p": 0.004494279707911708,
+    "gold": false
+   },
+   {
+    "id": "commit/560c7bceea",
+    "label": "commit 560c7bc: claims: a claim can be closed by an event, and the resolution is kept (REM-480)",
+    "p": 0.003970398614437852,
+    "gold": false
+   },
+   {
+    "id": "specs/claims/graph.md#45",
+    "label": "specs/claims/graph.md \u203a 12. Closure",
+    "p": 0.0038609096158881396,
+    "gold": false
+   },
+   {
+    "id": "specs/user-rbac/schema.sql#82",
+    "label": "specs/user-rbac/schema.sql",
+    "p": 0.0033380143140925404,
+    "gold": false
+   },
+   {
+    "id": "commit/b44b0e58c5",
+    "label": "commit b44b0e5: board: REM-602 in-progress \u2192 review",
+    "p": 0.003226201511331671,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-456.md#3",
+    "label": "board/cards/REM-456.md \u203a Evidence",
+    "p": 0.003051125708107733,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-608.md#4",
+    "label": "board/cards/REM-608.md \u203a Done when",
+    "p": 0.0027862807347540483,
+    "gold": false
+   },
+   {
+    "id": "specs/research-platform/architecture.md#17",
+    "label": "specs/research-platform/architecture.md \u203a 7. The application is the writing hub",
+    "p": 0.0026014601494571687,
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-self-model/dreaming/reduce/graph/CLOSURE.md#2",
+    "label": "applications/percolate-self-model/dreaming/reduce/graph/CLOSURE.md \u203a The refusal that is a category, not an absence",
+    "p": 0.002574449338018968,
+    "gold": false
+   },
+   {
+    "id": "meta/status/2026-09-19-release-roll-call.md#4",
+    "label": "meta/status/2026-09-19-release-roll-call.md \u203a Sessions",
+    "p": 0.002507672719528649,
+    "gold": false
+   },
+   {
+    "id": "specs/claims/graph.md#46",
+    "label": "specs/claims/graph.md \u203a 12. Closure",
+    "p": 0.002312761743196496,
+    "gold": false
+   },
+   {
+    "id": "specs/claims/schema.sql#40",
+    "label": "specs/claims/schema.sql",
+    "p": 0.0021221547689907953,
+    "gold": false
+   },
+   {
+    "id": "commit/be2b98013b",
+    "label": "commit be2b980: research: closure holds all seven of \u00a712's promises (REM-660)",
+    "p": 0.0020934700382272096,
+    "gold": false
+   },
+   {
+    "id": "commit/3be9c5bcde",
+    "label": "commit 3be9c5b: research: closure holds all seven of \u00a712's promises (REM-660)",
+    "p": 0.002055763474154673,
+    "gold": false
+   },
+   {
+    "id": "commit/b061401222",
+    "label": "commit b061401: board: REM-608 in-progress \u2192 done",
+    "p": 0.0018584043598287613,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/722799a3da",
+   "label": "commit 722799a: board: file REM-608 claims: a named person can be granted research:resolve",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-608.md#1",
+   "label": "board/cards/REM-608.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-480.md#6",
+   "label": "board/cards/REM-480.md \u203a Log",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-608.md#2",
+   "label": "board/cards/REM-608.md \u203a Goal",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/claims/graph.md#47",
+   "label": "specs/claims/graph.md \u203a 12. Closure",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/50dde35a46",
+   "label": "commit 50dde35: board: p8-subsystems-47 takes REM-608",
+   "wave": 1,
+   "via": "term:rem 608",
+   "gold": false
+  },
+  {
+   "id": "commit/1f1976641e",
+   "label": "commit 1f19766: graph.md \u00a712: who holds research:resolve, as operated (REM-608)",
+   "wave": 1,
+   "via": "term:rem 608",
+   "gold": true
+  },
+  {
+   "id": "commit/b061401222",
+   "label": "commit b061401: board: REM-608 in-progress \u2192 done",
+   "wave": 1,
+   "via": "term:rem 608",
+   "gold": false
+  },
+  {
+   "id": "commit/17934921d2",
+   "label": "commit 1793492: board: note on REM-608",
+   "wave": 1,
+   "via": "term:rem 608",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-608.md#4",
+   "label": "board/cards/REM-608.md \u203a Done when",
+   "wave": 1,
+   "via": "term:rem 608",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "board/cards/REM-608.md#5",
+    "label": "board/cards/REM-608.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-608.md#3",
+    "label": "board/cards/REM-608.md \u203a Decision",
+    "gold": false
+   },
+   {
+    "id": "commit/1f1976641e",
+    "label": "commit 1f19766: graph.md \u00a712: who holds research:resolve, as operated (REM-608)",
+    "gold": true
+   },
+   {
+    "id": "meta/status/2026-09-19-release-roll-call.md#7",
+    "label": "meta/status/2026-09-19-release-roll-call.md \u203a Corrections",
+    "gold": false
+   },
+   {
+    "id": "commit/50dde35a46",
+    "label": "commit 50dde35: board: p8-subsystems-47 takes REM-608",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "board/cards/REM-608.md#3",
+    "label": "board/cards/REM-608.md \u203a Decision",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-608.md#5",
+    "label": "board/cards/REM-608.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "specs/claims/graph.md#45",
+    "label": "specs/claims/graph.md \u203a 12. Closure",
+    "gold": false
+   },
+   {
+    "id": "commit/560c7bceea",
+    "label": "commit 560c7bc: claims: a claim can be closed by an event, and the resolution is kept (REM-480)",
+    "gold": false
+   },
+   {
+    "id": "specs/claims/schema.sql#41",
+    "label": "specs/claims/schema.sql",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "board/cards/REM-608.md#3",
+    "label": "board/cards/REM-608.md \u203a Decision",
+    "gold": false
+   },
+   {
+    "id": "commit/b061401222",
+    "label": "commit b061401: board: REM-608 in-progress \u2192 done",
+    "gold": false
+   },
+   {
+    "id": "commit/1f1976641e",
+    "label": "commit 1f19766: graph.md \u00a712: who holds research:resolve, as operated (REM-608)",
+    "gold": true
+   },
+   {
+    "id": "board/cards/REM-608.md#4",
+    "label": "board/cards/REM-608.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-608.md#5",
+    "label": "board/cards/REM-608.md \u203a Log",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "applications/percolate-self-model/dreaming/reduce/graph/closure.py#4",
+    "label": "applications/percolate-self-model/dreaming/reduce/graph/closure.py",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-608.md#3",
+    "label": "board/cards/REM-608.md \u203a Decision",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-496.md#6",
+    "label": "board/cards/REM-496.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-608.md#5",
+    "label": "board/cards/REM-608.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "specs/claims/graph.md#45",
+    "label": "specs/claims/graph.md \u203a 12. Closure",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 1.0,
+  "Q": 0.0,
+  "LQ": 1.0,
+  "S": 0.0
+ }
+}

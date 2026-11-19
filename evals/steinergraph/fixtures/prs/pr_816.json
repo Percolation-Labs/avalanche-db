@@ -1,0 +1,424 @@
+{
+ "qid": "pr:816",
+ "set": "prs",
+ "question": "What work went into this, and why: Cornerstone world: the worlds' Jev scores were mostly door width; w124 (MuSiQue naming) moves every number half-way to MuSiQue?",
+ "gold": [
+  {
+   "id": "commit/72df3dfc6f",
+   "label": "commit 72df3df: Cornerstone world: on the worlds Jev with today's door does not beat ranking by width alone (+.011 w123,",
+   "seed": true
+  },
+  {
+   "id": "commit/ddc0d0995d",
+   "label": "commit ddc0d09: Cornerstone world: measure both flaws (width-only beats chance on every corpus; bridges named exactly 1.",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/7b1335e8b4",
+   "label": "commit 7b1335e: Merge pull request #816 from Percolation-Labs/bill/cornerstone-world",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "meta/lab/results/cornerstone/RESULT.md#1",
+   "label": "meta/lab/results/cornerstone/RESULT.md \u203a The cornerstone world: the worlds' Jev scores were mostly door width, and w124'",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/72df3dfc6f",
+   "label": "commit 72df3df: Cornerstone world: on the worlds Jev with today's door does not beat ranking by width alone (+.011 w123,",
+   "rank": 3,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "board/messages/M-20261117-083708-a9dc.md#1",
+   "label": "board/messages/M-20261117-083708-a9dc.md",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "meta/lab/results/cornerstone/RESULT.md#4",
+   "label": "meta/lab/results/cornerstone/RESULT.md \u203a Naming: w124 against the predictions",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/72df3dfc6f",
+    "label": "commit 72df3df: Cornerstone world: on the worlds Jev with today's door does not beat ranking by width alone (+.011 w123,",
+    "role": "gold"
+   },
+   {
+    "id": "commit/ddc0d0995d",
+    "label": "commit ddc0d09: Cornerstone world: measure both flaws (width-only beats chance on every corpus; bridges named exactly 1.",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/72df3dfc6f",
+    "b": "commit/ddc0d0995d",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "near",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "cornerstone world",
+      "width": 15
+     },
+     {
+      "kind": "term",
+      "key": "w124",
+      "width": 33
+     },
+     {
+      "kind": "term",
+      "key": "cornerstone",
+      "width": 73
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "commit/72df3dfc6f",
+   "gold": "commit/72df3dfc6f",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 1170,
+  "within_2_doors": 32565,
+  "gold_within_1": 1,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "board/messages/M-20261117-082559-3c48.md#1",
+    "label": "board/messages/M-20261117-082559-3c48.md",
+    "p": 0.006443647278284158,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/cornerstone/RESULT.md#2",
+    "label": "meta/lab/results/cornerstone/RESULT.md \u203a The headline: width-only is the control the worlds were missing",
+    "p": 0.005836569792941983,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/cornerstone/REGISTERED.md#4",
+    "label": "meta/lab/results/cornerstone/REGISTERED.md \u203a Runs, and what would make w124 faithful",
+    "p": 0.003973877594710904,
+    "gold": false
+   },
+   {
+    "id": "commit/ddc0d0995d",
+    "label": "commit ddc0d09: Cornerstone world: measure both flaws (width-only beats chance on every corpus; bridges named exactly 1.",
+    "p": 0.003916234546397521,
+    "gold": true
+   },
+   {
+    "id": "meta/lab/results/cornerstone/w124-today.txt#1",
+    "label": "meta/lab/results/cornerstone/w124-today.txt",
+    "p": 0.0035974411701107946,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/cornerstone/REGISTERED.md#3",
+    "label": "meta/lab/results/cornerstone/REGISTERED.md \u203a The fix: w124, the same worlds with MuSiQue's naming",
+    "p": 0.003203832525004919,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/cornerstone/paired.txt#1",
+    "label": "meta/lab/results/cornerstone/paired.txt",
+    "p": 0.0029811949271819284,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/cornerstone/RESULT.md#6",
+    "label": "meta/lab/results/cornerstone/RESULT.md \u203a Postmortem",
+    "p": 0.0027873673131927597,
+    "gold": false
+   },
+   {
+    "id": "research-notes/coalescing/harness/coalesce.py#6",
+    "label": "research-notes/coalescing/harness/coalesce.py",
+    "p": 0.0027346841352669862,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261117-084528-45f6.md#1",
+    "label": "board/messages/M-20261117-084528-45f6.md",
+    "p": 0.0026233899582983945,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/two-hop-door/RESULT.md#1",
+    "label": "meta/lab/results/two-hop-door/RESULT.md \u203a The two-hop door is a null on MuSiQue: naming what lies one hop beyond does no",
+    "p": 0.0025783291006783926,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/worlds/ceiling.py#1",
+    "label": "meta/lab/worlds/ceiling.py",
+    "p": 0.00229786425305611,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/cornerstone/RESULT.md#5",
+    "label": "meta/lab/results/cornerstone/RESULT.md \u203a A reproducibility bug, found and fixed",
+    "p": 0.002246625971482481,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/cornerstone/REGISTERED.md#2",
+    "label": "meta/lab/results/cornerstone/REGISTERED.md \u203a The flaws, measured on the pages each corpus was scored on",
+    "p": 0.0022402288457932574,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/cornerstone/w124.txt#1",
+    "label": "meta/lab/results/cornerstone/w124.txt",
+    "p": 0.0020581709539463453,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/worlds/slice.py#2",
+    "label": "meta/lab/worlds/slice.py",
+    "p": 0.0019265564395566943,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/cornerstone/measure.txt#1",
+    "label": "meta/lab/results/cornerstone/measure.txt",
+    "p": 0.0018908518144181638,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/cornerstone/REGISTERED.md#6",
+    "label": "meta/lab/results/cornerstone/REGISTERED.md \u203a w125: term doors that group passages by what they are about (registered 17 ",
+    "p": 0.0018887980829735843,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/worlds/cornerstone_measure.py#3",
+    "label": "meta/lab/worlds/cornerstone_measure.py",
+    "p": 0.0018711236742826123,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/cornerstone/RESULT.md#7",
+    "label": "meta/lab/results/cornerstone/RESULT.md \u203a Width-only on the real corpora (17 Nov ~09:05Z, $0 from cache)",
+    "p": 0.001817897434137568,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/7b1335e8b4",
+   "label": "commit 7b1335e: Merge pull request #816 from Percolation-Labs/bill/cornerstone-world",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/cornerstone/RESULT.md#1",
+   "label": "meta/lab/results/cornerstone/RESULT.md \u203a The cornerstone world: the worlds' Jev scores were mostly door width, and w124'",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/72df3dfc6f",
+   "label": "commit 72df3df: Cornerstone world: on the worlds Jev with today's door does not beat ranking by width alone (+.011 w123,",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "board/messages/M-20261117-083708-a9dc.md#1",
+   "label": "board/messages/M-20261117-083708-a9dc.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/cornerstone/RESULT.md#4",
+   "label": "meta/lab/results/cornerstone/RESULT.md \u203a Naming: w124 against the predictions",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/worlds/cornerstone_paired.py#1",
+   "label": "meta/lab/worlds/cornerstone_paired.py",
+   "wave": 1,
+   "via": "term:results cornerstone",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/cornerstone/RESULT.md#5",
+   "label": "meta/lab/results/cornerstone/RESULT.md \u203a A reproducibility bug, found and fixed",
+   "wave": 1,
+   "via": "term:results cornerstone",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/cornerstone/RESULT.md#3",
+   "label": "meta/lab/results/cornerstone/RESULT.md \u203a The headline: width-only is the control the worlds were missing",
+   "wave": 1,
+   "via": "term:results cornerstone",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/cornerstone/REGISTERED.md#1",
+   "label": "meta/lab/results/cornerstone/REGISTERED.md \u203a The cornerstone world: fixing the worlds' two named flaws (bill, registered",
+   "wave": 1,
+   "via": "term:results cornerstone",
+   "gold": false
+  },
+  {
+   "id": "meta/lab/results/cornerstone/w124-doors.txt#1",
+   "label": "meta/lab/results/cornerstone/w124-doors.txt",
+   "wave": 1,
+   "via": "term:results cornerstone",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "board/messages/M-20261117-082559-3c48.md#1",
+    "label": "board/messages/M-20261117-082559-3c48.md",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/cornerstone/RESULT.md#2",
+    "label": "meta/lab/results/cornerstone/RESULT.md \u203a The headline: width-only is the control the worlds were missing",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/cornerstone/REGISTERED.md#4",
+    "label": "meta/lab/results/cornerstone/REGISTERED.md \u203a Runs, and what would make w124 faithful",
+    "gold": false
+   },
+   {
+    "id": "commit/ddc0d0995d",
+    "label": "commit ddc0d09: Cornerstone world: measure both flaws (width-only beats chance on every corpus; bridges named exactly 1.",
+    "gold": true
+   },
+   {
+    "id": "meta/lab/results/cornerstone/w124-today.txt#1",
+    "label": "meta/lab/results/cornerstone/w124-today.txt",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "meta/lab/results/cornerstone/RESULT.md#2",
+    "label": "meta/lab/results/cornerstone/RESULT.md \u203a The headline: width-only is the control the worlds were missing",
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261117-082559-3c48.md#1",
+    "label": "board/messages/M-20261117-082559-3c48.md",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/cornerstone/REGISTERED.md#4",
+    "label": "meta/lab/results/cornerstone/REGISTERED.md \u203a Runs, and what would make w124 faithful",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/cornerstone/REGISTERED.md#3",
+    "label": "meta/lab/results/cornerstone/REGISTERED.md \u203a The fix: w124, the same worlds with MuSiQue's naming",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/cornerstone/RESULT.md#6",
+    "label": "meta/lab/results/cornerstone/RESULT.md \u203a Postmortem",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/ddc0d0995d",
+    "label": "commit ddc0d09: Cornerstone world: measure both flaws (width-only beats chance on every corpus; bridges named exactly 1.",
+    "gold": true
+   },
+   {
+    "id": "meta/lab/results/cornerstone/RESULT.md#2",
+    "label": "meta/lab/results/cornerstone/RESULT.md \u203a The headline: width-only is the control the worlds were missing",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/cornerstone/w124-today.txt#1",
+    "label": "meta/lab/results/cornerstone/w124-today.txt",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/cornerstone/REGISTERED.md#4",
+    "label": "meta/lab/results/cornerstone/REGISTERED.md \u203a Runs, and what would make w124 faithful",
+    "gold": false
+   },
+   {
+    "id": "commit/9f71cf69e4",
+    "label": "commit 9f71cf6: Width-only on the real corpora: Jev clears width on MuSiQue with either door (+.118 / +.180); on BEAM on",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "commit/ddc0d0995d",
+    "label": "commit ddc0d09: Cornerstone world: measure both flaws (width-only beats chance on every corpus; bridges named exactly 1.",
+    "gold": true
+   },
+   {
+    "id": "meta/lab/results/cornerstone/REGISTERED.md#4",
+    "label": "meta/lab/results/cornerstone/REGISTERED.md \u203a Runs, and what would make w124 faithful",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/cornerstone/RESULT.md#2",
+    "label": "meta/lab/results/cornerstone/RESULT.md \u203a The headline: width-only is the control the worlds were missing",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/cornerstone/RESULT.md#6",
+    "label": "meta/lab/results/cornerstone/RESULT.md \u203a Postmortem",
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/cornerstone/RESULT.md#7",
+    "label": "meta/lab/results/cornerstone/RESULT.md \u203a Width-only on the real corpora (17 Nov ~09:05Z, $0 from cache)",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 1.0,
+  "Q": 0.0,
+  "LQ": 1.0,
+  "S": 1.0
+ }
+}

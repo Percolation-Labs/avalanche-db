@@ -1,0 +1,476 @@
+{
+ "qid": "pr:82",
+ "set": "prs",
+ "question": "What work went into this, and why: Three scripts asked which interpreter, and two of them got it wrong?",
+ "gold": [
+  {
+   "id": "commit/0e8f32b5f6",
+   "label": "commit 0e8f32b: The hook may refuse a push; it may not write to the checkout to do it",
+   "seed": false
+  },
+  {
+   "id": "commit/385d60d46b",
+   "label": "commit 385d60d: The first gate went red about the machine, so people learned to skip it",
+   "seed": false
+  },
+  {
+   "id": "commit/c396654111",
+   "label": "commit c396654: Three scripts asked which interpreter, and two of them got it wrong",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "commit/670dc6aa26",
+   "label": "commit 670dc6a: Merge pull request #82 from Percolation-Labs/fix/rem-92-check-finds-an-interpreter",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/c396654111",
+   "label": "commit c396654: Three scripts asked which interpreter, and two of them got it wrong",
+   "rank": 2,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "dev/check.sh#3",
+   "label": "dev/check.sh",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "meta/postmortems/2026-09-07-measuring-the-instrument.md#1",
+   "label": "meta/postmortems/2026-09-07-measuring-the-instrument.md \u203a Measuring the instrument instead of the subject \u2014 2026-09-07",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 2
+  },
+  {
+   "id": "commit/5287377afb",
+   "label": "commit 5287377: A red gate reported a defect that was not there, and it was acted on",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/0e8f32b5f6",
+    "label": "commit 0e8f32b: The hook may refuse a push; it may not write to the checkout to do it",
+    "role": "gold"
+   },
+   {
+    "id": "commit/385d60d46b",
+    "label": "commit 385d60d: The first gate went red about the machine, so people learned to skip it",
+    "role": "gold"
+   },
+   {
+    "id": "commit/c396654111",
+    "label": "commit c396654: Three scripts asked which interpreter, and two of them got it wrong",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/0e8f32b5f6",
+    "b": "commit/c396654111",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "session_01fsgwrp3yfnxjb89eyr9pmx",
+      "width": 13
+     },
+     {
+      "kind": "term",
+      "key": "code session_01fsgwrp3yfnxjb89eyr9pmx",
+      "width": 13
+     },
+     {
+      "kind": "term",
+      "key": "peer session",
+      "width": 14
+     },
+     {
+      "kind": "term",
+      "key": "push hook",
+      "width": 75
+     },
+     {
+      "kind": "term",
+      "key": "venv",
+      "width": 100
+     }
+    ]
+   },
+   {
+    "a": "commit/385d60d46b",
+    "b": "commit/c396654111",
+    "via": [
+     {
+      "kind": "beside"
+     },
+     {
+      "kind": "term",
+      "key": "red runner",
+      "width": 3
+     },
+     {
+      "kind": "term",
+      "key": "fail either",
+      "width": 3
+     },
+     {
+      "kind": "term",
+      "key": "green local",
+      "width": 4
+     },
+     {
+      "kind": "term",
+      "key": "tree_text_is_text",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "bin python3",
+      "width": 6
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1,
+   1,
+   1
+  ],
+  "entry": {
+   "seed": "commit/c396654111",
+   "gold": "commit/c396654111",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 2475,
+  "within_2_doors": 33680,
+  "gold_within_1": 2,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "dev/lib/python.sh#1",
+    "label": "dev/lib/python.sh",
+    "p": 0.006955754706848406,
+    "gold": false
+   },
+   {
+    "id": "commit/bc0b1a2480",
+    "label": "commit bc0b1a2: A fourth answer to \"which interpreter\", named in check.sh's header and left there",
+    "p": 0.003513665704687408,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-07-measuring-the-instrument.md#2",
+    "label": "meta/postmortems/2026-09-07-measuring-the-instrument.md \u203a 1. The recurring class, five instances",
+    "p": 0.00308986097591221,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-07-measuring-the-instrument.md#5",
+    "label": "meta/postmortems/2026-09-07-measuring-the-instrument.md \u203a 3. Two structural things I got wrong",
+    "p": 0.0029794779357624687,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-06-the-self-model-first-run.md#1",
+    "label": "meta/postmortems/2026-09-06-the-self-model-first-run.md \u203a Building the self-model, first run \u2014 2026-09-06",
+    "p": 0.002937390450337923,
+    "gold": false
+   },
+   {
+    "id": "commit/385d60d46b",
+    "label": "commit 385d60d: The first gate went red about the machine, so people learned to skip it",
+    "p": 0.002430443175306906,
+    "gold": true
+   },
+   {
+    "id": "dev/ci-database.sh#2",
+    "label": "dev/ci-database.sh",
+    "p": 0.0024262726567518354,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-04-docs-examples-nobody-ran.md#8",
+    "label": "meta/postmortems/2026-09-04-docs-examples-nobody-ran.md \u203a The sequel, 0.1.4: the same harness said no rows about rows",
+    "p": 0.0023213183031907023,
+    "gold": false
+   },
+   {
+    "id": "commit/8408216e56",
+    "label": "commit 8408216: Two security fixes that shipped without a test, found by asking git",
+    "p": 0.0016430793919208929,
+    "gold": false
+   },
+   {
+    "id": "commit/fff8e720ee",
+    "label": "commit fff8e72: Merge pull request #80 from Percolation-Labs/fix/rem-62-orgs-api-surface",
+    "p": 0.0014723753184572655,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-07-the-number-that-could-not-move.md#5",
+    "label": "meta/postmortems/2026-09-07-the-number-that-could-not-move.md \u203a What made it worse",
+    "p": 0.0014606072511984531,
+    "gold": false
+   },
+   {
+    "id": "commit/9186b4527b",
+    "label": "commit 9186b45: A probe that promised to run no step ran what came after the semicolon",
+    "p": 0.0013831795418169307,
+    "gold": false
+   },
+   {
+    "id": "commit/a139d979ad",
+    "label": "commit a139d97: $PY reached one script out of six, and check.sh never exported it",
+    "p": 0.0013256010509645655,
+    "gold": false
+   },
+   {
+    "id": "commit/33971ac616",
+    "label": "commit 33971ac: Merge pull request #74 from Percolation-Labs/chore/process-gates",
+    "p": 0.0012726966071335383,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261029-075415-3ee8.md#1",
+    "label": "board/messages/M-20261029-075415-3ee8.md",
+    "p": 0.001095095264231777,
+    "gold": false
+   },
+   {
+    "id": "commit/b0eb14788e",
+    "label": "commit b0eb147: CI pulls a published image before starting it",
+    "p": 0.001092612171362889,
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-12-true-when-it-was-measured.md#13",
+    "label": "meta/postmortems/2026-09-12-true-when-it-was-measured.md \u203a 4. A gate that is red about the machine",
+    "p": 0.0010523213980328902,
+    "gold": false
+   },
+   {
+    "id": "commit/37ed4cd487",
+    "label": "commit 37ed4cd: rows, not schema: the rule, and a gate that reads specs/ (REM-655) (#335)",
+    "p": 0.0010289064757163452,
+    "gold": false
+   },
+   {
+    "id": "dev/reload.sh#2",
+    "label": "dev/reload.sh",
+    "p": 0.0009867601458931484,
+    "gold": false
+   },
+   {
+    "id": "commit/31a94ddd00",
+    "label": "commit 31a94dd: A gate that can write: the hook rebuilt the served database and a test committed to the branch (#88)",
+    "p": 0.0009310493537992335,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "commit/670dc6aa26",
+   "label": "commit 670dc6a: Merge pull request #82 from Percolation-Labs/fix/rem-92-check-finds-an-interpreter",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/c396654111",
+   "label": "commit c396654: Three scripts asked which interpreter, and two of them got it wrong",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "dev/check.sh#3",
+   "label": "dev/check.sh",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/postmortems/2026-09-07-measuring-the-instrument.md#1",
+   "label": "meta/postmortems/2026-09-07-measuring-the-instrument.md \u203a Measuring the instrument instead of the subject \u2014 2026-09-07",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/5287377afb",
+   "label": "commit 5287377: A red gate reported a defect that was not there, and it was acted on",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/postmortems/2026-09-12-a-gate-that-can-write.md#7",
+   "label": "meta/postmortems/2026-09-12-a-gate-that-can-write.md \u203a 1c. The first gate is red for a reason that is not the tree",
+   "wave": 1,
+   "via": "term:bin python3",
+   "gold": false
+  },
+  {
+   "id": "research-notes/security-and-scale-audit-2026-09-12.md#2",
+   "label": "research-notes/security-and-scale-audit-2026-09-12.md \u203a Security and scale audit, 2026-09-12",
+   "wave": 1,
+   "via": "term:bin python3",
+   "gold": false
+  },
+  {
+   "id": "commit/fb90a52820",
+   "label": "commit fb90a52: ci-database.sh left a database holding the wrong extension",
+   "wave": 1,
+   "via": "term:bin python3",
+   "gold": false
+  },
+  {
+   "id": "commit/385d60d46b",
+   "label": "commit 385d60d: The first gate went red about the machine, so people learned to skip it",
+   "wave": 1,
+   "via": "term:bin python3",
+   "gold": true
+  },
+  {
+   "id": "dev/lib/python.sh#1",
+   "label": "dev/lib/python.sh",
+   "wave": 1,
+   "via": "term:bin python3",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "dev/lib/python.sh#1",
+    "label": "dev/lib/python.sh",
+    "gold": false
+   },
+   {
+    "id": "commit/bc0b1a2480",
+    "label": "commit bc0b1a2: A fourth answer to \"which interpreter\", named in check.sh's header and left there",
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-07-measuring-the-instrument.md#2",
+    "label": "meta/postmortems/2026-09-07-measuring-the-instrument.md \u203a 1. The recurring class, five instances",
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-07-measuring-the-instrument.md#5",
+    "label": "meta/postmortems/2026-09-07-measuring-the-instrument.md \u203a 3. Two structural things I got wrong",
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-06-the-self-model-first-run.md#1",
+    "label": "meta/postmortems/2026-09-06-the-self-model-first-run.md \u203a Building the self-model, first run \u2014 2026-09-06",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "dev/lib/python.sh#1",
+    "label": "dev/lib/python.sh",
+    "gold": false
+   },
+   {
+    "id": "commit/bc0b1a2480",
+    "label": "commit bc0b1a2: A fourth answer to \"which interpreter\", named in check.sh's header and left there",
+    "gold": false
+   },
+   {
+    "id": "commit/385d60d46b",
+    "label": "commit 385d60d: The first gate went red about the machine, so people learned to skip it",
+    "gold": true
+   },
+   {
+    "id": "meta/postmortems/2026-09-07-measuring-the-instrument.md#5",
+    "label": "meta/postmortems/2026-09-07-measuring-the-instrument.md \u203a 3. Two structural things I got wrong",
+    "gold": false
+   },
+   {
+    "id": "dev/ci-database.sh#2",
+    "label": "dev/ci-database.sh",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "meta/postmortems/2026-09-07-measuring-the-instrument.md#5",
+    "label": "meta/postmortems/2026-09-07-measuring-the-instrument.md \u203a 3. Two structural things I got wrong",
+    "gold": false
+   },
+   {
+    "id": "commit/bc0b1a2480",
+    "label": "commit bc0b1a2: A fourth answer to \"which interpreter\", named in check.sh's header and left there",
+    "gold": false
+   },
+   {
+    "id": "commit/33971ac616",
+    "label": "commit 33971ac: Merge pull request #74 from Percolation-Labs/chore/process-gates",
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-04-docs-examples-nobody-ran.md#8",
+    "label": "meta/postmortems/2026-09-04-docs-examples-nobody-ran.md \u203a The sequel, 0.1.4: the same harness said no rows about rows",
+    "gold": false
+   },
+   {
+    "id": "dev/lib/python.sh#1",
+    "label": "dev/lib/python.sh",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "commit/385d60d46b",
+    "label": "commit 385d60d: The first gate went red about the machine, so people learned to skip it",
+    "gold": true
+   },
+   {
+    "id": "dev/ci-database.sh#2",
+    "label": "dev/ci-database.sh",
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-12-a-gate-that-can-write.md#7",
+    "label": "meta/postmortems/2026-09-12-a-gate-that-can-write.md \u203a 1c. The first gate is red for a reason that is not the tree",
+    "gold": false
+   },
+   {
+    "id": "meta/postmortems/2026-09-16-three-browser-checks-nobody-ran.md#1",
+    "label": "meta/postmortems/2026-09-16-three-browser-checks-nobody-ran.md \u203a Three browser checks nobody ran",
+    "gold": false
+   },
+   {
+    "id": "applications/percolate-self-model/dreaming/small-decisions.md#7",
+    "label": "applications/percolate-self-model/dreaming/small-decisions.md \u203a Where fine-tuning fits, if anywhere",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.5,
+  "LQ": 0.0,
+  "S": 0.5
+ }
+}

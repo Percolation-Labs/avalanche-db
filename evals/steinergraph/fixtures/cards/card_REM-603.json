@@ -1,0 +1,448 @@
+{
+ "qid": "card:REM-603",
+ "set": "cards",
+ "question": "What was done about this, and why: claims: question links and aggregate counts follow rewording and retractions?",
+ "gold": [
+  {
+   "id": "commit/13e9d5ac26",
+   "label": "commit 13e9d5a: claims: scoped readings, durable receipts and current aggregate state (REM-584, REM-590, REM-603)",
+   "seed": false
+  },
+  {
+   "id": "commit/2e06e3f838",
+   "label": "commit 2e06e3f: Merge tested core claim readings and execution receipts (REM-584, REM-590, REM-603)",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "board/cards/REM-603.md#1",
+   "label": "board/cards/REM-603.md",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "board/cards/REM-603.md#7",
+   "label": "board/cards/REM-603.md \u203a Log",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "commit/f8beaa396a",
+   "label": "commit f8beaa3: board: file REM-603 claims: aggregate counts exclude reassigned occurrences and retracted answers",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "specs/claims/schema.sql#1",
+   "label": "specs/claims/schema.sql",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "meta/spikes/2026-10-20-lme-seeded-taxonomy/in_percolate/pool_run.py#6",
+   "label": "meta/spikes/2026-10-20-lme-seeded-taxonomy/in_percolate/pool_run.py",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 2
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "commit/13e9d5ac26",
+    "label": "commit 13e9d5a: claims: scoped readings, durable receipts and current aggregate state (REM-584, REM-590, REM-603)",
+    "role": "gold"
+   },
+   {
+    "id": "commit/2e06e3f838",
+    "label": "commit 2e06e3f: Merge tested core claim readings and execution receipts (REM-584, REM-590, REM-603)",
+    "role": "gold"
+   },
+   {
+    "id": "specs/claims/schema.sql#1",
+    "label": "specs/claims/schema.sql",
+    "role": "seed"
+   }
+  ],
+  "links": [
+   {
+    "a": "commit/13e9d5ac26",
+    "b": "commit/2e06e3f838",
+    "via": [
+     {
+      "kind": "term",
+      "key": "rem 603",
+      "width": 22
+     },
+     {
+      "kind": "term",
+      "key": "rem 590",
+      "width": 26
+     },
+     {
+      "kind": "term",
+      "key": "rem 584",
+      "width": 33
+     }
+    ]
+   },
+   {
+    "a": "commit/13e9d5ac26",
+    "b": "specs/claims/schema.sql#1",
+    "via": [
+     {
+      "kind": "term",
+      "key": "rem 603",
+      "width": 22
+     },
+     {
+      "kind": "term",
+      "key": "rem 590",
+      "width": 26
+     },
+     {
+      "kind": "term",
+      "key": "rem 584",
+      "width": 33
+     },
+     {
+      "kind": "term",
+      "key": "aggregate",
+      "width": 94
+     }
+    ]
+   }
+  ],
+  "cost": 2,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "specs/claims/schema.sql#1",
+   "gold": "commit/13e9d5ac26",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 2364,
+  "within_2_doors": 33919,
+  "gold_within_1": 2,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "board/cards/REM-603.md#3",
+    "label": "board/cards/REM-603.md \u203a Evidence",
+    "p": 0.003338110953653756,
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-10-20-lme-seeded-taxonomy/in_percolate/user_load.py#4",
+    "label": "meta/spikes/2026-10-20-lme-seeded-taxonomy/in_percolate/user_load.py",
+    "p": 0.0028645713855651313,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-603.md#2",
+    "label": "board/cards/REM-603.md \u203a Goal",
+    "p": 0.0024819426058664477,
+    "gold": false
+   },
+   {
+    "id": "commit/79af5319d6",
+    "label": "commit 79af531: board: codex-core-surface takes REM-603",
+    "p": 0.0022682055283050587,
+    "gold": false
+   },
+   {
+    "id": "meta/probes/2026-09-19-claims-aggregate-history.sql#2",
+    "label": "meta/probes/2026-09-19-claims-aggregate-history.sql",
+    "p": 0.0020097553646111605,
+    "gold": false
+   },
+   {
+    "id": "meta/probes/2026-09-19-core-claims-surface.md#2",
+    "label": "meta/probes/2026-09-19-core-claims-surface.md \u203a Findings and changes",
+    "p": 0.001932758914153087,
+    "gold": false
+   },
+   {
+    "id": "specs/research-platform/core-trust-delivery.md#2",
+    "label": "specs/research-platform/core-trust-delivery.md \u203a Core trust delivery map",
+    "p": 0.0018236366023911764,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-584.md#8",
+    "label": "board/cards/REM-584.md \u203a Log",
+    "p": 0.0017856727032503877,
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-10-20-lme-seeded-taxonomy/in_percolate/pool_run.py#7",
+    "label": "meta/spikes/2026-10-20-lme-seeded-taxonomy/in_percolate/pool_run.py",
+    "p": 0.001736770826083526,
+    "gold": false
+   },
+   {
+    "id": "meta/probes/2026-09-19-claims-aggregate-history.sql#1",
+    "label": "meta/probes/2026-09-19-claims-aggregate-history.sql",
+    "p": 0.001643953662332104,
+    "gold": false
+   },
+   {
+    "id": "specs/claims/graph.md#42",
+    "label": "specs/claims/graph.md \u203a 10. Reading the graph",
+    "p": 0.001617547361963238,
+    "gold": false
+   },
+   {
+    "id": "research-notes/temporal-attention/README.md#9",
+    "label": "research-notes/temporal-attention/README.md \u203a Reproduce",
+    "p": 0.0016005634753497565,
+    "gold": false
+   },
+   {
+    "id": "meta/lab/results/blind-door/RESULT.md#1",
+    "label": "meta/lab/results/blind-door/RESULT.md \u203a Blind doors: a door that describes the graph, scored on the same pages as md5 an",
+    "p": 0.0015781359686614469,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-603.md#6",
+    "label": "board/cards/REM-603.md \u203a Scope",
+    "p": 0.001529171602344255,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261105-131714-52be.md#1",
+    "label": "board/messages/M-20261105-131714-52be.md",
+    "p": 0.0015266390650107362,
+    "gold": false
+   },
+   {
+    "id": "meta/probes/2026-09-19-core-claims-surface.md#4",
+    "label": "meta/probes/2026-09-19-core-claims-surface.md \u203a Reproduction and verification",
+    "p": 0.0015121618263003406,
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-10-20-lme-seeded-taxonomy/in_percolate/beam.py#8",
+    "label": "meta/spikes/2026-10-20-lme-seeded-taxonomy/in_percolate/beam.py",
+    "p": 0.0014361968976406058,
+    "gold": false
+   },
+   {
+    "id": "commit/5b4054bfc7",
+    "label": "commit 5b4054b: board: codex-reading-room takes REM-602",
+    "p": 0.0014041113515635543,
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-603.md#4",
+    "label": "board/cards/REM-603.md \u203a Done when",
+    "p": 0.0013252460211691738,
+    "gold": false
+   },
+   {
+    "id": "board/messages/M-20261024-174005-3bd3.md#1",
+    "label": "board/messages/M-20261024-174005-3bd3.md",
+    "p": 0.0013093625661762679,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "board/cards/REM-603.md#1",
+   "label": "board/cards/REM-603.md",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-603.md#7",
+   "label": "board/cards/REM-603.md \u203a Log",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/f8beaa396a",
+   "label": "commit f8beaa3: board: file REM-603 claims: aggregate counts exclude reassigned occurrences and retracted answers",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "specs/claims/schema.sql#1",
+   "label": "specs/claims/schema.sql",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "meta/spikes/2026-10-20-lme-seeded-taxonomy/in_percolate/pool_run.py#6",
+   "label": "meta/spikes/2026-10-20-lme-seeded-taxonomy/in_percolate/pool_run.py",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "commit/13e9d5ac26",
+   "label": "commit 13e9d5a: claims: scoped readings, durable receipts and current aggregate state (REM-584, REM-590, REM-603)",
+   "wave": 1,
+   "via": "term:rem 603",
+   "gold": true
+  },
+  {
+   "id": "board/cards/REM-603.md#2",
+   "label": "board/cards/REM-603.md \u203a Goal",
+   "wave": 1,
+   "via": "term:rem 603",
+   "gold": false
+  },
+  {
+   "id": "meta/probes/2026-09-19-core-claims-surface.md#2",
+   "label": "meta/probes/2026-09-19-core-claims-surface.md \u203a Findings and changes",
+   "wave": 1,
+   "via": "term:rem 603",
+   "gold": false
+  },
+  {
+   "id": "board/cards/REM-603.md#6",
+   "label": "board/cards/REM-603.md \u203a Scope",
+   "wave": 1,
+   "via": "term:rem 603",
+   "gold": false
+  },
+  {
+   "id": "commit/85a21aedd0",
+   "label": "commit 85a21ae: board: REM-603 in-progress \u2192 done",
+   "wave": 1,
+   "via": "term:rem 603",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "board/cards/REM-603.md#3",
+    "label": "board/cards/REM-603.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-10-20-lme-seeded-taxonomy/in_percolate/user_load.py#4",
+    "label": "meta/spikes/2026-10-20-lme-seeded-taxonomy/in_percolate/user_load.py",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-603.md#2",
+    "label": "board/cards/REM-603.md \u203a Goal",
+    "gold": false
+   },
+   {
+    "id": "commit/79af5319d6",
+    "label": "commit 79af531: board: codex-core-surface takes REM-603",
+    "gold": false
+   },
+   {
+    "id": "meta/probes/2026-09-19-claims-aggregate-history.sql#2",
+    "label": "meta/probes/2026-09-19-claims-aggregate-history.sql",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "meta/probes/2026-09-19-claims-aggregate-history.sql#2",
+    "label": "meta/probes/2026-09-19-claims-aggregate-history.sql",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-603.md#3",
+    "label": "board/cards/REM-603.md \u203a Evidence",
+    "gold": false
+   },
+   {
+    "id": "meta/spikes/2026-10-20-lme-seeded-taxonomy/in_percolate/user_load.py#4",
+    "label": "meta/spikes/2026-10-20-lme-seeded-taxonomy/in_percolate/user_load.py",
+    "gold": false
+   },
+   {
+    "id": "meta/probes/2026-09-19-claims-aggregate-history.sql#1",
+    "label": "meta/probes/2026-09-19-claims-aggregate-history.sql",
+    "gold": false
+   },
+   {
+    "id": "specs/claims/graph.md#42",
+    "label": "specs/claims/graph.md \u203a 10. Reading the graph",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "commit/13e9d5ac26",
+    "label": "commit 13e9d5a: claims: scoped readings, durable receipts and current aggregate state (REM-584, REM-590, REM-603)",
+    "gold": true
+   },
+   {
+    "id": "board/cards/REM-603.md#6",
+    "label": "board/cards/REM-603.md \u203a Scope",
+    "gold": false
+   },
+   {
+    "id": "commit/85a21aedd0",
+    "label": "commit 85a21ae: board: REM-603 in-progress \u2192 done",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-603.md#5",
+    "label": "board/cards/REM-603.md \u203a Estimate",
+    "gold": false
+   },
+   {
+    "id": "commit/79d6e1eb0f",
+    "label": "commit 79d6e1e: REM-1240: paired per-walk interval for the per-read opener, and the replay's aggregate fit",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "board/cards/REM-707.md#4",
+    "label": "board/cards/REM-707.md \u203a Done when",
+    "gold": false
+   },
+   {
+    "id": "meta/probes/2026-09-19-claims-aggregate-history.sql#2",
+    "label": "meta/probes/2026-09-19-claims-aggregate-history.sql",
+    "gold": false
+   },
+   {
+    "id": "board/cards/REM-483.md#6",
+    "label": "board/cards/REM-483.md \u203a Log",
+    "gold": false
+   },
+   {
+    "id": "research-notes/coalescing/harness/RESULTS.md#7",
+    "label": "research-notes/coalescing/harness/RESULTS.md \u203a Next",
+    "gold": false
+   },
+   {
+    "id": "commit/13e9d5ac26",
+    "label": "commit 13e9d5a: claims: scoped readings, durable receipts and current aggregate state (REM-584, REM-590, REM-603)",
+    "gold": true
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.0,
+  "Q": 0.0,
+  "LQ": 0.5,
+  "S": 0.5
+ }
+}

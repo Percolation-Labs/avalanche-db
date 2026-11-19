@@ -1,0 +1,559 @@
+{
+ "qid": "RW:4hop1__40316_497223_15840_36002",
+ "set": "mq",
+ "question": "What were the Genesis's advantages over the game system with a 3 letter abbreviation, featuring a game named after the football league that the Los Angeles Rams are representative of?",
+ "gold": [
+  {
+   "id": "mq:61db9064091891f6",
+   "label": "Southern California",
+   "seed": false
+  },
+  {
+   "id": "mq:6d54f3466dac34d2",
+   "label": "NFL (video game)",
+   "seed": false
+  },
+  {
+   "id": "mq:6f03dca82a759573",
+   "label": "Nintendo Entertainment System",
+   "seed": false
+  },
+  {
+   "id": "mq:da314d9a1df28f7f",
+   "label": "Super Nintendo Entertainment System",
+   "seed": false
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:20aea69411e109e8",
+   "label": "Super Bowl XIV",
+   "rank": 1,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:7d00d66a51c2827a",
+   "label": "History of the Los Angeles Rams",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:febb3ca43bfb0a8c",
+   "label": "Monday Night Football",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:ead84e127369a30d",
+   "label": "Los Angeles Memorial Coliseum",
+   "rank": 4,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:72a1fd41bdf6187d",
+   "label": "Will Sherman",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 1
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:61db9064091891f6",
+    "label": "Southern California",
+    "role": "gold"
+   },
+   {
+    "id": "mq:6d54f3466dac34d2",
+    "label": "NFL (video game)",
+    "role": "gold"
+   },
+   {
+    "id": "mq:6f03dca82a759573",
+    "label": "Nintendo Entertainment System",
+    "role": "gold"
+   },
+   {
+    "id": "mq:7d00d66a51c2827a",
+    "label": "History of the Los Angeles Rams",
+    "role": "seed"
+   },
+   {
+    "id": "mq:c76f81d6be31e7de",
+    "label": "Los Angeles Lakers",
+    "role": "connector"
+   },
+   {
+    "id": "mq:da314d9a1df28f7f",
+    "label": "Super Nintendo Entertainment System",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:61db9064091891f6",
+    "b": "mq:7d00d66a51c2827a",
+    "via": [
+     {
+      "kind": "near",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "angeles rams",
+      "width": 11
+     },
+     {
+      "kind": "term",
+      "key": "anaheim",
+      "width": 16
+     },
+     {
+      "kind": "term",
+      "key": "rams",
+      "width": 20
+     },
+     {
+      "kind": "term",
+      "key": "southern california",
+      "width": 29
+     }
+    ]
+   },
+   {
+    "a": "mq:61db9064091891f6",
+    "b": "mq:c76f81d6be31e7de",
+    "via": [
+     {
+      "kind": "near",
+      "width": 5
+     },
+     {
+      "kind": "term",
+      "key": "angeles clippers",
+      "width": 6
+     },
+     {
+      "kind": "term",
+      "key": "clippers",
+      "width": 8
+     },
+     {
+      "kind": "term",
+      "key": "angeles kings",
+      "width": 10
+     },
+     {
+      "kind": "term",
+      "key": "angeles lakers",
+      "width": 15
+     },
+     {
+      "kind": "term",
+      "key": "lakers",
+      "width": 18
+     }
+    ]
+   },
+   {
+    "a": "mq:6d54f3466dac34d2",
+    "b": "mq:6f03dca82a759573",
+    "via": [
+     {
+      "kind": "term",
+      "key": "entertainment system",
+      "width": 32
+     },
+     {
+      "kind": "term",
+      "key": "nintendo entertainment",
+      "width": 32
+     },
+     {
+      "kind": "term",
+      "key": "nintendo",
+      "width": 79
+     }
+    ]
+   },
+   {
+    "a": "mq:6f03dca82a759573",
+    "b": "mq:da314d9a1df28f7f",
+    "via": [
+     {
+      "kind": "term",
+      "key": "family computer",
+      "width": 4
+     },
+     {
+      "kind": "term",
+      "key": "super nintendo",
+      "width": 11
+     },
+     {
+      "kind": "term",
+      "key": "nes",
+      "width": 12
+     },
+     {
+      "kind": "term",
+      "key": "electronics",
+      "width": 26
+     },
+     {
+      "kind": "term",
+      "key": "entertainment system",
+      "width": 32
+     }
+    ]
+   },
+   {
+    "a": "mq:c76f81d6be31e7de",
+    "b": "mq:da314d9a1df28f7f",
+    "via": [
+     {
+      "kind": "term",
+      "key": "compete",
+      "width": 65
+     }
+    ]
+   }
+  ],
+  "cost": 5,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   2,
+   2,
+   2,
+   1,
+   1,
+   1
+  ],
+  "entry": {
+   "seed": "mq:7d00d66a51c2827a",
+   "gold": "mq:61db9064091891f6",
+   "doors": 1
+  }
+ },
+ "potential": {
+  "within_1_door": 1556,
+  "within_2_doors": 19510,
+  "gold_within_1": 1,
+  "gold_within_2": 3,
+  "top_U": [
+   {
+    "id": "mq:622195a8da1d8503",
+    "label": "Los Angeles Memorial Coliseum",
+    "p": 0.014637876167175568,
+    "gold": false
+   },
+   {
+    "id": "mq:d320884af16bf5d4",
+    "label": "Roy Tuckman",
+    "p": 0.003142084760765348,
+    "gold": false
+   },
+   {
+    "id": "mq:022c05e76de4e121",
+    "label": "Robert Guillaume",
+    "p": 0.0030534236063328693,
+    "gold": false
+   },
+   {
+    "id": "mq:de321920fbc69b1d",
+    "label": "List of National Football League annual sacks leaders",
+    "p": 0.002371561738511378,
+    "gold": false
+   },
+   {
+    "id": "mq:61db9064091891f6",
+    "label": "Southern California",
+    "p": 0.0021470768075353267,
+    "gold": true
+   },
+   {
+    "id": "mq:e30b23dc75293a0d",
+    "label": "Super Bowl XXXVI",
+    "p": 0.002009572575692837,
+    "gold": false
+   },
+   {
+    "id": "mq:4993cc9eaa9c79f7",
+    "label": "Atlanta Falcons",
+    "p": 0.0017267229062186988,
+    "gold": false
+   },
+   {
+    "id": "mq:0ac06ff41daad5a4",
+    "label": "Adam Timmerman",
+    "p": 0.0016937451853075638,
+    "gold": false
+   },
+   {
+    "id": "mq:0e3a825827acbfa7",
+    "label": "2,000-yard club",
+    "p": 0.0015407193151356095,
+    "gold": false
+   },
+   {
+    "id": "mq:336593edf73f1df7",
+    "label": "Gordon Jones (American football)",
+    "p": 0.00151861181457839,
+    "gold": false
+   },
+   {
+    "id": "mq:4c60f8d8f78b12c5",
+    "label": "Bill Goldberg",
+    "p": 0.0015009611566582392,
+    "gold": false
+   },
+   {
+    "id": "mq:da4c63f830194de5",
+    "label": "Dugout (baseball)",
+    "p": 0.0014748037939027988,
+    "gold": false
+   },
+   {
+    "id": "mq:07e265f32f6e4491",
+    "label": "Olivier Vernon",
+    "p": 0.0014315158415287058,
+    "gold": false
+   },
+   {
+    "id": "mq:210a0ce5c501ddf8",
+    "label": "Miami Marlins",
+    "p": 0.001398243540584173,
+    "gold": false
+   },
+   {
+    "id": "mq:f9094fcd9c085659",
+    "label": "Jeremy Staat",
+    "p": 0.0013741844710483668,
+    "gold": false
+   },
+   {
+    "id": "mq:ce321ad95d4bc432",
+    "label": "Los Angeles Kings",
+    "p": 0.0013391659994350213,
+    "gold": false
+   },
+   {
+    "id": "mq:58ffa27575cee9b6",
+    "label": "Super Bowl curse",
+    "p": 0.001315802852337022,
+    "gold": false
+   },
+   {
+    "id": "mq:82f543de72069d5b",
+    "label": "Buffalo Braves",
+    "p": 0.0012690896897009326,
+    "gold": false
+   },
+   {
+    "id": "mq:4830f7262ee86211",
+    "label": "Super Bowl XXXVII",
+    "p": 0.0012462324013876255,
+    "gold": false
+   },
+   {
+    "id": "mq:f57e0d93c2dc9b97",
+    "label": "Los Angeles Dodgers",
+    "p": 0.0012296160096906344,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:20aea69411e109e8",
+   "label": "Super Bowl XIV",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:7d00d66a51c2827a",
+   "label": "History of the Los Angeles Rams",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:febb3ca43bfb0a8c",
+   "label": "Monday Night Football",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:ead84e127369a30d",
+   "label": "Los Angeles Memorial Coliseum",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:72a1fd41bdf6187d",
+   "label": "Will Sherman",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:4ebcc1dd25af5302",
+   "label": "New Orleans Saints",
+   "wave": 1,
+   "via": "term:football conference",
+   "gold": false
+  },
+  {
+   "id": "mq:f882515c89029d3d",
+   "label": "NFC South",
+   "wave": 1,
+   "via": "term:football conference",
+   "gold": false
+  },
+  {
+   "id": "mq:92997285da10c578",
+   "label": "Green Bay Packers",
+   "wave": 1,
+   "via": "term:football conference",
+   "gold": false
+  },
+  {
+   "id": "mq:35fb1c74092c95e9",
+   "label": "Philadelphia Eagles",
+   "wave": 1,
+   "via": "term:football conference",
+   "gold": false
+  },
+  {
+   "id": "mq:1ed9e5e604d66ddb",
+   "label": "2017 NFL season",
+   "wave": 1,
+   "via": "term:football conference",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:622195a8da1d8503",
+    "label": "Los Angeles Memorial Coliseum",
+    "gold": false
+   },
+   {
+    "id": "mq:d320884af16bf5d4",
+    "label": "Roy Tuckman",
+    "gold": false
+   },
+   {
+    "id": "mq:022c05e76de4e121",
+    "label": "Robert Guillaume",
+    "gold": false
+   },
+   {
+    "id": "mq:de321920fbc69b1d",
+    "label": "List of National Football League annual sacks leaders",
+    "gold": false
+   },
+   {
+    "id": "mq:61db9064091891f6",
+    "label": "Southern California",
+    "gold": true
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:622195a8da1d8503",
+    "label": "Los Angeles Memorial Coliseum",
+    "gold": false
+   },
+   {
+    "id": "mq:e30b23dc75293a0d",
+    "label": "Super Bowl XXXVI",
+    "gold": false
+   },
+   {
+    "id": "mq:61db9064091891f6",
+    "label": "Southern California",
+    "gold": true
+   },
+   {
+    "id": "mq:4993cc9eaa9c79f7",
+    "label": "Atlanta Falcons",
+    "gold": false
+   },
+   {
+    "id": "mq:336593edf73f1df7",
+    "label": "Gordon Jones (American football)",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:622195a8da1d8503",
+    "label": "Los Angeles Memorial Coliseum",
+    "gold": false
+   },
+   {
+    "id": "mq:e30b23dc75293a0d",
+    "label": "Super Bowl XXXVI",
+    "gold": false
+   },
+   {
+    "id": "mq:b0e95466c2090cad",
+    "label": "LeBron James",
+    "gold": false
+   },
+   {
+    "id": "mq:acccf8f0b227f7bc",
+    "label": "LeBron James",
+    "gold": false
+   },
+   {
+    "id": "mq:4993cc9eaa9c79f7",
+    "label": "Atlanta Falcons",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:622195a8da1d8503",
+    "label": "Los Angeles Memorial Coliseum",
+    "gold": false
+   },
+   {
+    "id": "mq:e30b23dc75293a0d",
+    "label": "Super Bowl XXXVI",
+    "gold": false
+   },
+   {
+    "id": "mq:336593edf73f1df7",
+    "label": "Gordon Jones (American football)",
+    "gold": false
+   },
+   {
+    "id": "mq:44cc435f351cb843",
+    "label": "2002 Rose Bowl",
+    "gold": false
+   },
+   {
+    "id": "mq:4c60f8d8f78b12c5",
+    "label": "Bill Goldberg",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": 0.25,
+  "Q": 0.25,
+  "LQ": 0.0,
+  "S": 0.0
+ }
+}

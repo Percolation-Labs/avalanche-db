@@ -1,0 +1,407 @@
+{
+ "qid": "RW:2hop__130867_54221",
+ "set": "mq",
+ "question": "What time of day can you start purchasing alcohol in the state that includes Narraguagus High School?",
+ "gold": [
+  {
+   "id": "mq:8407bc3bb4d0fe64",
+   "label": "Narraguagus Jr/Sr High School",
+   "seed": true
+  },
+  {
+   "id": "mq:bc3067abef2e0ab6",
+   "label": "Alcohol laws of Maine",
+   "seed": true
+  }
+ ],
+ "seeds": [
+  {
+   "id": "mq:8407bc3bb4d0fe64",
+   "label": "Narraguagus Jr/Sr High School",
+   "rank": 1,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:53b50a431f376a40",
+   "label": "Alcohol laws of New York",
+   "rank": 2,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:23e1b1c61926ea0c",
+   "label": "Alcohol laws of Kansas",
+   "rank": 3,
+   "gold": false,
+   "doors_to_gold": 1
+  },
+  {
+   "id": "mq:bc3067abef2e0ab6",
+   "label": "Alcohol laws of Maine",
+   "rank": 4,
+   "gold": true,
+   "doors_to_gold": 0
+  },
+  {
+   "id": "mq:61dedbbd443ec9bf",
+   "label": "San Carlos High School (Arizona)",
+   "rank": 5,
+   "gold": false,
+   "doors_to_gold": 2
+  }
+ ],
+ "steiner": {
+  "nodes": [
+   {
+    "id": "mq:8407bc3bb4d0fe64",
+    "label": "Narraguagus Jr/Sr High School",
+    "role": "gold"
+   },
+   {
+    "id": "mq:bc3067abef2e0ab6",
+    "label": "Alcohol laws of Maine",
+    "role": "gold"
+   }
+  ],
+  "links": [
+   {
+    "a": "mq:8407bc3bb4d0fe64",
+    "b": "mq:bc3067abef2e0ab6",
+    "via": [
+     {
+      "kind": "term",
+      "key": "maine",
+      "width": 64
+     }
+    ]
+   }
+  ],
+  "cost": 1,
+  "detached_gold": [],
+  "gold_pair_doors": [
+   1
+  ],
+  "entry": {
+   "seed": "mq:8407bc3bb4d0fe64",
+   "gold": "mq:8407bc3bb4d0fe64",
+   "doors": 0
+  }
+ },
+ "potential": {
+  "within_1_door": 1388,
+  "within_2_doors": 19662,
+  "gold_within_1": 0,
+  "gold_within_2": 0,
+  "top_U": [
+   {
+    "id": "mq:0ed2c58461e91bfa",
+    "label": "Alcohol consumption by youth in the United States",
+    "p": 0.0058306185336341005,
+    "gold": false
+   },
+   {
+    "id": "mq:706e58d697fc5457",
+    "label": "Beddington Lake",
+    "p": 0.005070291195536488,
+    "gold": false
+   },
+   {
+    "id": "mq:1509789bfd9226c5",
+    "label": "Alcohol law",
+    "p": 0.004191986160533407,
+    "gold": false
+   },
+   {
+    "id": "mq:0e7fdf7d2633f316",
+    "label": "San Carlos High School",
+    "p": 0.003890539012379762,
+    "gold": false
+   },
+   {
+    "id": "mq:810685e946700759",
+    "label": "Legal drinking age",
+    "p": 0.00309805894359855,
+    "gold": false
+   },
+   {
+    "id": "mq:d5a46d4bcaf7a217",
+    "label": "Alcohol laws of Kentucky",
+    "p": 0.0027680720010681095,
+    "gold": false
+   },
+   {
+    "id": "mq:52d395c928dc9091",
+    "label": "Legal drinking age",
+    "p": 0.0025411241821195244,
+    "gold": false
+   },
+   {
+    "id": "mq:4f5d9e19e8268518",
+    "label": "Monmouth-Roseville High School",
+    "p": 0.0025227128276707634,
+    "gold": false
+   },
+   {
+    "id": "mq:0336ba4c24cb7cf9",
+    "label": "Withington Girls' School",
+    "p": 0.0020927886789296446,
+    "gold": false
+   },
+   {
+    "id": "mq:5259d2f2c1997559",
+    "label": "E Township, Maine",
+    "p": 0.001879544733712896,
+    "gold": false
+   },
+   {
+    "id": "mq:2bd70e20ccba759a",
+    "label": "Mount View High School (Maine)",
+    "p": 0.0017368166464610305,
+    "gold": false
+   },
+   {
+    "id": "mq:9e400352f05dde57",
+    "label": "Alcohol proof",
+    "p": 0.0017362022480694904,
+    "gold": false
+   },
+   {
+    "id": "mq:896673c156bfd00b",
+    "label": "Ashland Community High School",
+    "p": 0.0016668849868604887,
+    "gold": false
+   },
+   {
+    "id": "mq:b4f41d165f9c210a",
+    "label": "Mission San Carlos Borromeo de Carmelo",
+    "p": 0.0014247459649966384,
+    "gold": false
+   },
+   {
+    "id": "mq:6f995273626b93b8",
+    "label": "Alps",
+    "p": 0.0014116819915028394,
+    "gold": false
+   },
+   {
+    "id": "mq:c7c625c9b9922bd5",
+    "label": "The Shadow of Saganami",
+    "p": 0.0014024368520776764,
+    "gold": false
+   },
+   {
+    "id": "mq:7787e3b3d4b6e16d",
+    "label": "Capital punishment in Texas",
+    "p": 0.0012315808243532483,
+    "gold": false
+   },
+   {
+    "id": "mq:6eeace0886a90133",
+    "label": "Marriage Act, 1961 (South Africa)",
+    "p": 0.0011723075909557152,
+    "gold": false
+   },
+   {
+    "id": "mq:086515015e2133f8",
+    "label": "John P. Surma",
+    "p": 0.0011690108948764948,
+    "gold": false
+   },
+   {
+    "id": "mq:322d8c131b763dca",
+    "label": "Addison Transit Center",
+    "p": 0.001006387831788328,
+    "gold": false
+   }
+  ]
+ },
+ "walk_reads": [
+  {
+   "id": "mq:8407bc3bb4d0fe64",
+   "label": "Narraguagus Jr/Sr High School",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:53b50a431f376a40",
+   "label": "Alcohol laws of New York",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:23e1b1c61926ea0c",
+   "label": "Alcohol laws of Kansas",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:bc3067abef2e0ab6",
+   "label": "Alcohol laws of Maine",
+   "wave": 0,
+   "via": "search",
+   "gold": true
+  },
+  {
+   "id": "mq:61dedbbd443ec9bf",
+   "label": "San Carlos High School (Arizona)",
+   "wave": 0,
+   "via": "search",
+   "gold": false
+  },
+  {
+   "id": "mq:d4c495358ae52874",
+   "label": "Gun laws in Indiana",
+   "wave": 1,
+   "via": "term:alcohol",
+   "gold": false
+  },
+  {
+   "id": "mq:4da41b4eccf000eb",
+   "label": "Beer",
+   "wave": 1,
+   "via": "term:alcohol",
+   "gold": false
+  },
+  {
+   "id": "mq:1509789bfd9226c5",
+   "label": "Alcohol law",
+   "wave": 1,
+   "via": "term:alcohol",
+   "gold": false
+  },
+  {
+   "id": "mq:9e400352f05dde57",
+   "label": "Alcohol proof",
+   "wave": 1,
+   "via": "term:alcohol",
+   "gold": false
+  },
+  {
+   "id": "mq:d5a46d4bcaf7a217",
+   "label": "Alcohol laws of Kentucky",
+   "wave": 1,
+   "via": "term:alcohol",
+   "gold": false
+  }
+ ],
+ "top5": {
+  "U": [
+   {
+    "id": "mq:0ed2c58461e91bfa",
+    "label": "Alcohol consumption by youth in the United States",
+    "gold": false
+   },
+   {
+    "id": "mq:706e58d697fc5457",
+    "label": "Beddington Lake",
+    "gold": false
+   },
+   {
+    "id": "mq:1509789bfd9226c5",
+    "label": "Alcohol law",
+    "gold": false
+   },
+   {
+    "id": "mq:0e7fdf7d2633f316",
+    "label": "San Carlos High School",
+    "gold": false
+   },
+   {
+    "id": "mq:810685e946700759",
+    "label": "Legal drinking age",
+    "gold": false
+   }
+  ],
+  "Q": [
+   {
+    "id": "mq:0ed2c58461e91bfa",
+    "label": "Alcohol consumption by youth in the United States",
+    "gold": false
+   },
+   {
+    "id": "mq:706e58d697fc5457",
+    "label": "Beddington Lake",
+    "gold": false
+   },
+   {
+    "id": "mq:52d395c928dc9091",
+    "label": "Legal drinking age",
+    "gold": false
+   },
+   {
+    "id": "mq:4f5d9e19e8268518",
+    "label": "Monmouth-Roseville High School",
+    "gold": false
+   },
+   {
+    "id": "mq:1509789bfd9226c5",
+    "label": "Alcohol law",
+    "gold": false
+   }
+  ],
+  "LQ": [
+   {
+    "id": "mq:0ed2c58461e91bfa",
+    "label": "Alcohol consumption by youth in the United States",
+    "gold": false
+   },
+   {
+    "id": "mq:706e58d697fc5457",
+    "label": "Beddington Lake",
+    "gold": false
+   },
+   {
+    "id": "mq:4f5d9e19e8268518",
+    "label": "Monmouth-Roseville High School",
+    "gold": false
+   },
+   {
+    "id": "mq:95dda51b568a5a18",
+    "label": "Beer",
+    "gold": false
+   },
+   {
+    "id": "mq:4da41b4eccf000eb",
+    "label": "Beer",
+    "gold": false
+   }
+  ],
+  "S": [
+   {
+    "id": "mq:24d736288dddec84",
+    "label": "Deception Bay State High School",
+    "gold": false
+   },
+   {
+    "id": "mq:c1c8091ac859597d",
+    "label": "Tamborine Mountain State High School",
+    "gold": false
+   },
+   {
+    "id": "mq:4f5d9e19e8268518",
+    "label": "Monmouth-Roseville High School",
+    "gold": false
+   },
+   {
+    "id": "mq:4c8bb1985e9161d0",
+    "label": "Emmaus High School",
+    "gold": false
+   },
+   {
+    "id": "mq:90ecb32bddc61499",
+    "label": "Early College High School (Salem, Oregon)",
+    "gold": false
+   }
+  ]
+ },
+ "recall5": {
+  "U": null,
+  "Q": null,
+  "LQ": null,
+  "S": null
+ }
+}
