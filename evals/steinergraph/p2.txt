@@ -1,0 +1,57 @@
+== cards: 150 questions, 135 with gold beyond the seeds
+  likeness: entry points (seeds in S) mean 0.37, ≥1 on 45/150; near seeds mean 4.01, ≥1 on 150/150; coverage 0.989; seed→gold distance, median of medians 1.0
+  question→gold: gold in search's hits 289/319, median rank 59, in top 5 55, top 50 139
+  connection (|S|≥2): mean pair distance 1.05 (shuffled 2.04); directly linked 0.946 (shuffled 0.013); in-S step 0.0941 (shuffled 0.0001)
+  recall beyond the seeds, U's top k: k=1 0.096, k=3 0.175, k=5 0.207, k=10 0.337, k=20 0.508; walk (5 reads) 0.355
+    near seeds 0  : n   0, U recall@5 nan, walk nan
+    near seeds 1–2: n  21, U recall@5 0.016, walk 0.405
+    near seeds ≥3 : n 114, U recall@5 0.242, walk 0.346
+  bar 1, compactness: n 87; most compact third (pair dist ≤ 1.00) U@5 0.224, least (≥ 1.00) 0.178: +0.046 [-0.115, +0.196] fail
+     k= 1: compact 0.098, middle 0.043, spread 0.098
+     k= 3: compact 0.195, middle 0.129, spread 0.109
+     k= 5: compact 0.224, middle 0.147, spread 0.178
+     k=10: compact 0.334, middle 0.282, spread 0.333
+     k=20: compact 0.467, middle 0.503, spread 0.431
+  bar 3: U recall@5 now 0.207; perfect likeness (questions with a near seed) 0.207; perfect connection (share with a near seed) 1.000; labels {'likeness-limited': 0, 'connection-limited': 104, 'reached': 31}
+         same labels under the recorded walk: {'likeness-limited': 0, 'connection-limited': 79, 'reached': 56}
+
+== PR titles: 93 questions, 87 with gold beyond the seeds
+  likeness: entry points (seeds in S) mean 1.08, ≥1 on 83/93; near seeds mean 4.22, ≥1 on 92/93; coverage 0.952; seed→gold distance, median of medians 0.5
+  question→gold: gold in search's hits 253/266, median rank 12, in top 5 100, top 50 169
+  connection (|S|≥2): mean pair distance 1.10 (shuffled 2.02); directly linked 0.901 (shuffled 0.018); in-S step 0.1389 (shuffled 0.0001)
+  recall beyond the seeds, U's top k: k=1 0.140, k=3 0.287, k=5 0.380, k=10 0.521, k=20 0.674; walk (5 reads) 0.098
+    near seeds 0  : n   1, U recall@5 0.000, walk 0.000
+    near seeds 1–2: n   8, U recall@5 0.375, walk 0.062
+    near seeds ≥3 : n  78, U recall@5 0.385, walk 0.103
+  bar 1, compactness: n 86; most compact third (pair dist ≤ 1.00) U@5 0.171, least (≥ 1.00) 0.324: -0.153 [-0.347, +0.046] fail
+     k= 1: compact 0.077, middle 0.233, spread 0.107
+     k= 3: compact 0.171, middle 0.489, spread 0.196
+     k= 5: compact 0.171, middle 0.639, spread 0.324
+     k=10: compact 0.344, middle 0.794, spread 0.423
+     k=20: compact 0.505, middle 0.922, spread 0.601
+  bar 3: U recall@5 now 0.380; perfect likeness (questions with a near seed) 0.384; perfect connection (share with a near seed) 0.989; labels {'likeness-limited': 1, 'connection-limited': 49, 'reached': 37}
+         same labels under the recorded walk: {'likeness-limited': 1, 'connection-limited': 76, 'reached': 10}
+
+== MuSiQue: 150 questions, 133 with gold beyond the seeds
+  likeness: entry points (seeds in S) mean 1.03, ≥1 on 116/150; near seeds mean 4.02, ≥1 on 149/150; coverage 0.886; seed→gold distance, median of medians 0.5
+  question→gold: gold in search's hits 355/399, median rank 12, in top 5 154, top 50 246
+  connection (|S|≥2): mean pair distance 1.22 (shuffled 1.97); directly linked 0.789 (shuffled 0.030); in-S step 0.0249 (shuffled 0.0002)
+  recall beyond the seeds, U's top k: k=1 0.055, k=3 0.107, k=5 0.122, k=10 0.197, k=20 0.269; walk (5 reads) 0.362
+    near seeds 0  : n   1, U recall@5 0.000, walk 0.000
+    near seeds 1–2: n  20, U recall@5 0.017, walk 0.400
+    near seeds ≥3 : n 112, U recall@5 0.142, walk 0.359
+  bar 1, compactness: n 132; most compact third (pair dist ≤ 1.00) U@5 0.193, least (≥ 1.33) 0.097: +0.097 [-0.027, +0.223] fail
+     k= 1: compact 0.091, middle 0.045, spread 0.028
+     k= 3: compact 0.170, middle 0.068, spread 0.083
+     k= 5: compact 0.193, middle 0.080, spread 0.097
+     k=10: compact 0.318, middle 0.159, spread 0.119
+     k=20: compact 0.420, middle 0.239, spread 0.153
+  bar 3: U recall@5 now 0.122; perfect likeness (questions with a near seed) 0.123; perfect connection (share with a near seed) 0.992; labels {'likeness-limited': 1, 'connection-limited': 113, 'reached': 19}
+         same labels under the recorded walk: {'likeness-limited': 1, 'connection-limited': 76, 'reached': 56}
+  bar 4, seed sets (total recall at 10 reads = 5 seeds + U's top 5; entry points):
+     single  total@10 0.475, entry 1.03
+     blind   total@10 0.504, entry 1.13  vs single +0.029 [-0.004, +0.066] fail
+     filled  total@10 0.770, entry 1.81  vs single +0.295 [+0.246, +0.344]
+     oracle  total@10 0.520, entry 1.15  vs single +0.045 [+0.022, +0.071]
+
+bar 1 passes on 0 set(s): fail

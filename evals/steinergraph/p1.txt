@@ -1,0 +1,25 @@
+== test: recall of gold beyond the seeds (questions with gold beyond the seeds)
+  set        arm           recall@5  recall@20  best gold rank, median   (Jev walk, 5 reads: recall)
+  cards      S                0.144      0.264                      51   (0.355, n 135)
+  cards      U                0.203      0.508                      15   
+  cards      Q                0.214      0.451                      12   
+  cards      Q_shuffled       0.004      0.014                    1918   
+             avalanche U: step 1: gold mass 0.0187, best gold in top 10 49/135; step 2: gold mass 0.0084, best gold in top 10 65/135; step 3: gold mass 0.0048, best gold in top 10 72/135
+             avalanche Q: step 1: gold mass 0.0242, best gold in top 10 59/135; step 2: gold mass 0.0154, best gold in top 10 60/135; step 3: gold mass 0.0146, best gold in top 10 61/135
+
+  PR titles  S                0.163      0.381                      20   (0.098, n 87)
+  PR titles  U                0.380      0.674                       6   
+  PR titles  Q                0.227      0.638                       9   
+  PR titles  Q_shuffled       0.002      0.002                    1324   
+             avalanche U: step 1: gold mass 0.0290, best gold in top 10 56/87; step 2: gold mass 0.0066, best gold in top 10 36/87; step 3: gold mass 0.0043, best gold in top 10 36/87
+             avalanche Q: step 1: gold mass 0.0352, best gold in top 10 58/87; step 2: gold mass 0.0138, best gold in top 10 40/87; step 3: gold mass 0.0141, best gold in top 10 40/87
+
+  MuSiQue    S                0.086      0.284                      38   (0.362, n 133)
+  MuSiQue    U                0.130      0.269                      39   
+  MuSiQue    Q                0.139      0.309                      27   
+  MuSiQue    Q_shuffled       0.009      0.012                     454   
+             avalanche U: step 1: gold mass 0.0079, best gold in top 10 33/133; step 2: gold mass 0.0019, best gold in top 10 31/133; step 3: gold mass 0.0010, best gold in top 10 31/133
+             avalanche Q: step 1: gold mass 0.0181, best gold in top 10 43/133; step 2: gold mass 0.0087, best gold in top 10 37/133; step 3: gold mass 0.0098, best gold in top 10 42/133
+
+Q − S, recall@5: cards +0.070, PR titles +0.064, MuSiQue +0.053
+P1: fail

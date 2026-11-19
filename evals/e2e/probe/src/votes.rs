@@ -21,7 +21,7 @@ pub(crate) struct Edges<'a> {
 }
 
 impl Edges<'_> {
-    fn of(&mut self, g: &mut Graph, u: &str) -> avalanche::Result<Rc<Vec<(String, f64, f64)>>> {
+    pub(crate) fn of(&mut self, g: &mut Graph, u: &str) -> avalanche::Result<Rc<Vec<(String, f64, f64)>>> {
         if let Some(v) = self.cache.get(u) {
             return Ok(v.clone());
         }
