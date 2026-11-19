@@ -19,7 +19,7 @@ Fitted β (e^β multiplies the family's step weight):
 - PR titles: number −2, phrase −2, Beside +1.
 - MuSiQue: number −1, word −1.
 
-Seven of the eleven fitted values sit at a grid edge, and the ascent changed direction between rounds.
+Five of the thirteen fitted values sit at a grid edge, and the ascent changed direction between rounds.
 
 **What it shows:**
 - **More freedom let coherence rise without recall.** On cards, dev coherence went from 1561 to 1835, and test recall
