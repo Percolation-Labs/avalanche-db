@@ -1,7 +1,8 @@
 # V1: a vote learned from the loop's own walks helps only on PR titles; the uniform vote is already near its best
 
 *19 Nov 2026, bill. Registered first (REGISTERED.md, 706d22f). $0, no Jev. Output: `score.txt`, `out/theta.json`, rows
-in `out/`.*
+in `out/`: `slim-*` keeps the uniform, learned and pooled θ only. The full 42-point rows (39 MB) are left out; they
+regenerate at $0 with `E2E_VOTES=TRACES e2e-probe STORE x OUT`.*
 
 The vote is PageRank from the passages read so far, with each edge weighted by
 exp(θ1 · ln width(door) + θ2 · ln(1 + doors(target))). θ = (−1, 0) is today's uniform vote. θ was chosen per graph on the
