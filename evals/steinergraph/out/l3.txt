@@ -1,0 +1,49 @@
+  cards dev/own round 1: β {'number': 1, 'code': -1, 'phrase': 0.0, 'word': 0.0, 'beside': 2} coherence 1813.309
+  cards dev/own round 2: β {'number': -1, 'code': -2, 'phrase': 0.0, 'word': -2, 'beside': 2} coherence 1835.231
+  cards dev/own round 3: β {'number': -1, 'code': -2, 'phrase': 0.0, 'word': -2, 'beside': 2} coherence 1835.231
+  cards dev/shuf round 1: β {'number': -1, 'code': 0.0, 'phrase': 0.0, 'word': 0.0, 'beside': 2} coherence 367.461
+  cards dev/shuf round 2: β {'number': 1, 'code': -1, 'phrase': 1, 'word': -1, 'beside': 2} coherence 413.231
+  cards dev/shuf round 3: β {'number': 1, 'code': -2, 'phrase': 1, 'word': -1, 'beside': 2} coherence 415.809
+  cards test/own round 1: β {'number': 0.0, 'code': -1, 'phrase': -1, 'word': -2, 'beside': 2} coherence 1842.859
+  cards test/own round 2: β {'number': 0.0, 'code': 1, 'phrase': 0, 'word': 0, 'beside': 2} coherence 1899.180
+  cards test/own round 3: β {'number': 0.0, 'code': 0, 'phrase': 0, 'word': 0, 'beside': 2} coherence 1901.085
+cards: L2 θ (-1, -1.5, 0.15); dev coherence at β=0 1560.885, at LC3 1835.231; families present ['number', 'code', 'phrase', 'word', 'beside']
+  LC3 β: number -1, code -2, phrase +0, word -2, beside +2  (at grid edge: ['code', 'word', 'beside'])
+  LC3-shuf β: number +1, code -2, phrase +1, word -1, beside +2  (at grid edge: ['code', 'beside'])
+  LC3-test β: number +0, code +0, phrase +0, word +0, beside +2  (at grid edge: ['beside'])
+TEST cards: Q 0.219, LQ 0.306, LC 0.275, LC3 0.214, LC3-shuf 0.262, LC3-test 0.228
+  LC3 − LC -0.061 [-0.102, -0.023]
+  LC3-shuf − LC -0.013 [-0.049, +0.020]
+  LC3-test − LC -0.047 [-0.084, -0.013]
+  prs dev/own round 1: β {'number': 0.0, 'code': -2, 'phrase': -2, 'word': -2, 'beside': 1} coherence 1686.821
+  prs dev/own round 2: β {'number': -2, 'code': 0, 'phrase': -2, 'word': 0, 'beside': 1} coherence 1764.823
+  prs dev/own round 3: β {'number': -2, 'code': 0, 'phrase': -2, 'word': 0, 'beside': 1} coherence 1764.823
+  prs dev/shuf round 1: β {'number': 0.0, 'code': -2, 'phrase': -1, 'word': -2, 'beside': 0.0} coherence 403.081
+  prs dev/shuf round 2: β {'number': -2, 'code': -2, 'phrase': -1, 'word': -2, 'beside': 0.0} coherence 415.716
+  prs dev/shuf round 3: β {'number': -2, 'code': -2, 'phrase': -1, 'word': -2, 'beside': 0.0} coherence 415.716
+  prs test/own round 1: β {'number': 1, 'code': -2, 'phrase': -2, 'word': -1, 'beside': 2} coherence 1715.652
+  prs test/own round 2: β {'number': -1, 'code': 0, 'phrase': 0, 'word': -1, 'beside': 2} coherence 1824.366
+  prs test/own round 3: β {'number': 1, 'code': 0, 'phrase': 0, 'word': -1, 'beside': 2} coherence 1842.543
+prs: L2 θ (-1, -1.5, 0.15); dev coherence at β=0 1315.276, at LC3 1764.823; families present ['number', 'code', 'phrase', 'word', 'beside']
+  LC3 β: number -2, code +0, phrase -2, word +0, beside +1  (at grid edge: ['number', 'phrase'])
+  LC3-shuf β: number -2, code -2, phrase -1, word -2, beside +0  (at grid edge: ['number', 'code', 'word'])
+  LC3-test β: number +1, code +0, phrase +0, word -1, beside +2  (at grid edge: ['beside'])
+TEST prs: Q 0.227, LQ 0.611, LC 0.621, LC3 0.660, LC3-shuf 0.661, LC3-test 0.666
+  LC3 − LC +0.039 [-0.008, +0.089]
+  LC3-shuf − LC +0.040 [+0.011, +0.072]
+  LC3-test − LC +0.045 [+0.000, +0.096]
+  mq dev/own round 1: β {'number': 0.0, 'code': 0.0, 'phrase': 0.0, 'word': -1, 'beside': 0.0} coherence 353.462
+  mq dev/own round 2: β {'number': -1, 'code': 0.0, 'phrase': 0.0, 'word': -1, 'beside': 0.0} coherence 353.950
+  mq dev/own round 3: β {'number': -1, 'code': 0.0, 'phrase': 0.0, 'word': -1, 'beside': 0.0} coherence 353.950
+  mq dev/shuf round 1: β {'number': -1, 'code': 0.0, 'phrase': 0.0, 'word': -1, 'beside': 0.0} coherence 121.894
+  mq dev/shuf round 2: β {'number': -1, 'code': 0.0, 'phrase': 0.0, 'word': -1, 'beside': 0.0} coherence 121.894
+  mq test/own round 1: β {'number': 1, 'code': 0.0, 'phrase': 0.0, 'word': 0.0, 'beside': 0.0} coherence 317.648
+  mq test/own round 2: β {'number': 1, 'code': 0.0, 'phrase': 0.0, 'word': 0.0, 'beside': 0.0} coherence 317.648
+mq: L2 θ (-1, -1, 0.15); dev coherence at β=0 349.938, at LC3 353.950; families present ['number', 'phrase', 'word']
+  LC3 β: number -1, phrase +0, word -1
+  LC3-shuf β: number -1, phrase +0, word -1
+  LC3-test β: number +1, phrase +0, word +0
+TEST mq: Q 0.145, LQ 0.094, LC 0.140, LC3 0.135, LC3-shuf 0.135, LC3-test 0.140
+  LC3 − LC -0.005 [-0.030, +0.023]
+  LC3-shuf − LC -0.005 [-0.030, +0.023]
+  LC3-test − LC +0.000 [+0.000, +0.000]
