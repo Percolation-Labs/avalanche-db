@@ -40,13 +40,8 @@ searches with duplicates skipped.
 For each set: coverage, entry points, and **total recall at 10 reads**, which is the 5 seeds plus U's top 5 beyond
 them.
 
-**Percolation, on the recorded walks.** After each wave, take the subgraph of read passages and their links. Two
-quantities:
-- the share of seeds in the largest component that contains a seed;
-- whether all the seeds are in one component.
-
-Both are scored by AUC for "the walk read gold beyond the seeds". The baseline is likeness alone (entry points). The
-question is whether percolation adds to it.
+**Percolation** (Sirsh's 12:36 point 3, and coherence against chance from 12:40) moved to james before any scoring
+(amended 12:45, M-20261119-123837-a58a). He scores it on the same rows.
 
 **Bars (test; 95% paired bootstrap, 2000 resamples).**
 1. **Compactness:** among questions with |S| ≥ 2 and at least one near seed, U's recall@5 is at least .10 higher in
@@ -60,7 +55,5 @@ question is whether percolation adds to it.
      or reached.
 4. **Decomposition:** blind-decomposed seeds beat single seeds by at least .03 in total recall at 10, with the
    interval above 0. Filled and oracle seeds are reported as bounds.
-5. **Percolation:** the largest seed component's share has AUC ≥ .65 on at least two sets, and on those sets it beats
-   entry points alone by ≥ .05.
 
 **Postmortem:** every result gets one.
