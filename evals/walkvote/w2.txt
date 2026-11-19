@@ -1,0 +1,26 @@
+test       arm                  gold first     MRR  read-weighted (b)   waves
+cards      P                         0.687   0.794              0.384   147
+cards      P ⊕ vote                  0.190   0.391              0.139   147
+cards      P ⊕ learned vote          0.320   0.508              0.218   147
+cards      P ⊕ shuffled vote         0.354   0.539              0.171   147
+cards      P ⊕ narrow                0.095   0.237              0.095   147
+cards      vote alone                0.136   0.224              0.134   147
+
+PR titles  P                         0.126   0.307              0.020   95
+PR titles  P ⊕ vote                  0.116   0.265              0.062   95
+PR titles  P ⊕ learned vote          0.200   0.363              0.125   95
+PR titles  P ⊕ shuffled vote         0.189   0.326              0.036   95
+PR titles  P ⊕ narrow                0.042   0.188              0.042   95
+PR titles  vote alone                0.232   0.322              0.232   95
+
+MuSiQue    P                         0.591   0.710              0.416   149
+MuSiQue    P ⊕ vote                  0.262   0.390              0.221   149
+MuSiQue    P ⊕ learned vote          0.262   0.390              0.221   149
+MuSiQue    P ⊕ shuffled vote         0.242   0.417              0.148   149
+MuSiQue    P ⊕ narrow                0.195   0.318              0.195   149
+MuSiQue    vote alone                0.081   0.155              0.077   149
+
+P ⊕ vote − P, gold first: cards -0.497, PR titles -0.011, MuSiQue -0.329
+P ⊕ vote − P, read-weighted (b): cards -0.245, PR titles +0.042, MuSiQue -0.196
+beats both controls by .02 where it gains: True
+STAGE 0: fail

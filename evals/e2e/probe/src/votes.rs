@@ -15,9 +15,9 @@ const ALPHA: f64 = 0.15;
 const EPS: f64 = 1e-4;
 
 /// u's out-edges as (t, ln width(k), ln(1 + doors(t))), one per (door, target) pair.
-struct Edges<'a> {
-    lk: Links<'a>,
-    cache: HashMap<String, Rc<Vec<(String, f64, f64)>>>,
+pub(crate) struct Edges<'a> {
+    pub(crate) lk: Links<'a>,
+    pub(crate) cache: HashMap<String, Rc<Vec<(String, f64, f64)>>>,
 }
 
 impl Edges<'_> {
@@ -40,7 +40,7 @@ impl Edges<'_> {
     }
 }
 
-fn wppr(g: &mut Graph, e: &mut Edges, from: &[String], th: (f64, f64)) -> avalanche::Result<HashMap<String, f64>> {
+pub(crate) fn wppr(g: &mut Graph, e: &mut Edges, from: &[String], th: (f64, f64)) -> avalanche::Result<HashMap<String, f64>> {
     let mut p: HashMap<String, f64> = HashMap::new();
     let mut r: HashMap<String, f64> = HashMap::new();
     let mut q: VecDeque<String> = VecDeque::new();
