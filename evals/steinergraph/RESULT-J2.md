@@ -38,3 +38,23 @@ MuSiQue test, 150 questions, total recall at 10 reads (as in J1 and P2):
   accuracy". Spend was small ($0.024), but the run could have been called at $0.
 - **The next $0 check:** for the 103 decisions, is hop j's gold passage in the top 5 at all? If it usually isn't, the
   lever is the hop's search, for example the walk's own doors from what's been read, not the candidates.
+
+## Diagnostic, $0, not registered: does each hop's search reach the passage that holds its answer?
+
+The sub-questions are searched exactly as J2's Jev arm searched them. For each, the rank of the hop's gold
+passage:
+
+| sub-questions | n | top 5 | 6–20 | 21–100 | beyond 100 |
+|---|---|---|---|---|---|
+| hop 1 (nothing to fill) | 150 | .81 | .07 | .09 | .03 |
+| later hops (filled by Jev's earlier picks) | 247 | .45 | .13 | .11 | .30 |
+| decisions where the answer was a candidate | 132 | .95 | .03 | .02 | .01 |
+| decisions where it wasn't | 115 | .36 | .18 | .19 | .27 |
+
+- **Hop 1's search usually lands (.81). Later hops land half as often (.45).** A wrong or partial fill earlier sends
+  the next search astray, and errors compound down the chain. That is the cost side of iteration.
+- **Of the decisions without the answer as a candidate:**
+  - about two thirds are search misses: the gold passage isn't in the top 5;
+  - one third are extraction misses: the passage was read, but the answer isn't a capitalised span or a number.
+- **So the next lever is the later hops' search,** for example searching from the walk's doors over what's been
+  read, or keeping two fills per hop so one bad pick doesn't derail the next search. Wider extraction is second.
