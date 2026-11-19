@@ -1,0 +1,19 @@
+cards: dev P gold-first 0.782 (b) 0.436; summed 0.839 (b) 0.404; per target 0.276 (b) 0.221; within width 0.759 (b) 0.389 -> chosen None
+  test P                            gold first 0.687  MRR 0.794  read-weighted (b) 0.384   (147 waves)
+  test P ⊕ within width             gold first 0.680  MRR 0.778  read-weighted (b) 0.367   (147 waves)
+  test within width alone           gold first 0.680  MRR 0.760  read-weighted (b) 0.359   (147 waves)
+PR titles: dev P gold-first 0.211 (b) 0.057; summed 0.366 (b) 0.060; per target 0.183 (b) 0.107; within width 0.338 (b) 0.060 -> chosen summed
+  test P                            gold first 0.126  MRR 0.307  read-weighted (b) 0.020   (95 waves)
+  test P ⊕ summed (chosen)          gold first 0.284  MRR 0.444  read-weighted (b) 0.025   (95 waves)
+  test P ⊕ summed, shuffled         gold first 0.242  MRR 0.370  read-weighted (b) 0.022   (95 waves)
+  test P ⊕ within width             gold first 0.200  MRR 0.391  read-weighted (b) 0.029   (95 waves)
+  test within width alone           gold first 0.200  MRR 0.382  read-weighted (b) 0.029   (95 waves)
+MuSiQue: dev P gold-first 0.639 (b) 0.457; summed 0.536 (b) 0.244; per target 0.278 (b) 0.255; within width 0.381 (b) 0.197 -> chosen None
+  test P                            gold first 0.591  MRR 0.710  read-weighted (b) 0.416   (149 waves)
+  test P ⊕ within width             gold first 0.423  MRR 0.578  read-weighted (b) 0.210   (149 waves)
+  test within width alone           gold first 0.369  MRR 0.484  read-weighted (b) 0.172   (149 waves)
+
+chosen − P, gold first: cards +0.000, PR titles +0.158, MuSiQue +0.000
+chosen − P, read-weighted (b): cards +0.000, PR titles +0.005, MuSiQue +0.000
+chosen − shuffled, gold first: cards +0.000, PR titles +0.042, MuSiQue +0.000
+W3: fail
