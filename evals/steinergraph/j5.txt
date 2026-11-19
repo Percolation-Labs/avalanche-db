@@ -1,0 +1,5 @@
+J5 J 0.574 − J1 J 0.578: -0.004 [-0.033, +0.026]; questions up 10, down 13
+J5: fail (J5 − J1 bar)
+full Jev right 69 of 119 where gold is a candidate
+full Jev right 65 of 119 where gold is a candidate
+decisions with gold a candidate: 119; gold answer has a door (key in 2-100): 93 (0.78); the door's closest passage is the next hop's gold: 12 (0.10)
