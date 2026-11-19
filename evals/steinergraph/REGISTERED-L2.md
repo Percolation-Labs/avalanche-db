@@ -40,3 +40,21 @@ cards (.535). So I expect LC to help on PR titles, and the 64 of 77 PR hits Besi
 expect little on cards. On MuSiQue, L1 harmed, so I expect LC to land near Q.
 
 **Postmortem:** every result gets one.
+
+## Amendment, 19 Nov 15:25Z, before any score was seen
+
+From bill's review (M-20261119-152018-2d23). The first run was stopped before it printed anything.
+
+1. **Locality control, LL:** θ maximising the share of T directly linked to any seed (any w > 0), unweighted and
+   with no null. Passages one link from a seed have w > 0 by construction, so coherence could be bought just by
+   staying near the seeds. If LL matches LC, the reward is buying locality, not coherence. θ for LC, LQ, LH and LL
+   are printed side by side, with Spearman across the grid between coherence and locality.
+2. **Seed–seed pairs are dropped** from both the observed and the expected sums. They don't depend on θ, so they
+   only dilute the ratio.
+3. **Named constants, all inherited, none chosen here:**
+   - Beside = 1, as a key of df 2 would score.
+   - The 1/(df−1) weighting, L1's width term.
+   - The df window 2–100, from the stored graph.
+   - Top 5 and 5 seeds, as in L1 and the walk's recorded seeds.
+   - L1's θ grid.
+4. The bar gives two chances, on cards and on PR titles. The result will say so.
