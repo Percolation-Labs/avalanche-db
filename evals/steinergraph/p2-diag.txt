@@ -1,0 +1,9 @@
+cards entry 0 105 U@5 0.175 walk 0.369
+cards entry ≥1 30 U@5 0.317 walk 0.306
+cards in-S step vs U@5 spearman 0.223 p 0.0379 | vs walk 0.012 n 87
+prs entry 0 10 U@5 0.079 walk 0.050
+prs entry ≥1 77 U@5 0.419 walk 0.104
+prs in-S step vs U@5 spearman 0.282 p 0.0081 | vs walk 0.067 n 87
+mq entry 0 34 U@5 0.071 walk 0.216
+mq entry ≥1 99 U@5 0.140 walk 0.412
+mq in-S step vs U@5 spearman 0.382 p 0.0 | vs walk 0.427 n 133
