@@ -1,0 +1,11 @@
+later sub-questions: 247
+  F  top5 0.449  6-20 0.134  21-100 0.113  beyond/absent 0.304
+  B  top5 0.320  6-20 0.117  21-100 0.093  beyond/absent 0.470
+  D  top5 0.348  6-20 0.065  21-100 0.077  beyond/absent 0.510
+  DO top5 0.397  6-20 0.093  21-100 0.093  beyond/absent 0.417
+  D: previous hop's gold among reads 0.652; this hop's gold among the doors 0.814; median doors 2529 of 21100
+  D top5 where previous gold was read (n 161): 0.404
+  D top5 where previous gold was not read (n 86): 0.244
+gate DO − F -0.053 [-0.121, +0.012]: CLOSED
+J3: gate closed; D not scored
+calibration (P2's probe dumps of the sub-questions, later hops, top 5): unfilled .291, gold-filled .806
