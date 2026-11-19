@@ -64,6 +64,9 @@ fn main() -> avalanche::Result<()> {
     let t0 = std::time::Instant::now();
     let ft = FullText::build(&mut g, &mut Reader::new(dir))?;
     eprintln!("full text built in {:.1?}", t0.elapsed());
+    if let Ok(tr) = std::env::var("E2E_SEARCHDUMP") {
+        return steinergraph::dump_search(&ft, &tr, out);
+    }
     if let Ok(tr) = std::env::var("E2E_STEINERGRAPH") {
         return steinergraph::run(&mut g, &ft, &tr, out);
     }

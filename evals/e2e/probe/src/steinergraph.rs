@@ -154,3 +154,16 @@ pub fn run(g: &mut Graph, ft: &FullText, traces: &str, out: &str) -> avalanche::
     }
     Ok(())
 }
+
+/// E2E_SEARCHDUMP: per question, every search hit with s(t) = score ÷ the question's top score (for evals/steinergraph L1).
+pub fn dump_search(ft: &FullText, traces: &str, out: &str) -> avalanche::Result<()> {
+    let mut f = std::fs::File::create(out)?;
+    for line in std::fs::read_to_string(traces)?.lines().filter(|l| !l.trim().is_empty()) {
+        let row: serde_json::Value = serde_json::from_str(line)?;
+        let hits = ft.search(row["walk"]["question"].as_str().unwrap());
+        let top = hits.first().map(|h| h.1).unwrap_or(1.0).max(1e-9);
+        let s: Vec<serde_json::Value> = hits.iter().map(|(d, x)| serde_json::json!([d, x / top])).collect();
+        writeln!(f, "{}", serde_json::json!({"qid": row["qid"], "S": s}))?;
+    }
+    Ok(())
+}
