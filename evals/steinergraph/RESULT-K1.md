@@ -22,8 +22,10 @@ caveat below decides whether L3 can reach that ceiling without gold.
 
 - **On cards, total coherence doesn't separate (.56), but number keys do (.71).**
   - Walks that find gold carry more of their strength through numbers: card ids, dates, `rem 505`.
-  - On cards L2 recovered 64% of L1's gain, not significantly. A number-family weight is the part of the signal L2's
-    single reward dilutes.
+  - On cards L2 recovered 64% of L1's gain, not significantly. *Hypothesis, since contradicted:* a number-family
+    weight is the part of the signal L2's single reward dilutes. L3 (avalanche-db #52, RESULT-L3.md) fitted
+    coherence per family, pushed the number weight down on cards (β −1), and lost −.061 held-out. Coherence doesn't
+    reward what found walks favour there.
 - **On PR titles, Beside carries it.** Its ratio (.845) is above total coherence (.775), as is the phrase ratio
   (.717). PR walks that find gold stay within linked sequences.
 - **The number family flips sign between the two p8 sets.**
@@ -51,5 +53,8 @@ caveat below decides whether L3 can reach that ceiling without gold.
 - **Families were fixed by surface form, before looking.** The sign flip was unexpected. It means "number" isn't one
   kind of door: card ids and version strings share a form and differ in meaning. A finer family set would need
   types the ingester knows (ids, dates, versions), which would be new labels rather than forms.
-- **Multiple chances.** 5 families × 2 measures × 3 sets is 30 AUCs. At α .05, about 1.5 stars would appear by
-  chance. 8 appeared, so the signal is real, but any single star isn't secure.
+- **Multiple chances.** There are 30 family AUCs (5 families × 2 measures × 3 sets), with 7 stars. Share and ratio
+  for the same family are strongly correlated, so these are closer to 15 tests. The stars fall on 4 family-by-set
+  cells (cards number; PR titles number, phrase and Beside), against about .75 expected by chance. The signal is
+  real, but any single cell isn't secure. *Corrected after james's review:* I first counted 8 stars, which included
+  PR titles' total coherence, and that isn't one of the 30.

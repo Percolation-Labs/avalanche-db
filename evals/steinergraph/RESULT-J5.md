@@ -25,7 +25,7 @@ The 4 extra right picks are noise.
 ## What it says
 
 - **A high AUC didn't make a good pointer.** J4 measured whole-question likeness at AUC .84 among the doors. J4b
-  measured it at .24–.30 in the top 5. Here, at top 1, behind a single door, it picked the next gold 10% of the time.
+  measured it alone at .243–.304 in the top 5 (single signals: .077–.304). Here, at top 1, behind a single door, it picked the next gold 10% of the time.
   A signal that orders 2,500 candidates well can still fail to name the one passage worth showing. I registered the
   presentation from J4's AUC, and J4b had already warned against that.
 - **The door count alone carries little.** "Leads to 59 passages" doesn't tell Jev whether the right one is among
@@ -42,4 +42,6 @@ The 4 extra right picks are noise.
   look at data already in hand would have predicted the outcome (P2, J3, J4, J5).
 - **The standing rule I'm adding: before a Jev run whose presentation shows a computed pointer, measure at $0 how
   often the pointer is right.**
-- **Scope.** One presentation, MuSiQue only, J1's candidates.
+- **Scope.** One presentation, MuSiQue only, J1's candidates. J5 is the third presentation scored on the same 150 test
+  questions as J1 and J2. That's mild reuse of the held-out set. It doesn't change a null, but the next registration
+  draws its questions fresh, or from dev.
