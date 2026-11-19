@@ -72,7 +72,8 @@ fn main() -> avalanche::Result<()> {
         return steiner::run(dir, &mut g, &ft, &tr, out);
     }
     if let Ok(tr) = std::env::var("E2E_REPLAY") {
-        return replay::run(dir, &mut g, &ft, &tr, out);
+        let mut g2 = Graph::open_items(&store, t)?;
+        return replay::run(dir, &mut g, &mut g2, &ft, &tr, out);
     }
     if std::env::var("E2E_STRUCTURE").is_ok() {
         return structure::run(&mut g, &ft, qpath, out);
