@@ -13,16 +13,16 @@ const ALPHA: f64 = 0.15;
 const EPS: f64 = 1e-4;
 const COH: usize = 30;
 
-struct Rng(u64);
+pub(crate) struct Rng(u64);
 impl Rng {
-    fn new(s: &str) -> Rng {
+    pub(crate) fn new(s: &str) -> Rng {
         let mut h: u64 = 1118;
         for b in s.bytes() {
             h = h.wrapping_mul(1099511628211).wrapping_add(b as u64);
         }
         Rng(h | 1)
     }
-    fn next(&mut self) -> u64 {
+    pub(crate) fn next(&mut self) -> u64 {
         self.0 ^= self.0 << 13;
         self.0 ^= self.0 >> 7;
         self.0 ^= self.0 << 17;
@@ -31,13 +31,13 @@ impl Rng {
 }
 
 /// A passage's doors as (key, targets); shuffled: each door keeps its key and width, its targets drawn at random.
-struct Links<'a> {
-    cache: HashMap<String, std::rc::Rc<Vec<(String, Vec<String>)>>>,
-    shuffle: Option<&'a [String]>,
+pub(crate) struct Links<'a> {
+    pub(crate) cache: HashMap<String, std::rc::Rc<Vec<(String, Vec<String>)>>>,
+    pub(crate) shuffle: Option<&'a [String]>,
 }
 
 impl Links<'_> {
-    fn of(&mut self, g: &mut Graph, x: &str) -> avalanche::Result<std::rc::Rc<Vec<(String, Vec<String>)>>> {
+    pub(crate) fn of(&mut self, g: &mut Graph, x: &str) -> avalanche::Result<std::rc::Rc<Vec<(String, Vec<String>)>>> {
         if let Some(v) = self.cache.get(x) {
             return Ok(v.clone());
         }
