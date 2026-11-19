@@ -1,0 +1,16 @@
+AUC, walk reads gold beyond the seeds          cards   PR titles     MuSiQue
+spectral gap                                   0.550       0.419       0.493
+seed coherence                                 0.425       0.535       0.485
+density (lower)                                0.429       0.508       0.557
+questions (walk found gold beyond seeds)    150 (70)     93 (11)    150 (62)
+
+graph medians (means)
+  spectral gap      cards 0.232 (0.237)   PR titles 0.213 (0.213)   MuSiQue 0.384 (0.377)   
+  seed coherence    cards 0.132 (0.166)   PR titles 0.137 (0.156)   MuSiQue 0.062 (0.078)   
+  density           cards 54.813 (57.456)   PR titles 51.722 (57.126)   MuSiQue 82.743 (82.826)   
+  H size            cards 1160.000 (1292.687)   PR titles 1101.000 (1308.462)   MuSiQue 2117.500 (2163.713)   
+  gold in H         cards 2.000 (2.060)   PR titles 2.000 (2.720)   MuSiQue 2.000 (2.313)     ← PR titles outside
+  gold conductance  cards 0.996 (0.989)   PR titles 0.988 (0.978)   MuSiQue 0.997 (0.996)     ← PR titles outside
+
+PREDICTS (AUC ≥ .65 on two graphs): none
+SINGLES OUT PR TITLES (question-free properties): none
