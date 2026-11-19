@@ -43,3 +43,22 @@ not as a gain. A pass leads to stage 1: the fused walk live with Jev on the test
 gain, ≤$1, against P live on the same questions.
 
 **Postmortem:** every result gets one.
+
+## Amendment, 19 Nov, before any scoring
+
+A smoke test on three PR-title test questions (wiring only, no measure computed) showed the whole-walk replay can't
+serve as stage 0: once a fused arm leaves the recorded walk it meets 15–270 doors Jev never scored. Those doors can
+never be opened, so every set would be "unreliable" by the rule above. Scoring those doors means calling Jev (kappa K6
+changes the request whenever the reads differ), which costs about $1 per arm per set. So:
+
+- **Stage 0 ($0)** is the first door of each recorded wave, as in W1, on V1's test rows (`evals/votes`, every wave with
+  a gold door). Arms as above. The fusion is the same, over every door in the recorded batch.
+  - Read-outs:
+    - gold door first;
+    - MRR of the best gold door;
+    - read-weighted (b): the first door's gold per unread target as a share of the best door's.
+  - Pass: P ⊕ vote beats P on gold-first by at least .03 on at least two sets, without falling more than .02 on any
+    set, and without falling more than .02 on read-weighted (b) on any set. On the sets where it gains, it beats
+    P ⊕ shuffled and P ⊕ narrow by at least .02.
+- **Stage 1 (≤$1)**, only on a stage 0 pass: the whole walk live with Jev, P ⊕ vote against P, on the test questions of
+  the set with the largest stage 0 gain. The read-out is gold recall@10, and the bar above applies to that set.
