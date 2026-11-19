@@ -12,7 +12,7 @@ p2 = {r["qid"]: r for r in map(json.loads, open("out/p2-mq.jsonl"))}
 res = {v: [p2[q]["seed_sets"][v]["total10"] for q in order] for v in ("single", "blind", "filled")}
 ent = {v: [p2[q]["seed_sets"][v]["entry"] for q in order] for v in ("single", "blind", "filled")}
 acc = {}
-for ch in ("T", "O", "J"):
+for ch in [c for c in ("T", "O", "J") if os.path.exists(f"{jd}/j1-{c}.jsonl")]:
     R = {r["qid"]: r for r in map(json.loads, open(f"{jd}/j1-{ch}.jsonl"))}
     seeds = [[g.ix[d] for d in R[q]["seeds"] if d in g.ix] for q in order]
     P, _ = g.run(seeds, UNI)
@@ -32,11 +32,12 @@ def boot(a, b, n=2000):
     return d.mean(), *np.percentile(bs, [2.5, 97.5])
 
 print("MuSiQue test, 150 questions: total recall at 10 reads (5 seeds + U's top 5), entry points")
-for v in ("single", "blind", "T", "J", "O", "filled"):
+for v in [v for v in ("single", "blind", "T", "J", "O", "filled") if v in res]:
     extra = f"  chooser right {acc[v][0]}/{acc[v][1]} (gold answer a candidate; {acc[v][2]} decisions)" if v in acc else ""
     print(f"  {v:<7} {np.mean(res[v]):.3f}  entry {np.mean(ent[v]):.2f}{extra}")
-for a, b in (("J", "blind"), ("J", "T"), ("O", "blind"), ("J", "single")):
+for a, b in [x for x in (("J", "blind"), ("J", "T"), ("O", "blind"), ("J", "single")) if x[0] in res]:
     m, lo, hi = boot(res[a], res[b]); print(f"  {a} − {b}: {m:+.3f} [{lo:+.3f}, {hi:+.3f}]")
-m1, lo1, _ = boot(res["J"], res["blind"]); m2, lo2, _ = boot(res["J"], res["T"])
-print(f"  gap closed, (J − blind) / (filled − blind): {(np.mean(res['J']) - np.mean(res['blind'])) / (np.mean(res['filled']) - np.mean(res['blind'])):.2f}")
-print("J1:", "pass" if m1 >= .05 and lo1 > 0 and m2 >= .03 and lo2 > 0 else "fail")
+if "J" in res:
+    m1, lo1, _ = boot(res["J"], res["blind"]); m2, lo2, _ = boot(res["J"], res["T"])
+    print(f"  gap closed, (J − blind) / (filled − blind): {(np.mean(res['J']) - np.mean(res['blind'])) / (np.mean(res['filled']) - np.mean(res['blind'])):.2f}")
+    print("J1:", "pass" if m1 >= .05 and lo1 > 0 and m2 >= .03 and lo2 > 0 else "fail")

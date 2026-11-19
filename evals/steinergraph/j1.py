@@ -37,14 +37,17 @@ def search(batch):
 
 spent = 0.0
 CAPW = r"[A-Z][\w'’.\-]*"
-SPAN = re.compile(rf"{CAPW}(?:\s+(?:(?:of|the|de|and)\s+)?{CAPW})*|\b\d{{4}}\b")
+WIDE = os.environ.get("J1_WIDE") == "1"  # J2 (REGISTERED-J2.md): top 5 passages, no 'and' joins, any digit token, cap 40
+NTOP, NMAX = (5, 40) if WIDE else (3, 24)
+SPAN = (re.compile(rf"{CAPW}(?:\s+(?:(?:of|the|de)\s+)?{CAPW})*|\b[\w,.\-]*\d[\w,.\-]*\b") if WIDE
+        else re.compile(rf"{CAPW}(?:\s+(?:(?:of|the|de|and)\s+)?{CAPW})*|\b\d{{4}}\b"))
 
 
 def candidates(question, hits):
     """Names and years in the top 3 hits, not in the question, reading order, at most 24: [(answer, sentence)]."""
     out, seen = [], set()
     ql = question.lower()
-    for d in hits[:3]:
+    for d in hits[:NTOP]:
         t, x = text.get(d, ("", ""))
         for sent in re.split(r"(?<=[.!?])\s+", f"{t}. {x}"):
             for m in SPAN.finditer(sent):
@@ -52,7 +55,7 @@ def candidates(question, hits):
                 if len(a) < 2 or a.lower() in ql or a.lower() in seen or a in ("The", "A", "An", "In", "It", "He", "She", "This"):
                     continue
                 seen.add(a.lower()); out.append((a, sent.strip()[:300]))
-                if len(out) >= 24:
+                if len(out) >= NMAX:
                     return out
     return out
 
@@ -97,7 +100,7 @@ def run(ch):
             needed = any(f"#{j + 1}" in x for x in s["subq"][j + 1:])
             if not needed:
                 continue
-            cands = candidates(s["queries"][-1], h[:3]); ga = s["ans"][j].lower().strip()
+            cands = candidates(s["queries"][-1], h[:NTOP]); ga = s["ans"][j].lower().strip()
             gi = next((i for i, (a, _) in enumerate(cands) if a.lower() == ga), None)
             if not cands:
                 i, scores = None, None

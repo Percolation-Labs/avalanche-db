@@ -1,0 +1,15 @@
+MuSiQue test, 150 questions: total recall at 10 reads (5 seeds + U's top 5), entry points
+  single  0.475  entry 1.03
+  blind   0.504  entry 1.13
+  T       0.532  entry 1.22  chooser right 19/130 (gold answer a candidate; 247 decisions)
+  J       0.586  entry 1.35  chooser right 72/132 (gold answer a candidate; 247 decisions)
+  O       0.657  entry 1.55  chooser right 144/144 (gold answer a candidate; 247 decisions)
+  filled  0.770  entry 1.81
+  J − blind: +0.081 [+0.047, +0.116]
+  J − T: +0.054 [+0.014, +0.092]
+  O − blind: +0.152 [+0.113, +0.193]
+  J − single: +0.111 [+0.068, +0.154]
+  gap closed, (J − blind) / (filled − blind): 0.31
+J1: pass
+J2 J 0.586 − J1 J 0.578: +0.007 [-0.016, +0.031]; questions up 9, down 6
+J2: fail (J2 − J1 bar)
