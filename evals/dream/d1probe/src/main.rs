@@ -3,6 +3,8 @@
 //!     d1-probe dump  STORE_DIR OUT.jsonl        one line per passage: {d, keys (under the cap), next, near}
 //!     d1-probe write STORE_DIR HUBS.jsonl       writes each hub {label, members} as one `tagged` literal per member
 //!
+//!     d1-probe labels STORE_DIR OUT.jsonl       one line per passage: {d, label}
+//!
 //! `write` refuses a label the store already holds, so a hub never merges into an existing key.
 
 use std::io::Write;
@@ -66,7 +68,14 @@ fn main() -> avalanche::Result<()> {
             let tx = store.write(t, &facts)?;
             println!("T{tx}: {} facts", facts.len());
         }
-        _ => return Err("mode is dump or write".into()),
+        "labels" => {
+            let mut f = std::io::BufWriter::new(std::fs::File::create(path)?);
+            for d in g.docs() {
+                let l = g.list(Pred::Label, &d)?;
+                writeln!(f, "{}", serde_json::json!({"d": d, "label": l.first()}))?;
+            }
+        }
+        _ => return Err("mode is dump, labels or write".into()),
     }
     Ok(())
 }
