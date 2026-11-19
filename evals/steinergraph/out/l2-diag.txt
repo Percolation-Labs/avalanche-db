@@ -1,0 +1,8 @@
+/Users/sirsh/code/avalanche-d1/evals/steinergraph/l2diag.py:28: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  sp = lambda v: spearmanr([v[i] for i in keep], r)[0]
+cards θ=Q (n 135, any gold in top 5 0.35): Spearman with recall@5: coherence +0.057, locality +nan, hub -0.048; coherence AUC for any gold in top 5 0.504
+cards θ=LC (n 135, any gold in top 5 0.36): Spearman with recall@5: coherence +0.151, locality -0.182, hub -0.057; coherence AUC for any gold in top 5 0.572
+prs θ=Q (n 87, any gold in top 5 0.29): Spearman with recall@5: coherence +0.031, locality -0.192, hub -0.196; coherence AUC for any gold in top 5 0.534
+prs θ=LC (n 87, any gold in top 5 0.70): Spearman with recall@5: coherence +0.297, locality -0.006, hub -0.187; coherence AUC for any gold in top 5 0.762
+mq θ=Q (n 133, any gold in top 5 0.23): Spearman with recall@5: coherence -0.033, locality +0.047, hub +0.028; coherence AUC for any gold in top 5 0.481
+mq θ=LC (n 133, any gold in top 5 0.22): Spearman with recall@5: coherence -0.024, locality +0.065, hub +0.081; coherence AUC for any gold in top 5 0.489

@@ -1,0 +1,47 @@
+cards: θ (width, doors, α) side by side: LC (-1, -1.5, 0.15); LC-test (-1, -1.5, 0.15); LH (0, 0.5, 0.15); LL (-1, 0, 0.3); LC-shuf (-2, -1.5, 0.15); LQ (0, -1.5, 0.5)
+  LC: dev coherence 1560.885 (uniform 597.202), dev locality 0.968 (uniform 0.998)
+  LC-test: dev coherence 1560.885 (uniform 597.202), dev locality 0.968 (uniform 0.998)
+  LH: dev coherence 277.216 (uniform 597.202), dev locality 0.968 (uniform 0.998)
+  LL: dev coherence 596.277 (uniform 597.202), dev locality 1.000 (uniform 0.998)
+  LC-shuf: dev coherence 1511.152 (uniform 597.202), dev locality 0.954 (uniform 0.998)
+  LQ: dev coherence 1138.009 (uniform 597.202), dev locality 1.000 (uniform 0.998)
+TEST cards: Q 0.219, LC 0.275, LC-test 0.275, LH 0.163, LL 0.227, LC-shuf 0.231, LQ 0.306
+  LC − Q +0.056 [-0.018, +0.133]
+  LC-test − Q +0.056 [-0.018, +0.133]
+  LH − Q -0.056 [-0.107, -0.015]
+  LL − Q +0.007 [-0.014, +0.033]
+  LC-shuf − Q +0.011 [-0.049, +0.075]
+  LQ − Q +0.087 [+0.010, +0.168]
+  share of LQ's gain recovered by LC 0.64
+  diagnostic: Spearman across the grid of dev coherence vs dev recall@5 +0.663; hub reward vs recall -0.731; locality vs recall +0.463; coherence vs locality -0.166
+prs: θ (width, doors, α) side by side: LC (-1, -1.5, 0.15); LC-test (-1, -1.5, 0.15); LH (0, 0.5, 0.15); LL (-1, 0, 0.15); LC-shuf (-1, -1.5, 0.15); LQ (-2, -1.5, 0.3)
+  LC: dev coherence 1315.276 (uniform 584.563), dev locality 0.969 (uniform 1.000)
+  LC-test: dev coherence 1315.276 (uniform 584.563), dev locality 0.969 (uniform 1.000)
+  LH: dev coherence 409.373 (uniform 584.563), dev locality 0.960 (uniform 1.000)
+  LL: dev coherence 584.563 (uniform 584.563), dev locality 1.000 (uniform 1.000)
+  LC-shuf: dev coherence 1315.276 (uniform 584.563), dev locality 0.969 (uniform 1.000)
+  LQ: dev coherence 1243.500 (uniform 584.563), dev locality 0.985 (uniform 1.000)
+TEST prs: Q 0.227, LC 0.621, LC-test 0.621, LH 0.052, LL 0.227, LC-shuf 0.621, LQ 0.611
+  LC − Q +0.394 [+0.288, +0.497]
+  LC-test − Q +0.394 [+0.288, +0.497]
+  LH − Q -0.175 [-0.256, -0.103]
+  LL − Q +0.000 [+0.000, +0.000]
+  LC-shuf − Q +0.394 [+0.288, +0.497]
+  LQ − Q +0.384 [+0.280, +0.489]
+  share of LQ's gain recovered by LC 1.02
+  diagnostic: Spearman across the grid of dev coherence vs dev recall@5 +0.937; hub reward vs recall -0.829; locality vs recall -0.420; coherence vs locality -0.326
+mq: θ (width, doors, α) side by side: LC (-1, -1, 0.15); LC-test (-1, -1.5, 0.15); LH (0, 0.5, 0.15); LL (-1, 0, 0.5); LC-shuf (-1, 0.5, 0.15); LQ (-1, 0.5, 0.15)
+  LC: dev coherence 349.938 (uniform 289.692), dev locality 1.000 (uniform 0.994)
+  LC-test: dev coherence 346.827 (uniform 289.692), dev locality 0.998 (uniform 0.994)
+  LH: dev coherence 193.322 (uniform 289.692), dev locality 0.988 (uniform 0.994)
+  LL: dev coherence 270.753 (uniform 289.692), dev locality 1.000 (uniform 0.994)
+  LC-shuf: dev coherence 286.743 (uniform 289.692), dev locality 0.990 (uniform 0.994)
+  LQ: dev coherence 286.743 (uniform 289.692), dev locality 0.990 (uniform 0.994)
+TEST mq: Q 0.145, LC 0.140, LC-test 0.138, LH 0.075, LL 0.137, LC-shuf 0.094, LQ 0.094
+  LC − Q -0.004 [-0.046, +0.037]
+  LC-test − Q -0.007 [-0.057, +0.045]
+  LH − Q -0.070 [-0.122, -0.024]
+  LL − Q -0.008 [-0.039, +0.021]
+  LC-shuf − Q -0.051 [-0.090, -0.019]
+  LQ − Q -0.051 [-0.090, -0.019]
+  diagnostic: Spearman across the grid of dev coherence vs dev recall@5 +0.331; hub reward vs recall +0.318; locality vs recall -0.204; coherence vs locality -0.100
