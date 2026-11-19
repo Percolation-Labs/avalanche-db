@@ -38,8 +38,9 @@ others. With D's reads it's 50% against 0.6%.
     the door.
 - **Fan-in depends on the read set.** It is weak over the gold reads (.55), where there are one or two reads, and
   useful over D's 10 (.73). That is a property of breadth, not of the door.
-- **Scale check.** An AUC of .84 over about 2,500 candidates still leaves gold around 400th on average. No single
-  attribute reaches J3's top 5. That is why the decision has to combine them, which is what Jev is for.
+- **Scale check.** No single attribute reaches J3's top 5. *Corrected after J4b:* I first wrote that an AUC of .84
+  leaves gold around 400th. That is the mean, but the ranks are skewed, and J4b measured the median at 17–120
+  depending on the attribute and read set. The conclusion stands that the decision has to combine them.
 
 ## What the door description should show Jev
 

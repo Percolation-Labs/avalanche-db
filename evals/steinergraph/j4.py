@@ -3,6 +3,7 @@
 import hashlib, json, os, re, subprocess, sys
 from collections import defaultdict
 import numpy as np, scipy.sparse as sp
+from scipy.stats import rankdata
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from l1 import G, load  # noqa: E402
@@ -103,7 +104,7 @@ for q in order:
 h1 = search({q: " ".join(info[q]["subq"][0].split()) for q in order})
 
 NAMES = ("narrow", "strength", "fan-in", "beside", "near", "passage", "door text", "question")
-out = {"RO": defaultdict(list), "RD": defaultdict(list)}; diag = {"RO": [], "RD": []}; cover = {"RO": [0, 0], "RD": [0, 0]}
+comb = {"RO": [], "RD": []}; out = {"RO": defaultdict(list), "RD": defaultdict(list)}; diag = {"RO": [], "RD": []}; cover = {"RO": [0, 0], "RD": [0, 0]}
 for q in order:
     s = info[q]; dhits = [h1[q][:READ]]
     qb = bm25_all(s["q"])
@@ -114,6 +115,7 @@ for q in order:
         for name, R in (("RO", [x for x in s["gold"][:j] if x >= 0]), ("RD", RD)):
             A = doors(R); cand = list(A); cover[name][1] += 1
             if gj < 0 or gj not in A:
+                comb[name].append(None)
                 continue
             cover[name][0] += 1; gi = cand.index(gj)
             cols = {"narrow": [A[c]["narrow"] for c in cand], "strength": [A[c]["strength"] for c in cand],
@@ -122,6 +124,10 @@ for q in order:
                     "door text": [sum(set(tok(k)) <= bt for k in A[c]["keys"]) for c in cand]}
             for k in NAMES:
                 out[name][k].append(auc(np.asarray(cols[k], float), gi))
+            # J4b: constant-free combinations (rank 1 = best, ties averaged)
+            rs = rankdata(-np.asarray(cols["strength"], float)); rq = rankdata(-np.asarray(cols["question"], float))
+            comb[name].append({"strength": rs[gi], "question": rq[gi], "borda": rankdata(rs + rq)[gi],
+                               "product": rankdata(rs * rq)[gi], "n": len(cand)})
             pa = s["ans"][j - 1].lower().strip()
             hit = np.array([pa in A[c]["keys"] for c in cand])
             diag[name].append((hit[gi], np.delete(hit, gi).mean()))
@@ -143,3 +149,13 @@ for name in ("RO", "RD"):
             print(f"    {k:10s} AUC {v.mean():.3f} [{lo:.3f}, {hi:.3f}]{'' if lo > .5 else '  (does not separate)'}")
     dg = np.array(diag[name], float)
     print(f"  diagnostic: a shared key equals the previous answer for gold {dg[:, 0].mean():.3f}, for other doors {dg[:, 1].mean():.3f}")
+
+print("J4b: gold rank among the doors (top-5 rate over all later sub-questions; outside the doors = miss)")
+for name in ("RO", "RD"):
+    c = comb[name]
+    for k in ("strength", "question", "borda", "product"):
+        r = [x[k] if x else None for x in c]
+        t5 = np.mean([x is not None and x <= 5 for x in r]); med = np.median([x for x in r if x is not None])
+        print(f"  {name} {k:8s} top5 {t5:.3f}  median rank {med:.0f}")
+    print(f"  {name} median candidates {np.median([x['n'] for x in c if x]):.0f}")
+print("reference: F (Jev fill) .449, gold fill .806, J3 D .348")

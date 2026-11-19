@@ -1,0 +1,12 @@
+J4b: gold rank among the doors (top-5 rate over all later sub-questions; outside the doors = miss)
+  RO strength top5 0.146  median rank 41
+  RO question top5 0.304  median rank 17
+  RO borda    top5 0.206  median rank 23
+  RO product  top5 0.320  median rank 10
+  RO median candidates 711
+  RD strength top5 0.077  median rank 120
+  RD question top5 0.243  median rank 33
+  RD borda    top5 0.126  median rank 59
+  RD product  top5 0.198  median rank 25
+  RD median candidates 2622
+reference: F (Jev fill) .449, gold fill .806, J3 D .348
