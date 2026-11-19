@@ -43,6 +43,43 @@ SPAN = (re.compile(rf"{CAPW}(?:\s+(?:(?:of|the|de)\s+)?{CAPW})*|\b[\w,.\-]*\d[\w
         else re.compile(rf"{CAPW}(?:\s+(?:(?:of|the|de|and)\s+)?{CAPW})*|\b\d{{4}}\b"))
 
 
+DOORS = os.environ.get("J1_DOORS") == "1"  # J5 (REGISTERED-J5.md): show where each candidate leads
+if DOORS:
+    import math
+    from collections import defaultdict
+    keymem = defaultdict(list)
+    for r in map(json.loads, open(f"{scr}/dream/d1/graph-mq.jsonl")):
+        for k in r["keys"]:
+            keymem[k].append(r["d"])
+    tokf = lambda x: re.findall(r"[a-z0-9]+", x.lower())
+    dtok = {h: tokf(t + ". " + x) for h, (t, x) in text.items()}
+    dfc = defaultdict(int)
+    for ts in dtok.values():
+        for t in set(ts):
+            dfc[t] += 1
+    NDOC = len(dtok); AVG = sum(map(len, dtok.values())) / NDOC
+
+    def bm25(qt, h):
+        ts = dtok.get(h, []); L = len(ts); sc = 0.0
+        for t in qt:
+            f = ts.count(t)
+            if f:
+                sc += math.log(1 + (NDOC - dfc[t] + .5) / (dfc[t] + .5)) * f * 2.2 / (f + 1.2 * (.25 + .75 * L / AVG))
+        return sc
+
+    def door(a, whole, read):
+        ms = keymem.get(a.lower(), [])
+        if not (2 <= len(ms) <= 100):
+            return " — leads nowhere in the graph"
+        rest = [m for m in ms if m not in read]
+        if not rest:
+            return f" — leads to {len(ms)} passages, all already read"
+        qt = set(tokf(whole)); b = max(rest, key=lambda m: bm25(qt, m))
+        t, x = text.get(b, ("", ""))
+        first = re.split(r"(?<=[.!?])\s+", x)[0][:300]
+        return f" — leads to {len(ms)} passages; closest to the question: {t}: {first}"
+
+
 def candidates(question, hits):
     """Names and years in the top 3 hits, not in the question, reading order, at most 24: [(answer, sentence)]."""
     out, seen = [], set()
@@ -60,12 +97,14 @@ def candidates(question, hits):
     return out
 
 
-def jev(question, cands):
+def jev(question, cands, whole=None, read=()):
     global spent
     qs_ = {}
     for i, (a, sent) in enumerate(cands):
         key = f"{i}_" + re.sub(r"[^a-z0-9]+", "_", a.lower()).strip("_")[:60]
-        qs_[key] = {"type": "noul", "instructions": f"`{a}`, from: {sent}"}
+        qs_[key] = {"type": "noul", "instructions": f"`{a}`, from: {sent}" + (door(a, whole, read) if DOORS else "")}
+    if os.environ.get("J1_SHOW") == "1":
+        print(json.dumps(qs_, indent=1)[:3000], flush=True)
     body = {"model": "jev-1.13.0", "state": {"question": question, "task": "Which of these is the answer to the question?"}, "questions": qs_}
     rq = urllib.request.Request(ENDPOINT, data=json.dumps(body).encode(), headers={"Authorization": f"Bearer {os.environ['AVALANCHE_MODEL_KEY']}", "Content-Type": "application/json"})
     a = json.load(urllib.request.urlopen(rq, timeout=120))
@@ -111,7 +150,7 @@ def run(ch):
             else:
                 if spent >= cap:
                     sys.exit(f"cap reached ${spent:.4f}")
-                i, scores = jev(s["queries"][-1], cands)
+                i, scores = jev(s["queries"][-1], cands, src[q.split(":", 1)[1]]["question"], {x for h in s["hits"] for x in h})
             s["fill"][j + 1] = cands[i][0] if i is not None else ""
             s["picks"].append({"hop": j + 1, "pick": i, "n_cands": len(cands), "gold_is_cand": gi is not None, "correct": i is not None and i == gi,
                                "gold_answer": s["ans"][j], "fill": s["fill"][j + 1], "scores": scores})

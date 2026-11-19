@@ -1,0 +1,19 @@
+p8: key occurrences by family number 79982, code 84612, phrase 597810, word 253371
+cards (dev 100, found 36), θ (-1, -1.5, 0.15): total coherence AUC 0.562 [0.444, 0.682]
+  number  mean share 0.146  share AUC 0.708 [0.604, 0.812] *  ratio AUC 0.683 [0.560, 0.790] *
+  code    mean share 0.035  share AUC 0.515 [0.420, 0.611]  ratio AUC 0.531 [0.432, 0.629]
+  phrase  mean share 0.469  share AUC 0.484 [0.368, 0.601]  ratio AUC 0.603 [0.481, 0.717]
+  word    mean share 0.048  share AUC 0.590 [0.474, 0.705]  ratio AUC 0.581 [0.467, 0.695]
+  beside  mean share 0.302  share AUC 0.438 [0.328, 0.550]  ratio AUC 0.401 [0.289, 0.517]
+prs (dev 65, found 38), θ (-1, -1.5, 0.15): total coherence AUC 0.775 [0.640, 0.898]
+  number  mean share 0.039  share AUC 0.278 [0.168, 0.403] *  ratio AUC 0.269 [0.159, 0.389] *
+  code    mean share 0.024  share AUC 0.429 [0.318, 0.542]  ratio AUC 0.446 [0.335, 0.555]
+  phrase  mean share 0.579  share AUC 0.444 [0.298, 0.588]  ratio AUC 0.717 [0.573, 0.851] *
+  word    mean share 0.039  share AUC 0.389 [0.243, 0.537]  ratio AUC 0.596 [0.447, 0.741]
+  beside  mean share 0.319  share AUC 0.727 [0.594, 0.848] *  ratio AUC 0.845 [0.732, 0.934] *
+mq: key occurrences by family number 19131, code 0, phrase 168773, word 322217
+mq (dev 101, found 13), θ (-1, -1, 0.15): total coherence AUC 0.527 [0.330, 0.720]
+  number  mean share 0.018  share AUC 0.611 [0.458, 0.754]  ratio AUC 0.615 [0.458, 0.759]
+  phrase  mean share 0.650  share AUC 0.519 [0.349, 0.685]  ratio AUC 0.621 [0.416, 0.812]
+  word    mean share 0.331  share AUC 0.467 [0.301, 0.639]  ratio AUC 0.457 [0.282, 0.644]
+  beside  mean share 0.000  share AUC 0.500 [0.500, 0.500]  ratio AUC 0.500 [0.500, 0.500]
