@@ -38,19 +38,38 @@ def auc_ci(x, y, n=2000, seed=0):
     return auc(list(x[y]), list(x[~y])), np.percentile(out, 2.5), np.percentile(out, 97.5)
 
 
+def narrow(rows, g, w):
+    """P3b: Beside, or a shared key held by at most w passages (2 ≤ df ≤ w); Near excluded."""
+    import scipy.sparse as sp
+    A = g.A.tocsc()
+    df = np.asarray(A.sum(0)).ravel()
+    A = A[:, np.where((df >= 2) & (df <= w))[0]].tocsr()
+    M = (A @ A.T).tocsr()
+    ri, ci = [], []
+    for i, r in enumerate(rows):
+        for x in r["next"]:
+            j = g.ix.get(x)
+            if j is not None and j != i: ri += [i, j]; ci += [j, i]
+    M = (M + sp.csr_matrix((np.ones(len(ri)), (ri, ci)), shape=M.shape)).tocsr()
+    M.setdiag(0); M.eliminate_zeros(); M.data[:] = 1
+    return M
+
+
 def main():
     scr, sdir = sys.argv[1], sys.argv[2]; rnd = random.Random(0)
+    W_ = int(sys.argv[sys.argv.index("--narrow") + 1]) if "--narrow" in sys.argv else None
     tf = {"cards": "trace-cards", "prs": "trace-pr", "mq": "trace-mq"}
     for gname, gsets in (("p8", ("cards", "prs")), ("mq", ("mq",))):
         rows = [json.loads(l) for l in open(f"{scr}/dream/d1/graph-{gname}.jsonl")]
-        g = l1.G(rows); D = fixtures.Doors(rows, g); N = D.N.tocsr()
+        g = l1.G(rows)
+        N = narrow(rows, g, W_) if W_ else fixtures.Doors(rows, g).N.tocsr()
         deg = np.diff(N.indptr); m2 = N.nnz  # 2m
         for c in gsets:
             _, test = l1.load(scr, g, c)
             St = l1.load_s(sdir, "test", c, g)
             traces = {t["qid"]: t for t in map(json.loads, open(f"{scr}/floor/{tf[c]}.jsonl"))}
             fin = {k: [] for k in SIGS}; srch = {k: [] for k in SIGS}; shuf = {k: [] for k in SIGS}
-            y, ys, yr = [], [], []
+            y, ys, yr, rec = [], [], [], []
             waves = {}  # wave -> [joined==1, found so far]
             dj_gold, dj_none = [], []
             for qid, seeds, gi, walk, gs in test:
@@ -71,7 +90,7 @@ def main():
                     waves.setdefault(w, []).append((s["joined"] == 1.0, found))
                     prev = s["joined"]
                 for k in SIGS: fin[k].append(s[k])
-                y.append(found)
+                y.append(found); rec.append(len((gi - set(seeds)) & set(R)) / len(gi - set(seeds)))
                 # search's top 10 as the read set
                 order = [i for i, _ in sorted(St.get(qid, {}).items(), key=lambda kv: -kv[1])][:10]
                 ss = signals(N, deg, m2, seeds + [i for i in order if i not in seeds][:5], seeds)
@@ -90,6 +109,8 @@ def main():
             print(f"\n{c}: {len(y)} walks with gold beyond the seeds; gold found by the walk {y.mean():.2f}, by search 6-10 {ys.mean():.2f}, by shuffled reads {yr.mean():.2f}")
             for name, S, Y in (("walk, final wave", fin, y), ("search top 10", srch, ys), ("shuffled reads", shuf, yr)):
                 print(f"  {name}: " + "; ".join("{} AUC {:.3f} [{:.3f}, {:.3f}]".format(k, *auc_ci(S[k], Y)) for k in SIGS))
+            from scipy.stats import spearmanr
+            print("  added (bill, REM-1341): Spearman with the walk's recall beyond the seeds: " + "; ".join(f"{k} {spearmanr(fin[k], rec)[0]:+.3f}" for k in SIGS))
             print("  by wave (share joined=1, share found so far): " + ", ".join(f"w{w} {np.mean([a for a, _ in v]):.2f}/{np.mean([b for _, b in v]):.2f}" for w, v in sorted(waves.items())))
             print(f"  Δjoined at the wave gold is first read {np.mean(dj_gold):+.3f} (n {len(dj_gold)}), other waves {np.mean(dj_none):+.3f} (n {len(dj_none)})")
 

@@ -1,0 +1,75 @@
+== narrow width 5
+
+cards: 135 walks with gold beyond the seeds; gold found by the walk 0.52, by search 6-10 0.22, by shuffled reads 0.07
+  walk, final wave: joined AUC 0.485 [0.390, 0.575]; component AUC 0.547 [0.446, 0.639]; coherence AUC 0.535 [0.441, 0.636]; raw links AUC 0.534 [0.434, 0.627]; mean degree AUC 0.480 [0.383, 0.576]
+  search top 10: joined AUC 0.570 [0.459, 0.666]; component AUC 0.611 [0.512, 0.710]; coherence AUC 0.599 [0.490, 0.709]; raw links AUC 0.600 [0.490, 0.709]; mean degree AUC 0.474 [0.354, 0.596]
+  shuffled reads: joined AUC 0.557 [0.360, 0.750]; component AUC 0.532 [0.336, 0.724]; coherence AUC 0.608 [0.390, 0.816]; raw links AUC 0.525 [0.335, 0.705]; mean degree AUC 0.412 [0.190, 0.642]
+  added (bill, REM-1341): Spearman with the walk's recall beyond the seeds: joined +0.006; component +0.124; coherence +0.130; raw links +0.131; mean degree -0.062
+  by wave (share joined=1, share found so far): w0 0.21/0.00, w1 0.29/0.47, w2 0.36/0.55, w3 0.43/0.43, w4 0.00/0.50, w5 0.00/0.00
+  Δjoined at the wave gold is first read +0.037 (n 70), other waves +0.049 (n 97)
+
+prs: 87 walks with gold beyond the seeds; gold found by the walk 0.13, by search 6-10 0.25, by shuffled reads 0.11
+  walk, final wave: joined AUC 0.662 [0.496, 0.823]; component AUC 0.669 [0.516, 0.821]; coherence AUC 0.653 [0.454, 0.847]; raw links AUC 0.623 [0.455, 0.793]; mean degree AUC 0.530 [0.319, 0.734]
+  search top 10: joined AUC 0.650 [0.524, 0.777]; component AUC 0.649 [0.509, 0.774]; coherence AUC 0.713 [0.579, 0.834]; raw links AUC 0.675 [0.550, 0.793]; mean degree AUC 0.438 [0.299, 0.583]
+  shuffled reads: joined AUC 0.495 [0.298, 0.696]; component AUC 0.508 [0.292, 0.726]; coherence AUC 0.626 [0.422, 0.822]; raw links AUC 0.432 [0.227, 0.645]; mean degree AUC 0.341 [0.176, 0.510]
+  added (bill, REM-1341): Spearman with the walk's recall beyond the seeds: joined +0.196; component +0.196; coherence +0.175; raw links +0.142; mean degree +0.035
+  by wave (share joined=1, share found so far): w0 0.16/0.00, w1 0.23/0.10, w2 0.38/0.10, w3 0.00/0.00
+  Δjoined at the wave gold is first read +0.055 (n 11), other waves +0.042 (n 99)
+
+mq: 133 walks with gold beyond the seeds; gold found by the walk 0.47, by search 6-10 0.16, by shuffled reads 0.08
+  walk, final wave: joined AUC 0.580 [0.488, 0.668]; component AUC 0.731 [0.643, 0.814]; coherence AUC 0.739 [0.646, 0.816]; raw links AUC 0.733 [0.639, 0.812]; mean degree AUC 0.553 [0.453, 0.650]
+  search top 10: joined AUC 0.525 [0.388, 0.662]; component AUC 0.629 [0.506, 0.744]; coherence AUC 0.607 [0.475, 0.734]; raw links AUC 0.589 [0.459, 0.716]; mean degree AUC 0.506 [0.381, 0.634]
+  shuffled reads: joined AUC 0.508 [0.319, 0.696]; component AUC 0.553 [0.398, 0.696]; coherence AUC 0.606 [0.409, 0.777]; raw links AUC 0.495 [0.301, 0.691]; mean degree AUC 0.406 [0.197, 0.638]
+  added (bill, REM-1341): Spearman with the walk's recall beyond the seeds: joined +0.179; component +0.427; coherence +0.475; raw links +0.436; mean degree +0.046
+  by wave (share joined=1, share found so far): w0 0.02/0.00, w1 0.02/0.44, w2 0.04/0.73, w3 0.10/0.90, w4 0.00/1.00
+  Δjoined at the wave gold is first read +0.013 (n 62), other waves +0.011 (n 129)
+== narrow width 2
+
+cards: 135 walks with gold beyond the seeds; gold found by the walk 0.52, by search 6-10 0.22, by shuffled reads 0.11
+  walk, final wave: joined AUC 0.567 [0.474, 0.657]; component AUC 0.614 [0.513, 0.704]; coherence AUC 0.568 [0.466, 0.657]; raw links AUC 0.580 [0.484, 0.669]; mean degree AUC 0.487 [0.393, 0.579]
+  search top 10: joined AUC 0.593 [0.499, 0.693]; component AUC 0.643 [0.547, 0.736]; coherence AUC 0.634 [0.524, 0.747]; raw links AUC 0.646 [0.545, 0.749]; mean degree AUC 0.517 [0.394, 0.643]
+  shuffled reads: joined AUC 0.609 [0.473, 0.732]; component AUC 0.613 [0.465, 0.751]; coherence AUC 0.792 [0.668, 0.898]; raw links AUC 0.647 [0.512, 0.775]; mean degree AUC 0.236 [0.135, 0.355]
+  added (bill, REM-1341): Spearman with the walk's recall beyond the seeds: joined +0.129; component +0.218; coherence +0.168; raw links +0.152; mean degree -0.054
+  by wave (share joined=1, share found so far): w0 0.02/0.00, w1 0.05/0.47, w2 0.09/0.55, w3 0.00/0.43, w4 0.00/0.50, w5 0.00/0.00
+  Δjoined at the wave gold is first read +0.040 (n 70), other waves +0.023 (n 97)
+
+prs: 87 walks with gold beyond the seeds; gold found by the walk 0.13, by search 6-10 0.25, by shuffled reads 0.40
+  walk, final wave: joined AUC 0.662 [0.513, 0.800]; component AUC 0.736 [0.580, 0.877]; coherence AUC 0.676 [0.506, 0.831]; raw links AUC 0.705 [0.521, 0.873]; mean degree AUC 0.503 [0.301, 0.714]
+  search top 10: joined AUC 0.612 [0.491, 0.730]; component AUC 0.651 [0.520, 0.772]; coherence AUC 0.710 [0.574, 0.831]; raw links AUC 0.635 [0.505, 0.755]; mean degree AUC 0.406 [0.265, 0.550]
+  shuffled reads: joined AUC 0.479 [0.358, 0.596]; component AUC 0.480 [0.357, 0.596]; coherence AUC 0.671 [0.538, 0.790]; raw links AUC 0.487 [0.362, 0.609]; mean degree AUC 0.340 [0.219, 0.470]
+  added (bill, REM-1341): Spearman with the walk's recall beyond the seeds: joined +0.193; component +0.280; coherence +0.204; raw links +0.240; mean degree +0.006
+  by wave (share joined=1, share found so far): w0 0.00/0.00, w1 0.01/0.10, w2 0.00/0.10, w3 0.00/0.00
+  Δjoined at the wave gold is first read +0.036 (n 11), other waves +0.008 (n 99)
+
+mq: 133 walks with gold beyond the seeds; gold found by the walk 0.47, by search 6-10 0.16, by shuffled reads 0.08
+  walk, final wave: joined AUC 0.498 [0.415, 0.578]; component AUC 0.639 [0.551, 0.723]; coherence AUC 0.661 [0.567, 0.750]; raw links AUC 0.672 [0.581, 0.758]; mean degree AUC 0.527 [0.430, 0.630]
+  search top 10: joined AUC 0.539 [0.421, 0.664]; component AUC 0.635 [0.509, 0.755]; coherence AUC 0.624 [0.503, 0.740]; raw links AUC 0.641 [0.507, 0.766]; mean degree AUC 0.628 [0.509, 0.743]
+  shuffled reads: joined AUC 0.511 [0.336, 0.696]; component AUC 0.692 [0.480, 0.888]; coherence AUC 0.613 [0.414, 0.807]; raw links AUC 0.484 [0.290, 0.687]; mean degree AUC 0.389 [0.189, 0.599]
+  added (bill, REM-1341): Spearman with the walk's recall beyond the seeds: joined +0.043; component +0.298; coherence +0.332; raw links +0.360; mean degree +0.025
+  by wave (share joined=1, share found so far): w0 0.00/0.00, w1 0.00/0.44, w2 0.00/0.73, w3 0.00/0.90, w4 0.00/1.00
+  Δjoined at the wave gold is first read +0.003 (n 62), other waves +0.002 (n 129)
+== narrow width 10
+
+cards: 135 walks with gold beyond the seeds; gold found by the walk 0.52, by search 6-10 0.22, by shuffled reads 0.05
+  walk, final wave: joined AUC 0.449 [0.353, 0.542]; component AUC 0.507 [0.409, 0.600]; coherence AUC 0.544 [0.447, 0.641]; raw links AUC 0.523 [0.424, 0.614]; mean degree AUC 0.494 [0.397, 0.590]
+  search top 10: joined AUC 0.565 [0.463, 0.667]; component AUC 0.570 [0.467, 0.672]; coherence AUC 0.616 [0.505, 0.725]; raw links AUC 0.565 [0.458, 0.679]; mean degree AUC 0.434 [0.318, 0.551]
+  shuffled reads: joined AUC 0.499 [0.333, 0.678]; component AUC 0.480 [0.302, 0.670]; coherence AUC 0.779 [0.605, 0.947]; raw links AUC 0.304 [0.207, 0.407]; mean degree AUC 0.129 [0.034, 0.232]
+  added (bill, REM-1341): Spearman with the walk's recall beyond the seeds: joined -0.066; component +0.040; coherence +0.148; raw links +0.072; mean degree -0.047
+  by wave (share joined=1, share found so far): w0 0.37/0.00, w1 0.44/0.47, w2 0.41/0.55, w3 0.57/0.43, w4 0.50/0.50, w5 0.00/0.00
+  Δjoined at the wave gold is first read +0.023 (n 70), other waves +0.056 (n 97)
+
+prs: 87 walks with gold beyond the seeds; gold found by the walk 0.13, by search 6-10 0.25, by shuffled reads 0.10
+  walk, final wave: joined AUC 0.653 [0.493, 0.796]; component AUC 0.645 [0.473, 0.807]; coherence AUC 0.690 [0.506, 0.860]; raw links AUC 0.620 [0.441, 0.797]; mean degree AUC 0.467 [0.255, 0.686]
+  search top 10: joined AUC 0.653 [0.529, 0.768]; component AUC 0.672 [0.543, 0.790]; coherence AUC 0.669 [0.535, 0.795]; raw links AUC 0.642 [0.510, 0.766]; mean degree AUC 0.453 [0.314, 0.599]
+  shuffled reads: joined AUC 0.482 [0.274, 0.679]; component AUC 0.475 [0.254, 0.689]; coherence AUC 0.574 [0.339, 0.804]; raw links AUC 0.521 [0.253, 0.771]; mean degree AUC 0.456 [0.246, 0.664]
+  added (bill, REM-1341): Spearman with the walk's recall beyond the seeds: joined +0.189; component +0.172; coherence +0.220; raw links +0.142; mean degree -0.036
+  by wave (share joined=1, share found so far): w0 0.36/0.00, w1 0.41/0.10, w2 0.57/0.10, w3 0.50/0.00
+  Δjoined at the wave gold is first read +0.091 (n 11), other waves +0.034 (n 99)
+
+mq: 133 walks with gold beyond the seeds; gold found by the walk 0.47, by search 6-10 0.16, by shuffled reads 0.01
+  walk, final wave: joined AUC 0.621 [0.527, 0.712]; component AUC 0.786 [0.707, 0.858]; coherence AUC 0.759 [0.672, 0.834]; raw links AUC 0.757 [0.672, 0.833]; mean degree AUC 0.556 [0.459, 0.658]
+  search top 10: joined AUC 0.542 [0.403, 0.677]; component AUC 0.605 [0.473, 0.725]; coherence AUC 0.582 [0.453, 0.705]; raw links AUC 0.591 [0.461, 0.712]; mean degree AUC 0.521 [0.401, 0.647]
+  shuffled reads: joined AUC 0.875 [0.824, 0.923]; component AUC 0.848 [0.787, 0.905]; coherence AUC 0.326 [0.244, 0.406]; raw links AUC 0.845 [0.784, 0.902]; mean degree AUC 0.886 [0.826, 0.939]
+  added (bill, REM-1341): Spearman with the walk's recall beyond the seeds: joined +0.222; component +0.517; coherence +0.508; raw links +0.479; mean degree +0.063
+  by wave (share joined=1, share found so far): w0 0.06/0.00, w1 0.08/0.44, w2 0.11/0.73, w3 0.20/0.90, w4 0.00/1.00
+  Δjoined at the wave gold is first read +0.013 (n 62), other waves +0.009 (n 129)
