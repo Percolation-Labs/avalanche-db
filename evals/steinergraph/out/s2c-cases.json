@@ -1,0 +1,437 @@
+{
+ "mq": {
+  "cases": [
+   {
+    "qid": "RW:2hop__107690_124896",
+    "key": "francis bacon",
+    "ctrl": "keeper",
+    "v": "mq:091b7ab3d2b75562",
+    "u": "mq:0f96a5643b1157f1",
+    "built": {
+     "hop": 0,
+     "uni": 3.8698,
+     "lc": 6.2683,
+     "rec": 0.0,
+     "rank": 526
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 4.3486,
+     "lc": 6.7032,
+     "rec": 0.0,
+     "rank": 830
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 3.8698,
+     "lc": 6.2683,
+     "rec": 0.0,
+     "rank": 526
+    },
+    "control": {
+     "hop": 0,
+     "uni": 3.8698,
+     "lc": 6.2171,
+     "rec": 0.0,
+     "rank": 526
+    }
+   },
+   {
+    "qid": "RW:2hop__135822_46621",
+    "key": "planets",
+    "ctrl": "revolves",
+    "v": "mq:df5d44989c280861",
+    "u": "mq:627cdd6d4a3e734f",
+    "built": {
+     "hop": 1,
+     "uni": 15.476,
+     "lc": 11.2167,
+     "rec": 0.0,
+     "rank": 38
+    },
+    "cut": {
+     "hop": 1,
+     "uni": 16.0796,
+     "lc": 11.7688,
+     "rec": 0.0,
+     "rank": 42
+    },
+    "restored": {
+     "hop": 1,
+     "uni": 15.476,
+     "lc": 11.2167,
+     "rec": 0.0,
+     "rank": 38
+    },
+    "control": {
+     "hop": 1,
+     "uni": 15.476,
+     "lc": 11.176,
+     "rec": 0.0,
+     "rank": 38
+    }
+   },
+   {
+    "qid": "RW:2hop__136179_13529",
+    "key": "diego maradona",
+    "ctrl": "napoli",
+    "v": "mq:1888b48951daf682",
+    "u": "mq:5e6f9f0e4b66db62",
+    "built": {
+     "hop": 0,
+     "uni": 3.3312,
+     "lc": 2.6693,
+     "rec": 0.0,
+     "rank": 11
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 4.2052,
+     "lc": 3.5021,
+     "rec": 0.0,
+     "rank": 17
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 3.3312,
+     "lc": 2.6693,
+     "rec": 0.0,
+     "rank": 11
+    },
+    "control": {
+     "hop": 0,
+     "uni": 3.3312,
+     "lc": 2.6469,
+     "rec": 0.0,
+     "rank": 11
+    }
+   },
+   {
+    "qid": "RW:2hop__161151_42352",
+    "key": "american colonies",
+    "ctrl": "1763",
+    "v": "mq:8174715888879957",
+    "u": "mq:5146099b9b96bffe",
+    "built": {
+     "hop": 0,
+     "uni": 5.9692,
+     "lc": 4.5254,
+     "rec": 0.0,
+     "rank": 10
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 7.0458,
+     "lc": 5.0931,
+     "rec": 0.0,
+     "rank": 11
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 5.9692,
+     "lc": 4.5254,
+     "rec": 0.0,
+     "rank": 10
+    },
+    "control": {
+     "hop": 0,
+     "uni": 5.9692,
+     "lc": 4.5021,
+     "rec": 0.0,
+     "rank": 10
+    }
+   }
+  ],
+  "gate": 4
+ },
+ "cards": {
+  "cases": [
+   {
+    "qid": "card:REM-10",
+    "key": "rem 10",
+    "ctrl": "call set_config",
+    "v": "commit/8a34a4e7fc",
+    "u": "board/cards/REM-10.md#1",
+    "built": {
+     "hop": 0,
+     "uni": 8.0507,
+     "lc": 16.6656,
+     "rec": 0.5,
+     "rank": 4
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 8.6793,
+     "lc": 16.8482,
+     "rec": 0.0,
+     "rank": 45
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 8.0507,
+     "lc": 16.6656,
+     "rec": 0.5,
+     "rank": 4
+    },
+    "control": {
+     "hop": 0,
+     "uni": 8.0507,
+     "lc": 16.632,
+     "rec": 0.5,
+     "rank": 4
+    }
+   },
+   {
+    "qid": "card:REM-1003",
+    "key": "rem 1003",
+    "ctrl": "labs terry",
+    "v": "commit/79f78cfcca",
+    "u": "commit/a1b5db4b0d",
+    "built": {
+     "hop": 0,
+     "uni": 4.2169,
+     "lc": 6.7247,
+     "rec": 0.0,
+     "rank": 379
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 5.0499,
+     "lc": 7.4089,
+     "rec": 0.0,
+     "rank": 1257
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 4.2169,
+     "lc": 6.7247,
+     "rec": 0.0,
+     "rank": 379
+    },
+    "control": {
+     "hop": 0,
+     "uni": 4.2169,
+     "lc": 6.5668,
+     "rec": 0.0,
+     "rank": 382
+    }
+   },
+   {
+    "qid": "card:REM-1044",
+    "key": "rem 1044",
+    "ctrl": "old version",
+    "v": "commit/c2bbafc728",
+    "u": "board/cards/REM-1044.md#4",
+    "built": {
+     "hop": 0,
+     "uni": 4.253,
+     "lc": 6.1539,
+     "rec": 0.0,
+     "rank": 14
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 4.8629,
+     "lc": 6.7386,
+     "rec": 0.0,
+     "rank": 21
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 4.253,
+     "lc": 6.1539,
+     "rec": 0.0,
+     "rank": 14
+    },
+    "control": {
+     "hop": 0,
+     "uni": 4.253,
+     "lc": 6.1203,
+     "rec": 0.0,
+     "rank": 14
+    }
+   },
+   {
+    "qid": "card:REM-1088",
+    "key": "reproductions",
+    "ctrl": "audit record",
+    "v": "commit/fb3a62f74f",
+    "u": "commit/eae149a722",
+    "built": {
+     "hop": 0,
+     "uni": 8.165,
+     "lc": 7.3686,
+     "rec": 0.0,
+     "rank": 1152
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 8.6603,
+     "lc": 7.549,
+     "rec": 0.0,
+     "rank": 1407
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 8.165,
+     "lc": 7.3686,
+     "rec": 0.0,
+     "rank": 1152
+    },
+    "control": {
+     "hop": 0,
+     "uni": 8.165,
+     "lc": 7.2314,
+     "rec": 0.0,
+     "rank": 1316
+    }
+   }
+  ],
+  "gate": 4
+ },
+ "prs": {
+  "cases": [
+   {
+    "qid": "pr:126",
+    "key": "built fresh",
+    "ctrl": "drifted database",
+    "v": "commit/8635be7edb",
+    "u": "dev/lib/container.sh#3",
+    "built": {
+     "hop": 0,
+     "uni": 9.1981,
+     "lc": 9.5277,
+     "rec": 0.0,
+     "rank": 6
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 9.453,
+     "lc": 9.7494,
+     "rec": 0.0,
+     "rank": 6
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 9.1981,
+     "lc": 9.5277,
+     "rec": 0.0,
+     "rank": 6
+    },
+    "control": {
+     "hop": 0,
+     "uni": 9.1981,
+     "lc": 9.5056,
+     "rec": 0.0,
+     "rank": 6
+    }
+   },
+   {
+    "qid": "pr:14",
+    "key": "capabilities round",
+    "ctrl": "change inside",
+    "v": "commit/48b6b627c2",
+    "u": "commit/417c194051",
+    "built": {
+     "hop": 0,
+     "uni": 11.7647,
+     "lc": 13.6433,
+     "rec": 0.0,
+     "rank": 35
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 12.1278,
+     "lc": 13.8516,
+     "rec": 0.0,
+     "rank": 35
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 11.7647,
+     "lc": 13.6433,
+     "rec": 0.0,
+     "rank": 35
+    },
+    "control": {
+     "hop": 0,
+     "uni": 11.7647,
+     "lc": 13.6132,
+     "rec": 0.0,
+     "rank": 35
+    }
+   },
+   {
+    "qid": "pr:205",
+    "key": "code session_01weg5nosqq2fsqtldwynurw",
+    "ctrl": "sealing",
+    "v": "commit/40b8555759",
+    "u": "commit/1f215d74b7",
+    "built": {
+     "hop": 0,
+     "uni": 5.1284,
+     "lc": 6.2793,
+     "rec": 0.0,
+     "rank": 42
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 5.2507,
+     "lc": 6.3641,
+     "rec": 0.0,
+     "rank": 68
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 5.1284,
+     "lc": 6.2793,
+     "rec": 0.0,
+     "rank": 42
+    },
+    "control": {
+     "hop": 0,
+     "uni": 5.1284,
+     "lc": 6.2302,
+     "rec": 0.0,
+     "rank": 42
+    }
+   },
+   {
+    "qid": "pr:210",
+    "key": "code session_01lfgh4wkyoz4kr44vbez84d",
+    "ctrl": "execute grants",
+    "v": "commit/3fd3f2e37b",
+    "u": "commit/65bb4fcd34",
+    "built": {
+     "hop": 0,
+     "uni": 3.1093,
+     "lc": 4.8986,
+     "rec": 0.0,
+     "rank": 1197
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 3.433,
+     "lc": 5.0292,
+     "rec": 0.0,
+     "rank": 1660
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 3.1093,
+     "lc": 4.8986,
+     "rec": 0.0,
+     "rank": 1197
+    },
+    "control": {
+     "hop": 0,
+     "uni": 3.1093,
+     "lc": 4.7,
+     "rec": 0.0,
+     "rank": 1197
+    }
+   }
+  ],
+  "gate": 2
+ }
+}

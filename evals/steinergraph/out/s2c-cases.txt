@@ -1,0 +1,81 @@
+
+== mq: 133 qualifying test questions; 0 skipped (door-only edge); 1 without a control key
+case RW:2hop__107690_124896: T* edge mq:0f96a5643b1157f1 -> mq:091b7ab3d2b75562; cut 'francis bacon' (width 6); control 'keeper' (width 6)
+   built     hop T* +0; T* UNI 3.87 nats, LC+F 6.27; recall 0.0; rank of v 526
+   cut       hop T* +0; T* UNI 4.35 nats, LC+F 6.70; recall 0.0; rank of v 830
+   restored  hop T* +0; T* UNI 3.87 nats, LC+F 6.27; recall 0.0; rank of v 526
+   control   hop T* +0; T* UNI 3.87 nats, LC+F 6.22; recall 0.0; rank of v 526
+   rank change: cut +304, control 0; restored equals built True -> agrees
+case RW:2hop__135822_46621: T* edge mq:627cdd6d4a3e734f -> mq:df5d44989c280861; cut 'planets' (width 29); control 'revolves' (width 26)
+   built     hop T* +1; T* UNI 15.48 nats, LC+F 11.22; recall 0.0; rank of v 38
+   cut       hop T* +1; T* UNI 16.08 nats, LC+F 11.77; recall 0.0; rank of v 42
+   restored  hop T* +1; T* UNI 15.48 nats, LC+F 11.22; recall 0.0; rank of v 38
+   control   hop T* +1; T* UNI 15.48 nats, LC+F 11.18; recall 0.0; rank of v 38
+   rank change: cut +4, control 0; restored equals built True -> agrees
+case RW:2hop__136179_13529: T* edge mq:5e6f9f0e4b66db62 -> mq:1888b48951daf682; cut 'diego maradona' (width 4); control 'napoli' (width 4)
+   built     hop T* +0; T* UNI 3.33 nats, LC+F 2.67; recall 0.0; rank of v 11
+   cut       hop T* +0; T* UNI 4.21 nats, LC+F 3.50; recall 0.0; rank of v 17
+   restored  hop T* +0; T* UNI 3.33 nats, LC+F 2.67; recall 0.0; rank of v 11
+   control   hop T* +0; T* UNI 3.33 nats, LC+F 2.65; recall 0.0; rank of v 11
+   rank change: cut +6, control 0; restored equals built True -> agrees
+case RW:2hop__161151_42352: T* edge mq:5146099b9b96bffe -> mq:8174715888879957; cut 'american colonies' (width 16); control '1763' (width 15)
+   built     hop T* +0; T* UNI 5.97 nats, LC+F 4.53; recall 0.0; rank of v 10
+   cut       hop T* +0; T* UNI 7.05 nats, LC+F 5.09; recall 0.0; rank of v 11
+   restored  hop T* +0; T* UNI 5.97 nats, LC+F 4.53; recall 0.0; rank of v 10
+   control   hop T* +0; T* UNI 5.97 nats, LC+F 4.50; recall 0.0; rank of v 10
+   rank change: cut +1, control 0; restored equals built True -> agrees
+mq gate: 4/4 cases agree
+
+== cards: 133 qualifying test questions; 2 skipped (door-only edge); 16 without a control key
+case card:REM-10: T* edge board/cards/REM-10.md#1 -> commit/8a34a4e7fc; cut 'rem 10' (width 8); control 'call set_config' (width 8)
+   built     hop T* +0; T* UNI 8.05 nats, LC+F 16.67; recall 0.5; rank of v 4
+   cut       hop T* +0; T* UNI 8.68 nats, LC+F 16.85; recall 0.0; rank of v 45
+   restored  hop T* +0; T* UNI 8.05 nats, LC+F 16.67; recall 0.5; rank of v 4
+   control   hop T* +0; T* UNI 8.05 nats, LC+F 16.63; recall 0.5; rank of v 4
+   rank change: cut +41, control 0; restored equals built True -> agrees
+case card:REM-1003: T* edge commit/a1b5db4b0d -> commit/79f78cfcca; cut 'rem 1003' (width 20); control 'labs terry' (width 15)
+   built     hop T* +0; T* UNI 4.22 nats, LC+F 6.72; recall 0.0; rank of v 379
+   cut       hop T* +0; T* UNI 5.05 nats, LC+F 7.41; recall 0.0; rank of v 1257
+   restored  hop T* +0; T* UNI 4.22 nats, LC+F 6.72; recall 0.0; rank of v 379
+   control   hop T* +0; T* UNI 4.22 nats, LC+F 6.57; recall 0.0; rank of v 382
+   rank change: cut +878, control 3; restored equals built True -> agrees
+case card:REM-1044: T* edge board/cards/REM-1044.md#4 -> commit/c2bbafc728; cut 'rem 1044' (width 14); control 'old version' (width 15)
+   built     hop T* +0; T* UNI 4.25 nats, LC+F 6.15; recall 0.0; rank of v 14
+   cut       hop T* +0; T* UNI 4.86 nats, LC+F 6.74; recall 0.0; rank of v 21
+   restored  hop T* +0; T* UNI 4.25 nats, LC+F 6.15; recall 0.0; rank of v 14
+   control   hop T* +0; T* UNI 4.25 nats, LC+F 6.12; recall 0.0; rank of v 14
+   rank change: cut +7, control 0; restored equals built True -> agrees
+case card:REM-1088: T* edge commit/eae149a722 -> commit/fb3a62f74f; cut 'reproductions' (width 3); control 'audit record' (width 3)
+   built     hop T* +0; T* UNI 8.16 nats, LC+F 7.37; recall 0.0; rank of v 1152
+   cut       hop T* +0; T* UNI 8.66 nats, LC+F 7.55; recall 0.0; rank of v 1407
+   restored  hop T* +0; T* UNI 8.16 nats, LC+F 7.37; recall 0.0; rank of v 1152
+   control   hop T* +0; T* UNI 8.16 nats, LC+F 7.23; recall 0.0; rank of v 1316
+   rank change: cut +255, control 164; restored equals built True -> agrees
+cards gate: 4/4 cases agree
+
+== prs: 56 qualifying test questions; 31 skipped (door-only edge); 4 without a control key
+case pr:126: T* edge dev/lib/container.sh#3 -> commit/8635be7edb; cut 'built fresh' (width 1); control 'drifted database' (width 1)
+   built     hop T* +0; T* UNI 9.20 nats, LC+F 9.53; recall 0.0; rank of v 6
+   cut       hop T* +0; T* UNI 9.45 nats, LC+F 9.75; recall 0.0; rank of v 6
+   restored  hop T* +0; T* UNI 9.20 nats, LC+F 9.53; recall 0.0; rank of v 6
+   control   hop T* +0; T* UNI 9.20 nats, LC+F 9.51; recall 0.0; rank of v 6
+   rank change: cut +0, control 0; restored equals built True -> does not agree
+case pr:14: T* edge commit/417c194051 -> commit/48b6b627c2; cut 'capabilities round' (width 2); control 'change inside' (width 2)
+   built     hop T* +0; T* UNI 11.76 nats, LC+F 13.64; recall 0.0; rank of v 35
+   cut       hop T* +0; T* UNI 12.13 nats, LC+F 13.85; recall 0.0; rank of v 35
+   restored  hop T* +0; T* UNI 11.76 nats, LC+F 13.64; recall 0.0; rank of v 35
+   control   hop T* +0; T* UNI 11.76 nats, LC+F 13.61; recall 0.0; rank of v 35
+   rank change: cut +0, control 0; restored equals built True -> does not agree
+case pr:205: T* edge commit/1f215d74b7 -> commit/40b8555759; cut 'code session_01weg5nosqq2fsqtldwynurw' (width 12); control 'sealing' (width 12)
+   built     hop T* +0; T* UNI 5.13 nats, LC+F 6.28; recall 0.0; rank of v 42
+   cut       hop T* +0; T* UNI 5.25 nats, LC+F 6.36; recall 0.0; rank of v 68
+   restored  hop T* +0; T* UNI 5.13 nats, LC+F 6.28; recall 0.0; rank of v 42
+   control   hop T* +0; T* UNI 5.13 nats, LC+F 6.23; recall 0.0; rank of v 42
+   rank change: cut +26, control 0; restored equals built True -> agrees
+case pr:210: T* edge commit/65bb4fcd34 -> commit/3fd3f2e37b; cut 'code session_01lfgh4wkyoz4kr44vbez84d' (width 3); control 'execute grants' (width 2)
+   built     hop T* +0; T* UNI 3.11 nats, LC+F 4.90; recall 0.0; rank of v 1197
+   cut       hop T* +0; T* UNI 3.43 nats, LC+F 5.03; recall 0.0; rank of v 1660
+   restored  hop T* +0; T* UNI 3.11 nats, LC+F 4.90; recall 0.0; rank of v 1197
+   control   hop T* +0; T* UNI 3.11 nats, LC+F 4.70; recall 0.0; rank of v 1197
+   rank change: cut +463, control 0; restored equals built True -> agrees
+prs gate: 2/4 cases agree
