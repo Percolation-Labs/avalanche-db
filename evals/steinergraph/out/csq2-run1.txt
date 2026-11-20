@@ -1,0 +1,90 @@
+
+-- mq RW:2hop__125412_544665 [graph-only]: scored 21095 passages; gold 1/1, T* non-seed 1/1; 0 unreached; A_ij range 0.4–4.82
+   am (= xm in rank)        AUC gold 1.000  AUC T* 1.000  ρ(deg) +0.28
+   aM                       AUC gold 1.000  AUC T* 1.000  ρ(deg) +0.04
+   xM                       AUC gold 1.000  AUC T* 1.000  ρ(deg) +0.07
+   walk mass P              AUC gold 1.000  AUC T* 1.000  ρ(deg) +0.89
+   L2 node coherence        AUC gold 1.000  AUC T* 1.000  ρ(deg) +0.16
+   degree                   AUC gold 0.427  AUC T* 0.427
+
+-- mq RW:2hop__125412_544665 [walk-as-used]: scored 21095 passages; gold 1/1, T* non-seed 1/1; 0 unreached; A_ij range 0.697–15.7
+   am (= xm in rank)        AUC gold 1.000  AUC T* 1.000  ρ(deg) +0.23
+   aM                       AUC gold 1.000  AUC T* 1.000  ρ(deg) +0.04
+   xM                       AUC gold 1.000  AUC T* 1.000  ρ(deg) +0.06
+   walk mass P              AUC gold 1.000  AUC T* 1.000  ρ(deg) -0.05
+   L2 node coherence        AUC gold 1.000  AUC T* 1.000  ρ(deg) +0.16
+   degree                   AUC gold 0.427  AUC T* 0.427
+
+-- mq RW:2hop__126306_396277 [graph-only]: scored 21095 passages; gold 1/1, T* non-seed 1/1; 0 unreached; A_ij range 0.555–1.34
+   am (= xm in rank)        AUC gold 0.999  AUC T* 0.999  ρ(deg) +0.38
+   aM                       AUC gold 1.000  AUC T* 1.000  ρ(deg) +0.26
+   xM                       AUC gold 1.000  AUC T* 1.000  ρ(deg) +0.22
+   walk mass P              AUC gold 1.000  AUC T* 1.000  ρ(deg) +0.89
+   L2 node coherence        AUC gold 1.000  AUC T* 1.000  ρ(deg) +0.15
+   degree                   AUC gold 0.138  AUC T* 0.138
+
+-- mq RW:2hop__126306_396277 [walk-as-used]: scored 21095 passages; gold 1/1, T* non-seed 1/1; 0 unreached; A_ij range 3.29–15.1
+   am (= xm in rank)        AUC gold 1.000  AUC T* 1.000  ρ(deg) +0.34
+   aM                       AUC gold 1.000  AUC T* 1.000  ρ(deg) +0.25
+   xM                       AUC gold 1.000  AUC T* 1.000  ρ(deg) +0.25
+   walk mass P              AUC gold 0.996  AUC T* 0.996  ρ(deg) -0.00
+   L2 node coherence        AUC gold 1.000  AUC T* 1.000  ρ(deg) +0.15
+   degree                   AUC gold 0.138  AUC T* 0.138
+
+-- cards card:REM-1001 [graph-only]: scored 47244 passages; gold 6/6, T* non-seed 6/6; 1387 unreached; A_ij range 5.24–22
+   am (= xm in rank)        AUC gold 0.999  AUC T* 0.999  ρ(deg) +0.50
+   aM                       AUC gold 0.999  AUC T* 0.999  ρ(deg) +0.34
+   xM                       AUC gold 0.999  AUC T* 0.999  ρ(deg) +0.32
+   walk mass P              AUC gold 0.999  AUC T* 0.999  ρ(deg) +0.90
+   L2 node coherence        AUC gold 0.999  AUC T* 0.999  ρ(deg) +0.05
+   degree                   AUC gold 0.379  AUC T* 0.379
+
+-- cards card:REM-1001 [walk-as-used]: scored 47244 passages; gold 6/6, T* non-seed 7/7; 1387 unreached; A_ij range 22.4–52.4
+   am (= xm in rank)        AUC gold 0.999  AUC T* 0.999  ρ(deg) +0.22
+   aM                       AUC gold 0.999  AUC T* 0.999  ρ(deg) +0.14
+   xM                       AUC gold 0.999  AUC T* 0.999  ρ(deg) +0.13
+   walk mass P              AUC gold 0.999  AUC T* 0.999  ρ(deg) +0.04
+   L2 node coherence        AUC gold 0.999  AUC T* 0.999  ρ(deg) +0.05
+   degree                   AUC gold 0.379  AUC T* 0.364
+
+-- cards card:REM-103 [graph-only]: scored 47258 passages; gold 2/2, T* non-seed 2/2; 1373 unreached; A_ij range 0.656–5.5
+   am (= xm in rank)        AUC gold 1.000  AUC T* 1.000  ρ(deg) +0.13
+   aM                       AUC gold 0.999  AUC T* 0.999  ρ(deg) -0.03
+   xM                       AUC gold 0.999  AUC T* 0.999  ρ(deg) +0.04
+   walk mass P              AUC gold 1.000  AUC T* 1.000  ρ(deg) +0.96
+   L2 node coherence        AUC gold 1.000  AUC T* 1.000  ρ(deg) +0.24
+   degree                   AUC gold 0.614  AUC T* 0.614
+
+-- cards card:REM-103 [walk-as-used]: scored 47258 passages; gold 2/2, T* non-seed 2/2; 1373 unreached; A_ij range 11–134
+   am (= xm in rank)        AUC gold 1.000  AUC T* 1.000  ρ(deg) +0.01
+   aM                       AUC gold 0.999  AUC T* 0.999  ρ(deg) -0.07
+   xM                       AUC gold 0.999  AUC T* 0.999  ρ(deg) -0.02
+   walk mass P              AUC gold 0.992  AUC T* 0.992  ρ(deg) +0.13
+   L2 node coherence        AUC gold 1.000  AUC T* 1.000  ρ(deg) +0.24
+   degree                   AUC gold 0.614  AUC T* 0.614
+graph-only auc_gold: am (= xm in rank) beats walk mass in 1/4
+graph-only auc_gold: aM beats walk mass in 2/4
+graph-only auc_tstar: am (= xm in rank) beats walk mass in 1/4
+graph-only auc_tstar: aM beats walk mass in 2/4
+walk-as-used auc_gold: am (= xm in rank) beats walk mass in 3/4
+walk-as-used auc_gold: aM beats walk mass in 3/4
+walk-as-used auc_tstar: am (= xm in rank) beats walk mass in 3/4
+walk-as-used auc_tstar: aM beats walk mass in 3/4
+       16.40 real         8.98 user         0.45 sys
+          1032372224  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              100899  page reclaims
+                 122  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   1  messages sent
+                   1  messages received
+                   1  signals received
+                 920  voluntary context switches
+                3683  involuntary context switches
+           433645563  instructions retired
+           127715454  cycles elapsed
+            26231312  peak memory footprint
