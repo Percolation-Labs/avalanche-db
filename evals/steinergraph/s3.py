@@ -82,7 +82,8 @@ def main():
             if first is None: first = (dict(cd), dict(gains))
             best = max(gains.items(), key=lambda kv: (kv[1], -kv[0][0], -kv[0][1]), default=(None, 0))
             say(f"  [{label}] round {rounds}: {len(cd)} candidates ({len(todo_)} rescored, {sum(v > 0 for v in gains.values())} with gain > 0) in {dt:.0f}s; best gain {best[1]:+.5f}")
-            if time_only or best[1] <= 0: break
+            # stop at no gain above the float error of the coherence sum (bill, #54 review 1): arithmetic, not a knob
+            if time_only or best[1] * len(qs) <= 1e-9 * abs(sum(C)): break
             added.append(best[0]); del gains[best[0]]; prevT = T
             g = mk(rbase, added); P, T = walks(g); C = cohs(T, allc)
         return added, first, g
@@ -107,7 +108,8 @@ def main():
     cols = [i for i, _ in tq]
     res = {}
     for nm, g in arms.items():
-        P, _ = walks(g, cols)
+        P, Tn = walks(g, cols)
+        if nm == 'drifted': T_drift = Tn
         rec = recall5(P, [(seeds[i], qs[i][2]) for i in cols])
         rk = []
         for j, (i, q) in enumerate(tq):
@@ -118,6 +120,10 @@ def main():
             tc.append(tot); mh.append(max((Cg[u, v] for v, u in par.items()), default=0) if par else float("inf"))
         rs = set(map(lambda p: canon(*p), added)) if nm == "repaired" else None
         res[nm] = dict(recall=rec, rank=rk, tcost=tc, maxhop=mh)
+        if nm != "built" and nm != "drifted":
+            ch = [(set(a) ^ set(b)) for a, b in zip(Tn, T_drift)]
+            ng = sum(bool(x) for x in ch); newgold = sum(bool((set(a) - set(b)) & set(qs[i][2])) for (i, _), a, b in zip(tq, Tn, T_drift))
+            say(f"      {nm}: top 5 changed vs drifted on {ng}/{len(tq)} cut questions; new entries include gold on {newgold}")
         say(f"  (c) {nm:9s} recall {mean_ok(rec):.3f}; median rank of v {int(np.median(rk))}; T* cost {np.mean(tc):.2f} nats, dearest hop {np.mean(mh):.2f}")
     for nm in ("repaired", "random", "hub", "count"):
         d, lo, hi = boot(res[nm]["recall"], res["drifted"]["recall"])

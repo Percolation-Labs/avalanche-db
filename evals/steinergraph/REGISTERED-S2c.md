@@ -50,3 +50,13 @@ Three points that S2c's cuts force, fixed before S3 runs:
    cost and T\*'s dearest hop (bill: the tree fails at its dearest hop). These are compared across drifted, repaired,
    the random, hub and count controls, and built. Before any ranking, S3 reports how many cut pairs are candidates at
    all. bill's S4 found that walks rarely read both ends of a tree edge.
+
+## S3 rerun amendment (bill's #54 review, before the rerun)
+
+- **Stop rule:** the loop stops when the best gain, summed over walks, is no larger than 1e-9 of the coherence sum.
+  That is the float error of the sum, not a tuning choice. The first run's stop at gain ≤ 0 accepted float-noise ties:
+  bill counted gain above 1e-3 on only 46 of 208 MuSiQue rounds and 5 of 37 cards rounds. The controls are matched to
+  the new count.
+- **Added measure:** for each repair arm, the number of cut questions whose top 5 changed against drifted, and how
+  many of the new entries are gold. This tests whether the reward moves the walk but not toward the answer.
+- The first run's outputs stay in `out/s3-*.log` as run 1.
