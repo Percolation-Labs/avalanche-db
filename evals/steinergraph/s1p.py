@@ -28,23 +28,33 @@ def cost_matrix(P):
     C = P.copy(); C.data = -np.log(C.data); C.data = np.maximum(C.data, 1e-12); return C
 
 
-def _from_vec(CT, init):
-    """Dijkstra over the reversed links from a virtual source: d[u] = min_v init[v] + cost(u→…→v)."""
-    n = CT.shape[0]; idx = np.where(np.isfinite(init))[0]
-    top = sp.csr_matrix((np.maximum(init[idx], 1e-12), (np.zeros(len(idx), int), idx)), shape=(1, n + 1))
-    M = sp.vstack([sp.hstack([CT, sp.csr_matrix((n, 1))]), top]).tocsr()
-    d, p = dijkstra(M, directed=True, indices=n, return_predecessors=True)
-    return d[:n], p[:n]
+class _Aug:
+    """The reversed link graph plus one virtual source row with an entry to every passage, built once per tree;
+    each Dijkstra only rewrites that row's data (one copy of the matrix, not two per call)."""
+    BIG = 1e30
+
+    def __init__(s, CT):
+        n = CT.shape[0]; s.n = n
+        top = sp.csr_matrix((np.full(n, s.BIG), (np.zeros(n, int), np.arange(n))), shape=(1, n + 1))
+        s.M = sp.vstack([sp.hstack([CT, sp.csr_matrix((n, 1))]), top]).tocsr()
+        s.top = slice(s.M.indptr[n], s.M.indptr[n + 1]); s.cols = s.M.indices[s.top]
+
+    def run(s, init):
+        v = init[s.cols]; s.M.data[s.top] = np.where(np.isfinite(v), np.maximum(v, 1e-12), s.BIG)
+        d, p = dijkstra(s.M, directed=True, indices=s.n, return_predecessors=True)
+        d = d[:s.n]; d[d >= s.BIG / 2] = np.inf
+        return d, p[:s.n]
 
 
 def tree(C, seeds, gold):
-    """Exact min-cost arborescence from any seed to all gold. Returns (cost, edges [(u, v, cost)]), oriented
-    root → leaf."""
-    n = C.shape[0]; CT = C.T.tocsr(); t = len(gold); F = 1 << t
+    """Exact min-cost Steiner arborescence from the contracted seed root to all gold: a virtual root r with 0-cost
+    links to every seed, so different gold may hang from different seeds (fixed 20 Nov after james's check: the
+    first version rooted everything at one seed). Returns (cost, edges [(u, v, cost)]) oriented root → leaf."""
+    n = C.shape[0]; aug = _Aug(C.T.tocsr()); t = len(gold); F = 1 << t
     dp = np.full((F, n), np.inf); pred = [None] * F; split = [None] * F
     for i, x in enumerate(gold):
         init = np.full(n, np.inf); init[x] = 0.0
-        dp[1 << i], pred[1 << i] = _from_vec(CT, init)
+        dp[1 << i], pred[1 << i] = aug.run(init)
     for S in range(1, F):
         if S & (S - 1) == 0: continue
         best = np.full(n, np.inf); arg = np.full(n, -1); A = (S - 1) & S
@@ -53,8 +63,17 @@ def tree(C, seeds, gold):
             if A < B:
                 v = dp[A] + dp[B]; m = v < best; best[m] = v[m]; arg[m] = A
             A = (A - 1) & S
-        dp[S], pred[S] = _from_vec(CT, best); split[S] = arg
-    full = F - 1; r = min(seeds, key=lambda s_: dp[full][s_]); cost = float(dp[full][r])
+        dp[S], pred[S] = aug.run(best); split[S] = arg
+    # the virtual root: a subtree at one seed, or a merge of root subtrees over a split of the gold
+    sd = list(seeds); rc = np.full(F, np.inf); rarg = [None] * F
+    for S in range(1, F):
+        j = int(np.argmin(dp[S][sd])); rc[S] = dp[S][sd[j]]; rarg[S] = ("seed", sd[j])
+        A = (S - 1) & S
+        while A:
+            B = S ^ A
+            if A < B and rc[A] + rc[B] < rc[S]: rc[S] = rc[A] + rc[B]; rarg[S] = ("split", A)
+            A = (A - 1) & S
+    full = F - 1; cost = float(rc[full])
     if not np.isfinite(cost): return cost, []
     edges = []
 
@@ -63,7 +82,12 @@ def tree(C, seeds, gold):
         while pred[S][u] != n and pred[S][u] >= 0:
             w = int(pred[S][u]); edges.append((u, w, float(C[u, w]))); u = w
         if S & (S - 1): A = int(split[S][u]); build(A, u); build(S ^ A, u)
-    build(full, r)
+
+    def broot(S):
+        k, x = rarg[S]
+        if k == "seed": build(S, x)
+        else: broot(x); broot(S ^ x)
+    broot(full)
     return cost, sorted(set(edges))
 
 
