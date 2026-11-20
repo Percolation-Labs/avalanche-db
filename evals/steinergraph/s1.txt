@@ -1,0 +1,33 @@
+== mq: 21100 passages, 77687 doors
+
+-- RW:2hop__121386_37168: gold 2 (0 not in graph, 2 already seeds, 0 cut off from the seeds)
+   nothing to connect
+
+-- RW:3hop1__103881_443779_52195: gold 3 (0 not in graph, 2 already seeds, 0 cut off from the seeds)
+   T*: 2 passages (1 beyond seeds), 1 edges; shortest-path tree 2 passages (gap 0)
+     S mq:17866d9115df51b8                      —[link]— G mq:276962cfbb42f582
+   LC θ(-1, -1, 0.15): coverage 0/1, focus 0/17 = 0.000 (ball ref 0.0004, ball 2342); order (depth, first step) []; departs at step 1; avalanche top5 gold 0/1, on T* 0/5
+   U θ(-1, 0, 0.15): coverage 0/1, focus 0/14 = 0.000 (ball ref 0.0004, ball 2342); order (depth, first step) []; departs at step 1; avalanche top5 gold 0/1, on T* 0/5
+   S4 T*-edge recall: k1 0/1 (prec 0.0000 of 136); k2 0/1 (prec 0.0000 of 255); k4 0/1 (prec 0.0000 of 424); k10 1/1 (prec 0.0016 of 617); rand×1 0/1; rand×2 0/1; rand×3 0/1; emerges at k = 9
+
+-- RW:4hop1__105401_17130_70784_61381: gold 4 (0 not in graph, 1 already seeds, 0 cut off from the seeds)
+   T*: 4 passages (3 beyond seeds), 3 edges; shortest-path tree 6 passages (gap 2)
+     S mq:243c393810fa6f28                      —[red sea]— G mq:5b56be54717d03f5
+     G mq:5b56be54717d03f5                      —[diverse]— G mq:7a7ee0dd25a47908
+     G mq:5b56be54717d03f5                      —[arabic]— G mq:ec91dd0e33450587
+   LC θ(-1, -1, 0.15): coverage 0/3, focus 0/17 = 0.000 (ball ref 0.0001, ball 21082); order (depth, first step) []; departs at step 1; avalanche top5 gold 0/3, on T* 0/5
+   U θ(-1, 0, 0.15): coverage 0/3, focus 0/13 = 0.000 (ball ref 0.0001, ball 21082); order (depth, first step) []; departs at step 1; avalanche top5 gold 0/3, on T* 0/5
+   S4 T*-edge recall: k1 0/3 (prec 0.0000 of 120); k2 0/3 (prec 0.0000 of 162); k4 0/3 (prec 0.0000 of 380); k10 0/3 (prec 0.0000 of 692); rand×1 0/3; rand×2 0/3; rand×3 0/3; emerges at k = None
+== cards: 48636 passages, 176242 doors
+
+-- card:REM-1001: gold 6 (0 not in graph, 0 already seeds, 0 cut off from the seeds)
+   T*: 7 passages (6 beyond seeds), 6 edges; shortest-path tree 7 passages (gap 0)
+     S board/cards/REM-1001.md#1                —[1001]— G commit/16d647ad64
+     S board/cards/REM-1001.md#1                —[1001]— G commit/4bdabc4da8
+     S board/cards/REM-1001.md#1                —[1001]— G commit/79f78cfcca
+     S board/cards/REM-1001.md#1                —[1001]— G commit/b186bc8fa9
+     S board/cards/REM-1001.md#1                —[1001]— G commit/be9e771658
+     G commit/73abc28a57                        —[link]— G commit/b186bc8fa9
+   LC θ(-1, -1.5, 0.15): coverage 0/6, focus 0/10 = 0.000 (ball ref 0.0124, ball 484); order (depth, first step) []; departs at step 1; avalanche top5 gold 0/6, on T* 0/5
+   U θ(-1, 0, 0.15): coverage 0/6, focus 0/16 = 0.000 (ball ref 0.0124, ball 484); order (depth, first step) []; departs at step 1; avalanche top5 gold 0/6, on T* 0/5
+   S4 T*-edge recall: k1 0/6 (prec 0.0000 of 28); k2 0/6 (prec 0.0000 of 28); k4 0/6 (prec 0.0000 of 85); k10 4/6 (prec 0.0161 of 249); rand×1 0/6; rand×2 0/6; rand×3 0/6; emerges at k = None

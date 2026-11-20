@@ -1,0 +1,6 @@
+== mq: 21100 passages, 11152074 directed links
+   graph-only: 88 trees; cost mean 9.38 nats; passages beyond seeds mean 2.05, non-gold mean 0.30; dearest hop mean 5.19; coverage mean 0.171 (any 24/88); focus mean 0.017
+   walk-as-used: 88 trees; cost mean 8.71 nats; passages beyond seeds mean 2.09, non-gold mean 0.34; dearest hop mean 5.05; coverage mean 0.182 (any 25/88); focus mean 0.027
+== cards: 48636 passages, 15825354 directed links
+   graph-only: 85 trees; cost mean 6.88 nats; passages beyond seeds mean 2.04, non-gold mean 0.14; dearest hop mean 3.90; coverage mean 0.362 (any 41/85); focus mean 0.039
+   walk-as-used: 85 trees; cost mean 7.48 nats; passages beyond seeds mean 2.09, non-gold mean 0.20; dearest hop mean 4.48; coverage mean 0.419 (any 48/85); focus mean 0.081

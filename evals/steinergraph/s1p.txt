@@ -1,0 +1,47 @@
+== mq: 21100 passages, 11152074 directed links
+
+-- RW:2hop__121386_37168: nothing beyond the seeds
+
+-- RW:3hop1__103881_443779_52195: gold beyond seeds 1
+   graph-only T*: 1 passages beyond seeds (0 non-gold), cost 4.05 nats (p = 1.73e-02), hops [4.05], solved 0.1s
+     S mq:17866d9115df51b8                    → G mq:276962cfbb42f582                    4.05
+   walk (-1, 0, 0.15): coverage 0/1, focus 0/20, departs at step 1, order []
+   walk-as-used T*: 1 passages beyond seeds (0 non-gold), cost 4.60 nats (p = 1.01e-02), hops [4.6], solved 0.1s
+     S mq:17866d9115df51b8                    → G mq:276962cfbb42f582                    4.60
+   walk (-1, -1, 0.15): coverage 0/1, focus 0/17, departs at step 1, order []
+
+-- RW:4hop1__105401_17130_70784_61381: gold beyond seeds 3
+   graph-only T*: 5 passages beyond seeds (2 non-gold), cost 17.37 nats (p = 2.85e-08), hops [1.34, 2.52, 3.69, 4.69, 5.14], solved 0.2s
+     S mq:243c393810fa6f28                    → · mq:e0f52e2f450eb72e                    2.52
+     G mq:5b56be54717d03f5                    → G mq:7a7ee0dd25a47908                    5.14
+     S mq:6421666ff3e70d66                    → · mq:9691cf1b00968b04                    4.69
+     · mq:9691cf1b00968b04                    → G mq:ec91dd0e33450587                    1.34
+     · mq:e0f52e2f450eb72e                    → G mq:5b56be54717d03f5                    3.69
+   walk (-1, 0, 0.15): coverage 2/5, focus 2/24, departs at step 4, order [(1, 'mq:e0f52e2f450eb72e'), (2, 'mq:ec91dd0e33450587')]
+   walk-as-used T*: 5 passages beyond seeds (2 non-gold), cost 17.07 nats (p = 3.85e-08), hops [1.44, 3.25, 3.32, 4.06, 5.0], solved 0.2s
+     S mq:243c393810fa6f28                    → · mq:e0f52e2f450eb72e                    1.44
+     G mq:5b56be54717d03f5                    → G mq:7a7ee0dd25a47908                    3.25
+     S mq:6421666ff3e70d66                    → · mq:9691cf1b00968b04                    3.32
+     · mq:9691cf1b00968b04                    → G mq:ec91dd0e33450587                    5.00
+     · mq:e0f52e2f450eb72e                    → G mq:5b56be54717d03f5                    4.06
+   walk (-1, -1, 0.15): coverage 1/5, focus 1/17, departs at step 2, order [(1, 'mq:e0f52e2f450eb72e')]
+== cards: 48636 passages, 15825354 directed links
+
+-- card:REM-1001: gold beyond seeds 6
+   graph-only T*: 6 passages beyond seeds (0 non-gold), cost 18.02 nats (p = 1.49e-08), hops [2.23, 2.26, 2.53, 2.86, 3.15, 4.97], solved 2.6s
+     G commit/16d647ad64                      → G commit/4bdabc4da8                      3.15
+     G commit/4bdabc4da8                      → G commit/be9e771658                      2.86
+     G commit/73abc28a57                      → G commit/16d647ad64                      2.26
+     G commit/b186bc8fa9                      → G commit/73abc28a57                      2.23
+     G commit/b186bc8fa9                      → G commit/79f78cfcca                      2.53
+     S commit/ca1e970129                      → G commit/b186bc8fa9                      4.97
+   walk (-1, 0, 0.15): coverage 0/6, focus 0/19, departs at step 1, order []
+   walk-as-used T*: 7 passages beyond seeds (1 non-gold), cost 20.52 nats (p = 1.23e-09), hops [1.82, 2.15, 2.45, 2.88, 3.09, 3.93, 4.2], solved 2.8s
+     · commit/59ab337a4a                      → G commit/4bdabc4da8                      2.88
+     · commit/59ab337a4a                      → G commit/79f78cfcca                      3.93
+     · commit/59ab337a4a                      → G commit/be9e771658                      3.09
+     G commit/73abc28a57                      → G commit/16d647ad64                      1.82
+     G commit/79f78cfcca                      → G commit/b186bc8fa9                      2.15
+     G commit/b186bc8fa9                      → G commit/73abc28a57                      2.45
+     S commit/ca1e970129                      → · commit/59ab337a4a                      4.20
+   walk (-1, -1.5, 0.15): coverage 0/7, focus 0/10, departs at step 1, order []
