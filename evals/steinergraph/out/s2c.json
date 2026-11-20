@@ -1,0 +1,9391 @@
+{
+ "mq": {
+  "cases": [
+   {
+    "qid": "RW:2hop__107690_124896",
+    "key": "francis bacon",
+    "ctrl": "keeper",
+    "v": "mq:091b7ab3d2b75562",
+    "u": "mq:0f96a5643b1157f1",
+    "built": {
+     "hop": 0,
+     "uni": 3.8698,
+     "lc": 6.2683,
+     "rec": 0.0,
+     "rank": 526
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 4.3486,
+     "lc": 6.7032,
+     "rec": 0.0,
+     "rank": 830
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 3.8698,
+     "lc": 6.2683,
+     "rec": 0.0,
+     "rank": 526
+    },
+    "control": {
+     "hop": 0,
+     "uni": 3.8698,
+     "lc": 6.2171,
+     "rec": 0.0,
+     "rank": 526
+    }
+   },
+   {
+    "qid": "RW:2hop__135822_46621",
+    "key": "planets",
+    "ctrl": "revolves",
+    "v": "mq:df5d44989c280861",
+    "u": "mq:627cdd6d4a3e734f",
+    "built": {
+     "hop": 1,
+     "uni": 15.476,
+     "lc": 11.2167,
+     "rec": 0.0,
+     "rank": 38
+    },
+    "cut": {
+     "hop": 1,
+     "uni": 16.0796,
+     "lc": 11.7688,
+     "rec": 0.0,
+     "rank": 42
+    },
+    "restored": {
+     "hop": 1,
+     "uni": 15.476,
+     "lc": 11.2167,
+     "rec": 0.0,
+     "rank": 38
+    },
+    "control": {
+     "hop": 1,
+     "uni": 15.476,
+     "lc": 11.176,
+     "rec": 0.0,
+     "rank": 38
+    }
+   },
+   {
+    "qid": "RW:2hop__136179_13529",
+    "key": "diego maradona",
+    "ctrl": "napoli",
+    "v": "mq:1888b48951daf682",
+    "u": "mq:5e6f9f0e4b66db62",
+    "built": {
+     "hop": 0,
+     "uni": 3.3312,
+     "lc": 2.6693,
+     "rec": 0.0,
+     "rank": 11
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 4.2052,
+     "lc": 3.5021,
+     "rec": 0.0,
+     "rank": 17
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 3.3312,
+     "lc": 2.6693,
+     "rec": 0.0,
+     "rank": 11
+    },
+    "control": {
+     "hop": 0,
+     "uni": 3.3312,
+     "lc": 2.6469,
+     "rec": 0.0,
+     "rank": 11
+    }
+   },
+   {
+    "qid": "RW:2hop__161151_42352",
+    "key": "american colonies",
+    "ctrl": "1763",
+    "v": "mq:8174715888879957",
+    "u": "mq:5146099b9b96bffe",
+    "built": {
+     "hop": 0,
+     "uni": 5.9692,
+     "lc": 4.5254,
+     "rec": 0.0,
+     "rank": 10
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 7.0458,
+     "lc": 5.0931,
+     "rec": 0.0,
+     "rank": 11
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 5.9692,
+     "lc": 4.5254,
+     "rec": 0.0,
+     "rank": 10
+    },
+    "control": {
+     "hop": 0,
+     "uni": 5.9692,
+     "lc": 4.5021,
+     "rec": 0.0,
+     "rank": 10
+    }
+   },
+   {
+    "qid": "RW:2hop__167577_31122",
+    "key": "george berkeley",
+    "ctrl": "materialism",
+    "v": "mq:9495f75b62cdff8b",
+    "u": "mq:949a0621ae3aa0d0",
+    "built": {
+     "hop": 0,
+     "uni": 3.7068,
+     "lc": 3.5461,
+     "rec": 0.0,
+     "rank": 19
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 4.0005,
+     "lc": 3.8198,
+     "rec": 0.0,
+     "rank": 34
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 3.7068,
+     "lc": 3.5461,
+     "rec": 0.0,
+     "rank": 19
+    },
+    "control": {
+     "hop": 0,
+     "uni": 3.7068,
+     "lc": 3.5162,
+     "rec": 0.0,
+     "rank": 20
+    }
+   },
+   {
+    "qid": "RW:2hop__175175_347233",
+    "key": "fort mitchell",
+    "ctrl": "kenton",
+    "v": "mq:1c76e44bc0c37362",
+    "u": "mq:5dad60a4f8846b32",
+    "built": {
+     "hop": 0,
+     "uni": 2.1256,
+     "lc": 1.4761,
+     "rec": 0.0,
+     "rank": 7
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 2.7439,
+     "lc": 1.9339,
+     "rec": 0.0,
+     "rank": 10
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 2.1256,
+     "lc": 1.4761,
+     "rec": 0.0,
+     "rank": 7
+    },
+    "control": {
+     "hop": 0,
+     "uni": 2.1256,
+     "lc": 1.3865,
+     "rec": 0.0,
+     "rank": 7
+    }
+   },
+   {
+    "qid": "RW:2hop__20059_236755",
+    "key": "richard stallman",
+    "ctrl": "gnu project",
+    "v": "mq:a71dceb9140c5033",
+    "u": "mq:63dd4c096c909b42",
+    "built": {
+     "hop": 0,
+     "uni": 4.5787,
+     "lc": 6.6504,
+     "rec": 0.0,
+     "rank": 1599
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 5.2019,
+     "lc": 7.2307,
+     "rec": 0.0,
+     "rank": 1791
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 4.5787,
+     "lc": 6.6504,
+     "rec": 0.0,
+     "rank": 1599
+    },
+    "control": {
+     "hop": 0,
+     "uni": 4.5787,
+     "lc": 6.606,
+     "rec": 0.0,
+     "rank": 1619
+    }
+   },
+   {
+    "qid": "RW:2hop__20256_71302",
+    "key": "pacino",
+    "ctrl": "1974 american",
+    "v": "mq:62a61bd58554ab05",
+    "u": "mq:8a64ae2971f7b244",
+    "built": {
+     "hop": 0,
+     "uni": 8.3594,
+     "lc": 6.5931,
+     "rec": 0.5,
+     "rank": 4
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 8.7589,
+     "lc": 6.9459,
+     "rec": 0.5,
+     "rank": 4
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 8.3594,
+     "lc": 6.5931,
+     "rec": 0.5,
+     "rank": 4
+    },
+    "control": {
+     "hop": 0,
+     "uni": 8.3594,
+     "lc": 6.5673,
+     "rec": 0.5,
+     "rank": 4
+    }
+   },
+   {
+    "qid": "RW:2hop__216535_370666",
+    "key": "nankai",
+    "ctrl": "calligrapher",
+    "v": "mq:3e8cabccb2ce7439",
+    "u": "mq:16706719d2c18397",
+    "built": {
+     "hop": 0,
+     "uni": 1.9196,
+     "lc": 3.706,
+     "rec": 0.0,
+     "rank": 10
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 2.4567,
+     "lc": 4.1693,
+     "rec": 0.0,
+     "rank": 29
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 1.9196,
+     "lc": 3.706,
+     "rec": 0.0,
+     "rank": 10
+    },
+    "control": {
+     "hop": 0,
+     "uni": 1.9196,
+     "lc": 3.576,
+     "rec": 0.0,
+     "rank": 10
+    }
+   },
+   {
+    "qid": "RW:2hop__253612_110882",
+    "key": "cottriall",
+    "ctrl": "austrian singles",
+    "v": "mq:385b29f588028e7f",
+    "u": "mq:6f28e542b4593f38",
+    "built": {
+     "hop": 0,
+     "uni": 7.9313,
+     "lc": 6.0618,
+     "rec": 0.0,
+     "rank": 195
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 8.4199,
+     "lc": 6.4113,
+     "rec": 0.0,
+     "rank": 201
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 7.9313,
+     "lc": 6.0618,
+     "rec": 0.0,
+     "rank": 195
+    },
+    "control": {
+     "hop": 0,
+     "uni": 7.9313,
+     "lc": 6.0375,
+     "rec": 0.0,
+     "rank": 198
+    }
+   },
+   {
+    "qid": "RW:2hop__307218_161450",
+    "key": "golest\u0101n",
+    "ctrl": "country south",
+    "v": "mq:b95bbf15db052c69",
+    "u": "mq:752ceed4181522c2",
+    "built": {
+     "hop": 0,
+     "uni": 2.9337,
+     "lc": 2.7976,
+     "rec": 0.0,
+     "rank": 9
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 3.746,
+     "lc": 3.5208,
+     "rec": 0.0,
+     "rank": 14
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 2.9337,
+     "lc": 2.7976,
+     "rec": 0.0,
+     "rank": 9
+    },
+    "control": {
+     "hop": 0,
+     "uni": 2.9337,
+     "lc": 2.7161,
+     "rec": 0.0,
+     "rank": 9
+    }
+   },
+   {
+    "qid": "RW:2hop__30741_85990",
+    "key": "republican party",
+    "ctrl": "herbert",
+    "v": "mq:2d9e3cac58a7a83f",
+    "u": "mq:5c0c5445c818ccdf",
+    "built": {
+     "hop": 0,
+     "uni": 14.6721,
+     "lc": 11.2279,
+     "rec": 0.0,
+     "rank": 94
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 15.7321,
+     "lc": 12.2653,
+     "rec": 0.0,
+     "rank": 102
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 14.6721,
+     "lc": 11.2279,
+     "rec": 0.0,
+     "rank": 94
+    },
+    "control": {
+     "hop": 0,
+     "uni": 14.6721,
+     "lc": 11.205,
+     "rec": 0.0,
+     "rank": 98
+    }
+   },
+   {
+    "qid": "RW:2hop__30905_213732",
+    "key": "john mccain",
+    "ctrl": "2008 united",
+    "v": "mq:6da42ec7172f8c06",
+    "u": "mq:e458d4e7eaf69497",
+    "built": {
+     "hop": 0,
+     "uni": 4.7791,
+     "lc": 6.1453,
+     "rec": 0.0,
+     "rank": 1415
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 5.4723,
+     "lc": 6.1496,
+     "rec": 0.0,
+     "rank": 1588
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 4.7791,
+     "lc": 6.1453,
+     "rec": 0.0,
+     "rank": 1415
+    },
+    "control": {
+     "hop": 0,
+     "uni": 4.7791,
+     "lc": 6.0791,
+     "rec": 0.0,
+     "rank": 1420
+    }
+   },
+   {
+    "qid": "RW:2hop__31124_31093",
+    "key": "george berkeley",
+    "ctrl": "1753",
+    "v": "mq:949a0621ae3aa0d0",
+    "u": "mq:1e47cdcdec0ecc54",
+    "built": {
+     "hop": 0,
+     "uni": 4.0849,
+     "lc": 2.1787,
+     "rec": 1.0,
+     "rank": 5
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 4.3589,
+     "lc": 2.4223,
+     "rec": 0.0,
+     "rank": 7
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 4.0849,
+     "lc": 2.1787,
+     "rec": 1.0,
+     "rank": 5
+    },
+    "control": {
+     "hop": 0,
+     "uni": 4.0849,
+     "lc": 2.1569,
+     "rec": 1.0,
+     "rank": 5
+    }
+   },
+   {
+    "qid": "RW:2hop__32887_235620",
+    "key": "chinese dynasty",
+    "ctrl": "formally known",
+    "v": "mq:84a3fa9e89a388e7",
+    "u": "mq:cb781d745f82a722",
+    "built": {
+     "hop": 0,
+     "uni": 4.0298,
+     "lc": 3.1458,
+     "rec": 1.0,
+     "rank": 4
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 5.0705,
+     "lc": 4.1265,
+     "rec": 0.0,
+     "rank": 6
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 4.0298,
+     "lc": 3.1458,
+     "rec": 1.0,
+     "rank": 4
+    },
+    "control": {
+     "hop": 0,
+     "uni": 4.0298,
+     "lc": 3.1155,
+     "rec": 1.0,
+     "rank": 4
+    }
+   },
+   {
+    "qid": "RW:2hop__32887_578772",
+    "key": "tang",
+    "ctrl": "vietnamese",
+    "v": "mq:0066118456459904",
+    "u": "mq:21d89cb921b6f6f6",
+    "built": {
+     "hop": 0,
+     "uni": 6.7464,
+     "lc": 8.7993,
+     "rec": 0.0,
+     "rank": 1421
+    },
+    "cut": {
+     "hop": 1,
+     "uni": 9.5046,
+     "lc": 10.2338,
+     "rec": 0.0,
+     "rank": 1994
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 6.7464,
+     "lc": 8.7993,
+     "rec": 0.0,
+     "rank": 1421
+    },
+    "control": {
+     "hop": 0,
+     "uni": 6.7464,
+     "lc": 8.7528,
+     "rec": 0.0,
+     "rank": 1445
+    }
+   },
+   {
+    "qid": "RW:2hop__34734_92852",
+    "key": "axis",
+    "ctrl": "pearl",
+    "v": "mq:5032995580fa9bef",
+    "u": "mq:3b20a598b990ea54",
+    "built": {
+     "hop": 0,
+     "uni": 13.7207,
+     "lc": 15.459,
+     "rec": 0.0,
+     "rank": 1725
+    },
+    "cut": {
+     "hop": 1,
+     "uni": 16.3343,
+     "lc": 16.5636,
+     "rec": 0.0,
+     "rank": 2198
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 13.7207,
+     "lc": 15.459,
+     "rec": 0.0,
+     "rank": 1725
+    },
+    "control": {
+     "hop": 0,
+     "uni": 13.7207,
+     "lc": 15.4239,
+     "rec": 0.0,
+     "rank": 1732
+    }
+   },
+   {
+    "qid": "RW:2hop__35137_22940",
+    "key": "medical textbook",
+    "ctrl": "abulcasis",
+    "v": "mq:75fd4c198e0411f2",
+    "u": "mq:42b5402a41ab74cd",
+    "built": {
+     "hop": 0,
+     "uni": 7.6824,
+     "lc": 5.3081,
+     "rec": 0.5,
+     "rank": 1
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 7.8516,
+     "lc": 5.2527,
+     "rec": 0.5,
+     "rank": 1
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 7.6824,
+     "lc": 5.3081,
+     "rec": 0.5,
+     "rank": 1
+    },
+    "control": {
+     "hop": 0,
+     "uni": 7.6617,
+     "lc": 5.2538,
+     "rec": 0.5,
+     "rank": 1
+    }
+   },
+   {
+    "qid": "RW:2hop__35209_17335",
+    "key": "buddhism",
+    "ctrl": "exploration",
+    "v": "mq:8bcc834bb8dfc8b1",
+    "u": "mq:7d9ccbfa942508d9",
+    "built": {
+     "hop": 1,
+     "uni": 16.1791,
+     "lc": 14.5438,
+     "rec": 0.0,
+     "rank": 282
+    },
+    "cut": {
+     "hop": 1,
+     "uni": 16.7764,
+     "lc": 14.5264,
+     "rec": 0.0,
+     "rank": 315
+    },
+    "restored": {
+     "hop": 1,
+     "uni": 16.1791,
+     "lc": 14.5438,
+     "rec": 0.0,
+     "rank": 282
+    },
+    "control": {
+     "hop": 1,
+     "uni": 16.1614,
+     "lc": 14.5264,
+     "rec": 0.0,
+     "rank": 287
+    }
+   },
+   {
+    "qid": "RW:2hop__41158_35124",
+    "key": "1037",
+    "ctrl": "european universities",
+    "v": "mq:42b5402a41ab74cd",
+    "u": "mq:77c6915a4b67f01f",
+    "built": {
+     "hop": 0,
+     "uni": 2.6251,
+     "lc": 2.1583,
+     "rec": 1.0,
+     "rank": 1
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 2.8902,
+     "lc": 2.3894,
+     "rec": 1.0,
+     "rank": 3
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 2.6251,
+     "lc": 2.1583,
+     "rec": 1.0,
+     "rank": 1
+    },
+    "control": {
+     "hop": 0,
+     "uni": 2.6251,
+     "lc": 2.1359,
+     "rec": 1.0,
+     "rank": 1
+    }
+   },
+   {
+    "qid": "RW:2hop__42747_83837",
+    "key": "artist luke",
+    "ctrl": "sixth studio",
+    "v": "mq:4602f74f005e746e",
+    "u": "mq:4d09ad1f6a1c6b68",
+    "built": {
+     "hop": 0,
+     "uni": 3.9691,
+     "lc": 2.3472,
+     "rec": 0.0,
+     "rank": 39
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 4.3128,
+     "lc": 2.5747,
+     "rec": 0.0,
+     "rank": 50
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 3.9691,
+     "lc": 2.3472,
+     "rec": 0.0,
+     "rank": 39
+    },
+    "control": {
+     "hop": 0,
+     "uni": 3.9691,
+     "lc": 2.2614,
+     "rec": 0.0,
+     "rank": 39
+    }
+   },
+   {
+    "qid": "RW:2hop__442516_595885",
+    "key": "mara river",
+    "ctrl": "african development",
+    "v": "mq:c7d9b14df59dd4f9",
+    "u": "mq:b665527def79407a",
+    "built": {
+     "hop": 0,
+     "uni": 2.654,
+     "lc": 1.4652,
+     "rec": 1.0,
+     "rank": 1
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 3.1914,
+     "lc": 2.1492,
+     "rec": 0.0,
+     "rank": 8
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 2.654,
+     "lc": 1.4652,
+     "rec": 1.0,
+     "rank": 1
+    },
+    "control": {
+     "hop": 0,
+     "uni": 2.654,
+     "lc": 1.4239,
+     "rec": 1.0,
+     "rank": 1
+    }
+   },
+   {
+    "qid": "RW:2hop__44259_747874",
+    "key": "andy murray",
+    "ctrl": "basel",
+    "v": "mq:5765ea6dfe69e01f",
+    "u": "mq:233816054989f8b1",
+    "built": {
+     "hop": 0,
+     "uni": 5.3291,
+     "lc": 4.9234,
+     "rec": 0.0,
+     "rank": 37
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 6.5971,
+     "lc": 6.1437,
+     "rec": 0.0,
+     "rank": 43
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 5.3291,
+     "lc": 4.9234,
+     "rec": 0.0,
+     "rank": 37
+    },
+    "control": {
+     "hop": 0,
+     "uni": 5.3291,
+     "lc": 4.8772,
+     "rec": 0.0,
+     "rank": 37
+    }
+   },
+   {
+    "qid": "RW:2hop__45126_807969",
+    "key": "salah",
+    "ctrl": "stuttgart",
+    "v": "mq:5b7355b6c8fd92c5",
+    "u": "mq:0239153eb8eef343",
+    "built": {
+     "hop": 0,
+     "uni": 12.7568,
+     "lc": 10.8744,
+     "rec": 0.0,
+     "rank": 1747
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 14.3074,
+     "lc": 12.3639,
+     "rec": 0.0,
+     "rank": 1977
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 12.7568,
+     "lc": 10.8744,
+     "rec": 0.0,
+     "rank": 1747
+    },
+    "control": {
+     "hop": 0,
+     "uni": 12.7568,
+     "lc": 10.8177,
+     "rec": 0.0,
+     "rank": 1799
+    }
+   },
+   {
+    "qid": "RW:2hop__451574_120065",
+    "key": "merseburg",
+    "ctrl": "1657",
+    "v": "mq:6eb94525b4c00294",
+    "u": "mq:6d2c1c816972c37b",
+    "built": {
+     "hop": 0,
+     "uni": 4.382,
+     "lc": 6.4202,
+     "rec": 0.0,
+     "rank": 452
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 6.4708,
+     "lc": 7.809,
+     "rec": 0.0,
+     "rank": 3027
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 4.382,
+     "lc": 6.4202,
+     "rec": 0.0,
+     "rank": 452
+    },
+    "control": {
+     "hop": 0,
+     "uni": 4.382,
+     "lc": 6.3631,
+     "rec": 0.0,
+     "rank": 456
+    }
+   },
+   {
+    "qid": "RW:2hop__458672_20057",
+    "key": "richard stallman",
+    "ctrl": "confusing",
+    "v": "mq:63dd4c096c909b42",
+    "u": "mq:cbc28cd620100b4f",
+    "built": {
+     "hop": 0,
+     "uni": 3.9647,
+     "lc": 3.9143,
+     "rec": 0.0,
+     "rank": 11
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 4.4371,
+     "lc": 4.3697,
+     "rec": 0.0,
+     "rank": 18
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 3.9647,
+     "lc": 3.9143,
+     "rec": 0.0,
+     "rank": 11
+    },
+    "control": {
+     "hop": 0,
+     "uni": 3.9647,
+     "lc": 3.8912,
+     "rec": 0.0,
+     "rank": 11
+    }
+   },
+   {
+    "qid": "RW:2hop__46213_494136",
+    "key": "dennis quaid",
+    "ctrl": "blythe danner",
+    "v": "mq:968f26fe2a6cff80",
+    "u": "mq:25d14061963084ea",
+    "built": {
+     "hop": 0,
+     "uni": 4.7044,
+     "lc": 5.1764,
+     "rec": 0.0,
+     "rank": 93
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 5.5333,
+     "lc": 5.9699,
+     "rec": 0.0,
+     "rank": 247
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 4.7044,
+     "lc": 5.1764,
+     "rec": 0.0,
+     "rank": 93
+    },
+    "control": {
+     "hop": 0,
+     "uni": 4.7044,
+     "lc": 5.1389,
+     "rec": 0.0,
+     "rank": 94
+    }
+   },
+   {
+    "qid": "RW:2hop__49887_573255",
+    "key": "first king",
+    "ctrl": "prayed",
+    "v": "mq:be74f2af7104cbc2",
+    "u": "mq:8d8a8974d74e7385",
+    "built": {
+     "hop": 0,
+     "uni": 11.7058,
+     "lc": 13.1478,
+     "rec": 0.0,
+     "rank": 16
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 12.1026,
+     "lc": 13.1028,
+     "rec": 0.0,
+     "rank": 28
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 11.7058,
+     "lc": 13.1478,
+     "rec": 0.0,
+     "rank": 16
+    },
+    "control": {
+     "hop": 0,
+     "uni": 11.675,
+     "lc": 13.1062,
+     "rec": 0.0,
+     "rank": 18
+    }
+   },
+   {
+    "qid": "RW:2hop__560534_91104",
+    "key": "earth observation",
+    "ctrl": "aerospace center",
+    "v": "mq:846c29bd3f5ff7f6",
+    "u": "mq:e0b7c249ae6d464a",
+    "built": {
+     "hop": 0,
+     "uni": 2.2991,
+     "lc": 0.8332,
+     "rec": 1.0,
+     "rank": 5
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 2.8225,
+     "lc": 1.1551,
+     "rec": 0.0,
+     "rank": 9
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 2.2991,
+     "lc": 0.8332,
+     "rec": 1.0,
+     "rank": 5
+    },
+    "control": {
+     "hop": 0,
+     "uni": 2.2991,
+     "lc": 0.803,
+     "rec": 1.0,
+     "rank": 5
+    }
+   },
+   {
+    "qid": "RW:2hop__56307_604644",
+    "key": "band smash",
+    "ctrl": "summer girl",
+    "v": "mq:d97aff0fd1842bdb",
+    "u": "mq:5fe5bc63d3f6639e",
+    "built": {
+     "hop": 0,
+     "uni": 9.3947,
+     "lc": 12.6463,
+     "rec": 0.0,
+     "rank": 2043
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 9.9635,
+     "lc": 13.1562,
+     "rec": 0.0,
+     "rank": 2075
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 9.3947,
+     "lc": 12.6463,
+     "rec": 0.0,
+     "rank": 2043
+    },
+    "control": {
+     "hop": 0,
+     "uni": 9.3947,
+     "lc": 12.5879,
+     "rec": 0.0,
+     "rank": 2057
+    }
+   },
+   {
+    "qid": "RW:2hop__575188_342798",
+    "key": "shah qajar",
+    "ctrl": "ahmad shah",
+    "v": "mq:a7de60bc1e4cbe5e",
+    "u": "mq:5cbb7d19a6a6bbf7",
+    "built": {
+     "hop": 0,
+     "uni": 2.1988,
+     "lc": 5.4103,
+     "rec": 0.0,
+     "rank": 25
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 2.5561,
+     "lc": 5.7663,
+     "rec": 0.0,
+     "rank": 28
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 2.1988,
+     "lc": 5.4103,
+     "rec": 0.0,
+     "rank": 25
+    },
+    "control": {
+     "hop": 0,
+     "uni": 2.1988,
+     "lc": 5.3593,
+     "rec": 0.0,
+     "rank": 25
+    }
+   },
+   {
+    "qid": "RW:2hop__576118_25719",
+    "key": "vandals",
+    "ctrl": "mint",
+    "v": "mq:40c5b23cb28b69bf",
+    "u": "mq:73072aa9a06d1989",
+    "built": {
+     "hop": 0,
+     "uni": 12.025,
+     "lc": 9.3054,
+     "rec": 0.0,
+     "rank": 24
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 12.2155,
+     "lc": 9.7539,
+     "rec": 0.0,
+     "rank": 26
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 12.025,
+     "lc": 9.3054,
+     "rec": 0.0,
+     "rank": 24
+    },
+    "control": {
+     "hop": 0,
+     "uni": 11.9991,
+     "lc": 9.2482,
+     "rec": 0.0,
+     "rank": 24
+    }
+   },
+   {
+    "qid": "RW:2hop__57638_72467",
+    "key": "kevin durant",
+    "ctrl": "former nba",
+    "v": "mq:559b4fd3532c01b7",
+    "u": "mq:a05dbc1e48550ad8",
+    "built": {
+     "hop": 0,
+     "uni": 8.0721,
+     "lc": 7.3331,
+     "rec": 0.0,
+     "rank": 32
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 8.6933,
+     "lc": 7.997,
+     "rec": 0.0,
+     "rank": 42
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 8.0721,
+     "lc": 7.3331,
+     "rec": 0.0,
+     "rank": 32
+    },
+    "control": {
+     "hop": 0,
+     "uni": 8.0721,
+     "lc": 7.3121,
+     "rec": 0.0,
+     "rank": 33
+    }
+   },
+   {
+    "qid": "RW:2hop__59048_827343",
+    "key": "john payne",
+    "ctrl": "insists",
+    "v": "mq:45d5c9de8b30febf",
+    "u": "mq:12e72349b13cf02b",
+    "built": {
+     "hop": 0,
+     "uni": 8.6864,
+     "lc": 5.939,
+     "rec": 0.5,
+     "rank": 4
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 9.2739,
+     "lc": 6.3892,
+     "rec": 0.0,
+     "rank": 6
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 8.6864,
+     "lc": 5.939,
+     "rec": 0.5,
+     "rank": 4
+    },
+    "control": {
+     "hop": 0,
+     "uni": 8.6486,
+     "lc": 5.9036,
+     "rec": 0.5,
+     "rank": 4
+    }
+   },
+   {
+    "qid": "RW:2hop__611538_152907",
+    "key": "cardinale",
+    "ctrl": "emigrants",
+    "v": "mq:79f2de780efcbc38",
+    "u": "mq:ab6711e1ac876561",
+    "built": {
+     "hop": 0,
+     "uni": 3.0679,
+     "lc": 5.2127,
+     "rec": 0.0,
+     "rank": 301
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 3.3903,
+     "lc": 5.5092,
+     "rec": 0.0,
+     "rank": 533
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 3.0679,
+     "lc": 5.2127,
+     "rec": 0.0,
+     "rank": 301
+    },
+    "control": {
+     "hop": 0,
+     "uni": 3.0679,
+     "lc": 5.1847,
+     "rec": 0.0,
+     "rank": 301
+    }
+   },
+   {
+    "qid": "RW:2hop__613959_135844",
+    "key": "tolyatti",
+    "ctrl": "completely rebuilt",
+    "v": "mq:11b5bff502bdc5bc",
+    "u": "mq:8cfb13e428ecce0a",
+    "built": {
+     "hop": 0,
+     "uni": 3.573,
+     "lc": 1.7301,
+     "rec": 0.0,
+     "rank": 7
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 4.5539,
+     "lc": 2.5873,
+     "rec": 0.0,
+     "rank": 32
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 3.573,
+     "lc": 1.7301,
+     "rec": 0.0,
+     "rank": 7
+    },
+    "control": {
+     "hop": 0,
+     "uni": 3.573,
+     "lc": 1.6647,
+     "rec": 0.0,
+     "rank": 7
+    }
+   },
+   {
+    "qid": "RW:2hop__632234_122868",
+    "key": "berton",
+    "ctrl": "klondike",
+    "v": "mq:b754b6dfb1e211b9",
+    "u": "mq:789de82a8f9b111b",
+    "built": {
+     "hop": 0,
+     "uni": 2.5479,
+     "lc": 1.8155,
+     "rec": 1.0,
+     "rank": 5
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 2.9449,
+     "lc": 2.1514,
+     "rec": 0.0,
+     "rank": 9
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 2.5479,
+     "lc": 1.8155,
+     "rec": 1.0,
+     "rank": 5
+    },
+    "control": {
+     "hop": 0,
+     "uni": 2.5479,
+     "lc": 1.765,
+     "rec": 1.0,
+     "rank": 5
+    }
+   },
+   {
+    "qid": "RW:2hop__66843_494136",
+    "key": "dennis quaid",
+    "ctrl": "blythe danner",
+    "v": "mq:968f26fe2a6cff80",
+    "u": "mq:bbb8a8559207e41b",
+    "built": {
+     "hop": 0,
+     "uni": 4.1085,
+     "lc": 6.6735,
+     "rec": 0.0,
+     "rank": 981
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 4.9373,
+     "lc": 7.4646,
+     "rec": 0.0,
+     "rank": 1506
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 4.1085,
+     "lc": 6.6735,
+     "rec": 0.0,
+     "rank": 981
+    },
+    "control": {
+     "hop": 0,
+     "uni": 4.1085,
+     "lc": 6.6358,
+     "rec": 0.0,
+     "rank": 983
+    }
+   },
+   {
+    "qid": "RW:2hop__673655_316668",
+    "key": "barretto",
+    "ctrl": "1963 album",
+    "v": "mq:99d42e87d787e189",
+    "u": "mq:353b5ff0fcf9b76e",
+    "built": {
+     "hop": 0,
+     "uni": 1.9459,
+     "lc": 4.3726,
+     "rec": 0.0,
+     "rank": 74
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 2.5649,
+     "lc": 5.0336,
+     "rec": 0.0,
+     "rank": 211
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 1.9459,
+     "lc": 4.3726,
+     "rec": 0.0,
+     "rank": 74
+    },
+    "control": {
+     "hop": 0,
+     "uni": 1.9459,
+     "lc": 4.3469,
+     "rec": 0.0,
+     "rank": 74
+    }
+   },
+   {
+    "qid": "RW:2hop__6736_6733",
+    "key": "central catalan",
+    "ctrl": "alguerese",
+    "v": "mq:b35a84959116624b",
+    "u": "mq:ad6d127dfd12696a",
+    "built": {
+     "hop": 0,
+     "uni": 7.3403,
+     "lc": 7.3683,
+     "rec": 0.0,
+     "rank": 1813
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 8.1361,
+     "lc": 8.1034,
+     "rec": 0.0,
+     "rank": 1978
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 7.3403,
+     "lc": 7.3683,
+     "rec": 0.0,
+     "rank": 1813
+    },
+    "control": {
+     "hop": 0,
+     "uni": 7.3403,
+     "lc": 7.3081,
+     "rec": 0.0,
+     "rank": 1817
+    }
+   },
+   {
+    "qid": "RW:2hop__6827_55848",
+    "key": "holdings",
+    "ctrl": "trust",
+    "v": "mq:d4796c5c359f263b",
+    "u": "mq:c5b339e710e52ec6",
+    "built": {
+     "hop": 0,
+     "uni": 6.2383,
+     "lc": 5.7371,
+     "rec": 0.0,
+     "rank": 462
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 7.3389,
+     "lc": 6.6048,
+     "rec": 0.0,
+     "rank": 783
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 6.2383,
+     "lc": 5.7371,
+     "rec": 0.0,
+     "rank": 462
+    },
+    "control": {
+     "hop": 0,
+     "uni": 6.2383,
+     "lc": 5.6832,
+     "rec": 0.0,
+     "rank": 475
+    }
+   },
+   {
+    "qid": "RW:2hop__6827_88924",
+    "key": "fleetboston",
+    "ctrl": "2011 survey",
+    "v": "mq:6a0e37536c30be2c",
+    "u": "mq:6b0b89914ae24453",
+    "built": {
+     "hop": 0,
+     "uni": 7.7903,
+     "lc": 5.3174,
+     "rec": 0.5,
+     "rank": 1
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 8.1039,
+     "lc": 5.5449,
+     "rec": 0.5,
+     "rank": 2
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 7.7903,
+     "lc": 5.3174,
+     "rec": 0.5,
+     "rank": 1
+    },
+    "control": {
+     "hop": 0,
+     "uni": 7.7903,
+     "lc": 5.3052,
+     "rec": 0.5,
+     "rank": 1
+    }
+   },
+   {
+    "qid": "RW:2hop__690412_526810",
+    "key": "sak river",
+    "ctrl": "every province",
+    "v": "mq:ca16d78c1ebe6c23",
+    "u": "mq:af1440fbaa4ac70e",
+    "built": {
+     "hop": 0,
+     "uni": 2.0701,
+     "lc": 1.6351,
+     "rec": 1.0,
+     "rank": 2
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 3.0633,
+     "lc": 2.5562,
+     "rec": 1.0,
+     "rank": 4
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 2.0701,
+     "lc": 1.6351,
+     "rec": 1.0,
+     "rank": 2
+    },
+    "control": {
+     "hop": 0,
+     "uni": 2.0701,
+     "lc": 1.6166,
+     "rec": 1.0,
+     "rank": 2
+    }
+   },
+   {
+    "qid": "RW:2hop__691639_154896",
+    "key": "yemeni",
+    "ctrl": "amid",
+    "v": "mq:a8a35c779dc97e9c",
+    "u": "mq:1c84d27025dbec5b",
+    "built": {
+     "hop": 0,
+     "uni": 3.629,
+     "lc": 3.0852,
+     "rec": 0.0,
+     "rank": 13
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 4.058,
+     "lc": 3.4838,
+     "rec": 0.0,
+     "rank": 17
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 3.629,
+     "lc": 3.0852,
+     "rec": 0.0,
+     "rank": 13
+    },
+    "control": {
+     "hop": 0,
+     "uni": 3.629,
+     "lc": 3.068,
+     "rec": 0.0,
+     "rank": 13
+    }
+   },
+   {
+    "qid": "RW:2hop__693157_131890",
+    "key": "deptford",
+    "ctrl": "convoys",
+    "v": "mq:287aceb8e82da81e",
+    "u": "mq:f82c146b1d3b7771",
+    "built": {
+     "hop": 0,
+     "uni": 4.0431,
+     "lc": 3.0621,
+     "rec": 0.0,
+     "rank": 34
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 5.9349,
+     "lc": 5.4055,
+     "rec": 0.0,
+     "rank": 534
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 4.0431,
+     "lc": 3.0621,
+     "rec": 0.0,
+     "rank": 34
+    },
+    "control": {
+     "hop": 0,
+     "uni": 4.0431,
+     "lc": 3.0262,
+     "rec": 0.0,
+     "rank": 34
+    }
+   },
+   {
+    "qid": "RW:2hop__706038_14251",
+    "key": "george robey",
+    "ctrl": "aircraft guns",
+    "v": "mq:455feaaad3eb4e5e",
+    "u": "mq:aeae47e1b167d772",
+    "built": {
+     "hop": 0,
+     "uni": 3.6243,
+     "lc": 2.9147,
+     "rec": 1.0,
+     "rank": 4
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 4.3175,
+     "lc": 3.5586,
+     "rec": 0.0,
+     "rank": 11
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 3.6243,
+     "lc": 2.9147,
+     "rec": 1.0,
+     "rank": 4
+    },
+    "control": {
+     "hop": 0,
+     "uni": 3.6243,
+     "lc": 2.8924,
+     "rec": 1.0,
+     "rank": 4
+    }
+   },
+   {
+    "qid": "RW:2hop__706637_93362",
+    "key": "veeru",
+    "ctrl": "ajay devgan",
+    "v": "mq:8438b5122e7f74af",
+    "u": "mq:4d7e549ee33f583e",
+    "built": {
+     "hop": 0,
+     "uni": 5.1623,
+     "lc": 3.197,
+     "rec": 0.0,
+     "rank": 10
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 5.4424,
+     "lc": 3.3679,
+     "rec": 0.0,
+     "rank": 11
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 5.1623,
+     "lc": 3.197,
+     "rec": 0.0,
+     "rank": 10
+    },
+    "control": {
+     "hop": 0,
+     "uni": 5.1623,
+     "lc": 3.1571,
+     "rec": 0.0,
+     "rank": 10
+    }
+   },
+   {
+    "qid": "RW:2hop__711639_110949",
+    "key": "mauro",
+    "ctrl": "cooperated",
+    "v": "mq:b8838768a9d4cd3c",
+    "u": "mq:3e311702592a6281",
+    "built": {
+     "hop": 0,
+     "uni": 10.6337,
+     "lc": 8.8944,
+     "rec": 0.0,
+     "rank": 3631
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 10.9214,
+     "lc": 9.1379,
+     "rec": 0.0,
+     "rank": 4638
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 10.6337,
+     "lc": 8.8944,
+     "rec": 0.0,
+     "rank": 3631
+    },
+    "control": {
+     "hop": 0,
+     "uni": 10.6337,
+     "lc": 8.8485,
+     "rec": 0.0,
+     "rank": 3695
+    }
+   },
+   {
+    "qid": "RW:2hop__748615_123956",
+    "key": "palembang",
+    "ctrl": "embargo",
+    "v": "mq:453049afce7f9959",
+    "u": "mq:8fd95af31ff765d8",
+    "built": {
+     "hop": 0,
+     "uni": 3.3116,
+     "lc": 0.9636,
+     "rec": 1.0,
+     "rank": 1
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 3.8712,
+     "lc": 1.335,
+     "rec": 1.0,
+     "rank": 1
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 3.3116,
+     "lc": 0.9636,
+     "rec": 1.0,
+     "rank": 1
+    },
+    "control": {
+     "hop": 0,
+     "uni": 3.3116,
+     "lc": 0.9413,
+     "rec": 1.0,
+     "rank": 1
+    }
+   },
+   {
+    "qid": "RW:2hop__77233_33207",
+    "key": "queen victoria",
+    "ctrl": "victorian",
+    "v": "mq:e010561c7f654f87",
+    "u": "mq:cc0d8674489c797b",
+    "built": {
+     "hop": 0,
+     "uni": 7.8721,
+     "lc": 6.3617,
+     "rec": 0.0,
+     "rank": 280
+    },
+    "cut": {
+     "hop": 1,
+     "uni": 10.4505,
+     "lc": 6.8256,
+     "rec": 0.0,
+     "rank": 374
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 7.8721,
+     "lc": 6.3617,
+     "rec": 0.0,
+     "rank": 280
+    },
+    "control": {
+     "hop": 0,
+     "uni": 7.8721,
+     "lc": 6.3254,
+     "rec": 0.0,
+     "rank": 282
+    }
+   },
+   {
+    "qid": "RW:2hop__780652_93362",
+    "key": "ajay devgn",
+    "ctrl": "tips",
+    "v": "mq:23d56bcbae734fee",
+    "u": "mq:4d7e549ee33f583e",
+    "built": {
+     "hop": 0,
+     "uni": 2.7395,
+     "lc": 6.8523,
+     "rec": 0.0,
+     "rank": 197
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 3.3016,
+     "lc": 7.4222,
+     "rec": 0.0,
+     "rank": 309
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 2.7395,
+     "lc": 6.8523,
+     "rec": 0.0,
+     "rank": 197
+    },
+    "control": {
+     "hop": 0,
+     "uni": 2.7395,
+     "lc": 6.8224,
+     "rec": 0.0,
+     "rank": 197
+    }
+   },
+   {
+    "qid": "RW:2hop__78873_461854",
+    "key": "vivien leigh",
+    "ctrl": "vic",
+    "v": "mq:df6a13f7b05be730",
+    "u": "mq:269ee91bf458e0ed",
+    "built": {
+     "hop": 0,
+     "uni": 4.8181,
+     "lc": 7.3171,
+     "rec": 0.0,
+     "rank": 675
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 5.3743,
+     "lc": 7.8145,
+     "rec": 0.0,
+     "rank": 755
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 4.8181,
+     "lc": 7.3171,
+     "rec": 0.0,
+     "rank": 675
+    },
+    "control": {
+     "hop": 0,
+     "uni": 4.8181,
+     "lc": 7.2527,
+     "rec": 0.0,
+     "rank": 675
+    }
+   },
+   {
+    "qid": "RW:2hop__789565_416401",
+    "key": "wang yanjun",
+    "ctrl": "historical accounts",
+    "v": "mq:7f6e7c0fc8a9339b",
+    "u": "mq:5aad82b73ab58df1",
+    "built": {
+     "hop": 0,
+     "uni": 2.5242,
+     "lc": 4.866,
+     "rec": 0.0,
+     "rank": 138
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 2.9363,
+     "lc": 5.2305,
+     "rec": 0.0,
+     "rank": 200
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 2.5242,
+     "lc": 4.866,
+     "rec": 0.0,
+     "rank": 138
+    },
+    "control": {
+     "hop": 0,
+     "uni": 2.5242,
+     "lc": 4.7925,
+     "rec": 0.0,
+     "rank": 138
+    }
+   },
+   {
+    "qid": "RW:2hop__81268_85407",
+    "key": "italian venezia",
+    "ctrl": "mouths",
+    "v": "mq:9ef826a6610b5dd0",
+    "u": "mq:7a9b914bd2ec687d",
+    "built": {
+     "hop": 0,
+     "uni": 11.5049,
+     "lc": 10.3201,
+     "rec": 0.0,
+     "rank": 496
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 12.2267,
+     "lc": 10.9644,
+     "rec": 0.0,
+     "rank": 628
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 11.5049,
+     "lc": 10.3201,
+     "rec": 0.0,
+     "rank": 496
+    },
+    "control": {
+     "hop": 0,
+     "uni": 11.5049,
+     "lc": 10.2892,
+     "rec": 0.0,
+     "rank": 497
+    }
+   },
+   {
+    "qid": "RW:2hop__821197_368148",
+    "key": "hughesville",
+    "ctrl": "county maryland",
+    "v": "mq:99b19931f5a33e9e",
+    "u": "mq:1361f10f1aa8377b",
+    "built": {
+     "hop": 0,
+     "uni": 2.2019,
+     "lc": 0.6387,
+     "rec": 1.0,
+     "rank": 1
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 2.7524,
+     "lc": 0.9037,
+     "rec": 1.0,
+     "rank": 1
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 2.2019,
+     "lc": 0.6387,
+     "rec": 1.0,
+     "rank": 1
+    },
+    "control": {
+     "hop": 0,
+     "uni": 2.2019,
+     "lc": 0.5904,
+     "rec": 1.0,
+     "rank": 1
+    }
+   },
+   {
+    "qid": "RW:2hop__83800_747874",
+    "key": "2016 wimbledon",
+    "ctrl": "equaled",
+    "v": "mq:18c463797163d64b",
+    "u": "mq:22515a6d69e5a3c2",
+    "built": {
+     "hop": 0,
+     "uni": 8.8706,
+     "lc": 11.39,
+     "rec": 0.0,
+     "rank": 9
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 9.3571,
+     "lc": 11.6481,
+     "rec": 0.0,
+     "rank": 15
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 8.8706,
+     "lc": 11.39,
+     "rec": 0.0,
+     "rank": 9
+    },
+    "control": {
+     "hop": 0,
+     "uni": 8.8459,
+     "lc": 11.3657,
+     "rec": 0.0,
+     "rank": 9
+    }
+   },
+   {
+    "qid": "RW:2hop__852122_150107",
+    "key": "acm",
+    "ctrl": "machinery",
+    "v": "mq:bc1955852e8b4493",
+    "u": "mq:07e4e374657c8fb6",
+    "built": {
+     "hop": 0,
+     "uni": 3.6525,
+     "lc": 1.8664,
+     "rec": 0.0,
+     "rank": 9
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 4.0943,
+     "lc": 2.1818,
+     "rec": 0.0,
+     "rank": 19
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 3.6525,
+     "lc": 1.8664,
+     "rec": 0.0,
+     "rank": 9
+    },
+    "control": {
+     "hop": 0,
+     "uni": 3.6525,
+     "lc": 1.7933,
+     "rec": 0.0,
+     "rank": 9
+    }
+   },
+   {
+    "qid": "RW:2hop__87580_7298",
+    "key": "groban",
+    "ctrl": "admits",
+    "v": "mq:77d7dd56aed88155",
+    "u": "mq:7b6d7c13507067b6",
+    "built": {
+     "hop": 0,
+     "uni": 10.5831,
+     "lc": 9.4218,
+     "rec": 0.0,
+     "rank": 38
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 11.2337,
+     "lc": 10.0591,
+     "rec": 0.0,
+     "rank": 40
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 10.5831,
+     "lc": 9.4218,
+     "rec": 0.0,
+     "rank": 38
+    },
+    "control": {
+     "hop": 0,
+     "uni": 10.5831,
+     "lc": 9.412,
+     "rec": 0.0,
+     "rank": 38
+    }
+   },
+   {
+    "qid": "RW:2hop__89632_40480",
+    "key": "patriot",
+    "ctrl": "dress",
+    "v": "mq:590bd94242bc197b",
+    "u": "mq:3e37c3eaf600ead1",
+    "built": {
+     "hop": 0,
+     "uni": 4.6821,
+     "lc": 4.87,
+     "rec": 0.0,
+     "rank": 33
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 6.5437,
+     "lc": 5.367,
+     "rec": 0.0,
+     "rank": 76
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 4.6821,
+     "lc": 4.87,
+     "rec": 0.0,
+     "rank": 33
+    },
+    "control": {
+     "hop": 0,
+     "uni": 4.6821,
+     "lc": 4.8503,
+     "rec": 0.0,
+     "rank": 34
+    }
+   },
+   {
+    "qid": "RW:2hop__9512_36630",
+    "key": "economic growth",
+    "ctrl": "boxer",
+    "v": "mq:5dce05a063b67c11",
+    "u": "mq:9a0c111ef48f8623",
+    "built": {
+     "hop": 0,
+     "uni": 6.8763,
+     "lc": 5.9775,
+     "rec": 0.0,
+     "rank": 80
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 7.3765,
+     "lc": 7.1221,
+     "rec": 0.0,
+     "rank": 175
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 6.8763,
+     "lc": 5.9775,
+     "rec": 0.0,
+     "rank": 80
+    },
+    "control": {
+     "hop": 0,
+     "uni": 6.8763,
+     "lc": 5.9535,
+     "rec": 0.0,
+     "rank": 80
+    }
+   },
+   {
+    "qid": "RW:2hop__96137_62765",
+    "key": "lead role",
+    "ctrl": "enslaved",
+    "v": "mq:bf182291197ff0d5",
+    "u": "mq:f69a0c97a76bf930",
+    "built": {
+     "hop": 0,
+     "uni": 6.4457,
+     "lc": 5.5719,
+     "rec": 0.0,
+     "rank": 64
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 6.9633,
+     "lc": 6.7525,
+     "rec": 0.0,
+     "rank": 93
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 6.4457,
+     "lc": 5.5719,
+     "rec": 0.0,
+     "rank": 64
+    },
+    "control": {
+     "hop": 0,
+     "uni": 6.4457,
+     "lc": 5.556,
+     "rec": 0.0,
+     "rank": 65
+    }
+   },
+   {
+    "qid": "RW:2hop__96177_121319",
+    "key": "robinson",
+    "ctrl": "arrived",
+    "v": "mq:851a196818cc0ce0",
+    "u": "mq:bf88f5e6e32a3fd1",
+    "built": {
+     "hop": 0,
+     "uni": 6.8134,
+     "lc": 9.3336,
+     "rec": 0.0,
+     "rank": 2856
+    },
+    "cut": {
+     "hop": 1,
+     "uni": 10.2473,
+     "lc": 9.2985,
+     "rec": 0.0,
+     "rank": 6028
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 6.8134,
+     "lc": 9.3336,
+     "rec": 0.0,
+     "rank": 2856
+    },
+    "control": {
+     "hop": 0,
+     "uni": 6.8134,
+     "lc": 9.2985,
+     "rec": 0.0,
+     "rank": 2894
+    }
+   },
+   {
+    "qid": "RW:3hop1__102461_24918_24991",
+    "key": "gorbachev",
+    "ctrl": "demonstrations",
+    "v": "mq:e17eb0f25570e86d",
+    "u": "mq:e1790e7f58ea9e42",
+    "built": {
+     "hop": 0,
+     "uni": 5.5568,
+     "lc": 4.1945,
+     "rec": 0.0,
+     "rank": 27
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 6.0155,
+     "lc": 4.6168,
+     "rec": 0.0,
+     "rank": 35
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 5.5568,
+     "lc": 4.1945,
+     "rec": 0.0,
+     "rank": 27
+    },
+    "control": {
+     "hop": 0,
+     "uni": 5.5568,
+     "lc": 4.1611,
+     "rec": 0.0,
+     "rank": 27
+    }
+   },
+   {
+    "qid": "RW:3hop1__106094_443779_52195",
+    "key": "leste",
+    "ctrl": "gdp ppp",
+    "v": "mq:276962cfbb42f582",
+    "u": "mq:17866d9115df51b8",
+    "built": {
+     "hop": 0,
+     "uni": 11.2518,
+     "lc": 10.0219,
+     "rec": 0.0,
+     "rank": 32
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 11.4981,
+     "lc": 10.268,
+     "rec": 0.0,
+     "rank": 43
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 11.2518,
+     "lc": 10.0219,
+     "rec": 0.0,
+     "rank": 32
+    },
+    "control": {
+     "hop": 0,
+     "uni": 11.2518,
+     "lc": 10.0108,
+     "rec": 0.0,
+     "rank": 32
+    }
+   },
+   {
+    "qid": "RW:3hop1__109185_720914_27537",
+    "key": "late pius",
+    "ctrl": "conclave",
+    "v": "mq:da86bc73e96d2254",
+    "u": "mq:b9d5ffd1c628055d",
+    "built": {
+     "hop": 0,
+     "uni": 7.4656,
+     "lc": 6.6293,
+     "rec": 0.5,
+     "rank": 3
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 8.0406,
+     "lc": 7.0857,
+     "rec": 0.5,
+     "rank": 3
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 7.4656,
+     "lc": 6.6293,
+     "rec": 0.5,
+     "rank": 3
+    },
+    "control": {
+     "hop": 0,
+     "uni": 7.4656,
+     "lc": 6.6112,
+     "rec": 0.5,
+     "rank": 3
+    }
+   },
+   {
+    "qid": "RW:3hop1__127837_157828_239539",
+    "key": "kosovo",
+    "ctrl": "herzegovina",
+    "v": "mq:7d8105464c5d4aae",
+    "u": "mq:d98470dfc607ebf3",
+    "built": {
+     "hop": 1,
+     "uni": 20.3067,
+     "lc": 17.6028,
+     "rec": 0.0,
+     "rank": 10
+    },
+    "cut": {
+     "hop": 1,
+     "uni": 21.6776,
+     "lc": 18.8584,
+     "rec": 0.0,
+     "rank": 21
+    },
+    "restored": {
+     "hop": 1,
+     "uni": 20.3067,
+     "lc": 17.6028,
+     "rec": 0.0,
+     "rank": 10
+    },
+    "control": {
+     "hop": 1,
+     "uni": 20.2703,
+     "lc": 17.5615,
+     "rec": 0.0,
+     "rank": 10
+    }
+   },
+   {
+    "qid": "RW:3hop1__131829_39743_24526",
+    "key": "temperatures usually",
+    "ctrl": "charlotte area",
+    "v": "mq:679e7c3ae7f12891",
+    "u": "mq:7b9e12adabcade94",
+    "built": {
+     "hop": 1,
+     "uni": 18.1577,
+     "lc": 13.6985,
+     "rec": 0.0,
+     "rank": 15
+    },
+    "cut": {
+     "hop": 1,
+     "uni": 18.5509,
+     "lc": 14.3181,
+     "rec": 0.0,
+     "rank": 18
+    },
+    "restored": {
+     "hop": 1,
+     "uni": 18.1577,
+     "lc": 13.6985,
+     "rec": 0.0,
+     "rank": 15
+    },
+    "control": {
+     "hop": 1,
+     "uni": 18.1213,
+     "lc": 13.6617,
+     "rec": 0.0,
+     "rank": 15
+    }
+   },
+   {
+    "qid": "RW:3hop1__132795_40769_64047",
+    "key": "lexus",
+    "ctrl": "lamps",
+    "v": "mq:7919472ea59ef28a",
+    "u": "mq:2e2b0b093721a57a",
+    "built": {
+     "hop": 0,
+     "uni": 11.8525,
+     "lc": 13.573,
+     "rec": 0.0,
+     "rank": 1816
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 13.1111,
+     "lc": 16.029,
+     "rec": 0.0,
+     "rank": 1885
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 11.8525,
+     "lc": 13.573,
+     "rec": 0.0,
+     "rank": 1816
+    },
+    "control": {
+     "hop": 0,
+     "uni": 11.8525,
+     "lc": 13.5422,
+     "rec": 0.0,
+     "rank": 1818
+    }
+   },
+   {
+    "qid": "RW:3hop1__133292_40769_64047",
+    "key": "acura",
+    "ctrl": "corona",
+    "v": "mq:2e2b0b093721a57a",
+    "u": "mq:4779450bf31d0758",
+    "built": {
+     "hop": 0,
+     "uni": 10.717,
+     "lc": 12.2422,
+     "rec": 0.0,
+     "rank": 27
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 11.5093,
+     "lc": 12.95,
+     "rec": 0.0,
+     "rank": 29
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 10.717,
+     "lc": 12.2422,
+     "rec": 0.0,
+     "rank": 27
+    },
+    "control": {
+     "hop": 0,
+     "uni": 10.6929,
+     "lc": 12.213,
+     "rec": 0.0,
+     "rank": 27
+    }
+   },
+   {
+    "qid": "RW:3hop1__145924_131905_41948",
+    "key": "hamburg",
+    "ctrl": "outer",
+    "v": "mq:4b9087563e4666cf",
+    "u": "mq:ccb33dec9b0e9a54",
+    "built": {
+     "hop": 0,
+     "uni": 5.0561,
+     "lc": 4.4197,
+     "rec": 0.0,
+     "rank": 92
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 5.2204,
+     "lc": 4.5405,
+     "rec": 0.0,
+     "rank": 105
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 5.0561,
+     "lc": 4.4197,
+     "rec": 0.0,
+     "rank": 92
+    },
+    "control": {
+     "hop": 0,
+     "uni": 5.0561,
+     "lc": 4.3776,
+     "rec": 0.0,
+     "rank": 92
+    }
+   },
+   {
+    "qid": "RW:3hop1__152880_131926_90707",
+    "key": "ohio river",
+    "ctrl": "joins",
+    "v": "mq:d5990bfa6c296226",
+    "u": "mq:1807cd41e05c5f79",
+    "built": {
+     "hop": 0,
+     "uni": 11.7916,
+     "lc": 7.3216,
+     "rec": 0.0,
+     "rank": 66
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 14.0106,
+     "lc": 7.6101,
+     "rec": 0.0,
+     "rank": 216
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 11.7916,
+     "lc": 7.3216,
+     "rec": 0.0,
+     "rank": 66
+    },
+    "control": {
+     "hop": 0,
+     "uni": 11.7916,
+     "lc": 7.2507,
+     "rec": 0.0,
+     "rank": 72
+    }
+   },
+   {
+    "qid": "RW:3hop1__220023_503371_21711",
+    "key": "aragon",
+    "ctrl": "secure",
+    "v": "mq:e984f43ed95865a8",
+    "u": "mq:41373c09e746ca2e",
+    "built": {
+     "hop": 0,
+     "uni": 5.8944,
+     "lc": 5.3756,
+     "rec": 0.0,
+     "rank": 73
+    },
+    "cut": {
+     "hop": 1,
+     "uni": 9.3112,
+     "lc": 7.4249,
+     "rec": 0.0,
+     "rank": 660
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 5.8944,
+     "lc": 5.3756,
+     "rec": 0.0,
+     "rank": 73
+    },
+    "control": {
+     "hop": 0,
+     "uni": 5.8944,
+     "lc": 5.327,
+     "rec": 0.0,
+     "rank": 73
+    }
+   },
+   {
+    "qid": "RW:3hop1__305282_282081_10972",
+    "key": "stanton moore",
+    "ctrl": "authenticity",
+    "v": "mq:df0cce6a8d0ea77f",
+    "u": "mq:55b25d5bc46fd394",
+    "built": {
+     "hop": 0,
+     "uni": 9.8895,
+     "lc": 13.0654,
+     "rec": 0.0,
+     "rank": 17128
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 11.0398,
+     "lc": 14.145,
+     "rec": 0.0,
+     "rank": 17261
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 9.8895,
+     "lc": 13.0654,
+     "rec": 0.0,
+     "rank": 17128
+    },
+    "control": {
+     "hop": 0,
+     "uni": 9.8895,
+     "lc": 13.0098,
+     "rec": 0.0,
+     "rank": 17364
+    }
+   },
+   {
+    "qid": "RW:3hop1__351696_42197_18397",
+    "key": "mao zedong",
+    "ctrl": "politburo",
+    "v": "mq:92d6c665c7279c38",
+    "u": "mq:4aec4bfb579ba905",
+    "built": {
+     "hop": 0,
+     "uni": 5.0971,
+     "lc": 3.3374,
+     "rec": 0.0,
+     "rank": 21
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 5.6407,
+     "lc": 3.8438,
+     "rec": 0.0,
+     "rank": 27
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 5.0971,
+     "lc": 3.3374,
+     "rec": 0.0,
+     "rank": 21
+    },
+    "control": {
+     "hop": 0,
+     "uni": 5.0971,
+     "lc": 3.313,
+     "rec": 0.0,
+     "rank": 22
+    }
+   },
+   {
+    "qid": "RW:3hop1__380590_831637_91775",
+    "key": "destroyer classes",
+    "ctrl": "submarine warfare",
+    "v": "mq:5de82255791981ef",
+    "u": "mq:9837550623abbfe3",
+    "built": {
+     "hop": 0,
+     "uni": 8.2462,
+     "lc": 7.6757,
+     "rec": 0.5,
+     "rank": 3
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 11.0687,
+     "lc": 10.1757,
+     "rec": 0.0,
+     "rank": 9
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 8.2462,
+     "lc": 7.6757,
+     "rec": 0.5,
+     "rank": 3
+    },
+    "control": {
+     "hop": 0,
+     "uni": 8.2462,
+     "lc": 7.6479,
+     "rec": 0.5,
+     "rank": 3
+    }
+   },
+   {
+    "qid": "RW:3hop1__38426_91850_685675",
+    "key": "jorge posada",
+    "ctrl": "switch hitter",
+    "v": "mq:f5a0a26217d76d55",
+    "u": "mq:3bf439dcba7ca155",
+    "built": {
+     "hop": 0,
+     "uni": 2.9641,
+     "lc": 3.4623,
+     "rec": 0.0,
+     "rank": 57
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 3.5049,
+     "lc": 3.9842,
+     "rec": 0.0,
+     "rank": 97
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 2.9641,
+     "lc": 3.4623,
+     "rec": 0.0,
+     "rank": 57
+    },
+    "control": {
+     "hop": 0,
+     "uni": 2.9641,
+     "lc": 3.435,
+     "rec": 0.0,
+     "rank": 60
+    }
+   },
+   {
+    "qid": "RW:3hop1__390489_502967_84283",
+    "key": "steve stevens",
+    "ctrl": "guitarist steve",
+    "v": "mq:63f443b5dcf2f7e1",
+    "u": "mq:30a885b1514e3d81",
+    "built": {
+     "hop": 0,
+     "uni": 9.7337,
+     "lc": 14.4289,
+     "rec": 0.0,
+     "rank": 607
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 12.1523,
+     "lc": 16.6582,
+     "rec": 0.0,
+     "rank": 902
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 9.7337,
+     "lc": 14.4289,
+     "rec": 0.0,
+     "rank": 607
+    },
+    "control": {
+     "hop": 0,
+     "uni": 9.6986,
+     "lc": 14.3924,
+     "rec": 0.0,
+     "rank": 607
+    }
+   },
+   {
+    "qid": "RW:3hop1__446612_160545_34754",
+    "key": "thai",
+    "ctrl": "neighbours",
+    "v": "mq:04dc16ca643eab0b",
+    "u": "mq:65680a1337c834f5",
+    "built": {
+     "hop": 0,
+     "uni": 12.076,
+     "lc": 11.918,
+     "rec": 0.0,
+     "rank": 2110
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 12.1901,
+     "lc": 11.8767,
+     "rec": 0.0,
+     "rank": 2186
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 12.076,
+     "lc": 11.918,
+     "rec": 0.0,
+     "rank": 2110
+    },
+    "control": {
+     "hop": 0,
+     "uni": 12.0115,
+     "lc": 11.6663,
+     "rec": 0.0,
+     "rank": 2118
+    }
+   },
+   {
+    "qid": "RW:3hop1__507961_160713_77246",
+    "key": "khyber pakhtunkhwa",
+    "ctrl": "councils",
+    "v": "mq:da23081c67abcc5d",
+    "u": "mq:d869dd64a7713572",
+    "built": {
+     "hop": 1,
+     "uni": 17.232,
+     "lc": 11.5665,
+     "rec": 0.0,
+     "rank": 722
+    },
+    "cut": {
+     "hop": 1,
+     "uni": 17.4653,
+     "lc": 11.5059,
+     "rec": 0.0,
+     "rank": 801
+    },
+    "restored": {
+     "hop": 1,
+     "uni": 17.232,
+     "lc": 11.5665,
+     "rec": 0.0,
+     "rank": 722
+    },
+    "control": {
+     "hop": 1,
+     "uni": 17.232,
+     "lc": 11.5059,
+     "rec": 0.0,
+     "rank": 770
+    }
+   },
+   {
+    "qid": "RW:3hop1__516535_834494_33939",
+    "key": "pima county",
+    "ctrl": "natural resources",
+    "v": "mq:839517897c4dd87e",
+    "u": "mq:ba386909f13343ac",
+    "built": {
+     "hop": 0,
+     "uni": 3.5645,
+     "lc": 2.6359,
+     "rec": 0.0,
+     "rank": 6
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 3.9434,
+     "lc": 2.9173,
+     "rec": 0.0,
+     "rank": 10
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 3.5645,
+     "lc": 2.6359,
+     "rec": 0.0,
+     "rank": 6
+    },
+    "control": {
+     "hop": 0,
+     "uni": 3.5645,
+     "lc": 2.5761,
+     "rec": 0.0,
+     "rank": 6
+    }
+   },
+   {
+    "qid": "RW:3hop1__564628_42197_18397",
+    "key": "mao zedong",
+    "ctrl": "politburo",
+    "v": "mq:92d6c665c7279c38",
+    "u": "mq:4aec4bfb579ba905",
+    "built": {
+     "hop": 0,
+     "uni": 12.2462,
+     "lc": 8.9291,
+     "rec": 0.5,
+     "rank": 5
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 12.5535,
+     "lc": 9.3188,
+     "rec": 0.0,
+     "rank": 8
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 12.2462,
+     "lc": 8.9291,
+     "rec": 0.5,
+     "rank": 5
+    },
+    "control": {
+     "hop": 0,
+     "uni": 12.2462,
+     "lc": 8.905,
+     "rec": 0.5,
+     "rank": 5
+    }
+   },
+   {
+    "qid": "RW:3hop1__617062_127905_46748",
+    "key": "cleveland indians",
+    "ctrl": "cleveland ohio",
+    "v": "mq:e5626003ff4b1e18",
+    "u": "mq:f57e794895999f13",
+    "built": {
+     "hop": 0,
+     "uni": 12.1304,
+     "lc": 10.6569,
+     "rec": 0.0,
+     "rank": 25
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 12.826,
+     "lc": 11.3238,
+     "rec": 0.0,
+     "rank": 34
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 12.1304,
+     "lc": 10.6569,
+     "rec": 0.0,
+     "rank": 25
+    },
+    "control": {
+     "hop": 0,
+     "uni": 12.1304,
+     "lc": 10.6313,
+     "rec": 0.0,
+     "rank": 25
+    }
+   },
+   {
+    "qid": "RW:3hop1__622145_42197_18397",
+    "key": "mao zedong",
+    "ctrl": "politburo",
+    "v": "mq:92d6c665c7279c38",
+    "u": "mq:4aec4bfb579ba905",
+    "built": {
+     "hop": 0,
+     "uni": 5.0971,
+     "lc": 3.0931,
+     "rec": 0.0,
+     "rank": 8
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 5.4044,
+     "lc": 3.5259,
+     "rec": 0.0,
+     "rank": 9
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 5.0971,
+     "lc": 3.0931,
+     "rec": 0.0,
+     "rank": 8
+    },
+    "control": {
+     "hop": 0,
+     "uni": 5.0971,
+     "lc": 3.0689,
+     "rec": 0.0,
+     "rank": 8
+    }
+   },
+   {
+    "qid": "RW:3hop1__63037_567566_84283",
+    "key": "another page",
+    "ctrl": "swept away",
+    "v": "mq:08b2610feb1873e2",
+    "u": "mq:2001c0817ed0aa38",
+    "built": {
+     "hop": 0,
+     "uni": 10.6464,
+     "lc": 13.1436,
+     "rec": 0.0,
+     "rank": 303
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 11.3545,
+     "lc": 13.6098,
+     "rec": 0.0,
+     "rank": 608
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 10.6464,
+     "lc": 13.1436,
+     "rec": 0.0,
+     "rank": 303
+    },
+    "control": {
+     "hop": 0,
+     "uni": 10.602,
+     "lc": 13.0568,
+     "rec": 0.0,
+     "rank": 306
+    }
+   },
+   {
+    "qid": "RW:3hop1__635099_131926_89261",
+    "key": "american continent",
+    "ctrl": "canadian provinces",
+    "v": "mq:72cb7ead3ba4477f",
+    "u": "mq:4ca772688948d344",
+    "built": {
+     "hop": 0,
+     "uni": 19.5909,
+     "lc": 16.2798,
+     "rec": 0.0,
+     "rank": 36
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 20.9709,
+     "lc": 17.5977,
+     "rec": 0.0,
+     "rank": 59
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 19.5909,
+     "lc": 16.2798,
+     "rec": 0.0,
+     "rank": 36
+    },
+    "control": {
+     "hop": 0,
+     "uni": 19.5663,
+     "lc": 16.2255,
+     "rec": 0.0,
+     "rank": 36
+    }
+   },
+   {
+    "qid": "RW:3hop1__68981_91191_16530",
+    "key": "embraced islam",
+    "ctrl": "first male",
+    "v": "mq:f141caf101d5c1d1",
+    "u": "mq:0fc4fe77f3926110",
+    "built": {
+     "hop": 0,
+     "uni": 14.3278,
+     "lc": 9.7554,
+     "rec": 0.0,
+     "rank": 20
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 15.9843,
+     "lc": 11.1328,
+     "rec": 0.0,
+     "rank": 98
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 14.3278,
+     "lc": 9.7554,
+     "rec": 0.0,
+     "rank": 20
+    },
+    "control": {
+     "hop": 0,
+     "uni": 14.2833,
+     "lc": 9.6681,
+     "rec": 0.0,
+     "rank": 21
+    }
+   },
+   {
+    "qid": "RW:3hop1__691197_15840_36014",
+    "key": "super nintendo",
+    "ctrl": "home video",
+    "v": "mq:6f03dca82a759573",
+    "u": "mq:12b37018dddda498",
+    "built": {
+     "hop": 0,
+     "uni": 4.8432,
+     "lc": 4.1224,
+     "rec": 0.0,
+     "rank": 19
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 5.2495,
+     "lc": 4.4943,
+     "rec": 0.0,
+     "rank": 24
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 4.8432,
+     "lc": 4.1224,
+     "rec": 0.0,
+     "rank": 19
+    },
+    "control": {
+     "hop": 0,
+     "uni": 4.8432,
+     "lc": 4.0879,
+     "rec": 0.0,
+     "rank": 19
+    }
+   },
+   {
+    "qid": "RW:3hop1__71549_486583_84283",
+    "key": "nicolette",
+    "ctrl": "pop charts",
+    "v": "mq:19f9a932367a95d0",
+    "u": "mq:686592b68ef0a5f3",
+    "built": {
+     "hop": 0,
+     "uni": 7.8315,
+     "lc": 6.9677,
+     "rec": 0.5,
+     "rank": 2
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 8.0784,
+     "lc": 6.9122,
+     "rec": 0.0,
+     "rank": 7
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 7.8315,
+     "lc": 6.9677,
+     "rec": 0.5,
+     "rank": 2
+    },
+    "control": {
+     "hop": 0,
+     "uni": 7.7445,
+     "lc": 6.9105,
+     "rec": 0.5,
+     "rank": 2
+    }
+   },
+   {
+    "qid": "RW:3hop1__742780_567566_84283",
+    "key": "another page",
+    "ctrl": "background vocals",
+    "v": "mq:b8f7c1231efb0ca5",
+    "u": "mq:08b2610feb1873e2",
+    "built": {
+     "hop": 0,
+     "uni": 15.7278,
+     "lc": 13.5789,
+     "rec": 0.0,
+     "rank": 151
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 16.4804,
+     "lc": 14.2851,
+     "rec": 0.0,
+     "rank": 158
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 15.7278,
+     "lc": 13.5789,
+     "rec": 0.0,
+     "rank": 151
+    },
+    "control": {
+     "hop": 0,
+     "uni": 15.7278,
+     "lc": 13.5587,
+     "rec": 0.0,
+     "rank": 155
+    }
+   },
+   {
+    "qid": "RW:3hop1__765388_42197_18397",
+    "key": "mao zedong",
+    "ctrl": "politburo",
+    "v": "mq:92d6c665c7279c38",
+    "u": "mq:4aec4bfb579ba905",
+    "built": {
+     "hop": 0,
+     "uni": 5.0971,
+     "lc": 3.1484,
+     "rec": 1.0,
+     "rank": 5
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 5.4044,
+     "lc": 3.5484,
+     "rec": 0.0,
+     "rank": 8
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 5.0971,
+     "lc": 3.1484,
+     "rec": 1.0,
+     "rank": 5
+    },
+    "control": {
+     "hop": 0,
+     "uni": 5.0971,
+     "lc": 3.1242,
+     "rec": 1.0,
+     "rank": 5
+    }
+   },
+   {
+    "qid": "RW:3hop1__786632_831637_91775",
+    "key": "cruisers",
+    "ctrl": "anti submarine",
+    "v": "mq:5de82255791981ef",
+    "u": "mq:65b08e876e8e3fb9",
+    "built": {
+     "hop": 0,
+     "uni": 11.1715,
+     "lc": 8.8154,
+     "rec": 0.5,
+     "rank": 1
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 11.6601,
+     "lc": 9.2385,
+     "rec": 0.5,
+     "rank": 3
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 11.1715,
+     "lc": 8.8154,
+     "rec": 0.5,
+     "rank": 1
+    },
+    "control": {
+     "hop": 0,
+     "uni": 11.1351,
+     "lc": 8.7292,
+     "rec": 0.5,
+     "rank": 1
+    }
+   },
+   {
+    "qid": "RW:3hop1__820301_720914_27537",
+    "key": "late pius",
+    "ctrl": "conclave",
+    "v": "mq:da86bc73e96d2254",
+    "u": "mq:b9d5ffd1c628055d",
+    "built": {
+     "hop": 0,
+     "uni": 12.8075,
+     "lc": 11.2988,
+     "rec": 0.3333333333333333,
+     "rank": 2
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 13.3825,
+     "lc": 11.757,
+     "rec": 0.3333333333333333,
+     "rank": 3
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 12.8075,
+     "lc": 11.2988,
+     "rec": 0.3333333333333333,
+     "rank": 2
+    },
+    "control": {
+     "hop": 0,
+     "uni": 12.8075,
+     "lc": 11.2806,
+     "rec": 0.3333333333333333,
+     "rank": 3
+    }
+   },
+   {
+    "qid": "RW:3hop1__830700_538202_84283",
+    "key": "james otto",
+    "ctrl": "released april",
+    "v": "mq:8bdf41f6b6581101",
+    "u": "mq:12291fa93ea26489",
+    "built": {
+     "hop": 0,
+     "uni": 10.5788,
+     "lc": 15.9067,
+     "rec": 0.0,
+     "rank": 868
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 11.8355,
+     "lc": 15.7116,
+     "rec": 0.0,
+     "rank": 1155
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 10.5788,
+     "lc": 15.9067,
+     "rec": 0.0,
+     "rank": 868
+    },
+    "control": {
+     "hop": 0,
+     "uni": 10.5363,
+     "lc": 15.8001,
+     "rec": 0.0,
+     "rank": 877
+    }
+   },
+   {
+    "qid": "RW:3hop1__849312_503371_21711",
+    "key": "aragon",
+    "ctrl": "secure",
+    "v": "mq:e984f43ed95865a8",
+    "u": "mq:447806e8621f753f",
+    "built": {
+     "hop": 0,
+     "uni": 5.7991,
+     "lc": 5.3781,
+     "rec": 0.0,
+     "rank": 71
+    },
+    "cut": {
+     "hop": 1,
+     "uni": 9.3112,
+     "lc": 7.4261,
+     "rec": 0.0,
+     "rank": 657
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 5.7991,
+     "lc": 5.3781,
+     "rec": 0.0,
+     "rank": 71
+    },
+    "control": {
+     "hop": 0,
+     "uni": 5.7991,
+     "lc": 5.3296,
+     "rec": 0.0,
+     "rank": 72
+    }
+   },
+   {
+    "qid": "RW:3hop1__857_846_7872",
+    "key": "phagpa lama",
+    "ctrl": "deference",
+    "v": "mq:71a0089843686c23",
+    "u": "mq:d3079c12e943ce0e",
+    "built": {
+     "hop": 0,
+     "uni": 8.6557,
+     "lc": 6.926,
+     "rec": 0.5,
+     "rank": 1
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 8.8186,
+     "lc": 7.0566,
+     "rec": 0.5,
+     "rank": 1
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 8.6557,
+     "lc": 6.926,
+     "rec": 0.5,
+     "rank": 1
+    },
+    "control": {
+     "hop": 0,
+     "uni": 8.6557,
+     "lc": 6.9113,
+     "rec": 0.5,
+     "rank": 1
+    }
+   },
+   {
+    "qid": "RW:3hop1__857_846_7888",
+    "key": "phagpa lama",
+    "ctrl": "deference",
+    "v": "mq:71a0089843686c23",
+    "u": "mq:d3079c12e943ce0e",
+    "built": {
+     "hop": 0,
+     "uni": 6.2341,
+     "lc": 4.6411,
+     "rec": 0.5,
+     "rank": 1
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 6.397,
+     "lc": 4.7753,
+     "rec": 0.5,
+     "rank": 1
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 6.2341,
+     "lc": 4.6411,
+     "rec": 0.5,
+     "rank": 1
+    },
+    "control": {
+     "hop": 0,
+     "uni": 6.2341,
+     "lc": 4.6272,
+     "rec": 0.5,
+     "rank": 1
+    }
+   },
+   {
+    "qid": "RW:3hop1__9285_5188_23307",
+    "key": "multi national",
+    "ctrl": "collective security",
+    "v": "mq:a29f88a939380568",
+    "u": "mq:282fa02acec5c6f2",
+    "built": {
+     "hop": 0,
+     "uni": 18.0957,
+     "lc": 14.7872,
+     "rec": 0.3333333333333333,
+     "rank": 3
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 19.2407,
+     "lc": 15.8591,
+     "rec": 0.3333333333333333,
+     "rank": 4
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 18.0957,
+     "lc": 14.7872,
+     "rec": 0.3333333333333333,
+     "rank": 3
+    },
+    "control": {
+     "hop": 0,
+     "uni": 18.0957,
+     "lc": 14.764,
+     "rec": 0.3333333333333333,
+     "rank": 3
+    }
+   },
+   {
+    "qid": "RW:3hop2__132957_595371_40768",
+    "key": "scion",
+    "ctrl": "first generation",
+    "v": "mq:4c807422c915e341",
+    "u": "mq:3ac80a4d4288acdc",
+    "built": {
+     "hop": 0,
+     "uni": 5.6866,
+     "lc": 3.8792,
+     "rec": 0.0,
+     "rank": 22
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 5.9349,
+     "lc": 4.7531,
+     "rec": 0.0,
+     "rank": 29
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 5.6866,
+     "lc": 3.8792,
+     "rec": 0.0,
+     "rank": 22
+    },
+    "control": {
+     "hop": 0,
+     "uni": 5.6866,
+     "lc": 3.8233,
+     "rec": 0.0,
+     "rank": 24
+    }
+   },
+   {
+    "qid": "RW:3hop2__132957_76377_40768",
+    "key": "nameplate",
+    "ctrl": "volkswagen",
+    "v": "mq:4817a1f7a89d7c96",
+    "u": "mq:9cbea3805ac3dc04",
+    "built": {
+     "hop": 0,
+     "uni": 5.0876,
+     "lc": 5.0335,
+     "rec": 0.0,
+     "rank": 24
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 6.1722,
+     "lc": 5.0101,
+     "rec": 0.0,
+     "rank": 27
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 5.0876,
+     "lc": 5.0335,
+     "rec": 0.0,
+     "rank": 24
+    },
+    "control": {
+     "hop": 0,
+     "uni": 5.0876,
+     "lc": 5.0101,
+     "rec": 0.0,
+     "rank": 24
+    }
+   },
+   {
+    "qid": "RW:3hop2__140194_49541_51068",
+    "key": "clara",
+    "ctrl": "biographical",
+    "v": "mq:5cf8952553e86cc2",
+    "u": "mq:2a7066d7ef97929c",
+    "built": {
+     "hop": 1,
+     "uni": 16.3672,
+     "lc": 12.6424,
+     "rec": 0.0,
+     "rank": 58
+    },
+    "cut": {
+     "hop": 1,
+     "uni": 17.1448,
+     "lc": 12.9354,
+     "rec": 0.0,
+     "rank": 72
+    },
+    "restored": {
+     "hop": 1,
+     "uni": 16.3672,
+     "lc": 12.6424,
+     "rec": 0.0,
+     "rank": 58
+    },
+    "control": {
+     "hop": 1,
+     "uni": 16.3447,
+     "lc": 12.6134,
+     "rec": 0.0,
+     "rank": 60
+    }
+   },
+   {
+    "qid": "RW:3hop2__27069_92991_76291",
+    "key": "republicans",
+    "ctrl": "obtain",
+    "v": "mq:e3de0ee582ca38ce",
+    "u": "mq:f2c97cae90522a0d",
+    "built": {
+     "hop": 0,
+     "uni": 10.3553,
+     "lc": 6.7487,
+     "rec": 0.0,
+     "rank": 39
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 10.4853,
+     "lc": 6.8276,
+     "rec": 0.0,
+     "rank": 44
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 10.3553,
+     "lc": 6.7487,
+     "rec": 0.0,
+     "rank": 39
+    },
+    "control": {
+     "hop": 0,
+     "uni": 10.3553,
+     "lc": 6.6993,
+     "rec": 0.0,
+     "rank": 39
+    }
+   },
+   {
+    "qid": "RW:3hop2__304722_230978_63959",
+    "key": "aston villa",
+    "ctrl": "reward",
+    "v": "mq:23524493ddd1f245",
+    "u": "mq:42316829bc81da2b",
+    "built": {
+     "hop": 0,
+     "uni": 11.1104,
+     "lc": 8.7186,
+     "rec": 0.0,
+     "rank": 249
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 11.7924,
+     "lc": 9.356,
+     "rec": 0.0,
+     "rank": 290
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 11.1104,
+     "lc": 8.7186,
+     "rec": 0.0,
+     "rank": 249
+    },
+    "control": {
+     "hop": 0,
+     "uni": 11.1104,
+     "lc": 8.6835,
+     "rec": 0.0,
+     "rank": 256
+    }
+   },
+   {
+    "qid": "RW:3hop2__326964_851134_7713",
+    "key": "yangzhou",
+    "ctrl": "chu",
+    "v": "mq:ac35e864b56ffaf3",
+    "u": "mq:eeb0f63c60039f66",
+    "built": {
+     "hop": 0,
+     "uni": 3.9512,
+     "lc": 4.5673,
+     "rec": 0.0,
+     "rank": 42
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 6.7565,
+     "lc": 6.5021,
+     "rec": 0.0,
+     "rank": 273
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 3.9512,
+     "lc": 4.5673,
+     "rec": 0.0,
+     "rank": 42
+    },
+    "control": {
+     "hop": 0,
+     "uni": 3.9512,
+     "lc": 4.5494,
+     "rec": 0.0,
+     "rank": 42
+    }
+   },
+   {
+    "qid": "RW:3hop2__57238_1926_54362",
+    "key": "confederate",
+    "ctrl": "battles",
+    "v": "mq:ddd180ff94ff89e7",
+    "u": "mq:7b44b41d2e17c72b",
+    "built": {
+     "hop": 0,
+     "uni": 14.2103,
+     "lc": 13.3682,
+     "rec": 0.0,
+     "rank": 1628
+    },
+    "cut": {
+     "hop": 1,
+     "uni": 16.6905,
+     "lc": 16.3272,
+     "rec": 0.0,
+     "rank": 2727
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 14.2103,
+     "lc": 13.3682,
+     "rec": 0.0,
+     "rank": 1628
+    },
+    "control": {
+     "hop": 0,
+     "uni": 14.1785,
+     "lc": 13.2845,
+     "rec": 0.0,
+     "rank": 1711
+    }
+   },
+   {
+    "qid": "RW:3hop2__607269_223623_162182",
+    "key": "paracel",
+    "ctrl": "ho\u00e0ng",
+    "v": "mq:832be2e09f953757",
+    "u": "mq:7b01925e99cc5cce",
+    "built": {
+     "hop": 0,
+     "uni": 4.4302,
+     "lc": 5.4833,
+     "rec": 0.0,
+     "rank": 21
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 4.6108,
+     "lc": 5.4347,
+     "rec": 0.0,
+     "rank": 21
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 4.4302,
+     "lc": 5.4833,
+     "rec": 0.0,
+     "rank": 21
+    },
+    "control": {
+     "hop": 0,
+     "uni": 4.4302,
+     "lc": 5.4347,
+     "rec": 0.0,
+     "rank": 21
+    }
+   },
+   {
+    "qid": "RW:3hop2__87184_36497_76291",
+    "key": "republicans regained",
+    "ctrl": "democratic held",
+    "v": "mq:e3de0ee582ca38ce",
+    "u": "mq:f2a60931baaaf042",
+    "built": {
+     "hop": 1,
+     "uni": 20.3419,
+     "lc": 22.6139,
+     "rec": 0.0,
+     "rank": 3057
+    },
+    "cut": {
+     "hop": 1,
+     "uni": 21.0169,
+     "lc": 22.565,
+     "rec": 0.0,
+     "rank": 3220
+    },
+    "restored": {
+     "hop": 1,
+     "uni": 20.3419,
+     "lc": 22.6139,
+     "rec": 0.0,
+     "rank": 3057
+    },
+    "control": {
+     "hop": 1,
+     "uni": 20.2878,
+     "lc": 22.5631,
+     "rec": 0.0,
+     "rank": 3103
+    }
+   },
+   {
+    "qid": "RW:3hop2__88342_93066_90766",
+    "key": "player award",
+    "ctrl": "judgment",
+    "v": "mq:823be9f0a54383c5",
+    "u": "mq:4c4690cbcc89a7d5",
+    "built": {
+     "hop": 0,
+     "uni": 10.667,
+     "lc": 9.9615,
+     "rec": 0.0,
+     "rank": 135
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 11.4397,
+     "lc": 10.6852,
+     "rec": 0.0,
+     "rank": 181
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 10.667,
+     "lc": 9.9615,
+     "rec": 0.0,
+     "rank": 135
+    },
+    "control": {
+     "hop": 0,
+     "uni": 10.667,
+     "lc": 9.9156,
+     "rec": 0.0,
+     "rank": 137
+    }
+   },
+   {
+    "qid": "RW:3hop2__89854_36497_76291",
+    "key": "republicans regained",
+    "ctrl": "democratic held",
+    "v": "mq:e3de0ee582ca38ce",
+    "u": "mq:f2a60931baaaf042",
+    "built": {
+     "hop": 1,
+     "uni": 20.3419,
+     "lc": 19.3153,
+     "rec": 0.0,
+     "rank": 101
+    },
+    "cut": {
+     "hop": 1,
+     "uni": 21.0169,
+     "lc": 19.2668,
+     "rec": 0.0,
+     "rank": 129
+    },
+    "restored": {
+     "hop": 1,
+     "uni": 20.3419,
+     "lc": 19.3153,
+     "rec": 0.0,
+     "rank": 101
+    },
+    "control": {
+     "hop": 1,
+     "uni": 20.2878,
+     "lc": 19.2652,
+     "rec": 0.0,
+     "rank": 118
+    }
+   },
+   {
+    "qid": "RW:3hop2__92991_89854_76291",
+    "key": "republicans regained",
+    "ctrl": "democratic held",
+    "v": "mq:e3de0ee582ca38ce",
+    "u": "mq:f2a60931baaaf042",
+    "built": {
+     "hop": 0,
+     "uni": 17.0099,
+     "lc": 11.194,
+     "rec": 0.0,
+     "rank": 43
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 17.0121,
+     "lc": 11.1449,
+     "rec": 0.0,
+     "rank": 47
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 17.0099,
+     "lc": 11.194,
+     "rec": 0.0,
+     "rank": 43
+    },
+    "control": {
+     "hop": 0,
+     "uni": 16.9558,
+     "lc": 11.145,
+     "rec": 0.0,
+     "rank": 47
+    }
+   },
+   {
+    "qid": "RW:4hop1__105401_17130_70784_79935",
+    "key": "aqaba",
+    "ctrl": "features within",
+    "v": "mq:5b56be54717d03f5",
+    "u": "mq:e0f52e2f450eb72e",
+    "built": {
+     "hop": 0,
+     "uni": 22.566,
+     "lc": 19.1605,
+     "rec": 0.25,
+     "rank": 75
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 22.7048,
+     "lc": 19.9579,
+     "rec": 0.25,
+     "rank": 96
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 22.566,
+     "lc": 19.1605,
+     "rec": 0.25,
+     "rank": 75
+    },
+    "control": {
+     "hop": 0,
+     "uni": 22.5505,
+     "lc": 19.1406,
+     "rec": 0.25,
+     "rank": 76
+    }
+   },
+   {
+    "qid": "RW:4hop1__105688_17130_70784_61381",
+    "key": "asir",
+    "ctrl": "holy mosques",
+    "v": "mq:ec91dd0e33450587",
+    "u": "mq:9691cf1b00968b04",
+    "built": {
+     "hop": 0,
+     "uni": 18.4354,
+     "lc": 20.0951,
+     "rec": 0.0,
+     "rank": 859
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 18.566,
+     "lc": 20.0784,
+     "rec": 0.0,
+     "rank": 861
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 18.4354,
+     "lc": 20.0951,
+     "rec": 0.0,
+     "rank": 859
+    },
+    "control": {
+     "hop": 0,
+     "uni": 18.4354,
+     "lc": 20.0783,
+     "rec": 0.0,
+     "rank": 861
+    }
+   },
+   {
+    "qid": "RW:4hop1__151650_5274_458768_33677",
+    "key": "cbs records",
+    "ctrl": "sme",
+    "v": "mq:0ab53ea6d24e21ee",
+    "u": "mq:130499a3056b377f",
+    "built": {
+     "hop": 0,
+     "uni": 8.3747,
+     "lc": 5.8331,
+     "rec": 0.0,
+     "rank": 11
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 8.5889,
+     "lc": 6.4828,
+     "rec": 0.0,
+     "rank": 14
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 8.3747,
+     "lc": 5.8331,
+     "rec": 0.0,
+     "rank": 11
+    },
+    "control": {
+     "hop": 0,
+     "uni": 8.3747,
+     "lc": 5.8023,
+     "rec": 0.0,
+     "rank": 12
+    }
+   },
+   {
+    "qid": "RW:4hop1__342858_131850_33952_34109",
+    "key": "tucson metro",
+    "ctrl": "cochise",
+    "v": "mq:c73c69fde47d0bda",
+    "u": "mq:5c05a372e4ad380f",
+    "built": {
+     "hop": 0,
+     "uni": 11.7181,
+     "lc": 7.8341,
+     "rec": 0.0,
+     "rank": 116
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 12.7937,
+     "lc": 8.7992,
+     "rec": 0.0,
+     "rank": 141
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 11.7181,
+     "lc": 7.8341,
+     "rec": 0.0,
+     "rank": 116
+    },
+    "control": {
+     "hop": 0,
+     "uni": 11.7181,
+     "lc": 7.8021,
+     "rec": 0.0,
+     "rank": 116
+    }
+   },
+   {
+    "qid": "RW:4hop1__343844_17130_70784_79935",
+    "key": "aqaba",
+    "ctrl": "features within",
+    "v": "mq:5b56be54717d03f5",
+    "u": "mq:e0f52e2f450eb72e",
+    "built": {
+     "hop": 1,
+     "uni": 21.6883,
+     "lc": 24.3061,
+     "rec": 0.0,
+     "rank": 32
+    },
+    "cut": {
+     "hop": 1,
+     "uni": 21.8425,
+     "lc": 25.1308,
+     "rec": 0.0,
+     "rank": 46
+    },
+    "restored": {
+     "hop": 1,
+     "uni": 21.6883,
+     "lc": 24.3061,
+     "rec": 0.0,
+     "rank": 32
+    },
+    "control": {
+     "hop": 1,
+     "uni": 21.6883,
+     "lc": 24.2913,
+     "rec": 0.0,
+     "rank": 32
+    }
+   },
+   {
+    "qid": "RW:4hop1__40316_497223_15840_36002",
+    "key": "family computer",
+    "ctrl": "bit home",
+    "v": "mq:6f03dca82a759573",
+    "u": "mq:da314d9a1df28f7f",
+    "built": {
+     "hop": 1,
+     "uni": 24.0062,
+     "lc": 20.8009,
+     "rec": 0.25,
+     "rank": 358
+    },
+    "cut": {
+     "hop": 1,
+     "uni": 24.6622,
+     "lc": 21.4071,
+     "rec": 0.25,
+     "rank": 376
+    },
+    "restored": {
+     "hop": 1,
+     "uni": 24.0062,
+     "lc": 20.8009,
+     "rec": 0.25,
+     "rank": 358
+    },
+    "control": {
+     "hop": 1,
+     "uni": 23.9699,
+     "lc": 20.6898,
+     "rec": 0.25,
+     "rank": 385
+    }
+   },
+   {
+    "qid": "RW:4hop1__473563_309800_355213_203322",
+    "key": "robert abel",
+    "ctrl": "whitney",
+    "v": "mq:22e04f2d1a8e4849",
+    "u": "mq:626a824cdc0f2f3c",
+    "built": {
+     "hop": 0,
+     "uni": 10.7953,
+     "lc": 10.1467,
+     "rec": 0.0,
+     "rank": 958
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 13.2802,
+     "lc": 12.6042,
+     "rec": 0.0,
+     "rank": 4202
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 10.7953,
+     "lc": 10.1467,
+     "rec": 0.0,
+     "rank": 958
+    },
+    "control": {
+     "hop": 0,
+     "uni": 10.7953,
+     "lc": 10.0527,
+     "rec": 0.0,
+     "rank": 958
+    }
+   },
+   {
+    "qid": "RW:4hop1__567737_141375_458768_33632",
+    "key": "clifford brown",
+    "ctrl": "dilemma",
+    "v": "mq:6b128c0e2d6f06b5",
+    "u": "mq:d23f269eb819cfb0",
+    "built": {
+     "hop": 0,
+     "uni": 13.3176,
+     "lc": 10.1499,
+     "rec": 0.5,
+     "rank": 3
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 13.6249,
+     "lc": 10.3117,
+     "rec": 0.5,
+     "rank": 3
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 13.3176,
+     "lc": 10.1499,
+     "rec": 0.5,
+     "rank": 3
+    },
+    "control": {
+     "hop": 0,
+     "uni": 13.271,
+     "lc": 10.1181,
+     "rec": 0.5,
+     "rank": 3
+    }
+   },
+   {
+    "qid": "RW:4hop1__58323_375563_161848_20546",
+    "key": "book thief",
+    "ctrl": "2013 world",
+    "v": "mq:72d3d13e1ec8d53b",
+    "u": "mq:2c80bdf4cfa709f4",
+    "built": {
+     "hop": 0,
+     "uni": 20.644,
+     "lc": 19.5943,
+     "rec": 0.25,
+     "rank": 1
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 20.6888,
+     "lc": 19.5913,
+     "rec": 0.25,
+     "rank": 1
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 20.644,
+     "lc": 19.5943,
+     "rec": 0.25,
+     "rank": 1
+    },
+    "control": {
+     "hop": 0,
+     "uni": 20.6238,
+     "lc": 19.5825,
+     "rec": 0.25,
+     "rank": 1
+    }
+   },
+   {
+    "qid": "RW:4hop1__696484_49925_13759_736921",
+    "key": "wittenberg",
+    "ctrl": "neighboring districts",
+    "v": "mq:d63cfcdbf18fa095",
+    "u": "mq:4e27a283fef849b7",
+    "built": {
+     "hop": 0,
+     "uni": 12.0369,
+     "lc": 9.991,
+     "rec": 0.0,
+     "rank": 84
+    },
+    "cut": {
+     "hop": 1,
+     "uni": 15.6014,
+     "lc": 13.0908,
+     "rec": 0.0,
+     "rank": 604
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 12.0369,
+     "lc": 9.991,
+     "rec": 0.0,
+     "rank": 84
+    },
+    "control": {
+     "hop": 0,
+     "uni": 12.0369,
+     "lc": 9.9359,
+     "rec": 0.0,
+     "rank": 85
+    }
+   },
+   {
+    "qid": "RW:4hop1__726391_153080_159767_81096",
+    "key": "charles mingus",
+    "ctrl": "cuts",
+    "v": "mq:68c091e277deca7f",
+    "u": "mq:98a07edb3ccc50d9",
+    "built": {
+     "hop": 0,
+     "uni": 20.3103,
+     "lc": 23.118,
+     "rec": 0.0,
+     "rank": 1288
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 21.0035,
+     "lc": 23.5659,
+     "rec": 0.0,
+     "rank": 1363
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 20.3103,
+     "lc": 23.118,
+     "rec": 0.0,
+     "rank": 1288
+    },
+    "control": {
+     "hop": 0,
+     "uni": 20.3103,
+     "lc": 23.2678,
+     "rec": 0.0,
+     "rank": 1412
+    }
+   },
+   {
+    "qid": "RW:4hop1__73810_32392_823060_610794",
+    "key": "acres south",
+    "ctrl": "carolina metropolitan",
+    "v": "mq:a6cd0672323b735d",
+    "u": "mq:371e6491122b99a7",
+    "built": {
+     "hop": 1,
+     "uni": 17.7134,
+     "lc": 21.746,
+     "rec": 0.0,
+     "rank": 1745
+    },
+    "cut": {
+     "hop": 1,
+     "uni": 18.0581,
+     "lc": 22.2001,
+     "rec": 0.0,
+     "rank": 1757
+    },
+    "restored": {
+     "hop": 1,
+     "uni": 17.7134,
+     "lc": 21.746,
+     "rec": 0.0,
+     "rank": 1745
+    },
+    "control": {
+     "hop": 1,
+     "uni": 17.6264,
+     "lc": 21.578,
+     "rec": 0.0,
+     "rank": 1844
+    }
+   },
+   {
+    "qid": "RW:4hop1__860115_798482_131926_89261",
+    "key": "american continent",
+    "ctrl": "canadian provinces",
+    "v": "mq:72cb7ead3ba4477f",
+    "u": "mq:4ca772688948d344",
+    "built": {
+     "hop": 0,
+     "uni": 24.5974,
+     "lc": 22.3335,
+     "rec": 0.0,
+     "rank": 8
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 25.4774,
+     "lc": 23.4467,
+     "rec": 0.0,
+     "rank": 15
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 24.5974,
+     "lc": 22.3335,
+     "rec": 0.0,
+     "rank": 8
+    },
+    "control": {
+     "hop": 0,
+     "uni": 24.5727,
+     "lc": 22.2875,
+     "rec": 0.0,
+     "rank": 8
+    }
+   },
+   {
+    "qid": "RW:4hop1__88342_75218_128008_54974",
+    "key": "bill devery",
+    "ctrl": null,
+    "v": "mq:6164185c9873d9b3",
+    "u": "mq:12ef516969969e27",
+    "built": {
+     "hop": 0,
+     "uni": 21.3054,
+     "lc": 20.0281,
+     "rec": 0.0,
+     "rank": 78
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 21.3735,
+     "lc": 20.0379,
+     "rec": 0.0,
+     "rank": 80
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 21.3054,
+     "lc": 20.0281,
+     "rec": 0.0,
+     "rank": 78
+    },
+    "control": null
+   },
+   {
+    "qid": "RW:4hop2__160585_14670_8987_8529",
+    "key": "ivan",
+    "ctrl": "professional tennis",
+    "v": "mq:b96a31354578b285",
+    "u": "mq:4b1d40a658d4a437",
+    "built": {
+     "hop": 0,
+     "uni": 18.6633,
+     "lc": 14.2841,
+     "rec": 0.0,
+     "rank": 571
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 19.7855,
+     "lc": 15.1958,
+     "rec": 0.0,
+     "rank": 588
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 18.6633,
+     "lc": 14.2841,
+     "rec": 0.0,
+     "rank": 571
+    },
+    "control": {
+     "hop": 0,
+     "uni": 18.6633,
+     "lc": 14.2363,
+     "rec": 0.0,
+     "rank": 597
+    }
+   },
+   {
+    "qid": "RW:4hop2__71753_261673_70784_79935",
+    "key": "persian gulf",
+    "ctrl": "densely",
+    "v": "mq:6421666ff3e70d66",
+    "u": "mq:a5cab0bf9acc5c9e",
+    "built": {
+     "hop": 0,
+     "uni": 17.7627,
+     "lc": 16.9901,
+     "rec": 0.0,
+     "rank": 104
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 18.1337,
+     "lc": 16.9782,
+     "rec": 0.0,
+     "rank": 132
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 17.7627,
+     "lc": 16.9901,
+     "rec": 0.0,
+     "rank": 104
+    },
+    "control": {
+     "hop": 0,
+     "uni": 17.7627,
+     "lc": 16.9754,
+     "rec": 0.0,
+     "rank": 105
+    }
+   },
+   {
+    "qid": "RW:4hop2__9988_158985_70784_61381",
+    "key": "distinct regions",
+    "ctrl": "ancestral home",
+    "v": "mq:ec91dd0e33450587",
+    "u": "mq:f7e20fac3cd1b17b",
+    "built": {
+     "hop": 0,
+     "uni": 8.7875,
+     "lc": 12.7906,
+     "rec": 0.0,
+     "rank": 1642
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 8.1051,
+     "lc": 16.2371,
+     "rec": 0.0,
+     "rank": 3661
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 8.7875,
+     "lc": 12.7906,
+     "rec": 0.0,
+     "rank": 1642
+    },
+    "control": {
+     "hop": 0,
+     "uni": 8.7875,
+     "lc": 12.7738,
+     "rec": 0.0,
+     "rank": 1647
+    }
+   },
+   {
+    "qid": "RW:4hop2__9988_685934_70784_61381",
+    "key": "distinct regions",
+    "ctrl": "ancestral home",
+    "v": "mq:ec91dd0e33450587",
+    "u": "mq:f7e20fac3cd1b17b",
+    "built": {
+     "hop": 0,
+     "uni": 14.3424,
+     "lc": 17.0566,
+     "rec": 0.0,
+     "rank": 1671
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 13.6599,
+     "lc": 20.626,
+     "rec": 0.0,
+     "rank": 5819
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 14.3424,
+     "lc": 17.0566,
+     "rec": 0.0,
+     "rank": 1671
+    },
+    "control": {
+     "hop": 0,
+     "uni": 14.3424,
+     "lc": 17.0399,
+     "rec": 0.0,
+     "rank": 1677
+    }
+   },
+   {
+    "qid": "RW:4hop3__152056_698586_1926_54362",
+    "key": "shawty",
+    "ctrl": "discography consists",
+    "v": "mq:6266b9de2c0706c4",
+    "u": "mq:4f5a1ab5a5874f09",
+    "built": {
+     "hop": 0,
+     "uni": 9.2842,
+     "lc": 10.656,
+     "rec": 0.0,
+     "rank": 13
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 10.9165,
+     "lc": 11.661,
+     "rec": 0.0,
+     "rank": 48
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 9.2842,
+     "lc": 10.656,
+     "rec": 0.0,
+     "rank": 13
+    },
+    "control": {
+     "hop": 0,
+     "uni": 9.2301,
+     "lc": 10.5736,
+     "rec": 0.0,
+     "rank": 13
+    }
+   },
+   {
+    "qid": "RW:4hop3__316459_41402_146281_13584",
+    "key": "roussillon",
+    "ctrl": "margrave",
+    "v": "mq:748997e28f30971e",
+    "u": "mq:c8e0cd9eefe6ca32",
+    "built": {
+     "hop": 2,
+     "uni": 24.0301,
+     "lc": 20.7075,
+     "rec": 0.0,
+     "rank": 6488
+    },
+    "cut": {
+     "hop": 2,
+     "uni": 24.3525,
+     "lc": 22.3836,
+     "rec": 0.0,
+     "rank": 6784
+    },
+    "restored": {
+     "hop": 2,
+     "uni": 24.0301,
+     "lc": 20.7075,
+     "rec": 0.0,
+     "rank": 6488
+    },
+    "control": {
+     "hop": 2,
+     "uni": 24.0301,
+     "lc": 20.5811,
+     "rec": 0.0,
+     "rank": 6529
+    }
+   },
+   {
+    "qid": "RW:4hop3__316459_41402_157761_13584",
+    "key": "centro",
+    "ctrl": "interiors",
+    "v": "mq:41522c4d9970f9a6",
+    "u": "mq:0f5e6b24f3012719",
+    "built": {
+     "hop": 2,
+     "uni": 24.8628,
+     "lc": 19.2571,
+     "rec": 0.0,
+     "rank": 3442
+    },
+    "cut": {
+     "hop": 2,
+     "uni": 25.1714,
+     "lc": 19.2147,
+     "rec": 0.0,
+     "rank": 4379
+    },
+    "restored": {
+     "hop": 2,
+     "uni": 24.8628,
+     "lc": 19.2571,
+     "rec": 0.0,
+     "rank": 3442
+    },
+    "control": {
+     "hop": 2,
+     "uni": 24.8628,
+     "lc": 19.2147,
+     "rec": 0.0,
+     "rank": 3721
+    }
+   },
+   {
+    "qid": "RW:4hop3__507819_88460_30152_20999",
+    "key": "laos",
+    "ctrl": "completion",
+    "v": "mq:45d774023fb4d3f5",
+    "u": "mq:1f45fcacd3de61d2",
+    "built": {
+     "hop": 0,
+     "uni": 20.0629,
+     "lc": 20.941,
+     "rec": 0.0,
+     "rank": 92
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 20.6275,
+     "lc": 20.979,
+     "rec": 0.0,
+     "rank": 96
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 20.0629,
+     "lc": 20.941,
+     "rec": 0.0,
+     "rank": 92
+    },
+    "control": {
+     "hop": 0,
+     "uni": 20.0629,
+     "lc": 20.9023,
+     "rec": 0.0,
+     "rank": 93
+    }
+   },
+   {
+    "qid": "RW:4hop3__813358_24325_125104_10557",
+    "key": "malmedy",
+    "ctrl": "speaking area",
+    "v": "mq:34f930c7dc562e75",
+    "u": "mq:c6b5be9584e03295",
+    "built": {
+     "hop": 0,
+     "uni": 17.3064,
+     "lc": 11.1194,
+     "rec": 0.3333333333333333,
+     "rank": 1
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 18.5591,
+     "lc": 12.0592,
+     "rec": 0.0,
+     "rank": 6
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 17.3064,
+     "lc": 11.1194,
+     "rec": 0.3333333333333333,
+     "rank": 1
+    },
+    "control": {
+     "hop": 0,
+     "uni": 17.3064,
+     "lc": 11.0892,
+     "rec": 0.3333333333333333,
+     "rank": 1
+    }
+   },
+   {
+    "qid": "RW:4hop3__857_846_326964_7713",
+    "key": "phagpa lama",
+    "ctrl": "deference",
+    "v": "mq:71a0089843686c23",
+    "u": "mq:d3079c12e943ce0e",
+    "built": {
+     "hop": 0,
+     "uni": 6.3141,
+     "lc": 6.0599,
+     "rec": 0.5,
+     "rank": 1
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 6.477,
+     "lc": 6.19,
+     "rec": 0.5,
+     "rank": 1
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 6.3141,
+     "lc": 6.0599,
+     "rec": 0.5,
+     "rank": 1
+    },
+    "control": {
+     "hop": 0,
+     "uni": 6.3141,
+     "lc": 6.0452,
+     "rec": 0.5,
+     "rank": 1
+    }
+   }
+  ],
+  "gate": 4,
+  "aggregate": {
+   "n": 132,
+   "logrank": [
+    0.4634444903796645,
+    0.36951367732541635,
+    0.5572526878472843
+   ],
+   "recall": [
+    -0.07070707070707072,
+    -0.11363636363636363,
+    -0.032828282828282825
+   ]
+  }
+ },
+ "cards": {
+  "cases": [
+   {
+    "qid": "card:REM-10",
+    "key": "rem 10",
+    "ctrl": "call set_config",
+    "v": "commit/8a34a4e7fc",
+    "u": "board/cards/REM-10.md#1",
+    "built": {
+     "hop": 0,
+     "uni": 8.0507,
+     "lc": 16.6656,
+     "rec": 0.5,
+     "rank": 4
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 8.6793,
+     "lc": 16.8482,
+     "rec": 0.0,
+     "rank": 45
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 8.0507,
+     "lc": 16.6656,
+     "rec": 0.5,
+     "rank": 4
+    },
+    "control": {
+     "hop": 0,
+     "uni": 8.0507,
+     "lc": 16.632,
+     "rec": 0.5,
+     "rank": 4
+    }
+   },
+   {
+    "qid": "card:REM-1003",
+    "key": "rem 1003",
+    "ctrl": "labs terry",
+    "v": "commit/79f78cfcca",
+    "u": "commit/a1b5db4b0d",
+    "built": {
+     "hop": 0,
+     "uni": 4.2169,
+     "lc": 6.7247,
+     "rec": 0.0,
+     "rank": 379
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 5.0499,
+     "lc": 7.4089,
+     "rec": 0.0,
+     "rank": 1257
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 4.2169,
+     "lc": 6.7247,
+     "rec": 0.0,
+     "rank": 379
+    },
+    "control": {
+     "hop": 0,
+     "uni": 4.2169,
+     "lc": 6.5668,
+     "rec": 0.0,
+     "rank": 382
+    }
+   },
+   {
+    "qid": "card:REM-1044",
+    "key": "rem 1044",
+    "ctrl": "old version",
+    "v": "commit/c2bbafc728",
+    "u": "board/cards/REM-1044.md#4",
+    "built": {
+     "hop": 0,
+     "uni": 4.253,
+     "lc": 6.1539,
+     "rec": 0.0,
+     "rank": 14
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 4.8629,
+     "lc": 6.7386,
+     "rec": 0.0,
+     "rank": 21
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 4.253,
+     "lc": 6.1539,
+     "rec": 0.0,
+     "rank": 14
+    },
+    "control": {
+     "hop": 0,
+     "uni": 4.253,
+     "lc": 6.1203,
+     "rec": 0.0,
+     "rank": 14
+    }
+   },
+   {
+    "qid": "card:REM-1088",
+    "key": "reproductions",
+    "ctrl": "audit record",
+    "v": "commit/fb3a62f74f",
+    "u": "commit/eae149a722",
+    "built": {
+     "hop": 0,
+     "uni": 8.165,
+     "lc": 7.3686,
+     "rec": 0.0,
+     "rank": 1152
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 8.6603,
+     "lc": 7.549,
+     "rec": 0.0,
+     "rank": 1407
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 8.165,
+     "lc": 7.3686,
+     "rec": 0.0,
+     "rank": 1152
+    },
+    "control": {
+     "hop": 0,
+     "uni": 8.165,
+     "lc": 7.2314,
+     "rec": 0.0,
+     "rank": 1316
+    }
+   },
+   {
+    "qid": "card:REM-1094",
+    "key": "rem 1094",
+    "ctrl": "extension version",
+    "v": "commit/fbd9b678a0",
+    "u": "commit/21af6ff16b",
+    "built": {
+     "hop": 0,
+     "uni": 5.001,
+     "lc": 6.6601,
+     "rec": 0.0,
+     "rank": 33
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 5.7301,
+     "lc": 6.812,
+     "rec": 0.0,
+     "rank": 47
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 5.001,
+     "lc": 6.6601,
+     "rec": 0.0,
+     "rank": 33
+    },
+    "control": {
+     "hop": 0,
+     "uni": 5.001,
+     "lc": 6.6299,
+     "rec": 0.0,
+     "rank": 33
+    }
+   },
+   {
+    "qid": "card:REM-1139",
+    "key": "annotation names",
+    "ctrl": "example annotation",
+    "v": "commit/d7ec8f1ca6",
+    "u": "commit/626945b44a",
+    "built": {
+     "hop": 0,
+     "uni": 6.8299,
+     "lc": 5.5511,
+     "rec": 0.0,
+     "rank": 39
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 7.4595,
+     "lc": 5.9995,
+     "rec": 0.0,
+     "rank": 43
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 6.8299,
+     "lc": 5.5511,
+     "rec": 0.0,
+     "rank": 39
+    },
+    "control": {
+     "hop": 0,
+     "uni": 6.8299,
+     "lc": 5.4406,
+     "rec": 0.0,
+     "rank": 44
+    }
+   },
+   {
+    "qid": "card:REM-1140",
+    "key": "launchd every",
+    "ctrl": "minutes since",
+    "v": "commit/423c7604f4",
+    "u": "commit/13d787243e",
+    "built": {
+     "hop": 0,
+     "uni": 11.0029,
+     "lc": 8.4579,
+     "rec": 0.0,
+     "rank": 9
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 11.6336,
+     "lc": 8.9451,
+     "rec": 0.0,
+     "rank": 9
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 11.0029,
+     "lc": 8.4579,
+     "rec": 0.0,
+     "rank": 9
+    },
+    "control": {
+     "hop": 0,
+     "uni": 11.0029,
+     "lc": 8.409,
+     "rec": 0.0,
+     "rank": 9
+    }
+   },
+   {
+    "qid": "card:REM-1166",
+    "key": "role policy",
+    "ctrl": "percolate rbac",
+    "v": "commit/12e0a80a7a",
+    "u": "board/messages/M-20261024-064011-0978.md#1",
+    "built": {
+     "hop": 0,
+     "uni": 3.375,
+     "lc": 3.204,
+     "rec": 0.0,
+     "rank": 20
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 3.8445,
+     "lc": 3.5143,
+     "rec": 0.0,
+     "rank": 28
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 3.375,
+     "lc": 3.204,
+     "rec": 0.0,
+     "rank": 20
+    },
+    "control": {
+     "hop": 0,
+     "uni": 3.375,
+     "lc": 3.0584,
+     "rec": 0.0,
+     "rank": 25
+    }
+   },
+   {
+    "qid": "card:REM-1194",
+    "key": "rem 1194",
+    "ctrl": "open clue",
+    "v": "commit/f2d8d24d16",
+    "u": "board/cards/REM-1194.md#2",
+    "built": {
+     "hop": 0,
+     "uni": 5.0062,
+     "lc": 6.4311,
+     "rec": 0.0,
+     "rank": 88
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 5.7683,
+     "lc": 7.0829,
+     "rec": 0.0,
+     "rank": 160
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 5.0062,
+     "lc": 6.4311,
+     "rec": 0.0,
+     "rank": 88
+    },
+    "control": {
+     "hop": 0,
+     "uni": 5.0062,
+     "lc": 6.3202,
+     "rec": 0.0,
+     "rank": 90
+    }
+   },
+   {
+    "qid": "card:REM-1217",
+    "key": "language rem",
+    "ctrl": "1217 spec",
+    "v": "commit/9c87026d77",
+    "u": "commit/26d14d2b33",
+    "built": {
+     "hop": 0,
+     "uni": 3.5639,
+     "lc": 6.1229,
+     "rec": 0.5,
+     "rank": 1
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 3.8742,
+     "lc": 6.1432,
+     "rec": 0.5,
+     "rank": 1
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 3.5639,
+     "lc": 6.1229,
+     "rec": 0.5,
+     "rank": 1
+    },
+    "control": {
+     "hop": 0,
+     "uni": 4.1017,
+     "lc": 6.4963,
+     "rec": 0.5,
+     "rank": 1
+    }
+   },
+   {
+    "qid": "card:REM-122",
+    "key": "dump carries",
+    "ctrl": "add_scope_columns adds",
+    "v": "commit/1acc8f9ce2",
+    "u": "board/cards/REM-122.md#2",
+    "built": {
+     "hop": 0,
+     "uni": 2.7496,
+     "lc": 5.5072,
+     "rec": 1.0,
+     "rank": 3
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 3.1157,
+     "lc": 5.8966,
+     "rec": 1.0,
+     "rank": 5
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 2.7496,
+     "lc": 5.5072,
+     "rec": 1.0,
+     "rank": 3
+    },
+    "control": {
+     "hop": 0,
+     "uni": 2.7496,
+     "lc": 5.498,
+     "rec": 1.0,
+     "rank": 3
+    }
+   },
+   {
+    "qid": "card:REM-123",
+    "key": "whole key",
+    "ctrl": "convergence gate",
+    "v": "commit/9a87941f19",
+    "u": "board/cards/REM-123.md#2",
+    "built": {
+     "hop": 0,
+     "uni": 10.041,
+     "lc": 17.8879,
+     "rec": 0.3333333333333333,
+     "rank": 1
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 10.5721,
+     "lc": 17.8792,
+     "rec": 0.3333333333333333,
+     "rank": 1
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 10.041,
+     "lc": 17.8879,
+     "rec": 0.3333333333333333,
+     "rank": 1
+    },
+    "control": {
+     "hop": 0,
+     "uni": 10.041,
+     "lc": 17.8792,
+     "rec": 0.3333333333333333,
+     "rank": 1
+    }
+   },
+   {
+    "qid": "card:REM-1245",
+    "key": "rem 1245",
+    "ctrl": "labs james",
+    "v": "commit/ac0fece0bf",
+    "u": "commit/edd6917fe6",
+    "built": {
+     "hop": 0,
+     "uni": 6.7616,
+     "lc": 9.156,
+     "rec": 0.0,
+     "rank": 13633
+    },
+    "cut": {
+     "hop": 1,
+     "uni": 12.7603,
+     "lc": 14.42,
+     "rec": 0.0,
+     "rank": 31338
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 6.7616,
+     "lc": 9.156,
+     "rec": 0.0,
+     "rank": 13633
+    },
+    "control": {
+     "hop": 0,
+     "uni": 6.7616,
+     "lc": 8.9794,
+     "rec": 0.0,
+     "rank": 13652
+    }
+   },
+   {
+    "qid": "card:REM-1266",
+    "key": "tutorial series",
+    "ctrl": "card fleshed",
+    "v": "commit/b39a2db133",
+    "u": "commit/3bba0e14be",
+    "built": {
+     "hop": 0,
+     "uni": 3.7587,
+     "lc": 2.3896,
+     "rec": 0.0,
+     "rank": 13
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 4.9008,
+     "lc": 3.289,
+     "rec": 0.0,
+     "rank": 39
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 3.7587,
+     "lc": 2.3896,
+     "rec": 0.0,
+     "rank": 13
+    },
+    "control": {
+     "hop": 0,
+     "uni": 3.7587,
+     "lc": 2.2095,
+     "rec": 0.0,
+     "rank": 13
+    }
+   },
+   {
+    "qid": "card:REM-130",
+    "key": "checker runs",
+    "ctrl": "bearing line",
+    "v": "commit/36fd6706c0",
+    "u": "board/cards/REM-130.md#1",
+    "built": {
+     "hop": 0,
+     "uni": 6.7047,
+     "lc": 8.9923,
+     "rec": 0.5,
+     "rank": 3
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 7.9946,
+     "lc": 9.1449,
+     "rec": 0.5,
+     "rank": 4
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 6.7047,
+     "lc": 8.9923,
+     "rec": 0.5,
+     "rank": 3
+    },
+    "control": {
+     "hop": 0,
+     "uni": 6.7047,
+     "lc": 8.9767,
+     "rec": 0.5,
+     "rank": 3
+    }
+   },
+   {
+    "qid": "card:REM-1301",
+    "key": "rem 1301",
+    "ctrl": "database read",
+    "v": "commit/c6c990ef62",
+    "u": "commit/ae968a5664",
+    "built": {
+     "hop": 0,
+     "uni": 2.5625,
+     "lc": 2.524,
+     "rec": 1.0,
+     "rank": 3
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 2.7393,
+     "lc": 2.5975,
+     "rec": 1.0,
+     "rank": 3
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 2.5625,
+     "lc": 2.524,
+     "rec": 1.0,
+     "rank": 3
+    },
+    "control": {
+     "hop": 0,
+     "uni": 2.5625,
+     "lc": 2.4222,
+     "rec": 1.0,
+     "rank": 3
+    }
+   },
+   {
+    "qid": "card:REM-1331",
+    "key": "guess read",
+    "ctrl": "1331 rounds",
+    "v": "commit/bc06376e94",
+    "u": "meta/postmortems/2026-11-09-a-guess-read-as-a-fact.md#3",
+    "built": {
+     "hop": 0,
+     "uni": 13.4981,
+     "lc": 12.1028,
+     "rec": 0.0,
+     "rank": 705
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 14.0325,
+     "lc": 13.5426,
+     "rec": 0.0,
+     "rank": 1405
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 13.4981,
+     "lc": 12.1028,
+     "rec": 0.0,
+     "rank": 705
+    },
+    "control": {
+     "hop": 0,
+     "uni": 13.4981,
+     "lc": 11.8781,
+     "rec": 0.0,
+     "rank": 854
+    }
+   },
+   {
+    "qid": "card:REM-1332",
+    "key": "rem 1332",
+    "ctrl": "subsystems follows",
+    "v": "commit/c99fc86b28",
+    "u": "commit/f045bb9f9e",
+    "built": {
+     "hop": 0,
+     "uni": 2.9457,
+     "lc": 4.8684,
+     "rec": 0.0,
+     "rank": 1099
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 3.2253,
+     "lc": 4.9597,
+     "rec": 0.0,
+     "rank": 1626
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 2.9457,
+     "lc": 4.8684,
+     "rec": 0.0,
+     "rank": 1099
+    },
+    "control": {
+     "hop": 0,
+     "uni": 2.9457,
+     "lc": 4.6698,
+     "rec": 0.0,
+     "rank": 1103
+    }
+   },
+   {
+    "qid": "card:REM-1337",
+    "key": "private long",
+    "ctrl": null,
+    "v": "commit/bb84bde4f1",
+    "u": "commit/787b3de44b",
+    "built": {
+     "hop": 0,
+     "uni": 8.2489,
+     "lc": 4.0762,
+     "rec": 0.0,
+     "rank": 10
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 8.8181,
+     "lc": 3.9044,
+     "rec": 0.0,
+     "rank": 15
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 8.2489,
+     "lc": 4.0762,
+     "rec": 0.0,
+     "rank": 10
+    },
+    "control": null
+   },
+   {
+    "qid": "card:REM-137",
+    "key": "user memory",
+    "ctrl": "arbitrary file",
+    "v": "commit/ff82f47fd1",
+    "u": "board/cards/REM-137.md#2",
+    "built": {
+     "hop": 0,
+     "uni": 2.2702,
+     "lc": 5.9789,
+     "rec": 1.0,
+     "rank": 1
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 2.9549,
+     "lc": 6.7816,
+     "rec": 1.0,
+     "rank": 1
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 2.2702,
+     "lc": 5.9789,
+     "rec": 1.0,
+     "rank": 1
+    },
+    "control": {
+     "hop": 0,
+     "uni": 2.2702,
+     "lc": 5.9699,
+     "rec": 1.0,
+     "rank": 1
+    }
+   },
+   {
+    "qid": "card:REM-138",
+    "key": "costly hour",
+    "ctrl": "ad4fb2c",
+    "v": "commit/ad4fb2cb29",
+    "u": "meta/postmortems/2026-09-12-the-diagnosis-was-the-expensive-half.md#1",
+    "built": {
+     "hop": 0,
+     "uni": 5.9743,
+     "lc": 8.3445,
+     "rec": 0.5,
+     "rank": 1
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 6.1111,
+     "lc": 8.4703,
+     "rec": 0.5,
+     "rank": 1
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 5.9743,
+     "lc": 8.3445,
+     "rec": 0.5,
+     "rank": 1
+    },
+    "control": {
+     "hop": 0,
+     "uni": 5.9743,
+     "lc": 8.9022,
+     "rec": 0.5,
+     "rank": 1
+    }
+   },
+   {
+    "qid": "card:REM-139",
+    "key": "day behind",
+    "ctrl": "commit touching",
+    "v": "commit/f808da6b26",
+    "u": "board/cards/REM-139.md#2",
+    "built": {
+     "hop": 0,
+     "uni": 6.766,
+     "lc": 11.7988,
+     "rec": 0.5,
+     "rank": 2
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 7.8658,
+     "lc": 11.612,
+     "rec": 0.5,
+     "rank": 4
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 6.766,
+     "lc": 11.7988,
+     "rec": 0.5,
+     "rank": 2
+    },
+    "control": {
+     "hop": 0,
+     "uni": 6.766,
+     "lc": 11.789,
+     "rec": 0.5,
+     "rank": 2
+    }
+   },
+   {
+    "qid": "card:REM-141",
+    "key": "discovered tools",
+    "ctrl": "gate asked",
+    "v": "commit/3493dda085",
+    "u": "board/cards/REM-141.md#2",
+    "built": {
+     "hop": 0,
+     "uni": 11.3562,
+     "lc": 22.5003,
+     "rec": 0.3333333333333333,
+     "rank": 2
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 11.4883,
+     "lc": 22.6313,
+     "rec": 0.3333333333333333,
+     "rank": 3
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 11.3562,
+     "lc": 22.5003,
+     "rec": 0.3333333333333333,
+     "rank": 2
+    },
+    "control": {
+     "hop": 0,
+     "uni": 11.3562,
+     "lc": 22.4854,
+     "rec": 0.3333333333333333,
+     "rank": 2
+    }
+   },
+   {
+    "qid": "card:REM-145",
+    "key": "rem 145",
+    "ctrl": "covers everything",
+    "v": "commit/b6794a01d0",
+    "u": "board/cards/REM-145.md#2",
+    "built": {
+     "hop": 0,
+     "uni": 3.241,
+     "lc": 4.1097,
+     "rec": 1.0,
+     "rank": 4
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 4.8441,
+     "lc": 5.3752,
+     "rec": 0.0,
+     "rank": 7
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 3.241,
+     "lc": 4.1097,
+     "rec": 1.0,
+     "rank": 4
+    },
+    "control": {
+     "hop": 0,
+     "uni": 3.241,
+     "lc": 4.0765,
+     "rec": 1.0,
+     "rank": 5
+    }
+   },
+   {
+    "qid": "card:REM-146",
+    "key": "rem 146",
+    "ctrl": "caller gets",
+    "v": "commit/1438d3f6db",
+    "u": "board/cards/REM-146.md#1",
+    "built": {
+     "hop": 0,
+     "uni": 6.9315,
+     "lc": 10.8158,
+     "rec": 0.0,
+     "rank": 116
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 8.4735,
+     "lc": 11.3335,
+     "rec": 0.0,
+     "rank": 1133
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 6.9315,
+     "lc": 10.8158,
+     "rec": 0.0,
+     "rank": 116
+    },
+    "control": {
+     "hop": 0,
+     "uni": 6.9315,
+     "lc": 10.764,
+     "rec": 0.0,
+     "rank": 116
+    }
+   },
+   {
+    "qid": "card:REM-147",
+    "key": "command proves",
+    "ctrl": "constraint tightening",
+    "v": "commit/1cdd7524c5",
+    "u": "meta/postmortems/README.md#55",
+    "built": {
+     "hop": 0,
+     "uni": 5.5715,
+     "lc": 7.4649,
+     "rec": 0.5,
+     "rank": 1
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 5.7052,
+     "lc": 7.5679,
+     "rec": 0.5,
+     "rank": 1
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 5.5715,
+     "lc": 7.4649,
+     "rec": 0.5,
+     "rank": 1
+    },
+    "control": {
+     "hop": 0,
+     "uni": 5.5715,
+     "lc": 7.4491,
+     "rec": 0.5,
+     "rank": 1
+    }
+   },
+   {
+    "qid": "card:REM-149",
+    "key": "rem 149",
+    "ctrl": "run_examples",
+    "v": "commit/7f7cf94f21",
+    "u": "board/cards/REM-149.md#1",
+    "built": {
+     "hop": 0,
+     "uni": 3.6889,
+     "lc": 5.9691,
+     "rec": 0.0,
+     "rank": 41
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 5.0752,
+     "lc": 6.1888,
+     "rec": 0.0,
+     "rank": 154
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 3.6889,
+     "lc": 5.9691,
+     "rec": 0.0,
+     "rank": 41
+    },
+    "control": {
+     "hop": 0,
+     "uni": 3.6889,
+     "lc": 5.9257,
+     "rec": 0.0,
+     "rank": 54
+    }
+   },
+   {
+    "qid": "card:REM-152",
+    "key": "file nothing",
+    "ctrl": "concurrent writes",
+    "v": "commit/b3279b98ef",
+    "u": "commit/77cc68df35",
+    "built": {
+     "hop": 0,
+     "uni": 9.1584,
+     "lc": 11.6586,
+     "rec": 0.3333333333333333,
+     "rank": 58
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 9.4144,
+     "lc": 11.8716,
+     "rec": 0.3333333333333333,
+     "rank": 58
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 9.1584,
+     "lc": 11.6586,
+     "rec": 0.3333333333333333,
+     "rank": 58
+    },
+    "control": {
+     "hop": 0,
+     "uni": 9.1584,
+     "lc": 11.6018,
+     "rec": 0.3333333333333333,
+     "rank": 58
+    }
+   },
+   {
+    "qid": "card:REM-174",
+    "key": "model tokens",
+    "ctrl": "suites pass",
+    "v": "commit/e81044760e",
+    "u": "specs/user-rbac/spec.md#37",
+    "built": {
+     "hop": 0,
+     "uni": 4.9785,
+     "lc": 6.1312,
+     "rec": 0.0,
+     "rank": 27
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 5.6051,
+     "lc": 6.7434,
+     "rec": 0.0,
+     "rank": 30
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 4.9785,
+     "lc": 6.1312,
+     "rec": 0.0,
+     "rank": 27
+    },
+    "control": {
+     "hop": 0,
+     "uni": 4.9785,
+     "lc": 6.1166,
+     "rec": 0.0,
+     "rank": 27
+    }
+   },
+   {
+    "qid": "card:REM-185",
+    "key": "privately rem",
+    "ctrl": "revision exposure",
+    "v": "commit/8ec9655542",
+    "u": "commit/961806b4bc",
+    "built": {
+     "hop": 0,
+     "uni": 21.185,
+     "lc": 22.0565,
+     "rec": 0.16666666666666666,
+     "rank": 141
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 21.392,
+     "lc": 22.1154,
+     "rec": 0.0,
+     "rank": 163
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 21.185,
+     "lc": 22.0565,
+     "rec": 0.16666666666666666,
+     "rank": 141
+    },
+    "control": {
+     "hop": 0,
+     "uni": 21.185,
+     "lc": 21.9817,
+     "rec": 0.16666666666666666,
+     "rank": 169
+    }
+   },
+   {
+    "qid": "card:REM-19",
+    "key": "temporal candidate",
+    "ctrl": "acceptance criterion",
+    "v": "commit/abcc1a9f84",
+    "u": "board/cards/REM-19.md#1",
+    "built": {
+     "hop": 0,
+     "uni": 9.9564,
+     "lc": 9.2246,
+     "rec": 0.3333333333333333,
+     "rank": 4
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 10.4235,
+     "lc": 9.7606,
+     "rec": 0.3333333333333333,
+     "rank": 4
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 9.9564,
+     "lc": 9.2246,
+     "rec": 0.3333333333333333,
+     "rank": 4
+    },
+    "control": {
+     "hop": 0,
+     "uni": 9.9406,
+     "lc": 9.1856,
+     "rec": 0.3333333333333333,
+     "rank": 4
+    }
+   },
+   {
+    "qid": "card:REM-193",
+    "key": "publication role",
+    "ctrl": "added research",
+    "v": "commit/9374b39cde",
+    "u": "commit/ef8d4fecb6",
+    "built": {
+     "hop": 0,
+     "uni": 9.4507,
+     "lc": 11.4454,
+     "rec": 0.6666666666666666,
+     "rank": 4
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 9.9448,
+     "lc": 11.8928,
+     "rec": 0.6666666666666666,
+     "rank": 5
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 9.4507,
+     "lc": 11.4454,
+     "rec": 0.6666666666666666,
+     "rank": 4
+    },
+    "control": {
+     "hop": 0,
+     "uni": 9.4507,
+     "lc": 11.4047,
+     "rec": 0.6666666666666666,
+     "rank": 5
+    }
+   },
+   {
+    "qid": "card:REM-20",
+    "key": "rem 20",
+    "ctrl": "code session_01jscqwmwcw5wxhzsawby683",
+    "v": "commit/221d061d28",
+    "u": "board/cards/REM-20.md#1",
+    "built": {
+     "hop": 0,
+     "uni": 4.3701,
+     "lc": 3.6132,
+     "rec": 0.0,
+     "rank": 136
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 6.2672,
+     "lc": 6.2645,
+     "rec": 0.0,
+     "rank": 593
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 4.3701,
+     "lc": 3.6132,
+     "rec": 0.0,
+     "rank": 136
+    },
+    "control": {
+     "hop": 0,
+     "uni": 4.3701,
+     "lc": 3.5512,
+     "rec": 0.0,
+     "rank": 139
+    }
+   },
+   {
+    "qid": "card:REM-212",
+    "key": "code session_016wcvbjgdvkgbqqwc3q4atn",
+    "ctrl": "comparison contract",
+    "v": "commit/65b1e31340",
+    "u": "commit/3c4efe5dec",
+    "built": {
+     "hop": 0,
+     "uni": 7.1075,
+     "lc": 7.0228,
+     "rec": 0.0,
+     "rank": 23
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 7.5701,
+     "lc": 7.1898,
+     "rec": 0.0,
+     "rank": 24
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 7.1075,
+     "lc": 7.0228,
+     "rec": 0.0,
+     "rank": 23
+    },
+    "control": {
+     "hop": 0,
+     "uni": 7.1075,
+     "lc": 6.9057,
+     "rec": 0.0,
+     "rank": 25
+    }
+   },
+   {
+    "qid": "card:REM-217",
+    "key": "first stance",
+    "ctrl": "code session_01tvdyw8dyy9kujvtrdbyrkd",
+    "v": "commit/b1ab13e253",
+    "u": "commit/25bef8c99d",
+    "built": {
+     "hop": 0,
+     "uni": 5.7046,
+     "lc": 3.2755,
+     "rec": 0.0,
+     "rank": 14
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 6.2775,
+     "lc": 3.4162,
+     "rec": 0.0,
+     "rank": 15
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 5.7046,
+     "lc": 3.2755,
+     "rec": 0.0,
+     "rank": 14
+    },
+    "control": {
+     "hop": 0,
+     "uni": 5.7046,
+     "lc": 3.2233,
+     "rec": 0.0,
+     "rank": 14
+    }
+   },
+   {
+    "qid": "card:REM-219",
+    "key": "comparison spec",
+    "ctrl": "spec shared",
+    "v": "commit/1fe701e7bd",
+    "u": "commit/08b24c1a0a",
+    "built": {
+     "hop": 0,
+     "uni": 11.7617,
+     "lc": 12.5136,
+     "rec": 0.0,
+     "rank": 166
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 12.2559,
+     "lc": 12.5599,
+     "rec": 0.0,
+     "rank": 175
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 11.7617,
+     "lc": 12.5136,
+     "rec": 0.0,
+     "rank": 166
+    },
+    "control": {
+     "hop": 0,
+     "uni": 11.7617,
+     "lc": 12.2964,
+     "rec": 0.0,
+     "rank": 167
+    }
+   },
+   {
+    "qid": "card:REM-248",
+    "key": "application withdraws",
+    "ctrl": "application revokes",
+    "v": "commit/85d42f4819",
+    "u": "commit/0bd9b4546d",
+    "built": {
+     "hop": 0,
+     "uni": 7.0575,
+     "lc": 4.5551,
+     "rec": 0.0,
+     "rank": 52
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 7.6124,
+     "lc": 4.8302,
+     "rec": 0.0,
+     "rank": 62
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 7.0575,
+     "lc": 4.5551,
+     "rec": 0.0,
+     "rank": 52
+    },
+    "control": {
+     "hop": 0,
+     "uni": 7.0575,
+     "lc": 4.3668,
+     "rec": 0.0,
+     "rank": 66
+    }
+   },
+   {
+    "qid": "card:REM-255",
+    "key": "org grant",
+    "ctrl": null,
+    "v": "commit/5523598598",
+    "u": "commit/8fbc499eeb",
+    "built": {
+     "hop": 0,
+     "uni": 3.8034,
+     "lc": 1.4605,
+     "rec": 0.0,
+     "rank": 11
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 4.5668,
+     "lc": 1.821,
+     "rec": 0.0,
+     "rank": 25
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 3.8034,
+     "lc": 1.4605,
+     "rec": 0.0,
+     "rank": 11
+    },
+    "control": null
+   },
+   {
+    "qid": "card:REM-287",
+    "key": "scheduled backups",
+    "ctrl": "backups rem",
+    "v": "commit/089789e8cc",
+    "u": "board/cards/REM-287.md#1",
+    "built": {
+     "hop": 0,
+     "uni": 4.0593,
+     "lc": 6.1669,
+     "rec": 0.0,
+     "rank": 32
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 6.0162,
+     "lc": 6.1145,
+     "rec": 0.0,
+     "rank": 75
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 4.0593,
+     "lc": 6.1669,
+     "rec": 0.0,
+     "rank": 32
+    },
+    "control": {
+     "hop": 0,
+     "uni": 4.0593,
+     "lc": 6.1145,
+     "rec": 0.0,
+     "rank": 32
+    }
+   },
+   {
+    "qid": "card:REM-29",
+    "key": "place nobody",
+    "ctrl": "labs docs",
+    "v": "commit/ac56611f0e",
+    "u": "commit/634ed9f258",
+    "built": {
+     "hop": 0,
+     "uni": 12.0431,
+     "lc": 13.0823,
+     "rec": 0.0,
+     "rank": 2604
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 12.3483,
+     "lc": 13.3416,
+     "rec": 0.0,
+     "rank": 2652
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 12.0431,
+     "lc": 13.0823,
+     "rec": 0.0,
+     "rank": 2604
+    },
+    "control": {
+     "hop": 0,
+     "uni": 11.9096,
+     "lc": 12.9123,
+     "rec": 0.0,
+     "rank": 2618
+    }
+   },
+   {
+    "qid": "card:REM-307",
+    "key": "marked readable",
+    "ctrl": null,
+    "v": "commit/214bf2dc82",
+    "u": "commit/35c44a400c",
+    "built": {
+     "hop": 0,
+     "uni": 2.2583,
+     "lc": 1.0105,
+     "rec": 1.0,
+     "rank": 2
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 2.6764,
+     "lc": 1.2185,
+     "rec": 1.0,
+     "rank": 3
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 2.2583,
+     "lc": 1.0105,
+     "rec": 1.0,
+     "rank": 2
+    },
+    "control": null
+   },
+   {
+    "qid": "card:REM-308",
+    "key": "cornered",
+    "ctrl": "icon buttons",
+    "v": "commit/4615b03377",
+    "u": "board/cards/REM-308.md#2",
+    "built": {
+     "hop": 0,
+     "uni": 2.4,
+     "lc": 1.7919,
+     "rec": 1.0,
+     "rank": 1
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 2.7656,
+     "lc": 1.8544,
+     "rec": 1.0,
+     "rank": 1
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 2.4,
+     "lc": 1.7919,
+     "rec": 1.0,
+     "rank": 1
+    },
+    "control": {
+     "hop": 0,
+     "uni": 2.4,
+     "lc": 1.8043,
+     "rec": 1.0,
+     "rank": 1
+    }
+   },
+   {
+    "qid": "card:REM-311",
+    "key": "amartey upgrade",
+    "ctrl": "publication role",
+    "v": "commit/ef8d4fecb6",
+    "u": "board/cards/REM-311.md#1",
+    "built": {
+     "hop": 0,
+     "uni": 2.5341,
+     "lc": 1.7972,
+     "rec": 1.0,
+     "rank": 4
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 3.1973,
+     "lc": 1.698,
+     "rec": 1.0,
+     "rank": 5
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 2.5341,
+     "lc": 1.7972,
+     "rec": 1.0,
+     "rank": 4
+    },
+    "control": {
+     "hop": 0,
+     "uni": 2.5341,
+     "lc": 2.1324,
+     "rec": 1.0,
+     "rank": 5
+    }
+   },
+   {
+    "qid": "card:REM-335",
+    "key": "rem 335",
+    "ctrl": "rem 327",
+    "v": "commit/76430c032b",
+    "u": "commit/2981bf9b0f",
+    "built": {
+     "hop": 0,
+     "uni": 6.965,
+     "lc": 10.8327,
+     "rec": 0.0,
+     "rank": 132
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 7.0295,
+     "lc": 10.7026,
+     "rec": 0.0,
+     "rank": 151
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 6.965,
+     "lc": 10.8327,
+     "rec": 0.0,
+     "rank": 132
+    },
+    "control": {
+     "hop": 0,
+     "uni": 6.965,
+     "lc": 10.6336,
+     "rec": 0.0,
+     "rank": 136
+    }
+   },
+   {
+    "qid": "card:REM-336",
+    "key": "rem 336",
+    "ctrl": "mounted",
+    "v": "commit/9a5d5f3cb7",
+    "u": "commit/a6b3502f47",
+    "built": {
+     "hop": 0,
+     "uni": 5.5134,
+     "lc": 5.2035,
+     "rec": 0.0,
+     "rank": 135
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 6.1811,
+     "lc": 5.2456,
+     "rec": 0.0,
+     "rank": 313
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 5.5134,
+     "lc": 5.2035,
+     "rec": 0.0,
+     "rank": 135
+    },
+    "control": {
+     "hop": 0,
+     "uni": 5.5134,
+     "lc": 5.0614,
+     "rec": 0.0,
+     "rank": 135
+    }
+   },
+   {
+    "qid": "card:REM-337",
+    "key": "rem 338",
+    "ctrl": "data volume",
+    "v": "commit/9b683486b3",
+    "u": "commit/d78f510f4e",
+    "built": {
+     "hop": 0,
+     "uni": 8.5293,
+     "lc": 9.6739,
+     "rec": 0.0,
+     "rank": 24
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 9.0293,
+     "lc": 10.3974,
+     "rec": 0.0,
+     "rank": 28
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 8.5293,
+     "lc": 9.6739,
+     "rec": 0.0,
+     "rank": 24
+    },
+    "control": {
+     "hop": 0,
+     "uni": 8.5293,
+     "lc": 9.6403,
+     "rec": 0.0,
+     "rank": 30
+    }
+   },
+   {
+    "qid": "card:REM-339",
+    "key": "da961c5c",
+    "ctrl": "content bucket",
+    "v": "commit/9b683486b3",
+    "u": "specs/percolate-application/data-governance.md#1",
+    "built": {
+     "hop": 0,
+     "uni": 18.1524,
+     "lc": 15.2841,
+     "rec": 0.2,
+     "rank": 4
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 19.03,
+     "lc": 15.5039,
+     "rec": 0.2,
+     "rank": 4
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 18.1524,
+     "lc": 15.2841,
+     "rec": 0.2,
+     "rank": 4
+    },
+    "control": {
+     "hop": 0,
+     "uni": 18.1064,
+     "lc": 15.237,
+     "rec": 0.2,
+     "rank": 4
+    }
+   },
+   {
+    "qid": "card:REM-348",
+    "key": "checked rem",
+    "ctrl": null,
+    "v": "commit/bb74b2468e",
+    "u": "commit/3bce6b1b2f",
+    "built": {
+     "hop": 0,
+     "uni": 6.5198,
+     "lc": 9.1823,
+     "rec": 0.0,
+     "rank": 2247
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 8.1307,
+     "lc": 10.9098,
+     "rec": 0.0,
+     "rank": 2290
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 6.5198,
+     "lc": 9.1823,
+     "rec": 0.0,
+     "rank": 2247
+    },
+    "control": null
+   },
+   {
+    "qid": "card:REM-351",
+    "key": "half proposed",
+    "ctrl": null,
+    "v": "commit/c82e0f99db",
+    "u": "commit/31c39f9f76",
+    "built": {
+     "hop": 0,
+     "uni": 5.8823,
+     "lc": 2.8667,
+     "rec": 0.0,
+     "rank": 14
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 6.4613,
+     "lc": 2.9597,
+     "rec": 0.0,
+     "rank": 14
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 5.8823,
+     "lc": 2.8667,
+     "rec": 0.0,
+     "rank": 14
+    },
+    "control": null
+   },
+   {
+    "qid": "card:REM-365",
+    "key": "closed mcp",
+    "ctrl": "broke get_my_access",
+    "v": "commit/564358a1be",
+    "u": "board/cards/REM-365.md#4",
+    "built": {
+     "hop": 0,
+     "uni": 2.6051,
+     "lc": 1.5891,
+     "rec": 1.0,
+     "rank": 1
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 3.34,
+     "lc": 2.1848,
+     "rec": 1.0,
+     "rank": 2
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 2.6051,
+     "lc": 1.5891,
+     "rec": 1.0,
+     "rank": 1
+    },
+    "control": {
+     "hop": 0,
+     "uni": 2.6051,
+     "lc": 1.4773,
+     "rec": 1.0,
+     "rank": 1
+    }
+   },
+   {
+    "qid": "card:REM-368",
+    "key": "rem 368",
+    "ctrl": "card brief",
+    "v": "commit/e2719913ce",
+    "u": "commit/92eb917be7",
+    "built": {
+     "hop": 0,
+     "uni": 4.7875,
+     "lc": 8.5859,
+     "rec": 0.0,
+     "rank": 2528
+    },
+    "cut": {
+     "hop": 1,
+     "uni": 6.947,
+     "lc": 11.6522,
+     "rec": 0.0,
+     "rank": 18031
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 4.7875,
+     "lc": 8.5859,
+     "rec": 0.0,
+     "rank": 2528
+    },
+    "control": {
+     "hop": 0,
+     "uni": 4.7875,
+     "lc": 8.5002,
+     "rec": 0.0,
+     "rank": 2543
+    }
+   },
+   {
+    "qid": "card:REM-376",
+    "key": "branch reverted",
+    "ctrl": "finished features",
+    "v": "commit/b590efceca",
+    "u": "commit/ed52d99cb4",
+    "built": {
+     "hop": 0,
+     "uni": 7.3491,
+     "lc": 9.2647,
+     "rec": 0.0,
+     "rank": 656
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 8.2356,
+     "lc": 10.0592,
+     "rec": 0.0,
+     "rank": 748
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 7.3491,
+     "lc": 9.2647,
+     "rec": 0.0,
+     "rank": 656
+    },
+    "control": {
+     "hop": 0,
+     "uni": 7.3491,
+     "lc": 9.1685,
+     "rec": 0.0,
+     "rank": 752
+    }
+   },
+   {
+    "qid": "card:REM-384",
+    "key": "rem 384",
+    "ctrl": "rem 386",
+    "v": "commit/99ed78a519",
+    "u": "commit/3912f065a5",
+    "built": {
+     "hop": 0,
+     "uni": 4.9127,
+     "lc": 6.0161,
+     "rec": 0.0,
+     "rank": 99
+    },
+    "cut": {
+     "hop": 1,
+     "uni": 8.7314,
+     "lc": 7.5672,
+     "rec": 0.0,
+     "rank": 475
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 4.9127,
+     "lc": 6.0161,
+     "rec": 0.0,
+     "rank": 99
+    },
+    "control": {
+     "hop": 0,
+     "uni": 4.9127,
+     "lc": 5.8859,
+     "rec": 0.0,
+     "rank": 105
+    }
+   },
+   {
+    "qid": "card:REM-390",
+    "key": "flows following",
+    "ctrl": null,
+    "v": "commit/8ed1e91602",
+    "u": "commit/3bd2cd56f1",
+    "built": {
+     "hop": 0,
+     "uni": 5.6713,
+     "lc": 3.6457,
+     "rec": 0.0,
+     "rank": 14
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 7.1265,
+     "lc": 3.8907,
+     "rec": 0.0,
+     "rank": 22
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 5.6713,
+     "lc": 3.6457,
+     "rec": 0.0,
+     "rank": 14
+    },
+    "control": null
+   },
+   {
+    "qid": "card:REM-392",
+    "key": "rem 392",
+    "ctrl": "production check",
+    "v": "commit/8a632e627b",
+    "u": "commit/16c3b52f34",
+    "built": {
+     "hop": 0,
+     "uni": 5.6751,
+     "lc": 6.1497,
+     "rec": 0.0,
+     "rank": 29
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 5.8089,
+     "lc": 5.7078,
+     "rec": 0.0,
+     "rank": 45
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 5.6751,
+     "lc": 6.1497,
+     "rec": 0.0,
+     "rank": 29
+    },
+    "control": {
+     "hop": 0,
+     "uni": 5.6751,
+     "lc": 6.0039,
+     "rec": 0.0,
+     "rank": 33
+    }
+   },
+   {
+    "qid": "card:REM-394",
+    "key": "chosen name",
+    "ctrl": "name lives",
+    "v": "commit/8b3ab6a55e",
+    "u": "board/cards/REM-394.md#1",
+    "built": {
+     "hop": 0,
+     "uni": 4.5669,
+     "lc": 4.7377,
+     "rec": 0.0,
+     "rank": 138
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 4.9904,
+     "lc": 4.5439,
+     "rec": 0.0,
+     "rank": 217
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 4.5669,
+     "lc": 4.7377,
+     "rec": 0.0,
+     "rank": 138
+    },
+    "control": {
+     "hop": 0,
+     "uni": 4.5669,
+     "lc": 4.4065,
+     "rec": 0.0,
+     "rank": 143
+    }
+   },
+   {
+    "qid": "card:REM-405",
+    "key": "rem 405",
+    "ctrl": "0628",
+    "v": "commit/174eeae4c1",
+    "u": "commit/fbc333ea15",
+    "built": {
+     "hop": 0,
+     "uni": 4.9053,
+     "lc": 4.8326,
+     "rec": 0.0,
+     "rank": 32
+    },
+    "cut": {
+     "hop": 1,
+     "uni": 6.2538,
+     "lc": 5.0859,
+     "rec": 0.0,
+     "rank": 163
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 4.9053,
+     "lc": 4.8326,
+     "rec": 0.0,
+     "rank": 32
+    },
+    "control": {
+     "hop": 0,
+     "uni": 4.9053,
+     "lc": 4.5616,
+     "rec": 0.0,
+     "rank": 38
+    }
+   },
+   {
+    "qid": "card:REM-423",
+    "key": "pin moves",
+    "ctrl": "already passed",
+    "v": "commit/6da4489c97",
+    "u": "commit/679b82f4ed",
+    "built": {
+     "hop": 0,
+     "uni": 27.9358,
+     "lc": 37.8746,
+     "rec": 0.0,
+     "rank": 17
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 28.8803,
+     "lc": 37.8379,
+     "rec": 0.0,
+     "rank": 19
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 27.9358,
+     "lc": 37.8746,
+     "rec": 0.0,
+     "rank": 17
+    },
+    "control": {
+     "hop": 0,
+     "uni": 27.9358,
+     "lc": 37.843,
+     "rec": 0.0,
+     "rank": 17
+    }
+   },
+   {
+    "qid": "card:REM-430",
+    "key": "origin row",
+    "ctrl": "application copy",
+    "v": "commit/9a15b289fb",
+    "u": "commit/42da6e7da4",
+    "built": {
+     "hop": 0,
+     "uni": 10.5151,
+     "lc": 10.4334,
+     "rec": 0.3333333333333333,
+     "rank": 23
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 10.9693,
+     "lc": 10.6299,
+     "rec": 0.3333333333333333,
+     "rank": 25
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 10.5151,
+     "lc": 10.4334,
+     "rec": 0.3333333333333333,
+     "rank": 23
+    },
+    "control": {
+     "hop": 0,
+     "uni": 10.5151,
+     "lc": 10.3821,
+     "rec": 0.3333333333333333,
+     "rank": 23
+    }
+   },
+   {
+    "qid": "card:REM-433",
+    "key": "side tables",
+    "ctrl": "claim answer",
+    "v": "commit/2787c6cef7",
+    "u": "meta/spikes/2026-09-18-claims-graph/README.md#1",
+    "built": {
+     "hop": 0,
+     "uni": 15.2081,
+     "lc": 18.5734,
+     "rec": 0.3333333333333333,
+     "rank": 5
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 15.4594,
+     "lc": 18.8005,
+     "rec": 0.0,
+     "rank": 6
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 15.2081,
+     "lc": 18.5734,
+     "rec": 0.3333333333333333,
+     "rank": 5
+    },
+    "control": {
+     "hop": 0,
+     "uni": 15.1879,
+     "lc": 18.5326,
+     "rec": 0.3333333333333333,
+     "rank": 5
+    }
+   },
+   {
+    "qid": "card:REM-436",
+    "key": "phrase rem",
+    "ctrl": null,
+    "v": "commit/e0a319a383",
+    "u": "commit/18e6ba1ff3",
+    "built": {
+     "hop": 0,
+     "uni": 5.3238,
+     "lc": 4.0457,
+     "rec": 0.5,
+     "rank": 8
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 5.6922,
+     "lc": 3.963,
+     "rec": 0.0,
+     "rank": 9
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 5.3238,
+     "lc": 4.0457,
+     "rec": 0.5,
+     "rank": 8
+    },
+    "control": null
+   },
+   {
+    "qid": "card:REM-443",
+    "key": "study checks",
+    "ctrl": null,
+    "v": "commit/8474648f4e",
+    "u": "commit/67e6a8c3ae",
+    "built": {
+     "hop": 0,
+     "uni": 5.4679,
+     "lc": 8.9056,
+     "rec": 0.0,
+     "rank": 795
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 5.7057,
+     "lc": 9.0172,
+     "rec": 0.0,
+     "rank": 909
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 5.4679,
+     "lc": 8.9056,
+     "rec": 0.0,
+     "rank": 795
+    },
+    "control": null
+   },
+   {
+    "qid": "card:REM-450",
+    "key": "rem 450",
+    "ctrl": "happens rem",
+    "v": "commit/2bb9106c7f",
+    "u": "commit/acde0db43d",
+    "built": {
+     "hop": 0,
+     "uni": 9.2103,
+     "lc": 12.6071,
+     "rec": 0.0,
+     "rank": 30
+    },
+    "cut": {
+     "hop": 1,
+     "uni": 10.515,
+     "lc": 12.2931,
+     "rec": 0.0,
+     "rank": 152
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 9.2103,
+     "lc": 12.6071,
+     "rec": 0.0,
+     "rank": 30
+    },
+    "control": {
+     "hop": 0,
+     "uni": 9.2103,
+     "lc": 12.371,
+     "rec": 0.0,
+     "rank": 33
+    }
+   },
+   {
+    "qid": "card:REM-451",
+    "key": "keyboard rem",
+    "ctrl": null,
+    "v": "commit/ee75aaf03e",
+    "u": "commit/b446155a63",
+    "built": {
+     "hop": 0,
+     "uni": 2.7179,
+     "lc": 2.0364,
+     "rec": 0.0,
+     "rank": 13
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 4.5606,
+     "lc": 3.4449,
+     "rec": 0.0,
+     "rank": 42
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 2.7179,
+     "lc": 2.0364,
+     "rec": 0.0,
+     "rank": 13
+    },
+    "control": null
+   },
+   {
+    "qid": "card:REM-467",
+    "key": "grouped rows",
+    "ctrl": "table keeps",
+    "v": "commit/1e10a6d83e",
+    "u": "board/cards/REM-467.md#6",
+    "built": {
+     "hop": 0,
+     "uni": 3.7828,
+     "lc": 6.2311,
+     "rec": 0.0,
+     "rank": 289
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 4.155,
+     "lc": 6.7462,
+     "rec": 0.0,
+     "rank": 701
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 3.7828,
+     "lc": 6.2311,
+     "rec": 0.0,
+     "rank": 289
+    },
+    "control": {
+     "hop": 0,
+     "uni": 3.7828,
+     "lc": 6.1008,
+     "rec": 0.0,
+     "rank": 289
+    }
+   },
+   {
+    "qid": "card:REM-472",
+    "key": "rem 472",
+    "ctrl": "rem 484",
+    "v": "commit/61d944efa8",
+    "u": "commit/33637aa860",
+    "built": {
+     "hop": 0,
+     "uni": 4.7875,
+     "lc": 3.9652,
+     "rec": 0.0,
+     "rank": 71
+    },
+    "cut": {
+     "hop": 1,
+     "uni": 7.6779,
+     "lc": 5.0535,
+     "rec": 0.0,
+     "rank": 1766
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 4.7875,
+     "lc": 3.9652,
+     "rec": 0.0,
+     "rank": 71
+    },
+    "control": {
+     "hop": 0,
+     "uni": 4.7875,
+     "lc": 3.5439,
+     "rec": 0.0,
+     "rank": 82
+    }
+   },
+   {
+    "qid": "card:REM-478",
+    "key": "gates dev",
+    "ctrl": "later row",
+    "v": "commit/b28bccc7ec",
+    "u": "commit/688df6b0ee",
+    "built": {
+     "hop": 0,
+     "uni": 4.6997,
+     "lc": 5.8384,
+     "rec": 0.0,
+     "rank": 16
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 4.8363,
+     "lc": 6.1159,
+     "rec": 0.0,
+     "rank": 17
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 4.6997,
+     "lc": 5.8384,
+     "rec": 0.0,
+     "rank": 16
+    },
+    "control": {
+     "hop": 0,
+     "uni": 4.6997,
+     "lc": 5.8094,
+     "rec": 0.0,
+     "rank": 16
+    }
+   },
+   {
+    "qid": "card:REM-479",
+    "key": "gates dev",
+    "ctrl": "agent holding",
+    "v": "commit/06bc71644e",
+    "u": "commit/31f74346c6",
+    "built": {
+     "hop": 0,
+     "uni": 4.9453,
+     "lc": 5.4407,
+     "rec": 0.0,
+     "rank": 29
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 5.0499,
+     "lc": 5.6345,
+     "rec": 0.0,
+     "rank": 32
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 4.9453,
+     "lc": 5.4407,
+     "rec": 0.0,
+     "rank": 29
+    },
+    "control": {
+     "hop": 0,
+     "uni": 4.9453,
+     "lc": 5.4019,
+     "rec": 0.0,
+     "rank": 29
+    }
+   },
+   {
+    "qid": "card:REM-482",
+    "key": "dropped carried",
+    "ctrl": "column grant",
+    "v": "commit/266e4634d3",
+    "u": "specs/claims/graph.md#40",
+    "built": {
+     "hop": 0,
+     "uni": 3.5804,
+     "lc": 3.9336,
+     "rec": 0.0,
+     "rank": 9
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 3.8603,
+     "lc": 4.1875,
+     "rec": 0.0,
+     "rank": 11
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 3.5804,
+     "lc": 3.9336,
+     "rec": 0.0,
+     "rank": 9
+    },
+    "control": {
+     "hop": 0,
+     "uni": 3.5804,
+     "lc": 3.9056,
+     "rec": 0.0,
+     "rank": 9
+    }
+   },
+   {
+    "qid": "card:REM-50",
+    "key": "rem 50",
+    "ctrl": "cff8674",
+    "v": "commit/cff8674647",
+    "u": "board/cards/REM-50.md#1",
+    "built": {
+     "hop": 0,
+     "uni": 4.2219,
+     "lc": 5.4858,
+     "rec": 0.0,
+     "rank": 27
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 6.3421,
+     "lc": 8.4055,
+     "rec": 0.0,
+     "rank": 74
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 4.2219,
+     "lc": 5.4858,
+     "rec": 0.0,
+     "rank": 27
+    },
+    "control": {
+     "hop": 0,
+     "uni": 4.2219,
+     "lc": 5.47,
+     "rec": 0.0,
+     "rank": 27
+    }
+   },
+   {
+    "qid": "card:REM-500",
+    "key": "calls grew",
+    "ctrl": "first readability",
+    "v": "commit/b91c4da8b8",
+    "u": "board/cards/REM-500.md#6",
+    "built": {
+     "hop": 0,
+     "uni": 15.2305,
+     "lc": 22.6389,
+     "rec": 0.5,
+     "rank": 1
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 15.3854,
+     "lc": 22.5989,
+     "rec": 0.5,
+     "rank": 1
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 15.2305,
+     "lc": 22.6389,
+     "rec": 0.5,
+     "rank": 1
+    },
+    "control": {
+     "hop": 0,
+     "uni": 15.6378,
+     "lc": 22.994,
+     "rec": 0.5,
+     "rank": 1
+    }
+   },
+   {
+    "qid": "card:REM-52",
+    "key": "rem 52",
+    "ctrl": "claims rem",
+    "v": "commit/6dd80104ed",
+    "u": "board/cards/REM-52.md#1",
+    "built": {
+     "hop": 0,
+     "uni": 4.8363,
+     "lc": 6.0417,
+     "rec": 0.0,
+     "rank": 49
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 7.5725,
+     "lc": 8.9296,
+     "rec": 0.0,
+     "rank": 280
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 4.8363,
+     "lc": 6.0417,
+     "rec": 0.0,
+     "rank": 49
+    },
+    "control": {
+     "hop": 0,
+     "uni": 4.8363,
+     "lc": 6.0214,
+     "rec": 0.0,
+     "rank": 50
+    }
+   },
+   {
+    "qid": "card:REM-526",
+    "key": "hop answered",
+    "ctrl": null,
+    "v": "commit/f5cec51bc7",
+    "u": "commit/e78a1550ca",
+    "built": {
+     "hop": 0,
+     "uni": 4.4127,
+     "lc": 3.4855,
+     "rec": 1.0,
+     "rank": 2
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 5.1664,
+     "lc": 3.8882,
+     "rec": 1.0,
+     "rank": 4
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 4.4127,
+     "lc": 3.4855,
+     "rec": 1.0,
+     "rank": 2
+    },
+    "control": null
+   },
+   {
+    "qid": "card:REM-528",
+    "key": "research works_access",
+    "ctrl": null,
+    "v": "commit/36f9d43494",
+    "u": "commit/bb2ab1ba3e",
+    "built": {
+     "hop": 0,
+     "uni": 12.1502,
+     "lc": 13.5453,
+     "rec": 0.25,
+     "rank": 20
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 12.59,
+     "lc": 13.4339,
+     "rec": 0.25,
+     "rank": 23
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 12.1502,
+     "lc": 13.5453,
+     "rec": 0.25,
+     "rank": 20
+    },
+    "control": null
+   },
+   {
+    "qid": "card:REM-53",
+    "key": "credit looked",
+    "ctrl": "b4f49e5",
+    "v": "commit/b4f49e5928",
+    "u": "commit/9d1701568e",
+    "built": {
+     "hop": 0,
+     "uni": 8.3123,
+     "lc": 4.273,
+     "rec": 0.0,
+     "rank": 64
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 10.4005,
+     "lc": 5.824,
+     "rec": 0.0,
+     "rank": 84
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 8.3123,
+     "lc": 4.273,
+     "rec": 0.0,
+     "rank": 64
+    },
+    "control": {
+     "hop": 0,
+     "uni": 8.3123,
+     "lc": 4.1106,
+     "rec": 0.0,
+     "rank": 64
+    }
+   },
+   {
+    "qid": "card:REM-539",
+    "key": "footnote appendix",
+    "ctrl": "print placement",
+    "v": "commit/25f9606f92",
+    "u": "board/cards/REM-539.md#4",
+    "built": {
+     "hop": 0,
+     "uni": 2.4584,
+     "lc": 1.6107,
+     "rec": 1.0,
+     "rank": 1
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 2.5599,
+     "lc": 3.3612,
+     "rec": 1.0,
+     "rank": 2
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 2.4584,
+     "lc": 1.6107,
+     "rec": 1.0,
+     "rank": 1
+    },
+    "control": {
+     "hop": 0,
+     "uni": 2.4584,
+     "lc": 1.5433,
+     "rec": 1.0,
+     "rank": 1
+    }
+   },
+   {
+    "qid": "card:REM-54",
+    "key": "agent_call depending",
+    "ctrl": "agent_call sent",
+    "v": "commit/57bd05be7b",
+    "u": "commit/da2f464e1f",
+    "built": {
+     "hop": 0,
+     "uni": 4.227,
+     "lc": 4.5007,
+     "rec": 0.5,
+     "rank": 4
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 4.6399,
+     "lc": 4.8486,
+     "rec": 0.5,
+     "rank": 4
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 4.227,
+     "lc": 4.5007,
+     "rec": 0.5,
+     "rank": 4
+    },
+    "control": {
+     "hop": 0,
+     "uni": 4.227,
+     "lc": 4.4794,
+     "rec": 0.5,
+     "rank": 4
+    }
+   },
+   {
+    "qid": "card:REM-55",
+    "key": "superuser install",
+    "ctrl": "app_owner starts",
+    "v": "commit/fe409f341a",
+    "u": "INSTALL.md#3",
+    "built": {
+     "hop": 0,
+     "uni": 3.5725,
+     "lc": 3.7085,
+     "rec": 1.0,
+     "rank": 3
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 4.354,
+     "lc": 5.2076,
+     "rec": 1.0,
+     "rank": 5
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 3.5725,
+     "lc": 3.7085,
+     "rec": 1.0,
+     "rank": 3
+    },
+    "control": {
+     "hop": 0,
+     "uni": 3.5725,
+     "lc": 3.6926,
+     "rec": 1.0,
+     "rank": 4
+    }
+   },
+   {
+    "qid": "card:REM-575",
+    "key": "question follows",
+    "ctrl": "change never",
+    "v": "commit/920c3a8deb",
+    "u": "commit/2103d0d2aa",
+    "built": {
+     "hop": 0,
+     "uni": 2.1033,
+     "lc": 1.3693,
+     "rec": 1.0,
+     "rank": 3
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 2.8209,
+     "lc": 1.9001,
+     "rec": 1.0,
+     "rank": 4
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 2.1033,
+     "lc": 1.3693,
+     "rec": 1.0,
+     "rank": 3
+    },
+    "control": {
+     "hop": 0,
+     "uni": 2.1033,
+     "lc": 1.298,
+     "rec": 1.0,
+     "rank": 3
+    }
+   },
+   {
+    "qid": "card:REM-58",
+    "key": "fix rem",
+    "ctrl": null,
+    "v": "commit/b568d2ff11",
+    "u": "commit/a9f5d2b25c",
+    "built": {
+     "hop": 1,
+     "uni": 24.3881,
+     "lc": 17.017,
+     "rec": 0.16666666666666666,
+     "rank": 9659
+    },
+    "cut": {
+     "hop": 1,
+     "uni": 24.4099,
+     "lc": 17.0342,
+     "rec": 0.16666666666666666,
+     "rank": 11041
+    },
+    "restored": {
+     "hop": 1,
+     "uni": 24.3881,
+     "lc": 17.017,
+     "rec": 0.16666666666666666,
+     "rank": 9659
+    },
+    "control": null
+   },
+   {
+    "qid": "card:REM-584",
+    "key": "rem 603",
+    "ctrl": "execution receipts",
+    "v": "commit/2e06e3f838",
+    "u": "commit/13e9d5ac26",
+    "built": {
+     "hop": 0,
+     "uni": 9.4873,
+     "lc": 7.1135,
+     "rec": 0.0,
+     "rank": 117
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 9.9991,
+     "lc": 7.3869,
+     "rec": 0.0,
+     "rank": 134
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 9.4873,
+     "lc": 7.1135,
+     "rec": 0.0,
+     "rank": 117
+    },
+    "control": {
+     "hop": 0,
+     "uni": 9.4873,
+     "lc": 6.9007,
+     "rec": 0.0,
+     "rank": 136
+    }
+   },
+   {
+    "qid": "card:REM-590",
+    "key": "rem 603",
+    "ctrl": "aggregate state",
+    "v": "commit/13e9d5ac26",
+    "u": "commit/2e06e3f838",
+    "built": {
+     "hop": 0,
+     "uni": 8.0342,
+     "lc": 5.1055,
+     "rec": 0.0,
+     "rank": 23
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 8.546,
+     "lc": 5.3713,
+     "rec": 0.0,
+     "rank": 33
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 8.0342,
+     "lc": 5.1055,
+     "rec": 0.0,
+     "rank": 23
+    },
+    "control": {
+     "hop": 0,
+     "uni": 8.0342,
+     "lc": 4.9317,
+     "rec": 0.0,
+     "rank": 23
+    }
+   },
+   {
+    "qid": "card:REM-594",
+    "key": "run_review needs",
+    "ctrl": "freeze run",
+    "v": "commit/294c4743d0",
+    "u": "specs/research-platform/core-research-programme.md#5",
+    "built": {
+     "hop": 0,
+     "uni": 2.5355,
+     "lc": 2.2138,
+     "rec": 1.0,
+     "rank": 1
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 2.7508,
+     "lc": 2.3962,
+     "rec": 1.0,
+     "rank": 1
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 2.5355,
+     "lc": 2.2138,
+     "rec": 1.0,
+     "rank": 1
+    },
+    "control": {
+     "hop": 0,
+     "uni": 2.5355,
+     "lc": 2.1879,
+     "rec": 1.0,
+     "rank": 1
+    }
+   },
+   {
+    "qid": "card:REM-60",
+    "key": "model refresh",
+    "ctrl": "extension table",
+    "v": "commit/9138e6c002",
+    "u": "commit/2d54769a16",
+    "built": {
+     "hop": 0,
+     "uni": 9.8108,
+     "lc": 8.1482,
+     "rec": 0.0,
+     "rank": 91
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 9.9645,
+     "lc": 8.2113,
+     "rec": 0.0,
+     "rank": 94
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 9.8108,
+     "lc": 8.1482,
+     "rec": 0.0,
+     "rank": 91
+    },
+    "control": {
+     "hop": 0,
+     "uni": 9.8108,
+     "lc": 8.0766,
+     "rec": 0.0,
+     "rank": 92
+    }
+   },
+   {
+    "qid": "card:REM-602",
+    "key": "discovery spec",
+    "ctrl": "compact discover",
+    "v": "commit/9aaa02bc60",
+    "u": "commit/be5964e339",
+    "built": {
+     "hop": 0,
+     "uni": 13.3047,
+     "lc": 18.1599,
+     "rec": 0.0,
+     "rank": 15
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 15.1913,
+     "lc": 19.9871,
+     "rec": 0.0,
+     "rank": 59
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 13.3047,
+     "lc": 18.1599,
+     "rec": 0.0,
+     "rank": 15
+    },
+    "control": {
+     "hop": 0,
+     "uni": 13.3047,
+     "lc": 18.0265,
+     "rec": 0.0,
+     "rank": 17
+    }
+   },
+   {
+    "qid": "card:REM-603",
+    "key": "rem 603",
+    "ctrl": "execution receipts",
+    "v": "commit/2e06e3f838",
+    "u": "commit/13e9d5ac26",
+    "built": {
+     "hop": 0,
+     "uni": 9.2192,
+     "lc": 8.9335,
+     "rec": 0.0,
+     "rank": 3641
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 9.691,
+     "lc": 9.1931,
+     "rec": 0.0,
+     "rank": 8429
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 9.2192,
+     "lc": 8.9335,
+     "rec": 0.0,
+     "rank": 3641
+    },
+    "control": {
+     "hop": 0,
+     "uni": 9.2192,
+     "lc": 8.7033,
+     "rec": 0.0,
+     "rank": 3816
+    }
+   },
+   {
+    "qid": "card:REM-608",
+    "key": "resolver role",
+    "ctrl": "role grant",
+    "v": "commit/1f1976641e",
+    "u": "specs/claims/graph.md#47",
+    "built": {
+     "hop": 0,
+     "uni": 2.3779,
+     "lc": 2.0064,
+     "rec": 0.0,
+     "rank": 6
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 2.5401,
+     "lc": 2.1038,
+     "rec": 0.0,
+     "rank": 10
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 2.3779,
+     "lc": 2.0064,
+     "rec": 0.0,
+     "rank": 6
+    },
+    "control": {
+     "hop": 0,
+     "uni": 2.3779,
+     "lc": 1.9175,
+     "rec": 0.0,
+     "rank": 6
+    }
+   },
+   {
+    "qid": "card:REM-609",
+    "key": "rem 609",
+    "ctrl": "rem 607",
+    "v": "commit/812180bb57",
+    "u": "commit/a131319517",
+    "built": {
+     "hop": 0,
+     "uni": 4.852,
+     "lc": 6.8631,
+     "rec": 0.0,
+     "rank": 35
+    },
+    "cut": {
+     "hop": 1,
+     "uni": 6.4941,
+     "lc": 8.2062,
+     "rec": 0.0,
+     "rank": 59
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 4.852,
+     "lc": 6.8631,
+     "rec": 0.0,
+     "rank": 35
+    },
+    "control": {
+     "hop": 0,
+     "uni": 4.852,
+     "lc": 6.8123,
+     "rec": 0.0,
+     "rank": 35
+    }
+   },
+   {
+    "qid": "card:REM-61",
+    "key": "source defaults",
+    "ctrl": "labs fix",
+    "v": "commit/59b8c6b377",
+    "u": "commit/9b764cc618",
+    "built": {
+     "hop": 0,
+     "uni": 4.9139,
+     "lc": 3.4973,
+     "rec": 0.0,
+     "rank": 49
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 5.4019,
+     "lc": 3.3836,
+     "rec": 0.0,
+     "rank": 63
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 4.9139,
+     "lc": 3.4973,
+     "rec": 0.0,
+     "rank": 49
+    },
+    "control": {
+     "hop": 0,
+     "uni": 4.9139,
+     "lc": 3.3811,
+     "rec": 0.0,
+     "rank": 49
+    }
+   },
+   {
+    "qid": "card:REM-613",
+    "key": "board filters",
+    "ctrl": "quieter",
+    "v": "commit/6e11664c29",
+    "u": "board/cards/REM-613.md#2",
+    "built": {
+     "hop": 0,
+     "uni": 9.464,
+     "lc": 9.0959,
+     "rec": 0.0,
+     "rank": 27
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 10.5925,
+     "lc": 10.2685,
+     "rec": 0.0,
+     "rank": 51
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 9.464,
+     "lc": 9.0959,
+     "rec": 0.0,
+     "rank": 27
+    },
+    "control": {
+     "hop": 0,
+     "uni": 9.464,
+     "lc": 8.8829,
+     "rec": 0.0,
+     "rank": 27
+    }
+   },
+   {
+    "qid": "card:REM-621",
+    "key": "rem 621",
+    "ctrl": "card exists",
+    "v": "commit/80ada7a055",
+    "u": "board/cards/REM-621.md#2",
+    "built": {
+     "hop": 0,
+     "uni": 3.6889,
+     "lc": 8.0988,
+     "rec": 0.0,
+     "rank": 329
+    },
+    "cut": {
+     "hop": 1,
+     "uni": 6.7439,
+     "lc": 10.9393,
+     "rec": 0.0,
+     "rank": 8589
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 3.6889,
+     "lc": 8.0988,
+     "rec": 0.0,
+     "rank": 329
+    },
+    "control": {
+     "hop": 0,
+     "uni": 3.6889,
+     "lc": 8.0219,
+     "rec": 0.0,
+     "rank": 329
+    }
+   },
+   {
+    "qid": "card:REM-626",
+    "key": "checks access",
+    "ctrl": "local load",
+    "v": "commit/5925bfd695",
+    "u": "commit/4226d2de38",
+    "built": {
+     "hop": 0,
+     "uni": 4.9858,
+     "lc": 6.9337,
+     "rec": 0.0,
+     "rank": 8
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 5.3752,
+     "lc": 7.1387,
+     "rec": 0.0,
+     "rank": 9
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 4.9858,
+     "lc": 6.9337,
+     "rec": 0.0,
+     "rank": 8
+    },
+    "control": {
+     "hop": 0,
+     "uni": 4.9858,
+     "lc": 6.8919,
+     "rec": 0.0,
+     "rank": 8
+    }
+   },
+   {
+    "qid": "card:REM-63",
+    "key": "rem 63",
+    "ctrl": "gate names",
+    "v": "commit/cf65508ec5",
+    "u": "board/cards/REM-63.md#1",
+    "built": {
+     "hop": 0,
+     "uni": 5.4293,
+     "lc": 6.9727,
+     "rec": 0.0,
+     "rank": 10065
+    },
+    "cut": {
+     "hop": 1,
+     "uni": 9.7681,
+     "lc": 9.1137,
+     "rec": 0.0,
+     "rank": 20011
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 5.4293,
+     "lc": 6.9727,
+     "rec": 0.0,
+     "rank": 10065
+    },
+    "control": {
+     "hop": 0,
+     "uni": 5.4293,
+     "lc": 6.7726,
+     "rec": 0.0,
+     "rank": 10101
+    }
+   },
+   {
+    "qid": "card:REM-634",
+    "key": "rem 634",
+    "ctrl": "rem 672",
+    "v": "commit/74b5a1ea93",
+    "u": "commit/e34afcdf6e",
+    "built": {
+     "hop": 0,
+     "uni": 4.9273,
+     "lc": 7.7323,
+     "rec": 0.0,
+     "rank": 1408
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 6.2226,
+     "lc": 7.6274,
+     "rec": 0.0,
+     "rank": 6673
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 4.9273,
+     "lc": 7.7323,
+     "rec": 0.0,
+     "rank": 1408
+    },
+    "control": {
+     "hop": 0,
+     "uni": 4.9273,
+     "lc": 7.6019,
+     "rec": 0.0,
+     "rank": 1795
+    }
+   },
+   {
+    "qid": "card:REM-636",
+    "key": "article choice",
+    "ctrl": "feature delegation",
+    "v": "commit/8a7554ae50",
+    "u": "commit/12a75c28e8",
+    "built": {
+     "hop": 0,
+     "uni": 1.1248,
+     "lc": 0.8198,
+     "rec": 1.0,
+     "rank": 2
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 1.4773,
+     "lc": 1.0164,
+     "rec": 1.0,
+     "rank": 3
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 1.1248,
+     "lc": 0.8198,
+     "rec": 1.0,
+     "rank": 2
+    },
+    "control": {
+     "hop": 0,
+     "uni": 1.1248,
+     "lc": 0.7345,
+     "rec": 1.0,
+     "rank": 3
+    }
+   },
+   {
+    "qid": "card:REM-639",
+    "key": "number rem",
+    "ctrl": "anyone scores",
+    "v": "commit/f9581ea103",
+    "u": "commit/bac3fff584",
+    "built": {
+     "hop": 0,
+     "uni": 28.9535,
+     "lc": 30.4533,
+     "rec": 0.0,
+     "rank": 163
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 29.3517,
+     "lc": 30.8284,
+     "rec": 0.0,
+     "rank": 174
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 28.9535,
+     "lc": 30.4533,
+     "rec": 0.0,
+     "rank": 163
+    },
+    "control": {
+     "hop": 0,
+     "uni": 28.9535,
+     "lc": 30.4269,
+     "rec": 0.0,
+     "rank": 170
+    }
+   },
+   {
+    "qid": "card:REM-642",
+    "key": "classes took",
+    "ctrl": null,
+    "v": "commit/a90165fb6c",
+    "u": "commit/26e3303df4",
+    "built": {
+     "hop": 0,
+     "uni": 22.6289,
+     "lc": 29.6955,
+     "rec": 0.16666666666666666,
+     "rank": 13
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 22.6614,
+     "lc": 29.6967,
+     "rec": 0.16666666666666666,
+     "rank": 13
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 22.6289,
+     "lc": 29.6955,
+     "rec": 0.16666666666666666,
+     "rank": 13
+    },
+    "control": null
+   },
+   {
+    "qid": "card:REM-653",
+    "key": "rem 653",
+    "ctrl": "challenging",
+    "v": "commit/0ff90e5e45",
+    "u": "commit/8f81394a08",
+    "built": {
+     "hop": 0,
+     "uni": 4.4998,
+     "lc": 9.2926,
+     "rec": 0.0,
+     "rank": 131
+    },
+    "cut": {
+     "hop": 1,
+     "uni": 6.3967,
+     "lc": 11.6211,
+     "rec": 0.0,
+     "rank": 472
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 4.4998,
+     "lc": 9.2926,
+     "rec": 0.0,
+     "rank": 131
+    },
+    "control": {
+     "hop": 0,
+     "uni": 4.4998,
+     "lc": 9.2742,
+     "rec": 0.0,
+     "rank": 131
+    }
+   },
+   {
+    "qid": "card:REM-655",
+    "key": "ever dropped",
+    "ctrl": "absolutes",
+    "v": "commit/37ed4cd487",
+    "u": "board/cards/REM-655.md#2",
+    "built": {
+     "hop": 0,
+     "uni": 14.9982,
+     "lc": 22.4356,
+     "rec": 0.3333333333333333,
+     "rank": 5
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 15.7276,
+     "lc": 22.7529,
+     "rec": 0.3333333333333333,
+     "rank": 5
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 14.9982,
+     "lc": 22.4356,
+     "rec": 0.3333333333333333,
+     "rank": 5
+    },
+    "control": {
+     "hop": 0,
+     "uni": 14.9955,
+     "lc": 22.4334,
+     "rec": 0.3333333333333333,
+     "rank": 5
+    }
+   },
+   {
+    "qid": "card:REM-664",
+    "key": "alone rem",
+    "ctrl": "card logs",
+    "v": "commit/39f0c4c58a",
+    "u": "commit/50c63a2acd",
+    "built": {
+     "hop": 0,
+     "uni": 11.7608,
+     "lc": 9.2126,
+     "rec": 0.3333333333333333,
+     "rank": 1
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 12.0654,
+     "lc": 9.1495,
+     "rec": 0.3333333333333333,
+     "rank": 1
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 11.7608,
+     "lc": 9.2126,
+     "rec": 0.3333333333333333,
+     "rank": 1
+    },
+    "control": {
+     "hop": 0,
+     "uni": 11.7501,
+     "lc": 9.1962,
+     "rec": 0.3333333333333333,
+     "rank": 1
+    }
+   },
+   {
+    "qid": "card:REM-673",
+    "key": "rem 673",
+    "ctrl": "test rem",
+    "v": "commit/b3c7e4a313",
+    "u": "commit/c98d38e610",
+    "built": {
+     "hop": 0,
+     "uni": 4.1889,
+     "lc": 2.2599,
+     "rec": 0.0,
+     "rank": 6
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 4.3148,
+     "lc": 2.2107,
+     "rec": 0.0,
+     "rank": 13
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 4.1889,
+     "lc": 2.2599,
+     "rec": 0.0,
+     "rank": 6
+    },
+    "control": {
+     "hop": 0,
+     "uni": 4.1889,
+     "lc": 2.1208,
+     "rec": 0.0,
+     "rank": 6
+    }
+   },
+   {
+    "qid": "card:REM-682",
+    "key": "rem 682",
+    "ctrl": "within budget",
+    "v": "commit/42ce64e9b4",
+    "u": "commit/3648027706",
+    "built": {
+     "hop": 0,
+     "uni": 5.3799,
+     "lc": 7.0189,
+     "rec": 0.0,
+     "rank": 98
+    },
+    "cut": {
+     "hop": 1,
+     "uni": 6.7334,
+     "lc": 7.4366,
+     "rec": 0.0,
+     "rank": 198
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 5.3799,
+     "lc": 7.0189,
+     "rec": 0.0,
+     "rank": 98
+    },
+    "control": {
+     "hop": 0,
+     "uni": 5.3799,
+     "lc": 6.9601,
+     "rec": 0.0,
+     "rank": 99
+    }
+   },
+   {
+    "qid": "card:REM-684",
+    "key": "questions rem",
+    "ctrl": "ab35ab6",
+    "v": "commit/ab17677a71",
+    "u": "commit/4db2e04113",
+    "built": {
+     "hop": 0,
+     "uni": 9.283,
+     "lc": 8.0425,
+     "rec": 0.0,
+     "rank": 69
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 10.4103,
+     "lc": 8.9736,
+     "rec": 0.0,
+     "rank": 72
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 9.283,
+     "lc": 8.0425,
+     "rec": 0.0,
+     "rank": 69
+    },
+    "control": {
+     "hop": 0,
+     "uni": 9.283,
+     "lc": 7.8084,
+     "rec": 0.0,
+     "rank": 75
+    }
+   },
+   {
+    "qid": "card:REM-687",
+    "key": "questions rem",
+    "ctrl": "ab35ab6",
+    "v": "commit/ab17677a71",
+    "u": "commit/4db2e04113",
+    "built": {
+     "hop": 0,
+     "uni": 14.6203,
+     "lc": 12.6747,
+     "rec": 0.0,
+     "rank": 278
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 15.4944,
+     "lc": 13.5609,
+     "rec": 0.0,
+     "rank": 295
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 14.6203,
+     "lc": 12.6747,
+     "rec": 0.0,
+     "rank": 278
+    },
+    "control": {
+     "hop": 0,
+     "uni": 14.6203,
+     "lc": 12.4832,
+     "rec": 0.0,
+     "rank": 295
+    }
+   },
+   {
+    "qid": "card:REM-691",
+    "key": "navigation phase",
+    "ctrl": "rule rem",
+    "v": "commit/e919a6e78e",
+    "u": "commit/8b0b6164ce",
+    "built": {
+     "hop": 0,
+     "uni": 7.0777,
+     "lc": 4.3667,
+     "rec": 0.0,
+     "rank": 20
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 9.1292,
+     "lc": 5.6458,
+     "rec": 0.0,
+     "rank": 32
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 7.0777,
+     "lc": 4.3667,
+     "rec": 0.0,
+     "rank": 20
+    },
+    "control": {
+     "hop": 0,
+     "uni": 7.0777,
+     "lc": 4.1357,
+     "rec": 0.0,
+     "rank": 20
+    }
+   },
+   {
+    "qid": "card:REM-699",
+    "key": "rem 699",
+    "ctrl": "rem 696",
+    "v": "commit/bb0a10a41f",
+    "u": "commit/afffc2832b",
+    "built": {
+     "hop": 0,
+     "uni": 1.7008,
+     "lc": 3.293,
+     "rec": 1.0,
+     "rank": 5
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 1.7918,
+     "lc": 3.3355,
+     "rec": 1.0,
+     "rank": 5
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 1.7008,
+     "lc": 3.293,
+     "rec": 1.0,
+     "rank": 5
+    },
+    "control": {
+     "hop": 0,
+     "uni": 1.7008,
+     "lc": 3.2405,
+     "rec": 1.0,
+     "rank": 5
+    }
+   },
+   {
+    "qid": "card:REM-702",
+    "key": "rem 702",
+    "ctrl": "social acts",
+    "v": "commit/85f49958b7",
+    "u": "commit/7209944c12",
+    "built": {
+     "hop": 0,
+     "uni": 7.9025,
+     "lc": 11.0846,
+     "rec": 0.0,
+     "rank": 11
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 8.9205,
+     "lc": 11.5751,
+     "rec": 0.0,
+     "rank": 16
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 7.9025,
+     "lc": 11.0846,
+     "rec": 0.0,
+     "rank": 11
+    },
+    "control": {
+     "hop": 0,
+     "uni": 7.9025,
+     "lc": 11.0427,
+     "rec": 0.0,
+     "rank": 12
+    }
+   },
+   {
+    "qid": "card:REM-703",
+    "key": "rem 703",
+    "ctrl": "rem 702",
+    "v": "commit/beeab263ff",
+    "u": "commit/51062469d1",
+    "built": {
+     "hop": 0,
+     "uni": 3.6636,
+     "lc": 6.0178,
+     "rec": 0.0,
+     "rank": 16
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 5.3256,
+     "lc": 7.4002,
+     "rec": 0.0,
+     "rank": 23
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 3.6636,
+     "lc": 6.0178,
+     "rec": 0.0,
+     "rank": 16
+    },
+    "control": {
+     "hop": 0,
+     "uni": 3.6636,
+     "lc": 5.9482,
+     "rec": 0.0,
+     "rank": 17
+    }
+   },
+   {
+    "qid": "card:REM-706",
+    "key": "rem 706",
+    "ctrl": "stay open",
+    "v": "commit/95fcffa2d0",
+    "u": "commit/f1ead2171c",
+    "built": {
+     "hop": 0,
+     "uni": 9.8253,
+     "lc": 8.5065,
+     "rec": 0.0,
+     "rank": 33
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 9.7041,
+     "lc": 9.4045,
+     "rec": 0.0,
+     "rank": 68
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 9.8253,
+     "lc": 8.5065,
+     "rec": 0.0,
+     "rank": 33
+    },
+    "control": {
+     "hop": 0,
+     "uni": 9.8047,
+     "lc": 8.3977,
+     "rec": 0.0,
+     "rank": 33
+    }
+   },
+   {
+    "qid": "card:REM-71",
+    "key": "carved",
+    "ctrl": "create unique",
+    "v": "commit/9a87941f19",
+    "u": "board/cards/REM-71.md#3",
+    "built": {
+     "hop": 0,
+     "uni": 5.301,
+     "lc": 8.4733,
+     "rec": 0.0,
+     "rank": 120
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 5.7004,
+     "lc": 8.9129,
+     "rec": 0.0,
+     "rank": 142
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 5.301,
+     "lc": 8.4733,
+     "rec": 0.0,
+     "rank": 120
+    },
+    "control": {
+     "hop": 0,
+     "uni": 5.301,
+     "lc": 8.4644,
+     "rec": 0.0,
+     "rank": 121
+    }
+   },
+   {
+    "qid": "card:REM-723",
+    "key": "intent focus",
+    "ctrl": "focus rem",
+    "v": "commit/7d9ab1fd72",
+    "u": "board/cards/REM-723.md#2",
+    "built": {
+     "hop": 0,
+     "uni": 3.9665,
+     "lc": 2.0791,
+     "rec": 0.0,
+     "rank": 35
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 4.1254,
+     "lc": 3.3769,
+     "rec": 0.0,
+     "rank": 51
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 3.9665,
+     "lc": 2.0791,
+     "rec": 0.0,
+     "rank": 35
+    },
+    "control": {
+     "hop": 0,
+     "uni": 3.9665,
+     "lc": 1.8799,
+     "rec": 0.0,
+     "rank": 36
+    }
+   },
+   {
+    "qid": "card:REM-726",
+    "key": "rem 726",
+    "ctrl": "tour rem",
+    "v": "commit/c25069f2f4",
+    "u": "commit/6c08ad2f1a",
+    "built": {
+     "hop": 0,
+     "uni": 4.4998,
+     "lc": 4.1638,
+     "rec": 0.0,
+     "rank": 73
+    },
+    "cut": {
+     "hop": 1,
+     "uni": 5.6671,
+     "lc": 4.2359,
+     "rec": 0.0,
+     "rank": 132
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 4.4998,
+     "lc": 4.1638,
+     "rec": 0.0,
+     "rank": 73
+    },
+    "control": {
+     "hop": 0,
+     "uni": 4.4998,
+     "lc": 3.9901,
+     "rec": 0.0,
+     "rank": 73
+    }
+   },
+   {
+    "qid": "card:REM-733",
+    "key": "three projections",
+    "ctrl": "carries state",
+    "v": "commit/a1ca069e49",
+    "u": "commit/6f70be0cd0",
+    "built": {
+     "hop": 0,
+     "uni": 15.4108,
+     "lc": 12.0821,
+     "rec": 0.16666666666666666,
+     "rank": 12
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 16.0992,
+     "lc": 12.8081,
+     "rec": 0.16666666666666666,
+     "rank": 15
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 15.4108,
+     "lc": 12.0821,
+     "rec": 0.16666666666666666,
+     "rank": 12
+    },
+    "control": {
+     "hop": 0,
+     "uni": 15.4108,
+     "lc": 12.0249,
+     "rec": 0.16666666666666666,
+     "rank": 12
+    }
+   },
+   {
+    "qid": "card:REM-74",
+    "key": "api branch",
+    "ctrl": "dead rows",
+    "v": "commit/eb3be1bbc2",
+    "u": "commit/41474e0bdb",
+    "built": {
+     "hop": 0,
+     "uni": 11.6089,
+     "lc": 9.6832,
+     "rec": 0.0,
+     "rank": 42
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 12.2548,
+     "lc": 9.8878,
+     "rec": 0.0,
+     "rank": 54
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 11.6089,
+     "lc": 9.6832,
+     "rec": 0.0,
+     "rank": 42
+    },
+    "control": {
+     "hop": 0,
+     "uni": 11.6089,
+     "lc": 9.6655,
+     "rec": 0.0,
+     "rank": 42
+    }
+   },
+   {
+    "qid": "card:REM-747",
+    "key": "modality decides",
+    "ctrl": "text rem",
+    "v": "commit/3222f78d8b",
+    "u": "commit/cacfb64de6",
+    "built": {
+     "hop": 0,
+     "uni": 1.597,
+     "lc": 0.5375,
+     "rec": 1.0,
+     "rank": 1
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 2.4238,
+     "lc": 0.9394,
+     "rec": 1.0,
+     "rank": 2
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 1.597,
+     "lc": 0.5375,
+     "rec": 1.0,
+     "rank": 1
+    },
+    "control": {
+     "hop": 0,
+     "uni": 1.597,
+     "lc": 0.4678,
+     "rec": 1.0,
+     "rank": 1
+    }
+   },
+   {
+    "qid": "card:REM-75",
+    "key": "rem 75",
+    "ctrl": "runs workflow",
+    "v": "commit/8ea09f77f6",
+    "u": "board/cards/REM-75.md#1",
+    "built": {
+     "hop": 0,
+     "uni": 9.9067,
+     "lc": 12.1281,
+     "rec": 0.0,
+     "rank": 27
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 10.2865,
+     "lc": 13.1456,
+     "rec": 0.0,
+     "rank": 41
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 9.9067,
+     "lc": 12.1281,
+     "rec": 0.0,
+     "rank": 27
+    },
+    "control": {
+     "hop": 0,
+     "uni": 9.9067,
+     "lc": 12.1076,
+     "rec": 0.0,
+     "rank": 27
+    }
+   },
+   {
+    "qid": "card:REM-755",
+    "key": "rem 755",
+    "ctrl": "retiring",
+    "v": "commit/bdb25111e5",
+    "u": "commit/635e3e6c37",
+    "built": {
+     "hop": 0,
+     "uni": 4.7185,
+     "lc": 4.2736,
+     "rec": 0.0,
+     "rank": 25
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 5.0668,
+     "lc": 4.8126,
+     "rec": 0.0,
+     "rank": 105
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 4.7185,
+     "lc": 4.2736,
+     "rec": 0.0,
+     "rank": 25
+    },
+    "control": {
+     "hop": 0,
+     "uni": 4.7185,
+     "lc": 4.1327,
+     "rec": 0.0,
+     "rank": 32
+    }
+   },
+   {
+    "qid": "card:REM-757",
+    "key": "calibration gate",
+    "ctrl": "amartey coalescing",
+    "v": "commit/cdb1f690f8",
+    "u": "commit/5939e1d7b7",
+    "built": {
+     "hop": 0,
+     "uni": 4.8191,
+     "lc": 5.0443,
+     "rec": 0.0,
+     "rank": 8
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 5.0911,
+     "lc": 4.7647,
+     "rec": 0.0,
+     "rank": 8
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 4.8191,
+     "lc": 5.0443,
+     "rec": 0.0,
+     "rank": 8
+    },
+    "control": {
+     "hop": 0,
+     "uni": 4.8191,
+     "lc": 4.3171,
+     "rec": 0.0,
+     "rank": 12
+    }
+   },
+   {
+    "qid": "card:REM-766",
+    "key": "brew queue",
+    "ctrl": "record live",
+    "v": "commit/b2e55542a6",
+    "u": "commit/c462a3bd98",
+    "built": {
+     "hop": 0,
+     "uni": 10.988,
+     "lc": 9.8975,
+     "rec": 0.3333333333333333,
+     "rank": 9
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 10.9918,
+     "lc": 9.6415,
+     "rec": 0.3333333333333333,
+     "rank": 16
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 10.988,
+     "lc": 9.8975,
+     "rec": 0.3333333333333333,
+     "rank": 9
+    },
+    "control": {
+     "hop": 0,
+     "uni": 10.8338,
+     "lc": 9.7484,
+     "rec": 0.3333333333333333,
+     "rank": 9
+    }
+   },
+   {
+    "qid": "card:REM-768",
+    "key": "profiles rem",
+    "ctrl": "documents people",
+    "v": "commit/1e875903d2",
+    "u": "specs/design/marketing-strategy.md#5",
+    "built": {
+     "hop": 0,
+     "uni": 2.6188,
+     "lc": 3.051,
+     "rec": 1.0,
+     "rank": 1
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 3.0873,
+     "lc": 3.4805,
+     "rec": 1.0,
+     "rank": 1
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 2.6188,
+     "lc": 3.051,
+     "rec": 1.0,
+     "rank": 1
+    },
+    "control": {
+     "hop": 0,
+     "uni": 2.6188,
+     "lc": 3.0026,
+     "rec": 1.0,
+     "rank": 1
+    }
+   },
+   {
+    "qid": "card:REM-777",
+    "key": "specify drafter",
+    "ctrl": "structural editing",
+    "v": "commit/d6c1d40264",
+    "u": "board/cards/REM-777.md#2",
+    "built": {
+     "hop": 0,
+     "uni": 3.1258,
+     "lc": 1.8803,
+     "rec": 0.0,
+     "rank": 12
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 5.0876,
+     "lc": 3.6051,
+     "rec": 0.0,
+     "rank": 44
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 3.1258,
+     "lc": 1.8803,
+     "rec": 0.0,
+     "rank": 12
+    },
+    "control": {
+     "hop": 0,
+     "uni": 3.1258,
+     "lc": 1.6536,
+     "rec": 0.0,
+     "rank": 16
+    }
+   },
+   {
+    "qid": "card:REM-781",
+    "key": "rem 781",
+    "ctrl": "clarify",
+    "v": "commit/b7a37f9e72",
+    "u": "commit/a17f69c1f6",
+    "built": {
+     "hop": 0,
+     "uni": 2.6184,
+     "lc": 2.5698,
+     "rec": 0.0,
+     "rank": 27
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 2.7726,
+     "lc": 2.5632,
+     "rec": 0.0,
+     "rank": 47
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 2.6184,
+     "lc": 2.5698,
+     "rec": 0.0,
+     "rank": 27
+    },
+    "control": {
+     "hop": 0,
+     "uni": 2.6184,
+     "lc": 2.4078,
+     "rec": 0.0,
+     "rank": 27
+    }
+   },
+   {
+    "qid": "card:REM-79",
+    "key": "parser row",
+    "ctrl": "3096",
+    "v": "commit/1acc8f9ce2",
+    "u": "board/cards/REM-79.md#2",
+    "built": {
+     "hop": 0,
+     "uni": 6.3906,
+     "lc": 15.4218,
+     "rec": 0.5,
+     "rank": 4
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 6.9306,
+     "lc": 16.0172,
+     "rec": 0.0,
+     "rank": 10
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 6.3906,
+     "lc": 15.4218,
+     "rec": 0.5,
+     "rank": 4
+    },
+    "control": {
+     "hop": 0,
+     "uni": 6.3906,
+     "lc": 15.4126,
+     "rec": 0.5,
+     "rank": 4
+    }
+   },
+   {
+    "qid": "card:REM-798",
+    "key": "rem 798",
+    "ctrl": "techniques",
+    "v": "commit/b8faa7972a",
+    "u": "commit/396cf3bc63",
+    "built": {
+     "hop": 0,
+     "uni": 8.7512,
+     "lc": 7.8873,
+     "rec": 0.0,
+     "rank": 7
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 8.791,
+     "lc": 8.0169,
+     "rec": 0.0,
+     "rank": 8
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 8.7512,
+     "lc": 7.8873,
+     "rec": 0.0,
+     "rank": 7
+    },
+    "control": {
+     "hop": 0,
+     "uni": 8.7512,
+     "lc": 7.7915,
+     "rec": 0.0,
+     "rank": 7
+    }
+   },
+   {
+    "qid": "card:REM-8",
+    "key": "rem 8",
+    "ctrl": "left uncommitted",
+    "v": "commit/d30b1f392e",
+    "u": "board/cards/REM-8.md#1",
+    "built": {
+     "hop": 0,
+     "uni": 4.2459,
+     "lc": 5.2504,
+     "rec": 0.0,
+     "rank": 40
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 5.0369,
+     "lc": 5.2307,
+     "rec": 0.0,
+     "rank": 100
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 4.2459,
+     "lc": 5.2504,
+     "rec": 0.0,
+     "rank": 40
+    },
+    "control": {
+     "hop": 0,
+     "uni": 4.2459,
+     "lc": 5.2288,
+     "rec": 0.0,
+     "rank": 40
+    }
+   },
+   {
+    "qid": "card:REM-801",
+    "key": "thinking boundary",
+    "ctrl": null,
+    "v": "commit/864f721369",
+    "u": "specs/percolate-application/drafter.md#80",
+    "built": {
+     "hop": 0,
+     "uni": 3.4646,
+     "lc": 1.1513,
+     "rec": 0.0,
+     "rank": 9
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 4.3668,
+     "lc": 1.6618,
+     "rec": 0.0,
+     "rank": 16
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 3.4646,
+     "lc": 1.1513,
+     "rec": 0.0,
+     "rank": 9
+    },
+    "control": null
+   },
+   {
+    "qid": "card:REM-804",
+    "key": "guard rem",
+    "ctrl": null,
+    "v": "commit/3aa0e8fc48",
+    "u": "commit/ec0200e108",
+    "built": {
+     "hop": 0,
+     "uni": 1.557,
+     "lc": 0.5258,
+     "rec": 1.0,
+     "rank": 3
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 2.9388,
+     "lc": 1.2874,
+     "rec": 1.0,
+     "rank": 5
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 1.557,
+     "lc": 0.5258,
+     "rec": 1.0,
+     "rank": 3
+    },
+    "control": null
+   },
+   {
+    "qid": "card:REM-81",
+    "key": "status reachable",
+    "ctrl": null,
+    "v": "commit/239705ffe3",
+    "u": "commit/0214f32d10",
+    "built": {
+     "hop": 0,
+     "uni": 23.6247,
+     "lc": 17.5211,
+     "rec": 0.0,
+     "rank": 385
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 23.3301,
+     "lc": 17.1046,
+     "rec": 0.0,
+     "rank": 841
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 23.6247,
+     "lc": 17.5211,
+     "rec": 0.0,
+     "rank": 385
+    },
+    "control": null
+   },
+   {
+    "qid": "card:REM-810",
+    "key": "board every",
+    "ctrl": "hookspath warning",
+    "v": "commit/1dcfd5b556",
+    "u": "commit/be98e8adf0",
+    "built": {
+     "hop": 0,
+     "uni": 2.7013,
+     "lc": 1.1098,
+     "rec": 1.0,
+     "rank": 5
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 3.0785,
+     "lc": 1.3466,
+     "rec": 1.0,
+     "rank": 5
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 2.7013,
+     "lc": 1.1098,
+     "rec": 1.0,
+     "rank": 5
+    },
+    "control": {
+     "hop": 0,
+     "uni": 2.7013,
+     "lc": 1.0242,
+     "rec": 0.0,
+     "rank": 6
+    }
+   },
+   {
+    "qid": "card:REM-83",
+    "key": "channel visible",
+    "ctrl": "percolate sql",
+    "v": "commit/139b4c725b",
+    "u": "commit/d2157221da",
+    "built": {
+     "hop": 0,
+     "uni": 7.2664,
+     "lc": 9.8449,
+     "rec": 0.5,
+     "rank": 1
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 7.5349,
+     "lc": 10.0465,
+     "rec": 0.5,
+     "rank": 1
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 7.2664,
+     "lc": 9.8449,
+     "rec": 0.5,
+     "rank": 1
+    },
+    "control": {
+     "hop": 0,
+     "uni": 7.2664,
+     "lc": 9.7417,
+     "rec": 0.5,
+     "rank": 1
+    }
+   },
+   {
+    "qid": "card:REM-86",
+    "key": "image rebuilt",
+    "ctrl": "day two",
+    "v": "commit/891e02919f",
+    "u": "board/cards/REM-86.md#1",
+    "built": {
+     "hop": 0,
+     "uni": 12.0191,
+     "lc": 13.423,
+     "rec": 0.3333333333333333,
+     "rank": 4
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 12.4891,
+     "lc": 13.8572,
+     "rec": 0.3333333333333333,
+     "rank": 4
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 12.0191,
+     "lc": 13.423,
+     "rec": 0.3333333333333333,
+     "rank": 4
+    },
+    "control": {
+     "hop": 0,
+     "uni": 12.0191,
+     "lc": 13.4,
+     "rec": 0.3333333333333333,
+     "rank": 4
+    }
+   },
+   {
+    "qid": "card:REM-88",
+    "key": "rem 88",
+    "ctrl": "column org_id",
+    "v": "commit/569d18bf50",
+    "u": "board/cards/REM-88.md#1",
+    "built": {
+     "hop": 0,
+     "uni": 4.08,
+     "lc": 4.519,
+     "rec": 0.0,
+     "rank": 63
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 6.0259,
+     "lc": 6.4468,
+     "rec": 0.0,
+     "rank": 264
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 4.08,
+     "lc": 4.519,
+     "rec": 0.0,
+     "rank": 63
+    },
+    "control": {
+     "hop": 0,
+     "uni": 4.08,
+     "lc": 4.4885,
+     "rec": 0.0,
+     "rank": 63
+    }
+   },
+   {
+    "qid": "card:REM-960",
+    "key": "rem 960",
+    "ctrl": "question rem",
+    "v": "commit/8cfbdf486e",
+    "u": "commit/70b1eab38d",
+    "built": {
+     "hop": 0,
+     "uni": 14.2856,
+     "lc": 10.1485,
+     "rec": 0.0,
+     "rank": 37
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 13.7066,
+     "lc": 10.0457,
+     "rec": 0.0,
+     "rank": 174
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 14.2856,
+     "lc": 10.1485,
+     "rec": 0.0,
+     "rank": 37
+    },
+    "control": {
+     "hop": 0,
+     "uni": 14.2856,
+     "lc": 10.1519,
+     "rec": 0.0,
+     "rank": 37
+    }
+   }
+  ],
+  "gate": 4,
+  "aggregate": {
+   "n": 117,
+   "logrank": [
+    0.4966553776995564,
+    0.3845840371346983,
+    0.6223525734280344
+   ],
+   "recall": [
+    -0.01282051282051282,
+    -0.039921652421652416,
+    0.014245014245014245
+   ]
+  }
+ },
+ "prs": {
+  "cases": [
+   {
+    "qid": "pr:126",
+    "key": "built fresh",
+    "ctrl": "drifted database",
+    "v": "commit/8635be7edb",
+    "u": "dev/lib/container.sh#3",
+    "built": {
+     "hop": 0,
+     "uni": 9.1981,
+     "lc": 9.5277,
+     "rec": 0.0,
+     "rank": 6
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 9.453,
+     "lc": 9.7494,
+     "rec": 0.0,
+     "rank": 6
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 9.1981,
+     "lc": 9.5277,
+     "rec": 0.0,
+     "rank": 6
+    },
+    "control": {
+     "hop": 0,
+     "uni": 9.1981,
+     "lc": 9.5056,
+     "rec": 0.0,
+     "rank": 6
+    }
+   },
+   {
+    "qid": "pr:14",
+    "key": "capabilities round",
+    "ctrl": "change inside",
+    "v": "commit/48b6b627c2",
+    "u": "commit/417c194051",
+    "built": {
+     "hop": 0,
+     "uni": 11.7647,
+     "lc": 13.6433,
+     "rec": 0.0,
+     "rank": 35
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 12.1278,
+     "lc": 13.8516,
+     "rec": 0.0,
+     "rank": 35
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 11.7647,
+     "lc": 13.6433,
+     "rec": 0.0,
+     "rank": 35
+    },
+    "control": {
+     "hop": 0,
+     "uni": 11.7647,
+     "lc": 13.6132,
+     "rec": 0.0,
+     "rank": 35
+    }
+   },
+   {
+    "qid": "pr:205",
+    "key": "code session_01weg5nosqq2fsqtldwynurw",
+    "ctrl": "sealing",
+    "v": "commit/40b8555759",
+    "u": "commit/1f215d74b7",
+    "built": {
+     "hop": 0,
+     "uni": 5.1284,
+     "lc": 6.2793,
+     "rec": 0.0,
+     "rank": 42
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 5.2507,
+     "lc": 6.3641,
+     "rec": 0.0,
+     "rank": 68
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 5.1284,
+     "lc": 6.2793,
+     "rec": 0.0,
+     "rank": 42
+    },
+    "control": {
+     "hop": 0,
+     "uni": 5.1284,
+     "lc": 6.2302,
+     "rec": 0.0,
+     "rank": 42
+    }
+   },
+   {
+    "qid": "pr:210",
+    "key": "code session_01lfgh4wkyoz4kr44vbez84d",
+    "ctrl": "execute grants",
+    "v": "commit/3fd3f2e37b",
+    "u": "commit/65bb4fcd34",
+    "built": {
+     "hop": 0,
+     "uni": 3.1093,
+     "lc": 4.8986,
+     "rec": 0.0,
+     "rank": 1197
+    },
+    "cut": {
+     "hop": 0,
+     "uni": 3.433,
+     "lc": 5.0292,
+     "rec": 0.0,
+     "rank": 1660
+    },
+    "restored": {
+     "hop": 0,
+     "uni": 3.1093,
+     "lc": 4.8986,
+     "rec": 0.0,
+     "rank": 1197
+    },
+    "control": {
+     "hop": 0,
+     "uni": 3.1093,
+     "lc": 4.7,
+     "rec": 0.0,
+     "rank": 1197
+    }
+   }
+  ],
+  "gate": 2
+ }
+}

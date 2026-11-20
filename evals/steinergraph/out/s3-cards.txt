@@ -1,0 +1,34 @@
+== S3 cards: 128 cut passages, 250 walks (dev+test), strength fixed from the drifted graph
+  [drifted] round 1: 237 candidates (237 rescored, 43 with gain > 0) in 53s; best gain +1.73888
+  [drifted] round 2: 239 candidates (5 rescored, 42 with gain > 0) in 1s; best gain +1.48437
+  [drifted] round 3: 238 candidates (18 rescored, 30 with gain > 0) in 4s; best gain +0.20366
+  [drifted] round 4: 237 candidates (13 rescored, 30 with gain > 0) in 3s; best gain +0.26464
+  [drifted] round 5: 238 candidates (14 rescored, 29 with gain > 0) in 3s; best gain +0.12745
+  [drifted] round 6: 240 candidates (7 rescored, 28 with gain > 0) in 2s; best gain +0.00000
+  accepted 5 links
+  (a) cut pairs recovered: 0/133; candidates at all in round 1: 4/133; trivially co-read as seeds of one walk: 1
+  (b) rank among 237 round-1 candidates by gain: [108, 130, 172, 227]
+  (c) built     recall 0.223; median rank of v 20; T* cost 7.27 nats, dearest hop 4.16
+  (c) drifted   recall 0.200; median rank of v 32; T* cost 8.10 nats, dearest hop 4.48
+      repaired: top 5 changed vs drifted on 1/133 cut questions; new entries include gold on 0
+  (c) repaired  recall 0.200; median rank of v 32; T* cost 8.10 nats, dearest hop 4.48
+      random: top 5 changed vs drifted on 0/133 cut questions; new entries include gold on 0
+  (c) random    recall 0.200; median rank of v 32; T* cost 8.10 nats, dearest hop 4.48
+      hub: top 5 changed vs drifted on 0/133 cut questions; new entries include gold on 0
+  (c) hub       recall 0.200; median rank of v 32; T* cost 8.10 nats, dearest hop 4.48
+      count: top 5 changed vs drifted on 1/133 cut questions; new entries include gold on 0
+  (c) count     recall 0.200; median rank of v 32; T* cost 8.10 nats, dearest hop 4.48
+      repaired − drifted: recall +0.000 [+0.000, +0.000]; log-rank gain +0.000 [-0.000, +0.001]
+      random − drifted: recall +0.000 [+0.000, +0.000]; log-rank gain -0.002 [-0.006, +0.000]
+      hub − drifted: recall +0.000 [+0.000, +0.000]; log-rank gain +0.000 [+0.000, +0.000]
+      count − drifted: recall +0.000 [+0.000, +0.000]; log-rank gain +0.000 [+0.000, +0.001]
+      the cut cost +0.023 recall; repair won back +0.000
+  [built] round 1: 236 candidates (236 rescored, 60 with gain > 0) in 53s; best gain +2.41947
+  [built] round 2: 243 candidates (32 rescored, 63 with gain > 0) in 7s; best gain +1.73888
+  [built] round 3: 245 candidates (5 rescored, 60 with gain > 0) in 1s; best gain +1.48437
+  [built] round 4: 244 candidates (18 rescored, 50 with gain > 0) in 4s; best gain +0.34490
+  [built] round 5: 241 candidates (13 rescored, 52 with gain > 0) in 3s; best gain +0.20366
+  [built] round 6: 240 candidates (13 rescored, 49 with gain > 0) in 3s; best gain +0.26464
+  [built] round 7: 241 candidates (14 rescored, 49 with gain > 0) in 4s; best gain +0.12745
+  [built] round 8: 243 candidates (7 rescored, 47 with gain > 0) in 2s; best gain +0.00000
+  (d) collateral on the built graph: 7 links added; test recall repaired − built +0.000 [+0.000, +0.000] over 135 questions

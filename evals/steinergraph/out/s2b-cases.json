@@ -1,0 +1,807 @@
+{
+ "mq": {
+  "cases": [
+   {
+    "qid": "RW:2hop__130867_54221",
+    "key": "maine",
+    "ctrl": "alcohol",
+    "ctrl_fam": true,
+    "passage": "mq:bc3067abef2e0ab6",
+    "built": {
+     "hop": 0,
+     "UNI": {
+      "cost": 0.0,
+      "rec": null,
+      "rank": 21096,
+      "tsize": 0
+     },
+     "LC": {
+      "cost": 0.0,
+      "rec": null,
+      "rank": 21096,
+      "tsize": 0
+     }
+    },
+    "cut": {
+     "hop": 0,
+     "UNI": {
+      "cost": 0.0,
+      "rec": null,
+      "rank": 21096,
+      "tsize": 0
+     },
+     "LC": {
+      "cost": 0.0,
+      "rec": null,
+      "rank": 21096,
+      "tsize": 0
+     }
+    },
+    "restored": {
+     "hop": 0,
+     "UNI": {
+      "cost": 0.0,
+      "rec": null,
+      "rank": 21096,
+      "tsize": 0
+     },
+     "LC": {
+      "cost": 0.0,
+      "rec": null,
+      "rank": 21096,
+      "tsize": 0
+     }
+    },
+    "control": {
+     "hop": 0,
+     "UNI": {
+      "cost": 0.0,
+      "rec": null,
+      "rank": 21096,
+      "tsize": 0
+     },
+     "LC": {
+      "cost": 0.0,
+      "rec": null,
+      "rank": 21096,
+      "tsize": 0
+     }
+    }
+   },
+   {
+    "qid": "RW:2hop__161151_42352",
+    "key": "north american",
+    "ctrl": "great britain",
+    "ctrl_fam": true,
+    "passage": "mq:8174715888879957",
+    "built": {
+     "hop": 0,
+     "UNI": {
+      "cost": 5.9692,
+      "rec": 0.0,
+      "rank": 10,
+      "tsize": 0
+     },
+     "LC": {
+      "cost": 4.5254,
+      "rec": 0.0,
+      "rank": 10,
+      "tsize": 0
+     }
+    },
+    "cut": {
+     "hop": 0,
+     "UNI": {
+      "cost": 5.9692,
+      "rec": 0.0,
+      "rank": 11,
+      "tsize": 0
+     },
+     "LC": {
+      "cost": 4.5021,
+      "rec": 0.0,
+      "rank": 13,
+      "tsize": 0
+     }
+    },
+    "restored": {
+     "hop": 0,
+     "UNI": {
+      "cost": 5.9692,
+      "rec": 0.0,
+      "rank": 10,
+      "tsize": 0
+     },
+     "LC": {
+      "cost": 4.5254,
+      "rec": 0.0,
+      "rank": 10,
+      "tsize": 0
+     }
+    },
+    "control": {
+     "hop": 0,
+     "UNI": {
+      "cost": 6.1071,
+      "rec": 0.0,
+      "rank": 11,
+      "tsize": 0
+     },
+     "LC": {
+      "cost": 4.6392,
+      "rec": 0.0,
+      "rank": 13,
+      "tsize": 0
+     }
+    }
+   },
+   {
+    "qid": "RW:2hop__20256_71302",
+    "key": "niro",
+    "ctrl": "oscars",
+    "ctrl_fam": true,
+    "passage": "mq:787591efd3f4c5c2",
+    "built": {
+     "hop": 0,
+     "UNI": {
+      "cost": 8.3594,
+      "rec": 0.5,
+      "rank": 7,
+      "tsize": 0
+     },
+     "LC": {
+      "cost": 6.5931,
+      "rec": 0.0,
+      "rank": 27,
+      "tsize": 0
+     }
+    },
+    "cut": {
+     "hop": 0,
+     "UNI": {
+      "cost": 8.3594,
+      "rec": 0.5,
+      "rank": 7,
+      "tsize": 0
+     },
+     "LC": {
+      "cost": 6.5715,
+      "rec": 0.0,
+      "rank": 27,
+      "tsize": 0
+     }
+    },
+    "restored": {
+     "hop": 0,
+     "UNI": {
+      "cost": 8.3594,
+      "rec": 0.5,
+      "rank": 7,
+      "tsize": 0
+     },
+     "LC": {
+      "cost": 6.5931,
+      "rec": 0.0,
+      "rank": 27,
+      "tsize": 0
+     }
+    },
+    "control": {
+     "hop": 0,
+     "UNI": {
+      "cost": 8.3594,
+      "rec": 0.5,
+      "rank": 7,
+      "tsize": 0
+     },
+     "LC": {
+      "cost": 6.5715,
+      "rec": 0.0,
+      "rank": 27,
+      "tsize": 0
+     }
+    }
+   },
+   {
+    "qid": "RW:2hop__32887_578772",
+    "key": "tang",
+    "ctrl": "vietnamese",
+    "ctrl_fam": true,
+    "passage": "mq:0066118456459904",
+    "built": {
+     "hop": 0,
+     "UNI": {
+      "cost": 6.7464,
+      "rec": 0.0,
+      "rank": 1421,
+      "tsize": 0
+     },
+     "LC": {
+      "cost": 8.7993,
+      "rec": 0.0,
+      "rank": 1357,
+      "tsize": 0
+     }
+    },
+    "cut": {
+     "hop": 1,
+     "UNI": {
+      "cost": 9.5046,
+      "rec": 0.0,
+      "rank": 1994,
+      "tsize": 1
+     },
+     "LC": {
+      "cost": 10.2338,
+      "rec": 0.0,
+      "rank": 1684,
+      "tsize": 1
+     }
+    },
+    "restored": {
+     "hop": 0,
+     "UNI": {
+      "cost": 6.7464,
+      "rec": 0.0,
+      "rank": 1421,
+      "tsize": 0
+     },
+     "LC": {
+      "cost": 8.7993,
+      "rec": 0.0,
+      "rank": 1357,
+      "tsize": 0
+     }
+    },
+    "control": {
+     "hop": 0,
+     "UNI": {
+      "cost": 6.7464,
+      "rec": 0.0,
+      "rank": 1445,
+      "tsize": 0
+     },
+     "LC": {
+      "cost": 8.7528,
+      "rec": 0.0,
+      "rank": 1344,
+      "tsize": 0
+     }
+    }
+   }
+  ],
+  "gate": "1"
+ },
+ "cards": {
+  "cases": [
+   {
+    "qid": "card:REM-152",
+    "key": "rem 152",
+    "ctrl": "invariants",
+    "ctrl_fam": false,
+    "passage": "commit/cf83bfcc1b",
+    "built": {
+     "hop": 0,
+     "UNI": {
+      "cost": 9.1584,
+      "rec": 0.3333333333333333,
+      "rank": 2,
+      "tsize": 0
+     },
+     "LC": {
+      "cost": 11.6586,
+      "rec": 0.3333333333333333,
+      "rank": 1,
+      "tsize": 0
+     }
+    },
+    "cut": {
+     "hop": 0,
+     "UNI": {
+      "cost": 9.116,
+      "rec": 0.3333333333333333,
+      "rank": 2,
+      "tsize": 0
+     },
+     "LC": {
+      "cost": 11.5331,
+      "rec": 0.3333333333333333,
+      "rank": 1,
+      "tsize": 0
+     }
+    },
+    "restored": {
+     "hop": 0,
+     "UNI": {
+      "cost": 9.1584,
+      "rec": 0.3333333333333333,
+      "rank": 2,
+      "tsize": 0
+     },
+     "LC": {
+      "cost": 11.6586,
+      "rec": 0.3333333333333333,
+      "rank": 1,
+      "tsize": 0
+     }
+    },
+    "control": {
+     "hop": 0,
+     "UNI": {
+      "cost": 9.1584,
+      "rec": 0.3333333333333333,
+      "rank": 2,
+      "tsize": 0
+     },
+     "LC": {
+      "cost": 11.6019,
+      "rec": 0.3333333333333333,
+      "rank": 1,
+      "tsize": 0
+     }
+    }
+   },
+   {
+    "qid": "card:REM-185",
+    "key": "rem 185",
+    "ctrl": "release path",
+    "ctrl_fam": false,
+    "passage": "commit/a50a914206",
+    "built": {
+     "hop": 0,
+     "UNI": {
+      "cost": 21.185,
+      "rec": 0.16666666666666666,
+      "rank": 7678,
+      "tsize": 0
+     },
+     "LC": {
+      "cost": 22.0565,
+      "rec": 0.0,
+      "rank": 1173,
+      "tsize": 0
+     }
+    },
+    "cut": {
+     "hop": 0,
+     "UNI": {
+      "cost": 21.2488,
+      "rec": 0.16666666666666666,
+      "rank": 26169,
+      "tsize": 0
+     },
+     "LC": {
+      "cost": 21.9824,
+      "rec": 0.0,
+      "rank": 14106,
+      "tsize": 0
+     }
+    },
+    "restored": {
+     "hop": 0,
+     "UNI": {
+      "cost": 21.185,
+      "rec": 0.16666666666666666,
+      "rank": 7678,
+      "tsize": 0
+     },
+     "LC": {
+      "cost": 22.0565,
+      "rec": 0.0,
+      "rank": 1173,
+      "tsize": 0
+     }
+    },
+    "control": {
+     "hop": 0,
+     "UNI": {
+      "cost": 21.185,
+      "rec": 0.16666666666666666,
+      "rank": 7712,
+      "tsize": 0
+     },
+     "LC": {
+      "cost": 21.9014,
+      "rec": 0.0,
+      "rank": 976,
+      "tsize": 0
+     }
+    }
+   },
+   {
+    "qid": "card:REM-19",
+    "key": "rem 19",
+    "ctrl": "replay 2026",
+    "ctrl_fam": true,
+    "passage": "commit/abcc1a9f84",
+    "built": {
+     "hop": 0,
+     "UNI": {
+      "cost": 9.9564,
+      "rec": 0.3333333333333333,
+      "rank": 4,
+      "tsize": 0
+     },
+     "LC": {
+      "cost": 9.2246,
+      "rec": 0.0,
+      "rank": 18,
+      "tsize": 0
+     }
+    },
+    "cut": {
+     "hop": 0,
+     "UNI": {
+      "cost": 9.9241,
+      "rec": 0.3333333333333333,
+      "rank": 4,
+      "tsize": 0
+     },
+     "LC": {
+      "cost": 9.1552,
+      "rec": 0.0,
+      "rank": 20,
+      "tsize": 0
+     }
+    },
+    "restored": {
+     "hop": 0,
+     "UNI": {
+      "cost": 9.9564,
+      "rec": 0.3333333333333333,
+      "rank": 4,
+      "tsize": 0
+     },
+     "LC": {
+      "cost": 9.2246,
+      "rec": 0.0,
+      "rank": 18,
+      "tsize": 0
+     }
+    },
+    "control": {
+     "hop": 0,
+     "UNI": {
+      "cost": 9.9406,
+      "rec": 0.3333333333333333,
+      "rank": 4,
+      "tsize": 0
+     },
+     "LC": {
+      "cost": 9.1986,
+      "rec": 0.0,
+      "rank": 18,
+      "tsize": 0
+     }
+    }
+   },
+   {
+    "qid": "card:REM-193",
+    "key": "rem 193",
+    "ctrl": "p8ci",
+    "ctrl_fam": true,
+    "passage": "commit/95a76cfb1f",
+    "built": {
+     "hop": 0,
+     "UNI": {
+      "cost": 9.4507,
+      "rec": 0.6666666666666666,
+      "rank": 190,
+      "tsize": 0
+     },
+     "LC": {
+      "cost": 11.4454,
+      "rec": 0.3333333333333333,
+      "rank": 703,
+      "tsize": 0
+     }
+    },
+    "cut": {
+     "hop": 0,
+     "UNI": {
+      "cost": 9.8921,
+      "rec": 0.6666666666666666,
+      "rank": 343,
+      "tsize": 0
+     },
+     "LC": {
+      "cost": 11.8667,
+      "rec": 0.3333333333333333,
+      "rank": 1885,
+      "tsize": 0
+     }
+    },
+    "restored": {
+     "hop": 0,
+     "UNI": {
+      "cost": 9.4507,
+      "rec": 0.6666666666666666,
+      "rank": 190,
+      "tsize": 0
+     },
+     "LC": {
+      "cost": 11.4454,
+      "rec": 0.3333333333333333,
+      "rank": 703,
+      "tsize": 0
+     }
+    },
+    "control": {
+     "hop": 0,
+     "UNI": {
+      "cost": 9.4507,
+      "rec": 0.6666666666666666,
+      "rank": 191,
+      "tsize": 0
+     },
+     "LC": {
+      "cost": 11.4202,
+      "rec": 0.3333333333333333,
+      "rank": 686,
+      "tsize": 0
+     }
+    }
+   }
+  ],
+  "gate": "2"
+ },
+ "prs": {
+  "cases": [
+   {
+    "qid": "pr:648",
+    "key": "judged walks",
+    "ctrl": "lead reads",
+    "ctrl_fam": true,
+    "passage": "commit/cef6d4c7cd",
+    "built": {
+     "hop": 0,
+     "UNI": {
+      "cost": 7.8808,
+      "rec": 0.0,
+      "rank": 16,
+      "tsize": 0
+     },
+     "LC": {
+      "cost": 7.8887,
+      "rec": 0.6666666666666666,
+      "rank": 2,
+      "tsize": 0
+     }
+    },
+    "cut": {
+     "hop": 0,
+     "UNI": {
+      "cost": 7.8808,
+      "rec": 0.0,
+      "rank": 19,
+      "tsize": 0
+     },
+     "LC": {
+      "cost": 7.7168,
+      "rec": 0.6666666666666666,
+      "rank": 2,
+      "tsize": 0
+     }
+    },
+    "restored": {
+     "hop": 0,
+     "UNI": {
+      "cost": 7.8808,
+      "rec": 0.0,
+      "rank": 16,
+      "tsize": 0
+     },
+     "LC": {
+      "cost": 7.8887,
+      "rec": 0.6666666666666666,
+      "rank": 2,
+      "tsize": 0
+     }
+    },
+    "control": {
+     "hop": 0,
+     "UNI": {
+      "cost": 7.8808,
+      "rec": 0.0,
+      "rank": 18,
+      "tsize": 0
+     },
+     "LC": {
+      "cost": 7.727,
+      "rec": 0.6666666666666666,
+      "rank": 2,
+      "tsize": 0
+     }
+    }
+   },
+   {
+    "qid": "pr:667",
+    "key": "order test",
+    "ctrl": "add mike",
+    "ctrl_fam": true,
+    "passage": "commit/f3221b8ae4",
+    "built": {
+     "hop": 0,
+     "UNI": {
+      "cost": 4.8919,
+      "rec": 0.5,
+      "rank": 5,
+      "tsize": 0
+     },
+     "LC": {
+      "cost": 4.6526,
+      "rec": 0.5,
+      "rank": 3,
+      "tsize": 0
+     }
+    },
+    "cut": {
+     "hop": 0,
+     "UNI": {
+      "cost": 4.8919,
+      "rec": 0.5,
+      "rank": 5,
+      "tsize": 0
+     },
+     "LC": {
+      "cost": 4.5344,
+      "rec": 0.5,
+      "rank": 3,
+      "tsize": 0
+     }
+    },
+    "restored": {
+     "hop": 0,
+     "UNI": {
+      "cost": 4.8919,
+      "rec": 0.5,
+      "rank": 5,
+      "tsize": 0
+     },
+     "LC": {
+      "cost": 4.6526,
+      "rec": 0.5,
+      "rank": 3,
+      "tsize": 0
+     }
+    },
+    "control": {
+     "hop": 0,
+     "UNI": {
+      "cost": 4.8919,
+      "rec": 0.5,
+      "rank": 5,
+      "tsize": 0
+     },
+     "LC": {
+      "cost": 4.5344,
+      "rec": 0.5,
+      "rank": 3,
+      "tsize": 0
+     }
+    }
+   },
+   {
+    "qid": "pr:686",
+    "key": "walklab dreaming",
+    "ctrl": "dev held",
+    "ctrl_fam": true,
+    "passage": "commit/28fd7fe157",
+    "built": {
+     "hop": 0,
+     "UNI": {
+      "cost": 14.0921,
+      "rec": 0.16666666666666666,
+      "rank": 27,
+      "tsize": 0
+     },
+     "LC": {
+      "cost": 10.2387,
+      "rec": 0.8333333333333334,
+      "rank": 7,
+      "tsize": 0
+     }
+    },
+    "cut": {
+     "hop": 0,
+     "UNI": {
+      "cost": 14.0962,
+      "rec": 0.16666666666666666,
+      "rank": 31,
+      "tsize": 0
+     },
+     "LC": {
+      "cost": 10.162,
+      "rec": 0.8333333333333334,
+      "rank": 12,
+      "tsize": 0
+     }
+    },
+    "restored": {
+     "hop": 0,
+     "UNI": {
+      "cost": 14.0921,
+      "rec": 0.16666666666666666,
+      "rank": 27,
+      "tsize": 0
+     },
+     "LC": {
+      "cost": 10.2387,
+      "rec": 0.8333333333333334,
+      "rank": 7,
+      "tsize": 0
+     }
+    },
+    "control": {
+     "hop": 0,
+     "UNI": {
+      "cost": 14.0921,
+      "rec": 0.16666666666666666,
+      "rank": 27,
+      "tsize": 0
+     },
+     "LC": {
+      "cost": 10.1621,
+      "rec": 0.8333333333333334,
+      "rank": 7,
+      "tsize": 0
+     }
+    }
+   },
+   {
+    "qid": "pr:740",
+    "key": "travelled reads",
+    "ctrl": null,
+    "ctrl_fam": false,
+    "passage": "commit/85374fd43a",
+    "built": {
+     "hop": 0,
+     "UNI": {
+      "cost": 5.1228,
+      "rec": 0.0,
+      "rank": 21,
+      "tsize": 0
+     },
+     "LC": {
+      "cost": 3.148,
+      "rec": 0.5,
+      "rank": 2,
+      "tsize": 0
+     }
+    },
+    "cut": {
+     "hop": 0,
+     "UNI": {
+      "cost": 5.1683,
+      "rec": 0.0,
+      "rank": 22,
+      "tsize": 0
+     },
+     "LC": {
+      "cost": 3.138,
+      "rec": 0.5,
+      "rank": 2,
+      "tsize": 0
+     }
+    },
+    "restored": {
+     "hop": 0,
+     "UNI": {
+      "cost": 5.1228,
+      "rec": 0.0,
+      "rank": 21,
+      "tsize": 0
+     },
+     "LC": {
+      "cost": 3.148,
+      "rec": 0.5,
+      "rank": 2,
+      "tsize": 0
+     }
+    },
+    "control": null
+   }
+  ],
+  "gate": "1"
+ }
+}

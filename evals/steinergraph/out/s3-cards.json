@@ -1,0 +1,107 @@
+{
+ "added": [
+  [
+   "board/cards/REM-846.md#4",
+   "commit/5ada0be7c7"
+  ],
+  [
+   "board/cards/REM-219.md#2",
+   "specs/percolate-application/comparison-and-trust.md#18"
+  ],
+  [
+   "board/cards/REM-780.md#1",
+   "board/cards/REM-781.md#1"
+  ],
+  [
+   "board/cards/REM-781.md#1",
+   "board/cards/REM-781.md#3"
+  ],
+  [
+   "board/cards/REM-356.md#2",
+   "specs/percolate-application/artifacts-and-thumbnails.md#10"
+  ]
+ ],
+ "added_built": [
+  [
+   "board/cards/REM-768.md#2",
+   "commit/d08cf6ea62"
+  ],
+  [
+   "board/cards/REM-846.md#4",
+   "commit/5ada0be7c7"
+  ],
+  [
+   "board/cards/REM-219.md#2",
+   "board/cards/REM-430.md#1"
+  ],
+  [
+   "commit/36fd6706c0",
+   "commit/ee79da8239"
+  ],
+  [
+   "board/cards/REM-780.md#1",
+   "board/cards/REM-781.md#1"
+  ],
+  [
+   "board/cards/REM-781.md#1",
+   "board/cards/REM-781.md#3"
+  ],
+  [
+   "board/cards/REM-356.md#2",
+   "specs/percolate-application/artifacts-and-thumbnails.md#10"
+  ]
+ ],
+ "recovered": 0,
+ "candidates": 4,
+ "n": 133,
+ "trivial": 1,
+ "ranks": [
+  108,
+  227,
+  130,
+  172
+ ],
+ "arms": {
+  "built": {
+   "recall": 0.22268170426065162,
+   "rank": 417.01503759398497,
+   "tcost": 7.268350075099988,
+   "maxhop": 4.159219515349893
+  },
+  "drifted": {
+   "recall": 0.200125313283208,
+   "rank": 964.0977443609023,
+   "tcost": 8.100549798156049,
+   "maxhop": 4.476383129284206
+  },
+  "repaired": {
+   "recall": 0.200125313283208,
+   "rank": 964.0827067669173,
+   "tcost": 8.100549798156049,
+   "maxhop": 4.476383129284206
+  },
+  "random": {
+   "recall": 0.200125313283208,
+   "rank": 963.6766917293234,
+   "tcost": 8.100549798156049,
+   "maxhop": 4.476383129284206
+  },
+  "hub": {
+   "recall": 0.200125313283208,
+   "rank": 964.0751879699249,
+   "tcost": 8.09681630143978,
+   "maxhop": 4.476383129284206
+  },
+  "count": {
+   "recall": 0.200125313283208,
+   "rank": 964.0751879699249,
+   "tcost": 8.100549798156049,
+   "maxhop": 4.476383129284206
+  }
+ },
+ "collateral": [
+  0.0,
+  0.0,
+  0.0
+ ]
+}

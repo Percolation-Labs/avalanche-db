@@ -1,0 +1,2 @@
+== S3 mq: 116 cut passages, 251 walks (dev+test), strength fixed from the drifted graph
+  [drifted] round 1: 835 candidates scored in 107s; best gain +2.05327
