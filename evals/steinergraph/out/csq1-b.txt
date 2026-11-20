@@ -1,0 +1,14 @@
+MuSiQue S3: A = drifted, B = drifted + 40 accepted links; loose mean 269.2175 → 285.7420
+== Q1b MuSiQue S3: per case (A → B)
+  RW:2hop__121386_37168: loose 178.601 → 178.601; xm +2.977 → +3.174; xM +3.974 → +4.124; am +1.753 → +1.898; aM +2.494 → +2.555; recall None → None; top5 changed False; dropped 0 → 0
+  RW:2hop__122140_37168: loose 116.813 → 153.482; xm +2.578 → +3.060; xM +3.303 → +3.765; am +1.397 → +1.658; aM +1.932 → +2.159; recall None → None; top5 changed True; dropped 0 → 0
+  RW:2hop__122565_37168: loose 92.419 → 130.352; xm +2.690 → +2.856; xM +3.731 → +3.810; am +1.711 → +1.710; aM +2.508 → +2.308; recall None → None; top5 changed True; dropped 0 → 0
+  RW:2hop__123166_47134: loose 136.015 → 136.015; xm +3.803 → +3.804; xM +5.722 → +5.723; am +2.622 → +2.623; aM +4.151 → +4.153; recall None → None; top5 changed False; dropped 0 → 0
+  mean B − A, loose: +16.5245 [+9.8481, +23.9183] (n 251)
+  mean B − A, xm: +0.0793 [+0.0554, +0.1045] (n 251)
+  mean B − A, xM: +0.0755 [+0.0488, +0.1036] (n 251)
+  mean B − A, am: +0.0480 [+0.0304, +0.0674] (n 251)
+  mean B − A, aM: +0.0313 [+0.0115, +0.0514] (n 251)
+  mean B − A, rec: +0.0000 [+0.0000, +0.0000] (n 221)
+  top 5 changed on 46/251
+  top-5 passages not reached by every seed (dropped from CS): A 0, B 0 of 1255
