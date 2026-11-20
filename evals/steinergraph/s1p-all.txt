@@ -1,0 +1,7 @@
+== mq: 21100 passages, 11152074 directed links
+   graph-only: 88 trees; cost mean 9.72 nats; passages beyond seeds mean 2.10, non-gold mean 0.35; dearest hop mean 5.26; coverage mean 0.164 (any 24/88); focus mean 0.016
+   walk-as-used: 88 trees; cost mean 8.95 nats; passages beyond seeds mean 2.12, non-gold mean 0.38; dearest hop mean 5.12; coverage mean 0.171 (any 22/88); focus mean 0.024
+== cards: 48636 passages, 15825354 directed links
+   graph-only: 85 trees; cost mean 6.94 nats; passages beyond seeds mean 2.06, non-gold mean 0.16; dearest hop mean 3.92; coverage mean 0.363 (any 41/85); focus mean 0.039
+   walk-as-used: 85 trees; cost mean 7.51 nats; passages beyond seeds mean 2.08, non-gold mean 0.19; dearest hop mean 4.50; coverage mean 0.417 (any 47/85); focus mean 0.080
+uv run -q --with scipy --with numpy python s1p.py $J $S/share-l1  --all  222.14s user 9.01s system 96% cpu 3:58.30 total

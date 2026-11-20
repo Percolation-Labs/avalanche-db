@@ -117,6 +117,7 @@ def main():
         tf.close()
         if ALL:
             A = [a for a in agg if a]
+            json.dump(A, open(f"{out}/s1p-agg-{c}.json", "w"))
             for ref in ("graph-only", "walk-as-used"):
                 B = [a[ref] for a in A if a.get(ref)]
                 if not B: continue

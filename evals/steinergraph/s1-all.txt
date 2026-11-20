@@ -1,0 +1,21 @@
+== mq: 21100 passages, 77687 doors
+   all dev: 101 questions; 88 with gold beyond the seeds reachable; 0 with gold cut off; 0 with gold not in the graph
+   T* passages beyond seeds: mean 2.00, max 5; DW smaller than the shortest-path tree on 33
+   LC: coverage mean 0.163 (any read 19/88); focus mean 0.0215 vs ball ref 0.0005; focus > ref on 19/88
+   U: coverage mean 0.200 (any read 24/88); focus mean 0.0256 vs ball ref 0.0005; focus > ref on 24/88
+   S4 search-pooled k1: T*-edge recall mean 0.135, all edges shown 10/88
+   S4 search-pooled k2: T*-edge recall mean 0.158, all edges shown 12/88
+   S4 search-pooled k4: T*-edge recall mean 0.207, all edges shown 15/88
+   S4 search-pooled k10: T*-edge recall mean 0.444, all edges shown 32/88
+   S4 rand×3: mean 0.048; edges shown with the far end walk-read (deviation): 40/176
+== cards: 48636 passages, 176242 doors
+   all dev: 100 questions; 85 with gold beyond the seeds reachable; 0 with gold cut off; 0 with gold not in the graph
+   T* passages beyond seeds: mean 1.89, max 6; DW smaller than the shortest-path tree on 18
+   LC: coverage mean 0.383 (any read 39/85); focus mean 0.0737 vs ball ref 0.0018; focus > ref on 39/85
+   U: coverage mean 0.300 (any read 34/85); focus mean 0.0455 vs ball ref 0.0018; focus > ref on 34/85
+   S4 search-pooled k1: T*-edge recall mean 0.325, all edges shown 23/85
+   S4 search-pooled k2: T*-edge recall mean 0.337, all edges shown 24/85
+   S4 search-pooled k4: T*-edge recall mean 0.413, all edges shown 31/85
+   S4 search-pooled k10: T*-edge recall mean 0.626, all edges shown 47/85
+   S4 rand×3: mean 0.027; edges shown with the far end walk-read (deviation): 80/162
+uv run -q --with scipy --with numpy python s1.py $J $S/share-l1 $S/steiner-al  411.91s user 4.73s system 98% cpu 7:03.10 total
