@@ -46,36 +46,53 @@ changed.
    - On the MuSiQue 4-hop case, the most probable tree routes through 2 non-gold bridge passages. The walk reads them in
      tree order: the 1.4–2.5-nat hop at step 1, and the gold behind it at step 2. It stalls at the 3.3–5.1-nat hops.
    - On cards REM-1001, the tree's first hop out of the seed costs 4.2–5.0 nats, and the walk never enters.
-3. **The entry hop decides it** (a $0 diagnostic, *not registered*).
-   - Whether the walk reads any of T\* is best predicted by T\*'s cheapest hop. AUC of "not covered" over "covered":
+3. **The walk gets on where its own step makes the tree likely, so the bottleneck is entry** (a $0 diagnostic,
+   *not registered*).
+   - AUC of "not covered" over "covered". The **entry hop** is the cheapest tree edge out of a seed. The cheapest hop is
+     taken over all tree edges.
 
-     | | cheapest hop | dearest hop | total cost |
-     |---|---|---|---|
-     | MuSiQue, walk as used | **.886** | .730 | .567 |
-     | MuSiQue, graph only | **.894** | .628 | .545 |
-     | cards, walk as used | **.854** | .783 | .680 |
-     | cards, graph only | .732 | **.741** | .627 |
+     | | entry hop | cheapest hop | dearest hop | total cost |
+     |---|---|---|---|---|
+     | MuSiQue, walk as used | **.927** | .886 | .730 | .567 |
+     | MuSiQue, graph only | **.951** | .894 | .628 | .545 |
+     | cards, walk as used | **.936** | .854 | .783 | .680 |
+     | cards, graph only | **.822** | .732 | .741 | .627 |
 
-   - Covered trees have a cheapest hop of about 1.7–2.5 nats (p ≈ .08–.18), and uncovered ones 3.5–4.4 nats
-     (p ≈ .01–.03).
-   - **Reading:** with 5 reads a step, the walk gets onto the tree only where some hop is likely enough to make the
-     top 5 of the walk's next step. A hop at about 1/50 doesn't.
+   - Covered trees have an entry hop of about 2.1–3.0 nats (p ≈ .05–.12), and uncovered ones 4.1–5.3 nats
+     (p ≈ .005–.017).
+   - **This is close to definitional, not a prediction (james's review).** For the walk as used, the entry hop is the
+     walk's own one-step probability onto a tree passage. With 5 reads a step, a likely first hop is close to being
+     read by construction. The graph-only rows are the fairer test, but they share the walk's kernel too.
+   - **What it does say:** the miss is at the entry. Hops deeper in the tree (the dearest hop, the total cost) separate
+     covered from uncovered far less.
+   - When this is registered on test, it needs a control that isn't the walk's step, such as the entry key's width
+     alone.
 4. **The tree doesn't emerge from walks across seeds.**
    - Pooling walks from search's top 1…10 shows T\*'s edges mostly because search ranks 6–10 hold gold: a seed is
      shown by definition.
    - Edges whose far end a walk actually read are 23% of MuSiQue's T\* edges and 49% of cards'.
-   - So, for james's S3, walks co-read the tree's links too seldom to be the only source of repair candidates. S3's
-     candidate check will say how seldom.
+     - "Read" excludes only that walk's own seeds.
+     - A walk seeded with search's top k < 10 that reads a document from ranks k+1…10 counts as reading it, so part of
+       the 23% and 49% may still be search's ranking showing through. These are upper bounds on what walks alone
+       contribute.
+   - So, for james's S3, walks co-read the tree's links too seldom to be the only source of repair candidates.
+     james's S3 on MuSiQue confirms it (RESULT-S3): only 7 of 133 cut pairs are candidates at all, and 6 of those
+     only because both ends are seeds of one walk.
 
 ## For Sirsh's story
 
 - **"We know what good looks like."** The most probable gold tree is computable exactly, about 2 passages beyond the
   seeds, in under a second on MuSiQue and about 5 s on cards.
-- **"We can measure how far a graph is from it."** Its cost in nats, and especially its cheapest hop, is a gold-time
+- **"We can measure how far a graph is from it."** Its cost in nats, and especially its entry hop, is a gold-time
   measure of how readable it is.
-- **"Drift."** james's S2c shows that cutting the key behind T\*'s cheapest gold edge moves the walk's rank on cards
-  (382 → 1,257) and only slightly on MuSiQue.
-- **"Repair."** S3 has to lower the tree's entry cost. S4 says walk co-reads alone seldom contain the missing link.
+- **"Drift."** james's S2c (test, RESULT-S2c at 1385544): cutting the key behind T\*'s cheapest gold edge raises the
+  walk's log rank against a matched control cut.
+  - MuSiQue: +.46 [+.37, +.56] (n 132), recall −.071 [−.114, −.033].
+  - Cards: +.50 [+.39, +.62] (n 117), recall −.013 (not significant).
+  - This is the third cut definition james registered. S2 and S2b failed their gates.
+- **"Repair."** S3 (MuSiQue): the candidate source fails, as S4 predicts. The 207 accepted links win back −.002 recall,
+  the same as the random, hub and count controls. Cards is still running. A repair has to lower the tree's entry
+  cost, and walk co-reads alone don't propose it.
 
 ## Postmortem
 
