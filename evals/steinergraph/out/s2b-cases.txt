@@ -1,0 +1,80 @@
+
+== mq: 63 test questions with a singly joined gold pair (0 without any control key, 2 on the any-family fallback)
+case RW:2hop__130867_54221: cut 'maine' (width 63, word) from mq:bc3067abef2e0ab6 (joined mq:8407bc3bb4d0fe64); control 'alcohol' (width 33)
+   built     hop T* +0; UNI: T* 0.00 nats (+0 passages), recall None, rank 21096; LC: T* 0.00 nats (+0 passages), recall None, rank 21096
+   cut       hop T* +0; UNI: T* 0.00 nats (+0 passages), recall None, rank 21096; LC: T* 0.00 nats (+0 passages), recall None, rank 21096
+   restored  hop T* +0; UNI: T* 0.00 nats (+0 passages), recall None, rank 21096; LC: T* 0.00 nats (+0 passages), recall None, rank 21096
+   control   hop T* +0; UNI: T* 0.00 nats (+0 passages), recall None, rank 21096; LC: T* 0.00 nats (+0 passages), recall None, rank 21096
+   UNI added cost: cut +0.00, control 0.0; restored equals built True -> does not agree
+case RW:2hop__161151_42352: cut 'north american' (width 82, phrase) from mq:8174715888879957 (joined mq:75356f1218a84b9a); control 'great britain' (width 92)
+   built     hop T* +0; UNI: T* 5.97 nats (+0 passages), recall 0.0, rank 10; LC: T* 4.53 nats (+0 passages), recall 0.0, rank 10
+   cut       hop T* +0; UNI: T* 5.97 nats (+0 passages), recall 0.0, rank 11; LC: T* 4.50 nats (+0 passages), recall 0.0, rank 13
+   restored  hop T* +0; UNI: T* 5.97 nats (+0 passages), recall 0.0, rank 10; LC: T* 4.53 nats (+0 passages), recall 0.0, rank 10
+   control   hop T* +0; UNI: T* 6.11 nats (+0 passages), recall 0.0, rank 11; LC: T* 4.64 nats (+0 passages), recall 0.0, rank 13
+   UNI added cost: cut +0.00, control 0.14; restored equals built True -> does not agree
+case RW:2hop__20256_71302: cut 'niro' (width 7, word) from mq:787591efd3f4c5c2 (joined mq:62a61bd58554ab05); control 'oscars' (width 8)
+   built     hop T* +0; UNI: T* 8.36 nats (+0 passages), recall 0.5, rank 7; LC: T* 6.59 nats (+0 passages), recall 0.0, rank 27
+   cut       hop T* +0; UNI: T* 8.36 nats (+0 passages), recall 0.5, rank 7; LC: T* 6.57 nats (+0 passages), recall 0.0, rank 27
+   restored  hop T* +0; UNI: T* 8.36 nats (+0 passages), recall 0.5, rank 7; LC: T* 6.59 nats (+0 passages), recall 0.0, rank 27
+   control   hop T* +0; UNI: T* 8.36 nats (+0 passages), recall 0.5, rank 7; LC: T* 6.57 nats (+0 passages), recall 0.0, rank 27
+   UNI added cost: cut +0.00, control 0.0; restored equals built True -> does not agree
+case RW:2hop__32887_578772: cut 'tang' (width 37, word) from mq:0066118456459904 (joined mq:42ff38d5177ffc40); control 'vietnamese' (width 39)
+   built     hop T* +0; UNI: T* 6.75 nats (+0 passages), recall 0.0, rank 1421; LC: T* 8.80 nats (+0 passages), recall 0.0, rank 1357
+   cut       hop T* +1; UNI: T* 9.50 nats (+1 passages), recall 0.0, rank 1994; LC: T* 10.23 nats (+1 passages), recall 0.0, rank 1684
+   restored  hop T* +0; UNI: T* 6.75 nats (+0 passages), recall 0.0, rank 1421; LC: T* 8.80 nats (+0 passages), recall 0.0, rank 1357
+   control   hop T* +0; UNI: T* 6.75 nats (+0 passages), recall 0.0, rank 1445; LC: T* 8.75 nats (+0 passages), recall 0.0, rank 1344
+   UNI added cost: cut +2.76, control 0.0; restored equals built True -> agrees
+mq gate: 1/4 cases agree
+
+== cards: 28 test questions with a singly joined gold pair (2 without any control key, 9 on the any-family fallback)
+case card:REM-152: cut 'rem 152' (width 20, number) from commit/cf83bfcc1b (joined commit/77cc68df35); control 'invariants' (width 43)
+   built     hop T* +0; UNI: T* 9.16 nats (+0 passages), recall 0.333, rank 2; LC: T* 11.66 nats (+0 passages), recall 0.333, rank 1
+   cut       hop T* +0; UNI: T* 9.12 nats (+0 passages), recall 0.333, rank 2; LC: T* 11.53 nats (+0 passages), recall 0.333, rank 1
+   restored  hop T* +0; UNI: T* 9.16 nats (+0 passages), recall 0.333, rank 2; LC: T* 11.66 nats (+0 passages), recall 0.333, rank 1
+   control   hop T* +0; UNI: T* 9.16 nats (+0 passages), recall 0.333, rank 2; LC: T* 11.60 nats (+0 passages), recall 0.333, rank 1
+   UNI added cost: cut -0.04, control 0.0; restored equals built True -> does not agree
+case card:REM-185: cut 'rem 185' (width 37, number) from commit/a50a914206 (joined commit/1bf6e6e375); control 'release path' (width 20)
+   built     hop T* +0; UNI: T* 21.18 nats (+0 passages), recall 0.167, rank 7678; LC: T* 22.06 nats (+0 passages), recall 0.0, rank 1173
+   cut       hop T* +0; UNI: T* 21.25 nats (+0 passages), recall 0.167, rank 26169; LC: T* 21.98 nats (+0 passages), recall 0.0, rank 14106
+   restored  hop T* +0; UNI: T* 21.18 nats (+0 passages), recall 0.167, rank 7678; LC: T* 22.06 nats (+0 passages), recall 0.0, rank 1173
+   control   hop T* +0; UNI: T* 21.18 nats (+0 passages), recall 0.167, rank 7712; LC: T* 21.90 nats (+0 passages), recall 0.0, rank 976
+   UNI added cost: cut +0.06, control 0.0; restored equals built True -> agrees
+case card:REM-19: cut 'rem 19' (width 7, number) from commit/abcc1a9f84 (joined commit/221d061d28); control 'replay 2026' (width 8)
+   built     hop T* +0; UNI: T* 9.96 nats (+0 passages), recall 0.333, rank 4; LC: T* 9.22 nats (+0 passages), recall 0.0, rank 18
+   cut       hop T* +0; UNI: T* 9.92 nats (+0 passages), recall 0.333, rank 4; LC: T* 9.16 nats (+0 passages), recall 0.0, rank 20
+   restored  hop T* +0; UNI: T* 9.96 nats (+0 passages), recall 0.333, rank 4; LC: T* 9.22 nats (+0 passages), recall 0.0, rank 18
+   control   hop T* +0; UNI: T* 9.94 nats (+0 passages), recall 0.333, rank 4; LC: T* 9.20 nats (+0 passages), recall 0.0, rank 18
+   UNI added cost: cut -0.03, control -0.02; restored equals built True -> does not agree
+case card:REM-193: cut 'rem 193' (width 27, number) from commit/95a76cfb1f (joined commit/9374b39cde); control 'p8ci' (width 24)
+   built     hop T* +0; UNI: T* 9.45 nats (+0 passages), recall 0.667, rank 190; LC: T* 11.45 nats (+0 passages), recall 0.333, rank 703
+   cut       hop T* +0; UNI: T* 9.89 nats (+0 passages), recall 0.667, rank 343; LC: T* 11.87 nats (+0 passages), recall 0.333, rank 1885
+   restored  hop T* +0; UNI: T* 9.45 nats (+0 passages), recall 0.667, rank 190; LC: T* 11.45 nats (+0 passages), recall 0.333, rank 703
+   control   hop T* +0; UNI: T* 9.45 nats (+0 passages), recall 0.667, rank 191; LC: T* 11.42 nats (+0 passages), recall 0.333, rank 686
+   UNI added cost: cut +0.44, control 0.0; restored equals built True -> agrees
+cards gate: 2/4 cases agree
+
+== prs: 11 test questions with a singly joined gold pair (4 without any control key, 5 on the any-family fallback)
+case pr:648: cut 'judged walks' (width 80, phrase) from commit/cef6d4c7cd (joined commit/1ab290d7fe); control 'lead reads' (width 35)
+   built     hop T* +0; UNI: T* 7.88 nats (+0 passages), recall 0.0, rank 16; LC: T* 7.89 nats (+0 passages), recall 0.667, rank 2
+   cut       hop T* +0; UNI: T* 7.88 nats (+0 passages), recall 0.0, rank 19; LC: T* 7.72 nats (+0 passages), recall 0.667, rank 2
+   restored  hop T* +0; UNI: T* 7.88 nats (+0 passages), recall 0.0, rank 16; LC: T* 7.89 nats (+0 passages), recall 0.667, rank 2
+   control   hop T* +0; UNI: T* 7.88 nats (+0 passages), recall 0.0, rank 18; LC: T* 7.73 nats (+0 passages), recall 0.667, rank 2
+   UNI added cost: cut +0.00, control 0.0; restored equals built True -> does not agree
+case pr:667: cut 'order test' (width 6, phrase) from commit/f3221b8ae4 (joined commit/3689219351); control 'add mike' (width 2)
+   built     hop T* +0; UNI: T* 4.89 nats (+0 passages), recall 0.5, rank 5; LC: T* 4.65 nats (+0 passages), recall 0.5, rank 3
+   cut       hop T* +0; UNI: T* 4.89 nats (+0 passages), recall 0.5, rank 5; LC: T* 4.53 nats (+0 passages), recall 0.5, rank 3
+   restored  hop T* +0; UNI: T* 4.89 nats (+0 passages), recall 0.5, rank 5; LC: T* 4.65 nats (+0 passages), recall 0.5, rank 3
+   control   hop T* +0; UNI: T* 4.89 nats (+0 passages), recall 0.5, rank 5; LC: T* 4.53 nats (+0 passages), recall 0.5, rank 3
+   UNI added cost: cut +0.00, control 0.0; restored equals built True -> does not agree
+case pr:686: cut 'walklab dreaming' (width 31, phrase) from commit/28fd7fe157 (joined commit/21919917cd); control 'dev held' (width 23)
+   built     hop T* +0; UNI: T* 14.09 nats (+0 passages), recall 0.167, rank 27; LC: T* 10.24 nats (+0 passages), recall 0.833, rank 7
+   cut       hop T* +0; UNI: T* 14.10 nats (+0 passages), recall 0.167, rank 31; LC: T* 10.16 nats (+0 passages), recall 0.833, rank 12
+   restored  hop T* +0; UNI: T* 14.09 nats (+0 passages), recall 0.167, rank 27; LC: T* 10.24 nats (+0 passages), recall 0.833, rank 7
+   control   hop T* +0; UNI: T* 14.09 nats (+0 passages), recall 0.167, rank 27; LC: T* 10.16 nats (+0 passages), recall 0.833, rank 7
+   UNI added cost: cut +0.00, control 0.0; restored equals built True -> agrees
+case pr:740: cut 'travelled reads' (width 30, phrase) from commit/85374fd43a (joined commit/3de62c0ac1); control 'None' (width -)
+   built     hop T* +0; UNI: T* 5.12 nats (+0 passages), recall 0.0, rank 21; LC: T* 3.15 nats (+0 passages), recall 0.5, rank 2
+   cut       hop T* +0; UNI: T* 5.17 nats (+0 passages), recall 0.0, rank 22; LC: T* 3.14 nats (+0 passages), recall 0.5, rank 2
+   restored  hop T* +0; UNI: T* 5.12 nats (+0 passages), recall 0.0, rank 21; LC: T* 3.15 nats (+0 passages), recall 0.5, rank 2
+   UNI added cost: cut +0.05, control None; restored equals built True -> does not agree
+prs gate: 1/4 cases agree
