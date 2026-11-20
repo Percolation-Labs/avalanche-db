@@ -1,0 +1,146 @@
+== mq: easy ['RW:2hop__125412_544665', 'RW:2hop__126306_396277'], miss ['RW:2hop__126306_396277', 'RW:2hop__130508_32379']
+
+-- easy mq RW:2hop__125412_544665 [graph-only]: scored 21095 passages; gold 1/1, T* non-seed 1/1; 0 unreached; A_ij range 0.4–4.82
+   am (= xm in rank)    gold ranks [1] (mean log 0.00); non-gold T* mean log rank nan;  AUC gold 1.000  AUC T* 1.000  ρ(deg) +0.28
+   aM                   gold ranks [1] (mean log 0.00); non-gold T* mean log rank nan;  AUC gold 1.000  AUC T* 1.000  ρ(deg) +0.04
+   xM                   gold ranks [1] (mean log 0.00); non-gold T* mean log rank nan;  AUC gold 1.000  AUC T* 1.000  ρ(deg) +0.07
+   walk mass P          gold ranks [1] (mean log 0.00); non-gold T* mean log rank nan;  AUC gold 1.000  AUC T* 1.000  ρ(deg) +0.89
+   L2 node coherence    gold ranks [1] (mean log 0.00); non-gold T* mean log rank nan;  AUC gold 1.000  AUC T* 1.000  ρ(deg) +0.16
+   degree               gold ranks [12095] (mean log 9.40); non-gold T* mean log rank nan;  AUC gold 0.427  AUC T* 0.427
+
+-- easy mq RW:2hop__125412_544665 [walk-as-used]: scored 21095 passages; gold 1/1, T* non-seed 1/1; 0 unreached; A_ij range 0.697–15.7
+   am (= xm in rank)    gold ranks [1] (mean log 0.00); non-gold T* mean log rank nan;  AUC gold 1.000  AUC T* 1.000  ρ(deg) +0.23
+   aM                   gold ranks [1] (mean log 0.00); non-gold T* mean log rank nan;  AUC gold 1.000  AUC T* 1.000  ρ(deg) +0.04
+   xM                   gold ranks [1] (mean log 0.00); non-gold T* mean log rank nan;  AUC gold 1.000  AUC T* 1.000  ρ(deg) +0.06
+   walk mass P          gold ranks [1] (mean log 0.00); non-gold T* mean log rank nan;  AUC gold 1.000  AUC T* 1.000  ρ(deg) -0.05
+   L2 node coherence    gold ranks [1] (mean log 0.00); non-gold T* mean log rank nan;  AUC gold 1.000  AUC T* 1.000  ρ(deg) +0.16
+   degree               gold ranks [12095] (mean log 9.40); non-gold T* mean log rank nan;  AUC gold 0.427  AUC T* 0.427
+
+-- easy mq RW:2hop__126306_396277 [graph-only]: scored 21095 passages; gold 1/1, T* non-seed 1/1; 0 unreached; A_ij range 0.555–1.34
+   am (= xm in rank)    gold ranks [16] (mean log 2.77); non-gold T* mean log rank nan;  AUC gold 0.999  AUC T* 0.999  ρ(deg) +0.38
+   aM                   gold ranks [1] (mean log 0.00); non-gold T* mean log rank nan;  AUC gold 1.000  AUC T* 1.000  ρ(deg) +0.26
+   xM                   gold ranks [1] (mean log 0.00); non-gold T* mean log rank nan;  AUC gold 1.000  AUC T* 1.000  ρ(deg) +0.22
+   walk mass P          gold ranks [3] (mean log 1.10); non-gold T* mean log rank nan;  AUC gold 1.000  AUC T* 1.000  ρ(deg) +0.89
+   L2 node coherence    gold ranks [6] (mean log 1.79); non-gold T* mean log rank nan;  AUC gold 1.000  AUC T* 1.000  ρ(deg) +0.15
+   degree               gold ranks [18177] (mean log 9.81); non-gold T* mean log rank nan;  AUC gold 0.138  AUC T* 0.138
+
+-- easy mq RW:2hop__126306_396277 [walk-as-used]: scored 21095 passages; gold 1/1, T* non-seed 1/1; 0 unreached; A_ij range 3.29–15.1
+   am (= xm in rank)    gold ranks [4] (mean log 1.39); non-gold T* mean log rank nan;  AUC gold 1.000  AUC T* 1.000  ρ(deg) +0.34
+   aM                   gold ranks [1] (mean log 0.00); non-gold T* mean log rank nan;  AUC gold 1.000  AUC T* 1.000  ρ(deg) +0.25
+   xM                   gold ranks [1] (mean log 0.00); non-gold T* mean log rank nan;  AUC gold 1.000  AUC T* 1.000  ρ(deg) +0.25
+   walk mass P          gold ranks [83] (mean log 4.42); non-gold T* mean log rank nan;  AUC gold 0.996  AUC T* 0.996  ρ(deg) -0.00
+   L2 node coherence    gold ranks [6] (mean log 1.79); non-gold T* mean log rank nan;  AUC gold 1.000  AUC T* 1.000  ρ(deg) +0.15
+   degree               gold ranks [18177] (mean log 9.81); non-gold T* mean log rank nan;  AUC gold 0.138  AUC T* 0.138
+
+-- miss mq RW:2hop__126306_396277 [graph-only]: scored 21095 passages; gold 1/1, T* non-seed 1/1; 0 unreached; A_ij range 0.555–1.34
+   am (= xm in rank)    gold ranks [16] (mean log 2.77); non-gold T* mean log rank nan;  AUC gold 0.999  AUC T* 0.999  ρ(deg) +0.38
+   aM                   gold ranks [1] (mean log 0.00); non-gold T* mean log rank nan;  AUC gold 1.000  AUC T* 1.000  ρ(deg) +0.26
+   xM                   gold ranks [1] (mean log 0.00); non-gold T* mean log rank nan;  AUC gold 1.000  AUC T* 1.000  ρ(deg) +0.22
+   walk mass P          gold ranks [3] (mean log 1.10); non-gold T* mean log rank nan;  AUC gold 1.000  AUC T* 1.000  ρ(deg) +0.89
+   L2 node coherence    gold ranks [6] (mean log 1.79); non-gold T* mean log rank nan;  AUC gold 1.000  AUC T* 1.000  ρ(deg) +0.15
+   degree               gold ranks [18177] (mean log 9.81); non-gold T* mean log rank nan;  AUC gold 0.138  AUC T* 0.138
+
+-- miss mq RW:2hop__126306_396277 [walk-as-used]: scored 21095 passages; gold 1/1, T* non-seed 1/1; 0 unreached; A_ij range 3.29–15.1
+   am (= xm in rank)    gold ranks [4] (mean log 1.39); non-gold T* mean log rank nan;  AUC gold 1.000  AUC T* 1.000  ρ(deg) +0.34
+   aM                   gold ranks [1] (mean log 0.00); non-gold T* mean log rank nan;  AUC gold 1.000  AUC T* 1.000  ρ(deg) +0.25
+   xM                   gold ranks [1] (mean log 0.00); non-gold T* mean log rank nan;  AUC gold 1.000  AUC T* 1.000  ρ(deg) +0.25
+   walk mass P          gold ranks [83] (mean log 4.42); non-gold T* mean log rank nan;  AUC gold 0.996  AUC T* 0.996  ρ(deg) -0.00
+   L2 node coherence    gold ranks [6] (mean log 1.79); non-gold T* mean log rank nan;  AUC gold 1.000  AUC T* 1.000  ρ(deg) +0.15
+   degree               gold ranks [18177] (mean log 9.81); non-gold T* mean log rank nan;  AUC gold 0.138  AUC T* 0.138
+
+-- miss mq RW:2hop__130508_32379 [graph-only]: scored 21095 passages; gold 1/1, T* non-seed 2/2; 0 unreached; A_ij range 0.807–2.6
+   am (= xm in rank)    gold ranks [1610] (mean log 7.38); non-gold T* mean log rank 5.59;  AUC gold 0.924  AUC T* 0.956  ρ(deg) +0.07
+   aM                   gold ranks [2934] (mean log 7.98); non-gold T* mean log rank 5.72;  AUC gold 0.861  AUC T* 0.923  ρ(deg) -0.01
+   xM                   gold ranks [3198] (mean log 8.07); non-gold T* mean log rank 5.76;  AUC gold 0.848  AUC T* 0.917  ρ(deg) -0.07
+   walk mass P          gold ranks [2613] (mean log 7.87); non-gold T* mean log rank 4.73;  AUC gold 0.876  AUC T* 0.935  ρ(deg) +0.86
+   L2 node coherence    gold ranks [11499] (mean log 9.35); non-gold T* mean log rank 5.55;  AUC gold 0.455  AUC T* 0.721  ρ(deg) +0.10
+   degree               gold ranks [4254] (mean log 8.36); non-gold T* mean log rank 7.12;  AUC gold 0.798  AUC T* 0.870
+
+-- miss mq RW:2hop__130508_32379 [walk-as-used]: scored 21095 passages; gold 1/1, T* non-seed 2/2; 0 unreached; A_ij range 2.11–14.4
+   am (= xm in rank)    gold ranks [1813] (mean log 7.50); non-gold T* mean log rank 3.89;  AUC gold 0.914  AUC T* 0.956  ρ(deg) +0.01
+   aM                   gold ranks [2460] (mean log 7.81); non-gold T* mean log rank 4.71;  AUC gold 0.883  AUC T* 0.939  ρ(deg) +0.03
+   xM                   gold ranks [2758] (mean log 7.92); non-gold T* mean log rank 4.17;  AUC gold 0.869  AUC T* 0.933  ρ(deg) -0.07
+   walk mass P          gold ranks [297] (mean log 5.69); non-gold T* mean log rank 3.71;  AUC gold 0.986  AUC T* 0.992  ρ(deg) -0.03
+   L2 node coherence    gold ranks [11499] (mean log 9.35); non-gold T* mean log rank 4.06;  AUC gold 0.455  AUC T* 0.726  ρ(deg) +0.10
+   degree               gold ranks [4254] (mean log 8.36); non-gold T* mean log rank 7.44;  AUC gold 0.798  AUC T* 0.859
+== cards: easy ['card:REM-1001', 'card:REM-103'], miss ['card:REM-1001', 'card:REM-103']
+
+-- easy cards card:REM-1001 [graph-only]: scored 47244 passages; gold 6/6, T* non-seed 6/6; 1387 unreached; A_ij range 5.24–22
+   am (= xm in rank)    gold ranks [57, 67, 58, 75, 60, 101] (mean log 4.22); non-gold T* mean log rank nan;  AUC gold 0.999  AUC T* 0.999  ρ(deg) +0.50
+   aM                   gold ranks [52, 54, 60, 66, 58, 51] (mean log 4.04); non-gold T* mean log rank nan;  AUC gold 0.999  AUC T* 0.999  ρ(deg) +0.34
+   xM                   gold ranks [54, 56, 62, 68, 59, 53] (mean log 4.07); non-gold T* mean log rank nan;  AUC gold 0.999  AUC T* 0.999  ρ(deg) +0.32
+   walk mass P          gold ranks [49, 77, 41, 56, 75, 52] (mean log 4.04); non-gold T* mean log rank nan;  AUC gold 0.999  AUC T* 0.999  ρ(deg) +0.90
+   L2 node coherence    gold ranks [70, 64, 78, 72, 65, 68] (mean log 4.24); non-gold T* mean log rank nan;  AUC gold 0.999  AUC T* 0.999  ρ(deg) +0.05
+   degree               gold ranks [29065, 31421, 25825, 27953, 31421, 30227] (mean log 10.28); non-gold T* mean log rank nan;  AUC gold 0.379  AUC T* 0.379
+
+-- easy cards card:REM-1001 [walk-as-used]: scored 47244 passages; gold 6/6, T* non-seed 7/7; 1387 unreached; A_ij range 22.4–52.4
+   am (= xm in rank)    gold ranks [40, 50, 44, 52, 46, 69] (mean log 3.90); non-gold T* mean log rank 3.22;  AUC gold 0.999  AUC T* 0.999  ρ(deg) +0.22
+   aM                   gold ranks [41, 48, 49, 52, 50, 43] (mean log 3.85); non-gold T* mean log rank 3.22;  AUC gold 0.999  AUC T* 0.999  ρ(deg) +0.14
+   xM                   gold ranks [42, 49, 50, 55, 51, 44] (mean log 3.88); non-gold T* mean log rank 3.30;  AUC gold 0.999  AUC T* 0.999  ρ(deg) +0.13
+   walk mass P          gold ranks [18, 38, 25, 235, 20, 39] (mean log 3.64); non-gold T* mean log rank 2.56;  AUC gold 0.999  AUC T* 0.999  ρ(deg) +0.04
+   L2 node coherence    gold ranks [70, 64, 78, 72, 65, 68] (mean log 4.24); non-gold T* mean log rank 2.92;  AUC gold 0.999  AUC T* 0.999  ρ(deg) +0.05
+   degree               gold ranks [29065, 31421, 25825, 27953, 31421, 30227] (mean log 10.28); non-gold T* mean log rank 10.45;  AUC gold 0.379  AUC T* 0.364
+
+-- easy cards card:REM-103 [graph-only]: scored 47258 passages; gold 2/2, T* non-seed 2/2; 1373 unreached; A_ij range 0.656–5.5
+   am (= xm in rank)    gold ranks [2, 12] (mean log 1.59); non-gold T* mean log rank nan;  AUC gold 1.000  AUC T* 1.000  ρ(deg) +0.13
+   aM                   gold ranks [3, 62] (mean log 2.61); non-gold T* mean log rank nan;  AUC gold 0.999  AUC T* 0.999  ρ(deg) -0.03
+   xM                   gold ranks [3, 53] (mean log 2.53); non-gold T* mean log rank nan;  AUC gold 0.999  AUC T* 0.999  ρ(deg) +0.04
+   walk mass P          gold ranks [8, 25] (mean log 2.65); non-gold T* mean log rank nan;  AUC gold 1.000  AUC T* 1.000  ρ(deg) +0.96
+   L2 node coherence    gold ranks [3, 35] (mean log 2.33); non-gold T* mean log rank nan;  AUC gold 1.000  AUC T* 1.000  ρ(deg) +0.24
+   degree               gold ranks [21714, 14797] (mean log 9.79); non-gold T* mean log rank nan;  AUC gold 0.614  AUC T* 0.614
+
+-- easy cards card:REM-103 [walk-as-used]: scored 47258 passages; gold 2/2, T* non-seed 2/2; 1373 unreached; A_ij range 11–134
+   am (= xm in rank)    gold ranks [2, 6] (mean log 1.24); non-gold T* mean log rank nan;  AUC gold 1.000  AUC T* 1.000  ρ(deg) +0.01
+   aM                   gold ranks [16, 60] (mean log 3.43); non-gold T* mean log rank nan;  AUC gold 0.999  AUC T* 0.999  ρ(deg) -0.07
+   xM                   gold ranks [18, 57] (mean log 3.47); non-gold T* mean log rank nan;  AUC gold 0.999  AUC T* 0.999  ρ(deg) -0.02
+   walk mass P          gold ranks [2, 768] (mean log 3.67); non-gold T* mean log rank nan;  AUC gold 0.992  AUC T* 0.992  ρ(deg) +0.13
+   L2 node coherence    gold ranks [3, 35] (mean log 2.33); non-gold T* mean log rank nan;  AUC gold 1.000  AUC T* 1.000  ρ(deg) +0.24
+   degree               gold ranks [21714, 14797] (mean log 9.79); non-gold T* mean log rank nan;  AUC gold 0.614  AUC T* 0.614
+
+-- miss cards card:REM-1001 [graph-only]: scored 47244 passages; gold 6/6, T* non-seed 6/6; 1387 unreached; A_ij range 5.24–22
+   am (= xm in rank)    gold ranks [57, 67, 58, 75, 60, 101] (mean log 4.22); non-gold T* mean log rank nan;  AUC gold 0.999  AUC T* 0.999  ρ(deg) +0.50
+   aM                   gold ranks [52, 54, 60, 66, 58, 51] (mean log 4.04); non-gold T* mean log rank nan;  AUC gold 0.999  AUC T* 0.999  ρ(deg) +0.34
+   xM                   gold ranks [54, 56, 62, 68, 59, 53] (mean log 4.07); non-gold T* mean log rank nan;  AUC gold 0.999  AUC T* 0.999  ρ(deg) +0.32
+   walk mass P          gold ranks [49, 77, 41, 56, 75, 52] (mean log 4.04); non-gold T* mean log rank nan;  AUC gold 0.999  AUC T* 0.999  ρ(deg) +0.90
+   L2 node coherence    gold ranks [70, 64, 78, 72, 65, 68] (mean log 4.24); non-gold T* mean log rank nan;  AUC gold 0.999  AUC T* 0.999  ρ(deg) +0.05
+   degree               gold ranks [29065, 31421, 25825, 27953, 31421, 30227] (mean log 10.28); non-gold T* mean log rank nan;  AUC gold 0.379  AUC T* 0.379
+
+-- miss cards card:REM-1001 [walk-as-used]: scored 47244 passages; gold 6/6, T* non-seed 7/7; 1387 unreached; A_ij range 22.4–52.4
+   am (= xm in rank)    gold ranks [40, 50, 44, 52, 46, 69] (mean log 3.90); non-gold T* mean log rank 3.22;  AUC gold 0.999  AUC T* 0.999  ρ(deg) +0.22
+   aM                   gold ranks [41, 48, 49, 52, 50, 43] (mean log 3.85); non-gold T* mean log rank 3.22;  AUC gold 0.999  AUC T* 0.999  ρ(deg) +0.14
+   xM                   gold ranks [42, 49, 50, 55, 51, 44] (mean log 3.88); non-gold T* mean log rank 3.30;  AUC gold 0.999  AUC T* 0.999  ρ(deg) +0.13
+   walk mass P          gold ranks [18, 38, 25, 235, 20, 39] (mean log 3.64); non-gold T* mean log rank 2.56;  AUC gold 0.999  AUC T* 0.999  ρ(deg) +0.04
+   L2 node coherence    gold ranks [70, 64, 78, 72, 65, 68] (mean log 4.24); non-gold T* mean log rank 2.92;  AUC gold 0.999  AUC T* 0.999  ρ(deg) +0.05
+   degree               gold ranks [29065, 31421, 25825, 27953, 31421, 30227] (mean log 10.28); non-gold T* mean log rank 10.45;  AUC gold 0.379  AUC T* 0.364
+
+-- miss cards card:REM-103 [graph-only]: scored 47258 passages; gold 2/2, T* non-seed 2/2; 1373 unreached; A_ij range 0.656–5.5
+   am (= xm in rank)    gold ranks [2, 12] (mean log 1.59); non-gold T* mean log rank nan;  AUC gold 1.000  AUC T* 1.000  ρ(deg) +0.13
+   aM                   gold ranks [3, 62] (mean log 2.61); non-gold T* mean log rank nan;  AUC gold 0.999  AUC T* 0.999  ρ(deg) -0.03
+   xM                   gold ranks [3, 53] (mean log 2.53); non-gold T* mean log rank nan;  AUC gold 0.999  AUC T* 0.999  ρ(deg) +0.04
+   walk mass P          gold ranks [8, 25] (mean log 2.65); non-gold T* mean log rank nan;  AUC gold 1.000  AUC T* 1.000  ρ(deg) +0.96
+   L2 node coherence    gold ranks [3, 35] (mean log 2.33); non-gold T* mean log rank nan;  AUC gold 1.000  AUC T* 1.000  ρ(deg) +0.24
+   degree               gold ranks [21714, 14797] (mean log 9.79); non-gold T* mean log rank nan;  AUC gold 0.614  AUC T* 0.614
+
+-- miss cards card:REM-103 [walk-as-used]: scored 47258 passages; gold 2/2, T* non-seed 2/2; 1373 unreached; A_ij range 11–134
+   am (= xm in rank)    gold ranks [2, 6] (mean log 1.24); non-gold T* mean log rank nan;  AUC gold 1.000  AUC T* 1.000  ρ(deg) +0.01
+   aM                   gold ranks [16, 60] (mean log 3.43); non-gold T* mean log rank nan;  AUC gold 0.999  AUC T* 0.999  ρ(deg) -0.07
+   xM                   gold ranks [18, 57] (mean log 3.47); non-gold T* mean log rank nan;  AUC gold 0.999  AUC T* 0.999  ρ(deg) -0.02
+   walk mass P          gold ranks [2, 768] (mean log 3.67); non-gold T* mean log rank nan;  AUC gold 0.992  AUC T* 0.992  ρ(deg) +0.13
+   L2 node coherence    gold ranks [3, 35] (mean log 2.33); non-gold T* mean log rank nan;  AUC gold 1.000  AUC T* 1.000  ρ(deg) +0.24
+   degree               gold ranks [21714, 14797] (mean log 9.79); non-gold T* mean log rank nan;  AUC gold 0.614  AUC T* 0.614
+MISS graph-only: am (= xm in rank) gives a lower mean log gold rank than walk mass in 2/4
+MISS graph-only: aM gives a lower mean log gold rank than walk mass in 3/4
+MISS graph-only: xM gives a lower mean log gold rank than walk mass in 2/4
+MISS graph-only: L2 node coherence gives a lower mean log gold rank than walk mass in 1/4
+graph-only auc_gold: am (= xm in rank) beats walk mass in 3/8
+graph-only auc_gold: aM beats walk mass in 4/8
+graph-only auc_tstar: am (= xm in rank) beats walk mass in 3/8
+graph-only auc_tstar: aM beats walk mass in 4/8
+MISS walk-as-used: am (= xm in rank) gives a lower mean log gold rank than walk mass in 2/4
+MISS walk-as-used: aM gives a lower mean log gold rank than walk mass in 2/4
+MISS walk-as-used: xM gives a lower mean log gold rank than walk mass in 2/4
+MISS walk-as-used: L2 node coherence gives a lower mean log gold rank than walk mass in 2/4
+walk-as-used auc_gold: am (= xm in rank) beats walk mass in 6/8
+walk-as-used auc_gold: aM beats walk mass in 6/8
+walk-as-used auc_tstar: am (= xm in rank) beats walk mass in 6/8
+walk-as-used auc_tstar: aM beats walk mass in 6/8
