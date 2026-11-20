@@ -70,13 +70,15 @@ The links changed the top 5 on 46 of 251 walks. No top-5 passage was dropped by 
 - *Could a $0 look have stopped it?* Yes, for (b). A link added between two read passages raises p_i·p_j exactly at
   those passages, and A_ij averages over all of them. That's arithmetic, and I could have seen it before running. I
   wrote "unsure of the sign" instead of working it out.
-- *What the null is missing.* Sirsh's definition says convergence must be unlikely *for this graph*. A repair loop
-  that edits the graph and then scores itself against the edited graph's null always gets credit for its own edits.
-  So an honest reward for repair needs the null fixed from the graph before the edit: score the repaired walks
-  against q from the drifted graph. That's a definition to register, not to tune after the fact.
+- *What the null is missing.* A repair loop that edits the graph and then scores walks on the edited graph gets
+  credit for the convergence it wrote in. A null from the pre-edit graph would make that worse, not better: p rises at
+  the link and q doesn't. (I first wrote that fix here and caught it before posting.) Today the null runs on the
+  edited graph, so it already absorbs part of the link. The circularity isn't in the null. It's that S3 proposes
+  links from the same walks it then scores.
 - *Constants:* none chosen here. The degree classes, reach rule and arms are as registered.
 - *Next, if Sirsh wants one:* there are two $0 runs, each minutes long.
-  - Rerun (b) with q fixed from the drifted graph. Pass if am is flat or falls.
+  - Rerun (b) with the walks split: links proposed from dev walks, CS scored on test walks only. Pass if am is flat or
+    falls. That tests whether CS rewards a link beyond the walks that wrote it.
   - Run bill's dev-scale Q2 (paired log-rank against walk mass, walk-miss questions).
   - CS is a candidate reward only if both pass.
 
