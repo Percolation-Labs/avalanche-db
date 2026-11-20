@@ -31,8 +31,8 @@ the loop changes nothing.
    almost never co-read, and a repair drawn from what walks read can't propose it. The few cut pairs that are
    candidates are mostly pairs of seeds, which search supplied, not the walk.
 2. **Coherence then ranks the true repair in the middle.** Where the cut pair is a candidate at all, its coherence
-   gain is middling (median rank about half the pool). The large gains, up to +2.4 per link, come from tying together
-   passages the walks already read. That raises coherence without reaching anything new: on cards, 36 links gave
+   gain is middling (median rank about half the pool). Every candidate joins passages that walks already read, by
+   construction. So the large gains, up to +2.4 per link, come from tying those together. That raises coherence without reaching anything new: on cards, 36 links gave
    exactly 0 recall change. This is L3's failure again in another form. The reward can be raised by making the
    walk's own reads more tightly connected, and that is not the same as finding the answer.
 3. **Coherence beats nothing.** The count, random and hub controls do as well as the coherence-ranked loop, all at
