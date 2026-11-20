@@ -2,7 +2,7 @@
 Candidates: passage pairs read together (seeds + top 5) by >= 2 questions' walks with no Beside door between them.
 Gain: change in mean L2 coherence over the walks, strength matrix fixed from the drifted graph; greedy until no gain.
     uv run --with scipy --with numpy python s3.py SCRATCH SDIR SET [--time-only]"""
-import json, sys, os, time, random, collections, itertools
+import json, sys, os, time, random, collections, itertools, copy
 import numpy as np, scipy.sparse as sp
 import l1, l2, s2
 from l1 import G, UNI, load, load_s, Fmat, recall5, boot, mean_ok
@@ -36,8 +36,11 @@ def main():
     qs = [(q, s_, gi, "dev") for q, s_, gi, *_ in dev] + [(q, s_, gi, "test") for q, s_, gi, *_ in test]
     seeds = [s_ for _, s_, _, _ in qs]
     Fa = np.hstack([Fmat(g0, [q for q, *_ in dev], Sd), Fmat(g0, [q for q, *_ in test], St)])
+    base_cache = {}
     def mk(rr, extra=()):
-        g = G(rr); add_beside(g, list(extra)); return g
+        key = id(rr)
+        if key not in base_cache: base_cache[key] = G(rr)
+        b = base_cache[key]; g = copy.copy(b); g.nd = b.nd.copy(); add_beside(g, list(extra)); return g
     gd = mk(rd); W, s, m2 = l2.strength(rd, gd)
     Ld = s2.links(gd)
     beside = set()
@@ -61,23 +64,27 @@ def main():
         added = []
         g = mk(rbase); allc = list(range(len(qs)))
         P, T = walks(g); C = cohs(T, allc); first = None; rounds = 0
+        gains, prevT = {}, None
         while True:
             t0 = time.time()
             cd = cands(T, set(added))
             holders = collections.defaultdict(list)
             for i, t in enumerate(T):
                 for x in set(seeds[i]) | set(t): holders[x].append(i)
-            gains = {}
-            for p in cd:
+            changed = set(range(len(qs))) if prevT is None else {i for i in range(len(qs)) if sorted(T[i]) != sorted(prevT[i])}
+            gains = {p: v for p, v in gains.items() if p in cd}
+            todo_ = [p for p in cd if p not in gains or (set(holders[p[0]]) | set(holders[p[1]])) & changed]
+            for p in todo_:
                 cols = sorted(set(holders[p[0]]) | set(holders[p[1]]))
                 g2 = mk(rbase, added + [p]); _, T2 = walks(g2, cols)
                 gains[p] = sum(cohs(T2, cols)) / len(qs) - sum(C[i] for i in cols) / len(qs)
             dt = time.time() - t0; rounds += 1
             if first is None: first = (dict(cd), dict(gains))
             best = max(gains.items(), key=lambda kv: (kv[1], -kv[0][0], -kv[0][1]), default=(None, 0))
-            say(f"  [{label}] round {rounds}: {len(cd)} candidates scored in {dt:.0f}s; best gain {best[1]:+.5f}")
+            say(f"  [{label}] round {rounds}: {len(cd)} candidates ({len(todo_)} rescored, {sum(v > 0 for v in gains.values())} with gain > 0) in {dt:.0f}s; best gain {best[1]:+.5f}")
             if time_only or best[1] <= 0: break
-            added.append(best[0]); g = mk(rbase, added); P, T = walks(g); C = cohs(T, allc)
+            added.append(best[0]); del gains[best[0]]; prevT = T
+            g = mk(rbase, added); P, T = walks(g); C = cohs(T, allc)
         return added, first, g
     added, (cd1, gn1), gr = loop(rd, "drifted")
     if time_only: open(f"out/s3-{c}-time.txt", "w").write("\n".join(txt) + "\n"); return
