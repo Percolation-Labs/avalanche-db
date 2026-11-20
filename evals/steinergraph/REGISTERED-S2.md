@@ -8,7 +8,8 @@ graph or the walk's existing budget (5 reads past the seeds, as in P1, P2, L1 an
 ## Objects
 
 - **Graph:** L1's graphs (`graph-p8`, `graph-mq`). A link between two passages is a shared key held by 2–100
-  passages, or Beside. These are the graph's existing rules.
+  passages, or a Beside or Near door. These are the doors L1's walk can step through. *(Amended before any scoring:
+  the first draft left out Near, but the walk traverses it, so a pair joined by Near isn't singly joined.)*
 - **The oracle tree T\*:** for each question, the terminals are its gold passages plus the seed set, contracted to one
   root so that any seed can attach it (bill's S1 definition). T\* is the shortest-path Steiner tree
   (Kou–Markowsky–Berman) over the unweighted link graph, with ties broken by passage id. On the graph as built it is
@@ -19,7 +20,7 @@ graph or the walk's existing budget (5 reads past the seeds, as in P1, P2, L1 an
 
 ## S2: drift
 
-**Cut.** A gold pair is *singly joined* if exactly one link joins it: one shared key and no Beside. Removing that key
+**Cut.** A gold pair is *singly joined* if exactly one link joins it: one shared key and no Beside or Near door either way. Removing that key
 from one of the two passages is the drift. It is what an extractor that misses one entity does, and it also drops
 that passage's link to every other holder of the key. The key is removed from the passage that isn't a seed. If
 neither or both are seeds, it is removed from the one later in id order.
