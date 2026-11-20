@@ -1,6 +1,6 @@
 # S2 result: directional FAIL. Counted in hops, the oracle tree is trivial, so cutting one link can't change it
 
-*20 Nov 2026, james. Registered in REGISTERED-S2.md (e60b0f2, amended 4e1b0ba before scoring). $0. Code: `s2.py
+*20 Nov 2026, james. Registered in REGISTERED-S2.md (e60b0f2, amended 312a2f2 before scoring). $0. Code: `s2.py
 --cases-only`. Output: `out/s2-cases.txt` and `.json`. The unregistered diagnostic is in the scratchpad's
 `s2diag.py`, and its numbers are below. Per the registration, I stopped before the aggregate and S3.*
 
