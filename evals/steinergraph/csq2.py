@@ -28,8 +28,15 @@ def main():
         g = G(rows); deg = cs.link_degree(g); cls = cs.degree_classes(deg)
         W, s, m2 = l2.strength(rows, g); Sd = load_s(sdir, "dev", c, g)
         recs = [json.loads(l) for l in open(f"{trees}/tstarp-{c}.jsonl")]
-        qids = list(dict.fromkeys(r["qid"] for r in recs))[:2]
-        for q in qids:
+        allq = list(dict.fromkeys(r["qid"] for r in recs)); easy = allq[:2]; miss = []
+        for q in allq:  # amendment 1: first two whose gold beyond the seeds is not all in walk-as-used P's top 5
+            if len(miss) == 2: break
+            t = next((r for r in recs if r["qid"] == q and r["ref"] == "walk-as-used"), None)
+            if t is None: continue
+            sd = [g.ix[x] for x in t["seeds"]]; Pw, _ = g.run([sd], lc[c], F=Fmat(g, [q], Sd)); pw = Pw[:, 0].copy(); pw[sd] = -1
+            if not {g.ix[x] for x in t["gold"]} <= set(np.argsort(-pw)[:5].tolist()): miss.append(q)
+        print(f"== {c}: easy {easy}, miss {miss}", flush=True)
+        for q, kind in [(q, "easy") for q in easy] + [(q, "miss") for q in miss]:
             for ref, th in (("graph-only", UNI), ("walk-as-used", lc[c])):
                 t = next((r for r in recs if r["qid"] == q and r["ref"] == ref), None)
                 if t is None: print(f"-- {c} {q} {ref}: no tree"); continue
@@ -46,21 +53,28 @@ def main():
                 idx = np.where(ok)[0]
                 arms = {"am (= xm in rank)": sc["am"], "aM": sc["aM"], "xM": sc["xM"],
                         "walk mass P": Pu, "L2 node coherence": l2n, "degree": deg.astype(float)}
-                gpos = np.isin(idx, list(gold)); tpos = np.isin(idx, list(tn))
-                res = {"c": c, "q": q, "ref": ref, "scored": int(ok.sum()), "gold": len(gold), "gold_scored": int(gpos.sum()),
+                gpos = np.isin(idx, list(gold)); tpos = np.isin(idx, list(tn)); ipos = np.isin(idx, list(tn - gold))
+                lrank = lambda v, pos: float(np.mean(np.log(rankdata(-v[idx])[pos]))) if pos.any() else float("nan")
+                res = {"c": c, "q": q, "kind": kind, "ref": ref,
+                       "lrank_gold": {k: lrank(v, gpos) for k, v in arms.items()}, "lrank_inter": {k: lrank(v, ipos) for k, v in arms.items()},
+                       "rank_gold": {k: [int(x) for x in rankdata(-v[idx])[gpos]] for k, v in arms.items()}, "scored": int(ok.sum()), "gold": len(gold), "gold_scored": int(gpos.sum()),
                        "tstar": len(tn), "tstar_scored": int(tpos.sum()),
                        "A": A, "unreached": int((~ok).sum() - len(seeds)),
                        "auc_gold": {k: auc(v[idx], gpos) for k, v in arms.items()},
                        "auc_tstar": {k: auc(v[idx], tpos) for k, v in arms.items()},
                        "rho_deg": {k: float(spearmanr(v[idx], deg[idx])[0]) for k, v in arms.items() if k != "degree"}}
                 out.append(res)
-                print(f"\n-- {c} {q[:40]} [{ref}]: scored {res['scored']} passages; gold {res['gold_scored']}/{res['gold']}, "
+                print(f"\n-- {kind} {c} {q[:40]} [{ref}]: scored {res['scored']} passages; gold {res['gold_scored']}/{res['gold']}, "
                       f"T* non-seed {res['tstar_scored']}/{res['tstar']}; {res['unreached']} unreached; A_ij range {min(A.values()):.3g}–{max(A.values()):.3g}")
                 for k in arms:
-                    print(f"   {k:24s} AUC gold {res['auc_gold'][k]:.3f}  AUC T* {res['auc_tstar'][k]:.3f}"
+                    print(f"   {k:20s} gold ranks {res['rank_gold'][k]} (mean log {res['lrank_gold'][k]:.2f}); non-gold T* mean log rank {res['lrank_inter'][k]:.2f};  AUC gold {res['auc_gold'][k]:.3f}  AUC T* {res['auc_tstar'][k]:.3f}"
                           + (f"  ρ(deg) {res['rho_deg'][k]:+.2f}" if k in res["rho_deg"] else ""), flush=True)
     json.dump(out, open(f"{here}/out/csq2.json", "w"), indent=1)
     for ref in ("graph-only", "walk-as-used"):
+        R = [r for r in out if r["ref"] == ref and r["kind"] == "miss"]
+        for k in ("am (= xm in rank)", "aM", "xM", "L2 node coherence"):
+            w = sum(r["lrank_gold"][k] < r["lrank_gold"]["walk mass P"] for r in R)
+            print(f"MISS {ref}: {k} gives a lower mean log gold rank than walk mass in {w}/{len(R)}")
         R = [r for r in out if r["ref"] == ref]
         for tgt in ("auc_gold", "auc_tstar"):
             for k in ("am (= xm in rank)", "aM"):
