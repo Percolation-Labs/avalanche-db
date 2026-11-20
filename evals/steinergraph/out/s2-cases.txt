@@ -1,0 +1,78 @@
+
+== mq: 63 test questions with a singly joined gold pair (2 without a control key)
+case RW:2hop__130867_54221: cut key 'maine' (width 63, word) from mq:bc3067abef2e0ab6, which joined it to mq:8407bc3bb4d0fe64
+   built                        T* cost 0, recall None, cut passage rank 21096
+   cut                          T* cost 0, recall None, cut passage rank 21096
+   restored                     T* cost 0, recall None, cut passage rank 21096
+   control 'alcohol'            T* cost 0, recall None, cut passage rank 21096
+   cut moved False; control held True; restored equals built True  -> does not agree
+case RW:2hop__161151_42352: cut key 'north american' (width 82, phrase) from mq:8174715888879957, which joined it to mq:75356f1218a84b9a
+   built                        T* cost 0, recall 0.0, cut passage rank 10
+   cut                          T* cost 0, recall 0.0, cut passage rank 11
+   restored                     T* cost 0, recall 0.0, cut passage rank 10
+   control 'great britain'      T* cost 0, recall 0.0, cut passage rank 11
+   cut moved True; control held False; restored equals built True  -> does not agree
+case RW:2hop__20256_71302: cut key 'niro' (width 7, word) from mq:787591efd3f4c5c2, which joined it to mq:62a61bd58554ab05
+   built                        T* cost 0, recall 0.5, cut passage rank 7
+   cut                          T* cost 0, recall 0.5, cut passage rank 7
+   restored                     T* cost 0, recall 0.5, cut passage rank 7
+   control 'oscars'             T* cost 0, recall 0.5, cut passage rank 7
+   cut moved False; control held True; restored equals built True  -> does not agree
+case RW:2hop__32887_578772: cut key 'tang' (width 37, word) from mq:0066118456459904, which joined it to mq:42ff38d5177ffc40
+   built                        T* cost 0, recall 0.0, cut passage rank 1421
+   cut                          T* cost 1, recall 0.0, cut passage rank 1994
+   restored                     T* cost 0, recall 0.0, cut passage rank 1421
+   control 'vietnamese'         T* cost 0, recall 0.0, cut passage rank 1445
+   cut moved True; control held False; restored equals built True  -> does not agree
+mq gate: 0/4 cases agree
+
+== cards: 28 test questions with a singly joined gold pair (9 without a control key)
+case card:REM-152: cut key 'rem 152' (width 20, number) from commit/cf83bfcc1b, which joined it to commit/77cc68df35
+   built                        T* cost 0, recall 0.333, cut passage rank 2
+   cut                          T* cost 0, recall 0.333, cut passage rank 2
+   restored                     T* cost 0, recall 0.333, cut passage rank 2
+   cut moved False; control held False; restored equals built True  -> does not agree
+case card:REM-185: cut key 'rem 185' (width 37, number) from commit/a50a914206, which joined it to commit/1bf6e6e375
+   built                        T* cost 0, recall 0.167, cut passage rank 7678
+   cut                          T* cost 0, recall 0.167, cut passage rank 26169
+   restored                     T* cost 0, recall 0.167, cut passage rank 7678
+   cut moved True; control held False; restored equals built True  -> does not agree
+case card:REM-19: cut key 'rem 19' (width 7, number) from commit/abcc1a9f84, which joined it to commit/221d061d28
+   built                        T* cost 0, recall 0.333, cut passage rank 4
+   cut                          T* cost 0, recall 0.333, cut passage rank 4
+   restored                     T* cost 0, recall 0.333, cut passage rank 4
+   control 'replay 2026'        T* cost 0, recall 0.333, cut passage rank 4
+   cut moved False; control held True; restored equals built True  -> does not agree
+case card:REM-193: cut key 'rem 193' (width 27, number) from commit/95a76cfb1f, which joined it to commit/9374b39cde
+   built                        T* cost 0, recall 0.667, cut passage rank 190
+   cut                          T* cost 0, recall 0.667, cut passage rank 343
+   restored                     T* cost 0, recall 0.667, cut passage rank 190
+   control 'p8ci'               T* cost 0, recall 0.667, cut passage rank 191
+   cut moved True; control held False; restored equals built True  -> does not agree
+cards gate: 0/4 cases agree
+
+== prs: 11 test questions with a singly joined gold pair (5 without a control key)
+case pr:648: cut key 'judged walks' (width 80, phrase) from commit/cef6d4c7cd, which joined it to commit/1ab290d7fe
+   built                        T* cost 0, recall 0.0, cut passage rank 16
+   cut                          T* cost 0, recall 0.0, cut passage rank 19
+   restored                     T* cost 0, recall 0.0, cut passage rank 16
+   control 'lead reads'         T* cost 0, recall 0.0, cut passage rank 18
+   cut moved True; control held False; restored equals built True  -> does not agree
+case pr:667: cut key 'order test' (width 6, phrase) from commit/f3221b8ae4, which joined it to commit/3689219351
+   built                        T* cost 0, recall 0.5, cut passage rank 5
+   cut                          T* cost 0, recall 0.5, cut passage rank 5
+   restored                     T* cost 0, recall 0.5, cut passage rank 5
+   control 'add mike'           T* cost 0, recall 0.5, cut passage rank 5
+   cut moved False; control held True; restored equals built True  -> does not agree
+case pr:686: cut key 'walklab dreaming' (width 31, phrase) from commit/28fd7fe157, which joined it to commit/21919917cd
+   built                        T* cost 0, recall 0.167, cut passage rank 27
+   cut                          T* cost 0, recall 0.167, cut passage rank 31
+   restored                     T* cost 0, recall 0.167, cut passage rank 27
+   control 'dev held'           T* cost 0, recall 0.167, cut passage rank 27
+   cut moved True; control held True; restored equals built True  -> agrees
+case pr:740: cut key 'travelled reads' (width 30, phrase) from commit/85374fd43a, which joined it to commit/3de62c0ac1
+   built                        T* cost 0, recall 0.0, cut passage rank 21
+   cut                          T* cost 0, recall 0.0, cut passage rank 22
+   restored                     T* cost 0, recall 0.0, cut passage rank 21
+   cut moved True; control held False; restored equals built True  -> does not agree
+prs gate: 1/4 cases agree

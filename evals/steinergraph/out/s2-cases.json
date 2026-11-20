@@ -1,0 +1,762 @@
+{
+ "mq": {
+  "cases": [
+   {
+    "qid": "RW:2hop__130867_54221",
+    "key": "maine",
+    "ctrl": "alcohol",
+    "passage": "mq:bc3067abef2e0ab6",
+    "partner": "mq:8407bc3bb4d0fe64",
+    "built": {
+     "cost": 0,
+     "rec": null,
+     "rank": 21096,
+     "tnodes": [
+      "mq:23e1b1c61926ea0c",
+      "mq:53b50a431f376a40",
+      "mq:61dedbbd443ec9bf",
+      "mq:8407bc3bb4d0fe64",
+      "mq:bc3067abef2e0ab6"
+     ]
+    },
+    "cut": {
+     "cost": 0,
+     "rec": null,
+     "rank": 21096,
+     "tnodes": [
+      "mq:23e1b1c61926ea0c",
+      "mq:53b50a431f376a40",
+      "mq:61dedbbd443ec9bf",
+      "mq:8407bc3bb4d0fe64",
+      "mq:bc3067abef2e0ab6"
+     ]
+    },
+    "restored": {
+     "cost": 0,
+     "rec": null,
+     "rank": 21096,
+     "tnodes": [
+      "mq:23e1b1c61926ea0c",
+      "mq:53b50a431f376a40",
+      "mq:61dedbbd443ec9bf",
+      "mq:8407bc3bb4d0fe64",
+      "mq:bc3067abef2e0ab6"
+     ]
+    },
+    "control": {
+     "cost": 0,
+     "rec": null,
+     "rank": 21096,
+     "tnodes": [
+      "mq:23e1b1c61926ea0c",
+      "mq:53b50a431f376a40",
+      "mq:61dedbbd443ec9bf",
+      "mq:8407bc3bb4d0fe64",
+      "mq:bc3067abef2e0ab6"
+     ]
+    }
+   },
+   {
+    "qid": "RW:2hop__161151_42352",
+    "key": "north american",
+    "ctrl": "great britain",
+    "passage": "mq:8174715888879957",
+    "partner": "mq:75356f1218a84b9a",
+    "built": {
+     "cost": 0,
+     "rec": 0.0,
+     "rank": 10,
+     "tnodes": [
+      "mq:5146099b9b96bffe",
+      "mq:680a40de6cb15e60",
+      "mq:75356f1218a84b9a",
+      "mq:8174715888879957",
+      "mq:944526e824cf5195",
+      "mq:e4d6ff539f0b582b"
+     ]
+    },
+    "cut": {
+     "cost": 0,
+     "rec": 0.0,
+     "rank": 11,
+     "tnodes": [
+      "mq:5146099b9b96bffe",
+      "mq:680a40de6cb15e60",
+      "mq:75356f1218a84b9a",
+      "mq:8174715888879957",
+      "mq:944526e824cf5195",
+      "mq:e4d6ff539f0b582b"
+     ]
+    },
+    "restored": {
+     "cost": 0,
+     "rec": 0.0,
+     "rank": 10,
+     "tnodes": [
+      "mq:5146099b9b96bffe",
+      "mq:680a40de6cb15e60",
+      "mq:75356f1218a84b9a",
+      "mq:8174715888879957",
+      "mq:944526e824cf5195",
+      "mq:e4d6ff539f0b582b"
+     ]
+    },
+    "control": {
+     "cost": 0,
+     "rec": 0.0,
+     "rank": 11,
+     "tnodes": [
+      "mq:5146099b9b96bffe",
+      "mq:680a40de6cb15e60",
+      "mq:75356f1218a84b9a",
+      "mq:8174715888879957",
+      "mq:944526e824cf5195",
+      "mq:e4d6ff539f0b582b"
+     ]
+    }
+   },
+   {
+    "qid": "RW:2hop__20256_71302",
+    "key": "niro",
+    "ctrl": "oscars",
+    "passage": "mq:787591efd3f4c5c2",
+    "partner": "mq:62a61bd58554ab05",
+    "built": {
+     "cost": 0,
+     "rec": 0.5,
+     "rank": 7,
+     "tnodes": [
+      "mq:62a61bd58554ab05",
+      "mq:787591efd3f4c5c2",
+      "mq:8a64ae2971f7b244",
+      "mq:8ed6d9d3b0633025",
+      "mq:8ee5954ff5080359",
+      "mq:ad1afd1bb52ebe1d",
+      "mq:b675ced2d879f937"
+     ]
+    },
+    "cut": {
+     "cost": 0,
+     "rec": 0.5,
+     "rank": 7,
+     "tnodes": [
+      "mq:62a61bd58554ab05",
+      "mq:787591efd3f4c5c2",
+      "mq:8a64ae2971f7b244",
+      "mq:8ed6d9d3b0633025",
+      "mq:8ee5954ff5080359",
+      "mq:ad1afd1bb52ebe1d",
+      "mq:b675ced2d879f937"
+     ]
+    },
+    "restored": {
+     "cost": 0,
+     "rec": 0.5,
+     "rank": 7,
+     "tnodes": [
+      "mq:62a61bd58554ab05",
+      "mq:787591efd3f4c5c2",
+      "mq:8a64ae2971f7b244",
+      "mq:8ed6d9d3b0633025",
+      "mq:8ee5954ff5080359",
+      "mq:ad1afd1bb52ebe1d",
+      "mq:b675ced2d879f937"
+     ]
+    },
+    "control": {
+     "cost": 0,
+     "rec": 0.5,
+     "rank": 7,
+     "tnodes": [
+      "mq:62a61bd58554ab05",
+      "mq:787591efd3f4c5c2",
+      "mq:8a64ae2971f7b244",
+      "mq:8ed6d9d3b0633025",
+      "mq:8ee5954ff5080359",
+      "mq:ad1afd1bb52ebe1d",
+      "mq:b675ced2d879f937"
+     ]
+    }
+   },
+   {
+    "qid": "RW:2hop__32887_578772",
+    "key": "tang",
+    "ctrl": "vietnamese",
+    "passage": "mq:0066118456459904",
+    "partner": "mq:42ff38d5177ffc40",
+    "built": {
+     "cost": 0,
+     "rec": 0.0,
+     "rank": 1421,
+     "tnodes": [
+      "mq:0066118456459904",
+      "mq:21d89cb921b6f6f6",
+      "mq:42ff38d5177ffc40",
+      "mq:8e849fc12a5fe0ec",
+      "mq:b8242fd585fa4784",
+      "mq:c5ee77f7343ebff2"
+     ]
+    },
+    "cut": {
+     "cost": 1,
+     "rec": 0.0,
+     "rank": 1994,
+     "tnodes": [
+      "mq:0066118456459904",
+      "mq:21d89cb921b6f6f6",
+      "mq:42ff38d5177ffc40",
+      "mq:8e849fc12a5fe0ec",
+      "mq:b8242fd585fa4784",
+      "mq:c5ee77f7343ebff2",
+      "mq:f82b4365dbad4566"
+     ]
+    },
+    "restored": {
+     "cost": 0,
+     "rec": 0.0,
+     "rank": 1421,
+     "tnodes": [
+      "mq:0066118456459904",
+      "mq:21d89cb921b6f6f6",
+      "mq:42ff38d5177ffc40",
+      "mq:8e849fc12a5fe0ec",
+      "mq:b8242fd585fa4784",
+      "mq:c5ee77f7343ebff2"
+     ]
+    },
+    "control": {
+     "cost": 0,
+     "rec": 0.0,
+     "rank": 1445,
+     "tnodes": [
+      "mq:0066118456459904",
+      "mq:21d89cb921b6f6f6",
+      "mq:42ff38d5177ffc40",
+      "mq:8e849fc12a5fe0ec",
+      "mq:b8242fd585fa4784",
+      "mq:c5ee77f7343ebff2"
+     ]
+    }
+   }
+  ],
+  "gate": 0
+ },
+ "cards": {
+  "cases": [
+   {
+    "qid": "card:REM-152",
+    "key": "rem 152",
+    "ctrl": null,
+    "passage": "commit/cf83bfcc1b",
+    "partner": "commit/77cc68df35",
+    "built": {
+     "cost": 0,
+     "rec": 0.3333333333333333,
+     "rank": 2,
+     "tnodes": [
+      "board/cards/REM-152.md#1",
+      "commit/77cc68df35",
+      "commit/b3279b98ef",
+      "commit/cf83bfcc1b",
+      "commit/f277cf5d42",
+      "specs/percolate-application/blog-dogfood.md#2",
+      "specs/percolate-application/simple-journeys-study.md#3",
+      "specs/world-model-ingestion/baseline.md#13"
+     ]
+    },
+    "cut": {
+     "cost": 0,
+     "rec": 0.3333333333333333,
+     "rank": 2,
+     "tnodes": [
+      "board/cards/REM-152.md#1",
+      "commit/77cc68df35",
+      "commit/b3279b98ef",
+      "commit/cf83bfcc1b",
+      "commit/f277cf5d42",
+      "specs/percolate-application/blog-dogfood.md#2",
+      "specs/percolate-application/simple-journeys-study.md#3",
+      "specs/world-model-ingestion/baseline.md#13"
+     ]
+    },
+    "restored": {
+     "cost": 0,
+     "rec": 0.3333333333333333,
+     "rank": 2,
+     "tnodes": [
+      "board/cards/REM-152.md#1",
+      "commit/77cc68df35",
+      "commit/b3279b98ef",
+      "commit/cf83bfcc1b",
+      "commit/f277cf5d42",
+      "specs/percolate-application/blog-dogfood.md#2",
+      "specs/percolate-application/simple-journeys-study.md#3",
+      "specs/world-model-ingestion/baseline.md#13"
+     ]
+    },
+    "control": null
+   },
+   {
+    "qid": "card:REM-185",
+    "key": "rem 185",
+    "ctrl": null,
+    "passage": "commit/a50a914206",
+    "partner": "commit/1bf6e6e375",
+    "built": {
+     "cost": 0,
+     "rec": 0.16666666666666666,
+     "rank": 7678,
+     "tnodes": [
+      "board/cards/REM-183.md#10",
+      "board/cards/REM-185.md#1",
+      "board/cards/REM-185.md#2",
+      "board/cards/REM-187.md#8",
+      "commit/1bf6e6e375",
+      "commit/8ec9655542",
+      "commit/961806b4bc",
+      "commit/a50a914206",
+      "commit/c9d210f298",
+      "commit/ea18e519d6",
+      "specs/percolate-application/authoring-and-publication.md#11"
+     ]
+    },
+    "cut": {
+     "cost": 0,
+     "rec": 0.16666666666666666,
+     "rank": 26169,
+     "tnodes": [
+      "board/cards/REM-183.md#10",
+      "board/cards/REM-185.md#1",
+      "board/cards/REM-185.md#2",
+      "board/cards/REM-187.md#8",
+      "commit/1bf6e6e375",
+      "commit/8ec9655542",
+      "commit/961806b4bc",
+      "commit/a50a914206",
+      "commit/c9d210f298",
+      "commit/ea18e519d6",
+      "specs/percolate-application/authoring-and-publication.md#11"
+     ]
+    },
+    "restored": {
+     "cost": 0,
+     "rec": 0.16666666666666666,
+     "rank": 7678,
+     "tnodes": [
+      "board/cards/REM-183.md#10",
+      "board/cards/REM-185.md#1",
+      "board/cards/REM-185.md#2",
+      "board/cards/REM-187.md#8",
+      "commit/1bf6e6e375",
+      "commit/8ec9655542",
+      "commit/961806b4bc",
+      "commit/a50a914206",
+      "commit/c9d210f298",
+      "commit/ea18e519d6",
+      "specs/percolate-application/authoring-and-publication.md#11"
+     ]
+    },
+    "control": null
+   },
+   {
+    "qid": "card:REM-19",
+    "key": "rem 19",
+    "ctrl": "replay 2026",
+    "passage": "commit/abcc1a9f84",
+    "partner": "commit/221d061d28",
+    "built": {
+     "cost": 0,
+     "rec": 0.3333333333333333,
+     "rank": 4,
+     "tnodes": [
+      "board/cards/REM-19.md#1",
+      "board/cards/REM-673.md#1",
+      "board/cards/REM-673.md#3",
+      "board/team/temporal-attention.md#2",
+      "commit/221d061d28",
+      "commit/abcc1a9f84",
+      "commit/ec5c58d68b",
+      "research-notes/temporal-attention/README.md#1"
+     ]
+    },
+    "cut": {
+     "cost": 0,
+     "rec": 0.3333333333333333,
+     "rank": 4,
+     "tnodes": [
+      "board/cards/REM-19.md#1",
+      "board/cards/REM-673.md#1",
+      "board/cards/REM-673.md#3",
+      "board/team/temporal-attention.md#2",
+      "commit/221d061d28",
+      "commit/abcc1a9f84",
+      "commit/ec5c58d68b",
+      "research-notes/temporal-attention/README.md#1"
+     ]
+    },
+    "restored": {
+     "cost": 0,
+     "rec": 0.3333333333333333,
+     "rank": 4,
+     "tnodes": [
+      "board/cards/REM-19.md#1",
+      "board/cards/REM-673.md#1",
+      "board/cards/REM-673.md#3",
+      "board/team/temporal-attention.md#2",
+      "commit/221d061d28",
+      "commit/abcc1a9f84",
+      "commit/ec5c58d68b",
+      "research-notes/temporal-attention/README.md#1"
+     ]
+    },
+    "control": {
+     "cost": 0,
+     "rec": 0.3333333333333333,
+     "rank": 4,
+     "tnodes": [
+      "board/cards/REM-19.md#1",
+      "board/cards/REM-673.md#1",
+      "board/cards/REM-673.md#3",
+      "board/team/temporal-attention.md#2",
+      "commit/221d061d28",
+      "commit/abcc1a9f84",
+      "commit/ec5c58d68b",
+      "research-notes/temporal-attention/README.md#1"
+     ]
+    }
+   },
+   {
+    "qid": "card:REM-193",
+    "key": "rem 193",
+    "ctrl": "p8ci",
+    "passage": "commit/95a76cfb1f",
+    "partner": "commit/9374b39cde",
+    "built": {
+     "cost": 0,
+     "rec": 0.6666666666666666,
+     "rank": 190,
+     "tnodes": [
+      "board/cards/REM-193.md#1",
+      "board/cards/REM-193.md#2",
+      "commit/9374b39cde",
+      "commit/95a76cfb1f",
+      "commit/ad2101212c",
+      "commit/cbc9ee3535",
+      "commit/ef8d4fecb6",
+      "meta/postmortems/2026-09-13-hetzner-cutover-and-its-secrets.md#8"
+     ]
+    },
+    "cut": {
+     "cost": 0,
+     "rec": 0.6666666666666666,
+     "rank": 343,
+     "tnodes": [
+      "board/cards/REM-193.md#1",
+      "board/cards/REM-193.md#2",
+      "commit/9374b39cde",
+      "commit/95a76cfb1f",
+      "commit/ad2101212c",
+      "commit/cbc9ee3535",
+      "commit/ef8d4fecb6",
+      "meta/postmortems/2026-09-13-hetzner-cutover-and-its-secrets.md#8"
+     ]
+    },
+    "restored": {
+     "cost": 0,
+     "rec": 0.6666666666666666,
+     "rank": 190,
+     "tnodes": [
+      "board/cards/REM-193.md#1",
+      "board/cards/REM-193.md#2",
+      "commit/9374b39cde",
+      "commit/95a76cfb1f",
+      "commit/ad2101212c",
+      "commit/cbc9ee3535",
+      "commit/ef8d4fecb6",
+      "meta/postmortems/2026-09-13-hetzner-cutover-and-its-secrets.md#8"
+     ]
+    },
+    "control": {
+     "cost": 0,
+     "rec": 0.6666666666666666,
+     "rank": 191,
+     "tnodes": [
+      "board/cards/REM-193.md#1",
+      "board/cards/REM-193.md#2",
+      "commit/9374b39cde",
+      "commit/95a76cfb1f",
+      "commit/ad2101212c",
+      "commit/cbc9ee3535",
+      "commit/ef8d4fecb6",
+      "meta/postmortems/2026-09-13-hetzner-cutover-and-its-secrets.md#8"
+     ]
+    }
+   }
+  ],
+  "gate": 0
+ },
+ "prs": {
+  "cases": [
+   {
+    "qid": "pr:648",
+    "key": "judged walks",
+    "ctrl": "lead reads",
+    "passage": "commit/cef6d4c7cd",
+    "partner": "commit/1ab290d7fe",
+    "built": {
+     "cost": 0,
+     "rec": 0.0,
+     "rank": 16,
+     "tnodes": [
+      "commit/1ab290d7fe",
+      "commit/44f62e6fb4",
+      "commit/4ee706bb25",
+      "commit/66a990b515",
+      "commit/cef6d4c7cd",
+      "meta/lab/results/q4-miss-census-topk-RULE.md#1",
+      "meta/lab/walklab/engine.py#2",
+      "specs/decision-walks/README.md#24"
+     ]
+    },
+    "cut": {
+     "cost": 0,
+     "rec": 0.0,
+     "rank": 19,
+     "tnodes": [
+      "commit/1ab290d7fe",
+      "commit/44f62e6fb4",
+      "commit/4ee706bb25",
+      "commit/66a990b515",
+      "commit/cef6d4c7cd",
+      "meta/lab/results/q4-miss-census-topk-RULE.md#1",
+      "meta/lab/walklab/engine.py#2",
+      "specs/decision-walks/README.md#24"
+     ]
+    },
+    "restored": {
+     "cost": 0,
+     "rec": 0.0,
+     "rank": 16,
+     "tnodes": [
+      "commit/1ab290d7fe",
+      "commit/44f62e6fb4",
+      "commit/4ee706bb25",
+      "commit/66a990b515",
+      "commit/cef6d4c7cd",
+      "meta/lab/results/q4-miss-census-topk-RULE.md#1",
+      "meta/lab/walklab/engine.py#2",
+      "specs/decision-walks/README.md#24"
+     ]
+    },
+    "control": {
+     "cost": 0,
+     "rec": 0.0,
+     "rank": 18,
+     "tnodes": [
+      "commit/1ab290d7fe",
+      "commit/44f62e6fb4",
+      "commit/4ee706bb25",
+      "commit/66a990b515",
+      "commit/cef6d4c7cd",
+      "meta/lab/results/q4-miss-census-topk-RULE.md#1",
+      "meta/lab/walklab/engine.py#2",
+      "specs/decision-walks/README.md#24"
+     ]
+    }
+   },
+   {
+    "qid": "pr:667",
+    "key": "order test",
+    "ctrl": "add mike",
+    "passage": "commit/f3221b8ae4",
+    "partner": "commit/3689219351",
+    "built": {
+     "cost": 0,
+     "rec": 0.5,
+     "rank": 5,
+     "tnodes": [
+      "commit/3689219351",
+      "commit/37b9059e9f",
+      "commit/5714fd31f8",
+      "commit/c74b65d599",
+      "commit/c9b136e2de",
+      "commit/f3221b8ae4",
+      "commit/ff05cd5f2c"
+     ]
+    },
+    "cut": {
+     "cost": 0,
+     "rec": 0.5,
+     "rank": 5,
+     "tnodes": [
+      "commit/3689219351",
+      "commit/37b9059e9f",
+      "commit/5714fd31f8",
+      "commit/c74b65d599",
+      "commit/c9b136e2de",
+      "commit/f3221b8ae4",
+      "commit/ff05cd5f2c"
+     ]
+    },
+    "restored": {
+     "cost": 0,
+     "rec": 0.5,
+     "rank": 5,
+     "tnodes": [
+      "commit/3689219351",
+      "commit/37b9059e9f",
+      "commit/5714fd31f8",
+      "commit/c74b65d599",
+      "commit/c9b136e2de",
+      "commit/f3221b8ae4",
+      "commit/ff05cd5f2c"
+     ]
+    },
+    "control": {
+     "cost": 0,
+     "rec": 0.5,
+     "rank": 5,
+     "tnodes": [
+      "commit/3689219351",
+      "commit/37b9059e9f",
+      "commit/5714fd31f8",
+      "commit/c74b65d599",
+      "commit/c9b136e2de",
+      "commit/f3221b8ae4",
+      "commit/ff05cd5f2c"
+     ]
+    }
+   },
+   {
+    "qid": "pr:686",
+    "key": "walklab dreaming",
+    "ctrl": "dev held",
+    "passage": "commit/28fd7fe157",
+    "partner": "commit/21919917cd",
+    "built": {
+     "cost": 0,
+     "rec": 0.16666666666666666,
+     "rank": 27,
+     "tnodes": [
+      "board/messages/M-20261103-082654-8713.md#1",
+      "board/messages/M-20261103-083125-3cdc.md#1",
+      "commit/18b49bf0d4",
+      "commit/21919917cd",
+      "commit/28fd7fe157",
+      "commit/50d7844edf",
+      "commit/5f9cc17a44",
+      "commit/877b936379",
+      "commit/9f5b99416b",
+      "commit/a6d02fc5c3",
+      "meta/lab/results/dream-tail/result.txt#4"
+     ]
+    },
+    "cut": {
+     "cost": 0,
+     "rec": 0.16666666666666666,
+     "rank": 31,
+     "tnodes": [
+      "board/messages/M-20261103-082654-8713.md#1",
+      "board/messages/M-20261103-083125-3cdc.md#1",
+      "commit/18b49bf0d4",
+      "commit/21919917cd",
+      "commit/28fd7fe157",
+      "commit/50d7844edf",
+      "commit/5f9cc17a44",
+      "commit/877b936379",
+      "commit/9f5b99416b",
+      "commit/a6d02fc5c3",
+      "meta/lab/results/dream-tail/result.txt#4"
+     ]
+    },
+    "restored": {
+     "cost": 0,
+     "rec": 0.16666666666666666,
+     "rank": 27,
+     "tnodes": [
+      "board/messages/M-20261103-082654-8713.md#1",
+      "board/messages/M-20261103-083125-3cdc.md#1",
+      "commit/18b49bf0d4",
+      "commit/21919917cd",
+      "commit/28fd7fe157",
+      "commit/50d7844edf",
+      "commit/5f9cc17a44",
+      "commit/877b936379",
+      "commit/9f5b99416b",
+      "commit/a6d02fc5c3",
+      "meta/lab/results/dream-tail/result.txt#4"
+     ]
+    },
+    "control": {
+     "cost": 0,
+     "rec": 0.16666666666666666,
+     "rank": 27,
+     "tnodes": [
+      "board/messages/M-20261103-082654-8713.md#1",
+      "board/messages/M-20261103-083125-3cdc.md#1",
+      "commit/18b49bf0d4",
+      "commit/21919917cd",
+      "commit/28fd7fe157",
+      "commit/50d7844edf",
+      "commit/5f9cc17a44",
+      "commit/877b936379",
+      "commit/9f5b99416b",
+      "commit/a6d02fc5c3",
+      "meta/lab/results/dream-tail/result.txt#4"
+     ]
+    }
+   },
+   {
+    "qid": "pr:740",
+    "key": "travelled reads",
+    "ctrl": null,
+    "passage": "commit/85374fd43a",
+    "partner": "commit/3de62c0ac1",
+    "built": {
+     "cost": 0,
+     "rec": 0.0,
+     "rank": 21,
+     "tnodes": [
+      "commit/3de62c0ac1",
+      "commit/85374fd43a",
+      "commit/9ab0630f43",
+      "commit/ba5e1fc41a",
+      "commit/e8fb02927b",
+      "meta/lab/q4/travelled_doors.py#1",
+      "meta/lab/results/musique-travelled/REGISTERED.md#1"
+     ]
+    },
+    "cut": {
+     "cost": 0,
+     "rec": 0.0,
+     "rank": 22,
+     "tnodes": [
+      "commit/3de62c0ac1",
+      "commit/85374fd43a",
+      "commit/9ab0630f43",
+      "commit/ba5e1fc41a",
+      "commit/e8fb02927b",
+      "meta/lab/q4/travelled_doors.py#1",
+      "meta/lab/results/musique-travelled/REGISTERED.md#1"
+     ]
+    },
+    "restored": {
+     "cost": 0,
+     "rec": 0.0,
+     "rank": 21,
+     "tnodes": [
+      "commit/3de62c0ac1",
+      "commit/85374fd43a",
+      "commit/9ab0630f43",
+      "commit/ba5e1fc41a",
+      "commit/e8fb02927b",
+      "meta/lab/q4/travelled_doors.py#1",
+      "meta/lab/results/musique-travelled/REGISTERED.md#1"
+     ]
+    },
+    "control": null
+   }
+  ],
+  "gate": 1
+ }
+}
