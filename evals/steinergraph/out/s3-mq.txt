@@ -8,14 +8,14 @@
   [drifted] round 7: 825 candidates (53 rescored, 229 with gain > 0) in 10s; best gain +0.72805
   [drifted] round 8: 823 candidates (40 rescored, 230 with gain > 0) in 7s; best gain +0.59166
   [drifted] round 9: 829 candidates (12 rescored, 227 with gain > 0) in 1s; best gain +0.57170
-  [drifted] round 10: 828 candidates (39 rescored, 237 with gain > 0) in 7s; best gain +0.56315
+  [drifted] round 10: 828 candidates (39 rescored, 237 with gain > 0) in 6s; best gain +0.56315
   [drifted] round 11: 822 candidates (30 rescored, 225 with gain > 0) in 5s; best gain +0.54705
   [drifted] round 12: 821 candidates (44 rescored, 226 with gain > 0) in 5s; best gain +0.52708
   [drifted] round 13: 820 candidates (15 rescored, 222 with gain > 0) in 2s; best gain +0.48810
   [drifted] round 14: 827 candidates (37 rescored, 209 with gain > 0) in 4s; best gain +0.44206
   [drifted] round 15: 829 candidates (9 rescored, 206 with gain > 0) in 1s; best gain +0.35327
   [drifted] round 16: 831 candidates (62 rescored, 210 with gain > 0) in 11s; best gain +0.82521
-  [drifted] round 17: 835 candidates (63 rescored, 209 with gain > 0) in 12s; best gain +0.35003
+  [drifted] round 17: 835 candidates (63 rescored, 209 with gain > 0) in 11s; best gain +0.35003
   [drifted] round 18: 842 candidates (61 rescored, 192 with gain > 0) in 10s; best gain +0.32822
   [drifted] round 19: 841 candidates (14 rescored, 179 with gain > 0) in 2s; best gain +0.31338
   [drifted] round 20: 847 candidates (27 rescored, 178 with gain > 0) in 3s; best gain +0.28122
@@ -34,227 +34,64 @@
   [drifted] round 33: 832 candidates (31 rescored, 177 with gain > 0) in 4s; best gain +0.17037
   [drifted] round 34: 834 candidates (33 rescored, 193 with gain > 0) in 5s; best gain +0.02302
   [drifted] round 35: 833 candidates (32 rescored, 175 with gain > 0) in 4s; best gain +0.01612
-  [drifted] round 36: 837 candidates (31 rescored, 182 with gain > 0) in 4s; best gain +0.12560
+  [drifted] round 36: 837 candidates (31 rescored, 182 with gain > 0) in 5s; best gain +0.12560
   [drifted] round 37: 835 candidates (30 rescored, 173 with gain > 0) in 4s; best gain +0.02019
   [drifted] round 38: 834 candidates (9 rescored, 173 with gain > 0) in 1s; best gain +0.01518
   [drifted] round 39: 829 candidates (33 rescored, 166 with gain > 0) in 6s; best gain +0.05592
   [drifted] round 40: 832 candidates (36 rescored, 175 with gain > 0) in 6s; best gain +0.01518
   [drifted] round 41: 827 candidates (31 rescored, 165 with gain > 0) in 5s; best gain +0.00000
-  [drifted] round 42: 826 candidates (0 rescored, 164 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 43: 825 candidates (0 rescored, 163 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 44: 824 candidates (0 rescored, 162 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 45: 823 candidates (0 rescored, 161 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 46: 822 candidates (0 rescored, 160 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 47: 821 candidates (0 rescored, 159 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 48: 820 candidates (0 rescored, 158 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 49: 819 candidates (0 rescored, 157 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 50: 818 candidates (0 rescored, 156 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 51: 817 candidates (0 rescored, 155 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 52: 816 candidates (0 rescored, 154 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 53: 815 candidates (0 rescored, 153 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 54: 814 candidates (0 rescored, 152 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 55: 813 candidates (2 rescored, 151 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 56: 812 candidates (0 rescored, 150 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 57: 811 candidates (0 rescored, 149 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 58: 810 candidates (0 rescored, 148 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 59: 809 candidates (0 rescored, 147 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 60: 808 candidates (0 rescored, 146 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 61: 807 candidates (0 rescored, 145 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 62: 806 candidates (0 rescored, 144 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 63: 805 candidates (0 rescored, 143 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 64: 804 candidates (0 rescored, 142 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 65: 803 candidates (0 rescored, 141 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 66: 802 candidates (0 rescored, 140 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 67: 801 candidates (0 rescored, 139 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 68: 800 candidates (0 rescored, 138 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 69: 799 candidates (0 rescored, 137 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 70: 798 candidates (0 rescored, 136 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 71: 797 candidates (0 rescored, 135 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 72: 796 candidates (0 rescored, 134 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 73: 795 candidates (0 rescored, 133 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 74: 794 candidates (0 rescored, 132 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 75: 793 candidates (0 rescored, 131 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 76: 792 candidates (0 rescored, 130 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 77: 791 candidates (0 rescored, 129 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 78: 790 candidates (0 rescored, 128 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 79: 789 candidates (0 rescored, 127 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 80: 788 candidates (0 rescored, 126 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 81: 787 candidates (0 rescored, 125 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 82: 786 candidates (0 rescored, 124 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 83: 785 candidates (0 rescored, 123 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 84: 784 candidates (0 rescored, 122 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 85: 783 candidates (0 rescored, 121 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 86: 782 candidates (0 rescored, 120 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 87: 781 candidates (2 rescored, 119 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 88: 780 candidates (0 rescored, 118 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 89: 779 candidates (0 rescored, 117 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 90: 778 candidates (0 rescored, 116 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 91: 777 candidates (0 rescored, 115 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 92: 776 candidates (0 rescored, 114 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 93: 775 candidates (0 rescored, 113 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 94: 774 candidates (0 rescored, 112 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 95: 773 candidates (0 rescored, 111 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 96: 772 candidates (0 rescored, 110 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 97: 771 candidates (0 rescored, 109 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 98: 770 candidates (0 rescored, 108 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 99: 769 candidates (0 rescored, 107 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 100: 768 candidates (0 rescored, 106 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 101: 767 candidates (0 rescored, 105 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 102: 766 candidates (0 rescored, 104 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 103: 765 candidates (0 rescored, 103 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 104: 764 candidates (0 rescored, 102 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 105: 763 candidates (0 rescored, 101 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 106: 762 candidates (0 rescored, 100 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 107: 761 candidates (0 rescored, 99 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 108: 760 candidates (0 rescored, 98 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 109: 759 candidates (0 rescored, 97 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 110: 758 candidates (2 rescored, 96 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 111: 757 candidates (0 rescored, 95 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 112: 756 candidates (0 rescored, 94 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 113: 755 candidates (0 rescored, 93 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 114: 754 candidates (0 rescored, 92 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 115: 753 candidates (0 rescored, 91 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 116: 752 candidates (0 rescored, 90 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 117: 751 candidates (0 rescored, 89 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 118: 750 candidates (0 rescored, 88 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 119: 749 candidates (0 rescored, 87 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 120: 748 candidates (0 rescored, 86 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 121: 747 candidates (4 rescored, 82 with gain > 0) in 1s; best gain +0.00000
-  [drifted] round 122: 746 candidates (0 rescored, 81 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 123: 745 candidates (0 rescored, 80 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 124: 744 candidates (0 rescored, 79 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 125: 743 candidates (0 rescored, 78 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 126: 742 candidates (0 rescored, 77 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 127: 741 candidates (0 rescored, 76 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 128: 740 candidates (0 rescored, 75 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 129: 739 candidates (0 rescored, 74 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 130: 738 candidates (0 rescored, 73 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 131: 737 candidates (0 rescored, 72 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 132: 736 candidates (0 rescored, 71 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 133: 735 candidates (0 rescored, 70 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 134: 734 candidates (0 rescored, 69 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 135: 733 candidates (0 rescored, 68 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 136: 732 candidates (0 rescored, 67 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 137: 737 candidates (41 rescored, 66 with gain > 0) in 6s; best gain +0.18890
-  [drifted] round 138: 732 candidates (30 rescored, 75 with gain > 0) in 4s; best gain +0.19714
-  [drifted] round 139: 731 candidates (18 rescored, 76 with gain > 0) in 3s; best gain +0.00000
-  [drifted] round 140: 730 candidates (0 rescored, 75 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 141: 729 candidates (0 rescored, 74 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 142: 728 candidates (0 rescored, 73 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 143: 727 candidates (0 rescored, 72 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 144: 726 candidates (0 rescored, 71 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 145: 725 candidates (0 rescored, 70 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 146: 724 candidates (0 rescored, 69 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 147: 723 candidates (0 rescored, 68 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 148: 722 candidates (17 rescored, 62 with gain > 0) in 3s; best gain +0.00000
-  [drifted] round 149: 721 candidates (0 rescored, 61 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 150: 720 candidates (0 rescored, 60 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 151: 719 candidates (0 rescored, 59 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 152: 718 candidates (0 rescored, 58 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 153: 717 candidates (0 rescored, 57 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 154: 716 candidates (0 rescored, 56 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 155: 715 candidates (0 rescored, 55 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 156: 714 candidates (0 rescored, 54 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 157: 713 candidates (0 rescored, 53 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 158: 712 candidates (0 rescored, 52 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 159: 711 candidates (0 rescored, 51 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 160: 710 candidates (0 rescored, 50 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 161: 709 candidates (0 rescored, 49 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 162: 708 candidates (0 rescored, 48 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 163: 707 candidates (0 rescored, 47 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 164: 707 candidates (34 rescored, 46 with gain > 0) in 6s; best gain +0.00000
-  [drifted] round 165: 706 candidates (0 rescored, 45 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 166: 702 candidates (5 rescored, 48 with gain > 0) in 1s; best gain +0.44206
-  [drifted] round 167: 704 candidates (7 rescored, 45 with gain > 0) in 1s; best gain +0.00000
-  [drifted] round 168: 703 candidates (0 rescored, 44 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 169: 702 candidates (0 rescored, 43 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 170: 701 candidates (0 rescored, 42 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 171: 700 candidates (0 rescored, 41 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 172: 699 candidates (0 rescored, 40 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 173: 698 candidates (0 rescored, 39 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 174: 697 candidates (0 rescored, 38 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 175: 696 candidates (0 rescored, 37 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 176: 695 candidates (0 rescored, 36 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 177: 694 candidates (0 rescored, 35 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 178: 693 candidates (0 rescored, 34 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 179: 692 candidates (0 rescored, 33 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 180: 691 candidates (0 rescored, 32 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 181: 690 candidates (0 rescored, 31 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 182: 689 candidates (0 rescored, 30 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 183: 679 candidates (32 rescored, 37 with gain > 0) in 3s; best gain +0.27352
-  [drifted] round 184: 687 candidates (40 rescored, 23 with gain > 0) in 4s; best gain +0.00000
-  [drifted] round 185: 686 candidates (0 rescored, 22 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 186: 685 candidates (0 rescored, 21 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 187: 686 candidates (18 rescored, 24 with gain > 0) in 3s; best gain +0.05356
-  [drifted] round 188: 683 candidates (25 rescored, 21 with gain > 0) in 4s; best gain +0.21012
-  [drifted] round 189: 683 candidates (26 rescored, 19 with gain > 0) in 4s; best gain +0.00000
-  [drifted] round 190: 682 candidates (0 rescored, 18 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 191: 681 candidates (0 rescored, 17 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 192: 680 candidates (0 rescored, 16 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 193: 679 candidates (0 rescored, 15 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 194: 678 candidates (0 rescored, 14 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 195: 677 candidates (0 rescored, 13 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 196: 676 candidates (0 rescored, 12 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 197: 675 candidates (0 rescored, 11 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 198: 674 candidates (0 rescored, 10 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 199: 673 candidates (0 rescored, 9 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 200: 672 candidates (0 rescored, 8 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 201: 671 candidates (0 rescored, 7 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 202: 670 candidates (0 rescored, 6 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 203: 669 candidates (0 rescored, 5 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 204: 668 candidates (0 rescored, 4 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 205: 667 candidates (0 rescored, 3 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 206: 666 candidates (0 rescored, 2 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 207: 665 candidates (0 rescored, 1 with gain > 0) in 0s; best gain +0.00000
-  [drifted] round 208: 664 candidates (0 rescored, 0 with gain > 0) in 0s; best gain +0.00000
-  accepted 207 links
-  (a) cut pairs recovered: 1/133; candidates at all in round 1: 7/133; trivially co-read as seeds of one walk: 6
+  accepted 40 links
+  (a) cut pairs recovered: 0/133; candidates at all in round 1: 7/133; trivially co-read as seeds of one walk: 6
   (b) rank among 835 round-1 candidates by gain: [139, 268, 409, 409, 477, 477, 477]
   (c) built     recall 0.145; median rank of v 38; T* cost 9.64 nats, dearest hop 5.36
   (c) drifted   recall 0.073; median rank of v 55; T* cost 10.50 nats, dearest hop 5.66
-  (c) repaired  recall 0.071; median rank of v 69; T* cost 10.49 nats, dearest hop 5.65
-  (c) random    recall 0.073; median rank of v 55; T* cost 10.49 nats, dearest hop 5.63
-  (c) hub       recall 0.073; median rank of v 54; T* cost 10.51 nats, dearest hop 5.65
-  (c) count     recall 0.071; median rank of v 54; T* cost 10.49 nats, dearest hop 5.64
-      repaired − drifted: recall -0.002 [-0.006, +0.000]; log-rank gain -0.004 [-0.024, +0.012]
-      random − drifted: recall +0.000 [-0.006, +0.006]; log-rank gain +0.009 [-0.003, +0.023]
-      hub − drifted: recall +0.000 [-0.006, +0.006]; log-rank gain -0.002 [-0.014, +0.013]
-      count − drifted: recall -0.002 [-0.006, +0.000]; log-rank gain +0.000 [-0.023, +0.021]
-      the cut cost +0.072 recall; repair won back -0.002
+      repaired: top 5 changed vs drifted on 24/133 cut questions; new entries include gold on 0
+  (c) repaired  recall 0.073; median rank of v 56; T* cost 10.50 nats, dearest hop 5.65
+      random: top 5 changed vs drifted on 4/133 cut questions; new entries include gold on 0
+  (c) random    recall 0.073; median rank of v 56; T* cost 10.50 nats, dearest hop 5.68
+      hub: top 5 changed vs drifted on 2/133 cut questions; new entries include gold on 0
+  (c) hub       recall 0.073; median rank of v 55; T* cost 10.50 nats, dearest hop 5.66
+      count: top 5 changed vs drifted on 6/133 cut questions; new entries include gold on 0
+  (c) count     recall 0.073; median rank of v 53; T* cost 10.49 nats, dearest hop 5.65
+      repaired − drifted: recall +0.000 [+0.000, +0.000]; log-rank gain -0.008 [-0.022, +0.002]
+      random − drifted: recall +0.000 [+0.000, +0.000]; log-rank gain -0.001 [-0.003, +0.001]
+      hub − drifted: recall +0.000 [+0.000, +0.000]; log-rank gain -0.003 [-0.008, -0.000]
+      count − drifted: recall +0.000 [+0.000, +0.000]; log-rank gain +0.002 [-0.002, +0.009]
+      the cut cost +0.072 recall; repair won back +0.000
   [built] round 1: 855 candidates (855 rescored, 316 with gain > 0) in 109s; best gain +2.05327
   [built] round 2: 854 candidates (33 rescored, 304 with gain > 0) in 5s; best gain +1.69169
   [built] round 3: 847 candidates (27 rescored, 293 with gain > 0) in 3s; best gain +1.58106
   [built] round 4: 850 candidates (19 rescored, 287 with gain > 0) in 2s; best gain +1.45691
-  [built] round 5: 846 candidates (34 rescored, 290 with gain > 0) in 5s; best gain +1.39698
-  [built] round 6: 841 candidates (21 rescored, 278 with gain > 0) in 4s; best gain +1.27669
-  [built] round 7: 840 candidates (43 rescored, 275 with gain > 0) in 14s; best gain +1.27640
-  [built] round 8: 839 candidates (42 rescored, 264 with gain > 0) in 7s; best gain +0.79901
-  [built] round 9: 835 candidates (63 rescored, 241 with gain > 0) in 13s; best gain +0.59166
-  [built] round 10: 841 candidates (12 rescored, 236 with gain > 0) in 2s; best gain +0.56692
-  [built] round 11: 840 candidates (36 rescored, 241 with gain > 0) in 6s; best gain +0.54705
+  [built] round 5: 846 candidates (34 rescored, 290 with gain > 0) in 4s; best gain +1.39698
+  [built] round 6: 841 candidates (21 rescored, 278 with gain > 0) in 3s; best gain +1.27669
+  [built] round 7: 840 candidates (43 rescored, 275 with gain > 0) in 7s; best gain +1.27640
+  [built] round 8: 839 candidates (42 rescored, 264 with gain > 0) in 6s; best gain +0.79901
+  [built] round 9: 835 candidates (63 rescored, 241 with gain > 0) in 11s; best gain +0.59166
+  [built] round 10: 841 candidates (12 rescored, 236 with gain > 0) in 1s; best gain +0.56692
+  [built] round 11: 840 candidates (36 rescored, 241 with gain > 0) in 5s; best gain +0.54705
   [built] round 12: 839 candidates (46 rescored, 226 with gain > 0) in 5s; best gain +0.52708
   [built] round 13: 838 candidates (14 rescored, 223 with gain > 0) in 2s; best gain +0.51496
   [built] round 14: 836 candidates (41 rescored, 230 with gain > 0) in 7s; best gain +0.56315
   [built] round 15: 830 candidates (30 rescored, 227 with gain > 0) in 5s; best gain +0.44206
   [built] round 16: 832 candidates (9 rescored, 224 with gain > 0) in 1s; best gain +0.35327
-  [built] round 17: 834 candidates (62 rescored, 223 with gain > 0) in 13s; best gain +0.82521
-  [built] round 18: 838 candidates (63 rescored, 212 with gain > 0) in 13s; best gain +0.32822
+  [built] round 17: 834 candidates (62 rescored, 223 with gain > 0) in 11s; best gain +0.82521
+  [built] round 18: 838 candidates (63 rescored, 212 with gain > 0) in 11s; best gain +0.32822
   [built] round 19: 837 candidates (14 rescored, 203 with gain > 0) in 2s; best gain +0.31338
   [built] round 20: 843 candidates (27 rescored, 191 with gain > 0) in 3s; best gain +0.29536
-  [built] round 21: 843 candidates (55 rescored, 173 with gain > 0) in 11s; best gain +0.28122
-  [built] round 22: 842 candidates (11 rescored, 170 with gain > 0) in 2s; best gain +0.24565
+  [built] round 21: 843 candidates (55 rescored, 173 with gain > 0) in 9s; best gain +0.28122
+  [built] round 22: 842 candidates (11 rescored, 170 with gain > 0) in 1s; best gain +0.24565
   [built] round 23: 841 candidates (33 rescored, 152 with gain > 0) in 5s; best gain +0.19064
   [built] round 24: 842 candidates (3 rescored, 151 with gain > 0) in 0s; best gain +0.17472
   [built] round 25: 841 candidates (47 rescored, 150 with gain > 0) in 9s; best gain +0.13485
   [built] round 26: 838 candidates (18 rescored, 153 with gain > 0) in 3s; best gain +0.22952
   [built] round 27: 837 candidates (12 rescored, 152 with gain > 0) in 2s; best gain +0.12799
-  [built] round 28: 836 candidates (32 rescored, 140 with gain > 0) in 6s; best gain +0.11840
+  [built] round 28: 836 candidates (32 rescored, 140 with gain > 0) in 5s; best gain +0.11840
   [built] round 29: 835 candidates (0 rescored, 139 with gain > 0) in 0s; best gain +0.10720
   [built] round 30: 832 candidates (17 rescored, 135 with gain > 0) in 2s; best gain +0.10643
-  [built] round 31: 828 candidates (24 rescored, 130 with gain > 0) in 4s; best gain +0.09546
+  [built] round 31: 828 candidates (24 rescored, 130 with gain > 0) in 3s; best gain +0.09546
   [built] round 32: 827 candidates (13 rescored, 127 with gain > 0) in 2s; best gain +0.08609
   [built] round 33: 834 candidates (35 rescored, 148 with gain > 0) in 4s; best gain +0.04496
-  [built] round 34: 829 candidates (43 rescored, 159 with gain > 0) in 8s; best gain +0.04249
+  [built] round 34: 829 candidates (43 rescored, 159 with gain > 0) in 7s; best gain +0.04249
   [built] round 35: 828 candidates (27 rescored, 161 with gain > 0) in 3s; best gain +0.02215
   [built] round 36: 827 candidates (38 rescored, 159 with gain > 0) in 5s; best gain +0.01629
   [built] round 37: 826 candidates (38 rescored, 164 with gain > 0) in 5s; best gain +0.24011
@@ -263,178 +100,4 @@
   [built] round 40: 824 candidates (31 rescored, 154 with gain > 0) in 4s; best gain +0.01898
   [built] round 41: 825 candidates (15 rescored, 160 with gain > 0) in 2s; best gain +0.00223
   [built] round 42: 820 candidates (18 rescored, 160 with gain > 0) in 2s; best gain +0.00000
-  [built] round 43: 819 candidates (0 rescored, 159 with gain > 0) in 0s; best gain +0.00000
-  [built] round 44: 818 candidates (0 rescored, 158 with gain > 0) in 0s; best gain +0.00000
-  [built] round 45: 817 candidates (0 rescored, 157 with gain > 0) in 0s; best gain +0.00000
-  [built] round 46: 816 candidates (0 rescored, 156 with gain > 0) in 0s; best gain +0.00000
-  [built] round 47: 815 candidates (0 rescored, 155 with gain > 0) in 0s; best gain +0.00000
-  [built] round 48: 806 candidates (32 rescored, 169 with gain > 0) in 4s; best gain +0.00000
-  [built] round 49: 805 candidates (0 rescored, 168 with gain > 0) in 0s; best gain +0.00000
-  [built] round 50: 804 candidates (0 rescored, 167 with gain > 0) in 0s; best gain +0.00000
-  [built] round 51: 803 candidates (0 rescored, 166 with gain > 0) in 0s; best gain +0.00000
-  [built] round 52: 802 candidates (0 rescored, 165 with gain > 0) in 0s; best gain +0.00000
-  [built] round 53: 801 candidates (0 rescored, 164 with gain > 0) in 0s; best gain +0.00000
-  [built] round 54: 800 candidates (0 rescored, 163 with gain > 0) in 0s; best gain +0.00000
-  [built] round 55: 799 candidates (0 rescored, 162 with gain > 0) in 0s; best gain +0.00000
-  [built] round 56: 798 candidates (0 rescored, 161 with gain > 0) in 0s; best gain +0.00000
-  [built] round 57: 797 candidates (0 rescored, 160 with gain > 0) in 0s; best gain +0.00000
-  [built] round 58: 796 candidates (0 rescored, 159 with gain > 0) in 0s; best gain +0.00000
-  [built] round 59: 795 candidates (0 rescored, 158 with gain > 0) in 0s; best gain +0.00000
-  [built] round 60: 794 candidates (2 rescored, 157 with gain > 0) in 0s; best gain +0.00000
-  [built] round 61: 793 candidates (0 rescored, 156 with gain > 0) in 0s; best gain +0.00000
-  [built] round 62: 792 candidates (0 rescored, 155 with gain > 0) in 0s; best gain +0.00000
-  [built] round 63: 791 candidates (0 rescored, 154 with gain > 0) in 0s; best gain +0.00000
-  [built] round 64: 790 candidates (0 rescored, 153 with gain > 0) in 0s; best gain +0.00000
-  [built] round 65: 789 candidates (0 rescored, 152 with gain > 0) in 0s; best gain +0.00000
-  [built] round 66: 788 candidates (0 rescored, 151 with gain > 0) in 0s; best gain +0.00000
-  [built] round 67: 787 candidates (0 rescored, 150 with gain > 0) in 0s; best gain +0.00000
-  [built] round 68: 786 candidates (0 rescored, 149 with gain > 0) in 0s; best gain +0.00000
-  [built] round 69: 785 candidates (12 rescored, 147 with gain > 0) in 2s; best gain +0.00000
-  [built] round 70: 784 candidates (0 rescored, 146 with gain > 0) in 0s; best gain +0.00000
-  [built] round 71: 783 candidates (0 rescored, 145 with gain > 0) in 0s; best gain +0.00000
-  [built] round 72: 782 candidates (0 rescored, 144 with gain > 0) in 0s; best gain +0.00000
-  [built] round 73: 781 candidates (0 rescored, 143 with gain > 0) in 0s; best gain +0.00000
-  [built] round 74: 780 candidates (0 rescored, 142 with gain > 0) in 0s; best gain +0.00000
-  [built] round 75: 779 candidates (0 rescored, 141 with gain > 0) in 0s; best gain +0.00000
-  [built] round 76: 778 candidates (0 rescored, 140 with gain > 0) in 0s; best gain +0.00000
-  [built] round 77: 777 candidates (0 rescored, 139 with gain > 0) in 0s; best gain +0.00000
-  [built] round 78: 776 candidates (0 rescored, 138 with gain > 0) in 0s; best gain +0.00000
-  [built] round 79: 775 candidates (0 rescored, 137 with gain > 0) in 0s; best gain +0.00000
-  [built] round 80: 774 candidates (0 rescored, 136 with gain > 0) in 0s; best gain +0.00000
-  [built] round 81: 769 candidates (46 rescored, 138 with gain > 0) in 9s; best gain +1.02619
-  [built] round 82: 772 candidates (47 rescored, 130 with gain > 0) in 10s; best gain +0.00000
-  [built] round 83: 771 candidates (0 rescored, 129 with gain > 0) in 0s; best gain +0.00000
-  [built] round 84: 770 candidates (0 rescored, 128 with gain > 0) in 0s; best gain +0.00000
-  [built] round 85: 769 candidates (0 rescored, 127 with gain > 0) in 0s; best gain +0.00000
-  [built] round 86: 768 candidates (0 rescored, 126 with gain > 0) in 0s; best gain +0.00000
-  [built] round 87: 767 candidates (0 rescored, 125 with gain > 0) in 0s; best gain +0.00000
-  [built] round 88: 766 candidates (0 rescored, 124 with gain > 0) in 0s; best gain +0.00000
-  [built] round 89: 765 candidates (0 rescored, 123 with gain > 0) in 0s; best gain +0.00000
-  [built] round 90: 764 candidates (0 rescored, 122 with gain > 0) in 0s; best gain +0.00000
-  [built] round 91: 763 candidates (0 rescored, 121 with gain > 0) in 0s; best gain +0.00000
-  [built] round 92: 762 candidates (0 rescored, 120 with gain > 0) in 0s; best gain +0.00000
-  [built] round 93: 761 candidates (0 rescored, 119 with gain > 0) in 0s; best gain +0.00000
-  [built] round 94: 760 candidates (0 rescored, 118 with gain > 0) in 0s; best gain +0.00000
-  [built] round 95: 759 candidates (0 rescored, 117 with gain > 0) in 0s; best gain +0.00000
-  [built] round 96: 758 candidates (0 rescored, 116 with gain > 0) in 0s; best gain +0.00000
-  [built] round 97: 757 candidates (0 rescored, 115 with gain > 0) in 0s; best gain +0.00000
-  [built] round 98: 756 candidates (0 rescored, 114 with gain > 0) in 0s; best gain +0.00000
-  [built] round 99: 755 candidates (0 rescored, 113 with gain > 0) in 0s; best gain +0.00000
-  [built] round 100: 754 candidates (0 rescored, 112 with gain > 0) in 0s; best gain +0.00000
-  [built] round 101: 753 candidates (39 rescored, 118 with gain > 0) in 7s; best gain +0.17472
-  [built] round 102: 752 candidates (44 rescored, 108 with gain > 0) in 8s; best gain +0.00000
-  [built] round 103: 751 candidates (0 rescored, 107 with gain > 0) in 0s; best gain +0.00000
-  [built] round 104: 750 candidates (0 rescored, 106 with gain > 0) in 0s; best gain +0.00000
-  [built] round 105: 749 candidates (0 rescored, 105 with gain > 0) in 0s; best gain +0.00000
-  [built] round 106: 748 candidates (0 rescored, 104 with gain > 0) in 0s; best gain +0.00000
-  [built] round 107: 747 candidates (0 rescored, 103 with gain > 0) in 0s; best gain +0.00000
-  [built] round 108: 746 candidates (0 rescored, 102 with gain > 0) in 0s; best gain +0.00000
-  [built] round 109: 745 candidates (0 rescored, 101 with gain > 0) in 0s; best gain +0.00000
-  [built] round 110: 744 candidates (0 rescored, 100 with gain > 0) in 0s; best gain +0.00000
-  [built] round 111: 743 candidates (0 rescored, 99 with gain > 0) in 0s; best gain +0.00000
-  [built] round 112: 742 candidates (0 rescored, 98 with gain > 0) in 0s; best gain +0.00000
-  [built] round 113: 741 candidates (0 rescored, 97 with gain > 0) in 0s; best gain +0.00000
-  [built] round 114: 740 candidates (0 rescored, 96 with gain > 0) in 0s; best gain +0.00000
-  [built] round 115: 739 candidates (0 rescored, 95 with gain > 0) in 0s; best gain +0.00000
-  [built] round 116: 738 candidates (0 rescored, 94 with gain > 0) in 0s; best gain +0.00000
-  [built] round 117: 737 candidates (0 rescored, 93 with gain > 0) in 0s; best gain +0.00000
-  [built] round 118: 736 candidates (0 rescored, 92 with gain > 0) in 0s; best gain +0.00000
-  [built] round 119: 735 candidates (0 rescored, 91 with gain > 0) in 0s; best gain +0.00000
-  [built] round 120: 734 candidates (0 rescored, 90 with gain > 0) in 0s; best gain +0.00000
-  [built] round 121: 733 candidates (0 rescored, 89 with gain > 0) in 0s; best gain +0.00000
-  [built] round 122: 732 candidates (0 rescored, 88 with gain > 0) in 0s; best gain +0.00000
-  [built] round 123: 731 candidates (0 rescored, 87 with gain > 0) in 0s; best gain +0.00000
-  [built] round 124: 730 candidates (2 rescored, 86 with gain > 0) in 0s; best gain +0.00000
-  [built] round 125: 729 candidates (0 rescored, 85 with gain > 0) in 0s; best gain +0.00000
-  [built] round 126: 728 candidates (0 rescored, 84 with gain > 0) in 0s; best gain +0.00000
-  [built] round 127: 727 candidates (0 rescored, 83 with gain > 0) in 0s; best gain +0.00000
-  [built] round 128: 726 candidates (0 rescored, 82 with gain > 0) in 0s; best gain +0.00000
-  [built] round 129: 725 candidates (0 rescored, 81 with gain > 0) in 0s; best gain +0.00000
-  [built] round 130: 724 candidates (0 rescored, 80 with gain > 0) in 0s; best gain +0.00000
-  [built] round 131: 723 candidates (0 rescored, 79 with gain > 0) in 0s; best gain +0.00000
-  [built] round 132: 722 candidates (0 rescored, 78 with gain > 0) in 0s; best gain +0.00000
-  [built] round 133: 721 candidates (0 rescored, 77 with gain > 0) in 0s; best gain +0.00000
-  [built] round 134: 720 candidates (0 rescored, 76 with gain > 0) in 0s; best gain +0.00000
-  [built] round 135: 719 candidates (0 rescored, 75 with gain > 0) in 0s; best gain +0.00000
-  [built] round 136: 718 candidates (0 rescored, 74 with gain > 0) in 0s; best gain +0.00000
-  [built] round 137: 717 candidates (0 rescored, 73 with gain > 0) in 0s; best gain +0.00000
-  [built] round 138: 716 candidates (0 rescored, 72 with gain > 0) in 0s; best gain +0.00000
-  [built] round 139: 715 candidates (0 rescored, 71 with gain > 0) in 0s; best gain +0.00000
-  [built] round 140: 714 candidates (0 rescored, 70 with gain > 0) in 0s; best gain +0.00000
-  [built] round 141: 713 candidates (2 rescored, 69 with gain > 0) in 0s; best gain +0.00000
-  [built] round 142: 712 candidates (0 rescored, 68 with gain > 0) in 0s; best gain +0.00000
-  [built] round 143: 711 candidates (0 rescored, 67 with gain > 0) in 0s; best gain +0.00000
-  [built] round 144: 710 candidates (0 rescored, 66 with gain > 0) in 0s; best gain +0.00000
-  [built] round 145: 709 candidates (0 rescored, 65 with gain > 0) in 0s; best gain +0.00000
-  [built] round 146: 708 candidates (0 rescored, 64 with gain > 0) in 0s; best gain +0.00000
-  [built] round 147: 707 candidates (0 rescored, 63 with gain > 0) in 0s; best gain +0.00000
-  [built] round 148: 706 candidates (0 rescored, 62 with gain > 0) in 0s; best gain +0.00000
-  [built] round 149: 705 candidates (0 rescored, 61 with gain > 0) in 0s; best gain +0.00000
-  [built] round 150: 704 candidates (0 rescored, 60 with gain > 0) in 0s; best gain +0.00000
-  [built] round 151: 703 candidates (0 rescored, 59 with gain > 0) in 0s; best gain +0.00000
-  [built] round 152: 702 candidates (0 rescored, 58 with gain > 0) in 0s; best gain +0.00000
-  [built] round 153: 701 candidates (0 rescored, 57 with gain > 0) in 0s; best gain +0.00000
-  [built] round 154: 700 candidates (0 rescored, 56 with gain > 0) in 0s; best gain +0.00000
-  [built] round 155: 699 candidates (0 rescored, 55 with gain > 0) in 0s; best gain +0.00000
-  [built] round 156: 698 candidates (0 rescored, 54 with gain > 0) in 0s; best gain +0.00000
-  [built] round 157: 697 candidates (0 rescored, 53 with gain > 0) in 0s; best gain +0.00000
-  [built] round 158: 696 candidates (2 rescored, 52 with gain > 0) in 0s; best gain +0.00000
-  [built] round 159: 697 candidates (27 rescored, 49 with gain > 0) in 4s; best gain +0.00000
-  [built] round 160: 696 candidates (21 rescored, 48 with gain > 0) in 3s; best gain +0.05844
-  [built] round 161: 695 candidates (20 rescored, 46 with gain > 0) in 3s; best gain +0.00000
-  [built] round 162: 694 candidates (0 rescored, 45 with gain > 0) in 0s; best gain +0.00000
-  [built] round 163: 693 candidates (0 rescored, 44 with gain > 0) in 0s; best gain +0.00000
-  [built] round 164: 692 candidates (0 rescored, 43 with gain > 0) in 0s; best gain +0.00000
-  [built] round 165: 691 candidates (0 rescored, 42 with gain > 0) in 0s; best gain +0.00000
-  [built] round 166: 692 candidates (23 rescored, 44 with gain > 0) in 3s; best gain +0.09472
-  [built] round 167: 691 candidates (12 rescored, 49 with gain > 0) in 2s; best gain +0.00000
-  [built] round 168: 690 candidates (0 rescored, 48 with gain > 0) in 0s; best gain +0.00000
-  [built] round 169: 689 candidates (7 rescored, 46 with gain > 0) in 1s; best gain +0.00000
-  [built] round 170: 688 candidates (0 rescored, 45 with gain > 0) in 0s; best gain +0.00000
-  [built] round 171: 687 candidates (0 rescored, 44 with gain > 0) in 0s; best gain +0.00000
-  [built] round 172: 686 candidates (0 rescored, 43 with gain > 0) in 0s; best gain +0.00000
-  [built] round 173: 685 candidates (0 rescored, 42 with gain > 0) in 0s; best gain +0.00000
-  [built] round 174: 684 candidates (0 rescored, 41 with gain > 0) in 0s; best gain +0.00000
-  [built] round 175: 683 candidates (0 rescored, 40 with gain > 0) in 0s; best gain +0.00000
-  [built] round 176: 682 candidates (0 rescored, 39 with gain > 0) in 0s; best gain +0.00000
-  [built] round 177: 681 candidates (0 rescored, 38 with gain > 0) in 0s; best gain +0.00000
-  [built] round 178: 680 candidates (0 rescored, 37 with gain > 0) in 0s; best gain +0.00000
-  [built] round 179: 679 candidates (0 rescored, 36 with gain > 0) in 0s; best gain +0.00000
-  [built] round 180: 678 candidates (0 rescored, 35 with gain > 0) in 0s; best gain +0.00000
-  [built] round 181: 677 candidates (0 rescored, 34 with gain > 0) in 0s; best gain +0.00000
-  [built] round 182: 676 candidates (0 rescored, 33 with gain > 0) in 0s; best gain +0.00000
-  [built] round 183: 676 candidates (33 rescored, 31 with gain > 0) in 6s; best gain +0.20510
-  [built] round 184: 676 candidates (63 rescored, 35 with gain > 0) in 11s; best gain +0.09435
-  [built] round 185: 670 candidates (58 rescored, 32 with gain > 0) in 11s; best gain +0.15079
-  [built] round 186: 670 candidates (59 rescored, 30 with gain > 0) in 11s; best gain +0.12423
-  [built] round 187: 671 candidates (47 rescored, 29 with gain > 0) in 9s; best gain +0.00000
-  [built] round 188: 670 candidates (0 rescored, 28 with gain > 0) in 0s; best gain +0.00000
-  [built] round 189: 669 candidates (0 rescored, 27 with gain > 0) in 0s; best gain +0.00000
-  [built] round 190: 668 candidates (0 rescored, 26 with gain > 0) in 0s; best gain +0.00000
-  [built] round 191: 667 candidates (0 rescored, 25 with gain > 0) in 0s; best gain +0.00000
-  [built] round 192: 666 candidates (0 rescored, 24 with gain > 0) in 0s; best gain +0.00000
-  [built] round 193: 665 candidates (0 rescored, 23 with gain > 0) in 0s; best gain +0.00000
-  [built] round 194: 664 candidates (0 rescored, 22 with gain > 0) in 0s; best gain +0.00000
-  [built] round 195: 663 candidates (0 rescored, 21 with gain > 0) in 0s; best gain +0.00000
-  [built] round 196: 662 candidates (0 rescored, 20 with gain > 0) in 0s; best gain +0.00000
-  [built] round 197: 661 candidates (0 rescored, 19 with gain > 0) in 0s; best gain +0.00000
-  [built] round 198: 660 candidates (0 rescored, 18 with gain > 0) in 0s; best gain +0.00000
-  [built] round 199: 659 candidates (0 rescored, 17 with gain > 0) in 0s; best gain +0.00000
-  [built] round 200: 658 candidates (0 rescored, 16 with gain > 0) in 0s; best gain +0.00000
-  [built] round 201: 657 candidates (0 rescored, 15 with gain > 0) in 0s; best gain +0.00000
-  [built] round 202: 656 candidates (0 rescored, 14 with gain > 0) in 0s; best gain +0.00000
-  [built] round 203: 655 candidates (0 rescored, 13 with gain > 0) in 0s; best gain +0.00000
-  [built] round 204: 654 candidates (0 rescored, 12 with gain > 0) in 0s; best gain +0.00000
-  [built] round 205: 653 candidates (0 rescored, 11 with gain > 0) in 0s; best gain +0.00000
-  [built] round 206: 652 candidates (0 rescored, 10 with gain > 0) in 0s; best gain +0.00000
-  [built] round 207: 651 candidates (0 rescored, 9 with gain > 0) in 0s; best gain +0.00000
-  [built] round 208: 650 candidates (0 rescored, 8 with gain > 0) in 0s; best gain +0.00000
-  [built] round 209: 649 candidates (0 rescored, 7 with gain > 0) in 0s; best gain +0.00000
-  [built] round 210: 648 candidates (0 rescored, 6 with gain > 0) in 0s; best gain +0.00000
-  [built] round 211: 647 candidates (0 rescored, 5 with gain > 0) in 0s; best gain +0.00000
-  [built] round 212: 646 candidates (0 rescored, 4 with gain > 0) in 0s; best gain +0.00000
-  [built] round 213: 645 candidates (0 rescored, 3 with gain > 0) in 0s; best gain +0.00000
-  [built] round 214: 644 candidates (0 rescored, 2 with gain > 0) in 0s; best gain +0.00000
-  [built] round 215: 643 candidates (0 rescored, 1 with gain > 0) in 0s; best gain +0.00000
-  [built] round 216: 642 candidates (0 rescored, 0 with gain > 0) in 0s; best gain +0.00000
-  (d) collateral on the built graph: 215 links added; test recall repaired − built -0.011 [-0.030, +0.000] over 133 questions
+  (d) collateral on the built graph: 41 links added; test recall repaired − built -0.013 [-0.032, +0.000] over 133 questions
