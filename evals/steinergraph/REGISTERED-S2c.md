@@ -35,3 +35,18 @@ cost, cut and control, is reported too.
 ## S3
 
 S3 runs on these cuts, unchanged from REGISTERED-S2b.md, only if this gate passes.
+
+## S3 amendment (before any S3 run)
+
+Three points that S2c's cuts force, fixed before S3 runs:
+
+1. **Candidates are co-read pairs with no Beside door between them, not "unlinked" pairs.** An S2c cut often leaves u
+   and v joined through wider keys. A repair is a Beside link, the graph's narrowest direct door. So a pair already
+   joined by keys can still be repaired, and one already joined by Beside can't.
+2. **A candidate's gain is scored by rerunning only the walks whose R holds either end.** Other walks would change
+   only by second-order mass. The strength matrix stays fixed at the drifted graph, so an added link can't raise its
+   own observed coherence. Only the walks it moves can.
+3. **Recovered means a repair link was added on the cut pair (u, v).** Its effect is scored as v's rank, recall, T\*'s
+   cost and T\*'s dearest hop (bill: the tree fails at its dearest hop). These are compared across drifted, repaired,
+   the random, hub and count controls, and built. Before any ranking, S3 reports how many cut pairs are candidates at
+   all. bill's S4 found that walks rarely read both ends of a tree edge.
