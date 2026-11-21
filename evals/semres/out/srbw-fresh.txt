@@ -1,0 +1,22 @@
+SET=fresh: 268 questions; entry's door keys: median 22, empty 0
+live: 536 requests, estimated $0.0359 (cap $0.25)
+spend this run $0.04076
+named set size: mean 1.40, share with 2+ 0.257
+entry is hop 1 0.687, hop 2 0.108
+both   : cos 0.235, cosdoor 0.478, name 0.563, pass 0.668, nameset 0.612
+ordered: cos 0.187, cosdoor 0.429, name 0.511, pass 0.597, nameset 0.556
+hop2   : cos 0.343, cosdoor 0.575, name 0.660, pass 0.817, nameset 0.746
+  given entry = hop 1 (n 184): both cos 0.272, cosdoor 0.625, name 0.745, pass 0.870, nameset 0.810
+  given entry = hop 2 (n 29): both cos 0.448, cosdoor 0.448, name 0.483, pass 0.655, nameset 0.517
+both name − cosdoor: +0.086 [+0.049, +0.127]
+both name − pass: -0.104 [-0.164, -0.045]
+both pass − cosdoor: +0.190 [+0.131, +0.250]
+both cosdoor − cos: +0.243 [+0.175, +0.306]
+both nameset − name: +0.049 [+0.011, +0.082]
+both nameset − pass: -0.056 [-0.104, -0.011]
+hop2 name − cosdoor: +0.086 [+0.045, +0.127]
+hop2 name − pass: -0.157 [-0.220, -0.093]
+hop2 pass − cosdoor: +0.243 [+0.179, +0.306]
+hop2 cosdoor − cos: +0.231 [+0.164, +0.295]
+hop2 nameset − name: +0.086 [+0.045, +0.127]
+hop2 nameset − pass: -0.071 [-0.119, -0.022]
