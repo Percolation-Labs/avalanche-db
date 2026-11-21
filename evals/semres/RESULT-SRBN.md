@@ -37,7 +37,17 @@ every namer's accuracy is a little generous.
   key.
 - `jev − cosq`: +.160 [+.117, +.203]. A wrong cheap name is worse than no name: cosq and cbq fall below k.
 - `ceiling_k − jev`: +.040 [+.017, +.063]. Jev's naming reaches most of the gold ceiling. The 30% it names wrong cost
-  only .04. I haven't measured why; one guess is that a wrong key that no option shares falls through to k's tie-break.
+  only .04. Counted afterwards at $0 (`srbn_wrong.py`, `out/srbn-wrong.txt`, bill's suggestion):
+
+  | Jev's name | n | hop-2 top-1 |
+  |---|---|---|
+  | right (a bridge key) | 209 | .789 |
+  | wrong, and no option shares it | 62 | .419 |
+  | wrong, but hop 2 shares it | 17 | .765 |
+  | wrong, and only lures share it | 12 | .000 |
+
+  Most wrong names (62 of 91) are shared by no option, so the step falls through to k's tie-break. Only 12 send the
+  walk to a lure. A wrong name is mostly harmless because the lexical step can tell when it's unused.
 - `jev − jev_pass`: **−.163 [−.220, −.107]**. Jev reading the passages outright stays well ahead.
 
 **Cost.** The naming request is about 840 characters per question (question, read, phrases), against about 10,000 for the

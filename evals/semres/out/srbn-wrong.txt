@@ -1,0 +1,5 @@
+right                          n 209  hop-2 top-1 0.789
+wrong, shared by none          n  62  hop-2 top-1 0.419
+wrong, shared incl. hop 2      n  17  hop-2 top-1 0.765
+wrong, shared by lures only    n  12  hop-2 top-1 0.000
+no keys 0
