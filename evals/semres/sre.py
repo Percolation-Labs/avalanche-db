@@ -40,12 +40,13 @@ for qi, r in enumerate(qs):
     out.append(rec)
 print(f"\n{len(out)} questions; passages with no door link {nolink} of {sum(len(r['paragraphs']) for r in qs)}; door entry = cos entry in {np.mean([o['same_entry'] for o in out]):.2f}")
 if SCORE:
-    rng = np.random.default_rng(0); nq = len(out)
+  for lab, sub in (("all", out), ("41-200", out[40:])):
+    rng = np.random.default_rng(0); nq = len(sub); print(f"== {lab} ({nq} questions)")
     for met in ("entry", "has1", "both"):
-        t = {a: np.array([o[a][met] for o in out], float) for a in ARMS}
+        t = {a: np.array([o[a][met] for o in sub], float) for a in ARMS}
         line = ", ".join(f"{a} {t[a].mean():.3f}" for a in ARMS)
         for a, b in (("door", "cos"), ("door", "vec")):
             dd = t[a] - t[b]; bt = [dd[rng.integers(0, nq, nq)].mean() for _ in range(4000)]
             line += f";  {a}−{b} {dd.mean():+.3f} [{np.percentile(bt, 2.5):+.3f}, {np.percentile(bt, 97.5):+.3f}]"
         print(f"{met:5s}: {line}")
-    json.dump(out, open("out/sre.json", "w"), indent=0)
+  json.dump(out, open("out/sre.json", "w"), indent=0)
