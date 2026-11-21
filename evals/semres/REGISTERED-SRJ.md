@@ -83,3 +83,24 @@ conductance should follow cos(read, option), the walker's state. That's directio
   - γ falls by at least half when cos_r is added.
   - If both hold, a vector conductance with the walker's state as probe is a fair model of Jev's choice. Otherwise, the
     result says how much of the choice vectors don't explain.
+
+## Amendment 2: is γ the bridge entity? (registered before it runs; $0, Jev answers from the stage-1 cache)
+
+**The feature.** e(v) = 1 if the hop-1 answer (MuSiQue's `question_decomposition[0].answer`, or any of its words of ≥4
+letters that aren't stopwords, all present) appears in v's text, case-folded.
+
+This is an upper-bound probe: it uses the decomposition's answer, which a walker would have to read off `read`. The
+question is whether the extra knowledge Jev shows is *the bridge entity named in the next passage*.
+
+**Fit.** On the same 760 options with the same bootstrap:
+- logit p_Jev = β_q·cos_q + δ·e + γ·[hop 2] + c;
+- the same without γ, to see what e alone carries.
+
+Also reported:
+- e's precision for hop 2: the share of e = 1 options that are hop 2;
+- e's recall: hop 2 has e = 1;
+- the e-decider's top-1 share, with ties broken by cos(question + read).
+
+**Directional bar.** γ falls by at least half when e is added, and δ's interval is above 0. If both hold, the edge term
+is "v names what `read` resolved", an entity-level relation computable from text (by NER or the walk's own doors). If
+γ stays, Jev knows something beyond the entity string.
