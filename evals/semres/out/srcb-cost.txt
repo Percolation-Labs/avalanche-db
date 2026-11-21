@@ -1,0 +1,3 @@
+bge-small: 21100 passages, 196 s, 1 vector x 384, fp16 index 16.2 MB
+answerdotai/answerai-colbert-small-v1: 306 s (1.6x bge), tokens per passage mean 94 (median 83), dim 96, fp16 index 381 MB (23x bge)
+mixedbread-ai/mxbai-edge-colbert-v0-17m: 92 s (0.5x bge), tokens per passage mean 110 (median 96), dim 48, fp16 index 222 MB (14x bge)
