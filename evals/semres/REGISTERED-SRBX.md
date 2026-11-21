@@ -78,3 +78,8 @@ request, sent only when |S| = 0. Metrics are as in SR-BW: both hops, ordered and
 
 **Scope.** MuSiQue train 2-hop, in-pool, 20 passages. One wording per task. SR-J's, SR-BN's and the new entry wording
 aren't searched. 300 questions.
+
+**Graph calibration (james, #75, posted before this takes effect).** On dev's seen sets, the rebuilt extractor moves k
+by −.015 to −.034 against graph-mq, ceiling_k by ±.01, and cosdoor by 0 to −.03. The predictions above are dev-based. The
+arms that lean on k (cosdoor, and name/nt through k ties) may run about .02 low on this graph. The predictions are
+left unchanged, and this note is the stated allowance.
