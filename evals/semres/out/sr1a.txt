@@ -1,0 +1,41 @@
+noise 1.0 20261121 B bridge    h(a) 0.00048 formula 0.00048 (Q 3.60); cross 8.60 nats; P(b→s) 1.000 → L 0.004, P(b→a) 0.0002 → L 0.9957
+noise 1.0 20261121 C hub lure  h(a) 0.00006 formula 0.00002 (Q 1.04); cross 7.73 nats; P(b→s) 0.996 → L 0.000, P(b→a) 0.0004 → L 0.0121
+noise 1.0 20261122 B bridge    h(a) 0.01730 formula 0.01730 (Q 3.54); cross 5.00 nats; P(b→s) 0.993 → L 0.000, P(b→a) 0.0068 → L 1.0000
+noise 1.0 20261122 C hub lure  h(a) 0.00000 formula 0.00000 (Q 3.60); cross 16.25 nats; P(b→s) 1.000 → L 0.042, P(b→a) 0.0000 → L 0.9576
+noise 1.0 20261123 B bridge    h(a) 0.00000 formula 0.00000 (Q 3.32); cross 23.60 nats; P(b→s) 1.000 → L 0.000, P(b→a) 0.0000 → L 0.0000
+noise 1.0 20261123 C hub lure  h(a) 0.00001 formula 0.00001 (Q 3.60); cross 12.97 nats; P(b→s) 1.000 → L 0.000, P(b→a) 0.0000 → L 0.0001
+noise 1.0 20261124 B bridge    h(a) 0.00588 formula 0.00585 (Q 3.55); cross 6.08 nats; P(b→s) 0.994 → L 0.000, P(b→a) 0.0023 → L 0.0101
+noise 1.0 20261124 C hub lure  h(a) 0.00000 formula 0.00000 (Q 3.43); cross 16.68 nats; P(b→s) 1.000 → L 0.000, P(b→a) 0.0000 → L 0.0008
+noise 1.5 20261121 B bridge    h(a) 0.00566 formula 0.00566 (Q 3.58); cross 6.12 nats; P(b→s) 0.998 → L 0.069, P(b→a) 0.0022 → L 0.9307
+noise 1.5 20261121 C hub lure  h(a) 0.01586 formula 0.00622 (Q 1.37); cross 4.14 nats; P(b→s) 0.946 → L 0.001, P(b→a) 0.0160 → L 0.1795
+noise 1.5 20261122 B bridge    h(a) 0.44696 formula 0.44696 (Q 1.99); cross 1.17 nats; P(b→s) 0.690 → L 0.000, P(b→a) 0.3104 → L 0.9999
+noise 1.5 20261122 C hub lure  h(a) 0.00001 formula 0.00001 (Q 3.60); cross 12.33 nats; P(b→s) 1.000 → L 0.689, P(b→a) 0.0000 → L 0.3112
+noise 1.5 20261123 B bridge    h(a) 0.00000 formula 0.00000 (Q 3.48); cross 25.76 nats; P(b→s) 1.000 → L 0.561, P(b→a) 0.0000 → L 0.0000
+noise 1.5 20261123 C hub lure  h(a) 0.00040 formula 0.00040 (Q 3.59); cross 8.77 nats; P(b→s) 0.999 → L 0.001, P(b→a) 0.0002 → L 0.0147
+noise 1.5 20261124 B bridge    h(a) 0.28890 formula 0.23382 (Q 1.86); cross 1.75 nats; P(b→s) 0.641 → L 0.000, P(b→a) 0.1737 → L 0.2992
+noise 1.5 20261124 C hub lure  h(a) 0.00003 formula 0.00003 (Q 3.55); cross 11.51 nats; P(b→s) 0.998 → L 0.006, P(b→a) 0.0000 → L 0.0074
+noise 2.0 20261121 B bridge    h(a) 0.02234 formula 0.02234 (Q 3.52); cross 4.74 nats; P(b→s) 0.991 → L 0.260, P(b→a) 0.0088 → L 0.7401
+noise 2.0 20261121 C hub lure  h(a) 0.10010 formula 0.04848 (Q 1.46); cross 2.48 nats; P(b→s) 0.801 → L 0.005, P(b→a) 0.0837 → L 0.3577
+noise 2.0 20261122 B bridge    h(a) 0.67624 formula 0.67624 (Q 1.17); cross 0.22 nats; P(b→s) 0.198 → L 0.000, P(b→a) 0.8022 → L 0.9997
+noise 2.0 20261122 C hub lure  h(a) 0.00011 formula 0.00011 (Q 3.60); cross 10.04 nats; P(b→s) 1.000 → L 0.930, P(b→a) 0.0000 → L 0.0698
+noise 2.0 20261123 B bridge    h(a) 0.00000 formula 0.00000 (Q 3.45); cross 26.99 nats; P(b→s) 1.000 → L 0.998, P(b→a) 0.0000 → L 0.0000
+noise 2.0 20261123 C hub lure  h(a) 0.00000 formula 0.00000 (Q 3.60); cross 20.10 nats; P(b→s) 1.000 → L 1.000, P(b→a) 0.0000 → L 0.0000
+noise 2.0 20261124 B bridge    h(a) 0.51565 formula 0.38499 (Q 1.13); cross 0.75 nats; P(b→s) 0.157 → L 0.000, P(b→a) 0.4723 → L 0.5620
+noise 2.0 20261124 C hub lure  h(a) 0.00042 formula 0.00041 (Q 3.44); cross 8.71 nats; P(b→s) 0.986 → L 0.051, P(b→a) 0.0002 → L 0.0125
+noise 3.0 20261121 B bridge    h(a) 0.07510 formula 0.07510 (Q 3.33); cross 3.47 nats; P(b→s) 0.969 → L 0.589, P(b→a) 0.0312 → L 0.4114
+noise 3.0 20261121 C hub lure  h(a) 0.21369 formula 0.12339 (Q 1.27); cross 1.44 nats; P(b→s) 0.518 → L 0.031, P(b→a) 0.2370 → L 0.4571
+noise 3.0 20261122 B bridge    h(a) 0.71543 formula 0.71543 (Q 1.03); cross 0.04 nats; P(b→s) 0.034 → L 0.001, P(b→a) 0.9656 → L 0.9988
+noise 3.0 20261122 C hub lure  h(a) 0.00113 formula 0.00113 (Q 3.60); cross 7.74 nats; P(b→s) 1.000 → L 0.981, P(b→a) 0.0004 → L 0.0195
+noise 3.0 20261123 B bridge    h(a) 0.00000 formula 0.00000 (Q 3.21); cross 28.12 nats; P(b→s) 1.000 → L 1.000, P(b→a) 0.0000 → L 0.0000
+noise 3.0 20261123 C hub lure  h(a) 0.00000 formula 0.00000 (Q 3.60); cross 19.95 nats; P(b→s) 1.000 → L 1.000, P(b→a) 0.0000 → L 0.0000
+noise 3.0 20261124 B bridge    h(a) 0.58253 formula 0.44313 (Q 1.03); cross 0.52 nats; P(b→s) 0.037 → L 0.001, P(b→a) 0.5970 → L 0.6657
+noise 3.0 20261124 C hub lure  h(a) 0.00419 formula 0.00381 (Q 2.77); cross 6.25 nats; P(b→s) 0.892 → L 0.191, P(b→a) 0.0019 → L 0.0140
+noise 4.0 20261121 B bridge    h(a) 0.11882 formula 0.11882 (Q 3.18); cross 2.96 nats; P(b→s) 0.948 → L 0.716, P(b→a) 0.0518 → L 0.2840
+noise 4.0 20261121 C hub lure  h(a) 0.22538 formula 0.14022 (Q 1.19); cross 1.20 nats; P(b→s) 0.400 → L 0.065, P(b→a) 0.3018 → L 0.4592
+noise 4.0 20261122 B bridge    h(a) 0.71915 formula 0.71915 (Q 1.01); cross 0.02 nats; P(b→s) 0.016 → L 0.002, P(b→a) 0.9835 → L 0.9979
+noise 4.0 20261122 C hub lure  h(a) 0.00327 formula 0.00327 (Q 3.59); cross 6.68 nats; P(b→s) 0.999 → L 0.987, P(b→a) 0.0013 → L 0.0133
+noise 4.0 20261123 B bridge    h(a) 0.00000 formula 0.00000 (Q 2.83); cross 28.56 nats; P(b→s) 1.000 → L 1.000, P(b→a) 0.0000 → L 0.0000
+noise 4.0 20261123 C hub lure  h(a) 0.00000 formula 0.00000 (Q 3.60); cross 19.72 nats; P(b→s) 1.000 → L 1.000, P(b→a) 0.0000 → L 0.0000
+noise 4.0 20261124 B bridge    h(a) 0.59156 formula 0.45320 (Q 1.02); cross 0.49 nats; P(b→s) 0.026 → L 0.004, P(b→a) 0.6153 → L 0.6660
+noise 4.0 20261124 C hub lure  h(a) 0.00875 formula 0.00743 (Q 2.21); cross 5.36 nats; P(b→s) 0.770 → L 0.286, P(b→a) 0.0047 → L 0.0138
+DEGENERATE: 13 world-cases below 1/20000, e.g. [(1.0, 20261122, 'C hub lure'), (1.0, 20261123, 'B bridge'), (1.0, 20261123, 'C hub lure')]; no bar read
