@@ -1,0 +1,10 @@
+4 cards, 76 options, 8 gold; vectors' Bayes slope on cos_q -15.19, on cos_r 0.33; cos_q gold/other 0.683/0.713, cos_r 0.767/0.766
+live: 4 requests, estimated $0.0006 (cap $0.05)
+spend this run $0.00077
+-- card:REM-1001: Jev p gold [0.48 0.52 0.32], max other 0.57; cos gold [0.707 0.692 0.701], max other 0.846
+-- card:REM-103: Jev p gold [0.67 0.81 0.8 ], max other 0.87; cos gold [0.68  0.629 0.769], max other 0.767
+-- card:REM-1030: Jev p gold [0.66], max other 0.46; cos gold [0.68], max other 0.837
+-- card:REM-1035: Jev p gold [0.53], max other 0.65; cos gold [0.606], max other 0.834
+cos_q + gold           cos_q +4.74 [-7.24, +16.35], gold +1.17 [+0.23, +1.92]
+cos_q + cos_r + gold   cos_q +8.18 [-6.06, +18.43], cos_r -6.83 [-13.17, +11.77], gold +1.28 [+0.34, +2.16]
+top-1 is gold: coin 0.00, search cos 0.25, cos read 0.25, Jev 0.25

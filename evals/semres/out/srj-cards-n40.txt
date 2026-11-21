@@ -1,0 +1,6 @@
+40 cards, 760 options, 76 gold; vectors' Bayes slope on cos_q -6.15, on cos_r 6.75; cos_q gold/other 0.674/0.693, cos_r 0.773/0.758
+live: 36 requests, estimated $0.0064 (cap $0.05)
+spend this run $0.00741
+cos_q + gold           cos_q +3.13 [+1.77, +4.73], gold +1.62 [+1.44, +1.79]
+cos_q + cos_r + gold   cos_q +2.19 [-0.18, +5.15], cos_r +1.73 [-1.21, +4.52], gold +1.58 [+1.39, +1.75]
+top-1 is gold: coin 0.03, search cos 0.17, cos read 0.25, Jev 0.75
