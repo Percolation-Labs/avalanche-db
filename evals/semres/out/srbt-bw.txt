@@ -1,0 +1,17 @@
+wave 1: 536 live requests, estimated $0.0360 (spent so far $0.0000, cap $0.25)
+wave 2: 75 live requests, estimated $0.0028 (spent so far $0.0408, cap $0.25)
+spend this run $0.04393
+SET=bw: n 268; Jev names a bridge key 0.743; |S| = 0 / 1 / >1: 48 / 145 / 75
+wave-2 passages per question 0.89 (against 19 in jev_pass)
+k         top-1 0.549
+jev       top-1 0.649
+nt        top-1 0.769
+nt_cut    top-1 0.780
+jev_pass  top-1 0.884
+ceiling_k top-1 0.687
+top-1 nt − jev: +0.119 [+0.075, +0.168]
+top-1 nt − jev_pass: -0.116 [-0.168, -0.063]
+top-1 nt − k: +0.220 [+0.164, +0.276]
+top-1 nt − nt_cut: -0.011 [-0.030, +0.004]
+within |S| > 1 (n 75): nt − jev: +0.427 [+0.280, +0.573]; nt 0.720, jev 0.293
+within |S| > 1 (n 75): nt − jev_pass: -0.093 [-0.173, -0.027]; nt 0.720, jev_pass 0.813
