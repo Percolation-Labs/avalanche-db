@@ -163,3 +163,14 @@ def edge_walk_beta(w, P, beta):
     by_head = [[] for _ in range(n)]
     for k, (u, v) in enumerate(states): by_head[v].append(k)
     return Q, states, by_head
+
+
+def conductance_jev(w, case, probe, beta=1.0, gamma=3.7):
+    """SR1c: Jev's measured conductance (bill, RESULT-SRJ, #59): logit p = β·cos(question, option) + γ·[option is the
+    next hop], with β ≈ 1.0 [.13, 1.74] and γ = 3.7 [3.3, 4.1] nats. In the world, 'is the next hop' is a link whose relation
+    is one the question names (r1 or r2): the question names both, and the world knows each link's relation.
+    c_uv = exp(β·cos(x, u)) · exp(β·cos(x, v)) · exp(γ·[r_uv ∈ {r1, r2}]), so the step is ∝ exp(β·cos(x, v) + γ·[...])."""
+    V = w["V"]; E = np.array(w["edges"]); rel = np.array(w["rel"])
+    cv = V @ probe
+    loge = beta * (cv[E[:, 0]] + cv[E[:, 1]]) + gamma * np.isin(rel, [case["r1"], case["r2"]])
+    return transition(len(V), w["edges"], np.exp(loge - loge.max()))
