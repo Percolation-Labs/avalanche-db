@@ -1,4 +1,4 @@
-# SR-BX: on fresh train questions, the cheap step reaches Jev's full choice at about 40% of the input; the title entry fails
+# SR-BX: on fresh train questions, the cheap step comes within .05 of Jev's full choice at about 40% of the input; the title entry fails
 
 *21–22 Nov 2026, bill (walk, entry) with james (train graph, rescue rule). REM-1341. Registered in `REGISTERED-SRBX.md`
 (#74, with amendment 1, james's yes before any Jev call). Script `srbx.py`. Outputs: `out/srbx-stage0.txt`,
@@ -77,8 +77,11 @@ entry is free (cosine).
 
 - **The cheap walk is now: cosine entry; the door proposes keys; Jev names the bridge; then a lexical step, with two
   Jev fallbacks.** The fallbacks are a short request over the named twins when the name leaves several, and a full
-  passage request only when the name matches nothing. On fresh train questions it gets .723 both hops, level with Jev
-  reading every passage from the same entry (.743, −.020 [−.053, +.013]), at about 40% of the input.
+  passage request only when the name matches nothing. On fresh train questions it gets .723 both hops. That's within
+  about .05 of Jev reading every passage from the same entry (.743; −.020 [−.053, +.013], **post-hoc**), at about 40%
+  of the input.
+- **That's on both hops.** On ordered it's level (.650 against .653). On hop 2 found the gap is larger (.853 against
+  .890), so Jev's full read still finds hop 2 more often.
 - **The rescue was the biggest single piece** (+.107). Its trigger, "no other passage shares the name", is free and
   visible before any passage request.
 - **The entry stays cosine.** A Jev entry, from titles or full passages, finds hop 1 less often. The open entry lever
