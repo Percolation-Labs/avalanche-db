@@ -31,7 +31,7 @@ from R.
   - The namer ceiling is .873: that's how often the read's door keys contain the bridge at all.
 - **Same-draw Jev reference, `jev_pass`**: a second request per question with SR-J's passage task over the 19
   options. This puts Jev's own hop-2 top-1 on this draw instead of SR-J-R's 40.
-- Both requests for all questions go out in **one wave**.
+- Both requests for all questions go out in **one wave** through `Jev.ask_many`.
 
 **Second stage (lexical, james).** score(v) = 1/(df_K − 1) if v shares K, else 0. Ties are broken by k (SR-K's sum) and
 then qr, in that order. That's lexicographic, with no weight. On the seen 300, the gold version (`ceiling_k`, K = the
@@ -53,6 +53,12 @@ decision naming the bridge lets one key beat the sum of keys.
   lexical step, but the naming request is a fraction of the tokens.
 - **Cost:** the naming request is short (~25 phrases) against the passage request (19 passages). I'll report the token
   ratio.
+
+**Amendment 1 (bill's review, before stage 0).**
+- The wave goes through `ask_many` (it was `asyncio.gather` over `ask`).
+- B (bridge keys) is word-set ⊆ the answer's words, so a one-word key such as "american" counts as a bridge key for
+  "American Football League". Naming accuracy is therefore slightly generous for every namer. The comparisons are
+  paired, so the differences stand.
 
 ## Matcher half (bill)
 

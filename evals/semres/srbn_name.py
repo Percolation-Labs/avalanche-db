@@ -3,7 +3,7 @@ passage's door keys, so that the walk steps through one identity instead of a su
 Per question, with gold hop 1 as read and R = SR-KB's bundle (the read's door keys, 2 <= df <= 100, not inside the question):
   Jev namer   one request: options = the keys in R (each a short phrase from the read). It picks argmax p.
   Jev passage one request, SR-J's task over the 19 passages, as a same-draw reference for Jev's own hop-2 top-1.
-  Both requests for every question go out in one wave (ask_many style: asyncio.gather, all in flight).
+  Both requests for every question go out in one wave through Jev.ask_many, all in flight together.
   $0 namer controls: cosq (bge cos(question, key)), cbq (a-ColBERT MaxSim(question, key)), rare (max 1/(df-1)).
 Hop-2 arms (lexical, mine): via a named key K, score(v) = 1/(df_K - 1) if v shares K; ties by k (SR-K's sum), then qr.
 B (gold, scoring only): keys in R whose words are all in hop 1's answer.
@@ -63,11 +63,9 @@ if miss:
     if est > MAX_USD: sys.exit("estimate over cap")
     from percolate_core.decide import Jev, Noul
     async def go():
-        async with Jev() as jev:
-            async def one(c, kind, o):
-                return await jev.ask({"question": c["q"], "read": c["read"], "task": NAME_TASK if kind == "name" else PASS_TASK},
-                                     {f"p{j}": Noul(t) for j, t in enumerate(o)})
-            return await asyncio.gather(*(one(*x) for x in miss))   # one wave, all in flight
+        async with Jev() as jev:   # the whole wave through ask_many, all in flight together
+            return await jev.ask_many([({"question": c["q"], "read": c["read"], "task": NAME_TASK if kind == "name" else PASS_TASK},
+                                        {f"p{j}": Noul(t) for j, t in enumerate(o)}) for c, kind, o in miss])
     with open(CACHE, "a") as f:
         for x, res in zip(miss, asyncio.run(go())):
             p = [res[f"p{j}"].p for j in range(len(x[2]))]; cache[key(*x)] = p
