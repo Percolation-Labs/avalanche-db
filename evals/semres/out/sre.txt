@@ -1,0 +1,13 @@
+-- Who is the spouse of the Green performer?
+   door pair: ['Green (Steve Hillage album)', 'Miquette Giraudy'], entry Green (Steve Hillage album)
+   cos pair: ['The Odd Life of Timothy Green', 'Green (Steve Hillage album)']
+
+200 questions; passages with no door link 721 of 3999; door entry = cos entry in 0.84; questions with no linked passage (cos fallback) 0
+== all (200 questions)
+entry: cos 0.780, door 0.725, vec 0.770;  door−cos -0.055 [-0.100, -0.015];  door−vec -0.045 [-0.090, +0.000]
+has1 : cos 0.870, door 0.790, vec 0.815;  door−cos -0.080 [-0.130, -0.030];  door−vec -0.025 [-0.080, +0.030]
+both : cos 0.200, door 0.465, vec 0.165;  door−cos +0.265 [+0.195, +0.335];  door−vec +0.300 [+0.230, +0.370]
+== 41-200 (160 questions)
+entry: cos 0.750, door 0.700, vec 0.731;  door−cos -0.050 [-0.094, -0.006];  door−vec -0.031 [-0.087, +0.019]
+has1 : cos 0.838, door 0.775, vec 0.769;  door−cos -0.062 [-0.119, -0.013];  door−vec +0.006 [-0.056, +0.069]
+both : cos 0.200, door 0.425, vec 0.150;  door−cos +0.225 [+0.156, +0.300];  door−vec +0.275 [+0.200, +0.350]
