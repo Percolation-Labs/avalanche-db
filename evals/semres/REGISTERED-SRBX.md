@@ -40,7 +40,7 @@ losses remain, each with a free or cheap signal:
 **Walks scored.** {e_cos, e_title} × {cosdoor, name, nt, nt_rescue, pass}, and e_pass × pass. That's 11 walks. Jev runs
 three dependent `ask_many` waves: (1) the entry requests; (2) name and passage requests from each distinct entry; (3) the
 twin requests. `nt_rescue` reuses wave 2's passage p, so it costs nothing extra here. In production it's one full passage
-request, sent only when |S| = 0. Metrics are as in SR-BW: both hops, ordered, hop 2 found, plus Jev input characters per question.
+request, sent only when |S| = 0. Metrics are as in SR-BW: both hops, ordered and hop 2 found.
 
 **Primary.** Both hops, `e_title × nt_rescue − e_cos × name`, paired bootstrap 95% CI.
 
@@ -50,7 +50,8 @@ request, sent only when |S| = 0. Metrics are as in SR-BW: both hops, ordered, ho
 - `e_cos × nt − e_cos × name` and `e_cos × nt_rescue − e_cos × nt`: the step alone (james's SR-BT, in a walk).
 - `e_cos × name − e_cos × cosdoor`: SR-BW's primary, replicated on train.
 - `e_title × nt_rescue − e_pass × pass`: the cheap walk against Jev reading everything at both steps.
-- Cost: characters per question for each walk.
+- Cost: requests and spend per wave, as the script prints them. The per-walk cost in production is stated in passage-request
+  units in the result, from the counts.
 
 **Predictions** (per entry case, added up, as SR-BW's postmortem asked).
 - **Entry hop 1:** e_cos about .68 (dev's rate). e_title about .78: titles are mostly the entity a passage is about, and
