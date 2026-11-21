@@ -1,0 +1,19 @@
+live: 599 requests, estimated $0.0393 (cap $0.25)
+spend this run $0.04485
+SET=fresh: n 300; bridge among door keys 0.897
+namer jev   names a bridge key 0.697
+namer cosq  names a bridge key 0.147
+namer cbq   names a bridge key 0.053
+namer rare  names a bridge key 0.063
+hop-2 k         top-1 0.587  top-3 0.790  MRR 0.711
+hop-2 jev_pass  top-1 0.843  top-3 0.960  MRR 0.902
+hop-2 ceiling_k top-1 0.720  top-3 0.877  MRR 0.811
+hop-2 jev       top-1 0.680  top-3 0.863  MRR 0.784
+hop-2 cosq      top-1 0.520  top-3 0.757  MRR 0.662
+hop-2 cbq       top-1 0.483  top-3 0.733  MRR 0.635
+hop-2 rare      top-1 0.587  top-3 0.790  MRR 0.711
+top-1 jev − k: +0.093 [+0.060, +0.130]
+top-1 jev − cosq: +0.160 [+0.117, +0.203]
+top-1 jev − jev_pass: -0.163 [-0.220, -0.107]
+top-1 ceiling_k − jev: +0.040 [+0.017, +0.063]
+naming jev − cosq: +0.550 [+0.493, +0.610]

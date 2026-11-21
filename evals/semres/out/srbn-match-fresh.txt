@@ -1,0 +1,20 @@
+SET=fresh: 300 questions; m_x on-demand encode+score per question 0.087 s (19 options + K)
+k        top-1 0.587  top-3 0.790  MRR 0.711
+jev_pass top-1 0.843  top-3 0.960  MRR 0.902
+m_x      top-1 0.643  top-3 0.797  MRR 0.741
+m_a      top-1 0.673  top-3 0.820  MRR 0.765
+m_lex    top-1 0.640  top-3 0.837  MRR 0.755
+m_title  top-1 0.643  top-3 0.837  MRR 0.757
+g_x      top-1 0.807  top-3 0.943  MRR 0.878
+g_a      top-1 0.827  top-3 0.940  MRR 0.889
+g_lex    top-1 0.757  top-3 0.923  MRR 0.846
+g_title  top-1 0.770  top-3 0.927  MRR 0.853
+top-1 m_x − m_title: +0.000 [-0.043, +0.043]
+top-1 m_a − m_x: +0.030 [-0.010, +0.070]
+top-1 m_x − k: +0.057 [-0.007, +0.117]
+top-1 m_x − jev_pass: -0.200 [-0.263, -0.140]
+top-1 g_x − g_title: +0.037 [-0.003, +0.077]
+m_x − jev(lexical door step): -0.037 [-0.093, +0.017]
+m_a − jev(lexical door step): -0.007 [-0.057, +0.047]
+m_title − jev(lexical door step): -0.037 [-0.080, +0.007]
+g_a − g_title: +0.057 [+0.020, +0.097]

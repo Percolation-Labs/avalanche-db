@@ -1,0 +1,29 @@
+[1mBertModel LOAD REPORT[0m from: BAAI/bge-small-en-v1.5
+Key                     | Status     |  | 
+------------------------+------------+--+-
+No sentence-transformers model found with name answerdotai/answerai-colbert-small-v1.
+[1mBertModel LOAD REPORT[0m from: answerdotai/answerai-colbert-small-v1
+Key           | Status     |  | 
+--------------+------------+--+-
+live: 8 requests, estimated $0.0005 (cap $0.05)
+spend this run $0.00060
+SET=stage0: n 4; bridge among door keys 1.000
+namer jev   names a bridge key 1.000
+namer cosq  names a bridge key 0.250
+namer cbq   names a bridge key 0.000
+namer rare  names a bridge key 0.000
+hop-2 k         top-1 0.750  top-3 1.000  MRR 0.875
+hop-2 jev_pass  top-1 1.000  top-3 1.000  MRR 1.000
+hop-2 ceiling_k top-1 1.000  top-3 1.000  MRR 1.000
+hop-2 jev       top-1 1.000  top-3 1.000  MRR 1.000
+hop-2 cosq      top-1 1.000  top-3 1.000  MRR 1.000
+hop-2 cbq       top-1 1.000  top-3 1.000  MRR 1.000
+hop-2 rare      top-1 0.750  top-3 1.000  MRR 0.875
+-- On what date did Battle of the birth place of Denny Januar Ali end?
+   |R| 13; Jev names 'palembang'; gold bridge keys ['palembang']
+-- How many refugees emigrated to the nation that founded New Amsterdam?
+   |R| 23; Jev names 'dutch republic'; gold bridge keys ['dutch republic']
+-- Along with the subject of The One That Got Away, what notable pop artist started out his career on adult contemporary radio?
+   |R| 61; Jev names 'josh groban'; gold bridge keys ['groban', 'josh', 'josh groban']
+-- In what part of Florida is Tom Denney's birthplace located?
+   |R| 13; Jev names 'ocala'; gold bridge keys ['ocala']
