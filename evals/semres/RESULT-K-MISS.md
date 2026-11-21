@@ -5,7 +5,7 @@
 `out/k-miss.txt`, `out/k-miss2.txt`.*
 
 **Serves.** REM-1341 asks which cheap operation should do most of Jev's work. The lexical key door k (SR-K) is the best
-cheap probe we have: .58 top-1 for hop 2, against .39 for the text probe and .88 for Jev. This look asks why k misses,
+cheap probe we have: .58 top-1 for hop 2, against .39 for the text probe; Jev's .88 is on SR-J-R's 40, a different random draw. This look asks why k misses,
 so the next operation targets the right failure.
 
 ## Where k's 127 misses come from
@@ -21,7 +21,8 @@ Read is gold hop 1. "Bridge" means the hop-1 answer.
 
 - **Most misses aren't for lack of a door.** Only 24 of 127 have no shared key. On those 24, the qr fallback ranks the
   answer first only .08 of the time.
-- **Lures win in two ways.** In 54 of the 103, the winning lure also names the bridge (a twin). In 49, it wins on a sum
+- **Lures win in two ways.** In at most 54 of the 103, the winning lure also names the bridge (a twin). This is an upper bound: it uses a substring test,
+  so short answers such as a year or 'US' over-count. In 49, it wins on a sum
   of other rare keys. For example, Mean Old Man beats the Dennis Quaid passage on "pioneer jerry", and the 1936
   election beats Eugene V. Debs on "popular vote" and "largest number".
 
@@ -39,10 +40,11 @@ qr breaks ties throughout.
 
 - **SR-K's sum stays best.** Taking only the rarest key, or counting keys, doesn't help.
 - **Ceiling (gold, not a door).** If the walker knew which shared key is the hop-1 answer and walked only through it,
-  top-1 would rise .58 → .71. That's what Jev does when it reads hop 1, and it's +.14 of the .30 gap to Jev. Of the
-  300, 262 reads contain a bridge key.
-- **Jev's remaining .17 is something else.** Jev is at .88, above even the gold ceiling (.71), so it must also use
-  the question's second relation. In "spouse of ...", for instance, it prefers the passage about the bridge that says
+  top-1 would rise .58 → .71. That is what we suppose Jev does when it reads hop 1 (unmeasured; the closest evidence
+  is SR-J's entity term, on the easy block). Against Jev's .88 on SR-J-R's 40, a different draw, it would be roughly
+  half the gap. Of the 300, 262 reads contain a bridge key.
+- **The rest of Jev's lead is probably something else.** Jev's .88 (on a different draw) is above even the gold
+  ceiling (.71), so it likely also uses the question's second relation. In "spouse of ...", for instance, it prefers the passage about the bridge that says
   who they married.
 
 ## What it means for next steps
@@ -50,7 +52,7 @@ qr breaks ties throughout.
 - The next cheap operation should **pick the bridge key out of the shared set**, not add keys or reweight them.
   Doing that without gold is a decision. Two options: a single Jev call per read passage ("which of these entities
   answers hop 1?"), or the question's wording. Either can be priced against the .71 ceiling.
-- **Twins (54 cases) won't be separated by any key reduction.** They share the bridge. That matches SR-TW and W2: only the
+- **Twins (up to 54 cases) won't be separated by any key reduction.** They share the bridge. That matches SR-TW and W2: only the
   second relation or an ordered step separates them.
 - For bill's ColBERT test, a token-level readout against the whole read passage could fail the same way as sum
   (many weak matches beating one identity). Scoring against the bridge's tokens is the version that could reach the
