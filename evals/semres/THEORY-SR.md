@@ -163,12 +163,12 @@ there, the decider takes the entry once the door shows its link (11/16, P ≈ .0
    - The relational term is the one to put into graph measures. The graph's own key doors are a partial, gold-free
      stand-in. Given the entry, they pick the next hop in .58 of all 1,252 questions, against cosine's .42. But they
      absorb under 1 nat of Jev's 3.8 (SR-K, corrected).
-2. **The entry hop is likely a graph property** (SR-E: cosine still lands the entry best; the door adds the second hop,
-   with both hops landing in .50 against cosine's .23 over 1,252 questions). Repair should present entry doors whose passage names its link. That's a
-   gold-free target, and candidate source (b) from S3 becomes concrete.
-3. **The open problem is relational twins.** A cluster joined by the right relation takes the relational bonus too (D:
-   2 of 4 in SR1c). The surprise-coherence null discounted hubs but not this. A null for relational convergence is the
-   next coherence question.
+2. **The entry is cosine's, and the graph's door adds the second hop.** Both hops land in .50, against cosine's .23,
+   over 1,252 questions (SR-E, SR-E2). Repair should give well-landed entries a door to their link.
+3. **Relational twins aren't separated by a reach number.** SR-TW's relational null failed: relKL put a above every lure
+   in 0 of 8, and rel's 12/12 dropped to 6/12 under the exact sampled null. A trap one named-relation door from s
+   saturates at a one-hop node's reach. Separation lives in the ordered per-step choice. SR-E2 finds the same on real
+   data: entry by cosine, then the door, beats choosing the pair jointly (+.060 [+.026, +.094]).
 
 ## What is noise or unshown
 
