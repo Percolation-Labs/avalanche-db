@@ -134,13 +134,16 @@ STEPS = ("cosdoor", "name", "nt", "nt_rescue", "pass")
 WALKS = [(en, s) for en in ("e_cos", "e_title") for s in STEPS] + [("e_pass", "pass")]
 out = []
 for x in Q:
-    h1, h2 = x["h1"], x["h2"]; rec = dict(qi=x["qi"], entry={en: ("h1" if x["e"][en] == h1 else "h2" if x["e"][en] == h2 else "-") for en in x["e"]})
+    h1, h2 = x["h1"], x["h2"]; rec = dict(qi=x["qi"], dup=int(len({p["title"] for p in x["P"]}) < x["n"]), entry={en: ("h1" if x["e"][en] == h1 else "h2" if x["e"][en] == h2 else "-") for en in x["e"]})
     for en, s in WALKS:
         e, v = x["e"][en], x["st"][en][0][s]; rec[f"{en}×{s}"] = dict(both=int({e, v} == {h1, h2}), ordered=int(e == h1 and v == h2), hop2=int(h2 in (e, v)))
     rec["share"] = {en: len(x["st"][en][1]) for en in ("e_cos", "e_title")}; out.append(rec)
 nq = len(out)
 for en in ("e_cos", "e_title", "e_pass"):
     print(f"{en:8s} entry: hop 1 {np.mean([o['entry'][en] == 'h1' for o in out]):.3f}, hop 2 {np.mean([o['entry'][en] == 'h2' for o in out]):.3f}")
+for lab, dv in (("repeated-title pools", 1), ("other pools", 0)):
+    sub = [o for o in out if o["dup"] == dv]
+    if sub: print(f"  {lab} (n {len(sub)}): entry hop 1 " + ", ".join(f"{en} {np.mean([o['entry'][en] == 'h1' for o in sub]):.3f}" for en in ("e_cos", "e_title", "e_pass")))
 for w in WALKS:
     k = f"{w[0]}×{w[1]}"; print(f"{k:20s} both {np.mean([o[k]['both'] for o in out]):.3f}  ordered {np.mean([o[k]['ordered'] for o in out]):.3f}  hop2 {np.mean([o[k]['hop2'] for o in out]):.3f}")
 if SET == "fresh":

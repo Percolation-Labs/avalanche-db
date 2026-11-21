@@ -93,5 +93,6 @@ left unchanged, and this note is the stated allowance.
   as options, Jev faces identical strings. The rule is knob-free: Jev picks a title, and among the passages carrying
   that title, e_title is the one nearest the question by bge cosine. This was set before any Jev call. It means
   e_title isn't purely a Jev choice when titles repeat. It's Jev's title choice, then cosine within that title.
+- **Readout added (james):** entry accuracy for each entry rule, split into the 143 repeated-title pools and the 157 others.
 - **Prediction unchanged** (e_title hop 1 about .78). The repeats add risk to it, since a title shared by hop 1 and a
   same-name lure leaves the split to cosine.
