@@ -25,8 +25,9 @@
 
 **Spend.** Stage 0 is 8 requests (seed 51001) and stage 1 is 24. Each is about $0.001, capped at $0.05.
 
-**Bar (hop 2, where the relation has to be read and the type inferred).** Jev's chain door is uniquely first in more
-cases than the dictionary reader's 9 of 16. If it is, Jev reads the relation from what it has read *and* infers the type
+**Bar (hop 2, where the relation has to be read and the type inferred), amended per bill's review before stage 0.**
+Jev's chain door is uniquely first in **at least 13 of 16**. If Jev were the dictionary reader (.56 per case), P(≥ 13) ≈ .04.
+The dictionary reader is also reported counting ties, and the reason it isn't 16/16 is reported too. If it is, Jev reads the relation from what it has read *and* infers the type
 from the door's words, without the generator's word lists.
 
 **Also reported:** the per-hop log(Jev/theory) with intervals, and the way-back share at hop 2.
