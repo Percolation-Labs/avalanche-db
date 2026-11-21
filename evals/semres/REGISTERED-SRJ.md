@@ -48,3 +48,38 @@ When Jev chooses the next passage, does it follow the vectors?
 Stage 1 covers 40 questions, at about $0.01. It is registered as an amendment with bootstrap intervals on β_J and γ, and
 needs no further yes under the $1 rule.
 - **The carry-over test:** james's (a) formula, with Jev's crossing cost (β_J in place of β_B) predicting Jev's hit rate.
+
+## Stage 0 result (spend $0.00045)
+
+- **Jev ranks hop 2 first in all 4 questions.** Search cos ranks it 7, 4, 3 and 16. Word overlap ranks it 11, 3, 7 and 1.
+- p_Jev(hop 2) ranges .48–.85, and the best other option .11–.30, so it isn't degenerate.
+- **β_J = −0.15**, against β_B = 8.7. Jev ignores the cosine to the question.
+- **γ = +3.24 nats.** Every bit of Jev's preference is in the hop-2 term.
+- Predictions:
+  - "β_J below β_B": yes, but far below. It's about 0, not merely softer.
+  - "γ > 0 and large": yes.
+  - "Jev beats the controls": yes.
+
+## Amendment 1: stage 1 (registered before it runs)
+
+Stage 0 suggests Jev's semantic space isn't the question's. Its state includes the passage it has read, so its
+conductance should follow cos(read, option), the walker's state. That's direction memory in vector form.
+
+- **Cases.** The first 40 of the 200 questions (stage 0's 4 included, answered from cache). One wave of requests.
+- **Spend.** Cap $0.05, estimated about $0.004.
+- **Fit.** logit p_Jev = β_q·cos(question, v) + β_r·cos(read, v) + γ·[hop 2] + c, with bge-small and no query prefix for
+  read. Each is reported with a bootstrap 95% interval over questions (2,000 resamples).
+  - The same fit with only cos_q is also reported, to compare with stage 0.
+- **Vector-space deciders,** ranking hop 2 among the 19:
+  - cos_q (search);
+  - cos_r;
+  - cos to (question + read) as one probe.
+  These run beside Jev and the five controls. Rank is reported as top-1 share and mean rank.
+- **Carry-over readouts.**
+  - (i) β_r against β_B,r: the vectors' own Bayes slope of hop 2 on cos_r, fitted on the 200 the same way as β_B.
+  - (ii) Whether adding cos_r shrinks γ. That's the share of Jev's hop-2 knowledge that the state vector explains.
+- **Directional bar.**
+  - β_r's interval is above 0 and β_q's covers 0.
+  - γ falls by at least half when cos_r is added.
+  - If both hold, a vector conductance with the walker's state as probe is a fair model of Jev's choice. Otherwise, the
+    result says how much of the choice vectors don't explain.
