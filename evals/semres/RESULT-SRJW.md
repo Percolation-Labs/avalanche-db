@@ -1,5 +1,16 @@
 # SR-JW result: Jev on rendered worlds. The theory is calibrated on average, wrong in two opposite ways per hop
 
+> **Amendment (bill's review, board M-20261121-135227): the hop-2 result is WITHDRAWN.** In 16 of 16 cases, exactly one
+> of b's unread doors says "is a <answer type>.", and it is a. A type-only string matcher picks it 16 of 16, the same as
+> Jev. My word-overlap control normalised by passage length, and every rendered passage carries all its link
+> sentences, so the one decisive word was drowned. So "Jev splits doors by the answer's type" is what a string matcher
+> does on this renderer, not evidence of relational reading. γ_type is a renderer artifact until shown on text with no
+> literal type sentence. What stands is independent of that string: the hop-1 deficit (−0.78) and the lower way-back
+> share (.08 against .36, because s is read). Fixes before any further Jev call:
+> 1. Describe the type through topic words only, never "is a <type>", and give 2–3 other doors the same type.
+> 2. Add type-only and exact-phrase deciders as registered control rows.
+> 3. Show each door its own text only.
+
 *21 Nov 2026, james. Registration: REGISTERED-SRJW.md. Jev spend: stage 0 $0.00037 (measured). Stage 1 had 24 requests at
 the same size, about $0.0011; its printed spend line didn't survive my log filter. The total is about $0.0015.
 Outputs: out/srjw-{0,1}.{txt,json}; the cache is ~/.cache/walklab/srjw-jev-cache.jsonl (32 entries).*
