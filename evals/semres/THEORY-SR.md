@@ -14,8 +14,9 @@ the shares (SR1a). Structure decides which steps exist. Semantics decide what ea
 The question is who sets the prices.
 
 **Cosine similarity sets them badly.** The vectors' own best-fit slope makes a decider so sharp that it won't leave a
-topic. On real MuSiQue text, the second hop looks *less* like the question than the best distractor. A similarity-priced
-walk fails on every bridge.
+topic. On real MuSiQue text, the second hop looks *less* like the question than the best distractor. At MuSiQue's
+measured slope, a similarity-priced walk put the answer in the top 5 in 0 of 16 world-cases (SR1b). With the generator's
+own Bayes slope it got 3 of 4 bridges (SR1), so the failure is specific to the calibrated slope.
 
 **Jev prices steps differently,** and we measured how:
 - A weak similarity term of about 1–3 nats per unit of cosine.
@@ -45,8 +46,9 @@ It's exact and computable. The walk is a resistor network, and reach is a voltag
 
 h(a) ≈ (1−α)² · P(s→b) · P(b→a) · Q,  with  Q = 1 / (1 − (1−α)² · P(s→b) · P(b→s))
 
-- On bridge worlds this is exact to three digits (median ratio 1.000, SR1a). With a hub nearby it under-predicts by up
-  to 3.4×, because hubs are extra paths.
+- Registered, on fresh worlds under Jev's conductance (SR1c): the formula prices reach on bridges within 1.2–1.4×.
+  SR1a's descriptive look found a median ratio of 1.000; it was unregistered, on worlds already seen, after a mis-chosen
+  gate. With a hub nearby the formula under-predicts by up to 3.4× there, because hubs are extra paths.
 - Q is the walker bouncing between s and b. It's a reflection that gives the crossing repeated tries, worth up to about
   3.6×. It's not a loss.
 
@@ -104,6 +106,8 @@ question, and 10.2 against the read passage (MuSiQue dev, 200 questions).
 - **The carry-over** (SR1c): the same worlds, walk and solver failed under every similarity-only conductance (0 of 4 on
   bridges). Under Jev's (β ≈ 1, γ ≈ 3.7) they put the answer in the top 5 in 4 of 4 (bridge) and 3 of 4 (hub lure),
   identically across γ's interval. Reach is .08–.42, and the chain formula prices it within 1.2–1.4×.
+  - The caveat belongs here, not only at the end: the worlds give the relation label exactly, and γ = 3.7 was applied to
+    "the relation is r1 or r2", not to the next hop's identity, which is what SR-J measured.
 
 **On rendered text, Jev's own choices** (SR-JW2 and JW3, with string-reader controls registered first):
 
@@ -125,7 +129,7 @@ question, and 10.2 against the read passage (MuSiQue dev, 200 questions).
 
 The conductance, as measured:
 
-**c(u→v) ∝ exp( β·cos + γ_rel·[needed relation] + γ_type·[asked type] + γ_read·[already read] )**
+**c(u→v) ∝ exp( β·cos + γ_rel·[needed relation] + γ_type·[asked type] + γ_read·[already read] )**, with β from SR-J only
 
 - **β** is about 1–3 nats per unit of cosine, from SR-J on real text. The rendered worlds can't estimate it.
 - **γ_rel** pays only when the door shows its link. In rendered worlds it's about +0.7, because "has relation r1 or r2"
@@ -138,22 +142,23 @@ The conductance, as measured:
   - An earlier draft said "−∞" and "one-way", from the way-back share. That was a ratio against a theory that
     over-credits the start, and a share ratio against a theory is not a coefficient.
 - **No back-current.** The "inductance" first modelled as direction memory was compensating for an over-sharp
-  similarity decider. With Jev's prices there's no back-current, and direction memory changes nothing (SR1c).
+  similarity decider. With Jev's prices there's no back-current, and direction memory changes no top-5 count at γ = 3.7, though it raises hit-by-25 in 12 of 16 (SR1c).
 
 **Jev prices a door by what the door shows.** When the bridge passage hides its links, Jev doesn't take it, even though
 the read passage names it (1/16). When the bridge shows them, Jev takes it (11/16).
 
-So MuSiQue's miss on single-seed chains belongs to the graph: the walk never presents the entry door (S1′'s entry-hop
-analysis, S4). The decider isn't refusing it.
+This is consistent with MuSiQue's single-seed chain miss belonging to the graph, with the walk never presenting the
+entry door (S1′'s entry-hop analysis; S4's 23% and 49%, which are upper bounds). It's shown only on rendered worlds:
+there, the decider takes the entry once the door shows its link (11/16, P ≈ .04).
 
 ## What this changes
 
 1. **Price walks with the decider's conductance, not the embedding's.**
    - A graph measure, such as T\* cost, coherence or a repair reward, that uses cosine as its semantic term prices steps
      Jev doesn't pay, and misses the step it does pay for.
-   - The relational term is the one to put into graph measures. The bridge entity, which the graph's own key doors
-     already encode, is the computable stand-in for it.
-2. **The entry hop is a graph property.** Repair should present entry doors whose passage names its link. That's a
+   - The relational term is the one to put into graph measures. **Hypothesis, untested, for the next registration:** the
+     bridge entity, which the graph's own key doors already encode, is a computable stand-in for it.
+2. **The entry hop is likely a graph property.** Repair should present entry doors whose passage names its link. That's a
    gold-free target, and candidate source (b) from S3 becomes concrete.
 3. **The open problem is relational twins.** A cluster joined by the right relation takes the relational bonus too (D:
    2 of 4 in SR1c). The surprise-coherence null discounted hubs but not this. A null for relational convergence is the
