@@ -58,3 +58,17 @@ bridge improves a full walk, not only a given hop.
 
 **Scope.** 2-hop only. In-pool, with 20 passages per question. One fixed entry rule (cosine). This is not a multi-wave
 walk, and it doesn't cover 3- or 4-hop questions.
+
+## Amendment 1 (before any Jev call; from james's 23:06Z pricing on SR-BN's seen 300)
+
+- **A fifth arm, `nameset`.** It's the same as `name`, except when two or more other passages share K. Then s is the
+  one Jev's passage request scores highest *among that set only*. With one sharer, s is that passage. With none, s is
+  `name`'s step.
+- It costs no extra Jev calls here: it reads the `pass` request's p over all 19. In production it would be a Jev
+  request over the named set only. james prices that at about 0.84 extra passages per question, about 4% of a passage
+  request. Because Jev saw all 19 in context here, the arm is an **approximation**, and I'll label it so.
+- **Secondary:** `nameset − name` and `nameset − pass` on `both`, plus the named set's size.
+- **Prediction.** On SR-BN's 300 with gold hop 1, james's approximation gets .787, against name .680 and pass .843. In
+  the walk, nameset is about .58: between name (.53) and pass (.60), closer to pass.
+- **Shared draw.** james will register "beyond the name" (gold hop 1 as read) on the same 904–1171, before either of us
+  scores. It's a different task, and neither of us will look at the other's outcomes before both are registered.

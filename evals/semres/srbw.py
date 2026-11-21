@@ -8,6 +8,8 @@ Per question, over its pool of 20 (MuSiQue answerable 2-hop):
              ties by S[e, ·], then qr = cos(q + e's text, ·)                      (SR-BN's lexical step, james's rule)
              empty R: s = cosdoor's step
     pass     Jev picks s among the 19 others (SR-J's passage task, unchanged), read = e's text   (reference, ~12x the tokens)
+    nameset  (amendment 1, james's arm) as name, but when 2+ others share K, s = argmax of pass's p over that set only;
+             1 sharer: that one; none: name's step. Approximated from the full pass request (p over all 19 in context).
 Metrics: both = {e, s} == {h1, h2};  ordered = e == h1 and s == h2;  hop2 = h2 in {e, s}.
 Jev: every request of a SET in one ask_many wave. Draw: SR-KB's permutation (seed 1341 over 41–1252 minus SR-J-R's 40).
   SET stage0 = perm 0–3 (seen, SR-KB's first four)    fresh = perm 904–1171 (registered; never scored)
@@ -77,7 +79,7 @@ if miss:
             f.write(json.dumps({"k": key(*x), "p": p}) + "\n"); usd += res.input_tokens * PRICE_IN
 print(f"spend this run ${usd:.5f}")
 # ---- steps and scoring
-ARMS = ("cos", "cosdoor", "name", "pass"); out = []
+ARMS = ("cos", "cosdoor", "name", "pass", "nameset"); out = []
 for c in cases:
     S, qr = np.array(c["S"]), np.array(c["qr"])
     pj = cache[key(c, "pass", c["texts"])]; c["step"]["pass"] = c["others"][int(np.argmax(pj))]
@@ -85,13 +87,16 @@ for c in cases:
         K = c["R"][int(np.argmax(cache[key(c, "name", c["R"])]))]
         sc = np.array([W(K) * (K in c["sh"][v]) for v in range(len(S))]) + 1e-3 * np.maximum(S, 0) / (S.max() + 1e-9) + 1e-6 * qr
         sc[c["e"]] = -np.inf; c["step"]["name"] = int(np.argmax(sc)); c["K"] = K
+        share = [j for j, v in enumerate(c["others"]) if K in c["sh"][v]]
+        c["step"]["nameset"] = c["others"][max(share, key=lambda j: pj[j])] if share else c["step"]["name"]; c["nset"] = len(share)
     else:
-        c["step"]["name"] = c["step"]["cosdoor"]; c["K"] = None
+        c["step"]["name"] = c["step"]["nameset"] = c["step"]["cosdoor"]; c["K"] = None; c["nset"] = 0
     e, h1, h2 = c["e"], c["h1"], c["h2"]
-    out.append(dict(qi=c["qi"], K=c["K"], entry_h1=int(e == h1), entry_h2=int(e == h2),
+    out.append(dict(qi=c["qi"], K=c["K"], nset=c["nset"], entry_h1=int(e == h1), entry_h2=int(e == h2),
                     **{a: dict(both=int({e, c["step"][a]} == {h1, h2}), ordered=int(e == h1 and c["step"][a] == h2),
                                hop2=int(h2 in (e, c["step"][a]))) for a in ARMS}))
-nq = len(out); print(f"entry is hop 1 {np.mean([o['entry_h1'] for o in out]):.3f}, hop 2 {np.mean([o['entry_h2'] for o in out]):.3f}")
+nq = len(out); print(f"named set size: mean {np.mean([o['nset'] for o in out]):.2f}, share with 2+ {np.mean([o['nset'] > 1 for o in out]):.3f}")
+print(f"entry is hop 1 {np.mean([o['entry_h1'] for o in out]):.3f}, hop 2 {np.mean([o['entry_h2'] for o in out]):.3f}")
 for met in ("both", "ordered", "hop2"): print(f"{met:7s}: " + ", ".join(f"{a} {np.mean([o[a][met] for o in out]):.3f}" for a in ARMS))
 for lab, f in (("entry = hop 1", "entry_h1"), ("entry = hop 2", "entry_h2")):
     sub = [o for o in out if o[f]]; print(f"  given {lab} (n {len(sub)}): both " + ", ".join(f"{a} {np.mean([o[a]['both'] for o in sub]):.3f}" for a in ARMS))
@@ -100,7 +105,7 @@ if SET == "stage0":
 else:
     rng = np.random.default_rng(0)
     for met in ("both", "hop2"):
-        for a, b in (("name", "cosdoor"), ("name", "pass"), ("pass", "cosdoor"), ("cosdoor", "cos")):
+        for a, b in (("name", "cosdoor"), ("name", "pass"), ("pass", "cosdoor"), ("cosdoor", "cos"), ("nameset", "name"), ("nameset", "pass")):
             dd = np.array([o[a][met] - o[b][met] for o in out], float); bt = [dd[rng.integers(0, nq, nq)].mean() for _ in range(4000)]
             print(f"{met} {a} − {b}: {dd.mean():+.3f} [{np.percentile(bt, 2.5):+.3f}, {np.percentile(bt, 97.5):+.3f}]")
 json.dump(dict(usd=usd, out=out), open(f"out/srbw-{SET}.json", "w"))
