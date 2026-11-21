@@ -1,0 +1,10 @@
+SR-JW2 (doors hide links): 32 option sets, 192 doors
+  β (cos)  -1.35 [-3.98, +1.13]
+  γ_rel    +0.12 [-0.10, +0.35]
+  γ_type   +1.09 [+0.71, +1.54]
+  γ_read   +0.33 [-0.27, +0.98]
+SR-JW3 (doors show links): 32 option sets, 192 doors
+  β (cos)  +2.24 [-0.57, +5.25]
+  γ_rel    +0.66 [+0.43, +0.92]
+  γ_type   +0.70 [+0.28, +1.06]
+  γ_read   -0.85 [-1.46, -0.29]

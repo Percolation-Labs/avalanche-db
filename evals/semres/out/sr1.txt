@@ -1,0 +1,23 @@
+GATE struct: 10 passages, max |MC − exact| = 1.41 binomial s.d., 0 beyond 3
+GATE comb: 10 passages, max |MC − exact| = 1.61 binomial s.d., 0 beyond 3
+20261121 A semantic      rank of a (b): struct 10 (4), sem 73 (742), comb 22 (5), comb@25 22 (5), comb+L@25 177 (33); hit a by 25: 0.0000 → L 0.0023; τ 6 → 13; μ_nn 0.496
+20261121 B bridge        rank of a (b): struct 10 (4), sem 339 (831), comb 2 (1), comb@25 2 (1), comb+L@25 2 (1); hit a by 25: 0.0005 → L 0.7194; τ 6 → 2; μ_nn 0.496
+20261121 C hub lure      rank of a (b): struct 12 (7), sem 969 (209), comb 12 (2), comb@25 11 (2), comb+L@25 489 (11); hit a by 25: 0.0001 → L 0.0005; τ 6 → 2; μ_nn 0.496
+20261121 D cluster lure  rank of a (b): struct 21 (5), sem 336 (1072), comb 111 (18), comb@25 110 (18), comb+L@25 595 (617); hit a by 25: 0.0000 → L 0.0000; τ 2 → 21; μ_nn 0.496
+20261122 A semantic      rank of a (b): struct 7 (4), sem 115 (1183), comb 45 (9), comb@25 44 (9), comb+L@25 119 (20); hit a by 25: 0.0003 → L 0.0061; τ 6 → 4; μ_nn 0.498
+20261122 B bridge        rank of a (b): struct 12 (4), sem 629 (417), comb 2 (1), comb@25 2 (1), comb+L@25 2 (1); hit a by 25: 0.0170 → L 0.7225; τ 6 → 2; μ_nn 0.498
+20261122 C hub lure      rank of a (b): struct 15 (7), sem 759 (210), comb 2 (1), comb@25 2 (1), comb+L@25 2 (1); hit a by 25: 0.0000 → L 0.7131; τ 6 → 2; μ_nn 0.498
+20261122 D cluster lure  rank of a (b): struct 18 (5), sem 433 (823), comb 323 (12), comb@25 321 (12), comb+L@25 515 (201); hit a by 25: 0.0000 → L 0.0000; τ 2 → 21; μ_nn 0.498
+20261123 A semantic      rank of a (b): struct 5 (3), sem 127 (994), comb 7 (4), comb@25 7 (4), comb+L@25 126 (60); hit a by 25: 0.0000 → L 0.0016; τ 6 → 18; μ_nn 0.506
+20261123 B bridge        rank of a (b): struct 10 (4), sem 1127 (132), comb 64 (1), comb@25 63 (1), comb+L@25 967 (1); hit a by 25: 0.0000 → L 0.0000; τ 6 → 9; μ_nn 0.506
+20261123 C hub lure      rank of a (b): struct 14 (7), sem 1087 (304), comb 17 (1), comb@25 17 (1), comb+L@25 577 (1); hit a by 25: 0.0000 → L 0.0001; τ 6 → 2; μ_nn 0.506
+20261123 D cluster lure  rank of a (b): struct 17 (5), sem 342 (1092), comb 91 (17), comb@25 91 (17), comb+L@25 827 (250); hit a by 25: 0.0000 → L 0.0000; τ 2 → 20; μ_nn 0.506
+20261124 A semantic      rank of a (b): struct 9 (4), sem 109 (116), comb 3 (1), comb@25 3 (1), comb+L@25 2 (1); hit a by 25: 0.0002 → L 0.3489; τ 6 → 2; μ_nn 0.508
+20261124 B bridge        rank of a (b): struct 10 (4), sem 1126 (1068), comb 3 (1), comb@25 3 (1), comb+L@25 46 (1); hit a by 25: 0.0058 → L 0.0073; τ 6 → 2; μ_nn 0.508
+20261124 C hub lure      rank of a (b): struct 15 (7), sem 346 (112), comb 28 (1), comb@25 27 (1), comb+L@25 175 (1); hit a by 25: 0.0000 → L 0.0008; τ 6 → 2; μ_nn 0.508
+20261124 D cluster lure  rank of a (b): struct 18 (5), sem 617 (327), comb 121 (9), comb@25 120 (9), comb+L@25 863 (9); hit a by 25: 0.0000 → L 0.0000; τ 2 → 6; μ_nn 0.508
+== per case type: seeds where a ranks in the top 5 (the walk's read budget)
+  A: struct 1/4, sem 0/4, comb 1/4, comb@25 1/4, comb+L@25 1/4; L raises hit-by-25 on 4/4
+  B: struct 0/4, sem 0/4, comb 3/4, comb@25 3/4, comb+L@25 2/4; L raises hit-by-25 on 4/4
+  C: struct 0/4, sem 0/4, comb 1/4, comb@25 1/4, comb+L@25 1/4; L raises hit-by-25 on 4/4
+  D: struct 0/4, sem 0/4, comb 0/4, comb@25 0/4, comb+L@25 0/4; L raises hit-by-25 on 4/4

@@ -1,0 +1,16 @@
+51001 A semantic      hop 1: 4 doors (1 relational); chain door share Jev 0.273, theory 0.924; rank Jev 2, theory 1, cos 4, overlap 4
+51001 A semantic      hop 2: 7 doors (3 relational); chain door share Jev 0.228, theory 0.311; rank Jev 1, theory 2, cos 2, overlap 2; back share Jev 0.218, theory 0.369
+51001 B bridge        hop 1: 4 doors (1 relational); chain door share Jev 0.812, theory 0.933; rank Jev 1, theory 1, cos 1, overlap 2
+51001 B bridge        hop 2: 7 doors (6 relational); chain door share Jev 0.245, theory 0.170; rank Jev 1, theory 2, cos 2, overlap 3; back share Jev 0.138, theory 0.184
+51001 C hub lure      hop 1: 7 doors (3 relational); chain door share Jev 0.352, theory 0.327; rank Jev 1, theory 2, cos 3, overlap 2
+51001 C hub lure      hop 2: 7 doors (4 relational); chain door share Jev 0.584, theory 0.229; rank Jev 1, theory 3, cos 6, overlap 2; back share Jev 0.058, theory 0.289
+51001 D cluster lure  hop 1: 5 doors (4 relational); chain door share Jev 0.250, theory 0.257; rank Jev 1, theory 2, cos 2, overlap 1
+51001 D cluster lure  hop 2: 7 doors (4 relational); chain door share Jev 0.484, theory 0.239; rank Jev 1, theory 2, cos 2, overlap 7; back share Jev 0.076, theory 0.272
+median log(Jev share / theory share) at the chain door +0.022 [-0.311, +0.707] (n 8)
+chain door ranked first: Jev 7/8, theory 2/8, cos 1/8, word overlap 1/8
+hop 1: median log(Jev/theory) -0.085 [-1.219, +0.075]; chain door uniquely first: jev_uniq 3/4, type_lit_uniq 0/4, phrase_uniq 0/4, relsent_uniq 2/4, dict_rt_uniq 1/4, door_rel_uniq 2/4; theory first 2, cos first 1
+hop 2: median log(Jev/theory) +0.537 [-0.311, +0.937]; chain door uniquely first: jev_uniq 4/4, type_lit_uniq 0/4, phrase_uniq 0/4, relsent_uniq 0/4, dict_rt_uniq 2/4, door_rel_uniq 0/4; theory first 0, cos first 0; back share Jev 0.107 vs theory 0.280
+  A 51001: chain reach h(a) from Jev's shares 0.047, from the theory's 0.276
+  B 51001: chain reach h(a) from Jev's shares 0.157, from the theory's 0.131
+  C 51001: chain reach h(a) from Jev's shares 0.151, from the theory's 0.058
+  D 51001: chain reach h(a) from Jev's shares 0.088, from the theory's 0.047
