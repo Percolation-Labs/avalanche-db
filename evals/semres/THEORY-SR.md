@@ -182,8 +182,11 @@ probe.
 | Average PRF / Rocchio of key-phrase vectors (idf or 1/(df − 1), centre removed) | .32–.37 |
 | holder means (stored vectors of each key's other passages) | .28–.32 |
 | token-level MaxSim, key phrase against option tokens (james, priced only) | .41 |
-| Jev-taught diagonal warp; graph-taught warp (james, priced only) | .12 agreement; .40 |
 | lexical door, for reference | .58 |
+
+The warps are a separate note, because they weren't measured on the 300. james priced the Jev-taught and graph-taught
+diagonal warps on SR-J's 40, the easy block. Their agreement with Jev's pick was .12 and .40, against the text probe's
+.62 on the same block.
 
 **The reading.** The next-hop term is an *identity* term: does the option name what hop 1 resolved? bge-small's
 vector space keeps only a trace of that. Averaging turns identity into topic, and topic is what every option in the pool
