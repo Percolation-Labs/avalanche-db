@@ -89,4 +89,4 @@ SR1c's γ 3.7 and β 1.0 are SR-J's fit on MuSiQue's first 40 questions in file 
 is .62, against .42 over all 1,252. They're within-question contrasts, so they may carry over better than the block's
 top-1 rates do, but that's untested. On cards (γ 1.6, β 1.7, amendment 1) the block issue doesn't arise. SR1c's carry-over
 claim should be read as "at the conductance Jev showed on that block". A Jev refit on a random draw of questions would
-settle it; it would cost about $0.005 for 40 questions at SR-J's rate.
+settle it; its price would be probed before registering it.
