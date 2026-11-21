@@ -4,7 +4,8 @@
 Outputs: out/srjw3-{0,1}.{txt,json}.*
 
 **PASS.** At hop 1, Jev's chain door is uniquely first in **11 of 16**. The bar was ≥ 7, the best string reader. Hop 2
-holds at 13 of 16.
+holds at 13 of 16. The margin is modest: if Jev were the string reader (.44 per case), P(≥ 11 of 16) ≈ .04 (bill's
+check). So: above the best string reader, not a clean win.
 
 Uniquely first, of 16:
 
