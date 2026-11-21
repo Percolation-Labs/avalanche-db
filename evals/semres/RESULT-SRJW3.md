@@ -37,11 +37,11 @@ Uniquely first, of 16:
    - The read set still cuts the way back to a third of the theory's.
 4. **Today's conductance, as measured on Jev:**
 
-   exp(β·cos + γ_rel·[the door names the needed relation] + γ_type·[the door is of the asked type] − ∞·[already read])
+   exp(β·cos + γ_rel·[the door names the needed relation] + γ_type·[the door is of the asked type] + γ_read·[already read]) — γ_read ≈ −0.85 nats, not −∞ (RESULT-FITJEV)
 
    - β ≈ 1 and γ_rel ≈ 3.7 come from bill's SR-J and are confirmed at the entry here.
    - γ_type ≈ +0.4 nats over γ_rel is seen at hop 2 and not yet fitted.
-   - The read mask comes from the way-back share.
+   - The read term was first named from the way-back share. The fit (RESULT-FITJEV) puts it at −0.85 [−1.46, −0.29].
 
 ## Postmortem
 
