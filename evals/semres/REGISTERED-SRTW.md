@@ -18,8 +18,8 @@ The seeds are fresh: 61001–61004.
 
 **Relational null.** The null is the same walk with γ = 0.
 - Why that's the null: average each link's bonus over random relation labels. Every conductance then scales by the same
-  factor, which cancels in P. So the γ = 0 walk is the mean-field null over labels exactly, not an approximation chosen
-  here.
+  factor, which cancels in P. So the γ = 0 walk is the walk under the mean conductance: the mean-field null (see
+  amendment 1).
 - rel(v) = log h_γ(s→v) − log h_0(s→v).
 - relKL(v) = h_γ(v) · rel(v), v's term in KL(h_γ ‖ h_0).
 - Neither has a parameter.
@@ -68,3 +68,20 @@ Carrying this over to the decider would mean SR-J's fitted γ. The null is then 
 carry-over test would need the γ = 0 Jev prices, which we have from SR-J's fit. That's not part of this run.
 
 **Not in scope.** Coverage against collision across the three probes. MuSiQue. Any Jev call.
+
+## Amendment 1 (before scoring, from bill's review)
+
+1. **Mean-field, not exact.** γ = 0 is the walk under the mean conductance. h is nonlinear in the conductances, so this
+   isn't E_labels[h]. I'll check the gap without registering it: average h over random relabellings on one seed and
+   report it beside the result.
+2. **The labels theory is wrong at the cluster's boundary.**
+   - The bonus cancels only at a node whose doors are all lifted together.
+   - lure0's door to s is r1, so in clean D it's already lifted against lure0's mostly unlifted cluster doors, and the
+     walker tends to leave.
+   - Under labels, all of lure0's doors are lifted, so the exit share falls from roughly e^γ/(e^γ + ~5) toward 1/8.
+     Current stays in the cluster longer, h_γ(lure) rises, and h_0 is unchanged.
+   - So **rel(lure) should rise under labels.** The prediction "labels doesn't move ranks by more than 2" is withdrawn.
+     The new prediction is that lures gain under labels in every arm except deg's null.
+   - The primary bar is unchanged. It now needs a to stay above lures that gain from trapping, so it's harder than when
+     I wrote it.
+3. **relKL is negative wherever the relations route current away.** It's a ranking score, not a probability.
