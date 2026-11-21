@@ -1,0 +1,12 @@
+live: 36 requests, estimated $0.0038 (cap $0.05)
+spend this run $0.00430
+fit cos_q only, 760 options: β_q +3.79 [+2.20, +5.42], γ +3.24 [+2.79, +3.71] (vectors' β_B 8.7)
+fit cos_q + cos_r: β_q +3.24 [+1.51, +4.76], β_r +0.81 [-1.00, +2.81], γ +3.22 [+2.77, +3.69]
+  hop-2 rank, chance     : mean 10.0, top-1 0.00
+  hop-2 rank, coin       : mean 7.7, top-1 0.07
+  hop-2 rank, overlap    : mean 7.2, top-1 0.28
+  hop-2 rank, search cos : mean 5.8, top-1 0.40
+  hop-2 rank, cos read   : mean 5.8, top-1 0.17
+  hop-2 rank, cos q+read : mean 4.6, top-1 0.35
+  hop-2 rank, Jev        : mean 1.4, top-1 0.88
+  hop-2 rank, oracle     : mean 1.0, top-1 1.00
