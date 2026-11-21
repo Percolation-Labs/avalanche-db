@@ -1,7 +1,7 @@
 """Vector operations for probes (REM-1341, Sirsh 21 Nov 16:37Z): a small library, one contract per operation, tested
 across the semres scenarios (synthetic worlds, SR-J/SR-K option sets, SR-E pools). No operation has a free constant:
 anything a caller would tune is either an input measured elsewhere (and named at the call) or fitted by `fit_*`
-with leave-one-group-out selection, which is a rule, not a knob.
+with grouped cross-validated selection, which is a rule, not a knob.
 
 Conventions: vectors are rows of float arrays; every returned probe is unit length; `w` arguments are non-negative
 weights that the caller derives (e.g. idf), never hand-set.
@@ -16,8 +16,8 @@ weights that the caller derives (e.g. idf), never hand-set.
   warp(x, W)                  unit(x @ W): a learned linear map of probe space; W = I is no warp
   diag_scores(Q, V, w)        Σ_d w_d q_d v_d per row pair: a dimension-reweighted cosine (a diagonal warp)
   fit_diag(X, y, groups)      w for diag_scores by L2 logistic regression on q⊙v features; the L2 strength is chosen
-                              by leave-one-group-out log-loss over a fixed decade grid (the grid spans the data's
-                              scale; the choice is the data's)
+                              by grouped 5-fold log-loss over a decade grid (folds by question; the choice is the
+                              data's, the grid spans it)
 """
 import numpy as np
 
@@ -72,12 +72,14 @@ def fit_diag(X, y, groups):
     Returns (w, b, C, cv_logloss). Soft targets are fitted by duplicating each row as a weighted 1 and 0."""
     from sklearn.linear_model import LogisticRegression
     X = np.asarray(X, float); y = np.asarray(y, float); g = np.asarray(groups)
-    XX = np.vstack([X, X]); yy = np.r_[np.ones(len(y)), np.zeros(len(y))]; sw = np.r_[y, 1 - y]; gg = np.r_[g, g]
+    XX = np.vstack([X, X]); yy = np.r_[np.ones(len(y)), np.zeros(len(y))]; sw = np.r_[y, 1 - y]
+    from sklearn.model_selection import GroupKFold
+    folds = list(GroupKFold(n_splits=min(5, len(np.unique(g)))).split(X, y, g))
     best = None
     for C in 10.0 ** np.arange(-3, 4):
         ll = 0.0
-        for k in np.unique(g):
-            tr, te = gg != k, gg == k
+        for tr0, te0 in folds:
+            tr, te = np.r_[tr0, tr0 + len(y)], np.r_[te0, te0 + len(y)]
             m = LogisticRegression(C=C, max_iter=2000).fit(XX[tr], yy[tr], sample_weight=sw[tr])
             p = np.clip(m.predict_proba(XX[te])[:, 1], 1e-9, 1 - 1e-9)
             ll -= (sw[te] * (yy[te] * np.log(p) + (1 - yy[te]) * np.log(1 - p))).sum()
