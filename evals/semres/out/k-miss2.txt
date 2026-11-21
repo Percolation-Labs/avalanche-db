@@ -1,0 +1,6 @@
+n 300; questions whose read has a bridge key: 262
+qr      top-1 0.393  top-3 0.653  MRR 0.559
+sum     top-1 0.577  top-3 0.783  MRR 0.703
+max     top-1 0.550  top-3 0.793  MRR 0.690
+count   top-1 0.537  top-3 0.760  MRR 0.672
+bridge  top-1 0.713  top-3 0.873  MRR 0.807
