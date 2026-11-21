@@ -1,0 +1,8 @@
+SET=fresh: lex_gb top-1 0.700 top-3 0.897 MRR 0.805; hop 2 contains the answer string 0.890; and another option does too 0.313
+lex_title (title == bridge, then answer words, then qr) top-1 0.720; hop 2's title is the bridge 0.257
+twins n=94: a_gb top-1 0.574, lex_gb 0.287, lex_title 0.351; hop 2 titled by the bridge 0.234
+a_gb − lex_title +0.087 [+0.050, +0.127]
+SET=kb: lex_gb top-1 0.740 top-3 0.907 MRR 0.833; hop 2 contains the answer string 0.920; and another option does too 0.313
+lex_title (title == bridge, then answer words, then qr) top-1 0.770; hop 2's title is the bridge 0.263
+twins n=94: a_gb top-1 0.574, lex_gb 0.277, lex_title 0.372; hop 2 titled by the bridge 0.223
+a_gb − lex_title +0.063 [+0.027, +0.100]

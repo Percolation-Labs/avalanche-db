@@ -59,6 +59,14 @@ words present in each option, with ties broken by qr. It's labelled post-hoc and
   option contains it too: a twin. Word overlap can't order twins, and ColBERT's mean of max token similarity does better
   there. These numbers don't show the mechanism. One guess is the title position or the answer's own context tokens. That's
   untested.
+- **Title position is not the mechanism** (james's $0 check, after review; `out/srcb-lexgb.txt`). Hop 2's title *is*
+  the bridge in only 26% of the fresh 300, and in 23% of the twins. A lexical arm that puts a title match first, then
+  answer words, then qr (`lex_title`) reaches .720. ColBERT still beats it by **+.087 [+.050, +.127]**. On the seen 300
+  the margin is +.063 [+.027, +.100].
+- **On the 94 twin questions** (fresh set), ColBERT given the name ranks hop 2 first .574 of the time, against .287
+  for answer words and .351 for title-first. The seen set is the same to within .02. So the gain is in separating
+  twins, and it isn't the title. The rest of the passage's tokens around the name are the remaining guess, and
+  that's untested. **The storage question stays open:** no lexical second stage we've tried matches the token matcher.
 - James's lexical *key* ceiling (.713, K-MISS) is on SR-KB's 300, not these, so it isn't compared directly.
 
 ## What it means
