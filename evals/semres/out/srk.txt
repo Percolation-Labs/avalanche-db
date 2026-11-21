@@ -1,0 +1,14 @@
+-- Who is the spouse of the Green performer?
+   hop 2 = Miquette Giraudy; k-pick = Miquette Giraudy; shared new keys at hop 2: ['hillage', 'steve hillage']
+-- Who founded the company that distributed the film UHF?
+   hop 2 = Mike Medavoy; k-pick = Mike Medavoy; shared new keys at hop 2: ['orion', 'orion pictures']
+-- What administrative territorial entity is the owner of Ciudad Deportiva located?
+   hop 2 = Nuevo Laredo Municipality; k-pick = Nuevo Laredo Municipality; shared new keys at hop 2: ['laredo', 'nuevo', 'nuevo laredo']
+
+1. k-decider top-1 0.95 [0.88, 1.00]  (vectors best .62, e-decider .90, Jev .97)
+2. k_new recall 0.93, precision 0.39 over 96 marked options  (e: .90, .97)
+   k_any recall 0.97, precision 0.13 over 304 marked options
+3. k-pick = Jev's argmax in 0.93
+4. cos_q + hop2           cos_q +1.00 [+0.14, +1.77], hop2 +3.77 [+3.40, +4.15]
+4. cos_q + k_new          cos_q +0.71 [-0.31, +1.88], k_new +1.59 [+1.16, +2.24]
+4. cos_q + k_new + hop2   cos_q +0.81 [+0.04, +1.58], k_new +0.20 [+0.05, +0.36], hop2 +3.61 [+3.23, +3.99]

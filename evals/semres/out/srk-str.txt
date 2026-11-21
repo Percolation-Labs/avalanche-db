@@ -1,0 +1,5 @@
+2. logk recall 0.93, precision 0.39 over 96 marked options  (e: .90, .97)
+   k_any recall 0.97, precision 0.13 over 304 marked options
+3. k-pick = Jev's argmax in 0.93
+4. cos_q + logk           cos_q +0.86 [-0.04, +1.83], logk +3.51 [+3.07, +4.04]
+4. cos_q + logk + hop2    cos_q +0.87 [+0.04, +1.59], logk +0.87 [+0.26, +1.43], hop2 +3.03 [+2.45, +3.65]
