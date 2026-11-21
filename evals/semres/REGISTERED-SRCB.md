@@ -77,3 +77,12 @@ Per-question latency comes from the scored run.
 - Compare it with james's lexical gold ceiling (walking only through the bridge key) of .713 on SR-KB's 300
   (K-MISS, #69). Reported as `a_gb − a_qr`.
 - Prediction: a_gb about .65, below the lexical ceiling, and well above a_qr.
+
+## Amendment 2 (james's review, 21:28Z, wording only, before scoring)
+
+- **M_qr mixes modes.** The read passage is encoded as a document (the document marker, no query padding) and its tokens
+  are then used as query tokens beside the question's query-mode tokens. That's a fair choice, but it isn't how either
+  model was trained. A fail on `M_qr` therefore doesn't show that ColBERT can't do this.
+- **M_qr is mostly the read passage.** The read has about 10× the question's tokens, so `M_qr` is close to
+  MaxSim(read, v). By K-MISS, that's the "many weak matches" readout that loses to lures with summed keys. So
+  `a_qr ≤ qr` would be expected, not surprising. **`a_k` and `a_gb` are the informative arms.** The primary is unchanged.
