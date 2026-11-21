@@ -66,10 +66,15 @@ The side lead reverses on real data. In MuSiQue the read passage's direction car
 More useful: **adding vectors loses to encoding the joint text** (.40 against .62). The encoder's own composition beats
 arithmetic on its outputs.
 
+**Per block (bill's review).** Every number above is on SR-J's first 40, the easy block. Off the block, the text probe
+qr falls to .35 (SR-J-R's random 40) and .39 (SR-KB's random 300), and Jev's top-1 to .88. The order of the probes is
+what these looks rest on, and SR-KB's random draw agrees with it: the vector combinations of the question and keys
+(.32–.37) fall below qr (.39), and the lexical key (.58) is above. The block's .62 should not be quoted as qr's level.
+
 ## What this answers for REM-1341
 
 - **The cheapest strong probe is already a text probe.** Concatenating the question with what was read and embedding
-  that once needs no LLM and no generation. On this block it beats every vector operation I tried by .22 or more.
+  that once needs no LLM and no generation. On the block it beats every vector operation I tried by .22 or more; on SR-KB's random draw it beats the key-bundle vectors by .02–.07.
   Vector arithmetic on stored vectors is cheaper again (no encoder call), but it gives up a third of the hits.
 - **The gap to Jev is identity, not geometry.** Jev pays for "this option names what hop 1 resolved". SR-K gets most of
   that lexically, by key identity. A diagonal warp or a pivot can't recover it from dense vectors. bill's SR-KB tests
