@@ -29,7 +29,7 @@ from pylate import models
 bge = SentenceTransformer("BAAI/bge-small-en-v1.5", device="cpu"); QP = "Represent this sentence for searching relevant passages: "
 CB = {"a": models.ColBERT("answerdotai/answerai-colbert-small-v1", device="cpu"),
       "x": models.ColBERT("mixedbread-ai/mxbai-edge-colbert-v0-17m", device="cpu")}
-ARMS = ["qr", "k"] + [f"{M}_{a}" for M in CB for a in ("q", "qr", "k")]
+ARMS = ["qr", "k"] + [f"{M}_{a}" for M in CB for a in ("q", "qr", "k", "gb")]
 maxsim = lambda T, D: (T @ D.T).max(1)
 out, secs = [], {M: 0.0 for M in CB}
 for n_, qi in enumerate(pool):
@@ -44,11 +44,12 @@ for n_, qi in enumerate(pool):
     for M, m in CB.items():
         t = time.time()
         Q = np.asarray(m.encode([r["question"]], is_query=True)[0])
-        D = [np.asarray(x) for x in m.encode([T[i] for i in opts] + [T[h1]] + R, is_query=False)]
-        Dv, Dr, K = D[:len(opts)], D[len(opts)], D[len(opts) + 1:]
+        D = [np.asarray(x) for x in m.encode([T[i] for i in opts] + [T[h1], d[0]["answer"]] + R, is_query=False)]
+        Dv, Dr, Db, K = D[:len(opts)], D[len(opts)], D[len(opts) + 1], D[len(opts) + 2:]
         QR = np.vstack([Q, Dr])
         sc[f"{M}_q"] = np.array([maxsim(Q, v).sum() for v in Dv])
         sc[f"{M}_qr"] = np.array([maxsim(QR, v).sum() for v in Dv])
+        sc[f"{M}_gb"] = np.array([maxsim(Db, v).mean() for v in Dv])   # amendment 1: GOLD CEILING, the hop-1 answer's tokens
         sc[f"{M}_k"] = np.array([sum(wk * maxsim(Kk, v).mean() for wk, Kk in zip(w, K)) for v in Dv]) if R else sc[f"{M}_q"]
         secs[M] += time.time() - t
     if n_ == 0:
@@ -63,7 +64,7 @@ print(f"\nSET={SET}: {nq} questions; per-question encode+score seconds (20 passa
       + ", ".join(f"{M} {secs[M] / nq:.3f}" for M in CB))
 rng = np.random.default_rng(0)
 for a in ARMS: print(f"{a:5s} top-1 {np.mean([o[a] == 1 for o in out]):.3f}  top-3 {np.mean([o[a] <= 3 for o in out]):.3f}  MRR {np.mean([1 / o[a] for o in out]):.3f}")
-for a, b in (("a_qr", "qr"), ("a_k", "k"), ("a_qr", "k"), ("a_k", "qr"), ("x_qr", "qr"), ("x_k", "k"), ("a_q", "a_qr")):
+for a, b in (("a_qr", "qr"), ("a_k", "k"), ("a_qr", "k"), ("a_k", "qr"), ("x_qr", "qr"), ("x_k", "k"), ("a_q", "a_qr"), ("a_gb", "a_qr")):
     dd = np.array([(o[a] == 1) - (o[b] == 1) for o in out], float); bt = [dd[rng.integers(0, nq, nq)].mean() for _ in range(4000)]
     print(f"top-1 {a} − {b}: {dd.mean():+.3f} [{np.percentile(bt, 2.5):+.3f}, {np.percentile(bt, 97.5):+.3f}]")
 json.dump(out, open(f"out/srcb-{SET}.json", "w"))

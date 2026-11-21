@@ -66,3 +66,14 @@ graph passages against bge-small's, tokens per passage, and fp16 index size agai
 Per-question latency comes from the scored run.
 
 **Scope.** Given the entry. In-pool, 19 options. MuSiQue 2-hop only. Two small CPU models, not ColBERTv2 or larger.
+
+## Amendment 1 (james's suggestion, 21:26Z, before scoring)
+
+- **A gold-ceiling arm, labelled as such.** `M_gb` = mean over the hop-1 answer's tokens of the max over v of cos.
+  The answer comes from MuSiQue's decomposition, so this is the bridge entity, and it is **not a decider**: it uses gold.
+- It asks whether ColBERT finds hop 2 when handed the right identity. If `a_gb` is high and `a_qr` low, the model can
+  match the name but can't pick it out of the read passage. If `a_gb` is low too, the token space doesn't carry the name
+  either.
+- Compare it with james's lexical gold ceiling (walking only through the bridge key) of .713 on SR-KB's 300
+  (K-MISS, #69). Reported as `a_gb − a_qr`.
+- Prediction: a_gb about .65, below the lexical ceiling, and well above a_qr.

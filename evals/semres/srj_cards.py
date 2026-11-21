@@ -1,6 +1,7 @@
 """SR-J amendment 3 (REGISTERED-SRJ.md): the same Jev fit on our cards. Read = the card's text, options = its gold commits
 (up to 3) + the commits most like the question that aren't gold (to 19), cos by bge-small. $0 look with --look.
-    srj_cards.py DT_CARDS FIXTURE_DOCS N MAX_USD [--look]"""
+    srj_cards.py DT_CARDS FIXTURE_DOCS N MAX_USD [--look] [--rest]
+--rest (SR-J-C2): skip the first 40 qualifying cards (SR-J amendment 3's) and take the next N."""
 import asyncio, json, sys, hashlib
 from pathlib import Path
 import numpy as np
@@ -13,7 +14,7 @@ QP = "Represent this sentence for searching relevant passages: "
 
 
 def main():
-    dt, fx, N, max_usd = sys.argv[1], sys.argv[2], int(sys.argv[3]), float(sys.argv[4]); look = "--look" in sys.argv
+    dt, fx, N, max_usd = sys.argv[1], sys.argv[2], int(sys.argv[3]), float(sys.argv[4]); look = "--look" in sys.argv; rest = "--rest" in sys.argv
     docs = {}
     for l in open(fx):
         r = json.loads(l); docs[r["uri"]] = (r["title"] + ". " + (r["said"] or ""))[:1500]
@@ -37,7 +38,11 @@ def main():
         opts = sorted(gold + dis); idx = {u: i for i, u in enumerate(commits)}
         cases.append(dict(id=r["qid"], q=r["question"], read=docs[card], opts=opts, texts=[docs[u] for u in opts],
                           cos=[float(cq[idx[u]]) for u in opts], cos_r=[float(EC[idx[u]] @ er) for u in opts], g=[int(u in gs) for u in opts]))
-        if len(cases) == (200 if look else N): break
+    if look and rest:
+        for name, cs in (("first 40", cases[:40]), ("rest", cases[40:])):
+            t = lambda k: np.mean([c["g"][int(np.argmax(c[k]))] for c in cs])
+            print(f"{name}: {len(cs)} cards, gold per card {np.mean([sum(c['g']) for c in cs]):.2f}, top-1 gold: search cos {t('cos'):.2f}, cos read {t('cos_r'):.2f}")
+    cases = cases[40:40 + N] if rest else cases[:200 if look else N]
     X = np.array([x for c in cases for x in c["cos"]]); XR = np.array([x for c in cases for x in c["cos_r"]]); Gd = np.array([x for c in cases for x in c["g"]])
     from sklearn.linear_model import LogisticRegression
     bq = LogisticRegression(C=1e6).fit(X[:, None], Gd).coef_[0][0]; br = LogisticRegression(C=1e6).fit(XR[:, None], Gd).coef_[0][0]
@@ -78,7 +83,7 @@ def main():
         lo, hi = np.percentile(B, [2.5, 97.5], 0)
         print(f"{name:22s} " + ", ".join(f"{k} {f[i]:+.2f} [{lo[i]:+.2f}, {hi[i]:+.2f}]" for i, k in enumerate(name.split(" + "))))
     print("top-1 is gold: " + ", ".join(f"{k} {np.mean(v):.2f}" for k, v in top.items()))
-    json.dump(dict(usd=usd, cases=[{k: v for k, v in c.items() if k != "texts"} | {"p": cache[key(c)]} for c in cases]), open(f"out/srj-cards-n{N}.json", "w"), indent=1)
+    json.dump(dict(usd=usd, cases=[{k: v for k, v in c.items() if k != "texts"} | {"p": cache[key(c)]} for c in cases]), open(f"out/srj-cards-{'rest-' if rest else ''}n{N}.json", "w"), indent=1)
 
 
 if __name__ == "__main__":
