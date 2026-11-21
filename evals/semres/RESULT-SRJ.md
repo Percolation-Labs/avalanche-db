@@ -75,3 +75,37 @@ spend: stage 0 $0.00045 and stage 1 $0.00395, so **$0.0044 in total today**. No 
    construction or Jev.
 3. **For james's (a):** the carry-over prediction should use Jev's (β ≈ 1, γ ≈ 3.7), not the vectors' β. Then Jev's hit
    rate along a chain is predicted by exp(−Σ (crossing cost − 3.7·[true link])) per step.
+
+## Amendment 2 result: the bridge entity carries Jev's choice as a decider, but the fit can't split the two terms ($0)
+
+The feature is e(v): v names the hop-1 answer. Output: `out/srj-entity.txt`.
+
+| fit (760 options) | cos_q | e (bridge entity in v) | γ, hop 2 |
+|---|---|---|---|
+| cos_q + hop 2 (stage 1) | +1.00 | — | +3.77 [+3.39, +4.16] |
+| cos_q + e | +.96 | **+3.80 [+3.41, +4.20]** | — |
+| cos_q + e + hop 2 | +.93 | +1.19 [+.73, +1.59] | +2.70 [+2.40, +3.00] |
+
+- e finds hop 2 with recall .90 and precision .97 (36 of 37 e = 1 options are hop 2).
+- An e-decider, with ties broken by cos(question + read), takes hop 2 first in **.90** of questions. Jev scores .97, and the
+  best vector decider .62.
+
+**The registered bar fails by the letter.** γ falls from 3.77 to 2.70, which is 28%, not half, though δ is above 0.
+
+**But the bar was badly posed, and I should have seen it before registering.** e and hop 2 coincide on 90% of hop-2
+options and 97% of e options. With collinear regressors, the split between δ and γ is set by the handful of options
+where they disagree, so "γ halves" was never a stable test. The precision and recall were computable at $0 before the
+fit.
+
+**What the data does say:**
+- e alone carries as much of Jev's log-odds as the oracle label does: 3.80 against 3.77 nats.
+- The e-decider recovers 90 of Jev's 97 points of top-1.
+
+So, as a decider, "v names what `read` resolved" reproduces most of what Jev knows beyond cosine. As a theory term, that's
+an entity-level edge conductance of about 3.8 nats, which text can compute through NER or the walk's own key doors. It
+needs the bridge entity *read off `read`*, not taken from the decomposition. That is the next $0 step: use the keys `read`
+shares with v (the L1 graph's doors) in place of e.
+
+**Postmortem addition.** A collinearity check (e's precision and recall against hop 2) belongs before any registered
+bar that splits two regressors. That's the same lesson as this morning's, in a new place: look at the numbers the bar
+depends on before writing the bar.
