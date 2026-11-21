@@ -22,7 +22,7 @@ held = set(np.random.default_rng(20261121).permutation(np.arange(40, len(qs)))[:
 pool = [i for i in np.random.default_rng(1341).permutation(np.arange(40, len(qs))) if i not in held][:N]
 from sentence_transformers import SentenceTransformer
 m = SentenceTransformer("BAAI/bge-small-en-v1.5", device="cpu"); QP = "Represent this sentence for searching relevant passages: "
-ARMS = ("q", "qr", "k", "kb", "rq", "rq_out"); out = []; nokeys = 0
+ARMS = ("q", "qr", "k", "kb", "rq", "rq_out", "kb_s", "rq_s"); out = []; nokeys = 0
 for n_, qi in enumerate(pool):
     r = qs[qi]; d = r["question_decomposition"]; h1, h2 = d[0]["paragraph_support_idx"], d[1]["paragraph_support_idx"]
     P = {p["idx"]: p for p in r["paragraphs"]}; T = {i: P[i]["title"] + ". " + P[i]["paragraph_text"] for i in P}
@@ -36,8 +36,9 @@ for n_, qi in enumerate(pool):
         K = m.encode(R, normalize_embeddings=True); w = vo.idf([df[k] for k in R], NG)
         kb = vo.combine(K, w); rq = vo.rocchio(eq, K, w); cen = vo.centre(np.vstack([O, er[None]]))
         sc.update(kb=O @ kb, rq=O @ rq, rq_out=O @ vo.pivot_out(rq, cen))
+        ws = np.array([1 / (df[k] - 1) for k in R]); sc.update(kb_s=O @ vo.combine(K, ws), rq_s=O @ vo.rocchio(eq, K, ws))   # amendment 1
     else:
-        nokeys += 1; sc.update(kb=sc["q"], rq=sc["q"], rq_out=sc["q"])   # no bundle: fall back to the question
+        nokeys += 1; sc.update(kb=sc["q"], rq=sc["q"], rq_out=sc["q"], kb_s=sc["q"], rq_s=sc["q"])   # no bundle: fall back to the question
     if n_ == 0:
         print(f"-- {r['question']}\n   read: {P[h1]['title']}; bundle: {R[:8]}")
         for a in ("qr", "kb", "rq"): print(f"   {a:3s} top 3: {[P[opts[j]]['title'] for j in np.argsort(-sc[a])[:3]]}")
@@ -50,7 +51,7 @@ print(f"\n{len(out)} questions; empty bundle (fallback to q) {nokeys}; bundle si
 if SCORE:
     rng = np.random.default_rng(0); nq = len(out)
     for a in ARMS: print(f"{a:7s} top-1 {np.mean([o[a] == 1 for o in out]):.3f}  top-3 {np.mean([o[a] <= 3 for o in out]):.3f}  MRR {np.mean([1 / o[a] for o in out]):.3f}")
-    for a, b in (("rq", "qr"), ("kb", "qr"), ("rq", "k"), ("rq_out", "rq")):
+    for a, b in (("rq", "qr"), ("kb", "qr"), ("rq", "k"), ("rq_out", "rq"), ("rq_s", "qr"), ("rq_s", "rq"), ("rq_s", "k")):
         dd = np.array([(o[a] == 1) - (o[b] == 1) for o in out], float); bt = [dd[rng.integers(0, nq, nq)].mean() for _ in range(4000)]
         print(f"top-1 {a} − {b}: {dd.mean():+.3f} [{np.percentile(bt, 2.5):+.3f}, {np.percentile(bt, 97.5):+.3f}]")
     json.dump(out, open("out/srkb.json", "w"))

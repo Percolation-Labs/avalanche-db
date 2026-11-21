@@ -47,3 +47,14 @@ None has a free parameter.
 - rq_out ≥ rq.
 
 **Scope.** Given the entry. In-pool, with 19 options. MuSiQue 2-hop only.
+
+## Amendment 1 (james's review, before scoring)
+
+- **Rarity weight.** idf over door keys spans less than 2× (log(21,100/df) for df 2–100 runs 5.35–9.26), so the idf arms
+  barely weight. The secondary arms `kb_s` = combine(K, 1/(df − 1)) and `rq_s` = rocchio(q, K, 1/(df − 1)) use SR-K's
+  own weight, which spans 99× and has no parameter. They report `rq_s − qr`, `rq_s − rq` and `rq_s − k`. The primary is
+  unchanged. Prediction: rq_s > rq.
+- **Encoding.** The key phrases are encoded as passages (no query prefix) and then mixed with the query-prefixed q. This
+  is stated, not changed.
+- **Not in this run:** james's other reading of "vectors behind keys", the mean of the stored vectors of each key's
+  holders. That needs the 21,100 passage embeddings cached, so it's a follow-up.
