@@ -29,7 +29,7 @@ hid = lambda p: "mq:" + hashlib.sha256((p["title"] + "\n" + p["paragraph_text"])
 qs = [r for r in map(json.loads, open(src)) if r["id"].startswith("2hop") and r["answerable"]]
 held = set(np.random.default_rng(20261121).permutation(np.arange(40, len(qs)))[:40].tolist())
 perm = [i for i in np.random.default_rng(1341).permutation(np.arange(40, len(qs))) if i not in held]
-pool = {"stage0": perm[600:604], "bw": perm[904:]}[SET]
+pool = {"stage0": perm[600:604], "stage0t": perm[604:900], "bw": perm[904:]}[SET]   # stage0t: amendment 2, see below
 from sentence_transformers import SentenceTransformer
 m = SentenceTransformer("BAAI/bge-small-en-v1.5", device="cpu"); QP = "Represent this sentence for searching relevant passages: "
 wd = lambda s: set(re.findall(r"[a-z0-9]+", s.lower())); W = lambda k: 1 / (df[k] - 1)
@@ -65,6 +65,11 @@ def wave(reqs, label):
             p = [res[f"p{j}"].p for j in range(len(x[2]))]; cache[key(*x)] = p
             f.write(json.dumps({"k": key(*x), "p": p}) + "\n"); usd += res.input_tokens * PRICE_IN
 
+if SET == "stage0t":   # amendment 2: the first 4 SR-BN questions (seen, all wave-1 requests cached) whose named set has 2+ members
+    for c in cases:
+        if not c["R"] or key(c, "name", c["R"]) not in cache: continue
+        K = c["R"][int(np.argmax(cache[key(c, "name", c["R"])]))]; c["n_S"] = sum(K in x for x in c["sh"])
+    cases = [c for c in cases if c.get("n_S", 0) > 1][:4]
 wave([(c, "name", c["R"]) for c in cases if c["R"]] + [(c, "pass", c["texts"]) for c in cases], "wave 1")
 for c in cases:
     c["pj"] = cache[key(c, "pass", c["texts"])]
@@ -94,7 +99,7 @@ n = len(cases); print(f"SET={SET}: n {n}; Jev names a bridge key {np.mean([o['na
                       f"|S| = 0 / 1 / >1: {sum(o['S'] == 0 for o in out)} / {sum(o['S'] == 1 for o in out)} / {sum(o['S'] > 1 for o in out)}")
 print(f"wave-2 passages per question {read2 / n:.2f} (against 19 in jev_pass)")
 for a in A: v = np.array(res[a]); print(f"{a:9s} top-1 {np.mean(v == 1):.3f}")
-if SET == "stage0":
+if SET.startswith("stage0"):
     for c, o in zip(cases, out): print(f"-- {c['q']}\n   K {o['K']!r}; |S| {o['S']}; nt {o['nt']}, jev_pass {o['jev_pass']}")
     sys.exit()
 rng = np.random.default_rng(0)

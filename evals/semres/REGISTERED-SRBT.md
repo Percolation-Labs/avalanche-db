@@ -66,3 +66,9 @@ no wording search. The pricing set (SR-BN's 300) is not reused for the claim.
 - `nt` and `jev` pick the same option when |S| ≤ 1. With one sharer it's that option; with none, both fall to k's order.
   So `nt − jev` is carried entirely by the |S| > 1 questions.
 - `nt − jev` and `nt − jev_pass` are also reported **within |S| > 1**, with n. The primary is unchanged.
+
+## Amendment 2 (after stage 0, before the wave; procedure only)
+
+- Stage 0 (600–603) had no question with |S| > 1. So wave 2, the twin request, never ran: its code path was untested.
+- **stage0t** adds a smoke test: the first 4 questions in SR-BN's set (604–899, seen) whose Jev-named set has 2+ members.
+  Their wave-1 requests are cached, so only the twin requests go out live. No arm, bar or draw changes.
