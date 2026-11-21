@@ -63,9 +63,11 @@ the named twins. This tests whether a Jev request over only those twins buys it,
   time.
 - **That |S| = 0 signal is free and visible before any passage request.** No option shares the name. The next registered
   step is the obvious one: when |S| = 0, send Jev's full passage request. On these numbers that would reach about
-  .86 (.769 plus about 25/268), with Jev reading about 0.18 × 19 + 0.89 ≈ 4.3 passages per question instead of 19.
-  That's post-hoc arithmetic on this set, so it needs a fresh draw. Dev 2-hop is used up, so it needs 3-hop questions
-  or another split.
+  .86 (.769 plus about 25/268), with Jev reading about 0.18 × 19 + 0.89 ≈ 4.3 passages per question instead of 19, plus the naming request (about
+  8% of a passage request, about 1.5 passages' worth).
+  That's post-hoc arithmetic on this set, so it needs a fresh draw. Dev 2-hop is used up for our graph, but MuSiQue
+  *train* 2-hop has the same construction. A door-key graph over its pools is a $0 build (the dream-d1 graph is
+  dev-only) and would give the fresh draw (bill's note).
 - bill's SR-BW shows the same shape in a full walk (nameset − name +.049 on both hops).
 
 ## Postmortem
