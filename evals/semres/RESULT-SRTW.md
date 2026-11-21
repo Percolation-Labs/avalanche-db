@@ -99,3 +99,31 @@ where separation from a twin would have to come from. The relations can't supply
   separation come from" question directly.
 
 Both are $0.
+
+## Follow-up (b), priced and not run
+
+This was bill's preferred next step: does the question's type term separate a from the twins? I priced it first, on
+SR1c's already-seen D worlds (41001–41004), not on fresh seeds.
+
+| seed | h(a) | max h(lure) | gap | P(b→a) |
+|---|---|---|---|---|
+| 41001 | .116 | .692 | ×6.0 | .43 |
+| 41002 | .084 | .646 | ×7.7 | .27 |
+| 41003 | .187 | .682 | ×3.7 | .46 |
+| 41004 | .164 | .688 | ×4.2 | .40 |
+
+FITJEV's type term is γ_type = 1.09 nats (doors hide links) or .70 (doors show them).
+- **In the walk:** b has 5 doors, and one of them (a) is of the asked type. So the term lifts P(b→a) to at most about
+  .69, which multiplies h(a) by about 1.6–2.1.
+- **In the score:** it adds at most e^1.09 ≈ ×3 against untyped lures, and ×1 against lures of the asked type.
+- **Both together:** about ×5, which is still below the gap on 2 of 4 worlds. It also counts the same measured term twice.
+
+So (b) fails by arithmetic, and isn't registered.
+
+**Why the trap wins on reach.** The cluster sits one named-relation door from s, the same distance as b, and it then
+holds the walker (h(lure) ≈ .65–.69 ≈ h of a one-hop node). The answer is two hops away. No per-door term of Jev's
+measured size makes a two-hop hit probability beat a one-hop one that saturates.
+
+A reach-based measure can separate them only by using the question's *order*: r1, then r2, then the asked type. That's
+the per-step choice a decider makes when it's shown the paths. It isn't a property of a reach number. This is where the
+remaining SR-TW question lives.
