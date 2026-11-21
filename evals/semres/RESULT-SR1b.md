@@ -47,3 +47,14 @@ b), which the world knows exactly.
   - **Prediction:** a reaches the top 5 in B and C in at least 3 of 4 seeds.
   - **Second prediction:** the chain formula then prices the walk. Reach ≈ (1−α)²·share·share·Q, with each share set by
     the 3.7 nats against the hop's competitors.
+
+## Correction check: the calibration block (21 Nov, after RESULT-SRK's correction)
+
+SR1b's β (8.7) and hop gap (.146) came from MuSiQue dev questions 1–200 in file order, and that block contains the easy
+first 40. bill reran the measure on questions 201–1252 (`out/srj-look-blocks.txt`): β 9.3, gap .688 − .584 = .104.
+`sr1b_blocks.py` (unregistered sensitivity, $0) re-bisects ATYPE to the narrower gap (.9573 against .8605) on calib's
+discarded seeds and reruns SR1b unchanged on its own seeds, with output in `out/sr1b-blocks.txt`.
+
+**The FAIL holds: 0 of 16 world-cases put a in the top 5, as before.** Median crossings fall by about 0.1–0.2 nats (B
+1.34 → 1.17, C 1.75 → 1.55), so the answer is a little cheaper to reach. That isn't enough to move a single rank into
+the top 5. Similarity-priced conductance fails on MuSiQue at large, not only on its first block.
