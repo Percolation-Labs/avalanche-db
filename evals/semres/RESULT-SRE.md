@@ -81,8 +81,9 @@ door shrank from +.155 to +.060 on fresh questions. Part of SR-E's .620 was the 
 the winner's curse the confirmation existed to catch. The entry rate is lower on these questions for every arm (.68
 against .78). cosdoor's ceiling is its entry rate times the door's recall given the entry (≈ .68 × .93 ≈ .63 if SR-K's
 recall held). Counted exactly: when the cosine entry is hop 1 (339 questions), its door link is hop 2 in .67, against SR-K's .93.
-In 18 more questions, cosine's top passage was hop 2 and its link was hop 1. That gap is unexamined. SR-K's 40 questions
-may have been easier. Or SR-K's options excluded hop 1 itself, while here the link is chosen from all 19 others.
+In 18 more questions, cosine's top passage was hop 2 and its link was hop 1. The gap is the question block, not the code. On SR-K's 40 questions the same code gives .97. On all 1,252 questions it
+gives .66. MuSiQue's first 40 questions in file order are an easy block (see RESULT-SRK's correction). Over all 1,252
+questions (`out/sre-blocks.txt`), `both` is cos .23, door .45, cosdoor .50.
 
 **Postmortem for SR-E2.** Registering the confirmation was worth it: the claim survives, at a little over a third of the
 size the exploratory run showed. The prediction was anchored on the exploratory number. Next time, predict a shrink
