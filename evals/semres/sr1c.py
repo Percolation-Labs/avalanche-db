@@ -15,10 +15,12 @@ import numpy as np
 import gen, net
 from sr1 import rank, ALPHA, ITERS
 
-BETA, ATYPE, NOISE = 1.0, 0.8605, 1.0  # β is Jev's
+BETA, ATYPE, NOISE = 1.0, 0.8605, 1.0  # β is Jev's (MuSiQue); argv[2] overrides with another corpus's measured β
 SEEDS = (41001, 41002, 41003, 41004)
 import sys
 GAMMA = float(sys.argv[1]) if len(sys.argv) > 1 else 3.7  # Jev's γ; 3.3 and 4.1 are its interval ends (sensitivity, not a fit)
+if len(sys.argv) > 2: BETA = float(sys.argv[2])
+TAG = f"{GAMMA}" + (f"-b{BETA}" if len(sys.argv) > 2 else "")
 
 
 def main():
@@ -30,7 +32,7 @@ def main():
     vs = sorted(set([c0["b"], c0["a"]] + list(np.argsort(-h0)[1:11])))
     z = max(abs(mc[v] - h0[v]) / max(np.sqrt(h0[v] * (1 - h0[v]) / N), 1e-12) for v in vs)
     say(f"GATE: max |MC − exact| {z:.2f} s.d. over {len(vs)} passages")
-    if z > 3: say("GATE FAILED"); open(f"out/sr1c-{GAMMA}.txt", "w").write("\n".join(lines) + "\n"); return
+    if z > 3: say("GATE FAILED"); open(f"out/sr1c-{TAG}.txt", "w").write("\n".join(lines) + "\n"); return
     res = []
     for sd in SEEDS:
         w = gen.world(sd, NOISE, ATYPE); n = len(w["V"])
@@ -55,7 +57,7 @@ def main():
         rs = [r for r in res if r["case"].startswith(ct)]
         say(f"  {ct}: " + ", ".join(f"{k_} {sum(r[k_][0] <= 5 for r in rs)}/4" for k_ in ("struct", "sem", "comb", "comb@25", "comb+L@25"))
             + f"; median crossing {np.median([r['cross'] for r in rs]):.2f} nats")
-    open(f"out/sr1c-{GAMMA}.txt", "w").write("\n".join(lines) + "\n"); json.dump(res, open(f"out/sr1c-{GAMMA}.json", "w"), indent=1)
+    open(f"out/sr1c-{TAG}.txt", "w").write("\n".join(lines) + "\n"); json.dump(res, open(f"out/sr1c-{TAG}.json", "w"), indent=1)
 
 
 if __name__ == "__main__":

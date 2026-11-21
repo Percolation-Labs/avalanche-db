@@ -23,3 +23,15 @@ interval ends) are reported as sensitivity and are not part of the bar.
 - **The chain formula now prices the walk better than in SR1b:** median exact/formula ≤ 1.5 on B.
 - **The carry-over claim, if B and C pass:** the theory's walk, priced by Jev's measured conductance, reaches the answer
   that similarity can't. That is the vector stage carried over to what the decision model does.
+
+## Amendment 1 (before running): cards' measured conductance
+
+bill measured Jev on 40 cards (RESULT-SRJ amendment 3): β = 1.7 per cos unit on the option, and γ = 1.6 [1.4, 1.8]
+nats relational. I run the same SR1c worlds with (γ 1.6, β 1.7). Nothing else changes.
+
+**Prediction.**
+- The weaker relational term loses to the other matching doors. The chain's share is about e^1.6/(e^1.6 + 8) ≈ .38
+  against .84 at γ = 3.7.
+- B falls below the bar: at most 2 of 4 seeds in the top 5.
+- Reach at a drops by about half or more.
+- That's a prediction of a weaker Jev walk on cards, which bill can check against the cards walks we already have.
