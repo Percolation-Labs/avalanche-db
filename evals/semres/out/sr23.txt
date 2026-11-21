@@ -1,0 +1,37 @@
+20261121 A semantic      landings {'x': False, 's+r1': True, 'r2': False, 'r2+type': False}; a hit by 25: x 0.0000, probes 0.0000 | +L: x 0.0001, probes 0.0000; per probe {'x': 0.0, 's+r1': 0.0, 'r2': 0.0, 'r2+type': 0.0}
+                          rank a: OR 689, collision 146, over null 202; P(all gold) OR 0.0000, collide(≥2) -0.000000
+20261121 B bridge        landings {'x': True, 's+r1': True, 'r2': False, 'r2+type': False}; a hit by 25: x 0.0005, probes 0.0000 | +L: x 0.7194, probes 0.0000; per probe {'x': 0.0005, 's+r1': 0.0, 'r2': 0.0, 'r2+type': 0.0}
+                          rank a: OR 630, collision 5, over null 14; P(all gold) OR 0.0000, collide(≥2) -0.000000
+20261121 C hub lure      landings {'x': False, 's+r1': True, 'r2': False, 'r2+type': False}; a hit by 25: x 0.0000, probes 0.0001 | +L: x 0.0000, probes 0.0002; per probe {'x': 0.0, 's+r1': 0.0, 'r2': 0.0003, 'r2+type': 0.0}
+                          rank a: OR 57, collision 179, over null 432; P(all gold) OR 0.0000, collide(≥2) -0.000000
+20261121 D cluster lure  landings {'x': False, 's+r1': False, 'r2': False, 'r2+type': False}; a hit by 25: x 0.0000, probes 0.0000 | +L: x 0.0000, probes 0.0000; per probe {'x': 0.0, 's+r1': 0.0, 'r2': 0.0, 'r2+type': 0.0}
+                          rank a: OR 32, collision 41, over null 32; P(all gold) OR 0.0000, collide(≥2) 0.000000; lure visits 5.569 → +L 5.569
+20261122 A semantic      landings {'x': True, 's+r1': True, 'r2': False, 'r2+type': False}; a hit by 25: x 0.0003, probes 0.0000 | +L: x 0.0061, probes 0.0005; per probe {'x': 0.0003, 's+r1': 0.0, 'r2': 0.0, 'r2+type': 0.0}
+                          rank a: OR 208, collision 120, over null 102; P(all gold) OR 0.0000, collide(≥2) 0.000000
+20261122 B bridge        landings {'x': True, 's+r1': True, 'r2': False, 'r2+type': False}; a hit by 25: x 0.0170, probes 0.0000 | +L: x 0.7225, probes 0.0000; per probe {'x': 0.017, 's+r1': 0.0, 'r2': 0.0, 'r2+type': 0.0}
+                          rank a: OR 842, collision 449, over null 400; P(all gold) OR 0.0000, collide(≥2) -0.000000
+20261122 C hub lure      landings {'x': True, 's+r1': True, 'r2': False, 'r2+type': False}; a hit by 25: x 0.0000, probes 0.0000 | +L: x 0.7131, probes 0.0000; per probe {'x': 0.0, 's+r1': 0.0, 'r2': 0.0, 'r2+type': 0.0}
+                          rank a: OR 180, collision 92, over null 164; P(all gold) OR 0.0000, collide(≥2) -0.000000
+20261122 D cluster lure  landings {'x': False, 's+r1': False, 'r2': False, 'r2+type': False}; a hit by 25: x 0.0000, probes 0.0000 | +L: x 0.0000, probes 0.0012; per probe {'x': 0.0, 's+r1': 0.0, 'r2': 0.0, 'r2+type': 0.0}
+                          rank a: OR 100, collision 116, over null 58; P(all gold) OR 0.0000, collide(≥2) -0.000000; lure visits 5.569 → +L 5.552
+20261123 A semantic      landings {'x': True, 's+r1': True, 'r2': False, 'r2+type': False}; a hit by 25: x 0.0000, probes 0.0000 | +L: x 0.0016, probes 0.0722; per probe {'x': 0.0, 's+r1': 0.0, 'r2': 0.0, 'r2+type': 0.0}
+                          rank a: OR 111, collision 75, over null 115; P(all gold) OR 0.0000, collide(≥2) -0.000000
+20261123 B bridge        landings {'x': False, 's+r1': True, 'r2': False, 'r2+type': False}; a hit by 25: x 0.0000, probes 0.0000 | +L: x 0.0000, probes 0.0000; per probe {'x': 0.0, 's+r1': 0.0, 'r2': 0.0, 'r2+type': 0.0}
+                          rank a: OR 39, collision 52, over null 156; P(all gold) OR 0.0000, collide(≥2) 0.000000
+20261123 C hub lure      landings {'x': True, 's+r1': True, 'r2': False, 'r2+type': False}; a hit by 25: x 0.0000, probes 0.0027 | +L: x 0.0001, probes 0.0001; per probe {'x': 0.0, 's+r1': 0.0, 'r2': 0.0082, 'r2+type': 0.0}
+                          rank a: OR 116, collision 217, over null 347; P(all gold) OR 0.0070, collide(≥2) 0.000000
+20261123 D cluster lure  landings {'x': False, 's+r1': False, 'r2': False, 'r2+type': False}; a hit by 25: x 0.0000, probes 0.0000 | +L: x 0.0000, probes 0.0000; per probe {'x': 0.0, 's+r1': 0.0, 'r2': 0.0, 'r2+type': 0.0}
+                          rank a: OR 644, collision 12, over null 7; P(all gold) OR 0.0000, collide(≥2) 0.000000; lure visits 5.569 → +L 5.569
+20261124 A semantic      landings {'x': True, 's+r1': True, 'r2': False, 'r2+type': False}; a hit by 25: x 0.0002, probes 0.0000 | +L: x 0.3489, probes 0.0001; per probe {'x': 0.0002, 's+r1': 0.0, 'r2': 0.0, 'r2+type': 0.0}
+                          rank a: OR 12, collision 20, over null 30; P(all gold) OR 0.0000, collide(≥2) -0.000000
+20261124 B bridge        landings {'x': True, 's+r1': True, 'r2': False, 'r2+type': False}; a hit by 25: x 0.0058, probes 0.0000 | +L: x 0.0073, probes 0.0000; per probe {'x': 0.0058, 's+r1': 0.0, 'r2': 0.0, 'r2+type': 0.0}
+                          rank a: OR 1146, collision 1077, over null 1168; P(all gold) OR 0.0000, collide(≥2) -0.000000
+20261124 C hub lure      landings {'x': True, 's+r1': True, 'r2': False, 'r2+type': True}; a hit by 25: x 0.0000, probes 0.3333 | +L: x 0.0008, probes 0.3333; per probe {'x': 0.0, 's+r1': 0.0, 'r2': 0.0, 'r2+type': 1.0}
+                          rank a: OR 1229, collision 1229, over null 1229; P(all gold) OR 0.8500, collide(≥2) 0.000000
+20261124 D cluster lure  landings {'x': False, 's+r1': False, 'r2': False, 'r2+type': False}; a hit by 25: x 0.0000, probes 0.2833 | +L: x 0.0000, probes 0.2833; per probe {'x': 0.0, 's+r1': 0.0, 'r2': 0.0, 'r2+type': 0.85}
+                          rank a: OR 2, collision 8, over null 8; P(all gold) OR 0.0000, collide(≥2) -0.000000; lure visits 5.569 → +L 5.565
+== bars (≥3 of 4 seeds per case type)
+  A: probes beat x at a, comb 0/4, comb+L 1/4; collision ranks a worse than OR 1/4 | without r2+type: probes beat x comb 0/4, comb+L 1/4, collision worse than OR 2/4
+  B: probes beat x at a, comb 1/4, comb+L 1/4; collision ranks a worse than OR 1/4 | without r2+type: probes beat x comb 0/4, comb+L 1/4, collision worse than OR 2/4
+  C: probes beat x at a, comb 3/4, comb+L 3/4; collision ranks a worse than OR 2/4 | without r2+type: probes beat x comb 2/4, comb+L 2/4, collision worse than OR 2/4
+  D: probes beat x at a, comb 3/4, comb+L 4/4; collision ranks a worse than OR 3/4 | without r2+type: probes beat x comb 0/4, comb+L 0/4, collision worse than OR 0/4; +L lowers lure visits 3/4

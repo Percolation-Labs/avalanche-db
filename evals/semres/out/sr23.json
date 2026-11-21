@@ -1,0 +1,642 @@
+[
+ {
+  "seed": 20261121,
+  "case": "A semantic",
+  "lands": {
+   "x": 394,
+   "s+r1": 1210,
+   "r2": 875,
+   "r2+type": 394
+  },
+  "land_is_gold": {
+   "x": false,
+   "s+r1": true,
+   "r2": false,
+   "r2+type": false
+  },
+  "x@a": 9.279025325102388e-14,
+  "probes@a": 0.0,
+  "xL@a": 0.00011045503236031871,
+  "probesL@a": 9.242162590794578e-12,
+  "probes@a_blind": 0.0,
+  "probesL@a_blind": 1.386157855165493e-11,
+  "rank_a_blind": {
+   "OR": 678.5,
+   "collision": 949.0
+  },
+  "rank_a": {
+   "OR": 689.0,
+   "collision": 146.0,
+   "collision/null": 202.0
+  },
+  "cover_OR": 0.0,
+  "cover_collide": -0.0,
+  "per_probe_a": {
+   "x": 0.0,
+   "s+r1": 0.0,
+   "r2": 0.0,
+   "r2+type": 0.0
+  }
+ },
+ {
+  "seed": 20261121,
+  "case": "B bridge",
+  "lands": {
+   "x": 1213,
+   "s+r1": 1213,
+   "r2": 17,
+   "r2+type": 17
+  },
+  "land_is_gold": {
+   "x": true,
+   "s+r1": true,
+   "r2": false,
+   "r2+type": false
+  },
+  "x@a": 0.00047060247354337447,
+  "probes@a": 0.0,
+  "xL@a": 0.7194499494118191,
+  "probesL@a": 9.874988160518683e-09,
+  "probes@a_blind": 0.0,
+  "probesL@a_blind": 2.90878432451791e-14,
+  "rank_a_blind": {
+   "OR": 626.5,
+   "collision": 8.0
+  },
+  "rank_a": {
+   "OR": 630.5,
+   "collision": 5.0,
+   "collision/null": 14.0
+  },
+  "cover_OR": 0.0,
+  "cover_collide": -0.0,
+  "per_probe_a": {
+   "x": 0.0005,
+   "s+r1": 0.0,
+   "r2": 0.0,
+   "r2+type": 0.0
+  }
+ },
+ {
+  "seed": 20261121,
+  "case": "C hub lure",
+  "lands": {
+   "x": 667,
+   "s+r1": 1216,
+   "r2": 1135,
+   "r2+type": 143
+  },
+  "land_is_gold": {
+   "x": false,
+   "s+r1": true,
+   "r2": false,
+   "r2+type": false
+  },
+  "x@a": 3.9090673852454475e-11,
+  "probes@a": 9.965594483030138e-05,
+  "xL@a": 5.6102183996012846e-06,
+  "probesL@a": 0.00016295794874832126,
+  "probes@a_blind": 0.00014948391724545207,
+  "probesL@a_blind": 0.0002432425952748618,
+  "rank_a_blind": {
+   "OR": 54.0,
+   "collision": 125.0
+  },
+  "rank_a": {
+   "OR": 57.0,
+   "collision": 179.0,
+   "collision/null": 432.0
+  },
+  "cover_OR": 1.0817736687386302e-06,
+  "cover_collide": -1.4459219488388658e-31,
+  "per_probe_a": {
+   "x": 0.0,
+   "s+r1": 0.0,
+   "r2": 0.0003,
+   "r2+type": 0.0
+  }
+ },
+ {
+  "seed": 20261121,
+  "case": "D cluster lure",
+  "lands": {
+   "x": 1222,
+   "s+r1": 1229,
+   "r2": 1225,
+   "r2+type": 1020
+  },
+  "land_is_gold": {
+   "x": false,
+   "s+r1": false,
+   "r2": false,
+   "r2+type": false
+  },
+  "x@a": 5.26714301213946e-43,
+  "probes@a": 2.923217223838037e-13,
+  "xL@a": 9.896075439783016e-23,
+  "probesL@a": 1.620795606616099e-07,
+  "probes@a_blind": 0.0,
+  "probesL@a_blind": 0.0,
+  "rank_a_blind": {
+   "OR": 617.0,
+   "collision": 110.0
+  },
+  "rank_a": {
+   "OR": 32.0,
+   "collision": 41.0,
+   "collision/null": 32.0
+  },
+  "cover_OR": 6.09210456338971e-28,
+  "cover_collide": 4.979036814463704e-50,
+  "per_probe_a": {
+   "x": 0.0,
+   "s+r1": 0.0,
+   "r2": 0.0,
+   "r2+type": 0.0
+  },
+  "lure_visits": [
+   5.569212409816864,
+   5.56921241022771
+  ]
+ },
+ {
+  "seed": 20261122,
+  "case": "A semantic",
+  "lands": {
+   "x": 1210,
+   "s+r1": 1210,
+   "r2": 401,
+   "r2+type": 97
+  },
+  "land_is_gold": {
+   "x": true,
+   "s+r1": true,
+   "r2": false,
+   "r2+type": false
+  },
+  "x@a": 0.00032707662439753117,
+  "probes@a": 6.772360450213455e-15,
+  "xL@a": 0.006066251713998244,
+  "probesL@a": 0.000451132602347859,
+  "probes@a_blind": 1.3322676295501878e-15,
+  "probesL@a_blind": 0.0006734002926879201,
+  "rank_a_blind": {
+   "OR": 115.0,
+   "collision": 453.0
+  },
+  "rank_a": {
+   "OR": 208.0,
+   "collision": 120.0,
+   "collision/null": 102.0
+  },
+  "cover_OR": 7.228729868709833e-18,
+  "cover_collide": 1.0232928536437357e-45,
+  "per_probe_a": {
+   "x": 0.0003,
+   "s+r1": 0.0,
+   "r2": 0.0,
+   "r2+type": 0.0
+  }
+ },
+ {
+  "seed": 20261122,
+  "case": "B bridge",
+  "lands": {
+   "x": 1213,
+   "s+r1": 1213,
+   "r2": 1228,
+   "r2+type": 1129
+  },
+  "land_is_gold": {
+   "x": true,
+   "s+r1": true,
+   "r2": false,
+   "r2+type": false
+  },
+  "x@a": 0.016974567214962783,
+  "probes@a": 0.0,
+  "xL@a": 0.7224838936152502,
+  "probesL@a": 9.076601992230593e-08,
+  "probes@a_blind": 0.0,
+  "probesL@a_blind": 1.3613932936529238e-07,
+  "rank_a_blind": {
+   "OR": 691.5,
+   "collision": 853.0
+  },
+  "rank_a": {
+   "OR": 842.5,
+   "collision": 449.0,
+   "collision/null": 400.0
+  },
+  "cover_OR": 0.0,
+  "cover_collide": -0.0,
+  "per_probe_a": {
+   "x": 0.017,
+   "s+r1": 0.0,
+   "r2": 0.0,
+   "r2+type": 0.0
+  }
+ },
+ {
+  "seed": 20261122,
+  "case": "C hub lure",
+  "lands": {
+   "x": 1216,
+   "s+r1": 1216,
+   "r2": 1229,
+   "r2+type": 712
+  },
+  "land_is_gold": {
+   "x": true,
+   "s+r1": true,
+   "r2": false,
+   "r2+type": false
+  },
+  "x@a": 2.235975628405192e-07,
+  "probes@a": 4.496403249731884e-14,
+  "xL@a": 0.7130749485861756,
+  "probesL@a": 1.1314637972992259e-05,
+  "probes@a_blind": 0.0,
+  "probesL@a_blind": 1.4202639064819778e-11,
+  "rank_a_blind": {
+   "OR": 628.0,
+   "collision": 442.0
+  },
+  "rank_a": {
+   "OR": 180.0,
+   "collision": 92.0,
+   "collision/null": 164.0
+  },
+  "cover_OR": 1.145639139110655e-13,
+  "cover_collide": -0.0,
+  "per_probe_a": {
+   "x": 0.0,
+   "s+r1": 0.0,
+   "r2": 0.0,
+   "r2+type": 0.0
+  }
+ },
+ {
+  "seed": 20261122,
+  "case": "D cluster lure",
+  "lands": {
+   "x": 1229,
+   "s+r1": 1222,
+   "r2": 1229,
+   "r2+type": 558
+  },
+  "land_is_gold": {
+   "x": false,
+   "s+r1": false,
+   "r2": false,
+   "r2+type": false
+  },
+  "x@a": 1.1448974068509506e-42,
+  "probes@a": 5.276072911897245e-10,
+  "xL@a": 1.5193049205039498e-16,
+  "probesL@a": 0.0012140414481337514,
+  "probes@a_blind": 0.0,
+  "probesL@a_blind": 0.0,
+  "rank_a_blind": {
+   "OR": 618.0,
+   "collision": 58.0
+  },
+  "rank_a": {
+   "OR": 100.0,
+   "collision": 116.0,
+   "collision/null": 58.0
+  },
+  "cover_OR": 1.6363074160395657e-18,
+  "cover_collide": -0.0,
+  "per_probe_a": {
+   "x": 0.0,
+   "s+r1": 0.0,
+   "r2": 0.0,
+   "r2+type": 0.0
+  },
+  "lure_visits": [
+   5.569212043362004,
+   5.551719907803663
+  ]
+ },
+ {
+  "seed": 20261123,
+  "case": "A semantic",
+  "lands": {
+   "x": 1210,
+   "s+r1": 1210,
+   "r2": 412,
+   "r2+type": 61
+  },
+  "land_is_gold": {
+   "x": true,
+   "s+r1": true,
+   "r2": false,
+   "r2+type": false
+  },
+  "x@a": 6.959290574198943e-08,
+  "probes@a": 8.562517361809796e-11,
+  "xL@a": 0.0015849723084375618,
+  "probesL@a": 0.07219860855023552,
+  "probes@a_blind": 2.220446049250313e-16,
+  "probesL@a_blind": 0.10829781195024668,
+  "rank_a_blind": {
+   "OR": 65.0,
+   "collision": 58.0
+  },
+  "rank_a": {
+   "OR": 111.0,
+   "collision": 75.0,
+   "collision/null": 115.0
+  },
+  "cover_OR": 2.1834438146255473e-10,
+  "cover_collide": -0.0,
+  "per_probe_a": {
+   "x": 0.0,
+   "s+r1": 0.0,
+   "r2": 0.0,
+   "r2+type": 0.0
+  }
+ },
+ {
+  "seed": 20261123,
+  "case": "B bridge",
+  "lands": {
+   "x": 1224,
+   "s+r1": 1213,
+   "r2": 1226,
+   "r2+type": 444
+  },
+  "land_is_gold": {
+   "x": false,
+   "s+r1": true,
+   "r2": false,
+   "r2+type": false
+  },
+  "x@a": 8.585694796605733e-39,
+  "probes@a": 1.0294654018139227e-11,
+  "xL@a": 2.2730243657680534e-19,
+  "probesL@a": 3.267542484963748e-05,
+  "probes@a_blind": 0.0,
+  "probesL@a_blind": 3.0402900055293003e-06,
+  "rank_a_blind": {
+   "OR": 651.0,
+   "collision": 809.0
+  },
+  "rank_a": {
+   "OR": 39.0,
+   "collision": 52.0,
+   "collision/null": 156.0
+  },
+  "cover_OR": 6.202678646791417e-13,
+  "cover_collide": 0.0,
+  "per_probe_a": {
+   "x": 0.0,
+   "s+r1": 0.0,
+   "r2": 0.0,
+   "r2+type": 0.0
+  }
+ },
+ {
+  "seed": 20261123,
+  "case": "C hub lure",
+  "lands": {
+   "x": 1216,
+   "s+r1": 1216,
+   "r2": 1068,
+   "r2+type": 391
+  },
+  "land_is_gold": {
+   "x": true,
+   "s+r1": true,
+   "r2": false,
+   "r2+type": false
+  },
+  "x@a": 5.932891662010427e-06,
+  "probes@a": 0.002733487617758934,
+  "xL@a": 0.00010326808063825683,
+  "probesL@a": 0.00014439261981746832,
+  "probes@a_blind": 0.00410023142663829,
+  "probesL@a_blind": 0.00021654897392675565,
+  "rank_a_blind": {
+   "OR": 116.0,
+   "collision": 446.0
+  },
+  "rank_a": {
+   "OR": 116.0,
+   "collision": 217.0,
+   "collision/null": 347.0
+  },
+  "cover_OR": 0.00697647251648406,
+  "cover_collide": 4.84040340768937e-23,
+  "per_probe_a": {
+   "x": 0.0,
+   "s+r1": 0.0,
+   "r2": 0.0082,
+   "r2+type": 0.0
+  }
+ },
+ {
+  "seed": 20261123,
+  "case": "D cluster lure",
+  "lands": {
+   "x": 1223,
+   "s+r1": 1229,
+   "r2": 1226,
+   "r2+type": 781
+  },
+  "land_is_gold": {
+   "x": false,
+   "s+r1": false,
+   "r2": false,
+   "r2+type": false
+  },
+  "x@a": 2.0771340548021144e-45,
+  "probes@a": 0.0,
+  "xL@a": 1.037198903819596e-27,
+  "probesL@a": 2.42144165829572e-08,
+  "probes@a_blind": 0.0,
+  "probesL@a_blind": 0.0,
+  "rank_a_blind": {
+   "OR": 616.5,
+   "collision": 49.0
+  },
+  "rank_a": {
+   "OR": 644.0,
+   "collision": 12.0,
+   "collision/null": 7.0
+  },
+  "cover_OR": 0.0,
+  "cover_collide": 3.6256270527031775e-48,
+  "per_probe_a": {
+   "x": 0.0,
+   "s+r1": 0.0,
+   "r2": 0.0,
+   "r2+type": 0.0
+  },
+  "lure_visits": [
+   5.569212410780512,
+   5.56921200528697
+  ]
+ },
+ {
+  "seed": 20261124,
+  "case": "A semantic",
+  "lands": {
+   "x": 1210,
+   "s+r1": 1210,
+   "r2": 1226,
+   "r2+type": 1120
+  },
+  "land_is_gold": {
+   "x": true,
+   "s+r1": true,
+   "r2": false,
+   "r2+type": false
+  },
+  "x@a": 0.0001611078087373386,
+  "probes@a": 6.6661121067568274e-12,
+  "xL@a": 0.3488982275907957,
+  "probesL@a": 5.369075346561836e-05,
+  "probes@a_blind": 0.0,
+  "probesL@a_blind": 2.7755575615628914e-15,
+  "rank_a_blind": {
+   "OR": 617.0,
+   "collision": 511.0
+  },
+  "rank_a": {
+   "OR": 12.0,
+   "collision": 20.0,
+   "collision/null": 30.0
+  },
+  "cover_OR": 1.6464811476849262e-11,
+  "cover_collide": -0.0,
+  "per_probe_a": {
+   "x": 0.0002,
+   "s+r1": 0.0,
+   "r2": 0.0,
+   "r2+type": 0.0
+  }
+ },
+ {
+  "seed": 20261124,
+  "case": "B bridge",
+  "lands": {
+   "x": 1213,
+   "s+r1": 1213,
+   "r2": 145,
+   "r2+type": 988
+  },
+  "land_is_gold": {
+   "x": true,
+   "s+r1": true,
+   "r2": false,
+   "r2+type": false
+  },
+  "x@a": 0.00576529305045894,
+  "probes@a": 0.0,
+  "xL@a": 0.007317872767252003,
+  "probesL@a": 1.4322831809465697e-10,
+  "probes@a_blind": 1.1102230246251565e-16,
+  "probesL@a_blind": 1.8101564691619387e-10,
+  "rank_a_blind": {
+   "OR": 1145.0,
+   "collision": 1119.0
+  },
+  "rank_a": {
+   "OR": 1146.0,
+   "collision": 1077.0,
+   "collision/null": 1168.0
+  },
+  "cover_OR": 9.436895709215846e-17,
+  "cover_collide": -0.0,
+  "per_probe_a": {
+   "x": 0.0058,
+   "s+r1": 0.0,
+   "r2": 0.0,
+   "r2+type": 0.0
+  }
+ },
+ {
+  "seed": 20261124,
+  "case": "C hub lure",
+  "lands": {
+   "x": 1216,
+   "s+r1": 1216,
+   "r2": 960,
+   "r2+type": 1218
+  },
+  "land_is_gold": {
+   "x": true,
+   "s+r1": true,
+   "r2": false,
+   "r2+type": true
+  },
+  "x@a": 1.4217104015657126e-07,
+  "probes@a": 0.33333333333333326,
+  "xL@a": 0.0008005734882176303,
+  "probesL@a": 0.33333333333333337,
+  "probes@a_blind": 0.0,
+  "probesL@a_blind": 1.1102230246251565e-16,
+  "rank_a_blind": {
+   "OR": 1229.0,
+   "collision": 1229.0
+  },
+  "rank_a": {
+   "OR": 1229.0,
+   "collision": 1229.0,
+   "collision/null": 1229.0
+  },
+  "cover_OR": 0.85000001355222,
+  "cover_collide": 0.0,
+  "per_probe_a": {
+   "x": 0.0,
+   "s+r1": 0.0,
+   "r2": 0.0,
+   "r2+type": 1.0
+  }
+ },
+ {
+  "seed": 20261124,
+  "case": "D cluster lure",
+  "lands": {
+   "x": 1222,
+   "s+r1": 1229,
+   "r2": 1226,
+   "r2+type": 497
+  },
+  "land_is_gold": {
+   "x": false,
+   "s+r1": false,
+   "r2": false,
+   "r2+type": false
+  },
+  "x@a": 3.615594886149891e-48,
+  "probes@a": 0.2833333331587873,
+  "xL@a": 8.128124911549134e-27,
+  "probesL@a": 0.2833333330626142,
+  "probes@a_blind": 0.0,
+  "probesL@a_blind": 0.0,
+  "rank_a_blind": {
+   "OR": 617.0,
+   "collision": 25.0
+  },
+  "rank_a": {
+   "OR": 2.0,
+   "collision": 8.0,
+   "collision/null": 8.0
+  },
+  "cover_OR": 2.3770671064169018e-14,
+  "cover_collide": -0.0,
+  "per_probe_a": {
+   "x": 0.0,
+   "s+r1": 0.0,
+   "r2": 0.0,
+   "r2+type": 0.85
+  },
+  "lure_visits": [
+   5.569212202425935,
+   5.564558503685786
+  ]
+ }
+]
