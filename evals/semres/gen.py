@@ -24,13 +24,14 @@ SEEDS = (20261121, 20261122, 20261123, 20261124)  # four worlds, each with all f
 def unit(v): return v / np.linalg.norm(v, axis=-1, keepdims=True)
 
 
-def world(seed=SEEDS[0]):
+def world(seed=SEEDS[0], noise=1.0):
+    """noise scales the passage noise around its topic (1.0 = SR1's world, cos to topic ≈ .7)."""
     rng = np.random.default_rng(seed)
     T = unit(rng.normal(size=(TOPICS, DIM)))
     R = unit(rng.normal(size=(RELS + 1, DIM)))  # last one is 'is_a'
     ISA = RELS
     topic = list(rng.integers(0, TOPICS, NODES))
-    V = [unit(T[t] + rng.normal(size=DIM) / np.sqrt(DIM)) for t in topic]
+    V = [unit(T[t] + noise * rng.normal(size=DIM) / np.sqrt(DIM)) for t in topic]
     edges, rel = [], []
     def link(u, v, r): edges.append((u, v)); rel.append(r)
     by = {t: [i for i in range(NODES) if topic[i] == t] for t in range(TOPICS)}
@@ -42,7 +43,7 @@ def world(seed=SEEDS[0]):
         h = len(V); V.append(unit(T.mean(0) + rng.normal(size=DIM) / np.sqrt(DIM))); topic.append(-1); hubs.append(h)
         for j in rng.choice(NODES, HUB_DEG, replace=False): link(h, int(j), ISA)
     def new(t, vec=None):
-        V.append(unit(T[t] + rng.normal(size=DIM) / np.sqrt(DIM)) if vec is None else vec); topic.append(t)
+        V.append(unit(T[t] + noise * rng.normal(size=DIM) / np.sqrt(DIM)) if vec is None else vec); topic.append(t)
         u = len(V) - 1
         for j in rng.choice(by[t], HOMO, replace=False): link(u, int(j), int(rng.integers(RELS)))  # it lives in its topic
         return u
