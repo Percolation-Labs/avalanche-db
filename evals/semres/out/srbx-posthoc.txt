@@ -1,0 +1,5 @@
+e_cos×nt_rescue − e_cos×pass: -0.020 [-0.053, +0.013]  (post-hoc)
+e_cos×nt_rescue − e_pass×pass: -0.027 [-0.077, +0.023]  (post-hoc)
+e_title×nt_rescue − e_cos×nt_rescue: +0.020 [-0.023, +0.067]  (post-hoc)
+e_cos |S|=0 0.28 |S|=1 0.5 |S|>=2 0.22 mean size among 2+ 3.74
+e_title |S|=0 0.31 |S|=1 0.467 |S|>=2 0.223 mean size among 2+ 3.61

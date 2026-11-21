@@ -1,0 +1,22 @@
+SET=stage0: 4 questions; passages missing from the graph 0; cos entry's door keys median 22
+pools with a repeated title: 3 of 4 (e_title: Jev picks a title; among passages with that title, the one nearest the question by cos)
+wave 1 entry: 8 requests, estimated $0.0005 (spent so far $0.0000, cap $0.05)
+wave 2 name+pass: 12 requests, estimated $0.0008 (spent so far $0.0005, cap $0.05)
+wave 3 twins: 4 requests, estimated $0.0001 (spent so far $0.0014, cap $0.05)
+spend this run $0.00156
+e_cos    entry: hop 1 0.750, hop 2 0.000
+e_title  entry: hop 1 0.750, hop 2 0.250
+e_pass   entry: hop 1 0.250, hop 2 0.750
+  repeated-title pools (n 3): entry hop 1 e_cos 0.667, e_title 0.667, e_pass 0.333
+  other pools (n 1): entry hop 1 e_cos 1.000, e_title 1.000, e_pass 0.000
+e_cos×cosdoor        both 0.250  ordered 0.250  hop2 0.250
+e_cos×name           both 0.250  ordered 0.250  hop2 0.250
+e_cos×nt             both 0.500  ordered 0.500  hop2 0.750
+e_cos×nt_rescue      both 0.500  ordered 0.500  hop2 0.750
+e_cos×pass           both 0.750  ordered 0.750  hop2 1.000
+e_title×cosdoor      both 0.500  ordered 0.250  hop2 0.500
+e_title×name         both 0.500  ordered 0.250  hop2 0.500
+e_title×nt           both 0.500  ordered 0.500  hop2 0.750
+e_title×nt_rescue    both 0.500  ordered 0.500  hop2 0.750
+e_title×pass         both 0.750  ordered 0.750  hop2 1.000
+e_pass×pass          both 0.500  ordered 0.250  hop2 1.000

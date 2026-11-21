@@ -1,0 +1,5 @@
+top-1: contains hop 1 0.679, contains hop 1 or hop 2 0.783
+top-2: contains hop 1 0.803, contains hop 1 or hop 2 0.884
+top-3: contains hop 1 0.856, contains hop 1 or hop 2 0.933
+top-4: contains hop 1 0.889, contains hop 1 or hop 2 0.953
+top-5: contains hop 1 0.901, contains hop 1 or hop 2 0.961
