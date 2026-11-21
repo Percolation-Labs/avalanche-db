@@ -1,0 +1,14 @@
+n 300; bundle size median 22, mean 25.6, max 97, empty 0
+bridge among the door keys (namer ceiling): 0.873
+namer cosq  names a bridge key 0.153
+namer cbq   names a bridge key 0.087
+namer rare  names a bridge key 0.053
+hop-2 via k        top-1 0.577  top-3 0.783
+hop-2 via ceiling  top-1 0.713  top-3 0.873
+hop-2 via ceiling_k top-1 0.700  top-3 0.847
+hop-2 via cosq     top-1 0.393  top-3 0.637
+hop-2 via cbq      top-1 0.350  top-3 0.617
+hop-2 via rare     top-1 0.420  top-3 0.663
+hop-2 via cosq_k   top-1 0.507  top-3 0.740
+hop-2 via cbq_k    top-1 0.467  top-3 0.727
+hop-2 via rare_k   top-1 0.583  top-3 0.783
