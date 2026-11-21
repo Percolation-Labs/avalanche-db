@@ -35,9 +35,8 @@ shares a rare key door with what was read is the next hop in 95% of 40 MuSiQue q
 | cos_q + log(1 + k_str) + hop 2 (unregistered) | +0.87 [+0.26, +1.43] | +3.03 [+2.45, +3.65] |
 
 With the key in the fit, the next-hop term falls only from 3.8 to 3.0–3.6 nats. A key door tells the walk *which* option
-continues the chain. Jev also prices *how sure* it is that this option is the continuation. It pays about 3 nats for
-the true hop over a key-sharing distractor, for example another passage that mentions the same studio but doesn't
-answer the relation. The key door is a good ranker and an under-priced conductance.
+continues the chain. Jev also prices *how sure* it is that this option is the continuation. It pays for the true hop over a passage that shares a key door but doesn't
+answer the relation. Which distractors those are wasn't inspected here. The key door is a good ranker and an under-priced conductance.
 
 **What this changes.**
 - THEORY-SR item 1's hypothesis holds for ranking. A gold-free graph measure can use "shares a rare key door with what
