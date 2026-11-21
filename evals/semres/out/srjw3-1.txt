@@ -1,0 +1,52 @@
+51001 A semantic      hop 1: 4 doors (1 relational); chain door share Jev 0.273, theory 0.924; rank Jev 2, theory 1, cos 4, overlap 4
+51001 A semantic      hop 2: 7 doors (3 relational); chain door share Jev 0.228, theory 0.311; rank Jev 1, theory 2, cos 2, overlap 2; back share Jev 0.218, theory 0.369
+51001 B bridge        hop 1: 4 doors (1 relational); chain door share Jev 0.812, theory 0.933; rank Jev 1, theory 1, cos 1, overlap 2
+51001 B bridge        hop 2: 7 doors (6 relational); chain door share Jev 0.245, theory 0.170; rank Jev 1, theory 2, cos 2, overlap 3; back share Jev 0.138, theory 0.184
+51001 C hub lure      hop 1: 7 doors (3 relational); chain door share Jev 0.352, theory 0.327; rank Jev 1, theory 2, cos 3, overlap 2
+51001 C hub lure      hop 2: 7 doors (4 relational); chain door share Jev 0.584, theory 0.229; rank Jev 1, theory 3, cos 6, overlap 2; back share Jev 0.058, theory 0.289
+51001 D cluster lure  hop 1: 5 doors (4 relational); chain door share Jev 0.250, theory 0.257; rank Jev 1, theory 2, cos 2, overlap 1
+51001 D cluster lure  hop 2: 7 doors (4 relational); chain door share Jev 0.484, theory 0.239; rank Jev 1, theory 2, cos 2, overlap 7; back share Jev 0.076, theory 0.272
+51002 A semantic      hop 1: 4 doors (1 relational); chain door share Jev 0.421, theory 0.930; rank Jev 1, theory 1, cos 3, overlap 3
+51002 A semantic      hop 2: 7 doors (4 relational); chain door share Jev 0.164, theory 0.239; rank Jev 4, theory 2, cos 3, overlap 2; back share Jev 0.249, theory 0.300
+51002 B bridge        hop 1: 4 doors (2 relational); chain door share Jev 0.815, theory 0.501; rank Jev 1, theory 1, cos 1, overlap 1
+51002 B bridge        hop 2: 7 doors (5 relational); chain door share Jev 0.266, theory 0.203; rank Jev 1, theory 2, cos 2, overlap 4; back share Jev 0.144, theory 0.228
+51002 C hub lure      hop 1: 7 doors (1 relational); chain door share Jev 0.232, theory 0.883; rank Jev 2, theory 1, cos 1, overlap 4
+51002 C hub lure      hop 2: 7 doors (5 relational); chain door share Jev 0.305, theory 0.207; rank Jev 1, theory 2, cos 2, overlap 2; back share Jev 0.081, theory 0.221
+51002 D cluster lure  hop 1: 5 doors (2 relational); chain door share Jev 0.606, theory 0.476; rank Jev 1, theory 2, cos 4, overlap 3
+51002 D cluster lure  hop 2: 7 doors (3 relational); chain door share Jev 0.371, theory 0.319; rank Jev 1, theory 2, cos 2, overlap 4; back share Jev 0.094, theory 0.341
+51003 A semantic      hop 1: 4 doors (3 relational); chain door share Jev 0.417, theory 0.331; rank Jev 2, theory 2, cos 2, overlap 4
+51003 A semantic      hop 2: 7 doors (4 relational); chain door share Jev 0.231, theory 0.239; rank Jev 2, theory 2, cos 2, overlap 3; back share Jev 0.164, theory 0.284
+51003 B bridge        hop 1: 4 doors (1 relational); chain door share Jev 0.728, theory 0.934; rank Jev 1, theory 1, cos 1, overlap 1
+51003 B bridge        hop 2: 7 doors (3 relational); chain door share Jev 0.433, theory 0.301; rank Jev 1, theory 3, cos 4, overlap 4; back share Jev 0.100, theory 0.364
+51003 C hub lure      hop 1: 7 doors (3 relational); chain door share Jev 0.435, theory 0.340; rank Jev 1, theory 1, cos 1, overlap 4
+51003 C hub lure      hop 2: 7 doors (3 relational); chain door share Jev 0.407, theory 0.323; rank Jev 1, theory 2, cos 3, overlap 5; back share Jev 0.143, theory 0.355
+51003 D cluster lure  hop 1: 5 doors (2 relational); chain door share Jev 0.232, theory 0.501; rank Jev 2, theory 1, cos 1, overlap 2
+51003 D cluster lure  hop 2: 7 doors (4 relational); chain door share Jev 0.658, theory 0.249; rank Jev 1, theory 2, cos 2, overlap 3; back share Jev 0.061, theory 0.274
+51004 A semantic      hop 1: 4 doors (1 relational); chain door share Jev 0.373, theory 0.934; rank Jev 2, theory 1, cos 1, overlap 3
+51004 A semantic      hop 2: 7 doors (4 relational); chain door share Jev 0.197, theory 0.238; rank Jev 3, theory 3, cos 3, overlap 2; back share Jev 0.085, theory 0.286
+51004 B bridge        hop 1: 4 doors (1 relational); chain door share Jev 0.417, theory 0.937; rank Jev 1, theory 1, cos 1, overlap 3
+51004 B bridge        hop 2: 7 doors (3 relational); chain door share Jev 0.544, theory 0.321; rank Jev 1, theory 2, cos 2, overlap 2; back share Jev 0.090, theory 0.345
+51004 C hub lure      hop 1: 7 doors (2 relational); chain door share Jev 0.727, theory 0.487; rank Jev 1, theory 1, cos 1, overlap 1
+51004 C hub lure      hop 2: 7 doors (5 relational); chain door share Jev 0.429, theory 0.199; rank Jev 1, theory 2, cos 2, overlap 4; back share Jev 0.064, theory 0.231
+51004 D cluster lure  hop 1: 5 doors (3 relational); chain door share Jev 0.518, theory 0.337; rank Jev 1, theory 1, cos 1, overlap 4
+51004 D cluster lure  hop 2: 7 doors (4 relational); chain door share Jev 0.470, theory 0.250; rank Jev 1, theory 2, cos 2, overlap 4; back share Jev 0.055, theory 0.272
+median log(Jev share / theory share) at the chain door +0.231 [-0.110, +0.367] (n 32)
+chain door ranked first: Jev 24/32, theory 12/32, cos 10/32, word overlap 4/32
+hop 1: median log(Jev/theory) -0.085 [-0.793, +0.241]; chain door uniquely first: jev_uniq 11/16, type_lit_uniq 0/16, phrase_uniq 0/16, relsent_uniq 7/16, dict_rt_uniq 4/16, door_rel_uniq 7/16; theory first 12, cos first 10
+hop 2: median log(Jev/theory) +0.367 [+0.150, +0.630]; chain door uniquely first: jev_uniq 13/16, type_lit_uniq 0/16, phrase_uniq 0/16, relsent_uniq 0/16, dict_rt_uniq 9/16, door_rel_uniq 0/16; theory first 0, cos first 0; back share Jev 0.092 vs theory 0.285
+  A 51001: chain reach h(a) from Jev's shares 0.047, from the theory's 0.276
+  A 51002: chain reach h(a) from Jev's shares 0.054, from the theory's 0.201
+  A 51003: chain reach h(a) from Jev's shares 0.073, from the theory's 0.061
+  A 51004: chain reach h(a) from Jev's shares 0.054, from the theory's 0.199
+  B 51001: chain reach h(a) from Jev's shares 0.157, from the theory's 0.131
+  B 51002: chain reach h(a) from Jev's shares 0.172, from the theory's 0.080
+  B 51003: chain reach h(a) from Jev's shares 0.241, from the theory's 0.269
+  B 51004: chain reach h(a) from Jev's shares 0.169, from the theory's 0.284
+  C 51001: chain reach h(a) from Jev's shares 0.151, from the theory's 0.058
+  C 51002: chain reach h(a) from Jev's shares 0.052, from the theory's 0.154
+  C 51003: chain reach h(a) from Jev's shares 0.134, from the theory's 0.087
+  C 51004: chain reach h(a) from Jev's shares 0.233, from the theory's 0.076
+  D 51001: chain reach h(a) from Jev's shares 0.088, from the theory's 0.047
+  D 51002: chain reach h(a) from Jev's shares 0.169, from the theory's 0.124
+  D 51003: chain reach h(a) from Jev's shares 0.112, from the theory's 0.100
+  D 51004: chain reach h(a) from Jev's shares 0.180, from the theory's 0.065
