@@ -1,0 +1,19 @@
+wave 1: all 8 cached
+wave 2: all 0 cached
+spend this run $0.00000
+SET=stage0: n 4; Jev names a bridge key 1.000; |S| = 0 / 1 / >1: 1 / 3 / 0
+wave-2 passages per question 0.00 (against 19 in jev_pass)
+k         top-1 1.000
+jev       top-1 1.000
+nt        top-1 1.000
+nt_cut    top-1 1.000
+jev_pass  top-1 1.000
+ceiling_k top-1 1.000
+-- What administrative territorial entity contains the headquarters of the Mono Lake Committee?
+   K 'lee vining'; |S| 1; nt 1, jev_pass 1
+-- What county is Erik Hort's birthplace a part of?
+   K 'montebello'; |S| 1; nt 1, jev_pass 1
+-- Who wrote the song The Story that is sung by the performer of Rhapsody Originals?
+   K 'brandi carlile'; |S| 1; nt 1, jev_pass 1
+-- What song did Paul McCartney write for the person who performed Too Late for Goodbyes?
+   K 'julian lennon'; |S| 0; nt 1, jev_pass 1

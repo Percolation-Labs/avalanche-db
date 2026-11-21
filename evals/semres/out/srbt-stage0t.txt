@@ -1,0 +1,19 @@
+wave 1: all 8 cached
+wave 2: 4 live requests, estimated $0.0001 (spent so far $0.0000, cap $0.05)
+spend this run $0.00015
+SET=stage0t: n 4; Jev names a bridge key 1.000; |S| = 0 / 1 / >1: 0 / 0 / 4
+wave-2 passages per question 2.00 (against 19 in jev_pass)
+k         top-1 0.250
+jev       top-1 0.500
+nt        top-1 1.000
+nt_cut    top-1 1.000
+jev_pass  top-1 1.000
+ceiling_k top-1 0.500
+-- How many games in a season of the league in which Barcelona won titles in 1948 and 1949?
+   K 'liga'; |S| 2; nt 1, jev_pass 1
+-- Which war did the operator of the Finnish coastal defence ship Ilmarinen serve in?
+   K 'finnish navy'; |S| 2; nt 1, jev_pass 1
+-- At the end of which year did tribes from the place where the Celts are said to have migrated from invade the Roman empire?
+   K 'central europe'; |S| 2; nt 1, jev_pass 1
+-- Who introduced a system of musical notation used in the region the Romans aimed to re-bolster influence in after the Second Punic war in the 14th century?
+   K 'balkans'; |S| 2; nt 1, jev_pass 1
