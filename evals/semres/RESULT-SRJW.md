@@ -52,7 +52,7 @@ and opposite. They cancel:
 
 The conductance of door u → v becomes:
 
-  exp(β·cos + γ_rel·[the relation is the needed one] + γ_type·[v is of the asked type] − ∞·[v already read])
+  exp(β·cos + γ_rel·[the relation is the needed one] + γ_type·[v is of the asked type] + γ_read·[v already read]) — γ_read ≈ −0.85, not −∞ (see RESULT-FITJEV)
 
 - γ depends on the state. It is weaker before the first read and stronger after.
 - The read set removes the back-current outright. With it, "inductance" is not a separate quantity; it is memory.
