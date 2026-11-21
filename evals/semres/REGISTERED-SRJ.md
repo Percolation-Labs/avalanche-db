@@ -104,3 +104,34 @@ Also reported:
 **Directional bar.** γ falls by at least half when e is added, and δ's interval is above 0. If both hold, the edge term
 is "v names what `read` resolved", an entity-level relation computable from text (by NER or the walk's own doors). If
 γ stays, Jev knows something beyond the entity string.
+
+## Amendment 3: the same fit on our cards (registered before any Jev call on cards)
+
+This checks whether Jev's flat cosine slope, β ≈ 1, is a product of how MuSiQue was built. Code: `srj_cards.py`.
+
+**Cases.** Dev cards (`dt-cards.jsonl`) whose card file and gold commits are in fixture-p8-history.
+- `read` is the card's text, truncated to 1,500 characters.
+- The options are the card's gold commits (up to 3), plus the non-gold commits closest to the question by bge-small
+  cos, making 19 in all.
+
+**$0 look, done before this registration.**
+- 96 cards qualify, with 1,824 options of which 174 are gold.
+- The vectors' Bayes slope on cos_q is **−4.08** and on cos_r is **+10.92**.
+- cos_q averages .674 for gold against .686 for the rest; cos_r averages .784 against .760.
+- The negative cos_q slope is a selection effect: the distractors were chosen as the non-gold commits nearest the
+  question, so they beat gold on cos_q by construction. MuSiQue's distractors were built the same way by its authors.
+  The comparison that matters is Jev's slope against the vectors' slope on the *same* option sets.
+
+**Stages.**
+- Stage 0: the first 4 cards.
+- Stage 1: the first 40.
+- Cap $0.05; estimated about $0.01 in all.
+
+**Fit.** logit p_Jev = β_q·cos_q (+ β_r·cos_r) + γ·gold + c, with a bootstrap over cards. Top-1 is gold is reported for
+coin, search cos, cos read and Jev.
+
+**Readout, directional.** Whether Jev's β_r sits well below the vectors' 10.9, as on MuSiQue (.88 against 10.2), and
+whether γ is large (≥ 2 nats).
+- **If both hold,** "Jev is soft on similarity and strong on something relational" holds on a second corpus that wasn't
+  built to fool similarity.
+- **If β_r approaches the vectors',** MuSiQue's construction is the cause.
