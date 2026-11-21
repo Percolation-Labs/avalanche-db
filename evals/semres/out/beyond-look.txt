@@ -1,0 +1,14 @@
+cells (gold-named lexical step hit, jev_pass hit): {'00': 22, '01': 62, '10': 25, '11': 191}
+named-set structure: {'alone': 170, 'twin': 93, 'hop 2 not in named set': 37}
+within twins (n 93): qr   picks hop 2 0.376
+within twins (n 93): cq   picks hop 2 0.430
+within twins (n 93): rel  picks hop 2 0.462
+within twins (n 93): jev  picks hop 2 0.828
+- ('How many games in a season of the league in which Barcelona won titles in 1948 and 1949?', 'La Liga', ['league', 'many', 'season', 'won'], ['La Liga', 'FC Barcelona'], 'La Liga')
+- ('Who introduced a system of musical notation used in the region the Romans aimed to re-bolster influence in after the Second Punic war in the 14th century?', 'the Balkans', ['14th', 'after', 'aimed', 'bolster', 'century', 'introduced', 'musical', 'notation', 'region', 'system', 'used'], ['Late Middle Ages', 'Hellenistic period'], 'Late Middle Ages')
+- ("What was the show named after the character featured in the video game Mickey's Safari in Letterland?", 'Mickey Mouse', ['after', 'featured', 'named', 'show'], ['The Mickey Mouse Club', "Mickey's Revue", 'Phantom Blot', 'Mickey Mouse'], 'The Mickey Mouse Club')
+- ('The space agency operating IRS-P2 had a communication satellite preceded by which experimental satellite?', 'ISRO', ['agency', 'communication', 'experimental', 'had', 'operating', 'preceded', 'space'], ['ATS-6', 'Polar Satellite Launch Vehicle'], 'ATS-6')
+- ('What kind of recognition did the actor who played the game maker in hunger games receive?', 'Philip Seymour Hoffman', ['game', 'games', 'hunger', 'kind', 'maker', 'played', 'receive', 'recognition'], ["Charlie Wilson's War (film)", 'The Hunger Games: Mockingjay – Part 2'], "Charlie Wilson's War (film)")
+- ('Who did the spouse of Hagar marry after the death of Sarah?', 'Abraham', ['after', 'death', 'marry', 'spouse'], ['Hagar', 'Incest in the Bible', 'Keturah', 'Ellen Hamlin'], 'Keturah')
+- ('Who is the employer of the physicist who Mach number is named after?', 'Ernst Mach', ['employer'], ['Vinko Dvořák', 'Mach bands', "Mach's principle"], 'Vinko Dvořák')
+- ('Who is the sibling of the actress that played the little girl in Miracle on 34th street 1947?', 'Natalie Wood', ['1947', 'actress', 'little', 'played', 'sibling'], ['Miracle on 34th Street', 'Mara Wilson', 'Five Finger Exercise'], 'Five Finger Exercise')

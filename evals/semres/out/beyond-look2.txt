@@ -1,0 +1,8 @@
+name→one        n 161  top-1 0.950
+name→twins      n  72  top-1 0.750
+name→k fallback n  67  top-1 0.433
+name→all        n 300  top-1 0.787
+passages Jev reads in the twin step: 0.84 per question (0.044 of a 19-passage request)
+gold alone                     n 170  jev_pass 0.906  gold-named lexical 1.000
+gold twins                     n  93  jev_pass 0.785  gold-named lexical 0.441
+hop 2 outside gold-named set   n  37  jev_pass 0.703  gold-named lexical 0.135
