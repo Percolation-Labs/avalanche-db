@@ -100,6 +100,10 @@ question, and 10.2 against the read passage (MuSiQue dev, 200 questions).
 | similarity slope (nats per cos unit) | ≈ 1 | ≈ 1.7–3 |
 | relational term γ (nats) | **3.7** [3.3, 4.1] | **1.6** [1.4, 1.8] |
 
+> **Caveat (21 Nov, RESULT-SRK correction).** The MuSiQue 40 are the first 40 answerable 2-hop questions in file order,
+> an easy block. The best vector decider gets .62 there and .42 over all 1,252. So Jev's 97% is likely optimistic for
+> MuSiQue at large. β and γ are within-question contrasts and may carry over better. That's untested.
+
 - **The relational term is mostly the bridge entity.** On MuSiQue, "the passage names what hop 1 resolved" carries 3.8
   nats on its own. A decider using only that gets 90% (SR-J amendment 2). We couldn't split it from the gold label,
   because the two coincide.
@@ -156,13 +160,15 @@ there, the decider takes the entry once the door shows its link (11/16, P ≈ .0
 1. **Price walks with the decider's conductance, not the embedding's.**
    - A graph measure, such as T\* cost, coherence or a repair reward, that uses cosine as its semantic term prices steps
      Jev doesn't pay, and misses the step it does pay for.
-   - The relational term is the one to put into graph measures. **Hypothesis, untested, for the next registration:** the
-     bridge entity, which the graph's own key doors already encode, is a computable stand-in for it.
-2. **The entry hop is likely a graph property.** Repair should present entry doors whose passage names its link. That's a
-   gold-free target, and candidate source (b) from S3 becomes concrete.
-3. **The open problem is relational twins.** A cluster joined by the right relation takes the relational bonus too (D:
-   2 of 4 in SR1c). The surprise-coherence null discounted hubs but not this. A null for relational convergence is the
-   next coherence question.
+   - The relational term is the one to put into graph measures. The graph's own key doors are a partial, gold-free
+     stand-in. Given the entry, they pick the next hop in .58 of all 1,252 questions, against cosine's .42. But they
+     absorb under 1 nat of Jev's 3.8 (SR-K, corrected).
+2. **The entry is cosine's, and the graph's door adds the second hop.** Both hops land in .50, against cosine's .23,
+   over 1,252 questions (SR-E, SR-E2). Repair should give well-landed entries a door to their link.
+3. **Relational twins aren't separated by a reach number.** SR-TW's relational null failed: relKL put a above every lure
+   in 0 of 8, and rel's 12/12 dropped to 6/12 under the exact sampled null. A trap one named-relation door from s
+   saturates at a one-hop node's reach. Separation lives in the ordered per-step choice. SR-E2 finds the same on real
+   data: entry by cosine, then the door, beats choosing the pair jointly (+.060 [+.026, +.094]).
 
 ## What is noise or unshown
 

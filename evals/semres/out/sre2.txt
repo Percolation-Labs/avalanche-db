@@ -1,0 +1,10 @@
+-- Who voices the character in Spongebob Squarepants who is named after a glowing species found in some beaches in Portugal?
+   door pair: ['The SpongeBob Movie: Sponge Out of Water', 'The SpongeBob Movie: Sponge Out of Water'], entry The SpongeBob Movie: Sponge Out of Water
+   cos pair: ['SpongeBob SquarePants (season 1)', 'The SpongeBob Movie: Sponge Out of Water']
+
+500 questions; passages with no door link 1490 of 9999; door entry = cos entry in 0.84; questions with no linked passage (cos fallback) 0
+== all (500 questions)
+entry: cos 0.678, door 0.640, vec 0.660, cosdoor 0.678;  door−cos -0.038 [-0.064, -0.014];  door−vec -0.020 [-0.048, +0.008];  cosdoor−door +0.038 [+0.014, +0.064]
+has1 : cos 0.802, door 0.732, vec 0.760, cosdoor 0.746;  door−cos -0.070 [-0.106, -0.034];  door−vec -0.028 [-0.066, +0.006];  cosdoor−door +0.014 [-0.014, +0.044]
+both : cos 0.214, door 0.432, vec 0.196, cosdoor 0.492;  door−cos +0.218 [+0.170, +0.268];  door−vec +0.236 [+0.192, +0.282];  cosdoor−door +0.060 [+0.026, +0.094]
+cosdoor−cos both +0.278 [+0.228, +0.330]

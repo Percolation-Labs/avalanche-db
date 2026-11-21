@@ -1,0 +1,11 @@
+== 0-200
+n options 3799 hop2 gold 200 Bayes slope β (nats per cos unit) 8.7 intercept -7.48
+cos hop1 mean 0.705 hop2 mean 0.559 best distractor mean 0.616
+hop2 rank by cos among 19: median 4.0 top1 0.225 top5 0.585
+crossing cost (β·(best distractor − hop2)) median nats 0.52
+== 200-1252
+n options 19987 hop2 gold 1052 Bayes slope β (nats per cos unit) 9.3 intercept -8.0
+cos hop1 mean 0.688 hop2 mean 0.584 best distractor mean 0.632
+hop2 rank by cos among 19: median 3.0 top1 0.288 top5 0.625
+crossing cost (β·(best distractor − hop2)) median nats 0.4
+  warnings.warn(
