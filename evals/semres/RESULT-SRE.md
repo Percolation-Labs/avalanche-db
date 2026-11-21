@@ -61,3 +61,29 @@ number. It has to be confirmed on fresh questions before it's claimed. SR-E2 is 
   pair score optimises fit to the whole question and gives up the best single entry. I didn't think through what the
   pair argmax trades away. The ordered variant should have been an arm from the start. It's the natural reading of
   THEORY-SR, where landing decides and then the next-hop term prices the step.
+
+## SR-E2 result: the ordered choice is confirmed on 500 fresh questions, with a smaller margin
+
+*Registered at abca67f before scoring. Questions 201–700. Output is in `out/sre2.txt` and `out/sre2.json`.*
+
+| both hops | cos | vec | door | **cosdoor** |
+|---|---|---|---|---|
+| SR-E (1–200) | .200 | .165 | .465 | .620 (unregistered) |
+| **SR-E2 (201–700)** | .214 | .196 | .432 | **.492** |
+
+- cosdoor − door: +.060 [+.026, +.094].
+- cosdoor − cos: +.278 [+.228, +.330].
+- **The bar passes on both.** The SR-E numbers replicate (door − vec +.236 [+.192, +.282]), as does the entry cost of the
+  joint pair (door − cos on entry −.038 [−.064, −.014]).
+
+**Predictions.** door and cos fell inside their ranges. cosdoor's .492 fell below the predicted .55–.65. Its gain over
+door shrank from +.155 to +.060 on fresh questions. Part of SR-E's .620 was the arm being chosen after the look, which is
+the winner's curse the confirmation existed to catch. The entry rate is lower on these questions for every arm (.68
+against .78). cosdoor's ceiling is its entry rate times the door's recall given the entry (≈ .68 × .93 ≈ .63 if SR-K's
+recall held). So the door step given a cosine entry is landing hop 2 in about .492 / .678 ≈ .73 here, below SR-K's .93.
+That gap is unexamined. SR-K's 40 questions may have been easier, or a cosine-chosen entry that is right may carry
+fewer door keys than average.
+
+**Postmortem for SR-E2.** Registering the confirmation was worth it: the claim survives, at a little over a third of the
+size the exploratory run showed. The prediction was anchored on the exploratory number. Next time, predict a shrink
+toward the registered arm.

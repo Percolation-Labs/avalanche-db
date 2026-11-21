@@ -1,0 +1,13002 @@
+[
+{
+"id": "2hop__38828_89399",
+"nolink": 1,
+"same_entry": 0,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__587048_621800",
+"nolink": 4,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__86458_20273",
+"nolink": 1,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__609313_20273",
+"nolink": 0,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__799936_20273",
+"nolink": 4,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__13986_161674",
+"nolink": 4,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__433694_20273",
+"nolink": 7,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__13986_40169",
+"nolink": 2,
+"same_entry": 0,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__25344_88628",
+"nolink": 5,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__657913_88628",
+"nolink": 8,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__734057_88628",
+"nolink": 5,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__95878_88628",
+"nolink": 2,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__726892_131968",
+"nolink": 10,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__693157_131890",
+"nolink": 2,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__611178_131968",
+"nolink": 3,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 1,
+"both": 1
+},
+"door": {
+"entry": 0,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 0,
+"has1": 1,
+"both": 1
+},
+"cosdoor": {
+"entry": 0,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__728969_131890",
+"nolink": 5,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__30032_46621",
+"nolink": 0,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 1,
+"both": 1
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__135822_46621",
+"nolink": 3,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__581084_828685",
+"nolink": 3,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__40697_46621",
+"nolink": 1,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__157737_46621",
+"nolink": 1,
+"same_entry": 0,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__39063_212301",
+"nolink": 2,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__25396_593388",
+"nolink": 1,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__25396_212301",
+"nolink": 3,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__39063_593388",
+"nolink": 5,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__153532_72380",
+"nolink": 0,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__619265_72380",
+"nolink": 0,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__37765_85990",
+"nolink": 0,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__623501_297043",
+"nolink": 5,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__46550_85990",
+"nolink": 1,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__30741_85990",
+"nolink": 4,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__66149_85990",
+"nolink": 2,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 1,
+"both": 1
+},
+"door": {
+"entry": 0,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 0,
+"has1": 1,
+"both": 1
+},
+"cosdoor": {
+"entry": 0,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__216535_370666",
+"nolink": 2,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__846388_19320",
+"nolink": 1,
+"same_entry": 0,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__91211_90973",
+"nolink": 2,
+"same_entry": 0,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__48033_90973",
+"nolink": 0,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__64175_90973",
+"nolink": 2,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__50936_90973",
+"nolink": 1,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__599396_19320",
+"nolink": 5,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__365236_19320",
+"nolink": 6,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__685045_19320",
+"nolink": 2,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__30384_30351",
+"nolink": 0,
+"same_entry": 0,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__555792_30351",
+"nolink": 0,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__431934_30351",
+"nolink": 0,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__708145_30351",
+"nolink": 5,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__837900_71701",
+"nolink": 2,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__278022_71701",
+"nolink": 5,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__10122_18974",
+"nolink": 0,
+"same_entry": 0,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__370564_71701",
+"nolink": 4,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__753260_71701",
+"nolink": 3,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__631024_18974",
+"nolink": 5,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__36747_18974",
+"nolink": 2,
+"same_entry": 0,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__10017_18974",
+"nolink": 6,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__810411_159673",
+"nolink": 1,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__96062_159673",
+"nolink": 2,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__203985_524737",
+"nolink": 0,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__77832_159673",
+"nolink": 3,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__527400_159673",
+"nolink": 0,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__766973_770570",
+"nolink": 3,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__13592_49388",
+"nolink": 2,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__34495_85544",
+"nolink": 1,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__34495_49388",
+"nolink": 1,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__13592_85544",
+"nolink": 2,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__506035_325512",
+"nolink": 4,
+"same_entry": 0,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__107690_124896",
+"nolink": 6,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__507722_124896",
+"nolink": 7,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__107548_124896",
+"nolink": 9,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__754682_730690",
+"nolink": 4,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__68590_27619",
+"nolink": 1,
+"same_entry": 0,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 1,
+"both": 1
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 1,
+"both": 1
+},
+"cosdoor": {
+"entry": 0,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__269076_449113",
+"nolink": 1,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__27650_27619",
+"nolink": 0,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__68590_27628",
+"nolink": 3,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 1,
+"both": 1
+},
+"door": {
+"entry": 0,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__809785_606637",
+"nolink": 1,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__27650_27628",
+"nolink": 5,
+"same_entry": 0,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__656411_345851",
+"nolink": 7,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__24661_66233",
+"nolink": 0,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__329676_119915",
+"nolink": 1,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__539184_119915",
+"nolink": 1,
+"same_entry": 0,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__26642_81961",
+"nolink": 0,
+"same_entry": 0,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__24661_81961",
+"nolink": 1,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__233551_746883",
+"nolink": 5,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__26642_66233",
+"nolink": 0,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 1,
+"both": 1
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__124933_653666",
+"nolink": 2,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__76402_653666",
+"nolink": 4,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__73717_653666",
+"nolink": 0,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__252521_80650",
+"nolink": 1,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 1,
+"both": 1
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__538735_3296",
+"nolink": 1,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__538735_3299",
+"nolink": 1,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__811015_3300",
+"nolink": 1,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__3131_3300",
+"nolink": 0,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__143915_68489",
+"nolink": 3,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__593688_292889",
+"nolink": 6,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__598467_68489",
+"nolink": 1,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__142842_68489",
+"nolink": 3,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__230022_68489",
+"nolink": 2,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__78756_198548",
+"nolink": 2,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__47808_198548",
+"nolink": 7,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__70584_198548",
+"nolink": 1,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__84172_198548",
+"nolink": 3,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__415518_616002",
+"nolink": 8,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__75207_46837",
+"nolink": 2,
+"same_entry": 0,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__75207_7363",
+"nolink": 0,
+"same_entry": 0,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__671664_646310",
+"nolink": 2,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__75207_365216",
+"nolink": 2,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__75207_53316",
+"nolink": 0,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__736167_74735",
+"nolink": 2,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__384238_74735",
+"nolink": 0,
+"same_entry": 0,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__763380_74735",
+"nolink": 1,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__789398_74735",
+"nolink": 0,
+"same_entry": 0,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__30905_213732",
+"nolink": 4,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__44522_58556",
+"nolink": 0,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__58939_189318",
+"nolink": 1,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__58939_213732",
+"nolink": 2,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__30905_189318",
+"nolink": 4,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__16446_58556",
+"nolink": 1,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__35686_58556",
+"nolink": 0,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__723404_58556",
+"nolink": 6,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__95773_51329",
+"nolink": 4,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__696442_51329",
+"nolink": 2,
+"same_entry": 0,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__591435_51329",
+"nolink": 2,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__753715_51329",
+"nolink": 0,
+"same_entry": 0,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__142443_768138",
+"nolink": 5,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__37097_53663",
+"nolink": 4,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__82669_768138",
+"nolink": 1,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__63982_768138",
+"nolink": 2,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__2416_53663",
+"nolink": 2,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__678516_179720",
+"nolink": 4,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__39954_80940",
+"nolink": 5,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__39954_80303",
+"nolink": 1,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 1,
+"both": 1
+},
+"door": {
+"entry": 0,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 0,
+"has1": 1,
+"both": 1
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__39954_65371",
+"nolink": 6,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__385392_756039",
+"nolink": 2,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__557743_92763",
+"nolink": 6,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__403060_92763",
+"nolink": 0,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__29349_92763",
+"nolink": 0,
+"same_entry": 0,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__267938_92763",
+"nolink": 9,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__142198_152093",
+"nolink": 6,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__632161_643449",
+"nolink": 2,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__170914_152093",
+"nolink": 4,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__705035_152093",
+"nolink": 8,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__143650_152023",
+"nolink": 10,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__203437_152093",
+"nolink": 4,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__559273_152023",
+"nolink": 7,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__374767_152023",
+"nolink": 3,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__409166_152023",
+"nolink": 3,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__48784_70131",
+"nolink": 0,
+"same_entry": 0,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__452580_70131",
+"nolink": 1,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__464479_70131",
+"nolink": 2,
+"same_entry": 0,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 1,
+"both": 1
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 1,
+"both": 1
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__552546_70131",
+"nolink": 2,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__124807_135019",
+"nolink": 7,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__605207_135019",
+"nolink": 9,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__271045_68633",
+"nolink": 6,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__645367_68633",
+"nolink": 3,
+"same_entry": 0,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__853227_68633",
+"nolink": 6,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__374495_68633",
+"nolink": 13,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__391873_88622",
+"nolink": 2,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__315246_88622",
+"nolink": 8,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__498061_88622",
+"nolink": 5,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__554145_88622",
+"nolink": 8,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__66708_573255",
+"nolink": 1,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__49887_573255",
+"nolink": 2,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__126188_396277",
+"nolink": 0,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__126306_396277",
+"nolink": 6,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__126299_396277",
+"nolink": 0,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__77518_548781",
+"nolink": 5,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__53175_548781",
+"nolink": 2,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__613779_55984",
+"nolink": 3,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__559076_55984",
+"nolink": 2,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__275891_55984",
+"nolink": 0,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__435087_55984",
+"nolink": 4,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 1,
+"both": 1
+},
+"door": {
+"entry": 0,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__21991_43945",
+"nolink": 4,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__269766_43945",
+"nolink": 2,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__170341_43945",
+"nolink": 4,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__69765_43945",
+"nolink": 3,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__414193_176917",
+"nolink": 4,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__2416_86208",
+"nolink": 0,
+"same_entry": 0,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__37097_86208",
+"nolink": 0,
+"same_entry": 0,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 1,
+"both": 1
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 1,
+"both": 1
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__231805_514393",
+"nolink": 10,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__16581_16569",
+"nolink": 3,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__156044_57816",
+"nolink": 1,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__754753_57816",
+"nolink": 1,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__510679_57816",
+"nolink": 2,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__663184_57816",
+"nolink": 1,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__47071_162399",
+"nolink": 11,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__580231_162399",
+"nolink": 6,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__619265_45326",
+"nolink": 0,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__153532_45326",
+"nolink": 0,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__455392_40315",
+"nolink": 2,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__763840_144857",
+"nolink": 6,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__227031_144857",
+"nolink": 7,
+"same_entry": 0,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__168816_144857",
+"nolink": 12,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__312223_144857",
+"nolink": 0,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__85463_66122",
+"nolink": 1,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__289517_139339",
+"nolink": 2,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__507528_139339",
+"nolink": 2,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__85463_54688",
+"nolink": 0,
+"same_entry": 0,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__669160_139339",
+"nolink": 4,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__332453_139339",
+"nolink": 2,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__85463_50252",
+"nolink": 1,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__85463_33311",
+"nolink": 1,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__60229_38663",
+"nolink": 4,
+"same_entry": 0,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__706038_14251",
+"nolink": 2,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__821368_14251",
+"nolink": 4,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__857585_14251",
+"nolink": 6,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__60229_1783",
+"nolink": 6,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__83405_158262",
+"nolink": 1,
+"same_entry": 0,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__57543_158262",
+"nolink": 0,
+"same_entry": 0,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__62020_158262",
+"nolink": 0,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__358582_189042",
+"nolink": 2,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__450600_158262",
+"nolink": 0,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__78401_158262",
+"nolink": 0,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__121145_561444",
+"nolink": 6,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__125412_544665",
+"nolink": 2,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__135668_561444",
+"nolink": 4,
+"same_entry": 0,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 1,
+"both": 1
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 1,
+"both": 1
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__144317_120065",
+"nolink": 9,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__451574_120065",
+"nolink": 3,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__159146_120065",
+"nolink": 8,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__123166_47134",
+"nolink": 6,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__326404_120065",
+"nolink": 7,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__123545_47134",
+"nolink": 2,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__107905_110222",
+"nolink": 3,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__351045_47134",
+"nolink": 3,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__347652_47134",
+"nolink": 9,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__846844_47134",
+"nolink": 5,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__107601_110222",
+"nolink": 3,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__175168_110222",
+"nolink": 4,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__503085_110222",
+"nolink": 4,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__293131_110222",
+"nolink": 7,
+"same_entry": 0,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__46376_158105",
+"nolink": 8,
+"same_entry": 0,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__13106_158105",
+"nolink": 0,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__55552_158105",
+"nolink": 0,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 1,
+"both": 1
+},
+"door": {
+"entry": 0,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 0,
+"has1": 1,
+"both": 1
+},
+"cosdoor": {
+"entry": 0,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__417937_158105",
+"nolink": 3,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__85455_158105",
+"nolink": 3,
+"same_entry": 0,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__73615_16848",
+"nolink": 1,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__73615_42173",
+"nolink": 3,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__238499_431914",
+"nolink": 2,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__16844_42173",
+"nolink": 0,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__311931_417706",
+"nolink": 1,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__16844_20510",
+"nolink": 0,
+"same_entry": 0,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__73615_20510",
+"nolink": 2,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__593397_224832",
+"nolink": 1,
+"same_entry": 0,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__156658_155922",
+"nolink": 1,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__814408_155922",
+"nolink": 1,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__155781_155922",
+"nolink": 1,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__81682_707195",
+"nolink": 6,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__852657_155922",
+"nolink": 1,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__149862_108549",
+"nolink": 3,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__669456_108549",
+"nolink": 5,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__358270_108549",
+"nolink": 2,
+"same_entry": 0,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__149983_108549",
+"nolink": 1,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__608902_653666",
+"nolink": 4,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__149710_108549",
+"nolink": 4,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__61664_786853",
+"nolink": 1,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__60686_229757",
+"nolink": 1,
+"same_entry": 0,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__55032_786853",
+"nolink": 1,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__67660_158861",
+"nolink": 0,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__63483_786853",
+"nolink": 1,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__67660_81007",
+"nolink": 0,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__825727_584042",
+"nolink": 1,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__91667_67223",
+"nolink": 2,
+"same_entry": 0,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__91667_81007",
+"nolink": 2,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__245835_762148",
+"nolink": 1,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__67660_67223",
+"nolink": 4,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__152052_141308",
+"nolink": 9,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__151705_141308",
+"nolink": 4,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 1,
+"both": 1
+},
+"door": {
+"entry": 0,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 0,
+"has1": 1,
+"both": 1
+},
+"cosdoor": {
+"entry": 0,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__501624_181960",
+"nolink": 8,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__152700_141308",
+"nolink": 6,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__596188_297986",
+"nolink": 6,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__151750_141308",
+"nolink": 1,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__152027_141308",
+"nolink": 1,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__157498_127908",
+"nolink": 2,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__179149_396277",
+"nolink": 4,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__448615_127908",
+"nolink": 1,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__423874_128023",
+"nolink": 1,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__108158_83769",
+"nolink": 6,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__72118_83769",
+"nolink": 1,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__72686_83769",
+"nolink": 3,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__424908_500483",
+"nolink": 0,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__646573_83769",
+"nolink": 7,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__169443_83769",
+"nolink": 7,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__394720_120259",
+"nolink": 3,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__88953_64006",
+"nolink": 0,
+"same_entry": 0,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__315072_120259",
+"nolink": 3,
+"same_entry": 0,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__511454_120259",
+"nolink": 5,
+"same_entry": 0,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__603365_120259",
+"nolink": 1,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__5190_64006",
+"nolink": 1,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__107185_64006",
+"nolink": 2,
+"same_entry": 0,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 1,
+"both": 1
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__418941_429437",
+"nolink": 2,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__62951_64006",
+"nolink": 0,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__575188_342798",
+"nolink": 9,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__691455_64006",
+"nolink": 3,
+"same_entry": 0,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__64372_83289",
+"nolink": 6,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__88406_83289",
+"nolink": 2,
+"same_entry": 0,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__194469_83289",
+"nolink": 4,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 1,
+"both": 1
+},
+"door": {
+"entry": 0,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 0,
+"has1": 1,
+"both": 1
+},
+"cosdoor": {
+"entry": 0,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__586343_83289",
+"nolink": 7,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__91626_96912",
+"nolink": 2,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__179322_83289",
+"nolink": 1,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__20536_96912",
+"nolink": 0,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__865828_377862",
+"nolink": 1,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__749997_96912",
+"nolink": 1,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__690412_526810",
+"nolink": 2,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__194532_57594",
+"nolink": 4,
+"same_entry": 0,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__557496_57594",
+"nolink": 1,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__273020_57594",
+"nolink": 2,
+"same_entry": 0,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__362912_97805",
+"nolink": 1,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__286268_97805",
+"nolink": 0,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__367336_97805",
+"nolink": 1,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__83257_19033",
+"nolink": 3,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__421324_97805",
+"nolink": 2,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__472486_97805",
+"nolink": 0,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__91021_19033",
+"nolink": 3,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__80637_19033",
+"nolink": 2,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__424294_19033",
+"nolink": 4,
+"same_entry": 0,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__55463_19033",
+"nolink": 2,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__363214_590899",
+"nolink": 1,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__157251_556157",
+"nolink": 2,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__157339_156796",
+"nolink": 2,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__157285_556157",
+"nolink": 3,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__70338_160040",
+"nolink": 6,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__70338_36240",
+"nolink": 3,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__859431_18803",
+"nolink": 5,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__359312_18803",
+"nolink": 4,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__796221_18803",
+"nolink": 6,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__242938_18803",
+"nolink": 6,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__695432_18803",
+"nolink": 5,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__442516_595885",
+"nolink": 7,
+"same_entry": 0,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__307719_121900",
+"nolink": 0,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__68158_189357",
+"nolink": 0,
+"same_entry": 0,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__77878_189357",
+"nolink": 0,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__142699_67465",
+"nolink": 1,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__215898_67465",
+"nolink": 4,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__567588_67465",
+"nolink": 2,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__518354_67465",
+"nolink": 4,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__536283_67465",
+"nolink": 5,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__6744_6731",
+"nolink": 0,
+"same_entry": 0,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__6745_6731",
+"nolink": 0,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__83489_747874",
+"nolink": 3,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__83800_747874",
+"nolink": 1,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__16632_110014",
+"nolink": 0,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__44259_747874",
+"nolink": 0,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__35989_623159",
+"nolink": 4,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 1,
+"both": 1
+},
+"door": {
+"entry": 0,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 0,
+"has1": 1,
+"both": 1
+},
+"cosdoor": {
+"entry": 0,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__144784_623159",
+"nolink": 7,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__147260_623159",
+"nolink": 4,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__156702_51769",
+"nolink": 1,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__590631_110882",
+"nolink": 7,
+"same_entry": 0,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 0,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__677160_110882",
+"nolink": 10,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__109242_113442",
+"nolink": 9,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__388467_110882",
+"nolink": 6,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__253612_110882",
+"nolink": 6,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__814856_110882",
+"nolink": 9,
+"same_entry": 0,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__540035_113442",
+"nolink": 5,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__13548_13529",
+"nolink": 0,
+"same_entry": 0,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__794999_113442",
+"nolink": 3,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__818692_113442",
+"nolink": 6,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__272714_113442",
+"nolink": 4,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__530579_13529",
+"nolink": 4,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__3739_13529",
+"nolink": 0,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__3737_13529",
+"nolink": 2,
+"same_entry": 0,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__136179_13529",
+"nolink": 3,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__75169_92673",
+"nolink": 0,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__53937_92673",
+"nolink": 4,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__827940_277334",
+"nolink": 5,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__161273_92673",
+"nolink": 2,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 1,
+"both": 1
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__263728_705527",
+"nolink": 10,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__642686_7292",
+"nolink": 2,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 0,
+"has1": 1,
+"both": 1
+},
+"cosdoor": {
+"entry": 0,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__850984_7292",
+"nolink": 2,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__676045_7292",
+"nolink": 2,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__754826_7292",
+"nolink": 0,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__367318_7292",
+"nolink": 1,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 1,
+"both": 1
+},
+"door": {
+"entry": 0,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__43579_289940",
+"nolink": 0,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__89657_289940",
+"nolink": 1,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__91713_289940",
+"nolink": 1,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__9238_9237",
+"nolink": 6,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__88834_425488",
+"nolink": 3,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__88834_356793",
+"nolink": 5,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__46065_417697",
+"nolink": 3,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__9174_9237",
+"nolink": 4,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__141365_417697",
+"nolink": 3,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__132854_417697",
+"nolink": 1,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__132969_417697",
+"nolink": 2,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__133102_417697",
+"nolink": 1,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__9223_9237",
+"nolink": 3,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__556426_9237",
+"nolink": 1,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__326140_9237",
+"nolink": 1,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__781079_9237",
+"nolink": 0,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__6265_718451",
+"nolink": 2,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__38030_23241",
+"nolink": 1,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__42464_718451",
+"nolink": 0,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__29606_600504",
+"nolink": 0,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__135963_486257",
+"nolink": 2,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__22930_23241",
+"nolink": 0,
+"same_entry": 0,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__160151_23241",
+"nolink": 2,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 1,
+"both": 1
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__243084_523417",
+"nolink": 4,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__31085_23241",
+"nolink": 2,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__37353_23241",
+"nolink": 1,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__160292_23241",
+"nolink": 0,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__57209_67668",
+"nolink": 2,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__49409_67668",
+"nolink": 2,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__84971_67668",
+"nolink": 1,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__301011_820181",
+"nolink": 4,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__88632_67668",
+"nolink": 2,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__142130_67668",
+"nolink": 1,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 1,
+"both": 1
+},
+"door": {
+"entry": 0,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__82766_67668",
+"nolink": 2,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__301587_233146",
+"nolink": 2,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__123145_66723",
+"nolink": 2,
+"same_entry": 0,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__463353_80420",
+"nolink": 6,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__123145_80420",
+"nolink": 4,
+"same_entry": 0,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__373544_66723",
+"nolink": 4,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__96812_130869",
+"nolink": 4,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__463353_66723",
+"nolink": 3,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__373544_80420",
+"nolink": 2,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__47257_43786",
+"nolink": 3,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__92590_43786",
+"nolink": 6,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__848156_130869",
+"nolink": 7,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__128342_375952",
+"nolink": 5,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__128420_375952",
+"nolink": 5,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__59366_71206",
+"nolink": 4,
+"same_entry": 0,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__166484_798067",
+"nolink": 3,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__864101_135373",
+"nolink": 3,
+"same_entry": 0,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__51113_84616",
+"nolink": 6,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__428940_135373",
+"nolink": 6,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__29873_679424",
+"nolink": 0,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__82713_84616",
+"nolink": 3,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__9014_679424",
+"nolink": 0,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__81379_84616",
+"nolink": 2,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__280451_84616",
+"nolink": 2,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__62369_84616",
+"nolink": 5,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__77263_84616",
+"nolink": 6,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__13353_85402",
+"nolink": 4,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__244193_461106",
+"nolink": 5,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__2148_78851",
+"nolink": 4,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__744371_78851",
+"nolink": 0,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__7906_78851",
+"nolink": 0,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__840174_78851",
+"nolink": 0,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__2150_78851",
+"nolink": 0,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__161915_78851",
+"nolink": 1,
+"same_entry": 0,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 0,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__730788_72813",
+"nolink": 5,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 0,
+"has1": 1,
+"both": 1
+},
+"cosdoor": {
+"entry": 0,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__808562_72813",
+"nolink": 7,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__683203_72813",
+"nolink": 5,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__96414_159054",
+"nolink": 1,
+"same_entry": 0,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 1,
+"both": 1
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 1,
+"both": 1
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__747306_72813",
+"nolink": 7,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__96411_159054",
+"nolink": 4,
+"same_entry": 0,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__532383_768138",
+"nolink": 4,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__96410_47902",
+"nolink": 3,
+"same_entry": 0,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__96414_47902",
+"nolink": 4,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__96411_47902",
+"nolink": 2,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__96410_159054",
+"nolink": 4,
+"same_entry": 0,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__81825_49084",
+"nolink": 3,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 1,
+"both": 1
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__10620_79092",
+"nolink": 2,
+"same_entry": 0,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__10620_49084",
+"nolink": 7,
+"same_entry": 0,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__460091_405771",
+"nolink": 2,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__14078_49084",
+"nolink": 8,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__820739_250752",
+"nolink": 2,
+"same_entry": 0,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__2299_1783",
+"nolink": 2,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__58168_38663",
+"nolink": 3,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 1,
+"both": 1
+},
+"door": {
+"entry": 0,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__58168_1783",
+"nolink": 6,
+"same_entry": 0,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__2299_38663",
+"nolink": 3,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__158275_35739",
+"nolink": 0,
+"same_entry": 0,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__612719_6455",
+"nolink": 1,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__141456_6455",
+"nolink": 1,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__544760_35739",
+"nolink": 0,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__486392_35739",
+"nolink": 0,
+"same_entry": 0,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__816977_6455",
+"nolink": 0,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__829474_123956",
+"nolink": 5,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__765180_123956",
+"nolink": 3,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__520033_123956",
+"nolink": 2,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__748615_123956",
+"nolink": 5,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__37656_160040",
+"nolink": 4,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__242753_658778",
+"nolink": 15,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__22885_160040",
+"nolink": 2,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__22885_36240",
+"nolink": 0,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__829358_754719",
+"nolink": 6,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__37656_36240",
+"nolink": 0,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__61714_80069",
+"nolink": 3,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__61714_52026",
+"nolink": 3,
+"same_entry": 0,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__752214_639679",
+"nolink": 6,
+"same_entry": 0,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__61714_42553",
+"nolink": 5,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__61714_89309",
+"nolink": 6,
+"same_entry": 0,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__61714_64633",
+"nolink": 1,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__61714_53995",
+"nolink": 5,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__135993_160249",
+"nolink": 4,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__34595_160249",
+"nolink": 5,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__265989_531490",
+"nolink": 3,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__846921_160249",
+"nolink": 9,
+"same_entry": 0,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__136067_160249",
+"nolink": 0,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__557284_160249",
+"nolink": 5,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__34594_160249",
+"nolink": 1,
+"same_entry": 0,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__32887_235620",
+"nolink": 1,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__6735_6733",
+"nolink": 1,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__32887_578772",
+"nolink": 3,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__6750_6733",
+"nolink": 3,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__215896_460425",
+"nolink": 7,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__6736_6733",
+"nolink": 4,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__323534_810083",
+"nolink": 6,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__223655_463572",
+"nolink": 4,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 1
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 1
+}
+},
+{
+"id": "2hop__44590_510545",
+"nolink": 1,
+"same_entry": 0,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__80860_510545",
+"nolink": 2,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__72487_510545",
+"nolink": 4,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 1,
+"has1": 1,
+"both": 0
+}
+},
+{
+"id": "2hop__68322_510545",
+"nolink": 3,
+"same_entry": 0,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 1,
+"both": 0
+},
+"door": {
+"entry": 1,
+"has1": 1,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__73719_510545",
+"nolink": 3,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 1,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+},
+{
+"id": "2hop__29893_29905",
+"nolink": 0,
+"same_entry": 1,
+"fallback": 0,
+"cos": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"door": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"vec": {
+"entry": 0,
+"has1": 0,
+"both": 0
+},
+"cosdoor": {
+"entry": 0,
+"has1": 0,
+"both": 0
+}
+}
+]
