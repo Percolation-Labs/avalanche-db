@@ -51,3 +51,12 @@ No arm has a parameter. The df range is the graph's own, as in SR-K.
 **Scope.** In-pool retrieval: 20 candidates per question, not the 21,100-passage graph. MuSiQue 2-hop only. No walk and
 no Jev. This tests whether the door picks the right *pair*. It doesn't test whether a walker presented with that door
 takes it.
+
+## Amendment 1 (james's review, before scoring)
+
+- **Linkless passages.** A passage with no shared door (S = 0 to every other passage) gets no `door` pair. It's dropped
+  from `door`'s argmax. Before this fix, argmax gave it the first passage in pool order. If a question has no linked
+  passage at all, `door` falls back to the `cos` pair, and the script prints how many questions do.
+- **Ties in S** are broken by cos(q, ·), not by pool order.
+- **The claim is `door − vec`.** On `both`, `cos`'s second member is the second-best cosine passage, and hop 2 often has a
+  low cosine. So `door − cos` alone is a weak comparison.
