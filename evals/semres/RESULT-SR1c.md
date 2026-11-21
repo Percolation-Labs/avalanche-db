@@ -61,3 +61,24 @@ Seeds of 4 with a in the top 5:
   2. A Jev-in-the-loop walk on 4 of these worlds, rendered as text. Does Jev's own walk match the predicted reach?
      That's the last link in the carry-over. I'd register it at about $0.05.
   3. The real-graph version: the MuSiQue walk with γ from a relation detector in place of Jev.
+
+## Amendment 1: cards' measured conductance (γ 1.6, β 1.7)
+
+Registered before running. Seeds of 4 with a in the top 5:
+
+| Case | Count |
+|---|---|
+| A | 2 |
+| B | 3 |
+| C | 2 |
+| D | 0 |
+
+- Reach at a on B and C is **0.44× MuSiQue's** (median, range .35–.59). That's as predicted ("drops by about half or more").
+- B's ranks are 5, 4, 7 and 2. That makes 3 of 4, against my predicted "at most 2 of 4", so that part is wrong.
+- The walk still reaches the answer, but with half the reach. The answer sits at the edge of the top 5 instead of near
+  the top.
+- D drops to 0 of 4. With a weaker relational term, the lures' similarity matters again.
+- **Postmortem.** My share arithmetic assumed about 8 competing doors at every hop. Doors that carry neither relation
+  are dearer than that by e^(β·Δcos). So the chain kept more share than I computed.
+- **For bill's check against real cards walks:** the theory predicts a Jev walk on cards that reaches gold about half as
+  often as on MuSiQue, for the same structure.
