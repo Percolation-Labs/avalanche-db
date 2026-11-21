@@ -49,3 +49,28 @@ def render(w, seed):
         ta = w["topic"][c["a"]]
         qs.append(f"Which {TOPICS[ta][0]} is the one that the place {nm[c['s']]} {RELS[c['r1']]} {RELS[c['r2']]}?")
     return nm, text, qs
+
+
+def render2(w, seed):
+    """SR-JW2 (bill's review fixes): a door shows only its own passage, with no link sentences and no 'is a <type>'.
+    A passage is its name, then its topic words. Its links are visible only once it has been read: read_text(u) adds
+    them. A reader has to take the relation from what it has read, and infer the type from the door's words."""
+    rng = np.random.default_rng(seed + 7)
+    n = len(w["V"]); nm = names(n, rng)
+    lures = {u for c in w["cases"] for u in c["lures"]}
+    rel = lambda r: ISA if r == w["isa"] else RELS[r]
+    links = [[] for _ in range(n)]
+    for (u, v), r in zip(w["edges"], w["rel"]):
+        s = f"{nm[u]} {rel(r)} {nm[v]}."; links[u].append(s); links[v].append(s)
+    own = []
+    for u in range(n):
+        t = w["topic"][u]
+        if u in w["hubs"]: d = "a broad heading that covers many things"
+        elif u in lures:
+            c = next(c for c in w["cases"] if u in c["lures"]); tt = w["topic"][c["s"]]
+            d = "known for its " + ", ".join(rng.choice(TOPICS[tt][1].split(), 3, replace=False))
+        else: d = "known for its " + ", ".join(rng.choice(TOPICS[t][1].split(), 3, replace=False))
+        own.append(f"{nm[u]} is {d}.")
+    read_text = lambda u: own[u] + " " + " ".join(links[u])
+    qs = [f"Which {TOPICS[w['topic'][c['a']]][0]} is the one that the place {nm[c['s']]} {RELS[c['r1']]} {RELS[c['r2']]}?" for c in w["cases"]]
+    return nm, own, read_text, qs
