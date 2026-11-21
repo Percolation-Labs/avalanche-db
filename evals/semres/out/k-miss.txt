@@ -1,0 +1,21 @@
+W1121 21:20:03.994000 5884 torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 14473.65it/s]
+n 300
+  hit                           173  0.577
+  door, lure stronger           103  0.343
+  no door (bridge in text)       15  0.050
+  no door (bridge absent)         9  0.030
+no-door cases: qr top-1 0.083, top-3 0.333 (n 24)
+door-lure cases: {'lure lacks bridge': 49, 'lure names bridge': 54}
+- ('Who is the spouse of the actor portraying Jerry Lee Lewis in Great Balls of Fire?', 'Dennis Quaid', ['dennis quaid', 'quaid', 'dennis'], np.float64(0.444), 'Mean Old Man', ['pioneer jerry', 'pioneer'], np.float64(1.02), False)
+- ('Where is the place where Rudolph the red-nosed reindeer lives on the world map?', 'the North Pole', ['north pole', 'pole'], np.float64(0.094), 'Rudolph the Red-Nosed Reindeer', ['hermey', 'clarice', 'yukon'], np.float64(1.3), False)
+- ('What political party was the candidate who garnered a million votes during the 1920 election despite being in prison, a member of?', 'Eugene V. Debs', ['debs', 'eugene', 'socialist party'], np.float64(0.401), '1936 United States presidential election', ['votes ever', 'largest percentage', 'largest number', 'popular vote'], np.float64(1.409), False)
+- ('Where is the river where the majority of Egyptians lived located in the world?', 'Nile River', ['nile', 'ethiopia'], np.float64(0.086), 'Sirkanay District', ['arable land', 'arable'], np.float64(0.667), False)
+- ('How many games do team in the league where Barcelona won titles in 1948 and 1949 play?', 'La Liga', ['liga'], np.float64(0.027), 'FC Barcelona', ['camp nou', 'nou', 'liga', 'camp'], np.float64(0.353), True)
+- ('When does the regular season for the league which the Buffalo Sabres Alumni Hockey Team had most of its members from begin?', 'NHL', ['nhl'], np.float64(0.014), '2000–01 WPHL season', ['professional hockey'], np.float64(0.2), False)
+- ('What month did the person who retained trust in Longchamp go away to the Holy Land?', 'Richard', ['third crusade', 'crusade', 'captured'], np.float64(0.399), 'William de Longchamp', ['1197', 'chancellor', 'bishop'], np.float64(1.049), True)
+- ('What century did the author of A Treatise Concerning the Principles of Human Knowledge live in?', 'George Berkeley', ['george berkeley', 'mental', 'berkeley', 'mind'], np.float64(0.347), 'Tabula rasa', ['john locke', 'locke', 'mental', 'solely'], np.float64(0.369), False)
+- ("When did Mark Crossley's team win the FA cup?", 'Nottingham Forest', ['nottingham forest', 'nottingham'], np.float64(0.192), 'John Terry', ['oldham athletic', 'oldham', 'nottingham forest', 'nottingham'], np.float64(1.406), True)
+- ('When did the person chosen to be president of the confederacy end his fight in the Mexican-American war?', 'Jefferson Davis', ['jefferson davis', 'jefferson', 'davis'], np.float64(0.129), 'Confederate States Army', ['jefferson davis', 'confederate states', 'provisional', '1865'], np.float64(0.252), True)
+- ('Who was the spouse of the British queen?', 'Elizabeth II', ['queen elizabeth'], np.float64(0.022), 'Mary, Princess Royal and Countess of Harewood', ['monarch queen', 'british monarch', 'queen elizabeth', 'monarch'], np.float64(0.597), True)
+- ('What is the dynasty the oldest wooden buildings in China be dated to an example of?', 'Tang', ['tang'], np.float64(0.027), 'History of China', ['china date', 'historian'], np.float64(1.013), False)
