@@ -1,0 +1,7 @@
+q1-40: n   40  entry 0.90  P(link=hop2|entry) 0.97  both: cos 0.20 door 0.62 cosdoor 0.90
+q41-200: n  160  entry 0.75  P(link=hop2|entry) 0.71  both: cos 0.20 door 0.42 cosdoor 0.55
+q201-400: n  200  entry 0.69  P(link=hop2|entry) 0.71  both: cos 0.23 door 0.47 cosdoor 0.52
+q401-700: n  300  entry 0.67  P(link=hop2|entry) 0.65  both: cos 0.20 door 0.41 cosdoor 0.48
+q701-1000: n  300  entry 0.65  P(link=hop2|entry) 0.70  both: cos 0.27 door 0.49 cosdoor 0.50
+q1001-1252: n  252  entry 0.63  P(link=hop2|entry) 0.49  both: cos 0.23 door 0.40 cosdoor 0.40
+all : n 1252  entry 0.68  P(link=hop2|entry) 0.66  both: cos 0.23 door 0.45 cosdoor 0.50

@@ -1,0 +1,6 @@
+q1-40: n   40  k-decider 0.95  cos(q+read) 0.62  hop 2 shares a door 0.93
+q41-200: n  160  k-decider 0.63  cos(q+read) 0.39  hop 2 shares a door 0.95
+q201-700: n  500  k-decider 0.57  cos(q+read) 0.42  hop 2 shares a door 0.93
+q701-1252: n  552  k-decider 0.55  cos(q+read) 0.41  hop 2 shares a door 0.88
+all : n 1252  k-decider 0.58  cos(q+read) 0.42  hop 2 shares a door 0.91
+k − cos(q+read), all: +0.164 [+0.137, +0.190]

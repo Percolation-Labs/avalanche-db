@@ -1,4 +1,8 @@
-# SR-K result: a shared key door ranks the next hop as well as gold does, but it isn't Jev's whole price
+# SR-K result: a shared key door ranks the next hop better than cosine, but it isn't Jev's whole price
+
+> **Correction (21 Nov, after SR-E2).** The .95 below holds only for SR-K's 40 questions, which are the first 40 in
+> file order and an unusually easy block. On all 1,252 answerable 2-hop dev questions, the k-decider gets **.58**
+> against cos(q + read)'s .42, a gain of +.16 [+.14, +.19]. See the correction section at the end.
 
 *21 Nov 2026, bill. Registered at c107338 (REGISTERED-SRK.md) before scoring. $0, with no Jev calls. Output is in
 `out/srk.txt`; the unregistered check is in `out/srk-str.txt`.*
@@ -64,3 +68,28 @@ answer the relation. Which distractors those are wasn't inspected here. The key 
   feature as the decider. The k_str fit is reported as unregistered.
 - **The near miss.** The first scoring run died on a missing numpy, and the output file was empty under exit code 0
   (`tee`). I read the file before trusting the run.
+
+## Correction: the first 40 questions in file order are not a sample
+
+SR-E2 found the door link landing hop 2 in only .67 of fresh questions with a correct entry, against .97 on these 40.
+`srk_all.py` reruns SR-K's k-decider and the cos(question + read) decider, given the gold hop 1, on every answerable
+2-hop dev question. It's unregistered, a correction check. Output is in `out/srk-all.txt`.
+
+| questions (file order) | k-decider | cos(q + read) | hop 2 shares a door with hop 1 |
+|---|---|---|---|
+| 1–40 (SR-K, SR-J) | .95 | .62 | .93 |
+| 41–200 | .63 | .39 | .95 |
+| 201–700 | .57 | .42 | .93 |
+| 701–1252 | .55 | .41 | .88 |
+| **all 1,252** | **.58** | **.42** | .91 |
+
+- **What survives.** The key door beats cosine by +.16 [+.14, +.19] on all questions. Hop 2 shares a door with what was
+  read in about 90% everywhere, so the door's recall is real.
+- **What doesn't.** The .95, and "as well as gold". Outside the first block, other options share stronger doors more
+  often, so precision falls. The ranking by Σ 1/(df − 1) isn't enough on its own.
+- **This also touches SR-J.** Its 40 Jev questions are the same block. On it, cosine got .62 against .42 overall, so Jev's
+  .97 there is likely high too. SR-J's fitted terms (β, γ) are differences *within* the block's option sets, so they may
+  carry over better than the top-1 rates do. That's untested.
+- **Postmortem.** "First N" in MuSiQue's file order isn't a random sample. Every 40-question claim since SR-J inherited
+  the block. I didn't check whether the block was typical: one look at a later block would have caught it. The fix for
+  future runs is to draw cases at random with a stated seed, or to report a second block beside the first.
