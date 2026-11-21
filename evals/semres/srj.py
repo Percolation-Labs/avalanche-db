@@ -4,7 +4,7 @@ request per question, all in flight together). Fit logit p_Jev = β_J·cos + γ�
 cos(question, passage), and compare β_J with the vectors' Bayes slope β_B (srj_look.py: 8.7 on 200 dev questions).
 Controls on the rank of hop 2 among the 19: chance, coin, word overlap (question + read), search cos, oracle.
     source ~/code/p8-subsystems/.env; P8_CREDENTIAL_ORIGINS='{"JEV_API_KEY":["https://api.typesafe.ai"]}' \\
-    uv run --with sentence-transformers --with scikit-learn --with 'percolate-core==0.2.15' python srj.py MUSIQUE_DEV N MAX_USD"""
+    uv run --with sentence-transformers --with scikit-learn --with 'percolate-core==0.2.15' python srj.py MUSIQUE_DEV N MAX_USD [SEED]"""
 import asyncio, json, re, sys, hashlib
 from pathlib import Path
 import numpy as np
@@ -22,7 +22,10 @@ def words(t): return set(WORD.findall(t.lower())) - {"the", "a", "an", "of", "in
 def main():
     src, N, max_usd = sys.argv[1], int(sys.argv[2]), float(sys.argv[3])
     rows = [json.loads(l) for l in open(src)]
-    rows = [r for r in rows if r["id"].startswith("2hop") and r["answerable"]][:N]
+    rows = [r for r in rows if r["id"].startswith("2hop") and r["answerable"]]
+    SEED = int(sys.argv[4]) if len(sys.argv) > 4 else None   # SR-J-R: a seeded random draw from questions 41-1252
+    if SEED is None: rows = rows[:N]
+    else: rows = [rows[i] for i in np.random.default_rng(SEED).permutation(np.arange(40, len(rows)))[:N]]
     from sentence_transformers import SentenceTransformer
     m = SentenceTransformer("BAAI/bge-small-en-v1.5", device="cpu")
     cases = []
@@ -89,7 +92,7 @@ def main():
     for k, v in ranks.items(): print(f"  hop-2 rank, {k:11s}: mean {np.mean(v):.1f}, top-1 {np.mean(np.array(v) == 1):.2f}")
     Path("out").mkdir(exist_ok=True)
     json.dump(dict(fit_q=f1.tolist(), fit_qr=f2.tolist(), ci_q=[lo1.tolist(), hi1.tolist()], ci_qr=[lo2.tolist(), hi2.tolist()], ranks=ranks, usd=usd, cases=[{k: v for k, v in c.items() if k != "texts"} | {"p": cache[key(c)]} for c in cases]),
-              open(f"out/srj-n{N}.json", "w"), indent=1)
+              open(f"out/srj-n{N}" + (f"-seed{SEED}" if SEED is not None else "") + ".json", "w"), indent=1)
 
 
 if __name__ == "__main__":
