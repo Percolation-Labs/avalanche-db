@@ -1,0 +1,29 @@
+SET=fresh: 300 questions; passages missing from the graph 0; cos entry's door keys median 19
+pools with a repeated title: 143 of 300 (e_title: Jev picks a title; among passages with that title, the one nearest the question by cos)
+wave 1 entry: 600 requests, estimated $0.0388 (spent so far $0.0000, cap $0.4)
+wave 2 name+pass: 904 requests, estimated $0.0658 (spent so far $0.0432, cap $0.4)
+wave 3 twins: 92 requests, estimated $0.0037 (spent so far $0.1160, cap $0.4)
+spend this run $0.11999
+e_cos    entry: hop 1 0.723, hop 2 0.117
+e_title  entry: hop 1 0.593, hop 2 0.257
+e_pass   entry: hop 1 0.607, hop 2 0.280
+  repeated-title pools (n 143): entry hop 1 e_cos 0.594, e_title 0.455, e_pass 0.510
+  other pools (n 157): entry hop 1 e_cos 0.841, e_title 0.720, e_pass 0.694
+e_cos×cosdoor        both 0.473  ordered 0.440  hop2 0.587
+e_cos×name           both 0.523  ordered 0.480  hop2 0.630
+e_cos×nt             both 0.617  ordered 0.570  hop2 0.730
+e_cos×nt_rescue      both 0.723  ordered 0.650  hop2 0.853
+e_cos×pass           both 0.743  ordered 0.653  hop2 0.890
+e_title×cosdoor      both 0.483  ordered 0.397  hop2 0.677
+e_title×name         both 0.530  ordered 0.417  hop2 0.700
+e_title×nt           both 0.610  ordered 0.487  hop2 0.790
+e_title×nt_rescue    both 0.743  ordered 0.550  hop2 0.877
+e_title×pass         both 0.727  ordered 0.537  hop2 0.873
+e_pass×pass          both 0.750  ordered 0.550  hop2 0.873
+both e_title×nt_rescue − e_cos×name: +0.220 [+0.160, +0.280]
+both e_title×name − e_cos×name: +0.007 [-0.033, +0.047]
+both e_cos×nt_rescue − e_cos×nt: +0.107 [+0.070, +0.147]
+both e_cos×nt − e_cos×name: +0.093 [+0.060, +0.130]
+both e_title×nt_rescue − e_pass×pass: -0.007 [-0.053, +0.037]
+both e_cos×name − e_cos×cosdoor: +0.050 [+0.013, +0.087]
+entry hop 1, e_title − e_cos: -0.130 [-0.193, -0.073]
