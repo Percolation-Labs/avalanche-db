@@ -1,0 +1,22 @@
+GATE: max |MC − exact| 1.49 s.d. over 12 passages
+31001 A semantic      rank a (b): struct 8 (4), sem 17 (459), comb 18 (10), comb@25 18 (10), comb+L@25 23 (49); hit a by 25 0.0332 → L 0.0532; cross 0.92 nats; h(a) 0.03344 formula 0.00874
+31001 B bridge        rank a (b): struct 10 (4), sem 31 (1210), comb 94 (81), comb@25 92 (79), comb+L@25 235 (303); hit a by 25 0.0017 → L 0.0033; cross 0.10 nats; h(a) 0.00170 formula 0.00067
+31001 C hub lure      rank a (b): struct 14 (7), sem 50 (1199), comb 16 (7), comb@25 16 (7), comb+L@25 11 (8); hit a by 25 0.0386 → L 0.0657; cross 0.85 nats; h(a) 0.03864 formula 0.02949
+31001 D cluster lure  rank a (b): struct 16 (5), sem 46 (584), comb 12 (10), comb@25 12 (10), comb+L@25 17 (16); hit a by 25 0.0001 → L 0.0001; cross 0.30 nats; h(a) 0.00006 formula 0.00006
+31002 A semantic      rank a (b): struct 9 (4), sem 63 (312), comb 95 (30), comb@25 95 (29), comb+L@25 99 (103); hit a by 25 0.0023 → L 0.0113; cross 2.60 nats; h(a) 0.00240 formula 0.00029
+31002 B bridge        rank a (b): struct 9 (4), sem 132 (745), comb 13 (5), comb@25 13 (5), comb+L@25 11 (6); hit a by 25 0.0257 → L 0.0501; cross 1.67 nats; h(a) 0.02580 formula 0.01438
+31002 C hub lure      rank a (b): struct 14 (7), sem 10 (281), comb 8 (6), comb@25 8 (6), comb+L@25 14 (12); hit a by 25 0.0433 → L 0.0409; cross 0.32 nats; h(a) 0.04365 formula 0.01549
+31002 D cluster lure  rank a (b): struct 17 (5), sem 108 (683), comb 22 (9), comb@25 22 (9), comb+L@25 17 (11); hit a by 25 0.0000 → L 0.0018; cross 2.71 nats; h(a) 0.00001 formula 0.00001
+31003 A semantic      rank a (b): struct 10 (4), sem 98 (803), comb 101 (78), comb@25 101 (77), comb+L@25 119 (118); hit a by 25 0.0006 → L 0.0036; cross 2.23 nats; h(a) 0.00061 formula 0.00015
+31003 B bridge        rank a (b): struct 8 (4), sem 25 (1211), comb 16 (10), comb@25 16 (9), comb+L@25 14 (12); hit a by 25 0.0303 → L 0.0459; cross 0.68 nats; h(a) 0.03034 formula 0.02252
+31003 C hub lure      rank a (b): struct 12 (7), sem 75 (598), comb 36 (7), comb@25 35 (7), comb+L@25 16 (11); hit a by 25 0.0071 → L 0.0529; cross 2.76 nats; h(a) 0.00714 formula 0.00410
+31003 D cluster lure  rank a (b): struct 18 (5), sem 312 (576), comb 31 (10), comb@25 31 (10), comb+L@25 31 (14); hit a by 25 0.0000 → L 0.0006; cross 3.80 nats; h(a) 0.00000 formula 0.00000
+31004 A semantic      rank a (b): struct 9 (4), sem 95 (1045), comb 119 (31), comb@25 118 (31), comb+L@25 174 (88); hit a by 25 0.0002 → L 0.0025; cross 3.23 nats; h(a) 0.00021 formula 0.00005
+31004 B bridge        rank a (b): struct 9 (4), sem 53 (311), comb 15 (3), comb@25 15 (3), comb+L@25 10 (7); hit a by 25 0.0164 → L 0.1025; cross 2.90 nats; h(a) 0.01654 formula 0.00725
+31004 C hub lure      rank a (b): struct 16 (7), sem 69 (1174), comb 86 (18), comb@25 83 (18), comb+L@25 30 (25); hit a by 25 0.0006 → L 0.0252; cross 2.25 nats; h(a) 0.00058 formula 0.00017
+31004 D cluster lure  rank a (b): struct 17 (5), sem 37 (1041), comb 13 (12), comb@25 13 (12), comb+L@25 18 (16); hit a by 25 0.0000 → L 0.0001; cross 0.21 nats; h(a) 0.00002 formula 0.00002
+== seeds (of 4) where a ranks in the top 5
+  A: struct 0/4, sem 0/4, comb 0/4, comb@25 0/4, comb+L@25 0/4; median crossing 2.41 nats
+  B: struct 0/4, sem 0/4, comb 0/4, comb@25 0/4, comb+L@25 0/4; median crossing 1.17 nats
+  C: struct 0/4, sem 0/4, comb 0/4, comb@25 0/4, comb+L@25 0/4; median crossing 1.55 nats
+  D: struct 0/4, sem 0/4, comb 0/4, comb@25 0/4, comb+L@25 0/4; median crossing 1.51 nats

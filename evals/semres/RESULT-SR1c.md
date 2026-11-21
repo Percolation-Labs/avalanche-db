@@ -82,3 +82,11 @@ Registered before running. Seeds of 4 with a in the top 5:
   are dearer than that by e^(β·Δcos). So the chain kept more share than I computed.
 - **For bill's check against real cards walks:** the theory predicts a Jev walk on cards that reaches gold about half as
   often as on MuSiQue, for the same structure.
+
+## Caveat (21 Nov, after RESULT-SRK's correction)
+
+SR1c's γ 3.7 and β 1.0 are SR-J's fit on MuSiQue's first 40 questions in file order, an easy block. There, cosine top-1
+is .62, against .42 over all 1,252. They're within-question contrasts, so they may carry over better than the block's
+top-1 rates do, but that's untested. Cards (γ 1.6, β 1.7, amendment 1) were also the first 40 in file order (srj_cards.py), and their typicality wasn't checked. SR1c's carry-over
+claim should be read as "at the conductance Jev showed on that block". A Jev refit on a random draw of questions would
+settle it; its price would be probed before registering it.
