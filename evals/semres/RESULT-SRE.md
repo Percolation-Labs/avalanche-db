@@ -42,8 +42,9 @@ number. It has to be confirmed on fresh questions before it's claimed. SR-E2 is 
 **What this changes.**
 - Item 2 sharpens. The entry hop is still cosine's to find; the door doesn't improve it, and the joint pair hurts it
   slightly.
-- What the door adds is that, once landed, the walk's second step is found without gold (SR-K's .95 given the true entry,
-  and .62 end to end with a cosine entry).
+- What the door adds is that, once landed, the walk's second step is found without gold more often than by cosine. Over all
+  1,252 questions: .58 given the true entry, against cosine's .42; and .50 end to end with a cosine entry, against .23.
+  (SR-K's .95 and SR-E's .62 were the easy first block.)
 - For repair, the target is a door from a well-landed entry to its link. Pairing the entry choice with the link costs
   entries.
 
