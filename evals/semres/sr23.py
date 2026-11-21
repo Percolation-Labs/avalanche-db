@@ -78,6 +78,10 @@ def main():
             # (2) at a: x alone vs probes at equal mass, node and edge walks
             r["x@a"] = float(H["x"][a]); r["probes@a"] = float(matched_mass(Hs)[a])
             r["xL@a"] = float(HL["x"][2]); r["probesL@a"] = float(matched_mass(HLs)[2])
+            ex = set(lands.values())
+            bl = [i for i, k in enumerate(sub) if k != "r2+type"]  # the registered second readout: james's probes only
+            r["probes@a_blind"] = float(matched_mass(Hs[bl])[a]); r["probesL@a_blind"] = float(matched_mass(HLs[bl])[2])
+            r["rank_a_blind"] = {"OR": rank_of(1 - np.prod(1 - Hs[bl], 0), [a], ex)[0], "collision": rank_of(collision(Hs[bl]), [a], ex)[0]}
             # (3) rank of a under OR vs collision (raw and over the degree null), over all passages but the landings
             ex = set(lands.values())
             OR = 1 - np.prod(1 - Hs, 0); col = collision(Hs)
@@ -100,6 +104,8 @@ def main():
         rs = [r for r in res if r["case"].startswith(ct)]
         say(f"  {ct}: probes beat x at a, comb {sum(r['probes@a'] > r['x@a'] for r in rs)}/4, comb+L {sum(r['probesL@a'] > r['xL@a'] for r in rs)}/4;"
             f" collision ranks a worse than OR {sum(r['rank_a']['collision'] > r['rank_a']['OR'] for r in rs)}/4"
+            + f" | without r2+type: probes beat x comb {sum(r['probes@a_blind'] > r['x@a'] for r in rs)}/4, comb+L {sum(r['probesL@a_blind'] > r['xL@a'] for r in rs)}/4,"
+              f" collision worse than OR {sum(r['rank_a_blind']['collision'] > r['rank_a_blind']['OR'] for r in rs)}/4"
             + (f"; +L lowers lure visits {sum(r['lure_visits'][1] < r['lure_visits'][0] for r in rs)}/4" if ct == "D" else ""))
     open("out/sr23.txt", "w").write("\n".join(lines) + "\n"); json.dump(res, open("out/sr23.json", "w"), indent=1)
 
