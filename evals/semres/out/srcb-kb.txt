@@ -1,0 +1,25 @@
+-- Who is the spouse of the actor portraying Jerry Lee Lewis in Great Balls of Fire?
+   read: Great Balls of Fire! (film); bundle size 21
+   qr    top 3: ['The Nutty Professor (1996 film)', 'Mean Old Man', "It's Only Money"]
+   a_qr  top 3: ['The Disorderly Orderly', 'The Nutty Professor (1996 film)', 'Flesh and Bone (film)']
+   a_k   top 3: ['Flesh and Bone (film)', 'The Bellboy', 'Mean Old Man']
+   x_qr  top 3: ['The Nutty Professor (1996 film)', 'The Disorderly Orderly', 'Rock and Roll Hall of Fame']
+SET=kb: 300 questions; per-question encode+score seconds (20 passages + question + keys): a 0.544, x 0.153
+qr    top-1 0.393  top-3 0.653  MRR 0.559
+k     top-1 0.577  top-3 0.783  MRR 0.703
+a_q   top-1 0.280  top-3 0.480  MRR 0.431
+a_qr  top-1 0.327  top-3 0.543  MRR 0.484
+a_k   top-1 0.457  top-3 0.650  MRR 0.586
+a_gb  top-1 0.833  top-3 0.950  MRR 0.894
+x_q   top-1 0.230  top-3 0.370  MRR 0.353
+x_qr  top-1 0.303  top-3 0.510  MRR 0.457
+x_k   top-1 0.403  top-3 0.583  MRR 0.531
+x_gb  top-1 0.817  top-3 0.937  MRR 0.879
+top-1 a_qr − qr: -0.067 [-0.113, -0.017]
+top-1 a_k − k: -0.120 [-0.170, -0.070]
+top-1 a_qr − k: -0.250 [-0.303, -0.193]
+top-1 a_k − qr: +0.063 [+0.007, +0.120]
+top-1 x_qr − qr: -0.090 [-0.140, -0.037]
+top-1 x_k − k: -0.173 [-0.227, -0.120]
+top-1 a_q − a_qr: -0.047 [-0.110, +0.013]
+top-1 a_gb − a_qr: +0.507 [+0.447, +0.567]
