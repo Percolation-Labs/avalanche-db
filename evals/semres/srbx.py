@@ -52,6 +52,8 @@ for qi in pool:
                   h1=ix[d[0]["paragraph_support_idx"]], h2=ix[d[1]["paragraph_support_idx"]]))
 print(f"SET={SET}: {len(Q)} questions; passages missing from the graph {sum(x['missing'] for x in Q)}; "
       f"cos entry's door keys median {np.median([len(x['D'][int(np.argmax(x['cq']))]) for x in Q]):.0f}")
+dup = sum(len({p["title"] for p in x["P"]}) < x["n"] for x in Q)
+print(f"pools with a repeated title: {dup} of {len(Q)} (e_title: Jev picks a title; among passages with that title, the one nearest the question by cos)")
 if LOOK:
     x = Q[0]; print(f"-- {x['q']}\n   titles: {[p['title'] for p in x['P']][:8]}"); sys.exit()
 # ---- Jev plumbing: cached, one ask_many per wave
@@ -79,7 +81,9 @@ def wave(reqs, label):
 ctxE = lambda x, t: {"question": x["q"], "task": t}
 get = wave([(ctxE(x, ENTRY_TASK_T), [p["title"] for p in x["P"]]) for x in Q] + [(ctxE(x, ENTRY_TASK), x["T"]) for x in Q], "1 entry")
 for x in Q:
-    x["e"] = dict(e_cos=int(np.argmax(x["cq"])), e_title=int(np.argmax(get(ctxE(x, ENTRY_TASK_T), [p["title"] for p in x["P"]]))),
+    tl = [p["title"] for p in x["P"]]; bt = tl[int(np.argmax(get(ctxE(x, ENTRY_TASK_T), tl)))]
+    et = max((v for v in range(x["n"]) if tl[v] == bt), key=lambda v: x["cq"][v])   # repeated title: the namesake nearest the question by cos
+    x["e"] = dict(e_cos=int(np.argmax(x["cq"])), e_title=int(et),
                   e_pass=int(np.argmax(get(ctxE(x, ENTRY_TASK), x["T"]))))
 # wave 2: name + pass from each distinct entry
 others = lambda x, e: [v for v in range(x["n"]) if v != e]
@@ -90,15 +94,15 @@ for x in Q:
         e = x["e"][en]; R2.append((ctxR(x, e, PASS_TASK), [x["T"][v] for v in others(x, e)]))
         if en != "e_pass" and x["D"][e]: R2.append((ctxR(x, e, NAME_TASK), sorted(x["D"][e])))
 get = wave(R2, "2 name+pass")
-def from_entry(x, e):
-    """Steps from entry e that need no wave 3; returns (steps, twin request or None)."""
+def from_entry(x, e, names=True):
+    """Steps from entry e that need no wave 3; returns (steps, twin request or None). names=False: pass only (e_pass)."""
     n, D, cq = x["n"], x["D"], x["cq"]; ot = others(x, e)
     S = np.array([sum(W(k) for k in D[e] & D[v]) if v != e else -1.0 for v in range(n)])
     qr = x["E"][1:] @ m.encode([QP + x["q"] + " " + x["T"][e]], normalize_embeddings=True)[0]
     pj = get(ctxR(x, e, PASS_TASK), [x["T"][v] for v in ot]); st = {}
     st["cosdoor"] = int(max(np.nonzero(S == S.max())[0], key=lambda u: cq[u])) if S.max() > 0 else int([v for v in np.argsort(-cq) if v != e][0])
     st["pass"] = ot[int(np.argmax(pj))]
-    R = sorted(D[e]); share, K = [], None
+    R = sorted(D[e]) if names else []; share, K = [], None
     if R:
         K = R[int(np.argmax(get(ctxR(x, e, NAME_TASK), R)))]
         sh = [keys.get(hid(x["P"][v]), set()) for v in range(n)]
@@ -117,7 +121,7 @@ for x in Q:
     for en in ("e_cos", "e_title"):
         st, twin, share, K = from_entry(x, x["e"][en]); x["st"][en] = (st, share, K)
         if twin: pend.append(twin)
-    x["st"]["e_pass"] = (from_entry(x, x["e"]["e_pass"])[0], [], None)
+    x["st"]["e_pass"] = (from_entry(x, x["e"]["e_pass"], names=False)[0], [], None)
 get3 = wave(pend, "3 twins")
 for x in Q:
     for en in ("e_cos", "e_title"):

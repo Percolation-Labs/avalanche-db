@@ -83,3 +83,15 @@ aren't searched. 300 questions.
 by −.015 to −.034 against graph-mq, ceiling_k by ±.01, and cosdoor by 0 to −.03. The predictions above are dev-based. The
 arms that lean on k (cosdoor, and name/nt through k ties) may run about .02 low on this graph. The predictions are
 left unchanged, and this note is the stated allowance.
+
+## Amendment 1 (james's review of #74, before any Jev call)
+
+- **A bug, fixed.** The reference walk (`e_pass × pass`) looked up a naming request that wave 2 never sends. Wherever
+  e_pass differed from both other entries, the run would have died after two paid waves. `from_entry(..., names=False)`
+  now computes only the passage step for e_pass.
+- **Repeated titles.** **143 of the 300 pools contain a repeated title** (MuSiQue titles repeat within pools). With titles
+  as options, Jev faces identical strings. The rule is knob-free: Jev picks a title, and among the passages carrying
+  that title, e_title is the one nearest the question by bge cosine. This was set before any Jev call. It means
+  e_title isn't purely a Jev choice when titles repeat. It's Jev's title choice, then cosine within that title.
+- **Prediction unchanged** (e_title hop 1 about .78). The repeats add risk to it, since a title shared by hop 1 and a
+  same-name lure leaves the split to cosine.
