@@ -30,8 +30,9 @@ corpus.
 | 904–1171 | .549 | .534 | .687 | .687 | .478 | .478 |
 
 - k drops .015–.034 on the rebuild. The ceiling moves ±.01, and cosdoor 0 to −.03.
-- Arms compared within one graph are paired, so a graph-wide shift of this size doesn't bias a difference. It does
-  mean train-graph levels shouldn't be compared against graph-mq's levels on dev.
+- The shift isn't uniform across arms. Differences between arms that use keys the same way are unaffected, but a key arm
+  against a non-key arm can shift by up to about .03 between graphs (bill's review). Train-graph levels also shouldn't
+  be compared against graph-mq's levels on dev.
 
 **Paths** (local cache, not in git):
 - `~/.cache/walklab/mq-train/musique_ans_v1.0_train.jsonl`: public MuSiQue train, sha256 83a75b1e….
