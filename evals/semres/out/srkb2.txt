@@ -1,0 +1,19 @@
+-- Who is the spouse of the actor portraying Jerry Lee Lewis in Great Balls of Fire?
+   read: Great Balls of Fire! (film); bundle: ['1989 american', 'adam', 'american biographical', 'biographical', 'biographical film', 'biography', 'dennis', 'dennis quaid']
+   qr  top 3: ['The Nutty Professor (1996 film)', 'Mean Old Man', "It's Only Money"]
+   rq_s top 3: ['The Nutty Professor (1996 film)', 'Mean Old Man', "It's Only Money"]
+   hm  top 3: ["It's Only Money", 'The Nutty Professor (1996 film)', 'The Ladies Man']
+   rhm top 3: ['The Nutty Professor (1996 film)', "It's Only Money", 'The Ladies Man']
+
+holder-mean keys per question median 20, zero 0
+
+300 questions; empty bundle (fallback to q) 0; bundle size median 21
+qr      top-1 0.393  top-3 0.653  MRR 0.559
+k       top-1 0.577  top-3 0.783  MRR 0.703
+rq_s    top-1 0.340  top-3 0.607  MRR 0.514
+hm      top-1 0.277  top-3 0.517  MRR 0.446
+rhm     top-1 0.320  top-3 0.540  MRR 0.481
+top-1 rhm − qr: -0.073 [-0.127, -0.020]
+top-1 hm − qr: -0.117 [-0.173, -0.060]
+top-1 rhm − rq_s: -0.020 [-0.063, +0.023]
+top-1 rhm − k: -0.257 [-0.323, -0.190]
