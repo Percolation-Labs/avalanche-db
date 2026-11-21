@@ -1,0 +1,14 @@
+cards dev, L2 θ (-1, -1.5, 0.15): A = β 0, B = LC3 β {'number': -1, 'code': -2, 'phrase': 0.0, 'word': -2, 'beside': 2}; loose mean 1560.885 → 1835.231
+== Q1a cards L3: per case (A → B)
+  card:REM-1001: loose 2562.531 → 3102.320; xm +7.567 → +8.959; xM +8.238 → +10.106; am +4.129 → +5.104; aM +4.797 → +6.265; recall 0.0 → 0.0; top5 changed True; dropped 0 → 0
+  card:REM-103: loose 459.029 → 724.655; xm +7.191 → +7.301; xM +8.346 → +9.289; am +3.327 → +2.029; aM +4.712 → +4.728; recall 0.5 → 0.5; top5 changed True; dropped 0 → 0
+  card:REM-1030: loose 1769.055 → 1805.537; xm +6.826 → +7.584; xM +8.079 → +8.862; am +2.961 → +3.685; aM +3.899 → +4.815; recall 0.0 → 0.0; top5 changed True; dropped 0 → 0
+  card:REM-1035: loose 1154.119 → 1154.302; xm +6.470 → +7.461; xM +8.432 → +9.633; am +4.128 → +4.525; aM +6.063 → +6.500; recall 1.0 → 1.0; top5 changed True; dropped 0 → 0
+  mean B − A, loose: +274.3454 [+161.0970, +394.0437] (n 100)
+  mean B − A, xm: +0.7430 [+0.5643, +0.9197] (n 100)
+  mean B − A, xM: +1.3564 [+1.2052, +1.5042] (n 100)
+  mean B − A, am: -0.0087 [-0.1721, +0.1596] (n 100)
+  mean B − A, aM: +0.5742 [+0.4470, +0.7068] (n 100)
+  mean B − A, rec: -0.0612 [-0.1229, +0.0000] (n 85)
+  top 5 changed on 98/100
+  top-5 passages not reached by every seed (dropped from CS): A 0, B 0 of 500
