@@ -109,3 +109,34 @@ shares with v (the L1 graph's doors) in place of e.
 **Postmortem addition.** A collinearity check (e's precision and recall against hop 2) belongs before any registered
 bar that splits two regressors. That's the same lesson as this morning's, in a new place: look at the numbers the bar
 depends on before writing the bar.
+
+## Amendment 3 result: on cards, Jev is still softer on similarity than the vectors, but its relational term is half MuSiQue's
+
+The run covered 40 dev cards, 19 options each (gold commits plus the commits nearest the question). Jev spend: stage 0
+$0.00077, stage 1 $0.00741. **Today's total is $0.0126.** Output: `out/srj-cards-n{4,40}.{txt,json}`.
+
+| on the same option sets | β_q (nats per cos) | β_r (nats per cos) | γ, gold (nats) | top 1 is gold |
+|---|---|---|---|---|
+| vectors' Bayes slope | −6.15 (selection effect) | 6.75 | — | search .17, cos read .25 |
+| Jev, cos_q + gold | +3.13 [+1.77, +4.73] | — | +1.62 [+1.44, +1.79] | **.75** (coin .03) |
+| Jev, cos_q + cos_r + gold | +2.19 [−.18, +5.15] | +1.73 [−1.21, +4.52] | +1.58 [+1.39, +1.75] | |
+
+**The registered directional readout, part by part:**
+- **"β_r well below the vectors'."** It holds in the point estimate, 1.7 against 6.8, but the interval reaches 4.5. So it
+  is softer by about 4× here, against about 12× on MuSiQue.
+- **"γ ≥ 2 nats."** It fails: γ is 1.6 [1.4, 1.8].
+- **Overall,** the "soft on similarity, strong on relation" picture holds on cards in direction but is weaker. Cards
+  have up to 3 gold per question, and the relation from card to commit is looser than MuSiQue's bridge entity.
+  - Jev still takes gold first in 75% of cards, against 17–25% for the vector deciders.
+- **Unlike MuSiQue, Jev's slope on question-cosine is positive (+3.1)** where the vectors' is negative on these hand-hard
+  option sets. On cards, Jev does follow the question's wording somewhat, so MuSiQue's β ≈ 1 is partly that corpus's
+  construction.
+
+**What carries into the theory**, across two corpora:
+- **The similarity slope.** Jev's is about 1–3 nats per cos unit, against the vectors' Bayes slope of 7–10. That's
+  softer, consistently.
+- **The relational term.** It's real on both corpora but depends on the corpus: about 3.7 nats on MuSiQue's single-entity
+  bridges and about 1.6 on cards.
+- **Consequence.** James's SR1c conductance should carry γ as a corpus-measured number, not a constant. The carry-over
+  test then predicts a weaker Jev walk on cards than on MuSiQue, which can be checked against the L1 walks we already
+  have.
