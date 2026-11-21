@@ -1,0 +1,722 @@
+[
+ {
+  "seed": 61001,
+  "case": "A",
+  "cond": "clean",
+  "raw": {
+   "a": 2,
+   "b": 1,
+   "lure": null
+  },
+  "rel": {
+   "a": 3,
+   "b": 8,
+   "lure": null
+  },
+  "relKL": {
+   "a": 2,
+   "b": 1,
+   "lure": null
+  },
+  "deg": {
+   "a": 11,
+   "b": 1,
+   "lure": null
+  },
+  "degKL": {
+   "a": 2,
+   "b": 1,
+   "lure": null
+  }
+ },
+ {
+  "seed": 61001,
+  "case": "B",
+  "cond": "clean",
+  "raw": {
+   "a": 2,
+   "b": 1,
+   "lure": null
+  },
+  "rel": {
+   "a": 5,
+   "b": 7,
+   "lure": null
+  },
+  "relKL": {
+   "a": 2,
+   "b": 1,
+   "lure": null
+  },
+  "deg": {
+   "a": 25,
+   "b": 3,
+   "lure": null
+  },
+  "degKL": {
+   "a": 3,
+   "b": 1,
+   "lure": null
+  }
+ },
+ {
+  "seed": 61001,
+  "case": "C",
+  "cond": "clean",
+  "raw": {
+   "a": 3,
+   "b": 2,
+   "lure": null
+  },
+  "rel": {
+   "a": 5,
+   "b": 7,
+   "lure": null
+  },
+  "relKL": {
+   "a": 3,
+   "b": 1,
+   "lure": null
+  },
+  "deg": {
+   "a": 3,
+   "b": 1,
+   "lure": null
+  },
+  "degKL": {
+   "a": 3,
+   "b": 2,
+   "lure": null
+  }
+ },
+ {
+  "seed": 61001,
+  "case": "D",
+  "cond": "clean",
+  "raw": {
+   "a": 8,
+   "b": 4,
+   "lure": 1
+  },
+  "rel": {
+   "a": 8,
+   "b": 16,
+   "lure": 10
+  },
+  "relKL": {
+   "a": 3,
+   "b": 4,
+   "lure": 1
+  },
+  "deg": {
+   "a": 11,
+   "b": 10,
+   "lure": 1
+  },
+  "degKL": {
+   "a": 9,
+   "b": 7,
+   "lure": 1
+  }
+ },
+ {
+  "seed": 61001,
+  "case": "D",
+  "cond": "labels",
+  "raw": {
+   "a": 11,
+   "b": 10,
+   "lure": 1
+  },
+  "rel": {
+   "a": 8,
+   "b": 22,
+   "lure": 13
+  },
+  "relKL": {
+   "a": 9,
+   "b": 11,
+   "lure": 1
+  },
+  "deg": {
+   "a": 11,
+   "b": 10,
+   "lure": 1
+  },
+  "degKL": {
+   "a": 11,
+   "b": 10,
+   "lure": 1
+  }
+ },
+ {
+  "seed": 61001,
+  "case": "D",
+  "cond": "chain",
+  "raw": {
+   "a": 8,
+   "b": 4,
+   "lure": 1
+  },
+  "rel": {
+   "a": 8,
+   "b": 16,
+   "lure": 11
+  },
+  "relKL": {
+   "a": 3,
+   "b": 4,
+   "lure": 1
+  },
+  "deg": {
+   "a": 11,
+   "b": 10,
+   "lure": 1
+  },
+  "degKL": {
+   "a": 9,
+   "b": 7,
+   "lure": 1
+  }
+ },
+ {
+  "seed": 61002,
+  "case": "A",
+  "cond": "clean",
+  "raw": {
+   "a": 2,
+   "b": 1,
+   "lure": null
+  },
+  "rel": {
+   "a": 15,
+   "b": 12,
+   "lure": null
+  },
+  "relKL": {
+   "a": 3,
+   "b": 1,
+   "lure": null
+  },
+  "deg": {
+   "a": 20,
+   "b": 2,
+   "lure": null
+  },
+  "degKL": {
+   "a": 3,
+   "b": 1,
+   "lure": null
+  }
+ },
+ {
+  "seed": 61002,
+  "case": "B",
+  "cond": "clean",
+  "raw": {
+   "a": 5,
+   "b": 2,
+   "lure": null
+  },
+  "rel": {
+   "a": 15,
+   "b": 25,
+   "lure": null
+  },
+  "relKL": {
+   "a": 5,
+   "b": 4,
+   "lure": null
+  },
+  "deg": {
+   "a": 53,
+   "b": 16,
+   "lure": null
+  },
+  "degKL": {
+   "a": 6,
+   "b": 2,
+   "lure": null
+  }
+ },
+ {
+  "seed": 61002,
+  "case": "C",
+  "cond": "clean",
+  "raw": {
+   "a": 3,
+   "b": 1,
+   "lure": null
+  },
+  "rel": {
+   "a": 5,
+   "b": 14,
+   "lure": null
+  },
+  "relKL": {
+   "a": 3,
+   "b": 1,
+   "lure": null
+  },
+  "deg": {
+   "a": 2,
+   "b": 1,
+   "lure": null
+  },
+  "degKL": {
+   "a": 2,
+   "b": 1,
+   "lure": null
+  }
+ },
+ {
+  "seed": 61002,
+  "case": "D",
+  "cond": "clean",
+  "raw": {
+   "a": 11,
+   "b": 4,
+   "lure": 1
+  },
+  "rel": {
+   "a": 43,
+   "b": 52,
+   "lure": 51
+  },
+  "relKL": {
+   "a": 11,
+   "b": 4,
+   "lure": 1
+  },
+  "deg": {
+   "a": 17,
+   "b": 16,
+   "lure": 1
+  },
+  "degKL": {
+   "a": 15,
+   "b": 7,
+   "lure": 1
+  }
+ },
+ {
+  "seed": 61002,
+  "case": "D",
+  "cond": "labels",
+  "raw": {
+   "a": 13,
+   "b": 10,
+   "lure": 1
+  },
+  "rel": {
+   "a": 43,
+   "b": 59,
+   "lure": 51
+  },
+  "relKL": {
+   "a": 16,
+   "b": 10,
+   "lure": 1
+  },
+  "deg": {
+   "a": 17,
+   "b": 16,
+   "lure": 1
+  },
+  "degKL": {
+   "a": 15,
+   "b": 10,
+   "lure": 1
+  }
+ },
+ {
+  "seed": 61002,
+  "case": "D",
+  "cond": "chain",
+  "raw": {
+   "a": 8,
+   "b": 4,
+   "lure": 1
+  },
+  "rel": {
+   "a": 43,
+   "b": 52,
+   "lure": 48
+  },
+  "relKL": {
+   "a": 10,
+   "b": 4,
+   "lure": 1
+  },
+  "deg": {
+   "a": 17,
+   "b": 16,
+   "lure": 1
+  },
+  "degKL": {
+   "a": 15,
+   "b": 5,
+   "lure": 1
+  }
+ },
+ {
+  "seed": 61003,
+  "case": "A",
+  "cond": "clean",
+  "raw": {
+   "a": 4,
+   "b": 2,
+   "lure": null
+  },
+  "rel": {
+   "a": 15,
+   "b": 24,
+   "lure": null
+  },
+  "relKL": {
+   "a": 6,
+   "b": 3,
+   "lure": null
+  },
+  "deg": {
+   "a": 29,
+   "b": 7,
+   "lure": null
+  },
+  "degKL": {
+   "a": 6,
+   "b": 2,
+   "lure": null
+  }
+ },
+ {
+  "seed": 61003,
+  "case": "B",
+  "cond": "clean",
+  "raw": {
+   "a": 2,
+   "b": 1,
+   "lure": null
+  },
+  "rel": {
+   "a": 14,
+   "b": 23,
+   "lure": null
+  },
+  "relKL": {
+   "a": 2,
+   "b": 1,
+   "lure": null
+  },
+  "deg": {
+   "a": 23,
+   "b": 2,
+   "lure": null
+  },
+  "degKL": {
+   "a": 3,
+   "b": 1,
+   "lure": null
+  }
+ },
+ {
+  "seed": 61003,
+  "case": "C",
+  "cond": "clean",
+  "raw": {
+   "a": 2,
+   "b": 1,
+   "lure": null
+  },
+  "rel": {
+   "a": 6,
+   "b": 14,
+   "lure": null
+  },
+  "relKL": {
+   "a": 2,
+   "b": 1,
+   "lure": null
+  },
+  "deg": {
+   "a": 2,
+   "b": 1,
+   "lure": null
+  },
+  "degKL": {
+   "a": 2,
+   "b": 1,
+   "lure": null
+  }
+ },
+ {
+  "seed": 61003,
+  "case": "D",
+  "cond": "clean",
+  "raw": {
+   "a": 13,
+   "b": 7,
+   "lure": 1
+  },
+  "rel": {
+   "a": 51,
+   "b": 73,
+   "lure": 64
+  },
+  "relKL": {
+   "a": 16,
+   "b": 12,
+   "lure": 1
+  },
+  "deg": {
+   "a": 16,
+   "b": 15,
+   "lure": 1
+  },
+  "degKL": {
+   "a": 16,
+   "b": 8,
+   "lure": 1
+  }
+ },
+ {
+  "seed": 61003,
+  "case": "D",
+  "cond": "labels",
+  "raw": {
+   "a": 16,
+   "b": 11,
+   "lure": 1
+  },
+  "rel": {
+   "a": 51,
+   "b": 78,
+   "lure": 69
+  },
+  "relKL": {
+   "a": 20,
+   "b": 19,
+   "lure": 1
+  },
+  "deg": {
+   "a": 16,
+   "b": 15,
+   "lure": 1
+  },
+  "degKL": {
+   "a": 16,
+   "b": 11,
+   "lure": 1
+  }
+ },
+ {
+  "seed": 61003,
+  "case": "D",
+  "cond": "chain",
+  "raw": {
+   "a": 13,
+   "b": 5,
+   "lure": 1
+  },
+  "rel": {
+   "a": 51,
+   "b": 71,
+   "lure": 63
+  },
+  "relKL": {
+   "a": 14,
+   "b": 9,
+   "lure": 1
+  },
+  "deg": {
+   "a": 16,
+   "b": 15,
+   "lure": 1
+  },
+  "degKL": {
+   "a": 16,
+   "b": 7,
+   "lure": 1
+  }
+ },
+ {
+  "seed": 61004,
+  "case": "A",
+  "cond": "clean",
+  "raw": {
+   "a": 4,
+   "b": 2,
+   "lure": null
+  },
+  "rel": {
+   "a": 3,
+   "b": 4,
+   "lure": null
+  },
+  "relKL": {
+   "a": 5,
+   "b": 4,
+   "lure": null
+  },
+  "deg": {
+   "a": 37,
+   "b": 9,
+   "lure": null
+  },
+  "degKL": {
+   "a": 5,
+   "b": 3,
+   "lure": null
+  }
+ },
+ {
+  "seed": 61004,
+  "case": "B",
+  "cond": "clean",
+  "raw": {
+   "a": 3,
+   "b": 2,
+   "lure": null
+  },
+  "rel": {
+   "a": 3,
+   "b": 17,
+   "lure": null
+  },
+  "relKL": {
+   "a": 2,
+   "b": 1,
+   "lure": null
+  },
+  "deg": {
+   "a": 52,
+   "b": 4,
+   "lure": null
+  },
+  "degKL": {
+   "a": 3,
+   "b": 2,
+   "lure": null
+  }
+ },
+ {
+  "seed": 61004,
+  "case": "C",
+  "cond": "clean",
+  "raw": {
+   "a": 8,
+   "b": 3,
+   "lure": null
+  },
+  "rel": {
+   "a": 26,
+   "b": 33,
+   "lure": null
+  },
+  "relKL": {
+   "a": 10,
+   "b": 3,
+   "lure": null
+  },
+  "deg": {
+   "a": 3,
+   "b": 2,
+   "lure": null
+  },
+  "degKL": {
+   "a": 7,
+   "b": 3,
+   "lure": null
+  }
+ },
+ {
+  "seed": 61004,
+  "case": "D",
+  "cond": "clean",
+  "raw": {
+   "a": 8,
+   "b": 4,
+   "lure": 1
+  },
+  "rel": {
+   "a": 14,
+   "b": 21,
+   "lure": 26
+  },
+  "relKL": {
+   "a": 9,
+   "b": 7,
+   "lure": 3
+  },
+  "deg": {
+   "a": 19,
+   "b": 18,
+   "lure": 1
+  },
+  "degKL": {
+   "a": 10,
+   "b": 4,
+   "lure": 1
+  }
+ },
+ {
+  "seed": 61004,
+  "case": "D",
+  "cond": "labels",
+  "raw": {
+   "a": 15,
+   "b": 11,
+   "lure": 1
+  },
+  "rel": {
+   "a": 14,
+   "b": 28,
+   "lure": 19
+  },
+  "relKL": {
+   "a": 15,
+   "b": 16,
+   "lure": 1
+  },
+  "deg": {
+   "a": 19,
+   "b": 18,
+   "lure": 1
+  },
+  "degKL": {
+   "a": 15,
+   "b": 11,
+   "lure": 1
+  }
+ },
+ {
+  "seed": 61004,
+  "case": "D",
+  "cond": "chain",
+  "raw": {
+   "a": 13,
+   "b": 5,
+   "lure": 1
+  },
+  "rel": {
+   "a": 14,
+   "b": 21,
+   "lure": 17
+  },
+  "relKL": {
+   "a": 10,
+   "b": 9,
+   "lure": 1
+  },
+  "deg": {
+   "a": 19,
+   "b": 18,
+   "lure": 1
+  },
+  "degKL": {
+   "a": 15,
+   "b": 7,
+   "lure": 1
+  }
+ }
+]

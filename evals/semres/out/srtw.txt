@@ -1,0 +1,31 @@
+61001 A clean  rank a (b) [best lure]: raw 2 (1), rel 3 (8), relKL 2 (1), deg 11 (1), degKL 2 (1)
+61001 B clean  rank a (b) [best lure]: raw 2 (1), rel 5 (7), relKL 2 (1), deg 25 (3), degKL 3 (1)
+61001 C clean  rank a (b) [best lure]: raw 3 (2), rel 5 (7), relKL 3 (1), deg 3 (1), degKL 3 (2)
+61001 D clean  rank a (b) [best lure]: raw 8 (4) [1], rel 8 (16) [10], relKL 3 (4) [1], deg 11 (10) [1], degKL 9 (7) [1]
+61001 D labels rank a (b) [best lure]: raw 11 (10) [1], rel 8 (22) [13], relKL 9 (11) [1], deg 11 (10) [1], degKL 11 (10) [1]
+61001 D chain  rank a (b) [best lure]: raw 8 (4) [1], rel 8 (16) [11], relKL 3 (4) [1], deg 11 (10) [1], degKL 9 (7) [1]
+61002 A clean  rank a (b) [best lure]: raw 2 (1), rel 15 (12), relKL 3 (1), deg 20 (2), degKL 3 (1)
+61002 B clean  rank a (b) [best lure]: raw 5 (2), rel 15 (25), relKL 5 (4), deg 53 (16), degKL 6 (2)
+61002 C clean  rank a (b) [best lure]: raw 3 (1), rel 5 (14), relKL 3 (1), deg 2 (1), degKL 2 (1)
+61002 D clean  rank a (b) [best lure]: raw 11 (4) [1], rel 43 (52) [51], relKL 11 (4) [1], deg 17 (16) [1], degKL 15 (7) [1]
+61002 D labels rank a (b) [best lure]: raw 13 (10) [1], rel 43 (59) [51], relKL 16 (10) [1], deg 17 (16) [1], degKL 15 (10) [1]
+61002 D chain  rank a (b) [best lure]: raw 8 (4) [1], rel 43 (52) [48], relKL 10 (4) [1], deg 17 (16) [1], degKL 15 (5) [1]
+61003 A clean  rank a (b) [best lure]: raw 4 (2), rel 15 (24), relKL 6 (3), deg 29 (7), degKL 6 (2)
+61003 B clean  rank a (b) [best lure]: raw 2 (1), rel 14 (23), relKL 2 (1), deg 23 (2), degKL 3 (1)
+61003 C clean  rank a (b) [best lure]: raw 2 (1), rel 6 (14), relKL 2 (1), deg 2 (1), degKL 2 (1)
+61003 D clean  rank a (b) [best lure]: raw 13 (7) [1], rel 51 (73) [64], relKL 16 (12) [1], deg 16 (15) [1], degKL 16 (8) [1]
+61003 D labels rank a (b) [best lure]: raw 16 (11) [1], rel 51 (78) [69], relKL 20 (19) [1], deg 16 (15) [1], degKL 16 (11) [1]
+61003 D chain  rank a (b) [best lure]: raw 13 (5) [1], rel 51 (71) [63], relKL 14 (9) [1], deg 16 (15) [1], degKL 16 (7) [1]
+61004 A clean  rank a (b) [best lure]: raw 4 (2), rel 3 (4), relKL 5 (4), deg 37 (9), degKL 5 (3)
+61004 B clean  rank a (b) [best lure]: raw 3 (2), rel 3 (17), relKL 2 (1), deg 52 (4), degKL 3 (2)
+61004 C clean  rank a (b) [best lure]: raw 8 (3), rel 26 (33), relKL 10 (3), deg 3 (2), degKL 7 (3)
+61004 D clean  rank a (b) [best lure]: raw 8 (4) [1], rel 14 (21) [26], relKL 9 (7) [3], deg 19 (18) [1], degKL 10 (4) [1]
+61004 D labels rank a (b) [best lure]: raw 15 (11) [1], rel 14 (28) [19], relKL 15 (16) [1], deg 19 (18) [1], degKL 15 (11) [1]
+61004 D chain  rank a (b) [best lure]: raw 13 (5) [1], rel 14 (21) [17], relKL 10 (9) [1], deg 19 (18) [1], degKL 15 (7) [1]
+== a in the top 5, by case/condition (of 4 seeds); and D: a above every lure
+  A clean : raw 4/4, rel 2/4, relKL 3/4, deg 0/4, degKL 3/4
+  B clean : raw 4/4, rel 2/4, relKL 4/4, deg 0/4, degKL 3/4
+  C clean : raw 3/4, rel 2/4, relKL 3/4, deg 4/4, degKL 3/4
+  D clean : raw 0/4, rel 0/4, relKL 1/4, deg 0/4, degKL 0/4; a above lures: raw 0/4, rel 4/4, relKL 0/4, deg 0/4, degKL 0/4
+  D labels: raw 0/4, rel 0/4, relKL 0/4, deg 0/4, degKL 0/4; a above lures: raw 0/4, rel 4/4, relKL 0/4, deg 0/4, degKL 0/4
+  D chain : raw 0/4, rel 0/4, relKL 1/4, deg 0/4, degKL 0/4; a above lures: raw 0/4, rel 4/4, relKL 0/4, deg 0/4, degKL 0/4
