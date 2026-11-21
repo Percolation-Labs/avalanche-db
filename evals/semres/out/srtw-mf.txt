@@ -1,0 +1,12 @@
+61001 D clean  log E/h0 median -0.82; rel under h0 a 8 lure 10 a>lures; E a 17 lure 10
+61001 D labels log E/h0 median -0.82; rel under h0 a 8 lure 13 a>lures; E a 23 lure 12
+61001 D chain  log E/h0 median -0.82; rel under h0 a 8 lure 11 a>lures; E a 18 lure 12
+61002 D clean  log E/h0 median -0.92; rel under h0 a 43 lure 51 a>lures; E a 37 lure 62 a>lures
+61002 D labels log E/h0 median -0.92; rel under h0 a 43 lure 51 a>lures; E a 37 lure 58 a>lures
+61002 D chain  log E/h0 median -0.92; rel under h0 a 43 lure 48 a>lures; E a 37 lure 52 a>lures
+61003 D clean  log E/h0 median -0.91; rel under h0 a 51 lure 64 a>lures; E a 127 lure 74
+61003 D labels log E/h0 median -0.91; rel under h0 a 51 lure 69 a>lures; E a 132 lure 75
+61003 D chain  log E/h0 median -0.91; rel under h0 a 51 lure 63 a>lures; E a 125 lure 60
+61004 D clean  log E/h0 median -1.07; rel under h0 a 14 lure 26 a>lures; E a 9 lure 119 a>lures
+61004 D labels log E/h0 median -1.07; rel under h0 a 14 lure 19 a>lures; E a 9 lure 29 a>lures
+61004 D chain  log E/h0 median -1.07; rel under h0 a 14 lure 17 a>lures; E a 9 lure 48 a>lures
