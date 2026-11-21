@@ -155,6 +155,50 @@ This is consistent with MuSiQue's single-seed chain miss belonging to the graph,
 entry door (S1′'s entry-hop analysis; S4's 23% and 49%, which are upper bounds). It's shown only on rendered worlds:
 there, the decider takes the entry once the door shows its link (11/16, P ≈ .04).
 
+## Afternoon, 21 Nov: the random-draw price, the door, and REM-1341's vector operations
+
+**Jev's MuSiQue price, redrawn** (SR-J-R, a random 40 from 41–1252, $0.0049): **3.8·cos + 3.2·[next hop]** nats.
+- The next-hop term holds (3.24 [2.79, 3.71]).
+- The similarity slope was a block artifact (1.0 on the first 40, 3.8 [2.2, 5.4] on the random draw).
+- Jev's top-1 is .88, against the best vector's .40.
+- SR1c rerun at this price (james): B 4/4, C 3/4, but A and D fall, because the higher β feeds the lure trap.
+
+**Measured gold-free, on all 1,252 questions** (SR-K, SR-E, SR-E2):
+
+| hop-2 decider, given the read passage | top-1 |
+|---|---|
+| cos(question + read), the text probe | .39–.42 |
+| **shared rare door keys, Σ 1/(df − 1), lexical** | **.58** |
+| Jev (random draw) | .88 |
+
+- **End to end:** an entry by cosine, then its door link, lands both hops in .50, against .23 for cosine's top two.
+- **Order matters.** That beats choosing the pair jointly (+.06 on 500 fresh questions).
+
+**REM-1341, vector operations on key bundles** (SR-KB, SR-KB2, james's W-LOOKS and MaxSim): all fail to beat the text
+probe.
+
+| route, 300 random questions | top-1 hop 2 |
+|---|---|
+| Average PRF / Rocchio of key-phrase vectors (idf or 1/(df − 1), centre removed) | .32–.37 |
+| holder means (stored vectors of each key's other passages) | .28–.32 |
+| token-level MaxSim, key phrase against option tokens (james, priced only) | .41 |
+| lexical door, for reference | .58 |
+
+The warps are a separate note, because they weren't measured on the 300. james priced the Jev-taught and graph-taught
+diagonal warps on SR-J's 40, the easy block. Their agreement with Jev's pick was .12 and .40, against the text probe's
+.62 on the same block.
+
+**The reading.** The next-hop term is an *identity* term: does the option name what hop 1 resolved? bge-small's
+vector space keeps only a trace of that. Averaging turns identity into topic, and topic is what every option in the pool
+already shares. So:
+- **The cheap library operation is lexical:** shared rare keys weighted by 1/(df − 1).
+- **Vectors earn their place before the door and after it.** Before: the entry by cosine. After: ordering the door's
+  shortlist for Jev.
+- **Twins need the ordered step.** No reach number separates them (SR-TW).
+
+**Open, for Sirsh.** Every vector route used bge-small. A late-interaction model (ColBERT) might keep identity in its
+token vectors, but that's a new model, not a $0 look.
+
 ## What this changes
 
 1. **Price walks with the decider's conductance, not the embedding's.**
@@ -202,3 +246,9 @@ All are on avalanche-db. Each is registered before scoring, with a postmortem in
 | SR-J (with amendments 1–3) | RESULT-SRJ.md | #59 |
 | SR-JW, SR-JW2, SR-JW3 | RESULT-SRJW*.md | #57 |
 | FITJEV (γ_type, γ_rel, γ_read) | RESULT-FITJEV.md | #57 |
+| SR-K, SR-E, SR-E2 (with the first-40 correction) | RESULT-SRK.md, RESULT-SRE.md | #60 |
+| SR-TW (relational null) | RESULT-SRTW.md | #61 |
+| SR1b/SR1c block corrections and re-price | RESULT-SR1b.md, RESULT-SR1c.md | #62 |
+| SR-J-R (Jev, random draw) | RESULT-SRJR.md | #63 |
+| W-LOOKS, MaxSim (priced, not registered) | RESULT-W-LOOKS.md | #64, #67 |
+| SR-KB, SR-KB2 (key-bundle probes) | RESULT-SRKB.md, RESULT-SRKB2.md | #65, #66 |
