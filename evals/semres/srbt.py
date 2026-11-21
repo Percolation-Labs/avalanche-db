@@ -102,4 +102,10 @@ for a, b in (("nt", "jev"), ("nt", "jev_pass"), ("nt", "k"), ("nt", "nt_cut")):
     dd = np.array([(x == 1) - (y == 1) for x, y in zip(res[a], res[b])], float)
     bt = [dd[rng.integers(0, n, n)].mean() for _ in range(4000)]
     print(f"top-1 {a} − {b}: {dd.mean():+.3f} [{np.percentile(bt, 2.5):+.3f}, {np.percentile(bt, 97.5):+.3f}]")
+tw = [i for i, o in enumerate(out) if o["S"] > 1]   # amendment 1: nt and jev differ only where |S| > 1
+for a, b in (("nt", "jev"), ("nt", "jev_pass")):
+    dd = np.array([(res[a][i] == 1) - (res[b][i] == 1) for i in tw], float)
+    bt = [dd[rng.integers(0, len(tw), len(tw))].mean() for _ in range(4000)]
+    print(f"within |S| > 1 (n {len(tw)}): {a} − {b}: {dd.mean():+.3f} [{np.percentile(bt, 2.5):+.3f}, {np.percentile(bt, 97.5):+.3f}]; "
+          f"{a} {np.mean([res[a][i] == 1 for i in tw]):.3f}, {b} {np.mean([res[b][i] == 1 for i in tw]):.3f}")
 json.dump(dict(out=out, usd=usd), open(f"out/srbt-{SET}.json", "w"))

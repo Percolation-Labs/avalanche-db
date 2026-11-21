@@ -60,3 +60,9 @@ Jev reading of only the named twins buys part of the second relation.
 
 **Scope.** Given gold hop 1. In-pool, 19 options. MuSiQue 2-hop. Jev's wordings are SR-BN's and SR-J's, unchanged, with
 no wording search. The pricing set (SR-BN's 300) is not reused for the claim.
+
+## Amendment 1 (bill's review, before stage 0; readout only)
+
+- `nt` and `jev` pick the same option when |S| ≤ 1. With one sharer it's that option; with none, both fall to k's order.
+  So `nt − jev` is carried entirely by the |S| > 1 questions.
+- `nt − jev` and `nt − jev_pass` are also reported **within |S| > 1**, with n. The primary is unchanged.
