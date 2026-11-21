@@ -38,8 +38,18 @@ given from gold.
 | entry = hop 1 | 184 | .272 | .625 | **.745** | .810 | .870 |
 | entry = hop 2 | 29 | .448 | .448 | .483 | .517 | .655 |
 
-- **Given a right entry, the walk matches SR-BN's single hop.** name gets .745 here, against .680 in SR-BN with gold
-  hop 1. pass gets .870 against .843. The step transfers.
+- **Given a right entry, the step transfers almost exactly** (james's join, checked by me). On the same 184
+  questions, james's SR-BT, which hands over gold hop 1 as read, gets:
+
+  | arm | SR-BT (gold hop 1) | this walk |
+  |---|---|---|
+  | k / cosdoor | .636 | .625 |
+  | jev / name | .739 | .745 |
+  | nt / nameset | .821 | .810 |
+  | jev_pass / pass | .891 | .870 |
+
+  These 184 are a selected subset (questions where cosine finds hop 1, likely easier), so compare them with each other,
+  not with SR-BN's .680 on another draw.
 - **The entry caps everything.** In 20.5% of questions the entry is neither hop, and no step can recover them. So the
   ceiling on both hops for any step from this entry is about .80. name reaches .563 of it, and pass .668.
 - **From a hop-2 entry,** the naming question is ill-posed, but name still steps back to hop 1 about as often as cosdoor
@@ -59,8 +69,9 @@ given from gold.
   request naming the bridge (about 8% of a passage request's input, SR-BN), and a lexical step. That gets .563 both
   hops against .478 for the walk without the decision.
 - **Spending on the twins pays.** Adding Jev's passage judgment only where the name leaves more than one candidate
-  (25.7% of questions, 1.4 sharers on average) gains another +.049. In production that's a second short request,
-  james's SR-BT, which is measuring it directly on the same questions.
+  (25.7% of questions, with 3.4 sharers on average among those) gains another +.049. In production that's a second short
+  request. james's SR-BT measured it directly on the same questions: nt − jev +.119 [+.075, +.168] given gold hop 1, and
+  nt − nt_cut −.011 [−.030, +.004]. So the approximation used here holds.
 - **The biggest remaining loss is the entry, not the step.** 20.5% of walks start on neither hop. A better entry (for
   example, Jev choosing among cosine's top few) is the next lever. It's untested.
 - **Jev reading all 19 is still best** (.668), at about 12× the naming request's input. The cheap route reaches 84% of
@@ -79,4 +90,4 @@ given from gold.
   request. SR-BN's wave was under its own estimate. The difference is small, but the estimator isn't conservative for
   long passages.
 - **Scope.** 2-hop only. In-pool, 20 passages. One entry rule. `nameset` is approximated from a request that saw all 19
-  passages (SR-BT measures the real thing). 268 questions, so the entry = hop 2 split (n 29) isn't readable.
+  passages. SR-BT's nt − nt_cut (−.011) says the approximation is close. 268 questions, so the entry = hop 2 split (n 29) isn't readable.
