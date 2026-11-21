@@ -20,7 +20,9 @@ walk fails on every bridge.
 **Jev prices steps differently,** and we measured how:
 - A weak similarity term of about 1–3 nats per unit of cosine.
 - A large relational term for "this passage is what the one I've read leads to": 3.7 nats on MuSiQue, 1.6 on our cards.
-- A read mask: it doesn't go back to what it has read.
+- Terms for the asked type (about +0.7–1.1 nats) and for the needed relation, the second only when the door shows its
+  link (about +0.7).
+- A mild penalty for going back to what it has read (−0.85 nats), not a refusal.
 
 With Jev's prices in place of similarity's, the same synthetic worlds, walk and solver reach the answer. On rendered
 text, Jev's own choices match those prices at the chain's entry.
@@ -110,18 +112,33 @@ question, and 10.2 against the read passage (MuSiQue dev, 200 questions).
 | door hides its links | Jev 1/16 against string reader 7 | Jev **14/16** against dictionary reader 9 |
 | door shows its links, as real passages do | Jev **11/16** against string reader 7 (P ≈ .04) | Jev 13/16 |
 | Jev against the theory's share, log | −0.09 [−0.79, +0.24] | +0.37 [+0.15, +0.63] |
-| way-back share, Jev against theory | — | .09 against .29 |
+| way-back share, Jev against theory | — | .09 against .29 (relative to a theory that over-credits the start) |
 
-The measured conductance is:
+**The terms, fitted** (FITJEV: $0, registered before the fit, on the 64 rendered option sets; 95% intervals):
 
-**c(u→v) ∝ exp( β·cos + γ_rel·[v is what `read` leads to] + γ_type·[v is of the asked type] − ∞·[v already read] )**
+| term | door hides its links | door shows its links |
+|---|---|---|
+| γ_type (the door is of the asked type) | +1.09 [+.71, +1.54] | +0.70 [+.28, +1.06] |
+| γ_rel (the door is linked by a needed relation) | +0.12 [−.10, +.35] | +0.66 [+.43, +.92] |
+| γ_read (the door is already read) | +0.33 [−.27, +.98] | −0.85 [−1.46, −.29] |
+| β (cosine) | not estimable here | not estimable here |
 
-- **β** is about 1–3 nats per unit of cosine.
-- **γ_rel** is 3.7 nats on MuSiQue and 1.6 on cards, measured per corpus.
-- **γ_type** is about +0.4 nats over γ_rel. It's seen at the bridge, not yet fitted.
-- **The read mask** cuts the way back to a third. It is what makes Jev's network one-way. The "inductance" we first
-  modelled as direction memory was compensating for an over-sharp similarity decider. With Jev's prices there's no
-  back-current, and direction memory changes nothing (SR1c).
+The conductance, as measured:
+
+**c(u→v) ∝ exp( β·cos + γ_rel·[needed relation] + γ_type·[asked type] + γ_read·[already read] )**
+
+- **β** is about 1–3 nats per unit of cosine, from SR-J on real text. The rendered worlds can't estimate it.
+- **γ_rel** pays only when the door shows its link. In rendered worlds it's about +0.7, because "has relation r1 or r2"
+  is common there.
+- **The 3.7 and 1.6 from SR-J** are the *joint* term for "this is the next hop": relation, type and identity together.
+  So they're larger than γ_rel + γ_type here.
+- **γ_type** is the steadiest term: +0.7 to +1.1 in both renderings.
+- **γ_read** is a mild penalty, −0.85 nats, about a 2.3× reduction, and only when doors show their links. It is not a
+  mask.
+  - An earlier draft said "−∞" and "one-way", from the way-back share. That was a ratio against a theory that
+    over-credits the start, and a share ratio against a theory is not a coefficient.
+- **No back-current.** The "inductance" first modelled as direction memory was compensating for an over-sharp
+  similarity decider. With Jev's prices there's no back-current, and direction memory changes nothing (SR1c).
 
 **Jev prices a door by what the door shows.** When the bridge passage hides its links, Jev doesn't take it, even though
 the read passage names it (1/16). When the bridge shows them, Jev takes it (11/16).
@@ -157,6 +174,8 @@ analysis, S4). The decider isn't refusing it.
   that didn't fit its readout (SR1a). The harnesses now gate on degeneracy, matched to the readout.
 - **A control has to be the cheap reader's actual rule.** SR-JW's normalised word overlap missed a literal giveaway that
   a one-string check found. The string readers are now registered rows.
+- **A share ratio against a theory is not a coefficient.** The way-back share made the read term look like a hard mask.
+  The fit makes it −0.85 nats.
 - **The decider changed the theory, not the vectors.** The vector-space modelling (SR1, SR23) was reframed by $0.0044 of
   Jev calls. Next time, measure the decider's prices first. Stage 0 cost $0.00045.
 
@@ -171,3 +190,4 @@ All are on avalanche-db. Each is registered before scoring, with a postmortem in
 | SR23 | RESULT-SR23.md | #58 |
 | SR-J (with amendments 1–3) | RESULT-SRJ.md | #59 |
 | SR-JW, SR-JW2, SR-JW3 | RESULT-SRJW*.md | #57 |
+| FITJEV (γ_type, γ_rel, γ_read) | RESULT-FITJEV.md | #57 |
