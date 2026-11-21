@@ -132,3 +132,34 @@ def edge_arrival(Q, alpha, m0, landed, by_head, targets, steps):
     for t in range(2, steps + 1):
         m = (1 - alpha) * np.asarray((sp.csr_matrix(m) @ Q).todense()); got = got + (1 - land) * (m * (1 - keep)).sum(1); m = m * keep; M[t] = got
     return M
+
+
+def conductance_beta(w, probe, beta):
+    """SR1b: one semantic slope β (nats per cos unit), measured on MuSiQue by bill (Bayes slope of hop-2 gold on cos,
+    β = 8.7), for passages and links alike: c_uv = exp(β·cos(probe, link_uv)) · exp(β·cos(probe, u)) · exp(β·cos(probe, v)).
+    No per-probe μ, so no dependence on where search lands."""
+    V = w["V"]; E = np.array(w["edges"])
+    cv = V @ probe; ce = w["EV"] @ probe
+    loge = beta * (ce + cv[E[:, 0]] + cv[E[:, 1]])
+    return transition(len(V), w["edges"], np.exp(loge - loge.max()))
+
+
+def edge_walk_beta(w, P, beta):
+    """direction memory on the same slope: step v → w weighted P[v, w] · exp(β·cos(v − u, w − v))."""
+    import scipy.sparse as sp
+    V = w["V"]; n = len(V)
+    nb = [np.nonzero(P[v])[0] for v in range(n)]
+    states = [(u, v) for u in range(n) for v in nb[u]]
+    idx = {s: k for k, s in enumerate(states)}
+    ri, ci, x = [], [], []
+    for k, (u, v) in enumerate(states):
+        ws = nb[v]
+        if not len(ws): continue
+        din = V[v] - V[u]; dout = V[ws] - V[v]
+        cosd = (dout @ din) / np.maximum(np.linalg.norm(dout, axis=1) * np.linalg.norm(din), 1e-12)
+        wt = P[v, ws] * np.exp(beta * cosd); wt = wt / wt.sum()
+        ri += [k] * len(ws); ci += [idx[(v, int(q))] for q in ws]; x += list(wt)
+    Q = sp.csr_matrix((x, (ri, ci)), shape=(len(states), len(states)))
+    by_head = [[] for _ in range(n)]
+    for k, (u, v) in enumerate(states): by_head[v].append(k)
+    return Q, states, by_head

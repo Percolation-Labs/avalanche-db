@@ -24,8 +24,10 @@ SEEDS = (20261121, 20261122, 20261123, 20261124)  # four worlds, each with all f
 def unit(v): return v / np.linalg.norm(v, axis=-1, keepdims=True)
 
 
-def world(seed=SEEDS[0], noise=1.0):
-    """noise scales the passage noise around its topic (1.0 = SR1's world, cos to topic ≈ .7)."""
+def world(seed=SEEDS[0], noise=1.0, atype=0.0):
+    """noise scales the passage noise around its topic (1.0 = SR1's world, cos to topic ≈ .7).
+    atype is how much of the answer's topic (its type) the question carries: x = s + r1 + r2 + atype·T[t_a].
+    SR1 used 0; SR1b calibrates it to MuSiQue's measured cos gap between hop 1 and hop 2."""
     rng = np.random.default_rng(seed)
     T = unit(rng.normal(size=(TOPICS, DIM)))
     R = unit(rng.normal(size=(RELS + 1, DIM)))  # last one is 'is_a'
@@ -55,7 +57,7 @@ def world(seed=SEEDS[0], noise=1.0):
         r1, r2 = (int(x) for x in rng.choice(RELS, 2, replace=False))
         s = new(t_s); b = new(t_b); a = new(t_a)
         link(s, b, r1); link(b, a, r2)
-        x = unit(V[s] + R[r1] + R[r2])
+        x = unit(V[s] + R[r1] + R[r2] + atype * T[t_a])
         lures = []
         if name.startswith("C"):
             for h in rng.choice(hubs, 3, replace=False): link(s, int(h), ISA)
@@ -67,7 +69,9 @@ def world(seed=SEEDS[0], noise=1.0):
             link(s, lures[0], r1)
         probes = {"x": x, "s+r1": unit(V[s] + R[r1]), "r2": R[r2]}
         cases.append(dict(name=name, s=s, b=b, a=a, r1=r1, r2=r2, lures=lures, probes=probes))
-    return dict(V=np.array(V), topic=topic, R=R, edges=edges, rel=rel, hubs=hubs, cases=cases, isa=ISA)
+    # each link's own semantics: its relation plus the same noise passages carry (SR1b; SR1 used the bare relation)
+    ev = unit(R[np.array(rel)] + noise * np.random.default_rng(seed + 1).normal(size=(len(rel), DIM)) / np.sqrt(DIM))
+    return dict(V=np.array(V), topic=topic, R=R, edges=edges, rel=rel, EV=ev, hubs=hubs, cases=cases, isa=ISA)
 
 
 if __name__ == "__main__":
