@@ -29,6 +29,8 @@ bridge weighting that can reach a fixed point.
 | R3 (SR-BR's accumulating arm) | .425 | | 12 / 1 |
 
 - T* − R and U* − R are exactly 0: the five learn questions gained at pass 1 change no test walk.
+- **None of the 8 gained questions is among the 6 that share a gold pair with a learn question** (checked against
+  SR-BR's `out/srbr.json` strata), so the gain isn't the stand-in reward leaking by pair.
 - T* − R3 is −.007 [−.015, +.002].
 
 ## What it means
@@ -38,10 +40,10 @@ bridge weighting that can reach a fixed point.
 - **The update settles because almost nothing moves.** Rewards change the walk on only five learn questions, and no
   walk breaks, so the success set has nowhere to go. A fixed point this close to the start is the expected case for a
   structural walk where the reward only adds to doors that already won.
-- **R3's extra +.007 is scale, not learning.** R3 is R's weights tripled; the success sets are near-identical. Its
-  edge shows that **the size of a reward relative to the base door strength is an unstated constant**: S_w uses
-  (1 + r), so the reward unit is fixed at "one pass = one unit of base strength". T fixes the rewards; it doesn't fix
-  their scale.
+- **R3's +.007 over T* isn't distinguishable from noise** (−.007 [−.015, +.002] the other way). If it is real, it's
+  scale, since R3's success sets match T*'s and its weights are about 3× larger. Either way **the size of a reward
+  relative to the base door strength is an unstated constant**: S_w uses (1 + r), so the reward unit is fixed at "one
+  pass = one unit of base strength". T fixes the rewards; it doesn't fix their scale.
 
 ## Predictions against outcomes
 
@@ -57,7 +59,7 @@ bridge weighting that can reach a fixed point.
   clean.
 - **What I got wrong.** The design asked "does it converge?" but on this walk that was nearly settled before the run:
   SR-BR's own pass-2 output (+5 successes) showed how little moves. The question that stays open is the scale, and I
-  only saw it once R3 beat T*.
+  only noticed it from R3's (non-significant) edge over T*.
 - **Mechanism.** The walk's step is an argmax over door strength; a reward only raises doors that already won, so it
   changes the argmax for few walks, and none for the worse. Convergence follows from monotonicity in practice, not by
   construction (T could cycle on another corpus).
