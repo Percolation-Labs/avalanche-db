@@ -1,4 +1,4 @@
-# What a door membership is worth to walks: almost all the value is in the 1.5% that bridge consecutive hops
+# What a door membership is worth to walks: bridges matter most, mostly for their own questions; pruning the rest is about neutral
 
 *22 Nov 2026, bill. The "priced on walks" measurement that NOTE-D3M (#82) called for, following james's suggestion. An
 unregistered look, $0, no Jev. Script `removal_map.py`, output `out/removal-map.txt`. The graph is MuSiQue dev
@@ -21,27 +21,49 @@ membership.
 
 D3's q = .05 sits at the 13.5th percentile of the vote, so D3 removes about the lowest decile and a third of the next.
 
-**What it shows.**
-- **Value is extremely concentrated.** Removing 7,000 bridge memberships costs .054 AUC and 15 points of gold-door
-  coverage. Removing 7,000 from any other class costs between +.002 and −.004. Per membership, bridges are worth
-  about 20–50× the rest. **A caveat about the metric:** a "gold door" is defined by keys linking the read set to gold, so
-  some of this concentration is built into the score. The size of the gap is still the point.
-- **Pruning can only lose, a little at a time.** No class has a reliably positive value from removal. The low-vote deciles
-  cost about −.001 to −.002 per 7,000. Over D3's 98,606 removals that adds up to roughly its dev loss (−.028). Pruning
-  buys nothing for walks here.
-- **D3's vote doesn't find the bridges either.** D3's add arm (`d3add.py`, registered) builds hubs from strong mutual
-  votes. On MuSiQue test it gets .808 against .807 unedited and .809 for random hubs: nothing.
+**This first table is circular, as james's review found.** "Earned" was built from all dev questions' gold chains,
+and the scoring waves are questions in that same set. So removing it removes the very bridges being scored, and the 7,000
+was also 92% of that class against 5–14% of the others. The corrected run is below. Read it, not this table, for value
+per membership.
+
+## Corrected run (`removal_map2.py`, `out/removal-map2.txt`)
+
+**Split.** Questions are split in two by sha256 of the MuSiQue id. Only half 1's D3 dev waves are scored (65 of 144
+waves; base AUC .8142, gold-door .692).
+- **earned_heldout:** bridges of half-0 questions that are *not* bridges of any half-1 question (2,829).
+- **earned_scored:** bridges of the scored questions (4,788). It's the circular reference.
+
+Table A removes an equal count (2,000) from each class, and Table B an equal fraction (10%). Each has 5 draws.
+
+| class | A: ΔAUC per 1,000 removed | B: ΔAUC per 1,000 removed | Δgold-door (A / B) |
+|---|---|---|---|
+| **earned_scored** (bridges of scored questions) | **−.0070** | **−.0170** | −.080 / −.015 |
+| **earned_heldout** (bridges of *other* questions) | **−.0021** | **−.0041** | 0 / 0 |
+| vote deciles 1–10 | −.0007 to +.0008 | −.0009 to +.0008 | about 0 |
+| related (non-gold pairs) | +.0001 | +.0003 | about 0 |
+
+- **Most of the bridge value is question-specific.** Per membership, a scored question's own bridges cost about 3–4×
+  what other questions' bridges cost, and only they dent gold-door coverage. That's now *shown*: bridges are
+  question-conditioned.
+- **General bridges still carry some value.** Bridges of other questions cost about 3–5× a typical vote-decile
+  membership (−.002 to −.004 per 1,000, against |≤ .0009|), with no coverage effect. That's real but small: a key that
+  bridged hops for some question tends to matter for neighbouring walks too.
+- **Pruning ordinary memberships is about neutral at these sizes.** No vote decile or related class has a reliable cost
+  or gain per 1,000. D3's dev loss (−.028 over 98,606 removals) is larger than these per-1,000 rates suggest. From the
+  first table's low deciles (−.0011 and −.0016 per 7,000), the low-vote removals account for **most of** it
+  (−.014 to −.023), and the rest is probably the interaction of removing so many at once. That's an inference.
+- **Power.** 65 scoring waves, 5 draws per cell. The vote-decile cells' standard errors (about .0005–.003) are as large
+  as their means, so single deciles aren't readable. Only the class-level contrasts are.
 
 **What it means for "define good, let dreaming converge toward it."**
-- **"Good" is concentrated in bridges, and bridges are question-conditioned.** A bridge is the key that links one hop to
-  the next *for some question*. The neighbourhood vote doesn't see questions, so it can't rank them, whether pruning or
+- **"Good" is concentrated in bridges, and mostly in a question's own bridges.** The corrected run shows it: a question's
+  own bridges are worth 3–4× other questions' bridges, which are worth 3–5× an ordinary membership. The neighbourhood vote doesn't see questions, so it can't rank them, whether pruning or
   adding.
 - The signal that *does* find bridges is a question-time decision. Jev, shown a passage's keys and a question, names the
   bridge .70 of the time (SR-BN), against .05–.15 for cosine, ColBERT or rarity.
 - So the RL loop that Sirsh's frame describes would learn from **walk outcomes on real questions**. When a named key
   carries a walk to an answer that's later confirmed, that membership's weight rises. That's a reward-driven reweighting
-  of bridges, not a structural prune. In this corpus the room is large (bridges are 1.5% of memberships and carry most
-  of the value), and pruning the rest is at best neutral.
+  of bridges, not a structural prune. Pruning ordinary memberships is about neutral, so there's little to gain there.
 - That is a design proposal. Testing it needs questions with outcomes (train, with a feedback signal) and a weight term
   in the walk's step. That's not done here.
 
