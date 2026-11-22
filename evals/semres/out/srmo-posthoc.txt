@@ -1,0 +1,7 @@
+spend this run $0.00000
+post-hoc: mean dlogit (true - none) over neither options: +0.339 [+0.292, +0.386] (n 100)
+post-hoc: mean dlogit (true - none) over lure options: +0.267 [+0.208, +0.326] (n 78)
+post-hoc: mean dlogit (true - none) over h2 options: +0.271 [+0.209, +0.334] (n 73)
+post-hoc: mean dlogit (wrong - none) over neither options: +0.310 [+0.253, +0.365] (n 100)
+post-hoc: mean dlogit (wrong - none) over lure options: +0.270 [+0.195, +0.346] (n 78)
+post-hoc: mean dlogit (wrong - none) over h2 options: +0.245 [+0.171, +0.319] (n 73)
