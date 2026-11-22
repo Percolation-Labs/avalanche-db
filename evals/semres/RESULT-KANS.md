@@ -1,4 +1,7 @@
-# K-ans: keeping only the reads that answer turns kappa's BEAM loss into a tie and keeps its MuSiQue gain
+# K-ans: a one-read-per-wave state turns kappa's BEAM loss into a tie and keeps its MuSiQue gain
+
+> **Corrected by K-ans 2 (`RESULT-KANS2.md`):** the BEAM gain is the shorter state, not the relevance filter. A random
+> read per wave does as well (K-ans − K-rnd +.004 [−.010, +.018]), and Jev's picks hold less gold than random ones.
 
 *22 Nov 2026, james. Kappa round 7. Registered in `REGISTERED-KANS.md` (#89, reviewed by bill before any Jev call). The
 script is p8-subsystems `meta/lab/worlds/kappa_ans.py` (branch `james/kappa-ans`, f2875e184 + the review commit),
