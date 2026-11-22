@@ -250,6 +250,12 @@ are tests of it, not a definition.
   price, and truth doesn't matter.
 - No history changes Jev's top choice beyond the noise floor of an identical repeat (flips about 2× the floor, with
   every CI including 0). SR-MI's null common mode had held relatedness fixed, so it couldn't speak to this.
+- **On BEAM it's different** (SR-MO3, 109 questions, $0.033). Any `found` (related, a gold sentence, or another
+  conversation's) narrows unread gold's average lead by about .1. Related history barely moves non-gold (−.02), and
+  unrelated history deflates it (−.2). So "content, not format" is MuSiQue-specific. There's no resemblance pull at one
+  step (rho slightly negative).
+- Only an oracle history (a gold message's sentence) changes the top choice: +.10. Kappa's BEAM walk loss more likely
+  comes from what walks read (related, non-gold) than from step prices. That's an inference.
 
 **(2) Mutual inductance: does flow on one path energise a parallel one?** (SR-MI, bill, train 3hop2, 188 fresh, $0.072)
 - **Yes, a little, in Jev.** Having read one parallel branch, Jev prices the other branch +.233 [+.170, +.296] logit
@@ -273,6 +279,12 @@ are tests of it, not a definition.
   gold-free walks used. Removing high-vote memberships loses to random as badly as removing low-vote ones (.759 and
   .765 against .79). Vote-directed pruning probably concentrates damage (an inference from two registered results), so a target for dreaming has to be priced on walks
   (a membership's counterfactual effect on a path's resistance to gold), not on a neighbourhood vote.
+- **Priced on walks** (bill, #84, $0, seen waves, split by question). A question's own bridges cost about 3–4× what
+  other questions' bridges cost per membership. Those cost about 3–5× an ordinary membership, and pruning ordinary
+  memberships is about neutral.
+- So "good" is concentrated in question-conditioned bridges. A dreaming target should reward bridges from walk outcomes
+  on real questions, not prune by structure. The first bridges removed cost most, so parallel bridges are partly
+  redundant.
 
 **Where kappa fits.** Kappa is the walk's memory, sent to Jev as `found`. On today's evidence its effect at a step is a
 uniform, relatedness-driven inflation plus a discount on what's been covered, not a pull along the thread. The coupling that does exist sits in
@@ -351,3 +363,5 @@ All are on avalanche-db. Each is registered before scoring, with a postmortem in
 | Inertia look (D3 survival against gold bridges) | RESULT-INERTIA-LOOK.md | #79 |
 | SR-MO2 (kappa's shift: content, not format) | RESULT-SRMO2.md | #81 |
 | D3m power check and two-entry pricing | NOTE-D3M.md | #82 |
+| Removal-value map (bridges, priced on walks) | RESULT-REMOVAL-MAP.md | #84 |
+| SR-MO3 (kappa on BEAM, one step) | RESULT-SRMO3.md | #85 |
