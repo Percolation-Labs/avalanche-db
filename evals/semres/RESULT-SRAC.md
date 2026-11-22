@@ -37,7 +37,8 @@ sentence that states the answer, and that sentence holds the gold answer.
   surrender without its date; "Flatline" without its release date), or a misleading noise passage (Denmark's borders).
 
 The artifacts fall equally on G and L (they're the same questions and passages), so they lower both levels and leave
-the primary contrast alone. AC's levels are understated by roughly 4–5 points.
+the primary contrast alone. **AC's levels are a lower bound** until the splitter (abbreviations) and
+normalisation (name forms) are fixed; they're understated by roughly 4–5 points.
 
 ## What it means, for Sirsh
 
