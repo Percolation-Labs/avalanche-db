@@ -58,3 +58,24 @@ the postmortem names.
 **Spend.** 760 door requests. The K-ans 2 and 3 rates give about $0.09. Cap $0.30.
 
 **Scope.** Replay pages, one seed, two corpora. These are not live walks.
+
+## Addendum before the Jev call: stage-0 picks at $0 (bill, 16:02Z)
+
+bill asked for the gold share of the picks on both corpora before the spend. `kappa_ans.py --picks`, in
+`out/khub-picks.txt`. Gold is now **the question's own** gold (items.jsonl), where K-ans 2's BEAM figures used every
+question's gold pooled.
+
+| corpus | waves (all multi-read) | K-ans gold share | K-rnd | K-hub |
+|---|---|---|---|---|
+| BEAM | 83 | .145 | .145 | .108 |
+| MuSiQue | 77 | .208 | .052 | .026 |
+
+- The K-hub pick is the wave's highest-degree read in 7 of 83 BEAM waves and 3 of 77 MuSiQue waves, so it is not
+  just picking hubs.
+- K-hub agrees with K-ans in 4 and 7 waves, and with K-rnd in 7 and 3.
+- **H-KH1 is predicted null before the spend.** On MuSiQue the hub pick is gold less often than random.
+- What the run still answers is whether NDCG follows gold share. If K-hub ties K-rnd on MuSiQue despite half the gold,
+  the sentence's gold content isn't the lever there either.
+- **Correction carried to K-ans 2.** With per-question gold, Jev's BEAM picks tie random (.145 each). The ".181
+  against .229, Jev below random" was an artefact of pooled gold. On MuSiQue, Jev's pick is gold four times as often
+  as random (.208 against .052), which K-ans 3's NDCG gap (+.017, n.s.) didn't show.

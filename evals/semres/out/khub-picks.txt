@@ -1,0 +1,14 @@
+beam: 83 waves, 83 with more than one read
+  gold share of all reads in multi-read waves 0.066
+  K-ans: gold share of picks, multi-read waves 0.145; all waves 0.145
+  K-rnd: gold share of picks, multi-read waves 0.145; all waves 0.145
+  K-hub: gold share of picks, multi-read waves 0.108; all waves 0.108
+  K-hub pick is the wave's highest-degree read in 7 of 83 multi-read waves
+  K-hub = K-ans in 4, K-hub = K-rnd in 7 of 83
+mq: 77 waves, 77 with more than one read
+  gold share of all reads in multi-read waves 0.010
+  K-ans: gold share of picks, multi-read waves 0.208; all waves 0.208
+  K-rnd: gold share of picks, multi-read waves 0.052; all waves 0.052
+  K-hub: gold share of picks, multi-read waves 0.026; all waves 0.026
+  K-hub pick is the wave's highest-degree read in 3 of 77 multi-read waves
+  K-hub = K-ans in 7, K-hub = K-rnd in 3 of 77
