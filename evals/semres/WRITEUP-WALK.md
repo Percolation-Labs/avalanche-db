@@ -21,7 +21,8 @@ model making small choices rather than reading everything.
 
 The walk we ended with has three parts.
 
-- **Start** from the passage closest to the question by vector similarity.
+- **Start** from the passage closest to the question by vector similarity, or from Jev's pick of the pool (better, and
+  dearer; see below).
 - **Step** along a shared name. From the passage just read, Jev picks which of its names (people, places, titles) the
   question needs next, and the walk moves to the passage that also holds that name. This is a **lexical step**: it
   follows a word the two passages share, not a similarity score.
@@ -65,8 +66,8 @@ recognise the answer sentence without the links in between.
 
 That changes what a good walk is:
 - **Reaching the answer passage is what counts, by whatever route.** On this measure, Jev reading everything at each
-  step is the better step: it often skips straight to the answer passage. The cheap walk reaches it as often only by
-  returning one more passage, for about 12% less input. Its case is now cost, not accuracy.
+  step is the better step: it often skips straight to the answer passage. The cheap walk reaches it about as often only
+  by returning one more passage, for about 12% less input. Its case is now cost, not accuracy.
 - **Returning less is better, as long as the answer is in.** Every extra passage is a chance to mislead the reader.
 
 ## Dreaming: improving the graph from walks that worked
