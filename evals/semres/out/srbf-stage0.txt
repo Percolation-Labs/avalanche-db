@@ -1,0 +1,13 @@
+SET=stage0: 4 questions; passages missing from the graph 0; cos entry's door keys median 26
+pools with a repeated title: 4 of 4 (e_title: Jev picks a title; among passages with that title, the one nearest the question by cos)
+wave 1 entry: 4 requests, estimated $0.0005 (spent so far $0.0000, cap $0.05)
+wave 2 name+pass: 16 requests, estimated $0.0012 (spent so far $0.0005, cap $0.05)
+wave 3 twins: 3 requests, estimated $0.0001 (spent so far $0.0018, cap $0.05)
+wave 4 reader: 5 requests, estimated $0.0002 (spent so far $0.0019, cap $0.05)
+spend this run $0.00216
+ONE: A-last 0.750  AC 0.750  returned passages 2.00
+TWO: A-last 0.750  AC 0.750  returned passages 2.25
+PRIMARY H-F: AC(TWO) − AC(ONE): +0.000 [+0.000, +0.000]
+A-last(TWO) − A-last(ONE): +0.000 [+0.000, +0.000]
+e1 on a hop 0.750; e2 on a hop when e1 is off both 1 of 1
+AC flips TWO vs ONE: gained 0, lost 0

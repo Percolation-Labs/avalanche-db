@@ -1,0 +1,10 @@
+ONE set = answer passage + other   n  22  AC 0.818
+ONE set = both hops                n 104  AC 0.808
+ONE set = hop 1 + other            n  11  AC 0.182
+ONE set = neither                  n  13  AC 0.000
+   ('In what part of Utah did Herb Jepko die?', 'Salt Lake City metropolitan area', 'Herb Jepko: Herb Jepko (March 20, 1931 - March 31, 1995) was an influential radio talk show host in Salt Lake City from 1964 to 1990.')
+   ('Who beat the man named as a sports person of the year in 2018, in the U.S. Open?', 'Novak Djokovic', 'Djokovic–Federer rivalry: Both players have beaten the other in each of the four Grand Slam tournaments.')
+   ("Which year witnessed the formation of the publisher of There's a Wocket in My Pocket?", '2001', "There's a Wocket in My Pocket: Seuss, published by Random House in 1974.")
+   ('In what language was the film A Kiss From Actress A where Actress A starred in The Dawn of a Tomorro', 'Russian', 'A Kiss from Mary Pickford: A Kiss From Mary Pickford () is a 1927 Soviet silent comedy film made in directed by Sergei Komarov and co-written by Komarov and Vad')
+   ('who are the two leaders of the opposition in the province Fairford is located?', 'Wab Kinew', 'Fairford (electoral district): It was created for the 1920 provincial election, and eliminated with the 1958 election.')
+   ('Who is We Belong Together by the composer of Almost Home about?', 'Tommy Mottola', "We Belong Together: The video for`` We Belong Together'' is a continuation focusing on Carey's wedding to an older and powerful man and ends with the singer elo")
