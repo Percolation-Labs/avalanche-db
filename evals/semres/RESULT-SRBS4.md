@@ -32,11 +32,12 @@ when a real sentence wins, or when the pool of 20 is empty.
 ## What it means
 
 - **The reader-tied stop stays close to the oracle at the reader** (−.033 live; −.023 in the replay). It doesn't save
-  passages or input. It returns 0.56 more passages and needs 77% more input, because it pays a reader request after
+  passages or input. It returns 0.56 more passages and needs 58% more input like for like, because it pays a reader request after
   every read, and because its hardest 6% run to the end of the pool and still score .167.
 - **So no knob-free stop yet matches simply knowing the hop count, on any of reader accuracy, passages or cost.**
   - The knowledge check (S-check) is cheap but stops early: −.073.
-  - The reader-tied check is accurate but costs more and runs away on hard questions: −.033, at 1.8× the input.
+  - The reader-tied check is accurate but costs more and runs away on hard questions: −.033, at 1.6× the input like
+    for like.
 - **The never-fired 18 are where a stop rule has to say "give up".** The reader can't find the answer even after 20
   passages (AC .167). A rule that returns the best set so far, rather than reading on, needs either a constant (a read
   cap) or a signal for when more reading stops helping. Neither is tested.
