@@ -1,0 +1,37 @@
+SET=fresh: 180 questions ({'2hop': 60, '3hop1': 60, '4hop1': 60}); none used by an earlier Jev run
+wave entry: 180 requests, estimated $0.0212 (spent so far $0.0000, cap $0.3)
+wave after up to 1 reads: 540 requests, estimated $0.0273 (spent so far $0.0212, cap $0.3)
+wave after up to 2 reads: 358 requests, estimated $0.0243 (spent so far $0.0484, cap $0.3)
+wave after up to 3 reads: 260 requests, estimated $0.0194 (spent so far $0.0727, cap $0.3)
+wave after up to 4 reads: 168 requests, estimated $0.0127 (spent so far $0.0921, cap $0.3)
+wave after up to 5 reads: 66 requests, estimated $0.0045 (spent so far $0.1048, cap $0.3)
+wave after up to 6 reads: 38 requests, estimated $0.0026 (spent so far $0.1093, cap $0.3)
+wave after up to 7 reads: 16 requests, estimated $0.0012 (spent so far $0.1119, cap $0.3)
+wave after up to 8 reads: 4 requests, estimated $0.0003 (spent so far $0.1131, cap $0.3)
+wave after up to 9 reads: 2 requests, estimated $0.0001 (spent so far $0.1134, cap $0.3)
+wave after up to 10 reads: 2 requests, estimated $0.0001 (spent so far $0.1135, cap $0.3)
+spend this run $0.11364 (DRY: estimate only)
+-- 2hop (n 60)
+   pass H       A-last 0.067  returned 2.00  input 20,151  early/exact/late 0/60/0
+   pass H+1     A-last 0.100  returned 3.00  input 29,793  early/exact/late 0/0/60
+   pass S-check A-last 0.067  returned 2.12  input 22,517  early/exact/late 30/12/18
+   pass S-state A-last 0.067  returned 2.23  input 25,164  early/exact/late 29/13/18
+-- 3hop1 (n 60)
+   pass H       A-last 0.117  returned 3.00  input 31,720  early/exact/late 0/60/0
+   pass H+1     A-last 0.150  returned 4.00  input 41,421  early/exact/late 0/0/60
+   pass S-check A-last 0.100  returned 2.13  input 25,224  early/exact/late 42/7/11
+   pass S-state A-last 0.100  returned 2.15  input 25,503  early/exact/late 41/8/11
+-- 4hop1 (n 60)
+   pass H       A-last 0.217  returned 4.00  input 40,658  early/exact/late 0/60/0
+   pass H+1     A-last 0.233  returned 5.00  input 49,737  early/exact/late 0/0/60
+   pass S-check A-last 0.100  returned 2.05  input 23,463  early/exact/late 51/5/4
+   pass S-state A-last 0.150  returned 2.25  input 25,713  early/exact/late 48/6/6
+-- all (n 180)
+   pass H       A-last 0.133  returned 3.00  input 30,843  early/exact/late 0/180/0
+   pass H+1     A-last 0.161  returned 4.00  input 40,317  early/exact/late 0/0/180
+   pass S-check A-last 0.089  returned 2.10  input 23,734  early/exact/late 123/24/33
+   pass S-state A-last 0.106  returned 2.21  input 25,460  early/exact/late 118/27/35
+PRIMARY A-last, S-state − S-check: +0.017 [-0.011, +0.044] (n 180)
+S-state − oracle(H): -0.028 [-0.061, +0.006] (n 180); S-check − oracle(H): -0.044 [-0.083, -0.011] (n 180)
+S-check: decisions (stop/continue × answer passage read) stop&read 16, stop&not 164, continue&read 18, continue&not 180; stop vs first arrival {'never reached': 147, 'at arrival': 10, 'before arrival': 17, 'after arrival': 6}; stops after one read 94
+S-state: decisions (stop/continue × answer passage read) stop&read 19, stop&not 161, continue&read 27, continue&not 191; stop vs first arrival {'never reached': 147, 'at arrival': 8, 'after arrival': 11, 'before arrival': 14}; stops after one read 88
