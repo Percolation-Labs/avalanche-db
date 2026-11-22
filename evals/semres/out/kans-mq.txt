@@ -1,0 +1,10 @@
+REL requests: 71 new of 77 waves
+door requests: 253 new (K0/K7 should be cached)
+max REL p per wave: quartiles 0.24, 0.47, 0.53, 0.64, 0.90 (n 77)
+mq HELD-OUT · D6 doors · 286 pages · spend $0.0595
+  K0    NDCG@10 0.768 [0.714, 0.811]  MRR 0.706  recall@3 0.730
+  K7    NDCG@10 0.805 [0.764, 0.844]  MRR 0.753  recall@3 0.789
+  Kans  NDCG@10 0.802 [0.756, 0.843]  MRR 0.747  recall@3 0.759
+  paired Kans - K7: NDCG -0.003 [-0.0318, +0.022]
+  paired Kans - K0: NDCG +0.034 [+0.0128, +0.056]
+  paired K7 - K0: NDCG +0.037 [+0.0079, +0.068]
