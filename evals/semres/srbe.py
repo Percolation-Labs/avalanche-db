@@ -179,8 +179,24 @@ for rule in ("SE", "SEP"):   # ties (same entry) keep cos's walk
 arm["oracle"] = np.maximum(arm["e_cos"], arm["e_title"])
 for k, v in arm.items(): print(f"both hops {k:12s} {v.mean():.3f}")
 print(f"PRIMARY H-E: SE − e_cos×{W2}: {boot(arm['SE'] - arm['e_cos'])}")
-for a, b in (("SE", "e_pass"), ("SEP", "e_cos"), ("SE", "e_title"), ("e_pass", "e_cos"), ("SE", "e_pass×pass")):
+for a, b in (("SE", "e_pass"), ("SE", "e_pass×pass"), ("SEP", "e_cos"), ("SE", "e_title"), ("e_pass", "e_cos"), ("e_pass×pass", "e_cos")):
     print(f"{a} − {b}: {boot(arm[a] - arm[b])}")
 dis = [i for i in range(len(out)) if arm["e_cos"][i] != arm["e_title"][i]]
 print(f"split questions {len(dis)}; SE right on {sum(arm['SE'][i] for i in dis)}, SEP right on {sum(arm['SEP'][i] for i in dis)}")
+# input chars per question (james's readout 1): requests each policy needs
+rc = lambda c, o: len(json.dumps(c)) + len(" ".join(o))
+def walk_chars(x, en):
+    e = x["e"][en]; c = rc(ctxR(x, e, PASS_TASK), [x["T"][v] for v in others(x, e)])
+    if x["D"][e]: c += rc(ctxR(x, e, NAME_TASK), sorted(x["D"][e]))
+    sh = x["st"][en][1]
+    if len(sh) > 1: c += rc(ctxR(x, e, PASS_TASK), [x["T"][v] for v in sh])
+    return c   # upper bound: nt_rescue needs the pass request only when |S| = 0, but it is counted always
+eT = lambda x: rc(ctxE(x, ENTRY_TASK_T), [p["title"] for p in x["P"]]); eP = lambda x: rc(ctxE(x, ENTRY_TASK), x["T"])
+ch = {"e_cos×nt_rescue": [walk_chars(x, "e_cos") for x in Q],
+      "e_pass×nt_rescue": [eP(x) + walk_chars(x, "e_pass") for x in Q],
+      "SE": [eT(x) + eP(x) + walk_chars(x, "e_cos") + (walk_chars(x, "e_title") if x["e"]["e_title"] != x["e"]["e_cos"] else 0) for x in Q],
+      "e_pass×pass": [eP(x) + rc(ctxR(x, x["e"]["e_pass"], PASS_TASK), [x["T"][v] for v in others(x, x["e"]["e_pass"])]) for x in Q]}
+for k, v in ch.items(): print(f"input chars per question {k:18s} mean {np.mean(v):,.0f}")
+print("ties: SE keeps cos's walk when the two entries' p are equal (incl. the same entry); unequal-entry exact ties: "
+      f"{sum(1 for x in Q if x['e']['e_cos'] != x['e']['e_title'] and get(ctxE(x, ENTRY_TASK), x['T'])[x['e']['e_cos']] == get(ctxE(x, ENTRY_TASK), x['T'])[x['e']['e_title']])}")
 json.dump({k: v.tolist() for k, v in arm.items()} | {"usd": spent[0]}, open(f"out/srbe-{SET}.json", "w"))

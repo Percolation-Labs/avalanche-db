@@ -39,3 +39,9 @@ request chooses", reported to Sirsh as a hypothesis. If SE ties e_pass×nt_rescu
 entry is e_pass. Production is Sirsh's.
 
 **Scope.** MuSiQue train 2-hop, the cheap walk, one draw of 300.
+
+**Amendment 1 (16:16Z, james's review, before the 300 run; stage 0 only so far).** Readouts added, nothing scored
+changes: input characters per question for e_cos×nt_rescue, e_pass×nt_rescue, SE and e_pass×pass (SE counts the
+second walk only when the entries differ; the rescue pass request is counted always, an upper bound); SE − e_pass×pass
+reported next to the primary as the full-request baseline; and the count of different-entry exact ties in p (SE keeps
+cosine's walk on any tie).
