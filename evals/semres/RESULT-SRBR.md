@@ -22,7 +22,9 @@ test half is walked with those weights. Nothing about the test questions is used
 | R2, R3: R re-walked 2 and 3 passes | .420, .425 | |
 
 - **Primary: R − unweighted = +.017 [+.007, +.031]. H-R passes.** Weights learned from one half's successful walks
-  improve walks on the other half's questions.
+  improve walks on the other half's questions. **In questions, that's 8 of 459 gained and 0 lost** (james's count,
+  checked). So the gain is small, but it's all upside: the weights never broke a walk that worked. That bounds the hub risk
+  here, though a corpus where hubs are lures could differ. RND gained 3 and lost 0, B 14/0, R2 10/1, R3 12/1.
 - **It isn't memorising answers.** In the 453 test questions that share no gold pair with a learn question, the gain is
   +.018 [+.007, +.031]. Only 6 share one, and there it's 0.
 - **The outcome signal matters.** R − RND is **+.011 [+.002, +.022]**, so boosting the walked memberships of successful
