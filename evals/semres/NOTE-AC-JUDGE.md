@@ -30,3 +30,8 @@ AC(G) − AC(L) is unchanged: −.033 [−.073, +.013]. SR-AC's conclusion stand
 **Proposal.** AC from now on = string or judge, with the judge's yes count reported. The splitter moves to a standard
 sentence segmenter before AC is anyone's primary. The two R gains should be read by hand when AC is next used, since
 those are the only places a lenient judge could inflate the floor.
+
+**First use, SR-BS2's stopped sets (`ac_stop.py`, `out/ac-stop.txt`, $0.020).** Judge "yes" counts per arm (james's
+note: arms with more failures get more chances at a lenient yes): S-check +11, S-state +9, oracle H +7. String-only AC
+is .672 / .689 / .717 and string-or-judge .733 / .739 / .756. So S-check − oracle H is −.045 on the string alone and
+−.022 with the judge; both are reported wherever this is cited.
