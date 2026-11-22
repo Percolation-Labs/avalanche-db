@@ -50,6 +50,8 @@ bytype = {t: [r for r in allq if r["id"].split("__")[0] == t] for t in TYPES}
 used = {bytype["2hop"][i]["id"] for i in np.random.default_rng(1341).permutation(len(bytype["2hop"]))[:608]}
 for t in ("3hop1", "4hop1"):
     used |= {bytype[t][i]["id"] for i in np.random.default_rng(1344).permutation(len(bytype[t]))[:102]}
+# and SR-BF's (bill: seed-1341 positions 608 onward, first ~154 after exclusions): remove seed-1341 positions up to 900
+used |= {bytype["2hop"][i]["id"] for i in np.random.default_rng(1341).permutation(len(bytype["2hop"]))[:900]}
 # and SR-BS's (seed 1345 over the same filtered lists; first 82 per type covers its 60 and stage 0 at 80-81)
 _u = set(used)
 for t in ("2hop", "3hop1", "4hop1"):
