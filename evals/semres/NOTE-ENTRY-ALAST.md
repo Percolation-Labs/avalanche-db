@@ -24,9 +24,15 @@ Serves Sirsh's 17:07Z target: the answer passage in what the walk returns (A-las
   said most misses are a hop's neighbour (21 of 48 for cosine) or a namesake (13). On chains, james's SR-BH reported
   25 of 200 entries off-chain, lost by every arm.
 
-**What a test would ask.** Whether a second entry (the entry request's runner-up, walked one step) recovers the
-off-hop questions at less cost than it adds. SR-BE's two-walk selector didn't help on both hops, but A-last is a looser
-target: a second walk needs only to touch the answer passage. A $0 look on the cached pass requests can price it
-before any registration.
+**A second entry, priced ($0).** The entry request's argmax is off both hops in 32 of 300 questions. Its runner-up
+is on a hop in 19 of those (its third in 15). So walking the top two entries one step each (four passages) would put an
+entry on a hop in .957 of questions against .893: **an upper bound of +.064 on A-last, for twice the passages**.
+
+- The price isn't only input. SR-AC found that extra non-answer passages cost a reader about 7 points (answer passage
+  alone .900, with chain-sized noise .827). Doubling the returned set to recover 6% of questions could lose as much at
+  the reader as it gains in A-last.
+- So a test must score the returned set with the reader (AC) as well as A-last, and compare one entry (2 passages)
+  against two (4 passages) on both. A gate that walks the second entry only sometimes would need a signal, and every
+  signal tried so far (SR-BE's selectors) is a choice between walks, not a reason to add one.
 
 **Scope.** MuSiQue train 2-hop, seen questions.

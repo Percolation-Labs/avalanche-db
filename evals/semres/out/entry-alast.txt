@@ -3,3 +3,5 @@ entry argmax is the answer passage 0.283; hop 1 0.610
 return the entry request's top 1: A-last 0.283  both hops 0.000
 return the entry request's top 2: A-last 0.603  both hops 0.480
 return the entry request's top 3: A-last 0.737  both hops 0.677
+entry argmax off both hops: 32 of 300; runner-up on a hop in 19, third in 15 of those
+upper bound, two entries each walked one step (4 passages): entry on a hop 0.957 vs one entry 0.893
