@@ -7,11 +7,15 @@ Measures (logit p clipped to [1e-4, 1 - 1e-4]):
   series  the same for J: [logit p(J | read A) − p(J | read L)] and from B, averaged
   rank    where B (resp. A) and J sit in Jev's order after reading A (resp. B)
   vector  the same contrasts with cos(q + read, ·), bge-small, for comparison with mi_look's anti-induction
+  common  (amendment 1, james) per question, the mean dlogit (read branch − read L) over options outside {A, B, J, L};
+          mutual_c = mutual − common is the PRIMARY; series_c likewise
+  twin    how often L shares a door key (train graph, 2 <= df <= 100, not inside the question) with A or B
 All requests in one ask_many wave. Draw: seed 1344 permutation of the corpus's answerable 3hop2; fresh = all except
 stage0 = the first 4 (outside the scored set).
     set -a; source ~/code/p8-subsystems/.env; set +a; P8_CREDENTIAL_ORIGINS='{"JEV_API_KEY":["https://api.typesafe.ai"]}' \
-    uv run --with numpy --with sentence-transformers --with 'percolate-core==0.2.15' python srmi.py TRAIN_CORPUS SET MAX_USD [--look]"""
-import asyncio, hashlib, json, sys
+    uv run --with numpy --with sentence-transformers --with 'percolate-core==0.2.15' python srmi.py TRAIN_CORPUS GRAPH_TRAIN SET MAX_USD [--look]"""
+import asyncio, hashlib, json, re, sys
+from collections import Counter
 from pathlib import Path
 import numpy as np
 
@@ -19,7 +23,9 @@ PASS_TASK = ("Each option is a passage not yet read. Having read `read`, would r
              "needed to answer `question`?")   # SR-J's, unchanged
 CACHE = Path.home() / ".cache" / "walklab" / "srmi-jev-cache.jsonl"
 PRICE_IN = 0.042e-6
-src, SET, MAX_USD = sys.argv[1], sys.argv[2], float(sys.argv[3]); LOOK = "--look" in sys.argv
+src, gpath, SET, MAX_USD = sys.argv[1], sys.argv[2], sys.argv[3], float(sys.argv[4]); LOOK = "--look" in sys.argv
+grows = [json.loads(l) for l in open(gpath)]; gkeys = {r["d"]: set(r["keys"]) for r in grows}; gdf = Counter(k for r in grows for k in r["keys"])
+hid = lambda p: "mq:" + hashlib.sha256((p["title"] + "\n" + p["paragraph_text"]).encode()).hexdigest()[:16]
 qs = [r for r in map(json.loads, open(src)) if r["id"].startswith("3hop2") and r["answerable"]]
 perm = np.random.default_rng(1344).permutation(len(qs)).tolist()
 pool = {"stage0": perm[:4], "fresh": perm[4:]}[SET]
@@ -33,7 +39,10 @@ for qi in pool:
     E = m.encode([QP + r["question"]] + T, normalize_embeddings=True); cq = E[1:] @ E[0]
     L = max((v for v in range(n) if v not in (A, B, J)), key=lambda v: cq[v])
     vec = {rd: E[1:] @ m.encode([QP + r["question"] + " " + T[rd]], normalize_embeddings=True)[0] for rd in (A, B, L)}
-    cases.append(dict(qi=int(qi), q=r["question"], T=T, n=n, A=A, B=B, J=J, L=L, vec=vec))
+    qt = set(re.findall(r"[a-z0-9]+", r["question"].lower()))
+    door = lambda v: {k for k in gkeys.get(hid(P[v]), ()) if 2 <= gdf[k] <= 100 and not set(k.split()) <= qt}
+    twin = bool(door(L) & (door(A) | door(B)))
+    cases.append(dict(qi=int(qi), q=r["question"], T=T, n=n, A=A, B=B, J=J, L=L, vec=vec, twin=twin))
 print(f"SET={SET}: {len(cases)} questions (3hop2)")
 if LOOK:
     c = cases[0]; print(f"-- {c['q']}\n   A {c['T'][c['A']][:60]} | B {c['T'][c['B']][:60]} | L {c['T'][c['L']][:60]}"); sys.exit()
@@ -65,17 +74,19 @@ def jrank(c, rd, tgt):
     o = others(c, rd); p = np.array(cache[ck(ctx(c, rd), [c["T"][v] for v in o])]); return int(1 + (p > p[o.index(tgt)]).sum())
 def vrank(c, rd, tgt):
     s = c["vec"][rd].copy(); s[rd] = -np.inf; return int(1 + (s > s[tgt]).sum())
-mutual, series, vmut, vser, rows = [], [], [], [], []
+mutual, series, common, vmut, vser, rows = [], [], [], [], [], []
 for c in cases:
     A, B, J, L = c["A"], c["B"], c["J"], c["L"]
     mutual.append(np.mean([lg(jev(c, A, B)) - lg(jev(c, L, B)), lg(jev(c, B, A)) - lg(jev(c, L, A))]))
     series.append(np.mean([lg(jev(c, A, J)) - lg(jev(c, L, J)), lg(jev(c, B, J)) - lg(jev(c, L, J))]))
+    rest = [v for v in range(c["n"]) if v not in (A, B, J, L)]
+    common.append(np.mean([np.mean([lg(jev(c, rd, v)) - lg(jev(c, L, v)) for v in rest]) for rd in (A, B)]))
     vmut.append(np.mean([c["vec"][A][B] - c["vec"][L][B], c["vec"][B][A] - c["vec"][L][A]]))
     vser.append(np.mean([c["vec"][A][J] - c["vec"][L][J], c["vec"][B][J] - c["vec"][L][J]]))
     rows.append(dict(qi=c["qi"], jr_other=[jrank(c, A, B), jrank(c, B, A)], jr_join=[jrank(c, A, J), jrank(c, B, J)],
                      jr_other_ctrl=[jrank(c, L, B), jrank(c, L, A)], jr_join_ctrl=[jrank(c, L, J)] * 2,
                      vr_other=[vrank(c, A, B), vrank(c, B, A)], vr_join=[vrank(c, A, J), vrank(c, B, J)]))
-n = len(cases)
+n = len(cases); print(f"L shares a door key with A or B in {np.mean([c['twin'] for c in cases]):.3f} of questions")
 for k, lab in (("jr_other", "Jev, other branch after reading a branch"), ("jr_other_ctrl", "Jev, that branch after reading L"),
                ("jr_join", "Jev, join after reading a branch"), ("jr_join_ctrl", "Jev, join after reading L"),
                ("vr_other", "cos(q+read), other branch"), ("vr_join", "cos(q+read), join")):
@@ -85,9 +96,10 @@ if SET == "fresh":
     def ci(v, lab):
         v = np.array(v, float); bt = [v[rng.integers(0, len(v), len(v))].mean() for _ in range(4000)]
         print(f"{lab}: {v.mean():+.3f} [{np.percentile(bt, 2.5):+.3f}, {np.percentile(bt, 97.5):+.3f}] (n {len(v)})")
-    ci(mutual, "PRIMARY mutual, dlogit p(other branch): read branch − read L")
-    ci(series, "series, dlogit p(J): read branch − read L")
-    ci(np.array(series) - np.array(mutual), "series − mutual")
+    M, S, C = np.array(mutual), np.array(series), np.array(common)
+    ci(M - C, "PRIMARY mutual_c, dlogit p(other branch) (read branch − read L) minus common mode")
+    ci(M, "mutual, raw"); ci(C, "common mode, mean dlogit over options outside {A, B, J, L}")
+    ci(S - C, "series_c"); ci(S, "series, raw"); ci(S - M, "series − mutual")
     ci(vmut, "vector mutual, dcos(other branch): read branch − read L")
     ci(vser, "vector series, dcos(J): read branch − read L")
-json.dump(dict(usd=usd, mutual=list(map(float, mutual)), series=list(map(float, series)), rows=rows), open(f"out/srmi-{SET}.json", "w"))
+json.dump(dict(usd=usd, mutual=list(map(float, mutual)), series=list(map(float, series)), common=list(map(float, common)), twin=[c["twin"] for c in cases], rows=rows), open(f"out/srmi-{SET}.json", "w"))

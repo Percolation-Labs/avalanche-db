@@ -55,3 +55,16 @@ $0.25.
 
 **Scope.** One shape (3hop2), MuSiQue train, one step, one control rule. One earlier document only. This is a different
 question from james's SR-MO, which varies `found` and holds `read` fixed.
+
+## Amendment 1 (james's review, before any Jev call)
+
+- **Common mode.** james's SR-MO found that any read or `found` shifts Jev's prices about +.3 logit on every option. Both
+  `mutual` and `series` compare two different reads (branch against L), so a read-wide shift lands in both. Per question,
+  `common` = the mean Δlogit (read branch − read L) over the options outside {A, B, J, L}, averaged over reading A and
+  reading B.
+- **The primary is now `mutual_c = mutual − common`**, and H-MI passes if its lower bound is above 0. Raw `mutual`,
+  `common`, `series_c`, raw `series` and `series − mutual` are all reported with CIs.
+- **L as a twin.** L is the nearest non-gold passage to the question, so it can be a twin of a branch. Reading it might
+  lower that twin's price and inflate mutual. I report how often L shares a door key with A or B (train graph).
+- **Prediction for the primary:** mutual_c about +.2, the raw +.3 less a small common mode. It's still a pass, but closer
+  to a coin flip.
