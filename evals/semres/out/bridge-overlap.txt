@@ -1,0 +1,2 @@
+dev: bridges half0 4617, half1 4788, shared 1788; half-1 bridge memberships also half-0 bridges 0.373; half-1 questions with >=1 bridge 1135, of which touch a half-0 bridge 0.816
+train: bridges half0 3635, half1 3747, shared 1118; half-1 bridge memberships also half-0 bridges 0.298; half-1 questions with >=1 bridge 957, of which touch a half-0 bridge 0.652
