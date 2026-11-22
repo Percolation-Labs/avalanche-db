@@ -1,0 +1,28 @@
+206 string-check failures; 183 distinct requests, 183 uncached, estimated $0.0013
+spend $0.00313
+G: AC string 0.867 -> with judge 0.907 (+6)
+L: AC string 0.900 -> with judge 0.940 (+6)
+LR: AC string 0.827 -> with judge 0.867 (+6)
+R: AC string 0.033 -> with judge 0.047 (+2)
+AC(G) − AC(L) with judge: -0.033 [-0.073, +0.013]
+judge on the first 20 failures (the hand-read set, same order as RESULT-SRAC.md):
+   1 G  judge=no  | Prince Henry the Navigator | Middle Ages: 1460) sent expeditions that discovered the Canary Islands, the Azores, and Ca
+   2 L  judge=no  | Prince Henry the Navigator | Middle Ages: 1460) sent expeditions that discovered the Canary Islands, the Azores, and Ca
+   3 L  judge=no  | 1855 | Siemens: The company, then called Telegraphen-Bauanstalt von Siemens & Halske, opened its 
+   4 LR judge=no  | 1855 | Siemens: The company, then called Telegraphen-Bauanstalt von Siemens & Halske, opened its 
+   5 L  judge=no  | Himalaya mountains | Spiti Valley: The name ``Spiti ''means`` The Middle Land'', i.e. the land between Tibet an
+   6 LR judge=no  | Himalaya mountains | Spiti Valley: The name ``Spiti ''means`` The Middle Land'', i.e. the land between Tibet an
+   7 G  judge=yes | M. Thambidurai | Deputy Speaker of the Lok Sabha: Thambidurai Karur 13 August 2014 Incumbent ADMK
+   8 L  judge=yes | M. Thambidurai | Deputy Speaker of the Lok Sabha: Thambidurai Karur 13 August 2014 Incumbent ADMK
+   9 LR judge=yes | M. Thambidurai | Deputy Speaker of the Lok Sabha: Thambidurai Karur 13 August 2014 Incumbent ADMK
+  10 LR judge=no  | Franklin County | Borders of Denmark: The only terrestrial border of Denmark is that with Germany, with a le
+  11 G  judge=no  | January 2, 2014 | Journals (album): Though it does not appear on the album itself, the bonus track, ``Flatli
+  12 L  judge=no  | January 2, 2014 | Journals (album): Though it does not appear on the album itself, the bonus track, ``Flatli
+  13 LR judge=no  | January 2, 2014 | Journals (album): Though it does not appear on the album itself, the bonus track, ``Flatli
+  14 G  judge=no  | Classic Albums: Iron Maiden -- The Numbe | Rock in Rio (album): The video release, which was issued on DVD, VHS and UMD, was edited b
+  15 G  judge=no  | the Carolingian family | East Prussia: The new kingdom ruled by the Hohenzollern dynasty became known as the Kingdo
+  16 L  judge=yes | the Carolingian family | Holy Roman Empire: The title was revived again in 962 when Otto I was crowned emperor, fas
+  17 LR judge=yes | the Carolingian family | Holy Roman Empire: The title was revived again in 962 when Otto I was crowned emperor, fas
+  18 G  judge=no  | July 1943 | Military history of Italy during World War II: Italy surrendered to the Allies at the end 
+  19 L  judge=no  | July 1943 | Military history of Italy during World War II: Italy surrendered to the Allies at the end 
+  20 LR judge=no  | July 1943 | Military history of Italy during World War II: Italy surrendered to the Allies at the end 
