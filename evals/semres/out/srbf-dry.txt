@@ -1,0 +1,13 @@
+SET=fresh: 150 questions; passages missing from the graph 0; cos entry's door keys median 19
+pools with a repeated title: 71 of 150 (e_title: Jev picks a title; among passages with that title, the one nearest the question by cos)
+DRY wave 1 entry: 150 requests; cumulative estimate $0.0170
+DRY wave 2 name+pass: 600 requests; cumulative estimate $0.0570
+DRY wave 3 twins: 37 requests; cumulative estimate $0.0585
+DRY wave 4 reader: 300 requests; cumulative estimate $0.0711
+spend this run $0.07111 (DRY estimate)
+ONE: A-last 0.053  AC 0.013  returned passages 2.00
+TWO: A-last 0.147  AC 0.020  returned passages 3.84
+PRIMARY H-F: AC(TWO) − AC(ONE): +0.007 [-0.020, +0.033]
+A-last(TWO) − A-last(ONE): +0.093 [+0.047, +0.140]
+e1 on a hop 0.040; e2 on a hop when e1 is off both 11 of 144
+AC flips TWO vs ONE: gained 3, lost 2
