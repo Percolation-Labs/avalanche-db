@@ -47,3 +47,12 @@ argmax.
 **Spend.** The dry run (`out/srbs2-dry.txt`, random scores) estimates $0.11 for the 180. Stage 0 first. Cap $0.30.
 
 **Scope.** MuSiQue train chains, one draw of 180, the pass step, H hidden from the walk.
+
+## Addendum 1, before the AC call (after the A-last result; bill's #102, 17:34Z)
+
+The AC secondary is scored by `srbs2_ac.py`. It copies bill's srac.py reader request verbatim (SENT_TASK, the splitter,
+title-prefixed sentence options in passage order, argmax ties to the earlier option), and his #102 judge (EQ_TASK,
+EQ_OPTS), which runs only when the string check fails. The sets are SR-BS2's returned sets for oracle H, oracle H + 1,
+S-check and S-state. Reported per arm: AC, the judge's yes count (bill's note), and AC − A-last disagreements.
+**The question it answers:** do the checks' knowledge stops cost the reader? That is, is AC(S-check) − AC(H) smaller
+than A-last's −.083? This is a readout, not a new hypothesis. The cap is $0.10.
