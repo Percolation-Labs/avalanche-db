@@ -1,0 +1,23 @@
+SET=stage0: 4 questions (Counter({'3hop1': 2, '4hop1': 2})); passages missing from the graph 0
+wave entry: 4 requests, estimated $0.0005 (spent so far $0.0000, cap $0.02)
+wave step 1 a: 8 requests, estimated $0.0006 (spent so far $0.0005, cap $0.02)
+wave step 2 a: 8 requests, estimated $0.0005 (spent so far $0.0011, cap $0.02)
+wave step 3 a: 4 requests, estimated $0.0003 (spent so far $0.0017, cap $0.02)
+spend this run $0.00200
+3hop1  cheap  all hops 0.500  per-hop recall 0.833  input chars/question 25,356
+3hop1  pass   all hops 0.500  per-hop recall 0.833  input chars/question 28,065
+3hop1  cheap − pass: all hops +0.000 [+0.000, +0.000] (n 2); per-hop +0.000 [+0.000, +0.000] (n 2)
+4hop1  cheap  all hops 0.000  per-hop recall 0.750  input chars/question 44,484
+4hop1  pass   all hops 0.000  per-hop recall 0.750  input chars/question 45,966
+4hop1  cheap − pass: all hops +0.000 [+0.000, +0.000] (n 2); per-hop +0.000 [+0.000, +0.000] (n 2)
+all    cheap  all hops 0.250  per-hop recall 0.792  input chars/question 34,920
+all    pass   all hops 0.250  per-hop recall 0.792  input chars/question 37,016
+all    cheap − pass: all hops +0.000 [+0.000, +0.000] (n 4); per-hop +0.000 [+0.000, +0.000] (n 4)
+PRIMARY all hops, cheap − pass (both types): +0.000 [+0.000, +0.000] (n 4)
+entry hop 1     n   2: all hops cheap 0.500, pass 0.500
+entry hop 2     n   1: all hops cheap 0.000, pass 0.000
+entry hop 3     n   1: all hops cheap 0.000, pass 0.000
+input chars, cheap / pass: 0.943
+step 1: {'rescue': 3, 'one': 1}; rescue rate 0.750
+step 2: {'one': 1, 'rescue': 3}; rescue rate 0.750
+step 3: {'rescue': 2}; rescue rate 1.000

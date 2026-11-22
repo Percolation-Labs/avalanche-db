@@ -1,0 +1,28 @@
+SET=fresh: 200 questions (Counter({'3hop1': 100, '4hop1': 100})); passages missing from the graph 0
+wave entry: 200 requests, estimated $0.0246 (spent so far $0.0000, cap $0.4)
+wave step 1 a: 400 requests, estimated $0.0290 (spent so far $0.0254, cap $0.4)
+wave step 1 b: 25 requests, estimated $0.0010 (spent so far $0.0572, cap $0.4)
+wave step 2 a: 400 requests, estimated $0.0280 (spent so far $0.0582, cap $0.4)
+wave step 2 b: 70 requests, estimated $0.0068 (spent so far $0.0892, cap $0.4)
+wave step 3 a: 200 requests, estimated $0.0135 (spent so far $0.0961, cap $0.4)
+wave step 3 b: 44 requests, estimated $0.0042 (spent so far $0.1110, cap $0.4)
+spend this run $0.11524
+3hop1  cheap  all hops 0.510  per-hop recall 0.787  input chars/question 24,649
+3hop1  pass   all hops 0.440  per-hop recall 0.770  input chars/question 31,901
+3hop1  cheap − pass: all hops +0.070 [+0.000, +0.150] (n 100); per-hop +0.017 [-0.017, +0.050] (n 100)
+4hop1  cheap  all hops 0.280  per-hop recall 0.723  input chars/question 33,787
+4hop1  pass   all hops 0.190  per-hop recall 0.715  input chars/question 42,706
+4hop1  cheap − pass: all hops +0.090 [+0.010, +0.180] (n 100); per-hop +0.007 [-0.025, +0.037] (n 100)
+all    cheap  all hops 0.395  per-hop recall 0.755  input chars/question 29,218
+all    pass   all hops 0.315  per-hop recall 0.743  input chars/question 37,303
+all    cheap − pass: all hops +0.080 [+0.025, +0.130] (n 200); per-hop +0.012 [-0.010, +0.033] (n 200)
+PRIMARY all hops, cheap − pass (both types): +0.080 [+0.025, +0.130] (n 200)
+entry hop 1     n  81: all hops cheap 0.593, pass 0.531
+entry hop 2     n  39: all hops cheap 0.333, pass 0.231
+entry hop 3     n  36: all hops cheap 0.361, pass 0.250
+entry hop 4     n  19: all hops cheap 0.263, pass 0.105
+entry off-chain n  25: all hops cheap 0.000, pass 0.000
+input chars, cheap / pass: 0.783
+step 1: {'rescue': 88, 'twin': 25, 'one': 87}; rescue rate 0.440
+step 2: {'rescue': 123, 'twin': 19, 'one': 58}; rescue rate 0.615
+step 3: {'rescue': 65, 'twin': 9, 'one': 26}; rescue rate 0.650
