@@ -36,6 +36,11 @@ update.
 - **The reward works, and it works by recurrence.** Rewarding the doors into an answer passage helps a later question
   whose answer is in that same passage, and almost never anything else. That is useful where questions recur (a user's
   corpus asked about the same things repeatedly), and close to nothing where they don't.
+- **It is memory of answer passages, not a learned way to find new ones** (james). Its value in use depends on how
+  often real questions land on passages an earlier confirmed walk already reached. MuSiQue train has 136 of 489 by
+  construction; a real workload may have more or fewer, and nothing here measures that. The hypothesis for Sirsh:
+  *reward walks whose returned set held a confirmed answer; it helps questions that reuse those passages* (+.037),
+  and almost no others (+.003).
 - **It never breaks a walk** (0 losses in both directions, as for every additive reward so far).
 - **The A-last reward is at least as good as the gold-pair reward** and needs only "did the answer passage come back",
   which is closer to a signal a product could observe than the gold pair is.
