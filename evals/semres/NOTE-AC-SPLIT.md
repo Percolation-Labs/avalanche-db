@@ -25,3 +25,18 @@ abbreviations and initials.
 **Proposal.** AC = pysbd segmentation + string-or-judge from now on, with the judge's yes count and any chosen segment
 over a few sentences long reported. SR-AC's conclusion (the answer passage alone suffices for a reader) stands at
 levels 2–6 points higher than first reported.
+
+**Judging string hits too (james's knob-free check, `ac_equiv.py --hits`, `out/ac-equiv-pysbd-hits.txt`, $0.003).**
+Every chosen sentence gets the two-option judge, not only string misses. (The "with judge" totals in that file
+double-count under `--hits`; read the rejection lines.)
+- String hits the judge rejects: **G 9 of 134, L 14 of 138, LR 6 of 125, R 4 of 5.**
+- **On random sets the rejections are real accidental containment** (a Rohtang Pass sentence mentioning the
+  Himalaya; a prime-minister sentence mentioning the United Kingdom).
+- **On gold sets they are mixed.** Some are accidental (a Clinton County sentence for "Franklin County"); some are the
+  judge being strict on a sentence that does state the answer ("Moldavanka … in the Odessa Oblast").
+- With the judge as the only scorer (strict), AC(G) ≈ .867 and AC(L) ≈ .860, so the primary is about +.007 instead of
+  −.027. **The conclusion is the same either way**: the chain adds nothing to a reader holding the answer passage.
+
+**So AC is reported as a band from here on:** lenient (string or judge) and strict (judge only), with the
+string-hit-judge-no count per arm. Where a decision would differ between the two, it isn't settled. This replaces a
+length cut on long segments.

@@ -1,0 +1,23 @@
+600 string-check failures; 330 distinct requests, 153 uncached, estimated $0.0012
+spend $0.00281
+G: AC string 0.893 -> with judge 1.760 (+130)
+L: AC string 0.920 -> with judge 1.780 (+129)
+LR: AC string 0.833 -> with judge 1.660 (+124)
+R: AC string 0.033 -> with judge 0.053 (+3)
+AC(G) − AC(L) with judge: -0.020 [-0.093, +0.053]
+judge on the first 20 failures (the hand-read set, same order as RESULT-SRAC.md):
+G: string hits the judge rejects 9 of 134
+      Odessa Oblast | Moldavanka: Moldavanka is a historical part of Odessa in the Odessa Oblast (province) of southern Ukraine, located joint
+      Franklin County | N. Monroe Marshall: Nathaniel Monroe Marshall (June 13, 1854 Schuyler Falls, Clinton County, New York – February 16, 193
+      Midwestern United States | Midwestern United States: The Midwestern United States, also referred to as the American Midwest, Middle West, or simply
+L: string hits the judge rejects 14 of 138
+      Odessa Oblast | Moldavanka: Moldavanka is a historical part of Odessa in the Odessa Oblast (province) of southern Ukraine, located joint
+      Franklin County | N. Monroe Marshall: Nathaniel Monroe Marshall (June 13, 1854 Schuyler Falls, Clinton County, New York – February 16, 193
+      Classic Albums: Iron Maiden -- | Classic Albums: Iron Maiden – The Number of the Beast: Directed by Tim Kirkby, it featured cuts from the title track, ``
+LR: string hits the judge rejects 6 of 125
+      Odessa Oblast | Moldavanka: Moldavanka is a historical part of Odessa in the Odessa Oblast (province) of southern Ukraine, located joint
+      Classic Albums: Iron Maiden -- | Classic Albums: Iron Maiden – The Number of the Beast: Directed by Tim Kirkby, it featured cuts from the title track, ``
+      Midwestern United States | Midwestern United States: The Midwestern United States, also referred to as the American Midwest, Middle West, or simply
+R: string hits the judge rejects 4 of 5
+      Himalaya mountains | Rohtang Pass: Rohtang Pass () (Bhoti: རོ་ཐང་། Rohtang , lit: རོ་ (Ro)- corpse, ཐང་། (thang)- plain/field due to people w
+      Monarch of the United Kingdom | Prime minister: In the United Kingdom the prime minister and former prime ministers may appear to also be styled Right H
