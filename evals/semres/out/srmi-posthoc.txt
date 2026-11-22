@@ -1,0 +1,4 @@
+mutual_c, L twin of a branch: +0.210 [+0.129, +0.294] (n 100)
+mutual_c, L not a twin:     +0.259 [+0.163, +0.361] (n 88)
+series_c, L twin: +0.353 [+0.223, +0.493] (n 100)
+series_c, not twin: +0.715 [+0.574, +0.860] (n 88)

@@ -1,0 +1,10 @@
+SET=stage0: 4 questions (3hop2)
+live: 12 requests, estimated $0.0013 (cap $0.05)
+spend this run $0.00142
+L shares a door key with A or B in 0.500 of questions
+Jev, other branch after reading a branch   median rank 3, top-1 0.125
+Jev, that branch after reading L           median rank 3, top-1 0.125
+Jev, join after reading a branch           median rank 1, top-1 0.875
+Jev, join after reading L                  median rank 1, top-1 0.750
+cos(q+read), other branch                  median rank 6, top-1 0.000
+cos(q+read), join                          median rank 4, top-1 0.250

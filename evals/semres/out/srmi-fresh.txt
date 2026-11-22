@@ -1,0 +1,18 @@
+SET=fresh: 188 questions (3hop2)
+live: 564 requests, estimated $0.0708 (cap $0.25)
+spend this run $0.07205
+L shares a door key with A or B in 0.532 of questions
+Jev, other branch after reading a branch   median rank 2, top-1 0.223
+Jev, that branch after reading L           median rank 3, top-1 0.207
+Jev, join after reading a branch           median rank 1, top-1 0.598
+Jev, join after reading L                  median rank 2, top-1 0.447
+cos(q+read), other branch                  median rank 7, top-1 0.082
+cos(q+read), join                          median rank 4, top-1 0.210
+PRIMARY mutual_c, dlogit p(other branch) (read branch − read L) minus common mode: +0.233 [+0.170, +0.296] (n 188)
+mutual, raw: +0.204 [+0.145, +0.266] (n 188)
+common mode, mean dlogit over options outside {A, B, J, L}: -0.029 [-0.066, +0.008] (n 188)
+series_c: +0.522 [+0.420, +0.622] (n 188)
+series, raw: +0.493 [+0.403, +0.583] (n 188)
+series − mutual: +0.289 [+0.181, +0.399] (n 188)
+vector mutual, dcos(other branch): read branch − read L: -0.055 [-0.064, -0.046] (n 188)
+vector series, dcos(J): read branch − read L: -0.014 [-0.026, -0.003] (n 188)
