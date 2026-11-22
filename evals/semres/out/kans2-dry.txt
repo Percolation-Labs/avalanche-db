@@ -1,0 +1,3 @@
+REL requests: 0 new of 83 waves
+door requests: 589 new (K0/K7 should be cached)
+DRY: uncached K0 0, K7 0 of 601 pages each; REL chars 565558

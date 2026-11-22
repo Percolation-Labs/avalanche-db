@@ -1,0 +1,21 @@
+REL requests: 13 new of 13 waves
+door requests: 80 new (K0/K7 should be cached)
+max REL p per wave: quartiles 0.35, 0.44, 0.51, 0.62, 0.88 (n 13)
+gold share: all reads in waves 0.043; K-ans kept reads 0.077 (13 waves)
+beam HELD-OUT · D6 doors · 80 pages · spend $0.0106
+  K0    NDCG@10 0.666 [0.518, 0.770]  MRR 0.564  recall@3 0.546
+  K7    NDCG@10 0.618 [0.541, 0.678]  MRR 0.501  recall@3 0.521
+  Kans  NDCG@10 0.657 [0.545, 0.733]  MRR 0.571  recall@3 0.516
+  paired Kans - K7: NDCG +0.039 [-0.0257, +0.096]
+  paired Kans - K0: NDCG -0.009 [-0.0931, +0.048]
+  paired K7 - K0: NDCG -0.048 [-0.0970, +0.023]
+REL requests: 6 new of 6 waves
+door requests: 33 new (K0/K7 should be cached)
+max REL p per wave: quartiles 0.31, 0.41, 0.47, 0.47, 0.84 (n 6)
+mq HELD-OUT · D6 doors · 33 pages · spend $0.0057
+  K0    NDCG@10 0.820 [0.701, 0.919]  MRR 0.759  recall@3 0.710
+  K7    NDCG@10 0.835 [0.711, 0.940]  MRR 0.786  recall@3 0.746
+  Kans  NDCG@10 0.842 [0.730, 0.934]  MRR 0.801  recall@3 0.811
+  paired Kans - K7: NDCG +0.007 [-0.0093, +0.028]
+  paired Kans - K0: NDCG +0.022 [+0.0081, +0.034]
+  paired K7 - K0: NDCG +0.015 [-0.0141, +0.024]

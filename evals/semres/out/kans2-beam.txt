@@ -1,0 +1,16 @@
+max REL p per wave: quartiles 0.28, 0.43, 0.51, 0.62, 0.95 (n 83)
+gold share: all reads in waves 0.115; K-ans kept reads 0.181 (83 waves)
+beam HELD-OUT · D6 doors · 601 pages · spend $0.0525
+  K0    NDCG@10 0.692 [0.656, 0.727]  MRR 0.656  recall@3 0.529
+  K7    NDCG@10 0.669 [0.637, 0.706]  MRR 0.625  recall@3 0.511
+  Kans  NDCG@10 0.702 [0.668, 0.736]  MRR 0.671  recall@3 0.545
+  Krnd  NDCG@10 0.698 [0.661, 0.736]  MRR 0.658  recall@3 0.551
+gold share of K-rnd kept reads 0.229
+  paired Kans - K7: NDCG +0.032 [+0.0084, +0.052]
+  paired Kans - K0: NDCG +0.010 [-0.0075, +0.029]
+  paired K7 - K0: NDCG -0.022 [-0.0401, -0.001]
+  paired Kans - Krnd: NDCG +0.004 [-0.0098, +0.018]
+  paired Krnd - K7: NDCG +0.029 [+0.0042, +0.047]
+  paired Krnd - K0: NDCG +0.006 [-0.0098, +0.023]
+  pages with a multi-read wave before them 601; with a differing pick 589 of 601
+  within differing-pick pages: Kans - Krnd NDCG +0.004 [-0.0106, +0.020]
