@@ -1,0 +1,23 @@
+2-hop questions 1252; learn 652; test 459 (SR-BX's 304 excluded); test questions sharing a learn gold pair 6
+RATE pass 1: learn success under previous weights 0.463; rho 0.463; memberships 3714; m < 1: 2580, m > 1: 1134; median n=1 success m 1.386
+RATE pass 2: learn success under previous weights 0.521; rho 0.521; memberships 3548; m < 1: 2327, m > 1: 1221; median n=1 success m 1.306
+RATE pass 3: learn success under previous weights 0.506; rho 0.506; memberships 3697; m < 1: 2511, m > 1: 1186; median n=1 success m 1.325
+RATE pass 4: learn success under previous weights 0.518; rho 0.518; memberships 3547; m < 1: 2331, m > 1: 1216; median n=1 success m 1.31
+RATE pass 5: learn success under previous weights 0.508; rho 0.508; memberships 3698; m < 1: 2511, m > 1: 1187; median n=1 success m 1.323
+RATE: walk tuple repeats after pass 5; CYCLE of period 2
+RATE-W pass 1: learn success under previous weights 0.463; rho 0.463; memberships 1135; m < 1: 0, m > 1: 1135; median n=1 success m 1.386
+RATE-W pass 2: learn success under previous weights 0.472; rho 0.472; memberships 1156; m < 1: 0, m > 1: 1156; median n=1 success m 1.372
+RATE-W: walk tuple repeats after pass 2; FIXED POINT
+test both hops none    0.401
+test both hops Tstar   0.418
+test both hops RATE    0.412
+test both hops RATE-W  0.412
+PRIMARY RATE − T*: -0.007 [-0.017, +0.002] (n 459)
+RATE − none: +0.011 [+0.000, +0.022] (n 459)
+RATE-W − Tstar: -0.007 [-0.015, +0.000] (n 459)
+RATE-W − none: +0.011 [+0.002, +0.022] (n 459)
+RATE − RATE-W: +0.000 [-0.007, +0.007] (n 459)
+flips vs unweighted Tstar: gained 8, lost 0
+flips vs unweighted RATE: gained 6, lost 1
+flips vs unweighted RATE-W: gained 5, lost 0
+flips RATE vs T*: gained 1, lost 4
