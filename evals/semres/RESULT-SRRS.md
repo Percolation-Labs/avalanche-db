@@ -29,7 +29,8 @@ reward unit with a measured rate.
   again (6 of 459 test questions share a learn pair), now on the penalty side.
 - **The unit was doing work.** RATE-W is T* with a measured scale instead of a unit, and it transfers less (+.011
   against +.017; the difference isn't significant). In S_w, T*'s factor (1 + r) applies at both ends, so a typical
-  single-success door gets about 2× from each, against about 1.39× here. On this data, larger boosts to successful
+  rewarded door gets about 2× from each (T*'s total reward 1,154 over about 1,156 memberships, so mean r ≈ 1), against
+  about 1.39× here. On this data, larger boosts to successful
   doors transfer better, so the unit isn't arbitrary in effect, even if it is in form.
 - **For dreaming.** The reward that converges and transfers best here is still SR-BC's T*: successes only, one pass.
   Its scale is a convention I can now name rather than defend: one success = one unit of base door strength. The
