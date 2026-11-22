@@ -42,6 +42,8 @@ review of the registration came after.*
 - **Returned-set size.** ONE is 2 passages in all 150. TWO is 2 in 74 (the runner-up's walk adds nothing new), 3 in 61,
   4 in 15.
 - **ONE's free wins.** The entry is the answer passage itself in 45 of 150, so A-last = 1 after one read.
+- **Where the A-last gains come from.** 7 questions: in 3 the runner-up is the answer passage itself (one extra
+  passage), in 4 its step reaches it.
 - **AC failures by arm, where the answer passage is in the set:** ONE 24, TWO 27. In 9 of each, the chosen sentence
   shares a word with the gold answer, likely a scoring miss rather than a wrong choice. The artifact count is equal
   across arms, so it doesn't explain the gap between A-last's +.047 and AC's +.020.

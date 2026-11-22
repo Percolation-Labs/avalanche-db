@@ -12,3 +12,4 @@ returned-set size distribution: ONE 2:150; TWO 2:74, 3:61, 4:15
 e1 is the answer passage itself: 45 of 150
 ONE: AC failures with the answer passage in the set 24; chosen sentence shares a gold-answer word in 9 (likely scoring misses)
 TWO: AC failures with the answer passage in the set 27; chosen sentence shares a gold-answer word in 9 (likely scoring misses)
+A-last gains TWO over ONE: 7; e2 is the answer passage itself in 3; reached by e2's step in 4

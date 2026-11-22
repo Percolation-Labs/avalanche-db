@@ -194,3 +194,5 @@ for a in ("ONE", "TWO"):
         (part := part + 1) if any(w in t for w in g.split()) else None
         full += 1
     print(f"{a}: AC failures with the answer passage in the set {full}; chosen sentence shares a gold-answer word in {part} (likely scoring misses)")
+gain = [x for x, a1, a2 in zip(Q, res["ONE"]["alast"], res["TWO"]["alast"]) if a2 > a1]
+print(f"A-last gains TWO over ONE: {len(gain)}; e2 is the answer passage itself in {sum(x['e']['e2'] == x['h2'] for x in gain)}; reached by e2's step in {sum(x['e']['e2'] != x['h2'] for x in gain)}")
