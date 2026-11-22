@@ -1,0 +1,47 @@
+SET=fresh: 180 questions ({'2hop': 60, '3hop1': 60, '4hop1': 60}); none used by an earlier Jev run
+wave entry: 180 requests, estimated $0.0222 (spent so far $0.0000, cap $0.3)
+wave after up to 1 reads: 540 requests, estimated $0.0284 (spent so far $0.0229, cap $0.3)
+wave after up to 2 reads: 426 requests, estimated $0.0270 (spent so far $0.0531, cap $0.3)
+wave after up to 3 reads: 195 requests, estimated $0.0162 (spent so far $0.0814, cap $0.3)
+wave after up to 4 reads: 104 requests, estimated $0.0088 (spent so far $0.0981, cap $0.3)
+wave after up to 5 reads: 38 requests, estimated $0.0025 (spent so far $0.1071, cap $0.3)
+wave after up to 6 reads: 33 requests, estimated $0.0022 (spent so far $0.1096, cap $0.3)
+wave after up to 7 reads: 29 requests, estimated $0.0020 (spent so far $0.1119, cap $0.3)
+wave after up to 8 reads: 26 requests, estimated $0.0018 (spent so far $0.1139, cap $0.3)
+wave after up to 9 reads: 22 requests, estimated $0.0017 (spent so far $0.1158, cap $0.3)
+wave after up to 10 reads: 19 requests, estimated $0.0015 (spent so far $0.1175, cap $0.3)
+wave after up to 11 reads: 19 requests, estimated $0.0015 (spent so far $0.1190, cap $0.3)
+wave after up to 12 reads: 19 requests, estimated $0.0015 (spent so far $0.1205, cap $0.3)
+wave after up to 13 reads: 18 requests, estimated $0.0014 (spent so far $0.1221, cap $0.3)
+wave after up to 14 reads: 18 requests, estimated $0.0015 (spent so far $0.1235, cap $0.3)
+wave after up to 15 reads: 18 requests, estimated $0.0015 (spent so far $0.1250, cap $0.3)
+wave after up to 16 reads: 17 requests, estimated $0.0014 (spent so far $0.1265, cap $0.3)
+wave after up to 17 reads: 17 requests, estimated $0.0014 (spent so far $0.1279, cap $0.3)
+wave after up to 18 reads: 17 requests, estimated $0.0014 (spent so far $0.1293, cap $0.3)
+wave after up to 19 reads: 17 requests, estimated $0.0014 (spent so far $0.1308, cap $0.3)
+wave after up to 20 reads: 10 requests, estimated $0.0013 (spent so far $0.1322, cap $0.3)
+spend this run $0.13349
+-- 2hop (n 60)
+   pass H       A-last 0.900  returned 2.00  input 21,068  early/exact/late 0/60/0
+   pass H+1     A-last 0.917  returned 3.00  input 31,137  early/exact/late 0/0/60
+   pass S-check A-last 0.833  returned 1.82  input 21,293  early/exact/late 23/34/3
+   pass S-state A-last 0.850  returned 1.97  input 23,298  early/exact/late 22/35/3
+-- 3hop1 (n 60)
+   pass H       A-last 0.817  returned 3.00  input 31,902  early/exact/late 0/60/0
+   pass H+1     A-last 0.917  returned 4.00  input 41,598  early/exact/late 0/0/60
+   pass S-check A-last 0.650  returned 2.43  input 28,498  early/exact/late 47/6/7
+   pass S-state A-last 0.700  returned 3.00  input 34,914  early/exact/late 43/10/7
+-- 4hop1 (n 60)
+   pass H       A-last 0.850  returned 4.00  input 44,944  early/exact/late 0/60/0
+   pass H+1     A-last 0.883  returned 5.00  input 54,854  early/exact/late 0/0/60
+   pass S-check A-last 0.833  returned 3.05  input 40,526  early/exact/late 51/3/6
+   pass S-state A-last 0.800  returned 3.17  input 42,808  early/exact/late 49/4/7
+-- all (n 180)
+   pass H       A-last 0.856  returned 3.00  input 32,638  early/exact/late 0/180/0
+   pass H+1     A-last 0.906  returned 4.00  input 42,530  early/exact/late 0/0/180
+   pass S-check A-last 0.772  returned 2.43  input 30,106  early/exact/late 121/43/16
+   pass S-state A-last 0.783  returned 2.71  input 33,673  early/exact/late 114/49/17
+PRIMARY A-last, S-state − S-check: +0.011 [-0.017, +0.039] (n 180)
+S-state − oracle(H): -0.072 [-0.122, -0.022] (n 180); S-check − oracle(H): -0.083 [-0.139, -0.033] (n 180)
+S-check: decisions (stop/continue × answer passage read) stop&read 136, stop&not 41, continue&read 103, continue&not 158; stop vs first arrival {'at arrival': 121, 'before arrival': 27, 'never reached': 14, 'after arrival': 18}; stops after one read 56
+S-state: decisions (stop/continue × answer passage read) stop&read 134, stop&not 39, continue&read 154, continue&not 161; stop vs first arrival {'at arrival': 124, 'before arrival': 25, 'never reached': 14, 'after arrival': 17}; stops after one read 58
