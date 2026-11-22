@@ -23,6 +23,13 @@ The same 200 chains as SR-BH, with H + 1 reads for both walks. Paired bootstrap 
 - **H-O fails, at the boundary.** The first condition holds; the DiD's upper bound is at 0, not below it. By the rule
   bill and I fixed before the run, order is **not shown**.
 - **Input with the spare read:** cheap 37.8k, pass 46.8k, ratio **.807**.
+- **Per unit of input** (bill's readout, `out/srbh2-per-char.txt`, $0), all hops per 10k input chars:
+  - cheap at H: .135
+  - pass at H: .084
+  - **cheap at H + 1: .146**
+  - pass at H + 1: .112
+
+  The spare read pays for itself: cheap at H + 1 is the best per character as well as the best overall.
 - **SR-BH's cheap wins:** with the spare read, the pass walk completes 4 of the 10 where it had skipped a hop, and 3 of
   the 9 where it had left the chain.
 
@@ -35,7 +42,9 @@ The same 200 chains as SR-BH, with H + 1 reads for both walks. Paired bootstrap 
   CI just reaches 0. Skips recover more often than chain-leaves (4 of 10 against 3 of 9), but these counts are too small
   to separate the two.
 - **The spare read is worth more than either step rule.** +.155 to +.210 on all hops, against +.080 between the rules.
-  On chains, a stopping rule that reads one past the hop count would matter more than which step is used. That points
+  On chains, and with H given as an oracle (the walk was told it could have one more read), reading one past the hop
+  count matters more than which step is used, and it is the best per character. So stopping is the next lever, and it
+  has to be measured without the oracle. That points
   the next test at stopping, not at the step.
 
 ## Predictions against outcomes
