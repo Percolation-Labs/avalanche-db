@@ -1,0 +1,12 @@
+usable questions 113
+live: 20 requests, estimated $0.0012 (cap $0.05)
+spend this run $0.00129
+SET=stage0: n 4 (usable DEV questions 113)
+top-1 gold under none       0.000
+top-1 gold under true       0.750  (lost 0, gained 3)
+top-1 gold under related    0.000  (lost 0, gained 0)
+top-1 gold under irrelevant 0.250  (lost 0, gained 1)
+top-1 gold under none2      0.250  (lost 0, gained 1)
+true: lead [0.685, 0.006, 0.725, 0.119], shift [0.282, 0.275, 0.3, -0.119], rho [0.635, 0.326, 0.352, 0.202]
+related: lead [0.373, 0.083, -0.135, 0.048], shift [0.035, 0.371, 0.185, 0.115], rho [0.277, -0.477, 0.433, 0.042]
+irrelevant: lead [0.449, 0.1, -0.133, 0.325], shift [-0.449, -0.15, -0.309, -0.162], rho [-0.334, -0.031, -0.284, 0.252]

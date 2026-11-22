@@ -1,0 +1,25 @@
+usable questions 113
+live: 545 requests, estimated $0.0295 (cap $0.25)
+/Users/sirsh/code/avalanche-d1/evals/semres/srmo3.py:81: ConstantInputWarning: An input array is constant; the correlation coefficient is not defined.
+  r = spearmanr(ov[keep], dd[keep]).statistic
+spend this run $0.03184
+SET=fresh: n 109 (usable questions 113)
+top-1 gold under none       0.495
+top-1 gold under true       0.596  (lost 9, gained 20)
+top-1 gold under related    0.468  (lost 15, gained 12)
+top-1 gold under irrelevant 0.477  (lost 14, gained 12)
+top-1 gold under none2      0.495  (lost 4, gained 4)
+PRIMARY lead(related): dlogit gold minus non-gold: -0.118 [-0.178, -0.058] (n 109)
+lead(true): -0.105 [-0.169, -0.043] (n 109)
+lead(related) − lead(true): -0.013 [-0.067, +0.039] (n 109)
+lead(irrelevant): -0.139 [-0.203, -0.075] (n 109)
+shift(true) over non-gold: +0.067 [+0.016, +0.122] (n 109)
+shift(related) over non-gold: -0.019 [-0.058, +0.021] (n 109)
+shift(irrelevant) over non-gold: -0.205 [-0.246, -0.167] (n 109)
+rho(related): Spearman(overlap with found, dlogit): -0.081 [-0.138, -0.021] (n 109)
+rho(true): -0.054 [-0.109, +0.002] (n 108)
+rho(irrelevant): -0.050 [-0.100, +0.000] (n 109)
+top-1 gold, true − none: +0.101 [+0.009, +0.193] (n 109)
+top-1 gold, related − none: -0.028 [-0.119, +0.064] (n 109)
+top-1 gold, irrelevant − none: -0.018 [-0.110, +0.073] (n 109)
+top-1 gold, none2 − none: +0.000 [-0.046, +0.055] (n 109)
