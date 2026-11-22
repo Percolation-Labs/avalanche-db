@@ -1,0 +1,20 @@
+live: 1000 requests, estimated $0.1183 (cap $0.25)
+spend this run $0.12387
+SET=fresh: n 200; questions with neither options 200, median count 10
+top-1 h3 under none       0.920
+top-1 h3 under true       0.905
+top-1 h3 under wrong      0.910
+top-1 h3 under irrelevant 0.900
+flips true       vs none: lost 8, gained 5
+flips wrong      vs none: lost 7, gained 5
+flips irrelevant vs none: lost 6, gained 2
+flips none2      vs none: lost 4, gained 3
+PRIMARY shift(irrelevant - none) over neither options: +0.013 [-0.009, +0.036] (n 200)
+shift(true - none): +0.297 [+0.267, +0.327] (n 200)
+shift(wrong - none): +0.286 [+0.245, +0.327] (n 200)
+shift(true) - shift(irrelevant): +0.284 [+0.251, +0.316] (n 200)
+shift(wrong) - shift(irrelevant): +0.272 [+0.235, +0.311] (n 200)
+top-1 h3, true - none: -0.015 [-0.050, +0.020] (n 200)
+top-1 h3, wrong - none: -0.010 [-0.045, +0.025] (n 200)
+top-1 h3, irrelevant - none: -0.020 [-0.050, +0.005] (n 200)
+top-1 h3, none2 - none: -0.005 [-0.030, +0.020] (n 200)
