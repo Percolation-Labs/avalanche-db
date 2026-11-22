@@ -15,7 +15,7 @@ same seed rule as K-ans 2. Jev spend: $0.0413 (272 door requests). Output: `out/
 - **H-K3 fails.** A random one-per-wave state doesn't keep a significant gain on MuSiQue. Its point estimate is about
   half of K7's or K-ans's.
 - K-ans − K-rnd is +.017 [−.009, +.046], and +.018 [−.010, +.048] within the 272 pages with a differing pick. That's
-  positive but not significant, so on MuSiQue Jev's pick *may* matter.
+  positive but not significant, so on MuSiQue we can't rule out that Jev's pick matters, and can't show it either.
 - K-rnd − K7 is −.021 [−.057, +.014].
 
 **Predictions against outcomes.** K-rnd − K0 about +.02, a coin flip: +.017 with a CI touching 0, as predicted. K-ans −
@@ -34,7 +34,7 @@ K-rnd about +.015: +.017, n.s.
   - K-rnd is neutral on BEAM and not significant on MuSiQue.
   - K-ans is neutral on BEAM and keeps MuSiQue's full gain.
 - **The mechanisms differ by corpus.** On BEAM, the fix is length: K-ans 2 showed the filter adds nothing there and
-  picks less gold than random. On MuSiQue, the sentence may matter: K-ans − K-rnd is +.017, n.s. MuSiQue's gain plausibly
+  picks less gold than random. On MuSiQue, we can't rule out that the sentence matters: K-ans − K-rnd is +.017, n.s. MuSiQue's gain plausibly
   needs the chain's passage in the state, and a random read often isn't it.
 - **The hypothesis for Sirsh to decide** (research phase, not a product change): K-ans is the state that helps where
   kappa helped and stops hurting where it hurt, at one extra short Jev request per wave. The cheaper random state is
