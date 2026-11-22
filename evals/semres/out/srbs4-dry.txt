@@ -1,0 +1,20 @@
+SET=fresh: 300 questions ({'2hop': 100, '3hop1': 100, '4hop1': 100}); none used by an earlier Jev run
+wave entry: 300 requests, estimated $0.0359 (spent so far $0.0000, cap $0.5)
+wave after up to 1 reads: 600 requests, estimated $0.0430 (spent so far $0.0359, cap $0.5)
+wave after up to 2 reads: 319 requests, estimated $0.0298 (spent so far $0.0790, cap $0.5)
+wave after up to 3 reads: 112 requests, estimated $0.0125 (spent so far $0.1088, cap $0.5)
+wave after up to 4 reads: 2 requests, estimated $0.0001 (spent so far $0.1213, cap $0.5)
+wave standard reader on returned sets: 566 requests, estimated $0.0207 (spent so far $0.1214, cap $0.5)
+wave judge: 522 requests, estimated $0.0072 (spent so far $0.1421, cap $0.5)
+spend this run $0.14934 (DRY: estimate only)
+2hop   H: AC 0.560 (judge yes 52)  A-last 0.110  returned 2.00  input 19,962
+2hop   R: AC 0.520 (judge yes 50)  A-last 0.050  returned 1.32  input 14,931
+3hop1  H: AC 0.540 (judge yes 50)  A-last 0.150  returned 3.00  input 31,116
+3hop1  R: AC 0.500 (judge yes 42)  A-last 0.090  returned 1.31  input 15,838
+4hop1  H: AC 0.420 (judge yes 38)  A-last 0.230  returned 4.00  input 44,123
+4hop1  R: AC 0.530 (judge yes 50)  A-last 0.090  returned 1.34  input 17,871
+all    H: AC 0.507 (judge yes 140)  A-last 0.163  returned 3.00  input 31,734
+all    R: AC 0.517 (judge yes 142)  A-last 0.077  returned 1.32  input 16,213
+PRIMARY AC, R-stop − oracle H: +0.010 [-0.063, +0.083] (n 300)
+never fired: 0 of 300; their AC 0.000, returned 0.0; excluding them: +0.010 [-0.063, +0.083] (n 300)
+reads at stop: {1: 212, 2: 80, 3: 7, 4: 1}

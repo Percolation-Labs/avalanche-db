@@ -1,0 +1,36 @@
+SET=fresh: 300 questions ({'2hop': 100, '3hop1': 100, '4hop1': 100}); none used by an earlier Jev run
+wave entry: 294 requests, estimated $0.0352 (spent so far $0.0000, cap $0.5)
+wave after up to 1 reads: 588 requests, estimated $0.0424 (spent so far $0.0365, cap $0.5)
+wave after up to 2 reads: 457 requests, estimated $0.0365 (spent so far $0.0811, cap $0.5)
+wave after up to 3 reads: 222 requests, estimated $0.0199 (spent so far $0.1194, cap $0.5)
+wave after up to 4 reads: 102 requests, estimated $0.0087 (spent so far $0.1401, cap $0.5)
+wave after up to 5 reads: 84 requests, estimated $0.0077 (spent so far $0.1492, cap $0.5)
+wave after up to 6 reads: 74 requests, estimated $0.0068 (spent so far $0.1573, cap $0.5)
+wave after up to 7 reads: 68 requests, estimated $0.0065 (spent so far $0.1645, cap $0.5)
+wave after up to 8 reads: 62 requests, estimated $0.0062 (spent so far $0.1714, cap $0.5)
+wave after up to 9 reads: 60 requests, estimated $0.0062 (spent so far $0.1780, cap $0.5)
+wave after up to 10 reads: 54 requests, estimated $0.0058 (spent so far $0.1845, cap $0.5)
+wave after up to 11 reads: 52 requests, estimated $0.0057 (spent so far $0.1906, cap $0.5)
+wave after up to 12 reads: 48 requests, estimated $0.0053 (spent so far $0.1967, cap $0.5)
+wave after up to 13 reads: 48 requests, estimated $0.0055 (spent so far $0.2024, cap $0.5)
+wave after up to 14 reads: 48 requests, estimated $0.0056 (spent so far $0.2082, cap $0.5)
+wave after up to 15 reads: 46 requests, estimated $0.0056 (spent so far $0.2143, cap $0.5)
+wave after up to 16 reads: 46 requests, estimated $0.0057 (spent so far $0.2203, cap $0.5)
+wave after up to 17 reads: 44 requests, estimated $0.0056 (spent so far $0.2264, cap $0.5)
+wave after up to 18 reads: 42 requests, estimated $0.0055 (spent so far $0.2324, cap $0.5)
+wave after up to 19 reads: 40 requests, estimated $0.0054 (spent so far $0.2384, cap $0.5)
+wave after up to 20 reads: 18 requests, estimated $0.0046 (spent so far $0.2442, cap $0.5)
+wave standard reader on returned sets: 525 requests, estimated $0.0286 (spent so far $0.2492, cap $0.5)
+wave judge: 119 requests, estimated $0.0016 (spent so far $0.2806, cap $0.5)
+spend this run $0.28264
+2hop   H: AC 0.800 (judge yes 3)  A-last 0.880  returned 2.00  input 19,957
+2hop   R: AC 0.760 (judge yes 5)  A-last 0.830  returned 3.04  input 44,518
+3hop1  H: AC 0.760 (judge yes 3)  A-last 0.880  returned 3.00  input 31,141
+3hop1  R: AC 0.700 (judge yes 2)  A-last 0.820  returned 3.16  input 42,520
+4hop1  H: AC 0.780 (judge yes 6)  A-last 0.820  returned 4.00  input 44,014
+4hop1  R: AC 0.780 (judge yes 6)  A-last 0.910  returned 4.49  input 81,427
+all    H: AC 0.780 (judge yes 12)  A-last 0.860  returned 3.00  input 31,704
+all    R: AC 0.747 (judge yes 13)  A-last 0.853  returned 3.56  input 56,155
+PRIMARY AC, R-stop − oracle H: -0.033 [-0.067, +0.000] (n 300)
+never fired: 18 of 300; their AC 0.167, returned 20.0; excluding them: -0.025 [-0.060, +0.007] (n 282)
+reads at stop: {1: 90, 2: 128, 3: 31, 4: 9, 5: 5, 6: 3, 7: 3, 8: 1, 9: 3, 10: 1, 11: 2, 14: 1, 16: 1, 17: 1, 18: 1, 19: 2, 20: 18}

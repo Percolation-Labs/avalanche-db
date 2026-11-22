@@ -1,0 +1,44 @@
+SET=fresh: 300 questions ({'2hop': 100, '3hop1': 100, '4hop1': 100}); none used by an earlier Jev run
+wave entry: 300 requests, estimated $0.0359 (spent so far $0.0000, cap $5.0)
+wave after up to 1 reads: 600 requests, estimated $0.0430 (spent so far $0.0359, cap $5.0)
+wave after up to 2 reads: 600 requests, estimated $0.0449 (spent so far $0.0790, cap $5.0)
+wave after up to 3 reads: 600 requests, estimated $0.0468 (spent so far $0.1239, cap $5.0)
+wave after up to 4 reads: 600 requests, estimated $0.0485 (spent so far $0.1707, cap $5.0)
+wave after up to 5 reads: 600 requests, estimated $0.0504 (spent so far $0.2191, cap $5.0)
+wave after up to 6 reads: 600 requests, estimated $0.0524 (spent so far $0.2695, cap $5.0)
+wave after up to 7 reads: 600 requests, estimated $0.0540 (spent so far $0.3219, cap $5.0)
+wave after up to 8 reads: 600 requests, estimated $0.0559 (spent so far $0.3760, cap $5.0)
+wave after up to 9 reads: 600 requests, estimated $0.0578 (spent so far $0.4319, cap $5.0)
+wave after up to 10 reads: 600 requests, estimated $0.0596 (spent so far $0.4898, cap $5.0)
+wave after up to 11 reads: 600 requests, estimated $0.0615 (spent so far $0.5494, cap $5.0)
+wave after up to 12 reads: 600 requests, estimated $0.0634 (spent so far $0.6109, cap $5.0)
+wave after up to 13 reads: 600 requests, estimated $0.0651 (spent so far $0.6742, cap $5.0)
+wave after up to 14 reads: 600 requests, estimated $0.0671 (spent so far $0.7393, cap $5.0)
+wave after up to 15 reads: 600 requests, estimated $0.0688 (spent so far $0.8065, cap $5.0)
+wave after up to 16 reads: 600 requests, estimated $0.0707 (spent so far $0.8753, cap $5.0)
+wave after up to 17 reads: 600 requests, estimated $0.0726 (spent so far $0.9460, cap $5.0)
+wave after up to 18 reads: 600 requests, estimated $0.0742 (spent so far $1.0186, cap $5.0)
+wave after up to 19 reads: 599 requests, estimated $0.0762 (spent so far $1.0928, cap $5.0)
+wave after up to 20 reads: 299 requests, estimated $0.0728 (spent so far $1.1690, cap $5.0)
+wave standard reader on returned sets: 600 requests, estimated $0.0867 (spent so far $1.2418, cap $5.0)
+wave judge: 568 requests, estimated $0.0078 (spent so far $1.3285, cap $5.0)
+/Users/sirsh/code/av-wt-bs4/evals/semres/srbs4.py:170: RuntimeWarning: Mean of empty slice
+  rng = np.random.default_rng(0); d = np.asarray(d, float); i = rng.integers(0, len(d), (B, len(d))); m = d[i].mean(1)
+/Users/sirsh/.cache/uv/archive-v0/BEVsCW6OsMuQTnK81TTE5/lib/python3.13/site-packages/numpy/_core/_methods.py:134: RuntimeWarning: invalid value encountered in divide
+  ret = um.true_divide(
+/Users/sirsh/code/av-wt-bs4/evals/semres/srbs4.py:171: RuntimeWarning: Mean of empty slice
+  return f"{d.mean():+.3f} [{np.quantile(m, .025):+.3f}, {np.quantile(m, .975):+.3f}] (n {len(d)})"
+/Users/sirsh/.cache/uv/archive-v0/BEVsCW6OsMuQTnK81TTE5/lib/python3.13/site-packages/numpy/_core/_methods.py:142: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+spend this run $1.33636 (DRY: estimate only)
+2hop   H: AC 0.560 (judge yes 52)  A-last 0.110  returned 2.00  input 19,962
+2hop   R: AC 0.560 (judge yes 49)  A-last 1.000  returned 19.99  input 339,720
+3hop1  H: AC 0.540 (judge yes 50)  A-last 0.150  returned 3.00  input 31,116
+3hop1  R: AC 0.480 (judge yes 45)  A-last 1.000  returned 20.00  input 357,911
+4hop1  H: AC 0.420 (judge yes 38)  A-last 0.230  returned 4.00  input 44,123
+4hop1  R: AC 0.540 (judge yes 50)  A-last 1.000  returned 20.00  input 389,053
+all    H: AC 0.507 (judge yes 140)  A-last 0.163  returned 3.00  input 31,734
+all    R: AC 0.527 (judge yes 144)  A-last 1.000  returned 20.00  input 362,228
+PRIMARY AC, R-stop − oracle H: +0.020 [-0.060, +0.100] (n 300)
+never fired: 300 of 300; their AC 0.527, returned 20.0; excluding them: +nan [+nan, +nan] (n 0)
+reads at stop: {19: 1, 20: 299}

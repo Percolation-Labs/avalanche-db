@@ -1,0 +1,1 @@
+oracle H + one final reader request: 35,635; R-stop (its last reader request is that call): 56,155; ratio 1.58
