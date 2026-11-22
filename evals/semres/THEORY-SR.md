@@ -255,11 +255,17 @@ are tests of it, not a definition.
 - **The vector probe goes the other way.** cos(q + read) *lowers* the parallel branch (−.055): it follows what was read
   away from what's still needed. So split probes combine in the decider, not in vector arithmetic.
 
-**(3) Inertia over time: does well-earned structure resist restructuring?** (bill, look pending)
-- Measure each door membership's survival across rounds of a convergent dream operator, against how often it carried a
-  gold hop in earlier walks, with the operator's own structural vote as a control.
-- D3's loop converges (memberships changed per round 13.2% → 3.3% → 1.2% → 0.5% on p8), but nothing yet records what
-  survives against what was earned.
+**(3) Inertia over time: does well-earned structure resist restructuring?** (bill, #79, $0, unregistered look)
+- D3's gold-free pruning vote was run unchanged on graph-mq. Memberships whose key joins two consecutive gold hops are
+  removed .008 of the time in round 1, against .136 for the others. That holds within the same passage (.008 against
+  .160) and in every df band.
+- Survival after all rounds is .978 against .804. Change per round falls from 12.9% to 0.8%, so the graph stiffens.
+- **This is structural resistance, not memory.** D3 re-votes from the current graph each round and has no record of
+  use.
+- **Keeping the bridges isn't enough.** D3's registered test has walks *worse* than random pruning of the same size
+  (.765 against .789, from .807). What it removes around the bridges carried context the walks used.
+- A true inertia term would weight the vote by recorded use or tenure (bitemporal history) and test whether that
+  protects earned structure beyond the structural vote. That's not run.
 
 **Where kappa fits.** Kappa is the walk's memory, sent to Jev as `found`. On today's evidence its effect at a step is a
 uniform shift plus a discount on what's been covered, not a pull along the thread. The coupling that does exist sits in
@@ -270,7 +276,8 @@ design that varies read and `found` on one draw.
 
 **Toward Sirsh's "good".** A target for dreaming would be low resistance to gold, measured as the cheap walk's both-hops
 rate (it's now within about .05 of Jev at 40% of the input), plus the inductive terms that turn out to carry signal. So
-far that's the read-coupling (2), not history (1). (3) asks whether the graph keeps what earned it.
+far that's the read-coupling (2), not history (1). (3) shows a structural vote can keep the bridges and still lose walks, so "good" has to price the whole
+path, not the bridge alone.
 
 ## What this changes
 
@@ -334,3 +341,4 @@ All are on avalanche-db. Each is registered before scoring, with a postmortem in
 | Train door-key graph and calibration | NOTE-TRAIN-GRAPH.md | #75 |
 | SR-MO (momentum) | RESULT-SRMO.md | #76 |
 | SR-MI (mutual inductance) | RESULT-SRMI.md | #77 |
+| Inertia look (D3 survival against gold bridges) | RESULT-INERTIA-LOOK.md | #79 |
