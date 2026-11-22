@@ -47,7 +47,7 @@ Here the walk is told the hop count H, as an oracle. Appendix STEP-STOP covers w
 | at H (SR-BH) | cheap **+.080** [+.025, +.130] | cheap −.045 [−.095, +.000] | .783 |
 | at H+1 (SR-BH2) | +.025 [−.030, +.085] | −.030 [−.075, +.010] | .807 |
 | uncapped key graph, at H (SR-BU) | — | −.035 [−.090, +.025] | .678 |
-| cheap at H+1 vs full at H (SR-BU2) | — | **+.000** [−.055, +.060] | about equal spend |
+| cheap at H+1 vs full at H (SR-BU2) | — | **+.000** [−.055, +.060] | .877 (32.7k / 37.3k) |
 | equal reads, H+1 each (SR-BU2) | — | −.055 [−.110, −.005] | — |
 
 **Why the two measures disagree.** The cheap walk reads the chain in order: each step names the next link. Jev's
@@ -56,8 +56,8 @@ the chain unread. That loses on "read the whole chain" but wins on "the answer i
 goal is the answer, the second measure is the one that counts.
 
 **What's left in the cheap walk's favour is input, not answers.** For the same number of passages returned, Jev's
-full step gets the answer in more often (−.055 at equal reads). Given one extra read, the cheap walk ties it at
-about equal input (+.000). Per 10k characters, the cheap walk reaches the answer passage more often: .316 against
+full step gets the answer in more often (−.055 at equal reads). Given one extra read, the cheap walk ties it
+(+.000; the registered test fell just short of its −.05 margin) with 12% less input. Per 10k characters, the cheap walk reaches the answer passage more often: .316 against
 .224 on the uncapped graph (SR-BU).
 
 ## Limits
