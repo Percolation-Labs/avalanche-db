@@ -44,3 +44,9 @@ constants, so the reward needs a scale the data sets.
 **If registered.** Same data, split and walk as SR-BC. Arms: unweighted, T* (SR-BC), RATE (option 3, fixed point by
 T's iteration), RATE-W (successes only). Primary: RATE − T* on test both hops. Prediction: about 0 to +.01; the main
 readout is lost walks under RATE.
+
+**Revision after james's review (16:26Z).** (1) The prior is centred on the corpus rate, not on .5:
+m = (w + 2ρ) / ((n + 2)ρ), ρ = W/N, so n = 0 gives exactly 1 (my version gave 1.08 to every unwalked door). One
+success gives about 1.39, one failure about .67. (2) The prior strength 2 is Laplace's convention, the one choice
+left. (3) 'Used' = both ends of every shared key the step crossed, as SR-BC's event. (4) RATE can lower weights, so
+its iteration may cycle; SR-BC's period readout and mean-of-cycle rule apply. Registered as SR-RS.
