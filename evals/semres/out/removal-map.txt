@@ -1,0 +1,14 @@
+G0 dev: AUC 0.8079, gold-door share 0.674, pairs 12441
+vote ratio at G0: q .05 sits at percentile 0.135 of finite door memberships
+vote decile 1   n  51012 | ΔAUC -0.0011 ± 0.0008 | Δgold-door -0.0014 ± 0.0014
+vote decile 2   n  51012 | ΔAUC -0.0016 ± 0.0006 | Δgold-door -0.0028 ± 0.0017
+vote decile 3   n  51012 | ΔAUC +0.0005 ± 0.0007 | Δgold-door +0.0000 ± 0.0000
+vote decile 4   n  51012 | ΔAUC -0.0000 ± 0.0009 | Δgold-door -0.0028 ± 0.0017
+vote decile 5   n  51011 | ΔAUC -0.0001 ± 0.0007 | Δgold-door -0.0069 ± 0.0031
+vote decile 6   n  51013 | ΔAUC -0.0005 ± 0.0011 | Δgold-door -0.0056 ± 0.0026
+vote decile 7   n  51012 | ΔAUC +0.0004 ± 0.0007 | Δgold-door +0.0000 ± 0.0000
+vote decile 8   n  51012 | ΔAUC -0.0022 ± 0.0014 | Δgold-door +0.0000 ± 0.0000
+vote decile 9   n  51012 | ΔAUC +0.0006 ± 0.0011 | Δgold-door +0.0000 ± 0.0000
+vote decile 10  n  51012 | ΔAUC -0.0035 ± 0.0019 | Δgold-door -0.0069 ± 0.0038
+earned          n   7617 | ΔAUC -0.0536 ± 0.0018 | Δgold-door -0.1528 ± 0.0022
+related         n 128136 | ΔAUC +0.0018 ± 0.0011 | Δgold-door -0.0028 ± 0.0028
