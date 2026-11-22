@@ -1,0 +1,23 @@
+cheap
+   58 ('continue', 'complete', 'answer string in reads')
+   28 ('continue', 'incomplete', 'answer string in reads')
+   207 ('continue', 'incomplete', 'no answer string')
+   53 ('stop', 'complete', 'answer string in reads')
+   93 ('stop', 'incomplete', 'answer string in reads')
+   33 ('stop', 'incomplete', 'no answer string')
+pass
+   55 ('continue', 'complete', 'answer string in reads')
+   24 ('continue', 'incomplete', 'answer string in reads')
+   151 ('continue', 'incomplete', 'no answer string')
+   34 ('stop', 'complete', 'answer string in reads')
+   112 ('stop', 'incomplete', 'answer string in reads')
+   33 ('stop', 'incomplete', 'no answer string')
+post hoc: answer string (or alias) in the read set at the stop, all 180; and all hops
+  cheap H       answer in reads 0.867   all hops 0.506
+  cheap H+1     answer in reads 0.939   all hops 0.683
+  cheap S-in    answer in reads 0.983   all hops 0.839
+  cheap S-check answer in reads 0.817   all hops 0.300
+  pass  H       answer in reads 0.928   all hops 0.439
+  pass  H+1     answer in reads 0.950   all hops 0.650
+  pass  S-in    answer in reads 0.906   all hops 0.378
+  pass  S-check answer in reads 0.817   all hops 0.194

@@ -1,0 +1,85 @@
+SET=fresh: 180 questions ({'2hop': 60, '3hop1': 60, '4hop1': 60}); none used by an earlier Jev run
+wave entry: 180 requests, estimated $0.0218 (spent so far $0.0000, cap $0.5)
+wave after up to 1 reads, a: 540 requests, estimated $0.0290 (spent so far $0.0225, cap $0.5)
+wave after up to 1 reads, b: 100 requests, estimated $0.0096 (spent so far $0.0547, cap $0.5)
+wave after up to 2 reads, a: 528 requests, estimated $0.0288 (spent so far $0.0646, cap $0.5)
+wave after up to 2 reads, b: 140 requests, estimated $0.0145 (spent so far $0.0966, cap $0.5)
+wave after up to 3 reads, a: 398 requests, estimated $0.0216 (spent so far $0.1116, cap $0.5)
+wave after up to 3 reads, b: 146 requests, estimated $0.0145 (spent so far $0.1359, cap $0.5)
+wave after up to 4 reads, a: 291 requests, estimated $0.0147 (spent so far $0.1509, cap $0.5)
+wave after up to 4 reads, b: 132 requests, estimated $0.0121 (spent so far $0.1677, cap $0.5)
+wave after up to 5 reads, a: 227 requests, estimated $0.0096 (spent so far $0.1802, cap $0.5)
+wave after up to 5 reads, b: 127 requests, estimated $0.0117 (spent so far $0.1915, cap $0.5)
+wave after up to 6 reads, a: 208 requests, estimated $0.0082 (spent so far $0.2035, cap $0.5)
+wave after up to 6 reads, b: 119 requests, estimated $0.0104 (spent so far $0.2134, cap $0.5)
+wave after up to 7 reads, a: 189 requests, estimated $0.0068 (spent so far $0.2241, cap $0.5)
+wave after up to 7 reads, b: 124 requests, estimated $0.0101 (spent so far $0.2325, cap $0.5)
+wave after up to 8 reads, a: 183 requests, estimated $0.0063 (spent so far $0.2429, cap $0.5)
+wave after up to 8 reads, b: 119 requests, estimated $0.0092 (spent so far $0.2506, cap $0.5)
+wave after up to 9 reads, a: 173 requests, estimated $0.0055 (spent so far $0.2601, cap $0.5)
+wave after up to 9 reads, b: 119 requests, estimated $0.0085 (spent so far $0.2670, cap $0.5)
+wave after up to 10 reads, a: 171 requests, estimated $0.0052 (spent so far $0.2759, cap $0.5)
+wave after up to 10 reads, b: 125 requests, estimated $0.0083 (spent so far $0.2825, cap $0.5)
+wave after up to 11 reads, a: 163 requests, estimated $0.0046 (spent so far $0.2911, cap $0.5)
+wave after up to 11 reads, b: 120 requests, estimated $0.0073 (spent so far $0.2971, cap $0.5)
+wave after up to 12 reads, a: 159 requests, estimated $0.0042 (spent so far $0.3048, cap $0.5)
+wave after up to 12 reads, b: 114 requests, estimated $0.0064 (spent so far $0.3103, cap $0.5)
+wave after up to 13 reads, a: 157 requests, estimated $0.0041 (spent so far $0.3170, cap $0.5)
+wave after up to 13 reads, b: 117 requests, estimated $0.0062 (spent so far $0.3223, cap $0.5)
+wave after up to 14 reads, a: 154 requests, estimated $0.0039 (spent so far $0.3288, cap $0.5)
+wave after up to 14 reads, b: 121 requests, estimated $0.0058 (spent so far $0.3341, cap $0.5)
+wave after up to 15 reads, a: 153 requests, estimated $0.0036 (spent so far $0.3402, cap $0.5)
+wave after up to 15 reads, b: 120 requests, estimated $0.0051 (spent so far $0.3450, cap $0.5)
+wave after up to 16 reads, a: 152 requests, estimated $0.0036 (spent so far $0.3503, cap $0.5)
+wave after up to 16 reads, b: 123 requests, estimated $0.0046 (spent so far $0.3552, cap $0.5)
+wave after up to 17 reads, a: 151 requests, estimated $0.0033 (spent so far $0.3601, cap $0.5)
+wave after up to 17 reads, b: 128 requests, estimated $0.0041 (spent so far $0.3646, cap $0.5)
+wave after up to 18 reads, a: 151 requests, estimated $0.0033 (spent so far $0.3691, cap $0.5)
+wave after up to 18 reads, b: 120 requests, estimated $0.0033 (spent so far $0.3737, cap $0.5)
+wave after up to 19 reads, a: 151 requests, estimated $0.0032 (spent so far $0.3772, cap $0.5)
+wave after up to 19 reads, b: 126 requests, estimated $0.0028 (spent so far $0.3817, cap $0.5)
+wave after up to 20 reads, a: 2 requests, estimated $0.0002 (spent so far $0.3847, cap $0.5)
+spend this run $0.38490
+-- 2hop (n 60)
+   cheap H       all hops 0.717  reads 2.00  input 15,896  per 10k 0.4508  early/exact/late 0/60/0
+   cheap H+1     all hops 0.833  reads 3.00  input 23,179  per 10k 0.3595  early/exact/late 0/0/60
+   cheap S-in    all hops 0.883  reads 15.92  input 91,955  per 10k 0.0961  early/exact/late 7/1/52
+   cheap S-check all hops 0.467  reads 2.28  input 22,460  per 10k 0.2078  early/exact/late 28/20/12
+   pass  H       all hops 0.700  reads 2.00  input 20,617  per 10k 0.3395  early/exact/late 0/60/0
+   pass  H+1     all hops 0.850  reads 3.00  input 30,435  per 10k 0.2793  early/exact/late 0/0/60
+   pass  S-in    all hops 0.467  reads 2.73  input 22,755  per 10k 0.2051  early/exact/late 26/25/9
+   pass  S-check all hops 0.417  reads 2.05  input 23,302  per 10k 0.1788  early/exact/late 28/23/9
+-- 3hop1 (n 60)
+   cheap H       all hops 0.483  reads 3.00  input 26,033  per 10k 0.1857  early/exact/late 0/60/0
+   cheap H+1     all hops 0.650  reads 4.00  input 34,876  per 10k 0.1864  early/exact/late 0/0/60
+   cheap S-in    all hops 0.817  reads 14.78  input 92,907  per 10k 0.0879  early/exact/late 7/7/46
+   cheap S-check all hops 0.317  reads 2.53  input 24,787  per 10k 0.1278  early/exact/late 31/21/8
+   pass  H       all hops 0.367  reads 3.00  input 31,663  per 10k 0.1158  early/exact/late 0/60/0
+   pass  H+1     all hops 0.617  reads 4.00  input 41,247  per 10k 0.1495  early/exact/late 0/0/60
+   pass  S-in    all hops 0.367  reads 5.05  input 39,950  per 10k 0.0918  early/exact/late 32/5/23
+   pass  S-check all hops 0.117  reads 2.18  input 25,331  per 10k 0.0461  early/exact/late 47/8/5
+-- 4hop1 (n 60)
+   cheap H       all hops 0.317  reads 4.00  input 34,883  per 10k 0.0908  early/exact/late 0/60/0
+   cheap H+1     all hops 0.567  reads 5.00  input 43,742  per 10k 0.1295  early/exact/late 0/0/60
+   cheap S-in    all hops 0.817  reads 15.82  input 102,202  per 10k 0.0799  early/exact/late 9/1/50
+   cheap S-check all hops 0.117  reads 3.05  input 32,697  per 10k 0.0357  early/exact/late 47/2/11
+   pass  H       all hops 0.250  reads 4.00  input 43,859  per 10k 0.0570  early/exact/late 0/60/0
+   pass  H+1     all hops 0.483  reads 5.00  input 53,520  per 10k 0.0903  early/exact/late 0/0/60
+   pass  S-in    all hops 0.300  reads 5.98  input 50,609  per 10k 0.0593  early/exact/late 34/2/24
+   pass  S-check all hops 0.050  reads 2.58  input 32,023  per 10k 0.0156  early/exact/late 51/4/5
+-- all (n 180)
+   cheap H       all hops 0.506  reads 3.00  input 25,604  per 10k 0.1975  early/exact/late 0/180/0
+   cheap H+1     all hops 0.683  reads 4.00  input 33,932  per 10k 0.2014  early/exact/late 0/0/180
+   cheap S-in    all hops 0.839  reads 15.51  input 95,688  per 10k 0.0877  early/exact/late 23/9/148
+   cheap S-check all hops 0.300  reads 2.62  input 26,648  per 10k 0.1126  early/exact/late 106/43/31
+   pass  H       all hops 0.439  reads 3.00  input 32,046  per 10k 0.1370  early/exact/late 0/180/0
+   pass  H+1     all hops 0.650  reads 4.00  input 41,734  per 10k 0.1557  early/exact/late 0/0/180
+   pass  S-in    all hops 0.378  reads 4.59  input 37,772  per 10k 0.1000  early/exact/late 92/32/56
+   pass  S-check all hops 0.194  reads 2.27  input 26,886  per 10k 0.0723  early/exact/late 126/35/19
+PRIMARY all hops, cheap × S-check − cheap × oracle(H): -0.206 [-0.283, -0.133] (n 180)
+cheap × S-in − cheap × oracle(H): +0.333 [+0.256, +0.417] (n 180)
+pass × S-check − pass × oracle(H): -0.244 [-0.311, -0.172] (n 180)
+pass × S-in − pass × oracle(H): -0.061 [-0.144, +0.017] (n 180)
+cheap × S-check − pass × S-check: +0.106 [+0.061, +0.156] (n 180)
+S-check decisions on the cheap walk (decision × all hops read): stop&complete 53, stop&incomplete 126, continue&complete 58, continue&incomplete 235; stops after one read 63; S-in wins at step 1 17
+S-check decisions on the pass walk (decision × all hops read): stop&complete 34, stop&incomplete 145, continue&complete 55, continue&incomplete 175; stops after one read 63; S-in wins at step 1 54
