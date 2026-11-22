@@ -39,9 +39,13 @@ the gold's lead on BEAM? Jev has read the first gold message search finds and pr
   average.
 - **The common mode differs from MuSiQue.** Related history barely moves non-gold here (−.02, against +.29 on
   MuSiQue). Irrelevant history *deflates* everything (−.205), where on MuSiQue it did nothing (+.013).
+  One guess, untested: on BEAM another conversation's turn reads as conflicting context (other people, other
+  facts), not as noise. So SR-MO2's "content, not format" holds for MuSiQue. On BEAM even unrelated `found` moves
+  prices.
 - **There's no resemblance pull at one step.** rho is slightly negative for every history: options that share words with
   `found` gain a little *less*. Round 5's +.118, a walk-level door statistic, doesn't appear as a per-option effect here.
-- **A true history improves the choice.** Top-1 gold rises from .495 to .596 (+.101, gained 20 against lost 9, against
+- **A true history improves the choice. It's an oracle arm:** `found` is a gold message's first sentence, so Jev is
+  shown part of the answer's thread, not just a right history (bill's review). Top-1 gold rises from .495 to .596 (+.101, gained 20 against lost 9, against
   the 4/4 floor). Related and irrelevant histories leave it unchanged within noise. So while the *average* gold lead
   narrows, the *best* gold rises. A true history seems to help Jev find the one most relevant unread message and
   lower the rest.
@@ -56,12 +60,12 @@ the gold's lead on BEAM? Jev has read the first gold message search finds and pr
 ## What it means for kappa
 
 - **At one step, BEAM gives no clean mechanism for kappa's walk-level loss.** The registered primary passes, but every
-  history narrows the average gold lead, a right one included. The only history that changes choices is the true one,
-  and it *helps* (+.10).
-- So kappa's BEAM loss (−.022 over walks) more likely comes from **what the walk reads** than from the step prices. In
+  history narrows the average gold lead, a right one included. The only history that changes choices is the oracle
+  `true` one, and it *helps* (+.10).
+- An inference, not tested: kappa's BEAM loss (−.022 over walks) more likely comes from **what the walk reads** than from the step prices. In
   BEAM walks the reads are mostly the user's own on-topic messages, so `found` is related but not gold. Here related
   `found` leaves the top choice unchanged, so a related-but-not-gold state doesn't help, and every state lowers the
-  average gold a little. A state built from *gold-like* reads would help (as true does here). That points to round 5's
+  average gold a little. A state built from *gold-like* reads might help, as the oracle `true` arm does here. That points to round 5's
   own conclusion, a structure-dependent state ("what not to read again" for many-piece questions), now with a step
   measurement under it.
 - **Corpora differ in how Jev reads `found`.** On MuSiQue, related history inflates everything (+.3) and unrelated does
