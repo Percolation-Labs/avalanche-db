@@ -199,6 +199,79 @@ already shares. So:
 **Open, for Sirsh.** Every vector route used bge-small. A late-interaction model (ColBERT) might keep identity in its
 token vectors, but that's a new model, not a $0 look.
 
+## Evening, 21 Nov: a cheap pipeline that names the bridge
+
+**Why the door misses** (K-MISS, seen data). Of the door's 127 misses, 103 lose to a lure with *more* shared-key
+strength, and only 24 have no door at all. So the gap is discrimination, not coverage. Walking through the hop-1
+answer's key alone (gold, a ceiling) would get .71.
+
+**ColBERT** (SR-CB, fresh). A small CPU late-interaction model doesn't beat the text probe against the whole read
+passage (.31 against .40) or the lexical door against the keys (.42 against .54). Handed the bridge's name, it finds hop
+2 in .81. So identity survives in token space, and the failure is picking the name out of the read passage.
+
+**Naming is a decision, not a cosine** (SR-BN, fresh). Cheap namers pick the bridge key .05–.15 of the time, out of
+about 22. Jev picks it .70. Stepping lexically through Jev's name gives +.093 [+.060, +.130] over the door, at about 8%
+of a passage request's input. Once a name is chosen, a token matcher adds nothing over the lexical step. No ColBERT
+index is needed.
+
+**Beyond the name** (SR-BT, fresh). Jev's extra is the second relation, and it lives inside the named twins. Asking Jev
+only about the twins adds +.119 [+.075, +.168] (+.43 within the twins), at under one passage per question. The rest of
+the gap to Jev's full choice is the case where no option shares the name (Jev's name was wrong, .08 right).
+
+**The full walk** (SR-BW on dev, SR-BX on fresh MuSiQue train with a rebuilt graph, #75).
+
+| step from cosine's entry (train, both hops) | |
+|---|---|
+| the door (cosdoor) | .473 |
+| + Jev names the bridge, lexical step | .523 |
+| + Jev over the named twins | .617 |
+| + Jev's full request only when the name matches nothing (the rescue) | **.723** |
+| Jev over all 19 passages | .743 |
+
+- Every piece is a registered gain on fresh questions. The rescue is the largest (+.107 [+.070, +.147]).
+- The cheap walk is within about .05 of Jev reading every passage, post hoc (−.020 [−.053, +.013]), at about 40% of
+  the input.
+- The entry stays cosine's. A Jev entry over titles finds hop 1 less often (−.130), because asked what to read first,
+  Jev picks the passage that holds the answer.
+
+## Semantic inductance, 22 Nov: three intuitions as tests
+
+Sirsh's note (22 Nov, 10:35Z) names *semantic inductance*: resistance to *change* in flow, so memory and momentum. These
+are tests of it, not a definition.
+
+**(1) Walk momentum: does a step's price depend on the path so far?** (SR-MO, james, dev 3hop1, 100 fresh, $0.040)
+- **No momentum at one step.** A wrong earlier read, carried as kappa's `found`, doesn't raise the prices of options on
+  its own thread: pull −.056 [−.115, +.009].
+- Jev discounts what `found` says was already read (−.18).
+- **Any `found` raises every option's price by about +.3 logit,** whether it's true or wrong, on or off the thread. The
+  answer's own price stays flat or falls. So history narrows the answer's lead without steering (post hoc).
+- Whether that's history or just the presence of extra context is untested. An irrelevant-`found` control separates
+  them. SR-MI's near-zero common mode, when only the read changed, points to format.
+
+**(2) Mutual inductance: does flow on one path energise a parallel one?** (SR-MI, bill, train 3hop2, 188 fresh, $0.072)
+- **Yes, a little, in Jev.** Having read one parallel branch, Jev prices the other branch +.233 [+.170, +.296] logit
+  above an equally question-like control read. That's corrected for a common mode, which is about zero here.
+- **In series it's about twice as strong.** The join gets +.52.
+- **The vector probe goes the other way.** cos(q + read) *lowers* the parallel branch (−.055): it follows what was read
+  away from what's still needed. So split probes combine in the decider, not in vector arithmetic.
+
+**(3) Inertia over time: does well-earned structure resist restructuring?** (bill, look pending)
+- Measure each door membership's survival across rounds of a convergent dream operator, against how often it carried a
+  gold hop in earlier walks, with the operator's own structural vote as a control.
+- D3's loop converges (memberships changed per round 13.2% → 3.3% → 1.2% → 0.5% on p8), but nothing yet records what
+  survives against what was earned.
+
+**Where kappa fits.** Kappa is the walk's memory, sent to Jev as `found`. On today's evidence its effect at a step is a
+uniform shift plus a discount on what's been covered, not a pull along the thread. The coupling that does exist sits in
+what's *being read*: a branch lifts its chain neighbour and, less, its parallel twin.
+
+Hypothesis, not a finding: inductance-like coupling lives in the current read, not the history. It's testable in one
+design that varies read and `found` on one draw.
+
+**Toward Sirsh's "good".** A target for dreaming would be low resistance to gold, measured as the cheap walk's both-hops
+rate (it's now within about .05 of Jev at 40% of the input), plus the inductive terms that turn out to carry signal. So
+far that's the read-coupling (2), not history (1). (3) asks whether the graph keeps what earned it.
+
 ## What this changes
 
 1. **Price walks with the decider's conductance, not the embedding's.**
@@ -252,3 +325,12 @@ All are on avalanche-db. Each is registered before scoring, with a postmortem in
 | SR-J-R (Jev, random draw) | RESULT-SRJR.md | #63 |
 | W-LOOKS, MaxSim (priced, not registered) | RESULT-W-LOOKS.md | #64, #67 |
 | SR-KB, SR-KB2 (key-bundle probes) | RESULT-SRKB.md, RESULT-SRKB2.md | #65, #66 |
+| K-MISS (where the door misses) | RESULT-K-MISS.md | #69 |
+| SR-CB (small ColBERT) | RESULT-SRCB.md | #70 |
+| SR-BN (Jev names the bridge) | RESULT-SRBN.md | #71 |
+| SR-BT (Jev over the named twins) | RESULT-SRBT.md | #72 |
+| SR-BW (full walk, dev) | RESULT-SRBW.md | #73 |
+| SR-BX (full walk, train; entry factor; rescue) | RESULT-SRBX.md | #74 |
+| Train door-key graph and calibration | NOTE-TRAIN-GRAPH.md | #75 |
+| SR-MO (momentum) | RESULT-SRMO.md | #76 |
+| SR-MI (mutual inductance) | RESULT-SRMI.md | #77 |
