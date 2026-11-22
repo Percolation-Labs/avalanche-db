@@ -11,7 +11,7 @@ Jev: one ask_many per wave; per step, wave a = name (cheap) + pass (pass walk), 
 Draw: SEED 1344, a permutation of each type's answerable questions; 'fresh' = the first 100 3hop1 and first 100
 4hop1; 'stage0' = positions 100-101 of each.
     set -a; source ~/code/p8-subsystems/.env; set +a; P8_CREDENTIAL_ORIGINS='{"JEV_API_KEY":["https://api.typesafe.ai"]}' \
-    uv run --with numpy --with 'percolate-core==0.2.15' python srbh.py MUSIQUE_TRAIN GRAPH_TRAIN SET MAX_USD [--dry] [--spare]"""
+    uv run --with numpy --with 'percolate-core==0.2.15' python srbh.py MUSIQUE_TRAIN GRAPH_TRAIN SET MAX_USD [--dry] [--spare] [--nocap]"""
 import asyncio, hashlib, json, re, sys
 from collections import Counter
 from pathlib import Path
@@ -26,6 +26,7 @@ SEED = 1344
 CACHE = Path.home() / ".cache" / "walklab" / "srbh-jev-cache.jsonl"
 PRICE_IN = 0.042e-6
 src, gpath, SET, MAX_USD = sys.argv[1], sys.argv[2], sys.argv[3], float(sys.argv[4]); DRY = "--dry" in sys.argv; SPARE = int("--spare" in sys.argv)   # SR-BH2: H + 1 reads for both walks
+NOCAP = "--nocap" in sys.argv   # SR-BU: keep every key with df >= 2 (no upper bound); pass GRAPH = graph-train-pc-nocap.jsonl
 rows = [json.loads(l) for l in open(gpath)]; keys = {r["d"]: set(r["keys"]) for r in rows}
 df = Counter(k for r in rows for k in r["keys"])
 hid = lambda p: "mq:" + hashlib.sha256((p["title"] + "\n" + p["paragraph_text"]).encode()).hexdigest()[:16]
@@ -39,7 +40,7 @@ Q = []
 for r in draw:
     P = sorted(r["paragraphs"], key=lambda p: p["idx"]); n = len(P)
     T = [p["title"] + ". " + p["paragraph_text"] for p in P]; qt = set(re.findall(r"[a-z0-9]+", r["question"].lower()))
-    D = [{k for k in keys.get(hid(p), ()) if 2 <= df[k] <= 100 and not set(k.split()) <= qt} for p in P]
+    D = [{k for k in keys.get(hid(p), ()) if 2 <= df[k] and (NOCAP or df[k] <= 100) and not set(k.split()) <= qt} for p in P]
     ix = {p["idx"]: i for i, p in enumerate(P)}
     Q.append(dict(id=r["id"], t=r["id"].split("__")[0], q=r["question"], P=P, T=T, D=D, n=n,
                   hops=[ix[s["paragraph_support_idx"]] for s in r["question_decomposition"]],
@@ -135,4 +136,4 @@ for step in range(1, 5):
     ks = Counter(x["log"][step - 1] for x in Q if len(x["log"]) >= step)
     if ks: print(f"step {step}: {dict(ks)}; rescue rate {(ks['rescue'] + ks['rescue, no keys']) / sum(ks.values()):.3f}")
 json.dump([dict(id=x["id"], hops=x["hops"], walk=x["walk"], log=x["log"], ch=x["ch"]) for x in Q] + [{"usd": spent[0]}],
-          open(f"out/srbh-{SET}{'-spare' if SPARE else ''}{'-dry' if DRY else ''}.json", "w"))
+          open(f"out/srbh-{SET}{'-spare' if SPARE else ''}{'-nocap' if NOCAP else ''}{'-dry' if DRY else ''}.json", "w"))
