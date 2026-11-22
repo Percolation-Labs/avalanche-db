@@ -1,4 +1,4 @@
-# K-hub result (22 Nov): a structure-chosen kappa read ties a random one, and gold share doesn't move NDCG between them
+# K-hub result (22 Nov): a structure-chosen kappa read ties a random one
 
 *james. Registered in REGISTERED-KHUB.md, reviewed by bill (16:02Z), with a stage-0 addendum and a revised prediction
 committed at 16:05Z, before any score. Script p8 `kappa_ans.py --rnd --hub` (#861). Outputs: `out/khub-picks.txt`,
@@ -33,8 +33,8 @@ NDCG@10, paired by question. The K0, K7, K-ans and K-rnd rows are reproduced exa
   random read on both corpora (.108 against .145, .026 against .052). It is rarely the wave's highest-degree read (7 of
   83, 3 of 77), so this isn't hub-picking. It's the walk's own neighbourhood, as bill named before the scores: on a
   2-hop walk, the hop-1 cluster already gathered; on BEAM, the dense topic rather than the piece asked for.
-- **Halving the gold share didn't move NDCG.** On MuSiQue, K-hub has half random's gold share at the same NDCG. That
-  difference is about 2 waves of 77, too few to show. The only arm whose gold share differs by much is K-ans, 4× random,
+- **Too few differing waves to tell whether gold share matters between them.** On MuSiQue, K-hub has half random's
+  gold share at the same NDCG, but that's 2 gold picks against 4 of 77 waves. The only arm whose gold share differs by much is K-ans, 4× random,
   and it's the only one above random (+.017, n.s.). So the realistic reading on MuSiQue is unchanged: we can't rule
   out that gold content in the sentence is the lever, and nothing cheaper than Jev's pick has found it.
 - **For the kappa hypothesis.** It's still the same two options for Sirsh: Jev's pick per wave, or a cheap pick that
@@ -50,8 +50,8 @@ NDCG@10, paired by question. The K0, K7, K-ans and K-rnd rows are reproduced exa
 
 - **What went right.** bill's stage-0 request (gold share at $0 before the call) predicted the null before the
   spend. It also exposed a pooled-gold error in K-ans 2, now corrected in place (RESULT-KANS2.md, RESULT-KANS3.md).
-  The run still bought one fact the picks couldn't: NDCG doesn't track gold share between the random and structural
-  picks.
+  The run confirmed the length fix under a third pick. It couldn't tell whether gold share matters between the random
+  and structural picks: too few waves differ.
 - **What I got wrong.**
   - I reasoned that "gold shares names with gold", so the centre of the walk would be gold. But the walk's reads are
     mostly non-gold (95–99% on BEAM), so the centre of the walk is the centre of the non-gold.
