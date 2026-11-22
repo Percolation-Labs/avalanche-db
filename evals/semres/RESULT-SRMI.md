@@ -69,10 +69,11 @@ questions.
   read before. But the two studies differ in corpus (dev 3hop1 against train 3hop2), in shape, and in what was varied
   (`found` with the read fixed, against the read with no `found`). Only one registered design that varies the read and
   `found` together, on one draw, can check it.
-- **First evidence on SR-MO's format question.** Here the common mode is about zero (−.03): the read changed while the
-  request's shape stayed the same. In SR-MO, adding `found` shifted every price by +.3. That fits the shift being caused
-  by the request's format or length rather than by history. It's a cross-study comparison, and an irrelevant-`found`
-  control would settle it.
+- **SR-MO's format question, corrected after SR-MO2 (#81).** I first read the near-zero common mode here as fitting a
+  *format* explanation of SR-MO's +.3 shift. james's SR-MO2 then tested it directly: an irrelevant `found` shifts prices
+  by only +.013 [−.009, +.036], while true and wrong histories shift them by about +.29. So **the +.3 is question-related
+  content, not format.** This study can't speak to it, because the read here was always question-related (a branch or
+  L), so relatedness was held constant. My earlier clause was wrong for that reason.
 
 ## Postmortem
 
