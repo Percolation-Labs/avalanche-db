@@ -20,14 +20,17 @@ Both walks start from the same entry passage, so any difference comes from the s
 |---|---|---|---|
 | Jev entry × cheap step | **.750** | **15.6k** | SR-BE |
 | Jev entry × full step | .743 | 20.6k | SR-BE |
-| cosine entry × cheap step | .723 | 5.2k | SR-BX, cost from SR-BE |
-| cosine entry × full step | .743 | — | SR-BX |
+| cosine entry × cheap step | .700 | 5.2k | SR-BE |
+| cosine entry × full step | .743 | — | SR-BX (another fresh draw) |
+
+The first three rows are one draw of 300 fresh train questions (SR-BE). The last row is SR-BX's own fresh draw,
+where the cosine-entry cheap walk scored .723. The same arm scores .700 here, so the two draws differ by a few points.
 
 - **From the same Jev entry, the cheap step ties Jev's full step:** +.007 [−.023, +.037], n 300 fresh, using 24%
   less input (SR-BE).
 - **From a cosine entry, the cheap step comes within about .05 of the full step** (−.020 [−.053, +.013], post hoc in
-  SR-BX). Its input is roughly a quarter of the full walk's from Jev's entry. That ratio is our own arithmetic
-  across SR-BX and SR-BE, not a registered comparison.
+  SR-BX). On SR-BE's draw the same cheap walk sends roughly a quarter of the input of the full walk from Jev's
+  entry (5.2k against 20.6k). That ratio is our own arithmetic, not a registered comparison.
 - **The rescue is what makes it work.** Without it, naming alone trails the full step by .10–.16:
   - SR-BW: −.104 [−.164, −.045]
   - SR-BN: −.163

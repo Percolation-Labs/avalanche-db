@@ -8,10 +8,10 @@ place. No rule we've found does as well without it.
 **Two rules come close, at different prices:**
 
 - **Asking Jev whether the question can be answered yet** is cheap, but it stops early. It leaves the answer out
-  about 7% more often than the hop-count oracle. Jev partly answers from what it already knows, so it stops before
+  about 7 points more often (AC) than the hop-count oracle. Jev partly answers from what it already knows, so it stops before
   the answer passage has been read.
 - **Asking the reader itself whether any returned sentence states the answer** stops in the right place more often.
-  It's within about 3%, a difference that isn't significant. But it reads about 1.6 times as much, and in 6% of
+  It's within about 3 points, a difference that isn't significant. But it reads about 1.6 times as much, and in 6% of
   questions it never stops at all.
 
 Reading one passage past the right point helps less than it seems. The answer passage is returned more often, but
