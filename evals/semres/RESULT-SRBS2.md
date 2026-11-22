@@ -2,7 +2,7 @@
 
 *james. Registered in REGISTERED-SRBS2.md (#101) after bill's review (17:29Z: a seed clash with SR-AC was fixed
 before any call). Script `srbs2.py`. Outputs: `out/srbs2-stage0.txt`, `out/srbs2-fresh.txt`, `out/srbs2-fresh.json`,
-`out/srbs2-handread.txt`. **Spend $0.137** ($0.003 stage 0, $0.133 the 180; cap $0.30).*
+`out/srbs2-handread.txt`. **Spend $0.169** ($0.003 stage 0, $0.133 the 180, $0.032 addendum 1's AC scoring; cap $0.30).*
 
 **Serves.** Sirsh's 17:07Z goal: return the answer passage with as few passages as possible.
 
@@ -53,6 +53,32 @@ from the walk.
 - **Against oracle H, the checks trade about .08 A-last for about 0.5 fewer passages.** SR-AC put a noise passage at
   about −.07 to a reader, so on the reader's measure this may be close to even. Only AC on these sets can say.
 
+## Addendum 1: the reader's measure (AC, string or judge; registered before the call)
+
+`srbs2_ac.py`, scored with bill's reader request and judge, unchanged. Output `out/srbs2-ac.txt`.
+
+| stop | AC | A-last | returned | AC = 1 without the gold last hop | judge yes |
+|---|---|---|---|---|---|
+| oracle H | .761 | .856 | 3.00 | 5 | 8 |
+| oracle H + 1 | .789 | .906 | 4.00 | 5 | 10 |
+| S-check | .733 | .772 | 2.43 | 11 | 11 |
+| S-state | .739 | .783 | 2.71 | 9 | 9 |
+
+- **On the reader's measure, the checks' early stops cost little.** AC, S-check − oracle H: **−.028 [−.072, +.022]**,
+  against A-last's −.083. S-state − oracle H: −.022 [−.067, +.022]. Both are not significant, with 0.3–0.6 fewer
+  passages returned.
+- **Why the gap shrinks.** In 11 of S-check's sets, the reader picks a sentence that states the answer from a passage
+  other than the gold last hop. These are A-last's misses (an off-chain passage states the answer). And the reader
+  loses some of oracle H's extra A-last wins, because the extra passages bring rivals (oracle H: A-last = 1 with AC = 0
+  in 22).
+- **The spare read is worth less to the reader than to A-last:** AC H + 1 − H is +.028 [−.011, +.067], against A-last's
+  +.050.
+- The judge's yes counts are similar across arms (8–11), so leniency doesn't explain the differences.
+- **Reading for Sirsh's goal.** A knob-free check that asks Jev whether the passages answer the question returns about
+  20% fewer passages than the oracle hop count, at no significant cost to a reader. It's the first stop rule that holds
+  up on his measure. The knowledge stops are partly real (9 of 10 hand-read early stops had no answer string in the
+  reads). But the reader check credits only a sentence in the set, so AC doesn't reward Jev's knowledge.
+
 ## Predictions against outcomes
 
 - **S-state stops early less (about 25 against about 42):** 25 against 27 before arrival. ✗ on the difference. My 42
@@ -73,7 +99,7 @@ from the walk.
 - **Mechanism.** A completeness question asked of an LLM is answered with its own knowledge in the loop. Any knob-free
   stop built on "is this enough?" will stop where the model already knows the answer. That's right for Sirsh's goal
   only if the final reader knows it too.
-- **Not tested.** AC on the stopped sets (bill, queued). A check that hides the question's entities from the reader,
+- **Not tested.** A check that hides the question's entities from the reader,
   to stop knowledge use, which would be a different design.
 
 **Scope.** MuSiQue train chains, one draw of 180, the pass step, H hidden. Production is Sirsh's.
