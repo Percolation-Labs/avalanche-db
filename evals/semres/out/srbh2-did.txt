@@ -1,0 +1,9 @@
+all hops at H: cheap 0.395, pass 0.315; at H+1: cheap 0.550, pass 0.525 (n 200)
+pass(H+1) − pass(H): +0.210 [+0.155, +0.270]
+cheap(H+1) − cheap(H): +0.155 [+0.105, +0.205]
+cheap − pass at H+1: +0.025 [-0.030, +0.085]
+DiD [(cheap − pass) at H+1] − [(cheap − pass) at H]: -0.055 [-0.105, +0.000]
+H-O (order shown): FAIL
+input chars at H+1: cheap 37,785, pass 46,820, ratio 0.807
+SR-BH cheap wins where pass skips: 10; pass completes with the spare read in 4
+SR-BH cheap wins where pass off: 9; pass completes with the spare read in 3

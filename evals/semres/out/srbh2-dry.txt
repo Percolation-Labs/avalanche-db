@@ -1,0 +1,4 @@
+wave step 3 a: 200 requests, estimated $0.0132 (spent so far $0.0000, cap $0.4)
+wave step 3 b: 48 requests, estimated $0.0051 (spent so far $0.0000, cap $0.4)
+wave step 4 a: 200 requests, estimated $0.0128 (spent so far $0.0000, cap $0.4)
+wave step 4 b: 55 requests, estimated $0.0056 (spent so far $0.0000, cap $0.4)

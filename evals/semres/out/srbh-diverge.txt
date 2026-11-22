@@ -1,0 +1,15 @@
+outcomes {'both': 55, 'neither': 113, 'pass only': 8, 'cheap only': 24}
+12 ('cheap only', 'one', 'cheap pick on chain', 'pass pick on chain')
+9 ('cheap only', 'one', 'cheap pick on chain', 'pass pick off')
+4 ('pass only', 'one', 'cheap pick off', 'pass pick on chain')
+3 ('pass only', 'twin', 'cheap pick off', 'pass pick on chain')
+3 ('cheap only', 'twin', 'cheap pick on chain', 'pass pick on chain')
+1 ('pass only', 'one', 'cheap pick on chain', 'pass pick on chain')
+steps reached with identical history, by cheap kind: {('rescue', 'same pick'): 190, ('twin', 'same pick'): 17, ('twin', 'differ'): 26, ('one', 'same pick'): 58, ('one', 'differ'): 85}
+at the first divergence, relative to the last read's hop:
+10 ('cheap wins', 'cheap adjacent', 'pass skips')
+9 ('cheap wins', 'cheap adjacent', 'pass off')
+5 ('cheap wins', 'cheap adjacent', 'pass adjacent')
+4 ('pass wins', 'cheap off', 'pass adjacent')
+3 ('pass wins', 'cheap off', 'pass skips')
+1 ('pass wins', 'cheap adjacent', 'pass adjacent')

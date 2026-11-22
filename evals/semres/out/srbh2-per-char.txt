@@ -1,0 +1,4 @@
+cheap H    all hops 0.395  input 29,218  all hops per 10k chars 0.1352
+pass  H    all hops 0.315  input 37,303  all hops per 10k chars 0.0844
+cheap H+1  all hops 0.550  input 37,785  all hops per 10k chars 0.1456
+pass  H+1  all hops 0.525  input 46,820  all hops per 10k chars 0.1121
