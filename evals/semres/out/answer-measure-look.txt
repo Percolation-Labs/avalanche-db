@@ -1,0 +1,29 @@
+validity: the gold answer (or alias) string appears in the gold last-hop passage
+   380 of 380 (1.000)
+
+arm                         last hop returned   answer string anywhere   string match WITHOUT the last hop (unchecked)
+SR-BH cheap @H               0.790               0.815                    0.025
+SR-BH pass @H                0.835               0.865                    0.030
+SR-BH2 cheap @H+1            0.860               0.870                    0.010
+SR-BH2 pass @H+1             0.890               0.900                    0.010
+SR-BS cheap @H               0.856               0.867                    0.011
+SR-BS pass @H                0.900               0.928                    0.028
+SR-BS cheap S-check          0.767               0.817                    0.050
+SR-BS pass S-check           0.767               0.817                    0.050
+SR-BS pass S-in              0.867               0.906                    0.039
+
+paired, last hop returned, cheap − pass:
+   SR-BH @H     -0.045 [-0.095, +0.000] (n 200)
+   SR-BH2 @H+1  -0.030 [-0.075, +0.010] (n 200)
+   SR-BS @H     -0.044 [-0.100, +0.011] (n 180)
+   SR-BS @H+1   +0.000 [-0.044, +0.039] (n 180)
+
+SR-BH @H, how each walk reaches or misses the answer passage:
+   10 ('cheap', 'last hop missed', 'entry off-chain')
+   32 ('cheap', 'last hop missed', 'on chain, ran out or wandered')
+   79 ('cheap', 'last hop read', 'a middle hop skipped')
+   79 ('cheap', 'last hop read', 'all middle hops read')
+   7 ('pass', 'last hop missed', 'entry off-chain')
+   26 ('pass', 'last hop missed', 'on chain, ran out or wandered')
+   104 ('pass', 'last hop read', 'a middle hop skipped')
+   63 ('pass', 'last hop read', 'all middle hops read')

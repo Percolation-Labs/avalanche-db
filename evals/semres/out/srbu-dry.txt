@@ -1,0 +1,7 @@
+SET=fresh: 200 questions (Counter({'3hop1': 100, '4hop1': 100})); passages missing from the graph 0
+wave step 1 a: 200 requests, estimated $0.0046 (spent so far $0.0000, cap $0.2)
+wave step 1 b: 33 requests, estimated $0.0012 (spent so far $0.0000, cap $0.2)
+wave step 2 a: 200 requests, estimated $0.0048 (spent so far $0.0000, cap $0.2)
+wave step 2 b: 58 requests, estimated $0.0049 (spent so far $0.0000, cap $0.2)
+wave step 3 a: 100 requests, estimated $0.0024 (spent so far $0.0000, cap $0.2)
+wave step 3 b: 47 requests, estimated $0.0047 (spent so far $0.0000, cap $0.2)

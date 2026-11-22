@@ -1,0 +1,7 @@
+cheap nocap H+1  A-last 0.835  returned set 4.50  input 32,687  A-last per 10k chars 0.2555
+cheap nocap H    A-last 0.800  returned set 3.50  input 25,298  A-last per 10k chars 0.3162
+pass H           A-last 0.835  returned set 3.50  input 37,303  A-last per 10k chars 0.2238
+pass H+1         A-last 0.890  returned set 4.50  input 46,820  A-last per 10k chars 0.1901
+PRIMARY (equal spend, not equal outcome for the reader) A-last cheap nocap H+1 − pass H: +0.000 [-0.055, +0.060] (n 200); H-U3 FAIL
+pass H+1 − pass H (reads alone): +0.055 [+0.025, +0.090] (n 200)
+cheap nocap H+1 − pass H+1 (equal reads): -0.055 [-0.110, -0.005] (n 200)

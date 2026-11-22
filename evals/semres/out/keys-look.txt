@@ -1,0 +1,16 @@
+== graph-train-pc.jsonl
+   2hop   first steps 1252  keyed 0.78  |R| median 18  |S| median 1, |S|=1 0.68, |S|>=5 0.06  bridge-key df median 18
+   3-4hop first steps  814  keyed 0.70  |R| median 17  |S| median 1, |S|=1 0.86, |S|>=5 0.02  bridge-key df median 4
+   3-4hop later steps 1060  keyed 0.47  |R| median 22  |S| median 1, |S|=1 0.78, |S|>=5 0.02  bridge-key df median 19
+== graph-train-pc-cap508.jsonl
+   2hop   first steps 1252  keyed 0.96  |R| median 27  |S| median 1, |S|=1 0.63, |S|>=5 0.08  bridge-key df median 26
+   3-4hop first steps  814  keyed 0.91  |R| median 26  |S| median 1, |S|=1 0.74, |S|>=5 0.05  bridge-key df median 6
+   3-4hop later steps 1060  keyed 0.85  |R| median 34  |S| median 1, |S|=1 0.67, |S|>=5 0.04  bridge-key df median 80
+== graph-train-pc-nocap.jsonl
+   2hop   first steps 1252  keyed 0.98  |R| median 34  |S| median 1, |S|=1 0.63, |S|>=5 0.08  bridge-key df median 27
+   3-4hop first steps  814  keyed 0.97  |R| median 32  |S| median 1, |S|=1 0.70, |S|>=5 0.06  bridge-key df median 7
+   3-4hop later steps 1060  keyed 0.96  |R| median 43  |S| median 1, |S|=1 0.64, |S|>=5 0.05  bridge-key df median 108
+== the previous hop's answer string is a key shared by hop i and hop i+1
+   graph-train-pc           2hop first 0.67  3-4hop first 0.57  3-4hop later 0.33
+   graph-train-pc-cap508    2hop first 0.85  3-4hop first 0.72  3-4hop later 0.69
+   graph-train-pc-nocap     2hop first 0.85  3-4hop first 0.76  3-4hop later 0.76
