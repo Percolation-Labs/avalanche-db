@@ -33,8 +33,8 @@ K-rnd about +.015: +.017, n.s.
   - K7 loses on BEAM.
   - K-rnd is neutral on BEAM and not significant on MuSiQue.
   - K-ans is neutral on BEAM and keeps MuSiQue's full gain.
-- **The mechanisms differ by corpus.** On BEAM, the fix is length: K-ans 2 showed the filter adds nothing there and
-  picks less gold than random. On MuSiQue, we can't rule out that the sentence matters: K-ans − K-rnd is +.017, n.s. MuSiQue's gain plausibly
+- **The mechanisms differ by corpus.** On BEAM, the fix is length: K-ans 2 showed the filter adds nothing there, and
+  per-question gold shows its picks tie random's (.145 each; corrected 16:10Z, the earlier 'less gold' used pooled gold). On MuSiQue, we can't rule out that the sentence matters: K-ans − K-rnd is +.017, n.s. MuSiQue's gain plausibly
   needs the chain's passage in the state, and a random read often isn't it.
 - **The hypothesis for Sirsh to decide** (research phase, not a product change): K-ans is the state that helps where
   kappa helped and stops hurting where it hurt, at one extra short Jev request per wave. The cheaper random state is

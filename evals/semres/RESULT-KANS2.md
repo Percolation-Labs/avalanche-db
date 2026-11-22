@@ -14,8 +14,8 @@ order.
 |---|---|---|
 | K0 (none) | .692 | |
 | K7 (all reads) | .669 | .115 (all wave reads, pooled) |
-| K-ans (Jev's argmax read per wave) | .702 | .181 |
-| **K-rnd (a random read per wave)** | **.698** | **.229** |
+| K-ans (Jev's argmax read per wave) | .702 | .181 (pooled gold; .145 per question) |
+| **K-rnd (a random read per wave)** | **.698** | **.229** (pooled; .145 per question) |
 
 | paired difference | NDCG |
 |---|---|
@@ -29,12 +29,11 @@ order.
   sentence, removes K7's BEAM loss.
 - **It isn't dilution.** 589 of 601 pages have an earlier wave where the two picks differ, and the contrast there is the
   same (+.004).
-- **Jev's filter picked less gold than chance.** K-rnd's kept reads are .229 gold against K-ans's .181. The per-wave
-  pick weights small waves (seed waves are small and gold-rich) more than the pooled .115 does. So the fair baseline for
-  K-ans is .229, and Jev's argmax falls *below* it. Asked "does this passage give information needed to answer…" over
-  BEAM chat turns, Jev's top pick is, if anything, anti-informative about gold. That fits the median max p of about .5:
-  it's indifferent, and its top pick is systematically off-gold. One guess, untested: it favours long or entity-dense
-  messages over the short turns that carry BEAM's facts.
+- **Corrected 22 Nov 16:10Z (K-hub stage 0, `out/khub-picks.txt`): Jev's filter ties chance on gold.** The .181 and
+  .229 below counted a read as gold if it was gold for *any* question in the fixture. With each question's own gold,
+  K-ans's and K-rnd's picks are both .145 gold over the 83 waves. The earlier line, "Jev's top pick is, if anything,
+  anti-informative about gold", was an artefact of that pooling and is withdrawn. On MuSiQue, Jev's pick is gold
+  four times as often as random (.208 against .052).
 
 **Predictions against outcomes.**
 - K-ans − K-rnd about +.015, a coin flip: +.004, a null.
@@ -58,7 +57,7 @@ order.
 
 - **What went right.** The control was registered after a passing primary, because the first postmortem couldn't
   separate the mechanisms, and it reversed the reading for $0.05. bill's differing-pick readout ruled out dilution.
-  Reporting gold share for both arms showed the filter is worse than chance, which neither of us predicted.
+  Reporting gold share for both arms was right, but I scored it against pooled gold. Per question, the filter ties chance on BEAM (corrected 16:10Z).
 - **What I got wrong.** I credited K-ans's gain to relevance in #89's "What it means" before the length control ran. I
   flagged it as untested, but the headline still said "the reads that answer". I also compared kept-read gold against a
   pooled base rate, which a per-wave pick doesn't face. The lesson: a filter's baseline is a random pick under the same

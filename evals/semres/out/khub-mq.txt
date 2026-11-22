@@ -1,0 +1,22 @@
+REL requests: 0 new of 77 waves
+door requests: 235 new (K0/K7 should be cached)
+max REL p per wave: quartiles 0.24, 0.47, 0.53, 0.64, 0.90 (n 77)
+mq HELD-OUT · D6 doors · 286 pages · spend $0.0358
+  K0    NDCG@10 0.768 [0.714, 0.811]  MRR 0.706  recall@3 0.730
+  K7    NDCG@10 0.805 [0.764, 0.844]  MRR 0.753  recall@3 0.789
+  Kans  NDCG@10 0.802 [0.756, 0.843]  MRR 0.747  recall@3 0.759
+  Krnd  NDCG@10 0.785 [0.736, 0.828]  MRR 0.728  recall@3 0.764
+  Khub  NDCG@10 0.784 [0.727, 0.827]  MRR 0.724  recall@3 0.771
+
+  paired Kans - K7: NDCG -0.003 [-0.0318, +0.022]
+  paired Kans - K0: NDCG +0.034 [+0.0128, +0.056]
+  paired K7 - K0: NDCG +0.037 [+0.0079, +0.068]
+  paired Kans - Krnd: NDCG +0.017 [-0.0086, +0.046]
+  paired Krnd - K7: NDCG -0.021 [-0.0572, +0.014]
+  paired Krnd - K0: NDCG +0.017 [-0.0053, +0.040]
+  paired Khub - K0: NDCG +0.016 [-0.0074, +0.033]
+  paired Khub - Krnd: NDCG -0.001 [-0.0309, +0.023]
+  paired Khub - Kans: NDCG -0.018 [-0.0502, +0.008]
+  pages with a multi-read wave before them 286; with a differing pick 272 of 286
+  within differing-pick pages: Kans - Krnd NDCG +0.018 [-0.0100, +0.048]
+  K-hub pick differs from K-rnd before 259 of 286 pages; within them Khub - Krnd NDCG -0.001 [-0.0356, +0.025]
