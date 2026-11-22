@@ -16,12 +16,15 @@ when a real sentence wins, or when the pool of 20 is empty.
 |---|---|---|---|---|
 | oracle H | .780 | .860 | 3.00 | 31.7k |
 | **R-stop** | **.747** | .853 | **3.56** | **56.2k** |
+| *oracle H + one final reader request* (bill's like-for-like row) | | | | *35.6k* |
 
 - **Primary: AC R-stop − oracle H: −.033 [−.067, .000]. H-S4 fails:** not shown within .05; the cost is within .067.
 - **Never fired: 18 of 300 (6%).** All 18 read the whole pool of 20. Their AC is **.167**. Excluding them, the
   primary is −.025 [−.060, +.007]. These 18 hit the pool bound (bill's 17:51Z readout), so any cap would bind there.
 - **Reads at the stop:** 1 read in 90 walks, 2 in 128, 3 in 31, 4–19 in 33, and 20 in 18.
-- **Input is 77% above the oracle walk** (56.2k against 31.7k). Two things drive it: the reader request after every
+- **Input is 58% above the oracle walk counted like for like** (bill's note). In use, every walk hands its set to a
+  reader once, and R-stop's last reader request is that call. So the comparison is 56.2k against 35.6k = 1.58×, or
+  1.77× against the bare oracle walk (`out/srbs4-cost.txt`). Two things drive it: the reader request after every
   read, and the 18 walks that read all 20. On 4hop1 it's 81k against 44k.
 - By type, AC R-stop against oracle H: 2-hop .760 against .800; 3hop1 .700 against .760; 4hop1 .780 against .780.
 - The judge's yes counts are 13 against 12.
