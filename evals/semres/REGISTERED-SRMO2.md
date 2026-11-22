@@ -53,3 +53,10 @@ $0.25.
 
 **Scope.** One step, one history length, MuSiQue 3hop1 dev. The irrelevant history is one rule (next question's hop 1).
 A length-matched filler (not a sentence) isn't tested.
+
+## Amendment 1 (bill's review, before any Jev call)
+
+- **A noise floor for flips.** Every question, in stage 0 and the wave, gets a second, identical `none` request.
+  Flips between the two `none` answers (lost and gained) are reported beside each history's flips. Jev's repeat noise
+  (.113 per option) can flip a small-margin top-1 on its own, so a history's flips are read against this floor.
+- That adds 200 requests, about $0.025. The total is about $0.125, under the $0.25 cap.

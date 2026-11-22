@@ -10,7 +10,7 @@ Measures (logit p clipped to [1e-4, 1 - 1e-4]):
   shift(h)  per question, the mean dlogit (h - none) over "neither" options (no door key shared with h2, the lure, or the
             irrelevant passage; not h3, not the lure). The common mode.
   top-1 h3 per history; flips against none: h3 first under none and not under h (lost), and the reverse (gained).
-SET: stage0 = perm 304-307 (+ a repeat of none), fresh = perm 104-303 of seed 1343 (SR-MO's 0-99 and 100-103 excluded).
+SET: stage0 = perm 304-307; every question also gets a repeat of none (amendment 1), fresh = perm 104-303 of seed 1343 (SR-MO's 0-99 and 100-103 excluded).
     set -a; source ~/code/p8-subsystems/.env; set +a; P8_CREDENTIAL_ORIGINS='{"JEV_API_KEY":["https://api.typesafe.ai"]}' \\
     uv run --with sentence-transformers --with numpy --with 'percolate-core==0.2.15' python srmo2.py MUSIQUE_DEV GRAPH_MQ SET MAX_USD"""
 import asyncio, hashlib, json, re, sys
@@ -55,7 +55,7 @@ if CACHE.exists():
     for l in open(CACHE): x = json.loads(l); cache[x["k"]] = x["p"]
 ck = lambda ctx, o, rep=0: hashlib.sha256(json.dumps([ctx, o, rep]).encode()).hexdigest()
 reqs = [(c["ctx"][h], c["texts"], 0) for c in cases for h in H]
-if SET == "stage0": reqs += [(c["ctx"]["none"], c["texts"], 1) for c in cases]
+reqs += [(c["ctx"]["none"], c["texts"], 1) for c in cases]   # amendment 1: a repeat of none on every question (noise floor for flips)
 miss = [x for x in reqs if ck(*x) not in cache]; usd = 0.0
 if miss:
     est = sum(len(json.dumps(c)) / 4 + len(" ".join(o)) / 4 + 200 for c, o, _ in miss) * PRICE_IN
@@ -71,16 +71,17 @@ if miss:
             f.write(json.dumps({"k": ck(*x), "p": p}) + "\n"); usd += res.input_tokens * PRICE_IN
 print(f"spend this run ${usd:.5f}")
 lg = lambda p: np.log(np.clip(p, 1e-4, 1 - 1e-4) / (1 - np.clip(p, 1e-4, 1 - 1e-4)))
-shift = {h: [] for h in H[1:]}; top = {h: [] for h in H}; out = []
+shift = {h: [] for h in H[1:]}; top = {h: [] for h in H}; out = []; top["none2"] = []
 for c in cases:
     L = {h: lg(np.array(cache[ck(c["ctx"][h], c["texts"])])) for h in H}
     for h in H: top[h].append(int(np.argmax(L[h]) == c["h3"]))
+    top["none2"].append(int(np.argmax(lg(np.array(cache[ck(c["ctx"]["none"], c["texts"], 1)]))) == c["h3"]))
     if c["neither"]:
         for h in H[1:]: shift[h].append(float((L[h] - L["none"])[c["neither"]].mean()))
     out.append(dict(qi=c["qi"], top={h: top[h][-1] for h in H}, nneither=len(c["neither"])))
 n = len(cases); print(f"SET={SET}: n {n}; questions with neither options {len(shift['true'])}, median count {np.median([o['nneither'] for o in out]):.0f}")
 for h in H: print(f"top-1 h3 under {h:10s} {np.mean(top[h]):.3f}")
-for h in H[1:]:
+for h in H[1:] + ("none2",):
     lost = sum(a and not b for a, b in zip(top["none"], top[h])); gained = sum(b and not a for a, b in zip(top["none"], top[h]))
     print(f"flips {h:10s} vs none: lost {lost}, gained {gained}")
 if SET == "stage0":
@@ -96,5 +97,5 @@ ci(shift["irrelevant"], "PRIMARY shift(irrelevant - none) over neither options")
 for h in ("true", "wrong"): ci(shift[h], f"shift({h} - none)")
 ci(np.array(shift["true"]) - np.array(shift["irrelevant"]), "shift(true) - shift(irrelevant)")
 ci(np.array(shift["wrong"]) - np.array(shift["irrelevant"]), "shift(wrong) - shift(irrelevant)")
-for h in H[1:]: ci(np.array(top[h]) - np.array(top["none"]), f"top-1 h3, {h} - none")
+for h in H[1:] + ("none2",): ci(np.array(top[h]) - np.array(top["none"]), f"top-1 h3, {h} - none")
 json.dump(dict(out=out, shift=shift, usd=usd), open(f"out/srmo2-{SET}.json", "w"))
