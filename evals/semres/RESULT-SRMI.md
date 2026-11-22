@@ -63,9 +63,16 @@ questions.
 - **Series beats parallel.** The join gets about twice the lift. Jev's prices mostly flow along the chain toward the
   answer passage. SR-BX's entry and this test's stage 0 showed the same: Jev heads for the passage that answers the
   question.
-- **With james's SR-MO:** history carried as `found` gives no momentum along a thread, only a uniform shift. The
-  passage being read, by contrast, does induce: it lifts its chain neighbour strongly and its parallel twin a little.
-  In circuit terms, the inductance-like coupling sits in what is *read now*, not in what was read before.
+- **With james's SR-MO, as a hypothesis, not a finding.** History carried as `found` gave no momentum along a thread
+  there, only a uniform shift. The passage being read here does induce: it lifts its chain neighbour strongly and its
+  parallel twin a little. One reading is that the inductance-like coupling sits in what is *read now*, not in what was
+  read before. But the two studies differ in corpus (dev 3hop1 against train 3hop2), in shape, and in what was varied
+  (`found` with the read fixed, against the read with no `found`). Only one registered design that varies the read and
+  `found` together, on one draw, can check it.
+- **First evidence on SR-MO's format question.** Here the common mode is about zero (−.03): the read changed while the
+  request's shape stayed the same. In SR-MO, adding `found` shifted every price by +.3. That fits the shift being caused
+  by the request's format or length rather than by history. It's a cross-study comparison, and an irrelevant-`found`
+  control would settle it.
 
 ## Postmortem
 
