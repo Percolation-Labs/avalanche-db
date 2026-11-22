@@ -27,14 +27,14 @@ reward unit with a measured rate.
   T*'s gain there, but its test gain is smaller. A door cut because one question's walk failed through it is a fact
   about that question; on a new question the same door is as likely to be the bridge. This is SR-BR's reuse finding
   again (6 of 459 test questions share a learn pair), now on the penalty side.
-- **The unit was doing work.** RATE-W is T* with a measured scale instead of a unit, and it transfers less (+.011
-  against +.017; the difference isn't significant). In S_w, T*'s factor (1 + r) applies at both ends, so a typical
+- **Consistent with the unit mattering, not significant.** RATE-W is T* with a measured scale instead of a unit, and
+  it transfers less (+.011 against +.017; RATE-W − T* −.007 [−.015, +.000]). In S_w, T*'s factor (1 + r) applies at both ends, so a typical
   rewarded door gets about 2× from each (T*'s total reward 1,154 over about 1,156 memberships, so mean r ≈ 1), against
   about 1.39× here. On this data, larger boosts to successful
-  doors transfer better, so the unit isn't arbitrary in effect, even if it is in form.
+  doors lean toward transferring better, so the unit may not be arbitrary in effect, even if it is in form.
 - **For dreaming.** The reward that converges and transfers best here is still SR-BC's T*: successes only, one pass.
   Its scale is a convention I can now name rather than defend: one success = one unit of base door strength. The
-  rate form removes the unit but costs a third of the gain.
+  rate form removes the unit, and its point estimate is about a third of the gain lower (a lean, not a measurement).
 
 ## Predictions against outcomes
 
@@ -48,8 +48,8 @@ reward unit with a measured rate.
 - **What went right.** james's review fixed a real error before it could run: my prior pulled every unwalked door to
   1.08, which would have mixed a corpus-wide boost into the comparison. RATE-W separated "failures as evidence" from
   "a different scale", and the two answers differ.
-- **What I got wrong.** I argued in the design that the rate form "has no unit" as if that settled it. The test says
-  the unit's size matters to transfer, so removing it is a cost, not a cleanup. The design should have registered a
+- **What I got wrong.** I argued in the design that the rate form "has no unit" as if that settled it. The test
+  leans toward the unit's size mattering to transfer, so removing it may be a cost, not a cleanup. The design should have registered a
   check on scale alone first (RATE-W against T*), which is the cheaper question.
 - **Mechanism.** Penalties are question-specific and don't transfer; boosts transfer weakly, more so when larger.
   Larger boosts were not tested beyond SR-BR's R3 (+.007 over R, n.s.).
