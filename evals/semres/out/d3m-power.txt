@@ -1,0 +1,3 @@
+SR-BW walks 268; in D3 test 19; used 249; memory memberships 557
+D3 removes 18 of the 557 memory memberships (0.032); D3 removes 98606 memberships in all
+of those, keys offered as a door in D3's test waves: 12 memberships (11 keys, 43 door offers)
