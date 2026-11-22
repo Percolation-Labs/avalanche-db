@@ -1,0 +1,13 @@
+2-hop questions 1252; learn 652; test 459 (SR-BX's 304 excluded); test questions sharing a learn gold pair 6
+reward=gold pair pass 1: rewarded 302; learn rate now 0.471
+reward=gold pair pass 2: rewarded 307; learn rate now 0.471
+reward=A-last pass 1: rewarded 374; learn rate now 0.581
+reward=A-last pass 2: rewarded 379; learn rate now 0.581
+-- test measure alast: none 0.534, T*pair 0.551, T*alast 0.556
+   T*pair − none +0.017 [+0.007, +0.031]  gained 8 lost 0
+   T*alast − none +0.022 [+0.009, +0.037]  gained 10 lost 0
+   T*alast − T*pair +0.004 [+0.000, +0.011]
+-- test measure both: none 0.401, T*pair 0.418, T*alast 0.423
+   T*pair − none +0.017 [+0.007, +0.031]  gained 8 lost 0
+   T*alast − none +0.022 [+0.009, +0.035]  gained 10 lost 0
+   T*alast − T*pair +0.004 [+0.000, +0.011]
