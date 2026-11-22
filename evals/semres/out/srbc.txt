@@ -1,0 +1,24 @@
+2-hop questions 1252; learn 652; test 459 (SR-BX's 304 excluded); test questions sharing a learn gold pair 6
+T pass 0 (unweighted): learn success 0.463 (302)
+T pass 1: weights from 302 successes; learn success now 0.471 (307); in +5, out -0; relative weight change 1.000
+T pass 2: weights from 307 successes; learn success now 0.471 (307); in +0, out -0; relative weight change 0.011
+T pass 3: weights from 307 successes; learn success now 0.471 (307); in +0, out -0; relative weight change 0.000
+H-C1: T reached a FIXED POINT after 2 pass(es) (success set repeats with period 1)
+U pass 1: +302 questions (rewarded total 302); learn success under current weights 0.463
+U pass 2: +5 questions (rewarded total 307); learn success under current weights 0.471
+U pass 3: +0 questions (rewarded total 307); learn success under current weights 0.471
+total weight: R 1141.2, T* 1153.8, U* 1153.8, R3 3463.9
+test both hops none  0.401
+test both hops R     0.418
+test both hops Tstar 0.418
+test both hops Ustar 0.418
+test both hops R3    0.425
+PRIMARY H-C2 both hops, T* − unweighted: +0.017 [+0.007, +0.031] (n 459)
+Tstar − R: +0.000 [+0.000, +0.000] (n 459)
+Ustar − R: +0.000 [+0.000, +0.000] (n 459)
+Ustar − none: +0.017 [+0.007, +0.031] (n 459)
+Tstar − R3: -0.007 [-0.015, +0.002] (n 459)
+flips vs unweighted R: gained 8, lost 0
+flips vs unweighted Tstar: gained 8, lost 0
+flips vs unweighted Ustar: gained 8, lost 0
+flips vs unweighted R3: gained 12, lost 1
