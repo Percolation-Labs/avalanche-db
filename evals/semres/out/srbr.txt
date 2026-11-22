@@ -1,0 +1,21 @@
+2-hop questions 1252; learn 652; test 459 (SR-BX's 304 excluded); test questions sharing a learn gold pair 6
+pass 2: learn-half success 0.477; relative weight change 1.011
+pass 3: learn-half success 0.480; relative weight change 0.509
+learn half: pass-1 success 0.463; events R 1228, F 2960, all 4188, B 2088
+top-10 weights R: 'quebec city'@362fff 4.00; 'puerto'@25e62a 3.50; 'puerto rico'@25e62a 3.50; 'santa rosa'@d8d7df 3.00; 'santa rosa california'@d8d7df 3.00; 'rosa'@d8d7df 3.00; 'ghana'@bd3d62 3.00; 'clinton county'@730845 3.00; 'clinton'@730845 3.00; 'simon'@5eb55e 3.00
+top-10 weights R3: 'quebec city'@362fff 12.00; 'puerto'@25e62a 10.50; 'puerto rico'@25e62a 10.50; 'santa rosa'@d8d7df 9.00; 'santa rosa california'@d8d7df 9.00; 'rosa'@d8d7df 9.00; 'ghana'@bd3d62 9.00; 'clinton county'@730845 9.00; 'clinton'@730845 9.00; 'simon'@5eb55e 9.00
+top-10 weights B: 'santa rosa'@d8d7df 4.00; 'santa rosa california'@d8d7df 4.00; 'rosa'@d8d7df 4.00; 'quebec city'@362fff 4.00; 'kazakhstan'@7a3ebf 3.50; 'puerto'@25e62a 3.50; 'puerto rico'@25e62a 3.50; 'prague'@e05533 3.25; 'haryana'@25d2b0 3.00; 'ghana'@bd3d62 3.00
+test both hops none  0.401  (shared pair 0.333, n 6; no shared pair 0.402, n 453)
+test both hops R     0.418  (shared pair 0.333, n 6; no shared pair 0.419, n 453)
+test both hops F     0.401  (shared pair 0.333, n 6; no shared pair 0.402, n 453)
+test both hops RND   0.407  (shared pair 0.333, n 6; no shared pair 0.408, n 453)
+test both hops B     0.431  (shared pair 0.333, n 6; no shared pair 0.433, n 453)
+test both hops R2    0.420  (shared pair 0.333, n 6; no shared pair 0.422, n 453)
+test both hops R3    0.425  (shared pair 0.333, n 6; no shared pair 0.426, n 453)
+PRIMARY both hops, R − unweighted (all test): +0.017 [+0.007, +0.031] (n 459)
+R − unweighted, no shared gold pair: +0.018 [+0.007, +0.031] (n 453)
+R − unweighted, shared gold pair: +0.000 [+0.000, +0.000] (n 6)
+R − RND: +0.011 [+0.002, +0.022] (n 459)
+R − F: +0.017 [+0.007, +0.031] (n 459)
+B − R: +0.013 [+0.004, +0.024] (n 459)
+R3 − R: +0.007 [-0.002, +0.017] (n 459)
