@@ -94,6 +94,9 @@ bill's registered predictions:
 - **What we got wrong.** We treated "can be answered from these passages" as a completeness test. For a model, it's an
   answer-presence test. On the cheap walk the stop option sat among names and phrases, where Jev almost never picked
   it, and I flagged that only as a step-1 sanity check, not as a reason it might never fire.
+- **bill's, in his words:** bill predicted S-check would stop late because he read "can be answered" as a human
+  reviewer would. A $0 check at stage 0 (S-check's stop rate when the answer string is already in the reads) would have
+  shown the answer-presence reading before the 180.
 - **Mechanism.** Both stop rules ask Jev a question about the *answer*. The walk's measure asks about the *chain*.
   Where the two differ (the answer passage read without its chain), S-check stops and all-hops counts a miss.
 - **Not tested.**
