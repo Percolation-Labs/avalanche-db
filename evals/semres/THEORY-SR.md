@@ -271,7 +271,7 @@ are tests of it, not a definition.
   (.765 against .789, from .807). What it removes around the bridges carried context the walks used.
 - **The memory term is the wrong lever** (bill, #82, $0 power check). D3 removes only 18 of the 557 memberships that
   gold-free walks used. Removing high-vote memberships loses to random as badly as removing low-vote ones (.759 and
-  .765 against .79). Vote-directed pruning concentrates damage, so a target for dreaming has to be priced on walks
+  .765 against .79). Vote-directed pruning probably concentrates damage (an inference from two registered results), so a target for dreaming has to be priced on walks
   (a membership's counterfactual effect on a path's resistance to gold), not on a neighbourhood vote.
 
 **Where kappa fits.** Kappa is the walk's memory, sent to Jev as `found`. On today's evidence its effect at a step is a
