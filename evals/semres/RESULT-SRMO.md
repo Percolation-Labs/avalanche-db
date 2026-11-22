@@ -48,6 +48,10 @@ Mean Δlogit against `none`, by option class:
   path. They carry a uniform shift, plus a discount on what it's told it has read. In circuit terms there's no
   inductance on the edge. History acts like lowering every resistance at once, plus raising the resistance back to
   where you came from.
+- **Whether the +.3 shift is history at all is untested** (bill's review). Both `true` and `wrong` add a `found` field
+  of about one sentence, so the shift could come from the request's shape or length: any extra context might make Jev
+  more generous. A history effect should depend on content, and a format effect wouldn't. An irrelevant-`found`
+  control (a sentence from another question's pool, one more request per question) separates them.
 - **For kappa,** sending history doesn't steer Jev here. It compresses its margins. That's a candidate mechanism for
   kappa's mixed record (MuSiQue +, BEAM −): when the answer's margin is large, compression is harmless; when lures
   are close, compression could flip choices. **That's untested.** A test would look at questions where h3's margin
