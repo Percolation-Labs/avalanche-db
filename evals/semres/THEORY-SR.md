@@ -260,6 +260,8 @@ are tests of it, not a definition.
   removed .008 of the time in round 1, against .136 for the others. That holds within the same passage (.008 against
   .160) and in every df band.
 - Survival after all rounds is .978 against .804. Change per round falls from 12.9% to 0.8%, so the graph stiffens.
+- **It's mostly relatedness** (james's control). Keys shared by two related non-gold passages of the same pool, matched
+  on df, survive at .939. Gold bridges get only a little more (.978).
 - **This is structural resistance, not memory.** D3 re-votes from the current graph each round and has no record of
   use.
 - **Keeping the bridges isn't enough.** D3's registered test has walks *worse* than random pruning of the same size
