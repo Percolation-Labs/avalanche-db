@@ -47,3 +47,14 @@ completeness or misreads the question. Production is Sirsh's.
 If the estimate exceeds the cap, the draw shrinks evenly across types; the rules don't change. Cap $0.50.
 
 **Scope.** MuSiQue train chains, one draw of 240, H hidden from the walk but used to score.
+
+**Amendment 1 (16:56Z, before stage 0; james's implementation, reviewed by bill).**
+- **One trajectory per step rule.** Each walk runs once with the stop option appended to its step request; the step
+  is the argmax over the real options only, so stopping never changes a step. Each stop rule (S-in, S-check, H, H+1)
+  cuts that trajectory, keeping the arms paired. The trajectory ends once every stop rule has fired. The oracle arms'
+  requests carry one extra option, so oracle(H) is reported beside SR-BH's .395 / .315 as a check.
+- **S-check's task line:** "Which statement is true of the passages in `reads`?", with the two registered options.
+- **Cheap walk with no door keys on the last read:** there's no name request, so the stop option rides on the rescue
+  pass request, the request the walk actually makes.
+- **Draw:** the random-score dry run priced 80 per type at $0.56, over the cap, so the draw shrinks evenly to **70 per
+  type (210)**, estimate $0.49, rules unchanged, as registered. It isn't re-grown after stage 0.
