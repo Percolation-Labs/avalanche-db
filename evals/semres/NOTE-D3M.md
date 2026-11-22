@@ -50,3 +50,22 @@ Then score on D3's held-out MuSiQue test against D3 and count-matched random rem
   connecting the two.
 - **Scope.** MuSiQue dev graph, one operator (D3) in two directions, D3's own test set. The concentration reading is
   inferred.
+
+## Addendum: the entry lever, priced at $0 on SR-BX's cache (seen data, post hoc)
+
+The walk's biggest remaining loss is the entry: in SR-BX, cosine's entry is neither hop in 48 of 300 questions and
+Jev's title entry in 45. **They mostly miss different questions** (only 20 in common). Walking from both entries would
+reach .817 both hops with an oracle choosing between the two walks, against .723 for cosine's walk alone. The question is
+whether a gold-free rule can choose.
+
+| entry rule (both walks run, then one kept) | both hops | − cosine walk |
+|---|---|---|
+| cosine only (SR-BX `e_cos × nt_rescue`) | .723 | |
+| title only (SR-BX `e_title × nt_rescue`) | .743 | |
+| keep title's walk if its name is shared and cosine's isn't | .730 | +.007 [−.013, +.027] |
+| keep the walk whose entry Jev's 19-passage request scored higher (`srbx_conf.py`, from cache, $0) | .747 | +.023 [−.003, +.050] |
+| *oracle: the better of the two* | *.817* | |
+
+- Neither rule recovers much of the oracle's +.09, and running two walks doubles the Jev cost per question. **I'm not
+  registering a two-entry walk** on this evidence. The selector is the bottleneck, not the coverage.
+- These are post-hoc numbers on SR-BX's scored questions, so they price an idea and aren't a result.
