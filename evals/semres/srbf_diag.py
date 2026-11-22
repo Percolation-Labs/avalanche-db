@@ -180,3 +180,17 @@ for x, ac in zip(Q, res["ONE"]["ac"]):
         ex.append((qs[x["qi"]]["question"][:100], qs[x["qi"]]["answer"], o[j][:160]))
 for k, v in cat.items(): print(f"ONE set = {k:24s} n {len(v):3d}  AC {np.mean(v):.3f}")
 for e in ex: print("  ", e)
+# ---- james's review readouts ($0)
+from collections import Counter
+print("returned-set size distribution: " + "; ".join(f"{a} " + ", ".join(f"{k}:{v}" for k, v in sorted(Counter(res[a]["size"]).items())) for a in ("ONE", "TWO")))
+print(f"e1 is the answer passage itself: {sum(x['e']['e1'] == x['h2'] for x in Q)} of {len(Q)}")
+def toks(s): return set(norm(s).split())
+for a in ("ONE", "TWO"):
+    part = full = 0
+    for x, ac, al in zip(Q, res[a]["ac"], res[a]["alast"]):
+        if ac or not al: continue
+        vs = x["sets"][a]; o = optA(x, vs); j = int(np.argmax(get4(ctxA(x, vs), o)))
+        g = max(golds[x["qi"]], key=len); t = toks(o[j])
+        (part := part + 1) if any(w in t for w in g.split()) else None
+        full += 1
+    print(f"{a}: AC failures with the answer passage in the set {full}; chosen sentence shares a gold-answer word in {part} (likely scoring misses)")
