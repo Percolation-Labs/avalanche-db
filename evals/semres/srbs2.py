@@ -35,33 +35,38 @@ STOP_OPT = "Nothing more: what has been read already answers `question`."       
 CHECK_TASK = "Which statement is true of the passages in `reads`?"   # the registration gives only the options; task line flagged to bill
 CHECK_OPTS = ["`question` can be answered from these passages", "`question` needs a passage not yet read"]   # REGISTERED-SRBS.md
 STATE_OPTS = ["these passages state the answer to `question`", "`question` needs a passage not yet read"]   # SR-BS2
-SEED = 1346
+SEED = 1347   # 1346 is SR-AC's seed (bill's review); a new seed, plus explicit exclusion below
 PER = 60   # per type (SR-BS's final size)
 TYPES = ("2hop", "3hop1", "4hop1")
 CACHE = Path.home() / ".cache" / "walklab" / "srbs2-jev-cache.jsonl"
 PRICE_IN = 0.042e-6
 src, gpath, SET, MAX_USD = sys.argv[1], sys.argv[2], sys.argv[3], float(sys.argv[4]); DRY = "--dry" in sys.argv
+DRAW_SRC = str(Path.home() / ".cache/walklab/mq-train/musique_ans_v1.0_train.jsonl")   # sha 83a75b1e…
 rows = [json.loads(l) for l in open(gpath)]; keys = {r["d"]: set(r["keys"]) for r in rows}
 df = Counter(k for r in rows for k in r["keys"])
 hid = lambda p: "mq:" + hashlib.sha256((p["title"] + "\n" + p["paragraph_text"]).encode()).hexdigest()[:16]
 allq = [r for r in map(json.loads, open(src)) if r["answerable"]]
 bytype = {t: [r for r in allq if r["id"].split("__")[0] == t] for t in TYPES}
-# questions any earlier Jev run used (SR-BX/SR-BE: 2hop, seed 1341, positions 0-607; SR-BH: seed 1344, 0-101 per type)
-used = {bytype["2hop"][i]["id"] for i in np.random.default_rng(1341).permutation(len(bytype["2hop"]))[:608]}
+# questions any earlier Jev run used, rebuilt exactly as each run drew them from the corpus lists
+used = {bytype["2hop"][i]["id"] for i in np.random.default_rng(1341).permutation(len(bytype["2hop"]))[:608]}   # SR-BX, SR-BE
 for t in ("3hop1", "4hop1"):
-    used |= {bytype[t][i]["id"] for i in np.random.default_rng(1344).permutation(len(bytype[t]))[:102]}
-# and SR-BF's (bill: seed-1341 positions 608 onward, first ~154 after exclusions): remove seed-1341 positions up to 900
-used |= {bytype["2hop"][i]["id"] for i in np.random.default_rng(1341).permutation(len(bytype["2hop"]))[:900]}
-# and SR-BS's (seed 1345 over the same filtered lists; first 82 per type covers its 60 and stage 0 at 80-81)
-_u = set(used)
+    used |= {bytype[t][i]["id"] for i in np.random.default_rng(1344).permutation(len(bytype[t]))[:102]}        # SR-BH
+_u = set(used)                                                                                                   # SR-BS's own exclusion set
 for t in ("2hop", "3hop1", "4hop1"):
     fr = [r for r in bytype[t] if r["id"] not in _u]
-    used |= {fr[i]["id"] for i in np.random.default_rng(1345).permutation(len(fr))[:82]}
+    used |= {fr[i]["id"] for i in np.random.default_rng(1345).permutation(len(fr))[:82]}                         # SR-BS (60 + stage 0 at 80-81)
+for f in ("used/srac-fresh.json", "used/srac-stage0.json"):                                                     # SR-AC, by id
+    used |= {o["id"] for o in json.load(open(f))["out"]}
+for f in ("used/srbf-fresh.json", "used/srbf-stage0.json"):                                                     # SR-BF, by id
+    used |= set(json.load(open(f))["ids"])
+# The draw comes from the FULL MuSiQue train file (the corpus has only 10 unused 4hop1 chains left). The pass walk and
+# the checks use no graph keys, so passages outside the train graph don't matter.
+full = [r for r in map(json.loads, open(DRAW_SRC)) if r["answerable"]]
 draw = []
 for t in TYPES:
-    fresh = [r for r in bytype[t] if r["id"] not in used]
+    fresh = [r for r in full if r["id"].split("__")[0] == t and r["id"] not in used]
     perm = np.random.default_rng(SEED).permutation(len(fresh))
-    draw += [fresh[i] for i in {"stage0": perm[80:82], "fresh": perm[:PER]}[SET]]
+    draw += [fresh[k] for k in {"stage0": perm[80:82], "fresh": perm[:PER]}[SET]]
 assert not {r["id"] for r in draw} & used
 Q = []
 for r in draw:
