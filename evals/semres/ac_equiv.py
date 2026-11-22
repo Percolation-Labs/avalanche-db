@@ -14,7 +14,7 @@ EQ_OPTS = ["Yes: the sentence states this answer.", "No: the sentence does not s
 src, MAX_USD = sys.argv[1], float(sys.argv[2]); DRY = "--dry" in sys.argv
 PRICE_IN = 0.042e-6; CACHE = Path.home() / ".cache" / "walklab" / "ac-equiv-cache.jsonl"
 Q = {r["id"]: r for r in map(json.loads, open(src))}
-d = json.load(open("out/srac-fresh.json"))["out"]
+d = json.load(open(sys.argv[3] if len(sys.argv) > 3 and not sys.argv[3].startswith("--") else "out/srac-fresh.json"))["out"]
 fails = [(o["id"], a, o[a]["chosen"]) for o in d for a in ("G", "L", "LR", "R") if o[a]["ac"] == 0]
 ctx = lambda i, sent: {"question": Q[i]["question"], "answer": Q[i]["answer"], "sentence": sent, "task": EQ_TASK}
 ck = lambda c: hashlib.sha256(json.dumps([c, EQ_OPTS]).encode()).hexdigest()
