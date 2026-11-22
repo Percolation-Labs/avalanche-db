@@ -80,7 +80,7 @@ for u in pool:
         ov = np.array([len(fw & wd(t)) / max(1, len(wd(t))) for t in u["texts"]])
         r = spearmanr(ov[keep], dd[keep]).statistic
         if np.isfinite(r): rho[h].append(float(r))
-n = len(pool); print(f"SET={SET}: n {n} (usable DEV questions {len(U)})")
+n = len(pool); print(f"SET={SET}: n {n} (usable questions {len(U)})")
 for h in top:
     lost = sum(a and not b for a, b in zip(top["none"], top[h])); gained = sum(b and not a for a, b in zip(top["none"], top[h]))
     print(f"top-1 gold under {h:10s} {np.mean(top[h]):.3f}" + ("" if h == "none" else f"  (lost {lost}, gained {gained})"))
