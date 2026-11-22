@@ -33,7 +33,13 @@ pages) and MuSiQue HELD-OUT (286 pages), replayed pages with fixed reads.
 - **One state now works on both corpora.** K7 helped one and hurt the other. K-ans helps MuSiQue and is neutral on BEAM.
 
 **The filter.**
-- BEAM gold share: all reads in the waves .115, and the kept reads **.181**, a 1.6× enrichment.
+- BEAM gold share: all reads in the waves .115, and the kept reads **.181**, a 1.6× enrichment. Both are pooled over
+  reads, not averaged per wave.
+- **That's a different read set from #88's .008–.045.** #88 counted the 65 whole recorded walks in `walks-1m.jsonl`:
+  up to 10 waves and about 500 reads each. The replay pages here are the rounds' pages: at most 4 rounds per question
+  (≤ 150 reads), early in the walk, and kept only where some door leads to gold (`any(gains)`). Early, gold-reachable
+  rounds are richer in gold. So #88's "95–99% non-gold" describes whole walks, and .115 describes these pages (bill's
+  review).
 - That's below #88's 3.5× price from search-order pools. Jev's per-read relevance is noisy at walk base rates.
 - The max REL p per wave has quartiles .28 / .43 / .51 / .62 / .95 on BEAM (83 waves) and .24 / .47 / .53 / .64 / .90 on
   MuSiQue (77). In most waves Jev isn't confident: the median best read is about .5. So many kept reads are the "least
@@ -42,8 +48,8 @@ pages) and MuSiQue HELD-OUT (286 pages), replayed pages with fixed reads.
 **Predictions against outcomes.**
 - BEAM K-ans − K7 about +.02 with a CI touching 0: **+.032 with a CI above 0**, better than predicted.
 - K-ans − K0 about 0 on BEAM: right (+.010, n.s.).
-- Kept-read gold share about .10 against about .03: the shares were higher than the walk-file look suggested (.181
-  against .115). These pages are early rounds, which hold more gold than whole walks. The enrichment was 1.6×, not 3.5×.
+- Kept-read gold share about .10 against about .03: the shares were higher (.181 against .115), because these pages
+  are early, gold-reachable rounds, not whole walks (see the filter section). The enrichment was 1.6×, not 3.5×.
 - MuSiQue K-ans − K7 about −.01 to +.01: right (−.003). K-ans − K0 about +.03: right (+.034).
 
 ## What it means
