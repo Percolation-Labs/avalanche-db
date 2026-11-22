@@ -1,0 +1,30 @@
+SET=fresh: 200 questions (Counter({'3hop1': 100, '4hop1': 100})); passages missing from the graph 0
+wave step 3 a: 100 requests, estimated $0.0024 (spent so far $0.0000, cap $0.1)
+wave step 3 b: 36 requests, estimated $0.0023 (spent so far $0.0043, cap $0.1)
+wave step 4 a: 100 requests, estimated $0.0024 (spent so far $0.0066, cap $0.1)
+wave step 4 b: 54 requests, estimated $0.0043 (spent so far $0.0108, cap $0.1)
+spend this run $0.01530
+3hop1  cheap  all hops 0.610  per-hop recall 0.833  input chars/question 29,281
+3hop1  pass   all hops 0.610  per-hop recall 0.847  input chars/question 41,579
+3hop1  cheap − pass: all hops +0.000 [-0.090, +0.080] (n 100); per-hop -0.013 [-0.050, +0.023] (n 100)
+4hop1  cheap  all hops 0.550  per-hop recall 0.823  input chars/question 36,094
+4hop1  pass   all hops 0.440  per-hop recall 0.807  input chars/question 52,061
+4hop1  cheap − pass: all hops +0.110 [+0.010, +0.210] (n 100); per-hop +0.015 [-0.020, +0.050] (n 100)
+all    cheap  all hops 0.580  per-hop recall 0.828  input chars/question 32,687
+all    pass   all hops 0.525  per-hop recall 0.827  input chars/question 46,820
+all    cheap − pass: all hops +0.055 [-0.010, +0.120] (n 200); per-hop +0.001 [-0.025, +0.025] (n 200)
+PRIMARY all hops, cheap − pass (both types): +0.055 [-0.010, +0.120] (n 200)
+entry hop 1     n  81: all hops cheap 0.728, pass 0.704
+entry hop 2     n  39: all hops cheap 0.513, pass 0.538
+entry hop 3     n  36: all hops cheap 0.472, pass 0.444
+entry hop 4     n  19: all hops cheap 0.684, pass 0.368
+entry off-chain n  25: all hops cheap 0.280, pass 0.160
+input chars, cheap / pass: 0.698
+step 1: {'rescue': 41, 'twin': 71, 'one': 88}; rescue rate 0.205
+step 2: {'rescue': 75, 'twin': 56, 'one': 69}; rescue rate 0.375
+step 3: {'rescue': 100, 'twin': 45, 'one': 55}; rescue rate 0.500
+step 4: {'one': 18, 'twin': 25, 'rescue': 57}; rescue rate 0.570
+A-last (gold last-hop passage returned) cheap 0.835; answer string in returned set 0.840
+A-last (gold last-hop passage returned) pass 0.890; answer string in returned set 0.900
+A-last, cheap − pass: -0.055 [-0.105, -0.005] (n 200)
+naming at keyed steps from an on-chain read (not the last hop): 362; the next hop shares the named key 0.514; it is the only passage that does 0.348
