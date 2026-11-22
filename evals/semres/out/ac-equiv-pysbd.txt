@@ -1,0 +1,8 @@
+198 string-check failures; 177 distinct requests, 24 uncached, estimated $0.0002
+spend $0.00042
+G: AC string 0.893 -> with judge 0.927 (+5)
+L: AC string 0.920 -> with judge 0.953 (+5)
+LR: AC string 0.833 -> with judge 0.867 (+5)
+R: AC string 0.033 -> with judge 0.047 (+2)
+AC(G) − AC(L) with judge: -0.027 [-0.067, +0.013]
+judge on the first 20 failures (the hand-read set, same order as RESULT-SRAC.md):

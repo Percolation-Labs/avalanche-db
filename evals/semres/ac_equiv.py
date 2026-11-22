@@ -14,8 +14,9 @@ EQ_OPTS = ["Yes: the sentence states this answer.", "No: the sentence does not s
 src, MAX_USD = sys.argv[1], float(sys.argv[2]); DRY = "--dry" in sys.argv
 PRICE_IN = 0.042e-6; CACHE = Path.home() / ".cache" / "walklab" / "ac-equiv-cache.jsonl"
 Q = {r["id"]: r for r in map(json.loads, open(src))}
-d = json.load(open("out/srac-fresh.json"))["out"]
-fails = [(o["id"], a, o[a]["chosen"]) for o in d for a in ("G", "L", "LR", "R") if o[a]["ac"] == 0]
+d = json.load(open(sys.argv[3] if len(sys.argv) > 3 and not sys.argv[3].startswith("--") else "out/srac-fresh.json"))["out"]
+HITS = "--hits" in sys.argv   # james: also judge string hits, to catch accidental containment (long table segments)
+fails = [(o["id"], a, o[a]["chosen"]) for o in d for a in ("G", "L", "LR", "R") if o[a]["ac"] == 0 or HITS]
 ctx = lambda i, sent: {"question": Q[i]["question"], "answer": Q[i]["answer"], "sentence": sent, "task": EQ_TASK}
 ck = lambda c: hashlib.sha256(json.dumps([c, EQ_OPTS]).encode()).hexdigest()
 cache = {}
@@ -50,3 +51,9 @@ for o in d:
     for a in ("G", "L", "LR"):
         if o[a]["ac"] == 0 and k < 20:
             k += 1; print(f"  {k:2d} {a:2s} judge={'yes' if yes[(o['id'], a)] else 'no '} | {Q[o['id']]['answer'][:40]} | {o[a]['chosen'][:90]}")
+
+if HITS:
+    for a in ("G", "L", "LR", "R"):
+        hn = [(o["id"]) for o in d if o[a]["ac"] == 1 and not yes[(o["id"], a)]]
+        print(f"{a}: string hits the judge rejects {len(hn)} of {sum(o[a]['ac'] for o in d)}")
+        for i in hn[:3]: print("     ", Q[i]["answer"][:30], "|", next(o for o in d if o["id"] == i)[a]["chosen"][:120])

@@ -20,7 +20,14 @@ PRICE_IN = 0.042e-6
 src, SET, MAX_USD = sys.argv[1], sys.argv[2], float(sys.argv[3]); DRY = "--dry" in sys.argv
 norm = lambda s: " ".join(re.findall(r"[a-z0-9]+", s.lower()))
 SPLIT = re.compile(r"(?<=[.!?])\s+(?=[A-Z0-9\"'(])")   # sentence boundary: end punctuation, space, capital/digit/quote/paren
-sents = lambda p: [f"{p['title']}: {s}" for s in SPLIT.split(p["paragraph_text"].strip()) if s.strip()]
+PYSBD = "--pysbd" in sys.argv   # AC splitter fix (NOTE-AC-SPLIT.md): a standard segmenter instead of the regex
+if PYSBD:
+    import pysbd
+    _seg = pysbd.Segmenter(language="en", clean=False)
+    _split = lambda t: [x.strip() for x in _seg.segment(t)]
+else:
+    _split = lambda t: SPLIT.split(t)
+sents = lambda p: [f"{p['title']}: {s}" for s in _split(p["paragraph_text"].strip()) if s.strip()]
 allq = [r for r in map(json.loads, open(src)) if r["answerable"]]
 bytype = {t: [r for r in allq if r["id"].split("__")[0] == t] for t in TYPES}
 used = {bytype["2hop"][i]["id"] for i in np.random.default_rng(1341).permutation(len(bytype["2hop"]))[:608]}
@@ -97,4 +104,4 @@ print(f"AC(LR) − AC(L), noise without the bridge: {ci([o['LR']['ac'] - o['L'][
 print(f"AC(G) − AC(R), the measure's range: {ci([o['G']['ac'] - o['R']['ac'] for o in out])}")
 ag = [(o[a]["alast"], o[a]["ac"]) for o in out for a in SETS]
 print("A-last × AC over all sets: " + ", ".join(f"A-last {i} AC {j}: {sum(1 for x in ag if x == (i, j))}" for i in (1, 0) for j in (1, 0)))
-json.dump(dict(usd=spent[0], out=out), open(f"out/srac-{SET}.json", "w"))
+json.dump(dict(usd=spent[0], out=out), open(f"out/srac-{SET}{'-pysbd' if PYSBD else ''}.json", "w"))
