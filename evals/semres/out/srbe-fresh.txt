@@ -1,0 +1,46 @@
+SET=fresh: 300 questions; passages missing from the graph 0; cos entry's door keys median 18
+pools with a repeated title: 140 of 300 (e_title: Jev picks a title; among passages with that title, the one nearest the question by cos)
+wave 1 entry: 600 requests, estimated $0.0392 (spent so far $0.0000, cap $0.4)
+wave 2 name+pass: 1000 requests, estimated $0.0692 (spent so far $0.0434, cap $0.4)
+wave 3 twins: 119 requests, estimated $0.0050 (spent so far $0.1199, cap $0.4)
+spend this run $0.12534
+e_cos    entry: hop 1 0.670, hop 2 0.167
+e_title  entry: hop 1 0.547, hop 2 0.280
+e_pass   entry: hop 1 0.610, hop 2 0.283
+  repeated-title pools (n 140): entry hop 1 e_cos 0.550, e_title 0.386, e_pass 0.471
+  other pools (n 160): entry hop 1 e_cos 0.775, e_title 0.688, e_pass 0.731
+e_cos×cosdoor        both 0.423  ordered 0.380  hop2 0.573
+e_cos×name           both 0.507  ordered 0.447  hop2 0.633
+e_cos×nt             both 0.587  ordered 0.513  hop2 0.713
+e_cos×nt_rescue      both 0.700  ordered 0.597  hop2 0.837
+e_cos×pass           both 0.710  ordered 0.603  hop2 0.863
+e_title×cosdoor      both 0.403  ordered 0.337  hop2 0.633
+e_title×name         both 0.503  ordered 0.397  hop2 0.697
+e_title×nt           both 0.553  ordered 0.433  hop2 0.760
+e_title×nt_rescue    both 0.690  ordered 0.497  hop2 0.850
+e_title×pass         both 0.680  ordered 0.490  hop2 0.860
+e_pass×cosdoor       both 0.440  ordered 0.377  hop2 0.680
+e_pass×name          both 0.543  ordered 0.457  hop2 0.767
+e_pass×nt            both 0.613  ordered 0.500  hop2 0.820
+e_pass×nt_rescue     both 0.750  ordered 0.570  hop2 0.893
+e_pass×pass          both 0.743  ordered 0.557  hop2 0.887
+both hops e_cos        0.700
+both hops e_title      0.690
+both hops e_pass       0.750
+both hops e_pass×pass  0.743
+both hops SE           0.743
+both hops SEP          0.770
+both hops oracle       0.797
+PRIMARY H-E: SE − e_cos×nt_rescue: +0.043 [+0.003, +0.083]
+SE − e_pass: -0.007 [-0.037, +0.027]
+SE − e_pass×pass: +0.000 [-0.043, +0.040]
+SEP − e_cos: +0.070 [+0.037, +0.107]
+SE − e_title: +0.053 [+0.023, +0.087]
+e_pass − e_cos: +0.050 [+0.003, +0.100]
+e_pass×pass − e_cos: +0.043 [-0.010, +0.100]
+split questions 61; SE right on 45, SEP right on 53
+input chars per question e_cos×nt_rescue    mean 12,004
+input chars per question e_pass×nt_rescue   mean 22,142
+input chars per question SE                 mean 28,628
+input chars per question e_pass×pass        mean 20,577
+ties: SE keeps cos's walk when the two entries' p are equal (incl. the same entry); unequal-entry exact ties: 1
