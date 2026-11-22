@@ -1,0 +1,5 @@
+300 questions (SR-BE fresh). Entry request ranks: answer passage (hop 2) median 2, hop 1 median 1
+entry argmax is the answer passage 0.283; hop 1 0.610
+return the entry request's top 1: A-last 0.283  both hops 0.000
+return the entry request's top 2: A-last 0.603  both hops 0.480
+return the entry request's top 3: A-last 0.737  both hops 0.677
