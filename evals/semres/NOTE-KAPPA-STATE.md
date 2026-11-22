@@ -28,10 +28,11 @@ below is $0 on recorded walks (seen data, unregistered).*
 
 **The design: a state that keeps only reads that answer.**
 - **K-ans.** After each wave, one extra Jev request over that wave's new reads, with the question and the task "Does this
-  passage give information needed to answer `question`?" `found` keeps only the reads Jev ranks at the top of that
-  request.
-- That's one short request per wave, the size of the reads, not of the options. It's knob-free if "top" means the argmax
-  per wave, or every read whose p beats the wave's median non-read option, which uses no threshold of ours.
+  passage give information needed to answer `question`, or identify something the answer depends on?" (bill's
+  wording, so a MuSiQue hop-1 passage that identifies the bridge isn't rejected).
+- `found` keeps **the argmax read of each wave**, one per wave. That's knob-free (bill's review chose between the two
+  rules first offered).
+- That's one short request per wave, the size of the reads, not of the options.
 - **Why it should help on both corpora.** It approximates the oracle arm (gold content) without gold. On BEAM it would
   drop the 95% related-non-gold reads, which SR-MO3 says are inert or mildly harmful. On MuSiQue it keeps the chain's
   passages, which K7 already mostly contains.
@@ -52,5 +53,10 @@ below is $0 on recorded walks (seen data, unregistered).*
 **Risks.**
 - Jev's per-read relevance may be as noisy as its door prices: high-p doors still read gold only .045 of the time. Then
   K-ans keeps as little gold as K7 does, and (1) fails cheaply.
+- **A partial $0 price** (bill's point 3). SR-MO3's cached passage p's are Jev's per-message relevance on BEAM. Under
+  `none`, Jev's argmax is gold .495 of the time, among options whose gold base rate is .141 (109 questions). That's
+  3.5× enrichment. But those are search-order pools. Walk reads run at about .03 gold, and at that base rate the same
+  enrichment would give an argmax gold share of only about .1, unless Jev's precision holds up when gold is scarce.
+  That's the number step (1) has to beat.
 - On MuSiQue, filtering can drop a hop-1 passage that doesn't *look* answer-bearing, since bridges are relations, not
   answers. Step (1) on MuSiQue would show it.
