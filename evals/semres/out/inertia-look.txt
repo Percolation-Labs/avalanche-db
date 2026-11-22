@@ -1,0 +1,10 @@
+2417 dev questions; door memberships 510121, earned 7617 (0.0149)
+round 1: removed earned 0.008 vs other 0.136; within earned-holding passages: earned 0.008 vs their other 0.160 | by df band (earned/other): 0:0.008/0.243 1:0.002/0.039 2:0.002/0.112 3:0.004/0.144 4:0.016/0.144
+   changed 12.948%; live earned 7555, live other 433953
+round 2: removed earned 0.008 vs other 0.042; within earned-holding passages: earned 0.008 vs their other 0.052 | by df band (earned/other): 0:0.001/0.007 1:0.001/0.039 2:0.001/0.026 3:0.004/0.040 4:0.020/0.066
+   changed 3.997%; live earned 7491, live other 415578
+round 3: removed earned 0.004 vs other 0.019; within earned-holding passages: earned 0.004 vs their other 0.022 | by df band (earned/other): 0:0.000/0.003 1:0.001/0.023 2:0.000/0.012 3:0.002/0.017 4:0.009/0.027
+   changed 1.775%; live earned 7463, live other 407745
+round 4: removed earned 0.002 vs other 0.009; within earned-holding passages: earned 0.002 vs their other 0.011 | by df band (earned/other): 0:0.000/0.002 1:0.000/0.010 2:0.000/0.006 3:0.002/0.008 4:0.004/0.013
+   changed 0.849%; live earned 7450, live other 404065
+survived all rounds: earned 0.978, other 0.804
