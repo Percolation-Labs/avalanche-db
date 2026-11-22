@@ -1,0 +1,34 @@
+reader with NONE, prefix 1: 300 requests, 300 uncached, estimated $0.0071 (spent $0.0000, cap $0.15)
+reader with NONE, prefix 2: 210 requests, 210 uncached, estimated $0.0072 (spent $0.0083, cap $0.15)
+reader with NONE, prefix 3: 72 requests, 72 uncached, estimated $0.0034 (spent $0.0166, cap $0.15)
+reader with NONE, prefix 4: 39 requests, 39 uncached, estimated $0.0023 (spent $0.0203, cap $0.15)
+reader with NONE, prefix 5: 27 requests, 27 uncached, estimated $0.0019 (spent $0.0228, cap $0.15)
+reader with NONE, prefix 6: 20 requests, 20 uncached, estimated $0.0017 (spent $0.0250, cap $0.15)
+reader with NONE, prefix 7: 16 requests, 16 uncached, estimated $0.0015 (spent $0.0268, cap $0.15)
+reader with NONE, prefix 8: 12 requests, 12 uncached, estimated $0.0013 (spent $0.0284, cap $0.15)
+reader with NONE, prefix 9: 10 requests, 10 uncached, estimated $0.0011 (spent $0.0298, cap $0.15)
+reader with NONE, prefix 10: 9 requests, 9 uncached, estimated $0.0011 (spent $0.0310, cap $0.15)
+reader with NONE, prefix 11: 8 requests, 8 uncached, estimated $0.0011 (spent $0.0323, cap $0.15)
+reader with NONE, prefix 12: 8 requests, 8 uncached, estimated $0.0012 (spent $0.0334, cap $0.15)
+reader with NONE, prefix 13: 8 requests, 8 uncached, estimated $0.0013 (spent $0.0347, cap $0.15)
+reader with NONE, prefix 14: 8 requests, 8 uncached, estimated $0.0014 (spent $0.0361, cap $0.15)
+reader with NONE, prefix 15: 8 requests, 8 uncached, estimated $0.0015 (spent $0.0377, cap $0.15)
+reader with NONE, prefix 16: 8 requests, 8 uncached, estimated $0.0016 (spent $0.0393, cap $0.15)
+reader with NONE, prefix 17: 8 requests, 8 uncached, estimated $0.0016 (spent $0.0410, cap $0.15)
+reader with NONE, prefix 18: 7 requests, 7 uncached, estimated $0.0016 (spent $0.0427, cap $0.15)
+reader with NONE, prefix 19: 6 requests, 6 uncached, estimated $0.0014 (spent $0.0444, cap $0.15)
+reader with NONE, prefix 20: 6 requests, 6 uncached, estimated $0.0015 (spent $0.0460, cap $0.15)
+judge: 88 requests, 6 uncached, estimated $0.0001 (spent $0.0476, cap $0.15)
+standard reader on the stopped set: 300 requests, 37 uncached, estimated $0.0025 (spent $0.0477, cap $0.15)
+judge (standard): 85 requests, 1 uncached, estimated $0.0000 (spent $0.0504, cap $0.15)
+spend $0.05040
+2hop   R-stop AC 0.770  A-last 0.890  returned 2.48  never stopped 11  | oracle H AC 0.780, S-check AC 0.740
+3hop1  R-stop AC 0.720  A-last 0.790  returned 2.46  never stopped 11  | oracle H AC 0.770, S-check AC 0.660
+4hop1  R-stop AC 0.760  A-last 0.840  returned 2.96  never stopped 8  | oracle H AC 0.800, S-check AC 0.730
+all    R-stop AC 0.750  A-last 0.840  returned 2.63  never stopped 30  | oracle H AC 0.783, S-check AC 0.710
+PRIMARY AC (standard request on the stopped set), R-stop − oracle H: -0.023 [-0.057, +0.007]  (n 300)
+  sensitivity (bill's note 1): never-stopped walks excluded (30 of 300): -0.011 [-0.041, +0.019]
+AC (standard), R-stop − S-check: +0.050 [+0.020, +0.083]
+secondary: AC of the NONE-request's own choice, R-stop − oracle H: -0.033 [-0.063, -0.003]
+AC levels: R-stop standard 0.760, R-stop own choice 0.750, oracle H 0.783
+stops after one read 90; input to the stop (walk + reader requests) is reported in the result from the json
