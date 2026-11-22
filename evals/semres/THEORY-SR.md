@@ -245,8 +245,11 @@ are tests of it, not a definition.
 - Jev discounts what `found` says was already read (−.18).
 - **Any `found` raises every option's price by about +.3 logit,** whether it's true or wrong, on or off the thread. The
   answer's own price stays flat or falls. So history narrows the answer's lead without steering (post hoc).
-- Whether that's history or just the presence of extra context is untested. An irrelevant-`found` control separates
-  them. SR-MI's near-zero common mode, when only the read changed, points to format.
+- **It's content, not format** (SR-MO2, 200 fresh, $0.127). An irrelevant `found` of the same form shifts prices
+  +.013 [−.009, +.036]. A question-related one, true or wrong, shifts them about +.29. So relatedness inflates every
+  price, and truth doesn't matter.
+- No history changes Jev's top choice beyond the noise floor of an identical repeat (flips about 2× the floor, with
+  every CI including 0). SR-MI's null common mode had held relatedness fixed, so it couldn't speak to this.
 
 **(2) Mutual inductance: does flow on one path energise a parallel one?** (SR-MI, bill, train 3hop2, 188 fresh, $0.072)
 - **Yes, a little, in Jev.** Having read one parallel branch, Jev prices the other branch +.233 [+.170, +.296] logit
@@ -266,11 +269,13 @@ are tests of it, not a definition.
   use.
 - **Keeping the bridges isn't enough.** D3's registered test has walks *worse* than random pruning of the same size
   (.765 against .789, from .807). What it removes around the bridges carried context the walks used.
-- A true inertia term would weight the vote by recorded use or tenure (bitemporal history) and test whether that
-  protects earned structure beyond the structural vote. That's not run.
+- **The memory term is the wrong lever** (bill, #82, $0 power check). D3 removes only 18 of the 557 memberships that
+  gold-free walks used. Removing high-vote memberships loses to random as badly as removing low-vote ones (.759 and
+  .765 against .79). Vote-directed pruning probably concentrates damage (an inference from two registered results), so a target for dreaming has to be priced on walks
+  (a membership's counterfactual effect on a path's resistance to gold), not on a neighbourhood vote.
 
 **Where kappa fits.** Kappa is the walk's memory, sent to Jev as `found`. On today's evidence its effect at a step is a
-uniform shift plus a discount on what's been covered, not a pull along the thread. The coupling that does exist sits in
+uniform, relatedness-driven inflation plus a discount on what's been covered, not a pull along the thread. The coupling that does exist sits in
 what's *being read*: a branch lifts its chain neighbour and, less, its parallel twin.
 
 Hypothesis, not a finding: inductance-like coupling lives in the current read, not the history. It's testable in one
@@ -344,3 +349,5 @@ All are on avalanche-db. Each is registered before scoring, with a postmortem in
 | SR-MO (momentum) | RESULT-SRMO.md | #76 |
 | SR-MI (mutual inductance) | RESULT-SRMI.md | #77 |
 | Inertia look (D3 survival against gold bridges) | RESULT-INERTIA-LOOK.md | #79 |
+| SR-MO2 (kappa's shift: content, not format) | RESULT-SRMO2.md | #81 |
+| D3m power check and two-entry pricing | NOTE-D3M.md | #82 |
