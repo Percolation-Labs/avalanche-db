@@ -9,7 +9,8 @@ each read) returned 2.4 passages against the oracle hop count's 3.0, at a reader
 zero: AC −.028 [−.072, +.022] with the judge, −.044 [−.089, +.000] string only. Does that hold on fresh questions?
 
 **Data.** 300 fresh answerable chains (100 each of 2-hop, 3hop1, 4hop1) from the full MuSiQue train file, SEED 1348.
-Excluded, and asserted: every question SR-BX, SR-BE, SR-BH, SR-BS, SR-AC, SR-BF and SR-BS2 used. SR-BS2's draw is
+Excluded, and asserted in one `used` set: every question SR-BX, SR-BE, SR-BH, SR-BS, SR-AC, SR-BF and SR-BS2 used
+(bill's note 1). SR-BS2's draw is
 rebuilt as it drew, and the dry run's overlap with SR-BS2's questions is 0. Stage 0 is positions 80–81 per type.
 
 **Walk and stop.** SR-BS2's, unchanged: Jev's entry request, then the pass step. S-check after each read, over the
@@ -22,7 +23,7 @@ returned passages beside it.**
 
 **Secondary.**
 - AC string only (no judge), the same contrast.
-- The judge's yes count per arm.
+- The judge's yes count per arm (printed by srbs2_ac.py).
 - A-last, S-check − oracle(H).
 - S-check's stops against the first arrival at the answer passage (before, at, after, never). Stops after one read.
 - By hop type.
@@ -36,8 +37,9 @@ returned passages beside it.**
 **What follows.**
 - **If H-S3 passes:** "a knob-free stop costs less than .05 of reader accuracy, at about 20% fewer passages" is
   offered to Sirsh as a hypothesis.
-- **If it fails with the point estimate near −.03:** the honest claim is "about 3 points of reader accuracy for 20%
-  fewer passages", and the trade is Sirsh's to judge.
+- **If it fails** (bill's note, added before the run): the CI includes −.05, which is **not evidence that the stop
+  rule is worse**. The result is then stated as "cost within about .07 (the lower bound), not shown within .05", with
+  the point estimate, and the trade is Sirsh's to judge.
 - **If the point estimate is much worse:** SR-BS2's reading was optimistic, and the postmortem says why.
 - Production is Sirsh's.
 
