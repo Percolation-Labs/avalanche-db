@@ -1,0 +1,34 @@
+SET=fresh: 300 questions; passages missing from the graph 0; cos entry's door keys median 19
+pools with a repeated title: 143 of 300 (e_title: Jev picks a title; among passages with that title, the one nearest the question by cos)
+spend this run $0.00000
+e_cos    entry: hop 1 0.723, hop 2 0.117
+e_title  entry: hop 1 0.593, hop 2 0.257
+e_pass   entry: hop 1 0.607, hop 2 0.280
+  repeated-title pools (n 143): entry hop 1 e_cos 0.594, e_title 0.455, e_pass 0.510
+  other pools (n 157): entry hop 1 e_cos 0.841, e_title 0.720, e_pass 0.694
+e_cos×cosdoor        both 0.473  ordered 0.440  hop2 0.587
+e_cos×name           both 0.523  ordered 0.480  hop2 0.630
+e_cos×nt             both 0.617  ordered 0.570  hop2 0.730
+e_cos×nt_rescue      both 0.723  ordered 0.650  hop2 0.853
+e_cos×pass           both 0.743  ordered 0.653  hop2 0.890
+e_title×cosdoor      both 0.483  ordered 0.397  hop2 0.677
+e_title×name         both 0.530  ordered 0.417  hop2 0.700
+e_title×nt           both 0.610  ordered 0.487  hop2 0.790
+e_title×nt_rescue    both 0.743  ordered 0.550  hop2 0.877
+e_title×pass         both 0.727  ordered 0.537  hop2 0.873
+e_pass×pass          both 0.750  ordered 0.550  hop2 0.873
+
+== (1) anatomy of entry misses (entry is neither hop)
+e_cos: 48 misses; shares a door key with a hop 21; no title or door link to either hop 14; namesake of a hop (same title) 13
+   hop-1 cos rank median 4, hop-1 rank in Jev's 20-passage entry request median 2; the walk still gets both hops in 0
+e_title: 45 misses; shares a door key with a hop 23; namesake of a hop (same title) 13; no title or door link to either hop 9
+   hop-1 cos rank median 2, hop-1 rank in Jev's 20-passage entry request median 2; the walk still gets both hops in 0
+
+== (2) choosing between the cos walk and the title walk (step nt_rescue); cos 0.723, title 0.743, oracle 0.817; walks agree on the pair in 231
+questions where exactly one walk gets both hops: 50 (cos only 22, title only 28)
+entry p, 20-passage entry request          0.780  − cos +0.057 [+0.023, +0.093]; right on 39 of 50 split questions
+step p from its entry (chosen step)        0.757  − cos +0.033 [+0.007, +0.063]; right on 32 of 50 split questions
+best step p from entry (NOTE-D3M .747)     0.747  − cos +0.023 [-0.003, +0.050]; right on 29 of 50 split questions
+pair: entry-request p of e + p of s        0.770  − cos +0.047 [+0.010, +0.087]; right on 36 of 50 split questions
+entry p × step p                           0.790  − cos +0.067 [+0.033, +0.103]; right on 42 of 50 split questions
+door strength between e and s              0.710  − cos -0.013 [-0.043, +0.017]; right on 18 of 50 split questions
