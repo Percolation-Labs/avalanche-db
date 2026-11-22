@@ -74,13 +74,21 @@ from the walk.
 - **The spare read is worth less to the reader than to A-last:** AC H + 1 − H is +.028 [−.011, +.067], against A-last's
   +.050.
 - **A duplicate, noted.** bill ran the same AC scoring independently (`ac_stop.py`, #102, $0.020), because our messages
-  crossed. His figures agree within .006 (S-check −.022 against oracle H, oracle H AC .756). The table here is the
-  registered addendum's.
-- The judge's yes counts are similar across arms (8–11), so leniency doesn't explain the differences.
+  crossed. His figures agree within .006 (S-check −.022 against this run's −.028; S-state −.017 against −.022; oracle
+  H AC .756 against .761). That's a free run-to-run reproducibility check on Jev's reader: about .006. The table here is
+  the registered addendum's.
+- **The judge's leniency, by arm (bill's 17:36Z note).**
+  - **String only** (no judge): S-check − oracle H is **−.044 [−.089, +.000]**; S-state − oracle H is −.028
+    [−.067, +.011]. String levels: oracle H .717, S-check .672, S-state .689.
+  - **With the judge**, S-check gets 3 more yeses than oracle H here (11 against 8; bill's run counts 11 against 7).
+  - So the judge narrows S-check's gap from −.044 to −.028. **Read the reader-side result as "−.03 to −.04, CI
+    touching 0", not as "no cost".**
+- **Order of events:** addendum 1 was written after SR-BS2's A-last result and before its AC call. It's a readout
+  added after the primary was known, not a pre-registered secondary of the original registration.
 - **Reading for Sirsh's goal.** A knob-free check that asks Jev whether the passages answer the question returns about
   20% fewer passages than the oracle hop count. At the reader it's **not distinguishable from the oracle at n = 180**
-  (about 2–3 points below, CI across 0). That is not the same as equal. It's the first stop rule that holds up this far on
-  his measure. The knowledge stops are partly real (9 of 10 hand-read early stops had no answer string in the
+  (about 2–3 points below, CI across 0). That is not the same as equal. **Superseded by SR-BS3 (300 fresh questions): AC −.073
+  [−.110, −.037]. The 'not distinguishable' reading here was the optimistic end of its interval.** The knowledge stops are partly real (9 of 10 hand-read early stops had no answer string in the
   reads). But the reader check credits only a sentence in the set, so AC doesn't reward Jev's knowledge.
 
 ## Predictions against outcomes

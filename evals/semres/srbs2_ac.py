@@ -1,7 +1,7 @@
 """SR-BS2 addendum 1: AC (bill's reader check, string or judge) on SR-BS2's returned sets. The reader request is copied
 verbatim from srac.py (#99) and the judge from ac_equiv.py (#102), with the same caches, so the scoring is bill's,
 unchanged.
-    uv run --with numpy --with 'percolate-core==0.2.15' python srbs2_ac.py MAX_USD [--dry]"""
+    uv run --with numpy --with 'percolate-core==0.2.15' python srbs2_ac.py MAX_USD [WALKS_JSON] [--dry]   (SR-BS3: WALKS_JSON = out/srbs3-fresh.json)"""
 import asyncio, hashlib, json, re, sys
 from pathlib import Path
 import numpy as np
@@ -43,8 +43,9 @@ def ask(reqs, cache, path, label):
 R = {}
 for l in open(Path.home() / ".cache/walklab/mq-train/musique_ans_v1.0_train.jsonl"):
     r = json.loads(l); R[r["id"]] = r
-X = [x for x in json.load(open("out/srbs2-fresh.json")) if "id" in x]
-RULES = ("H", "H+1", "S-check", "S-state")
+SRC = sys.argv[2] if len(sys.argv) > 2 and not sys.argv[2].startswith("--") else "out/srbs2-fresh.json"
+X = [x for x in json.load(open(SRC)) if "id" in x]
+RULES = tuple(r for r in ("H", "H+1", "S-check", "S-state") if r in ("H", "H+1") or r in X[0]["stop"])
 def cut(x, rule):
     H = len(x["hops"]); k = {"H": H, "H+1": H + 1}.get(rule) or x["stop"][rule]; return x["walk"][:min(k, len(x["walk"]))]
 items = []
@@ -71,6 +72,6 @@ for rule in RULES:
     v = [by[rule][i] for i in ids]
     print(f"{rule:8s} AC {np.mean([i['ac'] for i in v]):.3f} (judge yes {sum(i['judge'] for i in v)})  A-last {np.mean([i['alast'] for i in v]):.3f}  "
           f"AC=1 & A-last=0 {sum(i['ac'] and not i['alast'] for i in v)}, AC=0 & A-last=1 {sum(i['alast'] and not i['ac'] for i in v)}  returned {np.mean([len(i['ps']) for i in v]):.2f}")
-for rule in ("S-check", "S-state", "H+1"):
+for rule in [r for r in RULES if r != "H"]:
     print(f"AC {rule} − H: {boot([by[rule][i]['ac'] - by['H'][i]['ac'] for i in ids])}   (A-last: {boot([by[rule][i]['alast'] - by['H'][i]['alast'] for i in ids])})")
-json.dump([{k: v for k, v in it.items() if k not in ("ps", "golds")} for it in items], open("out/srbs2-ac.json", "w"))
+json.dump([{k: v for k, v in it.items() if k not in ("ps", "golds")} for it in items], open(SRC.replace(".json", "-ac.json"), "w"))
