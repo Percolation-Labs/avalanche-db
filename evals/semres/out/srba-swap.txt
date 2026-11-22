@@ -1,0 +1,17 @@
+2-hop questions 1252; learn 600; test 489 (SR-BX's 304 excluded); test questions sharing a learn gold pair 6
+reward=gold pair pass 1: rewarded 250; learn rate now 0.442
+reward=gold pair pass 2: rewarded 265; learn rate now 0.442
+reward=A-last pass 1: rewarded 326; learn rate now 0.563
+reward=A-last pass 2: rewarded 338; learn rate now 0.565
+reward=A-last pass 3: rewarded 339; learn rate now 0.565
+-- test measure alast: none 0.569, T*pair 0.579, T*alast 0.581
+   T*pair − none +0.010 [+0.002, +0.020]  gained 5 lost 0
+   T*alast − none +0.012 [+0.004, +0.022]  gained 6 lost 0
+   T*alast − T*pair +0.002 [+0.000, +0.006]
+-- test measure both: none 0.460, T*pair 0.470, T*alast 0.472
+   T*pair − none +0.010 [+0.002, +0.020]  gained 5 lost 0
+   T*alast − none +0.012 [+0.004, +0.022]  gained 6 lost 0
+   T*alast − T*pair +0.002 [+0.000, +0.006]
+test questions whose last-hop passage was in a rewarded learn walk (pass 1): 136 of 489
+   shared last-hop passage: T*alast − none on A-last +0.037 (n 136), gained 5, lost 0
+   not shared: T*alast − none on A-last +0.003 (n 353), gained 1, lost 0
