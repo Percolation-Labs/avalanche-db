@@ -79,3 +79,9 @@ question's gold pooled.
 - **Correction carried to K-ans 2.** With per-question gold, Jev's BEAM picks tie random (.145 each). The ".181
   against .229, Jev below random" was an artefact of pooled gold. On MuSiQue, Jev's pick is gold four times as often
   as random (.208 against .052), which K-ans 3's NDCG gap (+.017, n.s.) didn't show.
+- **Stage-0 miss, written 16:05Z before any score has landed.** I registered the BEAM hub picks as gold
+  *above* random. They came out below on both corpora (.108 against .145; .026 against .052). The mechanism candidate
+  (bill): centrality favours the read most linked to what the walk already holds. On a 2-hop walk that's the hop-1
+  neighbourhood already gathered, not the new bridge, and on BEAM it's the walk's dense topic rather than the piece
+  asked for.
+- **Revised prediction, MuSiQue: K-hub − K-rnd ≤ 0.** On BEAM, K-hub − K0 is about +.01, as for every one-per-wave arm.
