@@ -72,6 +72,15 @@ ask([(ectx(x["q"], x["a"], x["chosen"]), EQ_OPTS) for x in Q if not x["str"]], c
 for x in Q:
     x["ac"] = x["str"] or int(np.argmax(c2[ck(ectx(x["q"], x["a"], x["chosen"]), EQ_OPTS)]) == 0)
     x["alast"] = int(x["hops"][-1] in x["walk"][:x["stop"]])
+# bill's note 2, like for like: score the stopped set with the STANDARD reader request (no NONE), as oracle H's AC was
+C3 = Path.home() / ".cache/walklab/srac-jev-cache.jsonl"; c3 = load(C3)
+ask([(ctx(x["q"], [x["P"][v] for v in x["walk"][:x["stop"]]]), opts([x["P"][v] for v in x["walk"][:x["stop"]]])) for x in Q], c3, C3, "standard reader on the stopped set")
+for x in Q:
+    ps = [x["P"][v] for v in x["walk"][:x["stop"]]]; o = opts(ps); x["chosen_std"] = o[int(np.argmax(c3[ck(ctx(x["q"], ps), o)]))]
+    x["str_std"] = int(any(g in norm(x["chosen_std"]) for g in x["golds"]))
+ask([(ectx(x["q"], x["a"], x["chosen_std"]), EQ_OPTS) for x in Q if not x["str_std"]], c2, C2, "judge (standard)")
+for x in Q:
+    x["ac_std"] = x["str_std"] or int(np.argmax(c2[ck(ectx(x["q"], x["a"], x["chosen_std"]), EQ_OPTS)]) == 0)
 print(f"spend ${spent[0]:.5f}{' (DRY)' if DRY else ''}")
 def boot(d, B=2000):
     d = np.asarray(d, float); rng = np.random.default_rng(0); i = rng.integers(0, len(d), (B, len(d))); m = d[i].mean(1)
@@ -80,7 +89,12 @@ for t in ("2hop", "3hop1", "4hop1", "all"):
     s = [x for x in Q if t == "all" or x["t"] == t]
     print(f"{t:6s} R-stop AC {np.mean([x['ac'] for x in s]):.3f}  A-last {np.mean([x['alast'] for x in s]):.3f}  returned {np.mean([x['stop'] for x in s]):.2f}  "
           f"never stopped {sum(x.get('never', False) for x in s)}  | oracle H AC {np.mean([AC0[(x['id'], 'H')]['ac'] for x in s]):.3f}, S-check AC {np.mean([AC0[(x['id'], 'S-check')]['ac'] for x in s]):.3f}")
-print("AC, R-stop − oracle H: " + boot([x["ac"] - AC0[(x["id"], "H")]["ac"] for x in Q]))
-print("AC, R-stop − S-check: " + boot([x["ac"] - AC0[(x["id"], "S-check")]["ac"] for x in Q]))
+H0 = lambda x: AC0[(x["id"], "H")]["ac"]
+print("PRIMARY AC (standard request on the stopped set), R-stop − oracle H: " + boot([x["ac_std"] - H0(x) for x in Q]) + f"  (n {len(Q)})")
+st = [x for x in Q if not x.get("never")]
+print(f"  sensitivity (bill's note 1): never-stopped walks excluded ({len(Q) - len(st)} of {len(Q)}): " + boot([x["ac_std"] - H0(x) for x in st]))
+print("AC (standard), R-stop − S-check: " + boot([x["ac_std"] - AC0[(x["id"], "S-check")]["ac"] for x in Q]))
+print("secondary: AC of the NONE-request's own choice, R-stop − oracle H: " + boot([x["ac"] - H0(x) for x in Q]))
+print(f"AC levels: R-stop standard {np.mean([x['ac_std'] for x in Q]):.3f}, R-stop own choice {np.mean([x['ac'] for x in Q]):.3f}, oracle H {np.mean([H0(x) for x in Q]):.3f}")
 print(f"stops after one read {sum(x['stop'] == 1 for x in Q)}; input to the stop (walk + reader requests) is reported in the result from the json")
 json.dump([{k: v for k, v in x.items() if k not in ("P", "golds")} for x in Q], open("out/rstop.json", "w"))

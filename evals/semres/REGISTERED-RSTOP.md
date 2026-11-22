@@ -1,4 +1,4 @@
-# R-stop look (registered 22 Nov, before any Jev call): does the reader's own request know when the answer is in hand?
+# R-stop replay check (registered 22 Nov, before any Jev call; amended at bill's review 17:46Z, before the run): does the reader's own request know when the answer is in hand?
 
 *james, on bill's suggestion (17:43Z). Script `reader_stop.py`. A replay on SR-BS3's cached pass-walk trajectories
 (`out/srbs3-fresh.json`), so no walk is rerun. Cap $0.15. Serves Sirsh's 17:07Z goal. Following bill's 17:43Z rule,
@@ -16,12 +16,16 @@ or S-check's stop if that was later), and that count is reported.
 - **Limit of a replay:** the trajectories were walked to max(H + 1, S-check's stop). A rule that wants to read further
   is cut there. The never-stopped count bounds this.
 
-**Primary. AC (string or judge, #102) of the chosen sentence, R-stop − oracle H, paired bootstrap 95% CI over the 300,
+**Primary (amended, bill's note 2: like for like). AC (string or judge, #102) of the stopped set scored with the
+**standard** reader request (no NONE), as oracle H's was, R-stop − oracle H, paired bootstrap 95% CI over the 300,
 with returned passages beside it.** Oracle H's AC is SR-BS3's (`out/srbs3-fresh-ac.json`).
 - **H-R (non-inferiority):** the lower bound is above −.05.
 - **A fail means "not shown within .05"**, stated with the point estimate and lower bound, not as evidence of harm.
 
 **Secondary.**
+- **Sensitivity row (bill's note 1):** the primary with never-stopped walks excluded, with their count. Their cut point
+  depends on H, so if they're more than a few percent, the replay can't settle the question.
+- AC of the NONE-request's own choice.
 - R-stop − S-check (AC).
 - A-last.
 - Stops after one read, and never stopped.
@@ -37,4 +41,5 @@ with returned passages beside it.** Oracle H's AC is SR-BS3's (`out/srbs3-fresh-
 **Spend.** One wave per prefix length, only for walks not yet stopped. The dry run's worst case (all prefixes) is $0.08,
 plus about $0.003 for the judge. Cap $0.15.
 
-**Scope.** SR-BS3's 300 chains and trajectories, the pass step. It's a replay, so the walk itself doesn't change.
+**Scope.** A replay check on SR-BS3's 300 chains and trajectories, the questions where the idea came from (bill's note
+3). A pass needs a fresh draw before it's a claim.
