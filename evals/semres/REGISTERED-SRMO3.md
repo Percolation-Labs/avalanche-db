@@ -66,3 +66,9 @@ narrows the gold's lead on BEAM.
 
 **Scope.** One step, one history length, BEAM 1M (both halves), a recorded search order rather than a walk, and 109 questions.
 The question types are mixed: contradiction, update, temporal, ordering and multi-session.
+
+## Amendment 1 (bill's review, before any Jev call)
+
+- A question is usable only if its options hold a **non-gold message other than the related one**. Otherwise, with the
+  related message excluded as self, the non-gold mean is empty and the primary is NaN. The usable count and the
+  registered set size are recomputed under this rule and reported in the output (stage 0 is still the first 4 usable).

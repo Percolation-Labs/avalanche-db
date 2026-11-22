@@ -33,13 +33,13 @@ conv = lambda q: int(q.split(":")[1])
 first = lambda u: re.split(r"(?<=[.!?])\s", said[u].strip(), maxsplit=1)[0]
 wd = lambda s: set(re.findall(r"[a-z0-9]+", s.lower()))
 U = []
-for it in items:   # the usable DEV questions, in file order
+for it in items:   # the usable questions, all conversations, in file order
     o, g = order[it["qid"]], set(it["gold"]); fg = [d for d in o if d in g]
     if not fg: continue
     if len(fg) < 2: continue
     rd, tru = fg[0], fg[1]; opts = [d for d in o if d != rd][:19]
     rel = next(d for d in o if d not in g and d != rd)
-    if not any(d in g and d != tru for d in opts) or all(d in g for d in opts): continue
+    if not any(d in g and d != tru for d in opts) or not any(d not in g and d != rel for d in opts): continue   # amendment 1: a non-gold option besides rel
     U.append(dict(qid=it["qid"], q=it["question"], rd=rd, opts=opts, gold=[d in g for d in opts], rel=rel, tru=tru))
 for j, u in enumerate(U):   # irrelevant: the next usable question's read, from a different conversation
     nx = next(v for v in U[j + 1:] + U[:j] if conv(v["qid"]) != conv(u["qid"])); u["irr"] = nx["rd"]
