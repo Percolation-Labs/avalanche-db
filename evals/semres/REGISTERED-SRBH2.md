@@ -17,8 +17,11 @@ last read, by each walk's own rule.
   mechanism confirmed here still needs a fresh draw before any claim beyond these 200.
 
 **Primary.** All hops, paired bootstrap 95% CI.
-- **H-O (order): pass(H+1) − pass(H) has a lower bound above 0, and cheap(H+1) − pass(H+1) is smaller than SR-BH's
-  +.080.** That says the spare read recovers the pass walk more than the cheap walk.
+- **H-O (order), amended before the run at bill's review (16:37Z):** order is *shown* only if both hold.
+  - pass(H+1) − pass(H) has a lower bound above 0.
+  - The paired difference-in-differences [(cheap − pass) at H+1] − [(cheap − pass) at H], bootstrapped over the 200
+    questions, has an upper bound below 0.
+- Computed by `srbh2_did.py` from `out/srbh-fresh.json` and `out/srbh-fresh-spare.json`.
 
 **Secondary.**
 - cheap(H+1) − cheap(H).
