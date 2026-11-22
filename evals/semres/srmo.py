@@ -42,7 +42,8 @@ for qi in pool:
     opts = sorted(i for i in P if i not in (h1, h2)); qt = wd(r["question"])
     door = lambda i: {k for k in keys[hid(P[i])] if 2 <= df[k] <= 100 and not set(k.split()) <= qt}
     Dl, D2 = door(lure), door(h2)
-    link = ["lure" if door(i) & Dl and not door(i) & D2 else "neither" if not door(i) & (Dl | D2) else "h2" for i in opts]
+    link = ["self" if i == lure else "h3" if i == h3 else                       # amendment 1: own classes, out of pull
+            "lure" if door(i) & Dl and not door(i) & D2 else "neither" if not door(i) & (Dl | D2) else "h2" for i in opts]
     base = {"question": r["question"], "read": T[h2], "task": PASS_TASK}
     cases.append(dict(qi=int(qi), q=r["question"], texts=[T[i] for i in opts], h3=opts.index(h3), lure=opts.index(lure), link=link,
                       ctx=dict(none=base, true=base | {"found": [first(P[h1])]}, wrong=base | {"found": [first(P[lure])]})))
@@ -67,7 +68,7 @@ if miss:
             f.write(json.dumps({"k": ck(*x), "p": p}) + "\n"); usd += res.input_tokens * PRICE_IN
 print(f"spend this run ${usd:.5f}")
 lg = lambda p: np.log(np.clip(p, 1e-4, 1 - 1e-4) / (1 - np.clip(p, 1e-4, 1 - 1e-4)))
-pull, help1, helpl, wrong1, nlinks, rows_out = [], [], [], [], Counter(), []
+pull, help1, helpl, wrong1, nlinks, rows_out, selfd = [], [], [], [], Counter(), [], []
 for c in cases:
     L = {h: lg(np.array(cache[ck(c["ctx"][h], c["texts"])])) for h in ("none", "true", "wrong")}
     lk = np.array(c["link"]); nlinks.update(c["link"])
@@ -75,18 +76,20 @@ for c in cases:
         dd = L["wrong"] - L["none"]; pull.append(dd[lk == "lure"].mean() - dd[lk == "neither"].mean())
     top = {h: int(np.argmax(L[h])) for h in L}
     help1.append((top["true"] == c["h3"]) - (top["none"] == c["h3"])); wrong1.append((top["wrong"] == c["h3"]) - (top["none"] == c["h3"]))
-    helpl.append(L["true"][c["h3"]] - L["none"][c["h3"]])
+    helpl.append(L["true"][c["h3"]] - L["none"][c["h3"]]); selfd.append(L["wrong"][c["lure"]] - L["none"][c["lure"]])
     rows_out.append(dict(qi=c["qi"], top=top, h3=c["h3"], lure=c["lure"], link=c["link"]))
 n = len(cases); print(f"SET={SET}: n {n}; option links {dict(nlinks)}; questions with a pull contrast {len(pull)}")
 for h in ("none", "true", "wrong"): print(f"top-1 h3 under {h:5s} {np.mean([o['top'][h] == o['h3'] for o in rows_out]):.3f}")
 if SET == "stage0":
     sp = [np.abs(lg(np.array(cache[ck(c['ctx']['none'], c['texts'], 1)])) - lg(np.array(cache[ck(c['ctx']['none'], c['texts'])]))).mean() for c in cases]
     print(f"noise: mean |dlogit| between two identical none requests {np.mean(sp):.3f} (per question {[round(x, 3) for x in sp]})")
-    print(f"pull per question {[round(x, 3) for x in pull]}"); sys.exit()
+    same = sum(cache[ck(c['ctx']['none'], c['texts'], 1)] == cache[ck(c['ctx']['none'], c['texts'])] for c in cases)
+    print(f"identical repeat answers {same}/{n} (all identical may mean server-side caching, not zero noise)")
+    print(f"pull per question {[round(x, 3) for x in pull]}; lure self dlogit {[round(x, 3) for x in selfd]}"); sys.exit()
 rng = np.random.default_rng(0)
 def ci(v, lab):
     v = np.array(v, float); bt = [v[rng.integers(0, len(v), len(v))].mean() for _ in range(4000)]
     print(f"{lab}: {v.mean():+.3f} [{np.percentile(bt, 2.5):+.3f}, {np.percentile(bt, 97.5):+.3f}] (n {len(v)})")
 ci(pull, "PRIMARY pull, dlogit(wrong - none) lure-linked minus neither")
-ci(help1, "top-1 h3, true - none"); ci(wrong1, "top-1 h3, wrong - none"); ci(helpl, "dlogit h3, true - none")
+ci(selfd, "dlogit of the lure itself, wrong - none (found says it was read)"); ci(help1, "top-1 h3, true - none"); ci(wrong1, "top-1 h3, wrong - none"); ci(helpl, "dlogit h3, true - none")
 json.dump(dict(rows=rows_out, pull=pull, usd=usd), open(f"out/srmo-{SET}.json", "w"))

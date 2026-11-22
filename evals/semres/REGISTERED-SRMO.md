@@ -52,3 +52,14 @@ requests is Jev's own repeat spread. If it's comparable to the effects, I'll say
 **Scope.** One step (hop 2 → hop 3), one history length (one earlier document), and one wrong-history rule.
 MuSiQue only. A positive pull shows that Jev's prices depend on history at one step. It does not show that a walk
 without kappa would be worse, which the kappa rounds measured separately.
+
+## Amendment 1 (bill's review, before any Jev call)
+
+- **The lure is its own class (`self`), excluded from pull.** Under `wrong`, `found` says the lure was already read, so
+  its own price moves for a reason that isn't momentum. Its Δlogit (wrong − none) is reported separately: does Jev
+  discount what `found` says it has read?
+- **h3 is its own class too**, excluded from both pull classes. Its price moves with the chain, and the secondaries
+  report it.
+- **The noise floor may read 0** if Jev's server answers identical requests from a cache. The replicate index changes
+  only the local cache key. Stage 0 reports how many repeat answers are byte-identical. If all are, a 0 spread means
+  server-side caching, not zero noise.
