@@ -1,0 +1,15 @@
+live: 20 requests, estimated $0.0028 (cap $0.05)
+spend this run $0.00275
+SET=stage0: n 4; questions with neither options 4, median count 6
+top-1 h3 under none       0.750
+top-1 h3 under true       0.750
+top-1 h3 under wrong      1.000
+top-1 h3 under irrelevant 1.000
+flips true       vs none: lost 0, gained 0
+flips wrong      vs none: lost 0, gained 1
+flips irrelevant vs none: lost 0, gained 1
+flips none2      vs none: lost 0, gained 0
+noise: mean |dlogit| between two identical none requests 0.057
+shift true       per question [-0.116, 0.344, 0.334, 0.239]
+shift wrong      per question [0.0, 0.043, 0.556, 0.121]
+shift irrelevant per question [-0.554, -0.024, 0.116, -0.133]
