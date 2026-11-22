@@ -52,6 +52,10 @@ Table A removes an equal count (2,000) from each class, and Table B an equal fra
   or gain per 1,000. D3's dev loss (−.028 over 98,606 removals) is larger than these per-1,000 rates suggest. From the
   first table's low deciles (−.0011 and −.0016 per 7,000), the low-vote removals account for **most of** it
   (−.014 to −.023), and the rest is probably the interaction of removing so many at once. That's an inference.
+- **The first bridges removed are worth most** (james's observation). Per 1,000, the cost roughly doubles when fewer are
+  removed: held-out −.0041 at 282 against −.0021 at 2,000, and scored −.017 at 478 against −.007 at 2,000. So bridges are
+  partly redundant with one another. A dreaming reward could let a bridge's marginal value fall with the number of
+  parallel bridges for the same hop, which echoes SR-MI's "series beats parallel".
 - **Power.** 65 scoring waves, 5 draws per cell. The vote-decile cells' standard errors (about .0005–.003) are as large
   as their means, so single deciles aren't readable. Only the class-level contrasts are.
 
