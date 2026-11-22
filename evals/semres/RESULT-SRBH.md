@@ -1,4 +1,4 @@
-# SR-BH result (22 Nov): on 3- and 4-hop chains, the cheap walk beats Jev's full step, at 78% of the input
+# SR-BH result (22 Nov): on 3- and 4-hop chains, within an exact-hop budget, the cheap walk beats Jev's full step at 78% of the input
 
 *james. Registered in REGISTERED-SRBH.md (#94) and approved by bill (16:33Z) before any Jev call. Script `srbh.py`.
 Outputs: `out/srbh-stage0.txt`, `out/srbh-fresh.txt`, `out/srbh-fresh.json`, `out/srbh-diverge.txt` (the divergence
@@ -31,6 +31,8 @@ exactly as many passages as the question has hops.
 - **Entry position** (the entry request lands on hop 1 in 81 of 200 questions):
   - hop 1 (n 81): cheap .593, pass .531
   - a middle or last hop (94): cheap .33, pass .21
+  - Neither walk is forward-only: the options are every unread passage, so a walk can step back to an earlier hop.
+    The gain is spread across hop-1 entries (+.062) and later entries (+.12), not confined to hop 1.
   - off the chain (25): 0 for both
 
 ## Where the two walks part (post hoc, $0)
@@ -49,7 +51,9 @@ exactly as many passages as the question has hops.
 
 - **Naming the bridge keeps the walk in order.** The named key is the entity the last read hands on, so the step lands
   on the next hop. Asked "would reading this give information needed to answer the question?", Jev often prefers a
-  passage *further* along the chain. That's a real hop, but with exactly H reads the skipped hop is never read.
+  passage *further* along the chain. That's a real hop, but with exactly H reads the skipped hop is never read. The wording fits this (bill): PASS_TASK
+  asks whether a passage gives information needed to answer, which rewards the passage nearest the answer. NAME_TASK
+  asks only what the last read identifies, which points one hop on.
 - **This is partly a budget effect, and we can't separate it here.** The walks read exactly H passages, an oracle
   budget. With spare reads, the pass walk could go back for a skipped hop. A stopping rule (bill's note 1) is the test
   that separates them: if pass recovers with one extra read, its loss is order, not choice.
