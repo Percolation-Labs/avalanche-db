@@ -1,0 +1,14 @@
+mq HELD-OUT · D6 doors · 286 pages · spend $0.0413
+  K0    NDCG@10 0.768 [0.714, 0.811]  MRR 0.706  recall@3 0.730
+  K7    NDCG@10 0.805 [0.764, 0.844]  MRR 0.753  recall@3 0.789
+  Kans  NDCG@10 0.802 [0.756, 0.843]  MRR 0.747  recall@3 0.759
+  Krnd  NDCG@10 0.785 [0.736, 0.828]  MRR 0.728  recall@3 0.764
+
+  paired Kans - K7: NDCG -0.003 [-0.0318, +0.022]
+  paired Kans - K0: NDCG +0.034 [+0.0128, +0.056]
+  paired K7 - K0: NDCG +0.037 [+0.0079, +0.068]
+  paired Kans - Krnd: NDCG +0.017 [-0.0086, +0.046]
+  paired Krnd - K7: NDCG -0.021 [-0.0572, +0.014]
+  paired Krnd - K0: NDCG +0.017 [-0.0053, +0.040]
+  pages with a multi-read wave before them 286; with a differing pick 272 of 286
+  within differing-pick pages: Kans - Krnd NDCG +0.018 [-0.0100, +0.048]
