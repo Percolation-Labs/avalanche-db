@@ -73,10 +73,14 @@ from the walk.
   in 22).
 - **The spare read is worth less to the reader than to A-last:** AC H + 1 − H is +.028 [−.011, +.067], against A-last's
   +.050.
+- **A duplicate, noted.** bill ran the same AC scoring independently (`ac_stop.py`, #102, $0.020), because our messages
+  crossed. His figures agree within .006 (S-check −.022 against oracle H, oracle H AC .756). The table here is the
+  registered addendum's.
 - The judge's yes counts are similar across arms (8–11), so leniency doesn't explain the differences.
 - **Reading for Sirsh's goal.** A knob-free check that asks Jev whether the passages answer the question returns about
-  20% fewer passages than the oracle hop count, at no significant cost to a reader. It's the first stop rule that holds
-  up on his measure. The knowledge stops are partly real (9 of 10 hand-read early stops had no answer string in the
+  20% fewer passages than the oracle hop count. At the reader it's **not distinguishable from the oracle at n = 180**
+  (about 2–3 points below, CI across 0). That is not the same as equal. It's the first stop rule that holds up this far on
+  his measure. The knowledge stops are partly real (9 of 10 hand-read early stops had no answer string in the
   reads). But the reader check credits only a sentence in the set, so AC doesn't reward Jev's knowledge.
 
 ## Predictions against outcomes
