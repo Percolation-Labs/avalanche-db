@@ -74,8 +74,9 @@ from the walk.
 - **The spare read is worth less to the reader than to A-last:** AC H + 1 − H is +.028 [−.011, +.067], against A-last's
   +.050.
 - **A duplicate, noted.** bill ran the same AC scoring independently (`ac_stop.py`, #102, $0.020), because our messages
-  crossed. His figures agree within .006 (S-check −.022 against oracle H, oracle H AC .756). The table here is the
-  registered addendum's.
+  crossed. His figures agree within .006 (S-check −.022 against this run's −.028; S-state −.017 against −.022; oracle
+  H AC .756 against .761). That's a free run-to-run reproducibility check on Jev's reader: about .006. The table here is
+  the registered addendum's.
 - **The judge's leniency, by arm (bill's 17:36Z note).**
   - **String only** (no judge): S-check − oracle H is **−.044 [−.089, +.000]**; S-state − oracle H is −.028
     [−.067, +.011]. String levels: oracle H .717, S-check .672, S-state .689.
