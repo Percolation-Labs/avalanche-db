@@ -68,3 +68,11 @@ question from james's SR-MO, which varies `found` and holds `read` fixed.
   lower that twin's price and inflate mutual. I report how often L shares a door key with A or B (train graph).
 - **Prediction for the primary:** mutual_c about +.2, the raw +.3 less a small common mode. It's still a pass, but closer
   to a coin flip.
+
+**Stage 0 observation (4 questions, $0.0014, recorded before the wave).**
+- Jev's top-1 is the join J in 7 of 8 reads of a branch, and in 6 of 8 reads of L. Jev goes for the passage that
+  answers the question almost regardless of what it has read, which matches SR-BX's entry finding.
+- So `series` will likely be small: J is already high under L. That's a prediction miss in the making, not a design
+  fault. The primary (`mutual_c`) is unaffected, so the predictions are left as registered and this note is the
+  stated warning.
+- L shared a door key with a branch in 2 of 4.
