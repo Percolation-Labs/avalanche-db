@@ -11,7 +11,7 @@ Jev: one ask_many per wave; per step, wave a = name (cheap) + pass (pass walk), 
 Draw: SEED 1344, a permutation of each type's answerable questions; 'fresh' = the first 100 3hop1 and first 100
 4hop1; 'stage0' = positions 100-101 of each.
     set -a; source ~/code/p8-subsystems/.env; set +a; P8_CREDENTIAL_ORIGINS='{"JEV_API_KEY":["https://api.typesafe.ai"]}' \
-    uv run --with numpy --with 'percolate-core==0.2.15' python srbh.py MUSIQUE_TRAIN GRAPH_TRAIN SET MAX_USD [--dry]"""
+    uv run --with numpy --with 'percolate-core==0.2.15' python srbh.py MUSIQUE_TRAIN GRAPH_TRAIN SET MAX_USD [--dry] [--spare]"""
 import asyncio, hashlib, json, re, sys
 from collections import Counter
 from pathlib import Path
@@ -25,7 +25,7 @@ PASS_TASK = ("Each option is a passage not yet read. Having read `read`, would r
 SEED = 1344
 CACHE = Path.home() / ".cache" / "walklab" / "srbh-jev-cache.jsonl"
 PRICE_IN = 0.042e-6
-src, gpath, SET, MAX_USD = sys.argv[1], sys.argv[2], sys.argv[3], float(sys.argv[4]); DRY = "--dry" in sys.argv
+src, gpath, SET, MAX_USD = sys.argv[1], sys.argv[2], sys.argv[3], float(sys.argv[4]); DRY = "--dry" in sys.argv; SPARE = int("--spare" in sys.argv)   # SR-BH2: H + 1 reads for both walks
 rows = [json.loads(l) for l in open(gpath)]; keys = {r["d"]: set(r["keys"]) for r in rows}
 df = Counter(k for r in rows for k in r["keys"])
 hid = lambda p: "mq:" + hashlib.sha256((p["title"] + "\n" + p["paragraph_text"]).encode()).hexdigest()[:16]
@@ -78,8 +78,8 @@ for x in Q:
     x["ch"] = {"cheap": rc(ctxE(x), x["T"]), "pass": rc(ctxE(x), x["T"])}
 ctxR = lambda x, e, t: {"question": x["q"], "read": x["T"][e], "task": t}
 unread = lambda x, w: [v for v in range(x["n"]) if v not in x["walk"][w]]
-for step in range(1, 4):
-    live = [x for x in Q if len(x["hops"]) > step]
+for step in range(1, 5):
+    live = [x for x in Q if len(x["hops"]) + SPARE > step]
     if not live: break
     # wave a: the cheap walk's name request, the pass walk's pass request
     reqs = []
@@ -131,8 +131,8 @@ for k in sorted({pos(x) for x in Q}):   # bill's note 2: a mid-chain entry can't
     print(f"entry {k:9s} n {len(sel):3d}: all hops cheap {np.mean([res['cheap']['all'][i] for i in sel]):.3f}, pass {np.mean([res['pass']['all'][i] for i in sel]):.3f}")
 r = np.mean([x["ch"]["cheap"] for x in Q]) / np.mean([x["ch"]["pass"] for x in Q])
 print(f"input chars, cheap / pass: {r:.3f}")
-for step in range(1, 4):
+for step in range(1, 5):
     ks = Counter(x["log"][step - 1] for x in Q if len(x["log"]) >= step)
     if ks: print(f"step {step}: {dict(ks)}; rescue rate {(ks['rescue'] + ks['rescue, no keys']) / sum(ks.values()):.3f}")
 json.dump([dict(id=x["id"], hops=x["hops"], walk=x["walk"], log=x["log"], ch=x["ch"]) for x in Q] + [{"usd": spent[0]}],
-          open(f"out/srbh-{SET}{'-dry' if DRY else ''}.json", "w"))
+          open(f"out/srbh-{SET}{'-spare' if SPARE else ''}{'-dry' if DRY else ''}.json", "w"))
