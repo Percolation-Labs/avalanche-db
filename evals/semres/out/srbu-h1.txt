@@ -1,0 +1,7 @@
+H-U1 A-last, cheap(nocap) − cheap(today): +0.010 [-0.040, +0.065] (n 200)
+  today→nocap (A-last 0/1): {(1.0, 0.0): 14, (1.0, 1.0): 144, (0.0, 0.0): 26, (0.0, 1.0): 16}
+  3hop1: A-last cheap today 0.790, nocap 0.820, pass 0.890
+  4hop1: A-last cheap today 0.790, nocap 0.780, pass 0.780
+  cheap today  A-last 0.790  input 29,218  A-last per 10k chars 0.2704
+  cheap nocap  A-last 0.800  input 25,298  A-last per 10k chars 0.3162
+  pass         A-last 0.835  input 37,303  A-last per 10k chars 0.2238
