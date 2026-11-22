@@ -1,0 +1,7 @@
+2hop   n  1252  gold answer is a key of the answer passage 0.410  in its text 1.000
+3hop1  n   568  gold answer is a key of the answer passage 0.408  in its text 1.000
+3hop2  n   192  gold answer is a key of the answer passage 0.484  in its text 1.000
+4hop1  n   246  gold answer is a key of the answer passage 0.516  in its text 1.000
+4hop2  n    64  gold answer is a key of the answer passage 0.344  in its text 1.000
+4hop3  n    95  gold answer is a key of the answer passage 0.516  in its text 1.000
+examples not a key: ['Qiantang', 'Laura Kelly', '1:34', '175,155', 'Wab Kinew', '1978', '22 September 1792', 'Andy Partridge', 'Samuel Maoz', '3', '1 November 1966', 'it divided the country approximately in half']
