@@ -33,7 +33,8 @@ order.
   pick weights small waves (seed waves are small and gold-rich) more than the pooled .115 does. So the fair baseline for
   K-ans is .229, and Jev's argmax falls *below* it. Asked "does this passage give information needed to answer…" over
   BEAM chat turns, Jev's top pick is, if anything, anti-informative about gold. That fits the median max p of about .5:
-  it's guessing.
+  it's indifferent, and its top pick is systematically off-gold. One guess, untested: it favours long or entity-dense
+  messages over the short turns that carry BEAM's facts.
 
 **Predictions against outcomes.**
 - K-ans − K-rnd about +.015, a coin flip: +.004, a null.
@@ -47,7 +48,8 @@ order.
   sentence per wave, the loss disappears, whichever sentence is kept.
 - **That's consistent with SR-MO3.** At one step, related non-gold `found` narrowed the gold's lead. More of it
   presumably narrows it more. The fix is less of it, and choosing it well doesn't help.
-- **For the product: cap kappa's length per wave.** It needs no extra Jev request: the cheapest form of K-ans is a
+- **The hypothesis the evidence supports, for Sirsh to decide** (we're in the research phase, so this isn't a product
+  change): cap kappa's length at one sentence per wave. It needs no extra Jev request: the cheapest form of K-ans is a
   random (or first) read per wave. On MuSiQue, K-ans kept K7's gain (#89). Whether a *random* one-per-wave state also
   keeps it is untested, and that's the check before recommending it. MuSiQue's gain may need the right sentence, where
   BEAM's loss only needed fewer.
