@@ -43,6 +43,7 @@ for r in draw:
     D = [{k for k in keys.get(hid(p), ()) if 2 <= df[k] and (NOCAP or df[k] <= 100) and not set(k.split()) <= qt} for p in P]
     ix = {p["idx"]: i for i, p in enumerate(P)}
     Q.append(dict(id=r["id"], t=r["id"].split("__")[0], q=r["question"], P=P, T=T, D=D, n=n,
+                  ans=[a.lower() for a in [r["answer"]] + r.get("answer_aliases", [])],
                   hops=[ix[s["paragraph_support_idx"]] for s in r["question_decomposition"]],
                   missing=sum(hid(p) not in keys for p in P)))
 print(f"SET={SET}: {len(Q)} questions ({Counter(x['t'] for x in Q)}); passages missing from the graph {sum(x['missing'] for x in Q)}")
@@ -96,6 +97,7 @@ for step in range(1, 5):
         e = x["walk"]["cheap"][-1]; ot = unread(x, "cheap"); R = sorted(x["D"][e]); S = []
         if R:
             K = R[int(np.argmax(get(ctxR(x, e, NAME_TASK), R)))]; x["ch"]["cheap"] += rc(ctxR(x, e, NAME_TASK), R)
+            x.setdefault("named", []).append(dict(read=e, K=K, S=[v for v in ot if K in keys.get(hid(x["P"][v]), set())]))
             S = [v for v in ot if K in keys.get(hid(x["P"][v]), set())]
         x["S"] = S if len(S) > 1 else (ot if not S else None)   # None: one passage shares K, no request
         x["kind"] = "one" if len(S) == 1 else "twin" if S else ("rescue" if R else "rescue, no keys")
@@ -135,5 +137,14 @@ print(f"input chars, cheap / pass: {r:.3f}")
 for step in range(1, 5):
     ks = Counter(x["log"][step - 1] for x in Q if len(x["log"]) >= step)
     if ks: print(f"step {step}: {dict(ks)}; rescue rate {(ks['rescue'] + ks['rescue, no keys']) / sum(ks.values()):.3f}")
-json.dump([dict(id=x["id"], hops=x["hops"], walk=x["walk"], log=x["log"], ch=x["ch"]) for x in Q] + [{"usd": spent[0]}],
+# ---- SR-BU readouts: A-last (Sirsh's measure, checked), answer string, naming accuracy at keyed steps
+alast = {w: np.array([float(x["hops"][-1] in x["walk"][w]) for x in Q]) for w in ("cheap", "pass")}
+astr = {w: np.mean([any(a in (x["P"][v]["title"] + " " + x["P"][v]["paragraph_text"]).lower() for a in x["ans"] for v in x["walk"][w]) for x in Q]) for w in ("cheap", "pass")}
+for w in ("cheap", "pass"): print(f"A-last (gold last-hop passage returned) {w} {alast[w].mean():.3f}; answer string in returned set {astr[w]:.3f}")
+print("A-last, cheap − pass: " + boot(alast["cheap"] - alast["pass"]))
+nm = [(x, d) for x in Q for d in x.get("named", []) if d["read"] in x["hops"][:-1]]
+nx = lambda x, d: x["hops"][x["hops"].index(d["read"]) + 1]
+print(f"naming at keyed steps from an on-chain read (not the last hop): {len(nm)}; the next hop shares the named key "
+      f"{np.mean([nx(x, d) in d['S'] for x, d in nm]):.3f}; it is the only passage that does {np.mean([d['S'] == [nx(x, d)] for x, d in nm]):.3f}")
+json.dump([dict(id=x["id"], hops=x["hops"], walk=x["walk"], log=x["log"], ch=x["ch"], named=x.get("named", [])) for x in Q] + [{"usd": spent[0]}],
           open(f"out/srbh-{SET}{'-spare' if SPARE else ''}{'-nocap' if NOCAP else ''}{'-dry' if DRY else ''}.json", "w"))
