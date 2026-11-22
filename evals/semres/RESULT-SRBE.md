@@ -12,11 +12,11 @@ Fresh draw, 300 MuSiQue train 2-hop questions (positions 304–603), both hops, 
 
 | walk | both hops | input chars / question |
 |---|---|---|
-| cosine entry × cheap step (`e_cos×nt_rescue`) | .700 | 12.0k |
+| cosine entry × cheap step (`e_cos×nt_rescue`) | .700 | 5.2k |
 | title entry × cheap step | .690 | |
-| **SE: both walks, Jev's entry request keeps one** | **.743** | **28.6k** |
-| SEP: the same, by entry p × step p | .770 | 28.6k |
-| **Jev's entry request's own pick × cheap step (`e_pass×nt_rescue`)** | **.750** | **22.1k** (upper bound) |
+| **SE: both walks, Jev's entry request keeps one** | **.743** | **19.0k** |
+| SEP: the same, by entry p × step p | .770 | 19.0k |
+| **Jev's entry request's own pick × cheap step (`e_pass×nt_rescue`)** | **.750** | **15.6k** |
 | Jev's entry request × Jev's full step (`e_pass×pass`) | .743 | 20.6k |
 | *oracle between the cosine and title walks* | *.797* | |
 
@@ -25,20 +25,24 @@ Fresh draw, 300 MuSiQue train 2-hop questions (positions 304–603), both hops, 
 - **But the second walk adds nothing. SE − e_pass×nt_rescue: −.007 [−.037, +.027]; SE − e_pass×pass: +.000
   [−.043, +.040].** Once the entry request is paid for, walking from its own argmax does as well, for less input.
 - SEP − e_pass×nt_rescue +.020 [−.020, +.060]; SEP − e_pass×pass +.027 [−.020, +.073]. Neither is significant.
-- **e_pass×nt_rescue − e_cos×nt_rescue: +.050 [+.003, +.100].** With Jev's entry, the cheap step matches Jev's full
-  step: e_pass×nt_rescue − e_pass×pass is +.007 [−.023, +.037].
-- The input figure for e_pass×nt_rescue counts the rescue pass request on every question. It's needed only when no
-  other passage shares the named key (about 28% in SR-BX), so the real figure is lower than e_pass×pass's.
+- **Jev's entry over cosine's is about +.05, borderline.** With the cheap step it's +.050 [+.003, +.100]; with Jev's
+  full step +.043 [−.010, +.100]. It's the same entry, so read both as one borderline effect, not one significant and
+  one not. With Jev's entry, the cheap step matches Jev's full step: e_pass×nt_rescue − e_pass×pass is +.007
+  [−.023, +.037].
+- **Input is measured from the cache, counting only the requests each walk makes** (`out/srbe-fresh-cost.txt`, $0,
+  after james's review; the first run's figures counted the rescue request always and are superseded). The rescue
+  request is needed on 34–37% of questions. e_pass×nt_rescue uses 15.6k characters, 24% less than e_pass×pass.
+  SE's 19.0k counts both walks' name and twin requests and the title request.
 - One different-entry exact tie in p went to cosine's walk.
 
 ## What it means
 
 - **The lever is the entry request, not the second proposal.** Jev's 20-passage entry request, read once, gives a
-  better first passage than cosine (+.050). Using it to choose between two proposals is no better than taking its own
+  better first passage than cosine (about +.05, borderline). Using it to choose between two proposals is no better than taking its own
   pick.
 - **The cheap walk's best form is now Jev's entry, then the cheap step**: .750 on both hops against .700 for cosine's
-  entry. That equals Jev on both steps (.743), at about the same or lower input. The price is roughly double the
-  cosine-entry walk's input (12k), for +.05.
+  entry. That equals Jev on both steps (.743) at 24% less input. The price is three times the cosine-entry walk's
+  input (15.6k against 5.2k), for a borderline +.05.
 - **SEP's +.070 over cosine** is the best number here, but it was the best of six rules on the seen set, and it isn't
   separable from e_pass×nt_rescue on this draw. It's not a lead.
 
@@ -50,7 +54,7 @@ Fresh draw, 300 MuSiQue train 2-hop questions (positions 304–603), both hops, 
 
 ## Postmortem
 
-- **What went right.** james's cost readout (1) and the single-walk control turned a passing primary into the right
+- **What went right.** james's cost readout (and his insistence on measuring it rather than bounding it) and the single-walk control turned a passing primary into the right
   conclusion: without them, "SE passes" would have been the headline. Stage 0 was clean; spend was a third of the cap.
 - **What I got wrong.** The look's line that the entry request "picks hop 1 only 61% of the time" judged it against hop
   1, but both hops is unordered: an entry on hop 2 also works. Its pick is on a hop 89% of the time (cosine's 84%). I
