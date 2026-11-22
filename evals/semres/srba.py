@@ -79,4 +79,11 @@ for m in ("alast", "both"):
     for n in ("T*pair", "T*alast"):
         d = res[n, m] - res["none", m]; print(f"   {n} − none {ci(d)}  gained {(d>0).sum()} lost {(d<0).sum()}")
     print(f"   T*alast − T*pair {ci(res['T*alast', m] - res['T*pair', m])}")
+# james's note 1: the shared stratum, test questions whose last-hop passage a rewarded learn walk contained
+rew_pass = {C[i]["ids"][x] for i in learn for x in walk(C[i], {}) if alast(C[i], *walk(C[i], {}))}
+lastp = np.array([C[i]["ids"][C[i]["h2"]] in rew_pass for i in test])
+print(f"test questions whose last-hop passage was in a rewarded learn walk (pass 1): {lastp.sum()} of {len(test)}")
+for lab, msk in (("shared last-hop passage", lastp), ("not shared", ~lastp)):
+    d = res["T*alast", "alast"][msk] - res["none", "alast"][msk]
+    print(f"   {lab}: T*alast − none on A-last {d.mean():+.3f} (n {msk.sum()}), gained {(d > 0).sum()}, lost {(d < 0).sum()}")
 json.dump({f"{a}|{b}": v.tolist() for (a, b), v in res.items()} | {"test": test}, open("out/srba-swap.json" if SWAP else "out/srba.json", "w"))
