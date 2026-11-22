@@ -12,8 +12,10 @@ hid = lambda p: "mq:" + hashlib.sha256((p["title"] + "\n" + p["paragraph_text"])
 half = lambda mid: int(hashlib.sha256(mid.encode()).hexdigest()[:8], 16) % 2
 qs = [r for r in map(json.loads, open(src)) if r["id"].startswith("2hop") and r["answerable"]]
 bx = set(np.random.default_rng(1341).permutation(len(qs))[:304].tolist())   # SR-BX's 300 + stage 0
-learn = [i for i in range(len(qs)) if half(qs[i]["id"]) == 0]
-test = [i for i in range(len(qs)) if half(qs[i]["id"]) == 1 and i not in bx]
+SWAP = "--swap" in sys.argv   # SR-BA (REGISTERED-SRBA.md): learn on half 1, test on half 0, the direction never scored
+L, T = (1, 0) if SWAP else (0, 1)
+learn = [i for i in range(len(qs)) if half(qs[i]["id"]) == L]
+test = [i for i in range(len(qs)) if half(qs[i]["id"]) == T and i not in bx]
 import os
 cache = os.environ.get("SRBC_CACHE", "srbc-emb.npz"); Ec = dict(np.load(cache)) if os.path.exists(cache) else {}
 C = {}; m = None; QP = "Represent this sentence for searching relevant passages: "
@@ -77,4 +79,4 @@ for m in ("alast", "both"):
     for n in ("T*pair", "T*alast"):
         d = res[n, m] - res["none", m]; print(f"   {n} − none {ci(d)}  gained {(d>0).sum()} lost {(d<0).sum()}")
     print(f"   T*alast − T*pair {ci(res['T*alast', m] - res['T*pair', m])}")
-json.dump({f"{a}|{b}": v.tolist() for (a, b), v in res.items()} | {"test": test}, open("out/srba.json", "w"))
+json.dump({f"{a}|{b}": v.tolist() for (a, b), v in res.items()} | {"test": test}, open("out/srba-swap.json" if SWAP else "out/srba.json", "w"))
