@@ -87,8 +87,8 @@ from the walk.
   added after the primary was known, not a pre-registered secondary of the original registration.
 - **Reading for Sirsh's goal.** A knob-free check that asks Jev whether the passages answer the question returns about
   20% fewer passages than the oracle hop count. At the reader it's **not distinguishable from the oracle at n = 180**
-  (about 2–3 points below, CI across 0). That is not the same as equal. It's the first stop rule that holds up this far on
-  his measure. The knowledge stops are partly real (9 of 10 hand-read early stops had no answer string in the
+  (about 2–3 points below, CI across 0). That is not the same as equal. **Superseded by SR-BS3 (300 fresh questions): AC −.073
+  [−.110, −.037]. The 'not distinguishable' reading here was the optimistic end of its interval.** The knowledge stops are partly real (9 of 10 hand-read early stops had no answer string in the
   reads). But the reader check credits only a sentence in the set, so AC doesn't reward Jev's knowledge.
 
 ## Predictions against outcomes

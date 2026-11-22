@@ -1,0 +1,5 @@
+string only, S-check − H: -0.063 [-0.103, -0.023] ; H+1 − H: -0.013 [-0.047, +0.020]
+2hop: AC H 0.780, S-check 0.740, H+1 0.770; S-check − H -0.040 [-0.090, +0.010]
+3hop1: AC H 0.770, S-check 0.660, H+1 0.740; S-check − H -0.110 [-0.190, -0.050]
+4hop1: AC H 0.800, S-check 0.730, H+1 0.780; S-check − H -0.070 [-0.140, +0.000]
+S-check stops before arrival: 48; reader still right in 12

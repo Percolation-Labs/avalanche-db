@@ -1,0 +1,25 @@
+SET=stage0: 6 questions ({'2hop': 2, '3hop1': 2, '4hop1': 2}); none used by an earlier Jev run
+wave entry: 6 requests, estimated $0.0007 (spent so far $0.0000, cap $0.03)
+wave after up to 1 reads: 12 requests, estimated $0.0008 (spent so far $0.0007, cap $0.03)
+wave after up to 2 reads: 10 requests, estimated $0.0007 (spent so far $0.0016, cap $0.03)
+wave after up to 3 reads: 5 requests, estimated $0.0004 (spent so far $0.0024, cap $0.03)
+wave after up to 4 reads: 2 requests, estimated $0.0002 (spent so far $0.0028, cap $0.03)
+spend this run $0.00305
+-- 2hop (n 2)
+   pass H       A-last 1.000  returned 2.00  input 20,921  early/exact/late 0/2/0
+   pass H+1     A-last 1.000  returned 3.00  input 30,833  early/exact/late 0/0/2
+   pass S-check A-last 1.000  returned 1.50  input 16,234  early/exact/late 1/1/0
+-- 3hop1 (n 2)
+   pass H       A-last 1.000  returned 3.00  input 28,306  early/exact/late 0/2/0
+   pass H+1     A-last 1.000  returned 4.00  input 37,179  early/exact/late 0/0/2
+   pass S-check A-last 1.000  returned 2.00  input 20,401  early/exact/late 2/0/0
+-- 4hop1 (n 2)
+   pass H       A-last 1.000  returned 4.00  input 42,157  early/exact/late 0/2/0
+   pass H+1     A-last 1.000  returned 5.00  input 51,625  early/exact/late 0/0/2
+   pass S-check A-last 1.000  returned 2.00  input 25,542  early/exact/late 2/0/0
+-- all (n 6)
+   pass H       A-last 1.000  returned 3.00  input 30,461  early/exact/late 0/6/0
+   pass H+1     A-last 1.000  returned 4.00  input 39,879  early/exact/late 0/0/6
+   pass S-check A-last 1.000  returned 1.83  input 20,726  early/exact/late 5/1/0
+A-last, S-check − oracle(H): +0.000 [+0.000, +0.000] (n 6)  (the primary is AC, scored by srbs3_ac.py)
+S-check: decisions (stop/continue × answer passage read) stop&read 6, stop&not 0, continue&read 0, continue&not 5; stop vs first arrival {'at arrival': 6}; stops after one read 2

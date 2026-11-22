@@ -1,0 +1,8 @@
+reader: 830 requests, 830 uncached, estimated $0.0426 (spent $0.0000, cap $0.15)
+judge: 146 requests, 146 uncached, estimated $0.0020 (spent $0.0473, cap $0.15)
+spend $0.04975
+H        AC 0.783 (judge yes 15)  A-last 0.857  AC=1 & A-last=0 8, AC=0 & A-last=1 30  returned 3.00
+H+1      AC 0.763 (judge yes 13)  A-last 0.917  AC=1 & A-last=0 4, AC=0 & A-last=1 50  returned 4.00
+S-check  AC 0.710 (judge yes 12)  A-last 0.777  AC=1 & A-last=0 16, AC=0 & A-last=1 36  returned 2.59
+AC H+1 − H: -0.020 [-0.053, +0.010]   (A-last: +0.060 [+0.037, +0.087])
+AC S-check − H: -0.073 [-0.110, -0.037]   (A-last: -0.080 [-0.123, -0.040])

@@ -1,0 +1,41 @@
+SET=fresh: 300 questions ({'2hop': 100, '3hop1': 100, '4hop1': 100}); none used by an earlier Jev run
+wave entry: 294 requests, estimated $0.0346 (spent so far $0.0000, cap $0.4)
+wave after up to 1 reads: 588 requests, estimated $0.0399 (spent so far $0.0360, cap $0.4)
+wave after up to 2 reads: 492 requests, estimated $0.0377 (spent so far $0.0782, cap $0.4)
+wave after up to 3 reads: 269 requests, estimated $0.0242 (spent so far $0.1177, cap $0.4)
+wave after up to 4 reads: 145 requests, estimated $0.0131 (spent so far $0.1427, cap $0.4)
+wave after up to 5 reads: 52 requests, estimated $0.0036 (spent so far $0.1561, cap $0.4)
+wave after up to 6 reads: 38 requests, estimated $0.0026 (spent so far $0.1599, cap $0.4)
+wave after up to 7 reads: 30 requests, estimated $0.0020 (spent so far $0.1625, cap $0.4)
+wave after up to 8 reads: 26 requests, estimated $0.0018 (spent so far $0.1647, cap $0.4)
+wave after up to 9 reads: 22 requests, estimated $0.0015 (spent so far $0.1665, cap $0.4)
+wave after up to 10 reads: 20 requests, estimated $0.0014 (spent so far $0.1681, cap $0.4)
+wave after up to 11 reads: 20 requests, estimated $0.0014 (spent so far $0.1695, cap $0.4)
+wave after up to 12 reads: 20 requests, estimated $0.0014 (spent so far $0.1710, cap $0.4)
+wave after up to 13 reads: 20 requests, estimated $0.0014 (spent so far $0.1724, cap $0.4)
+wave after up to 14 reads: 20 requests, estimated $0.0014 (spent so far $0.1739, cap $0.4)
+wave after up to 15 reads: 18 requests, estimated $0.0012 (spent so far $0.1753, cap $0.4)
+wave after up to 16 reads: 18 requests, estimated $0.0013 (spent so far $0.1766, cap $0.4)
+wave after up to 17 reads: 16 requests, estimated $0.0011 (spent so far $0.1779, cap $0.4)
+wave after up to 18 reads: 16 requests, estimated $0.0011 (spent so far $0.1791, cap $0.4)
+wave after up to 19 reads: 16 requests, estimated $0.0011 (spent so far $0.1802, cap $0.4)
+wave after up to 20 reads: 7 requests, estimated $0.0009 (spent so far $0.1814, cap $0.4)
+spend this run $0.18227
+-- 2hop (n 100)
+   pass H       A-last 0.870  returned 2.00  input 20,248  early/exact/late 0/100/0
+   pass H+1     A-last 0.940  returned 3.00  input 29,813  early/exact/late 0/0/100
+   pass S-check A-last 0.840  returned 2.40  input 27,035  early/exact/late 39/50/11
+-- 3hop1 (n 100)
+   pass H       A-last 0.850  returned 3.00  input 30,207  early/exact/late 0/100/0
+   pass H+1     A-last 0.920  returned 4.00  input 39,435  early/exact/late 0/0/100
+   pass S-check A-last 0.720  returned 2.42  input 27,078  early/exact/late 81/9/10
+-- 4hop1 (n 100)
+   pass H       A-last 0.850  returned 4.00  input 42,468  early/exact/late 0/100/0
+   pass H+1     A-last 0.890  returned 5.00  input 51,821  early/exact/late 0/0/100
+   pass S-check A-last 0.770  returned 2.96  input 36,362  early/exact/late 87/1/12
+-- all (n 300)
+   pass H       A-last 0.857  returned 3.00  input 30,974  early/exact/late 0/300/0
+   pass H+1     A-last 0.917  returned 4.00  input 40,356  early/exact/late 0/0/300
+   pass S-check A-last 0.777  returned 2.59  input 30,158  early/exact/late 207/60/33
+A-last, S-check − oracle(H): -0.080 [-0.123, -0.040] (n 300)  (the primary is AC, scored by srbs3_ac.py)
+S-check: decisions (stop/continue × answer passage read) stop&read 227, stop&not 67, continue&read 212, continue&not 272; stop vs first arrival {'at arrival': 201, 'after arrival': 32, 'before arrival': 48, 'never reached': 19}; stops after one read 98
