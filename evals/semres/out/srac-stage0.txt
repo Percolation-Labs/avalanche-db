@@ -1,0 +1,13 @@
+SET=stage0: 6 questions; 24 requests, 24 uncached, estimated $0.0011 (cap $0.05); options per request median 10
+spend this run $0.00117
+2hop   n   2  AC G 1.000  L 0.500  LR 1.000  R 0.000   string G 1.000  L 1.000  LR 1.000  R 0.000
+3hop1  n   2  AC G 1.000  L 1.000  LR 1.000  R 0.000   string G 1.000  L 1.000  LR 1.000  R 0.000
+4hop1  n   2  AC G 1.000  L 1.000  LR 1.000  R 0.500   string G 1.000  L 1.000  LR 1.000  R 0.500
+all    n   6  AC G 1.000  L 0.833  LR 1.000  R 0.167   string G 1.000  L 1.000  LR 1.000  R 0.167
+PRIMARY: AC(G) − AC(L), the bridge's worth to a reader: +0.167 [+0.000, +0.500]
+   2hop: +0.500 [+0.000, +1.000]
+   3hop1: +0.000 [+0.000, +0.000]
+   4hop1: +0.000 [+0.000, +0.000]
+AC(LR) − AC(L), noise without the bridge: +0.167 [+0.000, +0.500]
+AC(G) − AC(R), the measure's range: +0.833 [+0.500, +1.000]
+A-last × AC over all sets: A-last 1 AC 1: 17, A-last 1 AC 0: 1, A-last 0 AC 1: 1, A-last 0 AC 0: 5
