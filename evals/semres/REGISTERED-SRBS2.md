@@ -1,0 +1,58 @@
+# SR-BS2 (registered 22 Nov after bill's review, 17:29Z; before any Jev call): does asking whether the passages *state* the answer stop the walk at the answer passage?
+
+*james. Follows NOTE-STOP-ALAST.md (#101). Script `srbs2.py`, built from srbs.py. Cap $0.30. Serves Sirsh's 17:07Z
+goal: the answer in what the walk returns, with fewer passages better for the reader (SR-AC).*
+
+**Question.** Re-read on A-last, SR-BS's check ("`question` can be answered from these passages") stopped the walk at
+the very read where the answer passage arrived in 116 of 180 questions, and before it in 42. The early stops look like
+Jev answering from its own knowledge. Does a wording that asks whether the passages *state* the answer stop early
+less?
+
+**Data.** A fresh draw from the **full** MuSiQue train file (`musique_ans_v1.0_train.jsonl`, sha 83a75b1e…), since
+the 2,417-question corpus has only 10 unused 4hop1 chains left. The pass step and the checks use no graph keys, so
+passages outside the train graph don't matter. SEED 1347, 60 each of 2-hop, 3hop1 and 4hop1 answerable chains. Stage 0
+is positions 80–81 per type. **Excluded before the draw, and asserted:**
+- SR-BX, SR-BE, SR-BH and SR-BS, rebuilt as each drew. Checked: all 180 SR-BS ids and all 200 SR-BH ids are covered.
+- SR-AC and SR-BF, by id from their outputs (310 ids, `used/`).
+- bill caught that seed 1346 was SR-AC's. The first draft used it, and it's replaced.
+
+**Walk.** Jev's entry request, then **the pass step** (PASS_TASK over all unread from the last read). It's the better
+step on A-last at equal reads (SR-BU2). The hop count is used only to score.
+
+**Stop rules.** Each is a two-option request after every read, over the full text of every read passage. Stop on the
+argmax.
+- **S-check:** SR-BS's wording, unchanged.
+- **S-state:** "these passages state the answer to `question`" against "`question` needs a passage not yet read".
+- References: oracle H and oracle H + 1.
+- A trajectory ends once both checks have fired and H + 1 reads are in, or the pool (20) is empty.
+
+**Primary. A-last, S-state − S-check, paired bootstrap 95% CI, with returned-set size and input beside it.**
+- **H-B2:** the lower bound is above 0.
+
+**Secondary.**
+- S-state − oracle(H), and S-check − oracle(H).
+- For each check: stop against the first arrival at the answer passage (before, at, after, never). Its decisions
+  against "the answer passage has been read". Stops after one read.
+- By hop type.
+- **AC on each stopped set (bill's note):** a stop on Jev's own knowledge that the reader also answers is visible
+  there and not in A-last. bill's srac.py reader scores it on the saved sets afterwards.
+- A hand read in session of 10 S-state early stops, to tell its own misses (A-last's lower bound: an off-chain passage
+  states the answer) from real early stops.
+
+**Predictions.**
+- S-state stops early less often (about 25 against about 42), and late a little more often.
+- A-last S-state − S-check is about +.05, so H-B2 passes about two times in three.
+- S-state is within about .03 of oracle(H), with fewer passages returned.
+
+**Spend.** The dry run (`out/srbs2-dry.txt`, random scores) estimates $0.11 for the 180. Stage 0 first. Cap $0.30.
+
+**Scope.** MuSiQue train chains, one draw of 180, the pass step, H hidden from the walk.
+
+## Addendum 1, before the AC call (after the A-last result; bill's #102, 17:34Z)
+
+The AC secondary is scored by `srbs2_ac.py`. It copies bill's srac.py reader request verbatim (SENT_TASK, the splitter,
+title-prefixed sentence options in passage order, argmax ties to the earlier option), and his #102 judge (EQ_TASK,
+EQ_OPTS), which runs only when the string check fails. The sets are SR-BS2's returned sets for oracle H, oracle H + 1,
+S-check and S-state. Reported per arm: AC, the judge's yes count (bill's note), and AC − A-last disagreements.
+**The question it answers:** do the checks' knowledge stops cost the reader? That is, is AC(S-check) − AC(H) smaller
+than A-last's −.083? This is a readout, not a new hypothesis. The cap is $0.10.

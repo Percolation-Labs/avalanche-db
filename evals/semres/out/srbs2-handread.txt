@@ -1,0 +1,31 @@
+1. Q: When was the place where immigration lead to declared a US territory?  | ANSWER: 1898
+   [off] Alaska: answer string in it: False
+   answer passage: History of Puerto Rico
+2. Q: What is the record label for the performer of From the Cradle?  | ANSWER: Atco Records
+   [hop1] From the Cradle: answer string in it: False
+   answer passage: The History of Eric Clapton
+3. Q: When did the Kuomintang defeat and take over the modern city that Khanbaliq became?  | ANSWER: 1928
+   [off] Nationalist government: answer string in it: False
+   answer passage: Nanjing
+4. Q: What was the country whose economy Swaziland is most linked with called, before it became a republic?  | ANSWER: the Union of South Africa
+   [hop1] Eswatini: answer string in it: False
+   answer passage: History of South Africa
+5. Q: What cigars are named for the capital of the country that stood against Somalia in their war against the country that originated the most black migrants to Israel?  | ANSWER: Havana cigars
+   [hop2] Somalis: answer string in it: False
+   answer passage: Cigar
+6. Q: Henry English Read was born in which country?  | ANSWER: America
+   [hop1] Henry English Read: answer string in it: False
+   answer passage: Bobby Lewis (country singer)
+7. Q: Which organ of the Freedom from Fear author's employer has suspended operations since 1994?  | ANSWER: United Nations Trusteeship Council
+   [off] United Nations: answer string in it: False
+   answer passage: United Nations Trusteeship Council
+8. Q: What happened when the ruler of the country Olenegorsk is located during WWI was removed from power?  | ANSWER: the Russian Provisional Government was established.
+   [hop2] Allied leaders of World War I: answer string in it: False
+   answer passage: Modern history
+9. Q: What country is the award received by the performer of "I'd Like to Teach the World to Sing" from?  | ANSWER: America
+   [hop1] I'd Like to Teach the World to Sing (album): answer string in it: False
+   [hop2] Lea Salonga: answer string in it: True
+   answer passage: Theatre World Award
+10. Q: When did the country bordering the country Mapado originated in conduct its first nuclear test?  | ANSWER: October 9, 2006
+   [off] North Korea and weapons of mass destruction: answer string in it: False
+   answer passage: 2006 North Korean nuclear test
