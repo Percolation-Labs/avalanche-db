@@ -93,3 +93,9 @@ def ci(v, lab):
 ci(pull, "PRIMARY pull, dlogit(wrong - none) lure-linked minus neither")
 ci(selfd, "dlogit of the lure itself, wrong - none (found says it was read)"); ci(help1, "top-1 h3, true - none"); ci(wrong1, "top-1 h3, wrong - none"); ci(helpl, "dlogit h3, true - none")
 json.dump(dict(rows=rows_out, pull=pull, usd=usd), open(f"out/srmo-{SET}.json", "w"))
+# ---- POST-HOC (added after scoring, unregistered, $0 from the cache): the general shift by class and history
+for h in ("true", "wrong"):
+    for cl in ("neither", "lure", "h2"):
+        v = [ (lg(np.array(cache[ck(c["ctx"][h], c["texts"])])) - lg(np.array(cache[ck(c["ctx"]["none"], c["texts"])])))[np.array(c["link"]) == cl].mean()
+              for c in cases if (np.array(c["link"]) == cl).any()]
+        ci(v, f"post-hoc: mean dlogit ({h} - none) over {cl} options")

@@ -1,0 +1,11 @@
+live: 300 requests, estimated $0.0376 (cap $0.25)
+spend this run $0.03843
+SET=fresh: n 100; option links {'lure': 288, 'neither': 979, 'h2': 330, 'h3': 100, 'self': 100}; questions with a pull contrast 78
+top-1 h3 under none  0.850
+top-1 h3 under true  0.840
+top-1 h3 under wrong 0.850
+PRIMARY pull, dlogit(wrong - none) lure-linked minus neither: -0.056 [-0.115, +0.009] (n 78)
+dlogit of the lure itself, wrong - none (found says it was read): -0.177 [-0.245, -0.110] (n 100)
+top-1 h3, true - none: -0.010 [-0.070, +0.050] (n 100)
+top-1 h3, wrong - none: +0.000 [-0.050, +0.050] (n 100)
+dlogit h3, true - none: -0.079 [-0.156, -0.007] (n 100)

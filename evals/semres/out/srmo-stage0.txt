@@ -1,0 +1,9 @@
+live: 16 requests, estimated $0.0016 (cap $0.05)
+spend this run $0.00171
+SET=stage0: n 4; option links {'neither': 43, 'h2': 6, 'h3': 4, 'self': 4, 'lure': 15}; questions with a pull contrast 2
+top-1 h3 under none  1.000
+top-1 h3 under true  0.750
+top-1 h3 under wrong 0.750
+noise: mean |dlogit| between two identical none requests 0.113 (per question [np.float64(0.084), np.float64(0.128), np.float64(0.154), np.float64(0.085)])
+identical repeat answers 0/4 (all identical may mean server-side caching, not zero noise)
+pull per question [np.float64(-0.087), np.float64(-0.071)]; lure self dlogit [np.float64(-0.334), np.float64(-0.356), np.float64(-0.438), np.float64(0.334)]
