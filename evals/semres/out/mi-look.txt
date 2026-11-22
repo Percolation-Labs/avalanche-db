@@ -1,0 +1,7 @@
+3hop2 dev: 192 questions; pool passages missing from the graph 0
+read A -> other branch shares a door 0.31 | door med 3 top1 0.11  cosq med 1 top1 0.70  cosqr med 4 top1 0.20
+read A -> join J       shares a door 0.77 | door med 2 top1 0.39  cosq med 6 top1 0.05  cosqr med 3 top1 0.17
+read A -> random lure  shares a door 0.18 | door med 10 top1 0.02  cosq med 10 top1 0.03  cosqr med 10 top1 0.04
+read B -> other branch shares a door 0.31 | door med 4 top1 0.09  cosq med 1 top1 0.70  cosqr med 4 top1 0.26
+read B -> join J       shares a door 0.89 | door med 2 top1 0.38  cosq med 6 top1 0.02  cosqr med 3 top1 0.17
+read B -> random lure  shares a door 0.25 | door med 10 top1 0.02  cosq med 10 top1 0.03  cosqr med 10 top1 0.04
