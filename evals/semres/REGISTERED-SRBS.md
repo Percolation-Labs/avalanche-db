@@ -58,3 +58,6 @@ If the estimate exceeds the cap, the draw shrinks evenly across types; the rules
   pass request, the request the walk actually makes.
 - **Draw:** the random-score dry run priced 80 per type at $0.56, over the cap, so the draw shrinks evenly to **70 per
   type (210)**, estimate $0.49, rules unchanged, as registered. It isn't re-grown after stage 0.
+- **Draw, after stage 0 (16:57Z):** stage 0 cost $0.0148 for 6 questions, projecting $0.52 for 210, so by the same
+  rule the draw shrinks to **60 per type (180)**, about $0.44. Cause: S-in rarely fired at stage 0 (18.5 reads on
+  average), so trajectories ran toward the 20-read bound.
